@@ -42,10 +42,12 @@ namespace HimoHito
             }
 
             string state = ropeController != null && ropeController.IsAttached
-                ? "ATTACHED — release mouse to recover rope"
-                : "READY — hold left mouse on a platform";
+                ? "ATTACHED — release E to recover rope"
+                : "READY — aim with arrow keys and hold E";
             GUILayout.Label(state, bodyStyle);
-            GUILayout.Label("Move: A / D    Jump: Space    Restart after falling is automatic", bodyStyle);
+            GUILayout.Label("Move: A / D    Jump: Space    Aim: Left / Right arrows", bodyStyle);
+            GUILayout.Label("Snap aim: Up / Down arrows    Rope: Hold E", bodyStyle);
+            GUILayout.Label("Mouse aiming is also available as an option", bodyStyle);
             GUILayout.EndArea();
         }
 

@@ -35,7 +35,10 @@ namespace HimoHito
 
         private void Update()
         {
-            moveInput = Input.GetAxisRaw("Horizontal");
+            // Arrow keys are reserved for rope aiming, so movement uses A/D only.
+            float left = Input.GetKey(KeyCode.A) ? -1f : 0f;
+            float right = Input.GetKey(KeyCode.D) ? 1f : 0f;
+            moveInput = left + right;
 
             if (Input.GetButtonDown("Jump"))
             {
