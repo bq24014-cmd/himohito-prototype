@@ -9,9 +9,15 @@ namespace HimoHitoEditor
     /// <summary>
     /// Creates the entire graybox scene from code so every setup decision is reviewable in Git.
     /// </summary>
+    [InitializeOnLoad]
     public static class PrototypeSceneBuilder
     {
         private const string ScenePath = "Assets/Scenes/Prototype.unity";
+
+        static PrototypeSceneBuilder()
+        {
+            EditorApplication.delayCall += BuildSceneOnFirstOpen;
+        }
 
         [MenuItem("HimoHito/Build Prototype Scene")]
         public static void BuildPrototypeScene()
@@ -40,6 +46,19 @@ namespace HimoHitoEditor
         {
             BuildPrototypeScene();
             EditorApplication.Exit(0);
+        }
+
+        private static void BuildSceneOnFirstOpen()
+        {
+            if (EditorApplication.isPlayingOrWillChangePlaymode)
+            {
+                return;
+            }
+
+            if (AssetDatabase.LoadAssetAtPath<SceneAsset>(ScenePath) == null)
+            {
+                BuildPrototypeScene();
+            }
         }
 
         private static void CreateCamera()

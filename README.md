@@ -1,6 +1,6 @@
 # ヒモヒト — Unity 2D プロトタイプ
 
-自分の体である紐を伸ばして足場に引っかけ、振り子で進むアクションパズルの最小プロトタイプです。
+自分の体である紐を伸ばして足場に引っかけ、振り子で進むアクションパズルの最小プロトタイプです。コードを理解しながら進められるように、機能ごとにGitコミットを分けています。
 
 ## 今回の判定対象
 
@@ -10,9 +10,80 @@
 
 敵、アート、BGM、切り離し、複数ステージはまだ作りません。
 
+## 起動方法
+
+1. Unity Hubで「Add project from disk」を選び、このフォルダを指定する
+2. Editorは `6000.3.21f1` を選ぶ
+3. 初回コンパイル後、`Assets/Scenes/Prototype.unity` が自動生成される
+4. `Prototype` シーンを開いてPlayを押す
+
+自動生成されない場合は、Unity上部メニューの `HimoHito > Build Prototype Scene` を押してください。
+
+## 操作
+
+- `A` / `D`: 左右移動
+- `Space`: ジャンプ
+- 足場にマウスカーソルを置いて左ボタンを押し続ける: 紐を射出・固定
+- 左ボタンを離す: 紐を回収し、使った長さを戻す
+- 落下: 自動で開始地点へ戻る
+
+## コードを読む順番
+
+### 1. `RopeResource.cs`
+
+`currentLength` が本作の「単一の真実」です。紐を出すと `TrySpend`、回収すると `Refund` が呼ばれます。最初はこのファイルだけで、残り長さがどう変化するか説明してみてください。
+
+### 2. `RopeController.cs`
+
+処理は次の順です。
+
+1. マウス入力を受け取る
+2. `Physics2D.RaycastAll` で足場を探す
+3. 必要な長さを `RopeResource` から消費する
+4. `DistanceJoint2D` でプレイヤーと固定点を結ぶ
+5. `LineRenderer` で紐を描く
+6. ボタンを離すとジョイントを解除して長さを戻す
+
+### 3. `PlayerMover.cs`
+
+入力は毎フレームの `Update`、物理変更は一定間隔の `FixedUpdate` で行います。`coyoteTime` と `jumpBufferTime` は、少し遅れた／早かった入力を許して操作感を良くする値です。
+
+### 4. `PrototypeSceneBuilder.cs`
+
+灰色の四角、足場3つ、カメラを自動配置するEditor専用コードです。ゲーム中の挙動ではなく「検証環境を再現するコード」なので、最後に読めば十分です。
+
+## Gitで差分を学ぶ
+
+```powershell
+git log --oneline
+git show 8533197
+git diff 8533197 b7e8c60
+```
+
+- `git show 8533197`: 移動だけを追加したコミットを見る
+- `git diff 8533197 b7e8c60`: 移動だけの状態から紐機能がどう増えたかを見る
+
+実験するときはmainを直接変えず、次のようにブランチを作ります。
+
+```powershell
+git switch -c experiment/rope-feel
+```
+
+たとえば重力、移動速度、紐の最大長を変え、1項目ずつコミットすると比較しやすくなります。
+
+## GitHub Desktopで公開する
+
+1. GitHub Desktopの `File > Add local repository` を選ぶ
+2. この `HimoHitoPrototype` フォルダを指定する
+3. `Publish repository` を押す
+4. Repository nameを `himohito-prototype` にする
+5. 学習中は `Keep this code private` を有効にしてもよい
+
+すでにローカルGit履歴があるため、公開後も4つのコミットがそのまま表示されます。
+
 ## 使用バージョン
 
 - Unity `6000.3.21f1`
 - Built-in Input Manager
 
-コードの読み方とGit/GitHubの進め方は、実装後にこのREADMEへ追記します。
+毎回の理解確認には [Docs/LEARNING_LOG.md](Docs/LEARNING_LOG.md) を使ってください。
