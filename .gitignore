@@ -1,0 +1,26 @@
+# Unity generates these folders locally. They are large and reproducible.
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+
+# IDE files
+/.vs/
+/.vscode/
+*.csproj
+*.sln
+*.suo
+*.user
+*.userprefs
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Unity crash and memory-capture files
+sysinfo.txt
+*.stacktrace
+*.snap
