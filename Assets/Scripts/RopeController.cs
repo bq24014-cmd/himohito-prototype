@@ -176,7 +176,12 @@ namespace HimoHito
                 return;
             }
 
+            // Disabling the joint must not erase the velocity built up by the pendulum.
+            Vector2 preservedVelocity = body.linearVelocity;
+            float preservedAngularVelocity = body.angularVelocity;
             ropeJoint.enabled = false;
+            body.linearVelocity = preservedVelocity;
+            body.angularVelocity = preservedAngularVelocity;
             lineRenderer.enabled = false;
             ropeResource.Refund(spentLength);
             spentLength = 0f;

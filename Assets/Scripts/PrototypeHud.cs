@@ -9,6 +9,7 @@ namespace HimoHito
     {
         [SerializeField] private RopeResource ropeResource;
         [SerializeField] private RopeController ropeController;
+        [SerializeField] private Rigidbody2D playerBody;
 
         private GUIStyle titleStyle;
         private GUIStyle bodyStyle;
@@ -25,13 +26,18 @@ namespace HimoHito
             {
                 ropeController = FindFirstObjectByType<RopeController>();
             }
+
+            if (playerBody == null && ropeController != null)
+            {
+                playerBody = ropeController.GetComponent<Rigidbody2D>();
+            }
         }
 
         private void OnGUI()
         {
             EnsureStyles();
 
-            GUILayout.BeginArea(new Rect(22f, 18f, 470f, 150f), GUI.skin.box);
+            GUILayout.BeginArea(new Rect(22f, 18f, 470f, 178f), GUI.skin.box);
             GUILayout.Label("HIMOHITO / GRAYBOX PROTOTYPE", titleStyle);
 
             if (ropeResource != null)
@@ -45,6 +51,10 @@ namespace HimoHito
                 ? "ATTACHED — release E to recover rope"
                 : "READY — aim with arrow keys and hold E";
             GUILayout.Label(state, bodyStyle);
+            if (playerBody != null)
+            {
+                GUILayout.Label($"SPEED  {playerBody.linearVelocity.magnitude:0.0}", bodyStyle);
+            }
             GUILayout.Label("Move: A / D    Jump: Space    Aim: Left / Right arrows", bodyStyle);
             GUILayout.Label("Snap aim: Up / Down arrows    Rope: Hold E", bodyStyle);
             GUILayout.Label("Mouse aiming is also available as an option", bodyStyle);

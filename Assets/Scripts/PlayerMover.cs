@@ -13,6 +13,16 @@ namespace HimoHito
         [SerializeField] private float moveSpeed = 7f;
         [SerializeField] private float acceleration = 45f;
 
+        [Header("Air control")]
+        [SerializeField] private float airControlForce = 9f;
+        [SerializeField] private float maximumAirSpeed = 10f;
+        [SerializeField, Range(0f, 1f)] private float airLinearDamping = 0.05f;
+
+        [Header("Pendulum control")]
+        [SerializeField] private float swingPumpForce = 18f;
+        [SerializeField] private float maximumSwingSpeed = 15f;
+        [SerializeField, Range(0f, 1f)] private float swingLinearDamping = 0.02f;
+
         [Header("Jump")]
         [SerializeField] private float jumpImpulse = 10f;
         [SerializeField] private float coyoteTime = 0.1f;
@@ -21,6 +31,7 @@ namespace HimoHito
 
         private Rigidbody2D body;
         private BoxCollider2D bodyCollider;
+        private RopeController ropeController;
         private float moveInput;
         private float coyoteTimer;
         private float jumpBufferTimer;
@@ -31,6 +42,7 @@ namespace HimoHito
         {
             body = GetComponent<Rigidbody2D>();
             bodyCollider = GetComponent<BoxCollider2D>();
+            ropeController = GetComponent<RopeController>();
         }
 
         private void Update()
@@ -53,18 +65,74 @@ namespace HimoHito
             IsGrounded = CheckGrounded();
             coyoteTimer = IsGrounded ? coyoteTime : coyoteTimer - Time.fixedDeltaTime;
 
+            bool isSwinging = ropeController != null && ropeController.IsAttached;
+            if (isSwinging)
+            {
+                ApplySwingControl();
+            }
+            else if (IsGrounded)
+            {
+                ApplyGroundControl();
+            }
+            else
+            {
+                ApplyAirControl();
+            }
+
+            if (jumpBufferTimer > 0f && coyoteTimer > 0f && !isSwinging)
+            {
+                body.AddForce(Vector2.up * jumpImpulse, ForceMode2D.Impulse);
+                jumpBufferTimer = 0f;
+                coyoteTimer = 0f;
+            }
+        }
+
+        private void ApplyGroundControl()
+        {
+            body.linearDamping = 0f;
             float targetSpeed = moveInput * moveSpeed;
             float nextHorizontalSpeed = Mathf.MoveTowards(
                 body.linearVelocity.x,
                 targetSpeed,
                 acceleration * Time.fixedDeltaTime);
             body.linearVelocity = new Vector2(nextHorizontalSpeed, body.linearVelocity.y);
+        }
 
-            if (jumpBufferTimer > 0f && coyoteTimer > 0f)
+        private void ApplyAirControl()
+        {
+            body.linearDamping = airLinearDamping;
+            if (Mathf.Approximately(moveInput, 0f))
             {
-                body.AddForce(Vector2.up * jumpImpulse, ForceMode2D.Impulse);
-                jumpBufferTimer = 0f;
-                coyoteTimer = 0f;
+                return;
+            }
+
+            float speedInRequestedDirection = body.linearVelocity.x * moveInput;
+            if (speedInRequestedDirection < maximumAirSpeed)
+            {
+                body.AddForce(Vector2.right * moveInput * airControlForce, ForceMode2D.Force);
+            }
+        }
+
+        private void ApplySwingControl()
+        {
+            // Very small damping represents air resistance without cancelling momentum.
+            body.linearDamping = swingLinearDamping;
+            if (Mathf.Approximately(moveInput, 0f))
+            {
+                return;
+            }
+
+            // The joint supplies rope tension. Input only adds force along the circle's tangent.
+            // D pumps counter-clockwise; A pumps clockwise. This direction stays continuous
+            // around the entire circle and avoids a force flip at the left/right extremes.
+            Vector2 radiusDirection = (body.position - ropeController.AnchorPoint).normalized;
+            Vector2 tangent = new Vector2(-radiusDirection.y, radiusDirection.x);
+
+            float tangentialSpeed = Vector2.Dot(body.linearVelocity, tangent);
+            float speedInRequestedDirection = tangentialSpeed * moveInput;
+            if (speedInRequestedDirection < maximumSwingSpeed)
+            {
+                body.AddForce(tangent * moveInput * swingPumpForce, ForceMode2D.Force);
             }
         }
 
