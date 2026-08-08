@@ -185,11 +185,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c562371b2852814985dd2cb70b3fba0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.PlayerMover
-  moveSpeed: 7
+  moveSpeed: 6.5
   acceleration: 45
   deceleration: 120
   jumpImpulse: 10
-  jumpHorizontalSpeedRetention: 0.6428571
+  jumpHorizontalSpeedRetention: 0.6923077
   coyoteTime: 0.1
   jumpBufferTime: 0.15
   groundProbeDistance: 0.08
