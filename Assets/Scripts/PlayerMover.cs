@@ -32,6 +32,7 @@ namespace HimoHito
         private Rigidbody2D body;
         private BoxCollider2D bodyCollider;
         private RopeController ropeController;
+        private PhysicsMaterial2D movementMaterial;
         private float moveInput;
         private float coyoteTimer;
         private float jumpBufferTimer;
@@ -43,6 +44,22 @@ namespace HimoHito
             body = GetComponent<Rigidbody2D>();
             bodyCollider = GetComponent<BoxCollider2D>();
             ropeController = GetComponent<RopeController>();
+
+            movementMaterial = new PhysicsMaterial2D("Player Movement Material")
+            {
+                friction = 0f,
+                bounciness = 0f,
+                hideFlags = HideFlags.HideAndDontSave
+            };
+            bodyCollider.sharedMaterial = movementMaterial;
+        }
+
+        private void OnDestroy()
+        {
+            if (movementMaterial != null)
+            {
+                Destroy(movementMaterial);
+            }
         }
 
         private void Update()
