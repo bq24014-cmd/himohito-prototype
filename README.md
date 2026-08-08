@@ -70,12 +70,12 @@ HUDの `SPEED` を見ると、振り子の最下点で速くなり、端で遅�
 
 ```powershell
 git log --oneline
-git show 8533197
-git diff 8533197 b7e8c60
+git show 26f55f7
+git diff 26f55f7 26873c8
 ```
 
-- `git show 8533197`: 移動だけを追加したコミットを見る
-- `git diff 8533197 b7e8c60`: 移動だけの状態から紐機能がどう増えたかを見る
+- `git show 26f55f7`: 移動だけを追加したコミットを見る
+- `git diff 26f55f7 26873c8`: 移動だけの状態から紐機能がどう増えたかを見る
 
 実験するときはmainを直接変えず、次のようにブランチを作ります。
 
