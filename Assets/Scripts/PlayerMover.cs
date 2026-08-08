@@ -12,7 +12,7 @@ namespace HimoHito
         [Header("Horizontal movement")]
         [SerializeField] private float moveSpeed = 9f;
         [SerializeField] private float acceleration = 45f;
-        [SerializeField] private float deceleration = 70f;
+        [SerializeField] private float deceleration = 120f;
 
         [Header("Air control")]
         [SerializeField] private float airControlForce = 9f;
