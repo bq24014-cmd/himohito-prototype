@@ -26,7 +26,9 @@ namespace HimoHitoEditor
 
             CreateCamera();
             CreatePlayer();
-            CreatePlatform("Ground", new Vector2(-1.5f, -4.4f), new Vector2(8f, 0.7f));
+            // Keep the original right edge at x = 2.5 while extending left for repeated
+            // run-jump distance checks that do not interfere with the swing route.
+            CreatePlatform("Ground", new Vector2(-6.5f, -4.4f), new Vector2(18f, 0.7f));
 
             // The yellow anchor is the only hookable object. The player can release toward
             // either a forgiving low platform or a smaller, higher-risk platform.
@@ -68,11 +70,11 @@ namespace HimoHitoEditor
         {
             GameObject cameraObject = new GameObject("Main Camera");
             cameraObject.tag = "MainCamera";
-            cameraObject.transform.position = new Vector3(2f, 0f, -10f);
+            cameraObject.transform.position = new Vector3(-4.5f, 0f, -10f);
 
             Camera camera = cameraObject.AddComponent<Camera>();
             camera.orthographic = true;
-            camera.orthographicSize = 6.2f;
+            camera.orthographicSize = 6.5f;
             camera.clearFlags = CameraClearFlags.SolidColor;
             camera.backgroundColor = new Color(0.045f, 0.052f, 0.11f);
         }
