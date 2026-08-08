@@ -10,7 +10,7 @@ namespace HimoHito
     public sealed class PlayerMover : MonoBehaviour
     {
         [Header("Horizontal movement")]
-        [SerializeField] private float moveSpeed = 8f;
+        [SerializeField] private float moveSpeed = 7f;
         [SerializeField] private float acceleration = 45f;
         [SerializeField] private float deceleration = 120f;
 
@@ -26,7 +26,7 @@ namespace HimoHito
 
         [Header("Jump")]
         [SerializeField] private float jumpImpulse = 10f;
-        [SerializeField, Range(0f, 1f)] private float jumpHorizontalSpeedRetention = 0.75f;
+        [SerializeField, Range(0f, 1f)] private float jumpHorizontalSpeedRetention = 0.6428571f;
         [SerializeField] private float coyoteTime = 0.1f;
         [SerializeField] private float jumpBufferTime = 0.15f;
         [SerializeField] private float groundProbeDistance = 0.08f;
