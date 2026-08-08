@@ -30,7 +30,7 @@ namespace HimoHitoEditor
 
             // The yellow anchor is the only hookable object. The player can release toward
             // either a forgiving low platform or a smaller, higher-risk platform.
-            CreateHookPoint("First Hook", new Vector2(-0.6f, 0.4f), new Vector2(1.5f, 0.35f));
+            CreateHookPoint("First Hook", new Vector2(0.4f, 0.4f), new Vector2(1.5f, 0.35f));
             CreatePlatform("Safe Landing", new Vector2(4.5f, -1.7f), new Vector2(2.4f, 0.5f));
             CreatePlatform("Risky Landing", new Vector2(6.4f, 0.8f), new Vector2(1.2f, 0.5f));
 
