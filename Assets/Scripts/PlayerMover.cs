@@ -26,6 +26,7 @@ namespace HimoHito
 
         [Header("Jump")]
         [SerializeField] private float jumpImpulse = 10f;
+        [SerializeField, Range(0f, 1f)] private float jumpHorizontalSpeedRetention = 0.75f;
         [SerializeField] private float coyoteTime = 0.1f;
         [SerializeField] private float jumpBufferTime = 0.15f;
         [SerializeField] private float groundProbeDistance = 0.08f;
@@ -99,7 +100,11 @@ namespace HimoHito
 
             if (jumpBufferTimer > 0f && coyoteTimer > 0f && !isSwinging)
             {
-                body.AddForce(Vector2.up * jumpImpulse, ForceMode2D.Impulse);
+                float horizontalBrakeImpulse = -body.linearVelocity.x
+                    * (1f - jumpHorizontalSpeedRetention)
+                    * body.mass;
+                Vector2 takeoffImpulse = new Vector2(horizontalBrakeImpulse, jumpImpulse);
+                body.AddForce(takeoffImpulse, ForceMode2D.Impulse);
                 jumpBufferTimer = 0f;
                 coyoteTimer = 0f;
             }

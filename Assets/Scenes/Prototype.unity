@@ -189,6 +189,7 @@ MonoBehaviour:
   acceleration: 45
   deceleration: 120
   jumpImpulse: 10
+  jumpHorizontalSpeedRetention: 0.75
   coyoteTime: 0.1
   jumpBufferTime: 0.15
   groundProbeDistance: 0.08
