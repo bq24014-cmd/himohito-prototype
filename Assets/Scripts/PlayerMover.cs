@@ -12,6 +12,7 @@ namespace HimoHito
         [Header("Horizontal movement")]
         [SerializeField] private float moveSpeed = 9f;
         [SerializeField] private float acceleration = 45f;
+        [SerializeField] private float deceleration = 70f;
 
         [Header("Air control")]
         [SerializeField] private float airControlForce = 9f;
@@ -108,10 +109,13 @@ namespace HimoHito
         {
             body.linearDamping = 0f;
             float targetSpeed = moveInput * moveSpeed;
+            float speedChange = Mathf.Approximately(moveInput, 0f)
+                ? deceleration
+                : acceleration;
             float nextHorizontalSpeed = Mathf.MoveTowards(
                 body.linearVelocity.x,
                 targetSpeed,
-                acceleration * Time.fixedDeltaTime);
+                speedChange * Time.fixedDeltaTime);
             body.linearVelocity = new Vector2(nextHorizontalSpeed, body.linearVelocity.y);
         }
 

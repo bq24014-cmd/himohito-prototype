@@ -187,6 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.PlayerMover
   moveSpeed: 9
   acceleration: 45
+  deceleration: 70
   jumpImpulse: 10
   coyoteTime: 0.1
   jumpBufferTime: 0.15
