@@ -10,7 +10,7 @@ namespace HimoHito
     public sealed class PlayerMover : MonoBehaviour
     {
         [Header("Horizontal movement")]
-        [SerializeField] private float moveSpeed = 12f;
+        [SerializeField] private float moveSpeed = 14f;
         [SerializeField] private float acceleration = 45f;
         [SerializeField] private float deceleration = 120f;
 
