@@ -49,7 +49,7 @@
 
 ### 3. `PlayerMover.cs`
 
-入力は毎フレームの `Update`、物理変更は一定間隔の `FixedUpdate` で行います。`coyoteTime` と `jumpBufferTime` は、少し遅れた／早かった入力を許して操作感を良くする値です。
+入力は毎フレームの `Update`、物理変更は一定間隔の `FixedUpdate` で行います。足元の細い範囲が足場と重なっているかを調べて接地を判定します。`coyoteTime` と `jumpBufferTime` は、少し遅れた／早かった入力を許して操作感を良くする値です。
 
 ## 振り子の物理
 

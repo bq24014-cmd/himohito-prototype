@@ -160,16 +160,17 @@ namespace HimoHito
         private bool CheckGrounded()
         {
             Bounds bounds = bodyCollider.bounds;
-            RaycastHit2D[] hits = Physics2D.BoxCastAll(
-                bounds.center,
-                new Vector2(bounds.size.x * 0.8f, bounds.size.y * 0.9f),
-                0f,
-                Vector2.down,
-                groundProbeDistance);
+            Vector2 probeCenter = new Vector2(
+                bounds.center.x,
+                bounds.min.y - groundProbeDistance * 0.5f);
+            Vector2 probeSize = new Vector2(
+                bounds.size.x * 0.8f,
+                groundProbeDistance * 2f);
+            Collider2D[] overlaps = Physics2D.OverlapBoxAll(probeCenter, probeSize, 0f);
 
-            foreach (RaycastHit2D hit in hits)
+            foreach (Collider2D overlap in overlaps)
             {
-                if (hit.collider != null && hit.collider != bodyCollider)
+                if (overlap != null && overlap != bodyCollider)
                 {
                     return true;
                 }
