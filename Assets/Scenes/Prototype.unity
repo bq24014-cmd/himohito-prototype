@@ -507,26 +507,13 @@ GameObject:
   - component: {fileID: 791694869}
   - component: {fileID: 791694868}
   - component: {fileID: 791694867}
-  - component: {fileID: 791694866}
   m_Layer: 0
-  m_Name: Next Hook
+  m_Name: Risky Landing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &791694866
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 791694865}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f8a5758d4ed17c40abb2a64c0410345, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HimoHito.HookPoint
 --- !u!61 &791694867
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -654,8 +641,8 @@ Transform:
   m_GameObject: {fileID: 791694865}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.7, y: 1.1, z: 0}
-  m_LocalScale: {x: 2.8, y: 0.5, z: 1}
+  m_LocalPosition: {x: 6.4, y: 0.8, z: 0}
+  m_LocalScale: {x: 1.2, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -672,7 +659,6 @@ GameObject:
   - component: {fileID: 907706791}
   - component: {fileID: 907706790}
   - component: {fileID: 907706789}
-  - component: {fileID: 907706788}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Untagged
@@ -680,18 +666,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &907706788
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 907706787}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f8a5758d4ed17c40abb2a64c0410345, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HimoHito.HookPoint
 --- !u!61 &907706789
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -998,7 +972,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSprite
-  color: {r: 0.38, g: 0.41, b: 0.52, a: 1}
+  color: {r: 1, g: 0.72, b: 0.18, a: 1}
 --- !u!212 &1741523285
 SpriteRenderer:
   serializedVersion: 2
@@ -1049,7 +1023,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 0}
-  m_Color: {r: 0.38, g: 0.41, b: 0.52, a: 1}
+  m_Color: {r: 1, g: 0.72, b: 0.18, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1067,8 +1041,8 @@ Transform:
   m_GameObject: {fileID: 1741523281}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.8, y: -0.3, z: 0}
-  m_LocalScale: {x: 2.4, y: 0.45, z: 1}
+  m_LocalPosition: {x: -0.6, y: 0.4, z: 0}
+  m_LocalScale: {x: 1.5, y: 0.35, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1131,26 +1105,13 @@ GameObject:
   - component: {fileID: 1879323690}
   - component: {fileID: 1879323689}
   - component: {fileID: 1879323688}
-  - component: {fileID: 1879323687}
   m_Layer: 0
-  m_Name: First Landing
+  m_Name: Safe Landing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1879323687
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1879323686}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f8a5758d4ed17c40abb2a64c0410345, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HimoHito.HookPoint
 --- !u!61 &1879323688
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1278,8 +1239,8 @@ Transform:
   m_GameObject: {fileID: 1879323686}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.4, y: -1.8, z: 0}
-  m_LocalScale: {x: 2.2, y: 0.5, z: 1}
+  m_LocalPosition: {x: 4.5, y: -1.7, z: 0}
+  m_LocalScale: {x: 2.4, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

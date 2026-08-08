@@ -28,11 +28,11 @@ namespace HimoHitoEditor
             CreatePlayer();
             CreatePlatform("Ground", new Vector2(-1.5f, -4.4f), new Vector2(8f, 0.7f));
 
-            // First experiment: attaching is forgiving, but the player must build a swing
-            // and choose a release time to reach a separate landing platform.
-            CreatePlatform("First Hook", new Vector2(-0.8f, -0.3f), new Vector2(2.4f, 0.45f));
-            CreatePlatform("First Landing", new Vector2(3.4f, -1.8f), new Vector2(2.2f, 0.5f));
-            CreatePlatform("Next Hook", new Vector2(6.7f, 1.1f), new Vector2(2.8f, 0.5f));
+            // The yellow anchor is the only hookable object. The player can release toward
+            // either a forgiving low platform or a smaller, higher-risk platform.
+            CreateHookPoint("First Hook", new Vector2(-0.6f, 0.4f), new Vector2(1.5f, 0.35f));
+            CreatePlatform("Safe Landing", new Vector2(4.5f, -1.7f), new Vector2(2.4f, 0.5f));
+            CreatePlatform("Risky Landing", new Vector2(6.4f, 0.8f), new Vector2(1.2f, 0.5f));
 
             GameObject hud = new GameObject("Prototype HUD");
             hud.AddComponent<PrototypeHud>();
@@ -111,17 +111,36 @@ namespace HimoHitoEditor
 
         private static void CreatePlatform(string name, Vector2 position, Vector2 size)
         {
+            CreatePlatformVisual(name, position, size, new Color(0.38f, 0.41f, 0.52f));
+        }
+
+        private static void CreateHookPoint(string name, Vector2 position, Vector2 size)
+        {
+            GameObject hookPoint = CreatePlatformVisual(
+                name,
+                position,
+                size,
+                new Color(1f, 0.72f, 0.18f));
+            hookPoint.AddComponent<HookPoint>();
+        }
+
+        private static GameObject CreatePlatformVisual(
+            string name,
+            Vector2 position,
+            Vector2 size,
+            Color color)
+        {
             GameObject platform = new GameObject(name);
             platform.transform.position = position;
             platform.transform.localScale = new Vector3(size.x, size.y, 1f);
 
             platform.AddComponent<SpriteRenderer>();
             SolidSprite visual = platform.AddComponent<SolidSprite>();
-            visual.Color = new Color(0.38f, 0.41f, 0.52f);
+            visual.Color = color;
 
             BoxCollider2D collider = platform.AddComponent<BoxCollider2D>();
             collider.size = Vector2.one;
-            platform.AddComponent<HookPoint>();
+            return platform;
         }
     }
 }
