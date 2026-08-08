@@ -27,9 +27,12 @@ namespace HimoHitoEditor
             CreateCamera();
             CreatePlayer();
             CreatePlatform("Ground", new Vector2(-1.5f, -4.4f), new Vector2(8f, 0.7f));
-            CreatePlatform("Hook Platform 1", new Vector2(1.2f, -1.4f), new Vector2(3.2f, 0.5f));
-            CreatePlatform("Hook Platform 2", new Vector2(4.8f, 0.9f), new Vector2(3f, 0.5f));
-            CreatePlatform("Hook Platform 3", new Vector2(8.1f, 3.0f), new Vector2(3.6f, 0.5f));
+
+            // First experiment: attaching is forgiving, but the player must build a swing
+            // and choose a release time to reach a separate landing platform.
+            CreatePlatform("First Hook", new Vector2(-0.8f, -0.3f), new Vector2(2.4f, 0.45f));
+            CreatePlatform("First Landing", new Vector2(3.4f, -1.8f), new Vector2(2.2f, 0.5f));
+            CreatePlatform("Next Hook", new Vector2(6.7f, 1.1f), new Vector2(2.8f, 0.5f));
 
             GameObject hud = new GameObject("Prototype HUD");
             hud.AddComponent<PrototypeHud>();
