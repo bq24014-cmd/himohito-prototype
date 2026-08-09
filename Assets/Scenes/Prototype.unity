@@ -863,8 +863,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cfccc1ad82411c47b427f2e4b5bb76c, type: 3}
   m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.RopeResource
-  maximumLength: 20
-  currentLength: 20
+  maximumLength: 12
+  currentLength: 12
 --- !u!120 &732658640
 LineRenderer:
   serializedVersion: 3
