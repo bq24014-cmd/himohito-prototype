@@ -50,10 +50,8 @@ namespace HimoHito
             if (ropeController != null)
             {
                 GUILayout.Label(
-                    $"SELECTED  {ropeController.SelectedRopeLength:0.0}    " +
-                    $"1: {ropeController.ShortRopeLength:0.#} / " +
-                    $"2: {ropeController.MediumRopeLength:0.#} / " +
-                    $"3: {ropeController.LongRopeLength:0.#}",
+                    $"LENGTH  {ropeController.SelectedRopeLength} / " +
+                    $"{ropeController.MaximumSelectableRopeLength}    W: +1 / S: -1",
                     bodyStyle);
             }
 

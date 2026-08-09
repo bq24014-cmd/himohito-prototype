@@ -13,13 +13,10 @@ namespace HimoHito
         [SerializeField, Min(1f)] private float maximumShotDistance = 14f;
         [SerializeField, Min(0.01f)] private float ropeWidth = 0.08f;
         [SerializeField] private Color ropeColor = new Color(0.95f, 0.82f, 0.35f);
-        [SerializeField, Min(0.5f)] private float aimGuideLength = 3f;
         [SerializeField, Min(10f)] private float aimRotationSpeed = 120f;
         [SerializeField] private Color aimGuideColor = new Color(0.55f, 0.65f, 0.8f, 0.55f);
         [SerializeField, Range(0f, 1f)] private float releaseRefundRate = 0.7f;
-        [SerializeField, Min(0.1f)] private float shortRopeLength = 4f;
-        [SerializeField, Min(0.1f)] private float mediumRopeLength = 8f;
-        [SerializeField, Min(0.1f)] private float longRopeLength = 12f;
+        [SerializeField, Min(1)] private int minimumSelectableRopeLength = 1;
 
         private Rigidbody2D body;
         private Collider2D bodyCollider;
@@ -31,16 +28,14 @@ namespace HimoHito
         private Vector2 anchorPoint;
         private Vector2 keyboardAimDirection = new Vector2(1f, 1f).normalized;
         private float spentLength;
-        private int selectedRopeLengthIndex = 1;
+        private int selectedRopeLength = 1;
 
         public bool IsAttached => ropeJoint != null && ropeJoint.enabled;
         public Vector2 AnchorPoint => anchorPoint;
         public Vector2 KeyboardAimDirection => keyboardAimDirection;
         public float ReleaseRefundRate => releaseRefundRate;
-        public float ShortRopeLength => shortRopeLength;
-        public float MediumRopeLength => mediumRopeLength;
-        public float LongRopeLength => longRopeLength;
-        public float SelectedRopeLength => GetRopeLength(selectedRopeLengthIndex);
+        public int SelectedRopeLength => selectedRopeLength;
+        public int MaximumSelectableRopeLength => GetMaximumSelectableRopeLength();
         public float ActiveRopeLength => spentLength;
 
         private void Awake()
@@ -137,10 +132,12 @@ namespace HimoHito
 
         private void OnValidate()
         {
+            maximumShotDistance = Mathf.Max(1f, maximumShotDistance);
             releaseRefundRate = Mathf.Clamp01(releaseRefundRate);
-            shortRopeLength = Mathf.Clamp(shortRopeLength, 0.1f, maximumShotDistance);
-            mediumRopeLength = Mathf.Clamp(mediumRopeLength, shortRopeLength, maximumShotDistance);
-            longRopeLength = Mathf.Clamp(longRopeLength, mediumRopeLength, maximumShotDistance);
+            minimumSelectableRopeLength = Mathf.Clamp(
+                minimumSelectableRopeLength,
+                1,
+                Mathf.FloorToInt(maximumShotDistance));
         }
 
         public bool TryAttach(Vector2 worldTarget)
@@ -206,6 +203,7 @@ namespace HimoHito
             lineRenderer.enabled = false;
             ropeResource.Refund(spentLength * releaseRefundRate);
             spentLength = 0f;
+            ClampSelectedRopeLength();
         }
 
         private void UpdateSelectedRopeLength()
@@ -215,19 +213,39 @@ namespace HimoHito
                 return;
             }
 
-            if (Input.GetKeyDown(KeyCode.Alpha1)) selectedRopeLengthIndex = 0;
-            if (Input.GetKeyDown(KeyCode.Alpha2)) selectedRopeLengthIndex = 1;
-            if (Input.GetKeyDown(KeyCode.Alpha3)) selectedRopeLengthIndex = 2;
+            ClampSelectedRopeLength();
+
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                selectedRopeLength = Mathf.Min(
+                    selectedRopeLength + 1,
+                    GetMaximumSelectableRopeLength());
+            }
+
+            if (Input.GetKeyDown(KeyCode.S))
+            {
+                selectedRopeLength = Mathf.Max(
+                    selectedRopeLength - 1,
+                    minimumSelectableRopeLength);
+            }
         }
 
-        private float GetRopeLength(int index)
+        private void ClampSelectedRopeLength()
         {
-            return index switch
-            {
-                0 => shortRopeLength,
-                2 => longRopeLength,
-                _ => mediumRopeLength
-            };
+            selectedRopeLength = Mathf.Clamp(
+                selectedRopeLength,
+                minimumSelectableRopeLength,
+                GetMaximumSelectableRopeLength());
+        }
+
+        private int GetMaximumSelectableRopeLength()
+        {
+            float availableLength = ropeResource != null
+                ? ropeResource.CurrentLength
+                : maximumShotDistance;
+            int availableWholeUnits = Mathf.FloorToInt(
+                Mathf.Min(maximumShotDistance, availableLength));
+            return Mathf.Max(minimumSelectableRopeLength, availableWholeUnits);
         }
 
         private void TryAttachTowardCursor()
@@ -284,7 +302,7 @@ namespace HimoHito
             lineRenderer.startColor = aimGuideColor;
             lineRenderer.endColor = aimGuideColor;
             lineRenderer.SetPosition(0, body.position);
-            lineRenderer.SetPosition(1, body.position + keyboardAimDirection * aimGuideLength);
+            lineRenderer.SetPosition(1, body.position + keyboardAimDirection * selectedRopeLength);
         }
     }
 }
