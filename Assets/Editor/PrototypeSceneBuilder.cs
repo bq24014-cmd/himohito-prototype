@@ -26,15 +26,17 @@ namespace HimoHitoEditor
 
             CreateCamera();
             CreatePlayer();
-            // Keep the original right edge at x = 2.5 while extending left for repeated
-            // run-jump distance checks that do not interfere with the swing route.
-            CreatePlatform("Ground", new Vector2(-6.5f, -4.4f), new Vector2(18f, 0.7f));
+            CreatePlatform("Start Ground", new Vector2(-9f, -5.2f), new Vector2(5f, 0.7f));
 
-            // The yellow anchor is the only hookable object. The player can release toward
-            // either a forgiving low platform or a smaller, higher-risk platform.
-            CreateHookPoint("First Hook", new Vector2(0.4f, 0.4f), new Vector2(1.5f, 0.35f));
-            CreatePlatform("Safe Landing", new Vector2(4.5f, -1.7f), new Vector2(2.4f, 0.5f));
-            CreatePlatform("Risky Landing", new Vector2(6.4f, 0.8f), new Vector2(1.2f, 0.5f));
+            // A narrow vertical slice: three readable rope-length decisions, generous
+            // landings, and one visible goal. The whole route fits inside one fixed camera.
+            CreateHookPoint("Hook 1", new Vector2(-5.5f, -0.2f), new Vector2(2.4f, 0.45f));
+            CreatePlatform("Landing 1", new Vector2(-1.5f, -2.5f), new Vector2(4f, 0.7f));
+            CreateHookPoint("Hook 2", new Vector2(4.5f, 2.5f), new Vector2(2.4f, 0.45f));
+            CreatePlatform("Landing 2", new Vector2(7.5f, -1.5f), new Vector2(4f, 0.7f));
+            CreateHookPoint("Hook 3", new Vector2(12.5f, 2.5f), new Vector2(2.4f, 0.45f));
+            CreatePlatform("Landing 3", new Vector2(15f, -1f), new Vector2(4f, 0.7f));
+            CreateGoalPlatform("Goal", new Vector2(18.2f, 0.2f), new Vector2(2.4f, 0.8f));
 
             GameObject hud = new GameObject("Prototype HUD");
             hud.AddComponent<PrototypeHud>();
@@ -70,11 +72,11 @@ namespace HimoHitoEditor
         {
             GameObject cameraObject = new GameObject("Main Camera");
             cameraObject.tag = "MainCamera";
-            cameraObject.transform.position = new Vector3(-4.5f, 0f, -10f);
+            cameraObject.transform.position = new Vector3(4f, 0f, -10f);
 
             Camera camera = cameraObject.AddComponent<Camera>();
             camera.orthographic = true;
-            camera.orthographicSize = 6.5f;
+            camera.orthographicSize = 8.7f;
             camera.clearFlags = CameraClearFlags.SolidColor;
             camera.backgroundColor = new Color(0.045f, 0.052f, 0.11f);
         }
@@ -82,7 +84,7 @@ namespace HimoHitoEditor
         private static void CreatePlayer()
         {
             GameObject player = new GameObject("Player");
-            player.transform.position = new Vector3(-3.4f, -3.3f, 0f);
+            player.transform.position = new Vector3(-9f, -4.2f, 0f);
             player.transform.localScale = new Vector3(0.8f, 1.2f, 1f);
 
             SpriteRenderer renderer = player.AddComponent<SpriteRenderer>();
@@ -109,7 +111,7 @@ namespace HimoHitoEditor
             player.AddComponent<RopeResource>();
             player.AddComponent<PlayerMover>();
             player.AddComponent<RopeController>();
-            player.AddComponent<RespawnOnFall>();
+            player.AddComponent<PrototypeRunController>();
         }
 
         private static void CreatePlatform(string name, Vector2 position, Vector2 size)
@@ -125,6 +127,16 @@ namespace HimoHitoEditor
                 size,
                 new Color(1f, 0.72f, 0.18f));
             hookPoint.AddComponent<HookPoint>();
+        }
+
+        private static void CreateGoalPlatform(string name, Vector2 position, Vector2 size)
+        {
+            GameObject goal = CreatePlatformVisual(
+                name,
+                position,
+                size,
+                new Color(0.28f, 0.9f, 0.58f));
+            goal.AddComponent<GoalZone>();
         }
 
         private static GameObject CreatePlatformVisual(

@@ -10,6 +10,7 @@ namespace HimoHito
         [SerializeField] private RopeResource ropeResource;
         [SerializeField] private RopeController ropeController;
         [SerializeField] private Rigidbody2D playerBody;
+        [SerializeField] private PrototypeRunController runController;
 
         private GUIStyle titleStyle;
         private GUIStyle bodyStyle;
@@ -30,6 +31,11 @@ namespace HimoHito
             if (playerBody == null && ropeController != null)
             {
                 playerBody = ropeController.GetComponent<Rigidbody2D>();
+            }
+
+            if (runController == null)
+            {
+                runController = FindFirstObjectByType<PrototypeRunController>();
             }
         }
 
@@ -55,9 +61,19 @@ namespace HimoHito
                     bodyStyle);
             }
 
-            string state = ropeController != null && ropeController.IsAttached
-                ? $"ATTACHED {ropeController.ActiveRopeLength:0.0} — release E: {ropeController.ReleaseRefundRate:P0} returns"
-                : "READY — aim with arrow keys and hold E";
+            string state;
+            if (runController != null && runController.Outcome != PrototypeRunController.RunOutcome.Playing)
+            {
+                state = runController.Outcome == PrototypeRunController.RunOutcome.Clear
+                    ? "CLEAR — press R to restart"
+                    : "FAILED — press R to restart";
+            }
+            else
+            {
+                state = ropeController != null && ropeController.IsAttached
+                    ? $"ATTACHED {ropeController.ActiveRopeLength:0.0} — release E: {ropeController.ReleaseRefundRate:P0} returns"
+                    : "READY — aim with arrow keys and hold E";
+            }
             GUILayout.Label(state, bodyStyle);
             if (playerBody != null)
             {
@@ -65,7 +81,7 @@ namespace HimoHito
             }
             GUILayout.Label("Move: A / D    Jump: Space    Aim: Left / Right arrows", bodyStyle);
             GUILayout.Label("Snap aim: Up / Down arrows    Rope: Hold E", bodyStyle);
-            GUILayout.Label("Mouse aiming is also available as an option", bodyStyle);
+            GUILayout.Label("Restart: R    Mouse aiming is optional", bodyStyle);
             GUILayout.EndArea();
         }
 
