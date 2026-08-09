@@ -37,7 +37,7 @@ namespace HimoHito
         {
             EnsureStyles();
 
-            GUILayout.BeginArea(new Rect(22f, 18f, 470f, 178f), GUI.skin.box);
+            GUILayout.BeginArea(new Rect(22f, 18f, 500f, 204f), GUI.skin.box);
             GUILayout.Label("HIMOHITO / GRAYBOX PROTOTYPE", titleStyle);
 
             if (ropeResource != null)
@@ -47,8 +47,18 @@ namespace HimoHito
                     lengthStyle);
             }
 
+            if (ropeController != null)
+            {
+                GUILayout.Label(
+                    $"SELECTED  {ropeController.SelectedRopeLength:0.0}    " +
+                    $"1: {ropeController.ShortRopeLength:0.#} / " +
+                    $"2: {ropeController.MediumRopeLength:0.#} / " +
+                    $"3: {ropeController.LongRopeLength:0.#}",
+                    bodyStyle);
+            }
+
             string state = ropeController != null && ropeController.IsAttached
-                ? $"ATTACHED — release E: {ropeController.ReleaseRefundRate:P0} returns"
+                ? $"ATTACHED {ropeController.ActiveRopeLength:0.0} — release E: {ropeController.ReleaseRefundRate:P0} returns"
                 : "READY — aim with arrow keys and hold E";
             GUILayout.Label(state, bodyStyle);
             if (playerBody != null)

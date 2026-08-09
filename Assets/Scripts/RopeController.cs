@@ -17,6 +17,9 @@ namespace HimoHito
         [SerializeField, Min(10f)] private float aimRotationSpeed = 120f;
         [SerializeField] private Color aimGuideColor = new Color(0.55f, 0.65f, 0.8f, 0.55f);
         [SerializeField, Range(0f, 1f)] private float releaseRefundRate = 0.7f;
+        [SerializeField, Min(0.1f)] private float shortRopeLength = 4f;
+        [SerializeField, Min(0.1f)] private float mediumRopeLength = 8f;
+        [SerializeField, Min(0.1f)] private float longRopeLength = 12f;
 
         private Rigidbody2D body;
         private Collider2D bodyCollider;
@@ -28,11 +31,17 @@ namespace HimoHito
         private Vector2 anchorPoint;
         private Vector2 keyboardAimDirection = new Vector2(1f, 1f).normalized;
         private float spentLength;
+        private int selectedRopeLengthIndex = 1;
 
         public bool IsAttached => ropeJoint != null && ropeJoint.enabled;
         public Vector2 AnchorPoint => anchorPoint;
         public Vector2 KeyboardAimDirection => keyboardAimDirection;
         public float ReleaseRefundRate => releaseRefundRate;
+        public float ShortRopeLength => shortRopeLength;
+        public float MediumRopeLength => mediumRopeLength;
+        public float LongRopeLength => longRopeLength;
+        public float SelectedRopeLength => GetRopeLength(selectedRopeLengthIndex);
+        public float ActiveRopeLength => spentLength;
 
         private void Awake()
         {
@@ -71,6 +80,7 @@ namespace HimoHito
 
         private void Update()
         {
+            UpdateSelectedRopeLength();
             bool aimChanged = UpdateKeyboardAim();
 
             if (Input.GetKeyDown(KeyCode.E) || (Input.GetKey(KeyCode.E) && aimChanged && !IsAttached))
@@ -128,6 +138,9 @@ namespace HimoHito
         private void OnValidate()
         {
             releaseRefundRate = Mathf.Clamp01(releaseRefundRate);
+            shortRopeLength = Mathf.Clamp(shortRopeLength, 0.1f, maximumShotDistance);
+            mediumRopeLength = Mathf.Clamp(mediumRopeLength, shortRopeLength, maximumShotDistance);
+            longRopeLength = Mathf.Clamp(longRopeLength, mediumRopeLength, maximumShotDistance);
         }
 
         public bool TryAttach(Vector2 worldTarget)
@@ -144,7 +157,9 @@ namespace HimoHito
                 return false;
             }
 
-            RaycastHit2D[] hits = Physics2D.RaycastAll(origin, offset.normalized, maximumShotDistance);
+            float selectedLength = SelectedRopeLength;
+            float shotDistance = Mathf.Min(selectedLength, maximumShotDistance);
+            RaycastHit2D[] hits = Physics2D.RaycastAll(origin, offset.normalized, shotDistance);
             foreach (RaycastHit2D hit in hits)
             {
                 if (hit.collider == null || hit.collider == bodyCollider)
@@ -157,17 +172,16 @@ namespace HimoHito
                     continue;
                 }
 
-                float requiredLength = Vector2.Distance(origin, hit.point);
-                if (!ropeResource.TrySpend(requiredLength))
+                if (!ropeResource.TrySpend(selectedLength))
                 {
                     return false;
                 }
 
-                spentLength = requiredLength;
+                spentLength = selectedLength;
                 anchorPoint = hit.point;
                 ropeJoint.connectedBody = null;
                 ropeJoint.connectedAnchor = anchorPoint;
-                ropeJoint.distance = requiredLength;
+                ropeJoint.distance = selectedLength;
                 ropeJoint.enabled = true;
                 lineRenderer.enabled = true;
                 return true;
@@ -192,6 +206,28 @@ namespace HimoHito
             lineRenderer.enabled = false;
             ropeResource.Refund(spentLength * releaseRefundRate);
             spentLength = 0f;
+        }
+
+        private void UpdateSelectedRopeLength()
+        {
+            if (IsAttached)
+            {
+                return;
+            }
+
+            if (Input.GetKeyDown(KeyCode.Alpha1)) selectedRopeLengthIndex = 0;
+            if (Input.GetKeyDown(KeyCode.Alpha2)) selectedRopeLengthIndex = 1;
+            if (Input.GetKeyDown(KeyCode.Alpha3)) selectedRopeLengthIndex = 2;
+        }
+
+        private float GetRopeLength(int index)
+        {
+            return index switch
+            {
+                0 => shortRopeLength,
+                2 => longRopeLength,
+                _ => mediumRopeLength
+            };
         }
 
         private void TryAttachTowardCursor()
