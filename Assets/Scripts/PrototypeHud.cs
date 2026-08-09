@@ -48,7 +48,7 @@ namespace HimoHito
             }
 
             string state = ropeController != null && ropeController.IsAttached
-                ? "ATTACHED — release E to recover rope"
+                ? $"ATTACHED — release E: {ropeController.ReleaseRefundRate:P0} returns"
                 : "READY — aim with arrow keys and hold E";
             GUILayout.Label(state, bodyStyle);
             if (playerBody != null)

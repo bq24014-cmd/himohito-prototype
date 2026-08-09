@@ -3,7 +3,7 @@ using UnityEngine;
 namespace HimoHito
 {
     /// <summary>
-    /// Arrow keys aim the rope. Holding E attaches it and releasing E refunds it.
+    /// Arrow keys aim the rope. Holding E attaches it and releasing E partially refunds it.
     /// Mouse input remains available as an optional alternative.
     /// </summary>
     [RequireComponent(typeof(Rigidbody2D), typeof(DistanceJoint2D), typeof(LineRenderer))]
@@ -16,6 +16,7 @@ namespace HimoHito
         [SerializeField, Min(0.5f)] private float aimGuideLength = 3f;
         [SerializeField, Min(10f)] private float aimRotationSpeed = 120f;
         [SerializeField] private Color aimGuideColor = new Color(0.55f, 0.65f, 0.8f, 0.55f);
+        [SerializeField, Range(0f, 1f)] private float releaseRefundRate = 0.7f;
 
         private Rigidbody2D body;
         private Collider2D bodyCollider;
@@ -31,6 +32,7 @@ namespace HimoHito
         public bool IsAttached => ropeJoint != null && ropeJoint.enabled;
         public Vector2 AnchorPoint => anchorPoint;
         public Vector2 KeyboardAimDirection => keyboardAimDirection;
+        public float ReleaseRefundRate => releaseRefundRate;
 
         private void Awake()
         {
@@ -123,6 +125,11 @@ namespace HimoHito
             }
         }
 
+        private void OnValidate()
+        {
+            releaseRefundRate = Mathf.Clamp01(releaseRefundRate);
+        }
+
         public bool TryAttach(Vector2 worldTarget)
         {
             if (IsAttached)
@@ -183,7 +190,7 @@ namespace HimoHito
             body.linearVelocity = preservedVelocity;
             body.angularVelocity = preservedAngularVelocity;
             lineRenderer.enabled = false;
-            ropeResource.Refund(spentLength);
+            ropeResource.Refund(spentLength * releaseRefundRate);
             spentLength = 0f;
         }
 
