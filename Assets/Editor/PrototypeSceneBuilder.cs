@@ -17,6 +17,7 @@ namespace HimoHitoEditor
         static PrototypeSceneBuilder()
         {
             EditorApplication.delayCall += BuildSceneOnFirstOpen;
+            EditorApplication.playModeStateChanged += HandlePlayModeStateChanged;
         }
 
         [MenuItem("HimoHito/Build Prototype Scene")]
@@ -28,13 +29,16 @@ namespace HimoHitoEditor
             CreatePlayer();
             CreatePlatform("Start Ground", new Vector2(-9f, -5.2f), new Vector2(5f, 0.7f));
 
-            // Three sections test different rope lengths: roughly 6, 4, then 8.
-            // The third landing is the goal, so none of the three decisions is optional.
+            // The lower route preserves the established three-section test.
+            // The planning branch spends more rope at Hook 2 to reach an upper landing,
+            // then offers a closer hook for the final approach.
             CreateHookPoint("Hook 1", new Vector2(-5f, -0.2f), new Vector2(1.6f, 0.45f));
             CreatePlatform("Landing 1", new Vector2(0f, -2.3f), new Vector2(4f, 0.7f));
             CreateHookPoint("Hook 2", new Vector2(5f, 1.5f), new Vector2(1.6f, 0.45f));
             CreatePlatform("Landing 2", new Vector2(8f, -2f), new Vector2(4f, 0.7f));
+            CreatePlatform("Planning Landing", new Vector2(9.5f, 0.8f), new Vector2(4f, 0.7f));
             CreateHookPoint("Hook 3", new Vector2(13.8f, 3.9f), new Vector2(1.6f, 0.45f));
+            CreateHookPoint("Planning Hook", new Vector2(14.8f, 3f), new Vector2(1.6f, 0.45f));
             CreateGoalPlatform("Goal / Landing 3", new Vector2(18.1f, -0.5f), new Vector2(4f, 0.8f));
 
             GameObject hud = new GameObject("Prototype HUD");
@@ -64,7 +68,75 @@ namespace HimoHitoEditor
             if (AssetDatabase.LoadAssetAtPath<SceneAsset>(ScenePath) == null)
             {
                 BuildPrototypeScene();
+                return;
             }
+
+            EnsurePlanningBranch();
+        }
+
+        private static void HandlePlayModeStateChanged(PlayModeStateChange state)
+        {
+            if (state == PlayModeStateChange.EnteredEditMode)
+            {
+                EditorApplication.delayCall += BuildSceneOnFirstOpen;
+            }
+        }
+
+        private static void EnsurePlanningBranch()
+        {
+            Scene previousActiveScene = SceneManager.GetActiveScene();
+            Scene prototypeScene = SceneManager.GetSceneByPath(ScenePath);
+            bool openedForUpdate = false;
+
+            if (!prototypeScene.IsValid() || !prototypeScene.isLoaded)
+            {
+                prototypeScene = EditorSceneManager.OpenScene(ScenePath, OpenSceneMode.Additive);
+                openedForUpdate = true;
+            }
+
+            SceneManager.SetActiveScene(prototypeScene);
+            bool changed = false;
+
+            if (!HasRootObject(prototypeScene, "Planning Landing"))
+            {
+                CreatePlatform("Planning Landing", new Vector2(9.5f, 0.8f), new Vector2(4f, 0.7f));
+                changed = true;
+            }
+
+            if (!HasRootObject(prototypeScene, "Planning Hook"))
+            {
+                CreateHookPoint("Planning Hook", new Vector2(14.8f, 3f), new Vector2(1.6f, 0.45f));
+                changed = true;
+            }
+
+            if (changed)
+            {
+                EditorSceneManager.SaveScene(prototypeScene);
+                Debug.Log("HimoHito planning branch added to the prototype scene.");
+            }
+
+            if (previousActiveScene.IsValid() && previousActiveScene.isLoaded)
+            {
+                SceneManager.SetActiveScene(previousActiveScene);
+            }
+
+            if (openedForUpdate)
+            {
+                EditorSceneManager.CloseScene(prototypeScene, true);
+            }
+        }
+
+        private static bool HasRootObject(Scene scene, string objectName)
+        {
+            foreach (GameObject rootObject in scene.GetRootGameObjects())
+            {
+                if (rootObject.name == objectName)
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
 
         private static void CreateCamera()
