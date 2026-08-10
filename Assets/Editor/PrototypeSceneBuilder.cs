@@ -28,15 +28,14 @@ namespace HimoHitoEditor
             CreatePlayer();
             CreatePlatform("Start Ground", new Vector2(-9f, -5.2f), new Vector2(5f, 0.7f));
 
-            // A narrow vertical slice: three readable rope-length decisions, generous
-            // landings, and one visible goal. The whole route fits inside one fixed camera.
-            CreateHookPoint("Hook 1", new Vector2(-5.5f, -0.2f), new Vector2(2.4f, 0.45f));
-            CreatePlatform("Landing 1", new Vector2(-1.5f, -2.5f), new Vector2(4f, 0.7f));
-            CreateHookPoint("Hook 2", new Vector2(4.5f, 2.5f), new Vector2(2.4f, 0.45f));
-            CreatePlatform("Landing 2", new Vector2(7.5f, -1.5f), new Vector2(4f, 0.7f));
-            CreateHookPoint("Hook 3", new Vector2(12.5f, 2.5f), new Vector2(2.4f, 0.45f));
-            CreatePlatform("Landing 3", new Vector2(15f, -1f), new Vector2(4f, 0.7f));
-            CreateGoalPlatform("Goal", new Vector2(18.2f, 0.2f), new Vector2(2.4f, 0.8f));
+            // Three sections test different rope lengths: roughly 6, 4, then 8.
+            // The third landing is the goal, so none of the three decisions is optional.
+            CreateHookPoint("Hook 1", new Vector2(-3.8f, 1.3f), new Vector2(1.6f, 0.45f));
+            CreatePlatform("Landing 1", new Vector2(0f, -2.3f), new Vector2(4f, 0.7f));
+            CreateHookPoint("Hook 2", new Vector2(5f, 1.5f), new Vector2(1.6f, 0.45f));
+            CreatePlatform("Landing 2", new Vector2(8f, -2f), new Vector2(4f, 0.7f));
+            CreateHookPoint("Hook 3", new Vector2(14.5f, 5.3f), new Vector2(1.6f, 0.45f));
+            CreateGoalPlatform("Goal / Landing 3", new Vector2(16f, -0.5f), new Vector2(4f, 0.8f));
 
             GameObject hud = new GameObject("Prototype HUD");
             hud.AddComponent<PrototypeHud>();
@@ -72,7 +71,7 @@ namespace HimoHitoEditor
         {
             GameObject cameraObject = new GameObject("Main Camera");
             cameraObject.tag = "MainCamera";
-            cameraObject.transform.position = new Vector3(4f, 0f, -10f);
+            cameraObject.transform.position = new Vector3(3.5f, 0f, -10f);
 
             Camera camera = cameraObject.AddComponent<Camera>();
             camera.orthographic = true;
