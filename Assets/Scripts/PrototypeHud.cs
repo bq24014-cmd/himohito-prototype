@@ -66,7 +66,9 @@ namespace HimoHito
             {
                 state = runController.Outcome == PrototypeRunController.RunOutcome.Clear
                     ? "CLEAR — press R to restart"
-                    : "FAILED — press R to restart";
+                    : runController.IsAutomaticRespawnPending
+                        ? "FAILED — respawning..."
+                        : "FAILED — press R to restart";
             }
             else
             {
