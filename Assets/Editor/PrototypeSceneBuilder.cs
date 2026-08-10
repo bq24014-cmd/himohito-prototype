@@ -35,7 +35,7 @@ namespace HimoHitoEditor
             CreateHookPoint("Hook 2", new Vector2(5f, 1.5f), new Vector2(1.6f, 0.45f));
             CreatePlatform("Landing 2", new Vector2(8f, -2f), new Vector2(4f, 0.7f));
             CreateHookPoint("Hook 3", new Vector2(13.8f, 3.9f), new Vector2(1.6f, 0.45f));
-            CreateGoalPlatform("Goal / Landing 3", new Vector2(17.6f, -0.5f), new Vector2(4f, 0.8f));
+            CreateGoalPlatform("Goal / Landing 3", new Vector2(18.1f, -0.5f), new Vector2(4f, 0.8f));
 
             GameObject hud = new GameObject("Prototype HUD");
             hud.AddComponent<PrototypeHud>();
