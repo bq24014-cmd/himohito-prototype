@@ -30,7 +30,7 @@ namespace HimoHitoEditor
 
             // Three sections test different rope lengths: roughly 6, 4, then 8.
             // The third landing is the goal, so none of the three decisions is optional.
-            CreateHookPoint("Hook 1", new Vector2(-3.8f, 1.3f), new Vector2(1.6f, 0.45f));
+            CreateHookPoint("Hook 1", new Vector2(-5f, -0.2f), new Vector2(1.6f, 0.45f));
             CreatePlatform("Landing 1", new Vector2(0f, -2.3f), new Vector2(4f, 0.7f));
             CreateHookPoint("Hook 2", new Vector2(5f, 1.5f), new Vector2(1.6f, 0.45f));
             CreatePlatform("Landing 2", new Vector2(8f, -2f), new Vector2(4f, 0.7f));
