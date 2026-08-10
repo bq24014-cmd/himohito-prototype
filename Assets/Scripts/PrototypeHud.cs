@@ -55,47 +55,50 @@ namespace HimoHito
                 return;
             }
 
-            GUILayout.BeginArea(new Rect(22f, 18f, 500f, 204f), GUI.skin.box);
-            GUILayout.Label("HIMOHITO / GRAYBOX PROTOTYPE", titleStyle);
+            GUILayout.BeginArea(new Rect(22f, 18f, 520f, 286f), GUI.skin.box);
+            GUILayout.Label("ヒモヒト / プロトタイプ", titleStyle);
 
             if (ropeResource != null)
             {
                 GUILayout.Label(
-                    $"ROPE  {ropeResource.CurrentLength:0.0} / {ropeResource.MaximumLength:0.0}",
+                    $"ヒモ残量  {ropeResource.CurrentLength:0.0} / {ropeResource.MaximumLength:0.0}",
                     lengthStyle);
             }
 
             if (ropeController != null)
             {
                 GUILayout.Label(
-                    $"LENGTH  {ropeController.SelectedRopeLength} / " +
-                    $"{ropeController.MaximumSelectableRopeLength}    W: +1 / S: -1",
+                    $"次に使う長さ  {ropeController.SelectedRopeLength} / " +
+                    $"{ropeController.MaximumSelectableRopeLength}",
                     bodyStyle);
+                GUILayout.Label("W：使う長さを1増やす", bodyStyle);
+                GUILayout.Label("S：使う長さを1減らす", bodyStyle);
             }
 
             string state;
             if (runController != null && runController.Outcome != PrototypeRunController.RunOutcome.Playing)
             {
                 state = runController.Outcome == PrototypeRunController.RunOutcome.Clear
-                    ? "CLEAR — press R to restart"
+                    ? "クリア — Rで再挑戦"
                     : runController.IsAutomaticRespawnPending
-                        ? "FAILED — respawning..."
-                        : "FAILED — press R to restart";
+                        ? "失敗 — 自動で戻ります..."
+                        : "失敗 — Rで再挑戦";
             }
             else
             {
                 state = ropeController != null && ropeController.IsAttached
-                    ? $"ATTACHED {ropeController.ActiveRopeLength:0.0} — release E: {ropeController.ReleaseRefundRate:P0} returns"
-                    : "READY — aim with arrow keys and hold E";
+                    ? $"ヒモ接続中 {ropeController.ActiveRopeLength:0.0} — Eを離すと{ropeController.ReleaseRefundRate:P0}戻る"
+                    : "準備完了 — 矢印キーで狙い、Eを長押し";
             }
             GUILayout.Label(state, bodyStyle);
             if (playerBody != null)
             {
-                GUILayout.Label($"SPEED  {playerBody.linearVelocity.magnitude:0.0}", bodyStyle);
+                GUILayout.Label($"速度  {playerBody.linearVelocity.magnitude:0.0}", bodyStyle);
             }
-            GUILayout.Label("Move: A / D    Jump: Space    Aim: Left / Right arrows", bodyStyle);
-            GUILayout.Label("Snap aim: Up / Down arrows    Rope: Hold E", bodyStyle);
-            GUILayout.Label("Restart: R    Mouse aiming is optional", bodyStyle);
+            GUILayout.Label("移動：A / D    ジャンプ：Space", bodyStyle);
+            GUILayout.Label("照準：← / →    真上・真下：↑ / ↓", bodyStyle);
+            GUILayout.Label("ヒモ：E長押し    再挑戦：R", bodyStyle);
+            GUILayout.Label("マウス照準も使用可能", bodyStyle);
             GUILayout.EndArea();
         }
 
@@ -120,7 +123,8 @@ namespace HimoHito
             GUILayout.Label("緑色のゴールを目指す", startObjectiveStyle);
             GUILayout.Space(22f);
             GUILayout.Label("重要", startImportantStyle);
-            GUILayout.Label("W / S  次に使うヒモの長さを選ぶ", startImportantStyle);
+            GUILayout.Label("W：次に使うヒモの長さを1増やす", startImportantStyle);
+            GUILayout.Label("S：次に使うヒモの長さを1減らす", startImportantStyle);
             GUILayout.Space(20f);
             GUILayout.Label("A / D  左右移動     Space  ジャンプ", startControlStyle);
             GUILayout.Label("← / →  照準を動かす     ↑ / ↓  真上・真下へ合わせる", startControlStyle);
