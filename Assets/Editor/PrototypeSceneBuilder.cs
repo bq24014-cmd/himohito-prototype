@@ -118,6 +118,7 @@ namespace HimoHitoEditor
             }
 
             changed |= EnsureExperimentalRopeLength(prototypeScene);
+            changed |= EnsureHorizontalCameraFollow(prototypeScene);
 
             if (changed)
             {
@@ -183,6 +184,18 @@ namespace HimoHitoEditor
             return true;
         }
 
+        private static bool EnsureHorizontalCameraFollow(Scene scene)
+        {
+            GameObject cameraObject = FindRootObject(scene, "Main Camera");
+            if (cameraObject == null || cameraObject.TryGetComponent<HorizontalCameraFollow>(out _))
+            {
+                return false;
+            }
+
+            cameraObject.AddComponent<HorizontalCameraFollow>();
+            return true;
+        }
+
         private static void CreateCamera()
         {
             GameObject cameraObject = new GameObject("Main Camera");
@@ -194,6 +207,7 @@ namespace HimoHitoEditor
             camera.orthographicSize = 8.7f;
             camera.clearFlags = CameraClearFlags.SolidColor;
             camera.backgroundColor = new Color(0.045f, 0.052f, 0.11f);
+            cameraObject.AddComponent<HorizontalCameraFollow>();
         }
 
         private static void CreatePlayer()
