@@ -8,8 +8,8 @@ namespace HimoHito
     /// </summary>
     public sealed class RopeResource : MonoBehaviour
     {
-        [SerializeField, Min(1f)] private float maximumLength = 9f;
-        [SerializeField, Min(0f)] private float currentLength = 9f;
+        [SerializeField, Min(1f)] private float maximumLength = 12f;
+        [SerializeField, Min(0f)] private float currentLength = 12f;
 
         public float MaximumLength => maximumLength;
         public float CurrentLength => currentLength;

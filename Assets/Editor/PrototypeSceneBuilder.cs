@@ -13,7 +13,7 @@ namespace HimoHitoEditor
     public static class PrototypeSceneBuilder
     {
         private const string ScenePath = "Assets/Scenes/Prototype.unity";
-        private const float ExperimentalRopeLength = 9f;
+        private const float ExperimentalRopeLength = 12f;
 
         static PrototypeSceneBuilder()
         {
