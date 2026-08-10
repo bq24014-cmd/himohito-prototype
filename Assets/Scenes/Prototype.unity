@@ -845,7 +845,7 @@ MonoBehaviour:
   airLinearDamping: 0.05
   swingPumpForce: 18
   maximumSwingSpeed: 15
-  maximumPumpedSwingAngle: 80
+  maximumPumpedSwingAngle: 85
   swingLinearDamping: 0.12
   jumpImpulse: 10
   jumpHorizontalSpeedRetention: 0.6923077

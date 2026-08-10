@@ -22,7 +22,7 @@ namespace HimoHito
         [Header("Pendulum control")]
         [SerializeField] private float swingPumpForce = 18f;
         [SerializeField] private float maximumSwingSpeed = 15f;
-        [SerializeField, Range(30f, 89f)] private float maximumPumpedSwingAngle = 80f;
+        [SerializeField, Range(30f, 89f)] private float maximumPumpedSwingAngle = 85f;
         [SerializeField, Range(0f, 1f)] private float swingLinearDamping = 0.12f;
 
         [Header("Jump")]
