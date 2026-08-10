@@ -13,6 +13,7 @@ namespace HimoHitoEditor
     public static class PrototypeSceneBuilder
     {
         private const string ScenePath = "Assets/Scenes/Prototype.unity";
+        private const float ExperimentalRopeLength = 9f;
 
         static PrototypeSceneBuilder()
         {
@@ -116,6 +117,8 @@ namespace HimoHitoEditor
                 changed = true;
             }
 
+            changed |= EnsureExperimentalRopeLength(prototypeScene);
+
             if (changed)
             {
                 EditorSceneManager.SaveScene(prototypeScene);
@@ -149,6 +152,35 @@ namespace HimoHitoEditor
             }
 
             return null;
+        }
+
+        private static bool EnsureExperimentalRopeLength(Scene scene)
+        {
+            GameObject player = FindRootObject(scene, "Player");
+            if (player == null || !player.TryGetComponent(out RopeResource ropeResource))
+            {
+                return false;
+            }
+
+            SerializedObject serializedResource = new SerializedObject(ropeResource);
+            SerializedProperty maximumLength = serializedResource.FindProperty("maximumLength");
+            SerializedProperty currentLength = serializedResource.FindProperty("currentLength");
+            if (maximumLength == null || currentLength == null)
+            {
+                return false;
+            }
+
+            bool changed = !Mathf.Approximately(maximumLength.floatValue, ExperimentalRopeLength) ||
+                           !Mathf.Approximately(currentLength.floatValue, ExperimentalRopeLength);
+            if (!changed)
+            {
+                return false;
+            }
+
+            maximumLength.floatValue = ExperimentalRopeLength;
+            currentLength.floatValue = ExperimentalRopeLength;
+            serializedResource.ApplyModifiedPropertiesWithoutUndo();
+            return true;
         }
 
         private static void CreateCamera()
