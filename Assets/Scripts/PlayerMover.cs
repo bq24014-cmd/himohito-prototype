@@ -22,6 +22,7 @@ namespace HimoHito
         [Header("Pendulum control")]
         [SerializeField] private float swingPumpForce = 18f;
         [SerializeField] private float maximumSwingSpeed = 15f;
+        [SerializeField, Range(30f, 89f)] private float maximumPumpedSwingAngle = 80f;
         [SerializeField, Range(0f, 1f)] private float swingLinearDamping = 0.12f;
 
         [Header("Jump")]
@@ -141,7 +142,7 @@ namespace HimoHito
 
         private void ApplySwingControl()
         {
-            // Very small damping represents air resistance without cancelling momentum.
+            // Small damping represents air resistance without cancelling momentum.
             body.linearDamping = swingLinearDamping;
             if (Mathf.Approximately(moveInput, 0f))
             {
@@ -156,10 +157,37 @@ namespace HimoHito
 
             float tangentialSpeed = Vector2.Dot(body.linearVelocity, tangent);
             float speedInRequestedDirection = tangentialSpeed * moveInput;
-            if (speedInRequestedDirection < maximumSwingSpeed)
+            float pumpScale = speedInRequestedDirection >= 0f
+                ? CalculateSwingEnergyScale(radiusDirection, tangentialSpeed)
+                : 1f;
+            if (speedInRequestedDirection < maximumSwingSpeed && pumpScale > 0f)
             {
-                body.AddForce(tangent * moveInput * swingPumpForce, ForceMode2D.Force);
+                body.AddForce(
+                    tangent * moveInput * swingPumpForce * pumpScale,
+                    ForceMode2D.Force);
             }
+        }
+
+        private float CalculateSwingEnergyScale(
+            Vector2 radiusDirection,
+            float tangentialSpeed)
+        {
+            float ropeLength = Mathf.Max(ropeController.ActiveRopeLength, 0.01f);
+            float gravityAcceleration = Mathf.Abs(Physics2D.gravity.y * body.gravityScale);
+            float heightAboveBottom = Mathf.Clamp(
+                radiusDirection.y * ropeLength + ropeLength,
+                0f,
+                ropeLength * 2f);
+            float currentEnergy =
+                0.5f * tangentialSpeed * tangentialSpeed +
+                gravityAcceleration * heightAboveBottom;
+
+            float angleRadians = maximumPumpedSwingAngle * Mathf.Deg2Rad;
+            float maximumHeight = ropeLength * (1f - Mathf.Cos(angleRadians));
+            float energyLimit = gravityAcceleration * maximumHeight;
+            float fadeStart = energyLimit * 0.75f;
+
+            return 1f - Mathf.InverseLerp(fadeStart, energyLimit, currentEnergy);
         }
 
         private bool CheckGrounded()
