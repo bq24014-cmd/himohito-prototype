@@ -10,6 +10,7 @@ namespace HimoHito
     {
         public enum RunOutcome
         {
+            WaitingToStart,
             Playing,
             Clear,
             Failed
@@ -22,10 +23,12 @@ namespace HimoHito
         private Rigidbody2D body;
         private RopeResource ropeResource;
         private RopeController ropeController;
+        private PlayerMover playerMover;
         private Vector2 startPosition;
         private float automaticRespawnTimer;
+        private bool startRequested;
 
-        public RunOutcome Outcome { get; private set; } = RunOutcome.Playing;
+        public RunOutcome Outcome { get; private set; } = RunOutcome.WaitingToStart;
         public bool IsAutomaticRespawnPending { get; private set; }
 
         private void Awake()
@@ -33,11 +36,23 @@ namespace HimoHito
             body = GetComponent<Rigidbody2D>();
             ropeResource = GetComponent<RopeResource>();
             ropeController = GetComponent<RopeController>();
+            playerMover = GetComponent<PlayerMover>();
             startPosition = body.position;
+        }
+
+        private void Start()
+        {
+            EnterStartScreen();
         }
 
         private void Update()
         {
+            if (Outcome == RunOutcome.WaitingToStart)
+            {
+                UpdateStartScreen();
+                return;
+            }
+
             if (Input.GetKeyDown(KeyCode.R))
             {
                 Restart();
@@ -74,6 +89,52 @@ namespace HimoHito
             {
                 Finish(RunOutcome.Failed);
             }
+        }
+
+        private void EnterStartScreen()
+        {
+            ropeController.DetachAndRefund();
+            body.linearVelocity = Vector2.zero;
+            body.angularVelocity = 0f;
+            body.simulated = false;
+            playerMover.enabled = false;
+            ropeController.enabled = false;
+            startRequested = false;
+            Outcome = RunOutcome.WaitingToStart;
+        }
+
+        private void UpdateStartScreen()
+        {
+            if (!startRequested && WasKeyboardKeyPressed())
+            {
+                startRequested = true;
+            }
+
+            if (startRequested && !Input.anyKey)
+            {
+                body.simulated = true;
+                playerMover.enabled = true;
+                ropeController.enabled = true;
+                Outcome = RunOutcome.Playing;
+            }
+        }
+
+        private static bool WasKeyboardKeyPressed()
+        {
+            if (!Input.anyKeyDown)
+            {
+                return false;
+            }
+
+            for (int button = 0; button <= 6; button++)
+            {
+                if (Input.GetMouseButtonDown(button))
+                {
+                    return false;
+                }
+            }
+
+            return true;
         }
 
         public void MarkClear()
