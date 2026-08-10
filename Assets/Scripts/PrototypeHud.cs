@@ -55,7 +55,7 @@ namespace HimoHito
                 return;
             }
 
-            GUILayout.BeginArea(new Rect(22f, 18f, 520f, 286f), GUI.skin.box);
+            GUILayout.BeginArea(new Rect(22f, 18f, 520f, 340f), GUI.skin.box);
             GUILayout.Label("ヒモヒト / プロトタイプ", titleStyle);
 
             if (ropeResource != null)
