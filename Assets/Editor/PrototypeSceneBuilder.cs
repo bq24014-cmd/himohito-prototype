@@ -29,6 +29,7 @@ namespace HimoHitoEditor
             CreateCamera();
             CreatePlayer();
             CreatePlatform("Start Ground", new Vector2(-9f, -5.2f), new Vector2(5f, 0.7f));
+            CreatePlatform("Practice Safety Floor", new Vector2(-4.5f, -7.75f), new Vector2(4f, 0.7f));
 
             // The lower route preserves the established three-section test.
             // The planning branch spends more rope at Hook 2 to reach an upper landing,
@@ -119,11 +120,12 @@ namespace HimoHitoEditor
 
             changed |= EnsureExperimentalRopeLength(prototypeScene);
             changed |= EnsureHorizontalCameraFollow(prototypeScene);
+            changed |= EnsurePracticeSection(prototypeScene);
 
             if (changed)
             {
                 EditorSceneManager.SaveScene(prototypeScene);
-                Debug.Log("HimoHito planning branch added to the prototype scene.");
+                Debug.Log("HimoHito prototype scene updates applied.");
             }
 
             if (previousActiveScene.IsValid() && previousActiveScene.isLoaded)
@@ -194,6 +196,34 @@ namespace HimoHitoEditor
 
             cameraObject.AddComponent<HorizontalCameraFollow>();
             return true;
+        }
+
+        private static bool EnsurePracticeSection(Scene scene)
+        {
+            Vector2 position = new Vector2(-4.5f, -7.75f);
+            Vector2 size = new Vector2(4f, 0.7f);
+            GameObject safetyFloor = FindRootObject(scene, "Practice Safety Floor");
+            if (safetyFloor == null)
+            {
+                CreatePlatform("Practice Safety Floor", position, size);
+                return true;
+            }
+
+            bool changed = false;
+            if ((Vector2)safetyFloor.transform.position != position)
+            {
+                safetyFloor.transform.position = position;
+                changed = true;
+            }
+
+            Vector3 targetScale = new Vector3(size.x, size.y, 1f);
+            if (safetyFloor.transform.localScale != targetScale)
+            {
+                safetyFloor.transform.localScale = targetScale;
+                changed = true;
+            }
+
+            return changed;
         }
 
         private static void CreateCamera()
