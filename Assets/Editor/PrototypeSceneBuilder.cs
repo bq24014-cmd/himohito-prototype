@@ -14,6 +14,7 @@ namespace HimoHitoEditor
     {
         private const string ScenePath = "Assets/Scenes/Prototype.unity";
         private const float ExperimentalRopeLength = 12f;
+        private static readonly Color RopeReleaseHazardColor = new Color(0.95f, 0.28f, 0.35f);
 
         static PrototypeSceneBuilder()
         {
@@ -30,7 +31,10 @@ namespace HimoHitoEditor
             CreatePlayer();
             CreatePlatform("Start Ground", new Vector2(-9f, -5.2f), new Vector2(5f, 0.7f));
             CreatePlatform("Practice Safety Floor", new Vector2(-4.5f, -7.25f), new Vector2(4f, 0.7f));
-            CreatePlatform("Practice Long Rope Obstacle", new Vector2(1.5f, -4.5f), new Vector2(0.6f, 2f));
+            CreateRopeReleaseHazard(
+                "Practice Long Rope Obstacle",
+                new Vector2(1.5f, -4.5f),
+                new Vector2(0.6f, 2f));
 
             // The lower route preserves the established three-section test.
             // The planning branch spends more rope at Hook 2 to reach an upper landing,
@@ -207,11 +211,58 @@ namespace HimoHitoEditor
                 "Practice Safety Floor",
                 new Vector2(-4.5f, -7.25f),
                 new Vector2(4f, 0.7f));
-            changed |= EnsurePlatform(
+            changed |= EnsureRopeReleaseHazard(
                 scene,
                 "Practice Long Rope Obstacle",
                 new Vector2(1.5f, -4.5f),
                 new Vector2(0.6f, 2f));
+            return changed;
+        }
+
+        private static bool EnsureRopeReleaseHazard(
+            Scene scene,
+            string objectName,
+            Vector2 position,
+            Vector2 size)
+        {
+            bool changed = EnsurePlatform(scene, objectName, position, size);
+            GameObject hazard = FindRootObject(scene, objectName);
+            if (hazard == null)
+            {
+                return changed;
+            }
+
+            if (hazard.TryGetComponent(out SolidSprite visual) &&
+                visual.Color != RopeReleaseHazardColor)
+            {
+                visual.Color = RopeReleaseHazardColor;
+                changed = true;
+            }
+
+            if (!hazard.TryGetComponent(out RopeReleaseHazard _))
+            {
+                hazard.AddComponent<RopeReleaseHazard>();
+                changed = true;
+            }
+
+            bool hasTrigger = false;
+            foreach (BoxCollider2D collider in hazard.GetComponents<BoxCollider2D>())
+            {
+                if (collider.isTrigger)
+                {
+                    hasTrigger = true;
+                    break;
+                }
+            }
+
+            if (!hasTrigger)
+            {
+                BoxCollider2D trigger = hazard.AddComponent<BoxCollider2D>();
+                trigger.isTrigger = true;
+                trigger.size = Vector2.one;
+                changed = true;
+            }
+
             return changed;
         }
 
@@ -295,6 +346,15 @@ namespace HimoHitoEditor
         private static void CreatePlatform(string name, Vector2 position, Vector2 size)
         {
             CreatePlatformVisual(name, position, size, new Color(0.38f, 0.41f, 0.52f));
+        }
+
+        private static void CreateRopeReleaseHazard(string name, Vector2 position, Vector2 size)
+        {
+            GameObject hazard = CreatePlatformVisual(name, position, size, RopeReleaseHazardColor);
+            BoxCollider2D trigger = hazard.AddComponent<BoxCollider2D>();
+            trigger.isTrigger = true;
+            trigger.size = Vector2.one;
+            hazard.AddComponent<RopeReleaseHazard>();
         }
 
         private static void CreateHookPoint(string name, Vector2 position, Vector2 size)
