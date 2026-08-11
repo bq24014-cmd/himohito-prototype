@@ -29,7 +29,7 @@ namespace HimoHitoEditor
             CreateCamera();
             CreatePlayer();
             CreatePlatform("Start Ground", new Vector2(-9f, -5.2f), new Vector2(5f, 0.7f));
-            CreatePlatform("Practice Safety Floor", new Vector2(-4.5f, -7.75f), new Vector2(4f, 0.7f));
+            CreatePlatform("Practice Safety Floor", new Vector2(-4.5f, -7.25f), new Vector2(4f, 0.7f));
 
             // The lower route preserves the established three-section test.
             // The planning branch spends more rope at Hook 2 to reach an upper landing,
@@ -200,7 +200,7 @@ namespace HimoHitoEditor
 
         private static bool EnsurePracticeSection(Scene scene)
         {
-            Vector2 position = new Vector2(-4.5f, -7.75f);
+            Vector2 position = new Vector2(-4.5f, -7.25f);
             Vector2 size = new Vector2(4f, 0.7f);
             GameObject safetyFloor = FindRootObject(scene, "Practice Safety Floor");
             if (safetyFloor == null)
