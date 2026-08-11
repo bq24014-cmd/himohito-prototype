@@ -8,15 +8,78 @@ namespace HimoHito
     /// </summary>
     public sealed class RopeReleaseHazard : MonoBehaviour
     {
-        private void OnTriggerEnter2D(Collider2D other)
+        private BoxCollider2D detectionArea;
+        private RopeController ropeController;
+        private Collider2D playerCollider;
+
+        private void Awake()
         {
-            RopeController ropeController = other.GetComponentInParent<RopeController>();
-            if (ropeController == null || !ropeController.IsAttached)
+            CacheReferences();
+        }
+
+        private void FixedUpdate()
+        {
+            CacheReferences();
+            if (detectionArea == null ||
+                playerCollider == null ||
+                ropeController == null ||
+                !ropeController.IsAttached)
             {
                 return;
             }
 
-            ropeController.DetachAndRefund();
+            // Attached motion can miss a one-frame trigger notification.
+            // Checking the actual collider overlap keeps the hazard reliable.
+            if (detectionArea.bounds.Intersects(playerCollider.bounds))
+            {
+                ropeController.DetachAndRefund();
+            }
+        }
+
+        private void OnTriggerEnter2D(Collider2D other)
+        {
+            TryDetach(other);
+        }
+
+        private void OnTriggerStay2D(Collider2D other)
+        {
+            TryDetach(other);
+        }
+
+        private void TryDetach(Collider2D other)
+        {
+            RopeController contactedRope = other.GetComponentInParent<RopeController>();
+            if (contactedRope == null || !contactedRope.IsAttached)
+            {
+                return;
+            }
+
+            contactedRope.DetachAndRefund();
+        }
+
+        private void CacheReferences()
+        {
+            if (detectionArea == null)
+            {
+                foreach (BoxCollider2D collider in GetComponents<BoxCollider2D>())
+                {
+                    if (collider.isTrigger)
+                    {
+                        detectionArea = collider;
+                        break;
+                    }
+                }
+            }
+
+            if (ropeController == null)
+            {
+                ropeController = FindFirstObjectByType<RopeController>();
+            }
+
+            if (ropeController != null && playerCollider == null)
+            {
+                playerCollider = ropeController.GetComponent<Collider2D>();
+            }
         }
     }
 }
