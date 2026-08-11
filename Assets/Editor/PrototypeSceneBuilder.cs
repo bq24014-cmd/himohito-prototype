@@ -30,6 +30,7 @@ namespace HimoHitoEditor
             CreatePlayer();
             CreatePlatform("Start Ground", new Vector2(-9f, -5.2f), new Vector2(5f, 0.7f));
             CreatePlatform("Practice Safety Floor", new Vector2(-4.5f, -7.25f), new Vector2(4f, 0.7f));
+            CreatePlatform("Practice Long Rope Obstacle", new Vector2(1.5f, -4.5f), new Vector2(0.6f, 2f));
 
             // The lower route preserves the established three-section test.
             // The planning branch spends more rope at Hook 2 to reach an upper landing,
@@ -200,26 +201,44 @@ namespace HimoHitoEditor
 
         private static bool EnsurePracticeSection(Scene scene)
         {
-            Vector2 position = new Vector2(-4.5f, -7.25f);
-            Vector2 size = new Vector2(4f, 0.7f);
-            GameObject safetyFloor = FindRootObject(scene, "Practice Safety Floor");
-            if (safetyFloor == null)
+            bool changed = false;
+            changed |= EnsurePlatform(
+                scene,
+                "Practice Safety Floor",
+                new Vector2(-4.5f, -7.25f),
+                new Vector2(4f, 0.7f));
+            changed |= EnsurePlatform(
+                scene,
+                "Practice Long Rope Obstacle",
+                new Vector2(1.5f, -4.5f),
+                new Vector2(0.6f, 2f));
+            return changed;
+        }
+
+        private static bool EnsurePlatform(
+            Scene scene,
+            string objectName,
+            Vector2 position,
+            Vector2 size)
+        {
+            GameObject platform = FindRootObject(scene, objectName);
+            if (platform == null)
             {
-                CreatePlatform("Practice Safety Floor", position, size);
+                CreatePlatform(objectName, position, size);
                 return true;
             }
 
             bool changed = false;
-            if ((Vector2)safetyFloor.transform.position != position)
+            if ((Vector2)platform.transform.position != position)
             {
-                safetyFloor.transform.position = position;
+                platform.transform.position = position;
                 changed = true;
             }
 
             Vector3 targetScale = new Vector3(size.x, size.y, 1f);
-            if (safetyFloor.transform.localScale != targetScale)
+            if (platform.transform.localScale != targetScale)
             {
-                safetyFloor.transform.localScale = targetScale;
+                platform.transform.localScale = targetScale;
                 changed = true;
             }
 
