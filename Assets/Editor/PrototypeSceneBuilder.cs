@@ -52,14 +52,14 @@ namespace HimoHitoEditor
             CreateHookPoint("Planning Hook", new Vector2(14.8f, 3f), new Vector2(1.6f, 0.45f));
             GameObject wovenPlatform = CreateWovenPlatform(
                 "Tutorial Woven Platform",
-                new Vector2(19.1f, -0.5f),
+                new Vector2(21.1f, -0.5f),
                 new Vector2(4f, 0.8f));
             CreateWeaveFrame(
                 "Tutorial Weave Frame",
                 new Vector2(8f, -0.7f),
                 new Vector2(4f, 3f),
                 wovenPlatform);
-            CreateGoalPlatform("Goal / Landing 3", new Vector2(24.15f, -0.5f), new Vector2(4f, 0.8f));
+            CreateGoalPlatform("Goal / Landing 3", new Vector2(26.15f, -0.5f), new Vector2(4f, 0.8f));
 
             GameObject hud = new GameObject("Prototype HUD");
             hud.AddComponent<PrototypeHud>();
@@ -228,7 +228,7 @@ namespace HimoHitoEditor
             }
 
             const string platformName = "Tutorial Woven Platform";
-            Vector2 platformPosition = new Vector2(19.1f, -0.5f);
+            Vector2 platformPosition = new Vector2(21.1f, -0.5f);
             Vector2 platformSize = new Vector2(4f, 0.8f);
             GameObject wovenPlatform = FindRootObject(scene, platformName);
             if (wovenPlatform == null)
@@ -283,7 +283,7 @@ namespace HimoHitoEditor
             GameObject goal = FindRootObject(scene, "Goal / Landing 3");
             if (goal != null)
             {
-                changed |= ApplyTransform(goal, new Vector2(24.15f, -0.5f), new Vector2(4f, 0.8f));
+                changed |= ApplyTransform(goal, new Vector2(26.15f, -0.5f), new Vector2(4f, 0.8f));
             }
 
             if (wovenPlatform.activeSelf)
