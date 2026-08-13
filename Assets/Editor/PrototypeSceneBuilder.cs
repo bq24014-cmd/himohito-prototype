@@ -46,7 +46,16 @@ namespace HimoHitoEditor
             CreatePlatform("Planning Landing", new Vector2(9.5f, -0.4f), new Vector2(4f, 0.7f));
             CreateHookPoint("Hook 3", new Vector2(13.8f, 3.9f), new Vector2(1.6f, 0.45f));
             CreateHookPoint("Planning Hook", new Vector2(14.8f, 3f), new Vector2(1.6f, 0.45f));
-            CreateGoalPlatform("Goal / Landing 3", new Vector2(18.1f, -0.5f), new Vector2(4f, 0.8f));
+            GameObject wovenPlatform = CreateWovenPlatform(
+                "Tutorial Woven Platform",
+                new Vector2(18.1f, -0.5f),
+                new Vector2(4f, 0.8f));
+            CreateWeaveFrame(
+                "Tutorial Weave Frame",
+                new Vector2(8f, -0.7f),
+                new Vector2(4f, 3f),
+                wovenPlatform);
+            CreateGoalPlatform("Goal / Landing 3", new Vector2(23f, -0.5f), new Vector2(4f, 0.8f));
 
             GameObject hud = new GameObject("Prototype HUD");
             hud.AddComponent<PrototypeHud>();
@@ -126,6 +135,7 @@ namespace HimoHitoEditor
             changed |= EnsureExperimentalRopeLength(prototypeScene);
             changed |= EnsureHorizontalCameraFollow(prototypeScene);
             changed |= EnsurePracticeSection(prototypeScene);
+            changed |= EnsureWeaveExperiment(prototypeScene);
 
             if (changed)
             {
@@ -201,6 +211,84 @@ namespace HimoHitoEditor
 
             cameraObject.AddComponent<HorizontalCameraFollow>();
             return true;
+        }
+
+        private static bool EnsureWeaveExperiment(Scene scene)
+        {
+            bool changed = false;
+            GameObject player = FindRootObject(scene, "Player");
+            if (player != null && !player.TryGetComponent(out WeaveResource _))
+            {
+                player.AddComponent<WeaveResource>();
+                changed = true;
+            }
+
+            const string platformName = "Tutorial Woven Platform";
+            Vector2 platformPosition = new Vector2(18.1f, -0.5f);
+            Vector2 platformSize = new Vector2(4f, 0.8f);
+            GameObject wovenPlatform = FindRootObject(scene, platformName);
+            if (wovenPlatform == null)
+            {
+                wovenPlatform = CreateWovenPlatform(platformName, platformPosition, platformSize);
+                changed = true;
+            }
+            else
+            {
+                changed |= ApplyTransform(wovenPlatform, platformPosition, platformSize);
+            }
+
+            const string frameName = "Tutorial Weave Frame";
+            Vector2 framePosition = new Vector2(8f, -0.7f);
+            Vector2 frameSize = new Vector2(4f, 3f);
+            GameObject frameObject = FindRootObject(scene, frameName);
+            if (frameObject == null)
+            {
+                CreateWeaveFrame(frameName, framePosition, frameSize, wovenPlatform);
+                changed = true;
+            }
+            else
+            {
+                changed |= ApplyTransform(frameObject, framePosition, frameSize);
+                WeaveFrame frame = frameObject.GetComponent<WeaveFrame>();
+                if (frame == null)
+                {
+                    frame = frameObject.AddComponent<WeaveFrame>();
+                    changed = true;
+                }
+
+                SerializedObject serializedFrame = new SerializedObject(frame);
+                SerializedProperty platformProperty = serializedFrame.FindProperty("wovenPlatform");
+                SerializedProperty costProperty = serializedFrame.FindProperty("requiredThreads");
+                if (platformProperty.objectReferenceValue != wovenPlatform || costProperty.intValue != 2)
+                {
+                    platformProperty.objectReferenceValue = wovenPlatform;
+                    costProperty.intValue = 2;
+                    serializedFrame.ApplyModifiedPropertiesWithoutUndo();
+                    changed = true;
+                }
+
+                if (!frameObject.TryGetComponent(out BoxCollider2D frameTrigger))
+                {
+                    frameTrigger = frameObject.AddComponent<BoxCollider2D>();
+                    frameTrigger.isTrigger = true;
+                    frameTrigger.size = Vector2.one;
+                    changed = true;
+                }
+            }
+
+            GameObject goal = FindRootObject(scene, "Goal / Landing 3");
+            if (goal != null)
+            {
+                changed |= ApplyTransform(goal, new Vector2(23f, -0.5f), new Vector2(4f, 0.8f));
+            }
+
+            if (wovenPlatform.activeSelf)
+            {
+                wovenPlatform.SetActive(false);
+                changed = true;
+            }
+
+            return changed;
         }
 
         private static bool EnsurePracticeSection(Scene scene)
@@ -279,17 +367,22 @@ namespace HimoHitoEditor
                 return true;
             }
 
+            return ApplyTransform(platform, position, size);
+        }
+
+        private static bool ApplyTransform(GameObject gameObject, Vector2 position, Vector2 size)
+        {
             bool changed = false;
-            if ((Vector2)platform.transform.position != position)
+            if ((Vector2)gameObject.transform.position != position)
             {
-                platform.transform.position = position;
+                gameObject.transform.position = position;
                 changed = true;
             }
 
             Vector3 targetScale = new Vector3(size.x, size.y, 1f);
-            if (platform.transform.localScale != targetScale)
+            if (gameObject.transform.localScale != targetScale)
             {
-                platform.transform.localScale = targetScale;
+                gameObject.transform.localScale = targetScale;
                 changed = true;
             }
 
@@ -338,6 +431,7 @@ namespace HimoHitoEditor
             ropeLine.sortingOrder = 5;
 
             player.AddComponent<RopeResource>();
+            player.AddComponent<WeaveResource>();
             player.AddComponent<PlayerMover>();
             player.AddComponent<RopeController>();
             player.AddComponent<PrototypeRunController>();
@@ -375,6 +469,43 @@ namespace HimoHitoEditor
                 size,
                 new Color(0.28f, 0.9f, 0.58f));
             goal.AddComponent<GoalZone>();
+        }
+
+        private static GameObject CreateWovenPlatform(string name, Vector2 position, Vector2 size)
+        {
+            GameObject platform = CreatePlatformVisual(
+                name,
+                position,
+                size,
+                new Color(0.72f, 0.42f, 1f));
+            platform.SetActive(false);
+            return platform;
+        }
+
+        private static void CreateWeaveFrame(
+            string name,
+            Vector2 position,
+            Vector2 size,
+            GameObject wovenPlatform)
+        {
+            GameObject frameObject = new GameObject(name);
+            frameObject.transform.position = position;
+            frameObject.transform.localScale = new Vector3(size.x, size.y, 1f);
+
+            BoxCollider2D trigger = frameObject.AddComponent<BoxCollider2D>();
+            trigger.isTrigger = true;
+            trigger.size = Vector2.one;
+
+            WeaveFrame frame = frameObject.AddComponent<WeaveFrame>();
+            frame.Configure(wovenPlatform, 2);
+
+            GameObject marker = CreatePlatformVisual(
+                "Weave Frame Marker",
+                position + new Vector2(1.7f, 0.1f),
+                new Vector2(0.25f, 1.6f),
+                new Color(0.72f, 0.42f, 1f));
+            marker.GetComponent<BoxCollider2D>().enabled = false;
+            marker.transform.SetParent(frameObject.transform, true);
         }
 
         private static GameObject CreatePlatformVisual(

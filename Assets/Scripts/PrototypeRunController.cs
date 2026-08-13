@@ -6,6 +6,7 @@ namespace HimoHito
     /// Connects the graybox into one complete run: play, clear or fail, then restart.
     /// </summary>
     [RequireComponent(typeof(Rigidbody2D), typeof(RopeResource), typeof(RopeController))]
+    [RequireComponent(typeof(WeaveResource))]
     public sealed class PrototypeRunController : MonoBehaviour
     {
         public enum RunOutcome
@@ -23,6 +24,7 @@ namespace HimoHito
         private Rigidbody2D body;
         private RopeResource ropeResource;
         private RopeController ropeController;
+        private WeaveResource weaveResource;
         private PlayerMover playerMover;
         private Vector2 startPosition;
         private float automaticRespawnTimer;
@@ -36,6 +38,7 @@ namespace HimoHito
             body = GetComponent<Rigidbody2D>();
             ropeResource = GetComponent<RopeResource>();
             ropeController = GetComponent<RopeController>();
+            weaveResource = GetComponent<WeaveResource>();
             playerMover = GetComponent<PlayerMover>();
             startPosition = body.position;
         }
@@ -159,6 +162,11 @@ namespace HimoHito
             body.simulated = true;
             ropeController.DetachAndRefund();
             ropeResource.ResetToMaximum();
+            weaveResource.ResetThreads();
+            foreach (WeaveFrame weaveFrame in FindObjectsByType<WeaveFrame>(FindObjectsSortMode.None))
+            {
+                weaveFrame.ResetWeave();
+            }
             body.position = startPosition;
             body.linearVelocity = Vector2.zero;
             body.angularVelocity = 0f;

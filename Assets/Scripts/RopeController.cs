@@ -7,7 +7,7 @@ namespace HimoHito
     /// Mouse input remains available as an optional alternative.
     /// </summary>
     [RequireComponent(typeof(Rigidbody2D), typeof(DistanceJoint2D), typeof(LineRenderer))]
-    [RequireComponent(typeof(RopeResource))]
+    [RequireComponent(typeof(RopeResource), typeof(WeaveResource))]
     public sealed class RopeController : MonoBehaviour
     {
         [SerializeField, Min(1f)] private float maximumShotDistance = 14f;
@@ -23,6 +23,7 @@ namespace HimoHito
         private DistanceJoint2D ropeJoint;
         private LineRenderer lineRenderer;
         private RopeResource ropeResource;
+        private WeaveResource weaveResource;
         private Camera mainCamera;
         private Material runtimeMaterial;
         private Vector2 anchorPoint;
@@ -45,6 +46,7 @@ namespace HimoHito
             ropeJoint = GetComponent<DistanceJoint2D>();
             lineRenderer = GetComponent<LineRenderer>();
             ropeResource = GetComponent<RopeResource>();
+            weaveResource = GetComponent<WeaveResource>();
             mainCamera = Camera.main;
 
             ropeJoint.enabled = false;
@@ -86,7 +88,7 @@ namespace HimoHito
 
             if (Input.GetKeyUp(KeyCode.E))
             {
-                DetachAndRefund();
+                DetachAndRefund(true);
             }
 
             if (Input.GetMouseButtonDown(0))
@@ -96,7 +98,7 @@ namespace HimoHito
 
             if (Input.GetMouseButtonUp(0))
             {
-                DetachAndRefund();
+                DetachAndRefund(true);
             }
         }
 
@@ -187,7 +189,7 @@ namespace HimoHito
             return false;
         }
 
-        public void DetachAndRefund()
+        public void DetachAndRefund(bool awardWeaveThread = false)
         {
             if (!IsAttached)
             {
@@ -202,6 +204,10 @@ namespace HimoHito
             body.angularVelocity = preservedAngularVelocity;
             lineRenderer.enabled = false;
             ropeResource.Refund(spentLength * releaseRefundRate);
+            if (awardWeaveThread && weaveResource != null)
+            {
+                weaveResource.AddThread();
+            }
             spentLength = 0f;
             ClampSelectedRopeLength();
         }

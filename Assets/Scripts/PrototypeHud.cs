@@ -11,6 +11,8 @@ namespace HimoHito
         [SerializeField] private RopeController ropeController;
         [SerializeField] private Rigidbody2D playerBody;
         [SerializeField] private PrototypeRunController runController;
+        [SerializeField] private WeaveResource weaveResource;
+        [SerializeField] private WeaveFrame weaveFrame;
 
         private GUIStyle titleStyle;
         private GUIStyle bodyStyle;
@@ -42,6 +44,16 @@ namespace HimoHito
             {
                 runController = FindFirstObjectByType<PrototypeRunController>();
             }
+
+            if (weaveResource == null)
+            {
+                weaveResource = FindFirstObjectByType<WeaveResource>();
+            }
+
+            if (weaveFrame == null)
+            {
+                weaveFrame = FindFirstObjectByType<WeaveFrame>();
+            }
         }
 
         private void OnGUI()
@@ -55,7 +67,7 @@ namespace HimoHito
                 return;
             }
 
-            GUILayout.BeginArea(new Rect(22f, 18f, 520f, 340f), GUI.skin.box);
+            GUILayout.BeginArea(new Rect(22f, 18f, 520f, 390f), GUI.skin.box);
             GUILayout.Label("ヒモヒト / プロトタイプ", titleStyle);
 
             if (ropeResource != null)
@@ -73,6 +85,19 @@ namespace HimoHito
                     bodyStyle);
                 GUILayout.Label("W：使う長さを1増やす", bodyStyle);
                 GUILayout.Label("S：使う長さを1減らす", bodyStyle);
+            }
+
+            if (weaveResource != null)
+            {
+                GUILayout.Label($"編み糸  {weaveResource.CurrentThreads}個", bodyStyle);
+            }
+
+            if (weaveFrame != null && weaveFrame.IsPlayerInRange && !weaveFrame.IsCompleted)
+            {
+                string weaveMessage = weaveFrame.RemainingThreads == 0
+                    ? "Q：編み糸2個で足場を編む"
+                    : $"足場まで編み糸があと{weaveFrame.RemainingThreads}個必要";
+                GUILayout.Label(weaveMessage, bodyStyle);
             }
 
             string state;
@@ -98,6 +123,7 @@ namespace HimoHito
             GUILayout.Label("移動：A / D    ジャンプ：Space", bodyStyle);
             GUILayout.Label("照準：← / →    真上・真下：↑ / ↓", bodyStyle);
             GUILayout.Label("ヒモ：E長押し    再挑戦：R", bodyStyle);
+            GUILayout.Label("編む：編み枠の近くでQ", bodyStyle);
             GUILayout.Label("マウス照準も使用可能", bodyStyle);
             GUILayout.EndArea();
         }
@@ -130,6 +156,7 @@ namespace HimoHito
             GUILayout.Label("← / →  照準を動かす     ↑ / ↓  真上・真下へ合わせる", startControlStyle);
             GUILayout.Label("E 長押し  ヒモを掛ける", startControlStyle);
             GUILayout.Label("E を離す  勢いを保って飛ぶ", startControlStyle);
+            GUILayout.Label("Q  編み糸2個で指定された足場を編む", startControlStyle);
             GUILayout.Label("R  最初から再挑戦", startControlStyle);
             GUILayout.FlexibleSpace();
             GUILayout.Label("キーボードの何かのキーを押して開始", startPromptStyle);
