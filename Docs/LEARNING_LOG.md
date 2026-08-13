@@ -1143,3 +1143,10 @@ Hook 1へ届く最低限の長さと、長すぎて振り子が低くなる長�
 2. Landing 1から上側のPlanning Landingへ到達できるか
 3. 下側のLanding 2を使った近道がなくなっているか
 4. Planning Landingから編み枠、生成橋、ゴールまで通して進めるか
+
+### Hook 3下側の補助Hookを削除
+
+- Hook 3の下側にあった`Planning Hook (14.8, 3.0)`を削除する
+- 上側の`Hook 3 (13.8, 3.9)`だけを残し、3区間目の接続先を一つに整理する
+- Planning Landing、編み枠、生成橋、ゴール、物理設定は変更しない
+- Planning LandingからHook 3へ接続し、その後の編む区間まで進めるか確認する

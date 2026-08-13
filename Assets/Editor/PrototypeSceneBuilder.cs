@@ -46,7 +46,6 @@ namespace HimoHitoEditor
             CreateHookPoint("Hook 2", new Vector2(5f, 1.5f), new Vector2(1.6f, 0.45f));
             CreatePlatform("Planning Landing", new Vector2(9.5f, -0.4f), new Vector2(4f, 0.7f));
             CreateHookPoint("Hook 3", new Vector2(13.8f, 3.9f), new Vector2(1.6f, 0.45f));
-            CreateHookPoint("Planning Hook", new Vector2(14.8f, 3f), new Vector2(1.6f, 0.45f));
             GameObject wovenPlatform = CreateWovenPlatform(
                 "Tutorial Woven Platform",
                 new Vector2(21.1f, -0.5f),
@@ -127,16 +126,11 @@ namespace HimoHitoEditor
                 changed = true;
             }
 
-            if (!HasRootObject(prototypeScene, "Planning Hook"))
-            {
-                CreateHookPoint("Planning Hook", new Vector2(14.8f, 3f), new Vector2(1.6f, 0.45f));
-                changed = true;
-            }
-
             changed |= EnsureExperimentalRopeLength(prototypeScene);
             changed |= EnsureHorizontalCameraFollow(prototypeScene);
             changed |= RemoveRootObject(prototypeScene, "Practice Safety Floor");
             changed |= RemoveRootObject(prototypeScene, "Landing 2");
+            changed |= RemoveRootObject(prototypeScene, "Planning Hook");
             changed |= EnsurePracticeSection(prototypeScene);
             changed |= EnsureWeaveExperiment(prototypeScene);
 
