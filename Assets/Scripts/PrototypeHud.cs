@@ -14,6 +14,8 @@ namespace HimoHito
         [SerializeField] private WeaveResource weaveResource;
         [SerializeField] private WeaveFrame weaveFrame;
 
+        private Camera mainCamera;
+        private Collider2D playerCollider;
         private GUIStyle titleStyle;
         private GUIStyle bodyStyle;
         private GUIStyle lengthStyle;
@@ -41,6 +43,12 @@ namespace HimoHito
             if (playerBody == null && ropeController != null)
             {
                 playerBody = ropeController.GetComponent<Rigidbody2D>();
+            }
+
+            mainCamera = Camera.main;
+            if (playerBody != null)
+            {
+                playerCollider = playerBody.GetComponent<Collider2D>();
             }
 
             if (runController == null)
@@ -135,11 +143,37 @@ namespace HimoHito
                 return;
             }
 
-            float panelWidth = Mathf.Min(460f, Screen.width - 40f);
-            const float panelHeight = 150f;
+            if (playerBody == null || mainCamera == null)
+            {
+                return;
+            }
+
+            Vector3 promptWorldPosition = playerBody.position;
+            if (playerCollider != null)
+            {
+                promptWorldPosition.y = playerCollider.bounds.max.y;
+            }
+
+            Vector3 screenPoint = mainCamera.WorldToScreenPoint(promptWorldPosition);
+            if (screenPoint.z <= 0f)
+            {
+                return;
+            }
+
+            float panelWidth = Mathf.Min(340f, Screen.width - 24f);
+            const float panelHeight = 120f;
+            const float screenMargin = 12f;
+            float panelX = Mathf.Clamp(
+                screenPoint.x - panelWidth * 0.5f,
+                screenMargin,
+                Screen.width - panelWidth - screenMargin);
+            float panelY = Mathf.Clamp(
+                Screen.height - screenPoint.y - panelHeight - 18f,
+                screenMargin,
+                Screen.height - panelHeight - screenMargin);
             Rect panel = new Rect(
-                (Screen.width - panelWidth) * 0.5f,
-                Screen.height - panelHeight - 32f,
+                panelX,
+                panelY,
                 panelWidth,
                 panelHeight);
 
@@ -149,7 +183,7 @@ namespace HimoHito
             GUI.color = previousColor;
 
             GUILayout.BeginArea(panel);
-            GUILayout.Space(10f);
+            GUILayout.Space(5f);
             GUILayout.Label("編む場所", weavePromptTitleStyle);
             GUILayout.Label(
                 $"編み糸  {weaveResource.CurrentThreads} / {weaveFrame.RequiredThreads}",
