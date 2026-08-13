@@ -826,6 +826,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f55b1c935f0f41b482450bb47157182a, type: 3}
   m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.RopeReleaseHazard
+  affectedHook: {fileID: 523582262}
 --- !u!1 &611392696
 GameObject:
   m_ObjectHideFlags: 0

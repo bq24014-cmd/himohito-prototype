@@ -31,15 +31,19 @@ namespace HimoHitoEditor
             CreatePlayer();
             CreatePlatform("Start Ground", new Vector2(-9f, -5.2f), new Vector2(5f, 0.7f));
             CreatePlatform("Practice Safety Floor", new Vector2(-4.5f, -7.25f), new Vector2(4f, 0.7f));
+            HookPoint hook1 = CreateHookPoint(
+                "Hook 1",
+                new Vector2(-5f, -0.2f),
+                new Vector2(1.6f, 0.45f));
             CreateRopeReleaseHazard(
                 "Practice Long Rope Obstacle",
                 new Vector2(1.5f, -4.5f),
-                new Vector2(0.6f, 2f));
+                new Vector2(0.6f, 2f),
+                hook1);
 
             // The lower route preserves the established three-section test.
             // The planning branch spends more rope at Hook 2 to reach an upper landing,
             // then offers a closer hook for the final approach.
-            CreateHookPoint("Hook 1", new Vector2(-5f, -0.2f), new Vector2(1.6f, 0.45f));
             CreatePlatform("Landing 1", new Vector2(0f, -2.3f), new Vector2(4f, 0.7f));
             CreateHookPoint("Hook 2", new Vector2(5f, 1.5f), new Vector2(1.6f, 0.45f));
             CreatePlatform("Landing 2", new Vector2(8f, -2f), new Vector2(4f, 0.7f));
@@ -294,6 +298,8 @@ namespace HimoHitoEditor
         private static bool EnsurePracticeSection(Scene scene)
         {
             bool changed = false;
+            GameObject hookObject = FindRootObject(scene, "Hook 1");
+            HookPoint hook1 = hookObject != null ? hookObject.GetComponent<HookPoint>() : null;
             changed |= EnsurePlatform(
                 scene,
                 "Practice Safety Floor",
@@ -303,7 +309,8 @@ namespace HimoHitoEditor
                 scene,
                 "Practice Long Rope Obstacle",
                 new Vector2(1.5f, -4.5f),
-                new Vector2(0.6f, 2f));
+                new Vector2(0.6f, 2f),
+                hook1);
             return changed;
         }
 
@@ -311,7 +318,8 @@ namespace HimoHitoEditor
             Scene scene,
             string objectName,
             Vector2 position,
-            Vector2 size)
+            Vector2 size,
+            HookPoint affectedHook)
         {
             bool changed = EnsurePlatform(scene, objectName, position, size);
             GameObject hazard = FindRootObject(scene, objectName);
@@ -327,9 +335,16 @@ namespace HimoHitoEditor
                 changed = true;
             }
 
-            if (!hazard.TryGetComponent(out RopeReleaseHazard _))
+            if (!hazard.TryGetComponent(out RopeReleaseHazard releaseHazard))
             {
-                hazard.AddComponent<RopeReleaseHazard>();
+                releaseHazard = hazard.AddComponent<RopeReleaseHazard>();
+                changed = true;
+            }
+
+            if (releaseHazard.AffectedHook != affectedHook)
+            {
+                releaseHazard.Configure(affectedHook);
+                EditorUtility.SetDirty(releaseHazard);
                 changed = true;
             }
 
@@ -442,23 +457,28 @@ namespace HimoHitoEditor
             CreatePlatformVisual(name, position, size, new Color(0.38f, 0.41f, 0.52f));
         }
 
-        private static void CreateRopeReleaseHazard(string name, Vector2 position, Vector2 size)
+        private static void CreateRopeReleaseHazard(
+            string name,
+            Vector2 position,
+            Vector2 size,
+            HookPoint affectedHook)
         {
             GameObject hazard = CreatePlatformVisual(name, position, size, RopeReleaseHazardColor);
             BoxCollider2D trigger = hazard.AddComponent<BoxCollider2D>();
             trigger.isTrigger = true;
             trigger.size = Vector2.one;
-            hazard.AddComponent<RopeReleaseHazard>();
+            RopeReleaseHazard releaseHazard = hazard.AddComponent<RopeReleaseHazard>();
+            releaseHazard.Configure(affectedHook);
         }
 
-        private static void CreateHookPoint(string name, Vector2 position, Vector2 size)
+        private static HookPoint CreateHookPoint(string name, Vector2 position, Vector2 size)
         {
             GameObject hookPoint = CreatePlatformVisual(
                 name,
                 position,
                 size,
                 new Color(1f, 0.72f, 0.18f));
-            hookPoint.AddComponent<HookPoint>();
+            return hookPoint.AddComponent<HookPoint>();
         }
 
         private static void CreateGoalPlatform(string name, Vector2 position, Vector2 size)

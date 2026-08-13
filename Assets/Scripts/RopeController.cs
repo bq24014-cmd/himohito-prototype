@@ -27,12 +27,14 @@ namespace HimoHito
         private Camera mainCamera;
         private Material runtimeMaterial;
         private Vector2 anchorPoint;
+        private HookPoint activeHookPoint;
         private Vector2 keyboardAimDirection = new Vector2(1f, 1f).normalized;
         private float spentLength;
         private int selectedRopeLength = 1;
 
         public bool IsAttached => ropeJoint != null && ropeJoint.enabled;
         public Vector2 AnchorPoint => anchorPoint;
+        public HookPoint ActiveHookPoint => activeHookPoint;
         public Vector2 KeyboardAimDirection => keyboardAimDirection;
         public float ReleaseRefundRate => releaseRefundRate;
         public int SelectedRopeLength => selectedRopeLength;
@@ -166,7 +168,8 @@ namespace HimoHito
                     continue;
                 }
 
-                if (hit.collider.GetComponentInParent<HookPoint>() == null)
+                HookPoint hookPoint = hit.collider.GetComponentInParent<HookPoint>();
+                if (hookPoint == null)
                 {
                     continue;
                 }
@@ -178,6 +181,7 @@ namespace HimoHito
 
                 spentLength = selectedLength;
                 anchorPoint = hit.point;
+                activeHookPoint = hookPoint;
                 ropeJoint.connectedBody = null;
                 ropeJoint.connectedAnchor = anchorPoint;
                 ropeJoint.distance = selectedLength;
@@ -200,6 +204,7 @@ namespace HimoHito
             Vector2 preservedVelocity = body.linearVelocity;
             float preservedAngularVelocity = body.angularVelocity;
             ropeJoint.enabled = false;
+            activeHookPoint = null;
             body.linearVelocity = preservedVelocity;
             body.angularVelocity = preservedAngularVelocity;
             lineRenderer.enabled = false;
