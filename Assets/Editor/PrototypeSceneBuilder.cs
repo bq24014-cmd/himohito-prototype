@@ -30,7 +30,6 @@ namespace HimoHitoEditor
             CreateCamera();
             CreatePlayer();
             CreatePlatform("Start Ground", new Vector2(-9f, -5.2f), new Vector2(5f, 0.7f));
-            CreatePlatform("Practice Safety Floor", new Vector2(-4.5f, -7.25f), new Vector2(4f, 0.7f));
             HookPoint hook1 = CreateHookPoint(
                 "Hook 1",
                 new Vector2(-5f, -0.2f),
@@ -41,12 +40,10 @@ namespace HimoHitoEditor
                 new Vector2(0.6f, 2f),
                 hook1);
 
-            // The lower route preserves the established three-section test.
-            // The planning branch spends more rope at Hook 2 to reach an upper landing,
-            // then offers a closer hook for the final approach.
+            // The route now keeps only the upper planning landing.
+            // Missing the red obstacle or upper landing leads to a fall and retry.
             CreatePlatform("Landing 1", new Vector2(0f, -2.3f), new Vector2(4f, 0.7f));
             CreateHookPoint("Hook 2", new Vector2(5f, 1.5f), new Vector2(1.6f, 0.45f));
-            CreatePlatform("Landing 2", new Vector2(8f, -2f), new Vector2(4f, 0.7f));
             CreatePlatform("Planning Landing", new Vector2(9.5f, -0.4f), new Vector2(4f, 0.7f));
             CreateHookPoint("Hook 3", new Vector2(13.8f, 3.9f), new Vector2(1.6f, 0.45f));
             CreateHookPoint("Planning Hook", new Vector2(14.8f, 3f), new Vector2(1.6f, 0.45f));
@@ -138,6 +135,8 @@ namespace HimoHitoEditor
 
             changed |= EnsureExperimentalRopeLength(prototypeScene);
             changed |= EnsureHorizontalCameraFollow(prototypeScene);
+            changed |= RemoveRootObject(prototypeScene, "Practice Safety Floor");
+            changed |= RemoveRootObject(prototypeScene, "Landing 2");
             changed |= EnsurePracticeSection(prototypeScene);
             changed |= EnsureWeaveExperiment(prototypeScene);
 
@@ -300,11 +299,6 @@ namespace HimoHitoEditor
             bool changed = false;
             GameObject hookObject = FindRootObject(scene, "Hook 1");
             HookPoint hook1 = hookObject != null ? hookObject.GetComponent<HookPoint>() : null;
-            changed |= EnsurePlatform(
-                scene,
-                "Practice Safety Floor",
-                new Vector2(-4.5f, -7.25f),
-                new Vector2(4f, 0.7f));
             changed |= EnsureRopeReleaseHazard(
                 scene,
                 "Practice Long Rope Obstacle",
@@ -312,6 +306,18 @@ namespace HimoHitoEditor
                 new Vector2(0.6f, 2f),
                 hook1);
             return changed;
+        }
+
+        private static bool RemoveRootObject(Scene scene, string objectName)
+        {
+            GameObject rootObject = FindRootObject(scene, objectName);
+            if (rootObject == null)
+            {
+                return false;
+            }
+
+            Object.DestroyImmediate(rootObject);
+            return true;
         }
 
         private static bool EnsureRopeReleaseHazard(
