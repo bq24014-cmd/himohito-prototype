@@ -22,6 +22,9 @@ namespace HimoHito
         private GUIStyle startImportantStyle;
         private GUIStyle startControlStyle;
         private GUIStyle startPromptStyle;
+        private GUIStyle weavePromptTitleStyle;
+        private GUIStyle weavePromptBodyStyle;
+        private GUIStyle weavePromptActionStyle;
 
         private void Awake()
         {
@@ -92,14 +95,6 @@ namespace HimoHito
                 GUILayout.Label($"編み糸  {weaveResource.CurrentThreads}個", bodyStyle);
             }
 
-            if (weaveFrame != null && weaveFrame.IsPlayerInRange && !weaveFrame.IsCompleted)
-            {
-                string weaveMessage = weaveFrame.RemainingThreads == 0
-                    ? "Q：編み糸2個で足場を編む"
-                    : $"足場まで編み糸があと{weaveFrame.RemainingThreads}個必要";
-                GUILayout.Label(weaveMessage, bodyStyle);
-            }
-
             string state;
             if (runController != null && runController.Outcome != PrototypeRunController.RunOutcome.Playing)
             {
@@ -125,6 +120,45 @@ namespace HimoHito
             GUILayout.Label("ヒモ：E長押し    再挑戦：R", bodyStyle);
             GUILayout.Label("編む：編み枠の近くでQ", bodyStyle);
             GUILayout.Label("マウス照準も使用可能", bodyStyle);
+            GUILayout.EndArea();
+
+            DrawWeavePrompt();
+        }
+
+        private void DrawWeavePrompt()
+        {
+            if (weaveFrame == null ||
+                weaveResource == null ||
+                !weaveFrame.IsPlayerInRange ||
+                weaveFrame.IsCompleted)
+            {
+                return;
+            }
+
+            float panelWidth = Mathf.Min(460f, Screen.width - 40f);
+            const float panelHeight = 150f;
+            Rect panel = new Rect(
+                (Screen.width - panelWidth) * 0.5f,
+                Screen.height - panelHeight - 32f,
+                panelWidth,
+                panelHeight);
+
+            Color previousColor = GUI.color;
+            GUI.color = new Color(0.32f, 0.16f, 0.48f, 0.96f);
+            GUI.Box(panel, GUIContent.none);
+            GUI.color = previousColor;
+
+            GUILayout.BeginArea(panel);
+            GUILayout.Space(10f);
+            GUILayout.Label("編む場所", weavePromptTitleStyle);
+            GUILayout.Label(
+                $"編み糸  {weaveResource.CurrentThreads} / {weaveFrame.RequiredThreads}",
+                weavePromptBodyStyle);
+
+            string actionMessage = weaveFrame.RemainingThreads == 0
+                ? "Q：足場を編む"
+                : $"あと{weaveFrame.RemainingThreads}個必要";
+            GUILayout.Label(actionMessage, weavePromptActionStyle);
             GUILayout.EndArea();
         }
 
@@ -221,6 +255,26 @@ namespace HimoHito
                 fontSize = 20,
                 fontStyle = FontStyle.Bold,
                 normal = { textColor = new Color(0.65f, 0.72f, 1f) }
+            };
+            weavePromptTitleStyle = new GUIStyle(GUI.skin.label)
+            {
+                alignment = TextAnchor.MiddleCenter,
+                fontSize = 22,
+                fontStyle = FontStyle.Bold,
+                normal = { textColor = new Color(0.86f, 0.72f, 1f) }
+            };
+            weavePromptBodyStyle = new GUIStyle(GUI.skin.label)
+            {
+                alignment = TextAnchor.MiddleCenter,
+                fontSize = 18,
+                normal = { textColor = Color.white }
+            };
+            weavePromptActionStyle = new GUIStyle(GUI.skin.label)
+            {
+                alignment = TextAnchor.MiddleCenter,
+                fontSize = 20,
+                fontStyle = FontStyle.Bold,
+                normal = { textColor = new Color(1f, 0.86f, 0.34f) }
             };
         }
     }
