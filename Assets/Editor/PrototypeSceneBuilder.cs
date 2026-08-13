@@ -59,7 +59,7 @@ namespace HimoHitoEditor
                 new Vector2(8f, -0.7f),
                 new Vector2(4f, 3f),
                 wovenPlatform);
-            CreateGoalPlatform("Goal / Landing 3", new Vector2(23f, -0.5f), new Vector2(4f, 0.8f));
+            CreateGoalPlatform("Goal / Landing 3", new Vector2(23.15f, -0.5f), new Vector2(4f, 0.8f));
 
             GameObject hud = new GameObject("Prototype HUD");
             hud.AddComponent<PrototypeHud>();
@@ -283,7 +283,7 @@ namespace HimoHitoEditor
             GameObject goal = FindRootObject(scene, "Goal / Landing 3");
             if (goal != null)
             {
-                changed |= ApplyTransform(goal, new Vector2(23f, -0.5f), new Vector2(4f, 0.8f));
+                changed |= ApplyTransform(goal, new Vector2(23.15f, -0.5f), new Vector2(4f, 0.8f));
             }
 
             if (wovenPlatform.activeSelf)
