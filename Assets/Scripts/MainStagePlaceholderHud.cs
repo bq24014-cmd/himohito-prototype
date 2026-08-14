@@ -15,7 +15,8 @@ namespace HimoHito
         private static void CreatePlaceholderForMainStage()
         {
             if (SceneManager.GetActiveScene().name != "MainStage" ||
-                FindFirstObjectByType<MainStagePlaceholderHud>() != null)
+                FindFirstObjectByType<MainStagePlaceholderHud>() != null ||
+                FindFirstObjectByType<RopeResource>() != null)
             {
                 return;
             }
