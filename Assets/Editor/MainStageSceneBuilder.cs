@@ -13,19 +13,34 @@ namespace HimoHitoEditor
     {
         private const string ScenePath = "Assets/Scenes/MainStage.unity";
 
-        [MenuItem("HimoHito/Build Main Stage Section 1")]
-        public static void BuildMainStageSectionOne()
+        [MenuItem("HimoHito/Build Main Stage Through Section 2")]
+        public static void BuildMainStageThroughSectionTwo()
         {
             Scene scene = EditorSceneManager.NewScene(NewSceneSetup.EmptyScene, NewSceneMode.Single);
 
             GameObject player = CreatePlayer(new Vector2(-6f, -4.2f));
-            GameObject landing = CreatePlatform(
+            CreatePlatform(
                 "Main Landing 1",
                 new Vector2(4.5f, -3.2f),
                 new Vector2(4.2f, 0.7f));
-            landing.AddComponent<MainStageSectionTarget>();
 
-            CreateCamera(player.transform, landing.transform);
+            CreatePlatform(
+                "Main Walkway 1",
+                new Vector2(8.6f, -3.2f),
+                new Vector2(4f, 0.7f));
+
+            CreateHookPoint(
+                "Main Hook 2",
+                new Vector2(15.2f, 0.7f),
+                new Vector2(1.6f, 0.45f));
+
+            GameObject landingTwo = CreatePlatform(
+                "Main Landing 2",
+                new Vector2(20.5f, -2.2f),
+                new Vector2(4f, 0.7f));
+            landingTwo.AddComponent<MainStageSectionTarget>();
+
+            CreateCamera(player.transform, landingTwo.transform);
             CreatePlatform(
                 "Main Start Ground",
                 new Vector2(-6f, -5.2f),
@@ -41,12 +56,12 @@ namespace HimoHitoEditor
             AssetDatabase.SaveAssets();
             AssetDatabase.Refresh();
             Selection.activeGameObject = player;
-            Debug.Log($"HimoHito main-stage section 1 created: {ScenePath}");
+            Debug.Log($"HimoHito main-stage sections 1-2 created: {ScenePath}");
         }
 
         public static void BuildFromCommandLine()
         {
-            BuildMainStageSectionOne();
+            BuildMainStageThroughSectionTwo();
             EditorApplication.Exit(0);
         }
 
