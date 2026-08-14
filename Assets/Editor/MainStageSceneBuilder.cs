@@ -48,7 +48,7 @@ namespace HimoHitoEditor
 
             GameObject landingThree = CreatePlatform(
                 "Main Landing 3",
-                new Vector2(46.2f, -0.5f),
+                new Vector2(46.3f, -0.5f),
                 new Vector2(4f, 0.7f));
             landingThree.AddComponent<MainStageSectionTarget>();
 
