@@ -27,6 +27,9 @@ namespace HimoHito
         private GUIStyle weavePromptTitleStyle;
         private GUIStyle weavePromptBodyStyle;
         private GUIStyle weavePromptActionStyle;
+        private GUIStyle clearTitleStyle;
+        private GUIStyle clearBodyStyle;
+        private GUIStyle clearPromptStyle;
 
         private void Awake()
         {
@@ -78,6 +81,13 @@ namespace HimoHito
                 return;
             }
 
+            if (runController != null &&
+                runController.Outcome == PrototypeRunController.RunOutcome.Clear)
+            {
+                DrawClearScreen();
+                return;
+            }
+
             GUILayout.BeginArea(new Rect(22f, 18f, 520f, 390f), GUI.skin.box);
             GUILayout.Label("ヒモヒト / チュートリアル", titleStyle);
 
@@ -115,9 +125,7 @@ namespace HimoHito
             string state;
             if (runController != null && runController.Outcome != PrototypeRunController.RunOutcome.Playing)
             {
-                state = runController.Outcome == PrototypeRunController.RunOutcome.Clear
-                    ? "クリア — Rで再挑戦"
-                    : runController.IsAutomaticRespawnPending
+                state = runController.IsAutomaticRespawnPending
                         ? "失敗 — 自動で戻ります..."
                         : "失敗 — Rで再挑戦";
             }
@@ -233,11 +241,29 @@ namespace HimoHito
             GUILayout.Label("← / →  照準を動かす     ↑ / ↓  真上・真下へ合わせる", startControlStyle);
             GUILayout.Label("E 長押し  ヒモを掛ける", startControlStyle);
             GUILayout.Label("E を離す  勢いを保って飛ぶ", startControlStyle);
-            GUILayout.Label("Q  編み糸2個で指定された足場を編む", startControlStyle);
+            GUILayout.Label("Q  編み糸3個で指定された足場を編む", startControlStyle);
             GUILayout.Label("R  現在の区間から再挑戦", startControlStyle);
             GUILayout.FlexibleSpace();
             GUILayout.Label("キーボードの何かのキーを押して開始", startPromptStyle);
             GUILayout.Space(24f);
+            GUILayout.EndArea();
+        }
+
+        private void DrawClearScreen()
+        {
+            Color previousColor = GUI.color;
+            GUI.color = new Color(0.035f, 0.04f, 0.085f, 0.99f);
+            GUI.Box(new Rect(0f, 0f, Screen.width, Screen.height), GUIContent.none);
+            GUI.color = previousColor;
+
+            GUILayout.BeginArea(new Rect(0f, 0f, Screen.width, Screen.height));
+            GUILayout.FlexibleSpace();
+            GUILayout.Label("TUTORIAL CLEAR", clearTitleStyle);
+            GUILayout.Space(18f);
+            GUILayout.Label("ヒモを掛ける・避ける・編むを習得しました", clearBodyStyle);
+            GUILayout.Space(42f);
+            GUILayout.Label("Enter　本編ステージへ", clearPromptStyle);
+            GUILayout.FlexibleSpace();
             GUILayout.EndArea();
         }
 
@@ -318,6 +344,26 @@ namespace HimoHito
                 fontSize = 20,
                 fontStyle = FontStyle.Bold,
                 normal = { textColor = new Color(1f, 0.86f, 0.34f) }
+            };
+            clearTitleStyle = new GUIStyle(GUI.skin.label)
+            {
+                alignment = TextAnchor.MiddleCenter,
+                fontSize = 58,
+                fontStyle = FontStyle.Bold,
+                normal = { textColor = new Color(0.35f, 1f, 0.78f) }
+            };
+            clearBodyStyle = new GUIStyle(GUI.skin.label)
+            {
+                alignment = TextAnchor.MiddleCenter,
+                fontSize = 24,
+                normal = { textColor = Color.white }
+            };
+            clearPromptStyle = new GUIStyle(GUI.skin.label)
+            {
+                alignment = TextAnchor.MiddleCenter,
+                fontSize = 25,
+                fontStyle = FontStyle.Bold,
+                normal = { textColor = new Color(1f, 0.82f, 0.28f) }
             };
         }
     }

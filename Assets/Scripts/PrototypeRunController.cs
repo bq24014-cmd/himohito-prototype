@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace HimoHito
 {
@@ -83,6 +84,13 @@ namespace HimoHito
             if (Outcome == RunOutcome.WaitingToStart)
             {
                 UpdateStartScreen();
+                return;
+            }
+
+            if (Outcome == RunOutcome.Clear &&
+                (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter)))
+            {
+                LoadNextStage();
                 return;
             }
 
@@ -274,6 +282,15 @@ namespace HimoHito
             automaticRespawnTimer = 0f;
             IsAutomaticRespawnPending = false;
             Outcome = RunOutcome.Playing;
+        }
+
+        private static void LoadNextStage()
+        {
+            int nextBuildIndex = SceneManager.GetActiveScene().buildIndex + 1;
+            if (nextBuildIndex >= 0 && nextBuildIndex < SceneManager.sceneCountInBuildSettings)
+            {
+                SceneManager.LoadScene(nextBuildIndex);
+            }
         }
     }
 }

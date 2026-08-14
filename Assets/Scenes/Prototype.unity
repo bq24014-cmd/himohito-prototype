@@ -2366,7 +2366,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15443adc335041d2a8492bf2ca520114, type: 3}
   m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.WeaveFrame
-  requiredThreads: 2
+  requiredThreads: 3
   wovenPlatform: {fileID: 913869083}
 --- !u!61 &2088378799
 BoxCollider2D:

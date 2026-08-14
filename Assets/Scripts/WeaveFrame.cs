@@ -8,7 +8,7 @@ namespace HimoHito
     [RequireComponent(typeof(BoxCollider2D))]
     public sealed class WeaveFrame : MonoBehaviour
     {
-        [SerializeField, Min(1)] private int requiredThreads = 2;
+        [SerializeField, Min(1)] private int requiredThreads = 3;
         [SerializeField] private GameObject wovenPlatform;
 
         private WeaveResource weaveResource;

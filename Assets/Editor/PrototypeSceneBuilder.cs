@@ -13,6 +13,7 @@ namespace HimoHitoEditor
     public static class PrototypeSceneBuilder
     {
         private const string ScenePath = "Assets/Scenes/Prototype.unity";
+        private const string MainStageScenePath = "Assets/Scenes/MainStage.unity";
         private const float ExperimentalRopeLength = 12f;
         private static readonly Color RopeReleaseHazardColor = new Color(0.95f, 0.28f, 0.35f);
 
@@ -81,7 +82,11 @@ namespace HimoHitoEditor
             hud.AddComponent<PrototypeHud>();
 
             EditorSceneManager.SaveScene(scene, ScenePath);
-            EditorBuildSettings.scenes = new[] { new EditorBuildSettingsScene(ScenePath, true) };
+            EditorBuildSettings.scenes = new[]
+            {
+                new EditorBuildSettingsScene(ScenePath, true),
+                new EditorBuildSettingsScene(MainStageScenePath, true)
+            };
             AssetDatabase.SaveAssets();
             AssetDatabase.Refresh();
             Selection.activeGameObject = GameObject.Find("Player");
@@ -278,10 +283,10 @@ namespace HimoHitoEditor
                 SerializedObject serializedFrame = new SerializedObject(frame);
                 SerializedProperty platformProperty = serializedFrame.FindProperty("wovenPlatform");
                 SerializedProperty costProperty = serializedFrame.FindProperty("requiredThreads");
-                if (platformProperty.objectReferenceValue != wovenPlatform || costProperty.intValue != 2)
+                if (platformProperty.objectReferenceValue != wovenPlatform || costProperty.intValue != 3)
                 {
                     platformProperty.objectReferenceValue = wovenPlatform;
-                    costProperty.intValue = 2;
+                    costProperty.intValue = 3;
                     serializedFrame.ApplyModifiedPropertiesWithoutUndo();
                     changed = true;
                 }
@@ -680,7 +685,7 @@ namespace HimoHitoEditor
             trigger.size = Vector2.one;
 
             WeaveFrame frame = frameObject.AddComponent<WeaveFrame>();
-            frame.Configure(wovenPlatform, 2);
+            frame.Configure(wovenPlatform, 3);
 
             GameObject marker = CreatePlatformVisual(
                 "Weave Frame Marker",
