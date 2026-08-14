@@ -43,12 +43,12 @@ namespace HimoHitoEditor
 
             CreateHookPoint(
                 "Main Hook 3",
-                new Vector2(38f, 2.2f),
+                new Vector2(36f, 2.2f),
                 new Vector2(1.6f, 0.45f));
 
             GameObject landingThree = CreatePlatform(
                 "Main Landing 3",
-                new Vector2(46.8f, 0.3f),
+                new Vector2(43.8f, 0.3f),
                 new Vector2(4f, 0.7f));
             landingThree.AddComponent<MainStageSectionTarget>();
 
