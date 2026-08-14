@@ -29,7 +29,16 @@ namespace HimoHitoEditor
 
             CreateCamera();
             CreatePlayer();
-            CreatePlatform("Start Ground", new Vector2(-9f, -5.2f), new Vector2(5f, 0.7f));
+            CreatePlatform("Start Ground", new Vector2(-18f, -5.2f), new Vector2(5f, 0.7f));
+            CreateHookPoint(
+                "Tutorial Hook",
+                new Vector2(-14f, -0.2f),
+                new Vector2(1.6f, 0.45f));
+            GameObject tutorialLanding = CreatePlatform(
+                "Tutorial Landing",
+                new Vector2(-9f, -5.2f),
+                new Vector2(5f, 0.7f));
+            ConfigureTutorialCheckpoint(tutorialLanding, 2, new Vector2(-9f, -4.2f));
             CreateHookPoint(
                 "Hook 1",
                 new Vector2(-5f, -0.2f),
@@ -41,7 +50,7 @@ namespace HimoHitoEditor
                 "Landing 1",
                 new Vector2(0f, -2.3f),
                 new Vector2(4f, 0.7f));
-            ConfigureTutorialCheckpoint(landing1, 2, new Vector2(0f, -1.3f));
+            ConfigureTutorialCheckpoint(landing1, 3, new Vector2(0f, -1.3f));
             HookPoint hook2 = CreateHookPoint(
                 "Hook 2",
                 new Vector2(5f, 1.5f),
@@ -51,11 +60,10 @@ namespace HimoHitoEditor
                 new Vector2(1.5f, -4.5f),
                 new Vector2(0.6f, 2f),
                 hook2);
-            GameObject planningLanding = CreatePlatform(
+            CreatePlatform(
                 "Planning Landing",
                 new Vector2(9.5f, -0.4f),
                 new Vector2(4f, 0.7f));
-            ConfigureTutorialCheckpoint(planningLanding, 3, new Vector2(9.5f, 0.6f));
             CreateHookPoint("Hook 3", new Vector2(13.8f, 3.9f), new Vector2(1.6f, 0.45f));
             GameObject wovenPlatform = CreateWovenPlatform(
                 "Tutorial Woven Platform",
@@ -143,6 +151,7 @@ namespace HimoHitoEditor
             changed |= RemoveRootObject(prototypeScene, "Practice Safety Floor");
             changed |= RemoveRootObject(prototypeScene, "Landing 2");
             changed |= RemoveRootObject(prototypeScene, "Planning Hook");
+            changed |= EnsureTutorialLayout(prototypeScene);
             changed |= EnsurePracticeSection(prototypeScene);
             changed |= EnsureWeaveExperiment(prototypeScene);
             changed |= EnsureTutorialCheckpoints(prototypeScene);
@@ -304,14 +313,45 @@ namespace HimoHitoEditor
         private static bool EnsurePracticeSection(Scene scene)
         {
             bool changed = false;
-            GameObject hookObject = FindRootObject(scene, "Hook 2");
-            HookPoint hook2 = hookObject != null ? hookObject.GetComponent<HookPoint>() : null;
+            GameObject hookObject = FindRootObject(scene, "Hook 1");
+            HookPoint hook1 = hookObject != null ? hookObject.GetComponent<HookPoint>() : null;
             changed |= EnsureRopeReleaseHazard(
                 scene,
                 "Practice Long Rope Obstacle",
                 new Vector2(1.5f, -4.5f),
                 new Vector2(0.6f, 2f),
-                hook2);
+                hook1);
+            return changed;
+        }
+
+        private static bool EnsureTutorialLayout(Scene scene)
+        {
+            bool changed = false;
+            changed |= EnsurePlatform(
+                scene,
+                "Start Ground",
+                new Vector2(-18f, -5.2f),
+                new Vector2(5f, 0.7f));
+            changed |= EnsureHookPoint(
+                scene,
+                "Tutorial Hook",
+                new Vector2(-14f, -0.2f),
+                new Vector2(1.6f, 0.45f));
+            changed |= EnsurePlatform(
+                scene,
+                "Tutorial Landing",
+                new Vector2(-9f, -5.2f),
+                new Vector2(5f, 0.7f));
+
+            GameObject player = FindRootObject(scene, "Player");
+            Vector2 playerStart = new Vector2(-18f, -4.2f);
+            if (player != null && (Vector2)player.transform.position != playerStart)
+            {
+                player.transform.position = playerStart;
+                changed = true;
+            }
+
+            changed |= RemoveTutorialCheckpoint(scene, "Planning Landing");
             return changed;
         }
 
@@ -320,19 +360,65 @@ namespace HimoHitoEditor
             bool changed = false;
             changed |= EnsureTutorialCheckpoint(
                 scene,
-                "Landing 1",
+                "Tutorial Landing",
                 2,
-                new Vector2(0f, -1.3f));
+                new Vector2(-9f, -4.2f));
             changed |= EnsureTutorialCheckpoint(
                 scene,
-                "Planning Landing",
+                "Landing 1",
                 3,
-                new Vector2(9.5f, 0.6f));
+                new Vector2(0f, -1.3f));
             changed |= EnsureTutorialCheckpoint(
                 scene,
                 "Tutorial Woven Platform",
                 4,
                 new Vector2(21.1f, 0.55f));
+            return changed;
+        }
+
+        private static bool RemoveTutorialCheckpoint(Scene scene, string objectName)
+        {
+            GameObject platform = FindRootObject(scene, objectName);
+            if (platform == null ||
+                !platform.TryGetComponent(out TutorialCheckpoint checkpoint))
+            {
+                return false;
+            }
+
+            Object.DestroyImmediate(checkpoint);
+            return true;
+        }
+
+        private static bool EnsureHookPoint(
+            Scene scene,
+            string objectName,
+            Vector2 position,
+            Vector2 size)
+        {
+            GameObject hookObject = FindRootObject(scene, objectName);
+            if (hookObject == null)
+            {
+                CreateHookPoint(objectName, position, size);
+                return true;
+            }
+
+            bool changed = ApplyTransform(hookObject, position, size);
+            if (!hookObject.TryGetComponent(out HookPoint _))
+            {
+                hookObject.AddComponent<HookPoint>();
+                changed = true;
+            }
+
+            if (hookObject.TryGetComponent(out SolidSprite visual))
+            {
+                Color hookColor = new Color(1f, 0.72f, 0.18f);
+                if (visual.Color != hookColor)
+                {
+                    visual.Color = hookColor;
+                    changed = true;
+                }
+            }
+
             return changed;
         }
 
@@ -485,7 +571,7 @@ namespace HimoHitoEditor
         private static void CreatePlayer()
         {
             GameObject player = new GameObject("Player");
-            player.transform.position = new Vector3(-9f, -4.2f, 0f);
+            player.transform.position = new Vector3(-18f, -4.2f, 0f);
             player.transform.localScale = new Vector3(0.8f, 1.2f, 1f);
 
             SpriteRenderer renderer = player.AddComponent<SpriteRenderer>();
