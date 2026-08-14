@@ -71,6 +71,13 @@ namespace HimoHito
             ApplyPlatformState();
         }
 
+        public void RestoreWeave(bool isCompleted)
+        {
+            IsCompleted = isCompleted;
+            playerInRange = false;
+            ApplyPlatformState();
+        }
+
         private void ApplyPlatformState()
         {
             if (wovenPlatform != null)

@@ -31,5 +31,10 @@ namespace HimoHito
         {
             currentThreads = 0;
         }
+
+        public void RestoreThreads(int amount)
+        {
+            currentThreads = Mathf.Max(0, amount);
+        }
     }
 }

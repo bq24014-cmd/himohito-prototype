@@ -30,26 +30,38 @@ namespace HimoHitoEditor
             CreateCamera();
             CreatePlayer();
             CreatePlatform("Start Ground", new Vector2(-9f, -5.2f), new Vector2(5f, 0.7f));
-            HookPoint hook1 = CreateHookPoint(
+            CreateHookPoint(
                 "Hook 1",
                 new Vector2(-5f, -0.2f),
+                new Vector2(1.6f, 0.45f));
+
+            // The route now keeps only the upper planning landing.
+            // Missing the red obstacle or upper landing leads to a fall and retry.
+            GameObject landing1 = CreatePlatform(
+                "Landing 1",
+                new Vector2(0f, -2.3f),
+                new Vector2(4f, 0.7f));
+            ConfigureTutorialCheckpoint(landing1, 2, new Vector2(0f, -1.3f));
+            HookPoint hook2 = CreateHookPoint(
+                "Hook 2",
+                new Vector2(5f, 1.5f),
                 new Vector2(1.6f, 0.45f));
             CreateRopeReleaseHazard(
                 "Practice Long Rope Obstacle",
                 new Vector2(1.5f, -4.5f),
                 new Vector2(0.6f, 2f),
-                hook1);
-
-            // The route now keeps only the upper planning landing.
-            // Missing the red obstacle or upper landing leads to a fall and retry.
-            CreatePlatform("Landing 1", new Vector2(0f, -2.3f), new Vector2(4f, 0.7f));
-            CreateHookPoint("Hook 2", new Vector2(5f, 1.5f), new Vector2(1.6f, 0.45f));
-            CreatePlatform("Planning Landing", new Vector2(9.5f, -0.4f), new Vector2(4f, 0.7f));
+                hook2);
+            GameObject planningLanding = CreatePlatform(
+                "Planning Landing",
+                new Vector2(9.5f, -0.4f),
+                new Vector2(4f, 0.7f));
+            ConfigureTutorialCheckpoint(planningLanding, 3, new Vector2(9.5f, 0.6f));
             CreateHookPoint("Hook 3", new Vector2(13.8f, 3.9f), new Vector2(1.6f, 0.45f));
             GameObject wovenPlatform = CreateWovenPlatform(
                 "Tutorial Woven Platform",
                 new Vector2(21.1f, -0.5f),
                 new Vector2(4f, 0.8f));
+            ConfigureTutorialCheckpoint(wovenPlatform, 4, new Vector2(21.1f, 0.55f));
             CreateWeaveFrame(
                 "Tutorial Weave Frame",
                 new Vector2(8f, -0.7f),
@@ -133,6 +145,7 @@ namespace HimoHitoEditor
             changed |= RemoveRootObject(prototypeScene, "Planning Hook");
             changed |= EnsurePracticeSection(prototypeScene);
             changed |= EnsureWeaveExperiment(prototypeScene);
+            changed |= EnsureTutorialCheckpoints(prototypeScene);
 
             if (changed)
             {
@@ -291,14 +304,65 @@ namespace HimoHitoEditor
         private static bool EnsurePracticeSection(Scene scene)
         {
             bool changed = false;
-            GameObject hookObject = FindRootObject(scene, "Hook 1");
-            HookPoint hook1 = hookObject != null ? hookObject.GetComponent<HookPoint>() : null;
+            GameObject hookObject = FindRootObject(scene, "Hook 2");
+            HookPoint hook2 = hookObject != null ? hookObject.GetComponent<HookPoint>() : null;
             changed |= EnsureRopeReleaseHazard(
                 scene,
                 "Practice Long Rope Obstacle",
                 new Vector2(1.5f, -4.5f),
                 new Vector2(0.6f, 2f),
-                hook1);
+                hook2);
+            return changed;
+        }
+
+        private static bool EnsureTutorialCheckpoints(Scene scene)
+        {
+            bool changed = false;
+            changed |= EnsureTutorialCheckpoint(
+                scene,
+                "Landing 1",
+                2,
+                new Vector2(0f, -1.3f));
+            changed |= EnsureTutorialCheckpoint(
+                scene,
+                "Planning Landing",
+                3,
+                new Vector2(9.5f, 0.6f));
+            changed |= EnsureTutorialCheckpoint(
+                scene,
+                "Tutorial Woven Platform",
+                4,
+                new Vector2(21.1f, 0.55f));
+            return changed;
+        }
+
+        private static bool EnsureTutorialCheckpoint(
+            Scene scene,
+            string objectName,
+            int sectionNumber,
+            Vector2 respawnPosition)
+        {
+            GameObject platform = FindRootObject(scene, objectName);
+            if (platform == null)
+            {
+                return false;
+            }
+
+            bool changed = false;
+            if (!platform.TryGetComponent(out TutorialCheckpoint checkpoint))
+            {
+                checkpoint = platform.AddComponent<TutorialCheckpoint>();
+                changed = true;
+            }
+
+            if (checkpoint.SectionNumber != sectionNumber ||
+                checkpoint.RespawnPosition != respawnPosition)
+            {
+                checkpoint.Configure(sectionNumber, respawnPosition);
+                EditorUtility.SetDirty(checkpoint);
+                changed = true;
+            }
+
             return changed;
         }
 
@@ -452,9 +516,22 @@ namespace HimoHitoEditor
             player.AddComponent<PrototypeRunController>();
         }
 
-        private static void CreatePlatform(string name, Vector2 position, Vector2 size)
+        private static GameObject CreatePlatform(string name, Vector2 position, Vector2 size)
         {
-            CreatePlatformVisual(name, position, size, new Color(0.38f, 0.41f, 0.52f));
+            return CreatePlatformVisual(
+                name,
+                position,
+                size,
+                new Color(0.38f, 0.41f, 0.52f));
+        }
+
+        private static void ConfigureTutorialCheckpoint(
+            GameObject platform,
+            int sectionNumber,
+            Vector2 respawnPosition)
+        {
+            TutorialCheckpoint checkpoint = platform.AddComponent<TutorialCheckpoint>();
+            checkpoint.Configure(sectionNumber, respawnPosition);
         }
 
         private static void CreateRopeReleaseHazard(

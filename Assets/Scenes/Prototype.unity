@@ -661,7 +661,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f55b1c935f0f41b482450bb47157182a, type: 3}
   m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.RopeReleaseHazard
-  affectedHook: {fileID: 523582262}
+  affectedHook: {fileID: 323891828}
 --- !u!1 &611392696
 GameObject:
   m_ObjectHideFlags: 0
@@ -1244,6 +1244,7 @@ GameObject:
   - component: {fileID: 864908579}
   - component: {fileID: 864908578}
   - component: {fileID: 864908577}
+  - component: {fileID: 864908581}
   m_Layer: 0
   m_Name: Landing 1
   m_TagString: Untagged
@@ -1251,6 +1252,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &864908581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 864908576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88fe4f2a4dbe4212ae39234049e238c8, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::HimoHito.TutorialCheckpoint
+  sectionNumber: 2
+  respawnPosition: {x: 0, y: -1.3}
 --- !u!61 &864908577
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1396,6 +1411,7 @@ GameObject:
   - component: {fileID: 913869086}
   - component: {fileID: 913869085}
   - component: {fileID: 913869084}
+  - component: {fileID: 913869088}
   m_Layer: 0
   m_Name: Tutorial Woven Platform
   m_TagString: Untagged
@@ -1403,6 +1419,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!114 &913869088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 913869083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88fe4f2a4dbe4212ae39234049e238c8, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::HimoHito.TutorialCheckpoint
+  sectionNumber: 4
+  respawnPosition: {x: 21.1, y: 0.55}
 --- !u!61 &913869084
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2166,6 +2196,7 @@ GameObject:
   - component: {fileID: 2028724671}
   - component: {fileID: 2028724670}
   - component: {fileID: 2028724669}
+  - component: {fileID: 2028724673}
   m_Layer: 0
   m_Name: Planning Landing
   m_TagString: Untagged
@@ -2173,6 +2204,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &2028724673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2028724668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88fe4f2a4dbe4212ae39234049e238c8, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::HimoHito.TutorialCheckpoint
+  sectionNumber: 3
+  respawnPosition: {x: 9.5, y: 0.6}
 --- !u!61 &2028724669
 BoxCollider2D:
   m_ObjectHideFlags: 0

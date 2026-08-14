@@ -79,7 +79,16 @@ namespace HimoHito
             }
 
             GUILayout.BeginArea(new Rect(22f, 18f, 520f, 390f), GUI.skin.box);
-            GUILayout.Label("ヒモヒト / プロトタイプ", titleStyle);
+            GUILayout.Label("ヒモヒト / チュートリアル", titleStyle);
+
+            if (runController != null)
+            {
+                GUILayout.Label(
+                    $"第{runController.CurrentTutorialSection}区間 / " +
+                    $"{PrototypeRunController.TutorialSectionCount}　" +
+                    runController.CurrentTutorialObjective,
+                    bodyStyle);
+            }
 
             if (ropeResource != null)
             {
@@ -125,7 +134,7 @@ namespace HimoHito
             }
             GUILayout.Label("移動：A / D    ジャンプ：Space", bodyStyle);
             GUILayout.Label("照準：← / →    真上・真下：↑ / ↓", bodyStyle);
-            GUILayout.Label("ヒモ：E長押し    再挑戦：R", bodyStyle);
+            GUILayout.Label("ヒモ：E長押し    この区間から再挑戦：R", bodyStyle);
             GUILayout.Label("編む：編み枠の近くでQ", bodyStyle);
             GUILayout.Label("マウス照準も使用可能", bodyStyle);
             GUILayout.EndArea();
@@ -214,7 +223,7 @@ namespace HimoHito
             GUILayout.BeginArea(panel, GUI.skin.box);
             GUILayout.Space(24f);
             GUILayout.Label("HIMOHITO", startTitleStyle);
-            GUILayout.Label("緑色のゴールを目指す", startObjectiveStyle);
+            GUILayout.Label("4つの区間でヒモの使い方を覚える", startObjectiveStyle);
             GUILayout.Space(22f);
             GUILayout.Label("重要", startImportantStyle);
             GUILayout.Label("W：次に使うヒモの長さを1増やす", startImportantStyle);
@@ -225,7 +234,7 @@ namespace HimoHito
             GUILayout.Label("E 長押し  ヒモを掛ける", startControlStyle);
             GUILayout.Label("E を離す  勢いを保って飛ぶ", startControlStyle);
             GUILayout.Label("Q  編み糸2個で指定された足場を編む", startControlStyle);
-            GUILayout.Label("R  最初から再挑戦", startControlStyle);
+            GUILayout.Label("R  現在の区間から再挑戦", startControlStyle);
             GUILayout.FlexibleSpace();
             GUILayout.Label("キーボードの何かのキーを押して開始", startPromptStyle);
             GUILayout.Space(24f);

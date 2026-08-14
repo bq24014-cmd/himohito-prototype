@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace HimoHito
@@ -27,11 +28,38 @@ namespace HimoHito
         private WeaveResource weaveResource;
         private PlayerMover playerMover;
         private Vector2 startPosition;
+        private Vector2 checkpointPosition;
+        private float checkpointRopeLength;
+        private int checkpointSelectedRopeLength;
+        private int checkpointWeaveThreads;
+        private readonly List<CheckpointWeaveState> checkpointWeaveStates = new();
         private float automaticRespawnTimer;
         private bool startRequested;
 
         public RunOutcome Outcome { get; private set; } = RunOutcome.WaitingToStart;
         public bool IsAutomaticRespawnPending { get; private set; }
+        public int CurrentTutorialSection { get; private set; } = 1;
+        public const int TutorialSectionCount = 4;
+        public string CurrentTutorialObjective => CurrentTutorialSection switch
+        {
+            1 => "Hookにヒモを掛ける",
+            2 => "障害物を避けて着地する",
+            3 => "消費したヒモから足場を編む",
+            4 => "編んだ足場からゴールする",
+            _ => string.Empty
+        };
+
+        private readonly struct CheckpointWeaveState
+        {
+            public CheckpointWeaveState(WeaveFrame frame, bool isCompleted)
+            {
+                Frame = frame;
+                IsCompleted = isCompleted;
+            }
+
+            public WeaveFrame Frame { get; }
+            public bool IsCompleted { get; }
+        }
 
         private void Awake()
         {
@@ -46,6 +74,8 @@ namespace HimoHito
         private void Start()
         {
             EnterStartScreen();
+            checkpointPosition = startPosition;
+            CaptureCheckpointState();
         }
 
         private void Update()
@@ -58,7 +88,14 @@ namespace HimoHito
 
             if (Input.GetKeyDown(KeyCode.R))
             {
-                Restart();
+                if (Outcome == RunOutcome.Clear)
+                {
+                    RestartTutorial();
+                }
+                else
+                {
+                    RestartFromCheckpoint();
+                }
                 return;
             }
 
@@ -67,7 +104,7 @@ namespace HimoHito
                 automaticRespawnTimer -= Time.unscaledDeltaTime;
                 if (automaticRespawnTimer <= 0f)
                 {
-                    Restart();
+                    RestartFromCheckpoint();
                 }
                 return;
             }
@@ -148,6 +185,21 @@ namespace HimoHito
             }
         }
 
+        public void TryReachTutorialSection(int sectionNumber, Vector2 respawnPosition)
+        {
+            if (Outcome != RunOutcome.Playing ||
+                ropeController.IsAttached ||
+                sectionNumber <= CurrentTutorialSection ||
+                sectionNumber > TutorialSectionCount)
+            {
+                return;
+            }
+
+            CurrentTutorialSection = sectionNumber;
+            checkpointPosition = respawnPosition;
+            CaptureCheckpointState();
+        }
+
         private void Finish(RunOutcome outcome)
         {
             ropeController.DetachAndRefund();
@@ -157,19 +209,68 @@ namespace HimoHito
             Outcome = outcome;
         }
 
-        private void Restart()
+        private void RestartFromCheckpoint()
+        {
+            body.simulated = true;
+            ropeController.DetachAndRefund();
+            RestoreCheckpointState();
+            body.position = checkpointPosition;
+            ResetMotionAndResume();
+        }
+
+        private void RestartTutorial()
         {
             body.simulated = true;
             ropeController.DetachAndRefund();
             ropeResource.ResetToMaximum();
             weaveResource.ResetThreads();
-            foreach (WeaveFrame weaveFrame in FindObjectsByType<WeaveFrame>(FindObjectsSortMode.None))
+            foreach (WeaveFrame weaveFrame in
+                     FindObjectsByType<WeaveFrame>(FindObjectsSortMode.None))
             {
                 weaveFrame.ResetWeave();
             }
+
+            CurrentTutorialSection = 1;
+            checkpointPosition = startPosition;
             body.position = startPosition;
+            CaptureCheckpointState();
+            ResetMotionAndResume();
+        }
+
+        private void CaptureCheckpointState()
+        {
+            checkpointRopeLength = ropeResource.CurrentLength;
+            checkpointSelectedRopeLength = ropeController.SelectedRopeLength;
+            checkpointWeaveThreads = weaveResource.CurrentThreads;
+            checkpointWeaveStates.Clear();
+            foreach (WeaveFrame weaveFrame in
+                     FindObjectsByType<WeaveFrame>(FindObjectsSortMode.None))
+            {
+                checkpointWeaveStates.Add(
+                    new CheckpointWeaveState(weaveFrame, weaveFrame.IsCompleted));
+            }
+        }
+
+        private void RestoreCheckpointState()
+        {
+            ropeResource.RestoreCurrentLength(checkpointRopeLength);
+            ropeController.RestoreSelectedRopeLength(checkpointSelectedRopeLength);
+            weaveResource.RestoreThreads(checkpointWeaveThreads);
+            foreach (CheckpointWeaveState state in checkpointWeaveStates)
+            {
+                if (state.Frame != null)
+                {
+                    state.Frame.RestoreWeave(state.IsCompleted);
+                }
+            }
+        }
+
+        private void ResetMotionAndResume()
+        {
             body.linearVelocity = Vector2.zero;
             body.angularVelocity = 0f;
+            playerMover.enabled = true;
+            ropeController.enabled = true;
             automaticRespawnTimer = 0f;
             IsAutomaticRespawnPending = false;
             Outcome = RunOutcome.Playing;

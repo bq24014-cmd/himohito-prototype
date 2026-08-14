@@ -217,6 +217,12 @@ namespace HimoHito
             ClampSelectedRopeLength();
         }
 
+        public void RestoreSelectedRopeLength(int length)
+        {
+            selectedRopeLength = length;
+            ClampSelectedRopeLength();
+        }
+
         private void UpdateSelectedRopeLength()
         {
             if (IsAttached)
