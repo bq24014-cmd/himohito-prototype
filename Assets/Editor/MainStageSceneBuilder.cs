@@ -26,17 +26,17 @@ namespace HimoHitoEditor
 
             CreatePlatform(
                 "Main Walkway 1",
-                new Vector2(8.6f, -3.2f),
-                new Vector2(4f, 0.7f));
+                new Vector2(10.1f, -3.2f),
+                new Vector2(7f, 0.7f));
 
             CreateHookPoint(
                 "Main Hook 2",
-                new Vector2(15.2f, 0.7f),
+                new Vector2(18.2f, 0.7f),
                 new Vector2(1.6f, 0.45f));
 
             GameObject landingTwo = CreatePlatform(
                 "Main Landing 2",
-                new Vector2(20.5f, -2.2f),
+                new Vector2(23.5f, -2.2f),
                 new Vector2(4f, 0.7f));
             landingTwo.AddComponent<MainStageSectionTarget>();
 
