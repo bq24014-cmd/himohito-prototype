@@ -13,8 +13,10 @@ namespace HimoHitoEditor
     {
         private const string ScenePath = "Assets/Scenes/MainStage.unity";
 
-        [MenuItem("HimoHito/Build Main Stage Through Section 2")]
-        public static void BuildMainStageThroughSectionTwo()
+        private const float DevelopmentRopeLength = 99f;
+
+        [MenuItem("HimoHito/Build Main Stage Through Section 3")]
+        public static void BuildMainStageThroughSectionThree()
         {
             Scene scene = EditorSceneManager.NewScene(NewSceneSetup.EmptyScene, NewSceneMode.Single);
 
@@ -36,11 +38,21 @@ namespace HimoHitoEditor
 
             GameObject landingTwo = CreatePlatform(
                 "Main Landing 2",
-                new Vector2(23.5f, -2.2f),
-                new Vector2(4f, 0.7f));
-            landingTwo.AddComponent<MainStageSectionTarget>();
+                new Vector2(27.1f, -2.2f),
+                new Vector2(11.2f, 0.7f));
 
-            CreateCamera(player.transform, landingTwo.transform);
+            CreateHookPoint(
+                "Main Hook 3",
+                new Vector2(38f, 2.2f),
+                new Vector2(1.6f, 0.45f));
+
+            GameObject landingThree = CreatePlatform(
+                "Main Landing 3",
+                new Vector2(46.8f, 0.3f),
+                new Vector2(4f, 0.7f));
+            landingThree.AddComponent<MainStageSectionTarget>();
+
+            CreateCamera(player.transform, landingThree.transform);
             CreatePlatform(
                 "Main Start Ground",
                 new Vector2(-6f, -5.2f),
@@ -56,12 +68,12 @@ namespace HimoHitoEditor
             AssetDatabase.SaveAssets();
             AssetDatabase.Refresh();
             Selection.activeGameObject = player;
-            Debug.Log($"HimoHito main-stage sections 1-2 created: {ScenePath}");
+            Debug.Log($"HimoHito main-stage sections 1-3 created: {ScenePath}");
         }
 
         public static void BuildFromCommandLine()
         {
-            BuildMainStageThroughSectionTwo();
+            BuildMainStageThroughSectionThree();
             EditorApplication.Exit(0);
         }
 
@@ -108,12 +120,21 @@ namespace HimoHitoEditor
             LineRenderer ropeLine = player.AddComponent<LineRenderer>();
             ropeLine.sortingOrder = 5;
 
-            player.AddComponent<RopeResource>();
+            RopeResource ropeResource = player.AddComponent<RopeResource>();
+            ConfigureDevelopmentRopeLength(ropeResource);
             player.AddComponent<WeaveResource>();
             player.AddComponent<PlayerMover>();
             player.AddComponent<RopeController>();
             player.AddComponent<MainStageRespawnOnFall>();
             return player;
+        }
+
+        private static void ConfigureDevelopmentRopeLength(RopeResource ropeResource)
+        {
+            SerializedObject serializedResource = new SerializedObject(ropeResource);
+            serializedResource.FindProperty("maximumLength").floatValue = DevelopmentRopeLength;
+            serializedResource.FindProperty("currentLength").floatValue = DevelopmentRopeLength;
+            serializedResource.ApplyModifiedPropertiesWithoutUndo();
         }
 
         private static GameObject CreatePlatform(string name, Vector2 position, Vector2 size)

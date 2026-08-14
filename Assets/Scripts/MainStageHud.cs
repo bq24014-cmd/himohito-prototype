@@ -36,7 +36,7 @@ namespace HimoHito
             EnsureStyles();
             GUILayout.BeginArea(new Rect(22f, 18f, 520f, 350f), GUI.skin.box);
             GUILayout.Label("ヒモヒト / 本編ステージ", titleStyle);
-            GUILayout.Label("第1〜2区間　基本の振り子と徒歩での準備", bodyStyle);
+            GUILayout.Label("第1〜3区間　観察して長さを選ぶ", bodyStyle);
 
             if (ropeResource != null)
             {
@@ -65,11 +65,11 @@ namespace HimoHito
             }
             else if (sectionTarget != null && sectionTarget.IsReached)
             {
-                GUILayout.Label("第2区間 到達", resultStyle);
+                GUILayout.Label("第3区間 到達", resultStyle);
             }
             else
             {
-                GUILayout.Label("歩いて次を観察し、Hook 2からLanding 2へ進む", resultStyle);
+                GUILayout.Label("Hook 3に掛かる長さとLanding 3へ届く長さを考える", resultStyle);
             }
 
             if (playerBody != null)
