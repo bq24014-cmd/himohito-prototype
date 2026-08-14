@@ -15,8 +15,8 @@ namespace HimoHitoEditor
 
         private const float DevelopmentRopeLength = 99f;
 
-        [MenuItem("HimoHito/Build Main Stage Through Section 3")]
-        public static void BuildMainStageThroughSectionThree()
+        [MenuItem("HimoHito/Build Main Stage Through Section 5")]
+        public static void BuildMainStageThroughSectionFive()
         {
             Scene scene = EditorSceneManager.NewScene(NewSceneSetup.EmptyScene, NewSceneMode.Single);
 
@@ -46,13 +46,14 @@ namespace HimoHitoEditor
                 new Vector2(36f, 2.2f),
                 new Vector2(1.6f, 0.45f));
 
-            GameObject landingThree = CreatePlatform(
+            CreatePlatform(
                 "Main Landing 3",
                 new Vector2(46.3f, -0.5f),
                 new Vector2(4f, 0.7f));
-            landingThree.AddComponent<MainStageSectionTarget>();
 
-            CreateCamera(player.transform, landingThree.transform);
+            GameObject midpoint = CreateSectionsFourAndFive();
+
+            CreateCamera(player.transform, midpoint.transform);
             CreatePlatform(
                 "Main Start Ground",
                 new Vector2(-6f, -5.2f),
@@ -68,13 +69,89 @@ namespace HimoHitoEditor
             AssetDatabase.SaveAssets();
             AssetDatabase.Refresh();
             Selection.activeGameObject = player;
-            Debug.Log($"HimoHito main-stage sections 1-3 created: {ScenePath}");
+            Debug.Log($"HimoHito main-stage sections 1-5 created: {ScenePath}");
         }
 
         public static void BuildFromCommandLine()
         {
-            BuildMainStageThroughSectionThree();
+            BuildMainStageThroughSectionFive();
             EditorApplication.Exit(0);
+        }
+
+        public static void AddSectionsFourAndFiveFromCommandLine()
+        {
+            Scene scene = EditorSceneManager.OpenScene(ScenePath, OpenSceneMode.Single);
+            RemoveSectionFourAndFiveObjects();
+
+            GameObject landingThree = GameObject.Find("Main Landing 3");
+            if (landingThree != null &&
+                landingThree.TryGetComponent(out MainStageSectionTarget oldTarget))
+            {
+                Object.DestroyImmediate(oldTarget);
+            }
+
+            GameObject midpoint = CreateSectionsFourAndFive();
+            RopeResource ropeResource = Object.FindFirstObjectByType<RopeResource>();
+            MainStagePreview preview = Object.FindFirstObjectByType<MainStagePreview>();
+            if (ropeResource != null && preview != null)
+            {
+                preview.Configure(ropeResource.transform, midpoint.transform);
+                EditorUtility.SetDirty(preview);
+            }
+
+            EditorSceneManager.SaveScene(scene, ScenePath);
+            AssetDatabase.SaveAssets();
+            AssetDatabase.Refresh();
+            EditorApplication.Exit(0);
+        }
+
+        private static GameObject CreateSectionsFourAndFive()
+        {
+            CreateHookPoint(
+                "Main Upper Route Hook",
+                new Vector2(55f, 4.8f),
+                new Vector2(1.6f, 0.45f));
+            CreatePlatform(
+                "Main Upper Route Landing",
+                new Vector2(62.5f, 2.2f),
+                new Vector2(6f, 0.7f));
+            CreatePlatform(
+                "Main Upper Route Descent",
+                new Vector2(66.3f, 0f),
+                new Vector2(4f, 0.7f));
+            CreatePlatform(
+                "Main Lower Walking Route",
+                new Vector2(56.5f, -3.3f),
+                new Vector2(16.4f, 0.7f));
+
+            GameObject midpoint = CreatePlatform(
+                "Main Midpoint Checkpoint",
+                new Vector2(68f, -2.4f),
+                new Vector2(7f, 0.7f));
+            MainStageCheckpoint checkpoint = midpoint.AddComponent<MainStageCheckpoint>();
+            checkpoint.Configure(new Vector2(68f, -1.35f));
+            return midpoint;
+        }
+
+        private static void RemoveSectionFourAndFiveObjects()
+        {
+            string[] objectNames =
+            {
+                "Main Upper Route Hook",
+                "Main Upper Route Landing",
+                "Main Upper Route Descent",
+                "Main Lower Walking Route",
+                "Main Midpoint Checkpoint"
+            };
+
+            foreach (string objectName in objectNames)
+            {
+                GameObject existing = GameObject.Find(objectName);
+                if (existing != null)
+                {
+                    Object.DestroyImmediate(existing);
+                }
+            }
         }
 
         private static void CreateCamera(Transform player, Transform previewTarget)

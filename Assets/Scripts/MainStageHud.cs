@@ -12,7 +12,7 @@ namespace HimoHito
         private Rigidbody2D playerBody;
         private WeaveResource weaveResource;
         private MainStagePreview preview;
-        private MainStageSectionTarget sectionTarget;
+        private MainStageCheckpoint midpointCheckpoint;
         private GUIStyle titleStyle;
         private GUIStyle bodyStyle;
         private GUIStyle ropeStyle;
@@ -24,7 +24,7 @@ namespace HimoHito
             ropeController = FindFirstObjectByType<RopeController>();
             weaveResource = FindFirstObjectByType<WeaveResource>();
             preview = FindFirstObjectByType<MainStagePreview>();
-            sectionTarget = FindFirstObjectByType<MainStageSectionTarget>();
+            midpointCheckpoint = FindFirstObjectByType<MainStageCheckpoint>();
             if (ropeController != null)
             {
                 playerBody = ropeController.GetComponent<Rigidbody2D>();
@@ -36,7 +36,7 @@ namespace HimoHito
             EnsureStyles();
             GUILayout.BeginArea(new Rect(22f, 18f, 520f, 350f), GUI.skin.box);
             GUILayout.Label("ヒモヒト / 本編ステージ", titleStyle);
-            GUILayout.Label("第1〜3区間　観察して長さを選ぶ", bodyStyle);
+            GUILayout.Label("第4〜5区間　使う資源を選ぶ上下分岐", bodyStyle);
 
             if (ropeResource != null)
             {
@@ -63,13 +63,13 @@ namespace HimoHito
             {
                 GUILayout.Label("ステージ確認中 — Landingからスタートへ戻ります", resultStyle);
             }
-            else if (sectionTarget != null && sectionTarget.IsReached)
+            else if (midpointCheckpoint != null && midpointCheckpoint.IsReached)
             {
-                GUILayout.Label("第3区間 到達", resultStyle);
+                GUILayout.Label("中間チェックポイント 到達", resultStyle);
             }
             else
             {
-                GUILayout.Label("Hook 3に掛かる長さとLanding 3へ届く長さを考える", resultStyle);
+                GUILayout.Label("上：ヒモを編み糸に変える　下：ヒモを温存する", resultStyle);
             }
 
             if (playerBody != null)
@@ -79,7 +79,7 @@ namespace HimoHito
 
             GUILayout.Label("移動：A / D　ジャンプ：Space", bodyStyle);
             GUILayout.Label("照準：矢印キー　ヒモ：E長押し", bodyStyle);
-            GUILayout.Label("落下した場合はスタートから再開", bodyStyle);
+            GUILayout.Label("合流後の落下は中間チェックポイントから再開", bodyStyle);
             GUILayout.EndArea();
         }
 

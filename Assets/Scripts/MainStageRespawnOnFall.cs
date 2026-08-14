@@ -3,7 +3,7 @@ using UnityEngine;
 namespace HimoHito
 {
     /// <summary>
-    /// Restarts the current main-stage test from its beginning after a fall.
+    /// Restarts from the latest main-stage checkpoint and restores its resources.
     /// </summary>
     [RequireComponent(typeof(Rigidbody2D), typeof(RopeResource), typeof(RopeController))]
     [RequireComponent(typeof(WeaveResource))]
@@ -15,7 +15,12 @@ namespace HimoHito
         private RopeResource ropeResource;
         private RopeController ropeController;
         private WeaveResource weaveResource;
-        private Vector2 startPosition;
+        private Vector2 checkpointPosition;
+        private float checkpointRopeLength;
+        private int checkpointSelectedRopeLength;
+        private int checkpointWeaveThreads;
+
+        public bool HasReachedMidpoint { get; private set; }
 
         private void Awake()
         {
@@ -23,7 +28,8 @@ namespace HimoHito
             ropeResource = GetComponent<RopeResource>();
             ropeController = GetComponent<RopeController>();
             weaveResource = GetComponent<WeaveResource>();
-            startPosition = body.position;
+            checkpointPosition = body.position;
+            CaptureCheckpointState();
         }
 
         private void Update()
@@ -34,11 +40,37 @@ namespace HimoHito
             }
 
             ropeController.DetachAndRefund();
-            ropeResource.ResetToMaximum();
-            weaveResource.ResetThreads();
-            body.position = startPosition;
+            RestoreCheckpointState();
+            body.position = checkpointPosition;
             body.linearVelocity = Vector2.zero;
             body.angularVelocity = 0f;
+        }
+
+        public bool TryReachMidpoint(Vector2 respawnPosition)
+        {
+            if (ropeController.IsAttached)
+            {
+                return false;
+            }
+
+            checkpointPosition = respawnPosition;
+            CaptureCheckpointState();
+            HasReachedMidpoint = true;
+            return true;
+        }
+
+        private void CaptureCheckpointState()
+        {
+            checkpointRopeLength = ropeResource.CurrentLength;
+            checkpointSelectedRopeLength = ropeController.SelectedRopeLength;
+            checkpointWeaveThreads = weaveResource.CurrentThreads;
+        }
+
+        private void RestoreCheckpointState()
+        {
+            ropeResource.RestoreCurrentLength(checkpointRopeLength);
+            ropeController.RestoreSelectedRopeLength(checkpointSelectedRopeLength);
+            weaveResource.RestoreThreads(checkpointWeaveThreads);
         }
     }
 }
