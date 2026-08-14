@@ -12,7 +12,7 @@ namespace HimoHitoEditor
     [InitializeOnLoad]
     public static class PrototypeSceneBuilder
     {
-        private const string ScenePath = "Assets/Scenes/Prototype.unity";
+        private const string ScenePath = "Assets/Scenes/Tutorial.unity";
         private const string MainStageScenePath = "Assets/Scenes/MainStage.unity";
         private const float ExperimentalRopeLength = 12f;
         private static readonly Color RopeReleaseHazardColor = new Color(0.95f, 0.28f, 0.35f);
@@ -23,7 +23,7 @@ namespace HimoHitoEditor
             EditorApplication.playModeStateChanged += HandlePlayModeStateChanged;
         }
 
-        [MenuItem("HimoHito/Build Prototype Scene")]
+        [MenuItem("HimoHito/Build Tutorial Scene")]
         public static void BuildPrototypeScene()
         {
             Scene scene = EditorSceneManager.NewScene(NewSceneSetup.EmptyScene, NewSceneMode.Single);
@@ -78,7 +78,7 @@ namespace HimoHitoEditor
                 wovenPlatform);
             CreateGoalPlatform("Goal / Landing 3", new Vector2(26.15f, -0.5f), new Vector2(4f, 0.8f));
 
-            GameObject hud = new GameObject("Prototype HUD");
+            GameObject hud = new GameObject("Tutorial HUD");
             hud.AddComponent<PrototypeHud>();
 
             EditorSceneManager.SaveScene(scene, ScenePath);
@@ -90,7 +90,7 @@ namespace HimoHitoEditor
             AssetDatabase.SaveAssets();
             AssetDatabase.Refresh();
             Selection.activeGameObject = GameObject.Find("Player");
-            Debug.Log($"HimoHito prototype scene created: {ScenePath}");
+            Debug.Log($"HimoHito tutorial scene created: {ScenePath}");
         }
 
         public static void BuildFromCommandLine()

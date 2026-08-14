@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 namespace HimoHitoEditor
 {
     /// <summary>
-    /// Builds only the agreed portion of MainStage. Prototype.unity is never opened or changed.
+    /// Builds only the agreed portion of MainStage. Tutorial.unity is never opened or changed.
     /// </summary>
     public static class MainStageSceneBuilder
     {
@@ -137,7 +137,7 @@ namespace HimoHitoEditor
         {
             EditorBuildSettings.scenes = new[]
             {
-                new EditorBuildSettingsScene("Assets/Scenes/Prototype.unity", true),
+                new EditorBuildSettingsScene("Assets/Scenes/Tutorial.unity", true),
                 new EditorBuildSettingsScene(ScenePath, true)
             };
         }

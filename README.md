@@ -14,11 +14,11 @@
 
 1. Unity Hubで「Add project from disk」を選び、このフォルダを指定する
 2. Editorは `6000.3.21f1` を選ぶ
-3. 初回コンパイル後、`Assets/Scenes/Prototype.unity` が自動生成される
-4. `Prototype` シーンを開いてPlayを押す
+3. 初回コンパイル後、`Assets/Scenes/Tutorial.unity` が自動生成される
+4. `Tutorial` シーンを開いてPlayを押す
 5. 操作説明を読み、キーボードの何かのキーを押して離すと開始する
 
-自動生成されない場合は、Unity上部メニューの `HimoHito > Build Prototype Scene` を押してください。
+自動生成されない場合は、Unity上部メニューの `HimoHito > Build Tutorial Scene` を押してください。
 
 ## 操作
 
