@@ -52,7 +52,7 @@ namespace HimoHitoEditor
                 new Vector2(0f, -2.3f),
                 new Vector2(4f, 0.7f));
             ConfigureTutorialCheckpoint(landing1, 3, new Vector2(0f, -1.3f));
-            HookPoint hook2 = CreateHookPoint(
+            CreateHookPoint(
                 "Hook 2",
                 new Vector2(5f, 1.5f),
                 new Vector2(1.6f, 0.45f));
@@ -60,7 +60,7 @@ namespace HimoHitoEditor
                 "Practice Long Rope Obstacle",
                 new Vector2(1.5f, -4.5f),
                 new Vector2(0.6f, 2f),
-                hook2);
+                2);
             CreatePlatform(
                 "Planning Landing",
                 new Vector2(9.5f, -0.4f),
@@ -317,16 +317,12 @@ namespace HimoHitoEditor
 
         private static bool EnsurePracticeSection(Scene scene)
         {
-            bool changed = false;
-            GameObject hookObject = FindRootObject(scene, "Hook 1");
-            HookPoint hook1 = hookObject != null ? hookObject.GetComponent<HookPoint>() : null;
-            changed |= EnsureRopeReleaseHazard(
+            return EnsureRopeReleaseHazard(
                 scene,
                 "Practice Long Rope Obstacle",
                 new Vector2(1.5f, -4.5f),
                 new Vector2(0.6f, 2f),
-                hook1);
-            return changed;
+                2);
         }
 
         private static bool EnsureTutorialLayout(Scene scene)
@@ -474,7 +470,7 @@ namespace HimoHitoEditor
             string objectName,
             Vector2 position,
             Vector2 size,
-            HookPoint affectedHook)
+            int activeTutorialSection)
         {
             bool changed = EnsurePlatform(scene, objectName, position, size);
             GameObject hazard = FindRootObject(scene, objectName);
@@ -496,9 +492,9 @@ namespace HimoHitoEditor
                 changed = true;
             }
 
-            if (releaseHazard.AffectedHook != affectedHook)
+            if (releaseHazard.ActiveTutorialSection != activeTutorialSection)
             {
-                releaseHazard.Configure(affectedHook);
+                releaseHazard.Configure(activeTutorialSection);
                 EditorUtility.SetDirty(releaseHazard);
                 changed = true;
             }
@@ -629,14 +625,14 @@ namespace HimoHitoEditor
             string name,
             Vector2 position,
             Vector2 size,
-            HookPoint affectedHook)
+            int activeTutorialSection)
         {
             GameObject hazard = CreatePlatformVisual(name, position, size, RopeReleaseHazardColor);
             BoxCollider2D trigger = hazard.AddComponent<BoxCollider2D>();
             trigger.isTrigger = true;
             trigger.size = Vector2.one;
             RopeReleaseHazard releaseHazard = hazard.AddComponent<RopeReleaseHazard>();
-            releaseHazard.Configure(affectedHook);
+            releaseHazard.Configure(activeTutorialSection);
         }
 
         private static HookPoint CreateHookPoint(string name, Vector2 position, Vector2 size)

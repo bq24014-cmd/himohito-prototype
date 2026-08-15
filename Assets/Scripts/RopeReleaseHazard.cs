@@ -8,17 +8,21 @@ namespace HimoHito
     /// </summary>
     public sealed class RopeReleaseHazard : MonoBehaviour
     {
-        [SerializeField] private HookPoint affectedHook;
+        [SerializeField, Range(1, PrototypeRunController.TutorialSectionCount)]
+        private int activeTutorialSection = 2;
 
         private BoxCollider2D detectionArea;
         private RopeController ropeController;
         private Collider2D playerCollider;
 
-        public HookPoint AffectedHook => affectedHook;
+        public int ActiveTutorialSection => activeTutorialSection;
 
-        public void Configure(HookPoint hook)
+        public void Configure(int tutorialSection)
         {
-            affectedHook = hook;
+            activeTutorialSection = Mathf.Clamp(
+                tutorialSection,
+                1,
+                PrototypeRunController.TutorialSectionCount);
         }
 
         private void Awake()
@@ -68,10 +72,16 @@ namespace HimoHito
 
         private bool ShouldDetach(RopeController contactedRope)
         {
-            return contactedRope != null &&
-                   contactedRope.IsAttached &&
-                   affectedHook != null &&
-                   contactedRope.ActiveHookPoint == affectedHook;
+            if (contactedRope == null || !contactedRope.IsAttached)
+            {
+                return false;
+            }
+
+            PrototypeRunController runController =
+                contactedRope.GetComponent<PrototypeRunController>();
+            return runController != null &&
+                   runController.Outcome == PrototypeRunController.RunOutcome.Playing &&
+                   runController.CurrentTutorialSection == activeTutorialSection;
         }
 
         private void CacheReferences()
