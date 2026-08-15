@@ -53,6 +53,11 @@ namespace HimoHito
                 return false;
             }
 
+            if (HasReachedMidpoint)
+            {
+                return true;
+            }
+
             checkpointPosition = respawnPosition;
             CaptureCheckpointState();
             HasReachedMidpoint = true;

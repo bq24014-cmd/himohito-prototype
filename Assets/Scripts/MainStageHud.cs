@@ -12,7 +12,7 @@ namespace HimoHito
         private Rigidbody2D playerBody;
         private WeaveResource weaveResource;
         private MainStagePreview preview;
-        private MainStageCheckpoint midpointCheckpoint;
+        private MainStageRespawnOnFall respawnController;
         private GUIStyle titleStyle;
         private GUIStyle bodyStyle;
         private GUIStyle ropeStyle;
@@ -24,7 +24,7 @@ namespace HimoHito
             ropeController = FindFirstObjectByType<RopeController>();
             weaveResource = FindFirstObjectByType<WeaveResource>();
             preview = FindFirstObjectByType<MainStagePreview>();
-            midpointCheckpoint = FindFirstObjectByType<MainStageCheckpoint>();
+            respawnController = FindFirstObjectByType<MainStageRespawnOnFall>();
             if (ropeController != null)
             {
                 playerBody = ropeController.GetComponent<Rigidbody2D>();
@@ -63,7 +63,7 @@ namespace HimoHito
             {
                 GUILayout.Label("ステージ確認中 — Landingからスタートへ戻ります", resultStyle);
             }
-            else if (midpointCheckpoint != null && midpointCheckpoint.IsReached)
+            else if (respawnController != null && respawnController.HasReachedMidpoint)
             {
                 GUILayout.Label("中間チェックポイント 到達", resultStyle);
             }
