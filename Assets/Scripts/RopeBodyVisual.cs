@@ -13,12 +13,14 @@ namespace HimoHito
         [SerializeField, Range(0.2f, 1f)] private float minimumVisualScale = 0.65f;
 
         private RopeResource ropeResource;
+        private RopeController ropeController;
         private SpriteRenderer sourceRenderer;
         private Transform visualTransform;
 
         private void Awake()
         {
             ropeResource = GetComponent<RopeResource>();
+            ropeController = GetComponent<RopeController>();
             sourceRenderer = GetComponent<SpriteRenderer>();
             CreateVisualBody();
             ApplyRemainingLength();
@@ -26,6 +28,11 @@ namespace HimoHito
 
         private void LateUpdate()
         {
+            if (ropeController != null && ropeController.IsAttached)
+            {
+                return;
+            }
+
             ApplyRemainingLength();
         }
 
