@@ -34,7 +34,7 @@ namespace HimoHito
         private void OnGUI()
         {
             EnsureStyles();
-            GUILayout.BeginArea(new Rect(22f, 18f, 520f, 350f), GUI.skin.box);
+            GUILayout.BeginArea(new Rect(22f, 18f, 520f, 380f), GUI.skin.box);
             GUILayout.Label("ヒモヒト / 本編ステージ", titleStyle);
             GUILayout.Label("第4〜5区間　使う資源を選ぶ上下分岐", bodyStyle);
 
@@ -43,6 +43,7 @@ namespace HimoHito
                 GUILayout.Label(
                     $"ヒモ残量  {ropeResource.CurrentLength:0.0} / {ropeResource.MaximumLength:0.0}",
                     ropeStyle);
+                RopeResourceGauge.Draw(ropeResource);
             }
 
             if (ropeController != null)

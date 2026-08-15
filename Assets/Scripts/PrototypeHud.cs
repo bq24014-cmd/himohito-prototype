@@ -88,7 +88,7 @@ namespace HimoHito
                 return;
             }
 
-            GUILayout.BeginArea(new Rect(22f, 18f, 520f, 390f), GUI.skin.box);
+            GUILayout.BeginArea(new Rect(22f, 18f, 520f, 420f), GUI.skin.box);
             GUILayout.Label("ヒモヒト / チュートリアル", titleStyle);
 
             if (runController != null)
@@ -105,6 +105,7 @@ namespace HimoHito
                 GUILayout.Label(
                     $"ヒモ残量  {ropeResource.CurrentLength:0.0} / {ropeResource.MaximumLength:0.0}",
                     lengthStyle);
+                RopeResourceGauge.Draw(ropeResource);
             }
 
             if (ropeController != null)

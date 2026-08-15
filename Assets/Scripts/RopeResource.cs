@@ -18,6 +18,12 @@ namespace HimoHito
         private void Awake()
         {
             currentLength = Mathf.Clamp(currentLength, 0f, maximumLength);
+
+            if (TryGetComponent(out SpriteRenderer _) &&
+                !TryGetComponent(out RopeBodyVisual _))
+            {
+                gameObject.AddComponent<RopeBodyVisual>();
+            }
         }
 
         private void OnValidate()
