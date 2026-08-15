@@ -48,8 +48,8 @@ namespace HimoHitoEditor
 
             CreatePlatform(
                 "Main Landing 3",
-                new Vector2(47.3f, -0.5f),
-                new Vector2(6f, 0.7f));
+                new Vector2(47.425f, -0.5f),
+                new Vector2(5.75f, 0.7f));
 
             GameObject midpoint = CreateSectionsFourAndFive();
 
