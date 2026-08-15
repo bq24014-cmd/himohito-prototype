@@ -14,6 +14,9 @@ namespace HimoHito
         private BoxCollider2D detectionArea;
         private RopeController ropeController;
         private Collider2D playerCollider;
+        private SpriteRenderer hazardRenderer;
+        private Collider2D[] hazardColliders;
+        private bool isHazardVisible = true;
 
         public int ActiveTutorialSection => activeTutorialSection;
 
@@ -28,12 +31,20 @@ namespace HimoHito
         private void Awake()
         {
             CacheReferences();
+            UpdateVisibility();
+        }
+
+        private void Update()
+        {
+            CacheReferences();
+            UpdateVisibility();
         }
 
         private void FixedUpdate()
         {
             CacheReferences();
-            if (detectionArea == null ||
+            if (!isHazardVisible ||
+                detectionArea == null ||
                 playerCollider == null ||
                 ropeController == null ||
                 !ShouldDetach(ropeController))
@@ -86,6 +97,16 @@ namespace HimoHito
 
         private void CacheReferences()
         {
+            if (hazardRenderer == null)
+            {
+                hazardRenderer = GetComponent<SpriteRenderer>();
+            }
+
+            if (hazardColliders == null || hazardColliders.Length == 0)
+            {
+                hazardColliders = GetComponents<Collider2D>();
+            }
+
             if (detectionArea == null)
             {
                 foreach (BoxCollider2D collider in GetComponents<BoxCollider2D>())
@@ -106,6 +127,42 @@ namespace HimoHito
             if (ropeController != null && playerCollider == null)
             {
                 playerCollider = ropeController.GetComponent<Collider2D>();
+            }
+        }
+
+        private void UpdateVisibility()
+        {
+            if (ropeController == null)
+            {
+                return;
+            }
+
+            PrototypeRunController runController =
+                ropeController.GetComponent<PrototypeRunController>();
+            if (runController == null)
+            {
+                return;
+            }
+
+            bool shouldBeVisible =
+                runController.CurrentTutorialSection <= activeTutorialSection;
+            if (isHazardVisible == shouldBeVisible)
+            {
+                return;
+            }
+
+            isHazardVisible = shouldBeVisible;
+            if (hazardRenderer != null)
+            {
+                hazardRenderer.enabled = shouldBeVisible;
+            }
+
+            foreach (Collider2D hazardCollider in hazardColliders)
+            {
+                if (hazardCollider != null)
+                {
+                    hazardCollider.enabled = shouldBeVisible;
+                }
             }
         }
     }
