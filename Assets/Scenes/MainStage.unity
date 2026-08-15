@@ -1154,7 +1154,7 @@ Transform:
   m_GameObject: {fileID: 1192301103}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 56.5, y: -3.3, z: 0}
+  m_LocalPosition: {x: 58.5, y: -3.3, z: 0}
   m_LocalScale: {x: 16.4, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1363,7 +1363,7 @@ Transform:
   m_GameObject: {fileID: 1223217097}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 55, y: 4.8, z: 0}
+  m_LocalPosition: {x: 57, y: 4.8, z: 0}
   m_LocalScale: {x: 1.6, y: 0.45, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1667,7 +1667,7 @@ Transform:
   m_GameObject: {fileID: 1431259291}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 66.3, y: 0, z: 0}
+  m_LocalPosition: {x: 68.3, y: 0, z: 0}
   m_LocalScale: {x: 4, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1984,7 +1984,7 @@ Transform:
   m_GameObject: {fileID: 1635154815}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 62.5, y: 2.2, z: 0}
+  m_LocalPosition: {x: 64.5, y: 2.2, z: 0}
   m_LocalScale: {x: 6, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2187,7 +2187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c8a2e2a9f1f4cc2a3a1b0c4d5e6f708, type: 3}
   m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.MainStageCheckpoint
-  respawnPosition: {x: 68, y: -1.35}
+  respawnPosition: {x: 70, y: -1.35}
 --- !u!61 &1946924953
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2315,7 +2315,7 @@ Transform:
   m_GameObject: {fileID: 1946924951}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 68, y: -2.4, z: 0}
+  m_LocalPosition: {x: 70, y: -2.4, z: 0}
   m_LocalScale: {x: 7, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
