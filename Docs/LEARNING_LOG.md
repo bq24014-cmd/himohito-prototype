@@ -1472,3 +1472,13 @@ Hook 1へ届く最低限の長さと、長すぎて振り子が低くなる長�
 - 第3区間からの再挑戦では消えた状態を維持し、後の移動や編む操作を妨げない
 - クリア後にチュートリアルを最初から再開して第1区間へ戻った場合は、表示と当たり判定を復元する
 - 障害物のGameObject自体は削除せず、区間番号から現在の状態を再現できるようにする
+
+## CP5：Windows仮ビルドの起動確認
+
+- `Tutorial`と`MainStage`を含むWindows 64bit版を作成するEditorコードを追加した
+- Unityメニューの`HimoHito > Build Windows Prototype`から同じ構成を再生成できる
+- `Builds/Windows/HimoHitoPrototype.exe`と必要なデータ一式を生成できた
+- UnityのBuild結果は成功で、出力サイズは約85.2MBだった
+- 生成した実行ファイルをUnity Editor外で10秒間起動し、早期終了しないことを確認した
+- 起動ログに`Exception`、`Error`、`Failed`、`Crash`は記録されなかった
+- 今回は技術的な起動確認用の仮ビルドとし、最終ビルドと通しプレイ動画は本編ステージ完成後に作る

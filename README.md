@@ -20,6 +20,14 @@
 
 自動生成されない場合は、Unity上部メニューの `HimoHito > Build Tutorial Scene` を押してください。
 
+## Windows版の作り方
+
+1. Unity上部メニューの`HimoHito > Build Windows Prototype`を押す
+2. `Builds/Windows/HimoHitoPrototype.exe`が作成されるまで待つ
+3. `HimoHitoPrototype.exe`を起動する
+
+Windows版には`Tutorial`と`MainStage`の2シーンがこの順番で含まれます。実行ファイルだけを移動せず、`Builds/Windows`内のデータフォルダとDLLをまとめて扱ってください。ビルド結果は再生成できて容量も大きいため、`Builds/`はGitHubへ保存しません。最終提出用のビルドと通しプレイ動画は、本編ステージ完成後に改めて作成します。
+
 ## 操作
 
 - 開始画面では、キーボードの何かのキーを押して離す: ゲームを開始する
