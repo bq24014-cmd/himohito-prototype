@@ -37,7 +37,7 @@ namespace HimoHito
 
             GameObject landing = EnsureSolidObject(
                 LandingName,
-                new Vector2(94f, -0.8f),
+                new Vector2(96f, -0.8f),
                 new Vector2(8f, 0.7f),
                 new Color(0.38f, 0.41f, 0.52f));
             if (!landing.TryGetComponent(out MainStageSectionTarget _))
