@@ -15,8 +15,8 @@ namespace HimoHitoEditor
 
         private const float DevelopmentRopeLength = 99f;
 
-        [MenuItem("HimoHito/Build Main Stage Through Section 5")]
-        public static void BuildMainStageThroughSectionFive()
+        [MenuItem("HimoHito/Build Main Stage Through Section 6")]
+        public static void BuildMainStageThroughSectionSix()
         {
             Scene scene = EditorSceneManager.NewScene(NewSceneSetup.EmptyScene, NewSceneMode.Single);
 
@@ -51,9 +51,10 @@ namespace HimoHitoEditor
                 new Vector2(47.425f, -0.5f),
                 new Vector2(5.75f, 0.7f));
 
-            GameObject midpoint = CreateSectionsFourAndFive();
+            CreateSectionsFourAndFive();
+            GameObject sectionSixTarget = CreateSectionSix();
 
-            CreateCamera(player.transform, midpoint.transform);
+            CreateCamera(player.transform, sectionSixTarget.transform);
             CreatePlatform(
                 "Main Start Ground",
                 new Vector2(-6f, -5.2f),
@@ -69,12 +70,39 @@ namespace HimoHitoEditor
             AssetDatabase.SaveAssets();
             AssetDatabase.Refresh();
             Selection.activeGameObject = player;
-            Debug.Log($"HimoHito main-stage sections 1-5 created: {ScenePath}");
+            Debug.Log($"HimoHito main-stage sections 1-6 created: {ScenePath}");
         }
 
         public static void BuildFromCommandLine()
         {
-            BuildMainStageThroughSectionFive();
+            BuildMainStageThroughSectionSix();
+            EditorApplication.Exit(0);
+        }
+
+        [MenuItem("HimoHito/Add Main Stage Section 6")]
+        public static void AddSectionSix()
+        {
+            Scene scene = EditorSceneManager.OpenScene(ScenePath, OpenSceneMode.Single);
+            RemoveSectionSixObjects();
+            GameObject sectionSixTarget = CreateSectionSix();
+
+            RopeResource ropeResource = Object.FindFirstObjectByType<RopeResource>();
+            MainStagePreview preview = Object.FindFirstObjectByType<MainStagePreview>();
+            if (ropeResource != null && preview != null)
+            {
+                preview.Configure(ropeResource.transform, sectionSixTarget.transform);
+                EditorUtility.SetDirty(preview);
+            }
+
+            EditorSceneManager.SaveScene(scene, ScenePath);
+            AssetDatabase.SaveAssets();
+            AssetDatabase.Refresh();
+            Debug.Log("HimoHito main-stage section 6 added.");
+        }
+
+        public static void AddSectionSixFromCommandLine()
+        {
+            AddSectionSix();
             EditorApplication.Exit(0);
         }
 
@@ -136,6 +164,11 @@ namespace HimoHitoEditor
             return midpoint;
         }
 
+        private static GameObject CreateSectionSix()
+        {
+            return MainStageSectionSixSetup.EnsureCreated();
+        }
+
         private static void RemoveSectionFourAndFiveObjects()
         {
             string[] objectNames =
@@ -145,6 +178,25 @@ namespace HimoHitoEditor
                 "Main Upper Route Descent",
                 "Main Lower Walking Route",
                 "Main Midpoint Checkpoint"
+            };
+
+            foreach (string objectName in objectNames)
+            {
+                GameObject existing = GameObject.Find(objectName);
+                if (existing != null)
+                {
+                    Object.DestroyImmediate(existing);
+                }
+            }
+        }
+
+        private static void RemoveSectionSixObjects()
+        {
+            string[] objectNames =
+            {
+                "Main Section 6 Hook",
+                "Main Section 6 Rope Hazard",
+                "Main Section 6 Landing"
             };
 
             foreach (string objectName in objectNames)

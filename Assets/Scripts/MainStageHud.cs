@@ -25,6 +25,12 @@ namespace HimoHito
             weaveResource = FindFirstObjectByType<WeaveResource>();
             preview = FindFirstObjectByType<MainStagePreview>();
             respawnController = FindFirstObjectByType<MainStageRespawnOnFall>();
+            GameObject sectionSixTarget = MainStageSectionSixSetup.EnsureCreated();
+            if (preview != null && ropeResource != null && sectionSixTarget != null)
+            {
+                preview.Configure(ropeResource.transform, sectionSixTarget.transform);
+            }
+
             if (ropeController != null)
             {
                 playerBody = ropeController.GetComponent<Rigidbody2D>();
@@ -36,7 +42,11 @@ namespace HimoHito
             EnsureStyles();
             GUILayout.BeginArea(new Rect(22f, 18f, 520f, 380f), GUI.skin.box);
             GUILayout.Label("ヒモヒト / 本編ステージ", titleStyle);
-            GUILayout.Label("第4〜5区間　使う資源を選ぶ上下分岐", bodyStyle);
+            GUILayout.Label(
+                respawnController != null && respawnController.HasReachedMidpoint
+                    ? "第6区間　長さを選んで障害物を越える"
+                    : "第4〜5区間　使う資源を選ぶ上下分岐",
+                bodyStyle);
 
             if (ropeResource != null)
             {
@@ -66,7 +76,9 @@ namespace HimoHito
             }
             else if (respawnController != null && respawnController.HasReachedMidpoint)
             {
-                GUILayout.Label("中間チェックポイント 到達", resultStyle);
+                GUILayout.Label(
+                    "中間チェックポイント到達 — 長すぎるヒモは赤い障害物に注意",
+                    resultStyle);
             }
             else
             {
