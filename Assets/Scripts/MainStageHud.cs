@@ -27,11 +27,12 @@ namespace HimoHito
             preview = FindFirstObjectByType<MainStagePreview>();
             respawnController = FindFirstObjectByType<MainStageRespawnOnFall>();
             MainStageSectionSixSetup.EnsureCreated();
-            GameObject sectionSevenTarget = MainStageSectionSevenSetup.EnsureCreated();
+            MainStageSectionSevenSetup.EnsureCreated();
+            GameObject sectionEightTarget = MainStageSectionEightSetup.EnsureCreated();
             weaveFrame = FindFirstObjectByType<WeaveFrame>();
-            if (preview != null && ropeResource != null && sectionSevenTarget != null)
+            if (preview != null && ropeResource != null && sectionEightTarget != null)
             {
-                preview.Configure(ropeResource.transform, sectionSevenTarget.transform);
+                preview.Configure(ropeResource.transform, sectionEightTarget.transform);
             }
 
             if (ropeController != null)
@@ -47,7 +48,9 @@ namespace HimoHito
             GUILayout.Label("ヒモヒト / 本編ステージ", titleStyle);
             GUILayout.Label(
                 respawnController != null && respawnController.HasReachedMidpoint
-                    ? "第6〜7区間　長さと資源を選んで進む"
+                    ? respawnController.HasReachedSectionEight
+                        ? "第8区間　2手先までヒモを配分する"
+                        : "第6〜7区間　長さと資源を選んで進む"
                     : "第4〜5区間　使う資源を選ぶ上下分岐",
                 bodyStyle);
 
@@ -87,6 +90,12 @@ namespace HimoHito
             if (preview != null && preview.IsPreviewing)
             {
                 GUILayout.Label("ステージ確認中 — Landingからスタートへ戻ります", resultStyle);
+            }
+            else if (respawnController != null && respawnController.HasReachedSectionEight)
+            {
+                GUILayout.Label(
+                    "第8区間 — 1手目だけで使い切らず、次のHook分を残す",
+                    resultStyle);
             }
             else if (respawnController != null && respawnController.HasReachedMidpoint)
             {

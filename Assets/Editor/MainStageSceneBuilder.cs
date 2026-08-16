@@ -15,8 +15,8 @@ namespace HimoHitoEditor
 
         private const float DevelopmentRopeLength = 99f;
 
-        [MenuItem("HimoHito/Build Main Stage Through Section 7")]
-        public static void BuildMainStageThroughSectionSeven()
+        [MenuItem("HimoHito/Build Main Stage Through Section 8")]
+        public static void BuildMainStageThroughSectionEight()
         {
             Scene scene = EditorSceneManager.NewScene(NewSceneSetup.EmptyScene, NewSceneMode.Single);
 
@@ -53,9 +53,10 @@ namespace HimoHitoEditor
 
             CreateSectionsFourAndFive();
             CreateSectionSix();
-            GameObject sectionSevenTarget = CreateSectionSeven();
+            CreateSectionSeven();
+            GameObject sectionEightTarget = CreateSectionEight();
 
-            CreateCamera(player.transform, sectionSevenTarget.transform);
+            CreateCamera(player.transform, sectionEightTarget.transform);
             CreatePlatform(
                 "Main Start Ground",
                 new Vector2(-6f, -5.2f),
@@ -71,12 +72,12 @@ namespace HimoHitoEditor
             AssetDatabase.SaveAssets();
             AssetDatabase.Refresh();
             Selection.activeGameObject = player;
-            Debug.Log($"HimoHito main-stage sections 1-7 created: {ScenePath}");
+            Debug.Log($"HimoHito main-stage sections 1-8 created: {ScenePath}");
         }
 
         public static void BuildFromCommandLine()
         {
-            BuildMainStageThroughSectionSeven();
+            BuildMainStageThroughSectionEight();
             EditorApplication.Exit(0);
         }
 
@@ -126,6 +127,27 @@ namespace HimoHitoEditor
             AssetDatabase.SaveAssets();
             AssetDatabase.Refresh();
             Debug.Log("HimoHito main-stage section 7 added.");
+        }
+
+        [MenuItem("HimoHito/Add Main Stage Section 8")]
+        public static void AddSectionEight()
+        {
+            Scene scene = EditorSceneManager.OpenScene(ScenePath, OpenSceneMode.Single);
+            RemoveSectionEightObjects();
+            GameObject sectionEightTarget = CreateSectionEight();
+
+            RopeResource ropeResource = Object.FindFirstObjectByType<RopeResource>();
+            MainStagePreview preview = Object.FindFirstObjectByType<MainStagePreview>();
+            if (ropeResource != null && preview != null)
+            {
+                preview.Configure(ropeResource.transform, sectionEightTarget.transform);
+                EditorUtility.SetDirty(preview);
+            }
+
+            EditorSceneManager.SaveScene(scene, ScenePath);
+            AssetDatabase.SaveAssets();
+            AssetDatabase.Refresh();
+            Debug.Log("HimoHito main-stage section 8 added.");
         }
 
         public static void AddSectionsFourAndFiveFromCommandLine()
@@ -196,6 +218,11 @@ namespace HimoHitoEditor
             return MainStageSectionSevenSetup.EnsureCreated();
         }
 
+        private static GameObject CreateSectionEight()
+        {
+            return MainStageSectionEightSetup.EnsureCreated();
+        }
+
         private static void RemoveSectionFourAndFiveObjects()
         {
             string[] objectNames =
@@ -245,6 +272,33 @@ namespace HimoHitoEditor
                 "Main Section 7 Woven Platform",
                 "Main Section 7 Weave Marker",
                 "Main Section 7 Landing"
+            };
+
+            foreach (string objectName in objectNames)
+            {
+                GameObject existing = GameObject.Find(objectName);
+                if (existing != null)
+                {
+                    Object.DestroyImmediate(existing);
+                }
+            }
+        }
+
+        private static void RemoveSectionEightObjects()
+        {
+            GameObject sectionSevenLanding = GameObject.Find(MainStageSectionSevenSetup.LandingName);
+            if (sectionSevenLanding != null &&
+                sectionSevenLanding.TryGetComponent(out MainStageSectionEightCheckpoint checkpoint))
+            {
+                Object.DestroyImmediate(checkpoint);
+            }
+
+            string[] objectNames =
+            {
+                MainStageSectionEightSetup.FirstHookName,
+                MainStageSectionEightSetup.PlanningLandingName,
+                MainStageSectionEightSetup.SecondHookName,
+                MainStageSectionEightSetup.FinalLandingName
             };
 
             foreach (string objectName in objectNames)

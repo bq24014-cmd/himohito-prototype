@@ -30,6 +30,7 @@ namespace HimoHito
         private bool checkpointCanUseSectionSevenBridge;
 
         public bool HasReachedMidpoint { get; private set; }
+        public bool HasReachedSectionEight { get; private set; }
         public bool CanUseSectionSevenBridge { get; private set; }
 
         private void Awake()
@@ -93,6 +94,27 @@ namespace HimoHito
             CanUseSectionSevenBridge = grantsSectionSevenBridge;
             CaptureCheckpointState();
             HasReachedMidpoint = true;
+            return true;
+        }
+
+        public bool TryStartSectionEight(Vector2 respawnPosition, float experimentRopeLength)
+        {
+            if (ropeController.IsAttached)
+            {
+                return false;
+            }
+
+            if (HasReachedSectionEight)
+            {
+                return true;
+            }
+
+            checkpointPosition = respawnPosition;
+            ropeResource.RestoreCurrentLength(experimentRopeLength);
+            ropeController.RestoreSelectedRopeLength(
+                Mathf.Min(ropeController.SelectedRopeLength, Mathf.FloorToInt(experimentRopeLength)));
+            HasReachedSectionEight = true;
+            CaptureCheckpointState();
             return true;
         }
 
