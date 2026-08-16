@@ -14,49 +14,70 @@ namespace HimoHito
 
         public static GameObject EnsureCreated()
         {
-            GameObject existingLanding = GameObject.Find(LandingName);
-            if (existingLanding != null)
-            {
-                return existingLanding;
-            }
-
-            GameObject hook = CreateSolidObject(
+            GameObject hook = EnsureSolidObject(
                 HookName,
                 new Vector2(82f, 3.2f),
                 new Vector2(1.6f, 0.45f),
                 new Color(1f, 0.72f, 0.18f));
-            hook.AddComponent<HookPoint>();
+            if (!hook.TryGetComponent(out HookPoint _))
+            {
+                hook.AddComponent<HookPoint>();
+            }
 
-            GameObject hazard = CreateSolidObject(
+            GameObject hazard = EnsureSolidObject(
                 HazardName,
-                new Vector2(84.5f, -7.1f),
-                new Vector2(11f, 0.65f),
+                new Vector2(85.5f, -7.1f),
+                new Vector2(13f, 0.65f),
                 new Color(1f, 0.28f, 0.32f));
             hazard.GetComponent<BoxCollider2D>().isTrigger = true;
-            hazard.AddComponent<MainStageRopeHazard>();
+            if (!hazard.TryGetComponent(out MainStageRopeHazard _))
+            {
+                hazard.AddComponent<MainStageRopeHazard>();
+            }
 
-            GameObject landing = CreateSolidObject(
+            GameObject landing = EnsureSolidObject(
                 LandingName,
-                new Vector2(93f, -0.8f),
-                new Vector2(6f, 0.7f),
+                new Vector2(94f, -0.8f),
+                new Vector2(8f, 0.7f),
                 new Color(0.38f, 0.41f, 0.52f));
-            landing.AddComponent<MainStageSectionTarget>();
+            if (!landing.TryGetComponent(out MainStageSectionTarget _))
+            {
+                landing.AddComponent<MainStageSectionTarget>();
+            }
+
             return landing;
         }
 
-        private static GameObject CreateSolidObject(
+        private static GameObject EnsureSolidObject(
             string name,
             Vector2 position,
             Vector2 size,
             Color color)
         {
-            GameObject gameObject = new GameObject(name);
+            GameObject gameObject = GameObject.Find(name);
+            if (gameObject == null)
+            {
+                gameObject = new GameObject(name);
+            }
+
             gameObject.transform.position = position;
             gameObject.transform.localScale = new Vector3(size.x, size.y, 1f);
-            gameObject.AddComponent<SpriteRenderer>();
-            SolidSprite visual = gameObject.AddComponent<SolidSprite>();
+            if (!gameObject.TryGetComponent(out SpriteRenderer _))
+            {
+                gameObject.AddComponent<SpriteRenderer>();
+            }
+
+            if (!gameObject.TryGetComponent(out SolidSprite visual))
+            {
+                visual = gameObject.AddComponent<SolidSprite>();
+            }
+
             visual.Color = color;
-            BoxCollider2D collider = gameObject.AddComponent<BoxCollider2D>();
+            if (!gameObject.TryGetComponent(out BoxCollider2D collider))
+            {
+                collider = gameObject.AddComponent<BoxCollider2D>();
+            }
+
             collider.size = Vector2.one;
             return gameObject;
         }
