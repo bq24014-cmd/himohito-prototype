@@ -5,6 +5,7 @@ namespace HimoHito
     /// <summary>
     /// Restarts from the latest main-stage checkpoint and restores its resources.
     /// </summary>
+    [DefaultExecutionOrder(-200)]
     [RequireComponent(typeof(Rigidbody2D), typeof(RopeResource), typeof(RopeController))]
     [RequireComponent(typeof(WeaveResource))]
     public sealed class MainStageRespawnOnFall : MonoBehaviour
@@ -33,15 +34,21 @@ namespace HimoHito
             weaveResource = GetComponent<WeaveResource>();
             checkpointPosition = body.position;
 
-            if (startFromMidpointForDevelopment)
+            ApplyDevelopmentStart();
+
+            CaptureCheckpointState();
+        }
+
+        private void Start()
+        {
+            if (!startFromMidpointForDevelopment)
             {
-                checkpointPosition = developmentStartPosition;
-                body.position = developmentStartPosition;
-                body.linearVelocity = Vector2.zero;
-                body.angularVelocity = 0f;
-                HasReachedMidpoint = true;
+                return;
             }
 
+            // Apply once more after every Awake so scene initialization cannot
+            // move the player back before the preview camera begins.
+            ApplyDevelopmentStart();
             CaptureCheckpointState();
         }
 
@@ -82,6 +89,21 @@ namespace HimoHito
             checkpointRopeLength = ropeResource.CurrentLength;
             checkpointSelectedRopeLength = ropeController.SelectedRopeLength;
             checkpointWeaveThreads = weaveResource.CurrentThreads;
+        }
+
+        private void ApplyDevelopmentStart()
+        {
+            if (!startFromMidpointForDevelopment)
+            {
+                return;
+            }
+
+            checkpointPosition = developmentStartPosition;
+            transform.position = developmentStartPosition;
+            body.position = developmentStartPosition;
+            body.linearVelocity = Vector2.zero;
+            body.angularVelocity = 0f;
+            HasReachedMidpoint = true;
         }
 
         private void RestoreCheckpointState()
