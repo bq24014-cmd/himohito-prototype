@@ -76,7 +76,9 @@ namespace HimoHito
             if (weaveFrame != null && weaveFrame.IsPlayerInRange && !weaveFrame.IsCompleted)
             {
                 GUILayout.Label(
-                    weaveFrame.RemainingThreads == 0
+                    !weaveFrame.HasRoutePermission
+                        ? "橋を編めるのは上ルートを攻略した場合だけ"
+                        : weaveFrame.RemainingThreads == 0
                         ? "Q：編み糸3個で橋を作る"
                         : $"橋を作るには編み糸があと{weaveFrame.RemainingThreads}個必要",
                     resultStyle);

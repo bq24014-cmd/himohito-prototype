@@ -482,6 +482,8 @@ MonoBehaviour:
   m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.MainStageCheckpoint
   respawnPosition: {x: 69.7, y: -1.35}
+  checkpointWeaveThreads: 0
+  grantsSectionSevenBridge: 0
 --- !u!61 &517235198
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1295,6 +1297,8 @@ MonoBehaviour:
   m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.MainStageCheckpoint
   respawnPosition: {x: 69.7, y: 1.05}
+  checkpointWeaveThreads: 3
+  grantsSectionSevenBridge: 1
 --- !u!61 &1080234846
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1986,6 +1990,7 @@ MonoBehaviour:
   startFromMidpointForDevelopment: 1
   developmentStartPosition: {x: 69.7, y: -1.35}
   developmentWeaveThreads: 3
+  developmentCanUseSectionSevenBridge: 1
 --- !u!114 &1380120221
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3365,6 +3370,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.WeaveFrame
   requiredThreads: 3
   wovenPlatform: {fileID: 1800000021}
+  requiresMainStagePermission: 1
 --- !u!61 &1800000013
 BoxCollider2D:
   m_ObjectHideFlags: 0

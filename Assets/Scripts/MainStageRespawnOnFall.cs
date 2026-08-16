@@ -15,6 +15,7 @@ namespace HimoHito
         [SerializeField] private Vector2 developmentStartPosition =
             new Vector2(69.7f, -1.35f);
         [SerializeField, Min(0)] private int developmentWeaveThreads = 3;
+        [SerializeField] private bool developmentCanUseSectionSevenBridge = true;
 
         private Rigidbody2D body;
         private RopeResource ropeResource;
@@ -26,8 +27,10 @@ namespace HimoHito
         private int checkpointWeaveThreads;
         private WeaveFrame sectionSevenWeaveFrame;
         private bool checkpointWeaveCompleted;
+        private bool checkpointCanUseSectionSevenBridge;
 
         public bool HasReachedMidpoint { get; private set; }
+        public bool CanUseSectionSevenBridge { get; private set; }
 
         private void Awake()
         {
@@ -70,7 +73,10 @@ namespace HimoHito
             body.angularVelocity = 0f;
         }
 
-        public bool TryReachMidpoint(Vector2 respawnPosition)
+        public bool TryReachMidpoint(
+            Vector2 respawnPosition,
+            int weaveThreads,
+            bool grantsSectionSevenBridge)
         {
             if (ropeController.IsAttached)
             {
@@ -83,6 +89,8 @@ namespace HimoHito
             }
 
             checkpointPosition = respawnPosition;
+            weaveResource.RestoreThreads(weaveThreads);
+            CanUseSectionSevenBridge = grantsSectionSevenBridge;
             CaptureCheckpointState();
             HasReachedMidpoint = true;
             return true;
@@ -97,6 +105,7 @@ namespace HimoHito
             {
                 checkpointWeaveCompleted = sectionSevenWeaveFrame.IsCompleted;
             }
+            checkpointCanUseSectionSevenBridge = CanUseSectionSevenBridge;
         }
 
         private void ApplyDevelopmentStart()
@@ -112,6 +121,7 @@ namespace HimoHito
             body.linearVelocity = Vector2.zero;
             body.angularVelocity = 0f;
             weaveResource.RestoreThreads(developmentWeaveThreads);
+            CanUseSectionSevenBridge = developmentCanUseSectionSevenBridge;
             HasReachedMidpoint = true;
         }
 
@@ -124,6 +134,7 @@ namespace HimoHito
             {
                 sectionSevenWeaveFrame.RestoreWeave(checkpointWeaveCompleted);
             }
+            CanUseSectionSevenBridge = checkpointCanUseSectionSevenBridge;
         }
     }
 }

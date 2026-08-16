@@ -171,7 +171,7 @@ namespace HimoHitoEditor
                 new Vector2(6f, 0.7f));
             MainStageCheckpoint upperCheckpoint =
                 upperDescent.AddComponent<MainStageCheckpoint>();
-            upperCheckpoint.Configure(new Vector2(69.7f, 1.05f));
+            upperCheckpoint.Configure(new Vector2(69.7f, 1.05f), 3, true);
             CreatePlatform(
                 "Main Lower Walking Route",
                 new Vector2(58.5f, -3.3f),
@@ -182,7 +182,7 @@ namespace HimoHitoEditor
                 new Vector2(71.7f, -2.4f),
                 new Vector2(10f, 0.7f));
             MainStageCheckpoint checkpoint = midpoint.AddComponent<MainStageCheckpoint>();
-            checkpoint.Configure(new Vector2(69.7f, -1.35f));
+            checkpoint.Configure(new Vector2(69.7f, -1.35f), 0, false);
             return midpoint;
         }
 

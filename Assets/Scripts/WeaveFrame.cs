@@ -10,9 +10,11 @@ namespace HimoHito
     {
         [SerializeField, Min(1)] private int requiredThreads = 3;
         [SerializeField] private GameObject wovenPlatform;
+        [SerializeField] private bool requiresMainStagePermission;
 
         private WeaveResource weaveResource;
         private bool playerInRange;
+        private MainStageRespawnOnFall mainStageRespawn;
 
         public int RequiredThreads => requiredThreads;
         public int RemainingThreads => weaveResource == null
@@ -20,23 +22,49 @@ namespace HimoHito
             : Mathf.Max(0, requiredThreads - weaveResource.CurrentThreads);
         public bool IsPlayerInRange => playerInRange;
         public bool IsCompleted { get; private set; }
+        public bool HasRoutePermission
+        {
+            get
+            {
+                if (!requiresMainStagePermission)
+                {
+                    return true;
+                }
+
+                if (mainStageRespawn == null)
+                {
+                    mainStageRespawn = FindFirstObjectByType<MainStageRespawnOnFall>();
+                }
+
+                return mainStageRespawn != null &&
+                       mainStageRespawn.CanUseSectionSevenBridge;
+            }
+        }
 
         private void Awake()
         {
             weaveResource = FindFirstObjectByType<WeaveResource>();
+            mainStageRespawn = FindFirstObjectByType<MainStageRespawnOnFall>();
             ApplyPlatformState();
         }
 
-        public void Configure(GameObject platform, int threadCost)
+        public void Configure(
+            GameObject platform,
+            int threadCost,
+            bool requireMainStagePermission = false)
         {
             wovenPlatform = platform;
             requiredThreads = Mathf.Max(1, threadCost);
+            requiresMainStagePermission = requireMainStagePermission;
             ApplyPlatformState();
         }
 
         private void Update()
         {
-            if (!playerInRange || IsCompleted || !Input.GetKeyDown(KeyCode.Q))
+            if (!playerInRange ||
+                IsCompleted ||
+                !HasRoutePermission ||
+                !Input.GetKeyDown(KeyCode.Q))
             {
                 return;
             }

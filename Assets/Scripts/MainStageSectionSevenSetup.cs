@@ -52,7 +52,7 @@ namespace HimoHito
                 weaveFrame = weaveFrameObject.AddComponent<WeaveFrame>();
             }
 
-            weaveFrame.Configure(wovenPlatform, 3);
+            weaveFrame.Configure(wovenPlatform, 3, true);
 
             GameObject marker = EnsureSolidObject(
                 WeaveMarkerName,
