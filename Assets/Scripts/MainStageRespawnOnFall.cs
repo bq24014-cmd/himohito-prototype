@@ -10,6 +10,9 @@ namespace HimoHito
     public sealed class MainStageRespawnOnFall : MonoBehaviour
     {
         [SerializeField] private float fallThreshold = -9f;
+        [SerializeField] private bool startFromMidpointForDevelopment = true;
+        [SerializeField] private Vector2 developmentStartPosition =
+            new Vector2(69.7f, -1.35f);
 
         private Rigidbody2D body;
         private RopeResource ropeResource;
@@ -29,6 +32,16 @@ namespace HimoHito
             ropeController = GetComponent<RopeController>();
             weaveResource = GetComponent<WeaveResource>();
             checkpointPosition = body.position;
+
+            if (startFromMidpointForDevelopment)
+            {
+                checkpointPosition = developmentStartPosition;
+                body.position = developmentStartPosition;
+                body.linearVelocity = Vector2.zero;
+                body.angularVelocity = 0f;
+                HasReachedMidpoint = true;
+            }
+
             CaptureCheckpointState();
         }
 
