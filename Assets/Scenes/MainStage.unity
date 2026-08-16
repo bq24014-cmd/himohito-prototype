@@ -1987,8 +1987,10 @@ MonoBehaviour:
   m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.MainStageRespawnOnFall
   fallThreshold: -9
-  startFromMidpointForDevelopment: 1
-  developmentStartPosition: {x: 69.7, y: -1.35}
+  startFromCurrentSectionForDevelopment: 1
+  developmentStartPosition: {x: 116.5, y: 0.15}
+  developmentRopeLength: 10.2
+  developmentSectionNumber: 8
   developmentWeaveThreads: 3
   developmentCanUseSectionSevenBridge: 1
 --- !u!114 &1380120221

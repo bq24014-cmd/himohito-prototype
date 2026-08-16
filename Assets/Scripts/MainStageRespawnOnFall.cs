@@ -11,9 +11,11 @@ namespace HimoHito
     public sealed class MainStageRespawnOnFall : MonoBehaviour
     {
         [SerializeField] private float fallThreshold = -9f;
-        [SerializeField] private bool startFromMidpointForDevelopment = true;
+        [SerializeField] private bool startFromCurrentSectionForDevelopment = true;
         [SerializeField] private Vector2 developmentStartPosition =
-            new Vector2(69.7f, -1.35f);
+            new Vector2(116.5f, 0.15f);
+        [SerializeField, Min(1f)] private float developmentRopeLength = 10.2f;
+        [SerializeField, Min(1)] private int developmentSectionNumber = 8;
         [SerializeField, Min(0)] private int developmentWeaveThreads = 3;
         [SerializeField] private bool developmentCanUseSectionSevenBridge = true;
 
@@ -49,7 +51,7 @@ namespace HimoHito
 
         private void Start()
         {
-            if (!startFromMidpointForDevelopment)
+            if (!startFromCurrentSectionForDevelopment)
             {
                 return;
             }
@@ -132,7 +134,7 @@ namespace HimoHito
 
         private void ApplyDevelopmentStart()
         {
-            if (!startFromMidpointForDevelopment)
+            if (!startFromCurrentSectionForDevelopment)
             {
                 return;
             }
@@ -142,9 +144,13 @@ namespace HimoHito
             body.position = developmentStartPosition;
             body.linearVelocity = Vector2.zero;
             body.angularVelocity = 0f;
+            ropeResource.RestoreCurrentLength(developmentRopeLength);
+            ropeController.RestoreSelectedRopeLength(
+                Mathf.Min(ropeController.SelectedRopeLength, Mathf.FloorToInt(developmentRopeLength)));
             weaveResource.RestoreThreads(developmentWeaveThreads);
             CanUseSectionSevenBridge = developmentCanUseSectionSevenBridge;
-            HasReachedMidpoint = true;
+            HasReachedMidpoint = developmentSectionNumber >= 6;
+            HasReachedSectionEight = developmentSectionNumber >= 8;
         }
 
         private void RestoreCheckpointState()
