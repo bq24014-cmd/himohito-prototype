@@ -241,8 +241,9 @@ namespace HimoHitoEditor
             string[] objectNames =
             {
                 "Main Section 7 Hook",
-                "Main Section 7 Upper Rope Hazard",
-                "Main Section 7 Lower Rope Hazard",
+                "Main Section 7 Weave Frame",
+                "Main Section 7 Woven Platform",
+                "Main Section 7 Weave Marker",
                 "Main Section 7 Landing"
             };
 

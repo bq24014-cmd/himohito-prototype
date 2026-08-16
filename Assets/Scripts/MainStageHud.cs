@@ -13,6 +13,7 @@ namespace HimoHito
         private WeaveResource weaveResource;
         private MainStagePreview preview;
         private MainStageRespawnOnFall respawnController;
+        private WeaveFrame weaveFrame;
         private GUIStyle titleStyle;
         private GUIStyle bodyStyle;
         private GUIStyle ropeStyle;
@@ -27,6 +28,7 @@ namespace HimoHito
             respawnController = FindFirstObjectByType<MainStageRespawnOnFall>();
             MainStageSectionSixSetup.EnsureCreated();
             GameObject sectionSevenTarget = MainStageSectionSevenSetup.EnsureCreated();
+            weaveFrame = FindFirstObjectByType<WeaveFrame>();
             if (preview != null && ropeResource != null && sectionSevenTarget != null)
             {
                 preview.Configure(ropeResource.transform, sectionSevenTarget.transform);
@@ -45,7 +47,7 @@ namespace HimoHito
             GUILayout.Label("ヒモヒト / 本編ステージ", titleStyle);
             GUILayout.Label(
                 respawnController != null && respawnController.HasReachedMidpoint
-                    ? "第6〜7区間　ヒモの長さで障害物を越える"
+                    ? "第6〜7区間　長さと資源を選んで進む"
                     : "第4〜5区間　使う資源を選ぶ上下分岐",
                 bodyStyle);
 
@@ -71,6 +73,15 @@ namespace HimoHito
                 GUILayout.Label($"編み糸  {weaveResource.CurrentThreads}個", bodyStyle);
             }
 
+            if (weaveFrame != null && weaveFrame.IsPlayerInRange && !weaveFrame.IsCompleted)
+            {
+                GUILayout.Label(
+                    weaveFrame.RemainingThreads == 0
+                        ? "Q：編み糸3個で橋を作る"
+                        : $"橋を作るには編み糸があと{weaveFrame.RemainingThreads}個必要",
+                    resultStyle);
+            }
+
             if (preview != null && preview.IsPreviewing)
             {
                 GUILayout.Label("ステージ確認中 — Landingからスタートへ戻ります", resultStyle);
@@ -78,7 +89,7 @@ namespace HimoHito
             else if (respawnController != null && respawnController.HasReachedMidpoint)
             {
                 GUILayout.Label(
-                    "中間地点後 — 短すぎても長すぎても障害物に注意",
+                    "第7区間 — 編み糸で橋を作るか、ヒモで谷を渡る",
                     resultStyle);
             }
             else

@@ -14,6 +14,7 @@ namespace HimoHito
         [SerializeField] private bool startFromMidpointForDevelopment = true;
         [SerializeField] private Vector2 developmentStartPosition =
             new Vector2(69.7f, -1.35f);
+        [SerializeField, Min(0)] private int developmentWeaveThreads = 3;
 
         private Rigidbody2D body;
         private RopeResource ropeResource;
@@ -23,6 +24,8 @@ namespace HimoHito
         private float checkpointRopeLength;
         private int checkpointSelectedRopeLength;
         private int checkpointWeaveThreads;
+        private WeaveFrame sectionSevenWeaveFrame;
+        private bool checkpointWeaveCompleted;
 
         public bool HasReachedMidpoint { get; private set; }
 
@@ -32,6 +35,7 @@ namespace HimoHito
             ropeResource = GetComponent<RopeResource>();
             ropeController = GetComponent<RopeController>();
             weaveResource = GetComponent<WeaveResource>();
+            sectionSevenWeaveFrame = FindFirstObjectByType<WeaveFrame>();
             checkpointPosition = body.position;
 
             ApplyDevelopmentStart();
@@ -89,6 +93,10 @@ namespace HimoHito
             checkpointRopeLength = ropeResource.CurrentLength;
             checkpointSelectedRopeLength = ropeController.SelectedRopeLength;
             checkpointWeaveThreads = weaveResource.CurrentThreads;
+            if (sectionSevenWeaveFrame != null)
+            {
+                checkpointWeaveCompleted = sectionSevenWeaveFrame.IsCompleted;
+            }
         }
 
         private void ApplyDevelopmentStart()
@@ -103,6 +111,7 @@ namespace HimoHito
             body.position = developmentStartPosition;
             body.linearVelocity = Vector2.zero;
             body.angularVelocity = 0f;
+            weaveResource.RestoreThreads(developmentWeaveThreads);
             HasReachedMidpoint = true;
         }
 
@@ -111,6 +120,10 @@ namespace HimoHito
             ropeResource.RestoreCurrentLength(checkpointRopeLength);
             ropeController.RestoreSelectedRopeLength(checkpointSelectedRopeLength);
             weaveResource.RestoreThreads(checkpointWeaveThreads);
+            if (sectionSevenWeaveFrame != null)
+            {
+                sectionSevenWeaveFrame.RestoreWeave(checkpointWeaveCompleted);
+            }
         }
     }
 }
