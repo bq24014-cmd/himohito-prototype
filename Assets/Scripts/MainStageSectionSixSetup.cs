@@ -26,7 +26,7 @@ namespace HimoHito
 
             GameObject hazard = EnsureSolidObject(
                 HazardName,
-                new Vector2(85.5f, -7.1f),
+                new Vector2(83.2f, -7.1f),
                 new Vector2(13f, 0.65f),
                 new Color(1f, 0.28f, 0.32f));
             hazard.GetComponent<BoxCollider2D>().isTrigger = true;
@@ -37,7 +37,7 @@ namespace HimoHito
 
             GameObject landing = EnsureSolidObject(
                 LandingName,
-                new Vector2(96f, -0.8f),
+                new Vector2(93.7f, -0.8f),
                 new Vector2(8f, 0.7f),
                 new Color(0.38f, 0.41f, 0.52f));
             if (!landing.TryGetComponent(out MainStageSectionTarget _))
