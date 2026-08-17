@@ -48,6 +48,12 @@ namespace HimoHito
                 playerBody = player.GetComponent<Rigidbody2D>();
                 playerMover = player.GetComponent<PlayerMover>();
                 ropeController = player.GetComponent<RopeController>();
+                MainStageRespawnOnFall respawnController =
+                    player.GetComponent<MainStageRespawnOnFall>();
+                if (respawnController != null && respawnController.HasReachedSectionTen)
+                {
+                    fixedY = player.position.y;
+                }
             }
         }
 

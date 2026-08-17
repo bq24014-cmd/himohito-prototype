@@ -11,10 +11,14 @@ namespace HimoHito
         [SerializeField] private Transform target;
         [SerializeField, Min(0f)] private float smoothTime = 0.18f;
         [SerializeField] private float horizontalOffset;
+        [SerializeField, Min(0f)] private float verticalSmoothTime = 0.28f;
+        [SerializeField] private bool followVerticalInSectionTen = true;
 
         private float horizontalVelocity;
+        private float verticalVelocity;
         private float fixedY;
         private float fixedZ;
+        private MainStageRespawnOnFall respawnController;
 
         private void Awake()
         {
@@ -24,9 +28,10 @@ namespace HimoHito
 
             if (target != null)
             {
+                respawnController = target.GetComponent<MainStageRespawnOnFall>();
                 transform.position = new Vector3(
                     target.position.x + horizontalOffset,
-                    fixedY,
+                    ShouldFollowVertically() ? target.position.y : fixedY,
                     fixedZ);
             }
         }
@@ -47,8 +52,16 @@ namespace HimoHito
                     desiredX,
                     ref horizontalVelocity,
                     smoothTime);
+            float desiredY = ShouldFollowVertically() ? target.position.y : fixedY;
+            float nextY = verticalSmoothTime <= 0f
+                ? desiredY
+                : Mathf.SmoothDamp(
+                    transform.position.y,
+                    desiredY,
+                    ref verticalVelocity,
+                    verticalSmoothTime);
 
-            transform.position = new Vector3(nextX, fixedY, fixedZ);
+            transform.position = new Vector3(nextX, nextY, fixedZ);
         }
 
         private void FindTargetIfNeeded()
@@ -62,7 +75,15 @@ namespace HimoHito
             if (playerRope != null)
             {
                 target = playerRope.transform;
+                respawnController = target.GetComponent<MainStageRespawnOnFall>();
             }
+        }
+
+        private bool ShouldFollowVertically()
+        {
+            return followVerticalInSectionTen &&
+                respawnController != null &&
+                respawnController.HasReachedSectionTen;
         }
     }
 }
