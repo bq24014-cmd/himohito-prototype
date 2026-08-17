@@ -15,10 +15,11 @@
 1. Unity Hubで「Add project from disk」を選び、このフォルダを指定する
 2. Editorは `6000.3.21f1` を選ぶ
 3. 初回コンパイル後、`Assets/Scenes/Tutorial.unity` が自動生成される
-4. `Tutorial` シーンを開いてPlayを押す
+4. UnityのPlayを押す（現在開いているシーンにかかわらず`Tutorial`から始まる）
 5. 操作説明を読み、キーボードの何かのキーを押して離すと開始する
 
 自動生成されない場合は、Unity上部メニューの `HimoHito > Build Tutorial Scene` を押してください。
+通しプレイ中は、Unity上部メニューの`HimoHito > Play From Tutorial`でも開始シーンを`Tutorial`へ設定できます。
 
 ## Windows版の作り方
 
