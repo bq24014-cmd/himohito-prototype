@@ -28,11 +28,12 @@ namespace HimoHito
             respawnController = FindFirstObjectByType<MainStageRespawnOnFall>();
             MainStageSectionSixSetup.EnsureCreated();
             MainStageSectionSevenSetup.EnsureCreated();
-            GameObject sectionEightTarget = MainStageSectionEightSetup.EnsureCreated();
+            MainStageSectionEightSetup.EnsureCreated();
+            GameObject sectionNineTarget = MainStageSectionNineSetup.EnsureCreated();
             weaveFrame = FindFirstObjectByType<WeaveFrame>();
-            if (preview != null && ropeResource != null && sectionEightTarget != null)
+            if (preview != null && ropeResource != null && sectionNineTarget != null)
             {
-                preview.Configure(ropeResource.transform, sectionEightTarget.transform);
+                preview.Configure(ropeResource.transform, sectionNineTarget.transform);
             }
 
             if (ropeController != null)
@@ -48,7 +49,9 @@ namespace HimoHito
             GUILayout.Label("ヒモヒト / 本編ステージ", titleStyle);
             GUILayout.Label(
                 respawnController != null && respawnController.HasReachedMidpoint
-                    ? respawnController.HasReachedSectionEight
+                    ? respawnController.HasReachedSectionNine
+                        ? "第9区間　動く障害物の安全な瞬間を読む"
+                        : respawnController.HasReachedSectionEight
                         ? "第8区間　2手先までヒモを配分する"
                         : "第6〜7区間　長さと資源を選んで進む"
                     : "第4〜5区間　使う資源を選ぶ上下分岐",
@@ -90,6 +93,12 @@ namespace HimoHito
             if (preview != null && preview.IsPreviewing)
             {
                 GUILayout.Label("ステージ確認中 — Landingからスタートへ戻ります", resultStyle);
+            }
+            else if (respawnController != null && respawnController.HasReachedSectionNine)
+            {
+                GUILayout.Label(
+                    "第9区間 — 赤い障害物が上がるタイミングを観察して進む",
+                    resultStyle);
             }
             else if (respawnController != null && respawnController.HasReachedSectionEight)
             {

@@ -13,9 +13,9 @@ namespace HimoHito
         [SerializeField] private float fallThreshold = -9f;
         [SerializeField] private bool startFromCurrentSectionForDevelopment = true;
         [SerializeField] private Vector2 developmentStartPosition =
-            new Vector2(116.5f, 0.15f);
-        [SerializeField, Min(1f)] private float developmentRopeLength = 10.2f;
-        [SerializeField, Min(1)] private int developmentSectionNumber = 8;
+            new Vector2(139.5f, 2.95f);
+        [SerializeField, Min(1f)] private float developmentRopeLength = 99f;
+        [SerializeField, Min(1)] private int developmentSectionNumber = 9;
         [SerializeField, Min(0)] private int developmentWeaveThreads = 3;
         [SerializeField] private bool developmentCanUseSectionSevenBridge = true;
 
@@ -33,6 +33,7 @@ namespace HimoHito
 
         public bool HasReachedMidpoint { get; private set; }
         public bool HasReachedSectionEight { get; private set; }
+        public bool HasReachedSectionNine { get; private set; }
         public bool CanUseSectionSevenBridge { get; private set; }
 
         private void Awake()
@@ -120,6 +121,24 @@ namespace HimoHito
             return true;
         }
 
+        public bool TryStartSectionNine(Vector2 respawnPosition)
+        {
+            if (ropeController.IsAttached)
+            {
+                return false;
+            }
+
+            if (HasReachedSectionNine)
+            {
+                return true;
+            }
+
+            checkpointPosition = respawnPosition;
+            HasReachedSectionNine = true;
+            CaptureCheckpointState();
+            return true;
+        }
+
         private void CaptureCheckpointState()
         {
             checkpointRopeLength = ropeResource.CurrentLength;
@@ -151,6 +170,7 @@ namespace HimoHito
             CanUseSectionSevenBridge = developmentCanUseSectionSevenBridge;
             HasReachedMidpoint = developmentSectionNumber >= 6;
             HasReachedSectionEight = developmentSectionNumber >= 8;
+            HasReachedSectionNine = developmentSectionNumber >= 9;
         }
 
         private void RestoreCheckpointState()
