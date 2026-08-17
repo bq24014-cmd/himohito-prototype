@@ -8,9 +8,9 @@ namespace HimoHito
     [RequireComponent(typeof(Rigidbody2D))]
     public sealed class MainStageVerticalMover : MonoBehaviour
     {
-        [SerializeField] private float lowerY = -0.7f;
+        [SerializeField] private float lowerY = -2.2f;
         [SerializeField] private float upperY = 7.3f;
-        [SerializeField, Min(0.5f)] private float cycleDuration = 7.5f;
+        [SerializeField, Min(0.5f)] private float cycleDuration = 8.9f;
 
         private Rigidbody2D body;
         private float elapsed;

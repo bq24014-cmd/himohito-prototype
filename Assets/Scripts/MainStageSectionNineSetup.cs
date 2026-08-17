@@ -39,7 +39,7 @@ namespace HimoHito
 
             GameObject hazard = EnsureSolidObject(
                 MovingHazardName,
-                new Vector2(150f, -0.7f),
+                new Vector2(150f, -2.2f),
                 new Vector2(3.2f, 0.8f),
                 new Color(1f, 0.28f, 0.32f));
             BoxCollider2D hazardCollider = hazard.GetComponent<BoxCollider2D>();
@@ -61,7 +61,7 @@ namespace HimoHito
                 mover = hazard.AddComponent<MainStageVerticalMover>();
             }
 
-            mover.Configure(-0.7f, 7.3f, 7.5f);
+            mover.Configure(-2.2f, 7.3f, 8.9f);
 
             GameObject landing = EnsureSolidObject(
                 LandingName,
