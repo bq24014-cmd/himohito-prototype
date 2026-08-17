@@ -13,11 +13,14 @@ namespace HimoHito
         private WeaveResource weaveResource;
         private MainStagePreview preview;
         private MainStageRespawnOnFall respawnController;
+        private MainStageGoalZone goalZone;
         private WeaveFrame weaveFrame;
         private GUIStyle titleStyle;
         private GUIStyle bodyStyle;
         private GUIStyle ropeStyle;
         private GUIStyle resultStyle;
+        private GUIStyle clearTitleStyle;
+        private GUIStyle clearBodyStyle;
 
         private void Awake()
         {
@@ -29,11 +32,16 @@ namespace HimoHito
             MainStageSectionSixSetup.EnsureCreated();
             MainStageSectionSevenSetup.EnsureCreated();
             MainStageSectionEightSetup.EnsureCreated();
-            GameObject sectionNineTarget = MainStageSectionNineSetup.EnsureCreated();
-            weaveFrame = FindFirstObjectByType<WeaveFrame>();
-            if (preview != null && ropeResource != null && sectionNineTarget != null)
+            MainStageSectionNineSetup.EnsureCreated();
+            GameObject sectionTenTarget = MainStageSectionTenSetup.EnsureCreated();
+            if (sectionTenTarget != null)
             {
-                preview.Configure(ropeResource.transform, sectionNineTarget.transform);
+                goalZone = sectionTenTarget.GetComponent<MainStageGoalZone>();
+            }
+            weaveFrame = FindFirstObjectByType<WeaveFrame>();
+            if (preview != null && ropeResource != null && sectionTenTarget != null)
+            {
+                preview.Configure(ropeResource.transform, sectionTenTarget.transform);
             }
 
             if (ropeController != null)
@@ -45,11 +53,19 @@ namespace HimoHito
         private void OnGUI()
         {
             EnsureStyles();
+            if (goalZone != null && goalZone.IsClear)
+            {
+                DrawClearScreen();
+                return;
+            }
+
             GUILayout.BeginArea(new Rect(22f, 18f, 520f, 380f), GUI.skin.box);
             GUILayout.Label("ヒモヒト / 本編ステージ", titleStyle);
             GUILayout.Label(
                 respawnController != null && respawnController.HasReachedMidpoint
-                    ? respawnController.HasReachedSectionNine
+                    ? respawnController.HasReachedSectionTen
+                        ? "第10区間　自分のヒモで大きく飛ぶ"
+                        : respawnController.HasReachedSectionNine
                         ? "第9区間　動く障害物の安全な瞬間を読む"
                         : respawnController.HasReachedSectionEight
                         ? "第8区間　2手先までヒモを配分する"
@@ -94,6 +110,12 @@ namespace HimoHito
             {
                 GUILayout.Label("ステージ確認中 — Landingからスタートへ戻ります", resultStyle);
             }
+            else if (respawnController != null && respawnController.HasReachedSectionTen)
+            {
+                GUILayout.Label(
+                    "第10区間 — 1つのHookで大きく振り、緑のゴールへ飛ぶ",
+                    resultStyle);
+            }
             else if (respawnController != null && respawnController.HasReachedSectionNine)
             {
                 GUILayout.Label(
@@ -128,6 +150,22 @@ namespace HimoHito
             GUILayout.EndArea();
         }
 
+        private void DrawClearScreen()
+        {
+            Color previousColor = GUI.color;
+            GUI.color = new Color(0.035f, 0.04f, 0.085f, 0.99f);
+            GUI.Box(new Rect(0f, 0f, Screen.width, Screen.height), GUIContent.none);
+            GUI.color = previousColor;
+
+            GUILayout.BeginArea(new Rect(0f, 0f, Screen.width, Screen.height));
+            GUILayout.FlexibleSpace();
+            GUILayout.Label("MAIN STAGE CLEAR", clearTitleStyle);
+            GUILayout.Space(18f);
+            GUILayout.Label("自分のヒモで、最後まで飛び切りました", clearBodyStyle);
+            GUILayout.FlexibleSpace();
+            GUILayout.EndArea();
+        }
+
         private void EnsureStyles()
         {
             if (titleStyle != null)
@@ -157,6 +195,19 @@ namespace HimoHito
                 fontSize = 16,
                 fontStyle = FontStyle.Bold,
                 normal = { textColor = new Color(0.44f, 0.92f, 1f) }
+            };
+            clearTitleStyle = new GUIStyle(GUI.skin.label)
+            {
+                alignment = TextAnchor.MiddleCenter,
+                fontSize = 48,
+                fontStyle = FontStyle.Bold,
+                normal = { textColor = new Color(0.33f, 1f, 0.76f) }
+            };
+            clearBodyStyle = new GUIStyle(GUI.skin.label)
+            {
+                alignment = TextAnchor.MiddleCenter,
+                fontSize = 24,
+                normal = { textColor = Color.white }
             };
         }
     }
