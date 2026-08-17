@@ -37,8 +37,8 @@ namespace HimoHito
 
             GameObject goal = EnsureSolidObject(
                 GoalName,
-                new Vector2(172.5f, 2.3f),
-                new Vector2(14f, 0.7f),
+                new Vector2(176.5f, 2.3f),
+                new Vector2(18f, 0.7f),
                 new Color(0.28f, 0.9f, 0.58f));
             if (!goal.TryGetComponent(out MainStageGoalZone _))
             {
