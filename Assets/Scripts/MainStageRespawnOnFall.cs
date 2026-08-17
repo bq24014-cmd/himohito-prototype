@@ -11,7 +11,7 @@ namespace HimoHito
     public sealed class MainStageRespawnOnFall : MonoBehaviour
     {
         [SerializeField] private float fallThreshold = -9f;
-        [SerializeField] private bool startFromCurrentSectionForDevelopment = true;
+        [SerializeField] private bool startFromCurrentSectionForDevelopment;
         [SerializeField] private Vector2 developmentStartPosition =
             new Vector2(155.1f, 3.3f);
         [SerializeField, Min(1f)] private float developmentRopeLength = 99f;

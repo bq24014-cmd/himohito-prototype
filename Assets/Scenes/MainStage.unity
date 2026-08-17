@@ -1987,7 +1987,7 @@ MonoBehaviour:
   m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.MainStageRespawnOnFall
   fallThreshold: -9
-  startFromCurrentSectionForDevelopment: 1
+  startFromCurrentSectionForDevelopment: 0
   developmentStartPosition: {x: 155.1, y: 3.3}
   developmentRopeLength: 99
   developmentSectionNumber: 10
