@@ -4203,7 +4203,7 @@ Transform:
   m_GameObject: {fileID: 2000000020}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 150, y: 0.8, z: 0}
+  m_LocalPosition: {x: 150, y: -0.7, z: 0}
   m_LocalScale: {x: 3.2, y: 0.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4304,9 +4304,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ce154024c9847b0b2b9716a3036f0ba, type: 3}
   m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.MainStageVerticalMover
-  lowerY: 0.8
-  upperY: 5.8
-  cycleDuration: 4.8
+  lowerY: -0.7
+  upperY: 7.3
+  cycleDuration: 7.5
 --- !u!1 &2000000030
 GameObject:
   m_ObjectHideFlags: 0
@@ -4336,7 +4336,7 @@ Transform:
   m_GameObject: {fileID: 2000000030}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 154.8, y: 2.3, z: 0}
+  m_LocalPosition: {x: 155.1, y: 2.3, z: 0}
   m_LocalScale: {x: 7, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
