@@ -104,33 +104,9 @@ namespace HimoHito
             {
                 GUILayout.Label("ヒモが尽きました — Rで現在の区間から再挑戦", resultStyle);
             }
-            else if (respawnController != null && respawnController.HasReachedSectionTen)
-            {
-                GUILayout.Label(
-                    "第10区間 — 1つのHookで大きく振り、緑のゴールへ飛ぶ",
-                    resultStyle);
-            }
-            else if (respawnController != null && respawnController.HasReachedSectionNine)
-            {
-                GUILayout.Label(
-                    "第9区間 — 赤い障害物が上がるタイミングを観察して進む",
-                    resultStyle);
-            }
-            else if (respawnController != null && respawnController.HasReachedSectionEight)
-            {
-                GUILayout.Label(
-                    "第8区間 — 1手目だけで使い切らず、次のHook分を残す",
-                    resultStyle);
-            }
-            else if (respawnController != null && respawnController.HasReachedMidpoint)
-            {
-                GUILayout.Label(
-                    "第7区間 — 編み糸で橋を作るか、ヒモで谷を渡る",
-                    resultStyle);
-            }
             else
             {
-                GUILayout.Label(GetEarlySectionHint(), resultStyle);
+                GUILayout.Label("緑のゴールを目指す", resultStyle);
             }
 
             if (playerBody != null)
@@ -150,54 +126,38 @@ namespace HimoHito
             {
                 if (respawnController.HasReachedSectionTen)
                 {
-                    return "第10区間　自分のヒモで大きく飛ぶ";
+                    return "第10区間";
                 }
                 if (respawnController.HasReachedSectionNine)
                 {
-                    return "第9区間　動く障害物の安全な瞬間を読む";
+                    return "第9区間";
                 }
                 if (respawnController.HasReachedSectionEight)
                 {
-                    return "第8区間　2手先までヒモを配分する";
+                    return "第8区間";
                 }
                 if (respawnController.HasReachedMidpoint)
                 {
-                    return "第6〜7区間　長さと資源を選んで進む";
+                    return playerBody != null && playerBody.position.x < 96f
+                        ? "第6区間"
+                        : "第7区間";
                 }
             }
 
             float playerX = playerBody != null ? playerBody.position.x : float.NegativeInfinity;
             if (playerX < 8f)
             {
-                return "第1区間　基本の振り子で着地する";
+                return "第1区間";
             }
             if (playerX < 30f)
             {
-                return "第2区間　歩いて次の配置を観察する";
+                return "第2区間";
             }
             if (playerX < 50f)
             {
-                return "第3区間　届く長さと飛べる長さを考える";
+                return "第3区間";
             }
-            return "第4〜5区間　使う資源を選ぶ上下分岐";
-        }
-
-        private string GetEarlySectionHint()
-        {
-            float playerX = playerBody != null ? playerBody.position.x : float.NegativeInfinity;
-            if (playerX < 8f)
-            {
-                return "Hookへヒモを掛け、振り子で最初の着地床へ進む";
-            }
-            if (playerX < 30f)
-            {
-                return "足場を歩き、次に使うヒモの長さを考える";
-            }
-            if (playerX < 50f)
-            {
-                return "Hookへ届く最短より、着地に必要な長さを選ぶ";
-            }
-            return "上：ヒモを編み糸に変える　下：ヒモを温存する";
+            return "第4〜5区間";
         }
 
         private void DrawClearScreen()
