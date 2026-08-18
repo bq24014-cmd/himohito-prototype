@@ -88,11 +88,11 @@ namespace HimoHito
                 ropeController.enabled = false;
             }
 
-            float previewX = previewTarget.position.x;
-            float playerX = player.position.x;
-            float distance = Mathf.Abs(previewX - playerX);
+            Vector2 previewPosition = previewTarget.position;
+            Vector2 returnPosition = new Vector2(player.position.x, fixedY);
+            float distance = Vector2.Distance(previewPosition, returnPosition);
             float actualReturnDuration = Mathf.Max(returnDuration, distance / returnSpeed);
-            SetCameraX(previewX);
+            SetCameraPosition(previewPosition);
             yield return new WaitForSecondsRealtime(holdDuration);
 
             float elapsed = 0f;
@@ -101,11 +101,11 @@ namespace HimoHito
                 elapsed += Time.unscaledDeltaTime;
                 float progress = Mathf.Clamp01(elapsed / actualReturnDuration);
                 float easedProgress = Mathf.SmoothStep(0f, 1f, progress);
-                SetCameraX(Mathf.Lerp(previewX, playerX, easedProgress));
+                SetCameraPosition(Vector2.Lerp(previewPosition, returnPosition, easedProgress));
                 yield return null;
             }
 
-            SetCameraX(playerX);
+            SetCameraPosition(returnPosition);
             if (playerBody != null)
             {
                 playerBody.simulated = true;
@@ -129,9 +129,9 @@ namespace HimoHito
             IsPreviewing = false;
         }
 
-        private void SetCameraX(float xPosition)
+        private void SetCameraPosition(Vector2 position)
         {
-            transform.position = new Vector3(xPosition, fixedY, fixedZ);
+            transform.position = new Vector3(position.x, position.y, fixedZ);
         }
     }
 }
