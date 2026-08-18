@@ -1761,3 +1761,10 @@ Hook 1へ届く最低限の長さと、長すぎて振り子が低くなる長�
 - 本編シーンを開いたままPlayすると本編から始まるため、通し確認にならないことを確認した
 - Editor起動後に`EditorSceneManager.playModeStartScene`を`Tutorial`へ設定するようにした
 - これにより、現在開いているシーンにかかわらずUnityのPlayでチュートリアルから開始する
+
+## `latest-prototype`を`main`へ再統合
+
+- 2026-08-17のレビューで、今週の成果が`latest-prototype`にあり、`main`が97コミット遅れていることを確認した
+- `origin/main`から`latest-prototype`までは一本道で、`main`側の独自コミットが0件であることを確認した
+- 履歴を書き換えず、競合も発生しない早送りで`main`へ統合する
+- 作業ツリーに残っている`Assets/Scenes/Tutorial.unity`の変更は、この統合記録には含めない
