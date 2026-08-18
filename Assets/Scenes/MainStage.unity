@@ -2543,6 +2543,7 @@ MonoBehaviour:
   holdDuration: 0.7
   returnDuration: 1.4
   returnSpeed: 38
+  previewOrthographicSize: 11.5
 --- !u!114 &1790426394
 MonoBehaviour:
   m_ObjectHideFlags: 0

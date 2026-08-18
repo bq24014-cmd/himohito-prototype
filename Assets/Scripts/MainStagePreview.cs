@@ -16,13 +16,16 @@ namespace HimoHito
         [SerializeField, Min(0f)] private float holdDuration = 0.7f;
         [SerializeField, Min(0.01f)] private float returnDuration = 1.4f;
         [SerializeField, Min(0.01f)] private float returnSpeed = 38f;
+        [SerializeField, Min(0.01f)] private float previewOrthographicSize = 11.5f;
 
+        private Camera previewCamera;
         private HorizontalCameraFollow cameraFollow;
         private Rigidbody2D playerBody;
         private PlayerMover playerMover;
         private RopeController ropeController;
         private float fixedY;
         private float fixedZ;
+        private float gameplayOrthographicSize;
 
         public bool IsPreviewing { get; private set; }
 
@@ -34,6 +37,8 @@ namespace HimoHito
 
         private void Awake()
         {
+            previewCamera = GetComponent<Camera>();
+            gameplayOrthographicSize = previewCamera.orthographicSize;
             cameraFollow = GetComponent<HorizontalCameraFollow>();
             fixedY = transform.position.y;
             fixedZ = transform.position.z;
@@ -93,6 +98,7 @@ namespace HimoHito
             float distance = Vector2.Distance(previewPosition, returnPosition);
             float actualReturnDuration = Mathf.Max(returnDuration, distance / returnSpeed);
             SetCameraPosition(previewPosition);
+            previewCamera.orthographicSize = previewOrthographicSize;
             yield return new WaitForSecondsRealtime(holdDuration);
 
             float elapsed = 0f;
@@ -102,10 +108,15 @@ namespace HimoHito
                 float progress = Mathf.Clamp01(elapsed / actualReturnDuration);
                 float easedProgress = Mathf.SmoothStep(0f, 1f, progress);
                 SetCameraPosition(Vector2.Lerp(previewPosition, returnPosition, easedProgress));
+                previewCamera.orthographicSize = Mathf.Lerp(
+                    previewOrthographicSize,
+                    gameplayOrthographicSize,
+                    easedProgress);
                 yield return null;
             }
 
             SetCameraPosition(returnPosition);
+            previewCamera.orthographicSize = gameplayOrthographicSize;
             if (playerBody != null)
             {
                 playerBody.simulated = true;
