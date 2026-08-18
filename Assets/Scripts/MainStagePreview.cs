@@ -15,6 +15,7 @@ namespace HimoHito
         [SerializeField] private Transform previewTarget;
         [SerializeField, Min(0f)] private float holdDuration = 0.7f;
         [SerializeField, Min(0.01f)] private float returnDuration = 1.4f;
+        [SerializeField, Min(0.01f)] private float returnSpeed = 38f;
 
         private HorizontalCameraFollow cameraFollow;
         private Rigidbody2D playerBody;
@@ -89,14 +90,16 @@ namespace HimoHito
 
             float previewX = previewTarget.position.x;
             float playerX = player.position.x;
+            float distance = Mathf.Abs(previewX - playerX);
+            float actualReturnDuration = Mathf.Max(returnDuration, distance / returnSpeed);
             SetCameraX(previewX);
             yield return new WaitForSecondsRealtime(holdDuration);
 
             float elapsed = 0f;
-            while (elapsed < returnDuration)
+            while (elapsed < actualReturnDuration)
             {
                 elapsed += Time.unscaledDeltaTime;
-                float progress = Mathf.Clamp01(elapsed / returnDuration);
+                float progress = Mathf.Clamp01(elapsed / actualReturnDuration);
                 float easedProgress = Mathf.SmoothStep(0f, 1f, progress);
                 SetCameraX(Mathf.Lerp(previewX, playerX, easedProgress));
                 yield return null;

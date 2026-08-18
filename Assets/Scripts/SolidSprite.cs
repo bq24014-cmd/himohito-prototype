@@ -31,7 +31,13 @@ namespace HimoHito
 
         private void OnValidate()
         {
-            Apply();
+            // Reassigning SpriteRenderer.sprite during OnValidate causes Unity's
+            // OnSpriteTilingPropertyChange warning. The sprite is created in
+            // OnEnable; validation only needs to refresh the editable color.
+            if (TryGetComponent(out SpriteRenderer spriteRenderer))
+            {
+                spriteRenderer.color = color;
+            }
         }
 
         private void Apply()

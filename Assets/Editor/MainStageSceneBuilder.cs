@@ -451,6 +451,7 @@ namespace HimoHitoEditor
             body.gravityScale = 2.8f;
             body.mass = 1f;
             body.freezeRotation = true;
+            body.interpolation = RigidbodyInterpolation2D.Interpolate;
             body.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
 
             DistanceJoint2D joint = player.AddComponent<DistanceJoint2D>();
