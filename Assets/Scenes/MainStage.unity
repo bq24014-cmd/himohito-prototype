@@ -2542,7 +2542,7 @@ MonoBehaviour:
   previewTarget: {fileID: 2100000021}
   holdDuration: 0.7
   returnDuration: 1.4
-  returnSpeed: 38
+  returnSpeed: 30
   previewOrthographicSize: 11.5
 --- !u!114 &1790426394
 MonoBehaviour:

@@ -15,7 +15,7 @@ namespace HimoHito
         [SerializeField] private Transform previewTarget;
         [SerializeField, Min(0f)] private float holdDuration = 0.7f;
         [SerializeField, Min(0.01f)] private float returnDuration = 1.4f;
-        [SerializeField, Min(0.01f)] private float returnSpeed = 38f;
+        [SerializeField, Min(0.01f)] private float returnSpeed = 30f;
         [SerializeField, Min(0.01f)] private float previewOrthographicSize = 11.5f;
 
         private Camera previewCamera;
