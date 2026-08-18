@@ -3,20 +3,18 @@ using UnityEngine;
 namespace HimoHito
 {
     /// <summary>
-    /// Starts the focused two-move rope-allocation experiment and saves its restart state.
+    /// Saves the rope carried into section eight as its restart state.
     /// </summary>
     [RequireComponent(typeof(Collider2D))]
     public sealed class MainStageSectionEightCheckpoint : MonoBehaviour
     {
         [SerializeField] private Vector2 respawnPosition;
-        [SerializeField, Min(1f)] private float experimentRopeLength = 10.2f;
 
         public bool IsReached { get; private set; }
 
-        public void Configure(Vector2 position, float ropeLength)
+        public void Configure(Vector2 position)
         {
             respawnPosition = position;
-            experimentRopeLength = Mathf.Max(1f, ropeLength);
         }
 
         private void OnCollisionStay2D(Collision2D collision)
@@ -30,9 +28,7 @@ namespace HimoHito
 
             MainStageRespawnOnFall respawn =
                 collision.rigidbody.GetComponent<MainStageRespawnOnFall>();
-            if (respawn != null && respawn.TryStartSectionEight(
-                    respawnPosition,
-                    experimentRopeLength))
+            if (respawn != null && respawn.TryStartSectionEight(respawnPosition))
             {
                 IsReached = true;
             }

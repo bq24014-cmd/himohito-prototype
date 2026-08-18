@@ -14,7 +14,7 @@ namespace HimoHito
         [SerializeField] private bool startFromCurrentSectionForDevelopment;
         [SerializeField] private Vector2 developmentStartPosition =
             new Vector2(155.1f, 3.3f);
-        [SerializeField, Min(1f)] private float developmentRopeLength = 99f;
+        [SerializeField, Min(1f)] private float developmentRopeLength = 28f;
         [SerializeField, Min(1)] private int developmentSectionNumber = 10;
         [SerializeField, Min(0)] private int developmentWeaveThreads = 3;
         [SerializeField] private bool developmentCanUseSectionSevenBridge = true;
@@ -101,7 +101,7 @@ namespace HimoHito
             return true;
         }
 
-        public bool TryStartSectionEight(Vector2 respawnPosition, float experimentRopeLength)
+        public bool TryStartSectionEight(Vector2 respawnPosition)
         {
             if (ropeController.IsAttached)
             {
@@ -114,9 +114,6 @@ namespace HimoHito
             }
 
             checkpointPosition = respawnPosition;
-            ropeResource.RestoreCurrentLength(experimentRopeLength);
-            ropeController.RestoreSelectedRopeLength(
-                Mathf.Min(ropeController.SelectedRopeLength, Mathf.FloorToInt(experimentRopeLength)));
             HasReachedSectionEight = true;
             CaptureCheckpointState();
             return true;

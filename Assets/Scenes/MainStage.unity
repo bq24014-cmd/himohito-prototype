@@ -1989,7 +1989,7 @@ MonoBehaviour:
   fallThreshold: -9
   startFromCurrentSectionForDevelopment: 0
   developmentStartPosition: {x: 155.1, y: 3.3}
-  developmentRopeLength: 99
+  developmentRopeLength: 28
   developmentSectionNumber: 10
   developmentWeaveThreads: 3
   developmentCanUseSectionSevenBridge: 1
@@ -2064,8 +2064,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cfccc1ad82411c47b427f2e4b5bb76c, type: 3}
   m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.RopeResource
-  maximumLength: 99
-  currentLength: 99
+  maximumLength: 28
+  currentLength: 28
 --- !u!120 &1380120225
 LineRenderer:
   serializedVersion: 3
@@ -3538,7 +3538,6 @@ MonoBehaviour:
   m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.MainStageSectionEightCheckpoint
   respawnPosition: {x: 116.5, y: 0.15}
-  experimentRopeLength: 10.2
 --- !u!61 &1800000033
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -12,7 +12,6 @@ namespace HimoHito
         public const string PlanningLandingName = "Main Section 8 Planning Landing";
         public const string SecondHookName = "Main Section 8 Hook B";
         public const string FinalLandingName = "Main Section 8 Landing";
-        public const float ExperimentRopeLength = 10.2f;
 
         public static GameObject EnsureCreated()
         {
@@ -26,7 +25,7 @@ namespace HimoHito
                     checkpoint = sectionSevenLanding.AddComponent<MainStageSectionEightCheckpoint>();
                 }
 
-                checkpoint.Configure(new Vector2(116.5f, 0.15f), ExperimentRopeLength);
+                checkpoint.Configure(new Vector2(116.5f, 0.15f));
             }
 
             EnsureHook(

@@ -13,7 +13,7 @@ namespace HimoHitoEditor
     {
         private const string ScenePath = "Assets/Scenes/MainStage.unity";
 
-        private const float DevelopmentRopeLength = 99f;
+        private const float MainStageRopeLength = 28f;
 
         [MenuItem("HimoHito/Build Main Stage Through Section 10")]
         public static void BuildMainStageThroughSectionTen()
@@ -460,7 +460,7 @@ namespace HimoHitoEditor
             ropeLine.sortingOrder = 5;
 
             RopeResource ropeResource = player.AddComponent<RopeResource>();
-            ConfigureDevelopmentRopeLength(ropeResource);
+            ConfigureMainStageRopeLength(ropeResource);
             player.AddComponent<WeaveResource>();
             player.AddComponent<PlayerMover>();
             player.AddComponent<RopeController>();
@@ -468,11 +468,11 @@ namespace HimoHitoEditor
             return player;
         }
 
-        private static void ConfigureDevelopmentRopeLength(RopeResource ropeResource)
+        private static void ConfigureMainStageRopeLength(RopeResource ropeResource)
         {
             SerializedObject serializedResource = new SerializedObject(ropeResource);
-            serializedResource.FindProperty("maximumLength").floatValue = DevelopmentRopeLength;
-            serializedResource.FindProperty("currentLength").floatValue = DevelopmentRopeLength;
+            serializedResource.FindProperty("maximumLength").floatValue = MainStageRopeLength;
+            serializedResource.FindProperty("currentLength").floatValue = MainStageRopeLength;
             serializedResource.ApplyModifiedPropertiesWithoutUndo();
         }
 
