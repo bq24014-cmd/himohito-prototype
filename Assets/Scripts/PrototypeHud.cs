@@ -126,9 +126,16 @@ namespace HimoHito
             string state;
             if (runController != null && runController.Outcome != PrototypeRunController.RunOutcome.Playing)
             {
-                state = runController.IsAutomaticRespawnPending
-                        ? "失敗 — 自動で戻ります..."
-                        : "失敗 — Rで再挑戦";
+                state = runController.FailureReason switch
+                {
+                    PrototypeRunController.RunFailureReason.Fell =>
+                        "落下しました — 自動で現在の区間へ戻ります...",
+                    PrototypeRunController.RunFailureReason.RopeExhausted =>
+                        "ヒモが尽きました — Rで現在の区間から再挑戦",
+                    _ => runController.IsAutomaticRespawnPending
+                        ? "失敗しました — 自動で現在の区間へ戻ります..."
+                        : "失敗しました — Rで現在の区間から再挑戦"
+                };
             }
             else
             {

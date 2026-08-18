@@ -19,6 +19,13 @@ namespace HimoHito
             Failed
         }
 
+        public enum RunFailureReason
+        {
+            None,
+            Fell,
+            RopeExhausted
+        }
+
         [SerializeField] private float fallThreshold = -9f;
         [SerializeField, Min(0f)] private float fallRespawnDelay = 0.5f;
         [SerializeField, Min(0.01f)] private float minimumUsableRopeLength = 1f;
@@ -38,6 +45,7 @@ namespace HimoHito
         private bool startRequested;
 
         public RunOutcome Outcome { get; private set; } = RunOutcome.WaitingToStart;
+        public RunFailureReason FailureReason { get; private set; } = RunFailureReason.None;
         public bool IsAutomaticRespawnPending { get; private set; }
         public int CurrentTutorialSection { get; private set; } = 1;
         public const int TutorialSectionCount = 4;
@@ -127,7 +135,7 @@ namespace HimoHito
                                  ropeResource.CurrentLength < minimumUsableRopeLength;
             if (fell)
             {
-                Finish(RunOutcome.Failed);
+                Finish(RunOutcome.Failed, RunFailureReason.Fell);
                 IsAutomaticRespawnPending = true;
                 automaticRespawnTimer = fallRespawnDelay;
                 return;
@@ -135,7 +143,7 @@ namespace HimoHito
 
             if (cannotUseRope)
             {
-                Finish(RunOutcome.Failed);
+                Finish(RunOutcome.Failed, RunFailureReason.RopeExhausted);
             }
         }
 
@@ -148,6 +156,7 @@ namespace HimoHito
             playerMover.enabled = false;
             ropeController.enabled = false;
             startRequested = false;
+            FailureReason = RunFailureReason.None;
             Outcome = RunOutcome.WaitingToStart;
         }
 
@@ -208,12 +217,15 @@ namespace HimoHito
             CaptureCheckpointState();
         }
 
-        private void Finish(RunOutcome outcome)
+        private void Finish(
+            RunOutcome outcome,
+            RunFailureReason failureReason = RunFailureReason.None)
         {
             ropeController.DetachAndRefund();
             body.linearVelocity = Vector2.zero;
             body.angularVelocity = 0f;
             body.simulated = false;
+            FailureReason = failureReason;
             Outcome = outcome;
         }
 
@@ -281,6 +293,7 @@ namespace HimoHito
             ropeController.enabled = true;
             automaticRespawnTimer = 0f;
             IsAutomaticRespawnPending = false;
+            FailureReason = RunFailureReason.None;
             Outcome = RunOutcome.Playing;
         }
 
