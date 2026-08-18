@@ -7,10 +7,11 @@ namespace HimoHito
     /// </summary>
     [DefaultExecutionOrder(-200)]
     [RequireComponent(typeof(Rigidbody2D), typeof(RopeResource), typeof(RopeController))]
-    [RequireComponent(typeof(WeaveResource))]
+    [RequireComponent(typeof(WeaveResource), typeof(PlayerMover))]
     public sealed class MainStageRespawnOnFall : MonoBehaviour
     {
         [SerializeField] private float fallThreshold = -9f;
+        [SerializeField, Min(0.01f)] private float minimumUsableRopeLength = 1f;
         [SerializeField] private bool startFromCurrentSectionForDevelopment;
         [SerializeField] private Vector2 developmentStartPosition =
             new Vector2(155.1f, 3.3f);
@@ -23,6 +24,8 @@ namespace HimoHito
         private RopeResource ropeResource;
         private RopeController ropeController;
         private WeaveResource weaveResource;
+        private PlayerMover playerMover;
+        private MainStageGoalZone goalZone;
         private Vector2 checkpointPosition;
         private float checkpointRopeLength;
         private int checkpointSelectedRopeLength;
@@ -36,6 +39,7 @@ namespace HimoHito
         public bool HasReachedSectionNine { get; private set; }
         public bool HasReachedSectionTen { get; private set; }
         public bool CanUseSectionSevenBridge { get; private set; }
+        public bool IsRopeExhausted { get; private set; }
 
         private void Awake()
         {
@@ -43,6 +47,8 @@ namespace HimoHito
             ropeResource = GetComponent<RopeResource>();
             ropeController = GetComponent<RopeController>();
             weaveResource = GetComponent<WeaveResource>();
+            playerMover = GetComponent<PlayerMover>();
+            goalZone = FindFirstObjectByType<MainStageGoalZone>();
             sectionSevenWeaveFrame = FindFirstObjectByType<WeaveFrame>();
             checkpointPosition = body.position;
 
@@ -66,16 +72,33 @@ namespace HimoHito
 
         private void Update()
         {
-            if (transform.position.y >= fallThreshold)
+            if (goalZone != null && goalZone.IsClear)
             {
                 return;
             }
 
-            ropeController.DetachAndRefund();
-            RestoreCheckpointState();
-            body.position = checkpointPosition;
-            body.linearVelocity = Vector2.zero;
-            body.angularVelocity = 0f;
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                RestartFromCheckpoint();
+                return;
+            }
+
+            if (IsRopeExhausted)
+            {
+                return;
+            }
+
+            if (transform.position.y < fallThreshold)
+            {
+                RestartFromCheckpoint();
+                return;
+            }
+
+            if (!ropeController.IsAttached &&
+                ropeResource.CurrentLength < minimumUsableRopeLength)
+            {
+                EnterRopeExhaustedState();
+            }
         }
 
         public bool TryReachMidpoint(
@@ -200,6 +223,31 @@ namespace HimoHito
                 sectionSevenWeaveFrame.RestoreWeave(checkpointWeaveCompleted);
             }
             CanUseSectionSevenBridge = checkpointCanUseSectionSevenBridge;
+        }
+
+        private void EnterRopeExhaustedState()
+        {
+            ropeController.DetachAndRefund();
+            body.linearVelocity = Vector2.zero;
+            body.angularVelocity = 0f;
+            body.simulated = false;
+            playerMover.enabled = false;
+            ropeController.enabled = false;
+            IsRopeExhausted = true;
+        }
+
+        private void RestartFromCheckpoint()
+        {
+            body.simulated = true;
+            ropeController.DetachAndRefund();
+            RestoreCheckpointState();
+            body.position = checkpointPosition;
+            transform.position = checkpointPosition;
+            body.linearVelocity = Vector2.zero;
+            body.angularVelocity = 0f;
+            playerMover.enabled = true;
+            ropeController.enabled = true;
+            IsRopeExhausted = false;
         }
     }
 }

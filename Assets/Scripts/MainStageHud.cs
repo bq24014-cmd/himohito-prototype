@@ -61,17 +61,7 @@ namespace HimoHito
 
             GUILayout.BeginArea(new Rect(22f, 18f, 520f, 380f), GUI.skin.box);
             GUILayout.Label("ヒモヒト / 本編ステージ", titleStyle);
-            GUILayout.Label(
-                respawnController != null && respawnController.HasReachedMidpoint
-                    ? respawnController.HasReachedSectionTen
-                        ? "第10区間　自分のヒモで大きく飛ぶ"
-                        : respawnController.HasReachedSectionNine
-                        ? "第9区間　動く障害物の安全な瞬間を読む"
-                        : respawnController.HasReachedSectionEight
-                        ? "第8区間　2手先までヒモを配分する"
-                        : "第6〜7区間　長さと資源を選んで進む"
-                    : "第4〜5区間　使う資源を選ぶ上下分岐",
-                bodyStyle);
+            GUILayout.Label(GetSectionTitle(), bodyStyle);
 
             if (ropeResource != null)
             {
@@ -110,6 +100,10 @@ namespace HimoHito
             {
                 GUILayout.Label("ステージ確認中 — Landingからスタートへ戻ります", resultStyle);
             }
+            else if (respawnController != null && respawnController.IsRopeExhausted)
+            {
+                GUILayout.Label("ヒモが尽きました — Rで現在の区間から再挑戦", resultStyle);
+            }
             else if (respawnController != null && respawnController.HasReachedSectionTen)
             {
                 GUILayout.Label(
@@ -136,7 +130,7 @@ namespace HimoHito
             }
             else
             {
-                GUILayout.Label("上：ヒモを編み糸に変える　下：ヒモを温存する", resultStyle);
+                GUILayout.Label(GetEarlySectionHint(), resultStyle);
             }
 
             if (playerBody != null)
@@ -146,8 +140,64 @@ namespace HimoHito
 
             GUILayout.Label("移動：A / D　ジャンプ：Space", bodyStyle);
             GUILayout.Label("照準：矢印キー　ヒモ：E長押し", bodyStyle);
-            GUILayout.Label("合流後の落下は中間チェックポイントから再開", bodyStyle);
+            GUILayout.Label("落下またはR：現在のチェックポイントから再開", bodyStyle);
             GUILayout.EndArea();
+        }
+
+        private string GetSectionTitle()
+        {
+            if (respawnController != null)
+            {
+                if (respawnController.HasReachedSectionTen)
+                {
+                    return "第10区間　自分のヒモで大きく飛ぶ";
+                }
+                if (respawnController.HasReachedSectionNine)
+                {
+                    return "第9区間　動く障害物の安全な瞬間を読む";
+                }
+                if (respawnController.HasReachedSectionEight)
+                {
+                    return "第8区間　2手先までヒモを配分する";
+                }
+                if (respawnController.HasReachedMidpoint)
+                {
+                    return "第6〜7区間　長さと資源を選んで進む";
+                }
+            }
+
+            float playerX = playerBody != null ? playerBody.position.x : float.NegativeInfinity;
+            if (playerX < 8f)
+            {
+                return "第1区間　基本の振り子で着地する";
+            }
+            if (playerX < 30f)
+            {
+                return "第2区間　歩いて次の配置を観察する";
+            }
+            if (playerX < 50f)
+            {
+                return "第3区間　届く長さと飛べる長さを考える";
+            }
+            return "第4〜5区間　使う資源を選ぶ上下分岐";
+        }
+
+        private string GetEarlySectionHint()
+        {
+            float playerX = playerBody != null ? playerBody.position.x : float.NegativeInfinity;
+            if (playerX < 8f)
+            {
+                return "Hookへヒモを掛け、振り子で最初の着地床へ進む";
+            }
+            if (playerX < 30f)
+            {
+                return "足場を歩き、次に使うヒモの長さを考える";
+            }
+            if (playerX < 50f)
+            {
+                return "Hookへ届く最短より、着地に必要な長さを選ぶ";
+            }
+            return "上：ヒモを編み糸に変える　下：ヒモを温存する";
         }
 
         private void DrawClearScreen()
