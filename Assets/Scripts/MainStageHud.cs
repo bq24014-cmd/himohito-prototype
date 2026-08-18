@@ -212,6 +212,25 @@ namespace HimoHito
             GUILayout.Label("MAIN STAGE CLEAR", clearTitleStyle);
             GUILayout.Space(18f);
             GUILayout.Label("自分のヒモで、最後まで飛び切りました", clearBodyStyle);
+            GUILayout.Space(28f);
+            if (ropeResource != null)
+            {
+                GUILayout.Label(
+                    $"残ったヒモ　{ropeResource.CurrentLength:0.0} / " +
+                    $"{ropeResource.MaximumLength:0.0}",
+                    clearBodyStyle);
+            }
+            if (respawnController != null)
+            {
+                GUILayout.Label(
+                    respawnController.CanUseSectionSevenBridge
+                        ? "選んだ道　上ルート（編んだ橋を使う道）"
+                        : "選んだ道　下ルート（ヒモを温存する道）",
+                    clearBodyStyle);
+            }
+            GUILayout.Space(28f);
+            GUILayout.Label("プロトタイプはここで終了です", clearBodyStyle);
+            GUILayout.Label("R　本編ステージを最初から再挑戦", clearBodyStyle);
             GUILayout.FlexibleSpace();
             GUILayout.EndArea();
         }

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace HimoHito
 {
@@ -9,6 +10,14 @@ namespace HimoHito
     public sealed class MainStageGoalZone : MonoBehaviour
     {
         public bool IsClear { get; private set; }
+
+        private void Update()
+        {
+            if (IsClear && Input.GetKeyDown(KeyCode.R))
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            }
+        }
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
