@@ -245,10 +245,10 @@ namespace HimoHitoEditor
 
             GameObject midpoint = CreatePlatform(
                 "Main Midpoint Checkpoint",
-                new Vector2(71.7f, -2.4f),
+                new Vector2(71.7f, -2.7f),
                 new Vector2(10f, 0.7f));
             MainStageCheckpoint checkpoint = midpoint.AddComponent<MainStageCheckpoint>();
-            checkpoint.Configure(new Vector2(69.7f, -1.35f), 0, false);
+            checkpoint.Configure(new Vector2(69.7f, -1.65f), 0, false);
             return midpoint;
         }
 
