@@ -48,7 +48,7 @@ namespace HimoHito
 
             GameObject hazard = EnsureFlashlightSpot(
                 FlashlightSpotName,
-                new Vector2(150f, -2.2f),
+                new Vector2(148.8f, -2.2f),
                 4.4f,
                 new Color(1f, 1f, 1f, 0.72f));
             CircleCollider2D hazardCollider = hazard.GetComponent<CircleCollider2D>();
