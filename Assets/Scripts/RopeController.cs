@@ -28,6 +28,7 @@ namespace HimoHito
         private LineRenderer lineRenderer;
         private RopeResource ropeResource;
         private WeaveResource weaveResource;
+        private SpriteRenderer bodyRenderer;
         private Camera mainCamera;
         private Material runtimeMaterial;
         private Vector2 anchorPoint;
@@ -55,6 +56,7 @@ namespace HimoHito
             lineRenderer = GetComponent<LineRenderer>();
             ropeResource = GetComponent<RopeResource>();
             weaveResource = GetComponent<WeaveResource>();
+            bodyRenderer = GetComponent<SpriteRenderer>();
             mainCamera = Camera.main;
 
             ropeJoint.enabled = false;
@@ -69,8 +71,9 @@ namespace HimoHito
             float visibleRopeWidth = GetVisibleRopeWidth();
             lineRenderer.startWidth = visibleRopeWidth;
             lineRenderer.endWidth = visibleRopeWidth;
-            lineRenderer.startColor = ropeColor;
-            lineRenderer.endColor = ropeColor;
+            Color visibleRopeColor = GetVisibleRopeColor();
+            lineRenderer.startColor = visibleRopeColor;
+            lineRenderer.endColor = visibleRopeColor;
 
             Shader spriteShader = Shader.Find("Sprites/Default");
             if (spriteShader != null)
@@ -123,8 +126,9 @@ namespace HimoHito
             float visibleRopeWidth = GetVisibleRopeWidth();
             lineRenderer.startWidth = visibleRopeWidth;
             lineRenderer.endWidth = visibleRopeWidth;
-            lineRenderer.startColor = ropeColor;
-            lineRenderer.endColor = ropeColor;
+            Color visibleRopeColor = GetVisibleRopeColor();
+            lineRenderer.startColor = visibleRopeColor;
+            lineRenderer.endColor = visibleRopeColor;
             DrawAttachedRope();
         }
 
@@ -408,6 +412,11 @@ namespace HimoHito
                 minimumRopeWidth,
                 ropeWidth,
                 Mathf.Clamp01(remainingRatio));
+        }
+
+        private Color GetVisibleRopeColor()
+        {
+            return bodyRenderer != null ? bodyRenderer.color : ropeColor;
         }
     }
 }
