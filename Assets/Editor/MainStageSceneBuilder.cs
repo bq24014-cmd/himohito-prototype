@@ -377,7 +377,8 @@ namespace HimoHitoEditor
             string[] objectNames =
             {
                 MainStageSectionNineSetup.HookName,
-                MainStageSectionNineSetup.FlashlightBeamName,
+                MainStageSectionNineSetup.FlashlightSpotName,
+                MainStageSectionNineSetup.LegacyFlashlightBeamName,
                 MainStageSectionNineSetup.LegacyMovingHazardName,
                 MainStageSectionNineSetup.LandingName
             };

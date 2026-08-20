@@ -3,13 +3,14 @@ using UnityEngine;
 namespace HimoHito
 {
     /// <summary>
-    /// Creates section nine: a flashlight beam sweeps across the pendulum area.
-    /// Touching the light with the attached rope forces a release and fall.
+    /// Creates section nine: a circular flashlight spot sweeps across the pendulum area.
+    /// Entering the light with the attached player forces a release and fall.
     /// </summary>
     public static class MainStageSectionNineSetup
     {
         public const string HookName = "Main Section 9 Hook";
-        public const string FlashlightBeamName = "Main Section 9 Flashlight Beam";
+        public const string FlashlightSpotName = "Main Section 9 Flashlight Spot";
+        public const string LegacyFlashlightBeamName = "Main Section 9 Flashlight Beam";
         public const string LegacyMovingHazardName = "Main Section 9 Moving Hazard";
         public const string LandingName = "Main Section 9 Landing";
 
@@ -38,18 +39,19 @@ namespace HimoHito
                 hook.AddComponent<HookPoint>();
             }
 
-            GameObject legacyHazard = FindSceneObject(LegacyMovingHazardName);
-            if (legacyHazard != null && FindSceneObject(FlashlightBeamName) == null)
+            GameObject legacyHazard = FindSceneObject(LegacyFlashlightBeamName) ??
+                                      FindSceneObject(LegacyMovingHazardName);
+            if (legacyHazard != null && FindSceneObject(FlashlightSpotName) == null)
             {
-                legacyHazard.name = FlashlightBeamName;
+                legacyHazard.name = FlashlightSpotName;
             }
 
-            GameObject hazard = EnsureSolidObject(
-                FlashlightBeamName,
+            GameObject hazard = EnsureFlashlightSpot(
+                FlashlightSpotName,
                 new Vector2(150f, -2.2f),
-                new Vector2(6.2f, 0.9f),
-                new Color(1f, 0.9f, 0.35f, 0.48f));
-            BoxCollider2D hazardCollider = hazard.GetComponent<BoxCollider2D>();
+                4.4f,
+                new Color(1f, 0.9f, 0.35f, 0.42f));
+            CircleCollider2D hazardCollider = hazard.GetComponent<CircleCollider2D>();
             hazardCollider.isTrigger = true;
             if (!hazard.TryGetComponent(out Rigidbody2D hazardBody))
             {
@@ -58,11 +60,10 @@ namespace HimoHito
 
             hazardBody.bodyType = RigidbodyType2D.Kinematic;
             hazardBody.gravityScale = 0f;
-            if (!hazard.TryGetComponent(out MainStageRopeHazard ropeHazard))
+            if (!hazard.TryGetComponent(out MainStageRopeHazard _))
             {
-                ropeHazard = hazard.AddComponent<MainStageRopeHazard>();
+                hazard.AddComponent<MainStageRopeHazard>();
             }
-            ropeHazard.Configure(false, true);
 
             if (!hazard.TryGetComponent(out MainStageVerticalMover mover))
             {
@@ -82,6 +83,49 @@ namespace HimoHito
             }
 
             return landing;
+        }
+
+        private static GameObject EnsureFlashlightSpot(
+            string name,
+            Vector2 position,
+            float diameter,
+            Color color)
+        {
+            GameObject gameObject = FindSceneObject(name);
+            if (gameObject == null)
+            {
+                gameObject = new GameObject(name);
+            }
+
+            gameObject.transform.position = position;
+            gameObject.transform.localScale = new Vector3(diameter, diameter, 1f);
+            if (!gameObject.TryGetComponent(out SpriteRenderer _))
+            {
+                gameObject.AddComponent<SpriteRenderer>();
+            }
+
+            if (!gameObject.TryGetComponent(out FlashlightSpotVisual visual))
+            {
+                visual = gameObject.AddComponent<FlashlightSpotVisual>();
+            }
+            visual.Color = color;
+
+            if (gameObject.TryGetComponent(out SolidSprite legacyVisual))
+            {
+                legacyVisual.enabled = false;
+            }
+
+            if (gameObject.TryGetComponent(out BoxCollider2D legacyBoxCollider))
+            {
+                legacyBoxCollider.enabled = false;
+            }
+
+            if (!gameObject.TryGetComponent(out CircleCollider2D collider))
+            {
+                collider = gameObject.AddComponent<CircleCollider2D>();
+            }
+            collider.radius = 0.5f;
+            return gameObject;
         }
 
         private static GameObject EnsureSolidObject(

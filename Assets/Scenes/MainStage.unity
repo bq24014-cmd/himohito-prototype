@@ -151,8 +151,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6fa9e4bc0ed42d7a627f3dbbf5f9344, type: 3}
   m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.MainStageRopeHazard
-  detachOnPlayerContact: 1
-  detachOnRopeContact: 0
 --- !u!61 &94736549
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4194,7 +4192,7 @@ GameObject:
   - component: {fileID: 2000000026}
   - component: {fileID: 2000000027}
   m_Layer: 0
-  m_Name: Main Section 9 Flashlight Beam
+  m_Name: Main Section 9 Flashlight Spot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4210,7 +4208,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 150, y: -2.2, z: 0}
-  m_LocalScale: {x: 6.2, y: 0.9, z: 1}
+  m_LocalScale: {x: 4.4, y: 4.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -4230,7 +4228,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
-  m_Color: {r: 1, g: 0.9, b: 0.35, a: 0.48}
+  m_Color: {r: 1, g: 0.9, b: 0.35, a: 0.42}
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
   m_WasSpriteAssigned: 1
@@ -4243,12 +4241,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2000000020}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}
+  m_Script: {fileID: 11500000, guid: d1f0342e3a2140aab8ec4c9f5802a911, type: 3}
   m_Name:
-  m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSprite
-  color: {r: 1, g: 0.9, b: 0.35, a: 0.48}
---- !u!61 &2000000024
-BoxCollider2D:
+  m_EditorClassIdentifier: Assembly-CSharp::HimoHito.FlashlightSpotVisual
+  color: {r: 1, g: 0.9, b: 0.35, a: 0.42}
+--- !u!58 &2000000024
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -4263,8 +4261,7 @@ BoxCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Radius: 0.5
 --- !u!50 &2000000025
 Rigidbody2D:
   serializedVersion: 5
@@ -4298,8 +4295,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6fa9e4bc0ed42d7a627f3dbbf5f9344, type: 3}
   m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.MainStageRopeHazard
-  detachOnPlayerContact: 0
-  detachOnRopeContact: 1
 --- !u!114 &2000000027
 MonoBehaviour:
   m_ObjectHideFlags: 0
