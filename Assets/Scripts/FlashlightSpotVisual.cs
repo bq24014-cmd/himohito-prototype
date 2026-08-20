@@ -70,26 +70,29 @@ namespace HimoHito
                         new Vector2(x, y),
                         center) / radius;
                     float colorProgress = Mathf.SmoothStep(
-                        0.08f,
-                        0.9f,
+                        0.12f,
+                        0.92f,
                         normalizedDistance);
-                    Color centerColor = new Color(1f, 0.97f, 0.82f);
-                    Color edgeColor = new Color(1f, 0.58f, 0.2f);
-                    Color radialColor = Color.Lerp(
-                        centerColor,
-                        edgeColor,
-                        colorProgress);
+                    Color centerColor = new Color(1f, 0.99f, 0.9f);
+                    Color edgeColor = new Color(1f, 0.6f, 0.2f);
+                    Color radialColor = Color.Lerp(centerColor, edgeColor, colorProgress);
 
-                    float broadLight = 1f - Mathf.SmoothStep(
-                        0.48f,
+                    float hotCenter = 1f - Mathf.SmoothStep(
+                        0.05f,
+                        0.3f,
+                        normalizedDistance);
+                    float mainSpot = 1f - Mathf.SmoothStep(
+                        0.56f,
+                        0.84f,
+                        normalizedDistance);
+                    float outerGlow = 1f - Mathf.SmoothStep(
+                        0.72f,
                         1f,
                         normalizedDistance);
-                    float softCenter = 1f - Mathf.SmoothStep(
-                        0f,
-                        0.55f,
-                        normalizedDistance);
                     float alpha = Mathf.Clamp01(
-                        broadLight * 0.72f + softCenter * 0.28f);
+                        hotCenter * 0.4f +
+                        mainSpot * 0.36f +
+                        outerGlow * 0.24f);
                     texture.SetPixel(
                         x,
                         y,
