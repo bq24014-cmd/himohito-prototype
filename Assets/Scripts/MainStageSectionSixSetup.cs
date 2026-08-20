@@ -42,10 +42,24 @@ namespace HimoHito
                 new Vector2(83.2f, -4.8f),
                 4.4f,
                 new Color(1f, 1f, 1f, 0.72f));
+            if (!hazard.TryGetComponent(out Rigidbody2D hazardBody))
+            {
+                hazardBody = hazard.AddComponent<Rigidbody2D>();
+            }
+
+            hazardBody.bodyType = RigidbodyType2D.Kinematic;
+            hazardBody.gravityScale = 0f;
             if (!hazard.TryGetComponent(out MainStageRopeHazard _))
             {
                 hazard.AddComponent<MainStageRopeHazard>();
             }
+
+            if (!hazard.TryGetComponent(out MainStageHorizontalMover mover))
+            {
+                mover = hazard.AddComponent<MainStageHorizontalMover>();
+            }
+
+            mover.Configure(79.2f, 87.2f, 8.9f);
 
             GameObject landing = EnsureSolidObject(
                 LandingName,
