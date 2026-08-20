@@ -4228,7 +4228,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
-  m_Color: {r: 1, g: 0.9, b: 0.35, a: 0.42}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.72}
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
   m_WasSpriteAssigned: 1
@@ -4244,7 +4244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1f0342e3a2140aab8ec4c9f5802a911, type: 3}
   m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.FlashlightSpotVisual
-  color: {r: 1, g: 0.9, b: 0.35, a: 0.42}
+  color: {r: 1, g: 1, b: 1, a: 0.72}
 --- !u!58 &2000000024
 CircleCollider2D:
   m_ObjectHideFlags: 0

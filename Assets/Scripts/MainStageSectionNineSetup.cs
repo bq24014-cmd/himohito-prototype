@@ -50,7 +50,7 @@ namespace HimoHito
                 FlashlightSpotName,
                 new Vector2(150f, -2.2f),
                 4.4f,
-                new Color(1f, 0.9f, 0.35f, 0.42f));
+                new Color(1f, 1f, 1f, 0.72f));
             CircleCollider2D hazardCollider = hazard.GetComponent<CircleCollider2D>();
             hazardCollider.isTrigger = true;
             if (!hazard.TryGetComponent(out Rigidbody2D hazardBody))

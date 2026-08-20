@@ -9,7 +9,7 @@ namespace HimoHito
     [RequireComponent(typeof(SpriteRenderer))]
     public sealed class FlashlightSpotVisual : MonoBehaviour
     {
-        [SerializeField] private Color color = new Color(1f, 0.9f, 0.35f, 0.42f);
+        [SerializeField] private Color color = new Color(1f, 1f, 1f, 0.72f);
 
         private const int TextureSize = 64;
         private static Sprite sharedSprite;
@@ -69,8 +69,31 @@ namespace HimoHito
                     float normalizedDistance = Vector2.Distance(
                         new Vector2(x, y),
                         center) / radius;
-                    float alpha = 1f - Mathf.SmoothStep(0.72f, 1f, normalizedDistance);
-                    texture.SetPixel(x, y, new Color(1f, 1f, 1f, alpha));
+                    float colorProgress = Mathf.SmoothStep(
+                        0.08f,
+                        0.9f,
+                        normalizedDistance);
+                    Color centerColor = new Color(1f, 0.97f, 0.82f);
+                    Color edgeColor = new Color(1f, 0.58f, 0.2f);
+                    Color radialColor = Color.Lerp(
+                        centerColor,
+                        edgeColor,
+                        colorProgress);
+
+                    float broadLight = 1f - Mathf.SmoothStep(
+                        0.48f,
+                        1f,
+                        normalizedDistance);
+                    float softCenter = 1f - Mathf.SmoothStep(
+                        0f,
+                        0.55f,
+                        normalizedDistance);
+                    float alpha = Mathf.Clamp01(
+                        broadLight * 0.72f + softCenter * 0.28f);
+                    texture.SetPixel(
+                        x,
+                        y,
+                        new Color(radialColor.r, radialColor.g, radialColor.b, alpha));
                 }
             }
 
