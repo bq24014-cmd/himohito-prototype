@@ -2007,7 +2007,7 @@ MonoBehaviour:
   m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.RopeController
   maximumShotDistance: 14
-  ropeWidth: 0.08
+  ropeWidth: 0.16
   ropeColor: {r: 0.95, g: 0.82, b: 0.35, a: 1}
   aimRotationSpeed: 120
   aimGuideColor: {r: 0.55, g: 0.65, b: 0.8, a: 0.55}

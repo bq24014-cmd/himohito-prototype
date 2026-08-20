@@ -11,7 +11,8 @@ namespace HimoHito
     public sealed class RopeController : MonoBehaviour
     {
         [SerializeField, Min(1f)] private float maximumShotDistance = 14f;
-        [SerializeField, Min(0.01f)] private float ropeWidth = 0.08f;
+        [SerializeField, Min(0.01f)] private float ropeWidth = 0.16f;
+        [SerializeField, Min(0.01f)] private float minimumRopeWidth = 0.06f;
         [SerializeField, Range(3, 32)] private int ropeVisualSegments = 14;
         [SerializeField] private Color ropeColor = new Color(0.95f, 0.82f, 0.35f);
         [SerializeField, Min(10f)] private float aimRotationSpeed = 120f;
@@ -65,8 +66,9 @@ namespace HimoHito
             lineRenderer.enabled = false;
             lineRenderer.positionCount = ropeVisualSegments;
             lineRenderer.useWorldSpace = true;
-            lineRenderer.startWidth = ropeWidth;
-            lineRenderer.endWidth = ropeWidth;
+            float visibleRopeWidth = GetVisibleRopeWidth();
+            lineRenderer.startWidth = visibleRopeWidth;
+            lineRenderer.endWidth = visibleRopeWidth;
             lineRenderer.startColor = ropeColor;
             lineRenderer.endColor = ropeColor;
 
@@ -118,8 +120,9 @@ namespace HimoHito
             }
 
             lineRenderer.enabled = true;
-            lineRenderer.startWidth = ropeWidth;
-            lineRenderer.endWidth = ropeWidth;
+            float visibleRopeWidth = GetVisibleRopeWidth();
+            lineRenderer.startWidth = visibleRopeWidth;
+            lineRenderer.endWidth = visibleRopeWidth;
             lineRenderer.startColor = ropeColor;
             lineRenderer.endColor = ropeColor;
             DrawAttachedRope();
@@ -141,6 +144,8 @@ namespace HimoHito
         private void OnValidate()
         {
             maximumShotDistance = Mathf.Max(1f, maximumShotDistance);
+            ropeWidth = Mathf.Max(0.01f, ropeWidth);
+            minimumRopeWidth = Mathf.Clamp(minimumRopeWidth, 0.01f, ropeWidth);
             ropeVisualSegments = Mathf.Clamp(ropeVisualSegments, 3, 32);
             releaseRefundRate = Mathf.Clamp01(releaseRefundRate);
             lengthSelectionRepeatDelay = Mathf.Max(0f, lengthSelectionRepeatDelay);
@@ -358,8 +363,8 @@ namespace HimoHito
         {
             lineRenderer.enabled = true;
             lineRenderer.positionCount = 2;
-            lineRenderer.startWidth = ropeWidth * 0.45f;
-            lineRenderer.endWidth = ropeWidth * 0.45f;
+            lineRenderer.startWidth = minimumRopeWidth * 0.6f;
+            lineRenderer.endWidth = minimumRopeWidth * 0.6f;
             lineRenderer.startColor = aimGuideColor;
             lineRenderer.endColor = aimGuideColor;
             lineRenderer.SetPosition(0, body.position);
@@ -381,6 +386,28 @@ namespace HimoHito
                 point += Vector2.down * (slack * 4f * t * (1f - t));
                 lineRenderer.SetPosition(i, point);
             }
+        }
+
+        private float GetVisibleRopeWidth()
+        {
+            if (ropeResource == null)
+            {
+                return ropeWidth;
+            }
+
+            float committedRemainingLength = ropeResource.CurrentLength;
+            if (IsAttached)
+            {
+                committedRemainingLength += spentLength;
+            }
+
+            float remainingRatio = ropeResource.MaximumLength <= 0f
+                ? 0f
+                : committedRemainingLength / ropeResource.MaximumLength;
+            return Mathf.Lerp(
+                minimumRopeWidth,
+                ropeWidth,
+                Mathf.Clamp01(remainingRatio));
         }
     }
 }
