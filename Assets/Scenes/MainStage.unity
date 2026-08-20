@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 94736549}
   - component: {fileID: 94736548}
   m_Layer: 0
-  m_Name: Main Section 6 Rope Hazard
+  m_Name: Main Section 6 Flashlight Spot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -151,8 +151,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6fa9e4bc0ed42d7a627f3dbbf5f9344, type: 3}
   m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.MainStageRopeHazard
---- !u!61 &94736549
-BoxCollider2D:
+--- !u!58 &94736549
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -162,41 +162,12 @@ BoxCollider2D:
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Radius: 0.5
 --- !u!114 &94736550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -206,10 +177,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 94736547}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}
+  m_Script: {fileID: 11500000, guid: d1f0342e3a2140aab8ec4c9f5802a911, type: 3}
   m_Name:
-  m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSprite
-  color: {r: 1, g: 0.28, b: 0.32, a: 1}
+  m_EditorClassIdentifier: Assembly-CSharp::HimoHito.FlashlightSpotVisual
+  color: {r: 1, g: 1, b: 1, a: 0.72}
 --- !u!212 &94736551
 SpriteRenderer:
   serializedVersion: 2
@@ -260,7 +231,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 0}
-  m_Color: {r: 1, g: 0.28, b: 0.32, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.72}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -278,8 +249,8 @@ Transform:
   m_GameObject: {fileID: 94736547}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 83.2, y: -7.1, z: 0}
-  m_LocalScale: {x: 13, y: 0.65, z: 1}
+  m_LocalPosition: {x: 83.2, y: -4.8, z: 0}
+  m_LocalScale: {x: 4.4, y: 4.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

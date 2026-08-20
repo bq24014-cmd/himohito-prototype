@@ -52,7 +52,7 @@ namespace HimoHito
         public string CurrentTutorialObjective => CurrentTutorialSection switch
         {
             1 => "Hookにヒモを掛ける",
-            2 => "障害物を避けて着地する",
+            2 => "懐中電灯の光を避けて着地する",
             3 => "消費したヒモから足場を編む",
             4 => "編んだ足場からゴールする",
             _ => string.Empty

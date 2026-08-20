@@ -46,13 +46,16 @@ namespace HimoHito
                 legacyHazard.name = FlashlightSpotName;
             }
 
-            GameObject hazard = EnsureFlashlightSpot(
-                FlashlightSpotName,
+            GameObject hazard = FindSceneObject(FlashlightSpotName);
+            if (hazard == null)
+            {
+                hazard = new GameObject(FlashlightSpotName);
+            }
+            FlashlightSpotVisual.ConfigureSpot(
+                hazard,
                 new Vector2(148.8f, -2.2f),
                 4.4f,
                 new Color(1f, 1f, 1f, 0.72f));
-            CircleCollider2D hazardCollider = hazard.GetComponent<CircleCollider2D>();
-            hazardCollider.isTrigger = true;
             if (!hazard.TryGetComponent(out Rigidbody2D hazardBody))
             {
                 hazardBody = hazard.AddComponent<Rigidbody2D>();
@@ -83,49 +86,6 @@ namespace HimoHito
             }
 
             return landing;
-        }
-
-        private static GameObject EnsureFlashlightSpot(
-            string name,
-            Vector2 position,
-            float diameter,
-            Color color)
-        {
-            GameObject gameObject = FindSceneObject(name);
-            if (gameObject == null)
-            {
-                gameObject = new GameObject(name);
-            }
-
-            gameObject.transform.position = position;
-            gameObject.transform.localScale = new Vector3(diameter, diameter, 1f);
-            if (!gameObject.TryGetComponent(out SpriteRenderer _))
-            {
-                gameObject.AddComponent<SpriteRenderer>();
-            }
-
-            if (!gameObject.TryGetComponent(out FlashlightSpotVisual visual))
-            {
-                visual = gameObject.AddComponent<FlashlightSpotVisual>();
-            }
-            visual.Color = color;
-
-            if (gameObject.TryGetComponent(out SolidSprite legacyVisual))
-            {
-                legacyVisual.enabled = false;
-            }
-
-            if (gameObject.TryGetComponent(out BoxCollider2D legacyBoxCollider))
-            {
-                legacyBoxCollider.enabled = false;
-            }
-
-            if (!gameObject.TryGetComponent(out CircleCollider2D collider))
-            {
-                collider = gameObject.AddComponent<CircleCollider2D>();
-            }
-            collider.radius = 0.5f;
-            return gameObject;
         }
 
         private static GameObject EnsureSolidObject(

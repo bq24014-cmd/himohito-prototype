@@ -9,7 +9,8 @@ namespace HimoHito
     public static class MainStageSectionSixSetup
     {
         public const string HookName = "Main Section 6 Hook";
-        public const string HazardName = "Main Section 6 Rope Hazard";
+        public const string FlashlightSpotName = "Main Section 6 Flashlight Spot";
+        public const string LegacyHazardName = "Main Section 6 Rope Hazard";
         public const string LandingName = "Main Section 6 Landing";
 
         public static GameObject EnsureCreated()
@@ -24,12 +25,23 @@ namespace HimoHito
                 hook.AddComponent<HookPoint>();
             }
 
-            GameObject hazard = EnsureSolidObject(
-                HazardName,
-                new Vector2(83.2f, -7.1f),
-                new Vector2(13f, 0.65f),
-                new Color(1f, 0.28f, 0.32f));
-            hazard.GetComponent<BoxCollider2D>().isTrigger = true;
+            GameObject legacyHazard = FindSceneObject(LegacyHazardName);
+            if (legacyHazard != null && FindSceneObject(FlashlightSpotName) == null)
+            {
+                legacyHazard.name = FlashlightSpotName;
+            }
+
+            GameObject hazard = FindSceneObject(FlashlightSpotName);
+            if (hazard == null)
+            {
+                hazard = new GameObject(FlashlightSpotName);
+            }
+
+            FlashlightSpotVisual.ConfigureSpot(
+                hazard,
+                new Vector2(83.2f, -4.8f),
+                4.4f,
+                new Color(1f, 1f, 1f, 0.72f));
             if (!hazard.TryGetComponent(out MainStageRopeHazard _))
             {
                 hazard.AddComponent<MainStageRopeHazard>();
@@ -46,6 +58,19 @@ namespace HimoHito
             }
 
             return landing;
+        }
+
+        private static GameObject FindSceneObject(string name)
+        {
+            foreach (GameObject candidate in Resources.FindObjectsOfTypeAll<GameObject>())
+            {
+                if (candidate.scene.IsValid() && candidate.name == name)
+                {
+                    return candidate;
+                }
+            }
+
+            return null;
         }
 
         private static GameObject EnsureSolidObject(

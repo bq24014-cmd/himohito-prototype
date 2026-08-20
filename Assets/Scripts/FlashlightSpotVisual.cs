@@ -24,6 +24,46 @@ namespace HimoHito
             }
         }
 
+        public static CircleCollider2D ConfigureSpot(
+            GameObject gameObject,
+            Vector2 position,
+            float diameter,
+            Color color)
+        {
+            gameObject.transform.position = position;
+            gameObject.transform.localScale = new Vector3(diameter, diameter, 1f);
+            if (!gameObject.TryGetComponent(out SpriteRenderer _))
+            {
+                gameObject.AddComponent<SpriteRenderer>();
+            }
+
+            if (!gameObject.TryGetComponent(out FlashlightSpotVisual visual))
+            {
+                visual = gameObject.AddComponent<FlashlightSpotVisual>();
+            }
+            visual.Color = color;
+
+            if (gameObject.TryGetComponent(out SolidSprite legacyVisual))
+            {
+                legacyVisual.enabled = false;
+            }
+
+            foreach (BoxCollider2D legacyBoxCollider in
+                     gameObject.GetComponents<BoxCollider2D>())
+            {
+                legacyBoxCollider.enabled = false;
+            }
+
+            if (!gameObject.TryGetComponent(out CircleCollider2D collider))
+            {
+                collider = gameObject.AddComponent<CircleCollider2D>();
+            }
+            collider.enabled = true;
+            collider.isTrigger = true;
+            collider.radius = 0.5f;
+            return collider;
+        }
+
         private void OnEnable()
         {
             Apply();

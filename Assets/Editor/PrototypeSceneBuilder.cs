@@ -15,7 +15,8 @@ namespace HimoHitoEditor
         private const string ScenePath = "Assets/Scenes/Tutorial.unity";
         private const string MainStageScenePath = "Assets/Scenes/MainStage.unity";
         private const float ExperimentalRopeLength = 12f;
-        private static readonly Color RopeReleaseHazardColor = new Color(0.95f, 0.28f, 0.35f);
+        private const string TutorialFlashlightSpotName = "Tutorial Flashlight Spot";
+        private const string LegacyTutorialHazardName = "Practice Long Rope Obstacle";
 
         static PrototypeSceneBuilder()
         {
@@ -46,7 +47,7 @@ namespace HimoHitoEditor
                 new Vector2(1.6f, 0.45f));
 
             // The route now keeps only the upper planning landing.
-            // Missing the red obstacle or upper landing leads to a fall and retry.
+            // Touching the flashlight spot in the airborne gap leads to a fall and retry.
             GameObject landing1 = CreatePlatform(
                 "Landing 1",
                 new Vector2(0f, -2.3f),
@@ -57,9 +58,9 @@ namespace HimoHitoEditor
                 new Vector2(5f, 1.5f),
                 new Vector2(1.6f, 0.45f));
             CreateRopeReleaseHazard(
-                "Practice Long Rope Obstacle",
-                new Vector2(1.5f, -4.5f),
-                new Vector2(0.6f, 2f),
+                TutorialFlashlightSpotName,
+                new Vector2(-4.25f, -3.1f),
+                3.2f,
                 2);
             CreatePlatform(
                 "Planning Landing",
@@ -317,11 +318,19 @@ namespace HimoHitoEditor
 
         private static bool EnsurePracticeSection(Scene scene)
         {
+            GameObject legacyHazard = FindRootObject(scene, LegacyTutorialHazardName);
+            if (legacyHazard != null &&
+                FindRootObject(scene, TutorialFlashlightSpotName) == null)
+            {
+                legacyHazard.name = TutorialFlashlightSpotName;
+                EditorUtility.SetDirty(legacyHazard);
+            }
+
             return EnsureRopeReleaseHazard(
                 scene,
-                "Practice Long Rope Obstacle",
-                new Vector2(1.5f, -4.5f),
-                new Vector2(0.6f, 2f),
+                TutorialFlashlightSpotName,
+                new Vector2(-4.25f, -3.1f),
+                3.2f,
                 2);
         }
 
@@ -469,22 +478,26 @@ namespace HimoHitoEditor
             Scene scene,
             string objectName,
             Vector2 position,
-            Vector2 size,
+            float diameter,
             int activeTutorialSection)
         {
-            bool changed = EnsurePlatform(scene, objectName, position, size);
             GameObject hazard = FindRootObject(scene, objectName);
             if (hazard == null)
             {
-                return changed;
+                hazard = new GameObject(objectName);
             }
 
-            if (hazard.TryGetComponent(out SolidSprite visual) &&
-                visual.Color != RopeReleaseHazardColor)
-            {
-                visual.Color = RopeReleaseHazardColor;
-                changed = true;
-            }
+            bool changed = ApplyTransform(
+                hazard,
+                position,
+                new Vector2(diameter, diameter));
+            CircleCollider2D circle = FlashlightSpotVisual.ConfigureSpot(
+                hazard,
+                position,
+                diameter,
+                new Color(1f, 1f, 1f, 0.72f));
+            EditorUtility.SetDirty(hazard);
+            EditorUtility.SetDirty(circle);
 
             if (!hazard.TryGetComponent(out RopeReleaseHazard releaseHazard))
             {
@@ -496,24 +509,6 @@ namespace HimoHitoEditor
             {
                 releaseHazard.Configure(activeTutorialSection);
                 EditorUtility.SetDirty(releaseHazard);
-                changed = true;
-            }
-
-            bool hasTrigger = false;
-            foreach (BoxCollider2D collider in hazard.GetComponents<BoxCollider2D>())
-            {
-                if (collider.isTrigger)
-                {
-                    hasTrigger = true;
-                    break;
-                }
-            }
-
-            if (!hasTrigger)
-            {
-                BoxCollider2D trigger = hazard.AddComponent<BoxCollider2D>();
-                trigger.isTrigger = true;
-                trigger.size = Vector2.one;
                 changed = true;
             }
 
@@ -624,13 +619,15 @@ namespace HimoHitoEditor
         private static void CreateRopeReleaseHazard(
             string name,
             Vector2 position,
-            Vector2 size,
+            float diameter,
             int activeTutorialSection)
         {
-            GameObject hazard = CreatePlatformVisual(name, position, size, RopeReleaseHazardColor);
-            BoxCollider2D trigger = hazard.AddComponent<BoxCollider2D>();
-            trigger.isTrigger = true;
-            trigger.size = Vector2.one;
+            GameObject hazard = new GameObject(name);
+            FlashlightSpotVisual.ConfigureSpot(
+                hazard,
+                position,
+                diameter,
+                new Color(1f, 1f, 1f, 0.72f));
             RopeReleaseHazard releaseHazard = hazard.AddComponent<RopeReleaseHazard>();
             releaseHazard.Configure(activeTutorialSection);
         }

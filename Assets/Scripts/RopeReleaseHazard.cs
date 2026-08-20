@@ -11,11 +11,10 @@ namespace HimoHito
         [SerializeField, Range(1, PrototypeRunController.TutorialSectionCount)]
         private int activeTutorialSection = 2;
 
-        private BoxCollider2D detectionArea;
+        private Collider2D detectionArea;
         private RopeController ropeController;
         private Collider2D playerCollider;
         private SpriteRenderer hazardRenderer;
-        private Collider2D[] hazardColliders;
         private bool isHazardVisible = true;
 
         public int ActiveTutorialSection => activeTutorialSection;
@@ -54,7 +53,7 @@ namespace HimoHito
 
             // Attached motion can miss a one-frame trigger notification.
             // Checking the actual collider overlap keeps the hazard reliable.
-            if (detectionArea.bounds.Intersects(playerCollider.bounds))
+            if (Physics2D.Distance(detectionArea, playerCollider).isOverlapped)
             {
                 ropeController.DetachAndRefund();
             }
@@ -102,16 +101,11 @@ namespace HimoHito
                 hazardRenderer = GetComponent<SpriteRenderer>();
             }
 
-            if (hazardColliders == null || hazardColliders.Length == 0)
-            {
-                hazardColliders = GetComponents<Collider2D>();
-            }
-
             if (detectionArea == null)
             {
-                foreach (BoxCollider2D collider in GetComponents<BoxCollider2D>())
+                foreach (Collider2D collider in GetComponents<Collider2D>())
                 {
-                    if (collider.isTrigger)
+                    if (collider.enabled && collider.isTrigger)
                     {
                         detectionArea = collider;
                         break;
@@ -157,12 +151,9 @@ namespace HimoHito
                 hazardRenderer.enabled = shouldBeVisible;
             }
 
-            foreach (Collider2D hazardCollider in hazardColliders)
+            if (detectionArea != null)
             {
-                if (hazardCollider != null)
-                {
-                    hazardCollider.enabled = shouldBeVisible;
-                }
+                detectionArea.enabled = shouldBeVisible;
             }
         }
     }

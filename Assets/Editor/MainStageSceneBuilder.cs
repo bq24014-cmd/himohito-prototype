@@ -302,9 +302,10 @@ namespace HimoHitoEditor
         {
             string[] objectNames =
             {
-                "Main Section 6 Hook",
-                "Main Section 6 Rope Hazard",
-                "Main Section 6 Landing"
+                MainStageSectionSixSetup.HookName,
+                MainStageSectionSixSetup.FlashlightSpotName,
+                MainStageSectionSixSetup.LegacyHazardName,
+                MainStageSectionSixSetup.LandingName
             };
 
             foreach (string objectName in objectNames)
