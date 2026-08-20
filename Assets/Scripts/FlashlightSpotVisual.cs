@@ -69,7 +69,7 @@ namespace HimoHito
                     float normalizedDistance = Vector2.Distance(
                         new Vector2(x, y),
                         center) / radius;
-                    float colorProgress = Mathf.SmoothStep(
+                    float colorProgress = SmoothRange(
                         0.12f,
                         0.92f,
                         normalizedDistance);
@@ -77,15 +77,15 @@ namespace HimoHito
                     Color edgeColor = new Color(1f, 0.6f, 0.2f);
                     Color radialColor = Color.Lerp(centerColor, edgeColor, colorProgress);
 
-                    float hotCenter = 1f - Mathf.SmoothStep(
+                    float hotCenter = 1f - SmoothRange(
                         0.05f,
                         0.3f,
                         normalizedDistance);
-                    float mainSpot = 1f - Mathf.SmoothStep(
+                    float mainSpot = 1f - SmoothRange(
                         0.56f,
                         0.84f,
                         normalizedDistance);
-                    float outerGlow = 1f - Mathf.SmoothStep(
+                    float outerGlow = 1f - SmoothRange(
                         0.72f,
                         1f,
                         normalizedDistance);
@@ -109,6 +109,12 @@ namespace HimoHito
             sharedSprite.name = "Runtime Flashlight Spot";
             sharedSprite.hideFlags = HideFlags.HideAndDontSave;
             return sharedSprite;
+        }
+
+        private static float SmoothRange(float minimum, float maximum, float value)
+        {
+            float progress = Mathf.InverseLerp(minimum, maximum, value);
+            return Mathf.SmoothStep(0f, 1f, progress);
         }
     }
 }
