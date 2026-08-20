@@ -12,6 +12,7 @@ namespace HimoHito
     {
         [SerializeField, Min(1f)] private float maximumShotDistance = 14f;
         [SerializeField, Min(0.01f)] private float ropeWidth = 0.08f;
+        [SerializeField, Range(3, 32)] private int ropeVisualSegments = 14;
         [SerializeField] private Color ropeColor = new Color(0.95f, 0.82f, 0.35f);
         [SerializeField, Min(10f)] private float aimRotationSpeed = 120f;
         [SerializeField] private Color aimGuideColor = new Color(0.55f, 0.65f, 0.8f, 0.55f);
@@ -62,7 +63,7 @@ namespace HimoHito
             ropeJoint.enableCollision = false;
 
             lineRenderer.enabled = false;
-            lineRenderer.positionCount = 2;
+            lineRenderer.positionCount = ropeVisualSegments;
             lineRenderer.useWorldSpace = true;
             lineRenderer.startWidth = ropeWidth;
             lineRenderer.endWidth = ropeWidth;
@@ -121,8 +122,7 @@ namespace HimoHito
             lineRenderer.endWidth = ropeWidth;
             lineRenderer.startColor = ropeColor;
             lineRenderer.endColor = ropeColor;
-            lineRenderer.SetPosition(0, body.position);
-            lineRenderer.SetPosition(1, anchorPoint);
+            DrawAttachedRope();
         }
 
         private void OnDisable()
@@ -141,6 +141,7 @@ namespace HimoHito
         private void OnValidate()
         {
             maximumShotDistance = Mathf.Max(1f, maximumShotDistance);
+            ropeVisualSegments = Mathf.Clamp(ropeVisualSegments, 3, 32);
             releaseRefundRate = Mathf.Clamp01(releaseRefundRate);
             lengthSelectionRepeatDelay = Mathf.Max(0f, lengthSelectionRepeatDelay);
             lengthSelectionRepeatInterval = Mathf.Max(0.01f, lengthSelectionRepeatInterval);
@@ -356,12 +357,30 @@ namespace HimoHito
         private void DrawAimGuide()
         {
             lineRenderer.enabled = true;
+            lineRenderer.positionCount = 2;
             lineRenderer.startWidth = ropeWidth * 0.45f;
             lineRenderer.endWidth = ropeWidth * 0.45f;
             lineRenderer.startColor = aimGuideColor;
             lineRenderer.endColor = aimGuideColor;
             lineRenderer.SetPosition(0, body.position);
             lineRenderer.SetPosition(1, body.position + keyboardAimDirection * selectedRopeLength);
+        }
+
+        private void DrawAttachedRope()
+        {
+            Vector2 start = body.position;
+            Vector2 end = anchorPoint;
+            float directDistance = Vector2.Distance(start, end);
+            float slack = Mathf.Max(0f, spentLength - directDistance);
+
+            lineRenderer.positionCount = ropeVisualSegments;
+            for (int i = 0; i < ropeVisualSegments; i++)
+            {
+                float t = i / (float)(ropeVisualSegments - 1);
+                Vector2 point = Vector2.Lerp(start, end, t);
+                point += Vector2.down * (slack * 4f * t * (1f - t));
+                lineRenderer.SetPosition(i, point);
+            }
         }
     }
 }
