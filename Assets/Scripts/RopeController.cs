@@ -48,6 +48,33 @@ namespace HimoHito
         public int MaximumSelectableRopeLength => GetMaximumSelectableRopeLength();
         public float ActiveRopeLength => spentLength;
 
+        /// <summary>
+        /// Checks the same curved rope that is drawn on screen against a box-shaped area.
+        /// This keeps hazards tied to the visible rope instead of the player's collider.
+        /// </summary>
+        public bool IntersectsAttachedRope(BoxCollider2D area)
+        {
+            if (!IsAttached || area == null)
+            {
+                return false;
+            }
+
+            Vector2 previousPoint = GetAttachedRopePoint(0f);
+            for (int i = 1; i < ropeVisualSegments; i++)
+            {
+                float t = i / (float)(ropeVisualSegments - 1);
+                Vector2 currentPoint = GetAttachedRopePoint(t);
+                if (SegmentIntersectsBox(previousPoint, currentPoint, area))
+                {
+                    return true;
+                }
+
+                previousPoint = currentPoint;
+            }
+
+            return false;
+        }
+
         private void Awake()
         {
             body = GetComponent<Rigidbody2D>();
@@ -377,19 +404,65 @@ namespace HimoHito
 
         private void DrawAttachedRope()
         {
-            Vector2 start = body.position;
-            Vector2 end = anchorPoint;
-            float directDistance = Vector2.Distance(start, end);
-            float slack = Mathf.Max(0f, spentLength - directDistance);
-
             lineRenderer.positionCount = ropeVisualSegments;
             for (int i = 0; i < ropeVisualSegments; i++)
             {
                 float t = i / (float)(ropeVisualSegments - 1);
-                Vector2 point = Vector2.Lerp(start, end, t);
-                point += Vector2.down * (slack * 4f * t * (1f - t));
-                lineRenderer.SetPosition(i, point);
+                lineRenderer.SetPosition(i, GetAttachedRopePoint(t));
             }
+        }
+
+        private Vector2 GetAttachedRopePoint(float t)
+        {
+            Vector2 start = body.position;
+            Vector2 end = anchorPoint;
+            float directDistance = Vector2.Distance(start, end);
+            float slack = Mathf.Max(0f, spentLength - directDistance);
+            Vector2 point = Vector2.Lerp(start, end, t);
+            return point + Vector2.down * (slack * 4f * t * (1f - t));
+        }
+
+        private static bool SegmentIntersectsBox(
+            Vector2 worldStart,
+            Vector2 worldEnd,
+            BoxCollider2D area)
+        {
+            Vector2 start = area.transform.InverseTransformPoint(worldStart);
+            Vector2 end = area.transform.InverseTransformPoint(worldEnd);
+            Vector2 halfSize = area.size * 0.5f;
+            Vector2 minimum = area.offset - halfSize;
+            Vector2 maximum = area.offset + halfSize;
+            Vector2 direction = end - start;
+            float enter = 0f;
+            float exit = 1f;
+
+            return ClipSegmentAxis(start.x, direction.x, minimum.x, maximum.x, ref enter, ref exit) &&
+                   ClipSegmentAxis(start.y, direction.y, minimum.y, maximum.y, ref enter, ref exit);
+        }
+
+        private static bool ClipSegmentAxis(
+            float start,
+            float direction,
+            float minimum,
+            float maximum,
+            ref float enter,
+            ref float exit)
+        {
+            if (Mathf.Approximately(direction, 0f))
+            {
+                return start >= minimum && start <= maximum;
+            }
+
+            float first = (minimum - start) / direction;
+            float second = (maximum - start) / direction;
+            if (first > second)
+            {
+                (first, second) = (second, first);
+            }
+
+            enter = Mathf.Max(enter, first);
+            exit = Mathf.Min(exit, second);
+            return enter <= exit;
         }
 
         private float GetVisibleRopeWidth()

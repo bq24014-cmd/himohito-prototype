@@ -3,13 +3,14 @@ using UnityEngine;
 namespace HimoHito
 {
     /// <summary>
-    /// Creates section nine: a slow vertical obstacle whose safe timing is observed
-    /// before starting the swing.
+    /// Creates section nine: a flashlight beam sweeps across the pendulum area.
+    /// Touching the light with the attached rope forces a release and fall.
     /// </summary>
     public static class MainStageSectionNineSetup
     {
         public const string HookName = "Main Section 9 Hook";
-        public const string MovingHazardName = "Main Section 9 Moving Hazard";
+        public const string FlashlightBeamName = "Main Section 9 Flashlight Beam";
+        public const string LegacyMovingHazardName = "Main Section 9 Moving Hazard";
         public const string LandingName = "Main Section 9 Landing";
 
         public static GameObject EnsureCreated()
@@ -37,11 +38,17 @@ namespace HimoHito
                 hook.AddComponent<HookPoint>();
             }
 
+            GameObject legacyHazard = FindSceneObject(LegacyMovingHazardName);
+            if (legacyHazard != null && FindSceneObject(FlashlightBeamName) == null)
+            {
+                legacyHazard.name = FlashlightBeamName;
+            }
+
             GameObject hazard = EnsureSolidObject(
-                MovingHazardName,
+                FlashlightBeamName,
                 new Vector2(150f, -2.2f),
-                new Vector2(3.2f, 0.8f),
-                new Color(1f, 0.28f, 0.32f));
+                new Vector2(6.2f, 0.9f),
+                new Color(1f, 0.9f, 0.35f, 0.48f));
             BoxCollider2D hazardCollider = hazard.GetComponent<BoxCollider2D>();
             hazardCollider.isTrigger = true;
             if (!hazard.TryGetComponent(out Rigidbody2D hazardBody))
@@ -51,10 +58,11 @@ namespace HimoHito
 
             hazardBody.bodyType = RigidbodyType2D.Kinematic;
             hazardBody.gravityScale = 0f;
-            if (!hazard.TryGetComponent(out MainStageRopeHazard _))
+            if (!hazard.TryGetComponent(out MainStageRopeHazard ropeHazard))
             {
-                hazard.AddComponent<MainStageRopeHazard>();
+                ropeHazard = hazard.AddComponent<MainStageRopeHazard>();
             }
+            ropeHazard.Configure(false, true);
 
             if (!hazard.TryGetComponent(out MainStageVerticalMover mover))
             {

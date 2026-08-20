@@ -5,32 +5,44 @@ using UnityEngine;
 namespace HimoHitoEditor
 {
     /// <summary>
-    /// Keeps full-play checks starting from the tutorial even while another scene is open.
+    /// Selects whether Play starts from the full tutorial or the active section experiment.
     /// </summary>
     [InitializeOnLoad]
     public static class PlayFromTutorial
     {
         private const string TutorialScenePath = "Assets/Scenes/Tutorial.unity";
+        private const string MainStageScenePath = "Assets/Scenes/MainStage.unity";
 
         static PlayFromTutorial()
         {
-            EditorApplication.delayCall += ConfigurePlayStartScene;
+            EditorApplication.delayCall += ConfigureSectionNineExperimentStartScene;
         }
 
         [MenuItem("HimoHito/Play From Tutorial")]
         public static void ConfigurePlayStartScene()
         {
-            SceneAsset tutorialScene =
-                AssetDatabase.LoadAssetAtPath<SceneAsset>(TutorialScenePath);
+            ConfigurePlayStartScene(TutorialScenePath, "Tutorial");
+        }
 
-            if (tutorialScene == null)
+        [MenuItem("HimoHito/Play From Section 9 Experiment")]
+        public static void ConfigureSectionNineExperimentStartScene()
+        {
+            ConfigurePlayStartScene(MainStageScenePath, "MainStage section 9 experiment");
+        }
+
+        private static void ConfigurePlayStartScene(string scenePath, string description)
+        {
+            SceneAsset scene = AssetDatabase.LoadAssetAtPath<SceneAsset>(scenePath);
+
+            if (scene == null)
             {
                 Debug.LogWarning(
-                    $"Tutorial scene was not found: {TutorialScenePath}");
+                    $"Play start scene was not found: {scenePath}");
                 return;
             }
 
-            EditorSceneManager.playModeStartScene = tutorialScene;
+            EditorSceneManager.playModeStartScene = scene;
+            Debug.Log($"Play starts from {description}.");
         }
     }
 }

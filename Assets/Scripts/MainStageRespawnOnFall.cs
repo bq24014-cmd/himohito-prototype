@@ -12,11 +12,11 @@ namespace HimoHito
     {
         [SerializeField] private float fallThreshold = -9f;
         [SerializeField, Min(0.01f)] private float minimumUsableRopeLength = 1f;
-        [SerializeField] private bool startFromCurrentSectionForDevelopment;
+        [SerializeField] private bool startFromCurrentSectionForDevelopment = true;
         [SerializeField] private Vector2 developmentStartPosition =
-            new Vector2(155.1f, 3.3f);
+            new Vector2(139.5f, 2.95f);
         [SerializeField, Min(1f)] private float developmentRopeLength = 28f;
-        [SerializeField, Min(1)] private int developmentSectionNumber = 10;
+        [SerializeField, Min(1)] private int developmentSectionNumber = 9;
         [SerializeField, Min(0)] private int developmentWeaveThreads = 3;
         [SerializeField] private bool developmentCanUseSectionSevenBridge = true;
 
