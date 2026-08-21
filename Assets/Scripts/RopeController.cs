@@ -17,7 +17,6 @@ namespace HimoHito
         [SerializeField] private Color ropeColor = new Color(0.95f, 0.82f, 0.35f);
         [SerializeField, Min(10f)] private float aimRotationSpeed = 120f;
         [SerializeField] private Color aimGuideColor = new Color(0.55f, 0.65f, 0.8f, 0.55f);
-        [SerializeField, Range(0f, 1f)] private float releaseRefundRate = 0.7f;
         [SerializeField, Min(1)] private int minimumSelectableRopeLength = 1;
         [SerializeField, Min(0f)] private float lengthSelectionRepeatDelay = 0.35f;
         [SerializeField, Min(0.01f)] private float lengthSelectionRepeatInterval = 0.1f;
@@ -42,7 +41,7 @@ namespace HimoHito
         public Vector2 AnchorPoint => anchorPoint;
         public HookPoint ActiveHookPoint => activeHookPoint;
         public Vector2 KeyboardAimDirection => keyboardAimDirection;
-        public float ReleaseRefundRate => releaseRefundRate;
+        public float ReleaseRefundRate => 1f;
         public int SelectedRopeLength => selectedRopeLength;
         public int MaximumSelectableRopeLength => GetMaximumSelectableRopeLength();
         public float ActiveRopeLength => spentLength;
@@ -150,7 +149,6 @@ namespace HimoHito
             ropeWidth = Mathf.Max(0.01f, ropeWidth);
             minimumRopeWidth = Mathf.Clamp(minimumRopeWidth, 0.01f, ropeWidth);
             ropeVisualSegments = Mathf.Clamp(ropeVisualSegments, 3, 32);
-            releaseRefundRate = Mathf.Clamp01(releaseRefundRate);
             lengthSelectionRepeatDelay = Mathf.Max(0f, lengthSelectionRepeatDelay);
             lengthSelectionRepeatInterval = Mathf.Max(0.01f, lengthSelectionRepeatInterval);
             minimumSelectableRopeLength = Mathf.Clamp(
@@ -223,7 +221,7 @@ namespace HimoHito
             body.linearVelocity = preservedVelocity;
             body.angularVelocity = preservedAngularVelocity;
             lineRenderer.enabled = false;
-            ropeResource.Refund(spentLength * releaseRefundRate);
+            ropeResource.Refund(spentLength);
             spentLength = 0f;
             ClampSelectedRopeLength();
         }
