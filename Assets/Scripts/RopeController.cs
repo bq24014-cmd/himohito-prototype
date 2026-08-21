@@ -7,7 +7,7 @@ namespace HimoHito
     /// Mouse input remains available as an optional alternative.
     /// </summary>
     [RequireComponent(typeof(Rigidbody2D), typeof(DistanceJoint2D), typeof(LineRenderer))]
-    [RequireComponent(typeof(RopeResource), typeof(WeaveResource))]
+    [RequireComponent(typeof(RopeResource))]
     public sealed class RopeController : MonoBehaviour
     {
         [SerializeField, Min(1f)] private float maximumShotDistance = 14f;
@@ -27,7 +27,6 @@ namespace HimoHito
         private DistanceJoint2D ropeJoint;
         private LineRenderer lineRenderer;
         private RopeResource ropeResource;
-        private WeaveResource weaveResource;
         private SpriteRenderer bodyRenderer;
         private Camera mainCamera;
         private Material runtimeMaterial;
@@ -47,6 +46,7 @@ namespace HimoHito
         public int SelectedRopeLength => selectedRopeLength;
         public int MaximumSelectableRopeLength => GetMaximumSelectableRopeLength();
         public float ActiveRopeLength => spentLength;
+        public Color VisibleRopeColor => GetVisibleRopeColor();
 
         private void Awake()
         {
@@ -55,7 +55,6 @@ namespace HimoHito
             ropeJoint = GetComponent<DistanceJoint2D>();
             lineRenderer = GetComponent<LineRenderer>();
             ropeResource = GetComponent<RopeResource>();
-            weaveResource = GetComponent<WeaveResource>();
             bodyRenderer = GetComponent<SpriteRenderer>();
             mainCamera = Camera.main;
 
@@ -100,7 +99,7 @@ namespace HimoHito
 
             if (Input.GetKeyUp(KeyCode.E))
             {
-                DetachAndRefund(true);
+                DetachAndRefund();
             }
 
             if (Input.GetMouseButtonDown(0))
@@ -110,7 +109,7 @@ namespace HimoHito
 
             if (Input.GetMouseButtonUp(0))
             {
-                DetachAndRefund(true);
+                DetachAndRefund();
             }
         }
 
@@ -209,7 +208,7 @@ namespace HimoHito
             return false;
         }
 
-        public void DetachAndRefund(bool awardWeaveThread = false)
+        public void DetachAndRefund(bool unusedLegacyAwardFlag = false)
         {
             if (!IsAttached)
             {
@@ -225,12 +224,26 @@ namespace HimoHito
             body.angularVelocity = preservedAngularVelocity;
             lineRenderer.enabled = false;
             ropeResource.Refund(spentLength * releaseRefundRate);
-            if (awardWeaveThread && weaveResource != null)
-            {
-                weaveResource.AddThread();
-            }
             spentLength = 0f;
             ClampSelectedRopeLength();
+        }
+
+        public bool CommitAttachedRopeAsPlatform(float permanentCost)
+        {
+            if (!IsAttached || permanentCost <= 0f)
+            {
+                return false;
+            }
+
+            float committedCost = Mathf.Min(permanentCost, spentLength);
+            float unusedLength = Mathf.Max(0f, spentLength - committedCost);
+            ropeJoint.enabled = false;
+            activeHookPoint = null;
+            lineRenderer.enabled = false;
+            ropeResource.Refund(unusedLength);
+            spentLength = 0f;
+            ClampSelectedRopeLength();
+            return true;
         }
 
         public void RestoreSelectedRopeLength(int length)

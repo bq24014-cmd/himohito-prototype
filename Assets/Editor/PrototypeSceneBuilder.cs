@@ -67,16 +67,6 @@ namespace HimoHitoEditor
                 new Vector2(9.5f, -0.4f),
                 new Vector2(4f, 0.7f));
             CreateHookPoint("Hook 3", new Vector2(13.8f, 3.9f), new Vector2(1.6f, 0.45f));
-            GameObject wovenPlatform = CreateWovenPlatform(
-                "Tutorial Woven Platform",
-                new Vector2(21.1f, -0.5f),
-                new Vector2(4f, 0.8f));
-            ConfigureTutorialCheckpoint(wovenPlatform, 4, new Vector2(21.1f, 0.55f));
-            CreateWeaveFrame(
-                "Tutorial Weave Frame",
-                new Vector2(8f, -0.7f),
-                new Vector2(4f, 3f),
-                wovenPlatform);
             CreateGoalPlatform("Goal / Landing 3", new Vector2(26.15f, -0.5f), new Vector2(4f, 0.8f));
 
             GameObject hud = new GameObject("Tutorial HUD");
@@ -242,75 +232,19 @@ namespace HimoHitoEditor
         {
             bool changed = false;
             GameObject player = FindRootObject(scene, "Player");
-            if (player != null && !player.TryGetComponent(out WeaveResource _))
+            if (player != null && !player.TryGetComponent(out RopePlatformBuilder _))
             {
-                player.AddComponent<WeaveResource>();
+                player.AddComponent<RopePlatformBuilder>();
                 changed = true;
             }
 
-            const string platformName = "Tutorial Woven Platform";
-            Vector2 platformPosition = new Vector2(21.1f, -0.5f);
-            Vector2 platformSize = new Vector2(4f, 0.8f);
-            GameObject wovenPlatform = FindRootObject(scene, platformName);
-            if (wovenPlatform == null)
-            {
-                wovenPlatform = CreateWovenPlatform(platformName, platformPosition, platformSize);
-                changed = true;
-            }
-            else
-            {
-                changed |= ApplyTransform(wovenPlatform, platformPosition, platformSize);
-            }
-
-            const string frameName = "Tutorial Weave Frame";
-            Vector2 framePosition = new Vector2(8f, -0.7f);
-            Vector2 frameSize = new Vector2(4f, 3f);
-            GameObject frameObject = FindRootObject(scene, frameName);
-            if (frameObject == null)
-            {
-                CreateWeaveFrame(frameName, framePosition, frameSize, wovenPlatform);
-                changed = true;
-            }
-            else
-            {
-                changed |= ApplyTransform(frameObject, framePosition, frameSize);
-                WeaveFrame frame = frameObject.GetComponent<WeaveFrame>();
-                if (frame == null)
-                {
-                    frame = frameObject.AddComponent<WeaveFrame>();
-                    changed = true;
-                }
-
-                SerializedObject serializedFrame = new SerializedObject(frame);
-                SerializedProperty platformProperty = serializedFrame.FindProperty("wovenPlatform");
-                SerializedProperty costProperty = serializedFrame.FindProperty("requiredThreads");
-                if (platformProperty.objectReferenceValue != wovenPlatform || costProperty.intValue != 3)
-                {
-                    platformProperty.objectReferenceValue = wovenPlatform;
-                    costProperty.intValue = 3;
-                    serializedFrame.ApplyModifiedPropertiesWithoutUndo();
-                    changed = true;
-                }
-
-                if (!frameObject.TryGetComponent(out BoxCollider2D frameTrigger))
-                {
-                    frameTrigger = frameObject.AddComponent<BoxCollider2D>();
-                    frameTrigger.isTrigger = true;
-                    frameTrigger.size = Vector2.one;
-                    changed = true;
-                }
-            }
+            changed |= RemoveRootObject(scene, "Tutorial Woven Platform");
+            changed |= RemoveRootObject(scene, "Tutorial Weave Frame");
 
             GameObject goal = FindRootObject(scene, "Goal / Landing 3");
             if (goal != null)
             {
                 changed |= ApplyTransform(goal, new Vector2(26.15f, -0.5f), new Vector2(4f, 0.8f));
-            }
-
-            if (wovenPlatform.activeSelf)
-            {
-                wovenPlatform.SetActive(false);
-                changed = true;
             }
 
             return changed;
@@ -592,7 +526,7 @@ namespace HimoHitoEditor
             ropeLine.sortingOrder = 5;
 
             player.AddComponent<RopeResource>();
-            player.AddComponent<WeaveResource>();
+            player.AddComponent<RopePlatformBuilder>();
             player.AddComponent<PlayerMover>();
             player.AddComponent<RopeController>();
             player.AddComponent<PrototypeRunController>();

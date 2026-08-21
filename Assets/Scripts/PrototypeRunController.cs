@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,7 +7,7 @@ namespace HimoHito
     /// Connects the graybox into one complete run: play, clear or fail, then restart.
     /// </summary>
     [RequireComponent(typeof(Rigidbody2D), typeof(RopeResource), typeof(RopeController))]
-    [RequireComponent(typeof(WeaveResource))]
+    [RequireComponent(typeof(RopePlatformBuilder))]
     public sealed class PrototypeRunController : MonoBehaviour
     {
         public enum RunOutcome
@@ -33,14 +32,13 @@ namespace HimoHito
         private Rigidbody2D body;
         private RopeResource ropeResource;
         private RopeController ropeController;
-        private WeaveResource weaveResource;
+        private RopePlatformBuilder platformBuilder;
         private PlayerMover playerMover;
         private Vector2 startPosition;
         private Vector2 checkpointPosition;
         private float checkpointRopeLength;
         private int checkpointSelectedRopeLength;
-        private int checkpointWeaveThreads;
-        private readonly List<CheckpointWeaveState> checkpointWeaveStates = new();
+        private RopePlatformBuilder.PlatformState[] checkpointPlatformStates;
         private float automaticRespawnTimer;
         private bool startRequested;
 
@@ -53,31 +51,30 @@ namespace HimoHito
         {
             1 => "Hookにヒモを掛ける",
             2 => "懐中電灯の光を避けて着地する",
-            3 => "消費したヒモから足場を編む",
-            4 => "編んだ足場からゴールする",
+            3 => "接続中のヒモを足場にする",
+            4 => "作った足場からゴールする",
             _ => string.Empty
         };
-
-        private readonly struct CheckpointWeaveState
-        {
-            public CheckpointWeaveState(WeaveFrame frame, bool isCompleted)
-            {
-                Frame = frame;
-                IsCompleted = isCompleted;
-            }
-
-            public WeaveFrame Frame { get; }
-            public bool IsCompleted { get; }
-        }
 
         private void Awake()
         {
             body = GetComponent<Rigidbody2D>();
             ropeResource = GetComponent<RopeResource>();
             ropeController = GetComponent<RopeController>();
-            weaveResource = GetComponent<WeaveResource>();
+            platformBuilder = GetComponent<RopePlatformBuilder>();
+            if (platformBuilder == null)
+            {
+                platformBuilder = gameObject.AddComponent<RopePlatformBuilder>();
+            }
             playerMover = GetComponent<PlayerMover>();
             startPosition = body.position;
+
+            foreach (WeaveFrame legacyFrame in
+                     FindObjectsByType<WeaveFrame>(FindObjectsSortMode.None))
+            {
+                legacyFrame.ResetWeave();
+                legacyFrame.gameObject.SetActive(false);
+            }
         }
 
         private void Start()
@@ -243,12 +240,7 @@ namespace HimoHito
             body.simulated = true;
             ropeController.DetachAndRefund();
             ropeResource.ResetToMaximum();
-            weaveResource.ResetThreads();
-            foreach (WeaveFrame weaveFrame in
-                     FindObjectsByType<WeaveFrame>(FindObjectsSortMode.None))
-            {
-                weaveFrame.ResetWeave();
-            }
+            platformBuilder.ClearPlatforms();
 
             CurrentTutorialSection = 1;
             checkpointPosition = startPosition;
@@ -261,28 +253,14 @@ namespace HimoHito
         {
             checkpointRopeLength = ropeResource.CurrentLength;
             checkpointSelectedRopeLength = ropeController.SelectedRopeLength;
-            checkpointWeaveThreads = weaveResource.CurrentThreads;
-            checkpointWeaveStates.Clear();
-            foreach (WeaveFrame weaveFrame in
-                     FindObjectsByType<WeaveFrame>(FindObjectsSortMode.None))
-            {
-                checkpointWeaveStates.Add(
-                    new CheckpointWeaveState(weaveFrame, weaveFrame.IsCompleted));
-            }
+            checkpointPlatformStates = platformBuilder.CapturePlatformStates();
         }
 
         private void RestoreCheckpointState()
         {
             ropeResource.RestoreCurrentLength(checkpointRopeLength);
             ropeController.RestoreSelectedRopeLength(checkpointSelectedRopeLength);
-            weaveResource.RestoreThreads(checkpointWeaveThreads);
-            foreach (CheckpointWeaveState state in checkpointWeaveStates)
-            {
-                if (state.Frame != null)
-                {
-                    state.Frame.RestoreWeave(state.IsCompleted);
-                }
-            }
+            platformBuilder.RestorePlatformStates(checkpointPlatformStates);
         }
 
         private void ResetMotionAndResume()

@@ -3,8 +3,8 @@ using UnityEngine;
 namespace HimoHito
 {
     /// <summary>
-    /// Creates section seven: a gap that can be crossed either by spending
-    /// weave threads on a bridge or by swinging with rope.
+    /// Keeps the section-seven gap available for the free rope-platform mechanic.
+    /// Legacy fixed weave-frame objects are retained only for scene compatibility.
     /// </summary>
     public static class MainStageSectionSevenSetup
     {
@@ -61,7 +61,9 @@ namespace HimoHito
                 new Color(0.72f, 0.42f, 1f));
             marker.GetComponent<BoxCollider2D>().enabled = false;
 
-            wovenPlatform.SetActive(weaveFrame.IsCompleted);
+            wovenPlatform.SetActive(false);
+            weaveFrameObject.SetActive(false);
+            marker.SetActive(false);
 
             GameObject landing = EnsureSolidObject(
                 LandingName,

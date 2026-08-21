@@ -11,8 +11,7 @@ namespace HimoHito
         [SerializeField] private RopeController ropeController;
         [SerializeField] private Rigidbody2D playerBody;
         [SerializeField] private PrototypeRunController runController;
-        [SerializeField] private WeaveResource weaveResource;
-        [SerializeField] private WeaveFrame weaveFrame;
+        [SerializeField] private RopePlatformBuilder platformBuilder;
 
         private Camera mainCamera;
         private Collider2D playerCollider;
@@ -59,19 +58,19 @@ namespace HimoHito
                 runController = FindFirstObjectByType<PrototypeRunController>();
             }
 
-            if (weaveResource == null)
+            if (platformBuilder == null)
             {
-                weaveResource = FindFirstObjectByType<WeaveResource>();
-            }
-
-            if (weaveFrame == null)
-            {
-                weaveFrame = FindFirstObjectByType<WeaveFrame>();
+                platformBuilder = FindFirstObjectByType<RopePlatformBuilder>();
             }
         }
 
         private void OnGUI()
         {
+            if (platformBuilder == null)
+            {
+                platformBuilder = FindFirstObjectByType<RopePlatformBuilder>();
+            }
+
             EnsureStyles();
 
             if (runController != null &&
@@ -118,11 +117,6 @@ namespace HimoHito
                 GUILayout.Label("S：使う長さを1減らす", bodyStyle);
             }
 
-            if (weaveResource != null)
-            {
-                GUILayout.Label($"編み糸  {weaveResource.CurrentThreads}個", bodyStyle);
-            }
-
             string state;
             if (runController != null && runController.Outcome != PrototypeRunController.RunOutcome.Playing)
             {
@@ -151,7 +145,7 @@ namespace HimoHito
             GUILayout.Label("移動：A / D    ジャンプ：Space", bodyStyle);
             GUILayout.Label("照準：← / →    真上・真下：↑ / ↓", bodyStyle);
             GUILayout.Label("ヒモ：E長押し    この区間から再挑戦：R", bodyStyle);
-            GUILayout.Label("編む：編み枠の近くでQ", bodyStyle);
+            GUILayout.Label("足場化：ヒモ接続中にQ", bodyStyle);
             GUILayout.Label("マウス照準も使用可能", bodyStyle);
             GUILayout.EndArea();
 
@@ -160,10 +154,9 @@ namespace HimoHito
 
         private void DrawWeavePrompt()
         {
-            if (weaveFrame == null ||
-                weaveResource == null ||
-                !weaveFrame.IsPlayerInRange ||
-                weaveFrame.IsCompleted)
+            if (platformBuilder == null ||
+                ropeController == null ||
+                !ropeController.IsAttached)
             {
                 return;
             }
@@ -209,14 +202,14 @@ namespace HimoHito
 
             GUILayout.BeginArea(panel);
             GUILayout.Space(5f);
-            GUILayout.Label("編む場所", weavePromptTitleStyle);
+            GUILayout.Label("このヒモを足場にする", weavePromptTitleStyle);
             GUILayout.Label(
-                $"編み糸  {weaveResource.CurrentThreads} / {weaveFrame.RequiredThreads}",
+                $"永久に使う長さ  {platformBuilder.CurrentPlatformCost:0.0}",
                 weavePromptBodyStyle);
 
-            string actionMessage = weaveFrame.RemainingThreads == 0
-                ? "Q：足場を編む"
-                : $"あと{weaveFrame.RemainingThreads}個必要";
+            string actionMessage = platformBuilder.CanBuildCurrentPlatform
+                ? "Q：ここまでのヒモを足場にする"
+                : $"足場化後にヒモを{platformBuilder.MinimumRopeReserve:0.0}以上残す必要があります";
             GUILayout.Label(actionMessage, weavePromptActionStyle);
             GUILayout.EndArea();
         }
@@ -249,7 +242,7 @@ namespace HimoHito
             GUILayout.Label("← / →  照準を動かす     ↑ / ↓  真上・真下へ合わせる", startControlStyle);
             GUILayout.Label("E 長押し  ヒモを掛ける", startControlStyle);
             GUILayout.Label("E を離す  勢いを保って飛ぶ", startControlStyle);
-            GUILayout.Label("Q  編み糸3個で指定された足場を編む", startControlStyle);
+            GUILayout.Label("Q  接続中のヒモをその場所で足場にする", startControlStyle);
             GUILayout.Label("R  現在の区間から再挑戦", startControlStyle);
             GUILayout.FlexibleSpace();
             GUILayout.Label("キーボードの何かのキーを押して開始", startPromptStyle);

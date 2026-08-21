@@ -10,11 +10,10 @@ namespace HimoHito
         private RopeResource ropeResource;
         private RopeController ropeController;
         private Rigidbody2D playerBody;
-        private WeaveResource weaveResource;
+        private RopePlatformBuilder platformBuilder;
         private MainStagePreview preview;
         private MainStageRespawnOnFall respawnController;
         private MainStageGoalZone goalZone;
-        private WeaveFrame weaveFrame;
         private GUIStyle titleStyle;
         private GUIStyle bodyStyle;
         private GUIStyle ropeStyle;
@@ -26,7 +25,7 @@ namespace HimoHito
         {
             ropeResource = FindFirstObjectByType<RopeResource>();
             ropeController = FindFirstObjectByType<RopeController>();
-            weaveResource = FindFirstObjectByType<WeaveResource>();
+            platformBuilder = FindFirstObjectByType<RopePlatformBuilder>();
             preview = FindFirstObjectByType<MainStagePreview>();
             respawnController = FindFirstObjectByType<MainStageRespawnOnFall>();
             MainStageSectionSixSetup.EnsureCreated();
@@ -38,7 +37,6 @@ namespace HimoHito
             {
                 goalZone = sectionTenTarget.GetComponent<MainStageGoalZone>();
             }
-            weaveFrame = FindFirstObjectByType<WeaveFrame>();
             if (preview != null && ropeResource != null && sectionTenTarget != null)
             {
                 preview.Configure(ropeResource.transform, sectionTenTarget.transform);
@@ -52,6 +50,11 @@ namespace HimoHito
 
         private void OnGUI()
         {
+            if (platformBuilder == null)
+            {
+                platformBuilder = FindFirstObjectByType<RopePlatformBuilder>();
+            }
+
             EnsureStyles();
             if (goalZone != null && goalZone.IsClear)
             {
@@ -80,19 +83,14 @@ namespace HimoHito
                 GUILayout.Label("W：使う長さを1増やす　S：1減らす", bodyStyle);
             }
 
-            if (weaveResource != null)
-            {
-                GUILayout.Label($"編み糸  {weaveResource.CurrentThreads}個", bodyStyle);
-            }
-
-            if (weaveFrame != null && weaveFrame.IsPlayerInRange && !weaveFrame.IsCompleted)
+            if (platformBuilder != null &&
+                ropeController != null &&
+                ropeController.IsAttached)
             {
                 GUILayout.Label(
-                    !weaveFrame.HasRoutePermission
-                        ? "橋を編めるのは上ルートを攻略した場合だけ"
-                        : weaveFrame.RemainingThreads == 0
-                        ? "Q：編み糸3個で橋を作る"
-                        : $"橋を作るには編み糸があと{weaveFrame.RemainingThreads}個必要",
+                    platformBuilder.CanBuildCurrentPlatform
+                        ? $"Q：現在のヒモ {platformBuilder.CurrentPlatformCost:0.0} を足場にする"
+                        : "この長さでは、足場化した後のヒモが足りません",
                     resultStyle);
             }
 
@@ -116,6 +114,7 @@ namespace HimoHito
 
             GUILayout.Label("移動：A / D　ジャンプ：Space", bodyStyle);
             GUILayout.Label("照準：矢印キー　ヒモ：E長押し", bodyStyle);
+            GUILayout.Label("足場化：ヒモ接続中にQ", bodyStyle);
             GUILayout.Label("落下またはR：現在のチェックポイントから再開", bodyStyle);
             GUILayout.EndArea();
         }
@@ -184,8 +183,8 @@ namespace HimoHito
             {
                 GUILayout.Label(
                     respawnController.CanUseSectionSevenBridge
-                        ? "選んだ道　上ルート（編んだ橋を使う道）"
-                        : "選んだ道　下ルート（ヒモを温存する道）",
+                        ? "選んだ道　上ルート"
+                        : "選んだ道　下ルート",
                     clearBodyStyle);
             }
             GUILayout.Space(28f);

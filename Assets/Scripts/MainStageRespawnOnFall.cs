@@ -7,7 +7,7 @@ namespace HimoHito
     /// </summary>
     [DefaultExecutionOrder(-200)]
     [RequireComponent(typeof(Rigidbody2D), typeof(RopeResource), typeof(RopeController))]
-    [RequireComponent(typeof(WeaveResource), typeof(PlayerMover))]
+    [RequireComponent(typeof(RopePlatformBuilder), typeof(PlayerMover))]
     public sealed class MainStageRespawnOnFall : MonoBehaviour
     {
         [SerializeField] private float fallThreshold = -9f;
@@ -17,21 +17,18 @@ namespace HimoHito
             new Vector2(69.7f, -1.65f);
         [SerializeField, Min(1f)] private float developmentRopeLength = 28f;
         [SerializeField, Min(1)] private int developmentSectionNumber = 6;
-        [SerializeField, Min(0)] private int developmentWeaveThreads = 3;
         [SerializeField] private bool developmentCanUseSectionSevenBridge = true;
 
         private Rigidbody2D body;
         private RopeResource ropeResource;
         private RopeController ropeController;
-        private WeaveResource weaveResource;
+        private RopePlatformBuilder platformBuilder;
         private PlayerMover playerMover;
         private MainStageGoalZone goalZone;
         private Vector2 checkpointPosition;
         private float checkpointRopeLength;
         private int checkpointSelectedRopeLength;
-        private int checkpointWeaveThreads;
-        private WeaveFrame sectionSevenWeaveFrame;
-        private bool checkpointWeaveCompleted;
+        private RopePlatformBuilder.PlatformState[] checkpointPlatformStates;
         private bool checkpointCanUseSectionSevenBridge;
 
         public bool HasReachedMidpoint { get; private set; }
@@ -46,10 +43,13 @@ namespace HimoHito
             body = GetComponent<Rigidbody2D>();
             ropeResource = GetComponent<RopeResource>();
             ropeController = GetComponent<RopeController>();
-            weaveResource = GetComponent<WeaveResource>();
+            platformBuilder = GetComponent<RopePlatformBuilder>();
+            if (platformBuilder == null)
+            {
+                platformBuilder = gameObject.AddComponent<RopePlatformBuilder>();
+            }
             playerMover = GetComponent<PlayerMover>();
             goalZone = FindFirstObjectByType<MainStageGoalZone>();
-            sectionSevenWeaveFrame = FindFirstObjectByType<WeaveFrame>();
             checkpointPosition = body.position;
 
             ApplyDevelopmentStart();
@@ -117,7 +117,6 @@ namespace HimoHito
             }
 
             checkpointPosition = respawnPosition;
-            weaveResource.RestoreThreads(weaveThreads);
             CanUseSectionSevenBridge = grantsSectionSevenBridge;
             CaptureCheckpointState();
             HasReachedMidpoint = true;
@@ -182,11 +181,7 @@ namespace HimoHito
         {
             checkpointRopeLength = ropeResource.CurrentLength;
             checkpointSelectedRopeLength = ropeController.SelectedRopeLength;
-            checkpointWeaveThreads = weaveResource.CurrentThreads;
-            if (sectionSevenWeaveFrame != null)
-            {
-                checkpointWeaveCompleted = sectionSevenWeaveFrame.IsCompleted;
-            }
+            checkpointPlatformStates = platformBuilder.CapturePlatformStates();
             checkpointCanUseSectionSevenBridge = CanUseSectionSevenBridge;
         }
 
@@ -205,7 +200,7 @@ namespace HimoHito
             ropeResource.RestoreCurrentLength(developmentRopeLength);
             ropeController.RestoreSelectedRopeLength(
                 Mathf.Min(ropeController.SelectedRopeLength, Mathf.FloorToInt(developmentRopeLength)));
-            weaveResource.RestoreThreads(developmentWeaveThreads);
+            platformBuilder.ClearPlatforms();
             CanUseSectionSevenBridge = developmentCanUseSectionSevenBridge;
             HasReachedMidpoint = developmentSectionNumber >= 6;
             HasReachedSectionEight = developmentSectionNumber >= 8;
@@ -217,11 +212,7 @@ namespace HimoHito
         {
             ropeResource.RestoreCurrentLength(checkpointRopeLength);
             ropeController.RestoreSelectedRopeLength(checkpointSelectedRopeLength);
-            weaveResource.RestoreThreads(checkpointWeaveThreads);
-            if (sectionSevenWeaveFrame != null)
-            {
-                sectionSevenWeaveFrame.RestoreWeave(checkpointWeaveCompleted);
-            }
+            platformBuilder.RestorePlatformStates(checkpointPlatformStates);
             CanUseSectionSevenBridge = checkpointCanUseSectionSevenBridge;
         }
 

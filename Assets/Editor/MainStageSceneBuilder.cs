@@ -465,7 +465,7 @@ namespace HimoHitoEditor
 
             RopeResource ropeResource = player.AddComponent<RopeResource>();
             ConfigureMainStageRopeLength(ropeResource);
-            player.AddComponent<WeaveResource>();
+            player.AddComponent<RopePlatformBuilder>();
             player.AddComponent<PlayerMover>();
             player.AddComponent<RopeController>();
             player.AddComponent<MainStageRespawnOnFall>();
