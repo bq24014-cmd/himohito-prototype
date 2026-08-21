@@ -294,6 +294,7 @@ MonoBehaviour:
   rightX: 87.2
   cycleDuration: 8.9
   hiddenDuration: 3
+  fadeDuration: 0.6
 --- !u!1 &249970469
 GameObject:
   m_ObjectHideFlags: 0
