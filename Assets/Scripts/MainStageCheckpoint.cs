@@ -3,7 +3,7 @@ using UnityEngine;
 namespace HimoHito
 {
     /// <summary>
-    /// Saves the chosen branch outcome when the player reaches the main-stage midpoint.
+    /// Saves the current run when the player reaches the main-stage midpoint.
     /// </summary>
     [RequireComponent(typeof(Collider2D))]
     public sealed class MainStageCheckpoint : MonoBehaviour
@@ -12,8 +12,6 @@ namespace HimoHito
         private static readonly Color MarkerColor = new Color(0.25f, 0.85f, 1f);
 
         [SerializeField] private Vector2 respawnPosition;
-        [SerializeField, Min(0)] private int checkpointWeaveThreads;
-        [SerializeField] private bool grantsSectionSevenBridge;
 
         private GameObject marker;
         private GUIStyle locationStyle;
@@ -27,14 +25,10 @@ namespace HimoHito
             CreateMarker();
         }
 
-        public void Configure(
-            Vector2 position,
-            int weaveThreads,
-            bool grantsBridge)
+        public void Configure(Vector2 position)
         {
             respawnPosition = position;
-            checkpointWeaveThreads = Mathf.Max(0, weaveThreads);
-            grantsSectionSevenBridge = grantsBridge;
+            UpdateMarkerPosition();
         }
 
         private void OnCollisionStay2D(Collision2D collision)
@@ -48,10 +42,7 @@ namespace HimoHito
 
             MainStageRespawnOnFall respawn =
                 collision.rigidbody.GetComponent<MainStageRespawnOnFall>();
-            if (respawn != null && respawn.TryReachMidpoint(
-                    respawnPosition,
-                    checkpointWeaveThreads,
-                    grantsSectionSevenBridge))
+            if (respawn != null && respawn.TryReachMidpoint(respawnPosition))
             {
                 IsReached = true;
                 reachedMessageUntil = Time.unscaledTime + ReachedMessageDuration;
@@ -94,6 +85,14 @@ namespace HimoHito
             renderer.sortingOrder = 4;
             SolidSprite visual = marker.AddComponent<SolidSprite>();
             visual.Color = MarkerColor;
+        }
+
+        private void UpdateMarkerPosition()
+        {
+            if (marker != null)
+            {
+                marker.transform.position = transform.position + Vector3.up * 1.05f;
+            }
         }
 
         private void DrawLocationLabel()
@@ -147,7 +146,14 @@ namespace HimoHito
         {
             if (marker != null)
             {
-                Destroy(marker);
+                if (Application.isPlaying)
+                {
+                    Destroy(marker);
+                }
+                else
+                {
+                    DestroyImmediate(marker);
+                }
             }
         }
     }

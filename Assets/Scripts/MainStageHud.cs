@@ -28,6 +28,7 @@ namespace HimoHito
             platformBuilder = FindFirstObjectByType<RopePlatformBuilder>();
             preview = FindFirstObjectByType<MainStagePreview>();
             respawnController = FindFirstObjectByType<MainStageRespawnOnFall>();
+            MainStageMidpointSetup.EnsureCreated();
             MainStageSectionSixSetup.EnsureCreated();
             MainStageSectionSevenSetup.EnsureCreated();
             MainStageSectionEightSetup.EnsureCreated();
@@ -177,14 +178,6 @@ namespace HimoHito
                 GUILayout.Label(
                     $"残ったヒモ　{ropeResource.CurrentLength:0.0} / " +
                     $"{ropeResource.MaximumLength:0.0}",
-                    clearBodyStyle);
-            }
-            if (respawnController != null)
-            {
-                GUILayout.Label(
-                    respawnController.CanUseSectionSevenBridge
-                        ? "選んだ道　上ルート"
-                        : "選んだ道　下ルート",
                     clearBodyStyle);
             }
             GUILayout.Space(28f);

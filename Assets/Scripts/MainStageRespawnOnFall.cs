@@ -17,7 +17,6 @@ namespace HimoHito
             new Vector2(69.7f, -1.65f);
         [SerializeField, Min(1f)] private float developmentRopeLength = 28f;
         [SerializeField, Min(1)] private int developmentSectionNumber = 6;
-        [SerializeField] private bool developmentCanUseSectionSevenBridge = true;
 
         private Rigidbody2D body;
         private RopeResource ropeResource;
@@ -29,13 +28,11 @@ namespace HimoHito
         private float checkpointRopeLength;
         private int checkpointSelectedRopeLength;
         private RopePlatformBuilder.PlatformState[] checkpointPlatformStates;
-        private bool checkpointCanUseSectionSevenBridge;
 
         public bool HasReachedMidpoint { get; private set; }
         public bool HasReachedSectionEight { get; private set; }
         public bool HasReachedSectionNine { get; private set; }
         public bool HasReachedSectionTen { get; private set; }
-        public bool CanUseSectionSevenBridge { get; private set; }
         public bool IsRopeExhausted { get; private set; }
 
         private void Awake()
@@ -101,10 +98,7 @@ namespace HimoHito
             }
         }
 
-        public bool TryReachMidpoint(
-            Vector2 respawnPosition,
-            int weaveThreads,
-            bool grantsSectionSevenBridge)
+        public bool TryReachMidpoint(Vector2 respawnPosition)
         {
             if (ropeController.IsAttached)
             {
@@ -117,7 +111,6 @@ namespace HimoHito
             }
 
             checkpointPosition = respawnPosition;
-            CanUseSectionSevenBridge = grantsSectionSevenBridge;
             CaptureCheckpointState();
             HasReachedMidpoint = true;
             return true;
@@ -182,7 +175,6 @@ namespace HimoHito
             checkpointRopeLength = ropeResource.CurrentLength;
             checkpointSelectedRopeLength = ropeController.SelectedRopeLength;
             checkpointPlatformStates = platformBuilder.CapturePlatformStates();
-            checkpointCanUseSectionSevenBridge = CanUseSectionSevenBridge;
         }
 
         private void ApplyDevelopmentStart()
@@ -201,7 +193,6 @@ namespace HimoHito
             ropeController.RestoreSelectedRopeLength(
                 Mathf.Min(ropeController.SelectedRopeLength, Mathf.FloorToInt(developmentRopeLength)));
             platformBuilder.ClearPlatforms();
-            CanUseSectionSevenBridge = developmentCanUseSectionSevenBridge;
             HasReachedMidpoint = developmentSectionNumber >= 6;
             HasReachedSectionEight = developmentSectionNumber >= 8;
             HasReachedSectionNine = developmentSectionNumber >= 9;
@@ -213,7 +204,6 @@ namespace HimoHito
             ropeResource.RestoreCurrentLength(checkpointRopeLength);
             ropeController.RestoreSelectedRopeLength(checkpointSelectedRopeLength);
             platformBuilder.RestorePlatformStates(checkpointPlatformStates);
-            CanUseSectionSevenBridge = checkpointCanUseSectionSevenBridge;
         }
 
         private void EnterRopeExhaustedState()

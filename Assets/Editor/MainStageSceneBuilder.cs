@@ -223,33 +223,7 @@ namespace HimoHitoEditor
 
         private static GameObject CreateSectionsFourAndFive()
         {
-            CreateHookPoint(
-                "Main Upper Route Hook",
-                new Vector2(57f, 4.8f),
-                new Vector2(1.6f, 0.45f));
-            CreatePlatform(
-                "Main Upper Route Landing",
-                new Vector2(64.5f, 2.2f),
-                new Vector2(6f, 0.7f));
-            GameObject upperDescent = CreatePlatform(
-                "Main Upper Route Descent",
-                new Vector2(69.7f, 0f),
-                new Vector2(6f, 0.7f));
-            MainStageCheckpoint upperCheckpoint =
-                upperDescent.AddComponent<MainStageCheckpoint>();
-            upperCheckpoint.Configure(new Vector2(69.7f, 1.05f), 3, true);
-            CreatePlatform(
-                "Main Lower Walking Route",
-                new Vector2(58.5f, -3.3f),
-                new Vector2(16.4f, 0.7f));
-
-            GameObject midpoint = CreatePlatform(
-                "Main Midpoint Checkpoint",
-                new Vector2(71.7f, -2.7f),
-                new Vector2(10f, 0.7f));
-            MainStageCheckpoint checkpoint = midpoint.AddComponent<MainStageCheckpoint>();
-            checkpoint.Configure(new Vector2(69.7f, -1.65f), 0, false);
-            return midpoint;
+            return MainStageMidpointSetup.EnsureCreated();
         }
 
         private static GameObject CreateSectionSix()

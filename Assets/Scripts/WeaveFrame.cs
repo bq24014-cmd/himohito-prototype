@@ -14,7 +14,6 @@ namespace HimoHito
 
         private WeaveResource weaveResource;
         private bool playerInRange;
-        private MainStageRespawnOnFall mainStageRespawn;
 
         public int RequiredThreads => requiredThreads;
         public int RemainingThreads => weaveResource == null
@@ -22,29 +21,11 @@ namespace HimoHito
             : Mathf.Max(0, requiredThreads - weaveResource.CurrentThreads);
         public bool IsPlayerInRange => playerInRange;
         public bool IsCompleted { get; private set; }
-        public bool HasRoutePermission
-        {
-            get
-            {
-                if (!requiresMainStagePermission)
-                {
-                    return true;
-                }
-
-                if (mainStageRespawn == null)
-                {
-                    mainStageRespawn = FindFirstObjectByType<MainStageRespawnOnFall>();
-                }
-
-                return mainStageRespawn != null &&
-                       mainStageRespawn.CanUseSectionSevenBridge;
-            }
-        }
+        public bool HasRoutePermission => true;
 
         private void Awake()
         {
             weaveResource = FindFirstObjectByType<WeaveResource>();
-            mainStageRespawn = FindFirstObjectByType<MainStageRespawnOnFall>();
             ApplyPlatformState();
         }
 
