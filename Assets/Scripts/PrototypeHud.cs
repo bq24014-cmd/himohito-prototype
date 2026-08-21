@@ -134,8 +134,8 @@ namespace HimoHito
             else
             {
                 state = ropeController != null && ropeController.IsAttached
-                    ? $"ヒモ接続中 {ropeController.ActiveRopeLength:0.0} — Eを離すと{ropeController.ReleaseRefundRate:P0}戻る"
-                    : "準備完了 — 矢印キーで狙い、Eを長押し";
+                    ? $"ヒモ接続中 {ropeController.ActiveRopeLength:0.0} — Eで外す（全回収）／Qで足場化"
+                    : "準備完了 — 矢印キーで狙い、Eで接続";
             }
             GUILayout.Label(state, bodyStyle);
             if (playerBody != null)
@@ -144,7 +144,7 @@ namespace HimoHito
             }
             GUILayout.Label("移動：A / D    ジャンプ：Space", bodyStyle);
             GUILayout.Label("照準：← / →    真上・真下：↑ / ↓", bodyStyle);
-            GUILayout.Label("ヒモ：E長押し    この区間から再挑戦：R", bodyStyle);
+            GUILayout.Label("ヒモ：Eで接続／解除    この区間から再挑戦：R", bodyStyle);
             GUILayout.Label("足場化：ヒモ接続中にQ", bodyStyle);
             GUILayout.Label("マウス照準も使用可能", bodyStyle);
             GUILayout.EndArea();
@@ -240,8 +240,8 @@ namespace HimoHito
             GUILayout.Space(20f);
             GUILayout.Label("A / D  左右移動     Space  ジャンプ", startControlStyle);
             GUILayout.Label("← / →  照準を動かす     ↑ / ↓  真上・真下へ合わせる", startControlStyle);
-            GUILayout.Label("E 長押し  ヒモを掛ける", startControlStyle);
-            GUILayout.Label("E を離す  勢いを保って飛ぶ", startControlStyle);
+            GUILayout.Label("E 1回目  ヒモを掛ける", startControlStyle);
+            GUILayout.Label("E 2回目  勢いを保ってヒモを外す", startControlStyle);
             GUILayout.Label("Q  接続中のヒモをその場所で足場にする", startControlStyle);
             GUILayout.Label("R  現在の区間から再挑戦", startControlStyle);
             GUILayout.FlexibleSpace();

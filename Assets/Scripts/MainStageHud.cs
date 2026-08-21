@@ -113,7 +113,7 @@ namespace HimoHito
             }
 
             GUILayout.Label("移動：A / D　ジャンプ：Space", bodyStyle);
-            GUILayout.Label("照準：矢印キー　ヒモ：E長押し", bodyStyle);
+            GUILayout.Label("照準：矢印キー　ヒモ：Eで接続／解除", bodyStyle);
             GUILayout.Label("足場化：ヒモ接続中にQ", bodyStyle);
             GUILayout.Label("落下またはR：現在のチェックポイントから再開", bodyStyle);
             GUILayout.EndArea();

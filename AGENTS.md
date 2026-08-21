@@ -21,8 +21,9 @@ Never commit `Library/`, `Temp/`, `Logs/`, or `UserSettings/`. Always preserve a
 - `Space`: jump while not attached
 - `Left` / `Right Arrow`: rotate the rope aim guide
 - `Up` / `Down Arrow`: snap the aim upward or downward
-- Hold `E`: shoot and attach the rope
-- Release `E`: detach and preserve momentum
+- Press `E` while detached: shoot and attach the rope
+- Press `E` while attached: detach, recover the rope, and preserve momentum
+- Press `Q` while attached: turn the rope from the hook to the player into a permanent platform
 
 Mouse aiming remains an optional secondary input.
 

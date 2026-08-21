@@ -3,7 +3,7 @@ using UnityEngine;
 namespace HimoHito
 {
     /// <summary>
-    /// Arrow keys aim the rope. Holding E attaches it and releasing E partially refunds it.
+    /// Arrow keys aim the rope. E toggles attachment and detachment.
     /// Mouse input remains available as an optional alternative.
     /// </summary>
     [RequireComponent(typeof(Rigidbody2D), typeof(DistanceJoint2D), typeof(LineRenderer))]
@@ -88,27 +88,32 @@ namespace HimoHito
         private void Update()
         {
             UpdateSelectedRopeLength();
-            bool aimChanged = UpdateKeyboardAim();
+            UpdateKeyboardAim();
 
-            if (Input.GetKeyDown(KeyCode.E) || (Input.GetKey(KeyCode.E) && aimChanged && !IsAttached))
+            if (Input.GetKeyDown(KeyCode.E))
             {
-                Vector2 keyboardTarget = body.position + keyboardAimDirection * maximumShotDistance;
-                TryAttach(keyboardTarget);
-            }
-
-            if (Input.GetKeyUp(KeyCode.E))
-            {
-                DetachAndRefund();
+                if (IsAttached)
+                {
+                    DetachAndRefund();
+                }
+                else
+                {
+                    Vector2 keyboardTarget =
+                        body.position + keyboardAimDirection * maximumShotDistance;
+                    TryAttach(keyboardTarget);
+                }
             }
 
             if (Input.GetMouseButtonDown(0))
             {
-                TryAttachTowardCursor();
-            }
-
-            if (Input.GetMouseButtonUp(0))
-            {
-                DetachAndRefund();
+                if (IsAttached)
+                {
+                    DetachAndRefund();
+                }
+                else
+                {
+                    TryAttachTowardCursor();
+                }
             }
         }
 
