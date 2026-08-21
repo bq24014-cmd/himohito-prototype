@@ -59,7 +59,7 @@ namespace HimoHito
                 mover = hazard.AddComponent<MainStageHorizontalMover>();
             }
 
-            mover.Configure(79.2f, 87.2f, 8.9f);
+            mover.Configure(79.2f, 87.2f, 8.9f, 3f);
 
             GameObject landing = EnsureSolidObject(
                 LandingName,

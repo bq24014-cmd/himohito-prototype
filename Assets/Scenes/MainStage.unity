@@ -293,6 +293,7 @@ MonoBehaviour:
   leftX: 79.2
   rightX: 87.2
   cycleDuration: 8.9
+  hiddenDuration: 3
 --- !u!1 &249970469
 GameObject:
   m_ObjectHideFlags: 0
