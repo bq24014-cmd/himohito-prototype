@@ -585,43 +585,6 @@ namespace HimoHitoEditor
             goal.AddComponent<GoalZone>();
         }
 
-        private static GameObject CreateWovenPlatform(string name, Vector2 position, Vector2 size)
-        {
-            GameObject platform = CreatePlatformVisual(
-                name,
-                position,
-                size,
-                new Color(0.72f, 0.42f, 1f));
-            platform.SetActive(false);
-            return platform;
-        }
-
-        private static void CreateWeaveFrame(
-            string name,
-            Vector2 position,
-            Vector2 size,
-            GameObject wovenPlatform)
-        {
-            GameObject frameObject = new GameObject(name);
-            frameObject.transform.position = position;
-            frameObject.transform.localScale = new Vector3(size.x, size.y, 1f);
-
-            BoxCollider2D trigger = frameObject.AddComponent<BoxCollider2D>();
-            trigger.isTrigger = true;
-            trigger.size = Vector2.one;
-
-            WeaveFrame frame = frameObject.AddComponent<WeaveFrame>();
-            frame.Configure(wovenPlatform, 3);
-
-            GameObject marker = CreatePlatformVisual(
-                "Weave Frame Marker",
-                position + new Vector2(1.7f, 0.1f),
-                new Vector2(0.25f, 1.6f),
-                new Color(0.72f, 0.42f, 1f));
-            marker.GetComponent<BoxCollider2D>().enabled = false;
-            marker.transform.SetParent(frameObject.transform, true);
-        }
-
         private static GameObject CreatePlatformVisual(
             string name,
             Vector2 position,

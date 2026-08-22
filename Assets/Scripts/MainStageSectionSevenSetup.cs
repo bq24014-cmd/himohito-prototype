@@ -17,6 +17,9 @@ namespace HimoHito
 
         public static GameObject EnsureCreated()
         {
+            RemoveLegacyGuide(WeaveFrameName);
+            RemoveLegacyGuide(WeaveMarkerName);
+
             GameObject hook = EnsureSolidObject(
                 HookName,
                 new Vector2(102.5f, 3.2f),
@@ -47,38 +50,6 @@ namespace HimoHito
                 finalHook.AddComponent<HookPoint>();
             }
 
-            GameObject weaveFrameObject = FindSceneObject(WeaveFrameName);
-            if (weaveFrameObject == null)
-            {
-                weaveFrameObject = new GameObject(WeaveFrameName);
-            }
-
-            weaveFrameObject.transform.position = new Vector2(96.5f, 0f);
-            weaveFrameObject.transform.localScale = new Vector3(2.5f, 3f, 1f);
-            if (!weaveFrameObject.TryGetComponent(out BoxCollider2D frameTrigger))
-            {
-                frameTrigger = weaveFrameObject.AddComponent<BoxCollider2D>();
-            }
-
-            frameTrigger.isTrigger = true;
-            frameTrigger.size = Vector2.one;
-            if (!weaveFrameObject.TryGetComponent(out WeaveFrame weaveFrame))
-            {
-                weaveFrame = weaveFrameObject.AddComponent<WeaveFrame>();
-            }
-
-            weaveFrame.Configure(null, 3, true);
-
-            GameObject marker = EnsureSolidObject(
-                WeaveMarkerName,
-                new Vector2(97.2f, 0.2f),
-                new Vector2(0.25f, 1.6f),
-                new Color(0.72f, 0.42f, 1f));
-            marker.GetComponent<BoxCollider2D>().enabled = false;
-
-            weaveFrameObject.SetActive(false);
-            marker.SetActive(false);
-
             GameObject landing = EnsureSolidObject(
                 LandingName,
                 new Vector2(134f, -0.8f),
@@ -90,6 +61,25 @@ namespace HimoHito
             }
 
             return landing;
+        }
+
+        private static void RemoveLegacyGuide(string objectName)
+        {
+            GameObject legacyGuide = FindSceneObject(objectName);
+            if (legacyGuide == null)
+            {
+                return;
+            }
+
+            legacyGuide.SetActive(false);
+            if (Application.isPlaying)
+            {
+                Object.Destroy(legacyGuide);
+            }
+            else
+            {
+                Object.DestroyImmediate(legacyGuide);
+            }
         }
 
         private static GameObject EnsureSolidObject(

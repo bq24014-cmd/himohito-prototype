@@ -105,7 +105,7 @@ namespace HimoHito
             }
             else
             {
-                GUILayout.Label("緑のゴールを目指す", resultStyle);
+                GUILayout.Label("ゴールを目指す", resultStyle);
             }
 
             if (playerBody != null)
