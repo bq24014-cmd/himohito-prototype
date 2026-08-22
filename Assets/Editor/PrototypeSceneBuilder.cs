@@ -46,8 +46,8 @@ namespace HimoHitoEditor
                 new Vector2(-5f, -0.2f),
                 new Vector2(1.6f, 0.45f));
 
-            // The route now keeps only the upper planning landing.
-            // Touching the flashlight spot in the airborne gap leads to a fall and retry.
+            // Section 2 teaches the flashlight gap. Sections 3 and 4 then teach
+            // making a rope platform and using its far end to reach the next hook.
             GameObject landing1 = CreatePlatform(
                 "Landing 1",
                 new Vector2(0f, -2.3f),
@@ -62,10 +62,6 @@ namespace HimoHitoEditor
                 new Vector2(-4.25f, -3.1f),
                 3.2f,
                 2);
-            CreatePlatform(
-                "Planning Landing",
-                new Vector2(9.5f, -0.4f),
-                new Vector2(4f, 0.7f));
             CreateHookPoint("Hook 3", new Vector2(13.8f, 3.9f), new Vector2(1.6f, 0.45f));
             CreateGoalPlatform("Goal / Landing 3", new Vector2(26.15f, -0.5f), new Vector2(4f, 0.8f));
 
@@ -129,24 +125,12 @@ namespace HimoHitoEditor
             SceneManager.SetActiveScene(prototypeScene);
             bool changed = false;
 
-            Vector2 planningLandingPosition = new Vector2(9.5f, -0.4f);
-            GameObject planningLanding = FindRootObject(prototypeScene, "Planning Landing");
-            if (planningLanding == null)
-            {
-                CreatePlatform("Planning Landing", planningLandingPosition, new Vector2(4f, 0.7f));
-                changed = true;
-            }
-            else if ((Vector2)planningLanding.transform.position != planningLandingPosition)
-            {
-                planningLanding.transform.position = planningLandingPosition;
-                changed = true;
-            }
-
             changed |= EnsureExperimentalRopeLength(prototypeScene);
             changed |= EnsureHorizontalCameraFollow(prototypeScene);
             changed |= RemoveRootObject(prototypeScene, "Practice Safety Floor");
             changed |= RemoveRootObject(prototypeScene, "Landing 2");
             changed |= RemoveRootObject(prototypeScene, "Planning Hook");
+            changed |= RemoveRootObject(prototypeScene, "Planning Landing");
             changed |= EnsureTutorialLayout(prototypeScene);
             changed |= EnsurePracticeSection(prototypeScene);
             changed |= EnsureWeaveExperiment(prototypeScene);
@@ -241,6 +225,17 @@ namespace HimoHitoEditor
             changed |= RemoveRootObject(scene, "Tutorial Woven Platform");
             changed |= RemoveRootObject(scene, "Tutorial Weave Frame");
 
+            changed |= EnsureHookPoint(
+                scene,
+                "Hook 2",
+                new Vector2(5f, 1.5f),
+                new Vector2(1.6f, 0.45f));
+            changed |= EnsureHookPoint(
+                scene,
+                "Hook 3",
+                new Vector2(13.8f, 3.9f),
+                new Vector2(1.6f, 0.45f));
+
             GameObject goal = FindRootObject(scene, "Goal / Landing 3");
             if (goal != null)
             {
@@ -286,6 +281,16 @@ namespace HimoHitoEditor
                 "Tutorial Landing",
                 new Vector2(-9f, -5.2f),
                 new Vector2(5f, 0.7f));
+            changed |= EnsureHookPoint(
+                scene,
+                "Hook 1",
+                new Vector2(-5f, -0.2f),
+                new Vector2(1.6f, 0.45f));
+            changed |= EnsurePlatform(
+                scene,
+                "Landing 1",
+                new Vector2(0f, -2.3f),
+                new Vector2(4f, 0.7f));
 
             GameObject player = FindRootObject(scene, "Player");
             Vector2 playerStart = new Vector2(-18f, -4.2f);
@@ -295,7 +300,6 @@ namespace HimoHitoEditor
                 changed = true;
             }
 
-            changed |= RemoveTutorialCheckpoint(scene, "Planning Landing");
             return changed;
         }
 
@@ -312,11 +316,6 @@ namespace HimoHitoEditor
                 "Landing 1",
                 3,
                 new Vector2(0f, -1.3f));
-            changed |= EnsureTutorialCheckpoint(
-                scene,
-                "Tutorial Woven Platform",
-                4,
-                new Vector2(21.1f, 0.55f));
             return changed;
         }
 

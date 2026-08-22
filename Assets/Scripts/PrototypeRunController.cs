@@ -52,7 +52,7 @@ namespace HimoHito
             1 => "Hookにヒモを掛ける",
             2 => "懐中電灯の光を避けて着地する",
             3 => "接続中のヒモを足場にする",
-            4 => "作った足場からゴールする",
+            4 => "足場の先から次のHookへ掛けてゴールする",
             _ => string.Empty
         };
 
@@ -193,7 +193,9 @@ namespace HimoHito
 
         public void MarkClear()
         {
-            if (Outcome == RunOutcome.Playing)
+            bool tutorialStepsComplete = gameObject.scene.name != "Tutorial" ||
+                                         CurrentTutorialSection >= TutorialSectionCount;
+            if (Outcome == RunOutcome.Playing && tutorialStepsComplete)
             {
                 Finish(RunOutcome.Clear);
             }
