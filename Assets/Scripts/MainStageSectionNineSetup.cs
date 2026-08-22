@@ -3,35 +3,42 @@ using UnityEngine;
 namespace HimoHito
 {
     /// <summary>
-    /// Creates section nine: a circular flashlight spot sweeps across the pendulum area.
+    /// Creates the new section eight: a circular flashlight spot sweeps across the pendulum area.
     /// Entering the light with the attached player forces a release and fall.
     /// </summary>
     public static class MainStageSectionNineSetup
     {
-        public const string HookName = "Main Section 9 Hook";
-        public const string FlashlightSpotName = "Main Section 9 Flashlight Spot";
+        public const string HookName = "Main Section 8 Hook";
+        public const string FlashlightSpotName = "Main Section 8 Flashlight Spot";
+        public const string LegacyHookName = "Main Section 9 Hook";
+        public const string LegacyFlashlightSpotName = "Main Section 9 Flashlight Spot";
         public const string LegacyFlashlightBeamName = "Main Section 9 Flashlight Beam";
         public const string LegacyMovingHazardName = "Main Section 9 Moving Hazard";
-        public const string LandingName = "Main Section 9 Landing";
+        public const string LandingName = "Main Section 8 Landing";
+        public const string LegacyLandingName = "Main Section 9 Landing";
 
         public static GameObject EnsureCreated()
         {
-            GameObject sectionEightLanding =
-                FindSceneObject(MainStageSectionEightSetup.FinalLandingName);
-            if (sectionEightLanding != null)
+            RenameLegacyObject(LegacyHookName, HookName);
+            RenameLegacyObject(LegacyFlashlightSpotName, FlashlightSpotName);
+            RenameLegacyObject(LegacyLandingName, LandingName);
+
+            GameObject sectionSevenLanding =
+                FindSceneObject(MainStageSectionSevenSetup.LandingName);
+            if (sectionSevenLanding != null)
             {
-                if (!sectionEightLanding.TryGetComponent(
+                if (!sectionSevenLanding.TryGetComponent(
                         out MainStageSectionNineCheckpoint checkpoint))
                 {
-                    checkpoint = sectionEightLanding.AddComponent<MainStageSectionNineCheckpoint>();
+                    checkpoint = sectionSevenLanding.AddComponent<MainStageSectionNineCheckpoint>();
                 }
 
-                checkpoint.Configure(new Vector2(159.5f, 2.95f));
+                checkpoint.Configure(new Vector2(136.5f, 0.15f));
             }
 
             GameObject hook = EnsureSolidObject(
                 HookName,
-                new Vector2(165.5f, 8.5f),
+                new Vector2(142.5f, 5.7f),
                 new Vector2(1.6f, 0.45f),
                 new Color(1f, 0.72f, 0.18f));
             if (!hook.TryGetComponent(out HookPoint _))
@@ -53,7 +60,7 @@ namespace HimoHito
             }
             FlashlightSpotVisual.ConfigureSpot(
                 hazard,
-                new Vector2(168.8f, -2.2f),
+                new Vector2(145.8f, -5f),
                 4.4f,
                 new Color(1f, 1f, 1f, 0.72f));
             if (!hazard.TryGetComponent(out Rigidbody2D hazardBody))
@@ -73,11 +80,11 @@ namespace HimoHito
                 mover = hazard.AddComponent<MainStageVerticalMover>();
             }
 
-            mover.Configure(-2.2f, 7.3f, 8.9f);
+            mover.Configure(-5f, 4.5f, 8.9f);
 
             GameObject landing = EnsureSolidObject(
                 LandingName,
-                new Vector2(175.1f, 2.3f),
+                new Vector2(152.1f, -0.5f),
                 new Vector2(7f, 0.7f),
                 new Color(0.38f, 0.41f, 0.52f));
             if (!landing.TryGetComponent(out MainStageSectionTarget _))
@@ -133,6 +140,20 @@ namespace HimoHito
             }
 
             return null;
+        }
+
+        private static void RenameLegacyObject(string legacyName, string currentName)
+        {
+            if (FindSceneObject(currentName) != null)
+            {
+                return;
+            }
+
+            GameObject legacyObject = FindSceneObject(legacyName);
+            if (legacyObject != null)
+            {
+                legacyObject.name = currentName;
+            }
         }
     }
 }

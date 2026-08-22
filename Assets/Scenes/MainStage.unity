@@ -3731,7 +3731,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1900000011
 Transform:
   m_ObjectHideFlags: 0
@@ -3827,7 +3827,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1900000021
 Transform:
   m_ObjectHideFlags: 0
@@ -3912,7 +3912,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1900000031
 Transform:
   m_ObjectHideFlags: 0
@@ -4005,12 +4005,12 @@ GameObject:
   - component: {fileID: 1900000045}
   - component: {fileID: 1900000046}
   m_Layer: 0
-  m_Name: Main Section 8 Landing
+  m_Name: Main Section 8 Legacy Landing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1900000041
 Transform:
   m_ObjectHideFlags: 0
@@ -4115,7 +4115,7 @@ GameObject:
   - component: {fileID: 2000000014}
   - component: {fileID: 2000000015}
   m_Layer: 0
-  m_Name: Main Section 9 Hook
+  m_Name: Main Section 8 Hook
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4130,7 +4130,7 @@ Transform:
   m_GameObject: {fileID: 2000000010}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 165.5, y: 8.5, z: 0}
+  m_LocalPosition: {x: 142.5, y: 5.7, z: 0}
   m_LocalScale: {x: 1.6, y: 0.45, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4214,7 +4214,7 @@ GameObject:
   - component: {fileID: 2000000026}
   - component: {fileID: 2000000027}
   m_Layer: 0
-  m_Name: Main Section 9 Flashlight Spot
+  m_Name: Main Section 8 Flashlight Spot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4229,7 +4229,7 @@ Transform:
   m_GameObject: {fileID: 2000000020}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 168.8, y: -2.2, z: 0}
+  m_LocalPosition: {x: 145.8, y: -5, z: 0}
   m_LocalScale: {x: 4.4, y: 4.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4329,8 +4329,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ce154024c9847b0b2b9716a3036f0ba, type: 3}
   m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.MainStageVerticalMover
-  lowerY: -2.2
-  upperY: 7.3
+  lowerY: -5
+  upperY: 4.5
   cycleDuration: 8.9
 --- !u!1 &2000000030
 GameObject:
@@ -4347,7 +4347,7 @@ GameObject:
   - component: {fileID: 2000000035}
   - component: {fileID: 2100000001}
   m_Layer: 0
-  m_Name: Main Section 9 Landing
+  m_Name: Main Section 8 Landing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4362,7 +4362,7 @@ Transform:
   m_GameObject: {fileID: 2000000030}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 175.1, y: 2.3, z: 0}
+  m_LocalPosition: {x: 152.1, y: -0.5, z: 0}
   m_LocalScale: {x: 7, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4442,7 +4442,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 461634bd103f4fbf865778c3128ca7b0, type: 3}
   m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.MainStageSectionTenCheckpoint
-  respawnPosition: {x: 175.1, y: 3.3}
+  respawnPosition: {x: 152.1, y: 0.5}
 --- !u!1 &2100000010
 GameObject:
   m_ObjectHideFlags: 0
@@ -4457,7 +4457,7 @@ GameObject:
   - component: {fileID: 2100000014}
   - component: {fileID: 2100000015}
   m_Layer: 0
-  m_Name: Main Section 10 Final Hook
+  m_Name: Main Section 9 Final Hook
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4472,7 +4472,7 @@ Transform:
   m_GameObject: {fileID: 2100000010}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 182, y: 10.5, z: 0}
+  m_LocalPosition: {x: 159, y: 7.7, z: 0}
   m_LocalScale: {x: 1.8, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4569,7 +4569,7 @@ Transform:
   m_GameObject: {fileID: 2100000020}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 205.5, y: 2.3, z: 0}
+  m_LocalPosition: {x: 182.5, y: -0.5, z: 0}
   m_LocalScale: {x: 36, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -3,7 +3,7 @@ using UnityEngine;
 namespace HimoHito
 {
     /// <summary>
-    /// Saves the section-nine observation floor as the restart point.
+    /// Saves the new section-eight observation floor as the restart point.
     /// </summary>
     [RequireComponent(typeof(Collider2D))]
     public sealed class MainStageSectionNineCheckpoint : MonoBehaviour

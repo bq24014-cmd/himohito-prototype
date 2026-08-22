@@ -15,7 +15,7 @@ namespace HimoHitoEditor
 
         private const float MainStageRopeLength = 28f;
 
-        [MenuItem("HimoHito/Build Main Stage Through Section 10")]
+        [MenuItem("HimoHito/Build Main Stage Through Section 9")]
         public static void BuildMainStageThroughSectionTen()
         {
             Scene scene = EditorSceneManager.NewScene(NewSceneSetup.EmptyScene, NewSceneMode.Single);
@@ -54,7 +54,6 @@ namespace HimoHitoEditor
             CreateSectionsFourAndFive();
             CreateSectionSix();
             CreateSectionSeven();
-            CreateSectionEight();
             CreateSectionNine();
             GameObject sectionTenTarget = CreateSectionTen();
 
@@ -74,7 +73,7 @@ namespace HimoHitoEditor
             AssetDatabase.SaveAssets();
             AssetDatabase.Refresh();
             Selection.activeGameObject = player;
-            Debug.Log($"HimoHito main-stage sections 1-10 created: {ScenePath}");
+            Debug.Log($"HimoHito main-stage sections 1-9 created: {ScenePath}");
         }
 
         public static void BuildFromCommandLine()
@@ -136,7 +135,8 @@ namespace HimoHitoEditor
         {
             Scene scene = EditorSceneManager.OpenScene(ScenePath, OpenSceneMode.Single);
             RemoveSectionEightObjects();
-            GameObject sectionEightTarget = CreateSectionEight();
+            RemoveSectionNineObjects();
+            GameObject sectionEightTarget = CreateSectionNine();
 
             RopeResource ropeResource = Object.FindFirstObjectByType<RopeResource>();
             MainStagePreview preview = Object.FindFirstObjectByType<MainStagePreview>();
@@ -156,8 +156,8 @@ namespace HimoHitoEditor
         public static void AddSectionNine()
         {
             Scene scene = EditorSceneManager.OpenScene(ScenePath, OpenSceneMode.Single);
-            RemoveSectionNineObjects();
-            GameObject sectionNineTarget = CreateSectionNine();
+            RemoveSectionTenObjects();
+            GameObject sectionNineTarget = CreateSectionTen();
 
             RopeResource ropeResource = Object.FindFirstObjectByType<RopeResource>();
             MainStagePreview preview = Object.FindFirstObjectByType<MainStagePreview>();
@@ -171,27 +171,6 @@ namespace HimoHitoEditor
             AssetDatabase.SaveAssets();
             AssetDatabase.Refresh();
             Debug.Log("HimoHito main-stage section 9 added.");
-        }
-
-        [MenuItem("HimoHito/Add Main Stage Section 10")]
-        public static void AddSectionTen()
-        {
-            Scene scene = EditorSceneManager.OpenScene(ScenePath, OpenSceneMode.Single);
-            RemoveSectionTenObjects();
-            GameObject sectionTenTarget = CreateSectionTen();
-
-            RopeResource ropeResource = Object.FindFirstObjectByType<RopeResource>();
-            MainStagePreview preview = Object.FindFirstObjectByType<MainStagePreview>();
-            if (ropeResource != null && preview != null)
-            {
-                preview.Configure(ropeResource.transform, sectionTenTarget.transform);
-                EditorUtility.SetDirty(preview);
-            }
-
-            EditorSceneManager.SaveScene(scene, ScenePath);
-            AssetDatabase.SaveAssets();
-            AssetDatabase.Refresh();
-            Debug.Log("HimoHito main-stage section 10 added.");
         }
 
         public static void AddSectionsFourAndFiveFromCommandLine()
@@ -234,11 +213,6 @@ namespace HimoHitoEditor
         private static GameObject CreateSectionSeven()
         {
             return MainStageSectionSevenSetup.EnsureCreated();
-        }
-
-        private static GameObject CreateSectionEight()
-        {
-            return MainStageSectionEightSetup.EnsureCreated();
         }
 
         private static GameObject CreateSectionNine()
@@ -343,9 +317,9 @@ namespace HimoHitoEditor
 
         private static void RemoveSectionNineObjects()
         {
-            GameObject sectionEightLanding = GameObject.Find(MainStageSectionEightSetup.FinalLandingName);
-            if (sectionEightLanding != null &&
-                sectionEightLanding.TryGetComponent(out MainStageSectionNineCheckpoint checkpoint))
+            GameObject sectionSevenLanding = GameObject.Find(MainStageSectionSevenSetup.LandingName);
+            if (sectionSevenLanding != null &&
+                sectionSevenLanding.TryGetComponent(out MainStageSectionNineCheckpoint checkpoint))
             {
                 Object.DestroyImmediate(checkpoint);
             }
@@ -354,9 +328,12 @@ namespace HimoHitoEditor
             {
                 MainStageSectionNineSetup.HookName,
                 MainStageSectionNineSetup.FlashlightSpotName,
+                MainStageSectionNineSetup.LegacyHookName,
+                MainStageSectionNineSetup.LegacyFlashlightSpotName,
                 MainStageSectionNineSetup.LegacyFlashlightBeamName,
                 MainStageSectionNineSetup.LegacyMovingHazardName,
-                MainStageSectionNineSetup.LandingName
+                MainStageSectionNineSetup.LandingName,
+                MainStageSectionNineSetup.LegacyLandingName
             };
 
             foreach (string objectName in objectNames)
@@ -381,6 +358,7 @@ namespace HimoHitoEditor
             string[] objectNames =
             {
                 MainStageSectionTenSetup.HookName,
+                MainStageSectionTenSetup.LegacyHookName,
                 MainStageSectionTenSetup.GoalName
             };
 

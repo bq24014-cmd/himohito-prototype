@@ -195,8 +195,8 @@ namespace HimoHito
             platformBuilder.ClearPlatforms();
             HasReachedMidpoint = developmentSectionNumber >= 6;
             HasReachedSectionEight = developmentSectionNumber >= 8;
-            HasReachedSectionNine = developmentSectionNumber >= 9;
-            HasReachedSectionTen = developmentSectionNumber >= 10;
+            HasReachedSectionNine = developmentSectionNumber >= 8;
+            HasReachedSectionTen = developmentSectionNumber >= 9;
         }
 
         private void RestoreCheckpointState()

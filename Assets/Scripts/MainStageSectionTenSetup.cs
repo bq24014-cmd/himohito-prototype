@@ -3,15 +3,18 @@ using UnityEngine;
 namespace HimoHito
 {
     /// <summary>
-    /// Creates section ten: one large, forgiving final swing into the goal.
+    /// Creates the new section nine: one large, forgiving final swing into the goal.
     /// </summary>
     public static class MainStageSectionTenSetup
     {
-        public const string HookName = "Main Section 10 Final Hook";
+        public const string HookName = "Main Section 9 Final Hook";
+        public const string LegacyHookName = "Main Section 10 Final Hook";
         public const string GoalName = "Main Stage Goal";
 
         public static GameObject EnsureCreated()
         {
+            RenameLegacyObject(LegacyHookName, HookName);
+
             GameObject sectionNineLanding =
                 FindSceneObject(MainStageSectionNineSetup.LandingName);
             if (sectionNineLanding != null)
@@ -22,12 +25,12 @@ namespace HimoHito
                     checkpoint = sectionNineLanding.AddComponent<MainStageSectionTenCheckpoint>();
                 }
 
-                checkpoint.Configure(new Vector2(175.1f, 3.3f));
+                checkpoint.Configure(new Vector2(152.1f, 0.5f));
             }
 
             GameObject hook = EnsureSolidObject(
                 HookName,
-                new Vector2(182f, 10.5f),
+                new Vector2(159f, 7.7f),
                 new Vector2(1.8f, 0.5f),
                 new Color(1f, 0.72f, 0.18f));
             if (!hook.TryGetComponent(out HookPoint _))
@@ -37,7 +40,7 @@ namespace HimoHito
 
             GameObject goal = EnsureSolidObject(
                 GoalName,
-                new Vector2(205.5f, 2.3f),
+                new Vector2(182.5f, -0.5f),
                 new Vector2(36f, 0.7f),
                 new Color(0.28f, 0.9f, 0.58f));
             if (!goal.TryGetComponent(out MainStageGoalZone _))
@@ -94,6 +97,20 @@ namespace HimoHito
             }
 
             return null;
+        }
+
+        private static void RenameLegacyObject(string legacyName, string currentName)
+        {
+            if (FindSceneObject(currentName) != null)
+            {
+                return;
+            }
+
+            GameObject legacyObject = FindSceneObject(legacyName);
+            if (legacyObject != null)
+            {
+                legacyObject.name = currentName;
+            }
         }
     }
 }

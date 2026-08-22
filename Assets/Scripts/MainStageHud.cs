@@ -31,7 +31,7 @@ namespace HimoHito
             MainStageMidpointSetup.EnsureCreated();
             MainStageSectionSixSetup.EnsureCreated();
             MainStageSectionSevenSetup.EnsureCreated();
-            MainStageSectionEightSetup.EnsureCreated();
+            MainStageSectionEightSetup.DisableLegacyObjects();
             MainStageSectionNineSetup.EnsureCreated();
             GameObject sectionTenTarget = MainStageSectionTenSetup.EnsureCreated();
             if (sectionTenTarget != null)
@@ -126,13 +126,9 @@ namespace HimoHito
             {
                 if (respawnController.HasReachedSectionTen)
                 {
-                    return "第10区間";
-                }
-                if (respawnController.HasReachedSectionNine)
-                {
                     return "第9区間";
                 }
-                if (respawnController.HasReachedSectionEight)
+                if (respawnController.HasReachedSectionNine)
                 {
                     return "第8区間";
                 }
