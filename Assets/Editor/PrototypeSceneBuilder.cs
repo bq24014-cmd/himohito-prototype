@@ -63,7 +63,7 @@ namespace HimoHitoEditor
                 3.2f,
                 2);
             CreateHookPoint("Hook 3", new Vector2(13.8f, 3.9f), new Vector2(1.6f, 0.45f));
-            CreateGoalPlatform("Goal / Landing 3", new Vector2(26.15f, -0.5f), new Vector2(4f, 0.8f));
+            CreateGoalPlatform("Goal / Landing 3", new Vector2(24.15f, -0.5f), new Vector2(4f, 0.8f));
 
             GameObject hud = new GameObject("Tutorial HUD");
             hud.AddComponent<PrototypeHud>();
@@ -239,7 +239,7 @@ namespace HimoHitoEditor
             GameObject goal = FindRootObject(scene, "Goal / Landing 3");
             if (goal != null)
             {
-                changed |= ApplyTransform(goal, new Vector2(26.15f, -0.5f), new Vector2(4f, 0.8f));
+                changed |= ApplyTransform(goal, new Vector2(24.15f, -0.5f), new Vector2(4f, 0.8f));
             }
 
             return changed;
