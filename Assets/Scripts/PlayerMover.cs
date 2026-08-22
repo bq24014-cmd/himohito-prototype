@@ -36,6 +36,7 @@ namespace HimoHito
         private BoxCollider2D bodyCollider;
         private RopeController ropeController;
         private PhysicsMaterial2D movementMaterial;
+        private GeneratedRopePlatform groundedRopePlatform;
         private float moveInput;
         private float coyoteTimer;
         private float jumpBufferTimer;
@@ -123,6 +124,29 @@ namespace HimoHito
                 targetSpeed,
                 speedChange * Time.fixedDeltaTime);
             body.linearVelocity = new Vector2(nextHorizontalSpeed, body.linearVelocity.y);
+
+            if (groundedRopePlatform != null && Mathf.Approximately(moveInput, 0f))
+            {
+                ApplyRopePlatformGrip();
+            }
+        }
+
+        private void ApplyRopePlatformGrip()
+        {
+            Vector2 platformDirection =
+                groundedRopePlatform.End - groundedRopePlatform.Start;
+            if (platformDirection.sqrMagnitude < 0.0001f)
+            {
+                return;
+            }
+
+            Vector2 tangent = platformDirection.normalized;
+            float slopeSpeed = Vector2.Dot(body.linearVelocity, tangent);
+            body.linearVelocity -= tangent * slopeSpeed;
+
+            Vector2 gravity = Physics2D.gravity * body.gravityScale;
+            Vector2 gravityAlongSlope = tangent * Vector2.Dot(gravity, tangent);
+            body.AddForce(-gravityAlongSlope * body.mass, ForceMode2D.Force);
         }
 
         private void ApplyAirControl()
@@ -192,6 +216,7 @@ namespace HimoHito
 
         private bool CheckGrounded()
         {
+            groundedRopePlatform = null;
             Bounds bounds = bodyCollider.bounds;
             Vector2 probeCenter = new Vector2(
                 bounds.center.x,
@@ -201,15 +226,21 @@ namespace HimoHito
                 groundProbeDistance * 2f);
             Collider2D[] overlaps = Physics2D.OverlapBoxAll(probeCenter, probeSize, 0f);
 
+            bool isGrounded = false;
             foreach (Collider2D overlap in overlaps)
             {
                 if (overlap != null && overlap != bodyCollider)
                 {
-                    return true;
+                    isGrounded = true;
+                    if (overlap.TryGetComponent(
+                            out GeneratedRopePlatform generatedRopePlatform))
+                    {
+                        groundedRopePlatform = generatedRopePlatform;
+                    }
                 }
             }
 
-            return false;
+            return isGrounded;
         }
     }
 }
