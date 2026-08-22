@@ -58,6 +58,8 @@ namespace HimoHito
 
         private void Awake()
         {
+            TutorialFirstSectionVisuals.Apply(gameObject);
+
             body = GetComponent<Rigidbody2D>();
             ropeResource = GetComponent<RopeResource>();
             ropeController = GetComponent<RopeController>();
