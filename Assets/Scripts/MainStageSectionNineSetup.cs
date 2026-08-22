@@ -26,12 +26,12 @@ namespace HimoHito
                     checkpoint = sectionEightLanding.AddComponent<MainStageSectionNineCheckpoint>();
                 }
 
-                checkpoint.Configure(new Vector2(139.5f, 2.95f));
+                checkpoint.Configure(new Vector2(159.5f, 2.95f));
             }
 
             GameObject hook = EnsureSolidObject(
                 HookName,
-                new Vector2(145.5f, 8.5f),
+                new Vector2(165.5f, 8.5f),
                 new Vector2(1.6f, 0.45f),
                 new Color(1f, 0.72f, 0.18f));
             if (!hook.TryGetComponent(out HookPoint _))
@@ -53,7 +53,7 @@ namespace HimoHito
             }
             FlashlightSpotVisual.ConfigureSpot(
                 hazard,
-                new Vector2(148.8f, -2.2f),
+                new Vector2(168.8f, -2.2f),
                 4.4f,
                 new Color(1f, 1f, 1f, 0.72f));
             if (!hazard.TryGetComponent(out Rigidbody2D hazardBody))
@@ -77,7 +77,7 @@ namespace HimoHito
 
             GameObject landing = EnsureSolidObject(
                 LandingName,
-                new Vector2(155.1f, 2.3f),
+                new Vector2(175.1f, 2.3f),
                 new Vector2(7f, 0.7f),
                 new Color(0.38f, 0.41f, 0.52f));
             if (!landing.TryGetComponent(out MainStageSectionTarget _))

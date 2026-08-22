@@ -25,26 +25,26 @@ namespace HimoHito
                     checkpoint = sectionSevenLanding.AddComponent<MainStageSectionEightCheckpoint>();
                 }
 
-                checkpoint.Configure(new Vector2(116.5f, 0.15f));
+                checkpoint.Configure(new Vector2(136.5f, 0.15f));
             }
 
             EnsureHook(
                 FirstHookName,
-                new Vector2(121.5f, 4.3f));
+                new Vector2(141.5f, 4.3f));
 
             EnsureSolidObject(
                 PlanningLandingName,
-                new Vector2(127f, -0.2f),
+                new Vector2(147f, -0.2f),
                 new Vector2(6f, 0.7f),
                 new Color(0.38f, 0.41f, 0.52f));
 
             EnsureHook(
                 SecondHookName,
-                new Vector2(129f, 8.5f));
+                new Vector2(149f, 8.5f));
 
             GameObject finalLanding = EnsureSolidObject(
                 FinalLandingName,
-                new Vector2(137f, 2f),
+                new Vector2(157f, 2f),
                 new Vector2(7f, 0.7f),
                 new Color(0.38f, 0.41f, 0.52f));
             if (!finalLanding.TryGetComponent(out MainStageSectionTarget _))

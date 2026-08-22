@@ -296,11 +296,12 @@ namespace HimoHitoEditor
         {
             string[] objectNames =
             {
-                "Main Section 7 Hook",
-                "Main Section 7 Weave Frame",
-                "Main Section 7 Woven Platform",
-                "Main Section 7 Weave Marker",
-                "Main Section 7 Landing"
+                MainStageSectionSevenSetup.HookName,
+                MainStageSectionSevenSetup.FinalHookName,
+                MainStageSectionSevenSetup.WeaveFrameName,
+                MainStageSectionSevenSetup.LegacyWovenPlatformName,
+                MainStageSectionSevenSetup.WeaveMarkerName,
+                MainStageSectionSevenSetup.LandingName
             };
 
             foreach (string objectName in objectNames)

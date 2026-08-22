@@ -3,14 +3,15 @@ using UnityEngine;
 namespace HimoHito
 {
     /// <summary>
-    /// Keeps the section-seven gap available for the free rope-platform mechanic.
-    /// Legacy fixed weave-frame objects are retained only for scene compatibility.
+    /// Creates section seven: turn the first rope into a walkable platform,
+    /// move to its endpoint, then attach a second rope to cross the gap.
     /// </summary>
     public static class MainStageSectionSevenSetup
     {
         public const string HookName = "Main Section 7 Hook";
+        public const string FinalHookName = "Main Section 7 Final Hook";
         public const string WeaveFrameName = "Main Section 7 Weave Frame";
-        public const string WovenPlatformName = "Main Section 7 Woven Platform";
+        public const string LegacyWovenPlatformName = "Main Section 7 Woven Platform";
         public const string WeaveMarkerName = "Main Section 7 Weave Marker";
         public const string LandingName = "Main Section 7 Landing";
 
@@ -18,7 +19,7 @@ namespace HimoHito
         {
             GameObject hook = EnsureSolidObject(
                 HookName,
-                new Vector2(102.5f, 4.2f),
+                new Vector2(102.5f, 3.2f),
                 new Vector2(1.6f, 0.45f),
                 new Color(1f, 0.72f, 0.18f));
             if (!hook.TryGetComponent(out HookPoint _))
@@ -26,11 +27,25 @@ namespace HimoHito
                 hook.AddComponent<HookPoint>();
             }
 
-            GameObject wovenPlatform = EnsureSolidObject(
-                WovenPlatformName,
-                new Vector2(103.85f, -0.8f),
-                new Vector2(12.3f, 0.7f),
-                new Color(0.72f, 0.42f, 1f));
+            GameObject finalHook = FindSceneObject(FinalHookName);
+            if (finalHook == null)
+            {
+                finalHook = FindSceneObject(LegacyWovenPlatformName);
+                if (finalHook != null)
+                {
+                    finalHook.name = FinalHookName;
+                }
+            }
+
+            finalHook = EnsureSolidObject(
+                FinalHookName,
+                new Vector2(120.5f, 3.5f),
+                new Vector2(1.6f, 0.45f),
+                new Color(1f, 0.72f, 0.18f));
+            if (!finalHook.TryGetComponent(out HookPoint _))
+            {
+                finalHook.AddComponent<HookPoint>();
+            }
 
             GameObject weaveFrameObject = FindSceneObject(WeaveFrameName);
             if (weaveFrameObject == null)
@@ -52,7 +67,7 @@ namespace HimoHito
                 weaveFrame = weaveFrameObject.AddComponent<WeaveFrame>();
             }
 
-            weaveFrame.Configure(wovenPlatform, 3, true);
+            weaveFrame.Configure(null, 3, true);
 
             GameObject marker = EnsureSolidObject(
                 WeaveMarkerName,
@@ -61,13 +76,12 @@ namespace HimoHito
                 new Color(0.72f, 0.42f, 1f));
             marker.GetComponent<BoxCollider2D>().enabled = false;
 
-            wovenPlatform.SetActive(false);
             weaveFrameObject.SetActive(false);
             marker.SetActive(false);
 
             GameObject landing = EnsureSolidObject(
                 LandingName,
-                new Vector2(114f, -0.8f),
+                new Vector2(134f, -0.8f),
                 new Vector2(8f, 0.7f),
                 new Color(0.38f, 0.41f, 0.52f));
             if (!landing.TryGetComponent(out MainStageSectionTarget _))
@@ -90,6 +104,7 @@ namespace HimoHito
                 gameObject = new GameObject(name);
             }
 
+            gameObject.SetActive(true);
             gameObject.transform.position = position;
             gameObject.transform.localScale = new Vector3(size.x, size.y, 1f);
             if (!gameObject.TryGetComponent(out SpriteRenderer _))
