@@ -3,7 +3,7 @@ using UnityEngine;
 namespace HimoHito
 {
     /// <summary>
-    /// Marks the run clear when the player reaches the green goal platform.
+    /// Marks the run clear when the player reaches the goal object.
     /// </summary>
     [RequireComponent(typeof(Collider2D))]
     public sealed class GoalZone : MonoBehaviour

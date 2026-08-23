@@ -4,8 +4,8 @@ using UnityEngine;
 namespace HimoHito
 {
     /// <summary>
-    /// Applies the adopted tutorial visuals without changing colliders or physics.
-    /// Sections one and two receive the agreed gameplay palette entries.
+    /// Applies the adopted visuals across the tutorial without changing colliders or physics.
+    /// Gameplay objects receive the agreed toy palette and presentation.
     /// </summary>
     public static class TutorialFirstSectionVisuals
     {
@@ -19,6 +19,8 @@ namespace HimoHito
             "Art/TutorialRailPlatform-v1";
         private const string HookResourcePath =
             "Art/TutorialHookConnector-v1";
+        private const string ToyBoxResourcePath =
+            "Art/TutorialToyBoxGoal-v1";
 
         private static readonly Dictionary<string, Sprite> ProcessedSprites =
             new Dictionary<string, Sprite>();
@@ -39,6 +41,9 @@ namespace HimoHito
             changed |= ApplyColor(FindSceneObject("Tutorial Hook"), HookColor);
             changed |= ApplyColor(FindSceneObject("Landing 1"), PlatformColor);
             changed |= ApplyColor(FindSceneObject("Hook 1"), HookColor);
+            changed |= ApplyColor(FindSceneObject("Hook 2"), HookColor);
+            changed |= ApplyColor(FindSceneObject("Hook 3"), HookColor);
+            changed |= ApplyColor(FindSceneObject("Goal / Landing 3"), PlatformColor);
             changed |= EnsureBackground();
             changed |= EnsureToyVisual(
                 "Start Ground",
@@ -65,8 +70,26 @@ namespace HimoHito
                 "Blue Toy Hook Visual",
                 HookResourcePath,
                 6);
+            changed |= EnsureToyVisual(
+                "Hook 2",
+                "Blue Toy Hook Visual",
+                HookResourcePath,
+                6);
+            changed |= EnsureToyVisual(
+                "Hook 3",
+                "Blue Toy Hook Visual",
+                HookResourcePath,
+                6);
+            changed |= EnsureToyVisual(
+                "Goal / Landing 3",
+                "Open Toy Box Goal Visual",
+                ToyBoxResourcePath,
+                1,
+                true);
             changed |= EnsureFixedHookAttachmentPoint("Tutorial Hook");
             changed |= EnsureFixedHookAttachmentPoint("Hook 1");
+            changed |= EnsureFixedHookAttachmentPoint("Hook 2");
+            changed |= EnsureFixedHookAttachmentPoint("Hook 3");
             return changed;
         }
 
@@ -74,7 +97,8 @@ namespace HimoHito
             string targetName,
             string visualName,
             string resourcePath,
-            int sortingOrderOffset)
+            int sortingOrderOffset,
+            bool preserveWorldAspect = false)
         {
             GameObject target = FindSceneObject(targetName);
             if (target == null ||
@@ -116,6 +140,14 @@ namespace HimoHito
                 1f / Mathf.Max(0.01f, spriteSize.x),
                 1f / Mathf.Max(0.01f, spriteSize.y),
                 1f);
+            if (preserveWorldAspect)
+            {
+                Vector3 parentScale = target.transform.lossyScale;
+                float parentWidth = Mathf.Max(0.01f, Mathf.Abs(parentScale.x));
+                float parentHeight = Mathf.Max(0.01f, Mathf.Abs(parentScale.y));
+                float worldScale = parentWidth / Mathf.Max(0.01f, spriteSize.x);
+                targetScale.y = worldScale / parentHeight;
+            }
             if (visualTransform.localScale != targetScale)
             {
                 visualTransform.localScale = targetScale;
@@ -215,6 +247,11 @@ namespace HimoHito
                 {
                     int index = y * source.width + x;
                     Color32 pixel = pixels[index];
+                    if (pixel.a == 0)
+                    {
+                        continue;
+                    }
+
                     byte highest = System.Math.Max(
                         pixel.r,
                         System.Math.Max(pixel.g, pixel.b));
