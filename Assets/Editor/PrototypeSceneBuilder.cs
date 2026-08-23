@@ -17,6 +17,8 @@ namespace HimoHitoEditor
         private const float ExperimentalRopeLength = 12f;
         private const string TutorialFlashlightSpotName = "Tutorial Flashlight Spot";
         private const string LegacyTutorialHazardName = "Practice Long Rope Obstacle";
+        private static readonly Vector2 TutorialGoalFloorPosition =
+            new Vector2(22.15f, -4.45f);
 
         static PrototypeSceneBuilder()
         {
@@ -63,7 +65,10 @@ namespace HimoHitoEditor
                 3.2f,
                 2);
             CreateHookPoint("Hook 3", new Vector2(13.8f, 3.9f), new Vector2(1.6f, 0.45f));
-            CreateGoalPlatform("Goal / Landing 3", new Vector2(22.15f, -0.5f), new Vector2(4f, 0.8f));
+            CreateGoalPlatform(
+                "Goal / Landing 3",
+                TutorialGoalFloorPosition,
+                new Vector2(4f, 0.8f));
 
             GameObject hud = new GameObject("Tutorial HUD");
             hud.AddComponent<PrototypeHud>();
@@ -269,7 +274,10 @@ namespace HimoHitoEditor
             GameObject goal = FindRootObject(scene, "Goal / Landing 3");
             if (goal != null)
             {
-                changed |= ApplyTransform(goal, new Vector2(22.15f, -0.5f), new Vector2(4f, 0.8f));
+                changed |= ApplyTransform(
+                    goal,
+                    TutorialGoalFloorPosition,
+                    new Vector2(4f, 0.8f));
             }
 
             return changed;
