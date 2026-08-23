@@ -3,7 +3,7 @@ using UnityEngine;
 namespace HimoHito
 {
     /// <summary>
-    /// Applies the first visual trial without changing colliders or physics.
+    /// Applies the adopted first-section visuals without changing colliders or physics.
     /// Only tutorial section one receives the agreed gameplay palette entries.
     /// </summary>
     public static class TutorialFirstSectionVisuals
