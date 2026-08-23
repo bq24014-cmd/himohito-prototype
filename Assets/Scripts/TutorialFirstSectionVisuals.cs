@@ -20,7 +20,7 @@ namespace HimoHito
         private const string HookResourcePath =
             "Art/TutorialHookConnector-v1";
         private const string ToyBoxResourcePath =
-            "Art/TutorialToyBoxGoal-v1";
+            "Art/TutorialToyBoxGoal-v2";
 
         private static readonly Dictionary<string, Sprite> ProcessedSprites =
             new Dictionary<string, Sprite>();
@@ -85,6 +85,7 @@ namespace HimoHito
                 "Open Toy Box Goal Visual",
                 ToyBoxResourcePath,
                 1,
+                true,
                 true);
             changed |= EnsureFixedHookAttachmentPoint("Tutorial Hook");
             changed |= EnsureFixedHookAttachmentPoint("Hook 1");
@@ -98,7 +99,8 @@ namespace HimoHito
             string visualName,
             string resourcePath,
             int sortingOrderOffset,
-            bool preserveWorldAspect = false)
+            bool preserveWorldAspect = false,
+            bool alignBottom = false)
         {
             GameObject target = FindSceneObject(targetName);
             if (target == null ||
@@ -120,12 +122,6 @@ namespace HimoHito
                 GameObject visualObject = new GameObject(visualName);
                 visualTransform = visualObject.transform;
                 visualTransform.SetParent(target.transform, false);
-                changed = true;
-            }
-
-            if (visualTransform.localPosition != Vector3.zero)
-            {
-                visualTransform.localPosition = Vector3.zero;
                 changed = true;
             }
 
@@ -151,6 +147,24 @@ namespace HimoHito
             if (visualTransform.localScale != targetScale)
             {
                 visualTransform.localScale = targetScale;
+                changed = true;
+            }
+
+            Vector3 targetLocalPosition = Vector3.zero;
+            if (alignBottom)
+            {
+                float parentHeight = Mathf.Max(
+                    0.01f,
+                    Mathf.Abs(target.transform.lossyScale.y));
+                float visualWorldHeight =
+                    spriteSize.y * targetScale.y * parentHeight;
+                targetLocalPosition.y =
+                    (visualWorldHeight - parentHeight) * 0.5f / parentHeight;
+            }
+
+            if (visualTransform.localPosition != targetLocalPosition)
+            {
+                visualTransform.localPosition = targetLocalPosition;
                 changed = true;
             }
 
