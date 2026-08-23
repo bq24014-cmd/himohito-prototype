@@ -31,6 +31,8 @@ namespace HimoHito
             new Color(1f, 0.706f, 0.235f);
         private static readonly Color HookColor =
             new Color(0.298f, 0.765f, 1f);
+        private static readonly Color ToyBlockYellow =
+            new Color(1f, 0.824f, 0.2f);
 
         public static bool Apply(GameObject player)
         {
@@ -86,7 +88,9 @@ namespace HimoHito
                 ToyBoxResourcePath,
                 1,
                 true,
-                true);
+                true,
+                new Vector2(3.6f, 1.9f));
+            changed |= EnsureGoalToyBlockTower();
             changed |= EnsureFixedHookAttachmentPoint("Tutorial Hook");
             changed |= EnsureFixedHookAttachmentPoint("Hook 1");
             changed |= EnsureFixedHookAttachmentPoint("Hook 2");
@@ -100,7 +104,8 @@ namespace HimoHito
             string resourcePath,
             int sortingOrderOffset,
             bool preserveWorldAspect = false,
-            bool alignBottom = false)
+            bool alignBottom = false,
+            Vector2? targetWorldSize = null)
         {
             GameObject target = FindSceneObject(targetName);
             if (target == null ||
@@ -143,6 +148,15 @@ namespace HimoHito
                 float parentHeight = Mathf.Max(0.01f, Mathf.Abs(parentScale.y));
                 float worldScale = parentWidth / Mathf.Max(0.01f, spriteSize.x);
                 targetScale.y = worldScale / parentHeight;
+            }
+            if (targetWorldSize.HasValue)
+            {
+                Vector3 parentScale = target.transform.lossyScale;
+                Vector2 worldSize = targetWorldSize.Value;
+                targetScale.x = worldSize.x /
+                    Mathf.Max(0.01f, spriteSize.x * Mathf.Abs(parentScale.x));
+                targetScale.y = worldSize.y /
+                    Mathf.Max(0.01f, spriteSize.y * Mathf.Abs(parentScale.y));
             }
             if (visualTransform.localScale != targetScale)
             {
@@ -203,6 +217,135 @@ namespace HimoHito
             if (sourceRenderer.enabled)
             {
                 sourceRenderer.enabled = false;
+                changed = true;
+            }
+
+            return changed;
+        }
+
+        private static bool EnsureGoalToyBlockTower()
+        {
+            GameObject goal = FindSceneObject("Goal / Landing 3");
+            if (goal == null ||
+                !goal.TryGetComponent(out SpriteRenderer sourceRenderer))
+            {
+                return false;
+            }
+
+            // The room floor in the adopted background sits at Y=-4.85.
+            // These blocks only explain why the elevated toy box is there;
+            // they deliberately have no colliders and cannot create a shortcut.
+            const float floorTop = -4.85f;
+            const float goalBottom = -0.9f;
+            const float blockWidth = 0.88f;
+            const float gap = 0.08f;
+            const int blockCount = 4;
+            float blockHeight =
+                (goalBottom - floorTop - gap * (blockCount - 1)) /
+                blockCount;
+
+            Color[] leftColors =
+            {
+                PlatformColor,
+                HookColor,
+                ToyBlockYellow,
+                PlatformColor
+            };
+            Color[] rightColors =
+            {
+                HookColor,
+                ToyBlockYellow,
+                PlatformColor,
+                HookColor
+            };
+
+            bool changed = false;
+            for (int index = 0; index < blockCount; index++)
+            {
+                float centerY = floorTop + blockHeight * 0.5f +
+                    index * (blockHeight + gap);
+                changed |= EnsureDecorativeBlock(
+                    goal,
+                    sourceRenderer,
+                    $"Toy Block Support Left {index + 1}",
+                    new Vector2(goal.transform.position.x - 1.15f, centerY),
+                    new Vector2(blockWidth, blockHeight),
+                    leftColors[index]);
+                changed |= EnsureDecorativeBlock(
+                    goal,
+                    sourceRenderer,
+                    $"Toy Block Support Right {index + 1}",
+                    new Vector2(goal.transform.position.x + 1.15f, centerY),
+                    new Vector2(blockWidth, blockHeight),
+                    rightColors[index]);
+            }
+
+            return changed;
+        }
+
+        private static bool EnsureDecorativeBlock(
+            GameObject goal,
+            SpriteRenderer sourceRenderer,
+            string blockName,
+            Vector2 worldPosition,
+            Vector2 worldSize,
+            Color color)
+        {
+            bool changed = false;
+            Transform blockTransform = goal.transform.Find(blockName);
+            if (blockTransform == null)
+            {
+                GameObject blockObject = new GameObject(blockName);
+                blockTransform = blockObject.transform;
+                blockTransform.SetParent(goal.transform, false);
+                changed = true;
+            }
+
+            Vector3 targetPosition =
+                new Vector3(worldPosition.x, worldPosition.y, goal.transform.position.z);
+            if (blockTransform.position != targetPosition)
+            {
+                blockTransform.position = targetPosition;
+                changed = true;
+            }
+
+            if (blockTransform.rotation != Quaternion.identity)
+            {
+                blockTransform.rotation = Quaternion.identity;
+                changed = true;
+            }
+
+            Vector3 parentScale = goal.transform.lossyScale;
+            Vector3 targetScale = new Vector3(
+                worldSize.x / Mathf.Max(0.01f, Mathf.Abs(parentScale.x)),
+                worldSize.y / Mathf.Max(0.01f, Mathf.Abs(parentScale.y)),
+                1f);
+            if (blockTransform.localScale != targetScale)
+            {
+                blockTransform.localScale = targetScale;
+                changed = true;
+            }
+
+            if (!blockTransform.TryGetComponent(out SolidSprite solidSprite))
+            {
+                solidSprite = blockTransform.gameObject.AddComponent<SolidSprite>();
+                changed = true;
+            }
+            if (solidSprite.Color != color)
+            {
+                solidSprite.Color = color;
+                changed = true;
+            }
+
+            SpriteRenderer renderer = blockTransform.GetComponent<SpriteRenderer>();
+            if (renderer.sortingLayerID != sourceRenderer.sortingLayerID)
+            {
+                renderer.sortingLayerID = sourceRenderer.sortingLayerID;
+                changed = true;
+            }
+            if (renderer.sortingOrder != sourceRenderer.sortingOrder)
+            {
+                renderer.sortingOrder = sourceRenderer.sortingOrder;
                 changed = true;
             }
 
