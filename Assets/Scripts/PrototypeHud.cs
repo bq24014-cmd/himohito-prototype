@@ -178,8 +178,8 @@ namespace HimoHito
                 return;
             }
 
-            float panelWidth = Mathf.Min(340f, Screen.width - 24f);
-            const float panelHeight = 120f;
+            float panelWidth = Mathf.Min(360f, Screen.width - 24f);
+            const float panelHeight = 148f;
             const float screenMargin = 12f;
             float panelX = Mathf.Clamp(
                 screenPoint.x - panelWidth * 0.5f,
@@ -200,8 +200,12 @@ namespace HimoHito
             GUI.Box(panel, GUIContent.none);
             GUI.color = previousColor;
 
-            GUILayout.BeginArea(panel);
-            GUILayout.Space(5f);
+            Rect contentArea = new Rect(
+                panel.x + 10f,
+                panel.y + 7f,
+                panel.width - 20f,
+                panel.height - 14f);
+            GUILayout.BeginArea(contentArea);
             GUILayout.Label("このヒモを足場にする", weavePromptTitleStyle);
             GUILayout.Label(
                 $"永久に使う長さ  {platformBuilder.CurrentPlatformCost:0.0}",
@@ -209,7 +213,7 @@ namespace HimoHito
 
             string actionMessage = platformBuilder.CanBuildCurrentPlatform
                 ? "Q：ここまでのヒモを足場にする"
-                : $"足場化後にヒモを{platformBuilder.MinimumRopeReserve:0.0}以上残す必要があります";
+                : $"足場にできません\nヒモを{platformBuilder.MinimumRopeReserve:0.0}以上残してください";
             GUILayout.Label(actionMessage, weavePromptActionStyle);
             GUILayout.EndArea();
         }
@@ -331,19 +335,22 @@ namespace HimoHito
                 alignment = TextAnchor.MiddleCenter,
                 fontSize = 22,
                 fontStyle = FontStyle.Bold,
+                wordWrap = true,
                 normal = { textColor = new Color(0.86f, 0.72f, 1f) }
             };
             weavePromptBodyStyle = new GUIStyle(GUI.skin.label)
             {
                 alignment = TextAnchor.MiddleCenter,
                 fontSize = 18,
+                wordWrap = true,
                 normal = { textColor = Color.white }
             };
             weavePromptActionStyle = new GUIStyle(GUI.skin.label)
             {
                 alignment = TextAnchor.MiddleCenter,
-                fontSize = 20,
+                fontSize = 18,
                 fontStyle = FontStyle.Bold,
+                wordWrap = true,
                 normal = { textColor = new Color(1f, 0.86f, 0.34f) }
             };
             clearTitleStyle = new GUIStyle(GUI.skin.label)
