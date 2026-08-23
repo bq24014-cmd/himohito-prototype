@@ -327,6 +327,12 @@ namespace HimoHito
                 changed = true;
             }
 
+            if (!background.TryGetComponent(out TutorialBackgroundParallax _))
+            {
+                background.AddComponent<TutorialBackgroundParallax>();
+                changed = true;
+            }
+
             return changed;
         }
 
