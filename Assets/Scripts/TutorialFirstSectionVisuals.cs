@@ -4,8 +4,8 @@ using UnityEngine;
 namespace HimoHito
 {
     /// <summary>
-    /// Applies the adopted first-section visuals without changing colliders or physics.
-    /// Only tutorial section one receives the agreed gameplay palette entries.
+    /// Applies the adopted tutorial visuals without changing colliders or physics.
+    /// Sections one and two receive the agreed gameplay palette entries.
     /// </summary>
     public static class TutorialFirstSectionVisuals
     {
@@ -37,6 +37,8 @@ namespace HimoHito
             changed |= ApplyColor(FindSceneObject("Start Ground"), PlatformColor);
             changed |= ApplyColor(FindSceneObject("Tutorial Landing"), PlatformColor);
             changed |= ApplyColor(FindSceneObject("Tutorial Hook"), HookColor);
+            changed |= ApplyColor(FindSceneObject("Landing 1"), PlatformColor);
+            changed |= ApplyColor(FindSceneObject("Hook 1"), HookColor);
             changed |= EnsureBackground();
             changed |= EnsureToyVisual(
                 "Start Ground",
@@ -53,7 +55,18 @@ namespace HimoHito
                 "Blue Toy Hook Visual",
                 HookResourcePath,
                 6);
-            changed |= EnsureTutorialHookAttachmentPoint();
+            changed |= EnsureToyVisual(
+                "Landing 1",
+                "Blue Railway Platform Visual",
+                RailResourcePath,
+                1);
+            changed |= EnsureToyVisual(
+                "Hook 1",
+                "Blue Toy Hook Visual",
+                HookResourcePath,
+                6);
+            changed |= EnsureFixedHookAttachmentPoint("Tutorial Hook");
+            changed |= EnsureFixedHookAttachmentPoint("Hook 1");
             return changed;
         }
 
@@ -150,11 +163,11 @@ namespace HimoHito
             return changed;
         }
 
-        private static bool EnsureTutorialHookAttachmentPoint()
+        private static bool EnsureFixedHookAttachmentPoint(string hookName)
         {
-            GameObject tutorialHook = FindSceneObject("Tutorial Hook");
-            if (tutorialHook == null ||
-                !tutorialHook.TryGetComponent(out HookPoint hookPoint))
+            GameObject hook = FindSceneObject(hookName);
+            if (hook == null ||
+                !hook.TryGetComponent(out HookPoint hookPoint))
             {
                 return false;
             }
