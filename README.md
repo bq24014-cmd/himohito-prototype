@@ -108,7 +108,7 @@ Hookへ掛けたまま`Q`を押すと、Hookから現在のプレイヤー位置
 
 シーンを再構築する場合は、Unity上部メニューの`HimoHito > Build Tutorial Scene`を使用します。現在開いているシーンにかかわらず通しプレイを始める場合は、`HimoHito > Play From Tutorial`を使用します。
 
-通常のPlayは`Tutorial`から始まります。第7区間だけを確認する場合は、`HimoHito > Play From Section 7 Experiment`を選びます。
+通常のPlayは`Tutorial`から始まります。本編へ移った後は、第1区間の開始床からプレイを始めます。
 
 ### Windows版を作成
 

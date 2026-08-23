@@ -12,7 +12,7 @@ namespace HimoHito
     {
         [SerializeField] private float fallThreshold = -9f;
         [SerializeField, Min(0.01f)] private float minimumUsableRopeLength = 1f;
-        [SerializeField] private bool startFromCurrentSectionForDevelopment = true;
+        [SerializeField] private bool startFromCurrentSectionForDevelopment;
         [SerializeField] private Vector2 developmentStartPosition =
             new Vector2(96.5f, 0.15f);
         [SerializeField, Min(1f)] private float developmentRopeLength = 28f;
