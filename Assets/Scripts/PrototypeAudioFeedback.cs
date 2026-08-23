@@ -12,10 +12,15 @@ namespace HimoHito
     {
         [SerializeField, Range(0f, 1f)] private float hookAttachWoodVolume = 0.42f;
         [SerializeField, Range(0f, 1f)] private float hookAttachSoftVolume = 0.10f;
+        [SerializeField, Min(0f)] private float releaseQuietSpeed = 1f;
+        [SerializeField, Min(0.01f)] private float releaseFullSpeed = 14f;
+        [SerializeField, Range(0f, 1f)] private float releaseQuietVolume = 0.04f;
+        [SerializeField, Range(0f, 1f)] private float releaseFullVolume = 0.24f;
 
         private AudioSource audioSource;
         private AudioClip hookAttachWoodClip;
         private AudioClip hookAttachSoftClip;
+        private AudioClip ropeReleaseWindClip;
 
         private void Awake()
         {
@@ -31,6 +36,7 @@ namespace HimoHito
             audioSource.dopplerLevel = 0f;
             hookAttachWoodClip = Resources.Load<AudioClip>("Audio/HookAttachWood");
             hookAttachSoftClip = Resources.Load<AudioClip>("Audio/HookAttachSoft");
+            ropeReleaseWindClip = Resources.Load<AudioClip>("Audio/RopeReleaseWind");
         }
 
         public void PlayHookAttached()
@@ -49,6 +55,24 @@ namespace HimoHito
             {
                 audioSource.PlayOneShot(hookAttachSoftClip, hookAttachSoftVolume);
             }
+        }
+
+        public void PlayRopeReleased(float releaseSpeed)
+        {
+            if (audioSource == null || ropeReleaseWindClip == null)
+            {
+                return;
+            }
+
+            float speedRatio = Mathf.InverseLerp(
+                releaseQuietSpeed,
+                Mathf.Max(releaseQuietSpeed + 0.01f, releaseFullSpeed),
+                Mathf.Max(0f, releaseSpeed));
+            float volume = Mathf.Lerp(
+                releaseQuietVolume,
+                releaseFullVolume,
+                speedRatio);
+            audioSource.PlayOneShot(ropeReleaseWindClip, volume);
         }
     }
 }

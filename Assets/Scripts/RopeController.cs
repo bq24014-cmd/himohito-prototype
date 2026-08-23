@@ -112,7 +112,7 @@ namespace HimoHito
             {
                 if (IsAttached)
                 {
-                    DetachAndRefund();
+                    DetachAndRefund(playReleaseSound: true);
                 }
                 else
                 {
@@ -126,7 +126,7 @@ namespace HimoHito
             {
                 if (IsAttached)
                 {
-                    DetachAndRefund();
+                    DetachAndRefund(playReleaseSound: true);
                 }
                 else
                 {
@@ -237,7 +237,7 @@ namespace HimoHito
             return false;
         }
 
-        public void DetachAndRefund(bool unusedLegacyAwardFlag = false)
+        public void DetachAndRefund(bool playReleaseSound = false)
         {
             if (!IsAttached)
             {
@@ -255,6 +255,10 @@ namespace HimoHito
             ropeResource.Refund(spentLength);
             spentLength = 0f;
             ClampSelectedRopeLength();
+            if (playReleaseSound)
+            {
+                audioFeedback.PlayRopeReleased(preservedVelocity.magnitude);
+            }
         }
 
         public bool CommitAttachedRopeAsPlatform(float permanentCost)
