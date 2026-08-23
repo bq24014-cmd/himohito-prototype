@@ -27,6 +27,7 @@ namespace HimoHito
         private DistanceJoint2D ropeJoint;
         private LineRenderer lineRenderer;
         private RopeResource ropeResource;
+        private PrototypeAudioFeedback audioFeedback;
         private SpriteRenderer bodyRenderer;
         private Camera mainCamera;
         private Material runtimeMaterial;
@@ -66,6 +67,11 @@ namespace HimoHito
             ropeJoint = GetComponent<DistanceJoint2D>();
             lineRenderer = GetComponent<LineRenderer>();
             ropeResource = GetComponent<RopeResource>();
+            audioFeedback = GetComponent<PrototypeAudioFeedback>();
+            if (audioFeedback == null)
+            {
+                audioFeedback = gameObject.AddComponent<PrototypeAudioFeedback>();
+            }
             bodyRenderer = GetComponent<SpriteRenderer>();
             mainCamera = Camera.main;
 
@@ -224,6 +230,7 @@ namespace HimoHito
                 ropeJoint.distance = selectedLength;
                 ropeJoint.enabled = true;
                 lineRenderer.enabled = true;
+                audioFeedback.PlayHookAttached();
                 return true;
             }
 
