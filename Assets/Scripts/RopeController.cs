@@ -6,6 +6,7 @@ namespace HimoHito
     /// Arrow keys aim the rope. E toggles attachment and detachment.
     /// Mouse input remains available as an optional alternative.
     /// </summary>
+    [DisallowMultipleComponent]
     [RequireComponent(typeof(Rigidbody2D), typeof(DistanceJoint2D), typeof(LineRenderer))]
     [RequireComponent(typeof(RopeResource))]
     public sealed class RopeController : MonoBehaviour
@@ -49,6 +50,17 @@ namespace HimoHito
 
         private void Awake()
         {
+            RopeController[] controllers = GetComponents<RopeController>();
+            if (controllers.Length > 0 && controllers[0] != this)
+            {
+                Debug.LogWarning(
+                    "Duplicate RopeController was disabled to prevent one E press " +
+                    "from attaching and detaching in the same frame.",
+                    this);
+                enabled = false;
+                return;
+            }
+
             body = GetComponent<Rigidbody2D>();
             bodyCollider = GetComponent<Collider2D>();
             ropeJoint = GetComponent<DistanceJoint2D>();

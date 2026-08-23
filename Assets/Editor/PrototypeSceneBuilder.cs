@@ -127,6 +127,7 @@ namespace HimoHitoEditor
             SceneManager.SetActiveScene(prototypeScene);
             bool changed = false;
 
+            changed |= RemoveDuplicateRopeControllers(prototypeScene);
             changed |= EnsureExperimentalRopeLength(prototypeScene);
             changed |= EnsureHorizontalCameraFollow(prototypeScene);
             changed |= RemoveRootObject(prototypeScene, "Practice Safety Floor");
@@ -173,6 +174,31 @@ namespace HimoHitoEditor
             }
 
             return null;
+        }
+
+        private static bool RemoveDuplicateRopeControllers(Scene scene)
+        {
+            GameObject player = FindRootObject(scene, "Player");
+            if (player == null)
+            {
+                return false;
+            }
+
+            RopeController[] controllers = player.GetComponents<RopeController>();
+            if (controllers.Length <= 1)
+            {
+                return false;
+            }
+
+            for (int i = 1; i < controllers.Length; i++)
+            {
+                Object.DestroyImmediate(controllers[i]);
+            }
+
+            Debug.LogWarning(
+                "Removed duplicate RopeController components from the tutorial player.",
+                player);
+            return true;
         }
 
         private static bool EnsureExperimentalRopeLength(Scene scene)
