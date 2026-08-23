@@ -5,7 +5,7 @@ namespace HimoHito
     /// <summary>
     /// Follows the player's horizontal movement while keeping camera height and zoom fixed.
     /// </summary>
-    [RequireComponent(typeof(Camera))]
+    [RequireComponent(typeof(Camera), typeof(AudioListener))]
     public sealed class HorizontalCameraFollow : MonoBehaviour
     {
         [SerializeField] private Transform target;
@@ -22,6 +22,11 @@ namespace HimoHito
 
         private void Awake()
         {
+            if (!TryGetComponent(out AudioListener _))
+            {
+                gameObject.AddComponent<AudioListener>();
+            }
+
             fixedY = transform.position.y;
             fixedZ = transform.position.z;
             FindTargetIfNeeded();

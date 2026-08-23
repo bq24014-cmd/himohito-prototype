@@ -383,6 +383,7 @@ namespace HimoHitoEditor
             camera.orthographicSize = 8.7f;
             camera.clearFlags = CameraClearFlags.SolidColor;
             camera.backgroundColor = new Color(0.045f, 0.052f, 0.11f);
+            cameraObject.AddComponent<AudioListener>();
             cameraObject.AddComponent<HorizontalCameraFollow>();
             MainStagePreview preview = cameraObject.AddComponent<MainStagePreview>();
             preview.Configure(player, previewTarget);
