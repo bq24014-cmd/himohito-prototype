@@ -87,10 +87,44 @@ namespace HimoHito
                 1,
                 true,
                 true);
+            changed |= RemoveLegacyGoalToyBlockSupports();
             changed |= EnsureFixedHookAttachmentPoint("Tutorial Hook");
             changed |= EnsureFixedHookAttachmentPoint("Hook 1");
             changed |= EnsureFixedHookAttachmentPoint("Hook 2");
             changed |= EnsureFixedHookAttachmentPoint("Hook 3");
+            return changed;
+        }
+
+        private static bool RemoveLegacyGoalToyBlockSupports()
+        {
+            GameObject goal = FindSceneObject("Goal / Landing 3");
+            if (goal == null)
+            {
+                return false;
+            }
+
+            bool changed = false;
+            for (int index = goal.transform.childCount - 1; index >= 0; index--)
+            {
+                Transform child = goal.transform.GetChild(index);
+                if (!child.name.StartsWith(
+                        "Toy Block Support ",
+                        System.StringComparison.Ordinal))
+                {
+                    continue;
+                }
+
+                if (Application.isPlaying)
+                {
+                    Object.Destroy(child.gameObject);
+                }
+                else
+                {
+                    Object.DestroyImmediate(child.gameObject);
+                }
+                changed = true;
+            }
+
             return changed;
         }
 
