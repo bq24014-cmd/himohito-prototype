@@ -68,6 +68,8 @@ namespace HimoHitoEditor
             GameObject hud = new GameObject("Tutorial HUD");
             hud.AddComponent<PrototypeHud>();
 
+            TutorialFirstSectionVisuals.Apply(GameObject.Find("Player"));
+
             EditorSceneManager.SaveScene(scene, ScenePath);
             EditorBuildSettings.scenes = new[]
             {
@@ -135,6 +137,8 @@ namespace HimoHitoEditor
             changed |= EnsurePracticeSection(prototypeScene);
             changed |= EnsureWeaveExperiment(prototypeScene);
             changed |= EnsureTutorialCheckpoints(prototypeScene);
+            changed |= TutorialFirstSectionVisuals.Apply(
+                FindRootObject(prototypeScene, "Player"));
 
             if (changed)
             {

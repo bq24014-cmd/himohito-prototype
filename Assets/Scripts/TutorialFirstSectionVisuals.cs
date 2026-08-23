@@ -20,16 +20,18 @@ namespace HimoHito
         private static readonly Color HookColor =
             new Color(0.298f, 0.765f, 1f);
 
-        public static void Apply(GameObject player)
+        public static bool Apply(GameObject player)
         {
-            ApplyColor(player, PlayerColor);
-            ApplyColor(FindSceneObject("Start Ground"), PlatformColor);
-            ApplyColor(FindSceneObject("Tutorial Landing"), PlatformColor);
-            ApplyColor(FindSceneObject("Tutorial Hook"), HookColor);
-            EnsureBackground();
+            bool changed = false;
+            changed |= ApplyColor(player, PlayerColor);
+            changed |= ApplyColor(FindSceneObject("Start Ground"), PlatformColor);
+            changed |= ApplyColor(FindSceneObject("Tutorial Landing"), PlatformColor);
+            changed |= ApplyColor(FindSceneObject("Tutorial Hook"), HookColor);
+            changed |= EnsureBackground();
+            return changed;
         }
 
-        private static void EnsureBackground()
+        private static bool EnsureBackground()
         {
             Sprite backgroundSprite =
                 Resources.Load<Sprite>(BackgroundResourcePath);
@@ -37,43 +39,79 @@ namespace HimoHito
             {
                 Debug.LogWarning(
                     $"Tutorial background was not found: {BackgroundResourcePath}");
-                return;
+                return false;
             }
 
+            bool changed = false;
             GameObject background = FindSceneObject(BackgroundName);
             if (background == null)
             {
                 background = new GameObject(BackgroundName);
+                changed = true;
             }
 
-            background.transform.position = new Vector3(-15f, 0f, 1f);
+            Vector3 targetPosition = new Vector3(-15f, 0f, 1f);
+            if (background.transform.position != targetPosition)
+            {
+                background.transform.position = targetPosition;
+                changed = true;
+            }
+
             float width = Mathf.Max(0.01f, backgroundSprite.bounds.size.x);
             float scale = 40f / width;
-            background.transform.localScale = new Vector3(scale, scale, 1f);
+            Vector3 targetScale = new Vector3(scale, scale, 1f);
+            if (background.transform.localScale != targetScale)
+            {
+                background.transform.localScale = targetScale;
+                changed = true;
+            }
 
             if (!background.TryGetComponent(out SpriteRenderer renderer))
             {
                 renderer = background.AddComponent<SpriteRenderer>();
+                changed = true;
             }
 
-            renderer.sprite = backgroundSprite;
-            renderer.color = Color.white;
-            renderer.sortingOrder = -100;
+            if (renderer.sprite != backgroundSprite)
+            {
+                renderer.sprite = backgroundSprite;
+                changed = true;
+            }
+
+            if (renderer.color != Color.white)
+            {
+                renderer.color = Color.white;
+                changed = true;
+            }
+
+            if (renderer.sortingOrder != -100)
+            {
+                renderer.sortingOrder = -100;
+                changed = true;
+            }
+
+            return changed;
         }
 
-        private static void ApplyColor(GameObject target, Color color)
+        private static bool ApplyColor(GameObject target, Color color)
         {
             if (target == null)
             {
-                return;
+                return false;
             }
 
             if (!target.TryGetComponent(out SolidSprite visual))
             {
-                return;
+                return false;
+            }
+
+            if (visual.Color == color)
+            {
+                return false;
             }
 
             visual.Color = color;
+            return true;
         }
 
         private static GameObject FindSceneObject(string objectName)
