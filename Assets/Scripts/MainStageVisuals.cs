@@ -1,0 +1,373 @@
+using UnityEngine;
+
+namespace HimoHito
+{
+    /// <summary>
+    /// Extends the adopted night-child-room toy language to the main stage.
+    /// Only renderers are changed; colliders, positions, and physics stay intact.
+    /// </summary>
+    public static class MainStageVisuals
+    {
+        private const string BackgroundResourcePath =
+            "Art/TutorialNightChildRoom-v1";
+        private const string BlockResourcePath =
+            "Art/TutorialBlockPlatform-v1";
+        private const string RailResourcePath =
+            "Art/TutorialRailPlatform-v1";
+        private const string HookResourcePath =
+            "Art/TutorialHookConnector-v1";
+        private const string ToyBoxResourcePath =
+            "Art/TutorialToyBoxGoal-v2";
+        private const string BackgroundName =
+            "Main Stage Night Child Room Background";
+
+        private static readonly Color PlayerColor =
+            new Color(1f, 0.365f, 0.561f);
+        private static readonly Color BlockColor =
+            new Color(1f, 0.706f, 0.235f);
+        private static readonly Color RailColor =
+            new Color(0.298f, 0.765f, 1f);
+        private static readonly Color HookColor = RailColor;
+
+        public static bool Apply(GameObject player)
+        {
+            bool changed = false;
+            changed |= ApplyColor(player, PlayerColor);
+            changed |= EnsureBackground();
+
+            foreach (GameObject candidate in
+                     Resources.FindObjectsOfTypeAll<GameObject>())
+            {
+                if (!candidate.scene.IsValid() ||
+                    !candidate.activeInHierarchy ||
+                    !candidate.name.StartsWith(
+                        "Main ",
+                        System.StringComparison.Ordinal))
+                {
+                    continue;
+                }
+
+                if (candidate.TryGetComponent(out HookPoint hookPoint))
+                {
+                    changed |= ApplyColor(candidate, HookColor);
+                    changed |= EnsureToyVisual(
+                        candidate,
+                        "Blue Toy Hook Visual",
+                        HookResourcePath,
+                        6);
+                    changed |= hookPoint.ConfigureFixedAttachmentPoint(Vector2.zero);
+                    continue;
+                }
+
+                if (candidate.name == MainStageSectionTenSetup.GoalName)
+                {
+                    changed |= ApplyColor(candidate, RailColor);
+                    changed |= EnsureToyVisual(
+                        candidate,
+                        "Blue Railway Goal Base Visual",
+                        RailResourcePath,
+                        1);
+                    changed |= EnsureGoalToyBox(candidate);
+                    continue;
+                }
+
+                if (candidate.TryGetComponent(out BoxCollider2D _) &&
+                    candidate.TryGetComponent(out SolidSprite _))
+                {
+                    bool isStartGround = candidate.name == "Main Start Ground";
+                    changed |= ApplyColor(
+                        candidate,
+                        isStartGround ? BlockColor : RailColor);
+                    changed |= EnsureToyVisual(
+                        candidate,
+                        isStartGround
+                            ? "Orange Block Platform Visual"
+                            : "Blue Railway Platform Visual",
+                        isStartGround ? BlockResourcePath : RailResourcePath,
+                        1);
+                }
+            }
+
+            return changed;
+        }
+
+        private static bool EnsureToyVisual(
+            GameObject target,
+            string visualName,
+            string resourcePath,
+            int sortingOrderOffset)
+        {
+            if (target == null ||
+                !target.TryGetComponent(out SpriteRenderer sourceRenderer))
+            {
+                return false;
+            }
+
+            Sprite processedSprite =
+                TutorialFirstSectionVisuals.LoadProcessedToySprite(resourcePath);
+            if (processedSprite == null)
+            {
+                return false;
+            }
+
+            bool changed = false;
+            Transform visualTransform = target.transform.Find(visualName);
+            if (visualTransform == null)
+            {
+                GameObject visualObject = new GameObject(visualName);
+                visualTransform = visualObject.transform;
+                visualTransform.SetParent(target.transform, false);
+                changed = true;
+            }
+
+            Vector2 spriteSize = processedSprite.bounds.size;
+            Vector3 targetScale = new Vector3(
+                1f / Mathf.Max(0.01f, spriteSize.x),
+                1f / Mathf.Max(0.01f, spriteSize.y),
+                1f);
+            if (visualTransform.localPosition != Vector3.zero)
+            {
+                visualTransform.localPosition = Vector3.zero;
+                changed = true;
+            }
+            if (visualTransform.localRotation != Quaternion.identity)
+            {
+                visualTransform.localRotation = Quaternion.identity;
+                changed = true;
+            }
+            if (visualTransform.localScale != targetScale)
+            {
+                visualTransform.localScale = targetScale;
+                changed = true;
+            }
+
+            if (!visualTransform.TryGetComponent(out SpriteRenderer renderer))
+            {
+                renderer = visualTransform.gameObject.AddComponent<SpriteRenderer>();
+                changed = true;
+            }
+            if (renderer.sprite != processedSprite)
+            {
+                renderer.sprite = processedSprite;
+                changed = true;
+            }
+            if (renderer.color != Color.white)
+            {
+                renderer.color = Color.white;
+                changed = true;
+            }
+            if (renderer.sortingLayerID != sourceRenderer.sortingLayerID)
+            {
+                renderer.sortingLayerID = sourceRenderer.sortingLayerID;
+                changed = true;
+            }
+
+            int targetOrder = sourceRenderer.sortingOrder + sortingOrderOffset;
+            if (renderer.sortingOrder != targetOrder)
+            {
+                renderer.sortingOrder = targetOrder;
+                changed = true;
+            }
+            if (sourceRenderer.enabled)
+            {
+                sourceRenderer.enabled = false;
+                changed = true;
+            }
+
+            return changed;
+        }
+
+        private static bool EnsureGoalToyBox(GameObject goal)
+        {
+            if (goal == null ||
+                !goal.TryGetComponent(out SpriteRenderer sourceRenderer))
+            {
+                return false;
+            }
+
+            Sprite toyBoxSprite =
+                TutorialFirstSectionVisuals.LoadProcessedToySprite(
+                    ToyBoxResourcePath);
+            if (toyBoxSprite == null)
+            {
+                return false;
+            }
+
+            const string visualName = "Main Goal Open Toy Box Visual";
+            const float toyBoxWorldWidth = 4.5f;
+            const float leftInset = 0.4f;
+            bool changed = false;
+            Transform visualTransform = goal.transform.Find(visualName);
+            if (visualTransform == null)
+            {
+                GameObject visualObject = new GameObject(visualName);
+                visualTransform = visualObject.transform;
+                visualTransform.SetParent(goal.transform, false);
+                changed = true;
+            }
+
+            Vector2 spriteSize = toyBoxSprite.bounds.size;
+            float toyBoxWorldHeight =
+                toyBoxWorldWidth * spriteSize.y / Mathf.Max(0.01f, spriteSize.x);
+            float goalWidth = Mathf.Abs(goal.transform.lossyScale.x);
+            float goalHeight = Mathf.Abs(goal.transform.lossyScale.y);
+            float goalLeft = goal.transform.position.x - goalWidth * 0.5f;
+            float goalTop = goal.transform.position.y + goalHeight * 0.5f;
+            Vector3 targetWorldPosition = new Vector3(
+                goalLeft + leftInset + toyBoxWorldWidth * 0.5f,
+                goalTop + toyBoxWorldHeight * 0.5f,
+                goal.transform.position.z);
+            if (visualTransform.position != targetWorldPosition)
+            {
+                visualTransform.position = targetWorldPosition;
+                changed = true;
+            }
+            if (visualTransform.rotation != Quaternion.identity)
+            {
+                visualTransform.rotation = Quaternion.identity;
+                changed = true;
+            }
+
+            Vector3 parentScale = goal.transform.lossyScale;
+            Vector3 targetScale = new Vector3(
+                toyBoxWorldWidth /
+                    Mathf.Max(0.01f, spriteSize.x * Mathf.Abs(parentScale.x)),
+                toyBoxWorldHeight /
+                    Mathf.Max(0.01f, spriteSize.y * Mathf.Abs(parentScale.y)),
+                1f);
+            if (visualTransform.localScale != targetScale)
+            {
+                visualTransform.localScale = targetScale;
+                changed = true;
+            }
+
+            if (!visualTransform.TryGetComponent(out SpriteRenderer renderer))
+            {
+                renderer = visualTransform.gameObject.AddComponent<SpriteRenderer>();
+                changed = true;
+            }
+            if (renderer.sprite != toyBoxSprite)
+            {
+                renderer.sprite = toyBoxSprite;
+                changed = true;
+            }
+            if (renderer.color != Color.white)
+            {
+                renderer.color = Color.white;
+                changed = true;
+            }
+            if (renderer.sortingLayerID != sourceRenderer.sortingLayerID)
+            {
+                renderer.sortingLayerID = sourceRenderer.sortingLayerID;
+                changed = true;
+            }
+            if (renderer.sortingOrder != sourceRenderer.sortingOrder + 2)
+            {
+                renderer.sortingOrder = sourceRenderer.sortingOrder + 2;
+                changed = true;
+            }
+
+            return changed;
+        }
+
+        private static bool EnsureBackground()
+        {
+            Sprite backgroundSprite =
+                Resources.Load<Sprite>(BackgroundResourcePath);
+            if (backgroundSprite == null)
+            {
+                Debug.LogWarning(
+                    $"Main-stage background was not found: {BackgroundResourcePath}");
+                return false;
+            }
+
+            bool changed = false;
+            GameObject background = FindSceneObject(BackgroundName);
+            if (background == null)
+            {
+                background = new GameObject(BackgroundName);
+                changed = true;
+            }
+
+            Camera targetCamera = Camera.main;
+            float cameraX = targetCamera != null
+                ? targetCamera.transform.position.x
+                : 0f;
+            Vector3 targetPosition = new Vector3(cameraX, 0f, 1f);
+            if (background.transform.position != targetPosition)
+            {
+                background.transform.position = targetPosition;
+                changed = true;
+            }
+
+            float width = Mathf.Max(0.01f, backgroundSprite.bounds.size.x);
+            float scale = 60f / width;
+            Vector3 targetScale = new Vector3(scale, scale, 1f);
+            if (background.transform.localScale != targetScale)
+            {
+                background.transform.localScale = targetScale;
+                changed = true;
+            }
+
+            if (!background.TryGetComponent(out SpriteRenderer renderer))
+            {
+                renderer = background.AddComponent<SpriteRenderer>();
+                changed = true;
+            }
+            if (renderer.sprite != backgroundSprite)
+            {
+                renderer.sprite = backgroundSprite;
+                changed = true;
+            }
+            if (renderer.color != Color.white)
+            {
+                renderer.color = Color.white;
+                changed = true;
+            }
+            if (renderer.sortingOrder != -100)
+            {
+                renderer.sortingOrder = -100;
+                changed = true;
+            }
+
+            if (!background.TryGetComponent(
+                    out TutorialBackgroundParallax parallax))
+            {
+                parallax = background.AddComponent<TutorialBackgroundParallax>();
+                changed = true;
+            }
+            parallax.Configure(0.97f);
+            return changed;
+        }
+
+        private static bool ApplyColor(GameObject target, Color color)
+        {
+            if (target == null || !target.TryGetComponent(out SolidSprite visual))
+            {
+                return false;
+            }
+
+            if (visual.Color == color)
+            {
+                return false;
+            }
+
+            visual.Color = color;
+            return true;
+        }
+
+        private static GameObject FindSceneObject(string objectName)
+        {
+            foreach (GameObject candidate in
+                     Resources.FindObjectsOfTypeAll<GameObject>())
+            {
+                if (candidate.scene.IsValid() && candidate.name == objectName)
+                {
+                    return candidate;
+                }
+            }
+
+            return null;
+        }
+    }
+}

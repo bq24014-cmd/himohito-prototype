@@ -95,6 +95,11 @@ namespace HimoHito
             return changed;
         }
 
+        public static Sprite LoadProcessedToySprite(string resourcePath)
+        {
+            return GetProcessedSprite(resourcePath);
+        }
+
         private static bool RemoveLegacyGoalToyBlockSupports()
         {
             GameObject goal = FindSceneObject("Goal / Landing 3");

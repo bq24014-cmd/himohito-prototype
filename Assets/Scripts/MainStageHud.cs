@@ -43,6 +43,11 @@ namespace HimoHito
                 preview.Configure(ropeResource.transform, sectionTenTarget.transform);
             }
 
+            if (ropeResource != null)
+            {
+                MainStageVisuals.Apply(ropeResource.gameObject);
+            }
+
             if (ropeController != null)
             {
                 playerBody = ropeController.GetComponent<Rigidbody2D>();

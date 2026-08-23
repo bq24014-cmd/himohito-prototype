@@ -23,6 +23,12 @@ namespace HimoHito
             TryInitialize();
         }
 
+        public void Configure(float followAmount)
+        {
+            horizontalFollow = Mathf.Clamp01(followAmount);
+            isInitialized = false;
+        }
+
         private void LateUpdate()
         {
             if (!isInitialized && !TryInitialize())
