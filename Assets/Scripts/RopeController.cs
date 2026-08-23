@@ -204,13 +204,20 @@ namespace HimoHito
                     continue;
                 }
 
+                Vector2 resolvedAnchor =
+                    hookPoint.GetAttachmentPoint(hit.point);
+                if (Vector2.Distance(origin, resolvedAnchor) > shotDistance + 0.01f)
+                {
+                    continue;
+                }
+
                 if (!ropeResource.TrySpend(selectedLength))
                 {
                     return false;
                 }
 
                 spentLength = selectedLength;
-                anchorPoint = hit.point;
+                anchorPoint = resolvedAnchor;
                 activeHookPoint = hookPoint;
                 ropeJoint.connectedBody = null;
                 ropeJoint.connectedAnchor = anchorPoint;

@@ -41,22 +41,27 @@ namespace HimoHito
             changed |= EnsureToyVisual(
                 "Start Ground",
                 "Orange Block Platform Visual",
-                BlockResourcePath);
+                BlockResourcePath,
+                1);
             changed |= EnsureToyVisual(
                 "Tutorial Landing",
                 "Blue Railway Platform Visual",
-                RailResourcePath);
+                RailResourcePath,
+                1);
             changed |= EnsureToyVisual(
                 "Tutorial Hook",
                 "Blue Toy Hook Visual",
-                HookResourcePath);
+                HookResourcePath,
+                6);
+            changed |= EnsureTutorialHookAttachmentPoint();
             return changed;
         }
 
         private static bool EnsureToyVisual(
             string targetName,
             string visualName,
-            string resourcePath)
+            string resourcePath,
+            int sortingOrderOffset)
         {
             GameObject target = FindSceneObject(targetName);
             if (target == null ||
@@ -128,7 +133,8 @@ namespace HimoHito
                 changed = true;
             }
 
-            int targetOrder = sourceRenderer.sortingOrder + 1;
+            int targetOrder =
+                sourceRenderer.sortingOrder + sortingOrderOffset;
             if (renderer.sortingOrder != targetOrder)
             {
                 renderer.sortingOrder = targetOrder;
@@ -142,6 +148,19 @@ namespace HimoHito
             }
 
             return changed;
+        }
+
+        private static bool EnsureTutorialHookAttachmentPoint()
+        {
+            GameObject tutorialHook = FindSceneObject("Tutorial Hook");
+            if (tutorialHook == null ||
+                !tutorialHook.TryGetComponent(out HookPoint hookPoint))
+            {
+                return false;
+            }
+
+            // The adopted connector art has its circular eye at local center.
+            return hookPoint.ConfigureFixedAttachmentPoint(Vector2.zero);
         }
 
         private static Sprite GetProcessedSprite(string resourcePath)
