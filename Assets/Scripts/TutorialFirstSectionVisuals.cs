@@ -85,9 +85,8 @@ namespace HimoHito
                 "Open Toy Box Goal Visual",
                 ToyBoxResourcePath,
                 1,
-                false,
                 true,
-                2.2f);
+                true);
             changed |= EnsureFixedHookAttachmentPoint("Tutorial Hook");
             changed |= EnsureFixedHookAttachmentPoint("Hook 1");
             changed |= EnsureFixedHookAttachmentPoint("Hook 2");
@@ -101,8 +100,7 @@ namespace HimoHito
             string resourcePath,
             int sortingOrderOffset,
             bool preserveWorldAspect = false,
-            bool alignBottom = false,
-            float targetWorldHeight = 0f)
+            bool alignBottom = false)
         {
             GameObject target = FindSceneObject(targetName);
             if (target == null ||
@@ -145,15 +143,6 @@ namespace HimoHito
                 float parentHeight = Mathf.Max(0.01f, Mathf.Abs(parentScale.y));
                 float worldScale = parentWidth / Mathf.Max(0.01f, spriteSize.x);
                 targetScale.y = worldScale / parentHeight;
-            }
-
-            if (targetWorldHeight > 0f)
-            {
-                float parentHeight = Mathf.Max(
-                    0.01f,
-                    Mathf.Abs(target.transform.lossyScale.y));
-                targetScale.y = targetWorldHeight /
-                    (Mathf.Max(0.01f, spriteSize.y) * parentHeight);
             }
             if (visualTransform.localScale != targetScale)
             {
