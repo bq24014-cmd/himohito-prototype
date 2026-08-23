@@ -87,6 +87,15 @@ Hookへ掛けたまま`Q`を押すと、Hookから現在のプレイヤー位置
 
 開始画面では、操作説明を読んだ後に任意のキーを押して離すとゲームが始まります。チュートリアルをクリアした後は`Enter`で本編へ進みます。本編クリア後は`R`で第1区間から再挑戦できます。
 
+## 使用素材とライセンス
+
+- Hook接続音：Kenney「Impact Sounds 1.0」の`impactWood_light_002.ogg`と`impactSoft_medium_000.ogg`を使用
+- ライセンス：Creative Commons Zero（CC0 1.0）
+- 配布元：[Kenney — Impact Sounds](https://kenney.nl/assets/impact-sounds)
+- 同梱ライセンス：`Assets/ThirdParty/KenneyImpactSounds/License.txt`
+
+木製玩具が軽く触れる音を中心にし、毛糸の柔らかさを表す音を小さく重ねています。接続に成功した時だけ鳴り、接続できなかった入力では鳴りません。
+
 ## 起動方法
 
 ### Unity Editorで実行
