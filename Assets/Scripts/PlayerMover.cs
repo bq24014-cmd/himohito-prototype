@@ -32,11 +32,16 @@ namespace HimoHito
         [SerializeField] private float jumpBufferTime = 0.15f;
         [SerializeField] private float groundProbeDistance = 0.08f;
 
+        [Header("Generated rope platform")]
+        [SerializeField, Min(0f)] private float ropePlatformContactGraceTime = 0.15f;
+
         private Rigidbody2D body;
         private BoxCollider2D bodyCollider;
         private RopeController ropeController;
         private PhysicsMaterial2D movementMaterial;
         private GeneratedRopePlatform groundedRopePlatform;
+        private GeneratedRopePlatform recentRopePlatform;
+        private float lastRopePlatformContactTime = float.NegativeInfinity;
         private float moveInput;
         private float coyoteTimer;
         private float jumpBufferTimer;
@@ -107,9 +112,32 @@ namespace HimoHito
                     * body.mass;
                 Vector2 takeoffImpulse = new Vector2(horizontalBrakeImpulse, jumpImpulse);
                 body.AddForce(takeoffImpulse, ForceMode2D.Impulse);
+                ClearRecentRopePlatform();
                 jumpBufferTimer = 0f;
                 coyoteTimer = 0f;
             }
+        }
+
+        public void RegisterGeneratedRopePlatformContact(
+            GeneratedRopePlatform platform)
+        {
+            if (platform == null)
+            {
+                return;
+            }
+
+            recentRopePlatform = platform;
+            lastRopePlatformContactTime = Time.fixedTime;
+        }
+
+        private void OnCollisionEnter2D(Collision2D collision)
+        {
+            RememberSupportingRopePlatform(collision);
+        }
+
+        private void OnCollisionStay2D(Collision2D collision)
+        {
+            RememberSupportingRopePlatform(collision);
         }
 
         private void ApplyGroundControl()
@@ -236,11 +264,67 @@ namespace HimoHito
                             out GeneratedRopePlatform generatedRopePlatform))
                     {
                         groundedRopePlatform = generatedRopePlatform;
+                        RegisterGeneratedRopePlatformContact(generatedRopePlatform);
                     }
                 }
             }
 
+            if (!isGrounded && TryGetRecentRopePlatform(out GeneratedRopePlatform recent))
+            {
+                groundedRopePlatform = recent;
+                isGrounded = true;
+            }
+
             return isGrounded;
+        }
+
+        private void RememberSupportingRopePlatform(Collision2D collision)
+        {
+            if (collision == null)
+            {
+                return;
+            }
+
+            GeneratedRopePlatform platform =
+                collision.gameObject.GetComponent<GeneratedRopePlatform>();
+            if (platform == null && collision.collider != null)
+            {
+                platform = collision.collider.GetComponent<GeneratedRopePlatform>();
+            }
+            if (platform == null)
+            {
+                return;
+            }
+
+            float playerCenterY = bodyCollider.bounds.center.y;
+            for (int i = 0; i < collision.contactCount; i++)
+            {
+                ContactPoint2D contact = collision.GetContact(i);
+                if (contact.point.y <= playerCenterY)
+                {
+                    RegisterGeneratedRopePlatformContact(platform);
+                    return;
+                }
+            }
+        }
+
+        private bool TryGetRecentRopePlatform(out GeneratedRopePlatform platform)
+        {
+            platform = recentRopePlatform;
+            if (platform == null || body.linearVelocity.y > 0.5f)
+            {
+                return false;
+            }
+
+            return Time.fixedTime - lastRopePlatformContactTime <=
+                ropePlatformContactGraceTime;
+        }
+
+        private void ClearRecentRopePlatform()
+        {
+            groundedRopePlatform = null;
+            recentRopePlatform = null;
+            lastRopePlatformContactTime = float.NegativeInfinity;
         }
     }
 }

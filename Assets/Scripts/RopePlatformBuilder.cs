@@ -73,8 +73,12 @@ namespace HimoHito
                 return false;
             }
 
-            CreatePlatform(start, end);
+            GeneratedRopePlatform generatedPlatform = CreatePlatform(start, end);
             PlacePlayerOnPlatform(end);
+            if (TryGetComponent(out PlayerMover playerMover))
+            {
+                playerMover.RegisterGeneratedRopePlatformContact(generatedPlatform);
+            }
 
             if (TryGetComponent(out PrototypeRunController tutorialRun) &&
                 tutorialRun.CurrentTutorialSection == 3)
@@ -154,7 +158,7 @@ namespace HimoHito
             return lengthBeforeAttachment - cost >= minimumRopeReserve;
         }
 
-        private void CreatePlatform(Vector2 start, Vector2 end)
+        private GeneratedRopePlatform CreatePlatform(Vector2 start, Vector2 end)
         {
             GameObject platform = new GameObject(
                 $"Generated Rope Platform {generatedPlatforms.Count + 1}");
@@ -189,6 +193,7 @@ namespace HimoHito
                 platform.AddComponent<GeneratedRopePlatform>();
             generated.Configure(start, end, line.material);
             generatedPlatforms.Add(platform);
+            return generated;
         }
 
         private void PlacePlayerOnPlatform(Vector2 end)
