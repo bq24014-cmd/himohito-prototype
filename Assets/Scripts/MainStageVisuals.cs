@@ -32,7 +32,7 @@ namespace HimoHito
         public static bool Apply(GameObject player)
         {
             bool changed = false;
-            changed |= ApplyColor(player, PlayerColor);
+            changed |= RestorePlayerVisual(player);
             changed |= EnsureBackground();
 
             foreach (GameObject candidate in
@@ -43,6 +43,11 @@ namespace HimoHito
                     !candidate.name.StartsWith(
                         "Main ",
                         System.StringComparison.Ordinal))
+                {
+                    continue;
+                }
+
+                if (candidate == player)
                 {
                     continue;
                 }
@@ -85,6 +90,48 @@ namespace HimoHito
                             : "Blue Railway Platform Visual",
                         isStartGround ? BlockResourcePath : RailResourcePath,
                         1);
+                }
+            }
+
+            return changed;
+        }
+
+        private static bool RestorePlayerVisual(GameObject player)
+        {
+            if (player == null)
+            {
+                return false;
+            }
+
+            bool changed = ApplyColor(player, PlayerColor);
+            Transform wrongRailVisual =
+                player.transform.Find("Blue Railway Platform Visual");
+            if (wrongRailVisual != null)
+            {
+                if (Application.isPlaying)
+                {
+                    Object.Destroy(wrongRailVisual.gameObject);
+                }
+                else
+                {
+                    Object.DestroyImmediate(wrongRailVisual.gameObject);
+                }
+                changed = true;
+            }
+
+            Transform ropeBodyVisual = player.transform.Find("Rope Body Visual");
+            if (ropeBodyVisual != null)
+            {
+                changed |= ApplyColor(ropeBodyVisual.gameObject, PlayerColor);
+            }
+
+            if (player.TryGetComponent(out SpriteRenderer sourceRenderer))
+            {
+                bool shouldEnableSource = ropeBodyVisual == null;
+                if (sourceRenderer.enabled != shouldEnableSource)
+                {
+                    sourceRenderer.enabled = shouldEnableSource;
+                    changed = true;
                 }
             }
 
