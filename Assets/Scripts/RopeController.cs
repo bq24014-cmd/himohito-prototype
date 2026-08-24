@@ -27,6 +27,7 @@ namespace HimoHito
         private DistanceJoint2D ropeJoint;
         private LineRenderer lineRenderer;
         private RopeResource ropeResource;
+        private RopeBodyVisual ropeBodyVisual;
         private PrototypeAudioFeedback audioFeedback;
         private SpriteRenderer bodyRenderer;
         private Camera mainCamera;
@@ -67,6 +68,7 @@ namespace HimoHito
             ropeJoint = GetComponent<DistanceJoint2D>();
             lineRenderer = GetComponent<LineRenderer>();
             ropeResource = GetComponent<RopeResource>();
+            ropeBodyVisual = GetComponent<RopeBodyVisual>();
             audioFeedback = GetComponent<PrototypeAudioFeedback>();
             if (audioFeedback == null)
             {
@@ -433,12 +435,25 @@ namespace HimoHito
 
         private Vector2 GetAttachedRopePoint(float t)
         {
-            Vector2 start = body.position;
+            Vector2 physicsStart = body.position;
+            Vector2 start = GetRopeVisualOrigin();
             Vector2 end = anchorPoint;
-            float directDistance = Vector2.Distance(start, end);
+            float directDistance = Vector2.Distance(physicsStart, end);
             float slack = Mathf.Max(0f, spentLength - directDistance);
             Vector2 point = Vector2.Lerp(start, end, t);
             return point + Vector2.down * (slack * 4f * t * (1f - t));
+        }
+
+        private Vector2 GetRopeVisualOrigin()
+        {
+            if (ropeBodyVisual == null)
+            {
+                ropeBodyVisual = GetComponent<RopeBodyVisual>();
+            }
+
+            return ropeBodyVisual != null
+                ? ropeBodyVisual.RopeOrigin
+                : body.position;
         }
 
         private float GetVisibleRopeWidth()

@@ -10,6 +10,8 @@ namespace HimoHito
     [RequireComponent(typeof(RopeResource), typeof(SpriteRenderer))]
     public sealed class RopeBodyVisual : MonoBehaviour
     {
+        private const string PlayerArtResourcePath = "Art/HimoHitoPlayer-v1";
+
         [SerializeField, Range(0.2f, 1f)] private float minimumVisualScale = 0.65f;
 
         [Header("Landing squash")]
@@ -24,12 +26,29 @@ namespace HimoHito
         private PlayerMover playerMover;
         private Rigidbody2D body;
         private SpriteRenderer sourceRenderer;
+        private SpriteRenderer visualRenderer;
         private Transform visualTransform;
+        private Vector2 visualBaseScale = Vector2.one;
+        private bool usesCharacterArt;
         private float currentBaseScale = 1f;
         private float fastestFallSpeed;
         private float landingElapsed;
         private float landingStrength;
         private bool wasGrounded;
+
+        public Vector2 RopeOrigin
+        {
+            get
+            {
+                if (usesCharacterArt && visualRenderer != null)
+                {
+                    Bounds visualBounds = visualRenderer.bounds;
+                    return new Vector2(visualBounds.center.x, visualBounds.max.y);
+                }
+
+                return transform.position;
+            }
+        }
 
         private void Awake()
         {
@@ -72,13 +91,29 @@ namespace HimoHito
             visualTransform = visualObject.transform;
             visualTransform.SetParent(transform, false);
 
-            SpriteRenderer visualRenderer = visualObject.AddComponent<SpriteRenderer>();
+            visualRenderer = visualObject.AddComponent<SpriteRenderer>();
             visualRenderer.sortingLayerID = sourceRenderer.sortingLayerID;
             visualRenderer.sortingOrder = sourceRenderer.sortingOrder;
             visualRenderer.maskInteraction = sourceRenderer.maskInteraction;
 
-            SolidSprite solidSprite = visualObject.AddComponent<SolidSprite>();
-            solidSprite.Color = sourceRenderer.color;
+            Sprite playerArt =
+                TutorialFirstSectionVisuals.LoadProcessedToySprite(
+                    PlayerArtResourcePath);
+            if (playerArt != null)
+            {
+                visualRenderer.sprite = playerArt;
+                visualRenderer.color = Color.white;
+                Vector2 spriteSize = playerArt.bounds.size;
+                visualBaseScale = new Vector2(
+                    0.9f / Mathf.Max(0.01f, spriteSize.x),
+                    1.15f / Mathf.Max(0.01f, spriteSize.y));
+                usesCharacterArt = true;
+            }
+            else
+            {
+                SolidSprite solidSprite = visualObject.AddComponent<SolidSprite>();
+                solidSprite.Color = sourceRenderer.color;
+            }
 
             sourceRenderer.enabled = false;
         }
@@ -135,8 +170,8 @@ namespace HimoHito
 
             Vector2 landingScale = CalculateLandingScale();
             visualTransform.localScale = new Vector3(
-                currentBaseScale * landingScale.x,
-                currentBaseScale * landingScale.y,
+                visualBaseScale.x * currentBaseScale * landingScale.x,
+                visualBaseScale.y * currentBaseScale * landingScale.y,
                 1f);
         }
 
