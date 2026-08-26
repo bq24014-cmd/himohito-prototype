@@ -11,8 +11,8 @@ namespace HimoHito
     public sealed class RopeBodyVisual : MonoBehaviour
     {
         private const string PlayerArtResourcePath = "Art/HimoHitoPlayer-v1";
-        private const string WalkArtResourcePath = "Art/HimoHitoWalk-v2";
-        private const int WalkColumns = 6;
+        private const string WalkArtResourcePath = "Art/HimoHitoWalk-v1";
+        private const int WalkColumns = 4;
         private const int WalkRows = 2;
         private const int WalkFrameCount = WalkColumns * WalkRows;
         private const float SpritePixelsPerUnit = 100f;
@@ -24,8 +24,8 @@ namespace HimoHito
 
         [Header("Walking animation")]
         [SerializeField, Min(0.01f)] private float minimumWalkSpeed = 0.35f;
-        [SerializeField, Min(1f)] private float minimumWalkFramesPerSecond = 7.5f;
-        [SerializeField, Min(1f)] private float maximumWalkFramesPerSecond = 13.5f;
+        [SerializeField, Min(1f)] private float minimumWalkFramesPerSecond = 5f;
+        [SerializeField, Min(1f)] private float maximumWalkFramesPerSecond = 9f;
         [SerializeField, Min(0.1f)] private float fullWalkAnimationSpeed = 6.5f;
 
         [Header("Landing squash")]
