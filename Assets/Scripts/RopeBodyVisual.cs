@@ -12,13 +12,19 @@ namespace HimoHito
     {
         private const string PlayerArtResourcePath = "Art/HimoHitoPlayer-v1";
         private const string WalkArtResourcePath = "Art/HimoHitoWalk-v1";
+        private const string JumpArtResourcePath = "Art/HimoHitoJump-v1";
         private const int WalkColumns = 4;
         private const int WalkRows = 2;
         private const int WalkFrameCount = WalkColumns * WalkRows;
+        private const int JumpColumns = 3;
+        private const int JumpRows = 2;
+        private const int JumpFrameCount = JumpColumns * JumpRows;
         private const float SpritePixelsPerUnit = 100f;
 
         private static Sprite[] cachedWalkFrames;
         private static Vector2 cachedWalkContentSize;
+        private static Sprite[] cachedJumpFrames;
+        private static Vector2 cachedJumpContentSize;
 
         [SerializeField, Range(0.2f, 1f)] private float minimumVisualScale = 0.65f;
 
@@ -27,6 +33,12 @@ namespace HimoHito
         [SerializeField, Min(1f)] private float minimumWalkFramesPerSecond = 5f;
         [SerializeField, Min(1f)] private float maximumWalkFramesPerSecond = 9f;
         [SerializeField, Min(0.1f)] private float fullWalkAnimationSpeed = 6.5f;
+
+        [Header("Jump animation")]
+        [SerializeField, Min(0f)] private float launchFrameDuration = 0.08f;
+        [SerializeField, Min(0.1f)] private float fastRiseSpeed = 4f;
+        [SerializeField, Min(0f)] private float apexSpeed = 0.8f;
+        [SerializeField, Min(0.1f)] private float fastFallSpeed = 4f;
 
         [Header("Landing squash")]
         [SerializeField, Min(0.05f)] private float landingDuration = 0.18f;
@@ -45,12 +57,15 @@ namespace HimoHito
         private Vector2 visualBaseScale = Vector2.one;
         private Vector2 standingVisualBaseScale = Vector2.one;
         private Vector2 walkingVisualBaseScale = Vector2.one;
+        private Vector2 jumpingVisualBaseScale = Vector2.one;
         private Sprite standingSprite;
         private Sprite[] walkingFrames;
+        private Sprite[] jumpingFrames;
         private bool usesCharacterArt;
         private bool isWalking;
         private float currentBaseScale = 1f;
         private float walkFrameProgress;
+        private float airborneElapsed;
         private float fastestFallSpeed;
         private float landingElapsed;
         private float landingStrength;
@@ -93,7 +108,7 @@ namespace HimoHito
                 UpdateRemainingLengthScale();
             }
 
-            UpdateWalkAnimation();
+            UpdateCharacterAnimation();
             ApplyVisualScale();
         }
 
@@ -137,6 +152,13 @@ namespace HimoHito
                         0.9f / Mathf.Max(0.01f, walkContentSize.x),
                         1.15f / Mathf.Max(0.01f, walkContentSize.y));
                 }
+                jumpingFrames = LoadJumpFrames(out Vector2 jumpContentSize);
+                if (jumpingFrames != null && jumpContentSize.sqrMagnitude > 0f)
+                {
+                    jumpingVisualBaseScale = new Vector2(
+                        0.9f / Mathf.Max(0.01f, jumpContentSize.x),
+                        1.15f / Mathf.Max(0.01f, jumpContentSize.y));
+                }
                 usesCharacterArt = true;
             }
             else
@@ -146,6 +168,73 @@ namespace HimoHito
             }
 
             sourceRenderer.enabled = false;
+        }
+
+        private void UpdateCharacterAnimation()
+        {
+            bool shouldShowJump =
+                usesCharacterArt &&
+                jumpingFrames != null &&
+                jumpingFrames.Length == JumpFrameCount &&
+                playerMover != null &&
+                !playerMover.IsGrounded &&
+                (ropeController == null || !ropeController.IsAttached);
+
+            if (shouldShowJump)
+            {
+                UpdateJumpAnimation();
+                return;
+            }
+
+            airborneElapsed = 0f;
+            UpdateWalkAnimation();
+        }
+
+        private void UpdateJumpAnimation()
+        {
+            if (visualRenderer == null || body == null)
+            {
+                return;
+            }
+
+            airborneElapsed += Time.deltaTime;
+            float verticalSpeed = body.linearVelocity.y;
+            int frameIndex;
+
+            if (airborneElapsed <= launchFrameDuration)
+            {
+                frameIndex = 0;
+            }
+            else if (verticalSpeed >= fastRiseSpeed)
+            {
+                frameIndex = 1;
+            }
+            else if (verticalSpeed > apexSpeed)
+            {
+                frameIndex = 2;
+            }
+            else if (verticalSpeed >= -apexSpeed)
+            {
+                frameIndex = 3;
+            }
+            else if (verticalSpeed > -fastFallSpeed)
+            {
+                frameIndex = 4;
+            }
+            else
+            {
+                frameIndex = 5;
+            }
+
+            if (Mathf.Abs(body.linearVelocity.x) >= minimumWalkSpeed)
+            {
+                visualRenderer.flipX = body.linearVelocity.x < 0f;
+            }
+
+            visualRenderer.sprite = jumpingFrames[frameIndex];
+            visualBaseScale = jumpingVisualBaseScale;
+            isWalking = false;
+            walkFrameProgress = 0f;
         }
 
         private void UpdateWalkAnimation()
@@ -198,25 +287,57 @@ namespace HimoHito
 
         private static Sprite[] LoadWalkFrames(out Vector2 contentSize)
         {
-            if (cachedWalkFrames != null &&
-                cachedWalkFrames.Length == WalkFrameCount)
+            return LoadAnimationFrames(
+                WalkArtResourcePath,
+                "Walk",
+                WalkColumns,
+                WalkRows,
+                ref cachedWalkFrames,
+                ref cachedWalkContentSize,
+                out contentSize);
+        }
+
+        private static Sprite[] LoadJumpFrames(out Vector2 contentSize)
+        {
+            return LoadAnimationFrames(
+                JumpArtResourcePath,
+                "Jump",
+                JumpColumns,
+                JumpRows,
+                ref cachedJumpFrames,
+                ref cachedJumpContentSize,
+                out contentSize);
+        }
+
+        private static Sprite[] LoadAnimationFrames(
+            string resourcePath,
+            string animationName,
+            int columns,
+            int rows,
+            ref Sprite[] cachedFrames,
+            ref Vector2 cachedContentSize,
+            out Vector2 contentSize)
+        {
+            int frameCount = columns * rows;
+            if (cachedFrames != null && cachedFrames.Length == frameCount)
             {
-                contentSize = cachedWalkContentSize;
-                return cachedWalkFrames;
+                contentSize = cachedContentSize;
+                return cachedFrames;
             }
 
             contentSize = Vector2.zero;
-            Texture2D source = Resources.Load<Texture2D>(WalkArtResourcePath);
+            Texture2D source = Resources.Load<Texture2D>(resourcePath);
             if (source == null)
             {
-                Debug.LogWarning($"Walk animation texture was not found: {WalkArtResourcePath}");
+                Debug.LogWarning(
+                    $"{animationName} animation texture was not found: {resourcePath}");
                 return null;
             }
 
-            if (source.width % WalkColumns != 0 || source.height % WalkRows != 0)
+            if (source.width % columns != 0 || source.height % rows != 0)
             {
                 Debug.LogWarning(
-                    $"Walk animation texture must be a {WalkColumns}x{WalkRows} grid: " +
+                    $"{animationName} animation texture must be a {columns}x{rows} grid: " +
                     $"{source.width}x{source.height}");
                 return null;
             }
@@ -229,7 +350,7 @@ namespace HimoHito
             catch (UnityException exception)
             {
                 Debug.LogWarning(
-                    $"Walk animation texture is not readable: {WalkArtResourcePath}\n" +
+                    $"{animationName} animation texture is not readable: {resourcePath}\n" +
                     exception.Message);
                 return null;
             }
@@ -264,17 +385,17 @@ namespace HimoHito
             transparentTexture.SetPixels32(pixels);
             transparentTexture.Apply(false, true);
 
-            int cellWidth = source.width / WalkColumns;
-            int cellHeight = source.height / WalkRows;
+            int cellWidth = source.width / columns;
+            int cellHeight = source.height / rows;
             int maximumContentWidth = 0;
             int maximumContentHeight = 0;
-            Sprite[] frames = new Sprite[WalkFrameCount];
+            Sprite[] frames = new Sprite[frameCount];
 
-            for (int frameIndex = 0; frameIndex < WalkFrameCount; frameIndex++)
+            for (int frameIndex = 0; frameIndex < frameCount; frameIndex++)
             {
-                int column = frameIndex % WalkColumns;
-                int rowFromTop = frameIndex / WalkColumns;
-                int rowFromBottom = WalkRows - 1 - rowFromTop;
+                int column = frameIndex % columns;
+                int rowFromTop = frameIndex / columns;
+                int rowFromBottom = rows - 1 - rowFromTop;
                 int cellX = column * cellWidth;
                 int cellY = rowFromBottom * cellHeight;
 
@@ -297,23 +418,24 @@ namespace HimoHito
                     SpritePixelsPerUnit,
                     0,
                     SpriteMeshType.FullRect);
-                frame.name = $"{source.name} Walk {frameIndex + 1}";
+                frame.name = $"{source.name} {animationName} {frameIndex + 1}";
                 frame.hideFlags = HideFlags.HideAndDontSave;
                 frames[frameIndex] = frame;
             }
 
             if (maximumContentWidth <= 0 || maximumContentHeight <= 0)
             {
-                Debug.LogWarning($"Walk animation texture became empty: {WalkArtResourcePath}");
+                Debug.LogWarning(
+                    $"{animationName} animation texture became empty: {resourcePath}");
                 return null;
             }
 
-            cachedWalkFrames = frames;
-            cachedWalkContentSize = new Vector2(
+            cachedFrames = frames;
+            cachedContentSize = new Vector2(
                 maximumContentWidth / SpritePixelsPerUnit,
                 maximumContentHeight / SpritePixelsPerUnit);
-            contentSize = cachedWalkContentSize;
-            return cachedWalkFrames;
+            contentSize = cachedContentSize;
+            return cachedFrames;
         }
 
         private static void FindFrameContentSize(
