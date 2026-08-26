@@ -11,13 +11,15 @@ namespace HimoHito
     [RequireComponent(typeof(RopeResource))]
     public sealed class RopeController : MonoBehaviour
     {
+        private static readonly Color AimGuideColor =
+            new Color(1f, 0.72f, 0.80f, 0.55f);
+
         [SerializeField, Min(1f)] private float maximumShotDistance = 14f;
         [SerializeField, Min(0.01f)] private float ropeWidth = 0.16f;
         [SerializeField, Min(0.01f)] private float minimumRopeWidth = 0.06f;
         [SerializeField, Range(3, 32)] private int ropeVisualSegments = 14;
         [SerializeField] private Color ropeColor = new Color(0.95f, 0.82f, 0.35f);
         [SerializeField, Min(10f)] private float aimRotationSpeed = 120f;
-        [SerializeField] private Color aimGuideColor = new Color(0.55f, 0.65f, 0.8f, 0.55f);
         [SerializeField, Min(1)] private int minimumSelectableRopeLength = 1;
         [SerializeField, Min(0f)] private float lengthSelectionRepeatDelay = 0.35f;
         [SerializeField, Min(0.01f)] private float lengthSelectionRepeatInterval = 0.1f;
@@ -417,8 +419,8 @@ namespace HimoHito
             lineRenderer.positionCount = 2;
             lineRenderer.startWidth = minimumRopeWidth * 0.6f;
             lineRenderer.endWidth = minimumRopeWidth * 0.6f;
-            lineRenderer.startColor = aimGuideColor;
-            lineRenderer.endColor = aimGuideColor;
+            lineRenderer.startColor = AimGuideColor;
+            lineRenderer.endColor = AimGuideColor;
             lineRenderer.SetPosition(0, body.position);
             lineRenderer.SetPosition(1, body.position + keyboardAimDirection * selectedRopeLength);
         }
