@@ -13,12 +13,16 @@ namespace HimoHito
         private const string PlayerArtResourcePath = "Art/HimoHitoPlayer-v1";
         private const string WalkArtResourcePath = "Art/HimoHitoWalk-v3";
         private const string JumpArtResourcePath = "Art/HimoHitoJump-v2";
+        private const string LandingArtResourcePath = "Art/HimoHitoLanding-v1";
         private const int WalkColumns = 4;
         private const int WalkRows = 2;
         private const int WalkFrameCount = WalkColumns * WalkRows;
         private const int JumpColumns = 3;
         private const int JumpRows = 2;
         private const int JumpFrameCount = JumpColumns * JumpRows;
+        private const int LandingColumns = 3;
+        private const int LandingRows = 2;
+        private const int LandingFrameCount = LandingColumns * LandingRows;
         private const float SpritePixelsPerUnit = 100f;
         private const float CharacterVisualWidth = 0.9f;
         private const float CharacterVisualHeight = 1.15f;
@@ -27,6 +31,8 @@ namespace HimoHito
         private static Vector2 cachedWalkContentSize;
         private static Sprite[] cachedJumpFrames;
         private static Vector2 cachedJumpContentSize;
+        private static Sprite[] cachedLandingFrames;
+        private static Vector2 cachedLandingContentSize;
 
         [SerializeField, Range(0.2f, 1f)] private float minimumVisualScale = 0.65f;
 
@@ -72,12 +78,10 @@ namespace HimoHito
         [Tooltip("Horizontal speed required before normal movement may change facing.")]
         private float facingDeadZone = 0.35f;
 
-        [Header("Landing squash")]
-        [SerializeField, Min(0.05f)] private float landingDuration = 0.18f;
+        [Header("Landing animation")]
+        [SerializeField, Min(0.05f)] private float landingDuration = 0.30f;
         [SerializeField, Min(0f)] private float minimumLandingSpeed = 1.5f;
         [SerializeField, Min(0.01f)] private float fullLandingSpeed = 10f;
-        [SerializeField, Range(0f, 0.3f)] private float maximumHorizontalSquash = 0.10f;
-        [SerializeField, Range(0f, 0.3f)] private float maximumVerticalSquash = 0.14f;
 
         private RopeResource ropeResource;
         private RopeController ropeController;
@@ -90,10 +94,12 @@ namespace HimoHito
         private Vector2 standingVisualBaseScale = Vector2.one;
         private Vector2 walkingVisualBaseScale = Vector2.one;
         private Vector2 jumpingVisualBaseScale = Vector2.one;
+        private Vector2 landingVisualBaseScale = Vector2.one;
         private Vector3 standingRopeLocalPoint;
         private Sprite standingSprite;
         private Sprite[] walkingFrames;
         private Sprite[] jumpingFrames;
+        private Sprite[] landingFrames;
         private bool usesCharacterArt;
         private bool isWalking;
         private bool isJumpingVisually;
@@ -150,6 +156,9 @@ namespace HimoHito
 
             UpdateCharacterAnimation();
             ApplyVisualScale();
+            landingElapsed = Mathf.Min(
+                landingDuration,
+                landingElapsed + Time.deltaTime);
         }
 
         private void OnDestroy()
@@ -203,6 +212,13 @@ namespace HimoHito
                         CharacterVisualWidth / Mathf.Max(0.01f, jumpContentSize.x),
                         CharacterVisualHeight / Mathf.Max(0.01f, jumpContentSize.y));
                 }
+                landingFrames = LoadLandingFrames(out Vector2 landingContentSize);
+                if (landingFrames != null && landingContentSize.sqrMagnitude > 0f)
+                {
+                    landingVisualBaseScale = new Vector2(
+                        CharacterVisualWidth / Mathf.Max(0.01f, landingContentSize.x),
+                        CharacterVisualHeight / Mathf.Max(0.01f, landingContentSize.y));
+                }
                 usesCharacterArt = true;
             }
             else
@@ -242,6 +258,14 @@ namespace HimoHito
                 isAttached &&
                 !isGrounded;
 
+            bool shouldShowLanding =
+                usesCharacterArt &&
+                landingFrames != null &&
+                landingFrames.Length == LandingFrameCount &&
+                landingElapsed < landingDuration &&
+                isGrounded &&
+                !isAttached;
+
             if (shouldShowSwing)
             {
                 UpdateSwingAnimation();
@@ -249,6 +273,12 @@ namespace HimoHito
             }
 
             UpdateUprightVisualRotation(isAttached);
+
+            if (shouldShowLanding)
+            {
+                UpdateLandingAnimation();
+                return;
+            }
 
             if (shouldShowJump)
             {
@@ -370,6 +400,37 @@ namespace HimoHito
             visualRenderer.sprite = standingSprite;
             visualTransform.localPosition = Vector3.zero;
             visualBaseScale = standingVisualBaseScale;
+            isWalking = false;
+            walkFrameProgress = 0f;
+            airborneElapsed = 0f;
+        }
+
+        private void UpdateLandingAnimation()
+        {
+            if (visualRenderer == null || landingFrames == null)
+            {
+                return;
+            }
+
+            float normalizedTime = Mathf.Clamp01(
+                landingElapsed / Mathf.Max(0.01f, landingDuration));
+            int frameIndex = Mathf.Min(
+                LandingFrameCount - 1,
+                Mathf.FloorToInt(normalizedTime * LandingFrameCount));
+
+            // A lighter landing stops at the bent-knee pose instead of using the
+            // deepest compression drawing. Strong falls keep the complete motion.
+            if (frameIndex == 2 && landingStrength < 0.8f)
+            {
+                frameIndex = 1;
+            }
+
+            visualRenderer.sprite = landingFrames[frameIndex];
+            visualTransform.localPosition = new Vector3(
+                0f,
+                -CharacterVisualHeight * 0.5f,
+                0f);
+            visualBaseScale = landingVisualBaseScale;
             isWalking = false;
             walkFrameProgress = 0f;
             airborneElapsed = 0f;
@@ -516,6 +577,19 @@ namespace HimoHito
                 false,
                 ref cachedJumpFrames,
                 ref cachedJumpContentSize,
+                out contentSize);
+        }
+
+        private static Sprite[] LoadLandingFrames(out Vector2 contentSize)
+        {
+            return LoadAnimationFrames(
+                LandingArtResourcePath,
+                "Landing",
+                LandingColumns,
+                LandingRows,
+                true,
+                ref cachedLandingFrames,
+                ref cachedLandingContentSize,
                 out contentSize);
         }
 
@@ -775,39 +849,10 @@ namespace HimoHito
                 return;
             }
 
-            Vector2 landingScale = CalculateLandingScale();
             visualTransform.localScale = new Vector3(
-                visualBaseScale.x * currentBaseScale * landingScale.x,
-                visualBaseScale.y * currentBaseScale * landingScale.y,
+                visualBaseScale.x * currentBaseScale,
+                visualBaseScale.y * currentBaseScale,
                 1f);
-        }
-
-        private Vector2 CalculateLandingScale()
-        {
-            if (landingElapsed >= landingDuration)
-            {
-                return Vector2.one;
-            }
-
-            float normalizedTime = Mathf.Clamp01(landingElapsed / landingDuration);
-            landingElapsed += Time.deltaTime;
-
-            float squashAmount;
-            if (normalizedTime < 0.42f)
-            {
-                squashAmount = Mathf.SmoothStep(0f, 1f, normalizedTime / 0.42f);
-            }
-            else
-            {
-                squashAmount = 1f - Mathf.SmoothStep(
-                    0f,
-                    1f,
-                    (normalizedTime - 0.42f) / 0.58f);
-            }
-
-            return new Vector2(
-                1f + maximumHorizontalSquash * landingStrength * squashAmount,
-                1f - maximumVerticalSquash * landingStrength * squashAmount);
         }
     }
 }
