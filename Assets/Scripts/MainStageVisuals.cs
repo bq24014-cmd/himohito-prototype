@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace HimoHito
 {
@@ -29,11 +30,20 @@ namespace HimoHito
             new Color(0.298f, 0.765f, 1f);
         private static readonly Color HookColor = RailColor;
 
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
+        private static void EnsureMainStageBackgroundAfterSceneLoad()
+        {
+            if (SceneManager.GetActiveScene().name == "MainStage")
+            {
+                EnsureBackground();
+            }
+        }
+
         public static bool Apply(GameObject player)
         {
             bool changed = false;
-            changed |= RestorePlayerVisual(player);
             changed |= EnsureBackground();
+            changed |= RestorePlayerVisual(player);
 
             foreach (GameObject candidate in
                      Resources.FindObjectsOfTypeAll<GameObject>())
@@ -335,6 +345,11 @@ namespace HimoHito
                 background = new GameObject(BackgroundName);
                 changed = true;
             }
+            else if (!background.activeSelf)
+            {
+                background.SetActive(true);
+                changed = true;
+            }
 
             Camera targetCamera = Camera.main;
             float cameraX = targetCamera != null
@@ -359,6 +374,16 @@ namespace HimoHito
             if (!background.TryGetComponent(out SpriteRenderer renderer))
             {
                 renderer = background.AddComponent<SpriteRenderer>();
+                changed = true;
+            }
+            if (!renderer.enabled)
+            {
+                renderer.enabled = true;
+                changed = true;
+            }
+            if (renderer.forceRenderingOff)
+            {
+                renderer.forceRenderingOff = false;
                 changed = true;
             }
             if (renderer.sprite != backgroundSprite)
