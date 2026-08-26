@@ -43,6 +43,35 @@ namespace HimoHito
         [SerializeField, Min(0f)] private float apexSpeed = 0.8f;
         [SerializeField, Min(0.1f)] private float fastFallSpeed = 4f;
 
+        [Header("Swing visual rotation")]
+        [SerializeField, Range(0f, 1f)]
+        [Tooltip("How strongly the visible body follows the rope angle.")]
+        private float ropeFollowAmount = 0.72f;
+
+        [SerializeField, Min(0.01f)]
+        [Tooltip("Seconds used to ease the visible body toward the rope angle.")]
+        private float swingRotationSmoothTime = 0.09f;
+
+        [SerializeField, Min(0.01f)]
+        [Tooltip("Seconds used to ease the visible body upright after release.")]
+        private float releaseRotationSmoothTime = 0.20f;
+
+        [SerializeField, Range(0f, 90f)]
+        [Tooltip("Maximum visible tilt. The Rigidbody2D and Collider2D never rotate.")]
+        private float maximumVisualRotation = 78f;
+
+        [SerializeField, Min(0f)]
+        [Tooltip("Extra visual lag in degrees for each unit of tangential speed.")]
+        private float inertiaLeanAmount = 0.65f;
+
+        [SerializeField, Range(0f, 15f)]
+        [Tooltip("Maximum extra visual lag caused by pendulum momentum.")]
+        private float maximumInertiaLean = 7f;
+
+        [SerializeField, Min(0f)]
+        [Tooltip("Horizontal speed required before normal movement may change facing.")]
+        private float facingDeadZone = 0.35f;
+
         [Header("Landing squash")]
         [SerializeField, Min(0.05f)] private float landingDuration = 0.18f;
         [SerializeField, Min(0f)] private float minimumLandingSpeed = 1.5f;
@@ -74,7 +103,12 @@ namespace HimoHito
         private float fastestFallSpeed;
         private float landingElapsed;
         private float landingStrength;
+        private float currentVisualAngle;
+        private float visualAngleVelocity;
         private bool wasGrounded;
+        private bool wasRopeAttached;
+        private bool swingFacingLeft;
+        private bool isReturningFromSwing;
 
         public Vector2 RopeOrigin
         {
@@ -100,6 +134,8 @@ namespace HimoHito
             UpdateRemainingLengthScale();
             landingElapsed = landingDuration;
             wasGrounded = playerMover != null && playerMover.IsGrounded;
+            wasRopeAttached = ropeController != null && ropeController.IsAttached;
+            swingFacingLeft = visualRenderer != null && visualRenderer.flipX;
             ApplyVisualScale();
         }
 
@@ -182,6 +218,7 @@ namespace HimoHito
         {
             bool isAttached = ropeController != null && ropeController.IsAttached;
             bool isGrounded = playerMover == null || playerMover.IsGrounded;
+            UpdateSwingState(isAttached);
 
             if (isAttached || isGrounded)
             {
@@ -211,10 +248,7 @@ namespace HimoHito
                 return;
             }
 
-            if (visualTransform != null)
-            {
-                visualTransform.localRotation = Quaternion.identity;
-            }
+            UpdateUprightVisualRotation(isAttached);
 
             if (shouldShowJump)
             {
@@ -274,10 +308,7 @@ namespace HimoHito
                 frameIndex = 4;
             }
 
-            if (Mathf.Abs(body.linearVelocity.x) >= minimumWalkSpeed)
-            {
-                visualRenderer.flipX = body.linearVelocity.x < 0f;
-            }
+            UpdateFacingFromHorizontalVelocity(body.linearVelocity.x);
 
             visualRenderer.sprite = jumpingFrames[frameIndex];
             visualTransform.localPosition = Vector3.zero;
@@ -300,16 +331,41 @@ namespace HimoHito
                 return;
             }
 
-            float ropeAngle = Vector2.SignedAngle(Vector2.up, bodyToAnchor);
-            visualTransform.localRotation = Quaternion.Euler(0f, 0f, ropeAngle);
+            Vector2 bodyToAnchorDirection = bodyToAnchor.normalized;
+            Vector2 radialDirection = -bodyToAnchorDirection;
+            Vector2 tangentDirection = new Vector2(
+                -radialDirection.y,
+                radialDirection.x);
+            float tangentialSpeed = Vector2.Dot(
+                body.linearVelocity,
+                tangentDirection);
+            float inertiaLean = Mathf.Clamp(
+                -tangentialSpeed * inertiaLeanAmount,
+                -maximumInertiaLean,
+                maximumInertiaLean);
+            float ropeAngle = Vector2.SignedAngle(
+                Vector2.up,
+                bodyToAnchorDirection);
+            float targetVisualAngle = Mathf.Clamp(
+                ropeAngle * ropeFollowAmount + inertiaLean,
+                -maximumVisualRotation,
+                maximumVisualRotation);
 
-            Vector2 visualRight =
-                Quaternion.Euler(0f, 0f, ropeAngle) * Vector2.right;
-            float tangentialVelocity = Vector2.Dot(body.linearVelocity, visualRight);
-            if (Mathf.Abs(tangentialVelocity) >= minimumWalkSpeed)
-            {
-                visualRenderer.flipX = tangentialVelocity < 0f;
-            }
+            currentVisualAngle = Mathf.SmoothDampAngle(
+                currentVisualAngle,
+                targetVisualAngle,
+                ref visualAngleVelocity,
+                swingRotationSmoothTime,
+                Mathf.Infinity,
+                Time.deltaTime);
+            visualTransform.localRotation = Quaternion.Euler(
+                0f,
+                0f,
+                currentVisualAngle);
+
+            // Facing is captured on attachment and held through both apexes.
+            // This prevents velocity sign changes from flipping the sprite.
+            visualRenderer.flipX = swingFacingLeft;
 
             visualRenderer.sprite = standingSprite;
             visualTransform.localPosition = Vector3.zero;
@@ -317,6 +373,71 @@ namespace HimoHito
             isWalking = false;
             walkFrameProgress = 0f;
             airborneElapsed = 0f;
+        }
+
+        private void UpdateSwingState(bool isAttached)
+        {
+            if (isAttached && !wasRopeAttached)
+            {
+                swingFacingLeft = visualRenderer != null && visualRenderer.flipX;
+                isReturningFromSwing = false;
+                visualAngleVelocity = 0f;
+            }
+            else if (!isAttached && wasRopeAttached)
+            {
+                isReturningFromSwing = true;
+                visualAngleVelocity = 0f;
+            }
+
+            wasRopeAttached = isAttached;
+        }
+
+        private void UpdateUprightVisualRotation(bool isAttached)
+        {
+            if (visualTransform == null)
+            {
+                return;
+            }
+
+            float smoothTime = isAttached
+                ? swingRotationSmoothTime
+                : releaseRotationSmoothTime;
+            currentVisualAngle = Mathf.SmoothDampAngle(
+                currentVisualAngle,
+                0f,
+                ref visualAngleVelocity,
+                smoothTime,
+                Mathf.Infinity,
+                Time.deltaTime);
+
+            if (Mathf.Abs(Mathf.DeltaAngle(currentVisualAngle, 0f)) < 0.1f &&
+                Mathf.Abs(visualAngleVelocity) < 0.5f)
+            {
+                currentVisualAngle = 0f;
+                visualAngleVelocity = 0f;
+                if (!isAttached)
+                {
+                    isReturningFromSwing = false;
+                }
+            }
+
+            visualTransform.localRotation = Quaternion.Euler(
+                0f,
+                0f,
+                currentVisualAngle);
+        }
+
+        private void UpdateFacingFromHorizontalVelocity(float horizontalVelocity)
+        {
+            if (visualRenderer == null ||
+                (ropeController != null && ropeController.IsAttached) ||
+                isReturningFromSwing ||
+                Mathf.Abs(horizontalVelocity) < facingDeadZone)
+            {
+                return;
+            }
+
+            visualRenderer.flipX = horizontalVelocity < 0f;
         }
 
         private void UpdateWalkAnimation()
@@ -352,7 +473,7 @@ namespace HimoHito
             }
 
             isWalking = true;
-            visualRenderer.flipX = body.linearVelocity.x < 0f;
+            UpdateFacingFromHorizontalVelocity(body.linearVelocity.x);
             visualTransform.localPosition = new Vector3(
                 0f,
                 -CharacterVisualHeight * 0.5f,
