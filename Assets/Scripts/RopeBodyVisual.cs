@@ -79,9 +79,8 @@ namespace HimoHito
         private float facingDeadZone = 0.35f;
 
         [Header("Landing animation")]
-        [SerializeField, Min(0.05f)] private float landingDuration = 0.30f;
+        [SerializeField, Min(0.05f)] private float landingDuration = 0.20f;
         [SerializeField, Min(0f)] private float minimumLandingSpeed = 1.5f;
-        [SerializeField, Min(0.01f)] private float fullLandingSpeed = 10f;
 
         private RopeResource ropeResource;
         private RopeController ropeController;
@@ -108,7 +107,6 @@ namespace HimoHito
         private float airborneElapsed;
         private float fastestFallSpeed;
         private float landingElapsed;
-        private float landingStrength;
         private float currentVisualAngle;
         private float visualAngleVelocity;
         private bool wasGrounded;
@@ -414,16 +412,11 @@ namespace HimoHito
 
             float normalizedTime = Mathf.Clamp01(
                 landingElapsed / Mathf.Max(0.01f, landingDuration));
-            int frameIndex = Mathf.Min(
-                LandingFrameCount - 1,
-                Mathf.FloorToInt(normalizedTime * LandingFrameCount));
-
-            // A lighter landing stops at the bent-knee pose instead of using the
-            // deepest compression drawing. Strong falls keep the complete motion.
-            if (frameIndex == 2 && landingStrength < 0.8f)
-            {
-                frameIndex = 1;
-            }
+            int frameIndex = normalizedTime < 0.28f
+                ? 0
+                : normalizedTime < 0.66f
+                    ? 1
+                    : LandingFrameCount - 1;
 
             visualRenderer.sprite = landingFrames[frameIndex];
             visualTransform.localPosition = new Vector3(
@@ -826,13 +819,6 @@ namespace HimoHito
             {
                 if (fastestFallSpeed >= minimumLandingSpeed)
                 {
-                    landingStrength = Mathf.Lerp(
-                        0.55f,
-                        1f,
-                        Mathf.InverseLerp(
-                            minimumLandingSpeed,
-                            Mathf.Max(minimumLandingSpeed + 0.01f, fullLandingSpeed),
-                            fastestFallSpeed));
                     landingElapsed = 0f;
                 }
 
