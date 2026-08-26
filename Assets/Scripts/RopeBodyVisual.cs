@@ -35,6 +35,7 @@ namespace HimoHito
         [SerializeField, Min(0.1f)] private float fullWalkAnimationSpeed = 6.5f;
 
         [Header("Jump animation")]
+        [SerializeField, Min(0f)] private float minimumJumpAnimationSpeed = 0.75f;
         [SerializeField, Min(0f)] private float launchFrameDuration = 0.08f;
         [SerializeField, Min(0.1f)] private float fastRiseSpeed = 4f;
         [SerializeField, Min(0f)] private float apexSpeed = 0.8f;
@@ -63,6 +64,7 @@ namespace HimoHito
         private Sprite[] jumpingFrames;
         private bool usesCharacterArt;
         private bool isWalking;
+        private bool isJumpingVisually;
         private float currentBaseScale = 1f;
         private float walkFrameProgress;
         private float airborneElapsed;
@@ -172,13 +174,24 @@ namespace HimoHito
 
         private void UpdateCharacterAnimation()
         {
+            bool isAttached = ropeController != null && ropeController.IsAttached;
+            bool isGrounded = playerMover == null || playerMover.IsGrounded;
+
+            if (isAttached || isGrounded)
+            {
+                isJumpingVisually = false;
+            }
+            else if (!isJumpingVisually && body != null)
+            {
+                isJumpingVisually =
+                    Mathf.Abs(body.linearVelocity.y) >= minimumJumpAnimationSpeed;
+            }
+
             bool shouldShowJump =
                 usesCharacterArt &&
                 jumpingFrames != null &&
                 jumpingFrames.Length == JumpFrameCount &&
-                playerMover != null &&
-                !playerMover.IsGrounded &&
-                (ropeController == null || !ropeController.IsAttached);
+                isJumpingVisually;
 
             if (shouldShowJump)
             {
