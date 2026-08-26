@@ -12,7 +12,7 @@ namespace HimoHito
     {
         private const string PlayerArtResourcePath = "Art/HimoHitoPlayer-v1";
         private const string WalkArtResourcePath = "Art/HimoHitoWalk-v3";
-        private const string JumpArtResourcePath = "Art/HimoHitoJump-v1";
+        private const string JumpArtResourcePath = "Art/HimoHitoJump-v2";
         private const int WalkColumns = 4;
         private const int WalkRows = 2;
         private const int WalkFrameCount = WalkColumns * WalkRows;
@@ -239,6 +239,18 @@ namespace HimoHito
             else
             {
                 frameIndex = 5;
+            }
+
+            // The generated takeoff and fast-fall drawings compress the whole body.
+            // Reuse the neighboring stable-proportion poses so only the legs and
+            // loose yarn communicate the jump instead of making the body pulse.
+            if (frameIndex == 0)
+            {
+                frameIndex = 1;
+            }
+            else if (frameIndex == 5)
+            {
+                frameIndex = 4;
             }
 
             if (Mathf.Abs(body.linearVelocity.x) >= minimumWalkSpeed)
