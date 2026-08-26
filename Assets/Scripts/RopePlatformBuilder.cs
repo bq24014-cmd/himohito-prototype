@@ -6,7 +6,8 @@ namespace HimoHito
 {
     /// <summary>
     /// Turns the currently attached rope into a permanent walkable platform with Q.
-    /// The distance from the hook to the player is permanently removed from the rope resource.
+    /// The distance from the attachment point to the player is permanently removed
+    /// from the rope resource. The attachment may be a Hook or another solid surface.
     /// </summary>
     [DefaultExecutionOrder(-100)]
     [RequireComponent(typeof(Rigidbody2D), typeof(RopeResource), typeof(RopeController))]

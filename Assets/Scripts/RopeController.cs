@@ -208,14 +208,18 @@ namespace HimoHito
                     continue;
                 }
 
-                HookPoint hookPoint = hit.collider.GetComponentInParent<HookPoint>();
-                if (hookPoint == null)
+                // Trigger colliders are detection areas such as flashlight hazards,
+                // checkpoints, and goals. They are not physical surfaces that can
+                // hold the player's rope.
+                if (hit.collider.isTrigger)
                 {
                     continue;
                 }
 
-                Vector2 resolvedAnchor =
-                    hookPoint.GetAttachmentPoint(hit.point);
+                HookPoint hookPoint = hit.collider.GetComponentInParent<HookPoint>();
+                Vector2 resolvedAnchor = hookPoint != null
+                    ? hookPoint.GetAttachmentPoint(hit.point)
+                    : hit.point;
                 if (Vector2.Distance(origin, resolvedAnchor) > shotDistance + 0.01f)
                 {
                     continue;

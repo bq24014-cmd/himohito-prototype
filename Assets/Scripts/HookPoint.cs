@@ -3,7 +3,8 @@ using UnityEngine;
 namespace HimoHito
 {
     /// <summary>
-    /// Marker component. The rope may attach only to colliders with this component.
+    /// Gives a dedicated Hook a fixed attachment position. Other solid colliders
+    /// use the actual raycast hit position as their rope anchor.
     /// </summary>
     public sealed class HookPoint : MonoBehaviour
     {
