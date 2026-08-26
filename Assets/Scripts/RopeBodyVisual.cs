@@ -20,6 +20,8 @@ namespace HimoHito
         private const int JumpRows = 2;
         private const int JumpFrameCount = JumpColumns * JumpRows;
         private const float SpritePixelsPerUnit = 100f;
+        private const float CharacterVisualWidth = 0.9f;
+        private const float CharacterVisualHeight = 1.15f;
 
         private static Sprite[] cachedWalkFrames;
         private static Vector2 cachedWalkContentSize;
@@ -143,23 +145,23 @@ namespace HimoHito
                 visualRenderer.color = Color.white;
                 Vector2 spriteSize = playerArt.bounds.size;
                 visualBaseScale = new Vector2(
-                    0.9f / Mathf.Max(0.01f, spriteSize.x),
-                    1.15f / Mathf.Max(0.01f, spriteSize.y));
+                    CharacterVisualWidth / Mathf.Max(0.01f, spriteSize.x),
+                    CharacterVisualHeight / Mathf.Max(0.01f, spriteSize.y));
                 standingVisualBaseScale = visualBaseScale;
                 standingSprite = playerArt;
                 walkingFrames = LoadWalkFrames(out Vector2 walkContentSize);
                 if (walkingFrames != null && walkContentSize.sqrMagnitude > 0f)
                 {
                     walkingVisualBaseScale = new Vector2(
-                        0.9f / Mathf.Max(0.01f, walkContentSize.x),
-                        1.15f / Mathf.Max(0.01f, walkContentSize.y));
+                        CharacterVisualWidth / Mathf.Max(0.01f, walkContentSize.x),
+                        CharacterVisualHeight / Mathf.Max(0.01f, walkContentSize.y));
                 }
                 jumpingFrames = LoadJumpFrames(out Vector2 jumpContentSize);
                 if (jumpingFrames != null && jumpContentSize.sqrMagnitude > 0f)
                 {
                     jumpingVisualBaseScale = new Vector2(
-                        0.9f / Mathf.Max(0.01f, jumpContentSize.x),
-                        1.15f / Mathf.Max(0.01f, jumpContentSize.y));
+                        CharacterVisualWidth / Mathf.Max(0.01f, jumpContentSize.x),
+                        CharacterVisualHeight / Mathf.Max(0.01f, jumpContentSize.y));
                 }
                 usesCharacterArt = true;
             }
@@ -245,6 +247,7 @@ namespace HimoHito
             }
 
             visualRenderer.sprite = jumpingFrames[frameIndex];
+            visualTransform.localPosition = Vector3.zero;
             visualBaseScale = jumpingVisualBaseScale;
             isWalking = false;
             walkFrameProgress = 0f;
@@ -273,6 +276,7 @@ namespace HimoHito
                 if (isWalking || visualRenderer.sprite != standingSprite)
                 {
                     visualRenderer.sprite = standingSprite;
+                    visualTransform.localPosition = Vector3.zero;
                     visualBaseScale = standingVisualBaseScale;
                 }
 
@@ -283,6 +287,10 @@ namespace HimoHito
 
             isWalking = true;
             visualRenderer.flipX = body.linearVelocity.x < 0f;
+            visualTransform.localPosition = new Vector3(
+                0f,
+                -CharacterVisualHeight * 0.5f,
+                0f);
             visualBaseScale = walkingVisualBaseScale;
 
             float speedRatio = Mathf.InverseLerp(
@@ -305,6 +313,7 @@ namespace HimoHito
                 "Walk",
                 WalkColumns,
                 WalkRows,
+                true,
                 ref cachedWalkFrames,
                 ref cachedWalkContentSize,
                 out contentSize);
@@ -317,6 +326,7 @@ namespace HimoHito
                 "Jump",
                 JumpColumns,
                 JumpRows,
+                false,
                 ref cachedJumpFrames,
                 ref cachedJumpContentSize,
                 out contentSize);
@@ -327,6 +337,7 @@ namespace HimoHito
             string animationName,
             int columns,
             int rows,
+            bool alignToFeet,
             ref Sprite[] cachedFrames,
             ref Vector2 cachedContentSize,
             out Vector2 contentSize)
@@ -412,22 +423,39 @@ namespace HimoHito
                 int cellX = column * cellWidth;
                 int cellY = rowFromBottom * cellHeight;
 
-                FindFrameContentSize(
+                FindFrameContentBounds(
                     pixels,
                     source.width,
                     cellX,
                     cellY,
                     cellWidth,
                     cellHeight,
-                    out int contentWidth,
-                    out int contentHeight);
+                    out int minContentX,
+                    out int minContentY,
+                    out int maxContentX,
+                    out int maxContentY);
+                int contentWidth = maxContentX >= minContentX
+                    ? maxContentX - minContentX + 1
+                    : 0;
+                int contentHeight = maxContentY >= minContentY
+                    ? maxContentY - minContentY + 1
+                    : 0;
                 maximumContentWidth = Mathf.Max(maximumContentWidth, contentWidth);
                 maximumContentHeight = Mathf.Max(maximumContentHeight, contentHeight);
+
+                Vector2 framePivot = CalculateFramePivot(
+                    cellWidth,
+                    cellHeight,
+                    minContentX,
+                    minContentY,
+                    maxContentX,
+                    maxContentY,
+                    alignToFeet);
 
                 Sprite frame = Sprite.Create(
                     transparentTexture,
                     new Rect(cellX, cellY, cellWidth, cellHeight),
-                    new Vector2(0.5f, 0.5f),
+                    framePivot,
                     SpritePixelsPerUnit,
                     0,
                     SpriteMeshType.FullRect);
@@ -451,20 +479,45 @@ namespace HimoHito
             return cachedFrames;
         }
 
-        private static void FindFrameContentSize(
+        private static Vector2 CalculateFramePivot(
+            int cellWidth,
+            int cellHeight,
+            int minContentX,
+            int minContentY,
+            int maxContentX,
+            int maxContentY,
+            bool alignToFeet)
+        {
+            if (maxContentX < minContentX || maxContentY < minContentY)
+            {
+                return new Vector2(0.5f, 0.5f);
+            }
+
+            float contentCenterX = (minContentX + maxContentX + 1f) * 0.5f;
+            float pivotY = alignToFeet
+                ? minContentY + 0.5f
+                : (minContentY + maxContentY + 1f) * 0.5f;
+            return new Vector2(
+                contentCenterX / cellWidth,
+                pivotY / cellHeight);
+        }
+
+        private static void FindFrameContentBounds(
             Color32[] pixels,
             int textureWidth,
             int cellX,
             int cellY,
             int cellWidth,
             int cellHeight,
-            out int contentWidth,
-            out int contentHeight)
+            out int minX,
+            out int minY,
+            out int maxX,
+            out int maxY)
         {
-            int minX = cellWidth;
-            int minY = cellHeight;
-            int maxX = -1;
-            int maxY = -1;
+            minX = cellWidth;
+            minY = cellHeight;
+            maxX = -1;
+            maxY = -1;
 
             for (int y = 0; y < cellHeight; y++)
             {
@@ -483,8 +536,6 @@ namespace HimoHito
                 }
             }
 
-            contentWidth = maxX >= minX ? maxX - minX + 1 : 0;
-            contentHeight = maxY >= minY ? maxY - minY + 1 : 0;
         }
 
         private void UpdateRemainingLengthScale()
