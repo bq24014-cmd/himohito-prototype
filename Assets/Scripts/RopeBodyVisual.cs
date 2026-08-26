@@ -11,7 +11,7 @@ namespace HimoHito
     public sealed class RopeBodyVisual : MonoBehaviour
     {
         private const string PlayerArtResourcePath = "Art/HimoHitoPlayer-v1";
-        private const string WalkArtResourcePath = "Art/HimoHitoWalk-v2";
+        private const string WalkArtResourcePath = "Art/HimoHitoWalk-v3";
         private const string JumpArtResourcePath = "Art/HimoHitoJump-v1";
         private const int WalkColumns = 4;
         private const int WalkRows = 2;
