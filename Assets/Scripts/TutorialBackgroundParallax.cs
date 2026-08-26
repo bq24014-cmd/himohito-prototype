@@ -57,6 +57,10 @@ namespace HimoHito
             }
 
             cameraTransform = targetCamera.transform;
+            transform.position = new Vector3(
+                cameraTransform.position.x,
+                transform.position.y,
+                transform.position.z);
             backgroundStartPosition = transform.position;
             cameraStartX = cameraTransform.position.x;
             isInitialized = true;
