@@ -13,12 +13,16 @@ namespace HimoHito
         private const string PlayerArtResourcePath = "Art/HimoHitoPlayer-v1";
         private const string WalkArtResourcePath = "Art/HimoHitoWalk-v3";
         private const string JumpArtResourcePath = "Art/HimoHitoJump-v2";
+        private const string SwingArtResourcePath = "Art/HimoHitoSwing-v1";
         private const int WalkColumns = 4;
         private const int WalkRows = 2;
         private const int WalkFrameCount = WalkColumns * WalkRows;
         private const int JumpColumns = 3;
         private const int JumpRows = 2;
         private const int JumpFrameCount = JumpColumns * JumpRows;
+        private const int SwingColumns = 3;
+        private const int SwingRows = 2;
+        private const int SwingFrameCount = SwingColumns * SwingRows;
         private const float SpritePixelsPerUnit = 100f;
         private const float CharacterVisualWidth = 0.9f;
         private const float CharacterVisualHeight = 1.15f;
@@ -27,6 +31,8 @@ namespace HimoHito
         private static Vector2 cachedWalkContentSize;
         private static Sprite[] cachedJumpFrames;
         private static Vector2 cachedJumpContentSize;
+        private static Sprite[] cachedSwingFrames;
+        private static Vector2 cachedSwingContentSize;
 
         [SerializeField, Range(0.2f, 1f)] private float minimumVisualScale = 0.65f;
 
@@ -42,6 +48,11 @@ namespace HimoHito
         [SerializeField, Min(0.1f)] private float fastRiseSpeed = 4f;
         [SerializeField, Min(0f)] private float apexSpeed = 0.8f;
         [SerializeField, Min(0.1f)] private float fastFallSpeed = 4f;
+
+        [Header("Swing animation")]
+        [SerializeField, Min(0f)] private float swingApexSpeed = 0.75f;
+        [SerializeField, Min(0.1f)] private float fastSwingSpeed = 5f;
+        [SerializeField, Min(0f)] private float swingBottomVerticalSpeed = 1.25f;
 
         [Header("Landing squash")]
         [SerializeField, Min(0.05f)] private float landingDuration = 0.18f;
@@ -61,9 +72,11 @@ namespace HimoHito
         private Vector2 standingVisualBaseScale = Vector2.one;
         private Vector2 walkingVisualBaseScale = Vector2.one;
         private Vector2 jumpingVisualBaseScale = Vector2.one;
+        private Vector2 swingingVisualBaseScale = Vector2.one;
         private Sprite standingSprite;
         private Sprite[] walkingFrames;
         private Sprite[] jumpingFrames;
+        private Sprite[] swingingFrames;
         private bool usesCharacterArt;
         private bool isWalking;
         private bool isJumpingVisually;
@@ -163,6 +176,13 @@ namespace HimoHito
                         CharacterVisualWidth / Mathf.Max(0.01f, jumpContentSize.x),
                         CharacterVisualHeight / Mathf.Max(0.01f, jumpContentSize.y));
                 }
+                swingingFrames = LoadSwingFrames(out Vector2 swingContentSize);
+                if (swingingFrames != null && swingContentSize.sqrMagnitude > 0f)
+                {
+                    swingingVisualBaseScale = new Vector2(
+                        CharacterVisualWidth / Mathf.Max(0.01f, swingContentSize.x),
+                        CharacterVisualHeight / Mathf.Max(0.01f, swingContentSize.y));
+                }
                 usesCharacterArt = true;
             }
             else
@@ -194,6 +214,19 @@ namespace HimoHito
                 jumpingFrames != null &&
                 jumpingFrames.Length == JumpFrameCount &&
                 isJumpingVisually;
+
+            bool shouldShowSwing =
+                usesCharacterArt &&
+                swingingFrames != null &&
+                swingingFrames.Length == SwingFrameCount &&
+                isAttached &&
+                !isGrounded;
+
+            if (shouldShowSwing)
+            {
+                UpdateSwingAnimation();
+                return;
+            }
 
             if (shouldShowJump)
             {
@@ -263,6 +296,55 @@ namespace HimoHito
             visualBaseScale = jumpingVisualBaseScale;
             isWalking = false;
             walkFrameProgress = 0f;
+        }
+
+        private void UpdateSwingAnimation()
+        {
+            if (visualRenderer == null || body == null || ropeController == null)
+            {
+                return;
+            }
+
+            Vector2 anchorToBody =
+                (Vector2)transform.position - ropeController.AnchorPoint;
+            Vector2 tangent = anchorToBody.sqrMagnitude > 0.0001f
+                ? new Vector2(-anchorToBody.y, anchorToBody.x).normalized
+                : Vector2.right;
+            float tangentialSpeed = Mathf.Abs(
+                Vector2.Dot(body.linearVelocity, tangent));
+            float verticalSpeed = body.linearVelocity.y;
+            int frameIndex;
+
+            if (tangentialSpeed < swingApexSpeed)
+            {
+                frameIndex = 2;
+            }
+            else if (
+                Mathf.Abs(verticalSpeed) <= swingBottomVerticalSpeed &&
+                tangentialSpeed >= fastSwingSpeed)
+            {
+                frameIndex = 1;
+            }
+            else if (verticalSpeed < 0f)
+            {
+                frameIndex = tangentialSpeed >= fastSwingSpeed ? 0 : 3;
+            }
+            else
+            {
+                frameIndex = tangentialSpeed >= fastSwingSpeed ? 5 : 4;
+            }
+
+            if (Mathf.Abs(body.linearVelocity.x) >= minimumWalkSpeed)
+            {
+                visualRenderer.flipX = body.linearVelocity.x < 0f;
+            }
+
+            visualRenderer.sprite = swingingFrames[frameIndex];
+            visualTransform.localPosition = Vector3.zero;
+            visualBaseScale = swingingVisualBaseScale;
+            isWalking = false;
+            walkFrameProgress = 0f;
+            airborneElapsed = 0f;
         }
 
         private void UpdateWalkAnimation()
@@ -341,6 +423,19 @@ namespace HimoHito
                 false,
                 ref cachedJumpFrames,
                 ref cachedJumpContentSize,
+                out contentSize);
+        }
+
+        private static Sprite[] LoadSwingFrames(out Vector2 contentSize)
+        {
+            return LoadAnimationFrames(
+                SwingArtResourcePath,
+                "Swing",
+                SwingColumns,
+                SwingRows,
+                false,
+                ref cachedSwingFrames,
+                ref cachedSwingContentSize,
                 out contentSize);
         }
 
