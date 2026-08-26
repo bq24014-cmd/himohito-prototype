@@ -15,13 +15,19 @@ namespace HimoHitoEditor
 
         static PlayFromTutorial()
         {
-            EditorApplication.delayCall += ConfigurePlayStartScene;
+            EditorApplication.delayCall += ConfigureMidpointDevelopmentStartScene;
         }
 
         [MenuItem("HimoHito/Play From Tutorial")]
         public static void ConfigurePlayStartScene()
         {
             ConfigurePlayStartScene(TutorialScenePath, "Tutorial");
+        }
+
+        [MenuItem("HimoHito/Play From Main Stage Midpoint")]
+        public static void ConfigureMidpointDevelopmentStartScene()
+        {
+            ConfigurePlayStartScene(MainStageScenePath, "MainStage midpoint development");
         }
 
         [MenuItem("HimoHito/Play From Section 7 Experiment")]
