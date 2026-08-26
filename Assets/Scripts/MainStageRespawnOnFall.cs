@@ -10,6 +10,13 @@ namespace HimoHito
     [RequireComponent(typeof(RopePlatformBuilder), typeof(PlayerMover))]
     public sealed class MainStageRespawnOnFall : MonoBehaviour
     {
+        // Temporary switch for testing the latter half of the main stage.
+        // Set this back to false when full-run verification resumes.
+        private static readonly bool ForceMidpointStartForDevelopment = true;
+        private const int MidpointSectionNumber = 6;
+        private static readonly Vector2 MidpointDevelopmentPosition =
+            new Vector2(69.7f, -1.65f);
+
         [SerializeField] private float fallThreshold = -9f;
         [SerializeField, Min(0.01f)] private float minimumUsableRopeLength = 1f;
         [SerializeField] private bool startFromCurrentSectionForDevelopment;
@@ -56,7 +63,7 @@ namespace HimoHito
 
         private void Start()
         {
-            if (!startFromCurrentSectionForDevelopment)
+            if (!ShouldApplyDevelopmentStart)
             {
                 return;
             }
@@ -179,25 +186,35 @@ namespace HimoHito
 
         private void ApplyDevelopmentStart()
         {
-            if (!startFromCurrentSectionForDevelopment)
+            if (!ShouldApplyDevelopmentStart)
             {
                 return;
             }
 
-            checkpointPosition = developmentStartPosition;
-            transform.position = developmentStartPosition;
-            body.position = developmentStartPosition;
+            Vector2 startPosition = ForceMidpointStartForDevelopment
+                ? MidpointDevelopmentPosition
+                : developmentStartPosition;
+            int sectionNumber = ForceMidpointStartForDevelopment
+                ? MidpointSectionNumber
+                : developmentSectionNumber;
+
+            checkpointPosition = startPosition;
+            transform.position = startPosition;
+            body.position = startPosition;
             body.linearVelocity = Vector2.zero;
             body.angularVelocity = 0f;
             ropeResource.RestoreCurrentLength(developmentRopeLength);
             ropeController.RestoreSelectedRopeLength(
                 Mathf.Min(ropeController.SelectedRopeLength, Mathf.FloorToInt(developmentRopeLength)));
             platformBuilder.ClearPlatforms();
-            HasReachedMidpoint = developmentSectionNumber >= 6;
-            HasReachedSectionEight = developmentSectionNumber >= 8;
-            HasReachedSectionNine = developmentSectionNumber >= 8;
-            HasReachedSectionTen = developmentSectionNumber >= 9;
+            HasReachedMidpoint = sectionNumber >= 6;
+            HasReachedSectionEight = sectionNumber >= 8;
+            HasReachedSectionNine = sectionNumber >= 8;
+            HasReachedSectionTen = sectionNumber >= 9;
         }
+
+        private bool ShouldApplyDevelopmentStart =>
+            ForceMidpointStartForDevelopment || startFromCurrentSectionForDevelopment;
 
         private void RestoreCheckpointState()
         {
