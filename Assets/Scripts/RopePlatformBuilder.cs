@@ -13,6 +13,8 @@ namespace HimoHito
     [RequireComponent(typeof(Rigidbody2D), typeof(RopeResource), typeof(RopeController))]
     public sealed class RopePlatformBuilder : MonoBehaviour
     {
+        private const float StandingClearance = 0.005f;
+
         [Serializable]
         public readonly struct PlatformState
         {
@@ -29,7 +31,6 @@ namespace HimoHito
         [SerializeField, Min(0.05f)] private float platformWidth = 0.22f;
         [SerializeField, Min(0.1f)] private float minimumPlatformLength = 1f;
         [SerializeField, Min(0.01f)] private float minimumRopeReserve = 1f;
-        [SerializeField, Min(0f)] private float standingClearance = 0.05f;
 
         private readonly List<GameObject> generatedPlatforms = new();
         private Rigidbody2D body;
@@ -82,7 +83,7 @@ namespace HimoHito
             }
 
             GeneratedRopePlatform generatedPlatform = CreatePlatform(start, end);
-            PlacePlayerOnPlatform(end);
+            PlacePlayerOnPlatform(start, end);
             if (TryGetComponent(out PlayerMover playerMover))
             {
                 playerMover.RegisterGeneratedRopePlatformContact(generatedPlatform);
@@ -245,13 +246,29 @@ namespace HimoHito
             return generated;
         }
 
-        private void PlacePlayerOnPlatform(Vector2 end)
+        private void PlacePlayerOnPlatform(Vector2 start, Vector2 end)
         {
-            float playerHalfHeight = bodyCollider != null
-                ? bodyCollider.bounds.extents.y
-                : 0.5f;
-            body.position = end + Vector2.up *
-                (playerHalfHeight + platformWidth * 0.5f + standingClearance);
+            Vector2 platformDirection = end - start;
+            Vector2 surfaceNormal = platformDirection.sqrMagnitude > 0.0001f
+                ? new Vector2(-platformDirection.y, platformDirection.x).normalized
+                : Vector2.up;
+            if (surfaceNormal.y < 0f)
+            {
+                surfaceNormal = -surfaceNormal;
+            }
+
+            float playerSupportDistance = 0.5f;
+            if (bodyCollider != null)
+            {
+                Vector2 extents = bodyCollider.bounds.extents;
+                playerSupportDistance =
+                    Mathf.Abs(surfaceNormal.x) * extents.x +
+                    Mathf.Abs(surfaceNormal.y) * extents.y;
+            }
+
+            float surfaceDistance =
+                playerSupportDistance + platformWidth * 0.5f + StandingClearance;
+            body.position = end + surfaceNormal * surfaceDistance;
             body.linearVelocity = Vector2.zero;
             body.angularVelocity = 0f;
         }
