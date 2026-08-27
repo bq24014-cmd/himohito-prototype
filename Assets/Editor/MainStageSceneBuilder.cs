@@ -45,6 +45,7 @@ namespace HimoHitoEditor
                 "Main Hook 3",
                 new Vector2(36f, 2.2f),
                 new Vector2(1.6f, 0.45f));
+            MainStageSectionThreeSetup.EnsureCreated();
 
             CreatePlatform(
                 "Main Landing 3",
