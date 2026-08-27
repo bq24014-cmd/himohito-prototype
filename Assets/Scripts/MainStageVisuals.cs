@@ -26,6 +26,12 @@ namespace HimoHito
             new Color(1f, 0.365f, 0.561f);
         private static readonly Color BlockColor =
             new Color(1f, 0.706f, 0.235f);
+        private static readonly Color BeamFaceColor =
+            new Color(0.35f, 0.22f, 0.16f);
+        private static readonly Color BeamEdgeColor =
+            new Color(0.62f, 0.40f, 0.24f);
+        private static readonly Color BeamBracketColor =
+            new Color(0.25f, 0.15f, 0.12f);
         private static readonly Color RailColor =
             new Color(0.298f, 0.765f, 1f);
         private static readonly Color HookColor = RailColor;
@@ -86,6 +92,12 @@ namespace HimoHito
                     continue;
                 }
 
+                if (candidate.name == MainStageSectionTwoSetup.BoardName)
+                {
+                    changed |= EnsureLengthWindowBeamVisual(candidate);
+                    continue;
+                }
+
                 if (candidate.TryGetComponent(out BoxCollider2D _) &&
                     candidate.TryGetComponent(out SolidSprite _))
                 {
@@ -107,6 +119,141 @@ namespace HimoHito
             }
 
             return changed;
+        }
+
+        private static bool EnsureLengthWindowBeamVisual(GameObject board)
+        {
+            if (board == null ||
+                !board.TryGetComponent(out SpriteRenderer sourceRenderer))
+            {
+                return false;
+            }
+
+            bool changed = false;
+            changed |= RemoveChild(board, "Orange Block Platform Visual");
+            changed |= EnsureSolidVisualPart(
+                board,
+                "Wooden Beam Face",
+                Vector2.zero,
+                new Vector2(1f, 0.72f),
+                BeamFaceColor,
+                sourceRenderer.sortingOrder + 2);
+            changed |= EnsureSolidVisualPart(
+                board,
+                "Wooden Beam Lower Edge",
+                new Vector2(0f, -0.42f),
+                new Vector2(1.06f, 0.22f),
+                BeamEdgeColor,
+                sourceRenderer.sortingOrder + 3);
+            changed |= EnsureSolidVisualPart(
+                board,
+                "Wooden Beam Left Bracket",
+                new Vector2(-0.36f, -0.74f),
+                new Vector2(0.08f, 0.56f),
+                BeamBracketColor,
+                sourceRenderer.sortingOrder + 1);
+            changed |= EnsureSolidVisualPart(
+                board,
+                "Wooden Beam Right Bracket",
+                new Vector2(0.36f, -0.74f),
+                new Vector2(0.08f, 0.56f),
+                BeamBracketColor,
+                sourceRenderer.sortingOrder + 1);
+
+            if (sourceRenderer.enabled)
+            {
+                sourceRenderer.enabled = false;
+                changed = true;
+            }
+
+            return changed;
+        }
+
+        private static bool EnsureSolidVisualPart(
+            GameObject parent,
+            string partName,
+            Vector2 localPosition,
+            Vector2 localScale,
+            Color color,
+            int sortingOrder)
+        {
+            bool changed = false;
+            Transform partTransform = parent.transform.Find(partName);
+            if (partTransform == null)
+            {
+                GameObject partObject = new GameObject(partName);
+                partTransform = partObject.transform;
+                partTransform.SetParent(parent.transform, false);
+                changed = true;
+            }
+
+            Vector3 targetPosition = new Vector3(
+                localPosition.x,
+                localPosition.y,
+                0f);
+            Vector3 targetScale = new Vector3(
+                localScale.x,
+                localScale.y,
+                1f);
+            if (partTransform.localPosition != targetPosition)
+            {
+                partTransform.localPosition = targetPosition;
+                changed = true;
+            }
+            if (partTransform.localRotation != Quaternion.identity)
+            {
+                partTransform.localRotation = Quaternion.identity;
+                changed = true;
+            }
+            if (partTransform.localScale != targetScale)
+            {
+                partTransform.localScale = targetScale;
+                changed = true;
+            }
+
+            if (!partTransform.TryGetComponent(out SpriteRenderer renderer))
+            {
+                renderer = partTransform.gameObject.AddComponent<SpriteRenderer>();
+                changed = true;
+            }
+            if (!partTransform.TryGetComponent(out SolidSprite solidSprite))
+            {
+                solidSprite = partTransform.gameObject.AddComponent<SolidSprite>();
+                changed = true;
+            }
+            if (solidSprite.Color != color)
+            {
+                solidSprite.Color = color;
+                changed = true;
+            }
+            if (renderer.sortingOrder != sortingOrder)
+            {
+                renderer.sortingOrder = sortingOrder;
+                changed = true;
+            }
+
+            return changed;
+        }
+
+        private static bool RemoveChild(GameObject parent, string childName)
+        {
+            Transform child = parent != null
+                ? parent.transform.Find(childName)
+                : null;
+            if (child == null)
+            {
+                return false;
+            }
+
+            if (Application.isPlaying)
+            {
+                Object.Destroy(child.gameObject);
+            }
+            else
+            {
+                Object.DestroyImmediate(child.gameObject);
+            }
+            return true;
         }
 
         private static bool RestorePlayerVisual(GameObject player)
