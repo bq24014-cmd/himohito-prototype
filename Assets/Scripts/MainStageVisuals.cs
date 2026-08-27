@@ -90,15 +90,18 @@ namespace HimoHito
                     candidate.TryGetComponent(out SolidSprite _))
                 {
                     bool isStartGround = candidate.name == "Main Start Ground";
+                    bool isSolidToyBoard =
+                        isStartGround ||
+                        candidate.TryGetComponent(out SolidSwingSurface _);
                     changed |= ApplyColor(
                         candidate,
-                        isStartGround ? BlockColor : RailColor);
+                        isSolidToyBoard ? BlockColor : RailColor);
                     changed |= EnsureToyVisual(
                         candidate,
-                        isStartGround
+                        isSolidToyBoard
                             ? "Orange Block Platform Visual"
                             : "Blue Railway Platform Visual",
-                        isStartGround ? BlockResourcePath : RailResourcePath,
+                        isSolidToyBoard ? BlockResourcePath : RailResourcePath,
                         1);
                 }
             }

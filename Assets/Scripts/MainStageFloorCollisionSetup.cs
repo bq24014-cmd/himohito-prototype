@@ -48,6 +48,12 @@ namespace HimoHito
                     continue;
                 }
 
+                if (candidate.TryGetComponent(out SolidSwingSurface _))
+                {
+                    changed |= EnsureSolid(candidate);
+                    continue;
+                }
+
                 if (!candidate.TryGetComponent(out SolidSprite _))
                 {
                     continue;

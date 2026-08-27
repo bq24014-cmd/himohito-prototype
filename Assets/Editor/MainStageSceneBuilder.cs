@@ -51,6 +51,7 @@ namespace HimoHitoEditor
                 new Vector2(47.425f, -0.5f),
                 new Vector2(5.75f, 0.7f));
 
+            MainStageSectionTwoSetup.EnsureCreated();
             CreateSectionsFourAndFive();
             CreateSectionSix();
             CreateSectionSeven();
