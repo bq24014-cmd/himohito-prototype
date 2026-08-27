@@ -162,7 +162,8 @@ namespace HimoHito
             foreach (RaycastHit2D hit in hits)
             {
                 if (hit.collider == null ||
-                    !hit.collider.TryGetComponent(out SolidSwingSurface _))
+                    !hit.collider.TryGetComponent(out SolidSwingSurface _) ||
+                    hit.distance <= solidSurfaceSkin)
                 {
                     continue;
                 }
