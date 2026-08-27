@@ -35,6 +35,10 @@ namespace HimoHito
         [Header("Generated rope platform")]
         [SerializeField, Min(0f)] private float ropePlatformContactGraceTime = 0.15f;
 
+        [Header("Solid swing collision")]
+        [SerializeField, Min(0f)] private float solidSurfaceSkin = 0.01f;
+        [SerializeField, Min(0.1f)] private float maximumCollisionSweepDistance = 2f;
+
         private Rigidbody2D body;
         private BoxCollider2D bodyCollider;
         private RopeController ropeController;
@@ -45,6 +49,8 @@ namespace HimoHito
         private float moveInput;
         private float coyoteTimer;
         private float jumpBufferTimer;
+        private Vector2 previousPhysicsPosition;
+        private bool hasPreviousPhysicsPosition;
 
         public bool IsGrounded { get; private set; }
 
@@ -61,6 +67,8 @@ namespace HimoHito
                 hideFlags = HideFlags.HideAndDontSave
             };
             bodyCollider.sharedMaterial = movementMaterial;
+            previousPhysicsPosition = body.position;
+            hasPreviousPhysicsPosition = true;
         }
 
         private void OnDestroy()
@@ -88,6 +96,7 @@ namespace HimoHito
 
         private void FixedUpdate()
         {
+            PreventSolidSurfaceTunneling();
             IsGrounded = CheckGrounded();
             coyoteTimer = IsGrounded ? coyoteTime : coyoteTimer - Time.fixedDeltaTime;
 
@@ -115,6 +124,71 @@ namespace HimoHito
                 ClearRecentRopePlatform();
                 jumpBufferTimer = 0f;
                 coyoteTimer = 0f;
+            }
+
+            previousPhysicsPosition = body.position;
+            hasPreviousPhysicsPosition = true;
+        }
+
+        private void PreventSolidSurfaceTunneling()
+        {
+            if (!hasPreviousPhysicsPosition)
+            {
+                previousPhysicsPosition = body.position;
+                hasPreviousPhysicsPosition = true;
+                return;
+            }
+
+            Vector2 displacement = body.position - previousPhysicsPosition;
+            float distance = displacement.magnitude;
+            if (distance <= Mathf.Epsilon || distance > maximumCollisionSweepDistance)
+            {
+                previousPhysicsPosition = body.position;
+                return;
+            }
+
+            Vector2 direction = displacement / distance;
+            Vector2 centerOffset =
+                (Vector2)bodyCollider.bounds.center - body.position;
+            RaycastHit2D[] hits = Physics2D.BoxCastAll(
+                previousPhysicsPosition + centerOffset,
+                bodyCollider.bounds.size,
+                0f,
+                direction,
+                distance);
+
+            RaycastHit2D closestSolidHit = default;
+            bool foundSolidHit = false;
+            foreach (RaycastHit2D hit in hits)
+            {
+                if (hit.collider == null ||
+                    !hit.collider.TryGetComponent(out SolidSwingSurface _))
+                {
+                    continue;
+                }
+
+                if (!foundSolidHit || hit.distance < closestSolidHit.distance)
+                {
+                    closestSolidHit = hit;
+                    foundSolidHit = true;
+                }
+            }
+
+            if (!foundSolidHit)
+            {
+                return;
+            }
+
+            float safeDistance = Mathf.Max(
+                0f,
+                closestSolidHit.distance - solidSurfaceSkin);
+            body.position = previousPhysicsPosition + direction * safeDistance;
+
+            float speedIntoSurface =
+                Vector2.Dot(body.linearVelocity, closestSolidHit.normal);
+            if (speedIntoSurface < 0f)
+            {
+                body.linearVelocity -= closestSolidHit.normal * speedIntoSurface;
             }
         }
 

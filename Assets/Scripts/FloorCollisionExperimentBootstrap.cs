@@ -24,11 +24,12 @@ namespace HimoHito
                 new Vector2(5.5f, 0.6f));
 
             CreateHook("Experiment Solid Floor Hook", new Vector2(5f, 3f));
-            CreateSolidPlatform(
+            GameObject solidBoard = CreateSolidPlatform(
                 "Experiment Solid Board",
                 new Vector2(9.5f, -5.2f),
                 new Vector2(5.5f, 0.7f),
                 new Color(0.38f, 0.41f, 0.52f));
+            solidBoard.AddComponent<SolidSwingSurface>();
 
             new GameObject("Experiment HUD").AddComponent<PrototypeHud>();
             Destroy(gameObject);
