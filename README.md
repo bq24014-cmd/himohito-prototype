@@ -119,7 +119,7 @@
 
 シーンを再構築する場合は、Unity上部メニューの`HimoHito > Build Tutorial Scene`を使用します。現在開いているシーンにかかわらず通しプレイを始める場合は、`HimoHito > Play From Tutorial`を使用します。
 
-現在は後半確認期間の開発用設定として、通常のPlayを押した直後から`MainStage`の中間チェックポイントで始まります。落下や`R`でも同じ中間地点へ戻ります。通し確認へ戻る際は、Play開始シーンと中間開始の一時設定を解除します。手動で通しプレイへ切り替える場合は、Unity上部メニューの`HimoHito > Play From Tutorial`を使用します。
+現在は本編の通し確認用として、通常のPlayを押すと`MainStage`の第1区間から始まります。中間地点へ到達するまでは、落下や`R`でも本編の開始地点へ戻ります。チュートリアルから通して確認する場合は、Unity上部メニューの`HimoHito > Play From Tutorial`を使用します。
 
 ### Windows版を作成
 

@@ -12,7 +12,7 @@ namespace HimoHito
     {
         // Temporary switch for testing the latter half of the main stage.
         // Set this back to false when full-run verification resumes.
-        private static readonly bool ForceMidpointStartForDevelopment = true;
+        private static readonly bool ForceMidpointStartForDevelopment = false;
         private const int MidpointSectionNumber = 6;
         private static readonly Vector2 MidpointDevelopmentPosition =
             new Vector2(69.7f, -1.65f);
