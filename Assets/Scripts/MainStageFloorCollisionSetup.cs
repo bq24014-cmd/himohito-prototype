@@ -5,14 +5,13 @@ namespace HimoHito
 {
     /// <summary>
     /// Gives each visible main-stage floor the collision rule suggested by
-    /// its toy material. Blue railway floors are one-way; the orange start
-    /// floor and generated rope platforms are solid from every direction.
+    /// its gameplay role. Launch and landing floors are one-way so they do
+    /// not block a returning swing. Deliberate obstacle boards stay solid.
     /// </summary>
     public static class MainStageFloorCollisionSetup
     {
         private const string MainStageSceneName = "MainStage";
         private const string MainObjectPrefix = "Main ";
-        private const string StartGroundName = "Main Start Ground";
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
         private static void ApplyAfterSceneLoad()
@@ -42,13 +41,7 @@ namespace HimoHito
                     continue;
                 }
 
-                if (candidate.name == StartGroundName)
-                {
-                    changed |= EnsureSolid(candidate);
-                    continue;
-                }
-
-                if (candidate.TryGetComponent(out SolidSwingSurface _))
+                if (candidate.name == MainStageSectionTwoSetup.BoardName)
                 {
                     changed |= EnsureSolid(candidate);
                     continue;
