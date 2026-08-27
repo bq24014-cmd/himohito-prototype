@@ -12,6 +12,8 @@ namespace HimoHitoEditor
     {
         private const string TutorialScenePath = "Assets/Scenes/Tutorial.unity";
         private const string MainStageScenePath = "Assets/Scenes/MainStage.unity";
+        private const string FloorCollisionExperimentScenePath =
+            "Assets/Scenes/FloorCollisionExperiment.unity";
 
         static PlayFromTutorial()
         {
@@ -40,6 +42,14 @@ namespace HimoHitoEditor
         public static void ConfigureSectionSevenExperimentStartScene()
         {
             ConfigurePlayStartScene(MainStageScenePath, "MainStage section 7 experiment");
+        }
+
+        [MenuItem("HimoHito/Play From Floor Collision Experiment")]
+        public static void ConfigureFloorCollisionExperimentStartScene()
+        {
+            ConfigurePlayStartScene(
+                FloorCollisionExperimentScenePath,
+                "floor collision experiment");
         }
 
         private static void ConfigurePlayStartScene(string scenePath, string description)

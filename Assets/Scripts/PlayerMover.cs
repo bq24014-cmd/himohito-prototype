@@ -257,15 +257,23 @@ namespace HimoHito
             bool isGrounded = false;
             foreach (Collider2D overlap in overlaps)
             {
-                if (overlap != null && overlap != bodyCollider)
+                if (overlap == null || overlap == bodyCollider)
                 {
-                    isGrounded = true;
-                    if (overlap.TryGetComponent(
-                            out GeneratedRopePlatform generatedRopePlatform))
-                    {
-                        groundedRopePlatform = generatedRopePlatform;
-                        RegisterGeneratedRopePlatformContact(generatedRopePlatform);
-                    }
+                    continue;
+                }
+
+                if (overlap.TryGetComponent(out OneWayRailPlatform oneWayRail) &&
+                    !oneWayRail.CanSupport(bodyCollider))
+                {
+                    continue;
+                }
+
+                isGrounded = true;
+                if (overlap.TryGetComponent(
+                        out GeneratedRopePlatform generatedRopePlatform))
+                {
+                    groundedRopePlatform = generatedRopePlatform;
+                    RegisterGeneratedRopePlatformContact(generatedRopePlatform);
                 }
             }
 
