@@ -17,7 +17,7 @@ namespace HimoHitoEditor
 
         static PlayFromTutorial()
         {
-            EditorApplication.delayCall += ConfigureMainStageBeginningStartScene;
+            EditorApplication.delayCall += ConfigureFloorCollisionExperimentStartScene;
         }
 
         [MenuItem("HimoHito/Play From Tutorial")]

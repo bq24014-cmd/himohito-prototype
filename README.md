@@ -82,7 +82,7 @@
 
 ### 実験ステージ
 
-`Assets/Scenes/FloorCollisionExperiment.unity`は、新しい床の当たり判定をチュートリアルや本編へ入れる前に比較するための独立シーンです。青いレールは下から通過して上から着地でき、灰色の固い板は振り子中も上下左右から衝突します。Unityの`HimoHito > Play From Floor Collision Experiment`を選んでからPlayし、`R`で開始地点へ戻せます。実験結果を確認するまでは、このルールを既存2シーンへ反映しません。
+`Assets/Scenes/FloorCollisionExperiment.unity`は、新しい床の当たり判定をチュートリアルや本編へ入れる前に比較するための独立シーンです。青いレールは下から通過して上から着地でき、灰色の固い板は振り子中も上下左右から衝突します。現在はUnityの通常のPlayがこの実験ステージから始まり、`R`で開始地点へ戻せます。別シーンから始めた後も、`HimoHito > Play From Floor Collision Experiment`で実験開始へ戻せます。実験結果を確認するまでは、このルールを既存2シーンへ反映しません。
 
 ## 操作
 
