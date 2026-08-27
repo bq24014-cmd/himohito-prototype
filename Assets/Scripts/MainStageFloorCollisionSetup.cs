@@ -12,7 +12,7 @@ namespace HimoHito
     {
         private const string MainStageSceneName = "MainStage";
         private const string MainObjectPrefix = "Main ";
-        private const string SectionThreeStartFloorName = "Main Landing 2";
+        private const string SectionThreeLandingFloorName = "Main Landing 3";
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
         private static void ApplyAfterSceneLoad()
@@ -43,7 +43,7 @@ namespace HimoHito
                 }
 
                 if (candidate.name == MainStageSectionTwoSetup.BoardName ||
-                    candidate.name == SectionThreeStartFloorName)
+                    candidate.name == SectionThreeLandingFloorName)
                 {
                     changed |= EnsureSolid(candidate);
                     continue;
