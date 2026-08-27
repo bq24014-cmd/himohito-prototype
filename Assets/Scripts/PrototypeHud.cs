@@ -135,7 +135,7 @@ namespace HimoHito
             {
                 state = ropeController != null && ropeController.IsAttached
                     ? $"ヒモ接続中 {ropeController.ActiveRopeLength:0.0} — Eで外す（全回収）／Qで足場化"
-                    : "準備完了 — 矢印キーで狙い、Eで接続";
+                    : "準備完了 — 矢印キーで狙い、Eで接続／Qで直接足場化";
             }
             GUILayout.Label(state, bodyStyle);
             if (playerBody != null)
@@ -145,7 +145,7 @@ namespace HimoHito
             GUILayout.Label("移動：A / D    ジャンプ：Space", bodyStyle);
             GUILayout.Label("照準：← / →    真上・真下：↑ / ↓", bodyStyle);
             GUILayout.Label("ヒモ：Eで接続／解除    この区間から再挑戦：R", bodyStyle);
-            GUILayout.Label("足場化：ヒモ接続中にQ", bodyStyle);
+            GUILayout.Label("足場化：物体へ照準を合わせてQ（接続中も可）", bodyStyle);
             GUILayout.Label("マウス照準も使用可能", bodyStyle);
             GUILayout.EndArea();
 
@@ -156,7 +156,7 @@ namespace HimoHito
         {
             if (platformBuilder == null ||
                 ropeController == null ||
-                !ropeController.IsAttached)
+                platformBuilder.CurrentPlatformCost <= 0f)
             {
                 return;
             }
@@ -206,13 +206,13 @@ namespace HimoHito
                 panel.width - 20f,
                 panel.height - 14f);
             GUILayout.BeginArea(contentArea);
-            GUILayout.Label("このヒモを足場にする", weavePromptTitleStyle);
+            GUILayout.Label("この位置へヒモ足場を作る", weavePromptTitleStyle);
             GUILayout.Label(
                 $"永久に使う長さ  {platformBuilder.CurrentPlatformCost:0.0}",
                 weavePromptBodyStyle);
 
             string actionMessage = platformBuilder.CanBuildCurrentPlatform
-                ? "Q：ここまでのヒモを足場にする"
+                ? "Q：照準地点までヒモ足場を作る"
                 : $"足場にできません\nヒモを{platformBuilder.MinimumRopeReserve:0.0}以上残してください";
             GUILayout.Label(actionMessage, weavePromptActionStyle);
             GUILayout.EndArea();
@@ -246,7 +246,7 @@ namespace HimoHito
             GUILayout.Label("← / →  照準を動かす     ↑ / ↓  真上・真下へ合わせる", startControlStyle);
             GUILayout.Label("E 1回目  ヒモを掛ける", startControlStyle);
             GUILayout.Label("E 2回目  勢いを保ってヒモを外す", startControlStyle);
-            GUILayout.Label("Q  接続中のヒモをその場所で足場にする", startControlStyle);
+            GUILayout.Label("Q  照準地点まで足場を作る（接続中も使用可能）", startControlStyle);
             GUILayout.Label("R  現在の区間から再挑戦", startControlStyle);
             GUILayout.FlexibleSpace();
             GUILayout.Label("キーボードの何かのキーを押して開始", startPromptStyle);

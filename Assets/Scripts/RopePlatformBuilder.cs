@@ -37,9 +37,11 @@ namespace HimoHito
         private RopeResource ropeResource;
         private RopeController ropeController;
 
-        public float CurrentPlatformCost => ropeController != null && ropeController.IsAttached
-            ? Vector2.Distance(ropeController.AnchorPoint, body.position)
-            : 0f;
+        public float CurrentPlatformCost => TryGetPlatformEndpoints(
+            out Vector2 start,
+            out Vector2 end)
+                ? Vector2.Distance(start, end)
+                : 0f;
         public float MinimumRopeReserve => minimumRopeReserve;
         public int GeneratedPlatformCount => generatedPlatforms.Count;
         public bool CanBuildCurrentPlatform => CanBuild(out _);
@@ -62,14 +64,19 @@ namespace HimoHito
 
         public bool TryBuildCurrentPlatform()
         {
-            if (!CanBuild(out float cost))
+            if (!CanBuild(out float cost, out Vector2 start, out Vector2 end))
             {
                 return false;
             }
 
-            Vector2 start = ropeController.AnchorPoint;
-            Vector2 end = body.position;
-            if (!ropeController.CommitAttachedRopeAsPlatform(cost))
+            if (ropeController.IsAttached)
+            {
+                if (!ropeController.CommitAttachedRopeAsPlatform(cost))
+                {
+                    return false;
+                }
+            }
+            else if (!ropeResource.TrySpend(cost))
             {
                 return false;
             }
@@ -138,25 +145,66 @@ namespace HimoHito
 
         private bool CanBuild(out float cost)
         {
+            return CanBuild(out cost, out _, out _);
+        }
+
+        private bool CanBuild(
+            out float cost,
+            out Vector2 start,
+            out Vector2 end)
+        {
             cost = 0f;
+            start = default;
+            end = default;
             if (body == null ||
                 ropeResource == null ||
                 ropeController == null ||
-                !ropeController.IsAttached)
+                !TryGetPlatformEndpoints(out start, out end))
             {
                 return false;
             }
 
-            cost = CurrentPlatformCost;
-            if (cost < minimumPlatformLength ||
-                cost > ropeController.ActiveRopeLength + 0.05f)
+            cost = Vector2.Distance(start, end);
+            if (cost < minimumPlatformLength)
             {
                 return false;
             }
 
-            float lengthBeforeAttachment =
-                ropeResource.CurrentLength + ropeController.ActiveRopeLength;
+            float availableLength = ropeController.IsAttached
+                ? ropeController.ActiveRopeLength
+                : ropeController.SelectedRopeLength;
+            if (cost > availableLength + 0.05f)
+            {
+                return false;
+            }
+
+            float lengthBeforeAttachment = ropeResource.CurrentLength;
+            if (ropeController.IsAttached)
+            {
+                lengthBeforeAttachment += ropeController.ActiveRopeLength;
+            }
+
             return lengthBeforeAttachment - cost >= minimumRopeReserve;
+        }
+
+        private bool TryGetPlatformEndpoints(
+            out Vector2 start,
+            out Vector2 end)
+        {
+            start = default;
+            end = body != null ? body.position : default;
+            if (body == null || ropeController == null)
+            {
+                return false;
+            }
+
+            if (ropeController.IsAttached)
+            {
+                start = ropeController.AnchorPoint;
+                return true;
+            }
+
+            return ropeController.TryResolveCurrentAimAnchor(out start);
         }
 
         private GeneratedRopePlatform CreatePlatform(Vector2 start, Vector2 end)

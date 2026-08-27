@@ -191,58 +191,40 @@ namespace HimoHito
                 return false;
             }
 
-            Vector2 origin = body.position;
-            Vector2 offset = worldTarget - origin;
-            if (offset.sqrMagnitude < 0.01f)
+            if (!TryResolveAttachmentPoint(
+                    worldTarget,
+                    out Vector2 resolvedAnchor,
+                    out HookPoint hookPoint))
             {
                 return false;
             }
 
             float selectedLength = SelectedRopeLength;
-            float shotDistance = Mathf.Min(selectedLength, maximumShotDistance);
-            RaycastHit2D[] hits = Physics2D.RaycastAll(origin, offset.normalized, shotDistance);
-            foreach (RaycastHit2D hit in hits)
+            if (!ropeResource.TrySpend(selectedLength))
             {
-                if (hit.collider == null || hit.collider == bodyCollider)
-                {
-                    continue;
-                }
-
-                // Trigger colliders are detection areas such as flashlight hazards,
-                // checkpoints, and goals. They are not physical surfaces that can
-                // hold the player's rope.
-                if (hit.collider.isTrigger)
-                {
-                    continue;
-                }
-
-                HookPoint hookPoint = hit.collider.GetComponentInParent<HookPoint>();
-                Vector2 resolvedAnchor = hookPoint != null
-                    ? hookPoint.GetAttachmentPoint(hit.point)
-                    : hit.point;
-                if (Vector2.Distance(origin, resolvedAnchor) > shotDistance + 0.01f)
-                {
-                    continue;
-                }
-
-                if (!ropeResource.TrySpend(selectedLength))
-                {
-                    return false;
-                }
-
-                spentLength = selectedLength;
-                anchorPoint = resolvedAnchor;
-                activeHookPoint = hookPoint;
-                ropeJoint.connectedBody = null;
-                ropeJoint.connectedAnchor = anchorPoint;
-                ropeJoint.distance = selectedLength;
-                ropeJoint.enabled = true;
-                lineRenderer.enabled = true;
-                audioFeedback.PlayHookAttached();
-                return true;
+                return false;
             }
 
-            return false;
+            spentLength = selectedLength;
+            anchorPoint = resolvedAnchor;
+            activeHookPoint = hookPoint;
+            ropeJoint.connectedBody = null;
+            ropeJoint.connectedAnchor = anchorPoint;
+            ropeJoint.distance = selectedLength;
+            ropeJoint.enabled = true;
+            lineRenderer.enabled = true;
+            audioFeedback.PlayHookAttached();
+            return true;
+        }
+
+        public bool TryResolveCurrentAimAnchor(out Vector2 resolvedAnchor)
+        {
+            Vector2 worldTarget =
+                body.position + keyboardAimDirection * maximumShotDistance;
+            return TryResolveAttachmentPoint(
+                worldTarget,
+                out resolvedAnchor,
+                out _);
         }
 
         public void DetachAndRefund(bool playReleaseSound = false)
@@ -291,6 +273,54 @@ namespace HimoHito
         {
             selectedRopeLength = length;
             ClampSelectedRopeLength();
+        }
+
+        private bool TryResolveAttachmentPoint(
+            Vector2 worldTarget,
+            out Vector2 resolvedAnchor,
+            out HookPoint hookPoint)
+        {
+            resolvedAnchor = default;
+            hookPoint = null;
+
+            Vector2 origin = body.position;
+            Vector2 offset = worldTarget - origin;
+            if (offset.sqrMagnitude < 0.01f)
+            {
+                return false;
+            }
+
+            float shotDistance = Mathf.Min(SelectedRopeLength, maximumShotDistance);
+            RaycastHit2D[] hits = Physics2D.RaycastAll(
+                origin,
+                offset.normalized,
+                shotDistance);
+            foreach (RaycastHit2D hit in hits)
+            {
+                if (hit.collider == null ||
+                    hit.collider == bodyCollider ||
+                    hit.collider.isTrigger)
+                {
+                    continue;
+                }
+
+                HookPoint candidateHook =
+                    hit.collider.GetComponentInParent<HookPoint>();
+                Vector2 candidateAnchor = candidateHook != null
+                    ? candidateHook.GetAttachmentPoint(hit.point)
+                    : hit.point;
+                if (Vector2.Distance(origin, candidateAnchor) >
+                    shotDistance + 0.01f)
+                {
+                    continue;
+                }
+
+                resolvedAnchor = candidateAnchor;
+                hookPoint = candidateHook;
+                return true;
+            }
+
+            return false;
         }
 
         private void UpdateSelectedRopeLength()
