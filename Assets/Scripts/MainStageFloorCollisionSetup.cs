@@ -12,6 +12,7 @@ namespace HimoHito
     {
         private const string MainStageSceneName = "MainStage";
         private const string MainObjectPrefix = "Main ";
+        private const string SectionThreeStartFloorName = "Main Landing 2";
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
         private static void ApplyAfterSceneLoad()
@@ -41,7 +42,8 @@ namespace HimoHito
                     continue;
                 }
 
-                if (candidate.name == MainStageSectionTwoSetup.BoardName)
+                if (candidate.name == MainStageSectionTwoSetup.BoardName ||
+                    candidate.name == SectionThreeStartFloorName)
                 {
                     changed |= EnsureSolid(candidate);
                     continue;
@@ -55,12 +57,31 @@ namespace HimoHito
                 changed |= EnsureOneWayRail(candidate);
             }
 
+            RopeResource player = Object.FindFirstObjectByType<RopeResource>();
+            if (player != null)
+            {
+                changed |= MainStageVisuals.Apply(player.gameObject);
+            }
+
             return changed;
         }
 
         private static bool EnsureSolid(GameObject floor)
         {
             bool changed = false;
+            if (floor.TryGetComponent(out OneWayRailPlatform oneWayRail))
+            {
+                if (Application.isPlaying)
+                {
+                    Object.Destroy(oneWayRail);
+                }
+                else
+                {
+                    Object.DestroyImmediate(oneWayRail);
+                }
+                changed = true;
+            }
+
             if (floor.TryGetComponent(out PlatformEffector2D effector) &&
                 effector.enabled)
             {

@@ -105,6 +105,11 @@ namespace HimoHito
                     bool isSolidToyBoard =
                         isStartGround ||
                         candidate.TryGetComponent(out SolidSwingSurface _);
+                    changed |= RemoveChild(
+                        candidate,
+                        isSolidToyBoard
+                            ? "Blue Railway Platform Visual"
+                            : "Orange Block Platform Visual");
                     changed |= ApplyColor(
                         candidate,
                         isSolidToyBoard ? BlockColor : RailColor);
