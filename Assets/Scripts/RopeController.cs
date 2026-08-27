@@ -221,10 +221,20 @@ namespace HimoHito
         {
             Vector2 worldTarget =
                 body.position + keyboardAimDirection * maximumShotDistance;
-            return TryResolveAttachmentPoint(
-                worldTarget,
-                out resolvedAnchor,
-                out _);
+            if (TryResolveAttachmentPoint(
+                    worldTarget,
+                    out resolvedAnchor,
+                    out _))
+            {
+                return true;
+            }
+
+            float freePlatformLength = Mathf.Min(
+                SelectedRopeLength,
+                maximumShotDistance);
+            resolvedAnchor =
+                body.position + keyboardAimDirection * freePlatformLength;
+            return freePlatformLength > 0f;
         }
 
         public void DetachAndRefund(bool playReleaseSound = false)
