@@ -242,6 +242,7 @@ namespace HimoHito
             GeneratedRopePlatform generated =
                 platform.AddComponent<GeneratedRopePlatform>();
             generated.Configure(start, end, line.material);
+            platform.AddComponent<SolidSwingSurface>();
             generatedPlatforms.Add(platform);
             return generated;
         }

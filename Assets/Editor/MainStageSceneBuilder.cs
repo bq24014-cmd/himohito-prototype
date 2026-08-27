@@ -68,6 +68,7 @@ namespace HimoHitoEditor
                 new Vector2(1.6f, 0.45f));
             new GameObject("Main Stage HUD").AddComponent<MainStageHud>();
             MainStageVisuals.Apply(player);
+            MainStageFloorCollisionSetup.ApplyCurrentScene();
 
             EditorSceneManager.SaveScene(scene, ScenePath);
             EnsureBuildSettings();

@@ -5,7 +5,7 @@ namespace HimoHito
     /// <summary>
     /// Marks a floor as solid from every direction, including during a fast swing.
     /// </summary>
-    [RequireComponent(typeof(BoxCollider2D), typeof(Rigidbody2D))]
+    [RequireComponent(typeof(Rigidbody2D))]
     public sealed class SolidSwingSurface : MonoBehaviour
     {
         private void Awake()
@@ -25,7 +25,12 @@ namespace HimoHito
 
         private void ConfigureComponents()
         {
-            BoxCollider2D solidCollider = GetComponent<BoxCollider2D>();
+            Collider2D solidCollider = GetComponent<Collider2D>();
+            if (solidCollider == null)
+            {
+                return;
+            }
+
             solidCollider.enabled = true;
             solidCollider.isTrigger = false;
             solidCollider.usedByEffector = false;
