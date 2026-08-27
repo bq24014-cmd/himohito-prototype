@@ -20,19 +20,14 @@ namespace HimoHito
             CreateHook("Experiment Rail Hook", new Vector2(-4f, 1.3f));
             CreateOneWayRail(
                 "Experiment One-Way Blue Rail",
-                new Vector2(1f, -1f),
+                new Vector2(0.75f, -5.15f),
                 new Vector2(5.5f, 0.6f));
 
             CreateHook("Experiment Solid Floor Hook", new Vector2(5f, 3f));
             CreateSolidPlatform(
                 "Experiment Solid Board",
-                new Vector2(10f, 0.5f),
+                new Vector2(9.5f, -5.2f),
                 new Vector2(5.5f, 0.7f),
-                new Color(0.38f, 0.41f, 0.52f));
-            CreateSolidPlatform(
-                "Experiment Recovery Ground",
-                new Vector2(10f, -5.2f),
-                new Vector2(7f, 0.7f),
                 new Color(0.38f, 0.41f, 0.52f));
 
             new GameObject("Experiment HUD").AddComponent<PrototypeHud>();
