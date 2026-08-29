@@ -266,8 +266,13 @@ namespace HimoHito
 
             GeneratedRopePlatform generated =
                 platform.AddComponent<GeneratedRopePlatform>();
-            generated.Configure(start, end, line.material);
-            platform.AddComponent<SolidSwingSurface>();
+            generated.Configure(
+                start,
+                end,
+                line.material,
+                edge,
+                bodyCollider,
+                ropeController);
             generatedPlatforms.Add(platform);
             return generated;
         }
@@ -306,19 +311,68 @@ namespace HimoHito
     public sealed class GeneratedRopePlatform : MonoBehaviour
     {
         private Material runtimeMaterial;
+        private Collider2D platformCollider;
+        private Collider2D playerCollider;
+        private RopeController ropeController;
+        private bool isIgnoringPlayerCollision;
 
         public Vector2 Start { get; private set; }
         public Vector2 End { get; private set; }
 
-        public void Configure(Vector2 start, Vector2 end, Material material)
+        public void Configure(
+            Vector2 start,
+            Vector2 end,
+            Material material,
+            Collider2D generatedCollider,
+            Collider2D playerBodyCollider,
+            RopeController playerRopeController)
         {
             Start = start;
             End = end;
             runtimeMaterial = material;
+            platformCollider = generatedCollider;
+            playerCollider = playerBodyCollider;
+            ropeController = playerRopeController;
+            UpdatePlayerCollision();
+        }
+
+        private void FixedUpdate()
+        {
+            UpdatePlayerCollision();
+        }
+
+        private void UpdatePlayerCollision()
+        {
+            if (platformCollider == null || playerCollider == null)
+            {
+                return;
+            }
+
+            bool shouldIgnore = ropeController != null && ropeController.IsAttached;
+            if (shouldIgnore == isIgnoringPlayerCollision)
+            {
+                return;
+            }
+
+            Physics2D.IgnoreCollision(
+                platformCollider,
+                playerCollider,
+                shouldIgnore);
+            isIgnoringPlayerCollision = shouldIgnore;
         }
 
         private void OnDestroy()
         {
+            if (isIgnoringPlayerCollision &&
+                platformCollider != null &&
+                playerCollider != null)
+            {
+                Physics2D.IgnoreCollision(
+                    platformCollider,
+                    playerCollider,
+                    false);
+            }
+
             if (runtimeMaterial != null)
             {
                 Destroy(runtimeMaterial);
