@@ -18,6 +18,9 @@ namespace HimoHito
         private GUIStyle bodyStyle;
         private GUIStyle ropeStyle;
         private GUIStyle resultStyle;
+        private GUIStyle guideStyle;
+        private GUIStyle guideCurrentStyle;
+        private GUIStyle guideCompleteStyle;
         private GUIStyle clearTitleStyle;
         private GUIStyle clearBodyStyle;
 
@@ -68,7 +71,7 @@ namespace HimoHito
                 return;
             }
 
-            GUILayout.BeginArea(new Rect(22f, 18f, 520f, 380f), GUI.skin.box);
+            GUILayout.BeginArea(new Rect(22f, 18f, 520f, 500f), GUI.skin.box);
             GUILayout.Label("ヒモヒト / 本編ステージ", titleStyle);
             GUILayout.Label(GetSectionTitle(), bodyStyle);
 
@@ -111,7 +114,16 @@ namespace HimoHito
             }
             else
             {
-                GUILayout.Label("ゴールを目指す", resultStyle);
+                GUILayout.Label(
+                    IsSectionEightActive()
+                        ? "ヒモ足場で光を遮って右の床へ進む"
+                        : "ゴールを目指す",
+                    resultStyle);
+            }
+
+            if (IsSectionEightActive())
+            {
+                DrawSectionEightGuide();
             }
 
             if (playerBody != null)
@@ -127,6 +139,53 @@ namespace HimoHito
             }
             GUILayout.Label("落下またはR：現在のチェックポイントから再開", bodyStyle);
             GUILayout.EndArea();
+        }
+
+        private bool IsSectionEightActive()
+        {
+            return respawnController != null &&
+                respawnController.HasReachedSectionNine &&
+                !respawnController.HasReachedSectionTen;
+        }
+
+        private void DrawSectionEightGuide()
+        {
+            bool hasShield = platformBuilder != null &&
+                platformBuilder.GeneratedPlatformCount > 0;
+            bool isAttached = ropeController != null && ropeController.IsAttached;
+
+            GUILayout.Space(4f);
+            GUILayout.Label("第8区間の攻略", resultStyle);
+            DrawGuideStep(
+                1,
+                "Qでヒモ足場を作り、懐中電灯と自分の間に置く",
+                hasShield,
+                !hasShield);
+            DrawGuideStep(
+                2,
+                "足場の影から、上の青いHookへEで接続する",
+                isAttached,
+                hasShield && !isAttached);
+            DrawGuideStep(
+                3,
+                "光を避けながら振り、右の青い床へ着地する",
+                false,
+                hasShield && isAttached);
+        }
+
+        private void DrawGuideStep(
+            int stepNumber,
+            string instruction,
+            bool isComplete,
+            bool isCurrent)
+        {
+            string marker = isComplete ? "✓" : isCurrent ? "▶" : "・";
+            GUIStyle style = isComplete
+                ? guideCompleteStyle
+                : isCurrent
+                    ? guideCurrentStyle
+                    : guideStyle;
+            GUILayout.Label($"{marker} {stepNumber}. {instruction}", style);
         }
 
         private string GetSectionTitle()
@@ -221,6 +280,21 @@ namespace HimoHito
                 fontSize = 16,
                 fontStyle = FontStyle.Bold,
                 normal = { textColor = new Color(0.44f, 0.92f, 1f) }
+            };
+            guideStyle = new GUIStyle(bodyStyle)
+            {
+                fontSize = 14,
+                wordWrap = true,
+                normal = { textColor = new Color(0.74f, 0.78f, 0.88f) }
+            };
+            guideCurrentStyle = new GUIStyle(guideStyle)
+            {
+                fontStyle = FontStyle.Bold,
+                normal = { textColor = new Color(1f, 0.78f, 0.2f) }
+            };
+            guideCompleteStyle = new GUIStyle(guideStyle)
+            {
+                normal = { textColor = new Color(0.33f, 1f, 0.76f) }
             };
             clearTitleStyle = new GUIStyle(GUI.skin.label)
             {
