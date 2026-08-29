@@ -10,20 +10,13 @@ namespace HimoHito
     [RequireComponent(typeof(RopePlatformBuilder), typeof(PlayerMover))]
     public sealed class MainStageRespawnOnFall : MonoBehaviour
     {
-        // Temporary switch for repeatedly testing section eight.
-        // Set this back to false when full-run verification resumes.
-        private static readonly bool ForceSectionEightStartForDevelopment = true;
-        private const int SectionEightNumber = 8;
-        private static readonly Vector2 SectionEightDevelopmentPosition =
-            new Vector2(136.5f, 0.15f);
-
         [SerializeField] private float fallThreshold = -9f;
         [SerializeField, Min(0.01f)] private float minimumUsableRopeLength = 1f;
-        [SerializeField] private bool startFromCurrentSectionForDevelopment;
+        [SerializeField] private bool startFromCurrentSectionForDevelopment = true;
         [SerializeField] private Vector2 developmentStartPosition =
-            new Vector2(96.5f, 0.15f);
+            new Vector2(136.5f, 0.15f);
         [SerializeField, Min(1f)] private float developmentRopeLength = 50f;
-        [SerializeField, Min(1)] private int developmentSectionNumber = 7;
+        [SerializeField, Min(1)] private int developmentSectionNumber = 8;
 
         private Rigidbody2D body;
         private RopeResource ropeResource;
@@ -191,30 +184,23 @@ namespace HimoHito
                 return;
             }
 
-            Vector2 startPosition = ForceSectionEightStartForDevelopment
-                ? SectionEightDevelopmentPosition
-                : developmentStartPosition;
-            int sectionNumber = ForceSectionEightStartForDevelopment
-                ? SectionEightNumber
-                : developmentSectionNumber;
-
-            checkpointPosition = startPosition;
-            transform.position = startPosition;
-            body.position = startPosition;
+            checkpointPosition = developmentStartPosition;
+            transform.position = developmentStartPosition;
+            body.position = developmentStartPosition;
             body.linearVelocity = Vector2.zero;
             body.angularVelocity = 0f;
             ropeResource.RestoreCurrentLength(developmentRopeLength);
             ropeController.RestoreSelectedRopeLength(
                 Mathf.Min(ropeController.SelectedRopeLength, Mathf.FloorToInt(developmentRopeLength)));
             platformBuilder.ClearPlatforms();
-            HasReachedMidpoint = sectionNumber >= 6;
-            HasReachedSectionEight = sectionNumber >= 8;
-            HasReachedSectionNine = sectionNumber >= 8;
-            HasReachedSectionTen = sectionNumber >= 9;
+            HasReachedMidpoint = developmentSectionNumber >= 6;
+            HasReachedSectionEight = developmentSectionNumber >= 8;
+            HasReachedSectionNine = developmentSectionNumber >= 8;
+            HasReachedSectionTen = developmentSectionNumber >= 9;
         }
 
         private bool ShouldApplyDevelopmentStart =>
-            ForceSectionEightStartForDevelopment || startFromCurrentSectionForDevelopment;
+            startFromCurrentSectionForDevelopment;
 
         private void RestoreCheckpointState()
         {
