@@ -13,7 +13,7 @@ namespace HimoHitoEditor
     {
         private const string ScenePath = "Assets/Scenes/MainStage.unity";
 
-        private const float MainStageRopeLength = 28f;
+        private const float MainStageRopeLength = 50f;
 
         [MenuItem("HimoHito/Build Main Stage Through Section 9")]
         public static void BuildMainStageThroughSectionTen()

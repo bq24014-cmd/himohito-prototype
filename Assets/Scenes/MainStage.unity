@@ -1999,7 +1999,7 @@ MonoBehaviour:
   minimumUsableRopeLength: 1
   startFromCurrentSectionForDevelopment: 0
   developmentStartPosition: {x: 96.5, y: 0.15}
-  developmentRopeLength: 28
+  developmentRopeLength: 50
   developmentSectionNumber: 7
   developmentWeaveThreads: 3
   developmentCanUseSectionSevenBridge: 1
@@ -2074,8 +2074,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cfccc1ad82411c47b427f2e4b5bb76c, type: 3}
   m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.RopeResource
-  maximumLength: 28
-  currentLength: 28
+  maximumLength: 50
+  currentLength: 50
 --- !u!120 &1380120225
 LineRenderer:
   serializedVersion: 3

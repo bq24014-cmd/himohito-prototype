@@ -22,7 +22,7 @@ namespace HimoHito
         [SerializeField] private bool startFromCurrentSectionForDevelopment;
         [SerializeField] private Vector2 developmentStartPosition =
             new Vector2(96.5f, 0.15f);
-        [SerializeField, Min(1f)] private float developmentRopeLength = 28f;
+        [SerializeField, Min(1f)] private float developmentRopeLength = 50f;
         [SerializeField, Min(1)] private int developmentSectionNumber = 7;
 
         private Rigidbody2D body;
