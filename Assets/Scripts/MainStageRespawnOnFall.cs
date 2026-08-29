@@ -10,12 +10,12 @@ namespace HimoHito
     [RequireComponent(typeof(RopePlatformBuilder), typeof(PlayerMover))]
     public sealed class MainStageRespawnOnFall : MonoBehaviour
     {
-        // Temporary switch for repeatedly testing section eight.
+        // Temporary switch for repeatedly testing section six.
         // Set this back to false when full-run verification resumes.
-        private static readonly bool ForceSectionEightStartForDevelopment = true;
-        private const int SectionEightNumber = 8;
-        private static readonly Vector2 SectionEightDevelopmentPosition =
-            new Vector2(136.5f, 0.15f);
+        private static readonly bool ForceSectionSixStartForDevelopment = true;
+        private const int SectionSixNumber = 6;
+        private static readonly Vector2 SectionSixDevelopmentPosition =
+            new Vector2(69.7f, -1.65f);
 
         [SerializeField] private float fallThreshold = -9f;
         [SerializeField, Min(0.01f)] private float minimumUsableRopeLength = 1f;
@@ -191,11 +191,11 @@ namespace HimoHito
                 return;
             }
 
-            Vector2 startPosition = ForceSectionEightStartForDevelopment
-                ? SectionEightDevelopmentPosition
+            Vector2 startPosition = ForceSectionSixStartForDevelopment
+                ? SectionSixDevelopmentPosition
                 : developmentStartPosition;
-            int sectionNumber = ForceSectionEightStartForDevelopment
-                ? SectionEightNumber
+            int sectionNumber = ForceSectionSixStartForDevelopment
+                ? SectionSixNumber
                 : developmentSectionNumber;
 
             checkpointPosition = startPosition;
@@ -214,7 +214,7 @@ namespace HimoHito
         }
 
         private bool ShouldApplyDevelopmentStart =>
-            ForceSectionEightStartForDevelopment || startFromCurrentSectionForDevelopment;
+            ForceSectionSixStartForDevelopment || startFromCurrentSectionForDevelopment;
 
         private void RestoreCheckpointState()
         {
