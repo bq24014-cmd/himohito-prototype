@@ -70,10 +70,11 @@ namespace HimoHito
 
             hazardBody.bodyType = RigidbodyType2D.Kinematic;
             hazardBody.gravityScale = 0f;
-            if (!hazard.TryGetComponent(out MainStageRopeHazard _))
+            if (!hazard.TryGetComponent(out MainStageRopeHazard ropeHazard))
             {
-                hazard.AddComponent<MainStageRopeHazard>();
+                ropeHazard = hazard.AddComponent<MainStageRopeHazard>();
             }
+            ropeHazard.ConfigureRopePlatformBlocking(true);
 
             if (!hazard.TryGetComponent(out MainStageVerticalMover mover))
             {

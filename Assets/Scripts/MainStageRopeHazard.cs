@@ -8,6 +8,14 @@ namespace HimoHito
     /// </summary>
     public sealed class MainStageRopeHazard : MonoBehaviour
     {
+        [SerializeField]
+        private bool canBeBlockedByGeneratedRopePlatform;
+
+        public void ConfigureRopePlatformBlocking(bool canBeBlocked)
+        {
+            canBeBlockedByGeneratedRopePlatform = canBeBlocked;
+        }
+
         private void Awake()
         {
             Collider2D detectionArea = GetComponent<Collider2D>();
@@ -30,10 +38,50 @@ namespace HimoHito
         private void TryDetach(Collider2D other)
         {
             RopeController contactedRope = other.GetComponentInParent<RopeController>();
-            if (contactedRope != null && contactedRope.IsAttached)
+            if (contactedRope == null || !contactedRope.IsAttached)
             {
-                contactedRope.DetachAndRefund();
+                return;
             }
+
+            if (canBeBlockedByGeneratedRopePlatform &&
+                IsBlockedByGeneratedRopePlatform(contactedRope))
+            {
+                return;
+            }
+
+            contactedRope.DetachAndRefund();
+        }
+
+        private bool IsBlockedByGeneratedRopePlatform(
+            RopeController contactedRope)
+        {
+            Vector2 lightPosition = transform.position;
+            Vector2 playerPosition = contactedRope.transform.position;
+            Vector2 toPlayer = playerPosition - lightPosition;
+            float distanceToPlayer = toPlayer.magnitude;
+            if (distanceToPlayer <= 0.01f)
+            {
+                return false;
+            }
+
+            RaycastHit2D[] hits = Physics2D.RaycastAll(
+                lightPosition,
+                toPlayer / distanceToPlayer,
+                distanceToPlayer);
+            foreach (RaycastHit2D hit in hits)
+            {
+                if (hit.collider == null || hit.collider.isTrigger)
+                {
+                    continue;
+                }
+
+                if (hit.collider.GetComponentInParent<GeneratedRopePlatform>() != null)
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
     }
 }
