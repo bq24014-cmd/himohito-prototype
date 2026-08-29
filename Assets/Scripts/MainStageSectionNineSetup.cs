@@ -3,8 +3,8 @@ using UnityEngine;
 namespace HimoHito
 {
     /// <summary>
-    /// Creates the new section eight: a circular flashlight spot sweeps across the pendulum area.
-    /// Entering the light with the attached player forces a release and fall.
+    /// Creates section eight: a permanent rope platform must be placed as a
+    /// shield before the player makes the main swing through the flashlight.
     /// </summary>
     public static class MainStageSectionNineSetup
     {
@@ -38,7 +38,7 @@ namespace HimoHito
 
             GameObject hook = EnsureSolidObject(
                 HookName,
-                new Vector2(142.5f, 5.7f),
+                new Vector2(149.5f, 4.8f),
                 new Vector2(1.6f, 0.45f),
                 new Color(1f, 0.72f, 0.18f));
             if (!hook.TryGetComponent(out HookPoint _))
@@ -60,8 +60,8 @@ namespace HimoHito
             }
             FlashlightSpotVisual.ConfigureSpot(
                 hazard,
-                new Vector2(145.8f, -5f),
-                4.4f,
+                new Vector2(154f, 0f),
+                6f,
                 new Color(1f, 1f, 1f, 0.72f));
             if (!hazard.TryGetComponent(out Rigidbody2D hazardBody))
             {
@@ -70,22 +70,21 @@ namespace HimoHito
 
             hazardBody.bodyType = RigidbodyType2D.Kinematic;
             hazardBody.gravityScale = 0f;
+            hazardBody.position = new Vector2(154f, 0f);
             if (!hazard.TryGetComponent(out MainStageRopeHazard ropeHazard))
             {
                 ropeHazard = hazard.AddComponent<MainStageRopeHazard>();
             }
             ropeHazard.ConfigureRopePlatformBlocking(true);
 
-            if (!hazard.TryGetComponent(out MainStageVerticalMover mover))
+            if (hazard.TryGetComponent(out MainStageVerticalMover mover))
             {
-                mover = hazard.AddComponent<MainStageVerticalMover>();
+                mover.enabled = false;
             }
-
-            mover.Configure(-5f, 4.5f, 8.9f);
 
             GameObject landing = EnsureSolidObject(
                 LandingName,
-                new Vector2(152.1f, -0.5f),
+                new Vector2(164f, -0.5f),
                 new Vector2(7f, 0.7f),
                 new Color(0.38f, 0.41f, 0.52f));
             if (!landing.TryGetComponent(out MainStageSectionTarget _))

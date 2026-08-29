@@ -25,12 +25,12 @@ namespace HimoHito
                     checkpoint = sectionNineLanding.AddComponent<MainStageSectionTenCheckpoint>();
                 }
 
-                checkpoint.Configure(new Vector2(152.1f, 0.5f));
+                checkpoint.Configure(new Vector2(164f, 0.5f));
             }
 
             GameObject hook = EnsureSolidObject(
                 HookName,
-                new Vector2(159f, 7.7f),
+                new Vector2(171f, 7.7f),
                 new Vector2(1.8f, 0.5f),
                 new Color(1f, 0.72f, 0.18f));
             if (!hook.TryGetComponent(out HookPoint _))
@@ -40,7 +40,7 @@ namespace HimoHito
 
             GameObject goal = EnsureSolidObject(
                 GoalName,
-                new Vector2(182.5f, -0.5f),
+                new Vector2(194.5f, -0.5f),
                 new Vector2(36f, 0.7f),
                 new Color(0.28f, 0.9f, 0.58f));
             if (!goal.TryGetComponent(out MainStageGoalZone _))

@@ -14,6 +14,7 @@ namespace HimoHito
     public sealed class RopePlatformBuilder : MonoBehaviour
     {
         private const float StandingClearance = 0.005f;
+        private const float MainStagePlatformUnlockX = 96f;
 
         [Serializable]
         public readonly struct PlatformState
@@ -37,6 +38,8 @@ namespace HimoHito
         private Collider2D bodyCollider;
         private RopeResource ropeResource;
         private RopeController ropeController;
+        private MainStageRespawnOnFall mainStageRespawn;
+        private bool mainStagePlatformBuildingUnlocked;
 
         public float CurrentPlatformCost => TryGetPlatformEndpoints(
             out Vector2 start,
@@ -45,6 +48,8 @@ namespace HimoHito
                 : 0f;
         public float MinimumRopeReserve => minimumRopeReserve;
         public int GeneratedPlatformCount => generatedPlatforms.Count;
+        public bool IsPlatformBuildingUnlocked =>
+            EvaluatePlatformBuildingUnlocked();
         public bool CanBuildCurrentPlatform => CanBuild(out _);
 
         private void Awake()
@@ -53,6 +58,7 @@ namespace HimoHito
             bodyCollider = GetComponent<Collider2D>();
             ropeResource = GetComponent<RopeResource>();
             ropeController = GetComponent<RopeController>();
+            mainStageRespawn = GetComponent<MainStageRespawnOnFall>();
         }
 
         private void Update()
@@ -160,6 +166,7 @@ namespace HimoHito
             if (body == null ||
                 ropeResource == null ||
                 ropeController == null ||
+                !EvaluatePlatformBuildingUnlocked() ||
                 !TryGetPlatformEndpoints(out start, out end))
             {
                 return false;
@@ -186,6 +193,24 @@ namespace HimoHito
             }
 
             return lengthBeforeAttachment - cost >= minimumRopeReserve;
+        }
+
+        private bool EvaluatePlatformBuildingUnlocked()
+        {
+            if (mainStageRespawn == null)
+            {
+                return true;
+            }
+
+            if (!mainStagePlatformBuildingUnlocked &&
+                body != null &&
+                (body.position.x >= MainStagePlatformUnlockX ||
+                 mainStageRespawn.HasReachedSectionEight))
+            {
+                mainStagePlatformBuildingUnlocked = true;
+            }
+
+            return mainStagePlatformBuildingUnlocked;
         }
 
         private bool TryGetPlatformEndpoints(
