@@ -10,12 +10,12 @@ namespace HimoHito
     [RequireComponent(typeof(RopePlatformBuilder), typeof(PlayerMover))]
     public sealed class MainStageRespawnOnFall : MonoBehaviour
     {
-        // Temporary switch for testing the latter half of the main stage.
+        // Temporary switch for repeatedly testing section eight.
         // Set this back to false when full-run verification resumes.
-        private static readonly bool ForceMidpointStartForDevelopment = false;
-        private const int MidpointSectionNumber = 6;
-        private static readonly Vector2 MidpointDevelopmentPosition =
-            new Vector2(69.7f, -1.65f);
+        private static readonly bool ForceSectionEightStartForDevelopment = true;
+        private const int SectionEightNumber = 8;
+        private static readonly Vector2 SectionEightDevelopmentPosition =
+            new Vector2(136.5f, 0.15f);
 
         [SerializeField] private float fallThreshold = -9f;
         [SerializeField, Min(0.01f)] private float minimumUsableRopeLength = 1f;
@@ -191,11 +191,11 @@ namespace HimoHito
                 return;
             }
 
-            Vector2 startPosition = ForceMidpointStartForDevelopment
-                ? MidpointDevelopmentPosition
+            Vector2 startPosition = ForceSectionEightStartForDevelopment
+                ? SectionEightDevelopmentPosition
                 : developmentStartPosition;
-            int sectionNumber = ForceMidpointStartForDevelopment
-                ? MidpointSectionNumber
+            int sectionNumber = ForceSectionEightStartForDevelopment
+                ? SectionEightNumber
                 : developmentSectionNumber;
 
             checkpointPosition = startPosition;
@@ -214,7 +214,7 @@ namespace HimoHito
         }
 
         private bool ShouldApplyDevelopmentStart =>
-            ForceMidpointStartForDevelopment || startFromCurrentSectionForDevelopment;
+            ForceSectionEightStartForDevelopment || startFromCurrentSectionForDevelopment;
 
         private void RestoreCheckpointState()
         {
