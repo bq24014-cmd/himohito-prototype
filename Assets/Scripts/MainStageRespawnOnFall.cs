@@ -14,7 +14,7 @@ namespace HimoHito
         [SerializeField, Min(0.01f)] private float minimumUsableRopeLength = 1f;
         [SerializeField] private bool startFromCurrentSectionForDevelopment = true;
         [SerializeField] private Vector2 developmentStartPosition =
-            new Vector2(136.5f, 0.15f);
+            new Vector2(144.5f, 0.15f);
         [SerializeField, Min(1f)] private float developmentRopeLength = 50f;
         [SerializeField, Min(1)] private int developmentSectionNumber = 8;
 

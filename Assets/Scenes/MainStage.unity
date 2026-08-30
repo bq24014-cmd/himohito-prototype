@@ -1998,7 +1998,7 @@ MonoBehaviour:
   fallThreshold: -9
   minimumUsableRopeLength: 1
   startFromCurrentSectionForDevelopment: 1
-  developmentStartPosition: {x: 136.5, y: 0.15}
+  developmentStartPosition: {x: 144.5, y: 0.15}
   developmentRopeLength: 50
   developmentSectionNumber: 8
   developmentWeaveThreads: 3
@@ -3496,7 +3496,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c183c06e85d24ab6a6f2148ce880c771, type: 3}
   m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.MainStageSectionEightCheckpoint
-  respawnPosition: {x: 136.5, y: 0.15}
+  respawnPosition: {x: 144.5, y: 0.15}
 --- !u!61 &1800000033
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3556,8 +3556,8 @@ Transform:
   m_GameObject: {fileID: 1800000031}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 134, y: -0.8, z: 0}
-  m_LocalScale: {x: 8, y: 0.7, z: 1}
+  m_LocalPosition: {x: 137.75, y: -0.8, z: 0}
+  m_LocalScale: {x: 15.5, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

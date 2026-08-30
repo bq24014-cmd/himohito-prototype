@@ -94,8 +94,7 @@ namespace HimoHito
 
             if (platformBuilder != null &&
                 platformBuilder.IsPlatformBuildingUnlocked &&
-                ropeController != null &&
-                ropeController.IsAttached)
+                ropeController != null)
             {
                 GUILayout.Label(
                     platformBuilder.CanBuildCurrentPlatform
@@ -135,7 +134,7 @@ namespace HimoHito
             GUILayout.Label("照準：矢印キー　ヒモ：Eで接続／解除", bodyStyle);
             if (platformBuilder != null && platformBuilder.IsPlatformBuildingUnlocked)
             {
-                GUILayout.Label("足場化：ヒモ接続中にQ", bodyStyle);
+                GUILayout.Label("足場化：照準を合わせてQ", bodyStyle);
             }
             GUILayout.Label("落下またはR：現在のチェックポイントから再開", bodyStyle);
             GUILayout.EndArea();
@@ -158,7 +157,7 @@ namespace HimoHito
             GUILayout.Label("第8区間の攻略", resultStyle);
             DrawGuideStep(
                 1,
-                "Qでヒモ足場を作り、懐中電灯と自分の間に置く",
+                "光が少し暗くなる向きでQを押し、ヒモ足場を作る",
                 hasShield,
                 !hasShield);
             DrawGuideStep(

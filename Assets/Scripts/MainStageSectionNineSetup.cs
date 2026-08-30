@@ -33,7 +33,7 @@ namespace HimoHito
                     checkpoint = sectionSevenLanding.AddComponent<MainStageSectionNineCheckpoint>();
                 }
 
-                checkpoint.Configure(new Vector2(136.5f, 0.15f));
+                checkpoint.Configure(new Vector2(144.5f, 0.15f));
             }
 
             GameObject hook = EnsureSolidObject(

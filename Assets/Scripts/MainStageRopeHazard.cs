@@ -17,14 +17,28 @@ namespace HimoHito
         [SerializeField, Range(0f, 1f)]
         private float blockedAlphaMultiplier = 0.22f;
 
+        [SerializeField, Range(0f, 1f)]
+        private float placementPreviewBrightnessMultiplier = 0.72f;
+
+        [SerializeField, Range(0f, 1f)]
+        private float placementPreviewAlphaMultiplier = 0.5f;
+
+        [SerializeField, Min(0f)]
+        private float placementPreviewMargin = 0.3f;
+
         [SerializeField, Min(0f)]
         private float visualTransitionSpeed = 14f;
 
         private SpriteRenderer spotRenderer;
+        private Collider2D detectionArea;
+        private RopeController playerRope;
+        private RopePlatformBuilder platformBuilder;
         private Color visibleColor = Color.white;
         private bool isBlocked;
+        private bool isPlacementPreview;
 
         public bool IsBlocked => isBlocked;
+        public bool IsPlacementPreview => isPlacementPreview;
 
         public void ConfigureRopePlatformBlocking(bool canBeBlocked)
         {
@@ -33,11 +47,14 @@ namespace HimoHito
 
         private void Awake()
         {
-            Collider2D detectionArea = GetComponent<Collider2D>();
+            detectionArea = GetComponent<Collider2D>();
             if (detectionArea != null)
             {
                 detectionArea.isTrigger = true;
             }
+
+            playerRope = FindFirstObjectByType<RopeController>();
+            platformBuilder = FindFirstObjectByType<RopePlatformBuilder>();
 
             spotRenderer = GetComponent<SpriteRenderer>();
             if (spotRenderer != null)
@@ -48,6 +65,7 @@ namespace HimoHito
 
         private void Update()
         {
+            UpdatePlacementPreview();
             UpdateBlockedVisual();
         }
 
@@ -71,20 +89,26 @@ namespace HimoHito
 
         private void OnDisable()
         {
+            isPlacementPreview = false;
             SetBlocked(false, true);
         }
 
         private void TryDetach(Collider2D other)
         {
             RopeController contactedRope = other.GetComponentInParent<RopeController>();
-            if (contactedRope == null || !contactedRope.IsAttached)
+            if (contactedRope == null)
+            {
+                return;
+            }
+
+            if (!contactedRope.IsAttached)
             {
                 SetBlocked(false);
                 return;
             }
 
             if (canBeBlockedByGeneratedRopePlatform &&
-                IsBlockedByGeneratedRopePlatform(contactedRope))
+                HasGeneratedRopePlatformInLight())
             {
                 SetBlocked(true);
                 return;
@@ -119,44 +143,107 @@ namespace HimoHito
                 progress);
         }
 
-        private Color GetTargetColor()
+        private void UpdatePlacementPreview()
         {
-            if (!isBlocked)
+            isPlacementPreview = false;
+            if (!canBeBlockedByGeneratedRopePlatform || isBlocked)
             {
-                return visibleColor;
+                return;
             }
 
-            return new Color(
-                visibleColor.r * blockedBrightnessMultiplier,
-                visibleColor.g * blockedBrightnessMultiplier,
-                visibleColor.b * blockedBrightnessMultiplier,
-                visibleColor.a * blockedAlphaMultiplier);
+            if (playerRope == null)
+            {
+                playerRope = FindFirstObjectByType<RopeController>();
+            }
+            if (platformBuilder == null)
+            {
+                platformBuilder = FindFirstObjectByType<RopePlatformBuilder>();
+            }
+
+            if (HasGeneratedRopePlatformInLight())
+            {
+                isPlacementPreview = true;
+                return;
+            }
+
+            if (playerRope == null ||
+                playerRope.IsAttached ||
+                platformBuilder == null ||
+                !platformBuilder.CanBuildCurrentPlatform ||
+                !playerRope.TryResolveCurrentAimAnchor(out Vector2 platformEnd))
+            {
+                return;
+            }
+
+            Vector2 platformStart = playerRope.transform.position;
+            Vector2 segment = platformEnd - platformStart;
+            float segmentLengthSquared = segment.sqrMagnitude;
+            if (segmentLengthSquared <= 0.0001f)
+            {
+                return;
+            }
+
+            Vector2 lightPosition = transform.position;
+            float progress = Mathf.Clamp01(
+                Vector2.Dot(lightPosition - platformStart, segment) /
+                segmentLengthSquared);
+            Vector2 closestPoint = platformStart + segment * progress;
+            float previewRadius = GetWorldDetectionRadius() +
+                placementPreviewMargin;
+            isPlacementPreview = progress > 0.1f &&
+                Vector2.Distance(closestPoint, lightPosition) <= previewRadius;
         }
 
-        private bool IsBlockedByGeneratedRopePlatform(
-            RopeController contactedRope)
+        private float GetWorldDetectionRadius()
         {
-            Vector2 lightPosition = transform.position;
-            Vector2 playerPosition = contactedRope.transform.position;
-            Vector2 toPlayer = playerPosition - lightPosition;
-            float distanceToPlayer = toPlayer.magnitude;
-            if (distanceToPlayer <= 0.01f)
+            if (detectionArea is not CircleCollider2D circle)
             {
-                return false;
+                return 0f;
             }
 
-            RaycastHit2D[] hits = Physics2D.RaycastAll(
-                lightPosition,
-                toPlayer / distanceToPlayer,
-                distanceToPlayer);
-            foreach (RaycastHit2D hit in hits)
+            Vector3 scale = circle.transform.lossyScale;
+            return circle.radius * Mathf.Max(
+                Mathf.Abs(scale.x),
+                Mathf.Abs(scale.y));
+        }
+
+        private Color GetTargetColor()
+        {
+            if (isBlocked)
             {
-                if (hit.collider == null || hit.collider.isTrigger)
+                return new Color(
+                    visibleColor.r * blockedBrightnessMultiplier,
+                    visibleColor.g * blockedBrightnessMultiplier,
+                    visibleColor.b * blockedBrightnessMultiplier,
+                    visibleColor.a * blockedAlphaMultiplier);
+            }
+
+            if (isPlacementPreview)
+            {
+                return new Color(
+                    visibleColor.r * placementPreviewBrightnessMultiplier,
+                    visibleColor.g * placementPreviewBrightnessMultiplier,
+                    visibleColor.b * placementPreviewBrightnessMultiplier,
+                    visibleColor.a * placementPreviewAlphaMultiplier);
+            }
+
+            return visibleColor;
+        }
+
+        private bool HasGeneratedRopePlatformInLight()
+        {
+            Vector2 lightPosition = transform.position;
+            Collider2D[] hits = Physics2D.OverlapCircleAll(
+                lightPosition,
+                GetWorldDetectionRadius());
+            foreach (Collider2D hit in hits)
+            {
+                if (hit == null || hit.isTrigger)
                 {
                     continue;
                 }
 
-                if (hit.collider.GetComponentInParent<GeneratedRopePlatform>() != null)
+                if (hit.GetComponentInParent<GeneratedRopePlatform>() != null)
                 {
                     return true;
                 }

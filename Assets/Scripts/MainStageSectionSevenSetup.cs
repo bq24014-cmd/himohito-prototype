@@ -52,13 +52,20 @@ namespace HimoHito
 
             GameObject landing = EnsureSolidObject(
                 LandingName,
-                new Vector2(134f, -0.8f),
-                new Vector2(8f, 0.7f),
+                new Vector2(137.75f, -0.8f),
+                new Vector2(15.5f, 0.7f),
                 new Color(0.38f, 0.41f, 0.52f));
             if (!landing.TryGetComponent(out MainStageSectionTarget _))
             {
                 landing.AddComponent<MainStageSectionTarget>();
             }
+
+            if (!landing.TryGetComponent(
+                    out MainStageSectionEightCheckpoint checkpoint))
+            {
+                checkpoint = landing.AddComponent<MainStageSectionEightCheckpoint>();
+            }
+            checkpoint.Configure(new Vector2(144.5f, 0.15f));
 
             return landing;
         }
