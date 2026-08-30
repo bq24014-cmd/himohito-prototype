@@ -10,6 +10,7 @@ namespace HimoHito
     {
         public const string HookName = "Main Section 8 Hook";
         public const string FlashlightSpotName = "Main Section 8 Flashlight Spot";
+        public const string FlashlightSourceName = "Main Section 8 Flashlight Source";
         public const string LegacyHookName = "Main Section 9 Hook";
         public const string LegacyFlashlightSpotName = "Main Section 9 Flashlight Spot";
         public const string LegacyFlashlightBeamName = "Main Section 9 Flashlight Beam";
@@ -75,7 +76,12 @@ namespace HimoHito
             {
                 ropeHazard = hazard.AddComponent<MainStageRopeHazard>();
             }
+
+            GameObject lightSource = EnsureFlashlightSource(
+                FlashlightSourceName,
+                new Vector2(156.8f, 4.8f));
             ropeHazard.ConfigureRopePlatformBlocking(true);
+            ropeHazard.ConfigureShadowSource(lightSource.transform);
 
             if (hazard.TryGetComponent(out MainStageVerticalMover mover))
             {
@@ -93,6 +99,33 @@ namespace HimoHito
             }
 
             return landing;
+        }
+
+        private static GameObject EnsureFlashlightSource(
+            string name,
+            Vector2 position)
+        {
+            GameObject lightSource = FindSceneObject(name);
+            if (lightSource == null)
+            {
+                lightSource = new GameObject(name);
+            }
+
+            FlashlightSpotVisual.ConfigureSpot(
+                lightSource,
+                position,
+                0.7f,
+                new Color(1f, 0.88f, 0.57f, 0.92f));
+            if (lightSource.TryGetComponent(out CircleCollider2D collider))
+            {
+                collider.enabled = false;
+            }
+            if (lightSource.TryGetComponent(out SpriteRenderer renderer))
+            {
+                renderer.sortingOrder = 6;
+            }
+
+            return lightSource;
         }
 
         private static GameObject EnsureSolidObject(

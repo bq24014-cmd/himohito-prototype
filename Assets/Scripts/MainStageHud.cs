@@ -157,7 +157,7 @@ namespace HimoHito
             GUILayout.Label("第8区間の攻略", resultStyle);
             DrawGuideStep(
                 1,
-                "光が少し暗くなる向きでQを押し、ヒモ足場を作る",
+                "影の予告が出る向きでQを押し、ヒモ足場を作る",
                 hasShield,
                 !hasShield);
             DrawGuideStep(
@@ -167,7 +167,7 @@ namespace HimoHito
                 hasShield && !isAttached);
             DrawGuideStep(
                 3,
-                "光を避けながら振り、右の青い床へ着地する",
+                "影の中を通るように振り、右の青い床へ着地する",
                 false,
                 hasShield && isAttached);
         }

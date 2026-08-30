@@ -332,6 +332,7 @@ namespace HimoHitoEditor
             {
                 MainStageSectionNineSetup.HookName,
                 MainStageSectionNineSetup.FlashlightSpotName,
+                MainStageSectionNineSetup.FlashlightSourceName,
                 MainStageSectionNineSetup.LegacyHookName,
                 MainStageSectionNineSetup.LegacyFlashlightSpotName,
                 MainStageSectionNineSetup.LegacyFlashlightBeamName,
