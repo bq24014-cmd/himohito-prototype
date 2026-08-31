@@ -263,9 +263,9 @@ namespace HimoHito
                 collider.size = Vector2.one;
                 changed = true;
             }
-            if (collider.isTrigger)
+            if (!collider.isTrigger)
             {
-                collider.isTrigger = false;
+                collider.isTrigger = true;
                 changed = true;
             }
             if (!hook.TryGetComponent(out HookPoint hookPoint))

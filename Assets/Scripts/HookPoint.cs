@@ -11,6 +11,11 @@ namespace HimoHito
         [SerializeField] private bool useFixedAttachmentPoint;
         [SerializeField] private Vector2 localAttachmentPoint;
 
+        private void Awake()
+        {
+            ConfigureNonSolidColliders();
+        }
+
         public Vector2 GetAttachmentPoint(Vector2 raycastHitPoint)
         {
             return useFixedAttachmentPoint
@@ -24,6 +29,21 @@ namespace HimoHito
                            localAttachmentPoint != localPoint;
             useFixedAttachmentPoint = true;
             localAttachmentPoint = localPoint;
+            changed |= ConfigureNonSolidColliders();
+            return changed;
+        }
+
+        private bool ConfigureNonSolidColliders()
+        {
+            bool changed = false;
+            foreach (Collider2D hookCollider in GetComponents<Collider2D>())
+            {
+                if (!hookCollider.isTrigger)
+                {
+                    hookCollider.isTrigger = true;
+                    changed = true;
+                }
+            }
             return changed;
         }
     }

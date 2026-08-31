@@ -345,14 +345,17 @@ namespace HimoHito
             foreach (RaycastHit2D hit in hits)
             {
                 if (hit.collider == null ||
-                    hit.collider == bodyCollider ||
-                    hit.collider.isTrigger)
+                    hit.collider == bodyCollider)
                 {
                     continue;
                 }
 
                 HookPoint candidateHook =
                     hit.collider.GetComponentInParent<HookPoint>();
+                if (hit.collider.isTrigger && candidateHook == null)
+                {
+                    continue;
+                }
                 Vector2 candidateAnchor = candidateHook != null
                     ? candidateHook.GetAttachmentPoint(hit.point)
                     : hit.point;
