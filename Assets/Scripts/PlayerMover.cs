@@ -104,9 +104,9 @@ namespace HimoHito
             bool isSwinging = ropeController != null && ropeController.IsAttached;
             if (isSwinging)
             {
-                if (HasSlackAttachedRope())
+                if (ShouldUseAttachmentLaunchControl())
                 {
-                    ApplySlackRopeControl();
+                    ApplyAttachmentLaunchControl();
                 }
                 else
                 {
@@ -369,11 +369,22 @@ namespace HimoHito
             return isGrounded;
         }
 
-        private bool HasSlackAttachedRope()
+        private bool ShouldUseAttachmentLaunchControl()
         {
             if (ropeController == null)
             {
                 return false;
+            }
+
+            // A lower Hook can begin below the player. At that angle the
+            // regular energy limiter intentionally stops further pumping,
+            // which would also prevent the player from leaving the bank.
+            // Keep world-left/right launch control until the player has
+            // passed below the anchor and a normal pendulum arc exists.
+            if (IsGrounded ||
+                body.position.y >= ropeController.AnchorPoint.y)
+            {
+                return true;
             }
 
             float anchorDistance = Vector2.Distance(
@@ -384,7 +395,7 @@ namespace HimoHito
             return remainingSlack > attachedRopeSlackThreshold;
         }
 
-        private void ApplySlackRopeControl()
+        private void ApplyAttachmentLaunchControl()
         {
             body.linearDamping = IsGrounded ? 0f : swingLinearDamping;
             if (Mathf.Approximately(moveInput, 0f))
