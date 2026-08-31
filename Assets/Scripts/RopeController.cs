@@ -29,6 +29,7 @@ namespace HimoHito
         private DistanceJoint2D ropeJoint;
         private LineRenderer lineRenderer;
         private RopeResource ropeResource;
+        private PlayerMover playerMover;
         private RopeBodyVisual ropeBodyVisual;
         private PrototypeAudioFeedback audioFeedback;
         private SpriteRenderer bodyRenderer;
@@ -37,7 +38,7 @@ namespace HimoHito
         private Vector2 anchorPoint;
         private HookPoint activeHookPoint;
         private Vector2 keyboardAimDirection = new Vector2(1f, 1f).normalized;
-        private float spentLength;
+        private float activeRopeLength;
         private float nextLengthIncreaseTime;
         private float nextLengthDecreaseTime;
         private int selectedRopeLength = 1;
@@ -49,7 +50,7 @@ namespace HimoHito
         public float ReleaseRefundRate => 1f;
         public int SelectedRopeLength => selectedRopeLength;
         public int MaximumSelectableRopeLength => GetMaximumSelectableRopeLength();
-        public float ActiveRopeLength => spentLength;
+        public float ActiveRopeLength => activeRopeLength;
         public Color VisibleRopeColor => GetVisibleRopeColor();
 
         private void Awake()
@@ -70,6 +71,7 @@ namespace HimoHito
             ropeJoint = GetComponent<DistanceJoint2D>();
             lineRenderer = GetComponent<LineRenderer>();
             ropeResource = GetComponent<RopeResource>();
+            playerMover = GetComponent<PlayerMover>();
             ropeBodyVisual = GetComponent<RopeBodyVisual>();
             audioFeedback = GetComponent<PrototypeAudioFeedback>();
             if (audioFeedback == null)
@@ -186,7 +188,7 @@ namespace HimoHito
 
         public bool TryAttach(Vector2 worldTarget)
         {
-            if (IsAttached)
+            if (IsAttached || (playerMover != null && !playerMover.IsGrounded))
             {
                 return false;
             }
@@ -199,13 +201,10 @@ namespace HimoHito
                 return false;
             }
 
+            // Attaching and swinging are free. Rope is permanently consumed only
+            // when Q converts the active rope into a platform.
             float selectedLength = SelectedRopeLength;
-            if (!ropeResource.TrySpend(selectedLength))
-            {
-                return false;
-            }
-
-            spentLength = selectedLength;
+            activeRopeLength = selectedLength;
             anchorPoint = resolvedAnchor;
             activeHookPoint = hookPoint;
             ropeJoint.connectedBody = null;
@@ -252,8 +251,7 @@ namespace HimoHito
             body.linearVelocity = preservedVelocity;
             body.angularVelocity = preservedAngularVelocity;
             lineRenderer.enabled = false;
-            ropeResource.Refund(spentLength);
-            spentLength = 0f;
+            activeRopeLength = 0f;
             ClampSelectedRopeLength();
             if (playReleaseSound)
             {
@@ -263,18 +261,16 @@ namespace HimoHito
 
         public bool CommitAttachedRopeAsPlatform(float permanentCost)
         {
-            if (!IsAttached || permanentCost <= 0f)
+            if (!IsAttached || permanentCost <= 0f ||
+                !ropeResource.TrySpend(permanentCost))
             {
                 return false;
             }
 
-            float committedCost = Mathf.Min(permanentCost, spentLength);
-            float unusedLength = Mathf.Max(0f, spentLength - committedCost);
             ropeJoint.enabled = false;
             activeHookPoint = null;
             lineRenderer.enabled = false;
-            ropeResource.Refund(unusedLength);
-            spentLength = 0f;
+            activeRopeLength = 0f;
             ClampSelectedRopeLength();
             return true;
         }
@@ -283,6 +279,47 @@ namespace HimoHito
         {
             selectedRopeLength = length;
             ClampSelectedRopeLength();
+        }
+
+        public bool TryResolveCurrentAimHook(
+            out HookPoint hookPoint,
+            out Vector2 resolvedAnchor)
+        {
+            Vector2 origin = body.position;
+            float searchDistance = Mathf.Min(
+                SelectedRopeLength,
+                maximumShotDistance);
+            RaycastHit2D[] hits = Physics2D.RaycastAll(
+                origin,
+                keyboardAimDirection,
+                searchDistance);
+            foreach (RaycastHit2D hit in hits)
+            {
+                if (hit.collider == null || hit.collider == bodyCollider)
+                {
+                    continue;
+                }
+
+                HookPoint candidate =
+                    hit.collider.GetComponentInParent<HookPoint>();
+                if (candidate == null)
+                {
+                    continue;
+                }
+
+                Vector2 candidateAnchor = candidate.GetAttachmentPoint(hit.point);
+                if (Vector2.Distance(origin, candidateAnchor) <=
+                    searchDistance + 0.01f)
+                {
+                    hookPoint = candidate;
+                    resolvedAnchor = candidateAnchor;
+                    return true;
+                }
+            }
+
+            resolvedAnchor = default;
+            hookPoint = null;
+            return false;
         }
 
         private bool TryResolveAttachmentPoint(
@@ -335,6 +372,16 @@ namespace HimoHito
 
         private void UpdateSelectedRopeLength()
         {
+            PrototypeRunController tutorial = GetComponent<PrototypeRunController>();
+            if (tutorial != null &&
+                gameObject.scene.name == "Tutorial" &&
+                tutorial.CurrentTutorialSection < 2)
+            {
+                selectedRopeLength = 6;
+                ResetLengthSelectionRepeat();
+                return;
+            }
+
             if (IsAttached)
             {
                 ResetLengthSelectionRepeat();
@@ -485,7 +532,7 @@ namespace HimoHito
             Vector2 start = GetRopeVisualOrigin();
             Vector2 end = anchorPoint;
             float directDistance = Vector2.Distance(physicsStart, end);
-            float slack = Mathf.Max(0f, spentLength - directDistance);
+            float slack = Mathf.Max(0f, activeRopeLength - directDistance);
             Vector2 point = Vector2.Lerp(start, end, t);
             return point + Vector2.down * (slack * 4f * t * (1f - t));
         }
@@ -509,15 +556,9 @@ namespace HimoHito
                 return ropeWidth;
             }
 
-            float committedRemainingLength = ropeResource.CurrentLength;
-            if (IsAttached)
-            {
-                committedRemainingLength += spentLength;
-            }
-
             float remainingRatio = ropeResource.MaximumLength <= 0f
                 ? 0f
-                : committedRemainingLength / ropeResource.MaximumLength;
+                : ropeResource.CurrentLength / ropeResource.MaximumLength;
             return Mathf.Lerp(
                 minimumRopeWidth,
                 ropeWidth,

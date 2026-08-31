@@ -3,7 +3,9 @@ using UnityEngine;
 namespace HimoHito
 {
     /// <summary>
-    /// Restarts from the latest main-stage checkpoint and restores its resources.
+    /// Restarts the current main-stage section. Each checkpoint records the
+    /// rope platforms that existed before it and guarantees the documented
+    /// lower bound for the sections ahead.
     /// </summary>
     [DefaultExecutionOrder(-200)]
     [RequireComponent(typeof(Rigidbody2D), typeof(RopeResource), typeof(RopeController))]
@@ -12,11 +14,6 @@ namespace HimoHito
     {
         [SerializeField] private float fallThreshold = -9f;
         [SerializeField, Min(0.01f)] private float minimumUsableRopeLength = 1f;
-        [SerializeField] private bool startFromCurrentSectionForDevelopment = true;
-        [SerializeField] private Vector2 developmentStartPosition =
-            new Vector2(144.5f, 0.15f);
-        [SerializeField, Min(1f)] private float developmentRopeLength = 50f;
-        [SerializeField, Min(1)] private int developmentSectionNumber = 8;
 
         private Rigidbody2D body;
         private RopeResource ropeResource;
@@ -29,10 +26,12 @@ namespace HimoHito
         private int checkpointSelectedRopeLength;
         private RopePlatformBuilder.PlatformState[] checkpointPlatformStates;
 
-        public bool HasReachedMidpoint { get; private set; }
-        public bool HasReachedSectionEight { get; private set; }
-        public bool HasReachedSectionNine { get; private set; }
-        public bool HasReachedSectionTen { get; private set; }
+        public int CurrentSection { get; private set; } = 1;
+        public int RefillCount { get; private set; }
+        public bool HasReachedMidpoint => CurrentSection >= 6;
+        public bool HasReachedSectionEight => CurrentSection >= 8;
+        public bool HasReachedSectionNine => CurrentSection >= 9;
+        public bool HasReachedSectionTen => CurrentSection >= 10;
         public bool IsRopeExhausted { get; private set; }
 
         private void Awake()
@@ -41,29 +40,9 @@ namespace HimoHito
             ropeResource = GetComponent<RopeResource>();
             ropeController = GetComponent<RopeController>();
             platformBuilder = GetComponent<RopePlatformBuilder>();
-            if (platformBuilder == null)
-            {
-                platformBuilder = gameObject.AddComponent<RopePlatformBuilder>();
-            }
             playerMover = GetComponent<PlayerMover>();
             goalZone = FindFirstObjectByType<MainStageGoalZone>();
             checkpointPosition = body.position;
-
-            ApplyDevelopmentStart();
-
-            CaptureCheckpointState();
-        }
-
-        private void Start()
-        {
-            if (!ShouldApplyDevelopmentStart)
-            {
-                return;
-            }
-
-            // Apply once more after every Awake so scene initialization cannot
-            // move the player back before the preview camera begins.
-            ApplyDevelopmentStart();
             CaptureCheckpointState();
         }
 
@@ -74,18 +53,7 @@ namespace HimoHito
                 return;
             }
 
-            if (Input.GetKeyDown(KeyCode.R))
-            {
-                RestartFromCheckpoint();
-                return;
-            }
-
-            if (IsRopeExhausted)
-            {
-                return;
-            }
-
-            if (transform.position.y < fallThreshold)
+            if (Input.GetKeyDown(KeyCode.R) || transform.position.y < fallThreshold)
             {
                 RestartFromCheckpoint();
                 return;
@@ -94,81 +62,41 @@ namespace HimoHito
             if (!ropeController.IsAttached &&
                 ropeResource.CurrentLength < minimumUsableRopeLength)
             {
-                EnterRopeExhaustedState();
+                IsRopeExhausted = true;
             }
         }
 
-        public bool TryReachMidpoint(Vector2 respawnPosition)
+        public bool TryReachSection(
+            int sectionNumber,
+            Vector2 respawnPosition,
+            float minimumRopeAfterCheckpoint)
         {
-            if (ropeController.IsAttached)
+            if (ropeController.IsAttached || sectionNumber <= CurrentSection)
             {
                 return false;
             }
 
-            if (HasReachedMidpoint)
-            {
-                return true;
-            }
-
+            CurrentSection = Mathf.Clamp(sectionNumber, 1, 10);
             checkpointPosition = respawnPosition;
+            if (ropeResource.CurrentLength < minimumRopeAfterCheckpoint)
+            {
+                ropeResource.RestoreCurrentLength(minimumRopeAfterCheckpoint);
+                RefillCount++;
+            }
             CaptureCheckpointState();
-            HasReachedMidpoint = true;
+            IsRopeExhausted = false;
             return true;
         }
 
-        public bool TryStartSectionEight(Vector2 respawnPosition)
-        {
-            if (ropeController.IsAttached)
-            {
-                return false;
-            }
-
-            if (HasReachedSectionEight)
-            {
-                return true;
-            }
-
-            checkpointPosition = respawnPosition;
-            HasReachedSectionEight = true;
-            CaptureCheckpointState();
-            return true;
-        }
-
-        public bool TryStartSectionNine(Vector2 respawnPosition)
-        {
-            if (ropeController.IsAttached)
-            {
-                return false;
-            }
-
-            if (HasReachedSectionNine)
-            {
-                return true;
-            }
-
-            checkpointPosition = respawnPosition;
-            HasReachedSectionNine = true;
-            CaptureCheckpointState();
-            return true;
-        }
-
-        public bool TryStartSectionTen(Vector2 respawnPosition)
-        {
-            if (ropeController.IsAttached)
-            {
-                return false;
-            }
-
-            if (HasReachedSectionTen)
-            {
-                return true;
-            }
-
-            checkpointPosition = respawnPosition;
-            HasReachedSectionTen = true;
-            CaptureCheckpointState();
-            return true;
-        }
+        // Compatibility entry points for older scene components.
+        public bool TryReachMidpoint(Vector2 position) =>
+            TryReachSection(6, position, 34f);
+        public bool TryStartSectionEight(Vector2 position) =>
+            TryReachSection(8, position, 30f);
+        public bool TryStartSectionNine(Vector2 position) =>
+            TryReachSection(9, position, 23f);
+        public bool TryStartSectionTen(Vector2 position) =>
+            TryReachSection(10, position, 11f);
 
         private void CaptureCheckpointState()
         {
@@ -177,56 +105,14 @@ namespace HimoHito
             checkpointPlatformStates = platformBuilder.CapturePlatformStates();
         }
 
-        private void ApplyDevelopmentStart()
-        {
-            if (!ShouldApplyDevelopmentStart)
-            {
-                return;
-            }
-
-            checkpointPosition = developmentStartPosition;
-            transform.position = developmentStartPosition;
-            body.position = developmentStartPosition;
-            body.linearVelocity = Vector2.zero;
-            body.angularVelocity = 0f;
-            ropeResource.RestoreCurrentLength(developmentRopeLength);
-            ropeController.RestoreSelectedRopeLength(
-                Mathf.Min(ropeController.SelectedRopeLength, Mathf.FloorToInt(developmentRopeLength)));
-            platformBuilder.ClearPlatforms();
-            HasReachedMidpoint = developmentSectionNumber >= 6;
-            HasReachedSectionEight = developmentSectionNumber >= 8;
-            HasReachedSectionNine = developmentSectionNumber >= 8;
-            HasReachedSectionTen = developmentSectionNumber >= 9;
-        }
-
-        private bool ShouldApplyDevelopmentStart =>
-            startFromCurrentSectionForDevelopment;
-
-        private void RestoreCheckpointState()
-        {
-            ropeResource.RestoreCurrentLength(checkpointRopeLength);
-            ropeController.RestoreSelectedRopeLength(checkpointSelectedRopeLength);
-            platformBuilder.RestorePlatformStates(checkpointPlatformStates);
-        }
-
-        private void EnterRopeExhaustedState()
-        {
-            ropeController.DetachAndRefund();
-            body.linearVelocity = Vector2.zero;
-            body.angularVelocity = 0f;
-            body.simulated = false;
-            playerMover.enabled = false;
-            ropeController.enabled = false;
-            IsRopeExhausted = true;
-        }
-
         private void RestartFromCheckpoint()
         {
             body.simulated = true;
             ropeController.DetachAndRefund();
-            RestoreCheckpointState();
+            ropeResource.RestoreCurrentLength(checkpointRopeLength);
+            ropeController.RestoreSelectedRopeLength(checkpointSelectedRopeLength);
+            platformBuilder.RestorePlatformStates(checkpointPlatformStates);
             body.position = checkpointPosition;
-            transform.position = checkpointPosition;
             body.linearVelocity = Vector2.zero;
             body.angularVelocity = 0f;
             playerMover.enabled = true;

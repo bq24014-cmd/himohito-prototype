@@ -6,80 +6,39 @@ using UnityEngine.SceneManagement;
 
 namespace HimoHitoEditor
 {
-    /// <summary>
-    /// Creates the entire graybox scene from code so every setup decision is reviewable in Git.
-    /// </summary>
-    [InitializeOnLoad]
+    /// <summary>Rebuilds the five-section tutorial from the 0829 manual.</summary>
     public static class PrototypeSceneBuilder
     {
         private const string ScenePath = "Assets/Scenes/Tutorial.unity";
-        private const string MainStageScenePath = "Assets/Scenes/MainStage.unity";
-        private const float ExperimentalRopeLength = 12f;
-        private const string TutorialFlashlightSpotName = "Tutorial Flashlight Spot";
-        private const string LegacyTutorialHazardName = "Practice Long Rope Obstacle";
+        private static readonly Color TerrainColor = new(0.96f, 0.55f, 0.18f);
+        private static readonly Color HookColor = new(0.30f, 0.76f, 1f);
+        private static readonly Color SpikeColor = new(1f, 0.18f, 0.25f);
 
-        static PrototypeSceneBuilder()
-        {
-            EditorApplication.delayCall += BuildSceneOnFirstOpen;
-            EditorApplication.playModeStateChanged += HandlePlayModeStateChanged;
-        }
-
-        [MenuItem("HimoHito/Build Tutorial Scene")]
+        [MenuItem("HimoHito/Rebuild Tutorial From 0829 Manual")]
         public static void BuildPrototypeScene()
         {
-            Scene scene = EditorSceneManager.NewScene(NewSceneSetup.EmptyScene, NewSceneMode.Single);
+            Scene scene = EditorSceneManager.NewScene(
+                NewSceneSetup.EmptyScene,
+                NewSceneMode.Single);
+            GameObject player = CreatePlayer(new Vector2(-4f, 0.65f));
 
-            CreateCamera();
-            CreatePlayer();
-            CreatePlatform("Start Ground", new Vector2(-18f, -5.2f), new Vector2(5f, 0.7f));
-            CreateHookPoint(
-                "Tutorial Hook",
-                new Vector2(-14f, -0.2f),
-                new Vector2(1.6f, 0.45f));
-            GameObject tutorialLanding = CreatePlatform(
-                "Tutorial Landing",
-                new Vector2(-9f, -5.2f),
-                new Vector2(5f, 0.7f));
-            ConfigureTutorialCheckpoint(tutorialLanding, 2, new Vector2(-9f, -4.2f));
-            CreateHookPoint(
-                "Hook 1",
-                new Vector2(-5f, -0.2f),
-                new Vector2(1.6f, 0.45f));
+            BuildT1();
+            BuildT2();
+            BuildT3();
+            BuildT4();
+            GameObject goal = BuildT5();
 
-            // Section 2 teaches the flashlight gap. Sections 3 and 4 then teach
-            // making a rope platform and using its far end to reach the next hook.
-            GameObject landing1 = CreatePlatform(
-                "Landing 1",
-                new Vector2(0f, -2.3f),
-                new Vector2(4f, 0.7f));
-            ConfigureTutorialCheckpoint(landing1, 3, new Vector2(0f, -1.3f));
-            CreateHookPoint(
-                "Hook 2",
-                new Vector2(5f, 1.5f),
-                new Vector2(1.6f, 0.45f));
-            CreateRopeReleaseHazard(
-                TutorialFlashlightSpotName,
-                new Vector2(-4.25f, -3.1f),
-                3.2f,
-                2);
-            CreateHookPoint("Hook 3", new Vector2(13.8f, 3.9f), new Vector2(1.6f, 0.45f));
-            CreateGoalPlatform("Goal / Landing 3", new Vector2(22.15f, -0.5f), new Vector2(4f, 0.8f));
-
-            GameObject hud = new GameObject("Tutorial HUD");
+            CreateCamera(player.transform);
+            GameObject hud = new("Tutorial HUD");
             hud.AddComponent<PrototypeHud>();
-
-            TutorialFirstSectionVisuals.Apply(GameObject.Find("Player"));
-
+            hud.AddComponent<StageOverlayControls>();
+            TutorialFirstSectionVisuals.Apply(player);
             EditorSceneManager.SaveScene(scene, ScenePath);
-            EditorBuildSettings.scenes = new[]
-            {
-                new EditorBuildSettingsScene(ScenePath, true),
-                new EditorBuildSettingsScene(MainStageScenePath, true)
-            };
+            EnsureBuildSettings();
             AssetDatabase.SaveAssets();
             AssetDatabase.Refresh();
-            Selection.activeGameObject = GameObject.Find("Player");
-            Debug.Log($"HimoHito tutorial scene created: {ScenePath}");
+            Selection.activeGameObject = player;
+            Debug.Log($"HimoHito 0829 tutorial rebuilt: {ScenePath}; goal={goal.name}");
         }
 
         public static void BuildFromCommandLine()
@@ -88,437 +47,100 @@ namespace HimoHitoEditor
             EditorApplication.Exit(0);
         }
 
-        private static void BuildSceneOnFirstOpen()
+        private static void BuildT1()
         {
-            if (EditorApplication.isPlayingOrWillChangePlaymode)
-            {
-                return;
-            }
-
-            if (AssetDatabase.LoadAssetAtPath<SceneAsset>(ScenePath) == null)
-            {
-                BuildPrototypeScene();
-                return;
-            }
-
-            EnsurePlanningBranch();
+            CreateTerrain("Start Ground", new Vector2(-4f, 0f), new Vector2(6f, 0.7f));
+            CreateHook("Tutorial Hook", new Vector2(2f, 6.6f));
+            GameObject landing = CreateTerrain("Tutorial Landing", new Vector2(8f, 0f), new Vector2(5f, 0.7f));
+            AddCheckpoint(landing, 2, new Vector2(8f, 0.65f), 8);
         }
 
-        private static void HandlePlayModeStateChanged(PlayModeStateChange state)
+        private static void BuildT2()
         {
-            if (state == PlayModeStateChange.EnteredEditMode)
-            {
-                EditorApplication.delayCall += BuildSceneOnFirstOpen;
-            }
+            CreateTerrain("T2 Start Shelf", new Vector2(12f, 0f), new Vector2(3f, 0.7f));
+            CreateHook("Hook 1", new Vector2(18f, 7.4f));
+            CreateSpike("T2 Center Spike", new Vector2(18f, 0.1f), new Vector2(1.2f, 0.4f));
+            GameObject landing = CreateTerrain("Landing 1", new Vector2(24f, 0f), new Vector2(5f, 0.7f));
+            AddCheckpoint(landing, 3, new Vector2(24f, 0.65f), 7);
         }
 
-        private static void EnsurePlanningBranch()
+        private static void BuildT3()
         {
-            Scene previousActiveScene = SceneManager.GetActiveScene();
-            Scene prototypeScene = SceneManager.GetSceneByPath(ScenePath);
-            bool openedForUpdate = false;
-
-            if (!prototypeScene.IsValid() || !prototypeScene.isLoaded)
-            {
-                prototypeScene = EditorSceneManager.OpenScene(ScenePath, OpenSceneMode.Additive);
-                openedForUpdate = true;
-            }
-
-            SceneManager.SetActiveScene(prototypeScene);
-            bool changed = false;
-
-            changed |= RemoveDuplicateRopeControllers(prototypeScene);
-            changed |= EnsureExperimentalRopeLength(prototypeScene);
-            changed |= EnsureHorizontalCameraFollow(prototypeScene);
-            changed |= RemoveRootObject(prototypeScene, "Practice Safety Floor");
-            changed |= RemoveRootObject(prototypeScene, "Landing 2");
-            changed |= RemoveRootObject(prototypeScene, "Planning Hook");
-            changed |= RemoveRootObject(prototypeScene, "Planning Landing");
-            changed |= EnsureTutorialLayout(prototypeScene);
-            changed |= EnsurePracticeSection(prototypeScene);
-            changed |= EnsureWeaveExperiment(prototypeScene);
-            changed |= EnsureTutorialCheckpoints(prototypeScene);
-            changed |= TutorialFirstSectionVisuals.Apply(
-                FindRootObject(prototypeScene, "Player"));
-
-            if (changed)
-            {
-                EditorSceneManager.SaveScene(prototypeScene);
-                Debug.Log("HimoHito prototype scene updates applied.");
-            }
-
-            if (previousActiveScene.IsValid() && previousActiveScene.isLoaded)
-            {
-                SceneManager.SetActiveScene(previousActiveScene);
-            }
-
-            if (openedForUpdate)
-            {
-                EditorSceneManager.CloseScene(prototypeScene, true);
-            }
+            // Facing edges are exactly 6 units apart. Length 7 therefore makes
+            // the manual's one-unit sag and permanently consumes 7 on Q.
+            CreateTerrain("T3 Left Shelf", new Vector2(29f, 4f), new Vector2(4f, 0.7f));
+            GameObject rightWall = CreateTerrain(
+                "T3 Right Shelf And T4 High Wall",
+                new Vector2(38f, 0f),
+                new Vector2(2f, 8f));
+            AddCheckpoint(rightWall, 4, new Vector2(37.5f, 4.65f), 10);
         }
 
-        private static bool HasRootObject(Scene scene, string objectName)
+        private static void BuildT4()
         {
-            return FindRootObject(scene, objectName) != null;
+            // From the bottom of the T3 bridge this hook is about 9.5 units
+            // away; the high wall prevents simply walking right.
+            CreateHook("Hook 2", new Vector2(42.5f, 7.2f));
+            GameObject landing = CreateTerrain("T4 Landing", new Vector2(48f, 0f), new Vector2(4f, 0.7f));
+            AddCheckpoint(landing, 5, new Vector2(47f, 0.65f), 6);
         }
 
-        private static GameObject FindRootObject(Scene scene, string objectName)
+        private static GameObject BuildT5()
         {
-            foreach (GameObject rootObject in scene.GetRootGameObjects())
-            {
-                if (rootObject.name == objectName)
-                {
-                    return rootObject;
-                }
-            }
-
-            return null;
+            // Outer attachment points are 10 units apart. Two length-6 bridges
+            // meet at Hook 3 but run into the beam. F joins them into one
+            // length-12 bridge whose two-unit sag passes below y=4.4.
+            CreateTerrain("T5 Left Shelf", new Vector2(52f, 5.85f), new Vector2(4f, 0.7f));
+            CreateHook("Hook 3", new Vector2(59f, 8.24f));
+            GameObject goal = CreateTerrain(
+                "Goal / Landing 3",
+                new Vector2(67f, 5.85f),
+                new Vector2(6f, 0.7f));
+            CreateTerrain(
+                "T5 Overhead Beam",
+                new Vector2(59f, 6.32f),
+                new Vector2(2f, 3.84f));
+            goal.AddComponent<GoalZone>();
+            return goal;
         }
 
-        private static bool RemoveDuplicateRopeControllers(Scene scene)
+        private static GameObject CreatePlayer(Vector2 position)
         {
-            GameObject player = FindRootObject(scene, "Player");
-            if (player == null)
-            {
-                return false;
-            }
-
-            RopeController[] controllers = player.GetComponents<RopeController>();
-            if (controllers.Length <= 1)
-            {
-                return false;
-            }
-
-            for (int i = 1; i < controllers.Length; i++)
-            {
-                Object.DestroyImmediate(controllers[i]);
-            }
-
-            Debug.LogWarning(
-                "Removed duplicate RopeController components from the tutorial player.",
-                player);
-            return true;
+            GameObject player = new("Player");
+            player.transform.position = position;
+            player.transform.localScale = new Vector3(0.8f, 1.2f, 1f);
+            SpriteRenderer renderer = player.AddComponent<SpriteRenderer>();
+            renderer.sortingOrder = 10;
+            player.AddComponent<SolidSprite>().Color = new Color(1f, 0.365f, 0.561f);
+            BoxCollider2D collider = player.AddComponent<BoxCollider2D>();
+            collider.size = Vector2.one;
+            collider.edgeRadius = 0.08f;
+            Rigidbody2D body = player.AddComponent<Rigidbody2D>();
+            body.gravityScale = 2.8f;
+            body.mass = 1f;
+            body.freezeRotation = true;
+            body.interpolation = RigidbodyInterpolation2D.Interpolate;
+            body.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
+            player.AddComponent<DistanceJoint2D>().enabled = false;
+            player.AddComponent<LineRenderer>().sortingOrder = 5;
+            RopeResource resource = player.AddComponent<RopeResource>();
+            SerializedObject serialized = new(resource);
+            serialized.FindProperty("maximumLength").floatValue = 20f;
+            serialized.FindProperty("currentLength").floatValue = 20f;
+            serialized.ApplyModifiedPropertiesWithoutUndo();
+            player.AddComponent<RopePlatformBuilder>();
+            player.AddComponent<PlayerMover>();
+            RopeController rope = player.AddComponent<RopeController>();
+            rope.RestoreSelectedRopeLength(6);
+            player.AddComponent<PrototypeRunController>();
+            return player;
         }
 
-        private static bool EnsureExperimentalRopeLength(Scene scene)
+        private static void CreateCamera(Transform player)
         {
-            GameObject player = FindRootObject(scene, "Player");
-            if (player == null || !player.TryGetComponent(out RopeResource ropeResource))
-            {
-                return false;
-            }
-
-            SerializedObject serializedResource = new SerializedObject(ropeResource);
-            SerializedProperty maximumLength = serializedResource.FindProperty("maximumLength");
-            SerializedProperty currentLength = serializedResource.FindProperty("currentLength");
-            if (maximumLength == null || currentLength == null)
-            {
-                return false;
-            }
-
-            bool changed = !Mathf.Approximately(maximumLength.floatValue, ExperimentalRopeLength) ||
-                           !Mathf.Approximately(currentLength.floatValue, ExperimentalRopeLength);
-            if (!changed)
-            {
-                return false;
-            }
-
-            maximumLength.floatValue = ExperimentalRopeLength;
-            currentLength.floatValue = ExperimentalRopeLength;
-            serializedResource.ApplyModifiedPropertiesWithoutUndo();
-            return true;
-        }
-
-        private static bool EnsureHorizontalCameraFollow(Scene scene)
-        {
-            GameObject cameraObject = FindRootObject(scene, "Main Camera");
-            if (cameraObject == null || cameraObject.TryGetComponent<HorizontalCameraFollow>(out _))
-            {
-                return false;
-            }
-
-            cameraObject.AddComponent<HorizontalCameraFollow>();
-            return true;
-        }
-
-        private static bool EnsureWeaveExperiment(Scene scene)
-        {
-            bool changed = false;
-            GameObject player = FindRootObject(scene, "Player");
-            if (player != null && !player.TryGetComponent(out RopePlatformBuilder _))
-            {
-                player.AddComponent<RopePlatformBuilder>();
-                changed = true;
-            }
-
-            changed |= RemoveRootObject(scene, "Tutorial Woven Platform");
-            changed |= RemoveRootObject(scene, "Tutorial Weave Frame");
-
-            changed |= EnsureHookPoint(
-                scene,
-                "Hook 2",
-                new Vector2(5f, 1.5f),
-                new Vector2(1.6f, 0.45f));
-            changed |= EnsureHookPoint(
-                scene,
-                "Hook 3",
-                new Vector2(13.8f, 3.9f),
-                new Vector2(1.6f, 0.45f));
-
-            GameObject goal = FindRootObject(scene, "Goal / Landing 3");
-            if (goal != null)
-            {
-                changed |= ApplyTransform(goal, new Vector2(22.15f, -0.5f), new Vector2(4f, 0.8f));
-            }
-
-            return changed;
-        }
-
-        private static bool EnsurePracticeSection(Scene scene)
-        {
-            GameObject legacyHazard = FindRootObject(scene, LegacyTutorialHazardName);
-            if (legacyHazard != null &&
-                FindRootObject(scene, TutorialFlashlightSpotName) == null)
-            {
-                legacyHazard.name = TutorialFlashlightSpotName;
-                EditorUtility.SetDirty(legacyHazard);
-            }
-
-            return EnsureRopeReleaseHazard(
-                scene,
-                TutorialFlashlightSpotName,
-                new Vector2(-4.25f, -3.1f),
-                3.2f,
-                2);
-        }
-
-        private static bool EnsureTutorialLayout(Scene scene)
-        {
-            bool changed = false;
-            changed |= EnsurePlatform(
-                scene,
-                "Start Ground",
-                new Vector2(-18f, -5.2f),
-                new Vector2(5f, 0.7f));
-            changed |= EnsureHookPoint(
-                scene,
-                "Tutorial Hook",
-                new Vector2(-14f, -0.2f),
-                new Vector2(1.6f, 0.45f));
-            changed |= EnsurePlatform(
-                scene,
-                "Tutorial Landing",
-                new Vector2(-9f, -5.2f),
-                new Vector2(5f, 0.7f));
-            changed |= EnsureHookPoint(
-                scene,
-                "Hook 1",
-                new Vector2(-5f, -0.2f),
-                new Vector2(1.6f, 0.45f));
-            changed |= EnsurePlatform(
-                scene,
-                "Landing 1",
-                new Vector2(0f, -2.3f),
-                new Vector2(4f, 0.7f));
-
-            GameObject player = FindRootObject(scene, "Player");
-            Vector2 playerStart = new Vector2(-18f, -4.2f);
-            if (player != null && (Vector2)player.transform.position != playerStart)
-            {
-                player.transform.position = playerStart;
-                changed = true;
-            }
-
-            return changed;
-        }
-
-        private static bool EnsureTutorialCheckpoints(Scene scene)
-        {
-            bool changed = false;
-            changed |= EnsureTutorialCheckpoint(
-                scene,
-                "Tutorial Landing",
-                2,
-                new Vector2(-9f, -4.2f));
-            changed |= EnsureTutorialCheckpoint(
-                scene,
-                "Landing 1",
-                3,
-                new Vector2(0f, -1.3f));
-            return changed;
-        }
-
-        private static bool RemoveTutorialCheckpoint(Scene scene, string objectName)
-        {
-            GameObject platform = FindRootObject(scene, objectName);
-            if (platform == null ||
-                !platform.TryGetComponent(out TutorialCheckpoint checkpoint))
-            {
-                return false;
-            }
-
-            Object.DestroyImmediate(checkpoint);
-            return true;
-        }
-
-        private static bool EnsureHookPoint(
-            Scene scene,
-            string objectName,
-            Vector2 position,
-            Vector2 size)
-        {
-            GameObject hookObject = FindRootObject(scene, objectName);
-            if (hookObject == null)
-            {
-                CreateHookPoint(objectName, position, size);
-                return true;
-            }
-
-            bool changed = ApplyTransform(hookObject, position, size);
-            if (!hookObject.TryGetComponent(out HookPoint _))
-            {
-                hookObject.AddComponent<HookPoint>();
-                changed = true;
-            }
-
-            if (hookObject.TryGetComponent(out SolidSprite visual))
-            {
-                Color hookColor = new Color(1f, 0.72f, 0.18f);
-                if (visual.Color != hookColor)
-                {
-                    visual.Color = hookColor;
-                    changed = true;
-                }
-            }
-
-            return changed;
-        }
-
-        private static bool EnsureTutorialCheckpoint(
-            Scene scene,
-            string objectName,
-            int sectionNumber,
-            Vector2 respawnPosition)
-        {
-            GameObject platform = FindRootObject(scene, objectName);
-            if (platform == null)
-            {
-                return false;
-            }
-
-            bool changed = false;
-            if (!platform.TryGetComponent(out TutorialCheckpoint checkpoint))
-            {
-                checkpoint = platform.AddComponent<TutorialCheckpoint>();
-                changed = true;
-            }
-
-            if (checkpoint.SectionNumber != sectionNumber ||
-                checkpoint.RespawnPosition != respawnPosition)
-            {
-                checkpoint.Configure(sectionNumber, respawnPosition);
-                EditorUtility.SetDirty(checkpoint);
-                changed = true;
-            }
-
-            return changed;
-        }
-
-        private static bool RemoveRootObject(Scene scene, string objectName)
-        {
-            GameObject rootObject = FindRootObject(scene, objectName);
-            if (rootObject == null)
-            {
-                return false;
-            }
-
-            Object.DestroyImmediate(rootObject);
-            return true;
-        }
-
-        private static bool EnsureRopeReleaseHazard(
-            Scene scene,
-            string objectName,
-            Vector2 position,
-            float diameter,
-            int activeTutorialSection)
-        {
-            GameObject hazard = FindRootObject(scene, objectName);
-            if (hazard == null)
-            {
-                hazard = new GameObject(objectName);
-            }
-
-            bool changed = ApplyTransform(
-                hazard,
-                position,
-                new Vector2(diameter, diameter));
-            CircleCollider2D circle = FlashlightSpotVisual.ConfigureSpot(
-                hazard,
-                position,
-                diameter,
-                new Color(1f, 1f, 1f, 0.72f));
-            EditorUtility.SetDirty(hazard);
-            EditorUtility.SetDirty(circle);
-
-            if (!hazard.TryGetComponent(out RopeReleaseHazard releaseHazard))
-            {
-                releaseHazard = hazard.AddComponent<RopeReleaseHazard>();
-                changed = true;
-            }
-
-            if (releaseHazard.ActiveTutorialSection != activeTutorialSection)
-            {
-                releaseHazard.Configure(activeTutorialSection);
-                EditorUtility.SetDirty(releaseHazard);
-                changed = true;
-            }
-
-            return changed;
-        }
-
-        private static bool EnsurePlatform(
-            Scene scene,
-            string objectName,
-            Vector2 position,
-            Vector2 size)
-        {
-            GameObject platform = FindRootObject(scene, objectName);
-            if (platform == null)
-            {
-                CreatePlatform(objectName, position, size);
-                return true;
-            }
-
-            return ApplyTransform(platform, position, size);
-        }
-
-        private static bool ApplyTransform(GameObject gameObject, Vector2 position, Vector2 size)
-        {
-            bool changed = false;
-            if ((Vector2)gameObject.transform.position != position)
-            {
-                gameObject.transform.position = position;
-                changed = true;
-            }
-
-            Vector3 targetScale = new Vector3(size.x, size.y, 1f);
-            if (gameObject.transform.localScale != targetScale)
-            {
-                gameObject.transform.localScale = targetScale;
-                changed = true;
-            }
-
-            return changed;
-        }
-
-        private static void CreateCamera()
-        {
-            GameObject cameraObject = new GameObject("Main Camera");
+            GameObject cameraObject = new("Main Camera");
             cameraObject.tag = "MainCamera";
-            cameraObject.transform.position = new Vector3(3.5f, 0f, -10f);
-
+            cameraObject.transform.position = new Vector3(player.position.x, 2f, -10f);
             Camera camera = cameraObject.AddComponent<Camera>();
             camera.orthographic = true;
             camera.orthographicSize = 8.7f;
@@ -528,111 +150,61 @@ namespace HimoHitoEditor
             cameraObject.AddComponent<HorizontalCameraFollow>();
         }
 
-        private static void CreatePlayer()
+        private static GameObject CreateTerrain(string name, Vector2 position, Vector2 size)
         {
-            GameObject player = new GameObject("Player");
-            player.transform.position = new Vector3(-18f, -4.2f, 0f);
-            player.transform.localScale = new Vector3(0.8f, 1.2f, 1f);
-
-            SpriteRenderer renderer = player.AddComponent<SpriteRenderer>();
-            renderer.sortingOrder = 10;
-            SolidSprite visual = player.AddComponent<SolidSprite>();
-            visual.Color = new Color(0.33f, 1f, 0.76f);
-
-            BoxCollider2D collider = player.AddComponent<BoxCollider2D>();
-            collider.size = Vector2.one;
-            collider.edgeRadius = 0.08f;
-
-            Rigidbody2D body = player.AddComponent<Rigidbody2D>();
-            body.gravityScale = 2.8f;
-            body.mass = 1f;
-            body.freezeRotation = true;
-            body.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
-
-            DistanceJoint2D joint = player.AddComponent<DistanceJoint2D>();
-            joint.enabled = false;
-
-            LineRenderer ropeLine = player.AddComponent<LineRenderer>();
-            ropeLine.sortingOrder = 5;
-
-            player.AddComponent<RopeResource>();
-            player.AddComponent<RopePlatformBuilder>();
-            player.AddComponent<PlayerMover>();
-            player.AddComponent<RopeController>();
-            player.AddComponent<PrototypeRunController>();
+            GameObject terrain = CreateSolidObject(name, position, size, TerrainColor);
+            Rigidbody2D body = terrain.AddComponent<Rigidbody2D>();
+            body.bodyType = RigidbodyType2D.Static;
+            terrain.AddComponent<SolidSwingSurface>();
+            return terrain;
         }
 
-        private static GameObject CreatePlatform(string name, Vector2 position, Vector2 size)
+        private static GameObject CreateHook(string name, Vector2 position)
         {
-            return CreatePlatformVisual(
-                name,
-                position,
-                size,
-                new Color(0.38f, 0.41f, 0.52f));
+            GameObject hook = CreateSolidObject(name, position, new Vector2(1.6f, 0.45f), HookColor);
+            hook.AddComponent<HookPoint>().ConfigureFixedAttachmentPoint(Vector2.zero);
+            return hook;
         }
 
-        private static void ConfigureTutorialCheckpoint(
-            GameObject platform,
-            int sectionNumber,
-            Vector2 respawnPosition)
+        private static void CreateSpike(string name, Vector2 position, Vector2 size)
         {
-            TutorialCheckpoint checkpoint = platform.AddComponent<TutorialCheckpoint>();
-            checkpoint.Configure(sectionNumber, respawnPosition);
+            GameObject spike = CreateSolidObject(name, position, size, SpikeColor);
+            spike.GetComponent<BoxCollider2D>().isTrigger = true;
+            spike.AddComponent<RopeSpikeHazard>();
         }
 
-        private static void CreateRopeReleaseHazard(
-            string name,
-            Vector2 position,
-            float diameter,
-            int activeTutorialSection)
-        {
-            GameObject hazard = new GameObject(name);
-            FlashlightSpotVisual.ConfigureSpot(
-                hazard,
-                position,
-                diameter,
-                new Color(1f, 1f, 1f, 0.72f));
-            RopeReleaseHazard releaseHazard = hazard.AddComponent<RopeReleaseHazard>();
-            releaseHazard.Configure(activeTutorialSection);
-        }
-
-        private static HookPoint CreateHookPoint(string name, Vector2 position, Vector2 size)
-        {
-            GameObject hookPoint = CreatePlatformVisual(
-                name,
-                position,
-                size,
-                new Color(1f, 0.72f, 0.18f));
-            return hookPoint.AddComponent<HookPoint>();
-        }
-
-        private static void CreateGoalPlatform(string name, Vector2 position, Vector2 size)
-        {
-            GameObject goal = CreatePlatformVisual(
-                name,
-                position,
-                size,
-                new Color(0.28f, 0.9f, 0.58f));
-            goal.AddComponent<GoalZone>();
-        }
-
-        private static GameObject CreatePlatformVisual(
+        private static GameObject CreateSolidObject(
             string name,
             Vector2 position,
             Vector2 size,
             Color color)
         {
-            GameObject platform = new GameObject(name);
-            platform.transform.position = position;
-            platform.transform.localScale = new Vector3(size.x, size.y, 1f);
+            GameObject gameObject = new(name);
+            gameObject.transform.position = position;
+            gameObject.transform.localScale = new Vector3(size.x, size.y, 1f);
+            gameObject.AddComponent<SpriteRenderer>();
+            gameObject.AddComponent<SolidSprite>().Color = color;
+            gameObject.AddComponent<BoxCollider2D>().size = Vector2.one;
+            return gameObject;
+        }
 
-            platform.AddComponent<SpriteRenderer>();
-            SolidSprite visual = platform.AddComponent<SolidSprite>();
-            visual.Color = color;
+        private static void AddCheckpoint(
+            GameObject floor,
+            int section,
+            Vector2 position,
+            int startingRopeLength)
+        {
+            TutorialCheckpoint checkpoint = floor.AddComponent<TutorialCheckpoint>();
+            checkpoint.Configure(section, position, startingRopeLength);
+        }
 
-            BoxCollider2D collider = platform.AddComponent<BoxCollider2D>();
-            collider.size = Vector2.one;
-            return platform;
+        private static void EnsureBuildSettings()
+        {
+            EditorBuildSettings.scenes = new[]
+            {
+                new EditorBuildSettingsScene(ScenePath, true),
+                new EditorBuildSettingsScene("Assets/Scenes/MainStage.unity", true)
+            };
         }
     }
 }

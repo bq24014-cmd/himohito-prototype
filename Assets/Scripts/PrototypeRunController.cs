@@ -46,13 +46,14 @@ namespace HimoHito
         public RunFailureReason FailureReason { get; private set; } = RunFailureReason.None;
         public bool IsAutomaticRespawnPending { get; private set; }
         public int CurrentTutorialSection { get; private set; } = 1;
-        public const int TutorialSectionCount = 4;
+        public const int TutorialSectionCount = 5;
         public string CurrentTutorialObjective => CurrentTutorialSection switch
         {
-            1 => "Hookにヒモを掛ける",
-            2 => "懐中電灯の光を避けて着地する",
-            3 => "接続中のヒモを足場にする",
-            4 => "足場の先から次のHookへ掛けてゴールする",
+            1 => "長さ6のヒモを掛け、踏み出して振る",
+            2 => "長さを選び、中央のトゲを越える",
+            3 => "地形同士に掛けたヒモを足場にする",
+            4 => "作った足場からHookへ掛けて渡る",
+            5 => "中央のHookを外し、1本の足場でゴールする",
             _ => string.Empty
         };
 
@@ -71,12 +72,6 @@ namespace HimoHito
             playerMover = GetComponent<PlayerMover>();
             startPosition = body.position;
 
-            foreach (WeaveFrame legacyFrame in
-                     FindObjectsByType<WeaveFrame>(FindObjectsSortMode.None))
-            {
-                legacyFrame.ResetWeave();
-                legacyFrame.gameObject.SetActive(false);
-            }
         }
 
         private void Start()
@@ -203,7 +198,10 @@ namespace HimoHito
             }
         }
 
-        public void TryReachTutorialSection(int sectionNumber, Vector2 respawnPosition)
+        public void TryReachTutorialSection(
+            int sectionNumber,
+            Vector2 respawnPosition,
+            int startingRopeLength)
         {
             if (Outcome != RunOutcome.Playing ||
                 ropeController.IsAttached ||
@@ -215,6 +213,7 @@ namespace HimoHito
 
             CurrentTutorialSection = sectionNumber;
             checkpointPosition = respawnPosition;
+            ropeController.RestoreSelectedRopeLength(startingRopeLength);
             CaptureCheckpointState();
         }
 

@@ -7,68 +7,40 @@ using UnityEngine.SceneManagement;
 namespace HimoHitoEditor
 {
     /// <summary>
-    /// Builds only the agreed portion of MainStage. Tutorial.unity is never opened or changed.
+    /// Rebuilds the ten-section main stage from the 2026-08-29 stage manual.
+    /// All coordinates are the document's starting estimates and remain tunable.
     /// </summary>
     public static class MainStageSceneBuilder
     {
         private const string ScenePath = "Assets/Scenes/MainStage.unity";
-
         private const float MainStageRopeLength = 50f;
+        private static readonly Color TerrainColor = new(0.96f, 0.55f, 0.18f);
+        private static readonly Color HookColor = new(0.30f, 0.76f, 1f);
+        private static readonly Color SpikeColor = new(1f, 0.18f, 0.25f);
 
-        [MenuItem("HimoHito/Build Main Stage Through Section 9")]
+        [MenuItem("HimoHito/Rebuild Main Stage From 0829 Manual")]
         public static void BuildMainStageThroughSectionTen()
         {
-            Scene scene = EditorSceneManager.NewScene(NewSceneSetup.EmptyScene, NewSceneMode.Single);
+            Scene scene = EditorSceneManager.NewScene(
+                NewSceneSetup.EmptyScene,
+                NewSceneMode.Single);
+            GameObject player = CreatePlayer(new Vector2(-4f, 0.65f));
 
-            GameObject player = CreatePlayer(new Vector2(-6f, -4.2f));
-            CreatePlatform(
-                "Main Landing 1",
-                new Vector2(4.5f, -3.2f),
-                new Vector2(4.2f, 0.7f));
+            BuildSection1();
+            BuildSection2();
+            BuildSection3();
+            BuildSection4();
+            BuildSection5();
+            BuildSection6();
+            BuildSection7();
+            BuildSection8();
+            BuildSection9();
+            GameObject goal = BuildSection10();
 
-            CreatePlatform(
-                "Main Walkway 1",
-                new Vector2(10.1f, -3.2f),
-                new Vector2(7f, 0.7f));
-
-            CreateHookPoint(
-                "Main Hook 2",
-                new Vector2(18.2f, 0.7f),
-                new Vector2(1.6f, 0.45f));
-
-            GameObject landingTwo = CreatePlatform(
-                "Main Landing 2",
-                new Vector2(27.1f, -2.2f),
-                new Vector2(11.2f, 0.7f));
-
-            CreateHookPoint(
-                "Main Hook 3",
-                new Vector2(36f, 2.2f),
-                new Vector2(1.6f, 0.45f));
-            MainStageSectionThreeSetup.EnsureCreated();
-
-            CreatePlatform(
-                "Main Landing 3",
-                new Vector2(47.425f, -0.5f),
-                new Vector2(5.75f, 0.7f));
-
-            MainStageSectionTwoSetup.EnsureCreated();
-            CreateSectionsFourAndFive();
-            CreateSectionSix();
-            CreateSectionSeven();
-            CreateSectionNine();
-            GameObject sectionTenTarget = CreateSectionTen();
-
-            CreateCamera(player.transform, sectionTenTarget.transform);
-            CreatePlatform(
-                "Main Start Ground",
-                new Vector2(-6f, -5.2f),
-                new Vector2(5.5f, 0.7f));
-            CreateHookPoint(
-                "Main Hook 1",
-                new Vector2(-1f, 0f),
-                new Vector2(1.6f, 0.45f));
-            new GameObject("Main Stage HUD").AddComponent<MainStageHud>();
+            CreateCamera(player.transform, goal.transform);
+            GameObject hud = new("Main Stage HUD");
+            hud.AddComponent<MainStageHud>();
+            hud.AddComponent<StageOverlayControls>();
             MainStageVisuals.Apply(player);
             MainStageFloorCollisionSetup.ApplyCurrentScene();
 
@@ -77,7 +49,7 @@ namespace HimoHitoEditor
             AssetDatabase.SaveAssets();
             AssetDatabase.Refresh();
             Selection.activeGameObject = player;
-            Debug.Log($"HimoHito main-stage sections 1-9 created: {ScenePath}");
+            Debug.Log($"HimoHito 0829 main stage rebuilt: {ScenePath}");
         }
 
         public static void BuildFromCommandLine()
@@ -86,303 +58,155 @@ namespace HimoHitoEditor
             EditorApplication.Exit(0);
         }
 
-        [MenuItem("HimoHito/Add Main Stage Section 6")]
-        public static void AddSectionSix()
+        private static void BuildSection1()
         {
-            Scene scene = EditorSceneManager.OpenScene(ScenePath, OpenSceneMode.Single);
-            RemoveSectionSixObjects();
-            GameObject sectionSixTarget = CreateSectionSix();
-
-            RopeResource ropeResource = Object.FindFirstObjectByType<RopeResource>();
-            MainStagePreview preview = Object.FindFirstObjectByType<MainStagePreview>();
-            if (ropeResource != null && preview != null)
-            {
-                preview.Configure(ropeResource.transform, sectionSixTarget.transform);
-                EditorUtility.SetDirty(preview);
-            }
-
-            EditorSceneManager.SaveScene(scene, ScenePath);
-            AssetDatabase.SaveAssets();
-            AssetDatabase.Refresh();
-            Debug.Log("HimoHito main-stage section 6 added.");
+            CreateTerrain("Main S01 Start Shelf", new Vector2(-4f, 0f), new Vector2(6f, 0.7f));
+            CreateHook("Main S01 Hook", new Vector2(2f, 6.6f));
+            GameObject landing = CreateTerrain("Main S01 Landing", new Vector2(8f, 0f), new Vector2(5f, 0.7f));
+            AddCheckpoint(landing, 2, new Vector2(8f, 0.65f), 50f);
         }
 
-        public static void AddSectionSixFromCommandLine()
+        private static void BuildSection2()
         {
-            AddSectionSix();
-            EditorApplication.Exit(0);
+            CreateTerrain("Main S02 Start Shelf", new Vector2(11.5f, 0f), new Vector2(2f, 0.7f));
+            CreateHook("Main S02 Length Window Hook", new Vector2(16f, 7.5f));
+            CreateSpike("Main S02 Front Spike", new Vector2(14.1f, 2.0f), new Vector2(0.9f, 1.8f));
+            CreateSpike("Main S02 Far Spike", new Vector2(18.8f, 1.15f), new Vector2(0.7f, 0.6f));
+            GameObject landing = CreateTerrain("Main S02 Raised Landing", new Vector2(22f, 4f), new Vector2(5f, 0.7f));
+            AddCheckpoint(landing, 3, new Vector2(21f, 4.65f), 50f);
         }
 
-        [MenuItem("HimoHito/Add Main Stage Section 7")]
-        public static void AddSectionSeven()
+        private static void BuildSection3()
         {
-            Scene scene = EditorSceneManager.OpenScene(ScenePath, OpenSceneMode.Single);
-            RemoveSectionSevenObjects();
-            GameObject sectionSevenTarget = CreateSectionSeven();
-
-            RopeResource ropeResource = Object.FindFirstObjectByType<RopeResource>();
-            MainStagePreview preview = Object.FindFirstObjectByType<MainStagePreview>();
-            if (ropeResource != null && preview != null)
-            {
-                preview.Configure(ropeResource.transform, sectionSevenTarget.transform);
-                EditorUtility.SetDirty(preview);
-            }
-
-            EditorSceneManager.SaveScene(scene, ScenePath);
-            AssetDatabase.SaveAssets();
-            AssetDatabase.Refresh();
-            Debug.Log("HimoHito main-stage section 7 added.");
+            CreateHook("Main S03 Upper Hook", new Vector2(29f, 7.6f));
+            CreateHook("Main S03 Lower Hook", new Vector2(29f, 5.2f));
+            CreateTerrain("Main S03 Lower Dead End", new Vector2(31f, 0f), new Vector2(5f, 0.7f));
+            CreateTerrain("Main S03 Return Step A", new Vector2(27f, 1.2f), new Vector2(2f, 0.5f));
+            CreateTerrain("Main S03 Return Step B", new Vector2(25f, 2.6f), new Vector2(2f, 0.5f));
+            GameObject landing = CreateTerrain("Main S03 High Shelf", new Vector2(36f, 5f), new Vector2(6f, 0.7f));
+            AddCheckpoint(landing, 4, new Vector2(35f, 5.65f), 45f);
         }
 
-        [MenuItem("HimoHito/Add Main Stage Section 8")]
-        public static void AddSectionEight()
+        private static void BuildSection4()
         {
-            Scene scene = EditorSceneManager.OpenScene(ScenePath, OpenSceneMode.Single);
-            RemoveSectionEightObjects();
-            RemoveSectionNineObjects();
-            GameObject sectionEightTarget = CreateSectionNine();
-
-            RopeResource ropeResource = Object.FindFirstObjectByType<RopeResource>();
-            MainStagePreview preview = Object.FindFirstObjectByType<MainStagePreview>();
-            if (ropeResource != null && preview != null)
-            {
-                preview.Configure(ropeResource.transform, sectionEightTarget.transform);
-                EditorUtility.SetDirty(preview);
-            }
-
-            EditorSceneManager.SaveScene(scene, ScenePath);
-            AssetDatabase.SaveAssets();
-            AssetDatabase.Refresh();
-            Debug.Log("HimoHito main-stage section 8 added.");
+            CreateTerrain("Main S04 Left Edge", new Vector2(41f, 5f), new Vector2(4f, 0.7f));
+            CreateTerrain("Main S04 Intermediate Column", new Vector2(46.5f, 3f), new Vector2(2f, 6f));
+            CreateHook("Main S04 Far Hook", new Vector2(54f, 7.2f));
+            GameObject landing = CreateTerrain("Main S04 Landing", new Vector2(61f, 4.5f), new Vector2(5f, 0.7f));
+            AddCheckpoint(landing, 5, new Vector2(60f, 5.15f), 40f);
         }
 
-        [MenuItem("HimoHito/Add Main Stage Section 9")]
-        public static void AddSectionNine()
+        private static void BuildSection5()
         {
-            Scene scene = EditorSceneManager.OpenScene(ScenePath, OpenSceneMode.Single);
-            RemoveSectionTenObjects();
-            GameObject sectionNineTarget = CreateSectionTen();
-
-            RopeResource ropeResource = Object.FindFirstObjectByType<RopeResource>();
-            MainStagePreview preview = Object.FindFirstObjectByType<MainStagePreview>();
-            if (ropeResource != null && preview != null)
-            {
-                preview.Configure(ropeResource.transform, sectionNineTarget.transform);
-                EditorUtility.SetDirty(preview);
-            }
-
-            EditorSceneManager.SaveScene(scene, ScenePath);
-            AssetDatabase.SaveAssets();
-            AssetDatabase.Refresh();
-            Debug.Log("HimoHito main-stage section 9 added.");
+            CreateTerrain("Main S05 Left Shelf", new Vector2(66f, 4.5f), new Vector2(3f, 0.7f));
+            CreateTerrain("Main S05 Right Shelf", new Vector2(72.4f, 4.5f), new Vector2(3f, 0.7f));
+            GameObject source = CreateLightSource("Main S05 Flashlight Source", new Vector2(69.2f, 8.2f));
+            CreateOccludedLight("Main S05 Flashlight Spot", new Vector2(69.2f, 2f), 4f, source.transform);
+            CreateHook("Main S05 Central Hook", new Vector2(77f, 7.2f));
+            GameObject landing = CreateTerrain("Main S05 Landing", new Vector2(83f, 4.5f), new Vector2(5f, 0.7f));
+            AddCheckpoint(landing, 6, new Vector2(82f, 5.15f), 34f);
         }
 
-        public static void AddSectionsFourAndFiveFromCommandLine()
+        private static void BuildSection6()
         {
-            Scene scene = EditorSceneManager.OpenScene(ScenePath, OpenSceneMode.Single);
-            RemoveSectionFourAndFiveObjects();
-
-            GameObject landingThree = GameObject.Find("Main Landing 3");
-            if (landingThree != null &&
-                landingThree.TryGetComponent(out MainStageSectionTarget oldTarget))
-            {
-                Object.DestroyImmediate(oldTarget);
-            }
-
-            GameObject midpoint = CreateSectionsFourAndFive();
-            RopeResource ropeResource = Object.FindFirstObjectByType<RopeResource>();
-            MainStagePreview preview = Object.FindFirstObjectByType<MainStagePreview>();
-            if (ropeResource != null && preview != null)
-            {
-                preview.Configure(ropeResource.transform, midpoint.transform);
-                EditorUtility.SetDirty(preview);
-            }
-
-            EditorSceneManager.SaveScene(scene, ScenePath);
-            AssetDatabase.SaveAssets();
-            AssetDatabase.Refresh();
-            EditorApplication.Exit(0);
+            CreateTerrain("Main S06 Upper Left", new Vector2(87f, 5.5f), new Vector2(3f, 0.7f));
+            CreateTerrain("Main S06 Upper Right", new Vector2(92f, 5.5f), new Vector2(3f, 0.7f));
+            CreateHook("Main S06 Lower Hook A", new Vector2(87f, 1.8f));
+            CreateHook("Main S06 Lower Hook B", new Vector2(92f, 1.8f));
+            CreateHook("Main S06 Lower Hook C", new Vector2(97f, 1.8f));
+            CreateTerrain("Main S06 Safety Floor", new Vector2(92f, -3f), new Vector2(16f, 0.7f));
+            CreateTerrain("Main S06 Return Step", new Vector2(99f, -1.2f), new Vector2(2f, 0.5f));
+            GameObject merge = CreateTerrain("Main S06 Merge", new Vector2(102f, 4.5f), new Vector2(5f, 0.7f));
+            AddCheckpoint(merge, 7, new Vector2(101f, 5.15f), 34f);
         }
 
-        private static GameObject CreateSectionsFourAndFive()
+        private static void BuildSection7()
         {
-            return MainStageMidpointSetup.EnsureCreated();
+            CreateTerrain("Main S07 Lower Start", new Vector2(106f, 4.5f), new Vector2(3f, 0.7f));
+            CreateTerrain("Main S07 Middle Shelf", new Vector2(111f, 6.5f), new Vector2(3f, 0.7f));
+            CreateTerrain("Main S07 Upper Step", new Vector2(115f, 8.5f), new Vector2(3f, 0.7f));
+            CreateHook("Main S07 Upper Hook", new Vector2(120f, 11f));
+            GameObject landing = CreateTerrain("Main S07 Landing", new Vector2(125f, 6f), new Vector2(5f, 0.7f));
+            AddCheckpoint(landing, 8, new Vector2(124f, 6.65f), 30f);
         }
 
-        private static GameObject CreateSectionSix()
+        private static void BuildSection8()
         {
-            return MainStageSectionSixSetup.EnsureCreated();
+            CreateTerrain("Main S08 Shaft Left Rim", new Vector2(130f, 5.5f), new Vector2(2f, 0.7f));
+            CreateTerrain("Main S08 Shaft Right Rim", new Vector2(134f, 5.5f), new Vector2(2f, 0.7f));
+            CreateTerrain("Main S08 Shaft Left Wall", new Vector2(129f, 1f), new Vector2(0.7f, 8f));
+            CreateTerrain("Main S08 Shaft Right Wall", new Vector2(135f, 1f), new Vector2(0.7f, 8f));
+            CreateSpike("Main S08 Bottom Spikes", new Vector2(132f, -3f), new Vector2(5f, 0.6f));
+            GameObject exit = CreateTerrain("Main S08 Bottom Exit", new Vector2(140f, -1.5f), new Vector2(8f, 0.7f));
+            AddCheckpoint(exit, 9, new Vector2(137f, -0.85f), 23f);
         }
 
-        private static GameObject CreateSectionSeven()
+        private static void BuildSection9()
         {
-            return MainStageSectionSevenSetup.EnsureCreated();
+            // Facing shelf edges are exactly 10 units apart. Two length-6 ropes
+            // reach the middle hook; removing it creates one length-12 rope.
+            CreateTerrain("Main S09 Left Shelf", new Vector2(145f, 1f), new Vector2(4f, 0.7f));
+            CreateHook("Main S09 Removable Hook", new Vector2(152f, 3.39f));
+            GameObject landing = CreateTerrain(
+                "Main S09 Right Shelf",
+                new Vector2(159f, 1f),
+                new Vector2(4f, 0.7f));
+            CreateTerrain(
+                "Main S09 Overhead Beam",
+                new Vector2(152f, 1.47f),
+                new Vector2(5f, 3.84f));
+            AddCheckpoint(landing, 10, new Vector2(158f, 1.65f), 11f);
         }
 
-        private static GameObject CreateSectionNine()
+        private static GameObject BuildSection10()
         {
-            return MainStageSectionNineSetup.EnsureCreated();
+            // Section 9's right shelf is the left bank. The facing edges are
+            // 9 units apart, so the final bridge uses length 10 and sags by 1.
+            GameObject goal = CreateTerrain(
+                MainStageSectionTenSetup.GoalName,
+                new Vector2(173f, 1f),
+                new Vector2(6f, 0.7f));
+            goal.AddComponent<MainStageGoalZone>();
+            return goal;
         }
 
-        private static GameObject CreateSectionTen()
+        private static GameObject CreatePlayer(Vector2 position)
         {
-            return MainStageSectionTenSetup.EnsureCreated();
+            GameObject player = new("Main Player");
+            player.transform.position = position;
+            player.transform.localScale = new Vector3(0.8f, 1.2f, 1f);
+            SpriteRenderer renderer = player.AddComponent<SpriteRenderer>();
+            renderer.sortingOrder = 10;
+            player.AddComponent<SolidSprite>().Color = new Color(1f, 0.365f, 0.561f);
+            BoxCollider2D collider = player.AddComponent<BoxCollider2D>();
+            collider.size = Vector2.one;
+            collider.edgeRadius = 0.08f;
+            Rigidbody2D body = player.AddComponent<Rigidbody2D>();
+            body.gravityScale = 2.8f;
+            body.mass = 1f;
+            body.freezeRotation = true;
+            body.interpolation = RigidbodyInterpolation2D.Interpolate;
+            body.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
+            player.AddComponent<DistanceJoint2D>().enabled = false;
+            player.AddComponent<LineRenderer>().sortingOrder = 5;
+            RopeResource resource = player.AddComponent<RopeResource>();
+            SerializedObject serialized = new(resource);
+            serialized.FindProperty("maximumLength").floatValue = MainStageRopeLength;
+            serialized.FindProperty("currentLength").floatValue = MainStageRopeLength;
+            serialized.ApplyModifiedPropertiesWithoutUndo();
+            player.AddComponent<RopePlatformBuilder>();
+            player.AddComponent<PlayerMover>();
+            RopeController ropeController = player.AddComponent<RopeController>();
+            ropeController.RestoreSelectedRopeLength(7);
+            player.AddComponent<MainStageRespawnOnFall>();
+            return player;
         }
 
-        private static void RemoveSectionFourAndFiveObjects()
+        private static void CreateCamera(Transform player, Transform goal)
         {
-            string[] objectNames =
-            {
-                "Main Upper Route Hook",
-                "Main Upper Route Landing",
-                "Main Upper Route Descent",
-                "Main Lower Walking Route",
-                "Main Midpoint Checkpoint"
-            };
-
-            foreach (string objectName in objectNames)
-            {
-                GameObject existing = GameObject.Find(objectName);
-                if (existing != null)
-                {
-                    Object.DestroyImmediate(existing);
-                }
-            }
-        }
-
-        private static void RemoveSectionSixObjects()
-        {
-            string[] objectNames =
-            {
-                MainStageSectionSixSetup.HookName,
-                MainStageSectionSixSetup.FlashlightSpotName,
-                MainStageSectionSixSetup.LegacyHazardName,
-                MainStageSectionSixSetup.LandingName
-            };
-
-            foreach (string objectName in objectNames)
-            {
-                GameObject existing = GameObject.Find(objectName);
-                if (existing != null)
-                {
-                    Object.DestroyImmediate(existing);
-                }
-            }
-        }
-
-        private static void RemoveSectionSevenObjects()
-        {
-            string[] objectNames =
-            {
-                MainStageSectionSevenSetup.HookName,
-                MainStageSectionSevenSetup.FinalHookName,
-                MainStageSectionSevenSetup.WeaveFrameName,
-                MainStageSectionSevenSetup.LegacyWovenPlatformName,
-                MainStageSectionSevenSetup.WeaveMarkerName,
-                MainStageSectionSevenSetup.LandingName
-            };
-
-            foreach (string objectName in objectNames)
-            {
-                GameObject existing = GameObject.Find(objectName);
-                if (existing != null)
-                {
-                    Object.DestroyImmediate(existing);
-                }
-            }
-        }
-
-        private static void RemoveSectionEightObjects()
-        {
-            GameObject sectionSevenLanding = GameObject.Find(MainStageSectionSevenSetup.LandingName);
-            if (sectionSevenLanding != null &&
-                sectionSevenLanding.TryGetComponent(out MainStageSectionEightCheckpoint checkpoint))
-            {
-                Object.DestroyImmediate(checkpoint);
-            }
-
-            string[] objectNames =
-            {
-                MainStageSectionEightSetup.FirstHookName,
-                MainStageSectionEightSetup.PlanningLandingName,
-                MainStageSectionEightSetup.SecondHookName,
-                MainStageSectionEightSetup.FinalLandingName
-            };
-
-            foreach (string objectName in objectNames)
-            {
-                GameObject existing = GameObject.Find(objectName);
-                if (existing != null)
-                {
-                    Object.DestroyImmediate(existing);
-                }
-            }
-        }
-
-        private static void RemoveSectionNineObjects()
-        {
-            GameObject sectionSevenLanding = GameObject.Find(MainStageSectionSevenSetup.LandingName);
-            if (sectionSevenLanding != null &&
-                sectionSevenLanding.TryGetComponent(out MainStageSectionNineCheckpoint checkpoint))
-            {
-                Object.DestroyImmediate(checkpoint);
-            }
-
-            string[] objectNames =
-            {
-                MainStageSectionNineSetup.HookName,
-                MainStageSectionNineSetup.FlashlightSpotName,
-                MainStageSectionNineSetup.FlashlightSourceName,
-                MainStageSectionNineSetup.LegacyHookName,
-                MainStageSectionNineSetup.LegacyFlashlightSpotName,
-                MainStageSectionNineSetup.LegacyFlashlightBeamName,
-                MainStageSectionNineSetup.LegacyMovingHazardName,
-                MainStageSectionNineSetup.LandingName,
-                MainStageSectionNineSetup.LegacyLandingName
-            };
-
-            foreach (string objectName in objectNames)
-            {
-                GameObject existing = GameObject.Find(objectName);
-                if (existing != null)
-                {
-                    Object.DestroyImmediate(existing);
-                }
-            }
-        }
-
-        private static void RemoveSectionTenObjects()
-        {
-            GameObject sectionNineLanding = GameObject.Find(MainStageSectionNineSetup.LandingName);
-            if (sectionNineLanding != null &&
-                sectionNineLanding.TryGetComponent(out MainStageSectionTenCheckpoint checkpoint))
-            {
-                Object.DestroyImmediate(checkpoint);
-            }
-
-            string[] objectNames =
-            {
-                MainStageSectionTenSetup.HookName,
-                MainStageSectionTenSetup.LegacyHookName,
-                MainStageSectionTenSetup.GoalName
-            };
-
-            foreach (string objectName in objectNames)
-            {
-                GameObject existing = GameObject.Find(objectName);
-                if (existing != null)
-                {
-                    Object.DestroyImmediate(existing);
-                }
-            }
-        }
-
-        private static void CreateCamera(Transform player, Transform previewTarget)
-        {
-            GameObject cameraObject = new GameObject("Main Camera");
+            GameObject cameraObject = new("Main Camera");
             cameraObject.tag = "MainCamera";
-            cameraObject.transform.position = new Vector3(player.position.x, 0f, -10f);
-
+            cameraObject.transform.position = new Vector3(player.position.x, 2f, -10f);
             Camera camera = cameraObject.AddComponent<Camera>();
             camera.orthographic = true;
             camera.orthographicSize = 8.7f;
@@ -391,67 +215,53 @@ namespace HimoHitoEditor
             cameraObject.AddComponent<AudioListener>();
             cameraObject.AddComponent<HorizontalCameraFollow>();
             MainStagePreview preview = cameraObject.AddComponent<MainStagePreview>();
-            preview.Configure(player, previewTarget);
+            preview.Configure(player, goal);
         }
 
-        private static GameObject CreatePlayer(Vector2 position)
+        private static GameObject CreateTerrain(string name, Vector2 position, Vector2 size)
         {
-            GameObject player = new GameObject("Main Player");
-            player.transform.position = position;
-            player.transform.localScale = new Vector3(0.8f, 1.2f, 1f);
-
-            SpriteRenderer renderer = player.AddComponent<SpriteRenderer>();
-            renderer.sortingOrder = 10;
-            SolidSprite visual = player.AddComponent<SolidSprite>();
-            visual.Color = new Color(0.33f, 1f, 0.76f);
-
-            BoxCollider2D collider = player.AddComponent<BoxCollider2D>();
-            collider.size = Vector2.one;
-            collider.edgeRadius = 0.08f;
-
-            Rigidbody2D body = player.AddComponent<Rigidbody2D>();
-            body.gravityScale = 2.8f;
-            body.mass = 1f;
-            body.freezeRotation = true;
-            body.interpolation = RigidbodyInterpolation2D.Interpolate;
-            body.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
-
-            DistanceJoint2D joint = player.AddComponent<DistanceJoint2D>();
-            joint.enabled = false;
-
-            LineRenderer ropeLine = player.AddComponent<LineRenderer>();
-            ropeLine.sortingOrder = 5;
-
-            RopeResource ropeResource = player.AddComponent<RopeResource>();
-            ConfigureMainStageRopeLength(ropeResource);
-            player.AddComponent<RopePlatformBuilder>();
-            player.AddComponent<PlayerMover>();
-            player.AddComponent<RopeController>();
-            player.AddComponent<MainStageRespawnOnFall>();
-            return player;
+            GameObject terrain = CreateSolidObject(name, position, size, TerrainColor);
+            Rigidbody2D body = terrain.AddComponent<Rigidbody2D>();
+            body.bodyType = RigidbodyType2D.Static;
+            terrain.AddComponent<SolidSwingSurface>();
+            return terrain;
         }
 
-        private static void ConfigureMainStageRopeLength(RopeResource ropeResource)
+        private static GameObject CreateHook(string name, Vector2 position)
         {
-            SerializedObject serializedResource = new SerializedObject(ropeResource);
-            serializedResource.FindProperty("maximumLength").floatValue = MainStageRopeLength;
-            serializedResource.FindProperty("currentLength").floatValue = MainStageRopeLength;
-            serializedResource.ApplyModifiedPropertiesWithoutUndo();
+            GameObject hook = CreateSolidObject(name, position, new Vector2(1.6f, 0.45f), HookColor);
+            hook.AddComponent<HookPoint>().ConfigureFixedAttachmentPoint(Vector2.zero);
+            return hook;
         }
 
-        private static GameObject CreatePlatform(string name, Vector2 position, Vector2 size)
+        private static GameObject CreateSpike(string name, Vector2 position, Vector2 size)
         {
-            return CreateSolidObject(name, position, size, new Color(0.38f, 0.41f, 0.52f));
+            GameObject spike = CreateSolidObject(name, position, size, SpikeColor);
+            BoxCollider2D collider = spike.GetComponent<BoxCollider2D>();
+            collider.isTrigger = true;
+            spike.AddComponent<RopeSpikeHazard>();
+            return spike;
         }
 
-        private static void CreateHookPoint(string name, Vector2 position, Vector2 size)
+        private static GameObject CreateLightSource(string name, Vector2 position)
         {
-            GameObject hook = CreateSolidObject(
-                name,
+            return CreateSolidObject(name, position, new Vector2(0.8f, 0.8f), new Color(1f, 0.86f, 0.54f));
+        }
+
+        private static void CreateOccludedLight(
+            string name,
+            Vector2 position,
+            float diameter,
+            Transform source)
+        {
+            GameObject spot = new(name);
+            FlashlightSpotVisual.ConfigureSpot(
+                spot,
                 position,
-                size,
-                new Color(1f, 0.72f, 0.18f));
-            hook.AddComponent<HookPoint>();
+                diameter,
+                new Color(1f, 0.82f, 0.56f, 0.62f));
+            PlatformOccludedLightHazard hazard = spot.AddComponent<PlatformOccludedLightHazard>();
+            hazard.Configure(source);
         }
 
         private static GameObject CreateSolidObject(
@@ -460,15 +270,23 @@ namespace HimoHitoEditor
             Vector2 size,
             Color color)
         {
-            GameObject gameObject = new GameObject(name);
+            GameObject gameObject = new(name);
             gameObject.transform.position = position;
             gameObject.transform.localScale = new Vector3(size.x, size.y, 1f);
             gameObject.AddComponent<SpriteRenderer>();
-            SolidSprite visual = gameObject.AddComponent<SolidSprite>();
-            visual.Color = color;
-            BoxCollider2D collider = gameObject.AddComponent<BoxCollider2D>();
-            collider.size = Vector2.one;
+            gameObject.AddComponent<SolidSprite>().Color = color;
+            gameObject.AddComponent<BoxCollider2D>().size = Vector2.one;
             return gameObject;
+        }
+
+        private static void AddCheckpoint(
+            GameObject floor,
+            int section,
+            Vector2 respawn,
+            float lowerBound)
+        {
+            MainStageCheckpoint checkpoint = floor.AddComponent<MainStageCheckpoint>();
+            checkpoint.Configure(section, respawn, lowerBound);
         }
 
         private static void EnsureBuildSettings()

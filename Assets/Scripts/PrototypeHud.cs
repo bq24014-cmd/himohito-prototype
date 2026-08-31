@@ -113,8 +113,11 @@ namespace HimoHito
                     $"次に使う長さ  {ropeController.SelectedRopeLength} / " +
                     $"{ropeController.MaximumSelectableRopeLength}",
                     bodyStyle);
-                GUILayout.Label("W：使う長さを1増やす", bodyStyle);
-                GUILayout.Label("S：使う長さを1減らす", bodyStyle);
+                if (runController == null || runController.CurrentTutorialSection >= 2)
+                {
+                    GUILayout.Label("W：使う長さを1増やす", bodyStyle);
+                    GUILayout.Label("S：使う長さを1減らす", bodyStyle);
+                }
             }
 
             string state;
@@ -134,8 +137,8 @@ namespace HimoHito
             else
             {
                 state = ropeController != null && ropeController.IsAttached
-                    ? $"ヒモ接続中 {ropeController.ActiveRopeLength:0.0} — Eで外す（全回収）／Qで足場化"
-                    : "準備完了 — 矢印キーで狙い、Eで接続／Qで空中に足場化";
+                    ? $"ヒモ接続中 {ropeController.ActiveRopeLength:0.0} — Eで外す（消費なし）"
+                    : "準備完了 — 矢印キーで狙い、Eで接続";
             }
             GUILayout.Label(state, bodyStyle);
             if (playerBody != null)
@@ -145,7 +148,14 @@ namespace HimoHito
             GUILayout.Label("移動：A / D    ジャンプ：Space", bodyStyle);
             GUILayout.Label("照準：← / →    真上・真下：↑ / ↓", bodyStyle);
             GUILayout.Label("ヒモ：Eで接続／解除    この区間から再挑戦：R", bodyStyle);
-            GUILayout.Label("足場化：作りたい方向へ照準を合わせてQ", bodyStyle);
+            if (runController == null || runController.CurrentTutorialSection >= 3)
+            {
+                GUILayout.Label("足場化：ヒモ接続中にQ（選んだ長さを永久消費）", bodyStyle);
+            }
+            if (runController != null && runController.CurrentTutorialSection >= 5)
+            {
+                GUILayout.Label("まとめる：2本が集まるHookへ照準を合わせてF", bodyStyle);
+            }
             GUILayout.Label("マウス照準も使用可能", bodyStyle);
             GUILayout.EndArea();
 
@@ -156,6 +166,7 @@ namespace HimoHito
         {
             if (platformBuilder == null ||
                 ropeController == null ||
+                !ropeController.IsAttached ||
                 platformBuilder.CurrentPlatformCost <= 0f)
             {
                 return;
@@ -236,7 +247,7 @@ namespace HimoHito
             GUILayout.BeginArea(panel, GUI.skin.box);
             GUILayout.Space(24f);
             GUILayout.Label("HIMOHITO", startTitleStyle);
-            GUILayout.Label("4つの区間でヒモの使い方を覚える", startObjectiveStyle);
+            GUILayout.Label("5つの区間でヒモの使い方を覚える", startObjectiveStyle);
             GUILayout.Space(22f);
             GUILayout.Label("重要", startImportantStyle);
             GUILayout.Label("W：次に使うヒモの長さを1増やす", startImportantStyle);
@@ -246,7 +257,8 @@ namespace HimoHito
             GUILayout.Label("← / →  照準を動かす     ↑ / ↓  真上・真下へ合わせる", startControlStyle);
             GUILayout.Label("E 1回目  ヒモを掛ける", startControlStyle);
             GUILayout.Label("E 2回目  勢いを保ってヒモを外す", startControlStyle);
-            GUILayout.Label("Q  照準方向へ足場を作る（空中・接続中も使用可能）", startControlStyle);
+            GUILayout.Label("Q  接続中のヒモを足場にする（足場化した時だけ消費）", startControlStyle);
+            GUILayout.Label("F  2本が集まるHookを外して1本にまとめる", startControlStyle);
             GUILayout.Label("R  現在の区間から再挑戦", startControlStyle);
             GUILayout.FlexibleSpace();
             GUILayout.Label("キーボードの何かのキーを押して開始", startPromptStyle);
@@ -265,7 +277,7 @@ namespace HimoHito
             GUILayout.FlexibleSpace();
             GUILayout.Label("TUTORIAL CLEAR", clearTitleStyle);
             GUILayout.Space(18f);
-            GUILayout.Label("ヒモを掛ける・避ける・編むを習得しました", clearBodyStyle);
+            GUILayout.Label("ヒモを掛ける・長さを選ぶ・足場にする・まとめるを習得しました", clearBodyStyle);
             GUILayout.Space(42f);
             GUILayout.Label("Enter　本編ステージへ", clearPromptStyle);
             GUILayout.FlexibleSpace();

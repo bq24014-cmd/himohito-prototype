@@ -800,7 +800,15 @@ namespace HimoHito
             }
 
             float remainingRatio = Mathf.Clamp01(ropeResource.NormalizedLength);
-            currentBaseScale = Mathf.Lerp(minimumVisualScale, 1f, remainingRatio);
+            // Four readable body sizes keep the resource feedback visible while
+            // avoiding a body that appears to pulse after every small spend.
+            currentBaseScale = remainingRatio switch
+            {
+                >= 0.75f => 1f,
+                >= 0.50f => Mathf.Lerp(minimumVisualScale, 1f, 0.66f),
+                >= 0.25f => Mathf.Lerp(minimumVisualScale, 1f, 0.33f),
+                _ => minimumVisualScale
+            };
         }
 
         private void UpdateLandingState()

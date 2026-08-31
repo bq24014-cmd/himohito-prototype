@@ -16,22 +16,6 @@ namespace HimoHito
         private static readonly Vector2 BoardSize =
             new Vector2(2.4f, 0.5f);
 
-        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
-        private static void EnsureAfterSceneLoad()
-        {
-            if (SceneManager.GetActiveScene().name != "MainStage")
-            {
-                return;
-            }
-
-            EnsureCreated();
-            RopeResource player = Object.FindFirstObjectByType<RopeResource>();
-            if (player != null)
-            {
-                MainStageVisuals.Apply(player.gameObject);
-            }
-        }
-
         public static GameObject EnsureCreated()
         {
             GameObject board = FindSceneObject(BoardName);

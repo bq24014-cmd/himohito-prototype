@@ -4,15 +4,13 @@ using UnityEngine.SceneManagement;
 namespace HimoHito
 {
     /// <summary>
-    /// Gives each visible main-stage floor the collision rule suggested by
-    /// its gameplay role. Launch and landing floors are one-way so they do
-    /// not block a returning swing. Deliberate obstacle boards stay solid.
+    /// Applies the 0829 manual's C-2 rule: authored terrain is solid from every
+    /// direction. Generated rope bridges keep their own collision behaviour.
     /// </summary>
     public static class MainStageFloorCollisionSetup
     {
         private const string MainStageSceneName = "MainStage";
         private const string MainObjectPrefix = "Main ";
-        private const string SectionThreeLandingFloorName = "Main Landing 3";
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
         private static void ApplyAfterSceneLoad()
@@ -42,19 +40,12 @@ namespace HimoHito
                     continue;
                 }
 
-                if (candidate.name == MainStageSectionTwoSetup.BoardName ||
-                    candidate.name == SectionThreeLandingFloorName)
-                {
-                    changed |= EnsureSolid(candidate);
-                    continue;
-                }
-
                 if (!candidate.TryGetComponent(out SolidSprite _))
                 {
                     continue;
                 }
 
-                changed |= EnsureOneWayRail(candidate);
+                changed |= EnsureSolid(candidate);
             }
 
             RopeResource player = Object.FindFirstObjectByType<RopeResource>();
@@ -98,35 +89,5 @@ namespace HimoHito
             return changed;
         }
 
-        private static bool EnsureOneWayRail(GameObject floor)
-        {
-            bool changed = false;
-            if (floor.TryGetComponent(out SolidSwingSurface solidSurface))
-            {
-                if (Application.isPlaying)
-                {
-                    Object.Destroy(solidSurface);
-                }
-                else
-                {
-                    Object.DestroyImmediate(solidSurface);
-                }
-                changed = true;
-            }
-
-            if (!floor.TryGetComponent(out PlatformEffector2D _))
-            {
-                floor.AddComponent<PlatformEffector2D>();
-                changed = true;
-            }
-
-            if (!floor.TryGetComponent(out OneWayRailPlatform _))
-            {
-                floor.AddComponent<OneWayRailPlatform>();
-                changed = true;
-            }
-
-            return changed;
-        }
     }
 }

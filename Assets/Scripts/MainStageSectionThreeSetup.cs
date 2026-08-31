@@ -17,22 +17,6 @@ namespace HimoHito
         private static readonly Vector2 UpperHookSize =
             new Vector2(1.6f, 0.45f);
 
-        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
-        private static void EnsureAfterSceneLoad()
-        {
-            if (SceneManager.GetActiveScene().name != "MainStage")
-            {
-                return;
-            }
-
-            EnsureCreated();
-            RopeResource player = Object.FindFirstObjectByType<RopeResource>();
-            if (player != null)
-            {
-                MainStageVisuals.Apply(player.gameObject);
-            }
-        }
-
         public static GameObject EnsureCreated()
         {
             GameObject hook = FindSceneObject(UpperHookName);
