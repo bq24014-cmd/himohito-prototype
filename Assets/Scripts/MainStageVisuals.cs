@@ -168,6 +168,8 @@ namespace HimoHito
                    objectName == MainStageSectionThreeSetup.ReturnStepBName ||
                    objectName == MainStageSectionThreeSetup.ReturnStepCName ||
                    objectName == MainStageSectionThreeSetup.ReturnStepDName ||
+                   objectName == MainStageSectionFourSetup.IntermediateColumnName ||
+                   objectName == MainStageSectionFourSetup.LandingName ||
                    objectName == "Main S01 Start Shelf" ||
                    objectName == "Main S01 Landing" ||
                    objectName == "Main S02 Raised Landing" ||

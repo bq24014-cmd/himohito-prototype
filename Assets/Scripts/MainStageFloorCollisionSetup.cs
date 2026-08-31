@@ -25,6 +25,7 @@ namespace HimoHito
         {
             bool changed = MainStageSectionTwoSetup.ApplyCurrentScene();
             changed |= MainStageSectionThreeSetup.ApplyCurrentScene();
+            changed |= MainStageSectionFourSetup.ApplyCurrentScene();
             foreach (GameObject candidate in
                      Resources.FindObjectsOfTypeAll<GameObject>())
             {

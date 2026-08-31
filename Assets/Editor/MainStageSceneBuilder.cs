@@ -145,11 +145,22 @@ namespace HimoHitoEditor
 
         private static void BuildSection4()
         {
-            CreateTerrain("Main S04 Left Edge", new Vector2(41f, 5f), new Vector2(4f, 0.7f));
-            CreateTerrain("Main S04 Intermediate Column", new Vector2(46.5f, 3f), new Vector2(2f, 6f));
-            CreateHook("Main S04 Far Hook", new Vector2(54f, 7.2f));
-            GameObject landing = CreateTerrain("Main S04 Landing", new Vector2(61f, 4.5f), new Vector2(5f, 0.7f));
-            AddCheckpoint(landing, 5, new Vector2(60f, 5.15f), 40f);
+            CreateTerrain(
+                MainStageSectionFourSetup.IntermediateColumnName,
+                MainStageSectionFourSetup.IntermediateColumnPosition,
+                MainStageSectionFourSetup.IntermediateColumnSize);
+            CreateHook(
+                MainStageSectionFourSetup.FarHookName,
+                MainStageSectionFourSetup.FarHookPosition);
+            GameObject landing = CreateTerrain(
+                MainStageSectionFourSetup.LandingName,
+                MainStageSectionFourSetup.LandingPosition,
+                MainStageSectionFourSetup.LandingSize);
+            AddCheckpoint(
+                landing,
+                5,
+                MainStageSectionFourSetup.LandingRespawnPosition,
+                45f);
         }
 
         private static void BuildSection5()
