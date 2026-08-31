@@ -21,6 +21,8 @@ namespace HimoHito
             "Main Section 3 Return Step C";
         public const string ReturnStepDName =
             "Main Section 3 Return Step D";
+        public const string RecoverySwitchName =
+            "Section 3 Recovery Switch";
         public const string HighShelfName = "Main Landing 3";
 
         // Slide 22 local coordinates are translated so the start bank's
@@ -51,6 +53,10 @@ namespace HimoHito
             new Vector2(35.9f, -10.225f);
         public static readonly Vector2 ReturnStepDSize =
             new Vector2(1.8f, 11.65f);
+        public static readonly Vector2 RecoverySwitchPosition =
+            new Vector2(44.1f, -5.75f);
+        public static readonly Vector2 RecoverySwitchSize =
+            new Vector2(0.9f, 0.35f);
         public static readonly Vector2 HighShelfPosition =
             new Vector2(49.6f, -7.15f);
         public static readonly Vector2 HighShelfSize =
@@ -104,6 +110,8 @@ namespace HimoHito
                 recovery.Configure();
             }
 
+            changed |= EnsureRecoverySwitch(lowDeadEnd);
+
             GameObject highShelf = FindSceneObject(HighShelfName);
             if (highShelf != null)
             {
@@ -118,6 +126,62 @@ namespace HimoHito
                     HighShelfRespawnPosition,
                     45f);
             }
+            return changed;
+        }
+
+        private static bool EnsureRecoverySwitch(GameObject lowDeadEnd)
+        {
+            bool changed = false;
+            GameObject recoverySwitch = FindSceneObject(RecoverySwitchName);
+            if (recoverySwitch == null)
+            {
+                recoverySwitch = new GameObject(RecoverySwitchName);
+                changed = true;
+            }
+            if (!recoverySwitch.activeSelf)
+            {
+                recoverySwitch.SetActive(true);
+                changed = true;
+            }
+            changed |= SetTransform(
+                recoverySwitch,
+                RecoverySwitchPosition,
+                RecoverySwitchSize);
+
+            if (!recoverySwitch.TryGetComponent(out SpriteRenderer _))
+            {
+                recoverySwitch.AddComponent<SpriteRenderer>();
+                changed = true;
+            }
+            if (!recoverySwitch.TryGetComponent(out SolidSprite visual))
+            {
+                visual = recoverySwitch.AddComponent<SolidSprite>();
+                changed = true;
+            }
+            if (!recoverySwitch.TryGetComponent(out BoxCollider2D trigger))
+            {
+                trigger = recoverySwitch.AddComponent<BoxCollider2D>();
+                changed = true;
+            }
+            if (!trigger.isTrigger)
+            {
+                trigger.isTrigger = true;
+                changed = true;
+            }
+            Vector2 triggerSize = new Vector2(3f, 5f);
+            if (trigger.size != triggerSize)
+            {
+                trigger.size = triggerSize;
+                changed = true;
+            }
+            if (!recoverySwitch.TryGetComponent(
+                    out MainStageSectionThreeRecoverySwitch controller))
+            {
+                controller = recoverySwitch.AddComponent<
+                    MainStageSectionThreeRecoverySwitch>();
+                changed = true;
+            }
+            controller.Configure(lowDeadEnd, visual);
             return changed;
         }
 
@@ -276,12 +340,14 @@ namespace HimoHito
 
     /// <summary>
     /// Keeps the lower-route recovery stairs out of both valid swing paths.
-    /// They become solid and visible only after the player reaches the low
-    /// dead end, where they are needed to prevent a soft lock.
+    /// They become solid and visible only after the player presses the switch
+    /// on the low dead end, where they are needed to prevent a soft lock.
     /// </summary>
     public sealed class MainStageSectionThreeRecoveryStairs : MonoBehaviour
     {
         private bool revealed;
+
+        public bool IsRevealed => revealed;
 
         public void Configure()
         {
@@ -296,23 +362,27 @@ namespace HimoHito
             Configure();
         }
 
-        private void OnCollisionEnter2D(Collision2D collision)
+        public void Reveal()
         {
-            if (revealed ||
-                collision.collider.GetComponentInParent<PlayerMover>() == null)
+            if (revealed)
             {
                 return;
             }
 
             revealed = true;
             SetStairsActive(true);
+        }
 
-            RopeResource player =
-                collision.collider.GetComponentInParent<RopeResource>();
-            if (player != null)
+        public void Hide()
+        {
+            if (!revealed)
             {
-                MainStageVisuals.Apply(player.gameObject);
+                SetStairsActive(false);
+                return;
             }
+
+            revealed = false;
+            SetStairsActive(false);
         }
 
         private static void SetStairsActive(bool active)
@@ -335,6 +405,120 @@ namespace HimoHito
                     candidate.SetActive(active);
                     return;
                 }
+            }
+        }
+    }
+
+    /// <summary>
+    /// Reveals the lower-route recovery stairs only when the player presses F
+    /// beside the toy switch. Returning to the section-three start bank hides
+    /// the stairs again so the next swing path stays clear.
+    /// </summary>
+    public sealed class MainStageSectionThreeRecoverySwitch : MonoBehaviour
+    {
+        private static readonly Color OffColor =
+            new Color(1f, 0.72f, 0.18f);
+        private static readonly Color OnColor =
+            new Color(0.36f, 0.94f, 0.72f);
+
+        private MainStageSectionThreeRecoveryStairs stairs;
+        private SolidSprite visual;
+        private PlayerMover nearbyPlayer;
+        private PlayerMover trackedPlayer;
+
+        public void Configure(GameObject lowDeadEnd, SolidSprite switchVisual)
+        {
+            visual = switchVisual;
+            stairs = lowDeadEnd != null
+                ? lowDeadEnd.GetComponent<
+                    MainStageSectionThreeRecoveryStairs>()
+                : null;
+            SetVisualState(stairs != null && stairs.IsRevealed);
+        }
+
+        private void Update()
+        {
+            if (trackedPlayer == null)
+            {
+                trackedPlayer = Object.FindFirstObjectByType<PlayerMover>();
+            }
+
+            if (nearbyPlayer != null &&
+                stairs != null &&
+                !stairs.IsRevealed &&
+                Input.GetKeyDown(KeyCode.F))
+            {
+                stairs.Reveal();
+                SetVisualState(true);
+
+                RopeResource resource =
+                    nearbyPlayer.GetComponentInParent<RopeResource>();
+                if (resource != null)
+                {
+                    MainStageVisuals.Apply(resource.gameObject);
+                }
+            }
+
+            if (trackedPlayer != null &&
+                stairs != null &&
+                stairs.IsRevealed &&
+                trackedPlayer.transform.position.x <= 33.1f &&
+                trackedPlayer.transform.position.y >= -5.2f)
+            {
+                stairs.Hide();
+                SetVisualState(false);
+            }
+        }
+
+        private void OnTriggerEnter2D(Collider2D other)
+        {
+            PlayerMover player = other.GetComponentInParent<PlayerMover>();
+            if (player != null)
+            {
+                nearbyPlayer = player;
+                trackedPlayer = player;
+            }
+        }
+
+        private void OnTriggerExit2D(Collider2D other)
+        {
+            PlayerMover player = other.GetComponentInParent<PlayerMover>();
+            if (player != null && player == nearbyPlayer)
+            {
+                nearbyPlayer = null;
+            }
+        }
+
+        private void OnGUI()
+        {
+            if (nearbyPlayer == null ||
+                stairs == null ||
+                stairs.IsRevealed)
+            {
+                return;
+            }
+
+            GUIStyle style = new GUIStyle(GUI.skin.box)
+            {
+                alignment = TextAnchor.MiddleCenter,
+                fontSize = 20,
+                fontStyle = FontStyle.Bold
+            };
+            GUI.Box(
+                new Rect(
+                    (Screen.width - 360f) * 0.5f,
+                    Screen.height - 92f,
+                    360f,
+                    48f),
+                "F：帰り道のスイッチを押す",
+                style);
+        }
+
+        private void SetVisualState(bool isOn)
+        {
+            if (visual != null)
+            {
+                visual.Color = isOn ? OnColor : OffColor;
             }
         }
     }
