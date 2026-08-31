@@ -64,7 +64,10 @@ namespace HimoHito
                 checkpoint = midpoint.AddComponent<MainStageCheckpoint>();
             }
 
-            checkpoint.Configure(RespawnPosition);
+            checkpoint.Configure(
+                section: 6,
+                position: RespawnPosition,
+                lowerBound: 34f);
             return midpoint;
         }
 
