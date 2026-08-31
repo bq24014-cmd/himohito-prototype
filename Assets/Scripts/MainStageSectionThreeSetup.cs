@@ -23,6 +23,8 @@ namespace HimoHito
             "Main Section 3 Return Step D";
         public const string RecoverySwitchName =
             "Section 3 Recovery Switch";
+        public const string LegacyLowerWalkingRouteName =
+            "Main Lower Walking Route";
         public const string HighShelfName = "Main Landing 3";
 
         // Slide 22 local coordinates are translated so the start bank's
@@ -30,37 +32,37 @@ namespace HimoHito
         public static readonly Vector2 LowerHookPosition =
             new Vector2(38.4f, -2.25f);
         public static readonly Vector2 UpperHookPosition =
-            new Vector2(38.4f, 0.15f);
+            new Vector2(38.4f, 1.75f);
         public static readonly Vector2 HookSize =
             new Vector2(1.6f, 0.45f);
         public static readonly Vector2 LowDeadEndPosition =
-            new Vector2(43.7f, -11.05f);
+            new Vector2(44.2f, -11.05f);
         public static readonly Vector2 LowDeadEndSize =
             new Vector2(3f, 10f);
         public static readonly Vector2 ReturnStepAPosition =
-            new Vector2(41.3f, -11.05f);
+            new Vector2(41.8f, -11.05f);
         public static readonly Vector2 ReturnStepASize =
             new Vector2(1.8f, 10f);
         public static readonly Vector2 ReturnStepBPosition =
-            new Vector2(39.5f, -10.775f);
+            new Vector2(40f, -10.775f);
         public static readonly Vector2 ReturnStepBSize =
             new Vector2(1.8f, 10.55f);
         public static readonly Vector2 ReturnStepCPosition =
-            new Vector2(37.7f, -10.5f);
+            new Vector2(38.2f, -10.5f);
         public static readonly Vector2 ReturnStepCSize =
             new Vector2(1.8f, 11.1f);
         public static readonly Vector2 ReturnStepDPosition =
-            new Vector2(35.9f, -10.225f);
+            new Vector2(36.4f, -10.225f);
         public static readonly Vector2 ReturnStepDSize =
             new Vector2(1.8f, 11.65f);
         public static readonly Vector2 RecoverySwitchPosition =
-            new Vector2(44.1f, -5.75f);
+            new Vector2(44.6f, -5.75f);
         public static readonly Vector2 RecoverySwitchSize =
             new Vector2(0.9f, 0.35f);
         public static readonly Vector2 HighShelfPosition =
             new Vector2(52.6f, -7.15f);
         public static readonly Vector2 HighShelfSize =
-            new Vector2(8f, 10f);
+            new Vector2(14f, 10f);
         public static readonly Vector2 HighShelfRespawnPosition =
             new Vector2(49.6f, -1.45f);
 
@@ -111,6 +113,7 @@ namespace HimoHito
             }
 
             changed |= EnsureRecoverySwitch(lowDeadEnd);
+            changed |= DisableLegacyLowerRoute();
 
             GameObject highShelf = FindSceneObject(HighShelfName);
             if (highShelf != null)
@@ -127,6 +130,19 @@ namespace HimoHito
                     45f);
             }
             return changed;
+        }
+
+        private static bool DisableLegacyLowerRoute()
+        {
+            GameObject legacyRoute =
+                FindSceneObject(LegacyLowerWalkingRouteName);
+            if (legacyRoute == null || !legacyRoute.activeSelf)
+            {
+                return false;
+            }
+
+            legacyRoute.SetActive(false);
+            return true;
         }
 
         private static bool EnsureRecoverySwitch(GameObject lowDeadEnd)
