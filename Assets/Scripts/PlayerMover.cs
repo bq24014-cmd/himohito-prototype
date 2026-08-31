@@ -424,9 +424,14 @@ namespace HimoHito
 
             Vector2 requestedTangent =
                 tangent * Mathf.Sign(horizontalProjection);
+
+            // horizontalProjection selects which of the two tangent directions
+            // matches A/D.  Do not multiply the force by that projection again:
+            // at the lower Hook the tangent has only a small horizontal part,
+            // and applying the factor twice leaves less force than floor
+            // friction, making both keys appear unresponsive.
             body.AddForce(
-                requestedTangent * acceleration *
-                Mathf.Abs(horizontalProjection),
+                requestedTangent * acceleration,
                 ForceMode2D.Force);
         }
 
