@@ -61,9 +61,13 @@ namespace HimoHitoEditor
         private static void BuildSection1()
         {
             CreateTerrain("Main S01 Start Shelf", new Vector2(-4f, 0f), new Vector2(6f, 0.7f));
-            CreateHook("Main S01 Hook", new Vector2(2f, 6.6f));
-            GameObject landing = CreateTerrain("Main S01 Landing", new Vector2(8f, 0f), new Vector2(5f, 0.7f));
-            AddCheckpoint(landing, 2, new Vector2(8f, 0.65f), 50f);
+            // The opening uses length 7. From the initial player position
+            // (-4, 0.65), this Hook is 6.69 units away, so it can be attached
+            // without first making a blind jump. The landing's left edge is
+            // 6.60 units from the Hook, keeping it inside the same swing arc.
+            CreateHook("Main S01 Hook", new Vector2(0.5f, 5.6f));
+            GameObject landing = CreateTerrain("Main S01 Landing", new Vector2(7f, 0f), new Vector2(5f, 0.7f));
+            AddCheckpoint(landing, 2, new Vector2(6f, 0.65f), 50f);
         }
 
         private static void BuildSection2()
