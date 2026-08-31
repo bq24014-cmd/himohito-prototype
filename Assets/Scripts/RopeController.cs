@@ -342,23 +342,27 @@ namespace HimoHito
                 origin,
                 offset.normalized,
                 shotDistance);
+
+            // A lower Hook can sit beyond the edge of the floor the player is
+            // standing on.  Prefer an explicitly aimed Hook before falling back
+            // to generic terrain, otherwise the downward shot attaches to that
+            // floor edge and the player appears unable to move.
             foreach (RaycastHit2D hit in hits)
             {
-                if (hit.collider == null ||
-                    hit.collider == bodyCollider)
+                if (hit.collider == null || hit.collider == bodyCollider)
                 {
                     continue;
                 }
 
                 HookPoint candidateHook =
                     hit.collider.GetComponentInParent<HookPoint>();
-                if (hit.collider.isTrigger && candidateHook == null)
+                if (candidateHook == null)
                 {
                     continue;
                 }
-                Vector2 candidateAnchor = candidateHook != null
-                    ? candidateHook.GetAttachmentPoint(hit.point)
-                    : hit.point;
+
+                Vector2 candidateAnchor =
+                    candidateHook.GetAttachmentPoint(hit.point);
                 if (Vector2.Distance(origin, candidateAnchor) >
                     shotDistance + 0.01f)
                 {
@@ -367,6 +371,31 @@ namespace HimoHito
 
                 resolvedAnchor = candidateAnchor;
                 hookPoint = candidateHook;
+                return true;
+            }
+
+            foreach (RaycastHit2D hit in hits)
+            {
+                if (hit.collider == null ||
+                    hit.collider == bodyCollider)
+                {
+                    continue;
+                }
+
+                if (hit.collider.isTrigger)
+                {
+                    continue;
+                }
+
+                Vector2 candidateAnchor = hit.point;
+                if (Vector2.Distance(origin, candidateAnchor) >
+                    shotDistance + 0.01f)
+                {
+                    continue;
+                }
+
+                resolvedAnchor = candidateAnchor;
+                hookPoint = null;
                 return true;
             }
 
