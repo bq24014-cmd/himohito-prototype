@@ -32,7 +32,7 @@ namespace HimoHito
         // Slide 22 local coordinates are translated so the start bank's
         // right edge (6.6, 3.1) matches the current world edge (33, -4.35).
         public static readonly Vector2 LowerHookPosition =
-            new Vector2(38.4f, -2.25f);
+            new Vector2(38.2f, -1.75f);
         public static readonly Vector2 UpperHookPosition =
             new Vector2(38.4f, 1.75f);
         public static readonly Vector2 HookSize =
