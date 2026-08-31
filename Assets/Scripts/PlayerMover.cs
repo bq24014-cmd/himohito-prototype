@@ -24,6 +24,7 @@ namespace HimoHito
         [SerializeField] private float maximumSwingSpeed = 15f;
         [SerializeField, Range(30f, 89f)] private float maximumPumpedSwingAngle = 85f;
         [SerializeField, Range(0f, 1f)] private float swingLinearDamping = 0.12f;
+        [SerializeField, Min(0f)] private float attachedRopeSlackThreshold = 0.1f;
 
         [Header("Jump")]
         [SerializeField] private float jumpImpulse = 10f;
@@ -103,7 +104,14 @@ namespace HimoHito
             bool isSwinging = ropeController != null && ropeController.IsAttached;
             if (isSwinging)
             {
-                ApplySwingControl();
+                if (HasSlackAttachedRope())
+                {
+                    ApplySlackRopeControl();
+                }
+                else
+                {
+                    ApplySwingControl();
+                }
             }
             else if (IsGrounded)
             {
@@ -359,6 +367,56 @@ namespace HimoHito
             }
 
             return isGrounded;
+        }
+
+        private bool HasSlackAttachedRope()
+        {
+            if (ropeController == null)
+            {
+                return false;
+            }
+
+            float anchorDistance = Vector2.Distance(
+                body.position,
+                ropeController.AnchorPoint);
+            float remainingSlack =
+                ropeController.ActiveRopeLength - anchorDistance;
+            return remainingSlack > attachedRopeSlackThreshold;
+        }
+
+        private void ApplySlackRopeControl()
+        {
+            body.linearDamping = IsGrounded ? 0f : swingLinearDamping;
+            if (Mathf.Approximately(moveInput, 0f))
+            {
+                return;
+            }
+
+            Vector2 radiusDirection =
+                (body.position - ropeController.AnchorPoint).normalized;
+            Vector2 tangent =
+                new Vector2(-radiusDirection.y, radiusDirection.x);
+            float horizontalProjection = Vector2.Dot(
+                Vector2.right * moveInput,
+                tangent);
+            if (Mathf.Abs(horizontalProjection) < 0.001f)
+            {
+                return;
+            }
+
+            float speedInRequestedDirection =
+                body.linearVelocity.x * moveInput;
+            if (speedInRequestedDirection >= moveSpeed)
+            {
+                return;
+            }
+
+            Vector2 requestedTangent =
+                tangent * Mathf.Sign(horizontalProjection);
+            body.AddForce(
+                requestedTangent * acceleration *
+                Mathf.Abs(horizontalProjection),
+                ForceMode2D.Force);
         }
 
         private void RememberSupportingRopePlatform(Collision2D collision)
