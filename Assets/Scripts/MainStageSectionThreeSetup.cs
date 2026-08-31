@@ -58,11 +58,11 @@ namespace HimoHito
         public static readonly Vector2 RecoverySwitchSize =
             new Vector2(0.9f, 0.35f);
         public static readonly Vector2 HighShelfPosition =
-            new Vector2(49.6f, -7.15f);
+            new Vector2(52.6f, -7.15f);
         public static readonly Vector2 HighShelfSize =
             new Vector2(8f, 10f);
         public static readonly Vector2 HighShelfRespawnPosition =
-            new Vector2(46.6f, -1.45f);
+            new Vector2(49.6f, -1.45f);
 
         private static readonly Color HookColor =
             new Color(0.298f, 0.765f, 1f);
