@@ -24,7 +24,7 @@ namespace HimoHitoEditor
             Scene scene = EditorSceneManager.NewScene(
                 NewSceneSetup.EmptyScene,
                 NewSceneMode.Single);
-            GameObject player = CreatePlayer(new Vector2(-4f, 0.65f));
+            GameObject player = CreatePlayer(new Vector2(-1.6f, 0.95f));
 
             BuildSection1();
             BuildSection2();
@@ -60,35 +60,87 @@ namespace HimoHitoEditor
 
         private static void BuildSection1()
         {
-            CreateTerrain("Main S01 Start Shelf", new Vector2(-4f, 0f), new Vector2(6f, 0.7f));
-            // The opening uses length 7. From the initial player position
-            // (-4, 0.65), this Hook is 6.69 units away, so it can be attached
-            // without first making a blind jump. The landing's left edge is
-            // 6.60 units from the Hook, keeping it inside the same swing arc.
-            CreateHook("Main S01 Hook", new Vector2(0.5f, 5.6f));
-            GameObject landing = CreateTerrain("Main S01 Landing", new Vector2(7f, 0f), new Vector2(5f, 0.7f));
-            AddCheckpoint(landing, 2, new Vector2(6f, 0.65f), 50f);
+            // Slide 20 of the 0829 manual: two level banks with a 7-unit
+            // valley, a centered Hook, and a comfortable length-7 opening.
+            // Both banks extend down like terrain so the collision silhouette
+            // is readable before the player starts swinging.
+            CreateTerrain(
+                "Main S01 Start Shelf",
+                new Vector2(-5f, -4.65f),
+                new Vector2(8f, 10f));
+            CreateHook("Main S01 Hook", new Vector2(2.5f, 6.2f));
+            GameObject landing = CreateTerrain(
+                "Main S01 Landing",
+                new Vector2(9.5f, -4.65f),
+                new Vector2(8f, 10f));
+            AddCheckpoint(landing, 2, new Vector2(6.1f, 0.95f), 50f);
         }
 
         private static void BuildSection2()
         {
-            CreateTerrain("Main S02 Start Shelf", new Vector2(11.5f, 0f), new Vector2(2f, 0.7f));
-            CreateHook("Main S02 Length Window Hook", new Vector2(16f, 7.5f));
-            CreateSpike("Main S02 Front Spike", new Vector2(14.1f, 2.0f), new Vector2(0.9f, 1.8f));
-            CreateSpike("Main S02 Far Spike", new Vector2(18.8f, 1.15f), new Vector2(0.7f, 0.6f));
-            GameObject landing = CreateTerrain("Main S02 Raised Landing", new Vector2(22f, 4f), new Vector2(5f, 0.7f));
-            AddCheckpoint(landing, 3, new Vector2(21f, 4.65f), 50f);
+            // Slide 21: a 7.5-unit valley with a centered Hook. Length 5
+            // cannot reach the raised bank, length 6 clears both spikes, and
+            // length 7 or more falls low enough to hit the 0.9-unit spike.
+            const float valleyBaseline = -3.15f;
+            CreateHook(
+                "Main S02 Length Window Hook",
+                new Vector2(17.25f, valleyBaseline + 7.5f));
+            CreateSpike(
+                "Main S02 Front Spike",
+                new Vector2(15.35f, valleyBaseline + 0.45f),
+                new Vector2(0.9f, 0.9f));
+            CreateSpike(
+                "Main S02 Far Spike",
+                new Vector2(19.55f, valleyBaseline + 0.15f),
+                new Vector2(0.7f, 0.3f));
+            GameObject landing = CreateTerrain(
+                "Main S02 Raised Landing",
+                new Vector2(29f, valleyBaseline - 1f),
+                new Vector2(8f, 10f));
+            AddCheckpoint(
+                landing,
+                3,
+                new Vector2(29f, valleyBaseline + 4.65f),
+                50f);
         }
 
         private static void BuildSection3()
         {
-            CreateHook("Main S03 Upper Hook", new Vector2(29f, 7.6f));
-            CreateHook("Main S03 Lower Hook", new Vector2(29f, 5.2f));
-            CreateTerrain("Main S03 Lower Dead End", new Vector2(31f, 0f), new Vector2(5f, 0.7f));
-            CreateTerrain("Main S03 Return Step A", new Vector2(27f, 1.2f), new Vector2(2f, 0.5f));
-            CreateTerrain("Main S03 Return Step B", new Vector2(25f, 2.6f), new Vector2(2f, 0.5f));
-            GameObject landing = CreateTerrain("Main S03 High Shelf", new Vector2(36f, 5f), new Vector2(6f, 0.7f));
-            AddCheckpoint(landing, 4, new Vector2(35f, 5.65f), 45f);
+            CreateHook(
+                MainStageSectionThreeSetup.LowerHookName,
+                MainStageSectionThreeSetup.LowerHookPosition);
+            CreateHook(
+                MainStageSectionThreeSetup.UpperHookName,
+                MainStageSectionThreeSetup.UpperHookPosition);
+            CreateTerrain(
+                MainStageSectionThreeSetup.LowDeadEndName,
+                MainStageSectionThreeSetup.LowDeadEndPosition,
+                MainStageSectionThreeSetup.LowDeadEndSize);
+            CreateTerrain(
+                MainStageSectionThreeSetup.ReturnStepAName,
+                MainStageSectionThreeSetup.ReturnStepAPosition,
+                MainStageSectionThreeSetup.ReturnStepASize);
+            CreateTerrain(
+                MainStageSectionThreeSetup.ReturnStepBName,
+                MainStageSectionThreeSetup.ReturnStepBPosition,
+                MainStageSectionThreeSetup.ReturnStepBSize);
+            CreateTerrain(
+                MainStageSectionThreeSetup.ReturnStepCName,
+                MainStageSectionThreeSetup.ReturnStepCPosition,
+                MainStageSectionThreeSetup.ReturnStepCSize);
+            CreateTerrain(
+                MainStageSectionThreeSetup.ReturnStepDName,
+                MainStageSectionThreeSetup.ReturnStepDPosition,
+                MainStageSectionThreeSetup.ReturnStepDSize);
+            GameObject landing = CreateTerrain(
+                MainStageSectionThreeSetup.HighShelfName,
+                MainStageSectionThreeSetup.HighShelfPosition,
+                MainStageSectionThreeSetup.HighShelfSize);
+            AddCheckpoint(
+                landing,
+                4,
+                MainStageSectionThreeSetup.HighShelfRespawnPosition,
+                45f);
         }
 
         private static void BuildSection4()
@@ -242,8 +294,11 @@ namespace HimoHitoEditor
         {
             GameObject spike = CreateSolidObject(name, position, size, SpikeColor);
             BoxCollider2D collider = spike.GetComponent<BoxCollider2D>();
+            collider.size = new Vector2(0.86f, 0.9f);
+            collider.offset = new Vector2(0f, -0.03f);
             collider.isTrigger = true;
             spike.AddComponent<RopeSpikeHazard>();
+            spike.AddComponent<ToySpikeVisual>().Refresh();
             return spike;
         }
 

@@ -1,61 +1,248 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 namespace HimoHito
 {
     /// <summary>
-    /// Adds the upper choice for section three. The existing Main Hook 3 is the
-    /// nearby lower choice; this hook asks for a longer rope but gives a higher
-    /// pendulum pivot toward Landing 3.
+    /// Builds section three from slide 22 of the 0829 stage manual.
+    /// The upper Hook reaches the high shelf with length 8. The lower Hook
+    /// reaches only a low dead end with length 6, where stairs allow retreat.
     /// </summary>
     public static class MainStageSectionThreeSetup
     {
+        public const string LowerHookName = "Main Hook 3";
         public const string UpperHookName = "Main Hook 3 Upper";
+        public const string LowDeadEndName =
+            "Main Section 3 Low Dead End";
+        public const string ReturnStepAName =
+            "Main Section 3 Return Step A";
+        public const string ReturnStepBName =
+            "Main Section 3 Return Step B";
+        public const string ReturnStepCName =
+            "Main Section 3 Return Step C";
+        public const string ReturnStepDName =
+            "Main Section 3 Return Step D";
+        public const string HighShelfName = "Main Landing 3";
 
-        private static readonly Vector2 UpperHookPosition =
-            new Vector2(36f, 4.8f);
-        private static readonly Vector2 UpperHookSize =
+        // Slide 22 local coordinates are translated so the start bank's
+        // right edge (6.6, 3.1) matches the current world edge (33, -4.35).
+        public static readonly Vector2 LowerHookPosition =
+            new Vector2(38.4f, -2.25f);
+        public static readonly Vector2 UpperHookPosition =
+            new Vector2(38.4f, 0.15f);
+        public static readonly Vector2 HookSize =
             new Vector2(1.6f, 0.45f);
+        public static readonly Vector2 LowDeadEndPosition =
+            new Vector2(43.7f, -11.05f);
+        public static readonly Vector2 LowDeadEndSize =
+            new Vector2(3f, 10f);
+        public static readonly Vector2 ReturnStepAPosition =
+            new Vector2(40.7f, -6.8f);
+        public static readonly Vector2 ReturnStepASize =
+            new Vector2(1.4f, 0.5f);
+        public static readonly Vector2 ReturnStepBPosition =
+            new Vector2(38.9f, -6.3f);
+        public static readonly Vector2 ReturnStepBSize =
+            new Vector2(1.4f, 0.5f);
+        public static readonly Vector2 ReturnStepCPosition =
+            new Vector2(37.1f, -5.75f);
+        public static readonly Vector2 ReturnStepCSize =
+            new Vector2(1.4f, 0.5f);
+        public static readonly Vector2 ReturnStepDPosition =
+            new Vector2(35.2f, -5.2f);
+        public static readonly Vector2 ReturnStepDSize =
+            new Vector2(1.4f, 0.5f);
+        public static readonly Vector2 HighShelfPosition =
+            new Vector2(49.6f, -7.15f);
+        public static readonly Vector2 HighShelfSize =
+            new Vector2(8f, 10f);
+        public static readonly Vector2 HighShelfRespawnPosition =
+            new Vector2(46.6f, -1.45f);
 
+        private static readonly Color HookColor =
+            new Color(0.298f, 0.765f, 1f);
+
+        public static bool ApplyCurrentScene()
+        {
+            bool changed = false;
+            changed |= EnsureHook(LowerHookName, LowerHookPosition);
+            changed |= EnsureHook(UpperHookName, UpperHookPosition);
+            changed |= EnsureTerrain(
+                LowDeadEndName,
+                LowDeadEndPosition,
+                LowDeadEndSize);
+            changed |= EnsureTerrain(
+                ReturnStepAName,
+                ReturnStepAPosition,
+                ReturnStepASize);
+            changed |= EnsureTerrain(
+                ReturnStepBName,
+                ReturnStepBPosition,
+                ReturnStepBSize);
+            changed |= EnsureTerrain(
+                ReturnStepCName,
+                ReturnStepCPosition,
+                ReturnStepCSize);
+            changed |= EnsureTerrain(
+                ReturnStepDName,
+                ReturnStepDPosition,
+                ReturnStepDSize);
+            changed |= EnsureTerrain(
+                HighShelfName,
+                HighShelfPosition,
+                HighShelfSize);
+
+            GameObject highShelf = FindSceneObject(HighShelfName);
+            if (highShelf != null)
+            {
+                if (!highShelf.TryGetComponent(
+                        out MainStageCheckpoint checkpoint))
+                {
+                    checkpoint = highShelf.AddComponent<MainStageCheckpoint>();
+                    changed = true;
+                }
+                checkpoint.Configure(
+                    4,
+                    HighShelfRespawnPosition,
+                    45f);
+            }
+            return changed;
+        }
+
+        // Compatibility entry point used by earlier editor utilities.
         public static GameObject EnsureCreated()
         {
-            GameObject hook = FindSceneObject(UpperHookName);
+            ApplyCurrentScene();
+            return FindSceneObject(UpperHookName);
+        }
+
+        private static bool EnsureHook(
+            string objectName,
+            Vector2 position)
+        {
+            bool changed = false;
+            GameObject hook = FindSceneObject(objectName);
             if (hook == null)
             {
-                hook = new GameObject(UpperHookName);
+                hook = new GameObject(objectName);
+                changed = true;
             }
-
-            hook.SetActive(true);
-            hook.transform.position = UpperHookPosition;
-            hook.transform.localScale = new Vector3(
-                UpperHookSize.x,
-                UpperHookSize.y,
-                1f);
+            if (!hook.activeSelf)
+            {
+                hook.SetActive(true);
+                changed = true;
+            }
+            changed |= SetTransform(hook, position, HookSize);
 
             if (!hook.TryGetComponent(out SpriteRenderer _))
             {
                 hook.AddComponent<SpriteRenderer>();
+                changed = true;
             }
-
             if (!hook.TryGetComponent(out SolidSprite visual))
             {
                 visual = hook.AddComponent<SolidSprite>();
+                changed = true;
             }
-            visual.Color = new Color(0.298f, 0.765f, 1f);
-
+            if (visual.Color != HookColor)
+            {
+                visual.Color = HookColor;
+                changed = true;
+            }
             if (!hook.TryGetComponent(out BoxCollider2D collider))
             {
                 collider = hook.AddComponent<BoxCollider2D>();
+                changed = true;
             }
-            collider.size = Vector2.one;
-            collider.isTrigger = false;
-
+            if (collider.size != Vector2.one)
+            {
+                collider.size = Vector2.one;
+                changed = true;
+            }
+            if (collider.isTrigger)
+            {
+                collider.isTrigger = false;
+                changed = true;
+            }
             if (!hook.TryGetComponent(out HookPoint hookPoint))
             {
                 hookPoint = hook.AddComponent<HookPoint>();
+                changed = true;
             }
-            hookPoint.ConfigureFixedAttachmentPoint(Vector2.zero);
-            return hook;
+            changed |= hookPoint.ConfigureFixedAttachmentPoint(Vector2.zero);
+            return changed;
+        }
+
+        private static bool EnsureTerrain(
+            string objectName,
+            Vector2 position,
+            Vector2 size)
+        {
+            bool changed = false;
+            GameObject terrain = FindSceneObject(objectName);
+            if (terrain == null)
+            {
+                terrain = new GameObject(objectName);
+                changed = true;
+            }
+            if (!terrain.activeSelf)
+            {
+                terrain.SetActive(true);
+                changed = true;
+            }
+            changed |= SetTransform(terrain, position, size);
+
+            if (!terrain.TryGetComponent(out SpriteRenderer _))
+            {
+                terrain.AddComponent<SpriteRenderer>();
+                changed = true;
+            }
+            if (!terrain.TryGetComponent(out SolidSprite _))
+            {
+                terrain.AddComponent<SolidSprite>();
+                changed = true;
+            }
+            if (!terrain.TryGetComponent(out BoxCollider2D collider))
+            {
+                collider = terrain.AddComponent<BoxCollider2D>();
+                changed = true;
+            }
+            if (collider.size != Vector2.one)
+            {
+                collider.size = Vector2.one;
+                changed = true;
+            }
+            if (collider.isTrigger)
+            {
+                collider.isTrigger = false;
+                changed = true;
+            }
+            if (!terrain.TryGetComponent(out SolidSwingSurface _))
+            {
+                terrain.AddComponent<SolidSwingSurface>();
+                changed = true;
+            }
+            return changed;
+        }
+
+        private static bool SetTransform(
+            GameObject target,
+            Vector2 position,
+            Vector2 size)
+        {
+            bool changed = false;
+            Vector3 targetPosition = new Vector3(position.x, position.y, 0f);
+            Vector3 targetScale = new Vector3(size.x, size.y, 1f);
+            if (target.transform.position != targetPosition)
+            {
+                target.transform.position = targetPosition;
+                changed = true;
+            }
+            if (target.transform.localScale != targetScale)
+            {
+                target.transform.localScale = targetScale;
+                changed = true;
+            }
+            return changed;
         }
 
         private static GameObject FindSceneObject(string objectName)
@@ -70,7 +257,6 @@ namespace HimoHito
                     return candidate;
                 }
             }
-
             return null;
         }
     }

@@ -26,6 +26,10 @@ namespace HimoHito
             new Color(1f, 0.365f, 0.561f);
         private static readonly Color BlockColor =
             new Color(1f, 0.706f, 0.235f);
+        private static readonly Color TerrainBodyColor =
+            new Color(0.56f, 0.29f, 0.09f);
+        private static readonly Color TerrainTopColor =
+            new Color(0.96f, 0.49f, 0.10f);
         private static readonly Color BeamFaceColor =
             new Color(0.35f, 0.22f, 0.16f);
         private static readonly Color BeamEdgeColor =
@@ -68,6 +72,27 @@ namespace HimoHito
                     continue;
                 }
 
+                if (candidate.TryGetComponent(out RopeSpikeHazard _))
+                {
+                    changed |= RemoveChild(
+                        candidate,
+                        "Orange Block Platform Visual");
+                    changed |= RemoveChild(
+                        candidate,
+                        "Blue Railway Platform Visual");
+                    changed |= ApplyColor(
+                        candidate,
+                        new Color(1f, 0.18f, 0.25f));
+                    if (!candidate.TryGetComponent(
+                            out ToySpikeVisual spikeVisual))
+                    {
+                        spikeVisual = candidate.AddComponent<ToySpikeVisual>();
+                        changed = true;
+                    }
+                    changed |= spikeVisual.Refresh();
+                    continue;
+                }
+
                 if (candidate.TryGetComponent(out HookPoint hookPoint))
                 {
                     changed |= ApplyColor(candidate, HookColor);
@@ -101,6 +126,12 @@ namespace HimoHito
                 if (candidate.TryGetComponent(out BoxCollider2D _) &&
                     candidate.TryGetComponent(out SolidSprite _))
                 {
+                    if (IsBankTerrain(candidate.name))
+                    {
+                        changed |= EnsureSectionOneTerrainVisual(candidate);
+                        continue;
+                    }
+
                     bool isStartGround = candidate.name == "Main Start Ground";
                     bool isSolidToyBoard =
                         isStartGround ||
@@ -121,6 +152,49 @@ namespace HimoHito
                         isSolidToyBoard ? BlockResourcePath : RailResourcePath,
                         1);
                 }
+            }
+
+            return changed;
+        }
+
+        private static bool IsBankTerrain(string objectName)
+        {
+            return objectName == "Main Start Ground" ||
+                   objectName == "Main Landing 1" ||
+                   objectName == "Main Landing 2" ||
+                   objectName == MainStageSectionThreeSetup.LowDeadEndName ||
+                   objectName == MainStageSectionThreeSetup.HighShelfName ||
+                   objectName == "Main S01 Start Shelf" ||
+                   objectName == "Main S01 Landing" ||
+                   objectName == "Main S02 Raised Landing" ||
+                   objectName == "Main S03 Lower Dead End" ||
+                   objectName == "Main S03 High Shelf";
+        }
+
+        private static bool EnsureSectionOneTerrainVisual(GameObject terrain)
+        {
+            if (terrain == null ||
+                !terrain.TryGetComponent(out SpriteRenderer sourceRenderer))
+            {
+                return false;
+            }
+
+            bool changed = false;
+            changed |= RemoveChild(terrain, "Orange Block Platform Visual");
+            changed |= RemoveChild(terrain, "Blue Railway Platform Visual");
+            changed |= ApplyColor(terrain, TerrainBodyColor);
+            changed |= EnsureSolidVisualPart(
+                terrain,
+                "Terrain Top Edge",
+                new Vector2(0f, 0.475f),
+                new Vector2(1f, 0.05f),
+                TerrainTopColor,
+                sourceRenderer.sortingOrder + 2);
+
+            if (!sourceRenderer.enabled)
+            {
+                sourceRenderer.enabled = true;
+                changed = true;
             }
 
             return changed;

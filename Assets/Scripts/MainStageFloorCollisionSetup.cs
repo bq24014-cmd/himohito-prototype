@@ -23,7 +23,8 @@ namespace HimoHito
 
         public static bool ApplyCurrentScene()
         {
-            bool changed = false;
+            bool changed = MainStageSectionTwoSetup.ApplyCurrentScene();
+            changed |= MainStageSectionThreeSetup.ApplyCurrentScene();
             foreach (GameObject candidate in
                      Resources.FindObjectsOfTypeAll<GameObject>())
             {
