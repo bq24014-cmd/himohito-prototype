@@ -95,12 +95,18 @@ namespace HimoHito
 
                 if (candidate.TryGetComponent(out HookPoint hookPoint))
                 {
-                    changed |= ApplyColor(candidate, HookColor);
+                    bool isBridgeAnchor = candidate.TryGetComponent(
+                        out RopePlatformAnchor _);
+                    Color hookColor = isBridgeAnchor
+                        ? MainStageSectionFourSetup.BridgeAnchorColor
+                        : HookColor;
+                    changed |= ApplyColor(candidate, hookColor);
                     changed |= EnsureToyVisual(
                         candidate,
                         "Blue Toy Hook Visual",
                         HookResourcePath,
-                        6);
+                        6,
+                        hookColor);
                     changed |= hookPoint.ConfigureFixedAttachmentPoint(Vector2.zero);
                     continue;
                 }
@@ -387,7 +393,8 @@ namespace HimoHito
             GameObject target,
             string visualName,
             string resourcePath,
-            int sortingOrderOffset)
+            int sortingOrderOffset,
+            Color? tint = null)
         {
             if (target == null ||
                 !target.TryGetComponent(out SpriteRenderer sourceRenderer))
@@ -443,9 +450,10 @@ namespace HimoHito
                 renderer.sprite = processedSprite;
                 changed = true;
             }
-            if (renderer.color != Color.white)
+            Color targetColor = tint ?? Color.white;
+            if (renderer.color != targetColor)
             {
-                renderer.color = Color.white;
+                renderer.color = targetColor;
                 changed = true;
             }
             if (renderer.sortingLayerID != sourceRenderer.sortingLayerID)

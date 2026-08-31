@@ -59,6 +59,26 @@ namespace HimoHito
             CaptureCheckpointState();
         }
 
+        private void Start()
+        {
+            if (!StartFromSectionFourForDevelopment)
+            {
+                return;
+            }
+
+            // Apply once more after every Awake has completed. This prevents
+            // scene setup components from leaving development Play at an older
+            // section checkpoint.
+            CurrentSection = 4;
+            body.position =
+                MainStageSectionThreeSetup.HighShelfRespawnPosition;
+            body.linearVelocity = Vector2.zero;
+            body.angularVelocity = 0f;
+            ropeResource.ResetToMaximum();
+            checkpointPosition = body.position;
+            CaptureCheckpointState();
+        }
+
         private void Update()
         {
             if (goalZone != null && goalZone.IsClear)

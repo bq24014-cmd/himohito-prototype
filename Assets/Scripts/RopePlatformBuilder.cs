@@ -210,6 +210,28 @@ namespace HimoHito
             start = ropeController.AnchorPoint;
             end = body.position;
             ropeLength = ropeController.ActiveRopeLength;
+
+            HookPoint activeHook = ropeController.ActiveHookPoint;
+            RopePlatformAnchor platformAnchor = null;
+            if (activeHook != null)
+            {
+                activeHook.TryGetComponent(out platformAnchor);
+            }
+
+            MainStageRespawnOnFall main =
+                GetComponent<MainStageRespawnOnFall>();
+            if (main != null && main.CurrentSection == 4 &&
+                platformAnchor == null)
+            {
+                return false;
+            }
+
+            if (platformAnchor != null &&
+                !platformAnchor.CanBuildFrom(end, ropeLength))
+            {
+                return false;
+            }
+
             float directDistance = Vector2.Distance(start, end);
             return ropeLength >= minimumPlatformLength &&
                    directDistance <= ropeLength + 0.05f &&

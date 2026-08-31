@@ -149,6 +149,22 @@ namespace HimoHitoEditor
                 MainStageSectionFourSetup.IntermediateColumnName,
                 MainStageSectionFourSetup.IntermediateColumnPosition,
                 MainStageSectionFourSetup.IntermediateColumnSize);
+            CreateMarker(
+                MainStageSectionFourSetup.BridgeStartMarkerName,
+                MainStageSectionFourSetup.BridgeStartMarkerPosition,
+                MainStageSectionFourSetup.BridgeStartMarkerSize,
+                MainStageSectionFourSetup.BridgeAnchorColor);
+            GameObject bridgeAnchor = CreateSolidObject(
+                MainStageSectionFourSetup.BridgeAnchorName,
+                MainStageSectionFourSetup.BridgeAnchorPosition,
+                MainStageSectionFourSetup.BridgeAnchorSize,
+                MainStageSectionFourSetup.BridgeAnchorColor);
+            bridgeAnchor.AddComponent<HookPoint>()
+                .ConfigureFixedAttachmentPoint(Vector2.zero);
+            bridgeAnchor.AddComponent<RopePlatformAnchor>().Configure(
+                MainStageSectionFourSetup.BridgeBuildOriginPosition,
+                MainStageSectionFourSetup.BridgeOriginTolerance,
+                MainStageSectionFourSetup.BridgeRopeLength);
             CreateHook(
                 MainStageSectionFourSetup.FarHookName,
                 MainStageSectionFourSetup.FarHookPosition);
@@ -347,6 +363,22 @@ namespace HimoHitoEditor
             gameObject.AddComponent<SolidSprite>().Color = color;
             gameObject.AddComponent<BoxCollider2D>().size = Vector2.one;
             return gameObject;
+        }
+
+        private static GameObject CreateMarker(
+            string name,
+            Vector2 position,
+            Vector2 size,
+            Color color)
+        {
+            GameObject marker = new(name);
+            marker.transform.position = position;
+            marker.transform.localScale =
+                new Vector3(size.x, size.y, 1f);
+            SpriteRenderer renderer = marker.AddComponent<SpriteRenderer>();
+            renderer.sortingOrder = 8;
+            marker.AddComponent<SolidSprite>().Color = color;
+            return marker;
         }
 
         private static void AddCheckpoint(

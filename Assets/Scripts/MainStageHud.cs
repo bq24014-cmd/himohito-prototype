@@ -83,6 +83,12 @@ namespace HimoHito
             {
                 GUILayout.Label("ヒモが不足しています — Rで区間の最初へ", accentStyle);
             }
+            else if (respawn != null &&
+                     respawn.CurrentSection == 4 &&
+                     platformBuilder != null)
+            {
+                DrawSectionFourGuide();
+            }
             else
             {
                 GUILayout.Label("おもちゃ箱のゴールを目指す", accentStyle);
@@ -104,6 +110,27 @@ namespace HimoHito
             }
             GUILayout.Label("R：現在の区間から再挑戦", bodyStyle);
             GUILayout.EndArea();
+        }
+
+        private void DrawSectionFourGuide()
+        {
+            if (platformBuilder.GeneratedPlatformCount > 0)
+            {
+                GUILayout.Label(
+                    "橋を渡り、柱の上から青フックへ長さ9で接続",
+                    accentStyle);
+                return;
+            }
+
+            bool isYellowAnchor = ropeController != null &&
+                ropeController.ActiveHookPoint != null &&
+                ropeController.ActiveHookPoint.TryGetComponent(
+                    out RopePlatformAnchor _);
+            GUILayout.Label(
+                isYellowAnchor
+                    ? "黄色フックへ接続中：Qで長さ5を消費して橋を作る"
+                    : "左岸の黄色印から、長さ5で柱の黄色フックへ接続",
+                accentStyle);
         }
 
         private void UpdateSectionTitle()
