@@ -113,6 +113,8 @@
 
 チュートリアルクリア後は`Enter`で本編へ進みます。
 
+現在の本編は第4区間の調整中のため、Play時は第3区間の高い棚上から第4区間として開始します。落下または`R`でも同じ地点へ戻ります。全区間確認へ戻す時は`MainStageRespawnOnFall`の開発用開始フラグを無効にします。
+
 ## Windows版を作成
 
 1. Unity上部メニューの`HimoHito > Build Windows Prototype`を押す

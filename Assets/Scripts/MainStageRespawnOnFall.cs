@@ -12,6 +12,10 @@ namespace HimoHito
     [RequireComponent(typeof(RopePlatformBuilder), typeof(PlayerMover))]
     public sealed class MainStageRespawnOnFall : MonoBehaviour
     {
+        // Temporary development switch. Set this to false when full-stage
+        // playtesting should begin from section one again.
+        private const bool StartFromSectionFourForDevelopment = true;
+
         [SerializeField] private float fallThreshold = -9f;
         [SerializeField, Min(0.01f)] private float minimumUsableRopeLength = 1f;
 
@@ -42,6 +46,15 @@ namespace HimoHito
             platformBuilder = GetComponent<RopePlatformBuilder>();
             playerMover = GetComponent<PlayerMover>();
             goalZone = FindFirstObjectByType<MainStageGoalZone>();
+
+            if (StartFromSectionFourForDevelopment)
+            {
+                CurrentSection = 4;
+                body.position =
+                    MainStageSectionThreeSetup.HighShelfRespawnPosition;
+                ropeResource.ResetToMaximum();
+            }
+
             checkpointPosition = body.position;
             CaptureCheckpointState();
         }
