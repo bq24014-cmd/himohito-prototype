@@ -36,21 +36,21 @@ namespace HimoHito
         public static readonly Vector2 LowDeadEndSize =
             new Vector2(3f, 10f);
         public static readonly Vector2 ReturnStepAPosition =
-            new Vector2(40.7f, -6.8f);
+            new Vector2(41.3f, -11.05f);
         public static readonly Vector2 ReturnStepASize =
-            new Vector2(1.4f, 0.5f);
+            new Vector2(1.8f, 10f);
         public static readonly Vector2 ReturnStepBPosition =
-            new Vector2(38.9f, -6.3f);
+            new Vector2(39.5f, -10.775f);
         public static readonly Vector2 ReturnStepBSize =
-            new Vector2(1.4f, 0.5f);
+            new Vector2(1.8f, 10.55f);
         public static readonly Vector2 ReturnStepCPosition =
-            new Vector2(37.1f, -5.75f);
+            new Vector2(37.7f, -10.5f);
         public static readonly Vector2 ReturnStepCSize =
-            new Vector2(1.4f, 0.5f);
+            new Vector2(1.8f, 11.1f);
         public static readonly Vector2 ReturnStepDPosition =
-            new Vector2(35.2f, -5.2f);
+            new Vector2(35.9f, -10.225f);
         public static readonly Vector2 ReturnStepDSize =
-            new Vector2(1.4f, 0.5f);
+            new Vector2(1.8f, 11.65f);
         public static readonly Vector2 HighShelfPosition =
             new Vector2(49.6f, -7.15f);
         public static readonly Vector2 HighShelfSize =
@@ -90,6 +90,19 @@ namespace HimoHito
                 HighShelfName,
                 HighShelfPosition,
                 HighShelfSize);
+
+            GameObject lowDeadEnd = FindSceneObject(LowDeadEndName);
+            if (lowDeadEnd != null)
+            {
+                if (!lowDeadEnd.TryGetComponent(
+                        out MainStageSectionThreeRecoveryStairs recovery))
+                {
+                    recovery = lowDeadEnd.AddComponent<
+                        MainStageSectionThreeRecoveryStairs>();
+                    changed = true;
+                }
+                recovery.Configure();
+            }
 
             GameObject highShelf = FindSceneObject(HighShelfName);
             if (highShelf != null)
@@ -258,6 +271,71 @@ namespace HimoHito
                 }
             }
             return null;
+        }
+    }
+
+    /// <summary>
+    /// Keeps the lower-route recovery stairs out of both valid swing paths.
+    /// They become solid and visible only after the player reaches the low
+    /// dead end, where they are needed to prevent a soft lock.
+    /// </summary>
+    public sealed class MainStageSectionThreeRecoveryStairs : MonoBehaviour
+    {
+        private bool revealed;
+
+        public void Configure()
+        {
+            if (Application.isPlaying && !revealed)
+            {
+                SetStairsActive(false);
+            }
+        }
+
+        private void Awake()
+        {
+            Configure();
+        }
+
+        private void OnCollisionEnter2D(Collision2D collision)
+        {
+            if (revealed ||
+                collision.collider.GetComponentInParent<PlayerMover>() == null)
+            {
+                return;
+            }
+
+            revealed = true;
+            SetStairsActive(true);
+
+            RopeResource player =
+                collision.collider.GetComponentInParent<RopeResource>();
+            if (player != null)
+            {
+                MainStageVisuals.Apply(player.gameObject);
+            }
+        }
+
+        private static void SetStairsActive(bool active)
+        {
+            SetActive(MainStageSectionThreeSetup.ReturnStepAName, active);
+            SetActive(MainStageSectionThreeSetup.ReturnStepBName, active);
+            SetActive(MainStageSectionThreeSetup.ReturnStepCName, active);
+            SetActive(MainStageSectionThreeSetup.ReturnStepDName, active);
+        }
+
+        private static void SetActive(string objectName, bool active)
+        {
+            foreach (GameObject candidate in
+                     Resources.FindObjectsOfTypeAll<GameObject>())
+            {
+                if (candidate.scene.IsValid() &&
+                    candidate.scene.name == "MainStage" &&
+                    candidate.name == objectName)
+                {
+                    candidate.SetActive(active);
+                    return;
+                }
+            }
         }
     }
 }
