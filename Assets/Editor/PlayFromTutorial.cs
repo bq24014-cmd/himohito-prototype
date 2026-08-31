@@ -17,7 +17,8 @@ namespace HimoHitoEditor
 
         static PlayFromTutorial()
         {
-            EditorApplication.delayCall += ConfigureMainStageBeginningStartScene;
+            EditorApplication.delayCall +=
+                ConfigureSectionFourDevelopmentStartScene;
         }
 
         [MenuItem("HimoHito/Play From Tutorial")]
@@ -36,6 +37,14 @@ namespace HimoHitoEditor
         public static void ConfigureMainStageBeginningStartScene()
         {
             ConfigurePlayStartScene(MainStageScenePath, "MainStage beginning");
+        }
+
+        [MenuItem("HimoHito/Play From Main Stage Section 4")]
+        public static void ConfigureSectionFourDevelopmentStartScene()
+        {
+            ConfigurePlayStartScene(
+                MainStageScenePath,
+                "本編第4区間の開発開始地点");
         }
 
         [MenuItem("HimoHito/Play From Section 7 Experiment")]
@@ -64,7 +73,7 @@ namespace HimoHitoEditor
             }
 
             EditorSceneManager.playModeStartScene = scene;
-            Debug.Log($"Play starts from {description}.");
+            Debug.Log($"Play開始地点：{description}");
         }
     }
 }
