@@ -16,6 +16,8 @@ namespace HimoHito
         public const string BridgeEndHookName =
             "Main Section 5 Green Shadow End Hook";
         public const string LightMountName = "Main S05 Flashlight Source";
+        public const string LightOcclusionOriginName =
+            "Main S05 Light Occlusion Origin";
         public const string LightSpotName = "Main S05 Flashlight Spot";
         public const string CentralHookName = "Main S05 Central Hook";
         public const string LandingName = "Main S05 Landing";
@@ -38,6 +40,8 @@ namespace HimoHito
         public static readonly Vector2 CentralHookPosition =
             new Vector2(97f, 2.45f);
         public static readonly Vector2 LightMountPosition =
+            new Vector2(97f, 2.85f);
+        public static readonly Vector2 LightOcclusionOriginPosition =
             new Vector2(89.3f, 2.85f);
         public static readonly Vector2 LightSpotPosition =
             new Vector2(89.3f, -3.15f);
@@ -97,10 +101,12 @@ namespace HimoHito
             changed |= centralHookPoint.ConfigureFixedAttachmentPoint(Vector2.zero);
 
             changed |= EnsureLightMount();
-            GameObject lightMount = FindSceneObject(LightMountName);
+            GameObject lightOcclusionOrigin = EnsureLightOcclusionOrigin(
+                out bool lightOcclusionOriginChanged);
+            changed |= lightOcclusionOriginChanged;
             changed |= EnsureLightSpot(
-                lightMount != null
-                    ? lightMount.transform
+                lightOcclusionOrigin != null
+                    ? lightOcclusionOrigin.transform
                     : centralHook.transform);
             changed |= EnsureTerrain(
                 LandingName,
@@ -218,6 +224,33 @@ namespace HimoHito
                 changed = true;
             }
             return changed;
+        }
+
+        private static GameObject EnsureLightOcclusionOrigin(out bool changed)
+        {
+            changed = false;
+            GameObject origin = FindSceneObject(LightOcclusionOriginName);
+            if (origin == null)
+            {
+                origin = new GameObject(LightOcclusionOriginName);
+                changed = true;
+            }
+            if (!origin.activeSelf)
+            {
+                origin.SetActive(true);
+                changed = true;
+            }
+
+            Vector3 targetPosition = new Vector3(
+                LightOcclusionOriginPosition.x,
+                LightOcclusionOriginPosition.y,
+                0f);
+            if (origin.transform.position != targetPosition)
+            {
+                origin.transform.position = targetPosition;
+                changed = true;
+            }
+            return origin;
         }
 
         private static bool EnsureLightSpot(Transform source)
