@@ -587,21 +587,7 @@ namespace HimoHito
                 return bridgeAnchorRingSprite;
             }
 
-            Sprite sourceSprite =
-                TutorialFirstSectionVisuals.LoadProcessedToySprite(
-                    HookResourcePath);
-            if (sourceSprite == null || sourceSprite.texture == null)
-            {
-                return null;
-            }
-
             const int textureSize = 128;
-            Texture2D sourceTexture = sourceSprite.texture;
-            Rect sourceRect = sourceSprite.textureRect;
-            float sampleSide = Mathf.Min(sourceRect.width, sourceRect.height);
-            Vector2 sampleOrigin = new Vector2(
-                sourceRect.center.x - sampleSide * 0.5f,
-                sourceRect.center.y - sampleSide * 0.5f);
             Color[] pixels = new Color[textureSize * textureSize];
 
             for (int y = 0; y < textureSize; y++)
@@ -610,22 +596,31 @@ namespace HimoHito
                 {
                     float normalizedX = (x + 0.5f) / textureSize;
                     float normalizedY = (y + 0.5f) / textureSize;
-                    float sourceX = sampleOrigin.x + normalizedX * sampleSide;
-                    float sourceY = sampleOrigin.y + normalizedY * sampleSide;
-                    Color sampled = sourceTexture.GetPixelBilinear(
-                        sourceX / sourceTexture.width,
-                        sourceY / sourceTexture.height);
-
                     Vector2 centered = new Vector2(
                         normalizedX - 0.5f,
                         normalizedY - 0.5f);
                     float radius = centered.magnitude;
-                    float circularMask = 1f - Mathf.SmoothStep(
+                    float outerMask = 1f - Mathf.SmoothStep(
                         0.46f,
                         0.5f,
                         radius);
-                    sampled.a *= circularMask;
-                    pixels[y * textureSize + x] = sampled;
+                    float innerMask = Mathf.SmoothStep(
+                        0.21f,
+                        0.26f,
+                        radius);
+                    float alpha = outerMask * innerMask;
+
+                    // A subtle top-left highlight keeps the ring in the same
+                    // soft toy language without reading the imported texture.
+                    float highlight = Mathf.Clamp01(
+                        0.72f +
+                        normalizedY * 0.20f -
+                        normalizedX * 0.08f);
+                    pixels[y * textureSize + x] = new Color(
+                        highlight,
+                        highlight,
+                        highlight,
+                        alpha);
                 }
             }
 
