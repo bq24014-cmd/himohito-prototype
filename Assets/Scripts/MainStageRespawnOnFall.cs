@@ -14,8 +14,8 @@ namespace HimoHito
     {
         // Temporary development switch. Set this to false when full-stage
         // playtesting should begin from section one again.
-        private const bool StartFromSectionFiveForDevelopment = true;
-        private const float SectionFiveStartingRopeLength = 45f;
+        private const bool StartFromSectionSixForDevelopment = true;
+        private const float SectionSixStartingRopeLength = 39f;
 
         [SerializeField] private float fallThreshold = -9f;
         [SerializeField, Min(0.01f)] private float minimumUsableRopeLength = 1f;
@@ -48,15 +48,15 @@ namespace HimoHito
             playerMover = GetComponent<PlayerMover>();
             goalZone = FindFirstObjectByType<MainStageGoalZone>();
 
-            if (StartFromSectionFiveForDevelopment)
+            if (StartFromSectionSixForDevelopment)
             {
-                CurrentSection = 5;
+                CurrentSection = 6;
                 body.position =
-                    MainStageSectionFourSetup.LandingRespawnPosition;
+                    MainStageSectionFiveSetup.LandingRespawnPosition;
                 ropeResource.RestoreCurrentLength(
-                    SectionFiveStartingRopeLength);
+                    SectionSixStartingRopeLength);
                 ropeController.RestoreSelectedRopeLength(
-                    MainStageSectionFiveSetup.BridgeRopeLength);
+                    MainStageSectionSixSetup.UpperBridgeRopeLength);
             }
 
             checkpointPosition = body.position;
@@ -65,7 +65,7 @@ namespace HimoHito
 
         private void Start()
         {
-            if (!StartFromSectionFiveForDevelopment)
+            if (!StartFromSectionSixForDevelopment)
             {
                 return;
             }
@@ -73,15 +73,15 @@ namespace HimoHito
             // Apply once more after every Awake has completed. This prevents
             // scene setup components from leaving development Play at an older
             // section checkpoint.
-            CurrentSection = 5;
+            CurrentSection = 6;
             body.position =
-                MainStageSectionFourSetup.LandingRespawnPosition;
+                MainStageSectionFiveSetup.LandingRespawnPosition;
             body.linearVelocity = Vector2.zero;
             body.angularVelocity = 0f;
             ropeResource.RestoreCurrentLength(
-                SectionFiveStartingRopeLength);
+                SectionSixStartingRopeLength);
             ropeController.RestoreSelectedRopeLength(
-                MainStageSectionFiveSetup.BridgeRopeLength);
+                MainStageSectionSixSetup.UpperBridgeRopeLength);
             checkpointPosition = body.position;
             CaptureCheckpointState();
         }
