@@ -186,13 +186,7 @@ namespace HimoHitoEditor
 
         private static void BuildSection5()
         {
-            CreateTerrain("Main S05 Left Shelf", new Vector2(66f, 4.5f), new Vector2(3f, 0.7f));
-            CreateTerrain("Main S05 Right Shelf", new Vector2(72.4f, 4.5f), new Vector2(3f, 0.7f));
-            GameObject source = CreateLightSource("Main S05 Flashlight Source", new Vector2(69.2f, 8.2f));
-            CreateOccludedLight("Main S05 Flashlight Spot", new Vector2(69.2f, 2f), 4f, source.transform);
-            CreateHook("Main S05 Central Hook", new Vector2(77f, 7.2f));
-            GameObject landing = CreateTerrain("Main S05 Landing", new Vector2(83f, 4.5f), new Vector2(5f, 0.7f));
-            AddCheckpoint(landing, 6, new Vector2(82f, 5.15f), 34f);
+            MainStageSectionFiveSetup.ApplyCurrentScene();
         }
 
         private static void BuildSection6()

@@ -257,6 +257,8 @@ namespace HimoHito
         private Collider2D playerCollider;
         private float currentAlpha;
 
+        public bool IsBlocked { get; private set; }
+
         public void Configure(Transform source)
         {
             lightSource = source;
@@ -281,8 +283,8 @@ namespace HimoHito
                 return;
             }
 
-            bool blocked = IsBlockedByGeneratedPlatform();
-            float targetAlpha = blocked ? blockedAlpha : activeAlpha;
+            IsBlocked = IsBlockedByGeneratedPlatform();
+            float targetAlpha = IsBlocked ? blockedAlpha : activeAlpha;
             currentAlpha = Mathf.MoveTowards(
                 currentAlpha,
                 targetAlpha,
@@ -291,7 +293,7 @@ namespace HimoHito
             color.a = currentAlpha;
             spotRenderer.color = color;
 
-            if (!blocked && playerRope.IsAttached &&
+            if (!IsBlocked && playerRope.IsAttached &&
                 Physics2D.Distance(triggerArea, playerCollider).isOverlapped)
             {
                 playerRope.DetachAndRefund();
@@ -301,7 +303,7 @@ namespace HimoHito
         private bool IsBlockedByGeneratedPlatform()
         {
             Vector2 source = lightSource.position;
-            Vector2 target = playerRope.transform.position;
+            Vector2 target = transform.position;
             RaycastHit2D[] hits = Physics2D.LinecastAll(source, target);
             foreach (RaycastHit2D hit in hits)
             {
