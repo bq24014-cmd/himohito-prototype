@@ -66,7 +66,7 @@ namespace HimoHito
         public static bool ApplyCurrentScene()
         {
             bool changed = false;
-            changed |= DisableLegacySectionSixObjects();
+            changed |= DisableLegacyOverlappingObjects();
             changed |= EnsureRailShelf(
                 LeftShelfName,
                 LeftShelfPosition,
@@ -127,14 +127,17 @@ namespace HimoHito
             return changed;
         }
 
-        private static bool DisableLegacySectionSixObjects()
+        private static bool DisableLegacyOverlappingObjects()
         {
             bool changed = false;
             string[] legacyNames =
             {
                 MainStageSectionSixSetup.HookName,
                 MainStageSectionSixSetup.FlashlightSpotName,
-                MainStageSectionSixSetup.LandingName
+                MainStageSectionSixSetup.LandingName,
+                // This old section-seven Hook sits inside the rebuilt
+                // section-five camera and looks like an unintended shortcut.
+                MainStageSectionSevenSetup.HookName
             };
             foreach (string legacyName in legacyNames)
             {
