@@ -226,6 +226,16 @@ namespace HimoHito
         private void ApplyGroundControl()
         {
             body.linearDamping = 0f;
+
+            if (groundedRopePlatform != null &&
+                groundedRopePlatform.TryGetSurfaceTangent(
+                    body.position,
+                    out Vector2 ropePlatformTangent))
+            {
+                ApplyRopePlatformGroundControl(ropePlatformTangent);
+                return;
+            }
+
             float targetSpeed = moveInput * moveSpeed;
             float speedChange = Mathf.Approximately(moveInput, 0f)
                 ? deceleration
@@ -235,29 +245,38 @@ namespace HimoHito
                 targetSpeed,
                 speedChange * Time.fixedDeltaTime);
             body.linearVelocity = new Vector2(nextHorizontalSpeed, body.linearVelocity.y);
-
-            if (groundedRopePlatform != null && Mathf.Approximately(moveInput, 0f))
-            {
-                ApplyRopePlatformGrip();
-            }
         }
 
-        private void ApplyRopePlatformGrip()
+        private void ApplyRopePlatformGroundControl(Vector2 tangent)
         {
-            Vector2 platformDirection =
-                groundedRopePlatform.End - groundedRopePlatform.Start;
-            if (platformDirection.sqrMagnitude < 0.0001f)
+            if (tangent.sqrMagnitude < 0.0001f)
             {
                 return;
             }
 
-            Vector2 tangent = platformDirection.normalized;
-            float slopeSpeed = Vector2.Dot(body.linearVelocity, tangent);
-            body.linearVelocity -= tangent * slopeSpeed;
+            tangent.Normalize();
+            if (tangent.x < 0f)
+            {
+                tangent = -tangent;
+            }
 
-            Vector2 gravity = Physics2D.gravity * body.gravityScale;
-            Vector2 gravityAlongSlope = tangent * Vector2.Dot(gravity, tangent);
-            body.AddForce(-gravityAlongSlope * body.mass, ForceMode2D.Force);
+            float targetSurfaceSpeed = moveInput * moveSpeed;
+            float speedChange = Mathf.Approximately(moveInput, 0f)
+                ? deceleration
+                : acceleration;
+            float currentSurfaceSpeed =
+                Vector2.Dot(body.linearVelocity, tangent);
+            float nextSurfaceSpeed = Mathf.MoveTowards(
+                currentSurfaceSpeed,
+                targetSurfaceSpeed,
+                speedChange * Time.fixedDeltaTime);
+
+            // The bridge is curved. Keeping the previous world-space vertical
+            // velocity would launch the player away from the rising half after
+            // passing the lowest point. While grounded, retain only velocity
+            // along the local bridge surface. Jumping is applied afterwards as
+            // a separate upward impulse, so this does not weaken takeoff.
+            body.linearVelocity = tangent * nextSurfaceSpeed;
         }
 
         private void ApplyAirControl()

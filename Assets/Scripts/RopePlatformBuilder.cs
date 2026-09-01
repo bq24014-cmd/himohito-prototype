@@ -425,6 +425,63 @@ namespace HimoHito
             return (curvePoints[^1] - curvePoints[^2]).normalized;
         }
 
+        public bool TryGetSurfaceTangent(
+            Vector2 worldPosition,
+            out Vector2 tangent)
+        {
+            tangent = default;
+            if (curvePoints == null || curvePoints.Length < 2)
+            {
+                Vector2 direct = End - Start;
+                if (direct.sqrMagnitude < 0.0001f)
+                {
+                    return false;
+                }
+
+                tangent = direct.normalized;
+                return true;
+            }
+
+            int closestSegment = 0;
+            float closestSegmentT = 0f;
+            float closestDistanceSquared = float.PositiveInfinity;
+            for (int i = 0; i < curvePoints.Length - 1; i++)
+            {
+                Vector2 start = curvePoints[i];
+                Vector2 segment = curvePoints[i + 1] - start;
+                float segmentLengthSquared = segment.sqrMagnitude;
+                float segmentT = segmentLengthSquared > 0.0001f
+                    ? Mathf.Clamp01(
+                        Vector2.Dot(worldPosition - start, segment) /
+                        segmentLengthSquared)
+                    : 0f;
+                Vector2 closestPoint = start + segment * segmentT;
+                float distanceSquared =
+                    (worldPosition - closestPoint).sqrMagnitude;
+                if (distanceSquared < closestDistanceSquared)
+                {
+                    closestDistanceSquared = distanceSquared;
+                    closestSegment = i;
+                    closestSegmentT = segmentT;
+                }
+            }
+
+            Vector2 firstTangent = GetCurvePointTangent(closestSegment);
+            Vector2 secondTangent = GetCurvePointTangent(closestSegment + 1);
+            tangent = Vector2.Lerp(
+                firstTangent,
+                secondTangent,
+                closestSegmentT).normalized;
+            return tangent.sqrMagnitude >= 0.0001f;
+        }
+
+        private Vector2 GetCurvePointTangent(int pointIndex)
+        {
+            int previous = Mathf.Max(0, pointIndex - 1);
+            int next = Mathf.Min(curvePoints.Length - 1, pointIndex + 1);
+            return (curvePoints[next] - curvePoints[previous]).normalized;
+        }
+
         private void FixedUpdate()
         {
             UpdatePlayerCollision();
