@@ -190,7 +190,7 @@ namespace HimoHito
                     MainStageSectionSixSetup.UpperBridgeEndHookName)
             {
                 GUILayout.Label(
-                    "上ルート：Qで長さ5を消費し、安全な橋を作る",
+                    $"上ルート：Qで長さ{MainStageSectionSixSetup.UpperBridgeRopeLength}を消費し、安全な橋を作る",
                     accentStyle);
                 return;
             }
@@ -207,7 +207,8 @@ namespace HimoHito
             }
 
             GUILayout.Label(
-                "上：長さ5の緑フックで安全橋　下：長さ4で青フック3連続",
+                $"上：長さ{MainStageSectionSixSetup.UpperBridgeRopeLength}の緑フックで安全橋　" +
+                $"下：長さ{MainStageSectionSixSetup.LowerRouteRopeLength}で青フック3連続",
                 accentStyle);
         }
 

@@ -4,7 +4,7 @@ namespace HimoHito
 {
     /// <summary>
     /// Builds section six from slide 25 of the 0829 stage manual.
-    /// The upper route spends five rope on a safe bridge, while the lower
+    /// The upper route spends rope on a safe bridge, while the lower
     /// route crosses three Hooks without permanently spending rope.
     /// </summary>
     public static class MainStageSectionSixSetup
@@ -30,36 +30,38 @@ namespace HimoHito
         public const string LowerHookCName = "Main S06 Lower Hook C";
         public const string MergeName = "Main S06 Merge";
 
-        public const int UpperBridgeRopeLength = 5;
-        public const int LowerRouteRopeLength = 4;
+        public const int UpperBridgeRopeLength = 7;
+        public const int LowerRouteRopeLength = 6;
 
         // Section five's right bank ends at X=114.1 with a top of Y=-2.15.
+        // Only this start anchor remains on the bank; the remaining route is
+        // raised three units to create the intended vertical separation.
         public static readonly Vector2 UpperBridgeStartHookPosition =
             new Vector2(114.1f, -2.15f);
         public static readonly Vector2 UpperBridgeEndHookPosition =
-            new Vector2(118.2f, 0.45f);
+            new Vector2(118.2f, 3.45f);
         public static readonly Vector2 BridgeHookSize =
             new Vector2(0.62f, 0.62f);
 
         public static readonly Vector2 UpperShelfAPosition =
-            new Vector2(119.7f, 0.1f);
+            new Vector2(119.7f, 3.1f);
         public static readonly Vector2 UpperShelfASize =
             new Vector2(3f, 0.7f);
         public static readonly Vector2 UpperShelfBPosition =
-            new Vector2(123.4f, 1.4f);
+            new Vector2(123.4f, 4.4f);
         public static readonly Vector2 UpperShelfBSize =
             new Vector2(2.6f, 0.7f);
         public static readonly Vector2 UpperShelfCPosition =
-            new Vector2(127f, 0.75f);
+            new Vector2(127f, 3.75f);
         public static readonly Vector2 UpperShelfCSize =
             new Vector2(2.6f, 0.7f);
 
         public static readonly Vector2 LowerHookAPosition =
-            new Vector2(117.4f, -0.3f);
+            new Vector2(117.4f, 2.7f);
         public static readonly Vector2 LowerHookBPosition =
-            new Vector2(122.8f, -0.1f);
+            new Vector2(122.8f, 2.9f);
         public static readonly Vector2 LowerHookCPosition =
-            new Vector2(127.6f, 0.1f);
+            new Vector2(127.6f, 3.1f);
         public static readonly Vector2 NormalHookSize =
             new Vector2(1.6f, 0.45f);
 
@@ -119,9 +121,9 @@ namespace HimoHito
                     changed = true;
                 }
 
-                // 34 is only a safety lower bound. The lower route arrives
-                // with 39, so its five-rope advantage remains after merging.
-                checkpoint.Configure(7, MergeRespawnPosition, 34f);
+                // 32 is only a safety lower bound. The lower route arrives
+                // with 39, so its seven-rope advantage remains after merging.
+                checkpoint.Configure(7, MergeRespawnPosition, 32f);
             }
 
             return changed;
