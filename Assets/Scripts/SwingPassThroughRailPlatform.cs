@@ -46,7 +46,15 @@ namespace HimoHito
                 return;
             }
 
-            bool shouldIgnore = playerRope != null && playerRope.IsAttached;
+            bool isBridgeBuildingAttachment =
+                playerRope != null &&
+                playerRope.ActiveHookPoint != null &&
+                playerRope.ActiveHookPoint.TryGetComponent(
+                    out RopePlatformAnchor _);
+            bool shouldIgnore =
+                playerRope != null &&
+                playerRope.IsAttached &&
+                !isBridgeBuildingAttachment;
             if (shouldIgnore == isIgnoringPlayer)
             {
                 return;
