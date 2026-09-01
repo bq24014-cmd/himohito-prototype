@@ -191,15 +191,7 @@ namespace HimoHitoEditor
 
         private static void BuildSection6()
         {
-            CreateTerrain("Main S06 Upper Left", new Vector2(87f, 5.5f), new Vector2(3f, 0.7f));
-            CreateTerrain("Main S06 Upper Right", new Vector2(92f, 5.5f), new Vector2(3f, 0.7f));
-            CreateHook("Main S06 Lower Hook A", new Vector2(87f, 1.8f));
-            CreateHook("Main S06 Lower Hook B", new Vector2(92f, 1.8f));
-            CreateHook("Main S06 Lower Hook C", new Vector2(97f, 1.8f));
-            CreateTerrain("Main S06 Safety Floor", new Vector2(92f, -3f), new Vector2(16f, 0.7f));
-            CreateTerrain("Main S06 Return Step", new Vector2(99f, -1.2f), new Vector2(2f, 0.5f));
-            GameObject merge = CreateTerrain("Main S06 Merge", new Vector2(102f, 4.5f), new Vector2(5f, 0.7f));
-            AddCheckpoint(merge, 7, new Vector2(101f, 5.15f), 34f);
+            MainStageSectionSixSetup.ApplyCurrentScene();
         }
 
         private static void BuildSection7()

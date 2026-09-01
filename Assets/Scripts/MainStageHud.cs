@@ -95,6 +95,12 @@ namespace HimoHito
             {
                 DrawSectionFiveGuide();
             }
+            else if (respawn != null &&
+                     respawn.CurrentSection == 6 &&
+                     platformBuilder != null)
+            {
+                DrawSectionSixGuide();
+            }
             else
             {
                 GUILayout.Label("おもちゃ箱のゴールを目指す", accentStyle);
@@ -171,6 +177,37 @@ namespace HimoHito
                 isShadowAnchor
                     ? "緑フックへ接続中：Qで遮光する足場を作る（消費6）"
                     : "左棚へ登り、長さ6で右の緑フックへ接続",
+                accentStyle);
+        }
+
+        private void DrawSectionSixGuide()
+        {
+            HookPoint activeHook = ropeController != null
+                ? ropeController.ActiveHookPoint
+                : null;
+            if (activeHook != null &&
+                activeHook.name ==
+                    MainStageSectionSixSetup.UpperBridgeEndHookName)
+            {
+                GUILayout.Label(
+                    "上ルート：Qで長さ5を消費し、安全な橋を作る",
+                    accentStyle);
+                return;
+            }
+
+            if (activeHook != null &&
+                (activeHook.name == MainStageSectionSixSetup.LowerHookAName ||
+                 activeHook.name == MainStageSectionSixSetup.LowerHookBName ||
+                 activeHook.name == MainStageSectionSixSetup.LowerHookCName))
+            {
+                GUILayout.Label(
+                    "下ルート：Eで離し、次の青フックへつなぐ（消費0）",
+                    accentStyle);
+                return;
+            }
+
+            GUILayout.Label(
+                "上：長さ5の緑フックで安全橋　下：長さ4で青フック3連続",
                 accentStyle);
         }
 
