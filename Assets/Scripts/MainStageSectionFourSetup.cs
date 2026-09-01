@@ -43,11 +43,11 @@ namespace HimoHito
         public static readonly Vector2 HookSize =
             new Vector2(1.6f, 0.45f);
         public static readonly Vector2 LandingPosition =
-            new Vector2(79.1f, -7.15f);
+            new Vector2(84.1f, -7.15f);
         public static readonly Vector2 LandingSize =
             new Vector2(6f, 10f);
         public static readonly Vector2 LandingRespawnPosition =
-            new Vector2(77.1f, -1.45f);
+            new Vector2(82.1f, -1.45f);
 
         private static readonly Color TerrainColor =
             new Color(0.56f, 0.29f, 0.09f);
