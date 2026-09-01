@@ -36,7 +36,7 @@ namespace HimoHito
         public static readonly Vector2 BridgeHookSize =
             new Vector2(0.62f, 0.62f);
         public static readonly Vector2 CentralHookPosition =
-            new Vector2(89.3f, 2.45f);
+            new Vector2(97f, 2.45f);
         public static readonly Vector2 LightMountPosition =
             new Vector2(89.3f, 2.85f);
         public static readonly Vector2 LightSpotPosition =
@@ -97,7 +97,11 @@ namespace HimoHito
             changed |= centralHookPoint.ConfigureFixedAttachmentPoint(Vector2.zero);
 
             changed |= EnsureLightMount();
-            changed |= EnsureLightSpot(centralHook.transform);
+            GameObject lightMount = FindSceneObject(LightMountName);
+            changed |= EnsureLightSpot(
+                lightMount != null
+                    ? lightMount.transform
+                    : centralHook.transform);
             changed |= EnsureTerrain(
                 LandingName,
                 LandingPosition,
