@@ -526,12 +526,6 @@ namespace HimoHito
                 visualTransform.localRotation = Quaternion.identity;
                 changed = true;
             }
-            if (visualTransform.localScale != Vector3.one)
-            {
-                visualTransform.localScale = Vector3.one;
-                changed = true;
-            }
-
             if (!visualTransform.TryGetComponent(out SpriteRenderer renderer))
             {
                 renderer = visualTransform.gameObject.AddComponent<SpriteRenderer>();
@@ -546,7 +540,6 @@ namespace HimoHito
             }
             int targetOrder = sourceRenderer.sortingOrder + 6;
             changed |= ringVisual.Configure(
-                tint,
                 sourceRenderer.sortingLayerID,
                 targetOrder);
             if (sourceRenderer.enabled)
