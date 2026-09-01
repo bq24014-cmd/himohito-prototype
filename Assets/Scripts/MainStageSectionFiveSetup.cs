@@ -43,10 +43,10 @@ namespace HimoHito
             new Vector2(89.3f, -3.15f);
         public const float LightSpotDiameter = 4f;
         public static readonly Vector2 LandingPosition =
-            new Vector2(101.1f, -7.15f);
+            new Vector2(106.1f, -7.15f);
         public static readonly Vector2 LandingSize = new Vector2(8f, 10f);
         public static readonly Vector2 LandingRespawnPosition =
-            new Vector2(98.4f, -1.45f);
+            new Vector2(103.4f, -1.45f);
 
         private static readonly Color ShelfColor =
             new Color(0.56f, 0.29f, 0.09f);
