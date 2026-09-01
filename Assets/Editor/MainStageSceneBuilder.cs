@@ -149,11 +149,17 @@ namespace HimoHitoEditor
                 MainStageSectionFourSetup.IntermediateColumnName,
                 MainStageSectionFourSetup.IntermediateColumnPosition,
                 MainStageSectionFourSetup.IntermediateColumnSize);
-            CreateMarker(
+            GameObject bridgeStartAnchor = CreateSolidObject(
                 MainStageSectionFourSetup.BridgeStartMarkerName,
                 MainStageSectionFourSetup.BridgeStartMarkerPosition,
                 MainStageSectionFourSetup.BridgeStartMarkerSize,
                 MainStageSectionFourSetup.BridgeAnchorColor);
+            bridgeStartAnchor.AddComponent<HookPoint>()
+                .ConfigureFixedAttachmentPoint(Vector2.zero);
+            bridgeStartAnchor.GetComponent<BoxCollider2D>().enabled = false;
+            bridgeStartAnchor.AddComponent<RopePlatformAnchor>().Configure(
+                MainStageSectionFourSetup.BridgeRopeLength,
+                MainStageSectionFourSetup.BridgeAnchorName);
             GameObject bridgeAnchor = CreateSolidObject(
                 MainStageSectionFourSetup.BridgeAnchorName,
                 MainStageSectionFourSetup.BridgeAnchorPosition,
@@ -162,7 +168,8 @@ namespace HimoHitoEditor
             bridgeAnchor.AddComponent<HookPoint>()
                 .ConfigureFixedAttachmentPoint(Vector2.zero);
             bridgeAnchor.AddComponent<RopePlatformAnchor>().Configure(
-                MainStageSectionFourSetup.BridgeRopeLength);
+                MainStageSectionFourSetup.BridgeRopeLength,
+                MainStageSectionFourSetup.BridgeStartMarkerName);
             CreateHook(
                 MainStageSectionFourSetup.FarHookName,
                 MainStageSectionFourSetup.FarHookPosition);

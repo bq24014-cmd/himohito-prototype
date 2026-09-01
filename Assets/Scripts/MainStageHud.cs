@@ -122,7 +122,7 @@ namespace HimoHito
                 return;
             }
 
-            bool isYellowAnchor = ropeController != null &&
+            bool isGreenAnchor = ropeController != null &&
                 ropeController.ActiveHookPoint != null &&
                 ropeController.ActiveHookPoint.TryGetComponent(
                     out RopePlatformAnchor _);
@@ -131,11 +131,11 @@ namespace HimoHito
                     ropeController.ActiveRopeLength -
                     MainStageSectionFourSetup.BridgeRopeLength) <= 0.05f;
             GUILayout.Label(
-                isYellowAnchor
+                isGreenAnchor
                     ? hasCorrectLength
-                        ? "黄色フックへ接続中：Qで長さ5を消費して橋を作る"
-                        : "Eで解除し、W/Sで長さ5にして黄色フックへ再接続"
-                    : "左岸の黄色印から、長さ5で柱の黄色フックへ接続",
+                        ? "緑フックへ接続中：Qで2つの緑フックを結ぶ"
+                        : "Eで解除し、W/Sで長さ5にして緑フックへ再接続"
+                    : "左右の緑フックを確認し、長さ5で右の緑フックへ接続",
                 accentStyle);
         }
 

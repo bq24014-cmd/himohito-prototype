@@ -232,6 +232,22 @@ namespace HimoHito
                 return false;
             }
 
+            if (platformAnchor != null &&
+                platformAnchor.TryGetPairedAnchor(
+                    out Vector2 pairedAnchor))
+            {
+                Vector2 activeAnchor = ropeController.AnchorPoint;
+                bool pairedAnchorIsCloserToPlayer =
+                    Vector2.Distance(body.position, pairedAnchor) <=
+                    Vector2.Distance(body.position, activeAnchor);
+                start = pairedAnchorIsCloserToPlayer
+                    ? activeAnchor
+                    : pairedAnchor;
+                end = pairedAnchorIsCloserToPlayer
+                    ? pairedAnchor
+                    : activeAnchor;
+            }
+
             float directDistance = Vector2.Distance(start, end);
             return ropeLength >= minimumPlatformLength &&
                    directDistance <= ropeLength + 0.05f &&

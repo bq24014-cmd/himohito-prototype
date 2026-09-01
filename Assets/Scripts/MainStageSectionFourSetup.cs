@@ -14,8 +14,12 @@ namespace HimoHito
         public const string FarHookName =
             "Main Section 4 Far Hook";
         public const string BridgeStartMarkerName =
-            "Main Section 4 Bridge Start Marker";
+            "Main Section 4 Green Bridge Start Hook";
         public const string BridgeAnchorName =
+            "Main Section 4 Green Bridge End Hook";
+        private const string LegacyBridgeStartMarkerName =
+            "Main Section 4 Bridge Start Marker";
+        private const string LegacyBridgeAnchorName =
             "Main Section 4 Yellow Bridge Hook";
         public const string LandingName =
             "Main Section 4 Landing";
@@ -32,11 +36,11 @@ namespace HimoHito
         public static readonly Vector2 BridgeStartMarkerPosition =
             new Vector2(60.15f, -2f);
         public static readonly Vector2 BridgeStartMarkerSize =
-            new Vector2(0.34f, 0.34f);
+            new Vector2(1.6f, 0.45f);
         public static readonly Vector2 BridgeAnchorPosition =
             new Vector2(64.75f, -3f);
         public static readonly Vector2 BridgeAnchorSize =
-            new Vector2(0.75f, 0.55f);
+            new Vector2(1.6f, 0.45f);
         public const int BridgeRopeLength = 5;
         public static readonly Vector2 FarHookPosition =
             new Vector2(72.6f, 1.05f);
@@ -54,11 +58,17 @@ namespace HimoHito
         private static readonly Color HookColor =
             new Color(0.298f, 0.765f, 1f);
         public static readonly Color BridgeAnchorColor =
-            new Color(1f, 0.78f, 0.18f);
+            new Color(0.33f, 1f, 0.76f);
 
         public static bool ApplyCurrentScene()
         {
             bool changed = false;
+            changed |= RenameLegacyObject(
+                LegacyBridgeStartMarkerName,
+                BridgeStartMarkerName);
+            changed |= RenameLegacyObject(
+                LegacyBridgeAnchorName,
+                BridgeAnchorName);
             changed |= EnsureTerrain(
                 IntermediateColumnName,
                 IntermediateColumnPosition,
@@ -89,52 +99,32 @@ namespace HimoHito
 
         private static bool EnsureBridgeStartMarker()
         {
-            bool changed = false;
-            GameObject marker = FindSceneObject(BridgeStartMarkerName);
-            if (marker == null)
+            GameObject marker = EnsureObject(
+                BridgeStartMarkerName,
+                BridgeStartMarkerPosition,
+                BridgeStartMarkerSize,
+                out bool changed);
+            if (!marker.TryGetComponent(out HookPoint hookPoint))
             {
-                marker = new GameObject(BridgeStartMarkerName);
+                hookPoint = marker.AddComponent<HookPoint>();
                 changed = true;
             }
-            if (!marker.activeSelf)
+            changed |= hookPoint.ConfigureFixedAttachmentPoint(Vector2.zero);
+            if (marker.TryGetComponent(out BoxCollider2D markerCollider) &&
+                markerCollider.enabled)
             {
-                marker.SetActive(true);
+                markerCollider.enabled = false;
                 changed = true;
             }
-
-            Vector3 targetPosition = new Vector3(
-                BridgeStartMarkerPosition.x,
-                BridgeStartMarkerPosition.y,
-                0f);
-            Vector3 targetScale = new Vector3(
-                BridgeStartMarkerSize.x,
-                BridgeStartMarkerSize.y,
-                1f);
-            if (marker.transform.position != targetPosition)
+            if (!marker.TryGetComponent(out RopePlatformAnchor platformAnchor))
             {
-                marker.transform.position = targetPosition;
+                platformAnchor = marker.AddComponent<RopePlatformAnchor>();
                 changed = true;
             }
-            if (marker.transform.localScale != targetScale)
-            {
-                marker.transform.localScale = targetScale;
-                changed = true;
-            }
-            if (!marker.TryGetComponent(out SpriteRenderer renderer))
-            {
-                renderer = marker.AddComponent<SpriteRenderer>();
-                changed = true;
-            }
-            if (renderer.sortingOrder != 8)
-            {
-                renderer.sortingOrder = 8;
-                changed = true;
-            }
-            if (!marker.TryGetComponent(out SolidSprite visual))
-            {
-                visual = marker.AddComponent<SolidSprite>();
-                changed = true;
-            }
+            changed |= platformAnchor.Configure(
+                BridgeRopeLength,
+                BridgeAnchorName);
+            marker.TryGetComponent(out SolidSprite visual);
             if (visual.Color != BridgeAnchorColor)
             {
                 visual.Color = BridgeAnchorColor;
@@ -162,7 +152,9 @@ namespace HimoHito
                 platformAnchor = anchor.AddComponent<RopePlatformAnchor>();
                 changed = true;
             }
-            changed |= platformAnchor.Configure(BridgeRopeLength);
+            changed |= platformAnchor.Configure(
+                BridgeRopeLength,
+                BridgeStartMarkerName);
             if (anchor.TryGetComponent(out SolidSprite visual) &&
                 visual.Color != BridgeAnchorColor)
             {
@@ -170,6 +162,26 @@ namespace HimoHito
                 changed = true;
             }
             return changed;
+        }
+
+        private static bool RenameLegacyObject(
+            string legacyName,
+            string currentName)
+        {
+            GameObject current = FindSceneObject(currentName);
+            if (current != null)
+            {
+                return false;
+            }
+
+            GameObject legacy = FindSceneObject(legacyName);
+            if (legacy == null)
+            {
+                return false;
+            }
+
+            legacy.name = currentName;
+            return true;
         }
 
         private static bool EnsureHook(string objectName, Vector2 position)
