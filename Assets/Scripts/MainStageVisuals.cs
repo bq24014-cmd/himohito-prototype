@@ -21,6 +21,11 @@ namespace HimoHito
             "Art/TutorialToyBoxGoal-v2";
         private const string BackgroundName =
             "Main Stage Night Child Room Background";
+        private const string HookVisualName = "Blue Toy Hook Visual";
+        private const string BridgeAnchorVisualName =
+            "Green Rope Anchor Ring Visual";
+
+        private static Sprite bridgeAnchorRingSprite;
 
         private static readonly Color PlayerColor =
             new Color(1f, 0.365f, 0.561f);
@@ -101,12 +106,25 @@ namespace HimoHito
                         ? MainStageSectionFourSetup.BridgeAnchorColor
                         : HookColor;
                     changed |= ApplyColor(candidate, hookColor);
-                    changed |= EnsureToyVisual(
-                        candidate,
-                        "Blue Toy Hook Visual",
-                        HookResourcePath,
-                        6,
-                        hookColor);
+                    if (isBridgeAnchor)
+                    {
+                        changed |= RemoveChild(candidate, HookVisualName);
+                        changed |= EnsureBridgeAnchorRingVisual(
+                            candidate,
+                            hookColor);
+                    }
+                    else
+                    {
+                        changed |= RemoveChild(
+                            candidate,
+                            BridgeAnchorVisualName);
+                        changed |= EnsureToyVisual(
+                            candidate,
+                            HookVisualName,
+                            HookResourcePath,
+                            6,
+                            hookColor);
+                    }
                     changed |= hookPoint.ConfigureFixedAttachmentPoint(Vector2.zero);
                     continue;
                 }
@@ -476,6 +494,163 @@ namespace HimoHito
             }
 
             return changed;
+        }
+
+        private static bool EnsureBridgeAnchorRingVisual(
+            GameObject target,
+            Color tint)
+        {
+            if (target == null ||
+                !target.TryGetComponent(out SpriteRenderer sourceRenderer))
+            {
+                return false;
+            }
+
+            Sprite ringSprite = GetBridgeAnchorRingSprite();
+            if (ringSprite == null)
+            {
+                return false;
+            }
+
+            bool changed = false;
+            Transform visualTransform =
+                target.transform.Find(BridgeAnchorVisualName);
+            if (visualTransform == null)
+            {
+                GameObject visualObject =
+                    new GameObject(BridgeAnchorVisualName);
+                visualTransform = visualObject.transform;
+                visualTransform.SetParent(target.transform, false);
+                changed = true;
+            }
+
+            Vector2 spriteSize = ringSprite.bounds.size;
+            Vector3 targetScale = new Vector3(
+                1f / Mathf.Max(0.01f, spriteSize.x),
+                1f / Mathf.Max(0.01f, spriteSize.y),
+                1f);
+            if (visualTransform.localPosition != Vector3.zero)
+            {
+                visualTransform.localPosition = Vector3.zero;
+                changed = true;
+            }
+            if (visualTransform.localRotation != Quaternion.identity)
+            {
+                visualTransform.localRotation = Quaternion.identity;
+                changed = true;
+            }
+            if (visualTransform.localScale != targetScale)
+            {
+                visualTransform.localScale = targetScale;
+                changed = true;
+            }
+
+            if (!visualTransform.TryGetComponent(out SpriteRenderer renderer))
+            {
+                renderer = visualTransform.gameObject.AddComponent<SpriteRenderer>();
+                changed = true;
+            }
+            if (renderer.sprite != ringSprite)
+            {
+                renderer.sprite = ringSprite;
+                changed = true;
+            }
+            if (renderer.color != tint)
+            {
+                renderer.color = tint;
+                changed = true;
+            }
+            if (renderer.sortingLayerID != sourceRenderer.sortingLayerID)
+            {
+                renderer.sortingLayerID = sourceRenderer.sortingLayerID;
+                changed = true;
+            }
+            int targetOrder = sourceRenderer.sortingOrder + 6;
+            if (renderer.sortingOrder != targetOrder)
+            {
+                renderer.sortingOrder = targetOrder;
+                changed = true;
+            }
+            if (sourceRenderer.enabled)
+            {
+                sourceRenderer.enabled = false;
+                changed = true;
+            }
+
+            return changed;
+        }
+
+        private static Sprite GetBridgeAnchorRingSprite()
+        {
+            if (bridgeAnchorRingSprite != null)
+            {
+                return bridgeAnchorRingSprite;
+            }
+
+            Sprite sourceSprite =
+                TutorialFirstSectionVisuals.LoadProcessedToySprite(
+                    HookResourcePath);
+            if (sourceSprite == null || sourceSprite.texture == null)
+            {
+                return null;
+            }
+
+            const int textureSize = 128;
+            Texture2D sourceTexture = sourceSprite.texture;
+            Rect sourceRect = sourceSprite.textureRect;
+            float sampleSide = Mathf.Min(sourceRect.width, sourceRect.height);
+            Vector2 sampleOrigin = new Vector2(
+                sourceRect.center.x - sampleSide * 0.5f,
+                sourceRect.center.y - sampleSide * 0.5f);
+            Color[] pixels = new Color[textureSize * textureSize];
+
+            for (int y = 0; y < textureSize; y++)
+            {
+                for (int x = 0; x < textureSize; x++)
+                {
+                    float normalizedX = (x + 0.5f) / textureSize;
+                    float normalizedY = (y + 0.5f) / textureSize;
+                    float sourceX = sampleOrigin.x + normalizedX * sampleSide;
+                    float sourceY = sampleOrigin.y + normalizedY * sampleSide;
+                    Color sampled = sourceTexture.GetPixelBilinear(
+                        sourceX / sourceTexture.width,
+                        sourceY / sourceTexture.height);
+
+                    Vector2 centered = new Vector2(
+                        normalizedX - 0.5f,
+                        normalizedY - 0.5f);
+                    float radius = centered.magnitude;
+                    float circularMask = 1f - Mathf.SmoothStep(
+                        0.46f,
+                        0.5f,
+                        radius);
+                    sampled.a *= circularMask;
+                    pixels[y * textureSize + x] = sampled;
+                }
+            }
+
+            Texture2D ringTexture = new Texture2D(
+                textureSize,
+                textureSize,
+                TextureFormat.RGBA32,
+                false);
+            ringTexture.name = "Generated Green Rope Anchor Ring";
+            ringTexture.hideFlags = HideFlags.HideAndDontSave;
+            ringTexture.filterMode = FilterMode.Bilinear;
+            ringTexture.wrapMode = TextureWrapMode.Clamp;
+            ringTexture.SetPixels(pixels);
+            ringTexture.Apply(false, false);
+
+            bridgeAnchorRingSprite = Sprite.Create(
+                ringTexture,
+                new Rect(0f, 0f, textureSize, textureSize),
+                new Vector2(0.5f, 0.5f),
+                textureSize,
+                0,
+                SpriteMeshType.FullRect);
+            bridgeAnchorRingSprite.name =
+                "Generated Green Rope Anchor Ring Sprite";
+            return bridgeAnchorRingSprite;
         }
 
         private static bool EnsureGoalToyBox(GameObject goal)

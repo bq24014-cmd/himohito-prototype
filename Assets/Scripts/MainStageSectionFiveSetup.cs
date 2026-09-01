@@ -34,7 +34,7 @@ namespace HimoHito
         public static readonly Vector2 BridgeEndHookPosition =
             new Vector2(91.5f, -0.65f);
         public static readonly Vector2 BridgeHookSize =
-            new Vector2(1.6f, 0.45f);
+            new Vector2(0.62f, 0.62f);
         public static readonly Vector2 CentralHookPosition =
             new Vector2(89.3f, 2.45f);
         public static readonly Vector2 LightMountPosition =
