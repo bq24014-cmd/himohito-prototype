@@ -167,15 +167,9 @@ namespace HimoHito
                     out RopePlatformAnchor anchor) &&
                 anchor.RequiredRopeLength ==
                     MainStageSectionFiveSetup.BridgeRopeLength;
-            bool hasCorrectLength = ropeController != null &&
-                Mathf.Abs(
-                    ropeController.ActiveRopeLength -
-                    MainStageSectionFiveSetup.BridgeRopeLength) <= 0.05f;
             GUILayout.Label(
                 isShadowAnchor
-                    ? hasCorrectLength
-                        ? "緑フックへ接続中：Qで遮光する足場を作る"
-                        : "Eで解除し、W/Sで長さ6にして再接続"
+                    ? "緑フックへ接続中：Qで遮光する足場を作る（消費6）"
                     : "左棚へ登り、長さ6で右の緑フックへ接続",
                 accentStyle);
         }

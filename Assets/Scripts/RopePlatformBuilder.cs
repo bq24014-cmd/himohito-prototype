@@ -45,7 +45,7 @@ namespace HimoHito
         public float CurrentPlatformCost =>
             IsPlatformBuildingUnlocked &&
             ropeController != null && ropeController.IsAttached
-                ? ropeController.ActiveRopeLength
+                ? GetCurrentPlatformCost()
                 : 0f;
         public float MinimumRopeReserve => minimumRopeReserve;
         public int GeneratedPlatformCount => generatedPlatforms.Count;
@@ -226,6 +226,15 @@ namespace HimoHito
                 return false;
             }
 
+            // Section five teaches blocking the light, not length selection.
+            // Once its green paired Hook is attached, always build the
+            // authored length-six bridge even if W/S was changed beforehand.
+            if (main != null && main.CurrentSection == 5 &&
+                platformAnchor != null)
+            {
+                ropeLength = platformAnchor.RequiredRopeLength;
+            }
+
             if (platformAnchor != null &&
                 !platformAnchor.CanBuildWith(ropeLength))
             {
@@ -252,6 +261,23 @@ namespace HimoHito
             return ropeLength >= minimumPlatformLength &&
                    directDistance <= ropeLength + 0.05f &&
                    ropeResource.CurrentLength - ropeLength >= minimumRopeReserve;
+        }
+
+        private float GetCurrentPlatformCost()
+        {
+            HookPoint activeHook = ropeController.ActiveHookPoint;
+            if (activeHook == null ||
+                !activeHook.TryGetComponent(
+                    out RopePlatformAnchor platformAnchor))
+            {
+                return ropeController.ActiveRopeLength;
+            }
+
+            MainStageRespawnOnFall main =
+                GetComponent<MainStageRespawnOnFall>();
+            return main != null && main.CurrentSection == 5
+                ? platformAnchor.RequiredRopeLength
+                : ropeController.ActiveRopeLength;
         }
 
         private bool IsHookRemovalUnlocked()
