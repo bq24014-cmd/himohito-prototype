@@ -57,7 +57,7 @@ namespace HimoHito
             new Vector2(2.6f, 0.7f);
 
         public static readonly Vector2 LowerHookAPosition =
-            new Vector2(121.4f, 2.7f);
+            new Vector2(121.4f, 1.7f);
         public static readonly Vector2 LowerHookBPosition =
             new Vector2(126.8f, 2.9f);
         public static readonly Vector2 LowerHookCPosition =
