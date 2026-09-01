@@ -25,8 +25,6 @@ namespace HimoHito
         private const string BridgeAnchorVisualName =
             "Green Rope Anchor Ring Visual";
 
-        private static Sprite bridgeAnchorRingSprite;
-
         private static readonly Color PlayerColor =
             new Color(1f, 0.365f, 0.561f);
         private static readonly Color BlockColor =
@@ -506,12 +504,6 @@ namespace HimoHito
                 return false;
             }
 
-            Sprite ringSprite = GetBridgeAnchorRingSprite();
-            if (ringSprite == null)
-            {
-                return false;
-            }
-
             bool changed = false;
             Transform visualTransform =
                 target.transform.Find(BridgeAnchorVisualName);
@@ -524,11 +516,6 @@ namespace HimoHito
                 changed = true;
             }
 
-            Vector2 spriteSize = ringSprite.bounds.size;
-            Vector3 targetScale = new Vector3(
-                1f / Mathf.Max(0.01f, spriteSize.x),
-                1f / Mathf.Max(0.01f, spriteSize.y),
-                1f);
             if (visualTransform.localPosition != Vector3.zero)
             {
                 visualTransform.localPosition = Vector3.zero;
@@ -539,9 +526,9 @@ namespace HimoHito
                 visualTransform.localRotation = Quaternion.identity;
                 changed = true;
             }
-            if (visualTransform.localScale != targetScale)
+            if (visualTransform.localScale != Vector3.one)
             {
-                visualTransform.localScale = targetScale;
+                visualTransform.localScale = Vector3.one;
                 changed = true;
             }
 
@@ -550,27 +537,18 @@ namespace HimoHito
                 renderer = visualTransform.gameObject.AddComponent<SpriteRenderer>();
                 changed = true;
             }
-            if (renderer.sprite != ringSprite)
+            if (!visualTransform.TryGetComponent(
+                    out RopeAnchorRingVisual ringVisual))
             {
-                renderer.sprite = ringSprite;
-                changed = true;
-            }
-            if (renderer.color != tint)
-            {
-                renderer.color = tint;
-                changed = true;
-            }
-            if (renderer.sortingLayerID != sourceRenderer.sortingLayerID)
-            {
-                renderer.sortingLayerID = sourceRenderer.sortingLayerID;
+                ringVisual = visualTransform.gameObject.AddComponent<
+                    RopeAnchorRingVisual>();
                 changed = true;
             }
             int targetOrder = sourceRenderer.sortingOrder + 6;
-            if (renderer.sortingOrder != targetOrder)
-            {
-                renderer.sortingOrder = targetOrder;
-                changed = true;
-            }
+            changed |= ringVisual.Configure(
+                tint,
+                sourceRenderer.sortingLayerID,
+                targetOrder);
             if (sourceRenderer.enabled)
             {
                 sourceRenderer.enabled = false;
@@ -578,74 +556,6 @@ namespace HimoHito
             }
 
             return changed;
-        }
-
-        private static Sprite GetBridgeAnchorRingSprite()
-        {
-            if (bridgeAnchorRingSprite != null)
-            {
-                return bridgeAnchorRingSprite;
-            }
-
-            const int textureSize = 128;
-            Color[] pixels = new Color[textureSize * textureSize];
-
-            for (int y = 0; y < textureSize; y++)
-            {
-                for (int x = 0; x < textureSize; x++)
-                {
-                    float normalizedX = (x + 0.5f) / textureSize;
-                    float normalizedY = (y + 0.5f) / textureSize;
-                    Vector2 centered = new Vector2(
-                        normalizedX - 0.5f,
-                        normalizedY - 0.5f);
-                    float radius = centered.magnitude;
-                    float outerMask = 1f - Mathf.SmoothStep(
-                        0.46f,
-                        0.5f,
-                        radius);
-                    float innerMask = Mathf.SmoothStep(
-                        0.21f,
-                        0.26f,
-                        radius);
-                    float alpha = outerMask * innerMask;
-
-                    // A subtle top-left highlight keeps the ring in the same
-                    // soft toy language without reading the imported texture.
-                    float highlight = Mathf.Clamp01(
-                        0.72f +
-                        normalizedY * 0.20f -
-                        normalizedX * 0.08f);
-                    pixels[y * textureSize + x] = new Color(
-                        highlight,
-                        highlight,
-                        highlight,
-                        alpha);
-                }
-            }
-
-            Texture2D ringTexture = new Texture2D(
-                textureSize,
-                textureSize,
-                TextureFormat.RGBA32,
-                false);
-            ringTexture.name = "Generated Green Rope Anchor Ring";
-            ringTexture.hideFlags = HideFlags.HideAndDontSave;
-            ringTexture.filterMode = FilterMode.Bilinear;
-            ringTexture.wrapMode = TextureWrapMode.Clamp;
-            ringTexture.SetPixels(pixels);
-            ringTexture.Apply(false, false);
-
-            bridgeAnchorRingSprite = Sprite.Create(
-                ringTexture,
-                new Rect(0f, 0f, textureSize, textureSize),
-                new Vector2(0.5f, 0.5f),
-                textureSize,
-                0,
-                SpriteMeshType.FullRect);
-            bridgeAnchorRingSprite.name =
-                "Generated Green Rope Anchor Ring Sprite";
-            return bridgeAnchorRingSprite;
         }
 
         private static bool EnsureGoalToyBox(GameObject goal)
