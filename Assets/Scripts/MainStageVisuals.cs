@@ -155,9 +155,13 @@ namespace HimoHito
                     }
 
                     bool isStartGround = candidate.name == "Main Start Ground";
+                    bool isSwingPassThroughRail =
+                        candidate.TryGetComponent(
+                            out SwingPassThroughRailPlatform _);
                     bool isSolidToyBoard =
-                        isStartGround ||
-                        candidate.TryGetComponent(out SolidSwingSurface _);
+                        !isSwingPassThroughRail &&
+                        (isStartGround ||
+                         candidate.TryGetComponent(out SolidSwingSurface _));
                     changed |= RemoveChild(
                         candidate,
                         isSolidToyBoard

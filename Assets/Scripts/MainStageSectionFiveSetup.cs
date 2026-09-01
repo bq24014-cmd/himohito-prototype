@@ -67,11 +67,11 @@ namespace HimoHito
         {
             bool changed = false;
             changed |= DisableLegacySectionSixObjects();
-            changed |= EnsureTerrain(
+            changed |= EnsureRailShelf(
                 LeftShelfName,
                 LeftShelfPosition,
                 ShelfSize);
-            changed |= EnsureTerrain(
+            changed |= EnsureRailShelf(
                 RightShelfName,
                 RightShelfPosition,
                 ShelfSize);
@@ -165,6 +165,54 @@ namespace HimoHito
                 changed = true;
             }
             if (terrain.TryGetComponent(out BoxCollider2D collider) &&
+                (!collider.enabled || collider.isTrigger))
+            {
+                collider.enabled = true;
+                collider.isTrigger = false;
+                changed = true;
+            }
+            return changed;
+        }
+
+        private static bool EnsureRailShelf(
+            string objectName,
+            Vector2 position,
+            Vector2 size)
+        {
+            GameObject shelf = EnsureObject(
+                objectName,
+                position,
+                size,
+                HookColor,
+                out bool changed);
+            if (shelf.TryGetComponent(out SolidSwingSurface solidSurface))
+            {
+                if (Application.isPlaying)
+                {
+                    Object.Destroy(solidSurface);
+                }
+                else
+                {
+                    Object.DestroyImmediate(solidSurface);
+                }
+                changed = true;
+            }
+            if (!shelf.TryGetComponent(out PlatformEffector2D _))
+            {
+                shelf.AddComponent<PlatformEffector2D>();
+                changed = true;
+            }
+            if (!shelf.TryGetComponent(out OneWayRailPlatform _))
+            {
+                shelf.AddComponent<OneWayRailPlatform>();
+                changed = true;
+            }
+            if (!shelf.TryGetComponent(out SwingPassThroughRailPlatform _))
+            {
+                shelf.AddComponent<SwingPassThroughRailPlatform>();
+                changed = true;
+            }
+            if (shelf.TryGetComponent(out BoxCollider2D collider) &&
                 (!collider.enabled || collider.isTrigger))
             {
                 collider.enabled = true;

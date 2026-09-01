@@ -38,7 +38,9 @@ namespace HimoHito
                     !candidate.TryGetComponent(out BoxCollider2D floorCollider) ||
                     floorCollider.isTrigger ||
                     candidate.TryGetComponent(out RopeResource _) ||
-                    candidate.TryGetComponent(out HookPoint _))
+                    candidate.TryGetComponent(out HookPoint _) ||
+                    candidate.TryGetComponent(
+                        out SwingPassThroughRailPlatform _))
                 {
                     continue;
                 }
