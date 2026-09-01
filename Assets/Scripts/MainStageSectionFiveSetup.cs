@@ -25,32 +25,32 @@ namespace HimoHito
         public const int BridgeRopeLength = 6;
         public const int SwingRopeLength = 7;
 
-        // Section four's landing top is Y=-2.15. The shelf tops are 1.5 higher.
+        // Section four's landing top is Y=-2.15. The shelf tops are 2.0 higher.
         public static readonly Vector2 LeftShelfPosition =
-            new Vector2(85.6f, -0.95f);
+            new Vector2(85.6f, -0.45f);
         public static readonly Vector2 RightShelfPosition =
-            new Vector2(93f, -0.95f);
+            new Vector2(93f, -0.45f);
         public static readonly Vector2 ShelfSize = new Vector2(3f, 0.6f);
         public static readonly Vector2 BridgeStartHookPosition =
-            new Vector2(87.1f, -0.65f);
+            new Vector2(87.1f, -0.15f);
         public static readonly Vector2 BridgeEndHookPosition =
-            new Vector2(91.5f, -0.65f);
+            new Vector2(91.5f, -0.15f);
         public static readonly Vector2 BridgeHookSize =
             new Vector2(0.62f, 0.62f);
         public static readonly Vector2 CentralHookPosition =
-            new Vector2(97f, 2.45f);
+            new Vector2(97f, 2.95f);
         public static readonly Vector2 LightMountPosition =
-            new Vector2(97f, 2.85f);
+            new Vector2(97f, 3.35f);
         public static readonly Vector2 LightOcclusionOriginPosition =
-            new Vector2(89.3f, 2.85f);
+            new Vector2(89.3f, 3.35f);
         public static readonly Vector2 LightSpotPosition =
             new Vector2(89.3f, -3.15f);
         public const float LightSpotDiameter = 4f;
         public static readonly Vector2 LandingPosition =
-            new Vector2(106.1f, -7.15f);
+            new Vector2(110.1f, -7.15f);
         public static readonly Vector2 LandingSize = new Vector2(8f, 10f);
         public static readonly Vector2 LandingRespawnPosition =
-            new Vector2(103.4f, -1.45f);
+            new Vector2(107.4f, -1.45f);
 
         private static readonly Color ShelfColor =
             new Color(0.56f, 0.29f, 0.09f);
