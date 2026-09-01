@@ -34,11 +34,11 @@ namespace HimoHito
         public static readonly Vector2 IntermediateColumnSize =
             new Vector2(1.8f, 10f);
         public static readonly Vector2 BridgeStartMarkerPosition =
-            new Vector2(60.15f, -2f);
+            new Vector2(60.6f, -2.15f);
         public static readonly Vector2 BridgeStartMarkerSize =
             new Vector2(1.6f, 0.45f);
         public static readonly Vector2 BridgeAnchorPosition =
-            new Vector2(64.75f, -3f);
+            new Vector2(64.2f, -3.15f);
         public static readonly Vector2 BridgeAnchorSize =
             new Vector2(1.6f, 0.45f);
         public const int BridgeRopeLength = 5;
