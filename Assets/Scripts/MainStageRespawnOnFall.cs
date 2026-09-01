@@ -53,6 +53,8 @@ namespace HimoHito
                 body.position =
                     MainStageSectionThreeSetup.HighShelfRespawnPosition;
                 ropeResource.ResetToMaximum();
+                ropeController.RestoreSelectedRopeLength(
+                    MainStageSectionFourSetup.BridgeRopeLength);
             }
 
             checkpointPosition = body.position;
@@ -75,6 +77,8 @@ namespace HimoHito
             body.linearVelocity = Vector2.zero;
             body.angularVelocity = 0f;
             ropeResource.ResetToMaximum();
+            ropeController.RestoreSelectedRopeLength(
+                MainStageSectionFourSetup.BridgeRopeLength);
             checkpointPosition = body.position;
             CaptureCheckpointState();
         }

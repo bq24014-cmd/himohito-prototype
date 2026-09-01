@@ -31,15 +31,12 @@ namespace HimoHito
             new Vector2(1.8f, 10f);
         public static readonly Vector2 BridgeStartMarkerPosition =
             new Vector2(60.15f, -2f);
-        public static readonly Vector2 BridgeBuildOriginPosition =
-            new Vector2(60.15f, -1.45f);
         public static readonly Vector2 BridgeStartMarkerSize =
             new Vector2(0.34f, 0.34f);
         public static readonly Vector2 BridgeAnchorPosition =
             new Vector2(64.75f, -3f);
         public static readonly Vector2 BridgeAnchorSize =
             new Vector2(0.75f, 0.55f);
-        public const float BridgeOriginTolerance = 0.85f;
         public const int BridgeRopeLength = 5;
         public static readonly Vector2 FarHookPosition =
             new Vector2(72.6f, 1.05f);
@@ -165,10 +162,7 @@ namespace HimoHito
                 platformAnchor = anchor.AddComponent<RopePlatformAnchor>();
                 changed = true;
             }
-            changed |= platformAnchor.Configure(
-                BridgeBuildOriginPosition,
-                BridgeOriginTolerance,
-                BridgeRopeLength);
+            changed |= platformAnchor.Configure(BridgeRopeLength);
             if (anchor.TryGetComponent(out SolidSprite visual) &&
                 visual.Color != BridgeAnchorColor)
             {

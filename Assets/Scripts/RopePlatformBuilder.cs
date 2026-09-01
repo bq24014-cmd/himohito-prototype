@@ -227,7 +227,7 @@ namespace HimoHito
             }
 
             if (platformAnchor != null &&
-                !platformAnchor.CanBuildFrom(end, ropeLength))
+                !platformAnchor.CanBuildWith(ropeLength))
             {
                 return false;
             }

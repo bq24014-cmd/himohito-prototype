@@ -162,8 +162,6 @@ namespace HimoHitoEditor
             bridgeAnchor.AddComponent<HookPoint>()
                 .ConfigureFixedAttachmentPoint(Vector2.zero);
             bridgeAnchor.AddComponent<RopePlatformAnchor>().Configure(
-                MainStageSectionFourSetup.BridgeBuildOriginPosition,
-                MainStageSectionFourSetup.BridgeOriginTolerance,
                 MainStageSectionFourSetup.BridgeRopeLength);
             CreateHook(
                 MainStageSectionFourSetup.FarHookName,

@@ -126,9 +126,15 @@ namespace HimoHito
                 ropeController.ActiveHookPoint != null &&
                 ropeController.ActiveHookPoint.TryGetComponent(
                     out RopePlatformAnchor _);
+            bool hasCorrectLength = ropeController != null &&
+                Mathf.Abs(
+                    ropeController.ActiveRopeLength -
+                    MainStageSectionFourSetup.BridgeRopeLength) <= 0.05f;
             GUILayout.Label(
                 isYellowAnchor
-                    ? "黄色フックへ接続中：Qで長さ5を消費して橋を作る"
+                    ? hasCorrectLength
+                        ? "黄色フックへ接続中：Qで長さ5を消費して橋を作る"
+                        : "Eで解除し、W/Sで長さ5にして黄色フックへ再接続"
                     : "左岸の黄色印から、長さ5で柱の黄色フックへ接続",
                 accentStyle);
         }
