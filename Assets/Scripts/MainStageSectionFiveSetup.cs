@@ -27,14 +27,14 @@ namespace HimoHito
 
         // Section four's landing top is Y=-2.15. The shelf tops are 1.5 higher.
         public static readonly Vector2 LeftShelfPosition =
-            new Vector2(85.6f, -0.95f);
+            new Vector2(88.6f, -0.95f);
         public static readonly Vector2 RightShelfPosition =
-            new Vector2(93f, -0.95f);
+            new Vector2(96f, -0.95f);
         public static readonly Vector2 ShelfSize = new Vector2(3f, 0.6f);
         public static readonly Vector2 BridgeStartHookPosition =
-            new Vector2(87.1f, -0.65f);
+            new Vector2(90.1f, -0.65f);
         public static readonly Vector2 BridgeEndHookPosition =
-            new Vector2(91.5f, -0.65f);
+            new Vector2(94.5f, -0.65f);
         public static readonly Vector2 BridgeHookSize =
             new Vector2(0.62f, 0.62f);
         public static readonly Vector2 CentralHookPosition =
@@ -42,9 +42,9 @@ namespace HimoHito
         public static readonly Vector2 LightMountPosition =
             new Vector2(97f, 3.35f);
         public static readonly Vector2 LightOcclusionOriginPosition =
-            new Vector2(89.3f, 2.85f);
+            new Vector2(92.3f, 2.85f);
         public static readonly Vector2 LightSpotPosition =
-            new Vector2(89.3f, -3.15f);
+            new Vector2(92.3f, -3.15f);
         public const float LightSpotDiameter = 4f;
         public static readonly Vector2 LandingPosition =
             new Vector2(110.1f, -7.15f);
