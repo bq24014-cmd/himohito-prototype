@@ -217,6 +217,24 @@ namespace HimoHito
             lastRopePlatformContactTime = Time.fixedTime;
         }
 
+        public bool IsSupportedByGeneratedRopePlatform(
+            GeneratedRopePlatform platform)
+        {
+            if (platform == null)
+            {
+                return false;
+            }
+
+            if (groundedRopePlatform == platform)
+            {
+                return true;
+            }
+
+            return TryGetRecentRopePlatform(
+                       out GeneratedRopePlatform recent) &&
+                   recent == platform;
+        }
+
         private void OnCollisionEnter2D(Collision2D collision)
         {
             RememberSupportingRopePlatform(collision);

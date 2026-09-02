@@ -445,8 +445,11 @@ namespace HimoHito
         private Collider2D platformCollider;
         private Collider2D playerCollider;
         private RopeController ropeController;
+        private PlayerMover playerMover;
         private Vector2[] curvePoints;
         private bool isIgnoringPlayerCollision;
+        private bool wasPlayerAttached;
+        private bool preserveCollisionUntilSeparated;
 
         public Vector2 Start { get; private set; }
         public Vector2 End { get; private set; }
@@ -470,6 +473,9 @@ namespace HimoHito
             platformCollider = generatedCollider;
             playerCollider = playerBodyCollider;
             ropeController = playerRopeController;
+            playerMover = playerRopeController != null
+                ? playerRopeController.GetComponent<PlayerMover>()
+                : null;
             UpdatePlayerCollision();
         }
 
@@ -565,7 +571,31 @@ namespace HimoHito
                 return;
             }
 
-            bool shouldIgnore = ropeController != null && ropeController.IsAttached;
+            bool isPlayerAttached =
+                ropeController != null && ropeController.IsAttached;
+            if (isPlayerAttached && !wasPlayerAttached)
+            {
+                // Keep the bridge solid when E is pressed while standing on it.
+                // Once the player leaves it, the bridge becomes non-solid for
+                // the rest of this attachment so it cannot obstruct the swing.
+                preserveCollisionUntilSeparated =
+                    playerMover != null &&
+                    playerMover.IsSupportedByGeneratedRopePlatform(this);
+            }
+            else if (!isPlayerAttached)
+            {
+                preserveCollisionUntilSeparated = false;
+            }
+            else if (preserveCollisionUntilSeparated &&
+                     (playerMover == null ||
+                      !playerMover.IsSupportedByGeneratedRopePlatform(this)))
+            {
+                preserveCollisionUntilSeparated = false;
+            }
+
+            bool shouldIgnore =
+                isPlayerAttached && !preserveCollisionUntilSeparated;
+            wasPlayerAttached = isPlayerAttached;
             if (shouldIgnore == isIgnoringPlayerCollision)
             {
                 return;
