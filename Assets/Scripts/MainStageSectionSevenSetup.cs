@@ -41,7 +41,7 @@ namespace HimoHito
         public static readonly Vector2 MiddleShelfSize =
             new Vector2(3f, 0.7f);
         public static readonly Vector2 UpperShelfPosition =
-            new Vector2(158.5f, 1.3f);
+            new Vector2(158.5f, 0.9f);
         public static readonly Vector2 UpperShelfSize =
             new Vector2(3f, 0.7f);
         public static readonly Vector2 UpperHookPosition =
