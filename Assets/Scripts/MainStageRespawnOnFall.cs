@@ -31,6 +31,7 @@ namespace HimoHito
         private float checkpointRopeLength;
         private int checkpointSelectedRopeLength;
         private RopePlatformBuilder.PlatformState[] checkpointPlatformStates;
+        private int lastForcedRestartFrame = -1;
 
         public int CurrentSection { get; private set; } = 1;
         public int RefillCount { get; private set; }
@@ -133,6 +134,17 @@ namespace HimoHito
             CaptureCheckpointState();
             IsRopeExhausted = false;
             return true;
+        }
+
+        public void FailCurrentSection()
+        {
+            if (lastForcedRestartFrame == Time.frameCount)
+            {
+                return;
+            }
+
+            lastForcedRestartFrame = Time.frameCount;
+            RestartFromCheckpoint();
         }
 
         private void CaptureCheckpointState()

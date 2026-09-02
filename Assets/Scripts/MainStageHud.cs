@@ -107,6 +107,12 @@ namespace HimoHito
             {
                 DrawSectionSevenGuide();
             }
+            else if (respawn != null &&
+                     respawn.CurrentSection == 8 &&
+                     platformBuilder != null)
+            {
+                DrawSectionEightGuide();
+            }
             else
             {
                 GUILayout.Label("おもちゃ箱のゴールを目指す", accentStyle);
@@ -259,6 +265,50 @@ namespace HimoHito
 
             GUILayout.Label(
                 "上段から長さ5で青フックへ接続し、右の床へ振り渡る",
+                accentStyle);
+        }
+
+        private void DrawSectionEightGuide()
+        {
+            if (MainStageSectionEightSetup.TryGetShaftPlatformLength(
+                    platformBuilder,
+                    out float platformLength))
+            {
+                if (MainStageSectionEightSetup.IsCorrectLength(platformLength))
+                {
+                    GUILayout.Label(
+                        $"長さ{platformLength:0}で深さ成功：たるみの底へ降り、右の開いた通路へ",
+                        accentStyle);
+                }
+                else if (platformLength <
+                         MainStageSectionEightSetup.MinimumCorrectLength)
+                {
+                    GUILayout.Label(
+                        "浅すぎて木のゲートが開かない — Rで戻り、長さ7か8を試す",
+                        accentStyle);
+                }
+                else
+                {
+                    GUILayout.Label(
+                        "深すぎて底のトゲに触れる — 長さ7か8なら安全",
+                        accentStyle);
+                }
+                return;
+            }
+
+            bool isShaftAnchor = ropeController != null &&
+                ropeController.ActiveHookPoint != null &&
+                ropeController.ActiveHookPoint.name ==
+                    MainStageSectionEightSetup.RightAnchorName;
+            bool hasCorrectLength = ropeController != null &&
+                MainStageSectionEightSetup.IsCorrectLength(
+                    ropeController.ActiveRopeLength);
+            GUILayout.Label(
+                isShaftAnchor
+                    ? hasCorrectLength
+                        ? "右の緑フックへ接続中：Qで垂れた道を作る"
+                        : "Eで解除し、W/Sで長さ7か8にして再接続"
+                    : "穴の幅を見て、長さ7か8で右の緑フックへ接続",
                 accentStyle);
         }
 

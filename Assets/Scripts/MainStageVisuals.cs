@@ -185,6 +185,7 @@ namespace HimoHito
                    objectName == MainStageSectionFiveSetup.LandingName ||
                    objectName == MainStageSectionSixSetup.MergeName ||
                    objectName == MainStageSectionSevenSetup.GoalFloorName ||
+                   objectName == MainStageSectionEightSetup.ExitFloorName ||
                    objectName == "Main S01 Start Shelf" ||
                    objectName == "Main S01 Landing" ||
                    objectName == "Main S02 Raised Landing" ||
