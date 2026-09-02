@@ -63,7 +63,7 @@ namespace HimoHito
 
             movementMaterial = new PhysicsMaterial2D("Player Movement Material")
             {
-                friction = 0f,
+                friction = 0.1f,
                 bounciness = 0f,
                 hideFlags = HideFlags.HideAndDontSave
             };
