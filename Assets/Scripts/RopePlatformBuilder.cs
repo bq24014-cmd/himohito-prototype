@@ -441,14 +441,15 @@ namespace HimoHito
 
     public sealed class GeneratedRopePlatform : MonoBehaviour
     {
+        private const float PlayerSupportDistance = 0.15f;
+
         private Material runtimeMaterial;
         private Collider2D platformCollider;
         private Collider2D playerCollider;
         private RopeController ropeController;
-        private PlayerMover playerMover;
         private Vector2[] curvePoints;
         private bool isIgnoringPlayerCollision;
-        private bool wasPlayerAttached;
+        private int observedAttachmentSequence;
         private bool preserveCollisionUntilSeparated;
 
         public Vector2 Start { get; private set; }
@@ -473,9 +474,9 @@ namespace HimoHito
             platformCollider = generatedCollider;
             playerCollider = playerBodyCollider;
             ropeController = playerRopeController;
-            playerMover = playerRopeController != null
-                ? playerRopeController.GetComponent<PlayerMover>()
-                : null;
+            observedAttachmentSequence = ropeController != null
+                ? ropeController.AttachmentSequence
+                : 0;
             UpdatePlayerCollision();
         }
 
@@ -573,29 +574,29 @@ namespace HimoHito
 
             bool isPlayerAttached =
                 ropeController != null && ropeController.IsAttached;
-            if (isPlayerAttached && !wasPlayerAttached)
+            bool isNewAttachment =
+                isPlayerAttached && ropeController.AttachmentSequence !=
+                observedAttachmentSequence;
+            if (isNewAttachment)
             {
                 // Keep the bridge solid when E is pressed while standing on it.
                 // Once the player leaves it, the bridge becomes non-solid for
                 // the rest of this attachment so it cannot obstruct the swing.
-                preserveCollisionUntilSeparated =
-                    playerMover != null &&
-                    playerMover.IsSupportedByGeneratedRopePlatform(this);
+                observedAttachmentSequence = ropeController.AttachmentSequence;
+                preserveCollisionUntilSeparated = IsSupportingPlayer();
             }
             else if (!isPlayerAttached)
             {
                 preserveCollisionUntilSeparated = false;
             }
             else if (preserveCollisionUntilSeparated &&
-                     (playerMover == null ||
-                      !playerMover.IsSupportedByGeneratedRopePlatform(this)))
+                     !IsSupportingPlayer())
             {
                 preserveCollisionUntilSeparated = false;
             }
 
             bool shouldIgnore =
                 isPlayerAttached && !preserveCollisionUntilSeparated;
-            wasPlayerAttached = isPlayerAttached;
             if (shouldIgnore == isIgnoringPlayerCollision)
             {
                 return;
@@ -603,6 +604,27 @@ namespace HimoHito
 
             Physics2D.IgnoreCollision(platformCollider, playerCollider, shouldIgnore);
             isIgnoringPlayerCollision = shouldIgnore;
+        }
+
+        private bool IsSupportingPlayer()
+        {
+            if (platformCollider == null || playerCollider == null ||
+                !platformCollider.enabled || !playerCollider.enabled)
+            {
+                return false;
+            }
+
+            ColliderDistance2D separation =
+                playerCollider.Distance(platformCollider);
+            if (!separation.isValid ||
+                separation.distance > PlayerSupportDistance)
+            {
+                return false;
+            }
+
+            // pointB belongs to the bridge. It must be at or below the
+            // player's centre; a nearby bridge above the player is not a floor.
+            return separation.pointB.y <= playerCollider.bounds.center.y;
         }
 
         private void OnDestroy()

@@ -56,6 +56,7 @@ namespace HimoHito
         public int SelectedRopeLength => selectedRopeLength;
         public int MaximumSelectableRopeLength => GetMaximumSelectableRopeLength();
         public float ActiveRopeLength => activeRopeLength;
+        public int AttachmentSequence { get; private set; }
         public Color VisibleRopeColor => GetVisibleRopeColor();
         public bool IsAirChainReconnectOpen =>
             !IsAttached &&
@@ -234,6 +235,7 @@ namespace HimoHito
             ropeJoint.connectedAnchor = anchorPoint;
             ropeJoint.distance = selectedLength;
             ropeJoint.enabled = true;
+            AttachmentSequence++;
             lineRenderer.enabled = true;
             ClearAirChainReconnectWindow();
             audioFeedback.PlayHookAttached();
