@@ -47,6 +47,8 @@ namespace HimoHito
         private int pendingAirChainOrder;
         private float airChainReconnectExpiresAt = float.NegativeInfinity;
         private int selectedRopeLength = 1;
+        private RigidbodyConstraints2D constraintsBeforePlatformBuildHold;
+        private bool isPlatformBuildHoldActive;
 
         public bool IsAttached => ropeJoint != null && ropeJoint.enabled;
         public Vector2 AnchorPoint => anchorPoint;
@@ -234,8 +236,10 @@ namespace HimoHito
             ropeJoint.connectedBody = null;
             ropeJoint.connectedAnchor = anchorPoint;
             float jointDistance = selectedLength;
-            if (hookPoint != null &&
-                hookPoint.TryGetComponent(out RopePlatformAnchor _))
+            bool isPlatformBuildAttachment =
+                hookPoint != null &&
+                hookPoint.TryGetComponent(out RopePlatformAnchor _);
+            if (isPlatformBuildAttachment)
             {
                 // A platform Hook is followed by Q, not by a swing. Section 9
                 // intentionally allows a small aiming margin beyond length 6;
@@ -247,6 +251,10 @@ namespace HimoHito
             }
             ropeJoint.distance = jointDistance;
             ropeJoint.enabled = true;
+            if (isPlatformBuildAttachment)
+            {
+                BeginPlatformBuildHold();
+            }
             AttachmentSequence++;
             lineRenderer.enabled = true;
             ClearAirChainReconnectWindow();
@@ -282,10 +290,15 @@ namespace HimoHito
             }
 
             // Disabling the joint must not erase the velocity built up by the pendulum.
-            Vector2 preservedVelocity = body.linearVelocity;
-            float preservedAngularVelocity = body.angularVelocity;
+            Vector2 preservedVelocity = isPlatformBuildHoldActive
+                ? Vector2.zero
+                : body.linearVelocity;
+            float preservedAngularVelocity = isPlatformBuildHoldActive
+                ? 0f
+                : body.angularVelocity;
             HookPoint releasedHook = activeHookPoint;
             ropeJoint.enabled = false;
+            EndPlatformBuildHold();
             activeHookPoint = null;
             body.linearVelocity = preservedVelocity;
             body.angularVelocity = preservedAngularVelocity;
@@ -377,11 +390,43 @@ namespace HimoHito
             }
 
             ropeJoint.enabled = false;
+            EndPlatformBuildHold();
             activeHookPoint = null;
             lineRenderer.enabled = false;
             activeRopeLength = 0f;
             ClampSelectedRopeLength();
             return true;
+        }
+
+        private void BeginPlatformBuildHold()
+        {
+            if (isPlatformBuildHoldActive || body == null)
+            {
+                return;
+            }
+
+            // A RopePlatformAnchor is a construction target. It must not switch
+            // the player into a pendulum while they are preparing Q at a bridge
+            // edge, so hold the successful E position until Q or detach.
+            constraintsBeforePlatformBuildHold = body.constraints;
+            body.linearVelocity = Vector2.zero;
+            body.angularVelocity = 0f;
+            body.constraints =
+                constraintsBeforePlatformBuildHold |
+                RigidbodyConstraints2D.FreezePositionX |
+                RigidbodyConstraints2D.FreezePositionY;
+            isPlatformBuildHoldActive = true;
+        }
+
+        private void EndPlatformBuildHold()
+        {
+            if (!isPlatformBuildHoldActive || body == null)
+            {
+                return;
+            }
+
+            body.constraints = constraintsBeforePlatformBuildHold;
+            isPlatformBuildHoldActive = false;
         }
 
         public void RestoreSelectedRopeLength(int length)
