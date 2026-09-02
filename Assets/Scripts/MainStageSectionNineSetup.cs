@@ -23,11 +23,11 @@ namespace HimoHito
         public static readonly Vector2 LeftAnchorPosition =
             new Vector2(175f, -2.15f);
         public static readonly Vector2 CenterHookPosition =
-            new Vector2(180.5f, -2.15f);
+            new Vector2(180.5f, -1.05f);
         public static readonly Vector2 RightAnchorPosition =
             new Vector2(186f, -2.15f);
         public static readonly Vector2 BeamPosition =
-            new Vector2(182f, 1.2f);
+            new Vector2(182f, 1.55f);
         public static readonly Vector2 BeamSize =
             new Vector2(2f, 5f);
         public static readonly Vector2 GoalFloorPosition =

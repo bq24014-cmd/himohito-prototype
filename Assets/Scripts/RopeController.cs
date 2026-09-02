@@ -13,6 +13,7 @@ namespace HimoHito
     {
         private static readonly Color AimGuideColor =
             new Color(1f, 0.72f, 0.80f, 0.55f);
+        private const float SectionNineHookTargetingGrace = 0.25f;
 
         [SerializeField, Min(1f)] private float maximumShotDistance = 14f;
         [SerializeField, Min(0.01f)] private float ropeWidth = 0.16f;
@@ -380,13 +381,15 @@ namespace HimoHito
             out Vector2 resolvedAnchor)
         {
             Vector2 origin = body.position;
-            float searchDistance = Mathf.Min(
+            float baseSearchDistance = Mathf.Min(
                 SelectedRopeLength,
                 maximumShotDistance);
+            float hookSearchDistance = GetHookSearchDistance(
+                baseSearchDistance);
             RaycastHit2D[] hits = Physics2D.RaycastAll(
                 origin,
                 keyboardAimDirection,
-                searchDistance);
+                hookSearchDistance);
             foreach (RaycastHit2D hit in hits)
             {
                 if (hit.collider == null || hit.collider == bodyCollider)
@@ -402,8 +405,11 @@ namespace HimoHito
                 }
 
                 Vector2 candidateAnchor = candidate.GetAttachmentPoint(hit.point);
+                float allowedDistance = IsSectionNinePlatformHook(candidate)
+                    ? hookSearchDistance
+                    : baseSearchDistance;
                 if (Vector2.Distance(origin, candidateAnchor) <=
-                    searchDistance + 0.01f)
+                    allowedDistance + 0.01f)
                 {
                     hookPoint = candidate;
                     resolvedAnchor = candidateAnchor;
@@ -432,10 +438,11 @@ namespace HimoHito
             }
 
             float shotDistance = Mathf.Min(SelectedRopeLength, maximumShotDistance);
+            float hookSearchDistance = GetHookSearchDistance(shotDistance);
             RaycastHit2D[] hits = Physics2D.RaycastAll(
                 origin,
                 offset.normalized,
-                shotDistance);
+                hookSearchDistance);
 
             // A lower Hook can sit beyond the edge of the floor the player is
             // standing on.  Prefer an explicitly aimed Hook before falling back
@@ -457,8 +464,12 @@ namespace HimoHito
 
                 Vector2 candidateAnchor =
                     candidateHook.GetAttachmentPoint(hit.point);
+                float allowedDistance =
+                    IsSectionNinePlatformHook(candidateHook)
+                        ? hookSearchDistance
+                        : shotDistance;
                 if (Vector2.Distance(origin, candidateAnchor) >
-                    shotDistance + 0.01f)
+                    allowedDistance + 0.01f)
                 {
                     continue;
                 }
@@ -494,6 +505,30 @@ namespace HimoHito
             }
 
             return false;
+        }
+
+        private float GetHookSearchDistance(float baseDistance)
+        {
+            MainStageRespawnOnFall main =
+                GetComponent<MainStageRespawnOnFall>();
+            return main != null && main.CurrentSection == 9
+                ? Mathf.Min(
+                    maximumShotDistance,
+                    baseDistance + SectionNineHookTargetingGrace)
+                : baseDistance;
+        }
+
+        private bool IsSectionNinePlatformHook(HookPoint hook)
+        {
+            if (hook == null ||
+                !hook.TryGetComponent(out RopePlatformAnchor _))
+            {
+                return false;
+            }
+
+            MainStageRespawnOnFall main =
+                GetComponent<MainStageRespawnOnFall>();
+            return main != null && main.CurrentSection == 9;
         }
 
         private void UpdateSelectedRopeLength()
