@@ -9,7 +9,7 @@
 - 自分の身体を使って振り子で飛ぶ動きに爽快感があるか
 - 次に使うヒモの長さを選ぶことで、移動前に考える時間が生まれるか
 - ヒモを永久に足場へ変える判断が、残量を配分するパズルとして機能するか
-- チュートリアル5区間と本編10区間を通して、教える・試す・ひねるの順番が伝わるか
+- チュートリアル5区間と本編10区間の設計を通して、教える・試す・ひねるの順番が伝わるか
 
 ## 基本ルール
 
@@ -67,7 +67,7 @@
 
 区間1では長さ6に固定し、区間2から`W`/`S`、区間3から`Q`、区間5で`F`を使用します。
 
-## 本編 — 10区間
+## 本編 — 10区間設計（現在は第7区間まで実装）
 
 1. **基本の再確認**：長さ7で掛けて振り、着地する
 2. **長さの窓**：Hookへ届くだけでなく、手前と奥のトゲを避けられる長さ6を選ぶ
@@ -96,14 +96,15 @@
 ## シーン
 
 - `Assets/Scenes/Tutorial.unity`：5区間のチュートリアル
-- `Assets/Scenes/MainStage.unity`：10区間の本編
+- `Assets/Scenes/MainStage.unity`：第7区間まで実装済みの本編
 - `Assets/Scenes/FloorCollisionExperiment.unity`：床の衝突だけを比較する実験用
 
 シーンを資料の初期配置へ再構築するメニュー：
 
-- `HimoHito > Rebuild All Stages From 0829 Manual`（チュートリアルと本編を一括再構築）
+- `HimoHito > Rebuild Implemented Stages From 0829 Manual`（チュートリアルと実装済み本編を一括再構築）
 - `HimoHito > Rebuild Tutorial From 0829 Manual`
-- `HimoHito > Rebuild Main Stage From 0829 Manual`
+- `HimoHito > Rebuild Main Stage Through Section 7`
+- `HimoHito > Clean Main Stage Legacy Objects`（旧区間とMissing Scriptを整理）
 
 ## Unity Editorでの実行
 
@@ -133,7 +134,7 @@
 | `Assets/Scripts/PrototypeRunController.cs` | チュートリアルの進行と再挑戦 |
 | `Assets/Scripts/MainStageRespawnOnFall.cs` | 本編の区間進行、資源下限、再挑戦 |
 | `Assets/Editor/PrototypeSceneBuilder.cs` | チュートリアル5区間の再構築 |
-| `Assets/Editor/MainStageSceneBuilder.cs` | 本編10区間の再構築 |
+| `Assets/Editor/MainStageSceneBuilder.cs` | 本編の実装済み区間の再構築と旧オブジェクト整理 |
 
 ## 素材とライセンス
 

@@ -7,19 +7,59 @@ using UnityEngine.SceneManagement;
 namespace HimoHitoEditor
 {
     /// <summary>
-    /// Rebuilds the ten-section main stage from the 2026-08-29 stage manual.
-    /// All coordinates are the document's starting estimates and remain tunable.
+    /// Rebuilds the implemented part of the main stage from the 2026-08-29
+    /// stage manual. Sections eight through ten are added only after their
+    /// current designs have been implemented.
     /// </summary>
     public static class MainStageSceneBuilder
     {
         private const string ScenePath = "Assets/Scenes/MainStage.unity";
         private const float MainStageRopeLength = 50f;
+        private static readonly string[] ObsoleteMainStageObjectNames =
+        {
+            "Main Section 4 Bridge Start Marker",
+            "Main Section 4 Intermediate Anchor",
+            "Main Section 6 Flashlight Spot",
+            "Main Section 6 Hook",
+            "Main Section 6 Landing",
+            "Main Section 6 Rope Hazard",
+            "Main S06 Safety Floor",
+            "Main S06 Return Step",
+            "Main Midpoint Checkpoint",
+            "Main Upper Route Hook",
+            "Main Upper Route Landing",
+            "Main Upper Route Descent",
+            "Main Upper Route Descent Marker",
+            "Main Lower Walking Route",
+            "Main Section 7 Hook",
+            "Main Section 7 Final Hook",
+            "Main Section 7 Landing",
+            "Main Section 7 Weave Frame",
+            "Main Section 7 Woven Platform",
+            "Main Section 7 Weave Marker",
+            "Main S07 Lower Start",
+            "Main Section 8 Hook A",
+            "Main Section 8 Planning Landing",
+            "Main Section 8 Hook B",
+            "Main Section 8 Legacy Landing",
+            "Main Section 8 Hook",
+            "Main Section 8 Flashlight Spot",
+            "Main Section 8 Landing",
+            "Main Section 9 Hook",
+            "Main Section 9 Final Hook",
+            "Main Section 9 Flashlight Spot",
+            "Main Section 9 Flashlight Beam",
+            "Main Section 9 Moving Hazard",
+            "Main Section 9 Landing",
+            "Main Stage Goal",
+            "Main Section 10 Final Hook"
+        };
         private static readonly Color TerrainColor = new(0.96f, 0.55f, 0.18f);
         private static readonly Color HookColor = new(0.30f, 0.76f, 1f);
         private static readonly Color SpikeColor = new(1f, 0.18f, 0.25f);
 
-        [MenuItem("HimoHito/Rebuild Main Stage From 0829 Manual")]
-        public static void BuildMainStageThroughSectionTen()
+        [MenuItem("HimoHito/Rebuild Main Stage Through Section 7")]
+        public static void BuildMainStageThroughCurrentSection()
         {
             Scene scene = EditorSceneManager.NewScene(
                 NewSceneSetup.EmptyScene,
@@ -32,12 +72,9 @@ namespace HimoHitoEditor
             BuildSection4();
             BuildSection5();
             BuildSection6();
-            BuildSection7();
-            BuildSection8();
-            BuildSection9();
-            GameObject goal = BuildSection10();
+            GameObject previewTarget = BuildSection7();
 
-            CreateCamera(player.transform, goal.transform);
+            CreateCamera(player.transform, previewTarget.transform);
             GameObject hud = new("Main Stage HUD");
             hud.AddComponent<MainStageHud>();
             hud.AddComponent<StageOverlayControls>();
@@ -54,8 +91,88 @@ namespace HimoHitoEditor
 
         public static void BuildFromCommandLine()
         {
-            BuildMainStageThroughSectionTen();
+            BuildMainStageThroughCurrentSection();
             EditorApplication.Exit(0);
+        }
+
+        [MenuItem("HimoHito/Clean Main Stage Legacy Objects")]
+        public static void CleanMainStageLegacyObjects()
+        {
+            Scene scene = SceneManager.GetActiveScene();
+            if (scene.path != ScenePath)
+            {
+                scene = EditorSceneManager.OpenScene(
+                    ScenePath,
+                    OpenSceneMode.Single);
+            }
+
+            int removedObjectCount = 0;
+            int removedMissingScriptCount = 0;
+            GameObject[] sceneObjects = Object.FindObjectsByType<GameObject>(
+                FindObjectsInactive.Include,
+                FindObjectsSortMode.None);
+            foreach (GameObject sceneObject in sceneObjects)
+            {
+                if (sceneObject == null || sceneObject.scene != scene)
+                {
+                    continue;
+                }
+
+                int missingScriptCount =
+                    GameObjectUtility.GetMonoBehavioursWithMissingScriptCount(
+                        sceneObject);
+                if (missingScriptCount > 0)
+                {
+                    GameObjectUtility.RemoveMonoBehavioursWithMissingScript(
+                        sceneObject);
+                    removedMissingScriptCount += missingScriptCount;
+                }
+
+                if (IsObsoleteMainStageObject(sceneObject.name))
+                {
+                    Object.DestroyImmediate(sceneObject);
+                    removedObjectCount++;
+                }
+            }
+
+            MainStageFloorCollisionSetup.ApplyCurrentScene();
+            RopeResource player = Object.FindFirstObjectByType<RopeResource>();
+            if (player != null)
+            {
+                MainStageVisuals.Apply(player.gameObject);
+            }
+
+            bool sceneChanged = scene.isDirty ||
+                                removedObjectCount > 0 ||
+                                removedMissingScriptCount > 0;
+            if (sceneChanged)
+            {
+                EditorSceneManager.MarkSceneDirty(scene);
+                EditorSceneManager.SaveScene(scene, ScenePath);
+            }
+            AssetDatabase.SaveAssets();
+            Debug.Log(
+                $"MainStage cleanup complete: removed {removedObjectCount} " +
+                $"legacy objects and {removedMissingScriptCount} missing scripts; " +
+                $"saved={sceneChanged}.");
+        }
+
+        public static void CleanFromCommandLine()
+        {
+            CleanMainStageLegacyObjects();
+            EditorApplication.Exit(0);
+        }
+
+        private static bool IsObsoleteMainStageObject(string objectName)
+        {
+            foreach (string obsoleteName in ObsoleteMainStageObjectNames)
+            {
+                if (objectName == obsoleteName)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
 
         private static void BuildSection1()
@@ -194,49 +311,9 @@ namespace HimoHitoEditor
             MainStageSectionSixSetup.ApplyCurrentScene();
         }
 
-        private static void BuildSection7()
+        private static GameObject BuildSection7()
         {
-            MainStageSectionSevenSetup.ApplyCurrentScene();
-        }
-
-        private static void BuildSection8()
-        {
-            CreateTerrain("Main S08 Shaft Left Rim", new Vector2(130f, 5.5f), new Vector2(2f, 0.7f));
-            CreateTerrain("Main S08 Shaft Right Rim", new Vector2(134f, 5.5f), new Vector2(2f, 0.7f));
-            CreateTerrain("Main S08 Shaft Left Wall", new Vector2(129f, 1f), new Vector2(0.7f, 8f));
-            CreateTerrain("Main S08 Shaft Right Wall", new Vector2(135f, 1f), new Vector2(0.7f, 8f));
-            CreateSpike("Main S08 Bottom Spikes", new Vector2(132f, -3f), new Vector2(5f, 0.6f));
-            GameObject exit = CreateTerrain("Main S08 Bottom Exit", new Vector2(140f, -1.5f), new Vector2(8f, 0.7f));
-            AddCheckpoint(exit, 9, new Vector2(137f, -0.85f), 23f);
-        }
-
-        private static void BuildSection9()
-        {
-            // Facing shelf edges are exactly 10 units apart. Two length-6 ropes
-            // reach the middle hook; removing it creates one length-12 rope.
-            CreateTerrain("Main S09 Left Shelf", new Vector2(145f, 1f), new Vector2(4f, 0.7f));
-            CreateHook("Main S09 Removable Hook", new Vector2(152f, 3.39f));
-            GameObject landing = CreateTerrain(
-                "Main S09 Right Shelf",
-                new Vector2(159f, 1f),
-                new Vector2(4f, 0.7f));
-            CreateTerrain(
-                "Main S09 Overhead Beam",
-                new Vector2(152f, 1.47f),
-                new Vector2(5f, 3.84f));
-            AddCheckpoint(landing, 10, new Vector2(158f, 1.65f), 11f);
-        }
-
-        private static GameObject BuildSection10()
-        {
-            // Section 9's right shelf is the left bank. The facing edges are
-            // 9 units apart, so the final bridge uses length 10 and sags by 1.
-            GameObject goal = CreateTerrain(
-                MainStageSectionTenSetup.GoalName,
-                new Vector2(173f, 1f),
-                new Vector2(6f, 0.7f));
-            goal.AddComponent<MainStageGoalZone>();
-            return goal;
+            return MainStageSectionSevenSetup.EnsureCreated();
         }
 
         private static GameObject CreatePlayer(Vector2 position)
@@ -249,7 +326,7 @@ namespace HimoHitoEditor
             player.AddComponent<SolidSprite>().Color = new Color(1f, 0.365f, 0.561f);
             BoxCollider2D collider = player.AddComponent<BoxCollider2D>();
             collider.size = Vector2.one;
-            collider.edgeRadius = 0.08f;
+            collider.edgeRadius = 0f;
             Rigidbody2D body = player.AddComponent<Rigidbody2D>();
             body.gravityScale = 2.8f;
             body.mass = 1f;
@@ -315,27 +392,6 @@ namespace HimoHitoEditor
             return spike;
         }
 
-        private static GameObject CreateLightSource(string name, Vector2 position)
-        {
-            return CreateSolidObject(name, position, new Vector2(0.8f, 0.8f), new Color(1f, 0.86f, 0.54f));
-        }
-
-        private static void CreateOccludedLight(
-            string name,
-            Vector2 position,
-            float diameter,
-            Transform source)
-        {
-            GameObject spot = new(name);
-            FlashlightSpotVisual.ConfigureSpot(
-                spot,
-                position,
-                diameter,
-                new Color(1f, 0.82f, 0.56f, 0.62f));
-            PlatformOccludedLightHazard hazard = spot.AddComponent<PlatformOccludedLightHazard>();
-            hazard.Configure(source);
-        }
-
         private static GameObject CreateSolidObject(
             string name,
             Vector2 position,
@@ -349,22 +405,6 @@ namespace HimoHitoEditor
             gameObject.AddComponent<SolidSprite>().Color = color;
             gameObject.AddComponent<BoxCollider2D>().size = Vector2.one;
             return gameObject;
-        }
-
-        private static GameObject CreateMarker(
-            string name,
-            Vector2 position,
-            Vector2 size,
-            Color color)
-        {
-            GameObject marker = new(name);
-            marker.transform.position = position;
-            marker.transform.localScale =
-                new Vector3(size.x, size.y, 1f);
-            SpriteRenderer renderer = marker.AddComponent<SpriteRenderer>();
-            renderer.sortingOrder = 8;
-            marker.AddComponent<SolidSprite>().Color = color;
-            return marker;
         }
 
         private static void AddCheckpoint(

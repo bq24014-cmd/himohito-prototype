@@ -20,6 +20,9 @@
 .DS_Store
 Thumbs.db
 
+# Local document renders and inspection output created during Codex work
+/.codex_tmp/
+
 # Unity crash and memory-capture files
 sysinfo.txt
 *.stacktrace

@@ -14,7 +14,8 @@ namespace HimoHito
     {
         // Temporary development switch. Set this to false when full-stage
         // playtesting should begin from section one again.
-        private const bool StartFromSectionSevenForDevelopment = true;
+        [SerializeField]
+        private bool startFromSectionSevenForDevelopment = true;
         private const float SectionSevenStartingRopeLength = 39f;
 
         [SerializeField] private float fallThreshold = -9f;
@@ -48,7 +49,7 @@ namespace HimoHito
             playerMover = GetComponent<PlayerMover>();
             goalZone = FindFirstObjectByType<MainStageGoalZone>();
 
-            if (StartFromSectionSevenForDevelopment)
+            if (startFromSectionSevenForDevelopment)
             {
                 CurrentSection = 7;
                 body.position =
@@ -65,7 +66,7 @@ namespace HimoHito
 
         private void Start()
         {
-            if (!StartFromSectionSevenForDevelopment)
+            if (!startFromSectionSevenForDevelopment)
             {
                 return;
             }
@@ -133,16 +134,6 @@ namespace HimoHito
             IsRopeExhausted = false;
             return true;
         }
-
-        // Compatibility entry points for older scene components.
-        public bool TryReachMidpoint(Vector2 position) =>
-            TryReachSection(6, position, 34f);
-        public bool TryStartSectionEight(Vector2 position) =>
-            TryReachSection(8, position, 30f);
-        public bool TryStartSectionNine(Vector2 position) =>
-            TryReachSection(9, position, 23f);
-        public bool TryStartSectionTen(Vector2 position) =>
-            TryReachSection(10, position, 11f);
 
         private void CaptureCheckpointState()
         {

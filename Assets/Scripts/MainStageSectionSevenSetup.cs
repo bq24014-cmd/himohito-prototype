@@ -160,7 +160,6 @@ namespace HimoHito
                 }
             }
 
-            MainStageSectionEightSetup.DisableLegacyObjects();
             return changed;
         }
 

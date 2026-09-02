@@ -37,15 +37,29 @@ namespace HimoHito
 
         private void OnValidate()
         {
-            Apply();
+            // Spriteの差し替えをOnValidate中に行うと、Unityが
+            // OnSpriteTilingPropertyChangeを送れず警告を出す。
+            // Sprite本体はOnEnable/Configureで設定し、ここでは
+            // Inspectorで編集可能な描画順だけを反映する。
+            if (TryGetComponent(out SpriteRenderer renderer))
+            {
+                renderer.sortingLayerID = sortingLayerId;
+                renderer.sortingOrder = sortingOrder;
+            }
         }
 
         private void Apply()
         {
             SpriteRenderer renderer = GetComponent<SpriteRenderer>();
             Sprite sprite = GetSharedSprite();
-            renderer.sprite = sprite;
-            renderer.color = Color.white;
+            if (renderer.sprite != sprite)
+            {
+                renderer.sprite = sprite;
+            }
+            if (renderer.color != Color.white)
+            {
+                renderer.color = Color.white;
+            }
             renderer.sortingLayerID = sortingLayerId;
             renderer.sortingOrder = sortingOrder;
             renderer.enabled = sprite != null;

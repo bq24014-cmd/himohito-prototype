@@ -10,7 +10,7 @@ namespace HimoHito
     {
         [SerializeField] private Transform target;
         [SerializeField, Min(0f)] private float smoothTime = 0.18f;
-        [SerializeField] private float horizontalOffset;
+        [SerializeField] private float horizontalOffset = 0f;
         [SerializeField, Min(0f)] private float verticalSmoothTime = 0.28f;
         [SerializeField] private bool followVerticalInSectionTen = true;
 

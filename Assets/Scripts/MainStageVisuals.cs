@@ -17,8 +17,6 @@ namespace HimoHito
             "Art/TutorialRailPlatform-v1";
         private const string HookResourcePath =
             "Art/TutorialHookConnector-v1";
-        private const string ToyBoxResourcePath =
-            "Art/TutorialToyBoxGoal-v2";
         private const string BackgroundName =
             "Main Stage Night Child Room Background";
         private const string HookVisualName = "Blue Toy Hook Visual";
@@ -124,18 +122,6 @@ namespace HimoHito
                             hookColor);
                     }
                     changed |= hookPoint.ConfigureFixedAttachmentPoint(Vector2.zero);
-                    continue;
-                }
-
-                if (candidate.name == MainStageSectionTenSetup.GoalName)
-                {
-                    changed |= ApplyColor(candidate, RailColor);
-                    changed |= EnsureToyVisual(
-                        candidate,
-                        "Blue Railway Goal Base Visual",
-                        RailResourcePath,
-                        1);
-                    changed |= EnsureGoalToyBox(candidate);
                     continue;
                 }
 
@@ -551,99 +537,6 @@ namespace HimoHito
             if (sourceRenderer.enabled)
             {
                 sourceRenderer.enabled = false;
-                changed = true;
-            }
-
-            return changed;
-        }
-
-        private static bool EnsureGoalToyBox(GameObject goal)
-        {
-            if (goal == null ||
-                !goal.TryGetComponent(out SpriteRenderer sourceRenderer))
-            {
-                return false;
-            }
-
-            Sprite toyBoxSprite =
-                TutorialFirstSectionVisuals.LoadProcessedToySprite(
-                    ToyBoxResourcePath);
-            if (toyBoxSprite == null)
-            {
-                return false;
-            }
-
-            const string visualName = "Main Goal Open Toy Box Visual";
-            const float toyBoxWorldWidth = 4.5f;
-            const float leftInset = 0.4f;
-            bool changed = false;
-            Transform visualTransform = goal.transform.Find(visualName);
-            if (visualTransform == null)
-            {
-                GameObject visualObject = new GameObject(visualName);
-                visualTransform = visualObject.transform;
-                visualTransform.SetParent(goal.transform, false);
-                changed = true;
-            }
-
-            Vector2 spriteSize = toyBoxSprite.bounds.size;
-            float toyBoxWorldHeight =
-                toyBoxWorldWidth * spriteSize.y / Mathf.Max(0.01f, spriteSize.x);
-            float goalWidth = Mathf.Abs(goal.transform.lossyScale.x);
-            float goalHeight = Mathf.Abs(goal.transform.lossyScale.y);
-            float goalLeft = goal.transform.position.x - goalWidth * 0.5f;
-            float goalTop = goal.transform.position.y + goalHeight * 0.5f;
-            Vector3 targetWorldPosition = new Vector3(
-                goalLeft + leftInset + toyBoxWorldWidth * 0.5f,
-                goalTop + toyBoxWorldHeight * 0.5f,
-                goal.transform.position.z);
-            if (visualTransform.position != targetWorldPosition)
-            {
-                visualTransform.position = targetWorldPosition;
-                changed = true;
-            }
-            if (visualTransform.rotation != Quaternion.identity)
-            {
-                visualTransform.rotation = Quaternion.identity;
-                changed = true;
-            }
-
-            Vector3 parentScale = goal.transform.lossyScale;
-            Vector3 targetScale = new Vector3(
-                toyBoxWorldWidth /
-                    Mathf.Max(0.01f, spriteSize.x * Mathf.Abs(parentScale.x)),
-                toyBoxWorldHeight /
-                    Mathf.Max(0.01f, spriteSize.y * Mathf.Abs(parentScale.y)),
-                1f);
-            if (visualTransform.localScale != targetScale)
-            {
-                visualTransform.localScale = targetScale;
-                changed = true;
-            }
-
-            if (!visualTransform.TryGetComponent(out SpriteRenderer renderer))
-            {
-                renderer = visualTransform.gameObject.AddComponent<SpriteRenderer>();
-                changed = true;
-            }
-            if (renderer.sprite != toyBoxSprite)
-            {
-                renderer.sprite = toyBoxSprite;
-                changed = true;
-            }
-            if (renderer.color != Color.white)
-            {
-                renderer.color = Color.white;
-                changed = true;
-            }
-            if (renderer.sortingLayerID != sourceRenderer.sortingLayerID)
-            {
-                renderer.sortingLayerID = sourceRenderer.sortingLayerID;
-                changed = true;
-            }
-            if (renderer.sortingOrder != sourceRenderer.sortingOrder + 2)
-            {
-                renderer.sortingOrder = sourceRenderer.sortingOrder + 2;
                 changed = true;
             }
 

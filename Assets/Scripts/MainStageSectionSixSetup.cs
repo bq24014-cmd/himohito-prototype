@@ -150,10 +150,7 @@ namespace HimoHito
                 MainStageSectionSevenSetup.HookName,
                 MainStageSectionSevenSetup.FinalHookName,
                 MainStageSectionSevenSetup.LandingName,
-                MainStageSectionNineSetup.HookName,
-                MainStageSectionNineSetup.FlashlightSpotName,
-                MainStageSectionNineSetup.FlashlightSourceName,
-                MainStageSectionNineSetup.LandingName
+                "Main Section 9 Final Hook"
             };
 
             foreach (string legacyName in legacyNames)

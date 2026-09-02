@@ -114,7 +114,7 @@ namespace HimoHitoEditor
             player.AddComponent<SolidSprite>().Color = new Color(1f, 0.365f, 0.561f);
             BoxCollider2D collider = player.AddComponent<BoxCollider2D>();
             collider.size = Vector2.one;
-            collider.edgeRadius = 0.08f;
+            collider.edgeRadius = 0f;
             Rigidbody2D body = player.AddComponent<Rigidbody2D>();
             body.gravityScale = 2.8f;
             body.mass = 1f;
