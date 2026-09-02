@@ -108,10 +108,10 @@ namespace HimoHito
                 DrawSectionSevenGuide();
             }
             else if (respawn != null &&
-                     respawn.CurrentSection == 8 &&
+                     respawn.CurrentSection == 9 &&
                      platformBuilder != null)
             {
-                DrawSectionEightGuide();
+                DrawSectionNineGuide();
             }
             else
             {
@@ -268,47 +268,39 @@ namespace HimoHito
                 accentStyle);
         }
 
-        private void DrawSectionEightGuide()
+        private void DrawSectionNineGuide()
         {
-            if (MainStageSectionEightSetup.TryGetShaftPlatformLength(
-                    platformBuilder,
-                    out float platformLength))
+            if (MainStageSectionNineSetup.HasMergedPlatform(platformBuilder))
             {
-                if (MainStageSectionEightSetup.IsCorrectLength(platformLength))
-                {
-                    GUILayout.Label(
-                        $"長さ{platformLength:0}で深さ成功：たるみの底へ降り、右の開いた通路へ",
-                        accentStyle);
-                }
-                else if (platformLength <
-                         MainStageSectionEightSetup.MinimumCorrectLength)
-                {
-                    GUILayout.Label(
-                        "浅すぎて縦穴の口まで降りられない — Rで戻り、長さ7か8を試す",
-                        accentStyle);
-                }
-                else
-                {
-                    GUILayout.Label(
-                        "深すぎて底のトゲに触れる — 長さ7か8なら安全",
-                        accentStyle);
-                }
+                GUILayout.Label(
+                    "統合成功：深くなった1本の足場で梁の下を通る",
+                    accentStyle);
                 return;
             }
 
-            bool isShaftAnchor = ropeController != null &&
-                ropeController.ActiveHookPoint != null &&
-                ropeController.ActiveHookPoint.name ==
-                    MainStageSectionEightSetup.RightAnchorName;
-            bool hasCorrectLength = ropeController != null &&
-                MainStageSectionEightSetup.IsCorrectLength(
-                    ropeController.ActiveRopeLength);
+            bool hasLeft =
+                MainStageSectionNineSetup.HasLeftPlatform(platformBuilder);
+            bool hasRight =
+                MainStageSectionNineSetup.HasRightPlatform(platformBuilder);
+            if (hasLeft && hasRight)
+            {
+                GUILayout.Label(
+                    "2本のままでは梁に当たる：中央の青フックを狙ってFで外す",
+                    accentStyle);
+                return;
+            }
+
+            HookPoint activeHook = ropeController != null
+                ? ropeController.ActiveHookPoint
+                : null;
             GUILayout.Label(
-                isShaftAnchor
-                    ? hasCorrectLength
-                        ? "右の緑フックへ接続中：Qで垂れた道を作る"
-                        : "Eで解除し、W/Sで長さ7か8にして再接続"
-                    : "左右の張り出しの間へ降りる長さを考え、右の緑フックへ接続",
+                activeHook != null &&
+                (activeHook.name == MainStageSectionNineSetup.CenterHookName ||
+                 activeHook.name == MainStageSectionNineSetup.RightAnchorName)
+                    ? $"接続中：Qで長さ{MainStageSectionNineSetup.PlatformRopeLength}の足場を作る"
+                    : hasLeft
+                        ? "中央から右の緑フックへ長さ6で接続し、Qで2本目を作る"
+                        : "左岸から中央の青フックへ長さ6で接続し、Qで1本目を作る",
                 accentStyle);
         }
 

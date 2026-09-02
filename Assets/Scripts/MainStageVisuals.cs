@@ -97,7 +97,8 @@ namespace HimoHito
                 if (candidate.TryGetComponent(out HookPoint hookPoint))
                 {
                     bool isBridgeAnchor = candidate.TryGetComponent(
-                        out RopePlatformAnchor _);
+                        out RopePlatformAnchor _) &&
+                        candidate.name != MainStageSectionNineSetup.CenterHookName;
                     Color hookColor = isBridgeAnchor
                         ? MainStageSectionFourSetup.BridgeAnchorColor
                         : HookColor;
@@ -185,7 +186,7 @@ namespace HimoHito
                    objectName == MainStageSectionFiveSetup.LandingName ||
                    objectName == MainStageSectionSixSetup.MergeName ||
                    objectName == MainStageSectionSevenSetup.GoalFloorName ||
-                   objectName == MainStageSectionEightSetup.ExitFloorName ||
+                   objectName == MainStageSectionNineSetup.GoalFloorName ||
                    objectName == "Main S01 Start Shelf" ||
                    objectName == "Main S01 Landing" ||
                    objectName == "Main S02 Raised Landing" ||

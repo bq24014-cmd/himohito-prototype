@@ -17,8 +17,9 @@ namespace HimoHito
         // playtesting should begin from section one again.
         [SerializeField]
         [FormerlySerializedAs("startFromSectionSevenForDevelopment")]
-        private bool startFromSectionEightForDevelopment = true;
-        private const float SectionEightStartingRopeLength = 35f;
+        [FormerlySerializedAs("startFromSectionEightForDevelopment")]
+        private bool startFromSectionNineForDevelopment = true;
+        private const float SectionNineStartingRopeLength = 35f;
 
         [SerializeField] private float fallThreshold = -9f;
         [SerializeField, Min(0.01f)] private float minimumUsableRopeLength = 1f;
@@ -33,12 +34,10 @@ namespace HimoHito
         private float checkpointRopeLength;
         private int checkpointSelectedRopeLength;
         private RopePlatformBuilder.PlatformState[] checkpointPlatformStates;
-        private int lastForcedRestartFrame = -1;
 
         public int CurrentSection { get; private set; } = 1;
         public int RefillCount { get; private set; }
         public bool HasReachedMidpoint => CurrentSection >= 6;
-        public bool HasReachedSectionEight => CurrentSection >= 8;
         public bool HasReachedSectionNine => CurrentSection >= 9;
         public bool HasReachedSectionTen => CurrentSection >= 10;
         public bool IsRopeExhausted { get; private set; }
@@ -52,15 +51,15 @@ namespace HimoHito
             playerMover = GetComponent<PlayerMover>();
             goalZone = FindFirstObjectByType<MainStageGoalZone>();
 
-            if (startFromSectionEightForDevelopment)
+            if (startFromSectionNineForDevelopment)
             {
-                CurrentSection = 8;
+                CurrentSection = 9;
                 body.position =
                     MainStageSectionSevenSetup.GoalRespawnPosition;
                 ropeResource.RestoreCurrentLength(
-                    SectionEightStartingRopeLength);
+                    SectionNineStartingRopeLength);
                 ropeController.RestoreSelectedRopeLength(
-                    MainStageSectionEightSetup.MinimumCorrectLength);
+                    MainStageSectionNineSetup.PlatformRopeLength);
             }
 
             checkpointPosition = body.position;
@@ -69,7 +68,7 @@ namespace HimoHito
 
         private void Start()
         {
-            if (!startFromSectionEightForDevelopment)
+            if (!startFromSectionNineForDevelopment)
             {
                 return;
             }
@@ -77,15 +76,15 @@ namespace HimoHito
             // Apply once more after every Awake has completed. This prevents
             // scene setup components from leaving development Play at an older
             // section checkpoint.
-            CurrentSection = 8;
+            CurrentSection = 9;
             body.position =
                 MainStageSectionSevenSetup.GoalRespawnPosition;
             body.linearVelocity = Vector2.zero;
             body.angularVelocity = 0f;
             ropeResource.RestoreCurrentLength(
-                SectionEightStartingRopeLength);
+                SectionNineStartingRopeLength);
             ropeController.RestoreSelectedRopeLength(
-                MainStageSectionEightSetup.MinimumCorrectLength);
+                MainStageSectionNineSetup.PlatformRopeLength);
             checkpointPosition = body.position;
             CaptureCheckpointState();
         }
@@ -136,17 +135,6 @@ namespace HimoHito
             CaptureCheckpointState();
             IsRopeExhausted = false;
             return true;
-        }
-
-        public void FailCurrentSection()
-        {
-            if (lastForcedRestartFrame == Time.frameCount)
-            {
-                return;
-            }
-
-            lastForcedRestartFrame = Time.frameCount;
-            RestartFromCheckpoint();
         }
 
         private void CaptureCheckpointState()

@@ -104,9 +104,10 @@ namespace HimoHito
                     changed = true;
                 }
 
-                // Preserve the section-six route difference; section eight
-                // must not refill the upper route here.
-                checkpoint.Configure(8, GoalRespawnPosition, 0f);
+                // Preserve the section-six route difference while guaranteeing
+                // the slide's section-nine entry lower bound. Section eight
+                // was removed, so this checkpoint advances directly to nine.
+                checkpoint.Configure(9, GoalRespawnPosition, 23f);
             }
 
             return changed;
