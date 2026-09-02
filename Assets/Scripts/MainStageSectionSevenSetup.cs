@@ -40,8 +40,11 @@ namespace HimoHito
             new Vector2(154.4f, -0.7f);
         public static readonly Vector2 MiddleShelfSize =
             new Vector2(3f, 0.7f);
+        // Jump impulse 10 against gravity 9.81 * 2.8 rises 1.82 at the apex.
+        // The player reaches the 1.1-wide horizontal gap after about 0.20 s,
+        // where the rise is only about 1.46. A 1.2 step keeps collision margin.
         public static readonly Vector2 UpperShelfPosition =
-            new Vector2(158.5f, 0.9f);
+            new Vector2(158.5f, 0.5f);
         public static readonly Vector2 UpperShelfSize =
             new Vector2(3f, 0.7f);
         public static readonly Vector2 UpperHookPosition =
