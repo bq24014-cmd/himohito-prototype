@@ -68,11 +68,10 @@ namespace HimoHito
                 hideFlags = HideFlags.HideAndDontSave
             };
             bodyCollider.sharedMaterial = movementMaterial;
-            // Keep the visible character unchanged while rounding only the
-            // physics corners that can catch on a rising rope curve.
-            bodyCollider.edgeRadius = Mathf.Min(
-                bodyCollider.size.x,
-                bodyCollider.size.y) * 0.25f;
+            // Keep the collider bounds aligned with the visible character.
+            // BoxCollider2D edge radius expands its outer bounds and makes the
+            // sprite appear to float above flat floors.
+            bodyCollider.edgeRadius = 0f;
             previousPhysicsPosition = body.position;
             hasPreviousPhysicsPosition = true;
         }
