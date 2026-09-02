@@ -4,16 +4,21 @@ namespace HimoHito
 {
     /// <summary>
     /// Builds section eight from slide 27 of the 0829 stage manual. The
-    /// generated rope platform must sag into the shaft without touching the
-    /// spikes. A correct depth opens the wooden passage gate on the right.
+    /// generated rope platform must sag through the three-unit shaft mouth
+    /// without touching the spikes, then lead to the low passage on the right.
     /// </summary>
     public static class MainStageSectionEightSetup
     {
         public const string LeftAnchorName = "Main S08 Green Left Rim";
         public const string RightAnchorName = "Main S08 Green Right Rim";
-        public const string DepthGateName = "Main S08 Wooden Depth Gate";
+        public const string RightRimName = "Main S08 Right Rim";
+        public const string LeftShaftLipName = "Main S08 Left Shaft Lip";
+        public const string RightShaftLipName = "Main S08 Right Shaft Lip";
         public const string ExitFloorName = "Main S08 Exit Floor";
         public const string SpikeNamePrefix = "Main S08 Pit Spike";
+
+        private const string LegacyDepthGateName =
+            "Main S08 Wooden Depth Gate";
 
         public const int MinimumBuildLength = 5;
         public const int MaximumBuildLength = 14;
@@ -29,10 +34,16 @@ namespace HimoHito
             new Vector2(175f, RimHeight);
         public static readonly Vector2 RightAnchorPosition =
             new Vector2(180f, RimHeight);
-        public static readonly Vector2 DepthGatePosition =
-            new Vector2(179.1f, -2f);
-        public static readonly Vector2 DepthGateSize =
-            new Vector2(0.7f, 8f);
+        public static readonly Vector2 RightRimPosition =
+            new Vector2(185f, -2.5f);
+        public static readonly Vector2 RightRimSize =
+            new Vector2(10f, 0.7f);
+        public static readonly Vector2 LeftShaftLipPosition =
+            new Vector2(175.5f, -3.65f);
+        public static readonly Vector2 RightShaftLipPosition =
+            new Vector2(179.5f, -3.65f);
+        public static readonly Vector2 ShaftLipSize =
+            new Vector2(1f, 0.3f);
         public static readonly Vector2 ExitFloorPosition =
             new Vector2(184.1f, -10.85f);
         public static readonly Vector2 ExitFloorSize =
@@ -53,7 +64,7 @@ namespace HimoHito
 
         public static bool ApplyCurrentScene()
         {
-            bool changed = false;
+            bool changed = RemoveLegacyObject(LegacyDepthGateName);
             changed |= EnsureBridgeHook(
                 LeftAnchorName,
                 LeftAnchorPosition,
@@ -66,15 +77,20 @@ namespace HimoHito
                 true);
 
             changed |= EnsureTerrain(
-                DepthGateName,
-                DepthGatePosition,
-                DepthGateSize,
-                out GameObject depthGate);
-            if (!depthGate.TryGetComponent(out SectionEightDepthGate _))
-            {
-                depthGate.AddComponent<SectionEightDepthGate>();
-                changed = true;
-            }
+                RightRimName,
+                RightRimPosition,
+                RightRimSize,
+                out _);
+            changed |= EnsureTerrain(
+                LeftShaftLipName,
+                LeftShaftLipPosition,
+                ShaftLipSize,
+                out _);
+            changed |= EnsureTerrain(
+                RightShaftLipName,
+                RightShaftLipPosition,
+                ShaftLipSize,
+                out _);
 
             changed |= EnsureTerrain(
                 ExitFloorName,
@@ -88,8 +104,8 @@ namespace HimoHito
             }
             checkpoint.Configure(9, ExitRespawnPosition, 0f);
 
-            float firstSpikeX = LeftAnchorPosition.x + 0.6f;
-            float lastSpikeX = DepthGatePosition.x - 0.65f;
+            float firstSpikeX = LeftAnchorPosition.x + 1.3f;
+            float lastSpikeX = RightAnchorPosition.x - 1.3f;
             float spikeStep = (lastSpikeX - firstSpikeX) /
                 Mathf.Max(1, SpikeCount - 1);
             for (int i = 0; i < SpikeCount; i++)
@@ -339,6 +355,26 @@ namespace HimoHito
                 }
             }
             return null;
+        }
+
+        private static bool RemoveLegacyObject(string objectName)
+        {
+            GameObject legacy = FindSceneObject(objectName);
+            if (legacy == null)
+            {
+                return false;
+            }
+
+            legacy.SetActive(false);
+            if (Application.isPlaying)
+            {
+                Object.Destroy(legacy);
+            }
+            else
+            {
+                Object.DestroyImmediate(legacy);
+            }
+            return true;
         }
     }
 }

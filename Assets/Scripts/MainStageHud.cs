@@ -284,7 +284,7 @@ namespace HimoHito
                          MainStageSectionEightSetup.MinimumCorrectLength)
                 {
                     GUILayout.Label(
-                        "浅すぎて木のゲートが開かない — Rで戻り、長さ7か8を試す",
+                        "浅すぎて縦穴の口まで降りられない — Rで戻り、長さ7か8を試す",
                         accentStyle);
                 }
                 else
@@ -308,7 +308,7 @@ namespace HimoHito
                     ? hasCorrectLength
                         ? "右の緑フックへ接続中：Qで垂れた道を作る"
                         : "Eで解除し、W/Sで長さ7か8にして再接続"
-                    : "穴の幅を見て、長さ7か8で右の緑フックへ接続",
+                    : "左右の張り出しの間へ降りる長さを考え、右の緑フックへ接続",
                 accentStyle);
         }
 
