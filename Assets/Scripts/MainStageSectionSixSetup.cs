@@ -57,11 +57,11 @@ namespace HimoHito
             new Vector2(2.6f, 0.7f);
 
         public static readonly Vector2 LowerHookAPosition =
-            new Vector2(119.4f, 2.5f);
+            new Vector2(119.4f, 1.6f);
         public static readonly Vector2 LowerHookBPosition =
-            new Vector2(126.8f, 4.9f);
+            new Vector2(126.8f, 1.8f);
         public static readonly Vector2 LowerHookCPosition =
-            new Vector2(133.6f, 5.1f);
+            new Vector2(133.6f, 1.8f);
         public static readonly Vector2 NormalHookSize =
             new Vector2(1.6f, 0.45f);
 
