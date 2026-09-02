@@ -56,6 +56,10 @@ namespace HimoHito
         public int MaximumSelectableRopeLength => GetMaximumSelectableRopeLength();
         public float ActiveRopeLength => activeRopeLength;
         public Color VisibleRopeColor => GetVisibleRopeColor();
+        public bool IsAirChainReconnectOpen =>
+            !IsAttached &&
+            !string.IsNullOrEmpty(pendingAirChainGroup) &&
+            Time.unscaledTime <= airChainReconnectExpiresAt;
 
         private void Awake()
         {
@@ -198,16 +202,22 @@ namespace HimoHito
                 return false;
             }
 
-            if (!TryResolveAttachmentPoint(
-                    worldTarget,
+            bool isAirborne = playerMover != null && !playerMover.IsGrounded;
+            bool useAirChainTarget = IsAirChainReconnectOpen;
+            bool foundTarget = useAirChainTarget
+                ? TryResolveNextAirChainHook(
                     out Vector2 resolvedAnchor,
-                    out HookPoint hookPoint))
+                    out HookPoint hookPoint)
+                : TryResolveAttachmentPoint(
+                    worldTarget,
+                    out resolvedAnchor,
+                    out hookPoint);
+            if (!foundTarget)
             {
                 return false;
             }
 
-            if (playerMover != null &&
-                !playerMover.IsGrounded &&
+            if (isAirborne &&
                 !CanReconnectAirChainTo(hookPoint))
             {
                 return false;
@@ -295,6 +305,45 @@ namespace HimoHito
                    Time.unscaledTime <= airChainReconnectExpiresAt &&
                    targetHook.AirChainGroup == pendingAirChainGroup &&
                    targetHook.AirChainOrder == pendingAirChainOrder + 1;
+        }
+
+        private bool TryResolveNextAirChainHook(
+            out Vector2 resolvedAnchor,
+            out HookPoint hookPoint)
+        {
+            resolvedAnchor = default;
+            hookPoint = null;
+            if (!IsAirChainReconnectOpen)
+            {
+                return false;
+            }
+
+            float shotDistance = Mathf.Min(
+                SelectedRopeLength,
+                maximumShotDistance);
+            foreach (HookPoint candidate in
+                     Object.FindObjectsByType<HookPoint>(
+                         FindObjectsSortMode.None))
+            {
+                if (!CanReconnectAirChainTo(candidate))
+                {
+                    continue;
+                }
+
+                Vector2 candidateAnchor = candidate.GetAttachmentPoint(
+                    candidate.transform.position);
+                if (Vector2.Distance(body.position, candidateAnchor) >
+                    shotDistance + 0.01f)
+                {
+                    continue;
+                }
+
+                resolvedAnchor = candidateAnchor;
+                hookPoint = candidate;
+                return true;
+            }
+
+            return false;
         }
 
         private void ClearAirChainReconnectWindow()

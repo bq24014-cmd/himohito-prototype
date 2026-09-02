@@ -182,6 +182,15 @@ namespace HimoHito
 
         private void DrawSectionSixGuide()
         {
+            if (ropeController != null &&
+                ropeController.IsAirChainReconnectOpen)
+            {
+                GUILayout.Label(
+                    "空中再接続受付中：射程内でEを押すと次の青フックへ接続",
+                    accentStyle);
+                return;
+            }
+
             HookPoint activeHook = ropeController != null
                 ? ropeController.ActiveHookPoint
                 : null;
@@ -201,7 +210,7 @@ namespace HimoHito
                  activeHook.name == MainStageSectionSixSetup.LowerHookCName))
             {
                 GUILayout.Label(
-                    "下ルート：Eで離し、1.5秒以内に次の青フックへ再接続（消費0）",
+                    "下ルート：Eで離し、射程内でもう一度E（次の青フックを自動選択）",
                     accentStyle);
                 return;
             }
