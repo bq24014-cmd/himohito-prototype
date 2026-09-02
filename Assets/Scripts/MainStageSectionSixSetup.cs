@@ -67,11 +67,11 @@ namespace HimoHito
             new Vector2(1.6f, 0.45f);
 
         public static readonly Vector2 MergePosition =
-            new Vector2(144.1f, -7.15f);
+            new Vector2(146.1f, -7.15f);
         public static readonly Vector2 MergeSize =
             new Vector2(8f, 10f);
         public static readonly Vector2 MergeRespawnPosition =
-            new Vector2(140.9f, -1.45f);
+            new Vector2(142.9f, -1.45f);
 
         private static readonly Color TerrainColor =
             new Color(0.56f, 0.29f, 0.09f);
