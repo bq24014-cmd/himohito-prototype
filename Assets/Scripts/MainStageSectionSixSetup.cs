@@ -29,6 +29,7 @@ namespace HimoHito
         public const string LowerHookBName = "Main S06 Lower Hook B";
         public const string LowerHookCName = "Main S06 Lower Hook C";
         public const string MergeName = "Main S06 Merge";
+        private const string LowerAirChainGroup = "MainS06Lower";
 
         public const int UpperBridgeRopeLength = 14;
         public const int LowerRouteRopeLength = 8;
@@ -107,9 +108,9 @@ namespace HimoHito
                 UpperShelfCPosition,
                 UpperShelfCSize);
 
-            changed |= EnsureHook(LowerHookAName, LowerHookAPosition);
-            changed |= EnsureHook(LowerHookBName, LowerHookBPosition);
-            changed |= EnsureHook(LowerHookCName, LowerHookCPosition);
+            changed |= EnsureHook(LowerHookAName, LowerHookAPosition, 1);
+            changed |= EnsureHook(LowerHookBName, LowerHookBPosition, 2);
+            changed |= EnsureHook(LowerHookCName, LowerHookCPosition, 3);
 
             changed |= EnsureTerrain(MergeName, MergePosition, MergeSize);
             GameObject merge = FindSceneObject(MergeName);
@@ -205,7 +206,10 @@ namespace HimoHito
             return changed;
         }
 
-        private static bool EnsureHook(string objectName, Vector2 position)
+        private static bool EnsureHook(
+            string objectName,
+            Vector2 position,
+            int airChainOrder)
         {
             GameObject hook = EnsureObject(
                 objectName,
@@ -219,6 +223,9 @@ namespace HimoHito
                 changed = true;
             }
             changed |= hookPoint.ConfigureFixedAttachmentPoint(Vector2.zero);
+            changed |= hookPoint.ConfigureAirChainStep(
+                LowerAirChainGroup,
+                airChainOrder);
 
             if (hook.TryGetComponent(out RopePlatformAnchor platformAnchor))
             {

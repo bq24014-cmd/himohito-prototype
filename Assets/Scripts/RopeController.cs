@@ -23,6 +23,7 @@ namespace HimoHito
         [SerializeField, Min(1)] private int minimumSelectableRopeLength = 1;
         [SerializeField, Min(0f)] private float lengthSelectionRepeatDelay = 0.35f;
         [SerializeField, Min(0.01f)] private float lengthSelectionRepeatInterval = 0.1f;
+        [SerializeField, Min(0.1f)] private float airChainReconnectWindow = 1.5f;
 
         private Rigidbody2D body;
         private Collider2D bodyCollider;
@@ -41,6 +42,9 @@ namespace HimoHito
         private float activeRopeLength;
         private float nextLengthIncreaseTime;
         private float nextLengthDecreaseTime;
+        private string pendingAirChainGroup;
+        private int pendingAirChainOrder;
+        private float airChainReconnectExpiresAt = float.NegativeInfinity;
         private int selectedRopeLength = 1;
 
         public bool IsAttached => ropeJoint != null && ropeJoint.enabled;
@@ -180,6 +184,7 @@ namespace HimoHito
             ropeVisualSegments = Mathf.Clamp(ropeVisualSegments, 3, 32);
             lengthSelectionRepeatDelay = Mathf.Max(0f, lengthSelectionRepeatDelay);
             lengthSelectionRepeatInterval = Mathf.Max(0.01f, lengthSelectionRepeatInterval);
+            airChainReconnectWindow = Mathf.Max(0.1f, airChainReconnectWindow);
             minimumSelectableRopeLength = Mathf.Clamp(
                 minimumSelectableRopeLength,
                 1,
@@ -188,7 +193,7 @@ namespace HimoHito
 
         public bool TryAttach(Vector2 worldTarget)
         {
-            if (IsAttached || (playerMover != null && !playerMover.IsGrounded))
+            if (IsAttached)
             {
                 return false;
             }
@@ -197,6 +202,13 @@ namespace HimoHito
                     worldTarget,
                     out Vector2 resolvedAnchor,
                     out HookPoint hookPoint))
+            {
+                return false;
+            }
+
+            if (playerMover != null &&
+                !playerMover.IsGrounded &&
+                !CanReconnectAirChainTo(hookPoint))
             {
                 return false;
             }
@@ -212,6 +224,7 @@ namespace HimoHito
             ropeJoint.distance = selectedLength;
             ropeJoint.enabled = true;
             lineRenderer.enabled = true;
+            ClearAirChainReconnectWindow();
             audioFeedback.PlayHookAttached();
             return true;
         }
@@ -246,17 +259,49 @@ namespace HimoHito
             // Disabling the joint must not erase the velocity built up by the pendulum.
             Vector2 preservedVelocity = body.linearVelocity;
             float preservedAngularVelocity = body.angularVelocity;
+            HookPoint releasedHook = activeHookPoint;
             ropeJoint.enabled = false;
             activeHookPoint = null;
             body.linearVelocity = preservedVelocity;
             body.angularVelocity = preservedAngularVelocity;
             lineRenderer.enabled = false;
             activeRopeLength = 0f;
+            OpenAirChainReconnectWindow(releasedHook);
             ClampSelectedRopeLength();
             if (playReleaseSound)
             {
                 audioFeedback.PlayRopeReleased(preservedVelocity.magnitude);
             }
+        }
+
+        private void OpenAirChainReconnectWindow(HookPoint releasedHook)
+        {
+            if (releasedHook == null || !releasedHook.IsAirChainStep)
+            {
+                ClearAirChainReconnectWindow();
+                return;
+            }
+
+            pendingAirChainGroup = releasedHook.AirChainGroup;
+            pendingAirChainOrder = releasedHook.AirChainOrder;
+            airChainReconnectExpiresAt =
+                Time.unscaledTime + airChainReconnectWindow;
+        }
+
+        private bool CanReconnectAirChainTo(HookPoint targetHook)
+        {
+            return targetHook != null &&
+                   targetHook.IsAirChainStep &&
+                   Time.unscaledTime <= airChainReconnectExpiresAt &&
+                   targetHook.AirChainGroup == pendingAirChainGroup &&
+                   targetHook.AirChainOrder == pendingAirChainOrder + 1;
+        }
+
+        private void ClearAirChainReconnectWindow()
+        {
+            pendingAirChainGroup = null;
+            pendingAirChainOrder = 0;
+            airChainReconnectExpiresAt = float.NegativeInfinity;
         }
 
         public bool CommitAttachedRopeAsPlatform(float permanentCost)

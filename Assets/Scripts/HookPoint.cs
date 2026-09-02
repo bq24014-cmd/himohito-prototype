@@ -10,6 +10,13 @@ namespace HimoHito
     {
         [SerializeField] private bool useFixedAttachmentPoint;
         [SerializeField] private Vector2 localAttachmentPoint;
+        [SerializeField] private string airChainGroup;
+        [SerializeField, Min(0)] private int airChainOrder;
+
+        public bool IsAirChainStep =>
+            !string.IsNullOrEmpty(airChainGroup) && airChainOrder > 0;
+        public string AirChainGroup => airChainGroup;
+        public int AirChainOrder => airChainOrder;
 
         private void Awake()
         {
@@ -30,6 +37,17 @@ namespace HimoHito
             useFixedAttachmentPoint = true;
             localAttachmentPoint = localPoint;
             changed |= ConfigureNonSolidColliders();
+            return changed;
+        }
+
+        public bool ConfigureAirChainStep(string groupName, int order)
+        {
+            string nextGroup = order > 0 ? groupName : string.Empty;
+            int nextOrder = string.IsNullOrEmpty(nextGroup) ? 0 : order;
+            bool changed = airChainGroup != nextGroup ||
+                           airChainOrder != nextOrder;
+            airChainGroup = nextGroup;
+            airChainOrder = nextOrder;
             return changed;
         }
 

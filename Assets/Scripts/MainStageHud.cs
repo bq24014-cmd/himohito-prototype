@@ -201,7 +201,7 @@ namespace HimoHito
                  activeHook.name == MainStageSectionSixSetup.LowerHookCName))
             {
                 GUILayout.Label(
-                    "下ルート：Eで離し、次の青フックへつなぐ（消費0）",
+                    "下ルート：Eで離し、1.5秒以内に次の青フックへ再接続（消費0）",
                     accentStyle);
                 return;
             }
