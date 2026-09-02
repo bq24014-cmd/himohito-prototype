@@ -574,6 +574,11 @@ namespace HimoHito
 
             bool isPlayerAttached =
                 ropeController != null && ropeController.IsAttached;
+            bool isBuildingPlatform =
+                isPlayerAttached &&
+                ropeController.ActiveHookPoint != null &&
+                ropeController.ActiveHookPoint.TryGetComponent(
+                    out RopePlatformAnchor _);
             bool isNewAttachment =
                 isPlayerAttached && ropeController.AttachmentSequence !=
                 observedAttachmentSequence;
@@ -595,8 +600,14 @@ namespace HimoHito
                 preserveCollisionUntilSeparated = false;
             }
 
+            // Platform-anchor connections exist only for the immediate E -> Q
+            // build operation. Every generated bridge must remain solid during
+            // that preparation; otherwise the bridge the player is standing on
+            // disappears before the second bridge can be committed.
             bool shouldIgnore =
-                isPlayerAttached && !preserveCollisionUntilSeparated;
+                isPlayerAttached &&
+                !isBuildingPlatform &&
+                !preserveCollisionUntilSeparated;
             if (shouldIgnore == isIgnoringPlayerCollision)
             {
                 return;
