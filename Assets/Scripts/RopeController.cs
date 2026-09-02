@@ -233,7 +233,19 @@ namespace HimoHito
             activeHookPoint = hookPoint;
             ropeJoint.connectedBody = null;
             ropeJoint.connectedAnchor = anchorPoint;
-            ropeJoint.distance = selectedLength;
+            float jointDistance = selectedLength;
+            if (hookPoint != null &&
+                hookPoint.TryGetComponent(out RopePlatformAnchor _))
+            {
+                // A platform Hook is followed by Q, not by a swing. Section 9
+                // intentionally allows a small aiming margin beyond length 6;
+                // do not let the joint shorten that margin and pull the player
+                // off the end of the first bridge before Q can be pressed.
+                jointDistance = Mathf.Max(
+                    jointDistance,
+                    Vector2.Distance(body.position, anchorPoint));
+            }
+            ropeJoint.distance = jointDistance;
             ropeJoint.enabled = true;
             AttachmentSequence++;
             lineRenderer.enabled = true;
