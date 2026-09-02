@@ -81,16 +81,14 @@ namespace HimoHito
                 RightRimPosition,
                 RightRimSize,
                 out _);
-            changed |= EnsureTerrain(
+            changed |= EnsureShaftLip(
                 LeftShaftLipName,
                 LeftShaftLipPosition,
-                ShaftLipSize,
-                out _);
-            changed |= EnsureTerrain(
+                ShaftLipSize);
+            changed |= EnsureShaftLip(
                 RightShaftLipName,
                 RightShaftLipPosition,
-                ShaftLipSize,
-                out _);
+                ShaftLipSize);
 
             changed |= EnsureTerrain(
                 ExitFloorName,
@@ -228,6 +226,29 @@ namespace HimoHito
             {
                 collider.enabled = true;
                 collider.isTrigger = false;
+                changed = true;
+            }
+            return changed;
+        }
+
+        private static bool EnsureShaftLip(
+            string objectName,
+            Vector2 position,
+            Vector2 size)
+        {
+            GameObject lip = EnsureObject(
+                objectName,
+                position,
+                size,
+                TerrainColor,
+                out bool changed);
+            if (lip.TryGetComponent(out BoxCollider2D collider) &&
+                collider.enabled)
+            {
+                // The slide uses these ledges to show the three-unit mouth.
+                // A solid box edge catches the player's rear corner while the
+                // sagging path descends diagonally, so they remain visual only.
+                collider.enabled = false;
                 changed = true;
             }
             return changed;
