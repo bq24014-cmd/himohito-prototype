@@ -14,8 +14,8 @@ namespace HimoHito
     {
         // Temporary development switch. Set this to false when full-stage
         // playtesting should begin from section one again.
-        private const bool StartFromSectionSixForDevelopment = true;
-        private const float SectionSixStartingRopeLength = 39f;
+        private const bool StartFromSectionSevenForDevelopment = true;
+        private const float SectionSevenStartingRopeLength = 39f;
 
         [SerializeField] private float fallThreshold = -9f;
         [SerializeField, Min(0.01f)] private float minimumUsableRopeLength = 1f;
@@ -48,15 +48,15 @@ namespace HimoHito
             playerMover = GetComponent<PlayerMover>();
             goalZone = FindFirstObjectByType<MainStageGoalZone>();
 
-            if (StartFromSectionSixForDevelopment)
+            if (StartFromSectionSevenForDevelopment)
             {
-                CurrentSection = 6;
+                CurrentSection = 7;
                 body.position =
-                    MainStageSectionFiveSetup.LandingRespawnPosition;
+                    MainStageSectionSixSetup.MergeRespawnPosition;
                 ropeResource.RestoreCurrentLength(
-                    SectionSixStartingRopeLength);
+                    SectionSevenStartingRopeLength);
                 ropeController.RestoreSelectedRopeLength(
-                    MainStageSectionSixSetup.UpperBridgeRopeLength);
+                    MainStageSectionSevenSetup.BridgeRopeLength);
             }
 
             checkpointPosition = body.position;
@@ -65,7 +65,7 @@ namespace HimoHito
 
         private void Start()
         {
-            if (!StartFromSectionSixForDevelopment)
+            if (!StartFromSectionSevenForDevelopment)
             {
                 return;
             }
@@ -73,15 +73,15 @@ namespace HimoHito
             // Apply once more after every Awake has completed. This prevents
             // scene setup components from leaving development Play at an older
             // section checkpoint.
-            CurrentSection = 6;
+            CurrentSection = 7;
             body.position =
-                MainStageSectionFiveSetup.LandingRespawnPosition;
+                MainStageSectionSixSetup.MergeRespawnPosition;
             body.linearVelocity = Vector2.zero;
             body.angularVelocity = 0f;
             ropeResource.RestoreCurrentLength(
-                SectionSixStartingRopeLength);
+                SectionSevenStartingRopeLength);
             ropeController.RestoreSelectedRopeLength(
-                MainStageSectionSixSetup.UpperBridgeRopeLength);
+                MainStageSectionSevenSetup.BridgeRopeLength);
             checkpointPosition = body.position;
             CaptureCheckpointState();
         }
@@ -122,6 +122,12 @@ namespace HimoHito
             {
                 ropeResource.RestoreCurrentLength(minimumRopeAfterCheckpoint);
                 RefillCount++;
+            }
+            if (CurrentSection == 7)
+            {
+                MainStageSectionSevenSetup.PrepareEntryPlatform(
+                    platformBuilder,
+                    ropeResource.CurrentLength);
             }
             CaptureCheckpointState();
             IsRopeExhausted = false;

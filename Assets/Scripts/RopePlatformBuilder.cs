@@ -173,6 +173,50 @@ namespace HimoHito
             }
         }
 
+        public bool EnsureAuthoredPlatform(
+            Vector2 start,
+            Vector2 end,
+            float ropeLength)
+        {
+            if (HasPlatformBetween(start, end, ropeLength))
+            {
+                return false;
+            }
+
+            CreatePlatform(start, end, ropeLength);
+            return true;
+        }
+
+        public bool HasPlatformBetween(
+            Vector2 start,
+            Vector2 end,
+            float ropeLength)
+        {
+            foreach (GameObject platformObject in generatedPlatforms)
+            {
+                if (platformObject == null ||
+                    !platformObject.TryGetComponent(
+                        out GeneratedRopePlatform platform))
+                {
+                    continue;
+                }
+
+                bool sameDirection =
+                    Vector2.Distance(platform.Start, start) <= 0.1f &&
+                    Vector2.Distance(platform.End, end) <= 0.1f;
+                bool reverseDirection =
+                    Vector2.Distance(platform.Start, end) <= 0.1f &&
+                    Vector2.Distance(platform.End, start) <= 0.1f;
+                if ((sameDirection || reverseDirection) &&
+                    Mathf.Abs(platform.RopeLength - ropeLength) <= 0.05f)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
         public void ClearPlatforms()
         {
             RestoreRemovedHooks();

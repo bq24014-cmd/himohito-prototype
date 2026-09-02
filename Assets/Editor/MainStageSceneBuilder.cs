@@ -196,12 +196,7 @@ namespace HimoHitoEditor
 
         private static void BuildSection7()
         {
-            CreateTerrain("Main S07 Lower Start", new Vector2(106f, 4.5f), new Vector2(3f, 0.7f));
-            CreateTerrain("Main S07 Middle Shelf", new Vector2(111f, 6.5f), new Vector2(3f, 0.7f));
-            CreateTerrain("Main S07 Upper Step", new Vector2(115f, 8.5f), new Vector2(3f, 0.7f));
-            CreateHook("Main S07 Upper Hook", new Vector2(120f, 11f));
-            GameObject landing = CreateTerrain("Main S07 Landing", new Vector2(125f, 6f), new Vector2(5f, 0.7f));
-            AddCheckpoint(landing, 8, new Vector2(124f, 6.65f), 30f);
+            MainStageSectionSevenSetup.ApplyCurrentScene();
         }
 
         private static void BuildSection8()

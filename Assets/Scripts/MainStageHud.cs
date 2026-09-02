@@ -101,6 +101,12 @@ namespace HimoHito
             {
                 DrawSectionSixGuide();
             }
+            else if (respawn != null &&
+                     respawn.CurrentSection == 7 &&
+                     platformBuilder != null)
+            {
+                DrawSectionSevenGuide();
+            }
             else
             {
                 GUILayout.Label("おもちゃ箱のゴールを目指す", accentStyle);
@@ -218,6 +224,41 @@ namespace HimoHito
             GUILayout.Label(
                 $"上：長さ{MainStageSectionSixSetup.UpperBridgeRopeLength}の緑フックで安全橋　" +
                 $"下：長さ{MainStageSectionSixSetup.LowerRouteRopeLength}で青フック3連続",
+                accentStyle);
+        }
+
+        private void DrawSectionSevenGuide()
+        {
+            bool hasFirstBridge = platformBuilder.HasPlatformBetween(
+                MainStageSectionSevenSetup.BridgeStartHookPosition,
+                MainStageSectionSevenSetup.BridgeEndHookPosition,
+                MainStageSectionSevenSetup.BridgeRopeLength);
+            if (!hasFirstBridge)
+            {
+                bool isBridgeAnchor = ropeController != null &&
+                    ropeController.ActiveHookPoint != null &&
+                    ropeController.ActiveHookPoint.name ==
+                        MainStageSectionSevenSetup.BridgeEndHookName;
+                GUILayout.Label(
+                    isBridgeAnchor
+                        ? "緑フックへ接続中：Qで長さ4の足場を先に作る"
+                        : "先に長さ4で中段の緑フックへ接続し、Qで足場化",
+                    accentStyle);
+                return;
+            }
+
+            if (playerBody != null &&
+                playerBody.position.x <
+                    MainStageSectionSevenSetup.UpperShelfPosition.x - 0.5f)
+            {
+                GUILayout.Label(
+                    "作った足場で中段へ渡り、中段から上段へジャンプ",
+                    accentStyle);
+                return;
+            }
+
+            GUILayout.Label(
+                "上段から長さ5で青フックへ接続し、右の床へ振り渡る",
                 accentStyle);
         }
 
