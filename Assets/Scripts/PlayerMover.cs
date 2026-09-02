@@ -63,11 +63,16 @@ namespace HimoHito
 
             movementMaterial = new PhysicsMaterial2D("Player Movement Material")
             {
-                friction = 0.1f,
+                friction = 0f,
                 bounciness = 0f,
                 hideFlags = HideFlags.HideAndDontSave
             };
             bodyCollider.sharedMaterial = movementMaterial;
+            // Keep the visible character unchanged while rounding only the
+            // physics corners that can catch on a rising rope curve.
+            bodyCollider.edgeRadius = Mathf.Min(
+                bodyCollider.size.x,
+                bodyCollider.size.y) * 0.25f;
             previousPhysicsPosition = body.position;
             hasPreviousPhysicsPosition = true;
         }

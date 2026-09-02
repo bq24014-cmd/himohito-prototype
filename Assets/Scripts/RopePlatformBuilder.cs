@@ -14,6 +14,7 @@ namespace HimoHito
     {
         private const float StandingClearance = 0.005f;
         private const float SharedEndpointTolerance = 0.35f;
+        private const int MinimumSmoothCurveSegments = 40;
 
         [Serializable]
         public readonly struct PlatformState
@@ -346,7 +347,7 @@ namespace HimoHito
 
         private Vector2[] BuildSaggingCurve(Vector2 start, Vector2 end, float ropeLength)
         {
-            int count = Mathf.Max(5, curveSegments);
+            int count = Mathf.Max(MinimumSmoothCurveSegments, curveSegments);
             Vector2[] points = new Vector2[count];
             float slack = Mathf.Max(0f, ropeLength - Vector2.Distance(start, end));
             for (int i = 0; i < count; i++)
