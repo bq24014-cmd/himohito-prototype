@@ -20,7 +20,8 @@ namespace HimoHitoEditor
             Scene scene = EditorSceneManager.NewScene(
                 NewSceneSetup.EmptyScene,
                 NewSceneMode.Single);
-            GameObject player = CreatePlayer(new Vector2(-4f, 0.65f));
+            GameObject player = CreatePlayer(
+                TutorialSectionOneSetup.StartRespawnPosition);
 
             BuildT1();
             BuildT2();
@@ -49,10 +50,7 @@ namespace HimoHitoEditor
 
         private static void BuildT1()
         {
-            CreateTerrain("Start Ground", new Vector2(-4f, 0f), new Vector2(6f, 0.7f));
-            CreateHook("Tutorial Hook", new Vector2(2f, 6.6f));
-            GameObject landing = CreateTerrain("Tutorial Landing", new Vector2(8f, 0f), new Vector2(5f, 0.7f));
-            AddCheckpoint(landing, 2, new Vector2(8f, 0.65f), 8);
+            TutorialSectionOneSetup.EnsureCreated();
         }
 
         private static void BuildT2()

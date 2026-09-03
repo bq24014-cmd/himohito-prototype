@@ -109,11 +109,15 @@ namespace HimoHito
 
             if (ropeController != null)
             {
+                bool isFirstSection = runController != null &&
+                    runController.CurrentTutorialSection == 1;
                 GUILayout.Label(
-                    $"次に使う長さ  {ropeController.SelectedRopeLength} / " +
-                    $"{ropeController.MaximumSelectableRopeLength}",
+                    isFirstSection
+                        ? "使用する長さ  6（固定）"
+                        : $"次に使う長さ  {ropeController.SelectedRopeLength} / " +
+                          $"{ropeController.MaximumSelectableRopeLength}",
                     bodyStyle);
-                if (runController == null || runController.CurrentTutorialSection >= 2)
+                if (!isFirstSection)
                 {
                     GUILayout.Label("W：使う長さを1増やす", bodyStyle);
                     GUILayout.Label("S：使う長さを1減らす", bodyStyle);
@@ -145,9 +149,20 @@ namespace HimoHito
             {
                 GUILayout.Label($"速度  {playerBody.linearVelocity.magnitude:0.0}", bodyStyle);
             }
-            GUILayout.Label("移動：A / D    ジャンプ：Space", bodyStyle);
-            GUILayout.Label("照準：← / →    真上・真下：↑ / ↓", bodyStyle);
-            GUILayout.Label("ヒモ：Eで接続／解除    この区間から再挑戦：R", bodyStyle);
+            bool showFirstSectionControls = runController != null &&
+                runController.CurrentTutorialSection == 1;
+            if (showFirstSectionControls)
+            {
+                GUILayout.Label("A / D：歩く（掛けたまま歩き出すと振り子になる）", bodyStyle);
+                GUILayout.Label("E：頭上のHookへヒモを掛ける／外す", bodyStyle);
+                GUILayout.Label("R：この区間の最初から再挑戦", bodyStyle);
+            }
+            else
+            {
+                GUILayout.Label("移動：A / D    ジャンプ：Space", bodyStyle);
+                GUILayout.Label("照準：← / →    真上・真下：↑ / ↓", bodyStyle);
+                GUILayout.Label("ヒモ：Eで接続／解除    この区間から再挑戦：R", bodyStyle);
+            }
             if (runController == null || runController.CurrentTutorialSection >= 3)
             {
                 GUILayout.Label("足場化：ヒモ接続中にQ（選んだ長さを永久消費）", bodyStyle);
@@ -156,7 +171,10 @@ namespace HimoHito
             {
                 GUILayout.Label("まとめる：2本が集まるHookへ照準を合わせてF", bodyStyle);
             }
-            GUILayout.Label("マウス照準も使用可能", bodyStyle);
+            if (!showFirstSectionControls)
+            {
+                GUILayout.Label("マウス照準も使用可能", bodyStyle);
+            }
             GUILayout.EndArea();
 
             DrawWeavePrompt();
@@ -247,19 +265,15 @@ namespace HimoHito
             GUILayout.BeginArea(panel, GUI.skin.box);
             GUILayout.Space(24f);
             GUILayout.Label("HIMOHITO", startTitleStyle);
-            GUILayout.Label("5つの区間でヒモの使い方を覚える", startObjectiveStyle);
+            GUILayout.Label("T1　掛けて、振って、渡る", startObjectiveStyle);
             GUILayout.Space(22f);
-            GUILayout.Label("重要", startImportantStyle);
-            GUILayout.Label("W：次に使うヒモの長さを1増やす", startImportantStyle);
-            GUILayout.Label("S：次に使うヒモの長さを1減らす", startImportantStyle);
+            GUILayout.Label("最初に覚えること", startImportantStyle);
+            GUILayout.Label("A / D：谷の手前まで歩く", startImportantStyle);
+            GUILayout.Label("E：頭上のHookへヒモを掛ける", startImportantStyle);
+            GUILayout.Label("掛けたまま歩き出すと、振り子になる", startImportantStyle);
             GUILayout.Space(20f);
-            GUILayout.Label("A / D  左右移動     Space  ジャンプ", startControlStyle);
-            GUILayout.Label("← / →  照準を動かす     ↑ / ↓  真上・真下へ合わせる", startControlStyle);
-            GUILayout.Label("E 1回目  ヒモを掛ける", startControlStyle);
-            GUILayout.Label("E 2回目  勢いを保ってヒモを外す", startControlStyle);
-            GUILayout.Label("Q  接続中のヒモを足場にする（足場化した時だけ消費）", startControlStyle);
-            GUILayout.Label("F  2本が集まるHookを外して1本にまとめる", startControlStyle);
-            GUILayout.Label("R  現在の区間から再挑戦", startControlStyle);
+            GUILayout.Label("長さは6で固定。W / SとQはまだ使いません", startControlStyle);
+            GUILayout.Label("失敗してもヒモは減りません。何度でも試せます", startControlStyle);
             GUILayout.FlexibleSpace();
             GUILayout.Label("キーボードの何かのキーを押して開始", startPromptStyle);
             GUILayout.Space(24f);

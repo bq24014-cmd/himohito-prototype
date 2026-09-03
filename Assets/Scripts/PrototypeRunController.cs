@@ -59,6 +59,7 @@ namespace HimoHito
 
         private void Awake()
         {
+            TutorialSectionOneSetup.ApplyCurrentScene();
             TutorialFirstSectionVisuals.Apply(gameObject);
 
             body = GetComponent<Rigidbody2D>();
@@ -70,6 +71,9 @@ namespace HimoHito
                 platformBuilder = gameObject.AddComponent<RopePlatformBuilder>();
             }
             playerMover = GetComponent<PlayerMover>();
+            body.position = TutorialSectionOneSetup.StartRespawnPosition;
+            ropeController.RestoreSelectedRopeLength(
+                TutorialSectionOneSetup.FixedRopeLength);
             startPosition = body.position;
 
         }
@@ -131,7 +135,9 @@ namespace HimoHito
             {
                 Finish(RunOutcome.Failed, RunFailureReason.Fell);
                 IsAutomaticRespawnPending = true;
-                automaticRespawnTimer = fallRespawnDelay;
+                automaticRespawnTimer = CurrentTutorialSection == 1
+                    ? 0.15f
+                    : fallRespawnDelay;
                 return;
             }
 
@@ -203,12 +209,19 @@ namespace HimoHito
             Vector2 respawnPosition,
             int startingRopeLength)
         {
+            bool isCompletingFirstSection =
+                CurrentTutorialSection == 1 && sectionNumber == 2;
             if (Outcome != RunOutcome.Playing ||
-                ropeController.IsAttached ||
+                (ropeController.IsAttached && !isCompletingFirstSection) ||
                 sectionNumber <= CurrentTutorialSection ||
                 sectionNumber > TutorialSectionCount)
             {
                 return;
+            }
+
+            if (isCompletingFirstSection && ropeController.IsAttached)
+            {
+                ropeController.DetachAndRefund();
             }
 
             CurrentTutorialSection = sectionNumber;

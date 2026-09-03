@@ -50,10 +50,13 @@ namespace HimoHito
                 "Orange Block Platform Visual",
                 BlockResourcePath,
                 1);
+            changed |= RemoveChild(
+                FindSceneObject("Tutorial Landing"),
+                "Blue Railway Platform Visual");
             changed |= EnsureToyVisual(
                 "Tutorial Landing",
-                "Blue Railway Platform Visual",
-                RailResourcePath,
+                "Orange Block Platform Visual",
+                BlockResourcePath,
                 1);
             changed |= EnsureToyVisual(
                 "Tutorial Hook",
@@ -93,6 +96,32 @@ namespace HimoHito
             changed |= EnsureFixedHookAttachmentPoint("Hook 2");
             changed |= EnsureFixedHookAttachmentPoint("Hook 3");
             return changed;
+        }
+
+        private static bool RemoveChild(
+            GameObject parent,
+            string childName)
+        {
+            if (parent == null)
+            {
+                return false;
+            }
+
+            Transform child = parent.transform.Find(childName);
+            if (child == null)
+            {
+                return false;
+            }
+
+            if (Application.isPlaying)
+            {
+                Object.Destroy(child.gameObject);
+            }
+            else
+            {
+                Object.DestroyImmediate(child.gameObject);
+            }
+            return true;
         }
 
         public static Sprite LoadProcessedToySprite(string resourcePath)
