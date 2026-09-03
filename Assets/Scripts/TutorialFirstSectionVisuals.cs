@@ -550,16 +550,7 @@ namespace HimoHito
 
         private static GameObject FindSceneObject(string objectName)
         {
-            foreach (GameObject candidate in
-                     Resources.FindObjectsOfTypeAll<GameObject>())
-            {
-                if (candidate.scene.IsValid() && candidate.name == objectName)
-                {
-                    return candidate;
-                }
-            }
-
-            return null;
+            return SceneObjectLookup.Find(objectName);
         }
     }
 }

@@ -133,6 +133,7 @@
 | `Assets/Scripts/PlayerMover.cs` | 地上・空中・振り子中の移動 |
 | `Assets/Scripts/PrototypeRunController.cs` | チュートリアルの進行と再挑戦 |
 | `Assets/Scripts/MainStageRespawnOnFall.cs` | 本編の区間進行、資源下限、再挑戦 |
+| `Assets/Scripts/SceneObjectLookup.cs` | 非アクティブを含むシーン内オブジェクト検索の共通処理 |
 | `Assets/Editor/PrototypeSceneBuilder.cs` | チュートリアル4区間の再構築 |
 | `Assets/Editor/MainStageSceneBuilder.cs` | 本編の実装済み区間の再構築と旧オブジェクト整理 |
 
