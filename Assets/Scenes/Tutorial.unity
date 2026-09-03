@@ -1424,7 +1424,8 @@ MonoBehaviour:
   m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.TutorialCheckpoint
   sectionNumber: 2
-  respawnPosition: {x: -9, y: -4.2}
+  respawnPosition: {x: 12, y: 0.95}
+  startingRopeLength: 8
 --- !u!61 &1431599382
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1552,7 +1553,7 @@ Transform:
   m_GameObject: {fileID: 1431599380}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8, y: -4.65, z: 0}
+  m_LocalPosition: {x: 12, y: -4.65, z: 0}
   m_LocalScale: {x: 6, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

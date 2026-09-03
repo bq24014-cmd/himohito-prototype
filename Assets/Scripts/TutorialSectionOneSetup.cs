@@ -24,7 +24,7 @@ namespace HimoHito
         public static readonly Vector2 HookPosition =
             new Vector2(2f, 5.9f);
         public static readonly Vector2 LandingFloorPosition =
-            new Vector2(8f, -4.65f);
+            new Vector2(12f, -4.65f);
         public static readonly Vector2 LandingFloorSize =
             new Vector2(6f, 10f);
         public static readonly Vector2 StartRespawnPosition =
@@ -33,7 +33,7 @@ namespace HimoHito
                 StartFloorPosition.y + StartFloorSize.y * 0.5f +
                 PlayerColliderWorldHeight * 0.5f - StartGroundingInset);
         public static readonly Vector2 LandingRespawnPosition =
-            new Vector2(8f, 0.95f);
+            new Vector2(12f, 0.95f);
 
         private static readonly Vector2 HookSize =
             new Vector2(1.6f, 0.45f);

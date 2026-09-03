@@ -3,7 +3,7 @@ using UnityEngine;
 namespace HimoHito
 {
     /// <summary>
-    /// Saves tutorial progress after the player lands and releases the rope.
+    /// Saves tutorial progress after the player lands.
     /// </summary>
     [RequireComponent(typeof(Collider2D))]
     public sealed class TutorialCheckpoint : MonoBehaviour

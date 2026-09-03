@@ -210,19 +210,14 @@ namespace HimoHito
             Vector2 respawnPosition,
             int startingRopeLength)
         {
-            bool isCompletingFirstSection =
+            bool canReachCheckpointWhileAttached =
                 CurrentTutorialSection == 1 && sectionNumber == 2;
             if (Outcome != RunOutcome.Playing ||
-                (ropeController.IsAttached && !isCompletingFirstSection) ||
+                (ropeController.IsAttached && !canReachCheckpointWhileAttached) ||
                 sectionNumber <= CurrentTutorialSection ||
                 sectionNumber > TutorialSectionCount)
             {
                 return;
-            }
-
-            if (isCompletingFirstSection && ropeController.IsAttached)
-            {
-                ropeController.DetachAndRefund();
             }
 
             CurrentTutorialSection = sectionNumber;
