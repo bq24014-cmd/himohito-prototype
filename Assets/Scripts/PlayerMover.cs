@@ -281,6 +281,22 @@ namespace HimoHito
             // along the local bridge surface. Jumping is applied afterwards as
             // a separate upward impulse, so this does not weaken takeoff.
             body.linearVelocity = tangent * nextSurfaceSpeed;
+
+            if (Mathf.Approximately(moveInput, 0f))
+            {
+                // Keep the existing friction and the part of gravity that
+                // presses the player into the bridge. Cancel only gravity's
+                // component along the local slope so an idle player behaves
+                // like they are held by static friction instead of creeping
+                // toward the sagging bridge's lowest point every physics step.
+                Vector2 gravityForce =
+                    Physics2D.gravity * body.gravityScale * body.mass;
+                float forceAlongSurface =
+                    Vector2.Dot(gravityForce, tangent);
+                body.AddForce(
+                    -tangent * forceAlongSurface,
+                    ForceMode2D.Force);
+            }
         }
 
         private void ApplyAirControl()
