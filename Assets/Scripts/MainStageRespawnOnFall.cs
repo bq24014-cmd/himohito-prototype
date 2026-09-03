@@ -18,8 +18,9 @@ namespace HimoHito
         [SerializeField]
         [FormerlySerializedAs("startFromSectionSevenForDevelopment")]
         [FormerlySerializedAs("startFromSectionEightForDevelopment")]
-        private bool startFromSectionNineForDevelopment = true;
-        private const float SectionNineStartingRopeLength = 27f;
+        [FormerlySerializedAs("startFromSectionNineForDevelopment")]
+        private bool startFromSectionTenForDevelopment = true;
+        private const float SectionTenStartingRopeLength = 15f;
 
         [SerializeField] private float fallThreshold = -9f;
         [SerializeField, Min(0.01f)] private float minimumUsableRopeLength = 1f;
@@ -51,15 +52,15 @@ namespace HimoHito
             playerMover = GetComponent<PlayerMover>();
             goalZone = FindFirstObjectByType<MainStageGoalZone>();
 
-            if (startFromSectionNineForDevelopment)
+            if (startFromSectionTenForDevelopment)
             {
-                CurrentSection = 9;
+                CurrentSection = 10;
                 body.position =
-                    MainStageSectionSevenSetup.GoalRespawnPosition;
+                    MainStageSectionNineSetup.GoalRespawnPosition;
                 ropeResource.RestoreCurrentLength(
-                    SectionNineStartingRopeLength);
+                    SectionTenStartingRopeLength);
                 ropeController.RestoreSelectedRopeLength(
-                    MainStageSectionNineSetup.PlatformRopeLength);
+                    MainStageSectionTenSetup.BridgeRopeLength);
             }
 
             checkpointPosition = body.position;
@@ -69,7 +70,7 @@ namespace HimoHito
         private void Start()
         {
             goalZone ??= FindFirstObjectByType<MainStageGoalZone>();
-            if (!startFromSectionNineForDevelopment)
+            if (!startFromSectionTenForDevelopment)
             {
                 return;
             }
@@ -77,15 +78,15 @@ namespace HimoHito
             // Apply once more after every Awake has completed. This prevents
             // scene setup components from leaving development Play at an older
             // section checkpoint.
-            CurrentSection = 9;
+            CurrentSection = 10;
             body.position =
-                MainStageSectionSevenSetup.GoalRespawnPosition;
+                MainStageSectionNineSetup.GoalRespawnPosition;
             body.linearVelocity = Vector2.zero;
             body.angularVelocity = 0f;
             ropeResource.RestoreCurrentLength(
-                SectionNineStartingRopeLength);
+                SectionTenStartingRopeLength);
             ropeController.RestoreSelectedRopeLength(
-                MainStageSectionNineSetup.PlatformRopeLength);
+                MainStageSectionTenSetup.BridgeRopeLength);
             checkpointPosition = body.position;
             CaptureCheckpointState();
         }
