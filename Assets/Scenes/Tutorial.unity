@@ -252,6 +252,7 @@ MonoBehaviour:
   fallThreshold: -9
   fallRespawnDelay: 0.5
   minimumUsableRopeLength: 1
+  startFromSectionThreeForDevelopment: 1
 --- !u!114 &631669799
 MonoBehaviour:
   m_ObjectHideFlags: 0

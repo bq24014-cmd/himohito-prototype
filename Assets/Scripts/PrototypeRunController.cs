@@ -28,6 +28,7 @@ namespace HimoHito
         [SerializeField] private float fallThreshold = -9f;
         [SerializeField, Min(0f)] private float fallRespawnDelay = 0.5f;
         [SerializeField, Min(0.01f)] private float minimumUsableRopeLength = 1f;
+        [SerializeField] private bool startFromSectionThreeForDevelopment = true;
 
         private Rigidbody2D body;
         private RopeResource ropeResource;
@@ -37,6 +38,8 @@ namespace HimoHito
         private Vector2 startPosition;
         private float startRopeCapacity;
         private float startRopeLength;
+        private int startSelectedRopeLength;
+        private int startTutorialSection = 1;
         private Vector2 checkpointPosition;
         private float checkpointRopeLength;
         private int checkpointSelectedRopeLength;
@@ -75,13 +78,29 @@ namespace HimoHito
                 platformBuilder = gameObject.AddComponent<RopePlatformBuilder>();
             }
             playerMover = GetComponent<PlayerMover>();
-            body.position = TutorialSectionOneSetup.StartRespawnPosition;
+            if (startFromSectionThreeForDevelopment)
+            {
+                startTutorialSection = 3;
+                CurrentTutorialSection = 3;
+                body.position =
+                    TutorialSectionTwoSetup.LandingRespawnPosition;
+                ropeResource.RestoreCapacityAndCurrent(
+                    TutorialSectionThreeSetup.StartingRopeAmount,
+                    TutorialSectionThreeSetup.StartingRopeAmount);
+                ropeController.RestoreSelectedRopeLength(
+                    TutorialSectionThreeSetup.RequiredRopeLength);
+            }
+            else
+            {
+                body.position = TutorialSectionOneSetup.StartRespawnPosition;
+                ropeController.RestoreSelectedRopeLength(
+                    TutorialSectionOneSetup.StartingRopeLength);
+            }
             Physics2D.SyncTransforms();
-            ropeController.RestoreSelectedRopeLength(
-                TutorialSectionOneSetup.StartingRopeLength);
             startPosition = body.position;
             startRopeCapacity = ropeResource.MaximumLength;
             startRopeLength = ropeResource.CurrentLength;
+            startSelectedRopeLength = ropeController.SelectedRopeLength;
 
         }
 
@@ -268,9 +287,11 @@ namespace HimoHito
                 startRopeLength);
             platformBuilder.ClearPlatforms();
 
-            CurrentTutorialSection = 1;
+            CurrentTutorialSection = startTutorialSection;
             checkpointPosition = startPosition;
             body.position = startPosition;
+            ropeController.RestoreSelectedRopeLength(
+                startSelectedRopeLength);
             CaptureCheckpointState();
             ResetMotionAndResume();
         }

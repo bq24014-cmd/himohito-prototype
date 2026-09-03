@@ -271,16 +271,40 @@ namespace HimoHito
             GUILayout.BeginArea(panel, GUI.skin.box);
             GUILayout.Space(24f);
             GUILayout.Label("HIMOHITO", startTitleStyle);
-            GUILayout.Label("T1　掛けて、振って、渡る", startObjectiveStyle);
+            bool startsFromSectionThree = runController != null &&
+                runController.CurrentTutorialSection == 3;
+            GUILayout.Label(
+                startsFromSectionThree
+                    ? "T3　編む — 初めて、体が減る"
+                    : "T1　掛けて、振って、渡る",
+                startObjectiveStyle);
             GUILayout.Space(22f);
             GUILayout.Label("最初に覚えること", startImportantStyle);
-            GUILayout.Label("A / D：谷の手前まで歩く", startImportantStyle);
-            GUILayout.Label("矢印キーでHookへ照準を合わせる", startImportantStyle);
-            GUILayout.Label("E：狙ったHookへヒモを掛ける", startImportantStyle);
-            GUILayout.Label("掛けたまま歩き出すと、振り子になる", startImportantStyle);
+            if (startsFromSectionThree)
+            {
+                GUILayout.Label("A / D：谷の手前まで歩く", startImportantStyle);
+                GUILayout.Label("対岸の床面へ長さ7で照準を合わせる", startImportantStyle);
+                GUILayout.Label("E：床面へヒモを掛ける", startImportantStyle);
+                GUILayout.Label("Q：掛けたヒモを足場にする", startImportantStyle);
+            }
+            else
+            {
+                GUILayout.Label("A / D：谷の手前まで歩く", startImportantStyle);
+                GUILayout.Label("矢印キーでHookへ照準を合わせる", startImportantStyle);
+                GUILayout.Label("E：狙ったHookへヒモを掛ける", startImportantStyle);
+                GUILayout.Label("掛けたまま歩き出すと、振り子になる", startImportantStyle);
+            }
             GUILayout.Space(20f);
-            GUILayout.Label("W / Sで長さ変更、矢印キーで照準。Qはまだ使いません", startControlStyle);
-            GUILayout.Label("失敗してもヒモは減りません。何度でも試せます", startControlStyle);
+            GUILayout.Label(
+                startsFromSectionThree
+                    ? "足場にした長さ7は永久に消費され、残量20から13になります"
+                    : "W / Sで長さ変更、矢印キーで照準。Qはまだ使いません",
+                startControlStyle);
+            GUILayout.Label(
+                startsFromSectionThree
+                    ? "失敗時は第3区間の最初から再挑戦できます"
+                    : "失敗してもヒモは減りません。何度でも試せます",
+                startControlStyle);
             GUILayout.FlexibleSpace();
             GUILayout.Label("キーボードの何かのキーを押して開始", startPromptStyle);
             GUILayout.Space(24f);
