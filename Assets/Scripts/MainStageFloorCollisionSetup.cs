@@ -30,6 +30,7 @@ namespace HimoHito
             changed |= MainStageSectionSixSetup.ApplyCurrentScene();
             changed |= MainStageSectionSevenSetup.ApplyCurrentScene();
             changed |= MainStageSectionNineSetup.ApplyCurrentScene();
+            changed |= MainStageSectionTenSetup.ApplyCurrentScene();
             foreach (GameObject candidate in
                      Resources.FindObjectsOfTypeAll<GameObject>())
             {

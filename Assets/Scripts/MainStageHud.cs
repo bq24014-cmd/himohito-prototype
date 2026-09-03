@@ -37,8 +37,14 @@ namespace HimoHito
             sectionTitleUntil = Time.unscaledTime + 1.2f;
         }
 
+        private void Start()
+        {
+            goal ??= FindFirstObjectByType<MainStageGoalZone>();
+        }
+
         private void OnGUI()
         {
+            goal ??= FindFirstObjectByType<MainStageGoalZone>();
             EnsureStyles();
             if (goal != null && goal.IsClear)
             {
@@ -113,6 +119,12 @@ namespace HimoHito
             {
                 DrawSectionNineGuide();
             }
+            else if (respawn != null &&
+                     respawn.CurrentSection == 10 &&
+                     platformBuilder != null)
+            {
+                DrawSectionTenGuide();
+            }
             else
             {
                 GUILayout.Label("おもちゃ箱のゴールを目指す", accentStyle);
@@ -128,7 +140,7 @@ namespace HimoHito
             {
                 GUILayout.Label("Q：接続中のヒモを足場化", bodyStyle);
             }
-            if (respawn != null && respawn.CurrentSection >= 9)
+            if (respawn != null && respawn.CurrentSection == 9)
             {
                 GUILayout.Label("F：2本が集まるHookを外して1本にまとめる", bodyStyle);
             }
@@ -301,6 +313,27 @@ namespace HimoHito
                     : hasLeft
                         ? "中央から右の緑フックへ長さ6で接続し、Qで2本目を作る"
                         : "左岸から中央の青フックへ長さ6で接続し、Qで1本目を作る",
+                accentStyle);
+        }
+
+        private void DrawSectionTenGuide()
+        {
+            if (MainStageSectionTenSetup.HasFinalPlatform(platformBuilder))
+            {
+                GUILayout.Label(
+                    "最後の橋を渡り、おもちゃ箱へ進む",
+                    accentStyle);
+                return;
+            }
+
+            bool isFinalAnchor = ropeController != null &&
+                ropeController.ActiveHookPoint != null &&
+                ropeController.ActiveHookPoint.name ==
+                    MainStageSectionTenSetup.RightAnchorName;
+            GUILayout.Label(
+                isFinalAnchor
+                    ? "接続中：Qで残りの長さ10を最後の橋にする"
+                    : "頭上にフックはない。長さ10で右岸の緑フックへ接続",
                 accentStyle);
         }
 

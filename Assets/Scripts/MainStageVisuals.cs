@@ -17,11 +17,14 @@ namespace HimoHito
             "Art/TutorialRailPlatform-v1";
         private const string HookResourcePath =
             "Art/TutorialHookConnector-v1";
+        private const string ToyBoxResourcePath =
+            "Art/TutorialToyBoxGoal-v2";
         private const string BackgroundName =
             "Main Stage Night Child Room Background";
         private const string HookVisualName = "Blue Toy Hook Visual";
         private const string BridgeAnchorVisualName =
             "Green Rope Anchor Ring Visual";
+        private const string GoalVisualName = "Open Toy Box Goal Visual";
 
         private static readonly Color PlayerColor =
             new Color(1f, 0.365f, 0.561f);
@@ -55,6 +58,11 @@ namespace HimoHito
             bool changed = false;
             changed |= EnsureBackground();
             changed |= RestorePlayerVisual(player);
+            changed |= EnsureToyVisual(
+                FindSceneObject(MainStageSectionTenSetup.GoalMarkerName),
+                GoalVisualName,
+                ToyBoxResourcePath,
+                8);
 
             foreach (GameObject candidate in
                      Resources.FindObjectsOfTypeAll<GameObject>())
@@ -187,6 +195,7 @@ namespace HimoHito
                    objectName == MainStageSectionSixSetup.MergeName ||
                    objectName == MainStageSectionSevenSetup.GoalFloorName ||
                    objectName == MainStageSectionNineSetup.GoalFloorName ||
+                   objectName == MainStageSectionTenSetup.GoalFloorName ||
                    objectName == "Main S01 Start Shelf" ||
                    objectName == "Main S01 Landing" ||
                    objectName == "Main S02 Raised Landing" ||

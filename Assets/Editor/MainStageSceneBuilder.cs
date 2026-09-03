@@ -9,7 +9,7 @@ namespace HimoHitoEditor
     /// <summary>
     /// Rebuilds the implemented part of the main stage from the 2026-08-29
     /// stage manual. Section eight was removed after playtesting, so section
-    /// seven connects directly to the implemented section nine.
+    /// seven connects directly to section nine and then the section ten finale.
     /// </summary>
     public static class MainStageSceneBuilder
     {
@@ -58,7 +58,7 @@ namespace HimoHitoEditor
         private static readonly Color HookColor = new(0.30f, 0.76f, 1f);
         private static readonly Color SpikeColor = new(1f, 0.18f, 0.25f);
 
-        [MenuItem("HimoHito/Rebuild Main Stage Through Section 9")]
+        [MenuItem("HimoHito/Rebuild Main Stage Through Section 10")]
         public static void BuildMainStageThroughCurrentSection()
         {
             Scene scene = EditorSceneManager.NewScene(
@@ -73,7 +73,8 @@ namespace HimoHitoEditor
             BuildSection5();
             BuildSection6();
             BuildSection7();
-            GameObject previewTarget = BuildSection9();
+            BuildSection9();
+            GameObject previewTarget = BuildSection10();
 
             CreateCamera(player.transform, previewTarget.transform);
             GameObject hud = new("Main Stage HUD");
@@ -320,6 +321,11 @@ namespace HimoHitoEditor
         private static GameObject BuildSection9()
         {
             return MainStageSectionNineSetup.EnsureCreated();
+        }
+
+        private static GameObject BuildSection10()
+        {
+            return MainStageSectionTenSetup.EnsureCreated();
         }
 
         private static GameObject CreatePlayer(Vector2 position)

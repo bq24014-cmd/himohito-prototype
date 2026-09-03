@@ -19,7 +19,7 @@ namespace HimoHito
         [FormerlySerializedAs("startFromSectionSevenForDevelopment")]
         [FormerlySerializedAs("startFromSectionEightForDevelopment")]
         private bool startFromSectionNineForDevelopment = true;
-        private const float SectionNineStartingRopeLength = 35f;
+        private const float SectionNineStartingRopeLength = 27f;
 
         [SerializeField] private float fallThreshold = -9f;
         [SerializeField, Min(0.01f)] private float minimumUsableRopeLength = 1f;
@@ -68,6 +68,7 @@ namespace HimoHito
 
         private void Start()
         {
+            goalZone ??= FindFirstObjectByType<MainStageGoalZone>();
             if (!startFromSectionNineForDevelopment)
             {
                 return;
@@ -91,6 +92,7 @@ namespace HimoHito
 
         private void Update()
         {
+            goalZone ??= FindFirstObjectByType<MainStageGoalZone>();
             if (goalZone != null && goalZone.IsClear)
             {
                 return;
