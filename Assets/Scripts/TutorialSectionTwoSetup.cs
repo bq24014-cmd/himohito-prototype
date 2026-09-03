@@ -18,11 +18,11 @@ namespace HimoHito
         public static readonly Vector2 HookPosition =
             new Vector2(18f, 5.5f);
         public static readonly Vector2 LandingFloorPosition =
-            new Vector2(24f, -4.65f);
+            new Vector2(27f, -4.65f);
         public static readonly Vector2 LandingFloorSize =
             new Vector2(6f, 10f);
         public static readonly Vector2 LandingRespawnPosition =
-            new Vector2(24f, 0.95f);
+            new Vector2(27f, 0.95f);
 
         private static readonly Vector2 HookSize =
             new Vector2(1.6f, 0.45f);
