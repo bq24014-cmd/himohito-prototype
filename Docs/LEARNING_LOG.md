@@ -3758,3 +3758,9 @@ Hook 1へ届く最低限の長さと、長すぎて振り子が低くなる長�
 - 比較用に残していた旧画像`HimoHitoWalk-v1/v2`、`HimoHitoJump-v1`、`HimoHitoSwing-v1`、`TutorialToyBoxGoal-v1`は、どこからも参照されていなかったため`Assets/Resources`から外した。
 - 空の`Assets/Tests/EditMode`も削除し、アセット本体と`.meta`を必ず一緒に扱った。
 - 削除対象はローカルの`Temp/AssetBackup-20260904`へ退避してからGitへ記録し、必要なら作業中に戻せるようにした。
+
+# 2026-09-04 旧ギミックのコードと非表示床を整理する
+
+- 現在のコード、保存シーン、再構築処理のいずれからも参照されていない`MainStageVerticalMover`と`RopeReleaseHazard`を削除した。
+- どちらも旧懐中電灯ギミック用の処理で、現在の第5区間の遮光判定やトゲ判定には使われていない。
+- 第1区間の地形と重なったため無効化されたまま残っていた`Main Walkway 1`を、本編の旧オブジェクト整理対象へ追加した。

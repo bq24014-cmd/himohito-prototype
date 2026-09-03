@@ -17,6 +17,7 @@ namespace HimoHitoEditor
         private const float MainStageRopeLength = 50f;
         private static readonly string[] ObsoleteMainStageObjectNames =
         {
+            "Main Walkway 1",
             "Main Section 4 Bridge Start Marker",
             "Main Section 4 Intermediate Anchor",
             "Main Section 6 Flashlight Spot",
