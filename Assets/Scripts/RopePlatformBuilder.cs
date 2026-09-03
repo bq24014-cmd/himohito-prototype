@@ -266,18 +266,10 @@ namespace HimoHito
             PrototypeRunController tutorial =
                 GetComponent<PrototypeRunController>();
             if (tutorial != null &&
-                tutorial.CurrentTutorialSection == 3)
+                tutorial.CurrentTutorialSection == 3 &&
+                platformAnchor == null)
             {
-                if (platformAnchor != null ||
-                    !TutorialSectionThreeSetup.TryGetAuthoredBridgeEndpoints(
-                        body.position,
-                        start,
-                        ropeLength,
-                        out start,
-                        out end))
-                {
-                    return false;
-                }
+                return false;
             }
 
             MainStageRespawnOnFall main =

@@ -166,7 +166,7 @@ namespace HimoHito
             if (runController != null && runController.CurrentTutorialSection == 3)
             {
                 GUILayout.Label(
-                    "頭上にHookはない。対岸の床面へ長さ7で掛け、Qで足場にする",
+                    "頭上にHookはない。対岸の緑フックへ長さ7で掛け、Qで足場にする",
                     bodyStyle);
             }
             if (runController == null || runController.CurrentTutorialSection >= 3)
@@ -283,8 +283,8 @@ namespace HimoHito
             if (startsFromSectionThree)
             {
                 GUILayout.Label("A / D：谷の手前まで歩く", startImportantStyle);
-                GUILayout.Label("対岸の床面へ長さ7で照準を合わせる", startImportantStyle);
-                GUILayout.Label("E：床面へヒモを掛ける", startImportantStyle);
+                GUILayout.Label("対岸の緑フックへ長さ7で照準を合わせる", startImportantStyle);
+                GUILayout.Label("E：緑フックへヒモを掛ける", startImportantStyle);
                 GUILayout.Label("Q：掛けたヒモを足場にする", startImportantStyle);
             }
             else
