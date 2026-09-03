@@ -11,7 +11,7 @@ namespace HimoHito
         private const float MinimumTopContactNormal = 0.6f;
         private const float TopContactTolerance = 0.12f;
 
-        [SerializeField, Range(2, 5)] private int sectionNumber = 2;
+        [SerializeField, Range(2, 4)] private int sectionNumber = 2;
         [SerializeField] private Vector2 respawnPosition;
         [SerializeField, Range(1, 14)] private int startingRopeLength = 6;
 
@@ -22,7 +22,7 @@ namespace HimoHito
 
         public void Configure(int section, Vector2 position, int selectedLength)
         {
-            sectionNumber = Mathf.Clamp(section, 2, 5);
+            sectionNumber = Mathf.Clamp(section, 2, 4);
             respawnPosition = position;
             startingRopeLength = Mathf.Clamp(selectedLength, 1, 14);
         }

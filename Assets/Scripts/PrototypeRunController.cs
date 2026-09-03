@@ -51,14 +51,13 @@ namespace HimoHito
         public RunFailureReason FailureReason { get; private set; } = RunFailureReason.None;
         public bool IsAutomaticRespawnPending { get; private set; }
         public int CurrentTutorialSection { get; private set; } = 1;
-        public const int TutorialSectionCount = 5;
+        public const int TutorialSectionCount = 4;
         public string CurrentTutorialObjective => CurrentTutorialSection switch
         {
             1 => "長さと向きを選び、ヒモを掛けて振る",
             2 => "長さを選び、中央のトゲを越える",
             3 => "地形同士に掛けたヒモを足場にする",
-            4 => "作った足場からHookへ掛けて渡る",
-            5 => "中央のHookを外し、1本の足場でゴールする",
+            4 => "中央のHookを外し、1本の足場でゴールする",
             _ => string.Empty
         };
 
@@ -67,6 +66,7 @@ namespace HimoHito
             TutorialSectionOneSetup.ApplyCurrentScene();
             TutorialSectionTwoSetup.ApplyCurrentScene();
             TutorialSectionThreeSetup.ApplyCurrentScene();
+            TutorialSectionFourSetup.ApplyCurrentScene();
             TutorialFirstSectionVisuals.Apply(gameObject);
 
             body = GetComponent<Rigidbody2D>();

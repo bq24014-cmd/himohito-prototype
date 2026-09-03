@@ -3,81 +3,145 @@ using UnityEngine;
 namespace HimoHito
 {
     /// <summary>
-    /// Builds tutorial T3 and exposes its authored terrain-to-terrain bridge.
+    /// Builds the tutorial finale. Two length-six platforms meet at the
+    /// center Hook; removing it with F joins them into one deeper bridge.
     /// </summary>
-    public static class TutorialSectionThreeSetup
+    public static class TutorialSectionFourSetup
     {
-        public const string LandingFloorName = "Tutorial T3 Landing";
-        public const string BridgeStartHookName =
-            "Tutorial T3 Green Bridge Start Hook";
-        public const string BridgeEndHookName =
-            "Tutorial T3 Green Bridge End Hook";
-        public const int RequiredRopeLength = 7;
-        public const int NextSectionStartingRopeLength = 6;
-        public const float StartingRopeAmount = 20f;
+        public const string LeftAnchorName =
+            "Tutorial T4 Green Left Bank";
+        public const string CenterHookName =
+            "Tutorial T4 Center Hook";
+        public const string RightAnchorName =
+            "Tutorial T4 Green Right Bank";
+        public const string BeamName = "Tutorial T4 Hanging Beam";
+        public const string GoalFloorName = "Tutorial T4 Goal Floor";
+        public const string GoalMarkerName = "Tutorial T4 Toy Box Goal";
+        public const int PlatformRopeLength = 6;
 
-        public static readonly Vector2 LandingFloorPosition =
-            new Vector2(39f, -4.65f);
-        public static readonly Vector2 LandingFloorSize =
+        public static readonly Vector2 LeftAnchorPosition =
+            new Vector2(42f, 0.35f);
+        public static readonly Vector2 CenterHookPosition =
+            new Vector2(47f, 1.55f);
+        public static readonly Vector2 RightAnchorPosition =
+            new Vector2(52f, 0.35f);
+        public static readonly Vector2 BeamPosition =
+            new Vector2(48.5f, 3.05f);
+        public static readonly Vector2 BeamSize =
+            new Vector2(2f, 5f);
+        public static readonly Vector2 GoalFloorPosition =
+            new Vector2(55f, -4.65f);
+        public static readonly Vector2 GoalFloorSize =
             new Vector2(6f, 10f);
-        public static readonly Vector2 LandingRespawnPosition =
-            new Vector2(39f, 0.95f);
-        public static readonly Vector2 LeftBridgeEndpoint =
-            new Vector2(30f, 0.35f);
-        public static readonly Vector2 RightBridgeEndpoint =
-            new Vector2(36f, 0.35f);
+        public static readonly Vector2 GoalMarkerPosition =
+            new Vector2(55f, 1.55f);
+        public static readonly Vector2 GoalMarkerSize =
+            new Vector2(2.4f, 2.2f);
 
         private const string BridgeAnchorVisualName =
             "Green Rope Anchor Ring Visual";
         private static readonly Vector2 BridgeHookSize =
             new Vector2(0.62f, 0.62f);
+        private static readonly Vector2 CenterHookSize =
+            new Vector2(1.6f, 0.45f);
         private static readonly Color TerrainColor =
             new Color(0.96f, 0.55f, 0.18f);
         private static readonly Color BridgeHookColor =
             new Color(0.33f, 1f, 0.76f);
+        private static readonly Color SwingHookColor =
+            new Color(0.30f, 0.76f, 1f);
+        private static readonly Color GoalMarkerColor =
+            new Color(0.80f, 0.48f, 0.18f);
 
         public static bool ApplyCurrentScene()
         {
-            bool changed = EnsureTerrain(out GameObject landing);
-            changed |= EnsureBridgeHook(
-                BridgeStartHookName,
-                LeftBridgeEndpoint,
-                BridgeEndHookName,
-                false);
-            changed |= EnsureBridgeHook(
-                BridgeEndHookName,
-                RightBridgeEndpoint,
-                BridgeStartHookName,
+            bool changed = EnsurePairedHook(
+                LeftAnchorName,
+                LeftAnchorPosition,
+                BridgeHookSize,
+                BridgeHookColor,
+                CenterHookName,
+                false,
                 true);
-            if (!landing.TryGetComponent(out TutorialCheckpoint checkpoint))
+            changed |= EnsurePairedHook(
+                CenterHookName,
+                CenterHookPosition,
+                CenterHookSize,
+                SwingHookColor,
+                LeftAnchorName,
+                true,
+                false);
+            changed |= EnsurePairedHook(
+                RightAnchorName,
+                RightAnchorPosition,
+                BridgeHookSize,
+                BridgeHookColor,
+                CenterHookName,
+                true,
+                true);
+            changed |= EnsureTerrain(
+                BeamName,
+                BeamPosition,
+                BeamSize,
+                out _);
+            changed |= EnsureTerrain(
+                GoalFloorName,
+                GoalFloorPosition,
+                GoalFloorSize,
+                out GameObject goalFloor);
+            if (!goalFloor.TryGetComponent(out GoalZone _))
             {
-                checkpoint = landing.AddComponent<TutorialCheckpoint>();
+                goalFloor.AddComponent<GoalZone>();
                 changed = true;
             }
-            checkpoint.Configure(
-                4,
-                LandingRespawnPosition,
-                NextSectionStartingRopeLength);
+            changed |= EnsureGoalMarker();
             return changed;
         }
 
         public static GameObject EnsureCreated()
         {
             ApplyCurrentScene();
-            return FindSceneObject(LandingFloorName);
+            return FindSceneObject(GoalMarkerName);
         }
 
-        private static bool EnsureBridgeHook(
+        public static bool HasLeftPlatform(RopePlatformBuilder builder)
+        {
+            return builder != null && builder.HasPlatformBetween(
+                LeftAnchorPosition,
+                CenterHookPosition,
+                PlatformRopeLength);
+        }
+
+        public static bool HasRightPlatform(RopePlatformBuilder builder)
+        {
+            return builder != null && builder.HasPlatformBetween(
+                CenterHookPosition,
+                RightAnchorPosition,
+                PlatformRopeLength);
+        }
+
+        public static bool HasMergedPlatform(RopePlatformBuilder builder)
+        {
+            return builder != null && builder.HasPlatformBetween(
+                LeftAnchorPosition,
+                RightAnchorPosition,
+                PlatformRopeLength * 2f);
+        }
+
+        private static bool EnsurePairedHook(
             string objectName,
             Vector2 position,
+            Vector2 size,
+            Color color,
             string pairedHookName,
-            bool canAttach)
+            bool canAttach,
+            bool useRingVisual)
         {
             GameObject hook = EnsureObject(
                 objectName,
                 position,
-                BridgeHookSize,
-                BridgeHookColor,
+                size,
+                color,
                 out bool changed);
             if (!hook.TryGetComponent(out HookPoint hookPoint))
             {
@@ -90,9 +154,7 @@ namespace HimoHito
                 anchor = hook.AddComponent<RopePlatformAnchor>();
                 changed = true;
             }
-            changed |= anchor.Configure(
-                RequiredRopeLength,
-                pairedHookName);
+            changed |= anchor.Configure(PlatformRopeLength, pairedHookName);
 
             BoxCollider2D collider = hook.GetComponent<BoxCollider2D>();
             if (collider.enabled != canAttach)
@@ -100,7 +162,10 @@ namespace HimoHito
                 collider.enabled = canAttach;
                 changed = true;
             }
-            changed |= EnsureBridgeAnchorRingVisual(hook);
+            if (useRingVisual)
+            {
+                changed |= EnsureBridgeAnchorRingVisual(hook);
+            }
             return changed;
         }
 
@@ -151,12 +216,16 @@ namespace HimoHito
             return changed;
         }
 
-        private static bool EnsureTerrain(out GameObject terrain)
+        private static bool EnsureTerrain(
+            string objectName,
+            Vector2 position,
+            Vector2 size,
+            out GameObject terrain)
         {
             terrain = EnsureObject(
-                LandingFloorName,
-                LandingFloorPosition,
-                LandingFloorSize,
+                objectName,
+                position,
+                size,
                 TerrainColor,
                 out bool changed);
             BoxCollider2D collider = terrain.GetComponent<BoxCollider2D>();
@@ -184,6 +253,68 @@ namespace HimoHito
             return changed;
         }
 
+        private static bool EnsureGoalMarker()
+        {
+            GameObject marker = FindSceneObject(GoalMarkerName);
+            bool changed = false;
+            if (marker == null)
+            {
+                marker = new GameObject(GoalMarkerName);
+                changed = true;
+            }
+            if (!marker.activeSelf)
+            {
+                marker.SetActive(true);
+                changed = true;
+            }
+            Vector3 targetPosition = new Vector3(
+                GoalMarkerPosition.x,
+                GoalMarkerPosition.y,
+                0f);
+            Vector3 targetScale = new Vector3(
+                GoalMarkerSize.x,
+                GoalMarkerSize.y,
+                1f);
+            if (marker.transform.position != targetPosition)
+            {
+                marker.transform.position = targetPosition;
+                changed = true;
+            }
+            if (marker.transform.localScale != targetScale)
+            {
+                marker.transform.localScale = targetScale;
+                changed = true;
+            }
+            if (!marker.TryGetComponent(out SpriteRenderer _))
+            {
+                marker.AddComponent<SpriteRenderer>();
+                changed = true;
+            }
+            if (!marker.TryGetComponent(out SolidSprite visual))
+            {
+                visual = marker.AddComponent<SolidSprite>();
+                changed = true;
+            }
+            if (visual.Color != GoalMarkerColor)
+            {
+                visual.Color = GoalMarkerColor;
+                changed = true;
+            }
+            if (marker.TryGetComponent(out Collider2D markerCollider))
+            {
+                if (Application.isPlaying)
+                {
+                    Object.Destroy(markerCollider);
+                }
+                else
+                {
+                    Object.DestroyImmediate(markerCollider);
+                }
+                changed = true;
+            }
+            return changed;
+        }
+
         private static GameObject EnsureObject(
             string objectName,
             Vector2 position,
@@ -203,7 +334,6 @@ namespace HimoHito
                 target.SetActive(true);
                 changed = true;
             }
-
             Vector3 targetPosition = new Vector3(position.x, position.y, 0f);
             Vector3 targetScale = new Vector3(size.x, size.y, 1f);
             if (target.transform.position != targetPosition)
@@ -249,9 +379,7 @@ namespace HimoHito
             foreach (GameObject candidate in
                      Resources.FindObjectsOfTypeAll<GameObject>())
             {
-                if (candidate.scene.IsValid() &&
-                    candidate.scene.name == "Tutorial" &&
-                    candidate.name == objectName)
+                if (candidate.scene.IsValid() && candidate.name == objectName)
                 {
                     return candidate;
                 }

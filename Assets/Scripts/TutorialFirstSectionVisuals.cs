@@ -48,6 +48,15 @@ namespace HimoHito
             changed |= ApplyColor(
                 FindSceneObject(TutorialSectionThreeSetup.LandingFloorName),
                 PlatformColor);
+            changed |= ApplyColor(
+                FindSceneObject(TutorialSectionFourSetup.BeamName),
+                PlatformColor);
+            changed |= ApplyColor(
+                FindSceneObject(TutorialSectionFourSetup.GoalFloorName),
+                PlatformColor);
+            changed |= ApplyColor(
+                FindSceneObject(TutorialSectionFourSetup.CenterHookName),
+                HookColor);
             changed |= ApplyColor(FindSceneObject("Landing 1"), PlatformColor);
             changed |= ApplyColor(FindSceneObject("Hook 1"), HookColor);
             changed |= ApplyColor(FindSceneObject("Hook 2"), HookColor);
@@ -88,6 +97,28 @@ namespace HimoHito
                 BlockResourcePath,
                 1);
             changed |= EnsureToyVisual(
+                TutorialSectionFourSetup.BeamName,
+                "Orange Block Platform Visual",
+                BlockResourcePath,
+                1);
+            changed |= EnsureToyVisual(
+                TutorialSectionFourSetup.GoalFloorName,
+                "Orange Block Platform Visual",
+                BlockResourcePath,
+                1);
+            changed |= EnsureToyVisual(
+                TutorialSectionFourSetup.CenterHookName,
+                "Blue Toy Hook Visual",
+                HookResourcePath,
+                6);
+            changed |= EnsureToyVisual(
+                TutorialSectionFourSetup.GoalMarkerName,
+                "Open Toy Box Goal Visual",
+                ToyBoxResourcePath,
+                1,
+                true,
+                true);
+            changed |= EnsureToyVisual(
                 "Landing 1",
                 "Blue Railway Platform Visual",
                 RailResourcePath,
@@ -118,6 +149,8 @@ namespace HimoHito
             changed |= EnsureFixedHookAttachmentPoint("Tutorial Hook");
             changed |= EnsureFixedHookAttachmentPoint(
                 TutorialSectionTwoSetup.HookName);
+            changed |= EnsureFixedHookAttachmentPoint(
+                TutorialSectionFourSetup.CenterHookName);
             changed |= EnsureFixedHookAttachmentPoint("Hook 1");
             changed |= EnsureFixedHookAttachmentPoint("Hook 2");
             changed |= EnsureFixedHookAttachmentPoint("Hook 3");

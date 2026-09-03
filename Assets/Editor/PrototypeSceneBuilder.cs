@@ -37,7 +37,7 @@ namespace HimoHitoEditor
             EditorApplication.playModeStateChanged += OnPlayModeStateChanged;
         }
 
-        [MenuItem("HimoHito/Rebuild Tutorial Through T3")]
+        [MenuItem("HimoHito/Rebuild Tutorial")]
         public static void BuildPrototypeScene()
         {
             Scene scene = EditorSceneManager.NewScene(
@@ -58,7 +58,7 @@ namespace HimoHitoEditor
             AssetDatabase.SaveAssets();
             AssetDatabase.Refresh();
             Selection.activeGameObject = player;
-            Debug.Log($"HimoHito tutorial through T3 rebuilt: {ScenePath}");
+            Debug.Log($"HimoHito tutorial rebuilt through finale: {ScenePath}");
         }
 
         public static void BuildFromCommandLine()
@@ -72,6 +72,7 @@ namespace HimoHitoEditor
             TutorialSectionOneSetup.EnsureCreated();
             TutorialSectionTwoSetup.EnsureCreated();
             TutorialSectionThreeSetup.EnsureCreated();
+            TutorialSectionFourSetup.EnsureCreated();
         }
 
         private static void OnPlayModeStateChanged(
@@ -101,6 +102,7 @@ namespace HimoHitoEditor
             bool changed = TutorialSectionOneSetup.ApplyCurrentScene();
             changed |= TutorialSectionTwoSetup.ApplyCurrentScene();
             changed |= TutorialSectionThreeSetup.ApplyCurrentScene();
+            changed |= TutorialSectionFourSetup.ApplyCurrentScene();
             GameObject player = GameObject.Find("Player");
             if (player != null)
             {
@@ -134,7 +136,7 @@ namespace HimoHitoEditor
             }
 
             EditorSceneManager.SaveScene(scene);
-            Debug.Log("チュートリアルT1～T3の配置と旧オブジェクトを同期しました。");
+            Debug.Log("チュートリアルT1～最終区間の配置と旧オブジェクトを同期しました。");
         }
 
         private static GameObject CreatePlayer(Vector2 position)

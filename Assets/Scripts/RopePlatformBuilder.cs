@@ -266,7 +266,7 @@ namespace HimoHito
             PrototypeRunController tutorial =
                 GetComponent<PrototypeRunController>();
             if (tutorial != null &&
-                tutorial.CurrentTutorialSection == 3 &&
+                tutorial.CurrentTutorialSection >= 3 &&
                 platformAnchor == null)
             {
                 return false;
@@ -339,7 +339,7 @@ namespace HimoHito
             PrototypeRunController tutorial = GetComponent<PrototypeRunController>();
             if (tutorial != null && gameObject.scene.name == "Tutorial")
             {
-                return tutorial.CurrentTutorialSection >= 5;
+                return tutorial.CurrentTutorialSection >= 4;
             }
 
             MainStageRespawnOnFall main = GetComponent<MainStageRespawnOnFall>();

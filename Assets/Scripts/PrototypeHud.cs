@@ -173,10 +173,11 @@ namespace HimoHito
             {
                 GUILayout.Label("足場化：ヒモ接続中にQ（選んだ長さを永久消費）", bodyStyle);
             }
-            if (runController != null && runController.CurrentTutorialSection >= 5)
+            if (runController != null && runController.CurrentTutorialSection >= 4)
             {
                 GUILayout.Label("まとめる：2本が集まるHookへ照準を合わせてF", bodyStyle);
             }
+            DrawSectionFourGuide();
             if (!showFirstSectionControls)
             {
                 GUILayout.Label("マウス照準も使用可能", bodyStyle);
@@ -184,6 +185,47 @@ namespace HimoHito
             GUILayout.EndArea();
 
             DrawWeavePrompt();
+        }
+
+        private void DrawSectionFourGuide()
+        {
+            if (runController == null ||
+                runController.CurrentTutorialSection != 4 ||
+                platformBuilder == null)
+            {
+                return;
+            }
+
+            if (TutorialSectionFourSetup.HasMergedPlatform(platformBuilder))
+            {
+                GUILayout.Label(
+                    "1本になった足場を歩き、梁の下をくぐってゴール",
+                    bodyStyle);
+                return;
+            }
+
+            bool hasLeft =
+                TutorialSectionFourSetup.HasLeftPlatform(platformBuilder);
+            bool hasRight =
+                TutorialSectionFourSetup.HasRightPlatform(platformBuilder);
+            if (hasLeft && hasRight)
+            {
+                GUILayout.Label(
+                    "2本のままでは梁に当たる。中央の青フックを狙ってF",
+                    bodyStyle);
+            }
+            else if (hasLeft)
+            {
+                GUILayout.Label(
+                    "中央まで歩き、右の緑フックへ長さ6でE → Q",
+                    bodyStyle);
+            }
+            else
+            {
+                GUILayout.Label(
+                    "中央の青フックへ長さ6でE → Q",
+                    bodyStyle);
+            }
         }
 
         private void DrawWeavePrompt()
