@@ -53,6 +53,14 @@ namespace HimoHito
             currentLength = maximumLength;
         }
 
+        public void RestoreCapacityAndCurrent(
+            float capacity,
+            float amount)
+        {
+            maximumLength = Mathf.Max(1f, capacity);
+            currentLength = Mathf.Clamp(amount, 0f, maximumLength);
+        }
+
         public void RestoreCurrentLength(float amount)
         {
             currentLength = Mathf.Clamp(amount, 0f, maximumLength);

@@ -45,6 +45,9 @@ namespace HimoHito
             changed |= ApplyColor(
                 FindSceneObject(TutorialSectionTwoSetup.HookName),
                 HookColor);
+            changed |= ApplyColor(
+                FindSceneObject(TutorialSectionThreeSetup.LandingFloorName),
+                PlatformColor);
             changed |= ApplyColor(FindSceneObject("Landing 1"), PlatformColor);
             changed |= ApplyColor(FindSceneObject("Hook 1"), HookColor);
             changed |= ApplyColor(FindSceneObject("Hook 2"), HookColor);
@@ -79,6 +82,11 @@ namespace HimoHito
                 "Blue Toy Hook Visual",
                 HookResourcePath,
                 6);
+            changed |= EnsureToyVisual(
+                TutorialSectionThreeSetup.LandingFloorName,
+                "Orange Block Platform Visual",
+                BlockResourcePath,
+                1);
             changed |= EnsureToyVisual(
                 "Landing 1",
                 "Blue Railway Platform Visual",

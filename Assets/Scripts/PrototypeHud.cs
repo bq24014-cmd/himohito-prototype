@@ -163,6 +163,12 @@ namespace HimoHito
                     "初期長さ8はトゲに当たる。Eで外し、W / Sで選び直す",
                     bodyStyle);
             }
+            if (runController != null && runController.CurrentTutorialSection == 3)
+            {
+                GUILayout.Label(
+                    "頭上にHookはない。対岸の床面へ長さ7で掛け、Qで足場にする",
+                    bodyStyle);
+            }
             if (runController == null || runController.CurrentTutorialSection >= 3)
             {
                 GUILayout.Label("足場化：ヒモ接続中にQ（選んだ長さを永久消費）", bodyStyle);

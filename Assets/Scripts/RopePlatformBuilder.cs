@@ -263,6 +263,23 @@ namespace HimoHito
                 activeHook.TryGetComponent(out platformAnchor);
             }
 
+            PrototypeRunController tutorial =
+                GetComponent<PrototypeRunController>();
+            if (tutorial != null &&
+                tutorial.CurrentTutorialSection == 3)
+            {
+                if (platformAnchor != null ||
+                    !TutorialSectionThreeSetup.TryGetAuthoredBridgeEndpoints(
+                        body.position,
+                        start,
+                        ropeLength,
+                        out start,
+                        out end))
+                {
+                    return false;
+                }
+            }
+
             MainStageRespawnOnFall main =
                 GetComponent<MainStageRespawnOnFall>();
             if (main != null && main.CurrentSection == 4 &&

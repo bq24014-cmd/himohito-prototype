@@ -35,6 +35,8 @@ namespace HimoHito
         private RopePlatformBuilder platformBuilder;
         private PlayerMover playerMover;
         private Vector2 startPosition;
+        private float startRopeCapacity;
+        private float startRopeLength;
         private Vector2 checkpointPosition;
         private float checkpointRopeLength;
         private int checkpointSelectedRopeLength;
@@ -61,6 +63,7 @@ namespace HimoHito
         {
             TutorialSectionOneSetup.ApplyCurrentScene();
             TutorialSectionTwoSetup.ApplyCurrentScene();
+            TutorialSectionThreeSetup.ApplyCurrentScene();
             TutorialFirstSectionVisuals.Apply(gameObject);
 
             body = GetComponent<Rigidbody2D>();
@@ -77,6 +80,8 @@ namespace HimoHito
             ropeController.RestoreSelectedRopeLength(
                 TutorialSectionOneSetup.StartingRopeLength);
             startPosition = body.position;
+            startRopeCapacity = ropeResource.MaximumLength;
+            startRopeLength = ropeResource.CurrentLength;
 
         }
 
@@ -223,6 +228,12 @@ namespace HimoHito
 
             CurrentTutorialSection = sectionNumber;
             checkpointPosition = respawnPosition;
+            if (sectionNumber == 3)
+            {
+                ropeResource.RestoreCapacityAndCurrent(
+                    TutorialSectionThreeSetup.StartingRopeAmount,
+                    TutorialSectionThreeSetup.StartingRopeAmount);
+            }
             ropeController.RestoreSelectedRopeLength(startingRopeLength);
             CaptureCheckpointState();
         }
@@ -252,7 +263,9 @@ namespace HimoHito
         {
             body.simulated = true;
             ropeController.DetachAndRefund();
-            ropeResource.ResetToMaximum();
+            ropeResource.RestoreCapacityAndCurrent(
+                startRopeCapacity,
+                startRopeLength);
             platformBuilder.ClearPlatforms();
 
             CurrentTutorialSection = 1;

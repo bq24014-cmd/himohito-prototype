@@ -37,7 +37,7 @@ namespace HimoHitoEditor
             EditorApplication.playModeStateChanged += OnPlayModeStateChanged;
         }
 
-        [MenuItem("HimoHito/Rebuild Tutorial Through T2")]
+        [MenuItem("HimoHito/Rebuild Tutorial Through T3")]
         public static void BuildPrototypeScene()
         {
             Scene scene = EditorSceneManager.NewScene(
@@ -58,7 +58,7 @@ namespace HimoHitoEditor
             AssetDatabase.SaveAssets();
             AssetDatabase.Refresh();
             Selection.activeGameObject = player;
-            Debug.Log($"HimoHito tutorial through T2 rebuilt: {ScenePath}");
+            Debug.Log($"HimoHito tutorial through T3 rebuilt: {ScenePath}");
         }
 
         public static void BuildFromCommandLine()
@@ -71,6 +71,7 @@ namespace HimoHitoEditor
         {
             TutorialSectionOneSetup.EnsureCreated();
             TutorialSectionTwoSetup.EnsureCreated();
+            TutorialSectionThreeSetup.EnsureCreated();
         }
 
         private static void OnPlayModeStateChanged(
@@ -99,6 +100,7 @@ namespace HimoHitoEditor
 
             bool changed = TutorialSectionOneSetup.ApplyCurrentScene();
             changed |= TutorialSectionTwoSetup.ApplyCurrentScene();
+            changed |= TutorialSectionThreeSetup.ApplyCurrentScene();
             GameObject player = GameObject.Find("Player");
             if (player != null)
             {
@@ -132,7 +134,7 @@ namespace HimoHitoEditor
             }
 
             EditorSceneManager.SaveScene(scene);
-            Debug.Log("チュートリアルT1～T2の配置と旧オブジェクトを同期しました。");
+            Debug.Log("チュートリアルT1～T3の配置と旧オブジェクトを同期しました。");
         }
 
         private static GameObject CreatePlayer(Vector2 position)
@@ -156,8 +158,8 @@ namespace HimoHitoEditor
             player.AddComponent<LineRenderer>().sortingOrder = 5;
             RopeResource resource = player.AddComponent<RopeResource>();
             SerializedObject serialized = new(resource);
-            serialized.FindProperty("maximumLength").floatValue = 20f;
-            serialized.FindProperty("currentLength").floatValue = 20f;
+            serialized.FindProperty("maximumLength").floatValue = 12f;
+            serialized.FindProperty("currentLength").floatValue = 12f;
             serialized.ApplyModifiedPropertiesWithoutUndo();
             player.AddComponent<RopePlatformBuilder>();
             player.AddComponent<PlayerMover>();
