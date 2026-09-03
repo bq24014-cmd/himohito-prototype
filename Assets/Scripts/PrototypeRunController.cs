@@ -60,6 +60,7 @@ namespace HimoHito
         private void Awake()
         {
             TutorialSectionOneSetup.ApplyCurrentScene();
+            TutorialSectionTwoSetup.ApplyCurrentScene();
             TutorialFirstSectionVisuals.Apply(gameObject);
 
             body = GetComponent<Rigidbody2D>();

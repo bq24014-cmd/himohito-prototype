@@ -39,6 +39,12 @@ namespace HimoHito
             changed |= ApplyColor(FindSceneObject("Start Ground"), PlatformColor);
             changed |= ApplyColor(FindSceneObject("Tutorial Landing"), PlatformColor);
             changed |= ApplyColor(FindSceneObject("Tutorial Hook"), HookColor);
+            changed |= ApplyColor(
+                FindSceneObject(TutorialSectionTwoSetup.LandingFloorName),
+                PlatformColor);
+            changed |= ApplyColor(
+                FindSceneObject(TutorialSectionTwoSetup.HookName),
+                HookColor);
             changed |= ApplyColor(FindSceneObject("Landing 1"), PlatformColor);
             changed |= ApplyColor(FindSceneObject("Hook 1"), HookColor);
             changed |= ApplyColor(FindSceneObject("Hook 2"), HookColor);
@@ -60,6 +66,16 @@ namespace HimoHito
                 1);
             changed |= EnsureToyVisual(
                 "Tutorial Hook",
+                "Blue Toy Hook Visual",
+                HookResourcePath,
+                6);
+            changed |= EnsureToyVisual(
+                TutorialSectionTwoSetup.LandingFloorName,
+                "Orange Block Platform Visual",
+                BlockResourcePath,
+                1);
+            changed |= EnsureToyVisual(
+                TutorialSectionTwoSetup.HookName,
                 "Blue Toy Hook Visual",
                 HookResourcePath,
                 6);
@@ -92,6 +108,8 @@ namespace HimoHito
                 true);
             changed |= RemoveLegacyGoalToyBlockSupports();
             changed |= EnsureFixedHookAttachmentPoint("Tutorial Hook");
+            changed |= EnsureFixedHookAttachmentPoint(
+                TutorialSectionTwoSetup.HookName);
             changed |= EnsureFixedHookAttachmentPoint("Hook 1");
             changed |= EnsureFixedHookAttachmentPoint("Hook 2");
             changed |= EnsureFixedHookAttachmentPoint("Hook 3");

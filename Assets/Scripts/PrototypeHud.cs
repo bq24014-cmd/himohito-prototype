@@ -157,6 +157,12 @@ namespace HimoHito
                 GUILayout.Label("照準：← / →    真上・真下：↑ / ↓", bodyStyle);
                 GUILayout.Label("ヒモ：Eで接続／解除    この区間から再挑戦：R", bodyStyle);
             }
+            if (runController != null && runController.CurrentTutorialSection == 2)
+            {
+                GUILayout.Label(
+                    "初期長さ8はトゲに当たる。Eで外し、W / Sで選び直す",
+                    bodyStyle);
+            }
             if (runController == null || runController.CurrentTutorialSection >= 3)
             {
                 GUILayout.Label("足場化：ヒモ接続中にQ（選んだ長さを永久消費）", bodyStyle);

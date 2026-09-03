@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 namespace HimoHitoEditor
 {
-    /// <summary>Rebuilds the tutorial from the currently implemented T1.</summary>
+    /// <summary>Rebuilds the currently implemented tutorial sections.</summary>
     [InitializeOnLoad]
     public static class PrototypeSceneBuilder
     {
@@ -35,7 +35,7 @@ namespace HimoHitoEditor
             EditorApplication.playModeStateChanged += OnPlayModeStateChanged;
         }
 
-        [MenuItem("HimoHito/Rebuild Tutorial T1")]
+        [MenuItem("HimoHito/Rebuild Tutorial Through T2")]
         public static void BuildPrototypeScene()
         {
             Scene scene = EditorSceneManager.NewScene(
@@ -44,7 +44,7 @@ namespace HimoHitoEditor
             GameObject player = CreatePlayer(
                 TutorialSectionOneSetup.StartRespawnPosition);
 
-            BuildT1();
+            BuildImplementedSections();
 
             CreateCamera(player.transform);
             GameObject hud = new("Tutorial HUD");
@@ -56,7 +56,7 @@ namespace HimoHitoEditor
             AssetDatabase.SaveAssets();
             AssetDatabase.Refresh();
             Selection.activeGameObject = player;
-            Debug.Log($"HimoHito tutorial T1 rebuilt: {ScenePath}");
+            Debug.Log($"HimoHito tutorial through T2 rebuilt: {ScenePath}");
         }
 
         public static void BuildFromCommandLine()
@@ -65,9 +65,10 @@ namespace HimoHitoEditor
             EditorApplication.Exit(0);
         }
 
-        private static void BuildT1()
+        private static void BuildImplementedSections()
         {
             TutorialSectionOneSetup.EnsureCreated();
+            TutorialSectionTwoSetup.EnsureCreated();
         }
 
         private static void OnPlayModeStateChanged(
@@ -94,7 +95,13 @@ namespace HimoHitoEditor
                 return;
             }
 
-            bool changed = false;
+            bool changed = TutorialSectionOneSetup.ApplyCurrentScene();
+            changed |= TutorialSectionTwoSetup.ApplyCurrentScene();
+            GameObject player = GameObject.Find("Player");
+            if (player != null)
+            {
+                changed |= TutorialFirstSectionVisuals.Apply(player);
+            }
             GameObject[] roots = scene.GetRootGameObjects();
             for (int legacyIndex = 0;
                  legacyIndex < LegacyObjectNames.Length;
@@ -123,7 +130,7 @@ namespace HimoHitoEditor
             }
 
             EditorSceneManager.SaveScene(scene);
-            Debug.Log("旧チュートリアルの床・Hook・ゴールを削除しました。");
+            Debug.Log("チュートリアルT1～T2の配置と旧オブジェクトを同期しました。");
         }
 
         private static GameObject CreatePlayer(Vector2 position)
