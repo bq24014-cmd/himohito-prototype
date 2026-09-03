@@ -521,6 +521,11 @@ namespace HimoHito
                     continue;
                 }
 
+                if (!CanAttachToHook(candidateHook))
+                {
+                    continue;
+                }
+
                 Vector2 candidateAnchor =
                     candidateHook.GetAttachmentPoint(hit.point);
                 float allowedDistance =
@@ -564,6 +569,23 @@ namespace HimoHito
             }
 
             return false;
+        }
+
+        private bool CanAttachToHook(HookPoint candidateHook)
+        {
+            if (gameObject.scene.name != "Tutorial" ||
+                candidateHook.name != TutorialSectionFourSetup.CenterHookName)
+            {
+                return true;
+            }
+
+            PrototypeRunController tutorial =
+                GetComponent<PrototypeRunController>();
+            RopePlatformBuilder platformBuilder =
+                GetComponent<RopePlatformBuilder>();
+            return tutorial == null ||
+                tutorial.CurrentTutorialSection != 4 ||
+                !TutorialSectionFourSetup.HasLeftPlatform(platformBuilder);
         }
 
         private float GetHookSearchDistance(float baseDistance)

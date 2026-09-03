@@ -288,9 +288,29 @@ namespace HimoHito
                 $"永久に使う長さ  {platformBuilder.CurrentPlatformCost:0.0}",
                 weavePromptBodyStyle);
 
-            string actionMessage = platformBuilder.CanBuildCurrentPlatform
-                ? "Q：この方向へヒモ足場を作る"
-                : $"足場にできません\nヒモを{platformBuilder.MinimumRopeReserve:0.0}以上残してください";
+            bool lacksReserve = ropeResource != null &&
+                ropeResource.CurrentLength - platformBuilder.CurrentPlatformCost <
+                platformBuilder.MinimumRopeReserve - 0.001f;
+            string actionMessage;
+            if (platformBuilder.CanBuildCurrentPlatform)
+            {
+                actionMessage = "Q：この方向へヒモ足場を作る";
+            }
+            else if (lacksReserve)
+            {
+                actionMessage =
+                    $"足場にできません\nヒモを{platformBuilder.MinimumRopeReserve:0.0}以上残してください";
+            }
+            else if (runController != null &&
+                runController.CurrentTutorialSection == 4)
+            {
+                actionMessage =
+                    "この接続先では足場を作れません\nEで外し、右の緑フックを狙ってください";
+            }
+            else
+            {
+                actionMessage = "この接続先では足場を作れません";
+            }
             GUILayout.Label(actionMessage, weavePromptActionStyle);
             GUILayout.EndArea();
         }
