@@ -27,7 +27,7 @@ namespace HimoHito
         public static readonly Vector2 RightAnchorPosition =
             new Vector2(52f, 0.35f);
         public static readonly Vector2 BeamPosition =
-            new Vector2(48.5f, 3.05f);
+            new Vector2(48.5f, 3.30f);
         public static readonly Vector2 BeamSize =
             new Vector2(2f, 5f);
         public static readonly Vector2 GoalFloorPosition =
