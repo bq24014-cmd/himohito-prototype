@@ -626,7 +626,7 @@ namespace HimoHito
             isIgnoringPlayerCollision = shouldIgnore;
         }
 
-        private bool IsSupportingPlayer()
+        public bool IsSupportingPlayer()
         {
             if (platformCollider == null || playerCollider == null ||
                 !platformCollider.enabled || !playerCollider.enabled)

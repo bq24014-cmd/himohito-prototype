@@ -507,7 +507,24 @@ namespace HimoHito
         private bool TryGetRecentRopePlatform(out GeneratedRopePlatform platform)
         {
             platform = recentRopePlatform;
-            if (platform == null || body.linearVelocity.y > 0.5f)
+            if (platform == null)
+            {
+                return false;
+            }
+
+            // On a rising bridge the supporting contact moves toward the
+            // lower corner of the player's box. The narrow centre ground
+            // probe can briefly miss that contact, and the surface-following
+            // velocity legitimately has a positive Y component. Keep ground
+            // control while the bridge is physically supporting the player;
+            // once a jump separates the colliders, the upward-velocity guard
+            // still releases the player into normal air control.
+            if (platform.IsSupportingPlayer())
+            {
+                return true;
+            }
+
+            if (body.linearVelocity.y > 0.5f)
             {
                 return false;
             }
