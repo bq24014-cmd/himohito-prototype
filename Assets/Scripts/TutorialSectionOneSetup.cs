@@ -11,8 +11,11 @@ namespace HimoHito
         public const string StartFloorName = "Start Ground";
         public const string HookName = "Tutorial Hook";
         public const string LandingFloorName = "Tutorial Landing";
-        public const int FixedRopeLength = 6;
+        public const int StartingRopeLength = 6;
         public const int NextSectionStartingRopeLength = 8;
+
+        private const float PlayerColliderWorldHeight = 1.2f;
+        private const float StartGroundingInset = 0.03f;
 
         public static readonly Vector2 StartFloorPosition =
             new Vector2(-4f, -4.65f);
@@ -25,7 +28,10 @@ namespace HimoHito
         public static readonly Vector2 LandingFloorSize =
             new Vector2(6f, 10f);
         public static readonly Vector2 StartRespawnPosition =
-            new Vector2(-4f, 0.95f);
+            new Vector2(
+                StartFloorPosition.x,
+                StartFloorPosition.y + StartFloorSize.y * 0.5f +
+                PlayerColliderWorldHeight * 0.5f - StartGroundingInset);
         public static readonly Vector2 LandingRespawnPosition =
             new Vector2(8f, 0.95f);
 

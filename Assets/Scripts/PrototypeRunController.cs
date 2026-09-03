@@ -49,7 +49,7 @@ namespace HimoHito
         public const int TutorialSectionCount = 5;
         public string CurrentTutorialObjective => CurrentTutorialSection switch
         {
-            1 => "長さ6のヒモを掛け、踏み出して振る",
+            1 => "長さと向きを選び、ヒモを掛けて振る",
             2 => "長さを選び、中央のトゲを越える",
             3 => "地形同士に掛けたヒモを足場にする",
             4 => "作った足場からHookへ掛けて渡る",
@@ -72,8 +72,9 @@ namespace HimoHito
             }
             playerMover = GetComponent<PlayerMover>();
             body.position = TutorialSectionOneSetup.StartRespawnPosition;
+            Physics2D.SyncTransforms();
             ropeController.RestoreSelectedRopeLength(
-                TutorialSectionOneSetup.FixedRopeLength);
+                TutorialSectionOneSetup.StartingRopeLength);
             startPosition = body.position;
 
         }

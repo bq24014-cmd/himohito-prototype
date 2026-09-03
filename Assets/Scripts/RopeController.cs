@@ -592,16 +592,6 @@ namespace HimoHito
 
         private void UpdateSelectedRopeLength()
         {
-            PrototypeRunController tutorial = GetComponent<PrototypeRunController>();
-            if (tutorial != null &&
-                gameObject.scene.name == "Tutorial" &&
-                tutorial.CurrentTutorialSection < 2)
-            {
-                selectedRopeLength = 6;
-                ResetLengthSelectionRepeat();
-                return;
-            }
-
             if (IsAttached)
             {
                 ResetLengthSelectionRepeat();
@@ -696,26 +686,6 @@ namespace HimoHito
 
         private bool UpdateKeyboardAim()
         {
-            if (!IsAttached &&
-                TryGetComponent(out PrototypeRunController tutorial) &&
-                gameObject.scene.name == "Tutorial" &&
-                tutorial.CurrentTutorialSection == 1)
-            {
-                GameObject firstHook = GameObject.Find(
-                    TutorialSectionOneSetup.HookName);
-                if (firstHook != null &&
-                    firstHook.TryGetComponent(out HookPoint hook))
-                {
-                    Vector2 direction = hook.GetAttachmentPoint(
-                        firstHook.transform.position) - body.position;
-                    if (direction.sqrMagnitude > 0.01f)
-                    {
-                        keyboardAimDirection = direction.normalized;
-                        return true;
-                    }
-                }
-            }
-
             bool changed = false;
 
             if (Input.GetKeyDown(KeyCode.UpArrow))

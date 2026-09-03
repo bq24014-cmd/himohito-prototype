@@ -109,19 +109,12 @@ namespace HimoHito
 
             if (ropeController != null)
             {
-                bool isFirstSection = runController != null &&
-                    runController.CurrentTutorialSection == 1;
                 GUILayout.Label(
-                    isFirstSection
-                        ? "使用する長さ  6（固定）"
-                        : $"次に使う長さ  {ropeController.SelectedRopeLength} / " +
-                          $"{ropeController.MaximumSelectableRopeLength}",
+                    $"次に使う長さ  {ropeController.SelectedRopeLength} / " +
+                    $"{ropeController.MaximumSelectableRopeLength}",
                     bodyStyle);
-                if (!isFirstSection)
-                {
-                    GUILayout.Label("W：使う長さを1増やす", bodyStyle);
-                    GUILayout.Label("S：使う長さを1減らす", bodyStyle);
-                }
+                GUILayout.Label("W：使う長さを1増やす", bodyStyle);
+                GUILayout.Label("S：使う長さを1減らす", bodyStyle);
             }
 
             string state;
@@ -154,7 +147,8 @@ namespace HimoHito
             if (showFirstSectionControls)
             {
                 GUILayout.Label("A / D：歩く（掛けたまま歩き出すと振り子になる）", bodyStyle);
-                GUILayout.Label("E：頭上のHookへヒモを掛ける／外す", bodyStyle);
+                GUILayout.Label("照準：← / →    真上・真下：↑ / ↓", bodyStyle);
+                GUILayout.Label("E：狙ったHookへヒモを掛ける／外す", bodyStyle);
                 GUILayout.Label("R：この区間の最初から再挑戦", bodyStyle);
             }
             else
@@ -269,10 +263,11 @@ namespace HimoHito
             GUILayout.Space(22f);
             GUILayout.Label("最初に覚えること", startImportantStyle);
             GUILayout.Label("A / D：谷の手前まで歩く", startImportantStyle);
-            GUILayout.Label("E：頭上のHookへヒモを掛ける", startImportantStyle);
+            GUILayout.Label("矢印キーでHookへ照準を合わせる", startImportantStyle);
+            GUILayout.Label("E：狙ったHookへヒモを掛ける", startImportantStyle);
             GUILayout.Label("掛けたまま歩き出すと、振り子になる", startImportantStyle);
             GUILayout.Space(20f);
-            GUILayout.Label("長さは6で固定。W / SとQはまだ使いません", startControlStyle);
+            GUILayout.Label("W / Sで長さ変更、矢印キーで照準。Qはまだ使いません", startControlStyle);
             GUILayout.Label("失敗してもヒモは減りません。何度でも試せます", startControlStyle);
             GUILayout.FlexibleSpace();
             GUILayout.Label("キーボードの何かのキーを押して開始", startPromptStyle);
