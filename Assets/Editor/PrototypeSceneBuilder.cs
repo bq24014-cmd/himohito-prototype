@@ -17,7 +17,8 @@ namespace HimoHitoEditor
             "Hook 1",
             "Goal / Landing 3",
             "Hook 3",
-            "Hook 2"
+            "Hook 2",
+            TutorialSectionOneSetup.LegacyFlashlightSpotName
         };
         private static readonly Vector2[] LegacyObjectPositions =
         {
@@ -25,7 +26,8 @@ namespace HimoHitoEditor
             new Vector2(-5f, -0.2f),
             new Vector2(22.15f, -0.5f),
             new Vector2(13.8f, 3.9f),
-            new Vector2(5f, 1.5f)
+            new Vector2(5f, 1.5f),
+            new Vector2(-4.25f, -3.1f)
         };
 
         static PrototypeSceneBuilder()

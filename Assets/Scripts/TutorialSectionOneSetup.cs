@@ -11,6 +11,8 @@ namespace HimoHito
         public const string StartFloorName = "Start Ground";
         public const string HookName = "Tutorial Hook";
         public const string LandingFloorName = "Tutorial Landing";
+        public const string LegacyFlashlightSpotName =
+            "Tutorial Flashlight Spot";
         public const int StartingRopeLength = 6;
         public const int NextSectionStartingRopeLength = 8;
 
@@ -44,7 +46,8 @@ namespace HimoHito
 
         public static bool ApplyCurrentScene()
         {
-            bool changed = EnsureTerrain(
+            bool changed = RemoveLegacyFlashlightSpot();
+            changed |= EnsureTerrain(
                 StartFloorName,
                 StartFloorPosition,
                 StartFloorSize,
@@ -66,6 +69,28 @@ namespace HimoHito
                 LandingRespawnPosition,
                 NextSectionStartingRopeLength);
             return changed;
+        }
+
+        private static bool RemoveLegacyFlashlightSpot()
+        {
+            GameObject spot = FindSceneObject(LegacyFlashlightSpotName);
+            if (spot == null ||
+                Vector2.Distance(
+                    spot.transform.position,
+                    new Vector2(-4.25f, -3.1f)) > 0.01f)
+            {
+                return false;
+            }
+
+            if (Application.isPlaying)
+            {
+                Object.Destroy(spot);
+            }
+            else
+            {
+                Object.DestroyImmediate(spot);
+            }
+            return true;
         }
 
         public static GameObject EnsureCreated()
