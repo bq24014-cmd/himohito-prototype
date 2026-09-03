@@ -18,6 +18,7 @@ namespace HimoHito
         public const string GoalFloorName = "Tutorial T4 Goal Floor";
         public const string GoalMarkerName = "Tutorial T4 Toy Box Goal";
         public const int PlatformRopeLength = 6;
+        public const float StartingRopeAmount = 13f;
 
         public static readonly Vector2 LeftAnchorPosition =
             new Vector2(42f, 0.35f);

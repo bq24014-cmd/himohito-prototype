@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 namespace HimoHito
 {
@@ -28,7 +29,8 @@ namespace HimoHito
         [SerializeField] private float fallThreshold = -9f;
         [SerializeField, Min(0f)] private float fallRespawnDelay = 0.5f;
         [SerializeField, Min(0.01f)] private float minimumUsableRopeLength = 1f;
-        [SerializeField] private bool startFromSectionThreeForDevelopment = true;
+        [FormerlySerializedAs("startFromSectionThreeForDevelopment")]
+        [SerializeField] private bool startFromSectionFourForDevelopment = true;
 
         private Rigidbody2D body;
         private RopeResource ropeResource;
@@ -78,17 +80,17 @@ namespace HimoHito
                 platformBuilder = gameObject.AddComponent<RopePlatformBuilder>();
             }
             playerMover = GetComponent<PlayerMover>();
-            if (startFromSectionThreeForDevelopment)
+            if (startFromSectionFourForDevelopment)
             {
-                startTutorialSection = 3;
-                CurrentTutorialSection = 3;
+                startTutorialSection = 4;
+                CurrentTutorialSection = 4;
                 body.position =
-                    TutorialSectionTwoSetup.LandingRespawnPosition;
+                    TutorialSectionThreeSetup.LandingRespawnPosition;
                 ropeResource.RestoreCapacityAndCurrent(
                     TutorialSectionThreeSetup.StartingRopeAmount,
-                    TutorialSectionThreeSetup.StartingRopeAmount);
+                    TutorialSectionFourSetup.StartingRopeAmount);
                 ropeController.RestoreSelectedRopeLength(
-                    TutorialSectionThreeSetup.RequiredRopeLength);
+                    TutorialSectionFourSetup.PlatformRopeLength);
             }
             else
             {
