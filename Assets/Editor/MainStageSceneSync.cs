@@ -5,11 +5,11 @@ using UnityEngine.SceneManagement;
 
 namespace HimoHitoEditor
 {
-    /// <summary>Keeps the saved MainStage scene aligned with section four.</summary>
+    /// <summary>Keeps the saved MainStage scene aligned with its setup code.</summary>
     [InitializeOnLoad]
-    public static class MainStageSectionFourSceneSync
+    public static class MainStageSceneSync
     {
-        static MainStageSectionFourSceneSync()
+        static MainStageSceneSync()
         {
             EditorSceneManager.sceneOpened += OnSceneOpened;
             EditorApplication.playModeStateChanged += OnPlayModeStateChanged;

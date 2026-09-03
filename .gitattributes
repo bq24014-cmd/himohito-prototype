@@ -1,5 +1,22 @@
 * text=auto
 
+# Keep Unity's text-based assets stable across Windows, macOS, and Linux.
+.gitattributes text eol=lf
+.gitignore text eol=lf
+.editorconfig text eol=lf
+*.cs text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.txt text eol=lf
+*.asmdef text eol=lf
+*.unity text eol=lf
+*.asset text eol=lf
+*.meta text eol=lf
+
+# Never let Git apply text conversion to source images or compressed audio.
+*.png binary
+*.ogg binary
+
 # Large binary source assets should use Git LFS when added later.
 *.psd filter=lfs diff=lfs merge=lfs -text
 *.wav filter=lfs diff=lfs merge=lfs -text

@@ -4,21 +4,18 @@ using UnityEngine;
 
 namespace HimoHitoEditor
 {
-    /// <summary>
-    /// Selects whether Play starts from the full tutorial or the active section experiment.
-    /// </summary>
+    /// <summary>Selects the scene Unity opens when Play starts.</summary>
     [InitializeOnLoad]
-    public static class PlayFromTutorial
+    public static class PlayStartSceneSelector
     {
         private const string TutorialScenePath = "Assets/Scenes/Tutorial.unity";
         private const string MainStageScenePath = "Assets/Scenes/MainStage.unity";
         private const string FloorCollisionExperimentScenePath =
             "Assets/Scenes/FloorCollisionExperiment.unity";
 
-        static PlayFromTutorial()
+        static PlayStartSceneSelector()
         {
-            EditorApplication.delayCall +=
-                ConfigurePlayStartScene;
+            EditorApplication.delayCall += ConfigurePlayStartScene;
         }
 
         [MenuItem("HimoHito/Play From Tutorial")]
