@@ -60,7 +60,6 @@ namespace HimoHito
         private void Awake()
         {
             TutorialSectionOneSetup.ApplyCurrentScene();
-            TutorialSectionOneSetup.ApplySectionVisibility(1);
             TutorialFirstSectionVisuals.Apply(gameObject);
 
             body = GetComponent<Rigidbody2D>();
@@ -226,8 +225,6 @@ namespace HimoHito
             }
 
             CurrentTutorialSection = sectionNumber;
-            TutorialSectionOneSetup.ApplySectionVisibility(
-                CurrentTutorialSection);
             checkpointPosition = respawnPosition;
             ropeController.RestoreSelectedRopeLength(startingRopeLength);
             CaptureCheckpointState();
@@ -262,7 +259,6 @@ namespace HimoHito
             platformBuilder.ClearPlatforms();
 
             CurrentTutorialSection = 1;
-            TutorialSectionOneSetup.ApplySectionVisibility(1);
             checkpointPosition = startPosition;
             body.position = startPosition;
             CaptureCheckpointState();

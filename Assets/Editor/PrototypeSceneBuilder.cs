@@ -6,15 +6,36 @@ using UnityEngine.SceneManagement;
 
 namespace HimoHitoEditor
 {
-    /// <summary>Rebuilds the five-section tutorial from the 0829 manual.</summary>
+    /// <summary>Rebuilds the tutorial from the currently implemented T1.</summary>
+    [InitializeOnLoad]
     public static class PrototypeSceneBuilder
     {
         private const string ScenePath = "Assets/Scenes/Tutorial.unity";
-        private static readonly Color TerrainColor = new(0.96f, 0.55f, 0.18f);
-        private static readonly Color HookColor = new(0.30f, 0.76f, 1f);
-        private static readonly Color SpikeColor = new(1f, 0.18f, 0.25f);
+        private static readonly string[] LegacyObjectNames =
+        {
+            "Landing 1",
+            "Hook 1",
+            "Goal / Landing 3",
+            "Hook 3",
+            "Hook 2"
+        };
+        private static readonly Vector2[] LegacyObjectPositions =
+        {
+            new Vector2(0f, -2.3f),
+            new Vector2(-5f, -0.2f),
+            new Vector2(22.15f, -0.5f),
+            new Vector2(13.8f, 3.9f),
+            new Vector2(5f, 1.5f)
+        };
 
-        [MenuItem("HimoHito/Rebuild Tutorial From 0829 Manual")]
+        static PrototypeSceneBuilder()
+        {
+            EditorApplication.delayCall +=
+                RemoveLegacyObjectsFromOpenTutorial;
+            EditorApplication.playModeStateChanged += OnPlayModeStateChanged;
+        }
+
+        [MenuItem("HimoHito/Rebuild Tutorial T1")]
         public static void BuildPrototypeScene()
         {
             Scene scene = EditorSceneManager.NewScene(
@@ -24,10 +45,6 @@ namespace HimoHitoEditor
                 TutorialSectionOneSetup.StartRespawnPosition);
 
             BuildT1();
-            BuildT2();
-            BuildT3();
-            BuildT4();
-            GameObject goal = BuildT5();
 
             CreateCamera(player.transform);
             GameObject hud = new("Tutorial HUD");
@@ -39,7 +56,7 @@ namespace HimoHitoEditor
             AssetDatabase.SaveAssets();
             AssetDatabase.Refresh();
             Selection.activeGameObject = player;
-            Debug.Log($"HimoHito 0829 tutorial rebuilt: {ScenePath}; goal={goal.name}");
+            Debug.Log($"HimoHito tutorial T1 rebuilt: {ScenePath}");
         }
 
         public static void BuildFromCommandLine()
@@ -53,53 +70,60 @@ namespace HimoHitoEditor
             TutorialSectionOneSetup.EnsureCreated();
         }
 
-        private static void BuildT2()
+        private static void OnPlayModeStateChanged(
+            PlayModeStateChange state)
         {
-            CreateTerrain("T2 Start Shelf", new Vector2(12f, 0f), new Vector2(3f, 0.7f));
-            CreateHook("Hook 1", new Vector2(18f, 7.4f));
-            CreateSpike("T2 Center Spike", new Vector2(18f, 0.1f), new Vector2(1.2f, 0.4f));
-            GameObject landing = CreateTerrain("Landing 1", new Vector2(24f, 0f), new Vector2(5f, 0.7f));
-            AddCheckpoint(landing, 3, new Vector2(24f, 0.65f), 7);
+            if (state == PlayModeStateChange.EnteredEditMode)
+            {
+                EditorApplication.delayCall +=
+                    RemoveLegacyObjectsFromOpenTutorial;
+            }
         }
 
-        private static void BuildT3()
+        [MenuItem("HimoHito/Clean Tutorial Legacy Objects")]
+        public static void RemoveLegacyObjectsFromOpenTutorial()
         {
-            // Facing edges are exactly 6 units apart. Length 7 therefore makes
-            // the manual's one-unit sag and permanently consumes 7 on Q.
-            CreateTerrain("T3 Left Shelf", new Vector2(29f, 4f), new Vector2(4f, 0.7f));
-            GameObject rightWall = CreateTerrain(
-                "T3 Right Shelf And T4 High Wall",
-                new Vector2(38f, 0f),
-                new Vector2(2f, 8f));
-            AddCheckpoint(rightWall, 4, new Vector2(37.5f, 4.65f), 10);
-        }
+            if (EditorApplication.isPlayingOrWillChangePlaymode)
+            {
+                return;
+            }
 
-        private static void BuildT4()
-        {
-            // From the bottom of the T3 bridge this hook is about 9.5 units
-            // away; the high wall prevents simply walking right.
-            CreateHook("Hook 2", new Vector2(42.5f, 7.2f));
-            GameObject landing = CreateTerrain("T4 Landing", new Vector2(48f, 0f), new Vector2(4f, 0.7f));
-            AddCheckpoint(landing, 5, new Vector2(47f, 0.65f), 6);
-        }
+            Scene scene = SceneManager.GetActiveScene();
+            if (!scene.IsValid() || scene.path != ScenePath)
+            {
+                return;
+            }
 
-        private static GameObject BuildT5()
-        {
-            // Outer attachment points are 10 units apart. Two length-6 bridges
-            // meet at Hook 3 but run into the beam. F joins them into one
-            // length-12 bridge whose two-unit sag passes below y=4.4.
-            CreateTerrain("T5 Left Shelf", new Vector2(52f, 5.85f), new Vector2(4f, 0.7f));
-            CreateHook("Hook 3", new Vector2(59f, 8.24f));
-            GameObject goal = CreateTerrain(
-                "Goal / Landing 3",
-                new Vector2(67f, 5.85f),
-                new Vector2(6f, 0.7f));
-            CreateTerrain(
-                "T5 Overhead Beam",
-                new Vector2(59f, 6.32f),
-                new Vector2(2f, 3.84f));
-            goal.AddComponent<GoalZone>();
-            return goal;
+            bool changed = false;
+            GameObject[] roots = scene.GetRootGameObjects();
+            for (int legacyIndex = 0;
+                 legacyIndex < LegacyObjectNames.Length;
+                 legacyIndex++)
+            {
+                foreach (GameObject root in roots)
+                {
+                    if (root == null ||
+                        root.name != LegacyObjectNames[legacyIndex] ||
+                        Vector2.Distance(
+                            root.transform.position,
+                            LegacyObjectPositions[legacyIndex]) > 0.01f)
+                    {
+                        continue;
+                    }
+
+                    Object.DestroyImmediate(root);
+                    changed = true;
+                    break;
+                }
+            }
+
+            if (!changed)
+            {
+                return;
+            }
+
+            EditorSceneManager.SaveScene(scene);
+            Debug.Log("旧チュートリアルの床・Hook・ゴールを削除しました。");
         }
 
         private static GameObject CreatePlayer(Vector2 position)
@@ -146,54 +170,6 @@ namespace HimoHitoEditor
             camera.backgroundColor = new Color(0.045f, 0.052f, 0.11f);
             cameraObject.AddComponent<AudioListener>();
             cameraObject.AddComponent<HorizontalCameraFollow>();
-        }
-
-        private static GameObject CreateTerrain(string name, Vector2 position, Vector2 size)
-        {
-            GameObject terrain = CreateSolidObject(name, position, size, TerrainColor);
-            Rigidbody2D body = terrain.AddComponent<Rigidbody2D>();
-            body.bodyType = RigidbodyType2D.Static;
-            terrain.AddComponent<SolidSwingSurface>();
-            return terrain;
-        }
-
-        private static GameObject CreateHook(string name, Vector2 position)
-        {
-            GameObject hook = CreateSolidObject(name, position, new Vector2(1.6f, 0.45f), HookColor);
-            hook.AddComponent<HookPoint>().ConfigureFixedAttachmentPoint(Vector2.zero);
-            return hook;
-        }
-
-        private static void CreateSpike(string name, Vector2 position, Vector2 size)
-        {
-            GameObject spike = CreateSolidObject(name, position, size, SpikeColor);
-            spike.GetComponent<BoxCollider2D>().isTrigger = true;
-            spike.AddComponent<RopeSpikeHazard>();
-        }
-
-        private static GameObject CreateSolidObject(
-            string name,
-            Vector2 position,
-            Vector2 size,
-            Color color)
-        {
-            GameObject gameObject = new(name);
-            gameObject.transform.position = position;
-            gameObject.transform.localScale = new Vector3(size.x, size.y, 1f);
-            gameObject.AddComponent<SpriteRenderer>();
-            gameObject.AddComponent<SolidSprite>().Color = color;
-            gameObject.AddComponent<BoxCollider2D>().size = Vector2.one;
-            return gameObject;
-        }
-
-        private static void AddCheckpoint(
-            GameObject floor,
-            int section,
-            Vector2 position,
-            int startingRopeLength)
-        {
-            TutorialCheckpoint checkpoint = floor.AddComponent<TutorialCheckpoint>();
-            checkpoint.Configure(section, position, startingRopeLength);
         }
 
         private static void EnsureBuildSettings()

@@ -8,34 +8,6 @@ namespace HimoHito
     /// </summary>
     public static class TutorialSectionOneSetup
     {
-        private static readonly string[][] LaterSectionObjectNames =
-        {
-            new[]
-            {
-                "T2 Start Shelf",
-                "Hook 1",
-                "T2 Center Spike",
-                "Landing 1"
-            },
-            new[]
-            {
-                "T3 Left Shelf",
-                "T3 Right Shelf And T4 High Wall"
-            },
-            new[]
-            {
-                "Hook 2",
-                "T4 Landing"
-            },
-            new[]
-            {
-                "T5 Left Shelf",
-                "Hook 3",
-                "Goal / Landing 3",
-                "T5 Overhead Beam"
-            }
-        };
-
         public const string StartFloorName = "Start Ground";
         public const string HookName = "Tutorial Hook";
         public const string LandingFloorName = "Tutorial Landing";
@@ -94,32 +66,6 @@ namespace HimoHito
         {
             ApplyCurrentScene();
             return FindSceneObject(LandingFloorName);
-        }
-
-        public static bool ApplySectionVisibility(int currentSection)
-        {
-            bool changed = false;
-            for (int groupIndex = 0;
-                 groupIndex < LaterSectionObjectNames.Length;
-                 groupIndex++)
-            {
-                bool shouldBeActive = currentSection >= groupIndex + 2;
-                foreach (string objectName in
-                         LaterSectionObjectNames[groupIndex])
-                {
-                    GameObject target = FindSceneObject(objectName);
-                    if (target == null ||
-                        target.activeSelf == shouldBeActive)
-                    {
-                        continue;
-                    }
-
-                    target.SetActive(shouldBeActive);
-                    changed = true;
-                }
-            }
-
-            return changed;
         }
 
         private static bool EnsureHook()
