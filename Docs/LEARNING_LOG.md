@@ -3751,3 +3751,10 @@ Hook 1へ届く最低限の長さと、長すぎて振り子が低くなる長�
 - 各区間のSetupとVisualsに重複していた、非アクティブを含むシーン内オブジェクト検索を`SceneObjectLookup`へ集約した。
 - MainStageまたはTutorialだけを対象にしていた箇所は、共通化後も同じシーン制限を渡して挙動を維持した。
 - Unity 6.3の参照でゲーム側・Editor側を警告レベル4でコンパイルし、警告・エラーがないことを確認した。
+
+# 2026-09-04 実行時アセットを現行素材だけに整理する
+
+- `Resources.Load`の文字列参照、シーンとアニメーションのGUID参照を照合し、現在使っている画像と音声を確認した。
+- 比較用に残していた旧画像`HimoHitoWalk-v1/v2`、`HimoHitoJump-v1`、`HimoHitoSwing-v1`、`TutorialToyBoxGoal-v1`は、どこからも参照されていなかったため`Assets/Resources`から外した。
+- 空の`Assets/Tests/EditMode`も削除し、アセット本体と`.meta`を必ず一緒に扱った。
+- 削除対象はローカルの`Temp/AssetBackup-20260904`へ退避してからGitへ記録し、必要なら作業中に戻せるようにした。

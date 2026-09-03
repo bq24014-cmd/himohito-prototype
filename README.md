@@ -143,6 +143,11 @@
 - ライセンス：Creative Commons Zero（CC0 1.0）
 - 同梱ライセンス：`Assets/ThirdParty/KenneyImpactSounds/License.txt`
 
+`Assets/Resources`には、実行時に読み込む現行素材だけを置きます。比較用だった旧画像
+`HimoHitoWalk-v1/v2`、`HimoHitoJump-v1`、`HimoHitoSwing-v1`、
+`TutorialToyBoxGoal-v1`はGit履歴から確認できるため、現行アセットから外しています。
+未使用の空の`Assets/Tests`フォルダーも置いていません。
+
 操作感、配置変更、選択理由、成功回数は[`Docs/LEARNING_LOG.md`](Docs/LEARNING_LOG.md)と[`Docs/METRICS.md`](Docs/METRICS.md)に記録しています。
 
 ## 使用バージョン
