@@ -19,6 +19,9 @@ namespace HimoHito
         [SerializeField]
         private bool startNearGoalForEndingPreview = true;
 
+        [SerializeField]
+        private bool startWithPartDPreview = true;
+
         [SerializeField] private float fallThreshold = -9f;
         [SerializeField, Min(0.01f)] private float minimumUsableRopeLength = 1f;
 
@@ -54,7 +57,7 @@ namespace HimoHito
             ropeController.RestoreSelectedRopeLength(
                 SectionOneStartingRopeLength);
 
-            if (startNearGoalForEndingPreview)
+            if (!startWithPartDPreview && startNearGoalForEndingPreview)
             {
                 ApplyEndingPreviewStart();
             }
@@ -65,6 +68,12 @@ namespace HimoHito
 
         private void Start()
         {
+            if (startWithPartDPreview)
+            {
+                ApplyPartDPreviewStart();
+                return;
+            }
+
             if (!startNearGoalForEndingPreview)
             {
                 return;
@@ -75,6 +84,15 @@ namespace HimoHito
             ApplyEndingPreviewStart();
             checkpointPosition = body.position;
             CaptureCheckpointState();
+        }
+
+        private void ApplyPartDPreviewStart()
+        {
+            // The checkpoint was captured before this preview state. Pressing
+            // R therefore restores section one with its normal rope amount,
+            // letting the same Play session verify the new far parallax layer.
+            ropeResource.RestoreCurrentLength(0f);
+            EnterRopeExhaustedState();
         }
 
         private void Update()
