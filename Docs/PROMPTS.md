@@ -135,3 +135,33 @@ The yarn is the foreground focal point across the lower third. Keep the center-l
 OUTPUT:
 One clean 16:9 raster illustration, no borders. No text, no letters, no numbers, no logos, no watermark, no UI, no human characters, no knitted doll character. Avoid photorealistic, 3D render, CGI, anime face, harsh contrast, neon colors, cluttered composition, busy center, lens flare. Taxonomy: illustration-story.
 ```
+
+## HimoHitoFarBackground-v1.png
+
+- 用途：チュートリアルと本編の遠景視差レイヤー
+- 生成日：2026-09-04
+- 使用ツール：Codex built-in image generation
+- 参照画像：`Assets/Resources/Art/TutorialNightChildRoom-v1.png`
+- 出力：`Assets/Resources/Art/HimoHitoFarBackground-v1.png`
+
+```text
+Use case: illustration-story
+Asset type: horizontally repeatable far-background layer for a Unity 2D side-scrolling puzzle platformer, 16:9 landscape
+Input image: use the supplied HimoHito child-bedroom artwork only as the exact style, palette, wallpaper-pattern, material, and nighttime-lighting reference
+
+Primary request: create only the far back wall of the same child's bedroom, horizontally seamless and suitable for repeated tiling. The entire image should feel several metres behind the playable area.
+
+Scene/backdrop: faint indigo wallpaper with the same small-leaf pattern. Include only very soft distant silhouettes: a tall bookshelf silhouette toward the right, a window with pale blue moonlight toward the left, and a subtle hanging paper garland along the top edge. Everything must be heavily soft-focused, low contrast, quiet, and noticeably darker than the supplied main background. No foreground objects and absolutely no floor or baseboard.
+
+Style/medium: 2D hand-painted picture-book game illustration, flat-ish shapes, soft gradients, subtle paper grain, calm and quiet. Materials should read only faintly because this is a distant layer.
+
+Composition/framing: flat and even, no strong focal point, no central subject. Keep the central 55 percent mostly wallpaper and shadow. The left and right edges must be plain matching wallpaper with identical brightness, color, and leaf-pattern rhythm so copies connect without a visible seam. Do not place the window, bookshelf, garland endpoint, highlight, or shadow directly on either edge.
+
+Parallax intent: designed to move at 78 percent of camera travel behind the existing background, so distant silhouettes must remain subtle and must not compete with gameplay.
+
+Color palette: deep indigo-violet #1A1430 to #2B2150, very muted toy-blue #3E8FD0, only a faint pale moon glow. No warm lamp focal point.
+
+Constraints: one clean opaque 16:9 raster image; no floor; no foreground toys; no character; no pink yarn; no text; no letters; no numbers; no logos; no watermark; no UI; no human characters. Keep both edge strips visually matching for horizontal tiling.
+
+Avoid: photorealistic, 3D render, CGI, anime, sharp objects, strong contrast, bright light, neon colors, clutter, busy center, perspective floor, baseboard, visible seams, vignette that darkens the edges differently.
+```

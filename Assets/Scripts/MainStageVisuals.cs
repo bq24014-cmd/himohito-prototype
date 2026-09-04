@@ -21,6 +21,8 @@ namespace HimoHito
             "Art/TutorialToyBoxGoal-v2";
         private const string BackgroundName =
             "Main Stage Night Child Room Background";
+        private const string FarBackgroundName =
+            "Main Stage Far Child Room Background";
         private const string HookVisualName = "Blue Toy Hook Visual";
         private const string BridgeAnchorVisualName =
             "Green Rope Anchor Ring Visual";
@@ -59,6 +61,10 @@ namespace HimoHito
         public static bool Apply(GameObject player)
         {
             bool changed = false;
+            changed |= HimoHitoFarBackgroundLayer.Ensure(
+                FarBackgroundName,
+                60f,
+                0.78f);
             changed |= EnsureBackground();
             changed |= RestorePlayerVisual(player);
             changed |= EnsureToyVisual(
@@ -878,9 +884,10 @@ namespace HimoHito
                 renderer.sprite = backgroundSprite;
                 changed = true;
             }
-            if (renderer.color != Color.white)
+            Color foregroundTint = new Color(1f, 1f, 1f, 0.84f);
+            if (renderer.color != foregroundTint)
             {
-                renderer.color = Color.white;
+                renderer.color = foregroundTint;
                 changed = true;
             }
             if (renderer.sortingOrder != -100)

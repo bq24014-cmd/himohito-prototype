@@ -13,6 +13,8 @@ namespace HimoHito
             "Art/TutorialNightChildRoom-v1";
         private const string BackgroundName =
             "Tutorial Night Child Room Background";
+        private const string FarBackgroundName =
+            "Tutorial Far Child Room Background";
         private const string BlockResourcePath =
             "Art/TutorialBlockPlatform-v1";
         private const string RailResourcePath =
@@ -62,6 +64,10 @@ namespace HimoHito
             changed |= ApplyColor(FindSceneObject("Hook 2"), HookColor);
             changed |= ApplyColor(FindSceneObject("Hook 3"), HookColor);
             changed |= ApplyColor(FindSceneObject("Goal / Landing 3"), PlatformColor);
+            changed |= HimoHitoFarBackgroundLayer.Ensure(
+                FarBackgroundName,
+                40f,
+                0.78f);
             changed |= EnsureBackground();
             changed |= EnsureToyVisual(
                 "Start Ground",
@@ -506,9 +512,10 @@ namespace HimoHito
                 changed = true;
             }
 
-            if (renderer.color != Color.white)
+            Color foregroundTint = new Color(1f, 1f, 1f, 0.84f);
+            if (renderer.color != foregroundTint)
             {
-                renderer.color = Color.white;
+                renderer.color = foregroundTint;
                 changed = true;
             }
 
