@@ -16,7 +16,7 @@ namespace HimoHitoEditor
         static PlayStartSceneSelector()
         {
             EditorApplication.delayCall +=
-                ConfigurePlayStartScene;
+                ConfigureEndingPreviewStartScene;
         }
 
         [MenuItem("HimoHito/Play From Tutorial")]
@@ -29,6 +29,12 @@ namespace HimoHitoEditor
         public static void ConfigureMainStageBeginningStartScene()
         {
             ConfigurePlayStartScene(MainStageScenePath, "MainStage beginning");
+        }
+
+        [MenuItem("HimoHito/Play From Ending Preview")]
+        public static void ConfigureEndingPreviewStartScene()
+        {
+            ConfigurePlayStartScene(MainStageScenePath, "ending preview");
         }
 
         [MenuItem("HimoHito/Play From Floor Collision Experiment")]

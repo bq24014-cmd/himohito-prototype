@@ -13,6 +13,10 @@ namespace HimoHito
     public sealed class MainStageRespawnOnFall : MonoBehaviour
     {
         private const int SectionOneStartingRopeLength = 7;
+        private const float EndingPreviewRopeLength = 5f;
+
+        [SerializeField]
+        private bool startNearGoalForEndingPreview = true;
 
         [SerializeField] private float fallThreshold = -9f;
         [SerializeField, Min(0.01f)] private float minimumUsableRopeLength = 1f;
@@ -49,6 +53,25 @@ namespace HimoHito
             ropeController.RestoreSelectedRopeLength(
                 SectionOneStartingRopeLength);
 
+            if (startNearGoalForEndingPreview)
+            {
+                ApplyEndingPreviewStart();
+            }
+
+            checkpointPosition = body.position;
+            CaptureCheckpointState();
+        }
+
+        private void Start()
+        {
+            if (!startNearGoalForEndingPreview)
+            {
+                return;
+            }
+
+            // Reapply after every Awake so authored section setup cannot leave
+            // the player at an older checkpoint during the ending preview.
+            ApplyEndingPreviewStart();
             checkpointPosition = body.position;
             CaptureCheckpointState();
         }
@@ -101,6 +124,18 @@ namespace HimoHito
             checkpointRopeLength = ropeResource.CurrentLength;
             checkpointSelectedRopeLength = ropeController.SelectedRopeLength;
             checkpointPlatformStates = platformBuilder.CapturePlatformStates();
+        }
+
+        private void ApplyEndingPreviewStart()
+        {
+            CurrentSection = 10;
+            body.position = MainStageSectionTenSetup.GoalMarkerPosition +
+                new Vector2(-2f, 2f);
+            body.linearVelocity = Vector2.zero;
+            body.angularVelocity = 0f;
+            ropeResource.RestoreCurrentLength(EndingPreviewRopeLength);
+            ropeController.RestoreSelectedRopeLength(1);
+            IsRopeExhausted = false;
         }
 
         private void RestartFromCheckpoint()
