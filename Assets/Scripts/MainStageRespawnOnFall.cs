@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace HimoHito
 {
@@ -13,14 +12,6 @@ namespace HimoHito
     [RequireComponent(typeof(RopePlatformBuilder), typeof(PlayerMover))]
     public sealed class MainStageRespawnOnFall : MonoBehaviour
     {
-        // Temporary development switch. Set this to false when full-stage
-        // playtesting should begin from section one again.
-        [SerializeField]
-        [FormerlySerializedAs("startFromSectionSevenForDevelopment")]
-        [FormerlySerializedAs("startFromSectionEightForDevelopment")]
-        [FormerlySerializedAs("startFromSectionNineForDevelopment")]
-        [FormerlySerializedAs("startFromSectionTenForDevelopment")]
-        private bool startFromSectionFourForDevelopment;
         private const int SectionOneStartingRopeLength = 7;
 
         [SerializeField] private float fallThreshold = -9f;
@@ -53,46 +44,11 @@ namespace HimoHito
             playerMover = GetComponent<PlayerMover>();
             goalZone = FindFirstObjectByType<MainStageGoalZone>();
 
-            if (startFromSectionFourForDevelopment)
-            {
-                CurrentSection = 4;
-                body.position =
-                    MainStageSectionThreeSetup.HighShelfRespawnPosition;
-                ropeResource.ResetToMaximum();
-                ropeController.RestoreSelectedRopeLength(
-                    MainStageSectionFourSetup.BridgeRopeLength);
-            }
-            else
-            {
-                CurrentSection = 1;
-                ropeResource.ResetToMaximum();
-                ropeController.RestoreSelectedRopeLength(
-                    SectionOneStartingRopeLength);
-            }
-
-            checkpointPosition = body.position;
-            CaptureCheckpointState();
-        }
-
-        private void Start()
-        {
-            goalZone ??= FindFirstObjectByType<MainStageGoalZone>();
-            if (!startFromSectionFourForDevelopment)
-            {
-                return;
-            }
-
-            // Apply once more after every Awake has completed. This prevents
-            // scene setup components from leaving development Play at an older
-            // section checkpoint.
-            CurrentSection = 4;
-            body.position =
-                MainStageSectionThreeSetup.HighShelfRespawnPosition;
-            body.linearVelocity = Vector2.zero;
-            body.angularVelocity = 0f;
+            CurrentSection = 1;
             ropeResource.ResetToMaximum();
             ropeController.RestoreSelectedRopeLength(
-                MainStageSectionFourSetup.BridgeRopeLength);
+                SectionOneStartingRopeLength);
+
             checkpointPosition = body.position;
             CaptureCheckpointState();
         }
