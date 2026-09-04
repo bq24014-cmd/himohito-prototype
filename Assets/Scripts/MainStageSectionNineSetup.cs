@@ -105,24 +105,21 @@ namespace HimoHito
         {
             return builder != null && builder.HasPlatformBetween(
                 LeftAnchorPosition,
-                CenterHookPosition,
-                PlatformRopeLength);
+                CenterHookPosition);
         }
 
         public static bool HasRightPlatform(RopePlatformBuilder builder)
         {
             return builder != null && builder.HasPlatformBetween(
                 CenterHookPosition,
-                RightAnchorPosition,
-                PlatformRopeLength);
+                RightAnchorPosition);
         }
 
         public static bool HasMergedPlatform(RopePlatformBuilder builder)
         {
             return builder != null && builder.HasPlatformBetween(
                 LeftAnchorPosition,
-                RightAnchorPosition,
-                PlatformRopeLength * 2f);
+                RightAnchorPosition);
         }
 
         private static bool EnsurePairedHook(

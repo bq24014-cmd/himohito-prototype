@@ -307,6 +307,13 @@ namespace HimoHito
                 actionMessage =
                     "この接続先では足場を作れません\nEで外し、右の緑フックを狙ってください";
             }
+            else if (ropeController.ActiveHookPoint != null &&
+                ropeController.ActiveHookPoint.TryGetComponent(
+                    out RopePlatformAnchor _))
+            {
+                actionMessage =
+                    "ヒモが対岸フックまで届いていません\nEで外し、Wで長くしてください";
+            }
             else
             {
                 actionMessage = "この接続先では足場を作れません";

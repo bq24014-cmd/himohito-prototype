@@ -189,6 +189,24 @@ namespace HimoHito
 
         public bool HasPlatformBetween(
             Vector2 start,
+            Vector2 end)
+        {
+            foreach (GameObject platformObject in generatedPlatforms)
+            {
+                if (platformObject != null &&
+                    platformObject.TryGetComponent(
+                        out GeneratedRopePlatform platform) &&
+                    ConnectsEndpoints(platform, start, end))
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        public bool HasPlatformBetween(
+            Vector2 start,
             Vector2 end,
             float ropeLength)
         {
@@ -201,13 +219,7 @@ namespace HimoHito
                     continue;
                 }
 
-                bool sameDirection =
-                    Vector2.Distance(platform.Start, start) <= 0.1f &&
-                    Vector2.Distance(platform.End, end) <= 0.1f;
-                bool reverseDirection =
-                    Vector2.Distance(platform.Start, end) <= 0.1f &&
-                    Vector2.Distance(platform.End, start) <= 0.1f;
-                if ((sameDirection || reverseDirection) &&
+                if (ConnectsEndpoints(platform, start, end) &&
                     Mathf.Abs(platform.RopeLength - ropeLength) <= 0.05f)
                 {
                     return true;
@@ -215,6 +227,20 @@ namespace HimoHito
             }
 
             return false;
+        }
+
+        private static bool ConnectsEndpoints(
+            GeneratedRopePlatform platform,
+            Vector2 start,
+            Vector2 end)
+        {
+            bool sameDirection =
+                Vector2.Distance(platform.Start, start) <= 0.1f &&
+                Vector2.Distance(platform.End, end) <= 0.1f;
+            bool reverseDirection =
+                Vector2.Distance(platform.Start, end) <= 0.1f &&
+                Vector2.Distance(platform.End, start) <= 0.1f;
+            return sameDirection || reverseDirection;
         }
 
         public void ClearPlatforms()
@@ -263,53 +289,26 @@ namespace HimoHito
                 activeHook.TryGetComponent(out platformAnchor);
             }
 
-            PrototypeRunController tutorial =
-                GetComponent<PrototypeRunController>();
-            if (tutorial != null &&
-                tutorial.CurrentTutorialSection >= 3 &&
-                platformAnchor == null)
-            {
-                return false;
-            }
-
-            MainStageRespawnOnFall main =
-                GetComponent<MainStageRespawnOnFall>();
-            if (main != null && main.CurrentSection == 4 &&
-                platformAnchor == null)
-            {
-                return false;
-            }
-
-            // Section five teaches blocking the light, not length selection.
-            // Once its green paired Hook is attached, always build the
-            // authored length-six bridge even if W/S was changed beforehand.
-            if (main != null && main.CurrentSection == 5 &&
-                platformAnchor != null)
-            {
-                ropeLength = platformAnchor.RequiredRopeLength;
-            }
-
-            if (platformAnchor != null &&
-                !platformAnchor.CanBuildWith(ropeLength))
-            {
-                return false;
-            }
-
-            if (platformAnchor != null &&
-                platformAnchor.TryGetPairedAnchor(
+            // Q is reserved for authored bridge Hooks. The chosen length does
+            // not have to match the suggested solution; it only has to span
+            // the actual distance between this Hook and its paired endpoint.
+            if (platformAnchor == null ||
+                !platformAnchor.TryGetPairedAnchor(
                     out Vector2 pairedAnchor))
             {
-                Vector2 activeAnchor = ropeController.AnchorPoint;
-                bool pairedAnchorIsCloserToPlayer =
-                    Vector2.Distance(body.position, pairedAnchor) <=
-                    Vector2.Distance(body.position, activeAnchor);
-                start = pairedAnchorIsCloserToPlayer
-                    ? activeAnchor
-                    : pairedAnchor;
-                end = pairedAnchorIsCloserToPlayer
-                    ? pairedAnchor
-                    : activeAnchor;
+                return false;
             }
+
+            Vector2 activeAnchor = ropeController.AnchorPoint;
+            bool pairedAnchorIsCloserToPlayer =
+                Vector2.Distance(body.position, pairedAnchor) <=
+                Vector2.Distance(body.position, activeAnchor);
+            start = pairedAnchorIsCloserToPlayer
+                ? activeAnchor
+                : pairedAnchor;
+            end = pairedAnchorIsCloserToPlayer
+                ? pairedAnchor
+                : activeAnchor;
 
             float directDistance = Vector2.Distance(start, end);
             return ropeLength >= minimumPlatformLength &&
@@ -319,19 +318,7 @@ namespace HimoHito
 
         private float GetCurrentPlatformCost()
         {
-            HookPoint activeHook = ropeController.ActiveHookPoint;
-            if (activeHook == null ||
-                !activeHook.TryGetComponent(
-                    out RopePlatformAnchor platformAnchor))
-            {
-                return ropeController.ActiveRopeLength;
-            }
-
-            MainStageRespawnOnFall main =
-                GetComponent<MainStageRespawnOnFall>();
-            return main != null && main.CurrentSection == 5
-                ? platformAnchor.RequiredRopeLength
-                : ropeController.ActiveRopeLength;
+            return ropeController.ActiveRopeLength;
         }
 
         private bool IsHookRemovalUnlocked()

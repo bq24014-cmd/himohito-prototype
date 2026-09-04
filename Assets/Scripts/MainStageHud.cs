@@ -162,16 +162,13 @@ namespace HimoHito
                 ropeController.ActiveHookPoint != null &&
                 ropeController.ActiveHookPoint.TryGetComponent(
                     out RopePlatformAnchor _);
-            bool hasCorrectLength = ropeController != null &&
-                Mathf.Abs(
-                    ropeController.ActiveRopeLength -
-                    MainStageSectionFourSetup.BridgeRopeLength) <= 0.05f;
+            bool canBuild = platformBuilder.CanBuildCurrentPlatform;
             GUILayout.Label(
                 isGreenAnchor
-                    ? hasCorrectLength
-                        ? "緑フックへ接続中：Qで2つの緑フックを結ぶ"
-                        : "Eで解除し、W/Sで長さ5にして緑フックへ再接続"
-                    : "左右の緑フックを確認し、長さ5で右の緑フックへ接続",
+                    ? canBuild
+                        ? $"緑フックへ接続中：Qで足場化（消費{platformBuilder.CurrentPlatformCost:0}）"
+                        : "ヒモが対岸フックまで届いていない：Eで外してWで長くする"
+                    : "左右の緑フックを確認し、対岸まで届く長さで接続",
                 accentStyle);
         }
 
@@ -194,13 +191,13 @@ namespace HimoHito
             bool isShadowAnchor = ropeController != null &&
                 ropeController.ActiveHookPoint != null &&
                 ropeController.ActiveHookPoint.TryGetComponent(
-                    out RopePlatformAnchor anchor) &&
-                anchor.RequiredRopeLength ==
-                    MainStageSectionFiveSetup.BridgeRopeLength;
+                    out RopePlatformAnchor _);
             GUILayout.Label(
                 isShadowAnchor
-                    ? "緑フックへ接続中：Qで遮光する足場を作る（消費6）"
-                    : "左棚へ登り、長さ6で右の緑フックへ接続",
+                    ? platformBuilder.CanBuildCurrentPlatform
+                        ? $"緑フックへ接続中：Qで遮光足場を作る（消費{platformBuilder.CurrentPlatformCost:0}）"
+                        : "ヒモが対岸フックまで届いていない：Eで外してWで長くする"
+                    : "左棚へ登り、対岸まで届く長さで右の緑フックへ接続",
                 accentStyle);
         }
 
@@ -223,7 +220,9 @@ namespace HimoHito
                     MainStageSectionSixSetup.UpperBridgeEndHookName)
             {
                 GUILayout.Label(
-                    $"上ルート：Qで長さ{MainStageSectionSixSetup.UpperBridgeRopeLength}を消費し、安全な橋を作る",
+                    platformBuilder.CanBuildCurrentPlatform
+                        ? $"上ルート：Qで長さ{platformBuilder.CurrentPlatformCost:0}を消費し、安全橋を作る"
+                        : "上ルート：ヒモが対岸フックまで届いていない",
                     accentStyle);
                 return;
             }
@@ -249,8 +248,7 @@ namespace HimoHito
         {
             bool hasFirstBridge = platformBuilder.HasPlatformBetween(
                 MainStageSectionSevenSetup.BridgeStartHookPosition,
-                MainStageSectionSevenSetup.BridgeEndHookPosition,
-                MainStageSectionSevenSetup.BridgeRopeLength);
+                MainStageSectionSevenSetup.BridgeEndHookPosition);
             if (!hasFirstBridge)
             {
                 bool isBridgeAnchor = ropeController != null &&
@@ -259,8 +257,10 @@ namespace HimoHito
                         MainStageSectionSevenSetup.BridgeEndHookName;
                 GUILayout.Label(
                     isBridgeAnchor
-                        ? "緑フックへ接続中：Qで長さ4の足場を先に作る"
-                        : "先に長さ4で中段の緑フックへ接続し、Qで足場化",
+                        ? platformBuilder.CanBuildCurrentPlatform
+                            ? $"緑フックへ接続中：Qで長さ{platformBuilder.CurrentPlatformCost:0}の足場を作る"
+                            : "ヒモが対岸フックまで届いていない"
+                        : "対岸まで届く長さで中段の緑フックへ接続し、Qで足場化",
                     accentStyle);
                 return;
             }
@@ -309,10 +309,12 @@ namespace HimoHito
                 activeHook != null &&
                 (activeHook.name == MainStageSectionNineSetup.CenterHookName ||
                  activeHook.name == MainStageSectionNineSetup.RightAnchorName)
-                    ? $"接続中：Qで長さ{MainStageSectionNineSetup.PlatformRopeLength}の足場を作る"
+                    ? platformBuilder.CanBuildCurrentPlatform
+                        ? $"接続中：Qで長さ{platformBuilder.CurrentPlatformCost:0}の足場を作る"
+                        : "ヒモが対岸フックまで届いていない"
                     : hasLeft
-                        ? "中央から右の緑フックへ長さ6で接続し、Qで2本目を作る"
-                        : "左岸から中央の青フックへ長さ6で接続し、Qで1本目を作る",
+                        ? "中央から右の緑フックへ届く長さで接続し、Qで2本目を作る"
+                        : "左岸から中央の青フックへ届く長さで接続し、Qで1本目を作る",
                 accentStyle);
         }
 
@@ -332,8 +334,10 @@ namespace HimoHito
                     MainStageSectionTenSetup.RightAnchorName;
             GUILayout.Label(
                 isFinalAnchor
-                    ? "接続中：Qで残りの長さ10を最後の橋にする"
-                    : "頭上にフックはない。長さ10で右岸の緑フックへ接続",
+                    ? platformBuilder.CanBuildCurrentPlatform
+                        ? $"接続中：Qで長さ{platformBuilder.CurrentPlatformCost:0}を最後の橋にする"
+                        : "ヒモが対岸フックまで届いていない"
+                    : "頭上にフックはない。対岸まで届く長さで右岸の緑フックへ接続",
                 accentStyle);
         }
 

@@ -74,8 +74,7 @@ namespace HimoHito
         {
             return builder != null && builder.HasPlatformBetween(
                 LeftAnchorPosition,
-                RightAnchorPosition,
-                BridgeRopeLength);
+                RightAnchorPosition);
         }
 
         private static bool EnsurePairedAnchor(

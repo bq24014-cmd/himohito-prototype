@@ -13,8 +13,7 @@ namespace HimoHito
     {
         private static readonly Color AimGuideColor =
             new Color(1f, 0.72f, 0.80f, 0.55f);
-        private const float SectionNineHookTargetingGrace = 0.25f;
-        private const float TutorialSectionThreeHookTargetingGrace = 0.5f;
+        private const float PlatformHookTargetingGrace = 0.5f;
 
         [SerializeField, Min(1f)] private float maximumShotDistance = 14f;
         [SerializeField, Min(0.01f)] private float ropeWidth = 0.16f;
@@ -242,10 +241,9 @@ namespace HimoHito
                 hookPoint.TryGetComponent(out RopePlatformAnchor _);
             if (isPlatformBuildAttachment)
             {
-                // A platform Hook is followed by Q, not by a swing. Section 9
-                // intentionally allows a small aiming margin beyond length 6;
-                // do not let the joint shorten that margin and pull the player
-                // off the end of the first bridge before Q can be pressed.
+                // A platform Hook is followed by Q, not by a swing. The player
+                // stands about half a collider outside the paired bank Hook, so
+                // do not let that targeting margin pull them off the edge.
                 jointDistance = Mathf.Max(
                     jointDistance,
                     Vector2.Distance(body.position, anchorPoint));
@@ -445,7 +443,9 @@ namespace HimoHito
                 }
 
                 Vector2 candidateAnchor = candidate.GetAttachmentPoint(hit.point);
-                float allowedDistance = UsesExtendedPlatformHookTargeting(candidate)
+                float allowedDistance = CanUsePlatformHookTargetingGrace(
+                    candidate,
+                    baseSearchDistance)
                     ? hookSearchDistance
                     : baseSearchDistance;
                 if (Vector2.Distance(origin, candidateAnchor) <=
@@ -510,7 +510,9 @@ namespace HimoHito
                 Vector2 candidateAnchor =
                     candidateHook.GetAttachmentPoint(hit.point);
                 float allowedDistance =
-                    UsesExtendedPlatformHookTargeting(candidateHook)
+                    CanUsePlatformHookTargetingGrace(
+                        candidateHook,
+                        shotDistance)
                         ? hookSearchDistance
                         : shotDistance;
                 if (Vector2.Distance(origin, candidateAnchor) >
@@ -546,40 +548,26 @@ namespace HimoHito
 
         private float GetHookSearchDistance(float baseDistance)
         {
-            MainStageRespawnOnFall main =
-                GetComponent<MainStageRespawnOnFall>();
-            float targetingGrace = main != null && main.CurrentSection == 9
-                ? SectionNineHookTargetingGrace
-                : 0f;
-
-            PrototypeRunController tutorial =
-                GetComponent<PrototypeRunController>();
-            if (tutorial != null && tutorial.CurrentTutorialSection == 3)
-            {
-                targetingGrace = TutorialSectionThreeHookTargetingGrace;
-            }
-
-            return Mathf.Min(maximumShotDistance, baseDistance + targetingGrace);
+            return Mathf.Min(
+                maximumShotDistance,
+                baseDistance + PlatformHookTargetingGrace);
         }
 
-        private bool UsesExtendedPlatformHookTargeting(HookPoint hook)
+        private static bool CanUsePlatformHookTargetingGrace(
+            HookPoint hook,
+            float ropeLength)
         {
             if (hook == null ||
-                !hook.TryGetComponent(out RopePlatformAnchor _))
+                !hook.TryGetComponent(out RopePlatformAnchor platformAnchor) ||
+                !platformAnchor.TryGetPairedAnchor(out Vector2 pairedAnchor))
             {
                 return false;
             }
 
-            MainStageRespawnOnFall main =
-                GetComponent<MainStageRespawnOnFall>();
-            if (main != null && main.CurrentSection == 9)
-            {
-                return true;
-            }
-
-            PrototypeRunController tutorial =
-                GetComponent<PrototypeRunController>();
-            return tutorial != null && tutorial.CurrentTutorialSection == 3;
+            Vector2 hookAnchor = hook.GetAttachmentPoint(
+                hook.transform.position);
+            return Vector2.Distance(hookAnchor, pairedAnchor) <=
+                ropeLength + 0.05f;
         }
 
         private void UpdateSelectedRopeLength()

@@ -4,7 +4,8 @@ namespace HimoHito
 {
     /// <summary>
     /// Marks a special Hook that is intended for making a permanent rope
-    /// platform. A paired Hook can fix both ends of the generated platform.
+    /// platform. The stored length is the authored recommendation; building
+    /// succeeds with any selected rope long enough to reach the paired Hook.
     /// </summary>
     [DisallowMultipleComponent]
     [RequireComponent(typeof(HookPoint))]
@@ -13,7 +14,7 @@ namespace HimoHito
         [SerializeField, Min(1)] private int requiredRopeLength = 5;
         [SerializeField] private string pairedAnchorName;
 
-        public int RequiredRopeLength => requiredRopeLength;
+        public int RecommendedRopeLength => requiredRopeLength;
 
         public bool Configure(int ropeLength, string pairedObjectName = "")
         {
@@ -24,11 +25,6 @@ namespace HimoHito
             requiredRopeLength = safeLength;
             pairedAnchorName = safePairedName;
             return changed;
-        }
-
-        public bool CanBuildWith(float ropeLength)
-        {
-            return Mathf.Abs(ropeLength - requiredRopeLength) <= 0.05f;
         }
 
         public bool TryGetPairedAnchor(out Vector2 anchorPosition)
