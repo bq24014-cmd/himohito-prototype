@@ -75,3 +75,36 @@ Avoid: photorealistic, 3D render, CGI, anime face, text, letters, numbers,
 symbols, watermark, signature, harsh contrast, neon colors, cluttered centre,
 lens flare, perspective-distorted paper, torn paper, ruled paper.
 ```
+
+## HimoHitoEndingBackground-v1.png
+
+- 用途：本編およびチュートリアルのクリア画面背景
+- 生成日：2026-09-04
+- 使用ツール：Codex built-in image generation
+- 参照画像：`HimoHitoTitleBackground-v1.png`、`HimoHitoControlsBackground-v1.png`、`TutorialNightChildRoom-v1.png`
+- 出力：`Assets/Resources/Art/HimoHitoEndingBackground-v1.png`
+
+```text
+Use case: illustration-story
+Asset type: 16:9 Unity game ending / clear-screen background
+Primary request: Create the Part D image 3 ending scene for HimoHito, matching the supplied game artwork exactly in world, palette, material treatment, and storybook rendering.
+Input images: Image 1 is the title-screen style and toy-box reference; Image 2 is the knitted pink doll and warm paper-light reference; Image 3 is the bedroom environment and background reference.
+
+2D game illustration for a picture-book style puzzle platformer.
+Setting: a child's bedroom at night, seen as a cozy toy-box world.
+Palette: deep indigo-violet base (#1A1430 to #2B2150), dusty pink yarn (#FF5C8A),
+toy-blue painted plastic (#3E8FD0), warm wooden-block orange (#E0862F),
+one warm lamp light (#FFD9A0) as the only light source, coming from the upper left.
+Materials: knitted wool, felt, painted wood, matte plastic toys.
+Rendering: flat-ish shapes with soft gradients, gentle rim light, subtle paper grain,
+no harsh shadows, hand-painted storybook feel, calm and quiet.
+No text, no letters, no logos, no watermark, no UI, no human characters.
+16:9 aspect ratio.
+
+Scene: the same wooden toy box, lid fully open, seen slightly from above and to the side. A very small knitted doll made of dusty pink yarn is settling safely inside the box among other familiar toys: one felt star, one wooden toy train, and one knitted ball. The pink doll must look visibly thinner and more unravelled than in the controls reference, with a narrow yarn body but still clearly recognizable as the same gentle doll. Warm golden light fills the box from within and spills softly onto the wooden floor. Behind the box, one long continuous dusty-pink yarn trail leads away from the doll and recedes into the upper-left darkness of the bedroom, clearly marking the path the doll travelled and the yarn it left behind.
+Mood: arrival, warmth, quiet accomplishment, with a small note of sacrifice.
+Composition: toy box centred in the lower third, lid open, dark bedroom surrounding it, yarn trail receding toward upper-left. Preserve a calm, uncluttered dark area across the upper centre and upper right for Unity to overlay CLEAR and run statistics. Keep all important subjects away from the outer 7 percent safe margins.
+Lighting/mood: only the warm upper-left lamp and the soft glow from inside the box; quiet bedtime atmosphere.
+Constraints: game-world objects only; the doll is inside the box; its body is thin and unravelled; the path is shown by one continuous yarn trail; text overlay area stays legible and dark.
+Avoid: photorealistic, 3D render, CGI, anime face, text, letters, numbers, symbols, watermark, signature, harsh contrast, neon colors, cluttered composition, busy upper center, lens flare, extra characters, giant doll, severed yarn, multiple yarn trails, daylight.
+```

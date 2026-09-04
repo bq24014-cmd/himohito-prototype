@@ -12,6 +12,7 @@ namespace HimoHito
         private MainStagePreview preview;
         private MainStageRespawnOnFall respawn;
         private MainStageGoalZone goal;
+        private Texture2D endingBackground;
         private GUIStyle titleStyle;
         private GUIStyle bodyStyle;
         private GUIStyle ropeStyle;
@@ -20,6 +21,8 @@ namespace HimoHito
         private GUIStyle clearBodyStyle;
         private int displayedSection;
         private float sectionTitleUntil;
+        private float stageStartedAt;
+        private float clearElapsedSeconds = -1f;
 
         private void Awake()
         {
@@ -29,12 +32,15 @@ namespace HimoHito
             preview = FindFirstObjectByType<MainStagePreview>();
             respawn = FindFirstObjectByType<MainStageRespawnOnFall>();
             goal = FindFirstObjectByType<MainStageGoalZone>();
+            endingBackground = Resources.Load<Texture2D>(
+                "Art/HimoHitoEndingBackground-v1");
             if (ropeController != null)
             {
                 playerBody = ropeController.GetComponent<Rigidbody2D>();
             }
             displayedSection = respawn != null ? respawn.CurrentSection : 1;
             sectionTitleUntil = Time.unscaledTime + 1.2f;
+            stageStartedAt = Time.time;
         }
 
         private void Start()
@@ -371,27 +377,64 @@ namespace HimoHito
         private void DrawClearScreen()
         {
             Color previous = GUI.color;
-            GUI.color = new Color(0.035f, 0.04f, 0.085f, 0.99f);
-            GUI.Box(new Rect(0f, 0f, Screen.width, Screen.height), GUIContent.none);
+            Rect screenRect = new Rect(0f, 0f, Screen.width, Screen.height);
+            if (endingBackground != null)
+            {
+                GUI.DrawTexture(
+                    screenRect,
+                    endingBackground,
+                    ScaleMode.ScaleAndCrop,
+                    true);
+            }
+            else
+            {
+                GUI.color = new Color(0.035f, 0.04f, 0.085f, 0.99f);
+                GUI.Box(screenRect, GUIContent.none);
+            }
             GUI.color = previous;
-            GUILayout.BeginArea(new Rect(0f, 0f, Screen.width, Screen.height));
-            GUILayout.FlexibleSpace();
-            GUILayout.Label("MAIN STAGE CLEAR", clearTitleStyle);
+
+            if (clearElapsedSeconds < 0f)
+            {
+                clearElapsedSeconds = Mathf.Max(0f, Time.time - stageStartedAt);
+            }
+
+            GUILayout.BeginArea(new Rect(
+                0f,
+                Screen.height * 0.075f,
+                Screen.width,
+                Screen.height * 0.42f));
+            GUILayout.Label("CLEAR", clearTitleStyle);
             if (ropeResource != null)
             {
-                GUILayout.Label($"残ったヒモ　{ropeResource.CurrentLength:0.0}", clearBodyStyle);
+                GUILayout.Label(
+                    $"残ったヒモ　{ropeResource.CurrentLength:0.0} / " +
+                    $"{ropeResource.MaximumLength:0.0}",
+                    clearBodyStyle);
             }
             if (platformBuilder != null)
             {
-                GUILayout.Label($"編んだ足場　{platformBuilder.GeneratedPlatformCount}", clearBodyStyle);
+                GUILayout.Label(
+                    $"編んだ足場　{platformBuilder.GeneratedPlatformCount} 本",
+                    clearBodyStyle);
             }
             if (respawn != null)
             {
                 GUILayout.Label($"補充　{respawn.RefillCount} 回", clearBodyStyle);
             }
+            GUILayout.Label(
+                $"かかった時間　{FormatElapsed(clearElapsedSeconds)}",
+                clearBodyStyle);
+            GUILayout.Space(16f);
             GUILayout.Label("R　本編を最初から再挑戦", clearBodyStyle);
-            GUILayout.FlexibleSpace();
             GUILayout.EndArea();
+        }
+
+        private static string FormatElapsed(float seconds)
+        {
+            int totalSeconds = Mathf.FloorToInt(seconds);
+            int minutes = totalSeconds / 60;
+            int remainingSeconds = totalSeconds % 60;
+            return $"{minutes}分{remainingSeconds:00}秒";
         }
 
         private void EnsureStyles()
@@ -429,13 +472,13 @@ namespace HimoHito
                 alignment = TextAnchor.MiddleCenter,
                 fontSize = 48,
                 fontStyle = FontStyle.Bold,
-                normal = { textColor = new Color(0.33f, 1f, 0.76f) }
+                normal = { textColor = new Color(1f, 0.36f, 0.56f) }
             };
             clearBodyStyle = new GUIStyle(GUI.skin.label)
             {
                 alignment = TextAnchor.MiddleCenter,
                 fontSize = 24,
-                normal = { textColor = Color.white }
+                normal = { textColor = new Color(1f, 0.86f, 0.66f) }
             };
 
             HimoHitoGuiTheme.ApplyToStyles(

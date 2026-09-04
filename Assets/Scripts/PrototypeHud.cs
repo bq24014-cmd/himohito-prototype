@@ -16,6 +16,7 @@ namespace HimoHito
         private Camera mainCamera;
         private Collider2D playerCollider;
         private Texture2D titleBackground;
+        private Texture2D endingBackground;
         private GUIStyle titleStyle;
         private GUIStyle bodyStyle;
         private GUIStyle lengthStyle;
@@ -66,6 +67,8 @@ namespace HimoHito
 
             titleBackground = Resources.Load<Texture2D>(
                 "Art/HimoHitoTitleBackground-v1");
+            endingBackground = Resources.Load<Texture2D>(
+                "Art/HimoHitoEndingBackground-v1");
         }
 
         private void OnGUI()
@@ -382,18 +385,32 @@ namespace HimoHito
         private void DrawClearScreen()
         {
             Color previousColor = GUI.color;
-            GUI.color = new Color(0.035f, 0.04f, 0.085f, 0.99f);
-            GUI.Box(new Rect(0f, 0f, Screen.width, Screen.height), GUIContent.none);
+            Rect screenRect = new Rect(0f, 0f, Screen.width, Screen.height);
+            if (endingBackground != null)
+            {
+                GUI.DrawTexture(
+                    screenRect,
+                    endingBackground,
+                    ScaleMode.ScaleAndCrop,
+                    true);
+            }
+            else
+            {
+                GUI.color = new Color(0.035f, 0.04f, 0.085f, 0.99f);
+                GUI.Box(screenRect, GUIContent.none);
+            }
             GUI.color = previousColor;
 
-            GUILayout.BeginArea(new Rect(0f, 0f, Screen.width, Screen.height));
-            GUILayout.FlexibleSpace();
-            GUILayout.Label("TUTORIAL CLEAR", clearTitleStyle);
+            GUILayout.BeginArea(new Rect(
+                0f,
+                Screen.height * 0.1f,
+                Screen.width,
+                Screen.height * 0.34f));
+            GUILayout.Label("チュートリアルクリア", clearTitleStyle);
             GUILayout.Space(18f);
             GUILayout.Label("ヒモを掛ける・長さを選ぶ・足場にする・まとめるを習得しました", clearBodyStyle);
             GUILayout.Space(42f);
             GUILayout.Label("Enter　本編ステージへ", clearPromptStyle);
-            GUILayout.FlexibleSpace();
             GUILayout.EndArea();
         }
 
@@ -484,13 +501,13 @@ namespace HimoHito
                 alignment = TextAnchor.MiddleCenter,
                 fontSize = 58,
                 fontStyle = FontStyle.Bold,
-                normal = { textColor = new Color(0.35f, 1f, 0.78f) }
+                normal = { textColor = new Color(1f, 0.36f, 0.56f) }
             };
             clearBodyStyle = new GUIStyle(GUI.skin.label)
             {
                 alignment = TextAnchor.MiddleCenter,
                 fontSize = 24,
-                normal = { textColor = Color.white }
+                normal = { textColor = new Color(1f, 0.86f, 0.66f) }
             };
             clearPromptStyle = new GUIStyle(GUI.skin.label)
             {
