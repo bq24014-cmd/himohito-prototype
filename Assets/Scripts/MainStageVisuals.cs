@@ -45,11 +45,11 @@ namespace HimoHito
         private static readonly Color HookColor = RailColor;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
-        private static void EnsureMainStageBackgroundAfterSceneLoad()
+        private static void EnsureMainStageVisualsAfterSceneLoad()
         {
             if (SceneManager.GetActiveScene().name == "MainStage")
             {
-                EnsureBackground();
+                Apply(FindSceneObject("Main Player"));
             }
         }
 
@@ -426,6 +426,12 @@ namespace HimoHito
                 TutorialFirstSectionVisuals.LoadProcessedToySprite(resourcePath);
             if (processedSprite == null)
             {
+                if (!sourceRenderer.enabled)
+                {
+                    sourceRenderer.enabled = true;
+                    return true;
+                }
+
                 return false;
             }
 
