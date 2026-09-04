@@ -39,6 +39,7 @@ namespace HimoHito
         private RopeController ropeController;
         private RopePlatformBuilder platformBuilder;
         private PlayerMover playerMover;
+        private StageOverlayControls overlayControls;
         private Vector2 startPosition;
         private float startRopeCapacity;
         private float startRopeLength;
@@ -81,6 +82,7 @@ namespace HimoHito
                 platformBuilder = gameObject.AddComponent<RopePlatformBuilder>();
             }
             playerMover = GetComponent<PlayerMover>();
+            overlayControls = FindFirstObjectByType<StageOverlayControls>();
             ropeResource.RestoreCapacityAndCurrent(
                 TutorialRopeCapacity,
                 TutorialRopeCapacity);
@@ -190,6 +192,11 @@ namespace HimoHito
 
         private void UpdateStartScreen()
         {
+            if (overlayControls != null && overlayControls.IsHelpVisible)
+            {
+                return;
+            }
+
             if (Input.GetKeyDown(KeyCode.Return) ||
                 Input.GetKeyDown(KeyCode.KeypadEnter))
             {

@@ -41,3 +41,37 @@ Composition/framing: centered close-up bust/upper-body portrait, character fills
 Color palette: vivid warm pink character, dark plum outline, midnight navy background, tiny warm cream highlight.
 Constraints: square 1:1, no text, no letters, no watermark, no checkerboard pattern, no transparency grid, no extra objects, no border frame, no photorealism.
 ```
+
+## HimoHitoControlsBackground-v1.png
+
+- 用途：タイトル画面およびゲーム中の操作説明背景
+- 生成日：2026-09-04
+- 使用ツール：Codex built-in image generation
+- 参照画像：`TutorialNightChildRoom-v1.png`、`HimoHitoTitleBackground-v1.png`
+- 出力：`Assets/Resources/Art/HimoHitoControlsBackground-v1.png`
+
+```text
+2D game illustration for a picture-book style puzzle platformer.
+Setting: a child's bedroom at night, seen as a cozy toy-box world.
+Palette: deep indigo-violet base (#1A1430 to #2B2150), dusty pink yarn (#FF5C8A),
+toy-blue painted plastic (#3E8FD0), warm wooden-block orange (#E0862F),
+one warm lamp light (#FFD9A0) as the only light source, coming from the upper left.
+Materials: knitted wool, felt, painted wood, matte plastic toys.
+Rendering: flat-ish shapes with soft gradients, gentle rim light, subtle paper grain,
+no harsh shadows, hand-painted storybook feel, calm and quiet.
+No text, no letters, no logos, no watermark, no UI, no human characters.
+16:9 aspect ratio.
+
+Scene: a close, calm corner of the same bedroom. A large sheet of pale cream
+drawing paper is pinned flat to the wall with two wooden pegs, softly lit by the
+lamp. The paper is completely blank and evenly lit, occupying the central 70
+percent of the frame. Around only the outer edges: wooden toys, a small knitted
+pink yarn doll looking up at the paper, a spool of yarn, and coloured pencils.
+The paper has faint fibre texture but no drawings, lines, symbols, or text.
+Composition: paper front-facing and centred, with a large clean rectangular area
+for Unity to overlay the Japanese controls.
+
+Avoid: photorealistic, 3D render, CGI, anime face, text, letters, numbers,
+symbols, watermark, signature, harsh contrast, neon colors, cluttered centre,
+lens flare, perspective-distorted paper, torn paper, ruled paper.
+```
