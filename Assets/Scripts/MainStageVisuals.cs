@@ -25,6 +25,9 @@ namespace HimoHito
         private const string BridgeAnchorVisualName =
             "Green Rope Anchor Ring Visual";
         private const string GoalVisualName = "Open Toy Box Goal Visual";
+        private const string BlockTileVisualPrefix =
+            "Orange Block Platform Tile ";
+        private const float MaximumBlockStripWorldWidth = 7.5f;
 
         private static readonly Color PlayerColor =
             new Color(1f, 0.365f, 0.561f);
@@ -67,7 +70,8 @@ namespace HimoHito
             foreach (GameObject candidate in
                      Resources.FindObjectsOfTypeAll<GameObject>())
             {
-                if (!candidate.scene.IsValid() ||
+                if (candidate == null ||
+                    !candidate.scene.IsValid() ||
                     !candidate.activeInHierarchy ||
                     !candidate.name.StartsWith(
                         "Main ",
@@ -83,6 +87,7 @@ namespace HimoHito
 
                 if (candidate.TryGetComponent(out RopeSpikeHazard _))
                 {
+                    changed |= RemoveRepeatedBlockVisuals(candidate);
                     changed |= RemoveChild(
                         candidate,
                         "Orange Block Platform Visual");
@@ -119,7 +124,7 @@ namespace HimoHito
                 {
                     if (IsBankTerrain(candidate.name))
                     {
-                        changed |= EnsureSectionOneTerrainVisual(candidate);
+                        changed |= EnsureBankTerrainVisual(candidate);
                         continue;
                     }
 
@@ -131,6 +136,7 @@ namespace HimoHito
                         !isSwingPassThroughRail &&
                         (isStartGround ||
                          candidate.TryGetComponent(out SolidSwingSurface _));
+                    changed |= RemoveRepeatedBlockVisuals(candidate);
                     changed |= RemoveChild(
                         candidate,
                         isSolidToyBoard
@@ -237,10 +243,11 @@ namespace HimoHito
                    objectName == "Main S03 High Shelf";
         }
 
-        private static bool EnsureSectionOneTerrainVisual(GameObject terrain)
+        private static bool EnsureBankTerrainVisual(GameObject terrain)
         {
             if (terrain == null ||
-                !terrain.TryGetComponent(out SpriteRenderer sourceRenderer))
+                !terrain.TryGetComponent(out SpriteRenderer sourceRenderer) ||
+                !terrain.TryGetComponent(out BoxCollider2D terrainCollider))
             {
                 return false;
             }
@@ -248,18 +255,214 @@ namespace HimoHito
             bool changed = false;
             changed |= RemoveChild(terrain, "Orange Block Platform Visual");
             changed |= RemoveChild(terrain, "Blue Railway Platform Visual");
+            changed |= RemoveChild(terrain, "Terrain Top Edge");
             changed |= ApplyColor(terrain, TerrainBodyColor);
-            changed |= EnsureSolidVisualPart(
-                terrain,
-                "Terrain Top Edge",
-                new Vector2(0f, 0.475f),
-                new Vector2(1f, 0.05f),
-                TerrainTopColor,
-                sourceRenderer.sortingOrder + 2);
 
-            if (!sourceRenderer.enabled)
+            Sprite blockSprite =
+                TutorialFirstSectionVisuals.LoadProcessedToySprite(
+                    BlockResourcePath);
+            if (blockSprite == null)
             {
-                sourceRenderer.enabled = true;
+                changed |= RemoveRepeatedBlockVisuals(terrain);
+                changed |= EnsureSolidVisualPart(
+                    terrain,
+                    "Terrain Top Edge",
+                    new Vector2(0f, 0.475f),
+                    new Vector2(1f, 0.05f),
+                    TerrainTopColor,
+                    sourceRenderer.sortingOrder + 2);
+
+                if (!sourceRenderer.enabled)
+                {
+                    sourceRenderer.enabled = true;
+                    changed = true;
+                }
+
+                return changed;
+            }
+
+            float worldWidth = Mathf.Max(
+                0.01f,
+                terrainCollider.bounds.size.x);
+            int stripCount = Mathf.Max(
+                1,
+                Mathf.CeilToInt(
+                    worldWidth / MaximumBlockStripWorldWidth));
+            Vector2 spriteSize = blockSprite.bounds.size;
+            float localStripWidth = terrainCollider.size.x / stripCount;
+            float localLeft = terrainCollider.offset.x -
+                              terrainCollider.size.x * 0.5f;
+
+            for (int stripIndex = 0;
+                 stripIndex < stripCount;
+                 stripIndex++)
+            {
+                string visualName = BlockTileVisualPrefix +
+                                    (stripIndex + 1).ToString("D2");
+                Vector2 localPosition = new Vector2(
+                    localLeft + localStripWidth * (stripIndex + 0.5f),
+                    terrainCollider.offset.y);
+                Vector2 localScale = new Vector2(
+                    localStripWidth /
+                    Mathf.Max(0.01f, spriteSize.x),
+                    terrainCollider.size.y /
+                    Mathf.Max(0.01f, spriteSize.y));
+                changed |= EnsureSpriteVisualPart(
+                    terrain,
+                    visualName,
+                    blockSprite,
+                    localPosition,
+                    localScale,
+                    sourceRenderer.sortingOrder + 1);
+            }
+
+            changed |= RemoveExcessRepeatedBlockVisuals(
+                terrain,
+                stripCount);
+
+            if (sourceRenderer.enabled)
+            {
+                sourceRenderer.enabled = false;
+                changed = true;
+            }
+
+            return changed;
+        }
+
+        private static bool EnsureSpriteVisualPart(
+            GameObject parent,
+            string partName,
+            Sprite sprite,
+            Vector2 localPosition,
+            Vector2 localScale,
+            int sortingOrder)
+        {
+            bool changed = false;
+            Transform partTransform = parent.transform.Find(partName);
+            if (partTransform == null)
+            {
+                GameObject partObject = new GameObject(partName);
+                partTransform = partObject.transform;
+                partTransform.SetParent(parent.transform, false);
+                changed = true;
+            }
+            if (!partTransform.gameObject.activeSelf)
+            {
+                partTransform.gameObject.SetActive(true);
+                changed = true;
+            }
+
+            Vector3 targetPosition = new Vector3(
+                localPosition.x,
+                localPosition.y,
+                0f);
+            Vector3 targetScale = new Vector3(
+                localScale.x,
+                localScale.y,
+                1f);
+            if (partTransform.localPosition != targetPosition)
+            {
+                partTransform.localPosition = targetPosition;
+                changed = true;
+            }
+            if (partTransform.localRotation != Quaternion.identity)
+            {
+                partTransform.localRotation = Quaternion.identity;
+                changed = true;
+            }
+            if (partTransform.localScale != targetScale)
+            {
+                partTransform.localScale = targetScale;
+                changed = true;
+            }
+
+            if (!partTransform.TryGetComponent(out SpriteRenderer renderer))
+            {
+                renderer = partTransform.gameObject.AddComponent<SpriteRenderer>();
+                changed = true;
+            }
+            if (renderer.sprite != sprite)
+            {
+                renderer.sprite = sprite;
+                changed = true;
+            }
+            if (!renderer.enabled)
+            {
+                renderer.enabled = true;
+                changed = true;
+            }
+            if (renderer.color != Color.white)
+            {
+                renderer.color = Color.white;
+                changed = true;
+            }
+            if (parent.TryGetComponent(out SpriteRenderer sourceRenderer) &&
+                renderer.sortingLayerID != sourceRenderer.sortingLayerID)
+            {
+                renderer.sortingLayerID = sourceRenderer.sortingLayerID;
+                changed = true;
+            }
+            if (renderer.sortingOrder != sortingOrder)
+            {
+                renderer.sortingOrder = sortingOrder;
+                changed = true;
+            }
+
+            return changed;
+        }
+
+        private static bool RemoveRepeatedBlockVisuals(GameObject parent)
+        {
+            return RemoveRepeatedBlockVisuals(parent, 0);
+        }
+
+        private static bool RemoveExcessRepeatedBlockVisuals(
+            GameObject parent,
+            int retainedStripCount)
+        {
+            return RemoveRepeatedBlockVisuals(parent, retainedStripCount);
+        }
+
+        private static bool RemoveRepeatedBlockVisuals(
+            GameObject parent,
+            int retainedStripCount)
+        {
+            if (parent == null)
+            {
+                return false;
+            }
+
+            bool changed = false;
+            for (int childIndex = parent.transform.childCount - 1;
+                 childIndex >= 0;
+                 childIndex--)
+            {
+                Transform child = parent.transform.GetChild(childIndex);
+                if (!child.name.StartsWith(
+                        BlockTileVisualPrefix,
+                        System.StringComparison.Ordinal))
+                {
+                    continue;
+                }
+
+                string suffix = child.name.Substring(
+                    BlockTileVisualPrefix.Length);
+                bool keep = int.TryParse(suffix, out int stripNumber) &&
+                            stripNumber >= 1 &&
+                            stripNumber <= retainedStripCount;
+                if (keep)
+                {
+                    continue;
+                }
+
+                if (Application.isPlaying)
+                {
+                    Object.Destroy(child.gameObject);
+                }
+                else
+                {
+                    Object.DestroyImmediate(child.gameObject);
+                }
                 changed = true;
             }
 
