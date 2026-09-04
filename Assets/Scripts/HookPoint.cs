@@ -23,6 +23,15 @@ namespace HimoHito
             ConfigureNonSolidColliders();
         }
 
+        private void OnEnable()
+        {
+            ConfigureNonSolidColliders();
+            if (Application.isPlaying && gameObject.scene.name == "MainStage")
+            {
+                MainStageVisuals.EnsureHookVisual(gameObject);
+            }
+        }
+
         public Vector2 GetAttachmentPoint(Vector2 raycastHitPoint)
         {
             return useFixedAttachmentPoint

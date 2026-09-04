@@ -102,35 +102,9 @@ namespace HimoHito
                     continue;
                 }
 
-                if (candidate.TryGetComponent(out HookPoint hookPoint))
+                if (candidate.TryGetComponent(out HookPoint _))
                 {
-                    bool isBridgeAnchor = candidate.TryGetComponent(
-                        out RopePlatformAnchor _) &&
-                        candidate.name != MainStageSectionNineSetup.CenterHookName;
-                    Color hookColor = isBridgeAnchor
-                        ? MainStageSectionFourSetup.BridgeAnchorColor
-                        : HookColor;
-                    changed |= ApplyColor(candidate, hookColor);
-                    if (isBridgeAnchor)
-                    {
-                        changed |= RemoveChild(candidate, HookVisualName);
-                        changed |= EnsureBridgeAnchorRingVisual(
-                            candidate,
-                            hookColor);
-                    }
-                    else
-                    {
-                        changed |= RemoveChild(
-                            candidate,
-                            BridgeAnchorVisualName);
-                        changed |= EnsureToyVisual(
-                            candidate,
-                            HookVisualName,
-                            HookResourcePath,
-                            6,
-                            hookColor);
-                    }
-                    changed |= hookPoint.ConfigureFixedAttachmentPoint(Vector2.zero);
+                    changed |= EnsureHookVisual(candidate);
                     continue;
                 }
 
@@ -175,6 +149,49 @@ namespace HimoHito
                 }
             }
 
+            return changed;
+        }
+
+        /// <summary>
+        /// Restores one main-stage hook independently of the scene-wide visual
+        /// pass. HookPoint calls this when it is enabled so a hook cannot keep a
+        /// textureless child after scene reloads or Play-mode transitions.
+        /// </summary>
+        public static bool EnsureHookVisual(GameObject hook)
+        {
+            if (hook == null ||
+                !hook.scene.IsValid() ||
+                hook.scene.name != "MainStage" ||
+                !hook.TryGetComponent(out HookPoint hookPoint))
+            {
+                return false;
+            }
+
+            bool isBridgeAnchor = hook.TryGetComponent(
+                out RopePlatformAnchor _) &&
+                hook.name != MainStageSectionNineSetup.CenterHookName;
+            Color hookColor = isBridgeAnchor
+                ? MainStageSectionFourSetup.BridgeAnchorColor
+                : HookColor;
+
+            bool changed = ApplyColor(hook, hookColor);
+            if (isBridgeAnchor)
+            {
+                changed |= RemoveChild(hook, HookVisualName);
+                changed |= EnsureBridgeAnchorRingVisual(hook, hookColor);
+            }
+            else
+            {
+                changed |= RemoveChild(hook, BridgeAnchorVisualName);
+                changed |= EnsureToyVisual(
+                    hook,
+                    HookVisualName,
+                    HookResourcePath,
+                    6,
+                    hookColor);
+            }
+
+            changed |= hookPoint.ConfigureFixedAttachmentPoint(Vector2.zero);
             return changed;
         }
 
@@ -426,6 +443,13 @@ namespace HimoHito
                 TutorialFirstSectionVisuals.LoadProcessedToySprite(resourcePath);
             if (processedSprite == null)
             {
+                // A Play-mode transition can destroy SolidSprite's temporary
+                // sprite while leaving the renderer enabled. Reapply the same
+                // color to rebuild a visible fallback before exposing it.
+                if (target.TryGetComponent(out SolidSprite fallbackVisual))
+                {
+                    fallbackVisual.Color = fallbackVisual.Color;
+                }
                 if (!sourceRenderer.enabled)
                 {
                     sourceRenderer.enabled = true;
@@ -474,6 +498,11 @@ namespace HimoHito
             if (renderer.sprite != processedSprite)
             {
                 renderer.sprite = processedSprite;
+                changed = true;
+            }
+            if (!renderer.enabled)
+            {
+                renderer.enabled = true;
                 changed = true;
             }
             Color targetColor = tint ?? Color.white;
