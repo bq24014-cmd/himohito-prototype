@@ -32,7 +32,7 @@ namespace HimoHito
         [SerializeField, Min(0f)] private float fallRespawnDelay = 0.5f;
         [SerializeField, Min(0.01f)] private float minimumUsableRopeLength = 1f;
         [FormerlySerializedAs("startFromSectionThreeForDevelopment")]
-        [SerializeField] private bool startFromSectionFourForDevelopment = true;
+        [SerializeField] private bool startFromSectionFourForDevelopment;
 
         private Rigidbody2D body;
         private RopeResource ropeResource;
