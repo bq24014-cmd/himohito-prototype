@@ -91,12 +91,6 @@ namespace HimoHito
                 ropeResource.RestoreCurrentLength(minimumRopeAfterCheckpoint);
                 RefillCount++;
             }
-            if (CurrentSection == 7)
-            {
-                MainStageSectionSevenSetup.PrepareEntryPlatform(
-                    platformBuilder,
-                    ropeResource.CurrentLength);
-            }
             CaptureCheckpointState();
             IsRopeExhausted = false;
             return true;

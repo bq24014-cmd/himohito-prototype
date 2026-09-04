@@ -29,7 +29,6 @@ namespace HimoHito
 
         public const int BridgeRopeLength = 4;
         public const int FinalSwingRopeLength = 5;
-        private const float UpperRouteRopeThreshold = 25.05f;
 
         // The merge floor from section six is the lower floor in the slide.
         public static readonly Vector2 BridgeStartHookPosition =
@@ -117,27 +116,6 @@ namespace HimoHito
         {
             ApplyCurrentScene();
             return FindSceneObject(GoalFloorName);
-        }
-
-        /// <summary>
-        /// The upper route already spent fourteen rope in section six. Carry
-        /// that decision forward by placing section seven's first bridge at no
-        /// additional cost before the checkpoint captures its platform state.
-        /// </summary>
-        public static void PrepareEntryPlatform(
-            RopePlatformBuilder platformBuilder,
-            float remainingRopeLength)
-        {
-            if (platformBuilder == null ||
-                remainingRopeLength > UpperRouteRopeThreshold)
-            {
-                return;
-            }
-
-            platformBuilder.EnsureAuthoredPlatform(
-                BridgeStartHookPosition,
-                BridgeEndHookPosition,
-                BridgeRopeLength);
         }
 
         private static bool DisableLegacyObjects()
