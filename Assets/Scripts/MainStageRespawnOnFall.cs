@@ -19,7 +19,8 @@ namespace HimoHito
         [FormerlySerializedAs("startFromSectionSevenForDevelopment")]
         [FormerlySerializedAs("startFromSectionEightForDevelopment")]
         [FormerlySerializedAs("startFromSectionNineForDevelopment")]
-        private bool startFromSectionTenForDevelopment = true;
+        private bool startFromSectionTenForDevelopment;
+        private const int SectionOneStartingRopeLength = 7;
         private const float SectionTenStartingRopeLength = 15f;
 
         [SerializeField] private float fallThreshold = -9f;
@@ -61,6 +62,13 @@ namespace HimoHito
                     SectionTenStartingRopeLength);
                 ropeController.RestoreSelectedRopeLength(
                     MainStageSectionTenSetup.BridgeRopeLength);
+            }
+            else
+            {
+                CurrentSection = 1;
+                ropeResource.ResetToMaximum();
+                ropeController.RestoreSelectedRopeLength(
+                    SectionOneStartingRopeLength);
             }
 
             checkpointPosition = body.position;

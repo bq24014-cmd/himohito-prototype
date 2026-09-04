@@ -8623,7 +8623,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 085691a767a788d4cb3948e3318d8cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.MainStageRespawnOnFall
-  startFromSectionTenForDevelopment: 1
+  startFromSectionTenForDevelopment: 0
   fallThreshold: -9
   minimumUsableRopeLength: 1
 --- !u!114 &1380120221
