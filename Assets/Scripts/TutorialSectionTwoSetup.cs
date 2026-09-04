@@ -13,7 +13,7 @@ namespace HimoHito
         public const string LeftSpikeName = "Tutorial T2 Spike Left";
         public const string CenterSpikeName = "Tutorial T2 Spike Center";
         public const string RightSpikeName = "Tutorial T2 Spike Right";
-        public const int NextSectionStartingRopeLength = 7;
+        public const int NextSectionStartingRopeLength = 6;
 
         public static readonly Vector2 HookPosition =
             new Vector2(18f, 5.5f);

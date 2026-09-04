@@ -14,6 +14,7 @@ namespace HimoHito
         private static readonly Color AimGuideColor =
             new Color(1f, 0.72f, 0.80f, 0.55f);
         private const float SectionNineHookTargetingGrace = 0.25f;
+        private const float TutorialSectionThreeHookTargetingGrace = 0.5f;
 
         [SerializeField, Min(1f)] private float maximumShotDistance = 14f;
         [SerializeField, Min(0.01f)] private float ropeWidth = 0.16f;
@@ -444,7 +445,7 @@ namespace HimoHito
                 }
 
                 Vector2 candidateAnchor = candidate.GetAttachmentPoint(hit.point);
-                float allowedDistance = IsSectionNinePlatformHook(candidate)
+                float allowedDistance = UsesExtendedPlatformHookTargeting(candidate)
                     ? hookSearchDistance
                     : baseSearchDistance;
                 if (Vector2.Distance(origin, candidateAnchor) <=
@@ -509,7 +510,7 @@ namespace HimoHito
                 Vector2 candidateAnchor =
                     candidateHook.GetAttachmentPoint(hit.point);
                 float allowedDistance =
-                    IsSectionNinePlatformHook(candidateHook)
+                    UsesExtendedPlatformHookTargeting(candidateHook)
                         ? hookSearchDistance
                         : shotDistance;
                 if (Vector2.Distance(origin, candidateAnchor) >
@@ -547,14 +548,21 @@ namespace HimoHito
         {
             MainStageRespawnOnFall main =
                 GetComponent<MainStageRespawnOnFall>();
-            return main != null && main.CurrentSection == 9
-                ? Mathf.Min(
-                    maximumShotDistance,
-                    baseDistance + SectionNineHookTargetingGrace)
-                : baseDistance;
+            float targetingGrace = main != null && main.CurrentSection == 9
+                ? SectionNineHookTargetingGrace
+                : 0f;
+
+            PrototypeRunController tutorial =
+                GetComponent<PrototypeRunController>();
+            if (tutorial != null && tutorial.CurrentTutorialSection == 3)
+            {
+                targetingGrace = TutorialSectionThreeHookTargetingGrace;
+            }
+
+            return Mathf.Min(maximumShotDistance, baseDistance + targetingGrace);
         }
 
-        private bool IsSectionNinePlatformHook(HookPoint hook)
+        private bool UsesExtendedPlatformHookTargeting(HookPoint hook)
         {
             if (hook == null ||
                 !hook.TryGetComponent(out RopePlatformAnchor _))
@@ -564,7 +572,14 @@ namespace HimoHito
 
             MainStageRespawnOnFall main =
                 GetComponent<MainStageRespawnOnFall>();
-            return main != null && main.CurrentSection == 9;
+            if (main != null && main.CurrentSection == 9)
+            {
+                return true;
+            }
+
+            PrototypeRunController tutorial =
+                GetComponent<PrototypeRunController>();
+            return tutorial != null && tutorial.CurrentTutorialSection == 3;
         }
 
         private void UpdateSelectedRopeLength()

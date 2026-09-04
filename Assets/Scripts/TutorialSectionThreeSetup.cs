@@ -12,7 +12,7 @@ namespace HimoHito
             "Tutorial T3 Green Bridge Start Hook";
         public const string BridgeEndHookName =
             "Tutorial T3 Green Bridge End Hook";
-        public const int RequiredRopeLength = 7;
+        public const int RequiredRopeLength = 6;
         public const int NextSectionStartingRopeLength = 6;
 
         public static readonly Vector2 LandingFloorPosition =

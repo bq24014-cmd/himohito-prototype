@@ -166,7 +166,7 @@ namespace HimoHito
             if (runController != null && runController.CurrentTutorialSection == 3)
             {
                 GUILayout.Label(
-                    "頭上にHookはない。対岸の緑フックへ長さ7で掛け、Qで足場にする",
+                    $"頭上にHookはない。対岸の緑フックへ長さ{TutorialSectionThreeSetup.RequiredRopeLength}で掛け、Qで足場にする",
                     bodyStyle);
             }
             if (runController == null || runController.CurrentTutorialSection >= 3)
@@ -355,7 +355,9 @@ namespace HimoHito
             else if (startsFromSectionThree)
             {
                 GUILayout.Label("A / D：谷の手前まで歩く", startImportantStyle);
-                GUILayout.Label("対岸の緑フックへ長さ7で照準を合わせる", startImportantStyle);
+                GUILayout.Label(
+                    $"対岸の緑フックへ長さ{TutorialSectionThreeSetup.RequiredRopeLength}で照準を合わせる",
+                    startImportantStyle);
                 GUILayout.Label("E：緑フックへヒモを掛ける", startImportantStyle);
                 GUILayout.Label("Q：掛けたヒモを足場にする", startImportantStyle);
             }
@@ -372,7 +374,7 @@ namespace HimoHito
                 : PrototypeRunController.TutorialRopeCapacity;
             GUILayout.Label(
                 startsFromSectionThree
-                    ? $"足場にした長さ7は永久に消費され、残量{currentRope:0}から{currentRope - TutorialSectionThreeSetup.RequiredRopeLength:0}になります"
+                    ? $"足場にした長さ{TutorialSectionThreeSetup.RequiredRopeLength}は永久に消費され、残量{currentRope:0}から{currentRope - TutorialSectionThreeSetup.RequiredRopeLength:0}になります"
                     : startsFromSectionFour
                         ? $"長さ6を2本作ると、残量{currentRope:0}から{currentRope - TutorialSectionFourSetup.PlatformRopeLength * 2:0}になります"
                         : "W / Sで長さ変更、矢印キーで照準。Qはまだ使いません",
