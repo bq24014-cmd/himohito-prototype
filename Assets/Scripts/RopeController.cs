@@ -262,26 +262,6 @@ namespace HimoHito
             return true;
         }
 
-        public bool TryResolveCurrentAimAnchor(out Vector2 resolvedAnchor)
-        {
-            Vector2 worldTarget =
-                body.position + keyboardAimDirection * maximumShotDistance;
-            if (TryResolveAttachmentPoint(
-                    worldTarget,
-                    out resolvedAnchor,
-                    out _))
-            {
-                return true;
-            }
-
-            float freePlatformLength = Mathf.Min(
-                SelectedRopeLength,
-                maximumShotDistance);
-            resolvedAnchor =
-                body.position + keyboardAimDirection * freePlatformLength;
-            return freePlatformLength > 0f;
-        }
-
         public void DetachAndRefund(bool playReleaseSound = false)
         {
             if (!IsAttached)
@@ -503,10 +483,10 @@ namespace HimoHito
                 offset.normalized,
                 hookSearchDistance);
 
-            // A lower Hook can sit beyond the edge of the floor the player is
-            // standing on.  Prefer an explicitly aimed Hook before falling back
-            // to generic terrain, otherwise the downward shot attaches to that
-            // floor edge and the player appears unable to move.
+            // Only authored HookPoints are valid rope targets. Floors, walls,
+            // beams, generated rope platforms, and empty space must never become
+            // implicit anchors; otherwise the visible Hooks lose their purpose
+            // and terrain edges can create unstable attachment states.
             foreach (RaycastHit2D hit in hits)
             {
                 if (hit.collider == null || hit.collider == bodyCollider)
@@ -540,31 +520,6 @@ namespace HimoHito
 
                 resolvedAnchor = candidateAnchor;
                 hookPoint = candidateHook;
-                return true;
-            }
-
-            foreach (RaycastHit2D hit in hits)
-            {
-                if (hit.collider == null ||
-                    hit.collider == bodyCollider)
-                {
-                    continue;
-                }
-
-                if (hit.collider.isTrigger)
-                {
-                    continue;
-                }
-
-                Vector2 candidateAnchor = hit.point;
-                if (Vector2.Distance(origin, candidateAnchor) >
-                    shotDistance + 0.01f)
-                {
-                    continue;
-                }
-
-                resolvedAnchor = candidateAnchor;
-                hookPoint = null;
                 return true;
             }
 

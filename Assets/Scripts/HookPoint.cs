@@ -3,8 +3,8 @@ using UnityEngine;
 namespace HimoHito
 {
     /// <summary>
-    /// Gives a dedicated Hook a fixed attachment position. Other solid colliders
-    /// use the actual raycast hit position as their rope anchor.
+    /// Marks an authored rope target and gives it a fixed attachment position.
+    /// Colliders without this component cannot be used as rope anchors.
     /// </summary>
     public sealed class HookPoint : MonoBehaviour
     {
