@@ -83,6 +83,10 @@ namespace HimoHito
             }
             playerMover = GetComponent<PlayerMover>();
             overlayControls = FindFirstObjectByType<StageOverlayControls>();
+            if (overlayControls == null)
+            {
+                overlayControls = gameObject.AddComponent<StageOverlayControls>();
+            }
             ropeResource.RestoreCapacityAndCurrent(
                 TutorialRopeCapacity,
                 TutorialRopeCapacity);

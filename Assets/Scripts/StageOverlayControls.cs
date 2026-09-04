@@ -58,6 +58,9 @@ namespace HimoHito
 
         private void OnGUI()
         {
+            // Lower IMGUI depth values are drawn in front. Keep the help sheet
+            // above the title HUD regardless of component creation order.
+            GUI.depth = -1000;
             HimoHitoGuiTheme.ApplyToSkin(GUI.skin);
             EnsureStyles();
             bool isOnTitleScreen = runController != null &&
