@@ -21,3 +21,23 @@ Color palette: #1A1430 to #2B2150, dusty pink #FF5C8A, toy blue #3E8FD0, wooden 
 Constraints: no text, no letters, no logos, no watermark, no UI, no people, no human characters; maintain visual continuity with the reference image.
 Avoid: photorealistic, 3D render, CGI, anime face, harsh contrast, neon colors, cluttered composition, busy center, lens flare.
 ```
+
+## HimoHitoAppIcon-v1.png
+
+- 用途：Windows版exeアイコン／スプラッシュロゴ
+- 生成日：2026-09-04
+- 使用ツール：Codex built-in image generation
+- 参照画像：`Assets/Resources/Art/HimoHitoPlayer-v1.png`
+- 出力：`Assets/Resources/Art/HimoHitoAppIcon-v1.png`
+
+```text
+Use case: logo-brand
+Asset type: Windows game executable icon for the Unity game 「ヒモヒト」
+Primary request: Create a polished square app icon based on the pink yarn character in the reference image.
+Input image: the reference is the character design and color/style reference; preserve its recognizable round knitted head, tiny dark eyes, short knitted body, and single yarn strand rising from the head.
+Scene/backdrop: deep midnight navy circular-to-square backdrop with a very subtle soft violet glow; no room scenery.
+Style/medium: warm hand-crafted children’s toy game icon, clean 2D painted illustration, soft yarn texture, bold readable silhouette.
+Composition/framing: centered close-up bust/upper-body portrait, character fills roughly 72% of the square, generous safe margin so it remains clear at 16x16 pixels.
+Color palette: vivid warm pink character, dark plum outline, midnight navy background, tiny warm cream highlight.
+Constraints: square 1:1, no text, no letters, no watermark, no checkerboard pattern, no transparency grid, no extra objects, no border frame, no photorealism.
+```

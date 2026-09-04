@@ -20,6 +20,8 @@ namespace HimoHitoEditor
         [MenuItem("HimoHito/Build Windows Prototype")]
         public static void BuildWindowsPrototype()
         {
+            ProjectPresentationSettings.Apply();
+
             string[] scenePaths = { TutorialScenePath, MainStageScenePath };
             foreach (string scenePath in scenePaths)
             {
