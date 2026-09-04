@@ -127,6 +127,44 @@ namespace HimoHito
             return changed;
         }
 
+        /// <summary>
+        /// Reasserts both authored rail shelves after R or a fall. Generated
+        /// rope platforms are restored separately by RopePlatformBuilder.
+        /// </summary>
+        public static void RestoreRailShelvesAfterRestart()
+        {
+            EnsureRailShelf(
+                LeftShelfName,
+                LeftShelfPosition,
+                ShelfSize);
+            EnsureRailShelf(
+                RightShelfName,
+                RightShelfPosition,
+                ShelfSize);
+
+            RestoreRailCollision(FindSceneObject(LeftShelfName));
+            RestoreRailCollision(FindSceneObject(RightShelfName));
+            MainStageVisuals.RestoreSectionFiveRailVisuals();
+        }
+
+        private static void RestoreRailCollision(GameObject shelf)
+        {
+            if (shelf == null)
+            {
+                return;
+            }
+            if (shelf.TryGetComponent(out OneWayRailPlatform oneWayRail))
+            {
+                oneWayRail.RestoreAfterRestart();
+            }
+            if (shelf.TryGetComponent(
+                    out SwingPassThroughRailPlatform swingRail))
+            {
+                swingRail.enabled = true;
+                swingRail.RestoreAfterRestart();
+            }
+        }
+
         private static bool DisableLegacyOverlappingObjects()
         {
             bool changed = false;
@@ -200,19 +238,31 @@ namespace HimoHito
                 }
                 changed = true;
             }
-            if (!shelf.TryGetComponent(out PlatformEffector2D _))
+            if (!shelf.TryGetComponent(out PlatformEffector2D effector))
             {
-                shelf.AddComponent<PlatformEffector2D>();
+                effector = shelf.AddComponent<PlatformEffector2D>();
                 changed = true;
             }
-            if (!shelf.TryGetComponent(out OneWayRailPlatform _))
+            if (!effector.enabled)
             {
-                shelf.AddComponent<OneWayRailPlatform>();
+                effector.enabled = true;
                 changed = true;
             }
-            if (!shelf.TryGetComponent(out SwingPassThroughRailPlatform _))
+            if (!shelf.TryGetComponent(out OneWayRailPlatform oneWayRail))
             {
-                shelf.AddComponent<SwingPassThroughRailPlatform>();
+                oneWayRail = shelf.AddComponent<OneWayRailPlatform>();
+                changed = true;
+            }
+            oneWayRail.RestoreAfterRestart();
+            if (!shelf.TryGetComponent(
+                    out SwingPassThroughRailPlatform swingRail))
+            {
+                swingRail = shelf.AddComponent<SwingPassThroughRailPlatform>();
+                changed = true;
+            }
+            if (!swingRail.enabled)
+            {
+                swingRail.enabled = true;
                 changed = true;
             }
             if (shelf.TryGetComponent(out BoxCollider2D collider) &&

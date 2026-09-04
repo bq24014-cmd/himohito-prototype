@@ -41,6 +41,12 @@ namespace HimoHito
                 platformCollider.bounds.max.y - groundingTolerance;
         }
 
+        public void RestoreAfterRestart()
+        {
+            enabled = true;
+            ConfigureComponents();
+        }
+
         private void ConfigureComponents()
         {
             if (!TryGetComponent(out platformCollider))
@@ -52,6 +58,7 @@ namespace HimoHito
             platformCollider.usedByEffector = true;
 
             PlatformEffector2D effector = GetComponent<PlatformEffector2D>();
+            effector.enabled = true;
             effector.useOneWay = true;
             effector.useOneWayGrouping = true;
             effector.surfaceArc = surfaceArc;

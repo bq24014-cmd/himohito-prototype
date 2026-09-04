@@ -152,6 +152,23 @@ namespace HimoHito
             return changed;
         }
 
+        /// <summary>Rebuilds only the two section-five rail images.</summary>
+        public static bool RestoreSectionFiveRailVisuals()
+        {
+            bool changed = false;
+            changed |= EnsureToyVisual(
+                FindSceneObject(MainStageSectionFiveSetup.LeftShelfName),
+                "Blue Railway Platform Visual",
+                RailResourcePath,
+                1);
+            changed |= EnsureToyVisual(
+                FindSceneObject(MainStageSectionFiveSetup.RightShelfName),
+                "Blue Railway Platform Visual",
+                RailResourcePath,
+                1);
+            return changed;
+        }
+
         /// <summary>
         /// Restores one main-stage hook independently of the scene-wide visual
         /// pass. HookPoint calls this when it is enabled so a hook cannot keep a
@@ -466,6 +483,11 @@ namespace HimoHito
                 GameObject visualObject = new GameObject(visualName);
                 visualTransform = visualObject.transform;
                 visualTransform.SetParent(target.transform, false);
+                changed = true;
+            }
+            if (!visualTransform.gameObject.activeSelf)
+            {
+                visualTransform.gameObject.SetActive(true);
                 changed = true;
             }
 

@@ -160,6 +160,7 @@ namespace HimoHito
             ropeResource.RestoreCurrentLength(checkpointRopeLength);
             ropeController.RestoreSelectedRopeLength(checkpointSelectedRopeLength);
             platformBuilder.RestorePlatformStates(checkpointPlatformStates);
+            MainStageSectionFiveSetup.RestoreRailShelvesAfterRestart();
             body.position = checkpointPosition;
             body.linearVelocity = Vector2.zero;
             body.angularVelocity = 0f;

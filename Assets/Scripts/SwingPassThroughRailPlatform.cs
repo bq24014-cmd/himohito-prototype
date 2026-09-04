@@ -67,6 +67,24 @@ namespace HimoHito
             isIgnoringPlayer = shouldIgnore;
         }
 
+        /// <summary>
+        /// Restores the authored rail immediately when a section restarts.
+        /// Waiting for the next FixedUpdate can leave the old swing collision
+        /// state active for the first respawn frame.
+        /// </summary>
+        public void RestoreAfterRestart()
+        {
+            if (railCollider == null)
+            {
+                railCollider = GetComponent<Collider2D>();
+            }
+            if (playerCollider == null)
+            {
+                ResolvePlayer();
+            }
+            RestorePlayerCollision();
+        }
+
         private void OnDisable()
         {
             RestorePlayerCollision();
@@ -79,8 +97,7 @@ namespace HimoHito
 
         private void RestorePlayerCollision()
         {
-            if (!isIgnoringPlayer ||
-                railCollider == null || playerCollider == null)
+            if (railCollider == null || playerCollider == null)
             {
                 return;
             }
