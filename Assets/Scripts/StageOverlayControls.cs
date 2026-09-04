@@ -48,6 +48,7 @@ namespace HimoHito
 
         private void OnGUI()
         {
+            HimoHitoGuiTheme.ApplyToSkin(GUI.skin);
             EnsureStyles();
             bool isOnTitleScreen = runController != null &&
                 runController.Outcome == PrototypeRunController.RunOutcome.WaitingToStart;
@@ -110,6 +111,8 @@ namespace HimoHito
                 wordWrap = true,
                 normal = { textColor = Color.white }
             };
+
+            HimoHitoGuiTheme.ApplyToStyles(titleStyle, bodyStyle);
         }
     }
 }

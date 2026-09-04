@@ -516,12 +516,14 @@ namespace HimoHito
                 return;
             }
 
+            HimoHitoGuiTheme.ApplyToSkin(GUI.skin);
             GUIStyle style = new GUIStyle(GUI.skin.box)
             {
                 alignment = TextAnchor.MiddleCenter,
                 fontSize = 20,
                 fontStyle = FontStyle.Bold
             };
+            HimoHitoGuiTheme.ApplyToStyles(style);
             GUI.Box(
                 new Rect(
                     (Screen.width - 360f) * 0.5f,

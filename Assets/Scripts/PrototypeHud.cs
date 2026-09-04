@@ -70,6 +70,8 @@ namespace HimoHito
 
         private void OnGUI()
         {
+            HimoHitoGuiTheme.ApplyToSkin(GUI.skin);
+
             if (platformBuilder == null)
             {
                 platformBuilder = FindFirstObjectByType<RopePlatformBuilder>();
@@ -106,7 +108,8 @@ namespace HimoHito
             if (ropeResource != null)
             {
                 GUILayout.Label(
-                    $"ヒモ残量  {ropeResource.CurrentLength:0.0} / {ropeResource.MaximumLength:0.0}",
+                    $"ヒモ残量  {HimoHitoGuiTheme.FormatRopeValue(ropeResource.CurrentLength)} / " +
+                    HimoHitoGuiTheme.FormatRopeValue(ropeResource.MaximumLength),
                     lengthStyle);
                 RopeResourceGauge.Draw(ropeResource);
             }
@@ -496,6 +499,22 @@ namespace HimoHito
                 fontStyle = FontStyle.Bold,
                 normal = { textColor = new Color(1f, 0.82f, 0.28f) }
             };
+
+            HimoHitoGuiTheme.ApplyToStyles(
+                titleStyle,
+                lengthStyle,
+                bodyStyle,
+                startTitleStyle,
+                startObjectiveStyle,
+                startImportantStyle,
+                startControlStyle,
+                startPromptStyle,
+                weavePromptTitleStyle,
+                weavePromptBodyStyle,
+                weavePromptActionStyle,
+                clearTitleStyle,
+                clearBodyStyle,
+                clearPromptStyle);
         }
     }
 }

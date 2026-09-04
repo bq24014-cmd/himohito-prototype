@@ -44,6 +44,7 @@ namespace HimoHito
 
         private void OnGUI()
         {
+            HimoHitoGuiTheme.ApplyToSkin(GUI.skin);
             goal ??= FindFirstObjectByType<MainStageGoalZone>();
             EnsureStyles();
             if (goal != null && goal.IsClear)
@@ -62,7 +63,8 @@ namespace HimoHito
             if (ropeResource != null)
             {
                 GUILayout.Label(
-                    $"ヒモ残量  {ropeResource.CurrentLength:0.0} / {ropeResource.MaximumLength:0.0}",
+                    $"ヒモ残量  {HimoHitoGuiTheme.FormatRopeValue(ropeResource.CurrentLength)} / " +
+                    HimoHitoGuiTheme.FormatRopeValue(ropeResource.MaximumLength),
                     ropeStyle);
                 RopeResourceGauge.Draw(ropeResource);
             }
@@ -435,6 +437,14 @@ namespace HimoHito
                 fontSize = 24,
                 normal = { textColor = Color.white }
             };
+
+            HimoHitoGuiTheme.ApplyToStyles(
+                titleStyle,
+                bodyStyle,
+                ropeStyle,
+                accentStyle,
+                clearTitleStyle,
+                clearBodyStyle);
         }
     }
 }

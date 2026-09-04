@@ -37,6 +37,7 @@ namespace HimoHito
 
         private void OnGUI()
         {
+            HimoHitoGuiTheme.ApplyToSkin(GUI.skin);
             EnsureStyles();
             Rect panel = new Rect(Screen.width - 430f, 20f, 410f, 158f);
             GUI.Box(panel, GUIContent.none);
@@ -81,6 +82,8 @@ namespace HimoHito
                 wordWrap = true
             };
             bodyStyle.normal.textColor = Color.white;
+
+            HimoHitoGuiTheme.ApplyToStyles(titleStyle, bodyStyle);
         }
     }
 }

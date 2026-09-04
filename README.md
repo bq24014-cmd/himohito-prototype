@@ -148,6 +148,13 @@ Play時は`Tutorial.unity`のT1先頭から、残量99・選択長6・生成済�
 - Hook接続音：Kenney「Impact Sounds 1.0」
 - ライセンス：Creative Commons Zero（CC0 1.0）
 - 同梱ライセンス：`Assets/ThirdParty/KenneyImpactSounds/License.txt`
+- UIフォント：Google Fonts「M PLUS Rounded 1c」Regular / Bold
+- ライセンス：SIL Open Font License 1.1
+- 同梱ライセンス：`Assets/ThirdParty/MPlusRounded1c/OFL.txt`
+
+第7回資料のUI方針に合わせ、タイトル、HUD、操作説明、クリア画面、
+ステージ内の案内表示はすべて同じフォントファミリーを使います。
+フォントはUnityプロジェクトに同梱し、実行するPCのフォント環境に依存しません。
 
 `Assets/Resources`には、実行時に読み込む現行素材だけを置きます。比較用だった旧画像
 `HimoHitoWalk-v1/v2`、`HimoHitoJump-v1`、`HimoHitoSwing-v1`、
