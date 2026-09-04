@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace HimoHito
 {
@@ -84,6 +85,19 @@ namespace HimoHito
                 return;
             }
 
+            if (IsRopeExhausted)
+            {
+                if (Input.GetKeyDown(KeyCode.R))
+                {
+                    RestartFromCheckpoint();
+                }
+                else if (Input.GetKeyDown(KeyCode.Escape))
+                {
+                    SceneManager.LoadScene("Tutorial");
+                }
+                return;
+            }
+
             if (Input.GetKeyDown(KeyCode.R) || transform.position.y < fallThreshold)
             {
                 RestartFromCheckpoint();
@@ -93,8 +107,18 @@ namespace HimoHito
             if (!ropeController.IsAttached &&
                 ropeResource.CurrentLength < minimumUsableRopeLength)
             {
-                IsRopeExhausted = true;
+                EnterRopeExhaustedState();
             }
+        }
+
+        private void EnterRopeExhaustedState()
+        {
+            body.linearVelocity = Vector2.zero;
+            body.angularVelocity = 0f;
+            body.simulated = false;
+            playerMover.enabled = false;
+            ropeController.enabled = false;
+            IsRopeExhausted = true;
         }
 
         public bool TryReachSection(

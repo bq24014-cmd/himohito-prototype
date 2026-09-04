@@ -59,6 +59,15 @@ namespace HimoHito
                 return;
             }
 
+            if (respawn != null && respawn.IsRopeExhausted)
+            {
+                HimoHitoFailureScreen.Draw(
+                    "ヒモが尽きました",
+                    "使った長さを見直せば、まだ先へ進めます。",
+                    "R　この区間から再挑戦");
+                return;
+            }
+
             UpdateSectionTitle();
             DrawSectionTitle();
 

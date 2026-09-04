@@ -108,3 +108,30 @@ Lighting/mood: only the warm upper-left lamp and the soft glow from inside the b
 Constraints: game-world objects only; the doll is inside the box; its body is thin and unravelled; the path is shown by one continuous yarn trail; text overlay area stays legible and dark.
 Avoid: photorealistic, 3D render, CGI, anime face, text, letters, numbers, symbols, watermark, signature, harsh contrast, neon colors, cluttered composition, busy upper center, lens flare, extra characters, giant doll, severed yarn, multiple yarn trails, daylight.
 ```
+
+## HimoHitoFailureBackground-v1.png
+
+- 用途：本編およびチュートリアルの失敗画面背景
+- 生成日：2026-09-04
+- 使用ツール：Codex built-in image generation
+- 参照画像：`HimoHitoTitleBackground-v1.png`、`HimoHitoEndingBackground-v1.png`、`TutorialNightChildRoom-v1.png`
+- 出力：`Assets/Resources/Art/HimoHitoFailureBackground-v1.png`
+
+```text
+Create a production-ready 16:9 failure-screen background illustration for the Unity 2D puzzle-platformer HimoHito, matching the three supplied project references exactly in visual language and room design.
+
+STYLE BASE:
+2D game illustration for a picture-book style puzzle platformer. Setting: a child's bedroom at night, seen as a cozy toy-box world. Palette: deep indigo-violet base (#1A1430 to #2B2150), dusty pink yarn (#FF5C8A), toy-blue painted plastic (#3E8FD0), warm wooden-block orange (#E0862F), one warm lamp light (#FFD9A0) as the only light source, coming from the upper left. Materials: knitted wool, felt, painted wood, matte plastic toys. Rendering: flat-ish shapes with soft gradients, gentle rim light, subtle paper grain, no harsh shadows, hand-painted storybook feel, calm and quiet.
+
+SCENE:
+The bedroom floor at night, seen from very low and close, almost at floor level. A short loose piece of dusty-pink yarn lies alone on the wooden floorboards in the lower third, its end slightly frayed. A few subtle dust motes float in the dim light. Far in the background, out of focus, the same wooden toy box from the supplied references is visible in the upper-right area, its inner warm light now dim and distant, clearly unreachable. Everything else falls into soft indigo shadow.
+
+MOOD:
+A quiet setback. Not cruel, not tragic, not frightening; gently encouraging another try. The yarn should feel precious and recoverable, not dead or destroyed.
+
+COMPOSITION / UI SAFE AREA:
+The yarn is the foreground focal point across the lower third. Keep the center-left and central upper half calm, dark, and uncluttered so Unity can overlay large Japanese failure text and retry instructions with excellent readability. The toy box must remain small and softly blurred in the upper right. Strong depth-of-field distinction between the close yarn and distant toy box.
+
+OUTPUT:
+One clean 16:9 raster illustration, no borders. No text, no letters, no numbers, no logos, no watermark, no UI, no human characters, no knitted doll character. Avoid photorealistic, 3D render, CGI, anime face, harsh contrast, neon colors, cluttered composition, busy center, lens flare. Taxonomy: illustration-story.
+```

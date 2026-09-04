@@ -96,6 +96,13 @@ namespace HimoHito
                 return;
             }
 
+            if (runController != null &&
+                runController.Outcome == PrototypeRunController.RunOutcome.Failed)
+            {
+                DrawFailureScreen();
+                return;
+            }
+
             GUILayout.BeginArea(new Rect(22f, 18f, 520f, 420f), GUI.skin.box);
             GUILayout.Label("ヒモヒト / チュートリアル", titleStyle);
 
@@ -195,6 +202,20 @@ namespace HimoHito
             GUILayout.EndArea();
 
             DrawWeavePrompt();
+        }
+
+        private void DrawFailureScreen()
+        {
+            bool fell = runController.FailureReason ==
+                PrototypeRunController.RunFailureReason.Fell;
+            HimoHitoFailureScreen.Draw(
+                fell ? "足を踏み外しました" : "ヒモが尽きました",
+                fell
+                    ? "少しだけ休んで、同じ区間からもう一度。"
+                    : "使う長さを選び直せば、まだ先へ進めます。",
+                runController.IsAutomaticRespawnPending
+                    ? "現在の区間へ戻ります…"
+                    : "R　この区間から再挑戦");
         }
 
         private void DrawSectionFourGuide()

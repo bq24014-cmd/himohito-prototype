@@ -135,6 +135,13 @@ namespace HimoHito
                 return;
             }
 
+            if (Outcome == RunOutcome.Failed &&
+                Input.GetKeyDown(KeyCode.Escape))
+            {
+                SceneManager.LoadScene("Tutorial");
+                return;
+            }
+
             if (Input.GetKeyDown(KeyCode.R))
             {
                 if (Outcome == RunOutcome.Clear)
