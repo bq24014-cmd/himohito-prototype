@@ -15,6 +15,7 @@ namespace HimoHito
 
         private Camera mainCamera;
         private Collider2D playerCollider;
+        private Texture2D titleBackground;
         private GUIStyle titleStyle;
         private GUIStyle bodyStyle;
         private GUIStyle lengthStyle;
@@ -62,6 +63,9 @@ namespace HimoHito
             {
                 platformBuilder = FindFirstObjectByType<RopePlatformBuilder>();
             }
+
+            titleBackground = Resources.Load<Texture2D>(
+                "Art/HimoHitoTitleBackground-v1");
         }
 
         private void OnGUI()
@@ -324,78 +328,51 @@ namespace HimoHito
 
         private void DrawStartScreen()
         {
+            Rect screenRect = new Rect(0f, 0f, Screen.width, Screen.height);
             Color previousColor = GUI.color;
-            GUI.color = new Color(0.04f, 0.05f, 0.11f, 0.98f);
-            GUI.Box(new Rect(0f, 0f, Screen.width, Screen.height), GUIContent.none);
+            if (titleBackground != null)
+            {
+                GUI.DrawTexture(
+                    screenRect,
+                    titleBackground,
+                    ScaleMode.ScaleAndCrop,
+                    true);
+            }
+            else
+            {
+                GUI.color = new Color(0.04f, 0.05f, 0.11f, 1f);
+                GUI.Box(screenRect, GUIContent.none);
+            }
+
+            float shadeWidth = Mathf.Min(Screen.width * 0.58f, 1040f);
+            GUI.color = new Color(0.025f, 0.025f, 0.075f, 0.72f);
+            GUI.Box(new Rect(0f, 0f, shadeWidth, Screen.height), GUIContent.none);
             GUI.color = previousColor;
 
-            float panelWidth = Mathf.Min(880f, Screen.width - 40f);
-            float panelHeight = Mathf.Min(620f, Screen.height - 40f);
+            float panelWidth = Mathf.Min(760f, shadeWidth - 72f);
+            float panelHeight = Mathf.Min(650f, Screen.height - 72f);
             Rect panel = new Rect(
-                (Screen.width - panelWidth) * 0.5f,
+                Mathf.Max(42f, shadeWidth * 0.09f),
                 (Screen.height - panelHeight) * 0.5f,
                 panelWidth,
                 panelHeight);
 
-            GUILayout.BeginArea(panel, GUI.skin.box);
-            GUILayout.Space(24f);
-            GUILayout.Label("HIMOHITO", startTitleStyle);
-            bool startsFromSectionThree = runController != null &&
-                runController.CurrentTutorialSection == 3;
-            bool startsFromSectionFour = runController != null &&
-                runController.CurrentTutorialSection == 4;
-            GUILayout.Label(
-                startsFromSectionThree
-                    ? "T3　編む — 初めて、体が減る"
-                    : startsFromSectionFour
-                        ? "T4　外して、1本にする"
-                        : "T1　掛けて、振って、渡る",
-                startObjectiveStyle);
-            GUILayout.Space(22f);
-            GUILayout.Label("最初に覚えること", startImportantStyle);
-            if (startsFromSectionFour)
-            {
-                GUILayout.Label("中央の青フックへ長さ6でE → Q", startImportantStyle);
-                GUILayout.Label("中央まで歩き、右の緑フックへE → Q", startImportantStyle);
-                GUILayout.Label("2本ができたら、中央の青フックを狙ってF", startImportantStyle);
-            }
-            else if (startsFromSectionThree)
-            {
-                GUILayout.Label("A / D：谷の手前まで歩く", startImportantStyle);
-                GUILayout.Label(
-                    $"対岸の緑フックへ長さ{TutorialSectionThreeSetup.RequiredRopeLength}で照準を合わせる",
-                    startImportantStyle);
-                GUILayout.Label("E：緑フックへヒモを掛ける", startImportantStyle);
-                GUILayout.Label("Q：掛けたヒモを足場にする", startImportantStyle);
-            }
-            else
-            {
-                GUILayout.Label("A / D：谷の手前まで歩く", startImportantStyle);
-                GUILayout.Label("矢印キーでHookへ照準を合わせる", startImportantStyle);
-                GUILayout.Label("E：狙ったHookへヒモを掛ける", startImportantStyle);
-                GUILayout.Label("掛けたまま歩き出すと、振り子になる", startImportantStyle);
-            }
-            GUILayout.Space(20f);
-            float currentRope = ropeResource != null
-                ? ropeResource.CurrentLength
-                : PrototypeRunController.TutorialRopeCapacity;
-            GUILayout.Label(
-                startsFromSectionThree
-                    ? $"足場にした長さ{TutorialSectionThreeSetup.RequiredRopeLength}は永久に消費され、残量{currentRope:0}から{currentRope - TutorialSectionThreeSetup.RequiredRopeLength:0}になります"
-                    : startsFromSectionFour
-                        ? $"長さ6を2本作ると、残量{currentRope:0}から{currentRope - TutorialSectionFourSetup.PlatformRopeLength * 2:0}になります"
-                        : "W / Sで長さ変更、矢印キーで照準。Qはまだ使いません",
-                startControlStyle);
-            GUILayout.Label(
-                startsFromSectionThree
-                    ? "失敗時は第3区間の最初から再挑戦できます"
-                    : startsFromSectionFour
-                        ? "失敗時は第4区間の最初から再挑戦できます"
-                        : "失敗してもヒモは減りません。何度でも試せます",
-                startControlStyle);
+            GUILayout.BeginArea(panel);
             GUILayout.FlexibleSpace();
-            GUILayout.Label("キーボードの何かのキーを押して開始", startPromptStyle);
-            GUILayout.Space(24f);
+            GUILayout.Label("HIMOHITO", startObjectiveStyle);
+            GUILayout.Label("ヒモヒト", startTitleStyle);
+            GUILayout.Space(20f);
+            GUILayout.Label(
+                "自分の体であるヒモを伸ばして進み、\n必要な場所では足場として編むアクションパズル",
+                startControlStyle);
+            GUILayout.Space(54f);
+            GUILayout.Label("Enter　はじめる", startImportantStyle);
+            GUILayout.Label("Tab　操作説明", startPromptStyle);
+            GUILayout.Label("Esc　終了", startPromptStyle);
+            GUILayout.FlexibleSpace();
+            GUILayout.Label(
+                "制作：bq24014-cmd　／　Unity 6.3 LTS　／　使用素材はREADME参照",
+                bodyStyle);
             GUILayout.EndArea();
         }
 
@@ -443,35 +420,36 @@ namespace HimoHito
             };
             startTitleStyle = new GUIStyle(GUI.skin.label)
             {
-                alignment = TextAnchor.MiddleCenter,
-                fontSize = 42,
+                alignment = TextAnchor.MiddleLeft,
+                fontSize = 64,
                 fontStyle = FontStyle.Bold,
-                normal = { textColor = new Color(0.35f, 1f, 0.78f) }
+                normal = { textColor = new Color(1f, 0.36f, 0.56f) }
             };
             startObjectiveStyle = new GUIStyle(GUI.skin.label)
             {
-                alignment = TextAnchor.MiddleCenter,
-                fontSize = 24,
+                alignment = TextAnchor.MiddleLeft,
+                fontSize = 20,
                 fontStyle = FontStyle.Bold,
-                normal = { textColor = Color.white }
+                normal = { textColor = new Color(0.72f, 0.79f, 1f) }
             };
             startImportantStyle = new GUIStyle(GUI.skin.label)
             {
-                alignment = TextAnchor.MiddleCenter,
-                fontSize = 24,
+                alignment = TextAnchor.MiddleLeft,
+                fontSize = 28,
                 fontStyle = FontStyle.Bold,
                 normal = { textColor = new Color(1f, 0.82f, 0.28f) }
             };
             startControlStyle = new GUIStyle(GUI.skin.label)
             {
-                alignment = TextAnchor.MiddleCenter,
-                fontSize = 18,
+                alignment = TextAnchor.MiddleLeft,
+                fontSize = 21,
+                wordWrap = true,
                 normal = { textColor = Color.white }
             };
             startPromptStyle = new GUIStyle(GUI.skin.label)
             {
-                alignment = TextAnchor.MiddleCenter,
-                fontSize = 20,
+                alignment = TextAnchor.MiddleLeft,
+                fontSize = 22,
                 fontStyle = FontStyle.Bold,
                 normal = { textColor = new Color(0.65f, 0.72f, 1f) }
             };

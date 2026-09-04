@@ -49,7 +49,6 @@ namespace HimoHito
         private int checkpointSelectedRopeLength;
         private RopePlatformBuilder.PlatformState[] checkpointPlatformStates;
         private float automaticRespawnTimer;
-        private bool startRequested;
 
         public RunOutcome Outcome { get; private set; } = RunOutcome.WaitingToStart;
         public RunFailureReason FailureReason { get; private set; } = RunFailureReason.None;
@@ -185,43 +184,35 @@ namespace HimoHito
             body.simulated = false;
             playerMover.enabled = false;
             ropeController.enabled = false;
-            startRequested = false;
             FailureReason = RunFailureReason.None;
             Outcome = RunOutcome.WaitingToStart;
         }
 
         private void UpdateStartScreen()
         {
-            if (!startRequested && WasKeyboardKeyPressed())
-            {
-                startRequested = true;
-            }
-
-            if (startRequested && !Input.anyKey)
+            if (Input.GetKeyDown(KeyCode.Return) ||
+                Input.GetKeyDown(KeyCode.KeypadEnter))
             {
                 body.simulated = true;
                 playerMover.enabled = true;
                 ropeController.enabled = true;
                 Outcome = RunOutcome.Playing;
+                return;
+            }
+
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                QuitApplication();
             }
         }
 
-        private static bool WasKeyboardKeyPressed()
+        private static void QuitApplication()
         {
-            if (!Input.anyKeyDown)
-            {
-                return false;
-            }
-
-            for (int button = 0; button <= 6; button++)
-            {
-                if (Input.GetMouseButtonDown(button))
-                {
-                    return false;
-                }
-            }
-
-            return true;
+#if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+#else
+            Application.Quit();
+#endif
         }
 
         public void MarkClear()

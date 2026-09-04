@@ -1,0 +1,23 @@
+# 生成画像プロンプト記録
+
+## HimoHitoTitleBackground-v1.png
+
+- 用途：タイトル画面背景
+- 生成日：2026-09-04
+- 使用ツール：Codex built-in image generation
+- 参照画像：`Assets/Resources/Art/TutorialNightChildRoom-v1.png`
+- 出力：`Assets/Resources/Art/HimoHitoTitleBackground-v1.png`
+
+```text
+Use case: illustration-story
+Asset type: 16:9 Unity title-screen background for the 2D game ヒモヒト
+Input image: use the attached existing bedroom background strictly as the style, palette, material, lighting, texture, and world-building reference; create a new composition rather than painting over it.
+Primary request: a wide side-view of the same quiet child’s bedroom at night. Place a wooden toy box slightly right of center with its lid half open, warm golden light spilling from inside onto the wooden floor. A single loose dusty-pink yarn thread runs out of the box across the floor toward the lower-left corner and exits the frame.
+Scene details: only objects that already exist in the reference world—picture books, felt star, knitted ball, wooden toy blocks, toy train, shelves, and curtains. Keep the left half dark, calm, uncluttered, and largely empty so Unity can overlay the game title and menu there.
+Style/medium: 2D hand-painted storybook game illustration; flat-ish forms, soft gradients, gentle rim light, subtle paper grain; knitted wool, felt, painted wood, and matte plastic textures.
+Composition/framing: exact 16:9 landscape; main subject on the right third; large clean negative space across the left half; no important object at screen edges.
+Lighting/mood: one warm lamp light from the upper left, otherwise deep indigo-violet nighttime; quiet, expectant, a little lonely but warm.
+Color palette: #1A1430 to #2B2150, dusty pink #FF5C8A, toy blue #3E8FD0, wooden orange #E0862F, warm light #FFD9A0.
+Constraints: no text, no letters, no logos, no watermark, no UI, no people, no human characters; maintain visual continuity with the reference image.
+Avoid: photorealistic, 3D render, CGI, anime face, harsh contrast, neon colors, cluttered composition, busy center, lens flare.
+```

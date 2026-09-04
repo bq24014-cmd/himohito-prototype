@@ -7,14 +7,27 @@ namespace HimoHito
     {
         private bool showHelp;
         private bool isPaused;
+        private PrototypeRunController runController;
         private GUIStyle titleStyle;
         private GUIStyle bodyStyle;
+
+        private void Awake()
+        {
+            runController = FindFirstObjectByType<PrototypeRunController>();
+        }
 
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.Tab))
             {
                 showHelp = !showHelp;
+            }
+
+            bool isOnTitleScreen = runController != null &&
+                runController.Outcome == PrototypeRunController.RunOutcome.WaitingToStart;
+            if (isOnTitleScreen)
+            {
+                return;
             }
 
             if (Input.GetKeyDown(KeyCode.Escape))
@@ -36,8 +49,13 @@ namespace HimoHito
         private void OnGUI()
         {
             EnsureStyles();
-            GUI.Label(new Rect(Screen.width - 215f, 12f, 200f, 28f),
-                "Tab：操作確認　Esc：ポーズ", bodyStyle);
+            bool isOnTitleScreen = runController != null &&
+                runController.Outcome == PrototypeRunController.RunOutcome.WaitingToStart;
+            if (!isOnTitleScreen)
+            {
+                GUI.Label(new Rect(Screen.width - 215f, 12f, 200f, 28f),
+                    "Tab：操作確認　Esc：ポーズ", bodyStyle);
+            }
 
             if (!showHelp && !isPaused)
             {
