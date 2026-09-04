@@ -14,7 +14,6 @@ namespace HimoHito
             "Tutorial T3 Green Bridge End Hook";
         public const int RequiredRopeLength = 7;
         public const int NextSectionStartingRopeLength = 6;
-        public const float StartingRopeAmount = 20f;
 
         public static readonly Vector2 LandingFloorPosition =
             new Vector2(39f, -4.65f);

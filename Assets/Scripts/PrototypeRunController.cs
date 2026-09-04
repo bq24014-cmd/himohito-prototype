@@ -11,6 +11,8 @@ namespace HimoHito
     [RequireComponent(typeof(RopePlatformBuilder))]
     public sealed class PrototypeRunController : MonoBehaviour
     {
+        public const float TutorialRopeCapacity = 99f;
+
         public enum RunOutcome
         {
             WaitingToStart,
@@ -80,15 +82,15 @@ namespace HimoHito
                 platformBuilder = gameObject.AddComponent<RopePlatformBuilder>();
             }
             playerMover = GetComponent<PlayerMover>();
+            ropeResource.RestoreCapacityAndCurrent(
+                TutorialRopeCapacity,
+                TutorialRopeCapacity);
             if (startFromSectionFourForDevelopment)
             {
                 startTutorialSection = 4;
                 CurrentTutorialSection = 4;
                 body.position =
                     TutorialSectionThreeSetup.LandingRespawnPosition;
-                ropeResource.RestoreCapacityAndCurrent(
-                    TutorialSectionThreeSetup.StartingRopeAmount,
-                    TutorialSectionFourSetup.StartingRopeAmount);
                 ropeController.RestoreSelectedRopeLength(
                     TutorialSectionFourSetup.PlatformRopeLength);
             }
@@ -249,12 +251,6 @@ namespace HimoHito
 
             CurrentTutorialSection = sectionNumber;
             checkpointPosition = respawnPosition;
-            if (sectionNumber == 3)
-            {
-                ropeResource.RestoreCapacityAndCurrent(
-                    TutorialSectionThreeSetup.StartingRopeAmount,
-                    TutorialSectionThreeSetup.StartingRopeAmount);
-            }
             ropeController.RestoreSelectedRopeLength(startingRopeLength);
             CaptureCheckpointState();
         }

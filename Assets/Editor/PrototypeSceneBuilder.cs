@@ -160,8 +160,10 @@ namespace HimoHitoEditor
             player.AddComponent<LineRenderer>().sortingOrder = 5;
             RopeResource resource = player.AddComponent<RopeResource>();
             SerializedObject serialized = new(resource);
-            serialized.FindProperty("maximumLength").floatValue = 12f;
-            serialized.FindProperty("currentLength").floatValue = 12f;
+            serialized.FindProperty("maximumLength").floatValue =
+                PrototypeRunController.TutorialRopeCapacity;
+            serialized.FindProperty("currentLength").floatValue =
+                PrototypeRunController.TutorialRopeCapacity;
             serialized.ApplyModifiedPropertiesWithoutUndo();
             player.AddComponent<RopePlatformBuilder>();
             player.AddComponent<PlayerMover>();
