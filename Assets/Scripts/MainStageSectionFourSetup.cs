@@ -43,7 +43,7 @@ namespace HimoHito
             new Vector2(0.62f, 0.62f);
         public const int BridgeRopeLength = 5;
         public static readonly Vector2 FarHookPosition =
-            new Vector2(72.6f, 1.05f);
+            new Vector2(72.6f, 2.55f);
         public static readonly Vector2 HookSize =
             new Vector2(1.6f, 0.45f);
         public static readonly Vector2 LandingPosition =
