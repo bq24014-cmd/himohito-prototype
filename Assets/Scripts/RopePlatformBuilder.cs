@@ -110,6 +110,8 @@ namespace HimoHito
             }
             audioFeedback?.PlayRopePlatformBuilt();
             RopeBuildFluff.Play(platform.GetComponent<LineRenderer>());
+            RopeBridgeReveal.Play(platform.GetComponent<LineRenderer>(), transform.position);
+            GetComponent<RopeBodyVisual>()?.PlayWeavePose();
             return true;
         }
 
@@ -140,9 +142,12 @@ namespace HimoHito
             Vector2 firstOuter = joined[0].GetOtherEndpoint(anchor);
             Vector2 secondOuter = joined[1].GetOtherEndpoint(anchor);
             float combinedLength = joined[0].RopeLength + joined[1].RopeLength;
+            Vector2[] firstCurve = BuildSaggingCurve(firstOuter, anchor, joined[0].RopeLength);
+            Vector2[] secondCurve = BuildSaggingCurve(anchor, secondOuter, joined[1].RopeLength);
             RemovePlatform(joined[0].gameObject);
             RemovePlatform(joined[1].gameObject);
-            CreatePlatform(firstOuter, secondOuter, combinedLength);
+            GeneratedRopePlatform merged = CreatePlatform(firstOuter, secondOuter, combinedLength);
+            RopeBridgeMergeVisual.Play(merged.GetComponent<LineRenderer>(), firstCurve, secondCurve);
             if (!removedHooks.Contains(hook.gameObject))
             {
                 removedHooks.Add(hook.gameObject);

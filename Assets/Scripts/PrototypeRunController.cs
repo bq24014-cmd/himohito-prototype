@@ -13,7 +13,7 @@ namespace HimoHito
     public sealed class PrototypeRunController : MonoBehaviour
     {
         public const float TutorialRopeCapacity = 99f;
-        private const float ClearRevealDelay = 0.45f;
+        private const float ClearRevealDelay = 1.35f;
 
         public enum RunOutcome
         {
@@ -256,7 +256,9 @@ namespace HimoHito
             FailureReason = RunFailureReason.None;
             Outcome = RunOutcome.Clearing;
 
-            GetComponent<PrototypeAudioFeedback>()?.PlayGoalChestOpened();
+            GetComponent<RopeBodyVisual>()?.PlayGoalPose(ClearRevealDelay,
+                GameObject.Find(TutorialSectionFourSetup.GoalMarkerName)?.transform);
+
             StartCoroutine(CompleteClearSequence());
         }
 
@@ -284,7 +286,7 @@ namespace HimoHito
 
             CurrentTutorialSection = sectionNumber;
             checkpointPosition = respawnPosition;
-            ropeController.RestoreSelectedRopeLength(startingRopeLength);
+            // Keep the player's selection across sections instead of applying the lesson preset.
             CaptureCheckpointState();
         }
 

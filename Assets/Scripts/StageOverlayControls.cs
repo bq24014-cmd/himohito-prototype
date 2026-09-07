@@ -18,6 +18,7 @@ namespace HimoHito
         private GUIStyle helpTitleStyle;
         private GUIStyle helpBodyStyle;
         private GUIStyle helpKeyStyle;
+        private Vector2 pauseScroll;
 
         public bool IsHelpVisible => showHelp;
         public bool IsOverlayVisible => showHelp || isPaused;
@@ -96,12 +97,19 @@ namespace HimoHito
 
         private void OnDisable()
         {
+            HimoHitoAudioSettings.Save();
             if (isPaused || showHelp)
             {
                 Time.timeScale = 1f;
                 isPaused = false;
                 showHelp = false;
             }
+        }
+
+        private void OnApplicationQuit() => HimoHitoAudioSettings.Save();
+        private void OnApplicationPause(bool paused)
+        {
+            if (paused) HimoHitoAudioSettings.Save();
         }
 
         private void OnGUI()
@@ -208,21 +216,40 @@ namespace HimoHito
             GUI.Box(new Rect(0f, 0f, Screen.width, Screen.height), GUIContent.none);
             GUI.color = previous;
 
-            float width = Mathf.Min(720f, Screen.width - 40f);
-            float height = 430f;
+            // Scale this panel as a whole: labels, slider handles and hit areas grow together.
+            // Keep the help sheet and gameplay HUD at their existing sizes.
+            Matrix4x4 previousMatrix = GUI.matrix;
+            float panelScale = Mathf.Min(1.35f, Screen.width / 760f, Screen.height / 470f);
+            panelScale = Mathf.Max(0.1f, panelScale);
+            GUI.matrix = previousMatrix * Matrix4x4.Scale(new Vector3(panelScale, panelScale, 1f));
+            float availableWidth = Screen.width / panelScale;
+            float availableHeight = Screen.height / panelScale;
+            float width = Mathf.Min(720f, availableWidth - 40f);
+            float height = Mathf.Min(430f, availableHeight - 24f);
             GUILayout.BeginArea(new Rect(
-                (Screen.width - width) * 0.5f,
-                (Screen.height - height) * 0.5f,
+                (availableWidth - width) * 0.5f,
+                (availableHeight - height) * 0.5f,
                 width,
                 height), GUI.skin.box);
             GUILayout.Label("PAUSE", titleStyle);
-            GUILayout.Space(18f);
-            GUILayout.Label("A / D：移動・振り子を加速　　Space：ジャンプ", bodyStyle);
-            GUILayout.Label("W / S：次に使う長さを増減", bodyStyle);
-            GUILayout.Label("矢印キー：照準　　E：接続／解除", bodyStyle);
-            GUILayout.Label("Q：接続中のヒモを足場にする（この時だけ永久消費）", bodyStyle);
-            GUILayout.Label("F：2本が集まるHookを外して1本にまとめる", bodyStyle);
-            GUILayout.Label("R：現在の区間から再挑戦", bodyStyle);
+            pauseScroll = GUILayout.BeginScrollView(pauseScroll);
+            GUILayout.Space(12f);
+            GUILayout.Label("音量設定", bodyStyle);
+            DrawVolumeRow("BGM", true);
+            DrawVolumeRow("効果音", false);
+            GUILayout.Space(12f);
+            GUILayout.BeginHorizontal();
+            if (GUILayout.Button("効果音を試聴", GUILayout.Height(36f)))
+                audioFeedback?.PlayUiPaperOpened();
+            if (GUILayout.Button("初期音量に戻す", GUILayout.Height(36f)))
+            {
+                HimoHitoAudioSettings.SetMusic(1f);
+                HimoHitoAudioSettings.SetEffects(1f);
+            }
+            GUILayout.EndHorizontal();
+            GUILayout.Space(12f);
+            GUILayout.Label("100％＝これまでの音量 ／ 0％＝無音\n設定は自動保存されます。操作方法はTabで確認", bodyStyle);
+            GUILayout.EndScrollView();
             GUILayout.FlexibleSpace();
             Rect resumeButtonRow = GUILayoutUtility.GetRect(
                 1f,
@@ -239,11 +266,32 @@ namespace HimoHito
                 "Escで再開",
                 titleStyle);
             GUILayout.EndArea();
+            GUI.matrix = previousMatrix;
+        }
+
+        private void DrawVolumeRow(string label, bool music)
+        {
+            float current = music ? HimoHitoAudioSettings.Music : HimoHitoAudioSettings.Effects;
+            GUILayout.Space(10f);
+            GUILayout.Label($"{label}　{Mathf.RoundToInt(current * 100f)}％", bodyStyle);
+            GUILayout.BeginHorizontal();
+            float next = current;
+            if (GUILayout.Button("−", GUILayout.Width(42f), GUILayout.Height(30f))) next -= 0.05f;
+            next = GUILayout.HorizontalSlider(next, 0f, 1f, GUILayout.Height(30f));
+            if (GUILayout.Button("＋", GUILayout.Width(42f), GUILayout.Height(30f))) next += 0.05f;
+            GUILayout.EndHorizontal();
+            next = Mathf.Clamp01(next);
+            if (!Mathf.Approximately(next, current))
+            {
+                if (music) HimoHitoAudioSettings.SetMusic(next);
+                else HimoHitoAudioSettings.SetEffects(next);
+            }
         }
 
         private void ApplyPauseState()
         {
             Time.timeScale = isPaused || showHelp ? 0f : 1f;
+            if (!isPaused && !showHelp) HimoHitoAudioSettings.Save();
         }
 
         private bool IsResultScreenActive()

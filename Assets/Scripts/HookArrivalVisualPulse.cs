@@ -6,8 +6,10 @@ namespace HimoHito
     [DisallowMultipleComponent]
     public sealed class HookArrivalVisualPulse : MonoBehaviour
     {
-        private const float Duration = 0.22f;
+        private const float Duration = 0.28f;
+        private const float ScaleExpansion = 0.14f;
         private Vector3 restingPosition;
+        private Vector3 restingScale;
         private float elapsed;
         private bool playing;
 
@@ -15,6 +17,7 @@ namespace HimoHito
         {
             Restore();
             restingPosition = transform.localPosition;
+            restingScale = transform.localScale;
             elapsed = 0f;
             playing = true;
         }
@@ -37,6 +40,11 @@ namespace HimoHito
                 ? transform.parent.InverseTransformVector(worldOffset)
                 : worldOffset;
             transform.localPosition = restingPosition + localOffset;
+            // Smooth rise and fall, with zero slope at both ends. Scale only the visual child.
+            float swell = Mathf.Sin(t * Mathf.PI);
+            float scale = 1f + ScaleExpansion * swell * swell;
+            transform.localScale = new Vector3(restingScale.x * scale,
+                restingScale.y * scale, restingScale.z);
         }
 
         private void OnDisable() => Restore();
@@ -45,6 +53,7 @@ namespace HimoHito
         {
             if (!playing) return;
             transform.localPosition = restingPosition;
+            transform.localScale = restingScale;
             playing = false;
         }
     }

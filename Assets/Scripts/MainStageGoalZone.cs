@@ -10,7 +10,7 @@ namespace HimoHito
     [RequireComponent(typeof(Collider2D))]
     public sealed class MainStageGoalZone : MonoBehaviour
     {
-        private const float ClearRevealDelay = 0.45f;
+        private const float ClearRevealDelay = 1.35f;
 
         public bool IsClear { get; private set; }
         public bool IsCompleting => isClearPending || IsClear;
@@ -24,7 +24,7 @@ namespace HimoHito
             }
         }
 
-        private void OnCollisionEnter2D(Collision2D collision)
+        private void OnCollisionStay2D(Collision2D collision)
         {
             if (IsClear ||
                 isClearPending ||
@@ -34,6 +34,9 @@ namespace HimoHito
             {
                 return;
             }
+
+            if (!GoalChestPresentation.ReadyToClear(collision, GetComponent<Collider2D>(),
+                MainStageSectionTenSetup.GoalMarkerName)) return;
 
             if (collision.rigidbody.TryGetComponent(out RopeController ropeController))
             {
@@ -45,9 +48,10 @@ namespace HimoHito
             collision.rigidbody.simulated = false;
 
             isClearPending = true;
+            collision.rigidbody.GetComponent<RopeBodyVisual>()?.PlayGoalPose(ClearRevealDelay,
+                GameObject.Find(MainStageSectionTenSetup.GoalMarkerName)?.transform);
             PrototypeAudioFeedback audioFeedback =
                 collision.rigidbody.GetComponent<PrototypeAudioFeedback>();
-            audioFeedback?.PlayGoalChestOpened();
             StartCoroutine(CompleteClearSequence(audioFeedback));
         }
 

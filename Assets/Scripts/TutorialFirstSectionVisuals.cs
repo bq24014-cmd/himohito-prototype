@@ -110,13 +110,9 @@ namespace HimoHito
                 1);
             changed |= EnsurePartDHookRingVisual(
                 TutorialSectionFourSetup.CenterHookName);
-            changed |= EnsureToyVisual(
-                TutorialSectionFourSetup.GoalMarkerName,
-                "Open Toy Box Goal Visual",
-                ToyBoxResourcePath,
-                1,
-                true,
-                true);
+            changed |= GoalChestPresentation.Ensure(
+                FindSceneObject(TutorialSectionFourSetup.GoalMarkerName),
+                FindSceneObject(TutorialSectionFourSetup.GoalFloorName));
             changed |= EnsureToyVisual(
                 "Landing 1",
                 "Blue Railway Platform Visual",
@@ -141,7 +137,19 @@ namespace HimoHito
             changed |= EnsureFixedHookAttachmentPoint("Hook 1");
             changed |= EnsureFixedHookAttachmentPoint("Hook 2");
             changed |= EnsureFixedHookAttachmentPoint("Hook 3");
+            changed |= EnsureSpikeVisual(TutorialSectionTwoSetup.LeftSpikeName);
+            changed |= EnsureSpikeVisual(TutorialSectionTwoSetup.CenterSpikeName);
+            changed |= EnsureSpikeVisual(TutorialSectionTwoSetup.RightSpikeName);
             return changed;
+        }
+
+        private static bool EnsureSpikeVisual(string objectName)
+        {
+            GameObject target = FindSceneObject(objectName);
+            if (target == null) return false;
+            bool added = !target.TryGetComponent(out ToySpikeVisual visual);
+            if (added) visual = target.AddComponent<ToySpikeVisual>();
+            return visual.Refresh() || added;
         }
 
         public static void RestoreSceneVisualsAfterReload()

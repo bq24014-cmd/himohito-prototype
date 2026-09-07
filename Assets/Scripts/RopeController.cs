@@ -17,6 +17,10 @@ namespace HimoHito
         private const float RopeRevealDuration = 0.13f;
         private float ropeRevealStartedAt;
         private bool hookArrivalPending;
+        private LineRenderer aimHookOutline;
+        private Material aimHookMaterial;
+        private AnimationCurve unavailableAimWidth;
+        private readonly AnimationCurve availableAimWidth = AnimationCurve.Constant(0f, 1f, 1f);
 
         [SerializeField, Min(1f)] private float maximumShotDistance = 14f;
         [SerializeField, Min(0.01f)] private float ropeWidth = 0.16f;
@@ -160,6 +164,7 @@ namespace HimoHito
 
         private void LateUpdate()
         {
+            UpdateAimHookFeedback();
             if (!IsAttached)
             {
                 DrawAimGuide();
@@ -178,11 +183,13 @@ namespace HimoHito
 
         private void OnDisable()
         {
+            if (aimHookOutline != null) aimHookOutline.enabled = false;
             DetachAndRefund();
         }
 
         private void OnDestroy()
         {
+            if (aimHookMaterial != null) Destroy(aimHookMaterial);
             if (runtimeMaterial != null)
             {
                 Destroy(runtimeMaterial);
@@ -213,24 +220,9 @@ namespace HimoHito
 
             audioFeedback?.PlayRopeShot();
 
-            bool isAirborne = playerMover != null && !playerMover.IsGrounded;
-            bool useAirChainTarget = IsAirChainReconnectOpen;
-            bool foundTarget = useAirChainTarget
-                ? TryResolveNextAirChainHook(
-                    out Vector2 resolvedAnchor,
-                    out HookPoint hookPoint)
-                : TryResolveAttachmentPoint(
-                    worldTarget,
-                    out resolvedAnchor,
-                    out hookPoint);
+            bool foundTarget = TryResolveAvailableAttachment(worldTarget,
+                out Vector2 resolvedAnchor, out HookPoint hookPoint);
             if (!foundTarget)
-            {
-                audioFeedback?.PlayRopeAttachMiss();
-                return false;
-            }
-
-            if (isAirborne &&
-                !CanReconnectAirChainTo(hookPoint))
             {
                 audioFeedback?.PlayRopeAttachMiss();
                 return false;
@@ -276,6 +268,7 @@ namespace HimoHito
         public void DetachAndRefund(bool playReleaseSound = false)
         {
             hookArrivalPending = false;
+            if (!playReleaseSound) ropeBodyVisual?.CancelActionPoses();
             if (!IsAttached)
             {
                 return;
@@ -289,6 +282,8 @@ namespace HimoHito
                 ? 0f
                 : body.angularVelocity;
             HookPoint releasedHook = activeHookPoint;
+            // Manual release only: copy the artwork before hiding the live rope.
+            if (playReleaseSound) RopeRetractVisual.Play(lineRenderer, body);
             ropeJoint.enabled = false;
             EndPlatformBuildHold();
             activeHookPoint = null;
@@ -300,6 +295,9 @@ namespace HimoHito
             ClampSelectedRopeLength();
             if (playReleaseSound)
             {
+                // The joint and momentum have already been handled. Only the
+                // visible body follows through; reattachment remains immediate.
+                ropeBodyVisual?.PlaySwingReleasePose();
                 audioFeedback.PlayRopeReleased(preservedVelocity.magnitude);
             }
         }
@@ -382,6 +380,7 @@ namespace HimoHito
             }
 
             hookArrivalPending = false;
+            ropeBodyVisual?.CancelActionPoses();
             ropeJoint.enabled = false;
             EndPlatformBuildHold();
             activeHookPoint = null;
@@ -476,10 +475,21 @@ namespace HimoHito
             return false;
         }
 
+        private bool TryResolveAvailableAttachment(Vector2 worldTarget,
+            out Vector2 resolvedAnchor, out HookPoint hookPoint)
+        {
+            bool found = IsAirChainReconnectOpen
+                ? TryResolveNextAirChainHook(out resolvedAnchor, out hookPoint)
+                : TryResolveAttachmentPoint(worldTarget, out resolvedAnchor, out hookPoint);
+            return found && (playerMover == null || playerMover.IsGrounded ||
+                CanReconnectAirChainTo(hookPoint));
+        }
+
         private bool TryResolveAttachmentPoint(
             Vector2 worldTarget,
             out Vector2 resolvedAnchor,
-            out HookPoint hookPoint)
+            out HookPoint hookPoint,
+            bool previewBeyondSelectedLength = false)
         {
             resolvedAnchor = default;
             hookPoint = null;
@@ -491,7 +501,8 @@ namespace HimoHito
                 return false;
             }
 
-            float shotDistance = Mathf.Min(SelectedRopeLength, maximumShotDistance);
+            float shotDistance = previewBeyondSelectedLength
+                ? maximumShotDistance : Mathf.Min(SelectedRopeLength, maximumShotDistance);
             float hookSearchDistance = GetHookSearchDistance(shotDistance);
             RaycastHit2D[] hits = Physics2D.RaycastAll(
                 origin,
@@ -718,6 +729,57 @@ namespace HimoHito
             }
 
             return changed;
+        }
+
+        private void UpdateAimHookFeedback()
+        {
+            if (aimHookOutline != null) aimHookOutline.enabled = false;
+            if (IsAttached || Time.timeScale <= 0f || body == null) return;
+
+            Vector2 target = body.position + keyboardAimDirection * maximumShotDistance;
+            bool available = TryResolveAvailableAttachment(target, out Vector2 anchor,
+                out HookPoint hook);
+            if (!available && !TryResolveAttachmentPoint(target, out anchor, out hook,
+                    previewBeyondSelectedLength: true)) return;
+
+            if (aimHookOutline == null)
+            {
+                Shader shader = Shader.Find("Sprites/Default");
+                if (shader == null) return;
+                GameObject visual = new GameObject("Aim Hook Feedback");
+                visual.transform.SetParent(transform, false);
+                aimHookOutline = visual.AddComponent<LineRenderer>();
+                aimHookMaterial = new Material(shader) { hideFlags = HideFlags.HideAndDontSave };
+                aimHookOutline.sharedMaterial = aimHookMaterial;
+                aimHookOutline.useWorldSpace = true;
+                aimHookOutline.loop = true;
+                aimHookOutline.positionCount = 65;
+                aimHookOutline.sortingLayerID = lineRenderer.sortingLayerID;
+                aimHookOutline.sortingOrder = lineRenderer.sortingOrder + 2;
+                unavailableAimWidth = new AnimationCurve();
+                for (int i = 0; i <= 64; i++)
+                {
+                    Keyframe key = new Keyframe(i / 64f, i % 8 < 5 ? 1f : 0f);
+                    key.outTangent = float.PositiveInfinity;
+                    unavailableAimWidth.AddKey(key);
+                }
+            }
+
+            Color color = available ? new Color(1f, 0.91f, 0.65f, 0.8f)
+                : new Color(1f, 0.64f, 0.72f, 0.5f);
+            aimHookOutline.startColor = aimHookOutline.endColor = color;
+            // A thin, complete ring means E can connect; a broken ring means it cannot.
+            for (int i = 0; i <= 64; i++)
+            {
+                float t = i / 64f;
+                float angle = t * Mathf.PI * 2f;
+                float radius = 0.49f;
+                aimHookOutline.SetPosition(i, new Vector3(anchor.x + Mathf.Cos(angle) * radius,
+                    anchor.y + Mathf.Sin(angle) * radius, 0f));
+            }
+            aimHookOutline.widthCurve = available ? availableAimWidth : unavailableAimWidth;
+            aimHookOutline.widthMultiplier = available ? 0.035f : 0.025f;
+            aimHookOutline.enabled = true;
         }
 
         private void DrawAimGuide()

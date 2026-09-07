@@ -67,6 +67,7 @@ namespace HimoHito
         private float landingFluffAirTime;
 
         public bool IsGrounded { get; private set; }
+        public float MovementInput => moveInput; // Read-only input for presentation.
 
         private void Awake()
         {
@@ -164,6 +165,7 @@ namespace HimoHito
                 Vector2 takeoffImpulse = new Vector2(horizontalBrakeImpulse, jumpImpulse);
                 body.AddForce(takeoffImpulse, ForceMode2D.Impulse);
                 audioFeedback?.PlayPlayerJumped();
+                GetComponent<RopeBodyVisual>()?.PlayTakeoffElasticity();
                 ClearRecentRopePlatform();
                 jumpBufferTimer = 0f;
                 coyoteTimer = 0f;
@@ -200,6 +202,8 @@ namespace HimoHito
             }
 
             audioFeedback?.PlayPlayerFootstep();
+            RopeBridgeStepVisual.Play(groundedRopePlatform,
+                new Vector2(bodyCollider.bounds.center.x, bodyCollider.bounds.min.y));
             float speedRatio = Mathf.InverseLerp(
                 minimumFootstepSpeed,
                 moveSpeed,

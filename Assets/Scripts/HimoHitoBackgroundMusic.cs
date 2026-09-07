@@ -15,6 +15,7 @@ namespace HimoHito
         private bool supportedScene;
         private bool warnedMissing;
         private float nextReferenceCheck;
+        private float mixVolume;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
         private static void ResetStatics()
@@ -122,7 +123,8 @@ namespace HimoHito
             bool onTitle = tutorial != null &&
                 tutorial.Outcome == PrototypeRunController.RunOutcome.WaitingToStart;
             if (!onTitle && Time.timeScale < 0.01f) target = Mathf.Min(target, 0.15f);
-            source.volume = Mathf.MoveTowards(source.volume, target, Time.unscaledDeltaTime * 0.7f);
+            mixVolume = Mathf.MoveTowards(mixVolume, target, Time.unscaledDeltaTime * 0.7f);
+            source.volume = mixVolume * HimoHitoAudioSettings.Music;
         }
 
         private void OnDestroy()

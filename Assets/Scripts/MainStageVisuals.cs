@@ -70,11 +70,9 @@ namespace HimoHito
                 0.78f);
             changed |= EnsureBackground();
             changed |= RestorePlayerVisual(player);
-            changed |= EnsureToyVisual(
+            changed |= GoalChestPresentation.Ensure(
                 FindSceneObject(MainStageSectionTenSetup.GoalMarkerName),
-                GoalVisualName,
-                ToyBoxResourcePath,
-                8);
+                FindSceneObject(MainStageSectionTenSetup.GoalFloorName));
 
             foreach (GameObject candidate in
                      Resources.FindObjectsOfTypeAll<GameObject>())

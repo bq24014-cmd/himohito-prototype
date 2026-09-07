@@ -113,6 +113,18 @@ namespace HimoHito
             hookAttachWoodClip = Resources.Load<AudioClip>("Audio/HookAttachWood");
             hookAttachSoftClip = Resources.Load<AudioClip>("Audio/HookAttachSoft");
             ropeReleaseWindClip = Resources.Load<AudioClip>("Audio/RopeReleaseWind");
+            ApplyUserVolume();
+        }
+
+        private void LateUpdate() => ApplyUserVolume();
+
+        private void ApplyUserVolume()
+        {
+            float volume = HimoHitoAudioSettings.Effects;
+            if (audioSource != null) audioSource.volume = volume;
+            if (lengthSelectionAudioSource != null) lengthSelectionAudioSource.volume = volume;
+            if (footstepAudioSource != null) footstepAudioSource.volume = volume;
+            if (failureAudioSource != null) failureAudioSource.volume = volume;
         }
 
         public void PlayRopeShot()
@@ -281,6 +293,7 @@ namespace HimoHito
 
         public void PlayUiPaperOpened()
         {
+            ApplyUserVolume();
             if (audioSource != null && uiPaperOpenClip != null)
             {
                 audioSource.PlayOneShot(uiPaperOpenClip, uiPaperOpenVolume);

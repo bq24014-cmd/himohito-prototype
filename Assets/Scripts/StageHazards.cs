@@ -86,6 +86,7 @@ namespace HimoHito
     public sealed class ToySpikeVisual : MonoBehaviour
     {
         private const string FaceName = "Wooden Toy Spike Face";
+        private const string PaintedSpikeResourcePath = "Art/WoodenToySpike-v1";
         private const int TextureSize = 64;
         private static Sprite sharedSprite;
 
@@ -118,9 +119,13 @@ namespace HimoHito
                 face.localRotation = Quaternion.identity;
                 changed = true;
             }
-            if (face.localScale != Vector3.one)
+            Sprite targetSprite = GetSharedSprite();
+            // Fit the new artwork inside the same local hazard bounds; never resize the collider.
+            Vector3 visualScale = new Vector3(1f / targetSprite.bounds.size.x,
+                1f / targetSprite.bounds.size.y, 1f);
+            if (face.localScale != visualScale)
             {
-                face.localScale = Vector3.one;
+                face.localScale = visualScale;
                 changed = true;
             }
 
@@ -130,7 +135,6 @@ namespace HimoHito
                 changed = true;
             }
 
-            Sprite targetSprite = GetSharedSprite();
             if (faceRenderer.sprite != targetSprite)
             {
                 faceRenderer.sprite = targetSprite;
@@ -161,6 +165,11 @@ namespace HimoHito
 
         private static Sprite GetSharedSprite()
         {
+            Sprite paintedSprite = TutorialFirstSectionVisuals.LoadProcessedToySprite(
+                PaintedSpikeResourcePath);
+            if (paintedSprite != null) return paintedSprite;
+
+            // Retain a visible hazard if the art has not finished importing.
             if (sharedSprite != null)
             {
                 return sharedSprite;

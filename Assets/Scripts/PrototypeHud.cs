@@ -103,100 +103,22 @@ namespace HimoHito
                 return;
             }
 
-            GUILayout.BeginArea(new Rect(22f, 18f, 520f, 420f), GUI.skin.box);
-            GUILayout.Label("ヒモヒト / チュートリアル", titleStyle);
-
-            if (runController != null)
-            {
-                GUILayout.Label(
-                    $"第{runController.CurrentTutorialSection}区間 / " +
-                    $"{PrototypeRunController.TutorialSectionCount}　" +
-                    runController.CurrentTutorialObjective,
-                    bodyStyle);
-            }
-
+            GUILayout.BeginArea(new Rect(22f, 18f, Mathf.Min(360f, Screen.width - 44f), 174f), GUI.skin.box);
+            GUILayout.Label("チュートリアル　" + $"第{(runController != null ? runController.CurrentTutorialSection : 1)}区間 / {PrototypeRunController.TutorialSectionCount}", titleStyle);
             if (ropeResource != null)
             {
                 GUILayout.Label(
                     $"ヒモ残量  {HimoHitoGuiTheme.FormatRopeValue(ropeResource.CurrentLength)} / " +
-                    HimoHitoGuiTheme.FormatRopeValue(ropeResource.MaximumLength),
-                    lengthStyle);
+                    HimoHitoGuiTheme.FormatRopeValue(ropeResource.MaximumLength), lengthStyle);
                 RopeResourceGauge.Draw(ropeResource);
             }
-
             if (ropeController != null)
             {
-                GUILayout.Label(
-                    $"次に使う長さ  {ropeController.SelectedRopeLength} / " +
-                    $"{ropeController.MaximumSelectableRopeLength}",
-                    bodyStyle);
-                GUILayout.Label("W：使う長さを1増やす", bodyStyle);
-                GUILayout.Label("S：使う長さを1減らす", bodyStyle);
+                GUILayout.Label($"次に使う長さ  {ropeController.SelectedRopeLength} / " +
+                    $"{ropeController.MaximumSelectableRopeLength}" +
+                    (ropeController.IsAttached ? "　接続中" : ""), bodyStyle);
             }
-
-            string state;
-            if (runController != null && runController.Outcome != PrototypeRunController.RunOutcome.Playing)
-            {
-                state = runController.FailureReason switch
-                {
-                    PrototypeRunController.RunFailureReason.Fell =>
-                        "落下しました — Rで現在の区間から再挑戦",
-                    PrototypeRunController.RunFailureReason.RopeExhausted =>
-                        "ヒモが尽きました — Rで現在の区間から再挑戦",
-                    _ => "失敗しました — Rで現在の区間から再挑戦"
-                };
-            }
-            else
-            {
-                state = ropeController != null && ropeController.IsAttached
-                    ? $"ヒモ接続中 {ropeController.ActiveRopeLength:0.0} — Eで外す（消費なし）"
-                    : "準備完了 — 矢印キーで狙い、Eで接続";
-            }
-            GUILayout.Label(state, bodyStyle);
-            if (playerBody != null)
-            {
-                GUILayout.Label($"速度  {playerBody.linearVelocity.magnitude:0.0}", bodyStyle);
-            }
-            bool showFirstSectionControls = runController != null &&
-                runController.CurrentTutorialSection == 1;
-            if (showFirstSectionControls)
-            {
-                GUILayout.Label("A / D：歩く（掛けたまま歩き出すと振り子になる）", bodyStyle);
-                GUILayout.Label("照準：← / →    真上・真下：↑ / ↓", bodyStyle);
-                GUILayout.Label("E：狙ったHookへヒモを掛ける／外す", bodyStyle);
-                GUILayout.Label("R：この区間の最初から再挑戦", bodyStyle);
-            }
-            else
-            {
-                GUILayout.Label("移動：A / D    ジャンプ：Space", bodyStyle);
-                GUILayout.Label("照準：← / →    真上・真下：↑ / ↓", bodyStyle);
-                GUILayout.Label("ヒモ：Eで接続／解除    この区間から再挑戦：R", bodyStyle);
-            }
-            if (runController != null && runController.CurrentTutorialSection == 2)
-            {
-                GUILayout.Label(
-                    "初期長さ8はトゲに当たる。Eで外し、W / Sで選び直す",
-                    bodyStyle);
-            }
-            if (runController != null && runController.CurrentTutorialSection == 3)
-            {
-                GUILayout.Label(
-                    $"頭上にHookはない。対岸の緑フックへ長さ{TutorialSectionThreeSetup.RequiredRopeLength}で掛け、Qで足場にする",
-                    bodyStyle);
-            }
-            if (runController == null || runController.CurrentTutorialSection >= 3)
-            {
-                GUILayout.Label("足場化：ヒモ接続中にQ（選んだ長さを永久消費）", bodyStyle);
-            }
-            if (runController != null && runController.CurrentTutorialSection >= 4)
-            {
-                GUILayout.Label("まとめる：2本が集まるHookへ照準を合わせてF", bodyStyle);
-            }
-            DrawSectionFourGuide();
-            if (!showFirstSectionControls)
-            {
-                GUILayout.Label("マウス照準も使用可能", bodyStyle);
-            }
+            GUILayout.Label("Tab　操作説明", bodyStyle);
             GUILayout.EndArea();
 
             DrawWeavePrompt();

@@ -30,11 +30,11 @@ namespace HimoHito
         public static readonly Vector2 BeamSize =
             new Vector2(2f, 5f);
         public static readonly Vector2 GoalFloorPosition =
-            new Vector2(55f, -4.65f);
+            new Vector2(59.5f, -4.65f);
         public static readonly Vector2 GoalFloorSize =
-            new Vector2(6f, 10f);
+            new Vector2(15f, 10f);
         public static readonly Vector2 GoalMarkerPosition =
-            new Vector2(55f, 1.55f);
+            new Vector2(63f, 1.55f);
         public static readonly Vector2 GoalMarkerSize =
             new Vector2(2.4f, 2.2f);
 

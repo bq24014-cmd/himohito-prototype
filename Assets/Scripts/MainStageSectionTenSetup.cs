@@ -21,11 +21,11 @@ namespace HimoHito
         public static readonly Vector2 RightAnchorPosition =
             new Vector2(203f, -2.15f);
         public static readonly Vector2 GoalFloorPosition =
-            new Vector2(207f, -7.15f);
+            new Vector2(210.5f, -7.15f);
         public static readonly Vector2 GoalFloorSize =
-            new Vector2(8f, 10f);
+            new Vector2(15f, 10f);
         public static readonly Vector2 GoalMarkerPosition =
-            new Vector2(207f, -0.95f);
+            new Vector2(214f, -0.95f);
         public static readonly Vector2 GoalMarkerSize =
             new Vector2(2.6f, 2.4f);
 

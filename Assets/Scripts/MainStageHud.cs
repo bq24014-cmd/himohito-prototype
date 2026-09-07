@@ -74,97 +74,22 @@ namespace HimoHito
             UpdateSectionTitle();
             DrawSectionTitle();
 
-            GUILayout.BeginArea(new Rect(22f, 18f, 520f, 440f), GUI.skin.box);
-            GUILayout.Label("ヒモヒト / 本編ステージ", titleStyle);
-            GUILayout.Label($"第{(respawn != null ? respawn.CurrentSection : 1)}区間", bodyStyle);
-
+            GUILayout.BeginArea(new Rect(22f, 18f, Mathf.Min(360f, Screen.width - 44f), 174f), GUI.skin.box);
+            GUILayout.Label("本編　" + $"第{(respawn != null ? respawn.CurrentSection : 1)}区間", titleStyle);
             if (ropeResource != null)
             {
                 GUILayout.Label(
                     $"ヒモ残量  {HimoHitoGuiTheme.FormatRopeValue(ropeResource.CurrentLength)} / " +
-                    HimoHitoGuiTheme.FormatRopeValue(ropeResource.MaximumLength),
-                    ropeStyle);
+                    HimoHitoGuiTheme.FormatRopeValue(ropeResource.MaximumLength), ropeStyle);
                 RopeResourceGauge.Draw(ropeResource);
             }
-
             if (ropeController != null)
             {
-                GUILayout.Label(
-                    $"次に使う長さ  {ropeController.SelectedRopeLength} / " +
-                    $"{ropeController.MaximumSelectableRopeLength}",
-                    bodyStyle);
-                GUILayout.Label("W：長くする　S：短くする", bodyStyle);
-                GUILayout.Label(
-                    ropeController.IsAttached
-                        ? "接続中：Eで解除 / Qでこの長さを永久消費して足場化"
-                        : "矢印で狙い、Eで接続",
-                    accentStyle);
+                GUILayout.Label($"次に使う長さ  {ropeController.SelectedRopeLength} / " +
+                    $"{ropeController.MaximumSelectableRopeLength}" +
+                    (ropeController.IsAttached ? "　接続中" : ""), bodyStyle);
             }
-
-            if (preview != null && preview.IsPreviewing)
-            {
-                GUILayout.Label("ステージ全体を確認中", accentStyle);
-            }
-            else if (respawn != null && respawn.IsRopeExhausted)
-            {
-                GUILayout.Label("ヒモが不足しています — Rで区間の最初へ", accentStyle);
-            }
-            else if (respawn != null &&
-                     respawn.CurrentSection == 4 &&
-                     platformBuilder != null)
-            {
-                DrawSectionFourGuide();
-            }
-            else if (respawn != null &&
-                     respawn.CurrentSection == 5 &&
-                     platformBuilder != null)
-            {
-                DrawSectionFiveGuide();
-            }
-            else if (respawn != null &&
-                     respawn.CurrentSection == 6 &&
-                     platformBuilder != null)
-            {
-                DrawSectionSixGuide();
-            }
-            else if (respawn != null &&
-                     respawn.CurrentSection == 7 &&
-                     platformBuilder != null)
-            {
-                DrawSectionSevenGuide();
-            }
-            else if (respawn != null &&
-                     respawn.CurrentSection == 9 &&
-                     platformBuilder != null)
-            {
-                DrawSectionNineGuide();
-            }
-            else if (respawn != null &&
-                     respawn.CurrentSection == 10 &&
-                     platformBuilder != null)
-            {
-                DrawSectionTenGuide();
-            }
-            else
-            {
-                GUILayout.Label("おもちゃ箱のゴールを目指す", accentStyle);
-            }
-
-            if (playerBody != null)
-            {
-                GUILayout.Label($"速度  {playerBody.linearVelocity.magnitude:0.0}", bodyStyle);
-            }
-            GUILayout.Label("A / D：移動　Space：ジャンプ", bodyStyle);
-            GUILayout.Label("矢印：照準　E：接続／解除", bodyStyle);
-            if (platformBuilder != null && platformBuilder.IsPlatformBuildingUnlocked)
-            {
-                GUILayout.Label("Q：接続中のヒモを足場化", bodyStyle);
-            }
-            if (respawn != null && respawn.CurrentSection == 9)
-            {
-                GUILayout.Label("F：2本が集まるHookを外して1本にまとめる", bodyStyle);
-            }
-            GUILayout.Label("R：現在の区間から再挑戦", bodyStyle);
+            GUILayout.Label("Tab　操作説明", bodyStyle);
             GUILayout.EndArea();
         }
 

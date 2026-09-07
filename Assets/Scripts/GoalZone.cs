@@ -24,7 +24,9 @@ namespace HimoHito
                 collision.rigidbody.GetComponent<PrototypeRunController>();
             if (runController != null)
             {
-                runController.MarkClear();
+                if (GoalChestPresentation.ReadyToClear(collision, goalCollider,
+                    TutorialSectionFourSetup.GoalMarkerName))
+                    runController.MarkClear();
             }
         }
 

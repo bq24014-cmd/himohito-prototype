@@ -13,6 +13,8 @@ namespace HimoHito
         private static readonly Color HighColor = new Color(0.25f, 0.9f, 0.58f, 1f);
         private static readonly Color FlashColor = new Color(1f, 0.98f, 0.94f, 1f);
         private const float FlashDuration = 0.22f;
+        private const float LowRopeThreshold = 0.20f;
+        private const float KnotPulsePeriod = 2.4f;
         private static RopeResource flashingResource;
         private static float flashStartedAt;
 
@@ -102,11 +104,25 @@ namespace HimoHito
                 trackRect.x,
                 trackRect.xMax,
                 remainingRatio) - knotSize * 0.5f;
+            // Only the marker breathes; retain its position and never make it disappear.
+            Color knotColor = previousColor;
+            knotColor.a *= EvaluateKnotAlpha(remainingRatio, Time.time);
+            GUI.color = knotColor;
             HimoHitoUiParts.DrawKnot(new Rect(
                 knotX,
                 outerRect.y + (outerRect.height - knotSize) * 0.5f,
                 knotSize,
                 knotSize));
+            GUI.color = previousColor;
+        }
+
+        private static float EvaluateKnotAlpha(float remainingRatio, float time)
+        {
+            // Ease in over 20% -> 15%, avoiding a sudden visual jump at the threshold.
+            float strength = Mathf.SmoothStep(0f, 1f,
+                (LowRopeThreshold - remainingRatio) / 0.05f);
+            float wave = 0.5f - 0.5f * Mathf.Cos(time * 2f * Mathf.PI / KnotPulsePeriod);
+            return 1f - 0.4f * strength * wave;
         }
 
         private static Color EvaluateFillColor(float remainingRatio)
