@@ -65,6 +65,9 @@ namespace HimoHito
         private bool hasPreviousVerticalSpeed;
         private float footstepTimer;
         private float landingFluffAirTime;
+        private readonly Collider2D[] ropeEndpointHits = new Collider2D[16];
+        private readonly Collider2D[] stepClearanceHits = new Collider2D[16];
+        private readonly ContactPoint2D[] ropeWalkingContacts = new ContactPoint2D[32];
 
         public bool IsGrounded { get; private set; }
         public float MovementInput => moveInput; // Read-only input for presentation.
@@ -149,6 +152,7 @@ namespace HimoHito
             }
             else if (IsGrounded)
             {
+                TryStepOntoRopeEndpoint();
                 ApplyGroundControl();
             }
             else
@@ -303,12 +307,14 @@ namespace HimoHito
         {
             body.linearDamping = 0f;
 
-            if (groundedRopePlatform != null &&
-                groundedRopePlatform.TryGetSurfaceTangent(
-                    body.position,
-                    out Vector2 ropePlatformTangent))
+            if (groundedRopePlatform != null)
             {
-                ApplyRopePlatformGroundControl(ropePlatformTangent);
+                if (TryGetRopeWalkingContactTangent(out Vector2 contactTangent))
+                    ApplyRopePlatformGroundControl(contactTangent);
+                else
+                    // A probe can see the next arc while the feet have not
+                    // touched it. Do not project momentum onto that arc yet.
+                    ApplyAirControl();
                 return;
             }
 
@@ -321,6 +327,106 @@ namespace HimoHito
                 targetSpeed,
                 speedChange * Time.fixedDeltaTime);
             body.linearVelocity = new Vector2(nextHorizontalSpeed, body.linearVelocity.y);
+        }
+
+        private void TryStepOntoRopeEndpoint()
+        {
+            // Only take up the small lip made by a bridge's thickness at a
+            // bank. This is not general stair climbing or an airborne snap.
+            if (groundedRopePlatform != null || Mathf.Abs(moveInput) < 0.01f ||
+                jumpBufferTimer > 0f || body.linearVelocity.y > 0.5f)
+                return;
+
+            const float maximumRise = 0.18f;
+            const float clearance = 0.04f;
+            Bounds bounds = bodyCollider.bounds;
+            float direction = Mathf.Sign(moveInput);
+            float frontX = bounds.center.x + bounds.extents.x * direction;
+            float reach = Mathf.Clamp(Mathf.Abs(body.linearVelocity.x) *
+                Time.fixedDeltaTime + 0.06f, 0.14f, 0.2f);
+            ContactFilter2D filter = new ContactFilter2D();
+            filter.SetLayerMask(Physics2D.GetLayerCollisionMask(gameObject.layer));
+            filter.useTriggers = false;
+            int count = Physics2D.OverlapBox(
+                new Vector2(frontX + direction * reach * 0.5f, bounds.min.y),
+                new Vector2(reach + 0.04f, maximumRise * 2f),
+                0f, filter, ropeEndpointHits);
+            if (count == ropeEndpointHits.Length) return;
+
+            for (int i = 0; i < count; i++)
+            {
+                Collider2D hit = ropeEndpointHits[i];
+                if (!CanUseGroundCollider(hit) ||
+                    !(hit is EdgeCollider2D edge) ||
+                    !hit.TryGetComponent(out GeneratedRopePlatform platform)) continue;
+
+                Vector2 endpoint = direction > 0f
+                    ? (platform.Start.x < platform.End.x ? platform.Start : platform.End)
+                    : (platform.Start.x > platform.End.x ? platform.Start : platform.End);
+                float gap = (endpoint.x - frontX) * direction;
+                float rise = endpoint.y + edge.edgeRadius + clearance - bounds.min.y;
+                // Endpoints must be at the bank's height. Do not use this to
+                // reach an elevated hook or climb the middle of a bridge.
+                if (gap < -0.04f || gap > reach + edge.edgeRadius ||
+                    Mathf.Abs(endpoint.y - bounds.min.y) > 0.06f ||
+                    rise <= clearance || rise > maximumRise) continue;
+
+                // Keep walls/ceilings solid and never lift through an obstacle.
+                Vector2 destination = (Vector2)bounds.center + Vector2.up * rise;
+                int blockers = Physics2D.OverlapBox(destination,
+                    (Vector2)bounds.size - Vector2.one * 0.01f,
+                    0f, filter, stepClearanceHits);
+                if (blockers == stepClearanceHits.Length) return;
+                bool blocked = false;
+                for (int j = 0; j < blockers; j++)
+                {
+                    if (CanUseGroundCollider(stepClearanceHits[j]))
+                    { blocked = true; break; }
+                }
+                if (blocked) continue;
+
+                body.position += Vector2.up * rise;
+                return;
+            }
+        }
+
+        private bool CanUseGroundCollider(Collider2D other)
+        {
+            return other != null && other != bodyCollider && !other.isTrigger &&
+                other.attachedRigidbody != body &&
+                other.GetComponentInParent<HookPoint>() == null &&
+                !Physics2D.GetIgnoreLayerCollision(gameObject.layer, other.gameObject.layer) &&
+                !Physics2D.GetIgnoreCollision(bodyCollider, other);
+        }
+
+        private bool TryGetRopeWalkingContactTangent(out Vector2 tangent)
+        {
+            tangent = default;
+            int count = bodyCollider.GetContacts(ropeWalkingContacts);
+            bool found = false;
+            float bestSupport = float.NegativeInfinity;
+            bool moving = Mathf.Abs(moveInput) > 0.01f;
+            for (int i = 0; i < count; i++)
+            {
+                ContactPoint2D contact = ropeWalkingContacts[i];
+                Collider2D other = contact.collider == bodyCollider
+                    ? contact.otherCollider : contact.collider;
+                Vector2 normal = contact.normal;
+                if (!CanUseGroundCollider(other) || normal.y < 0.45f ||
+                    contact.point.y > bodyCollider.bounds.center.y) continue;
+
+                // At a bank or shared hook, several surfaces can support the
+                // player's box at once. Choose the most uphill one in the
+                // requested direction: walking along it cannot push down into
+                // another support. At rest prefer the flattest actual support.
+                Vector2 candidate = new Vector2(normal.y, -normal.x).normalized;
+                float support = moving ? candidate.y / candidate.x * Mathf.Sign(moveInput) : normal.y;
+                if (found && support <= bestSupport) continue;
+                found = true;
+                bestSupport = support;
+                tangent = candidate;
+            }
+            return found;
         }
 
         private void ApplyRopePlatformGroundControl(Vector2 tangent)
@@ -451,7 +557,11 @@ namespace HimoHito
             bool isGrounded = false;
             foreach (Collider2D overlap in overlaps)
             {
-                if (overlap == null || overlap == bodyCollider)
+                // Hook triggers must remain visible to rope targeting, but
+                // touching a ring is not ground contact. In particular, a
+                // ring beside a bridge end must not suppress bridge support
+                // and switch slope-following back to flat-floor movement.
+                if (!CanUseGroundCollider(overlap))
                 {
                     continue;
                 }
