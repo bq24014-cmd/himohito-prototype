@@ -9,6 +9,8 @@
 /[Mm]emoryCaptures/
 /[Rr]ecordings/
 /[Cc]rashReports/
+/Assets/_Recovery/
+/Assets/_Recovery.meta
 
 # IDE files
 /.vs/
@@ -35,6 +37,9 @@ Desktop.ini
 
 # Local document renders and inspection output created during Codex work
 /.codex_tmp/
+
+# DOVA-SYNDROME: licensed for use in the game, not standalone redistribution.
+/Assets/Resources/Audio/YasashiiOdori.mp3
 
 # Unity crash and memory-capture files
 sysinfo.txt
