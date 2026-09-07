@@ -140,12 +140,10 @@ namespace HimoHito
                 state = runController.FailureReason switch
                 {
                     PrototypeRunController.RunFailureReason.Fell =>
-                        "落下しました — 自動で現在の区間へ戻ります...",
+                        "落下しました — Rで現在の区間から再挑戦",
                     PrototypeRunController.RunFailureReason.RopeExhausted =>
                         "ヒモが尽きました — Rで現在の区間から再挑戦",
-                    _ => runController.IsAutomaticRespawnPending
-                        ? "失敗しました — 自動で現在の区間へ戻ります..."
-                        : "失敗しました — Rで現在の区間から再挑戦"
+                    _ => "失敗しました — Rで現在の区間から再挑戦"
                 };
             }
             else
@@ -213,9 +211,7 @@ namespace HimoHito
                 fell
                     ? "少しだけ休んで、同じ区間からもう一度。"
                     : "使う長さを選び直せば、まだ先へ進めます。",
-                runController.IsAutomaticRespawnPending
-                    ? "現在の区間へ戻ります…"
-                    : "R　この区間から再挑戦");
+                "R　この区間から再挑戦");
         }
 
         private void DrawSectionFourGuide()
@@ -393,7 +389,20 @@ namespace HimoHito
                 "自分の体であるヒモを伸ばして進み、\n必要な場所では足場として編むアクションパズル",
                 startControlStyle);
             GUILayout.Space(54f);
-            GUILayout.Label("Enter　はじめる", startImportantStyle);
+            Rect startButtonRow = GUILayoutUtility.GetRect(
+                1f,
+                58f,
+                GUILayout.ExpandWidth(true),
+                GUILayout.Height(58f));
+            Rect startButton = new Rect(
+                startButtonRow.x,
+                startButtonRow.y,
+                Mathf.Min(390f, startButtonRow.width),
+                startButtonRow.height);
+            HimoHitoUiParts.DrawWoodButtonLabel(
+                startButton,
+                "Enter　はじめる",
+                startImportantStyle);
             GUILayout.Label("Tab　操作説明", startPromptStyle);
             GUILayout.Label("Esc　終了", startPromptStyle);
             GUILayout.FlexibleSpace();
@@ -431,7 +440,20 @@ namespace HimoHito
             GUILayout.Space(18f);
             GUILayout.Label("ヒモを掛ける・長さを選ぶ・足場にする・まとめるを習得しました", clearBodyStyle);
             GUILayout.Space(42f);
-            GUILayout.Label("Enter　本編ステージへ", clearPromptStyle);
+            Rect clearButtonRow = GUILayoutUtility.GetRect(
+                1f,
+                62f,
+                GUILayout.ExpandWidth(true),
+                GUILayout.Height(62f));
+            Rect clearButton = new Rect(
+                clearButtonRow.x + Mathf.Max(0f, (clearButtonRow.width - 480f) * 0.5f),
+                clearButtonRow.y,
+                Mathf.Min(480f, clearButtonRow.width),
+                clearButtonRow.height);
+            HimoHitoUiParts.DrawWoodButtonLabel(
+                clearButton,
+                "Enter　本編ステージへ",
+                clearPromptStyle);
             GUILayout.EndArea();
         }
 

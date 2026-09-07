@@ -58,7 +58,20 @@ namespace HimoHito
             GUILayout.Space(22f);
             GUILayout.Label(message, bodyStyle);
             GUILayout.FlexibleSpace();
-            GUILayout.Label(retryPrompt, promptStyle);
+            Rect retryButtonRow = GUILayoutUtility.GetRect(
+                1f,
+                58f,
+                GUILayout.ExpandWidth(true),
+                GUILayout.Height(58f));
+            Rect retryButton = new Rect(
+                retryButtonRow.x,
+                retryButtonRow.y,
+                Mathf.Min(470f, retryButtonRow.width),
+                retryButtonRow.height);
+            HimoHitoUiParts.DrawWoodButtonLabel(
+                retryButton,
+                retryPrompt,
+                promptStyle);
             GUILayout.Label("Esc　タイトルへ", bodyStyle);
             GUILayout.EndArea();
         }

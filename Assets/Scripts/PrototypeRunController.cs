@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
@@ -12,11 +13,13 @@ namespace HimoHito
     public sealed class PrototypeRunController : MonoBehaviour
     {
         public const float TutorialRopeCapacity = 99f;
+        private const float ClearRevealDelay = 0.45f;
 
         public enum RunOutcome
         {
             WaitingToStart,
             Playing,
+            Clearing,
             Clear,
             Failed
         }
@@ -29,7 +32,6 @@ namespace HimoHito
         }
 
         [SerializeField] private float fallThreshold = -9f;
-        [SerializeField, Min(0f)] private float fallRespawnDelay = 0.5f;
         [SerializeField, Min(0.01f)] private float minimumUsableRopeLength = 1f;
         [FormerlySerializedAs("startFromSectionThreeForDevelopment")]
         [SerializeField] private bool startFromSectionFourForDevelopment;
@@ -40,6 +42,7 @@ namespace HimoHito
         private RopePlatformBuilder platformBuilder;
         private PlayerMover playerMover;
         private StageOverlayControls overlayControls;
+        private TutorialSectionGuide tutorialSectionGuide;
         private Vector2 startPosition;
         private float startRopeCapacity;
         private float startRopeLength;
@@ -49,11 +52,9 @@ namespace HimoHito
         private float checkpointRopeLength;
         private int checkpointSelectedRopeLength;
         private RopePlatformBuilder.PlatformState[] checkpointPlatformStates;
-        private float automaticRespawnTimer;
 
         public RunOutcome Outcome { get; private set; } = RunOutcome.WaitingToStart;
         public RunFailureReason FailureReason { get; private set; } = RunFailureReason.None;
-        public bool IsAutomaticRespawnPending { get; private set; }
         public int CurrentTutorialSection { get; private set; } = 1;
         public const int TutorialSectionCount = 4;
         public string CurrentTutorialObjective => CurrentTutorialSection switch
@@ -86,6 +87,12 @@ namespace HimoHito
             if (overlayControls == null)
             {
                 overlayControls = gameObject.AddComponent<StageOverlayControls>();
+            }
+            tutorialSectionGuide = GetComponent<TutorialSectionGuide>();
+            if (tutorialSectionGuide == null)
+            {
+                tutorialSectionGuide =
+                    gameObject.AddComponent<TutorialSectionGuide>();
             }
             ropeResource.RestoreCapacityAndCurrent(
                 TutorialRopeCapacity,
@@ -135,10 +142,21 @@ namespace HimoHito
                 return;
             }
 
+            if (Outcome == RunOutcome.Clearing)
+            {
+                return;
+            }
+
             if (Outcome == RunOutcome.Failed &&
                 Input.GetKeyDown(KeyCode.Escape))
             {
                 SceneManager.LoadScene("Tutorial");
+                return;
+            }
+
+            if (tutorialSectionGuide != null &&
+                tutorialSectionGuide.IsVisible)
+            {
                 return;
             }
 
@@ -149,16 +167,6 @@ namespace HimoHito
                     RestartTutorial();
                 }
                 else
-                {
-                    RestartFromCheckpoint();
-                }
-                return;
-            }
-
-            if (IsAutomaticRespawnPending)
-            {
-                automaticRespawnTimer -= Time.unscaledDeltaTime;
-                if (automaticRespawnTimer <= 0f)
                 {
                     RestartFromCheckpoint();
                 }
@@ -176,10 +184,6 @@ namespace HimoHito
             if (fell)
             {
                 Finish(RunOutcome.Failed, RunFailureReason.Fell);
-                IsAutomaticRespawnPending = true;
-                automaticRespawnTimer = CurrentTutorialSection == 1
-                    ? 0.15f
-                    : fallRespawnDelay;
                 return;
             }
 
@@ -239,8 +243,28 @@ namespace HimoHito
                                          CurrentTutorialSection >= TutorialSectionCount;
             if (Outcome == RunOutcome.Playing && tutorialStepsComplete)
             {
-                Finish(RunOutcome.Clear);
+                BeginClearSequence();
             }
+        }
+
+        private void BeginClearSequence()
+        {
+            ropeController.DetachAndRefund();
+            body.linearVelocity = Vector2.zero;
+            body.angularVelocity = 0f;
+            body.simulated = false;
+            FailureReason = RunFailureReason.None;
+            Outcome = RunOutcome.Clearing;
+
+            GetComponent<PrototypeAudioFeedback>()?.PlayGoalChestOpened();
+            StartCoroutine(CompleteClearSequence());
+        }
+
+        private IEnumerator CompleteClearSequence()
+        {
+            yield return new WaitForSecondsRealtime(ClearRevealDelay);
+            GetComponent<PrototypeAudioFeedback>()?.PlayClearRevealed();
+            Outcome = RunOutcome.Clear;
         }
 
         public void TryReachTutorialSection(
@@ -274,6 +298,10 @@ namespace HimoHito
             body.simulated = false;
             FailureReason = failureReason;
             Outcome = outcome;
+            if (failureReason == RunFailureReason.RopeExhausted)
+            {
+                GetComponent<PrototypeAudioFeedback>()?.PlayRopeExhausted();
+            }
         }
 
         private void RestartFromCheckpoint()
@@ -319,23 +347,27 @@ namespace HimoHito
 
         private void ResetMotionAndResume()
         {
+            GetComponent<PrototypeAudioFeedback>()?.StopRopeExhaustedAudio();
             body.linearVelocity = Vector2.zero;
             body.angularVelocity = 0f;
             playerMover.enabled = true;
             ropeController.enabled = true;
-            automaticRespawnTimer = 0f;
-            IsAutomaticRespawnPending = false;
             FailureReason = RunFailureReason.None;
             Outcome = RunOutcome.Playing;
         }
 
         private static void LoadNextStage()
         {
-            int nextBuildIndex = SceneManager.GetActiveScene().buildIndex + 1;
-            if (nextBuildIndex >= 0 && nextBuildIndex < SceneManager.sceneCountInBuildSettings)
+            const string MainStageSceneName = "MainStage";
+            if (Application.CanStreamedLevelBeLoaded(MainStageSceneName))
             {
-                SceneManager.LoadScene(nextBuildIndex);
+                SceneManager.LoadScene(MainStageSceneName);
+                return;
             }
+
+            Debug.LogError(
+                $"本編シーンを読み込めません。Build Settingsに" +
+                $"{MainStageSceneName}が登録されているか確認してください。");
         }
     }
 }

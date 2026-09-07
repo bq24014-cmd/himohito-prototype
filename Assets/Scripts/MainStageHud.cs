@@ -59,11 +59,14 @@ namespace HimoHito
                 return;
             }
 
-            if (respawn != null && respawn.IsRopeExhausted)
+            if (respawn != null && respawn.IsFailureVisible)
             {
+                bool fell = respawn.IsFallFailure;
                 HimoHitoFailureScreen.Draw(
-                    "ヒモが尽きました",
-                    "使った長さを見直せば、まだ先へ進めます。",
+                    fell ? "足を踏み外しました" : "ヒモが尽きました",
+                    fell
+                        ? "同じ区間から、落ち着いてもう一度。"
+                        : "使った長さを見直せば、まだ先へ進めます。",
                     "R　この区間から再挑戦");
                 return;
             }
@@ -434,7 +437,20 @@ namespace HimoHito
                 $"かかった時間　{FormatElapsed(clearElapsedSeconds)}",
                 clearBodyStyle);
             GUILayout.Space(16f);
-            GUILayout.Label("R　本編を最初から再挑戦", clearBodyStyle);
+            Rect retryButtonRow = GUILayoutUtility.GetRect(
+                1f,
+                60f,
+                GUILayout.ExpandWidth(true),
+                GUILayout.Height(60f));
+            Rect retryButton = new Rect(
+                retryButtonRow.x + Mathf.Max(0f, (retryButtonRow.width - 480f) * 0.5f),
+                retryButtonRow.y,
+                Mathf.Min(480f, retryButtonRow.width),
+                retryButtonRow.height);
+            HimoHitoUiParts.DrawWoodButtonLabel(
+                retryButton,
+                "R　本編を最初から再挑戦",
+                clearBodyStyle);
             GUILayout.EndArea();
         }
 

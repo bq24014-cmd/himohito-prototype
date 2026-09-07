@@ -33,7 +33,7 @@ namespace HimoHitoEditor
             PlayerSettings.productName = "ヒモヒト";
             PlayerSettings.defaultScreenWidth = 1920;
             PlayerSettings.defaultScreenHeight = 1080;
-            PlayerSettings.fullScreenMode = FullScreenMode.Windowed;
+            PlayerSettings.fullScreenMode = FullScreenMode.FullScreenWindow;
             PlayerSettings.resizableWindow = false;
 
             PlayerSettings.SplashScreen.show = true;
@@ -67,8 +67,7 @@ namespace HimoHitoEditor
 
             PlayerSettings.SplashScreen.logos = new[]
             {
-                PlayerSettings.SplashScreenLogo.Create(2f, splashLogo),
-                PlayerSettings.SplashScreenLogo.CreateWithUnityLogo(2f)
+                PlayerSettings.SplashScreenLogo.Create(2f, splashLogo)
             };
         }
 

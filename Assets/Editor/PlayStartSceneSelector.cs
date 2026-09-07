@@ -16,7 +16,7 @@ namespace HimoHitoEditor
         static PlayStartSceneSelector()
         {
             EditorApplication.delayCall +=
-                ConfigureEndingPreviewStartScene;
+                ConfigurePlayStartScene;
         }
 
         [MenuItem("HimoHito/Play From Tutorial")]

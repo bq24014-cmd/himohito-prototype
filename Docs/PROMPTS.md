@@ -165,3 +165,93 @@ Constraints: one clean opaque 16:9 raster image; no floor; no foreground toys; n
 
 Avoid: photorealistic, 3D render, CGI, anime, sharp objects, strong contrast, bright light, neon colors, clutter, busy center, perspective floor, baseboard, visible seams, vignette that darkens the edges differently.
 ```
+
+## HimoHitoUiParts-v1.png
+
+- 用途：Part D画像⑥。HUDゲージ、結び目、接続リング、操作ボタン、失敗画面のほつれ端
+- 生成日：2026-09-04
+- 使用ツール：Codex built-in image generation
+- 参照画像：`HimoHitoTitleBackground-v1.png`、`TutorialRopeAnchorRing-v1.png`、`TutorialBlockPlatform-v1.png`
+- 出力：`Assets/Resources/Art/HimoHitoUiParts-v1.png`
+- 加工：生成時の白背景をUnity読込時に透明化し、1枚のシートから各パーツを切り出して表示
+
+```text
+Use case: stylized-concept
+Asset type: Unity 2D game UI sprite sheet with transparent background
+Primary request: Create one clean sprite sheet containing exactly five isolated,
+separate UI assets for the game HimoHito, all matching the supplied nighttime
+children's-bedroom picture-book artwork: (1) a long horizontal HUD gauge frame
+made from one warm orange wooden toy stick, with small dusty-pink yarn wraps tied
+around both ends and an empty transparent middle; (2) one simple dusty-pink yarn
+knot shown front-on; (3) one small toy-blue painted wooden connector ring with a
+clear center hole, front-on; (4) one wide rounded rectangular button plate made
+from warm orange toy wood, completely blank; (5) one short frayed end of dusty-pink yarn.
+Input images: Image 1 is the main world and lighting reference; Image 2 is the
+connector ring material and shape reference; Image 3 is the warm wooden toy material reference.
+Scene/backdrop: genuinely transparent background, no checkerboard pattern rendered into the image.
+Style/medium: flat-ish hand-painted 2D picture-book game art, soft gradients,
+subtle paper grain, matte painted wood and knitted yarn; consistent with the supplied references.
+Composition/framing: arrange the five assets in one evenly spaced horizontal row,
+each fully visible with generous empty transparent space between items; no overlap;
+straight-on orthographic presentation; consistent scale suitable for cutting into sprites.
+Lighting/mood: soft upper-left warm light, gentle rim light, no cast shadows outside each object.
+Color palette: deep indigo only in tiny shaded details, dusty pink yarn #FF5C8A,
+toy-blue #3E8ED0, warm wooden orange #E0862F, pale warm highlight #FFD9A0.
+Materials/textures: knitted wool fibers, softly painted wooden toy surfaces.
+Constraints: exactly five objects; no text, no letters, no numbers, no icons beyond
+the described objects; crisp isolated silhouettes; preserve true alpha transparency;
+no perspective; no human characters; no extra decorations; no borders around the sheet.
+Avoid: checkerboard backdrop, opaque white or grey backdrop, photorealism, 3D render,
+CGI, neon colors, UI text, labels, watermark, signature, clutter.
+```
+
+## HimoHitoKeyVisual-v1.png
+
+- 用途：第7回資料Part D画像⑦。README先頭、応募フォーム、プレイ動画のサムネイル
+- 生成日：2026-09-05
+- 使用ツール：Codex built-in image generation
+- 参照画像：`HimoHitoTitleBackground-v1.png`、`HimoHitoPlayer-v1.png`、`TutorialHookConnector-v1.png`
+- 出力：`Docs/Images/HimoHitoKeyVisual-v1.png`
+
+```text
+Use case: ads-marketing
+Asset type: 16:9 game key visual for the top of a README, application form thumbnail, and gameplay-video thumbnail.
+Input images: Image 1 is the required bedroom world, palette, lighting, and painterly picture-book style reference. Image 2 is the exact small pink knitted yarn doll character reference. Image 3 is the blue toy connector design reference; use a compact connector/ring form at each bridge endpoint.
+Primary request: Create one cinematic hero image that explains the game idea at a glance: a small pink knitted yarn doll stands at the center of a bridge made from its own dusty-pink yarn. The yarn bridge stretches between two blue toy connectors and sags gently under the doll's weight in a smooth catenary curve. Below the bridge is deep darkness. Far behind and above, a warm wooden toy box glows small in the bedroom.
+Scene/backdrop: a child's bedroom at night, cozy toy-box world, consistent with Image 1.
+Subject: the doll must be small in the frame; the sagging yarn bridge is the main subject. Match the yarn texture, silhouette, and colors of Image 2 closely.
+Style/medium: 2D game illustration for a picture-book puzzle platformer; flat-ish shapes, soft gradients, gentle rim light, subtle paper grain, hand-painted storybook feel; calm and quiet.
+Composition/framing: wide 16:9. Bridge spans the lower-middle third. Large quiet dark negative space above. Doll centered on the lowest part of the bridge. Blue connectors clearly visible at both ends. The warm toy box is distant, small, and secondary in the upper background.
+Lighting/mood: one warm lamp/toy-box glow from the upper left; otherwise deep indigo-violet night. Mood: a small creature crossing a gap it made from itself.
+Color palette: deep indigo-violet #1A1430 to #2B2150, dusty pink yarn #FF5C8A, toy-blue painted plastic #3E8FD0, warm wooden orange #E0862F, warm lamp light #FFD9A0.
+Materials/textures: knitted wool, felt, painted wood, matte plastic toys.
+Constraints: no text, no letters, no logos, no watermark, no UI, no human characters; preserve the existing project's visual language; readable at thumbnail size.
+Avoid: photorealism, 3D render, CGI, anime face, harsh contrast, neon colors, cluttered composition, busy center, lens flare, extra characters, multiple dolls, realistic humans.
+```
+
+## TutorialGuideSign-v1.png
+
+- 用途：チュートリアルT1～T4の各区間開始地点に置く、`Z`説明用の木製看板
+- 生成日：2026-09-05
+- 使用ツール：Codex built-in image generation
+- 参照画像：ユーザー提示の一本脚木製看板、`TutorialNightChildRoom-v1.png`、`TutorialBlockPlatform-v1.png`、`HimoHitoUiParts-v1.png`
+- 出力：`Assets/Resources/Art/TutorialGuideSign-v1.png`
+- 加工：生成結果の中立色チェック模様だけを透過し、Unity Sprite用の実アルファへ整えた
+
+```text
+Use case: stylized-concept
+Asset type: production-ready Unity 2D world sprite for a tutorial sign.
+Primary request: Preserve the reference sign's essential silhouette: one wide
+horizontal wooden board made from three joined planks, supported by exactly one
+centered vertical post. Keep it mostly front-facing for a side-view platform game.
+Match the established HimoHito artwork with warm orange-brown painted toy wood,
+softly rounded handmade edges, subtle grain, cozy picture-book rendering, a warm
+upper-left highlight, and soft indigo shadow. Wrap a small amount of dusty-pink
+yarn around the board/post joint and add one small toy-blue painted tack. Leave
+the central board blank for an interaction symbol.
+Composition: isolated single sign, centered, entire post visible, transparent
+background, readable at small size, no cast shadow outside the object.
+Avoid: text, letters, numbers, logos, arrows, multiple signs, extra posts,
+background scenery, checkerboard, white background, pixel art, Minecraft style,
+photorealism, 3D render, CGI, neon colors, watermark.
+```

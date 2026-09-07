@@ -21,20 +21,24 @@ namespace HimoHito
 
             Rect outerRect = GUILayoutUtility.GetRect(
                 1f,
-                20f,
+                30f,
                 GUILayout.ExpandWidth(true),
-                GUILayout.Height(20f));
+                GUILayout.Height(30f));
             Rect trackRect = new Rect(
-                outerRect.x + 2f,
-                outerRect.y + 2f,
-                Mathf.Max(0f, outerRect.width - 4f),
-                Mathf.Max(0f, outerRect.height - 4f));
+                outerRect.x + 20f,
+                outerRect.y + 9f,
+                Mathf.Max(0f, outerRect.width - 40f),
+                12f);
 
             float remainingRatio = Mathf.Clamp01(ropeResource.NormalizedLength);
             Color previousColor = GUI.color;
 
-            GUI.color = Color.black;
-            GUI.DrawTexture(outerRect, Texture2D.whiteTexture);
+            if (!HimoHitoUiParts.IsAvailable)
+            {
+                GUI.color = Color.black;
+                GUI.DrawTexture(outerRect, Texture2D.whiteTexture);
+            }
+
             GUI.color = TrackColor;
             GUI.DrawTexture(trackRect, Texture2D.whiteTexture);
 
@@ -44,9 +48,28 @@ namespace HimoHito
                 fillRect.width *= remainingRatio;
                 GUI.color = EvaluateFillColor(remainingRatio);
                 GUI.DrawTexture(fillRect, Texture2D.whiteTexture);
+
             }
 
             GUI.color = previousColor;
+
+            if (!HimoHitoUiParts.IsAvailable)
+            {
+                return;
+            }
+
+            HimoHitoUiParts.DrawGaugeFrame(outerRect);
+
+            float knotSize = 19f;
+            float knotX = Mathf.Lerp(
+                trackRect.x,
+                trackRect.xMax,
+                remainingRatio) - knotSize * 0.5f;
+            HimoHitoUiParts.DrawKnot(new Rect(
+                knotX,
+                outerRect.y + (outerRect.height - knotSize) * 0.5f,
+                knotSize,
+                knotSize));
         }
 
         private static Color EvaluateFillColor(float remainingRatio)

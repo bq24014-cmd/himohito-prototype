@@ -47,6 +47,7 @@ namespace HimoHitoEditor
                 TutorialSectionOneSetup.StartRespawnPosition);
 
             BuildImplementedSections();
+            TutorialSectionGuide.EnsureSigns();
 
             CreateCamera(player.transform);
             GameObject hud = new("Tutorial HUD");
@@ -103,6 +104,7 @@ namespace HimoHitoEditor
             changed |= TutorialSectionTwoSetup.ApplyCurrentScene();
             changed |= TutorialSectionThreeSetup.ApplyCurrentScene();
             changed |= TutorialSectionFourSetup.ApplyCurrentScene();
+            changed |= TutorialSectionGuide.EnsureSigns();
             GameObject player = GameObject.Find("Player");
             if (player != null)
             {
@@ -170,6 +172,7 @@ namespace HimoHitoEditor
             RopeController rope = player.AddComponent<RopeController>();
             rope.RestoreSelectedRopeLength(6);
             player.AddComponent<PrototypeRunController>();
+            player.AddComponent<TutorialSectionGuide>();
             return player;
         }
 

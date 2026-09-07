@@ -206,6 +206,8 @@ namespace HimoHito
                 return false;
             }
 
+            audioFeedback?.PlayRopeShot();
+
             bool isAirborne = playerMover != null && !playerMover.IsGrounded;
             bool useAirChainTarget = IsAirChainReconnectOpen;
             bool foundTarget = useAirChainTarget
@@ -218,12 +220,14 @@ namespace HimoHito
                     out hookPoint);
             if (!foundTarget)
             {
+                audioFeedback?.PlayRopeAttachMiss();
                 return false;
             }
 
             if (isAirborne &&
                 !CanReconnectAirChainTo(hookPoint))
             {
+                audioFeedback?.PlayRopeAttachMiss();
                 return false;
             }
 
@@ -596,7 +600,7 @@ namespace HimoHito
         {
             if (Input.GetKeyDown(key))
             {
-                ChangeSelectedRopeLength(amount);
+                ChangeSelectedRopeLength(amount, true);
                 nextRepeatTime = Time.unscaledTime + lengthSelectionRepeatDelay;
                 return;
             }
@@ -612,16 +616,28 @@ namespace HimoHito
                 return;
             }
 
-            ChangeSelectedRopeLength(amount);
+            ChangeSelectedRopeLength(amount, false);
             nextRepeatTime = Time.unscaledTime + lengthSelectionRepeatInterval;
         }
 
-        private void ChangeSelectedRopeLength(int amount)
+        private void ChangeSelectedRopeLength(
+            int amount,
+            bool playLimitSound)
         {
+            int previousLength = selectedRopeLength;
             selectedRopeLength = Mathf.Clamp(
                 selectedRopeLength + amount,
                 minimumSelectableRopeLength,
                 GetMaximumSelectableRopeLength());
+
+            if (selectedRopeLength != previousLength)
+            {
+                audioFeedback?.PlayRopeLengthChanged(amount);
+            }
+            else if (playLimitSound)
+            {
+                audioFeedback?.PlayRopeLengthLimitReached();
+            }
         }
 
         private void ResetLengthSelectionRepeat()

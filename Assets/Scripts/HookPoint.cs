@@ -26,16 +26,26 @@ namespace HimoHito
         private void OnEnable()
         {
             ConfigureNonSolidColliders();
-            if (Application.isPlaying && gameObject.scene.name == "MainStage")
+            if (!Application.isPlaying)
+            {
+                return;
+            }
+
+            if (gameObject.scene.name == "MainStage")
             {
                 MainStageVisuals.EnsureHookVisual(gameObject);
+                MainStageVisuals.RestoreSceneVisualsAfterReload();
+            }
+            else if (gameObject.scene.name == "Tutorial")
+            {
+                TutorialFirstSectionVisuals.RestoreSceneVisualsAfterReload();
             }
         }
 
         public Vector2 GetAttachmentPoint(Vector2 raycastHitPoint)
         {
             return useFixedAttachmentPoint
-                ? transform.TransformPoint(localAttachmentPoint)
+                ? (Vector2)transform.TransformPoint(localAttachmentPoint)
                 : raycastHitPoint;
         }
 

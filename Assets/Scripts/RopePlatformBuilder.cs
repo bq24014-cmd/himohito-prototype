@@ -42,6 +42,7 @@ namespace HimoHito
         private Collider2D bodyCollider;
         private RopeResource ropeResource;
         private RopeController ropeController;
+        private PrototypeAudioFeedback audioFeedback;
 
         public float CurrentPlatformCost =>
             IsPlatformBuildingUnlocked &&
@@ -72,6 +73,11 @@ namespace HimoHito
             bodyCollider = GetComponent<Collider2D>();
             ropeResource = GetComponent<RopeResource>();
             ropeController = GetComponent<RopeController>();
+            audioFeedback = GetComponent<PrototypeAudioFeedback>();
+            if (audioFeedback == null)
+            {
+                audioFeedback = gameObject.AddComponent<PrototypeAudioFeedback>();
+            }
         }
 
         private void Update()
@@ -101,6 +107,7 @@ namespace HimoHito
             {
                 mover.RegisterGeneratedRopePlatformContact(platform);
             }
+            audioFeedback?.PlayRopePlatformBuilt();
             return true;
         }
 
@@ -139,6 +146,7 @@ namespace HimoHito
                 removedHooks.Add(hook.gameObject);
             }
             hook.gameObject.SetActive(false);
+            audioFeedback?.PlayRopePlatformsMerged();
             return true;
         }
 

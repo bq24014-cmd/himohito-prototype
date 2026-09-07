@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace HimoHito
 {
@@ -19,10 +20,10 @@ namespace HimoHito
             "Art/TutorialBlockPlatform-v1";
         private const string RailResourcePath =
             "Art/TutorialRailPlatform-v1";
-        private const string HookResourcePath =
-            "Art/TutorialHookConnector-v1";
         private const string ToyBoxResourcePath =
             "Art/TutorialToyBoxGoal-v2";
+        private const string HookVisualName = "Blue Toy Hook Visual";
+        private const float HookVisualWorldDiameter = 0.72f;
 
         private static readonly Dictionary<string, Sprite> ProcessedSprites =
             new Dictionary<string, Sprite>();
@@ -33,6 +34,8 @@ namespace HimoHito
             new Color(1f, 0.706f, 0.235f);
         private static readonly Color HookColor =
             new Color(0.298f, 0.765f, 1f);
+        private static int lastReloadRestoreFrame = -1;
+        private static bool isRestoringAfterReload;
 
         public static bool Apply(GameObject player)
         {
@@ -82,21 +85,14 @@ namespace HimoHito
                 "Orange Block Platform Visual",
                 BlockResourcePath,
                 1);
-            changed |= EnsureToyVisual(
-                "Tutorial Hook",
-                "Blue Toy Hook Visual",
-                HookResourcePath,
-                6);
+            changed |= EnsurePartDHookRingVisual("Tutorial Hook");
             changed |= EnsureToyVisual(
                 TutorialSectionTwoSetup.LandingFloorName,
                 "Orange Block Platform Visual",
                 BlockResourcePath,
                 1);
-            changed |= EnsureToyVisual(
-                TutorialSectionTwoSetup.HookName,
-                "Blue Toy Hook Visual",
-                HookResourcePath,
-                6);
+            changed |= EnsurePartDHookRingVisual(
+                TutorialSectionTwoSetup.HookName);
             changed |= EnsureToyVisual(
                 TutorialSectionThreeSetup.LandingFloorName,
                 "Orange Block Platform Visual",
@@ -112,11 +108,8 @@ namespace HimoHito
                 "Orange Block Platform Visual",
                 BlockResourcePath,
                 1);
-            changed |= EnsureToyVisual(
-                TutorialSectionFourSetup.CenterHookName,
-                "Blue Toy Hook Visual",
-                HookResourcePath,
-                6);
+            changed |= EnsurePartDHookRingVisual(
+                TutorialSectionFourSetup.CenterHookName);
             changed |= EnsureToyVisual(
                 TutorialSectionFourSetup.GoalMarkerName,
                 "Open Toy Box Goal Visual",
@@ -129,21 +122,9 @@ namespace HimoHito
                 "Blue Railway Platform Visual",
                 RailResourcePath,
                 1);
-            changed |= EnsureToyVisual(
-                "Hook 1",
-                "Blue Toy Hook Visual",
-                HookResourcePath,
-                6);
-            changed |= EnsureToyVisual(
-                "Hook 2",
-                "Blue Toy Hook Visual",
-                HookResourcePath,
-                6);
-            changed |= EnsureToyVisual(
-                "Hook 3",
-                "Blue Toy Hook Visual",
-                HookResourcePath,
-                6);
+            changed |= EnsurePartDHookRingVisual("Hook 1");
+            changed |= EnsurePartDHookRingVisual("Hook 2");
+            changed |= EnsurePartDHookRingVisual("Hook 3");
             changed |= EnsureToyVisual(
                 "Goal / Landing 3",
                 "Open Toy Box Goal Visual",
@@ -160,6 +141,76 @@ namespace HimoHito
             changed |= EnsureFixedHookAttachmentPoint("Hook 1");
             changed |= EnsureFixedHookAttachmentPoint("Hook 2");
             changed |= EnsureFixedHookAttachmentPoint("Hook 3");
+            return changed;
+        }
+
+        public static void RestoreSceneVisualsAfterReload()
+        {
+            if (!Application.isPlaying ||
+                SceneManager.GetActiveScene().name != "Tutorial" ||
+                isRestoringAfterReload ||
+                lastReloadRestoreFrame == Time.frameCount)
+            {
+                return;
+            }
+
+            lastReloadRestoreFrame = Time.frameCount;
+            isRestoringAfterReload = true;
+            try
+            {
+                Apply(FindSceneObject("Player"));
+            }
+            finally
+            {
+                isRestoringAfterReload = false;
+            }
+        }
+
+        private static bool EnsurePartDHookRingVisual(string targetName)
+        {
+            GameObject target = FindSceneObject(targetName);
+            if (target == null ||
+                !target.TryGetComponent(out SpriteRenderer sourceRenderer))
+            {
+                return false;
+            }
+
+            bool changed = false;
+            Transform visualTransform = target.transform.Find(HookVisualName);
+            if (visualTransform == null)
+            {
+                GameObject visualObject = new GameObject(HookVisualName);
+                visualTransform = visualObject.transform;
+                visualTransform.SetParent(target.transform, false);
+                changed = true;
+            }
+            if (!visualTransform.gameObject.activeSelf)
+            {
+                visualTransform.gameObject.SetActive(true);
+                changed = true;
+            }
+            if (!visualTransform.TryGetComponent(out SpriteRenderer _))
+            {
+                visualTransform.gameObject.AddComponent<SpriteRenderer>();
+                changed = true;
+            }
+            if (!visualTransform.TryGetComponent(
+                    out HimoHitoHookRingVisual ringVisual))
+            {
+                ringVisual = visualTransform.gameObject.AddComponent<
+                    HimoHitoHookRingVisual>();
+                changed = true;
+            }
+
+            changed |= ringVisual.Configure(
+                sourceRenderer.sortingLayerID,
+                sourceRenderer.sortingOrder + 6,
+                HookVisualWorldDiameter);
+            if (sourceRenderer.enabled)
+            {
+                sourceRenderer.enabled = false;
+                changed = true;
+            }
             return changed;
         }
 

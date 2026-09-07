@@ -15,8 +15,6 @@ namespace HimoHito
             "Art/TutorialBlockPlatform-v1";
         private const string RailResourcePath =
             "Art/TutorialRailPlatform-v1";
-        private const string HookResourcePath =
-            "Art/TutorialHookConnector-v1";
         private const string ToyBoxResourcePath =
             "Art/TutorialToyBoxGoal-v2";
         private const string BackgroundName =
@@ -30,6 +28,7 @@ namespace HimoHito
         private const string BlockTileVisualPrefix =
             "Orange Block Platform Tile ";
         private const float MaximumBlockStripWorldWidth = 7.5f;
+        private const float HookVisualWorldDiameter = 0.72f;
 
         private static readonly Color PlayerColor =
             new Color(1f, 0.365f, 0.561f);
@@ -48,6 +47,8 @@ namespace HimoHito
         private static readonly Color RailColor =
             new Color(0.298f, 0.765f, 1f);
         private static readonly Color HookColor = RailColor;
+        private static int lastReloadRestoreFrame = -1;
+        private static bool isRestoringAfterReload;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
         private static void EnsureMainStageVisualsAfterSceneLoad()
@@ -164,6 +165,28 @@ namespace HimoHito
             return changed;
         }
 
+        public static void RestoreSceneVisualsAfterReload()
+        {
+            if (!Application.isPlaying ||
+                SceneManager.GetActiveScene().name != "MainStage" ||
+                isRestoringAfterReload ||
+                lastReloadRestoreFrame == Time.frameCount)
+            {
+                return;
+            }
+
+            lastReloadRestoreFrame = Time.frameCount;
+            isRestoringAfterReload = true;
+            try
+            {
+                Apply(FindSceneObject("Main Player"));
+            }
+            finally
+            {
+                isRestoringAfterReload = false;
+            }
+        }
+
         /// <summary>Rebuilds only the two section-five rail images.</summary>
         public static bool RestoreSectionFiveRailVisuals()
         {
@@ -212,15 +235,57 @@ namespace HimoHito
             else
             {
                 changed |= RemoveChild(hook, BridgeAnchorVisualName);
-                changed |= EnsureToyVisual(
-                    hook,
-                    HookVisualName,
-                    HookResourcePath,
-                    6,
-                    hookColor);
+                changed |= EnsurePartDHookRingVisual(hook);
             }
 
             changed |= hookPoint.ConfigureFixedAttachmentPoint(Vector2.zero);
+            return changed;
+        }
+
+        private static bool EnsurePartDHookRingVisual(GameObject target)
+        {
+            if (target == null ||
+                !target.TryGetComponent(out SpriteRenderer sourceRenderer))
+            {
+                return false;
+            }
+
+            bool changed = false;
+            Transform visualTransform = target.transform.Find(HookVisualName);
+            if (visualTransform == null)
+            {
+                GameObject visualObject = new GameObject(HookVisualName);
+                visualTransform = visualObject.transform;
+                visualTransform.SetParent(target.transform, false);
+                changed = true;
+            }
+            if (!visualTransform.gameObject.activeSelf)
+            {
+                visualTransform.gameObject.SetActive(true);
+                changed = true;
+            }
+            if (!visualTransform.TryGetComponent(out SpriteRenderer _))
+            {
+                visualTransform.gameObject.AddComponent<SpriteRenderer>();
+                changed = true;
+            }
+            if (!visualTransform.TryGetComponent(
+                    out HimoHitoHookRingVisual ringVisual))
+            {
+                ringVisual = visualTransform.gameObject.AddComponent<
+                    HimoHitoHookRingVisual>();
+                changed = true;
+            }
+
+            changed |= ringVisual.Configure(
+                sourceRenderer.sortingLayerID,
+                sourceRenderer.sortingOrder + 6,
+                HookVisualWorldDiameter);
+            if (sourceRenderer.enabled)
+            {
+                sourceRenderer.enabled = false;
+                changed = true;
+            }
             return changed;
         }
 

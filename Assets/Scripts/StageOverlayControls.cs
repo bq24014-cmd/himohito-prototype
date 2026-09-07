@@ -8,6 +8,8 @@ namespace HimoHito
         private bool showHelp;
         private bool isPaused;
         private PrototypeRunController runController;
+        private TutorialSectionGuide tutorialSectionGuide;
+        private PrototypeAudioFeedback audioFeedback;
         private Texture2D helpBackground;
         private GUIStyle titleStyle;
         private GUIStyle bodyStyle;
@@ -16,19 +18,38 @@ namespace HimoHito
         private GUIStyle helpKeyStyle;
 
         public bool IsHelpVisible => showHelp;
+        public bool IsOverlayVisible => showHelp || isPaused;
 
         private void Awake()
         {
             runController = FindFirstObjectByType<PrototypeRunController>();
+            tutorialSectionGuide =
+                FindFirstObjectByType<TutorialSectionGuide>();
+            audioFeedback = FindFirstObjectByType<PrototypeAudioFeedback>();
             helpBackground = Resources.Load<Texture2D>(
                 "Art/HimoHitoControlsBackground-v1");
         }
 
         private void Update()
         {
+            if (tutorialSectionGuide == null)
+            {
+                tutorialSectionGuide =
+                    FindFirstObjectByType<TutorialSectionGuide>();
+            }
+            if (tutorialSectionGuide != null &&
+                tutorialSectionGuide.IsVisible)
+            {
+                return;
+            }
+
             if (Input.GetKeyDown(KeyCode.Tab))
             {
                 showHelp = !showHelp;
+                if (showHelp)
+                {
+                    PlayOpenSound();
+                }
                 ApplyPauseState();
             }
 
@@ -42,8 +63,21 @@ namespace HimoHito
             if (Input.GetKeyDown(KeyCode.Escape))
             {
                 isPaused = !isPaused;
+                if (isPaused)
+                {
+                    PlayOpenSound();
+                }
                 ApplyPauseState();
             }
+        }
+
+        private void PlayOpenSound()
+        {
+            if (audioFeedback == null)
+            {
+                audioFeedback = FindFirstObjectByType<PrototypeAudioFeedback>();
+            }
+            audioFeedback?.PlayUiPaperOpened();
         }
 
         private void OnDisable()
@@ -171,7 +205,20 @@ namespace HimoHito
             GUILayout.Label("F：2本が集まるHookを外して1本にまとめる", bodyStyle);
             GUILayout.Label("R：現在の区間から再挑戦", bodyStyle);
             GUILayout.FlexibleSpace();
-            GUILayout.Label("Escで再開", titleStyle);
+            Rect resumeButtonRow = GUILayoutUtility.GetRect(
+                1f,
+                58f,
+                GUILayout.ExpandWidth(true),
+                GUILayout.Height(58f));
+            Rect resumeButton = new Rect(
+                resumeButtonRow.x + Mathf.Max(0f, (resumeButtonRow.width - 320f) * 0.5f),
+                resumeButtonRow.y,
+                Mathf.Min(320f, resumeButtonRow.width),
+                resumeButtonRow.height);
+            HimoHitoUiParts.DrawWoodButtonLabel(
+                resumeButton,
+                "Escで再開",
+                titleStyle);
             GUILayout.EndArea();
         }
 

@@ -36,6 +36,14 @@ namespace HimoHito
         [Header("Generated rope platform")]
         [SerializeField, Min(0f)] private float ropePlatformContactGraceTime = 0.15f;
 
+        [Header("Landing sound")]
+        [SerializeField, Min(0f)] private float minimumLandingSoundSpeed = 1.25f;
+
+        [Header("Footsteps")]
+        [SerializeField, Min(0f)] private float minimumFootstepSpeed = 0.75f;
+        [SerializeField, Min(0.05f)] private float slowFootstepInterval = 0.38f;
+        [SerializeField, Min(0.05f)] private float fastFootstepInterval = 0.22f;
+
         [Header("Solid swing collision")]
         [SerializeField, Min(0f)] private float solidSurfaceSkin = 0.01f;
         [SerializeField, Min(0.1f)] private float maximumCollisionSweepDistance = 2f;
@@ -43,6 +51,7 @@ namespace HimoHito
         private Rigidbody2D body;
         private BoxCollider2D bodyCollider;
         private RopeController ropeController;
+        private PrototypeAudioFeedback audioFeedback;
         private PhysicsMaterial2D movementMaterial;
         private GeneratedRopePlatform groundedRopePlatform;
         private GeneratedRopePlatform recentRopePlatform;
@@ -52,6 +61,9 @@ namespace HimoHito
         private float jumpBufferTimer;
         private Vector2 previousPhysicsPosition;
         private bool hasPreviousPhysicsPosition;
+        private float previousVerticalSpeed;
+        private bool hasPreviousVerticalSpeed;
+        private float footstepTimer;
 
         public bool IsGrounded { get; private set; }
 
@@ -60,6 +72,11 @@ namespace HimoHito
             body = GetComponent<Rigidbody2D>();
             bodyCollider = GetComponent<BoxCollider2D>();
             ropeController = GetComponent<RopeController>();
+            audioFeedback = GetComponent<PrototypeAudioFeedback>();
+            if (audioFeedback == null)
+            {
+                audioFeedback = gameObject.AddComponent<PrototypeAudioFeedback>();
+            }
 
             movementMaterial = new PhysicsMaterial2D("Player Movement Material")
             {
@@ -102,7 +119,15 @@ namespace HimoHito
         private void FixedUpdate()
         {
             PreventSolidSurfaceTunneling();
+            bool wasGrounded = IsGrounded;
             IsGrounded = CheckGrounded();
+            if (hasPreviousVerticalSpeed &&
+                !wasGrounded &&
+                IsGrounded &&
+                previousVerticalSpeed <= -minimumLandingSoundSpeed)
+            {
+                audioFeedback?.PlayPlayerLanded();
+            }
             coyoteTimer = IsGrounded ? coyoteTime : coyoteTimer - Time.fixedDeltaTime;
 
             bool isSwinging = ropeController != null && ropeController.IsAttached;
@@ -126,6 +151,7 @@ namespace HimoHito
                 ApplyAirControl();
             }
 
+            bool jumpedThisStep = false;
             if (jumpBufferTimer > 0f && coyoteTimer > 0f && !isSwinging)
             {
                 float horizontalBrakeImpulse = -body.linearVelocity.x
@@ -133,13 +159,51 @@ namespace HimoHito
                     * body.mass;
                 Vector2 takeoffImpulse = new Vector2(horizontalBrakeImpulse, jumpImpulse);
                 body.AddForce(takeoffImpulse, ForceMode2D.Impulse);
+                audioFeedback?.PlayPlayerJumped();
                 ClearRecentRopePlatform();
                 jumpBufferTimer = 0f;
                 coyoteTimer = 0f;
+                jumpedThisStep = true;
             }
+
+            UpdateFootstepAudio(isSwinging, jumpedThisStep);
 
             previousPhysicsPosition = body.position;
             hasPreviousPhysicsPosition = true;
+            previousVerticalSpeed = body.linearVelocity.y;
+            hasPreviousVerticalSpeed = true;
+        }
+
+        private void UpdateFootstepAudio(bool isSwinging, bool jumpedThisStep)
+        {
+            float horizontalSpeed = Mathf.Abs(body.linearVelocity.x);
+            bool isWalking =
+                !isSwinging &&
+                !jumpedThisStep &&
+                IsGrounded &&
+                Mathf.Abs(moveInput) > 0.01f &&
+                horizontalSpeed >= minimumFootstepSpeed;
+            if (!isWalking)
+            {
+                footstepTimer = 0f;
+                return;
+            }
+
+            footstepTimer -= Time.fixedDeltaTime;
+            if (footstepTimer > 0f)
+            {
+                return;
+            }
+
+            audioFeedback?.PlayPlayerFootstep();
+            float speedRatio = Mathf.InverseLerp(
+                minimumFootstepSpeed,
+                moveSpeed,
+                horizontalSpeed);
+            footstepTimer = Mathf.Lerp(
+                slowFootstepInterval,
+                fastFootstepInterval,
+                speedRatio);
         }
 
         private void PreventSolidSurfaceTunneling()

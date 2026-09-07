@@ -17,10 +17,10 @@ namespace HimoHito
         private const float EndingPreviewRopeLength = 5f;
 
         [SerializeField]
-        private bool startNearGoalForEndingPreview = true;
+        private bool startNearGoalForEndingPreview;
 
         [SerializeField]
-        private bool startWithPartDPreview = true;
+        private bool startWithPartDPreview;
 
         [SerializeField] private float fallThreshold = -9f;
         [SerializeField, Min(0.01f)] private float minimumUsableRopeLength = 1f;
@@ -30,6 +30,7 @@ namespace HimoHito
         private RopeController ropeController;
         private RopePlatformBuilder platformBuilder;
         private PlayerMover playerMover;
+        private PrototypeAudioFeedback audioFeedback;
         private MainStageGoalZone goalZone;
         private Vector2 checkpointPosition;
         private float checkpointRopeLength;
@@ -42,6 +43,8 @@ namespace HimoHito
         public bool HasReachedSectionNine => CurrentSection >= 9;
         public bool HasReachedSectionTen => CurrentSection >= 10;
         public bool IsRopeExhausted { get; private set; }
+        public bool IsFallFailure { get; private set; }
+        public bool IsFailureVisible => IsRopeExhausted || IsFallFailure;
 
         private void Awake()
         {
@@ -50,6 +53,11 @@ namespace HimoHito
             ropeController = GetComponent<RopeController>();
             platformBuilder = GetComponent<RopePlatformBuilder>();
             playerMover = GetComponent<PlayerMover>();
+            audioFeedback = GetComponent<PrototypeAudioFeedback>();
+            if (audioFeedback == null)
+            {
+                audioFeedback = gameObject.AddComponent<PrototypeAudioFeedback>();
+            }
             goalZone = FindFirstObjectByType<MainStageGoalZone>();
 
             CurrentSection = 1;
@@ -103,7 +111,7 @@ namespace HimoHito
                 return;
             }
 
-            if (IsRopeExhausted)
+            if (IsFailureVisible)
             {
                 if (Input.GetKeyDown(KeyCode.R))
                 {
@@ -116,9 +124,15 @@ namespace HimoHito
                 return;
             }
 
-            if (Input.GetKeyDown(KeyCode.R) || transform.position.y < fallThreshold)
+            if (Input.GetKeyDown(KeyCode.R))
             {
                 RestartFromCheckpoint();
+                return;
+            }
+
+            if (transform.position.y < fallThreshold)
+            {
+                EnterFallFailureState();
                 return;
             }
 
@@ -137,6 +151,19 @@ namespace HimoHito
             playerMover.enabled = false;
             ropeController.enabled = false;
             IsRopeExhausted = true;
+            IsFallFailure = false;
+            audioFeedback?.PlayRopeExhausted();
+        }
+
+        private void EnterFallFailureState()
+        {
+            body.linearVelocity = Vector2.zero;
+            body.angularVelocity = 0f;
+            body.simulated = false;
+            playerMover.enabled = false;
+            ropeController.enabled = false;
+            IsRopeExhausted = false;
+            IsFallFailure = true;
         }
 
         public bool TryReachSection(
@@ -158,6 +185,7 @@ namespace HimoHito
             }
             CaptureCheckpointState();
             IsRopeExhausted = false;
+            IsFallFailure = false;
             return true;
         }
 
@@ -178,10 +206,12 @@ namespace HimoHito
             ropeResource.RestoreCurrentLength(EndingPreviewRopeLength);
             ropeController.RestoreSelectedRopeLength(1);
             IsRopeExhausted = false;
+            IsFallFailure = false;
         }
 
         private void RestartFromCheckpoint()
         {
+            audioFeedback?.StopRopeExhaustedAudio();
             body.simulated = true;
             ropeController.DetachAndRefund();
             ropeResource.RestoreCurrentLength(checkpointRopeLength);
@@ -194,6 +224,7 @@ namespace HimoHito
             playerMover.enabled = true;
             ropeController.enabled = true;
             IsRopeExhausted = false;
+            IsFallFailure = false;
         }
     }
 }
