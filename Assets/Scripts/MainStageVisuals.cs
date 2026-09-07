@@ -62,6 +62,8 @@ namespace HimoHito
         public static bool Apply(GameObject player)
         {
             bool changed = false;
+            changed |= RecoverySwitchVisual.Ensure(
+                FindSceneObject(MainStageSectionThreeSetup.RecoverySwitchName));
             changed |= HimoHitoFarBackgroundLayer.Ensure(
                 FarBackgroundName,
                 60f,
@@ -770,9 +772,25 @@ namespace HimoHito
                 1f / Mathf.Max(0.01f, spriteSize.x),
                 1f / Mathf.Max(0.01f, spriteSize.y),
                 1f);
-            if (visualTransform.localPosition != Vector3.zero)
+            Vector3 targetLocalPosition = Vector3.zero;
+            if (target.name == MainStageSectionTenSetup.GoalMarkerName &&
+                visualName == GoalVisualName)
             {
-                visualTransform.localPosition = Vector3.zero;
+                // Align only the artwork with the visible wooden surface.
+                // Keep the goal trigger and its gameplay position unchanged.
+                float floorTop = MainStageSectionTenSetup.GoalFloorPosition.y +
+                    MainStageSectionTenSetup.GoalFloorSize.y * 0.5f;
+                const float woodSurfaceInset = 0.16f;
+                float visualWorldHeight = spriteSize.y * targetScale.y *
+                    Mathf.Abs(target.transform.lossyScale.y);
+                targetLocalPosition = target.transform.InverseTransformPoint(
+                    new Vector3(target.transform.position.x,
+                        floorTop - woodSurfaceInset + visualWorldHeight * 0.5f,
+                        target.transform.position.z));
+            }
+            if (visualTransform.localPosition != targetLocalPosition)
+            {
+                visualTransform.localPosition = targetLocalPosition;
                 changed = true;
             }
             if (visualTransform.localRotation != Quaternion.identity)

@@ -13,6 +13,7 @@ namespace HimoHito
         private const float ClearRevealDelay = 0.45f;
 
         public bool IsClear { get; private set; }
+        public bool IsCompleting => isClearPending || IsClear;
         private bool isClearPending;
 
         private void Update()

@@ -8,6 +8,8 @@ namespace HimoHito
         private bool showHelp;
         private bool isPaused;
         private PrototypeRunController runController;
+        private MainStageRespawnOnFall mainStageRespawn;
+        private MainStageGoalZone mainStageGoal;
         private TutorialSectionGuide tutorialSectionGuide;
         private PrototypeAudioFeedback audioFeedback;
         private Texture2D helpBackground;
@@ -23,6 +25,8 @@ namespace HimoHito
         private void Awake()
         {
             runController = FindFirstObjectByType<PrototypeRunController>();
+            mainStageRespawn = FindFirstObjectByType<MainStageRespawnOnFall>();
+            mainStageGoal = FindFirstObjectByType<MainStageGoalZone>();
             tutorialSectionGuide =
                 FindFirstObjectByType<TutorialSectionGuide>();
             audioFeedback = FindFirstObjectByType<PrototypeAudioFeedback>();
@@ -32,6 +36,16 @@ namespace HimoHito
 
         private void Update()
         {
+            if (IsResultScreenActive())
+            {
+                if (IsOverlayVisible)
+                {
+                    showHelp = false;
+                    isPaused = false;
+                    ApplyPauseState();
+                }
+                return;
+            }
             if (tutorialSectionGuide == null)
             {
                 tutorialSectionGuide =
@@ -92,6 +106,11 @@ namespace HimoHito
 
         private void OnGUI()
         {
+            if (IsResultScreenActive() ||
+                (tutorialSectionGuide != null && tutorialSectionGuide.IsVisible))
+            {
+                return;
+            }
             // Lower IMGUI depth values are drawn in front. Keep the help sheet
             // above the title HUD regardless of component creation order.
             GUI.depth = -1000;
@@ -99,7 +118,7 @@ namespace HimoHito
             EnsureStyles();
             bool isOnTitleScreen = runController != null &&
                 runController.Outcome == PrototypeRunController.RunOutcome.WaitingToStart;
-            if (!isOnTitleScreen)
+            if (!isOnTitleScreen && !IsOverlayVisible)
             {
                 GUI.Label(new Rect(Screen.width - 215f, 12f, 200f, 28f),
                     "Tab：操作確認　Esc：ポーズ", bodyStyle);
@@ -225,6 +244,18 @@ namespace HimoHito
         private void ApplyPauseState()
         {
             Time.timeScale = isPaused || showHelp ? 0f : 1f;
+        }
+
+        private bool IsResultScreenActive()
+        {
+            if (runController != null)
+            {
+                return runController.Outcome != PrototypeRunController.RunOutcome.Playing &&
+                    runController.Outcome != PrototypeRunController.RunOutcome.WaitingToStart;
+            }
+
+            return (mainStageRespawn != null && mainStageRespawn.IsFailureVisible) ||
+                (mainStageGoal != null && mainStageGoal.IsCompleting);
         }
 
         private void EnsureStyles()

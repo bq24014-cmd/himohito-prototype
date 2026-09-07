@@ -255,3 +255,26 @@ Avoid: text, letters, numbers, logos, arrows, multiple signs, extra posts,
 background scenery, checkerboard, white background, pixel art, Minecraft style,
 photorealism, 3D render, CGI, neon colors, watermark.
 ```
+
+## 2026-09-07 接続ヒモ用の毛糸テクスチャ
+
+- 手段：組み込みimage_gen（CLI/API不使用）
+- スタイル参照：`Assets/Resources/Art/HimoHitoPlayer-v1.png`の頭頂の毛糸
+- 採用素材：`Assets/Resources/Art/HimoHitoYarnRope-v1.png`
+- 生成素材はRGBで背景が焼き込まれていたため、Unity側の`YarnRopeTexture`で背景除去・縦余白除去・繰り返し境界の調整を行う。原画像そのものに透過情報はない。
+
+初回プロンプト：主人公の頭頂の毛糸に合わせた、水平で左右端まで連続するピンクの撚り糸。柔らかい手描き、マゼンタの溝、暖かなピンクのハイライト、濃いプラムの輪郭。文字・結び目・背景なし、左右シームレス、透明PNGのゲーム用テクスチャ。
+
+採用した再生成のプロンプト：
+
+```text
+Edit target: supplied rope texture. Remove ALL white gray checkerboard background and output genuine alpha transparency, NOT a drawn checkerboard. Preserve the pink twisted illustrated yarn. Crop tightly to yarn vertically with tiny transparent margins. Make the left and right edges match perfectly for repeating seamless texture. Single straight horizontal continuous cord runs from left to right edge with no end caps; no top/bottom empty composition. Keep the same hand-painted pink plies and plum outline, no other elements. Transparent PNG game texture.
+```
+
+## 2026-09-07 帰り道スイッチ
+
+組み込みimage_gen使用。参照はTutorialGuideSign-v1.png。採用素材はAssets/Resources/Art/RecoverySwitch-v1.png。背景はUnityの既存透過処理で除去。
+
+```text
+Create ONE isolated game sprite for HimoHito, matching the reference's warm hand-painted toy wood and pink twisted yarn. A small squat floor push-button: rounded honey wooden base, raised raspberry-pink knitted cushion button on top, a tiny twisted pink yarn tie on its side. Straight front view, very slight top visibility, horizontal silhouette width:height about 2:1. Readable at tiny size, rounded edges and rich cozy wood grain, soft highlights, dark plum/brown contours. No signpost, no text, no letters, no icons, no metal, no scenery, no floor shadow. Entire object uncropped, centered with modest empty padding. Transparent background actual alpha preferred; otherwise pure white background, never checkerboard. Do not include the reference sign; use only its art style.
+```

@@ -14,6 +14,9 @@ namespace HimoHito
         private static readonly Color AimGuideColor =
             new Color(1f, 0.72f, 0.80f, 0.55f);
         private const float PlatformHookTargetingGrace = 0.5f;
+        private const float RopeRevealDuration = 0.13f;
+        private float ropeRevealStartedAt;
+        private bool hookArrivalPending;
 
         [SerializeField, Min(1f)] private float maximumShotDistance = 14f;
         [SerializeField, Min(0.01f)] private float ropeWidth = 0.16f;
@@ -37,6 +40,7 @@ namespace HimoHito
         private SpriteRenderer bodyRenderer;
         private Camera mainCamera;
         private Material runtimeMaterial;
+        private Texture2D yarnTexture;
         private Vector2 anchorPoint;
         private HookPoint activeHookPoint;
         private Vector2 keyboardAimDirection = new Vector2(1f, 1f).normalized;
@@ -118,6 +122,7 @@ namespace HimoHito
                     hideFlags = HideFlags.HideAndDontSave
                 };
                 lineRenderer.material = runtimeMaterial;
+                yarnTexture = YarnRopeTexture.Load();
             }
         }
 
@@ -261,12 +266,16 @@ namespace HimoHito
             AttachmentSequence++;
             lineRenderer.enabled = true;
             ClearAirChainReconnectWindow();
-            audioFeedback.PlayHookAttached();
+            // The joint is already active. Only presentation travels to the Hook.
+            ropeRevealStartedAt = Time.time;
+            hookArrivalPending = true;
+            DrawAttachedRope();
             return true;
         }
 
         public void DetachAndRefund(bool playReleaseSound = false)
         {
+            hookArrivalPending = false;
             if (!IsAttached)
             {
                 return;
@@ -372,6 +381,7 @@ namespace HimoHito
                 return false;
             }
 
+            hookArrivalPending = false;
             ropeJoint.enabled = false;
             EndPlatformBuildHold();
             activeHookPoint = null;
@@ -712,6 +722,9 @@ namespace HimoHito
 
         private void DrawAimGuide()
         {
+            if (runtimeMaterial != null) runtimeMaterial.mainTexture = null;
+            lineRenderer.textureMode = LineTextureMode.Stretch;
+            lineRenderer.textureScale = Vector2.one;
             lineRenderer.enabled = true;
             lineRenderer.positionCount = 2;
             lineRenderer.startWidth = minimumRopeWidth * 0.6f;
@@ -724,11 +737,44 @@ namespace HimoHito
 
         private void DrawAttachedRope()
         {
+            if (runtimeMaterial != null && yarnTexture != null)
+            {
+                runtimeMaterial.mainTexture = yarnTexture;
+                lineRenderer.textureMode = LineTextureMode.Tile;
+                float tileWorldLength = GetVisibleRopeWidth() * yarnTexture.width / yarnTexture.height;
+                lineRenderer.textureScale = new Vector2(1f / Mathf.Max(0.01f, tileWorldLength), 1f);
+                // The artwork already carries the player's pink; do not tint it twice.
+                Color tint = new Color(1f, 1f, 1f, GetVisibleRopeColor().a);
+                lineRenderer.startColor = tint;
+                lineRenderer.endColor = tint;
+            }
+            float progress = Mathf.Clamp01((Time.time - ropeRevealStartedAt) / RopeRevealDuration);
+            float visibleFraction = Mathf.SmoothStep(0f, 1f, progress);
             lineRenderer.positionCount = ropeVisualSegments;
             for (int i = 0; i < ropeVisualSegments; i++)
             {
-                float t = i / (float)(ropeVisualSegments - 1);
+                float t = visibleFraction * i / (float)(ropeVisualSegments - 1);
                 lineRenderer.SetPosition(i, GetAttachedRopePoint(t));
+            }
+
+            if (hookArrivalPending && progress >= 1f)
+            {
+                hookArrivalPending = false;
+                audioFeedback?.PlayHookAttached();
+                if (activeHookPoint != null)
+                {
+                    HimoHitoHookRingVisual blue = activeHookPoint.GetComponentInChildren<HimoHitoHookRingVisual>();
+                    RopeAnchorRingVisual green = activeHookPoint.GetComponentInChildren<RopeAnchorRingVisual>();
+                    Transform visual = blue != null ? blue.transform : green != null ? green.transform : null;
+                    // Never animate the physical Hook or a renderer carrying a collider.
+                    if (visual != null && visual != activeHookPoint.transform &&
+                        visual.GetComponentInChildren<Collider2D>() == null)
+                    {
+                        HookArrivalVisualPulse pulse = visual.GetComponent<HookArrivalVisualPulse>();
+                        if (pulse == null) pulse = visual.gameObject.AddComponent<HookArrivalVisualPulse>();
+                        pulse.Play();
+                    }
+                }
             }
         }
 

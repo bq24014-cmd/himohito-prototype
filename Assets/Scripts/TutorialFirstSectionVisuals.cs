@@ -344,6 +344,18 @@ namespace HimoHito
                     spriteSize.y * targetScale.y * parentHeight;
                 targetLocalPosition.y =
                     (visualWorldHeight - parentHeight) * 0.5f / parentHeight;
+                if (targetName == TutorialSectionFourSetup.GoalMarkerName)
+                {
+                    // Seat the artwork on the visible wood, not the marker's
+                    // bounding box. Keep the goal collider and marker untouched.
+                    float floorTop = TutorialSectionFourSetup.GoalFloorPosition.y +
+                        TutorialSectionFourSetup.GoalFloorSize.y * 0.5f;
+                    const float woodSurfaceInset = 0.16f;
+                    targetLocalPosition = target.transform.InverseTransformPoint(
+                        new Vector3(target.transform.position.x,
+                            floorTop - woodSurfaceInset + visualWorldHeight * 0.5f,
+                            target.transform.position.z));
+                }
             }
 
             if (visualTransform.localPosition != targetLocalPosition)

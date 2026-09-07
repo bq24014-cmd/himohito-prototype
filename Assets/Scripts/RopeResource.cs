@@ -50,6 +50,7 @@ namespace HimoHito
 
         public void ResetToMaximum()
         {
+            RopeResourceGauge.ClearFlash(this);
             currentLength = maximumLength;
         }
 
@@ -57,12 +58,14 @@ namespace HimoHito
             float capacity,
             float amount)
         {
+            RopeResourceGauge.ClearFlash(this);
             maximumLength = Mathf.Max(1f, capacity);
             currentLength = Mathf.Clamp(amount, 0f, maximumLength);
         }
 
         public void RestoreCurrentLength(float amount)
         {
+            RopeResourceGauge.ClearFlash(this);
             currentLength = Mathf.Clamp(amount, 0f, maximumLength);
         }
     }

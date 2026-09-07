@@ -64,6 +64,7 @@ namespace HimoHito
         private float previousVerticalSpeed;
         private bool hasPreviousVerticalSpeed;
         private float footstepTimer;
+        private float landingFluffAirTime;
 
         public bool IsGrounded { get; private set; }
 
@@ -127,7 +128,10 @@ namespace HimoHito
                 previousVerticalSpeed <= -minimumLandingSoundSpeed)
             {
                 audioFeedback?.PlayPlayerLanded();
+                if (landingFluffAirTime >= 0.08f)
+                    RopeLandingFluff.Play(bodyCollider);
             }
+            landingFluffAirTime = IsGrounded ? 0f : landingFluffAirTime + Time.fixedDeltaTime;
             coyoteTimer = IsGrounded ? coyoteTime : coyoteTimer - Time.fixedDeltaTime;
 
             bool isSwinging = ropeController != null && ropeController.IsAttached;

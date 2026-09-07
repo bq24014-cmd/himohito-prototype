@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f91dd2dfa544d96a0d4754e2ab2961c, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.MainStageGoalZone
 --- !u!114 &29111727
 MonoBehaviour:
@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: caea6ce1b2764598a2e78008b4f433c7, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSwingSurface
 --- !u!50 &29111728
 Rigidbody2D:
@@ -248,7 +248,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSprite
   color: {r: 0.56, g: 0.29, b: 0.09, a: 1}
 --- !u!212 &29111731
@@ -359,7 +359,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c8a2e2a9f1f4cc2a3a1b0c4d5e6f708, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.MainStageCheckpoint
   sectionNumber: 5
   respawnPosition: {x: 82.1, y: -1.45}
@@ -374,7 +374,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: caea6ce1b2764598a2e78008b4f433c7, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSwingSurface
 --- !u!50 &34308089
 Rigidbody2D:
@@ -459,7 +459,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSprite
   color: {r: 0.56, g: 0.29, b: 0.09, a: 1}
 --- !u!212 &34308092
@@ -580,7 +580,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78fb05e36b4b4c1ca7162bb78cd5005e, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.RopeAnchorRingVisual
   sortingLayerId: 0
   sortingOrder: 6
@@ -777,7 +777,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78fb05e36b4b4c1ca7162bb78cd5005e, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.RopeAnchorRingVisual
   sortingLayerId: 0
   sortingOrder: 6
@@ -850,6 +850,7 @@ GameObject:
   m_Component:
   - component: {fileID: 167088362}
   - component: {fileID: 167088363}
+  - component: {fileID: 167088364}
   m_Layer: 0
   m_Name: Blue Toy Hook Visual
   m_TagString: Untagged
@@ -867,7 +868,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.072463766, y: 0.1984127, z: 1}
+  m_LocalScale: {x: 0.45000002, y: 1.6000001, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1844922430}
@@ -922,15 +923,30 @@ SpriteRenderer:
   m_SortingOrder: 6
   m_MaskInteraction: 0
   m_Sprite: {fileID: 0}
-  m_Color: {r: 0.298, g: 0.765, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 13.8, y: 5.04}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &167088364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 167088361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d00bd5e0b5b4e878bb89da53c2e0a47, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::HimoHito.HimoHitoHookRingVisual
+  sortingLayerId: 0
+  sortingOrder: 6
+  worldDiameter: 0.72
 --- !u!1 &197578218
 GameObject:
   m_ObjectHideFlags: 0
@@ -963,7 +979,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c8a2e2a9f1f4cc2a3a1b0c4d5e6f708, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.MainStageCheckpoint
   sectionNumber: 7
   respawnPosition: {x: 142.9, y: -1.45}
@@ -978,7 +994,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: caea6ce1b2764598a2e78008b4f433c7, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSwingSurface
 --- !u!50 &197578221
 Rigidbody2D:
@@ -1063,7 +1079,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSprite
   color: {r: 0.56, g: 0.29, b: 0.09, a: 1}
 --- !u!212 &197578224
@@ -1264,7 +1280,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: caea6ce1b2764598a2e78008b4f433c7, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSwingSurface
 --- !u!50 &233133329
 Rigidbody2D:
@@ -1349,7 +1365,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSprite
   color: {r: 1, g: 0.706, b: 0.235, a: 1}
 --- !u!212 &233133332
@@ -1433,7 +1449,7 @@ MonoScript:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 
+  m_Name:
   serializedVersion: 7
   m_DefaultReferences: {}
   m_Icon: {fileID: 0}
@@ -1655,7 +1671,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: caea6ce1b2764598a2e78008b4f433c7, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSwingSurface
 --- !u!50 &295987747
 Rigidbody2D:
@@ -1740,7 +1756,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSprite
   color: {r: 1, g: 0.706, b: 0.235, a: 1}
 --- !u!212 &295987750
@@ -1824,7 +1840,7 @@ MonoScript:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 
+  m_Name:
   serializedVersion: 7
   m_DefaultReferences: {}
   m_Icon: {fileID: 0}
@@ -1934,6 +1950,7 @@ GameObject:
   m_Component:
   - component: {fileID: 320842316}
   - component: {fileID: 320842317}
+  - component: {fileID: 320842318}
   m_Layer: 0
   m_Name: Blue Toy Hook Visual
   m_TagString: Untagged
@@ -1951,7 +1968,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.072463766, y: 0.1984127, z: 1}
+  m_LocalScale: {x: 0.45000002, y: 1.6000001, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1391390608}
@@ -2006,15 +2023,30 @@ SpriteRenderer:
   m_SortingOrder: 6
   m_MaskInteraction: 0
   m_Sprite: {fileID: 0}
-  m_Color: {r: 0.298, g: 0.765, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 13.8, y: 5.04}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &320842318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 320842315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d00bd5e0b5b4e878bb89da53c2e0a47, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::HimoHito.HimoHitoHookRingVisual
+  sortingLayerId: 0
+  sortingOrder: 6
+  worldDiameter: 0.72
 --- !u!1 &350812393
 GameObject:
   m_ObjectHideFlags: 0
@@ -2054,7 +2086,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 1527665840}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.PlatformOccludedLightHazard
   lightSource: {fileID: 669427073}
   blockedAlpha: 0.08
@@ -2106,7 +2138,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d1f0342e3a2140aab8ec4c9f5802a911, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.FlashlightSpotVisual
   color: {r: 1, g: 0.82, b: 0.56, a: 0.62}
 --- !u!212 &350812397
@@ -2193,7 +2225,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 2060587148}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.PlatformOccludedLightHazard
   lightSource: {fileID: 0}
   blockedAlpha: 0.08
@@ -2209,7 +2241,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 594833740}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.PlatformOccludedLightHazard
   lightSource: {fileID: 0}
   blockedAlpha: 0.08
@@ -2225,7 +2257,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 398262979}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.PlatformOccludedLightHazard
   lightSource: {fileID: 0}
   blockedAlpha: 0.08
@@ -2241,7 +2273,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 741799362}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.PlatformOccludedLightHazard
   lightSource: {fileID: 0}
   blockedAlpha: 0.08
@@ -2257,7 +2289,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 1057343550}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.PlatformOccludedLightHazard
   lightSource: {fileID: 0}
   blockedAlpha: 0.08
@@ -2273,7 +2305,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 497324298}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.PlatformOccludedLightHazard
   lightSource: {fileID: 0}
   blockedAlpha: 0.08
@@ -2289,7 +2321,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 1614350266}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.PlatformOccludedLightHazard
   lightSource: {fileID: 0}
   blockedAlpha: 0.08
@@ -2305,7 +2337,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 400548486}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.PlatformOccludedLightHazard
   lightSource: {fileID: 0}
   blockedAlpha: 0.08
@@ -2321,7 +2353,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 239381815}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.PlatformOccludedLightHazard
   lightSource: {fileID: 669427073}
   blockedAlpha: 0.08
@@ -2333,7 +2365,7 @@ MonoScript:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 
+  m_Name:
   serializedVersion: 7
   m_DefaultReferences: {}
   m_Icon: {fileID: 0}
@@ -2348,7 +2380,7 @@ MonoScript:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 
+  m_Name:
   serializedVersion: 7
   m_DefaultReferences: {}
   m_Icon: {fileID: 0}
@@ -2491,7 +2523,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78fb05e36b4b4c1ca7162bb78cd5005e, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.RopeAnchorRingVisual
   sortingLayerId: 0
   sortingOrder: 6
@@ -2585,7 +2617,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 303043026}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.ToySpikeVisual
 --- !u!114 &455616561
 MonoBehaviour:
@@ -2597,7 +2629,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9a7455ccf38b4ccebb03ba4d625fa2be, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.RopeSpikeHazard
 --- !u!61 &455616562
 BoxCollider2D:
@@ -2655,7 +2687,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSprite
   color: {r: 1, g: 0.18, b: 0.25, a: 1}
 --- !u!212 &455616564
@@ -2830,7 +2862,7 @@ MonoScript:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 
+  m_Name:
   serializedVersion: 7
   m_DefaultReferences: {}
   m_Icon: {fileID: 0}
@@ -2870,7 +2902,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: caea6ce1b2764598a2e78008b4f433c7, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSwingSurface
 --- !u!50 &519685050
 Rigidbody2D:
@@ -2955,7 +2987,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSprite
   color: {r: 1, g: 0.706, b: 0.235, a: 1}
 --- !u!212 &519685053
@@ -3033,21 +3065,6 @@ Transform:
   - {fileID: 1300586303}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!115 &520324706
-MonoScript:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  serializedVersion: 7
-  m_DefaultReferences: {}
-  m_Icon: {fileID: 0}
-  m_Type: 0
-  m_ExecutionOrder: 0
-  m_ClassName: MainStageSectionThreeRecoverySwitch
-  m_Namespace: HimoHito
-  m_AssemblyName: Assembly-CSharp
 --- !u!1 &551520625
 GameObject:
   m_ObjectHideFlags: 0
@@ -3079,7 +3096,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d6b4a2f17c8e49a1b3d5e7f901234abc, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.RopePlatformAnchor
   requiredRopeLength: 4
   pairedAnchorName: Main S07 Green Lower Bridge Start Hook
@@ -3093,11 +3110,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f8a5758d4ed17c40abb2a64c0410345, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.HookPoint
   useFixedAttachmentPoint: 1
   localAttachmentPoint: {x: 0, y: 0}
-  airChainGroup: 
+  airChainGroup:
   airChainOrder: 0
 --- !u!61 &551520628
 BoxCollider2D:
@@ -3155,7 +3172,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSprite
   color: {r: 0.33, g: 1, b: 0.76, a: 1}
 --- !u!212 &551520630
@@ -3264,7 +3281,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSprite
   color: {r: 0.33, g: 1, b: 0.76, a: 1}
 --- !u!212 &559035991
@@ -3352,7 +3369,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d6b4a2f17c8e49a1b3d5e7f901234abc, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.RopePlatformAnchor
   requiredRopeLength: 5
   pairedAnchorName: Main Section 4 Green Bridge End Hook
@@ -3366,11 +3383,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f8a5758d4ed17c40abb2a64c0410345, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.HookPoint
   useFixedAttachmentPoint: 1
   localAttachmentPoint: {x: 0, y: 0}
-  airChainGroup: 
+  airChainGroup:
   airChainOrder: 0
 --- !u!61 &559035995
 BoxCollider2D:
@@ -3449,7 +3466,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d6b4a2f17c8e49a1b3d5e7f901234abc, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.RopePlatformAnchor
   requiredRopeLength: 6
   pairedAnchorName: Main S09 Center Hook
@@ -3463,11 +3480,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f8a5758d4ed17c40abb2a64c0410345, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.HookPoint
   useFixedAttachmentPoint: 1
   localAttachmentPoint: {x: 0, y: 0}
-  airChainGroup: 
+  airChainGroup:
   airChainOrder: 0
 --- !u!61 &584080186
 BoxCollider2D:
@@ -3525,7 +3542,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSprite
   color: {r: 0.33, g: 1, b: 0.76, a: 1}
 --- !u!212 &584080188
@@ -3609,7 +3626,7 @@ MonoScript:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 
+  m_Name:
   serializedVersion: 7
   m_DefaultReferences: {}
   m_Icon: {fileID: 0}
@@ -3830,11 +3847,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f8a5758d4ed17c40abb2a64c0410345, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.HookPoint
   useFixedAttachmentPoint: 1
   localAttachmentPoint: {x: 0, y: 0}
-  airChainGroup: 
+  airChainGroup:
   airChainOrder: 0
 --- !u!61 &630721646
 BoxCollider2D:
@@ -3892,7 +3909,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSprite
   color: {r: 0.298, g: 0.765, b: 1, a: 1}
 --- !u!212 &630721648
@@ -4071,6 +4088,7 @@ GameObject:
   m_Component:
   - component: {fileID: 661798980}
   - component: {fileID: 661798981}
+  - component: {fileID: 661798982}
   m_Layer: 0
   m_Name: Blue Toy Hook Visual
   m_TagString: Untagged
@@ -4088,7 +4106,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.072463766, y: 0.1984127, z: 1}
+  m_LocalScale: {x: 0.45000002, y: 1.6000001, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 630721649}
@@ -4143,15 +4161,30 @@ SpriteRenderer:
   m_SortingOrder: 6
   m_MaskInteraction: 0
   m_Sprite: {fileID: 0}
-  m_Color: {r: 0.298, g: 0.765, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 13.8, y: 5.04}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &661798982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 661798979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d00bd5e0b5b4e878bb89da53c2e0a47, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::HimoHito.HimoHitoHookRingVisual
+  sortingLayerId: 0
+  sortingOrder: 6
+  worldDiameter: 0.72
 --- !u!1 &669427072
 GameObject:
   m_ObjectHideFlags: 0
@@ -4305,7 +4338,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d6b4a2f17c8e49a1b3d5e7f901234abc, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.RopePlatformAnchor
   requiredRopeLength: 6
   pairedAnchorName: Main S09 Center Hook
@@ -4319,11 +4352,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f8a5758d4ed17c40abb2a64c0410345, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.HookPoint
   useFixedAttachmentPoint: 1
   localAttachmentPoint: {x: 0, y: 0}
-  airChainGroup: 
+  airChainGroup:
   airChainOrder: 0
 --- !u!61 &714001062
 BoxCollider2D:
@@ -4381,7 +4414,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSprite
   color: {r: 0.33, g: 1, b: 0.76, a: 1}
 --- !u!212 &714001064
@@ -4489,11 +4522,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f8a5758d4ed17c40abb2a64c0410345, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.HookPoint
   useFixedAttachmentPoint: 1
   localAttachmentPoint: {x: 0, y: 0}
-  airChainGroup: 
+  airChainGroup:
   airChainOrder: 0
 --- !u!61 &717824444
 BoxCollider2D:
@@ -4551,7 +4584,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSprite
   color: {r: 0.298, g: 0.765, b: 1, a: 1}
 --- !u!212 &717824446
@@ -4822,7 +4855,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78fb05e36b4b4c1ca7162bb78cd5005e, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.RopeAnchorRingVisual
   sortingLayerId: 0
   sortingOrder: 6
@@ -4923,7 +4956,7 @@ MonoScript:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 
+  m_Name:
   serializedVersion: 7
   m_DefaultReferences: {}
   m_Icon: {fileID: 0}
@@ -4942,6 +4975,7 @@ GameObject:
   m_Component:
   - component: {fileID: 750751282}
   - component: {fileID: 750751283}
+  - component: {fileID: 750751284}
   m_Layer: 0
   m_Name: Blue Toy Hook Visual
   m_TagString: Untagged
@@ -4959,7 +4993,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.072463766, y: 0.1984127, z: 1}
+  m_LocalScale: {x: 0.45000002, y: 1.6000001, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 717824447}
@@ -5014,15 +5048,30 @@ SpriteRenderer:
   m_SortingOrder: 6
   m_MaskInteraction: 0
   m_Sprite: {fileID: 0}
-  m_Color: {r: 0.298, g: 0.765, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 13.8, y: 5.04}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &750751284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 750751281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d00bd5e0b5b4e878bb89da53c2e0a47, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::HimoHito.HimoHitoHookRingVisual
+  sortingLayerId: 0
+  sortingOrder: 6
+  worldDiameter: 0.72
 --- !u!1 &765052921
 GameObject:
   m_ObjectHideFlags: 0
@@ -5144,11 +5193,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f8a5758d4ed17c40abb2a64c0410345, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.HookPoint
   useFixedAttachmentPoint: 1
   localAttachmentPoint: {x: 0, y: 0}
-  airChainGroup: 
+  airChainGroup:
   airChainOrder: 0
 --- !u!61 &815952954
 BoxCollider2D:
@@ -5206,7 +5255,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSprite
   color: {r: 0.298, g: 0.765, b: 1, a: 1}
 --- !u!212 &815952956
@@ -5294,6 +5343,7 @@ GameObject:
   m_Component:
   - component: {fileID: 825668481}
   - component: {fileID: 825668482}
+  - component: {fileID: 825668483}
   m_Layer: 0
   m_Name: Blue Toy Hook Visual
   m_TagString: Untagged
@@ -5311,7 +5361,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.072463766, y: 0.1984127, z: 1}
+  m_LocalScale: {x: 0.45000002, y: 1.6000001, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1235963838}
@@ -5366,15 +5416,30 @@ SpriteRenderer:
   m_SortingOrder: 6
   m_MaskInteraction: 0
   m_Sprite: {fileID: 0}
-  m_Color: {r: 0.298, g: 0.765, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 13.8, y: 5.04}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &825668483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 825668480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d00bd5e0b5b4e878bb89da53c2e0a47, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::HimoHito.HimoHitoHookRingVisual
+  sortingLayerId: 0
+  sortingOrder: 6
+  worldDiameter: 0.72
 --- !u!1 &839588645
 GameObject:
   m_ObjectHideFlags: 0
@@ -5407,7 +5472,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c8a2e2a9f1f4cc2a3a1b0c4d5e6f708, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.MainStageCheckpoint
   sectionNumber: 6
   respawnPosition: {x: 107.4, y: -1.45}
@@ -5422,7 +5487,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: caea6ce1b2764598a2e78008b4f433c7, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSwingSurface
 --- !u!50 &839588648
 Rigidbody2D:
@@ -5507,7 +5572,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSprite
   color: {r: 0.56, g: 0.29, b: 0.09, a: 1}
 --- !u!212 &839588651
@@ -5779,7 +5844,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78fb05e36b4b4c1ca7162bb78cd5005e, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.RopeAnchorRingVisual
   sortingLayerId: 0
   sortingOrder: 6
@@ -5885,7 +5950,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6cb1a74121a64f1782f48e2cbd4853d2, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.TutorialBackgroundParallax
   horizontalFollow: 0.97
 --- !u!1 &934038474
@@ -5915,7 +5980,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6cb1a74121a64f1782f48e2cbd4853d2, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.TutorialBackgroundParallax
   horizontalFollow: 0.78
 --- !u!4 &934038476
@@ -6058,7 +6123,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: caea6ce1b2764598a2e78008b4f433c7, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSwingSurface
 --- !u!50 &947926177
 Rigidbody2D:
@@ -6143,7 +6208,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSprite
   color: {r: 0.56, g: 0.29, b: 0.09, a: 1}
 --- !u!212 &947926180
@@ -6252,7 +6317,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d6b4a2f17c8e49a1b3d5e7f901234abc, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.RopePlatformAnchor
   requiredRopeLength: 4
   pairedAnchorName: Main S07 Green Middle Bridge End Hook
@@ -6266,11 +6331,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f8a5758d4ed17c40abb2a64c0410345, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.HookPoint
   useFixedAttachmentPoint: 1
   localAttachmentPoint: {x: 0, y: 0}
-  airChainGroup: 
+  airChainGroup:
   airChainOrder: 0
 --- !u!61 &962649618
 BoxCollider2D:
@@ -6328,7 +6393,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSprite
   color: {r: 0.33, g: 1, b: 0.76, a: 1}
 --- !u!212 &962649620
@@ -6437,7 +6502,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d6b4a2f17c8e49a1b3d5e7f901234abc, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.RopePlatformAnchor
   requiredRopeLength: 10
   pairedAnchorName: Main S10 Green Left Bank
@@ -6451,11 +6516,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f8a5758d4ed17c40abb2a64c0410345, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.HookPoint
   useFixedAttachmentPoint: 1
   localAttachmentPoint: {x: 0, y: 0}
-  airChainGroup: 
+  airChainGroup:
   airChainOrder: 0
 --- !u!61 &995937624
 BoxCollider2D:
@@ -6513,7 +6578,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSprite
   color: {r: 0.33, g: 1, b: 0.76, a: 1}
 --- !u!212 &995937626
@@ -6617,7 +6682,7 @@ Transform:
   m_GameObject: {fileID: 1049736609}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.06666667, z: 0}
   m_LocalScale: {x: 0.08481764, y: 0.10020041, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6688,7 +6753,7 @@ MonoScript:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 
+  m_Name:
   serializedVersion: 7
   m_DefaultReferences: {}
   m_Icon: {fileID: 0}
@@ -6866,7 +6931,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSprite
   color: {r: 0.56, g: 0.29, b: 0.09, a: 1}
 --- !u!212 &1090326786
@@ -6955,7 +7020,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c8a2e2a9f1f4cc2a3a1b0c4d5e6f708, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.MainStageCheckpoint
   sectionNumber: 3
   respawnPosition: {x: 29, y: -3.65}
@@ -6970,7 +7035,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: caea6ce1b2764598a2e78008b4f433c7, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSwingSurface
 --- !u!50 &1090326790
 Rigidbody2D:
@@ -7117,7 +7182,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 43db227655eb47b47b88d0c417891ba5, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.MainStageHud
 --- !u!4 &1119008755
 Transform:
@@ -7302,7 +7367,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSprite
   color: {r: 0.56, g: 0.29, b: 0.09, a: 1}
 --- !u!212 &1129056243
@@ -7391,7 +7456,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: caea6ce1b2764598a2e78008b4f433c7, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSwingSurface
 --- !u!50 &1129056246
 Rigidbody2D:
@@ -7430,6 +7495,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1135571036}
   - component: {fileID: 1135571037}
+  - component: {fileID: 1135571038}
   m_Layer: 0
   m_Name: Blue Toy Hook Visual
   m_TagString: Untagged
@@ -7447,7 +7513,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.072463766, y: 0.1984127, z: 1}
+  m_LocalScale: {x: 0.45000002, y: 1.6000001, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2061265746}
@@ -7502,15 +7568,30 @@ SpriteRenderer:
   m_SortingOrder: 6
   m_MaskInteraction: 0
   m_Sprite: {fileID: 0}
-  m_Color: {r: 0.298, g: 0.765, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 13.8, y: 5.04}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1135571038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1135571035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d00bd5e0b5b4e878bb89da53c2e0a47, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::HimoHito.HimoHitoHookRingVisual
+  sortingLayerId: 0
+  sortingOrder: 6
+  worldDiameter: 0.72
 --- !u!1 &1137895897
 GameObject:
   m_ObjectHideFlags: 0
@@ -7554,7 +7635,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78fb05e36b4b4c1ca7162bb78cd5005e, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.RopeAnchorRingVisual
   sortingLayerId: 0
   sortingOrder: 6
@@ -7648,7 +7729,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d6b4a2f17c8e49a1b3d5e7f901234abc, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.RopePlatformAnchor
   requiredRopeLength: 6
   pairedAnchorName: Main S09 Green Left Bank
@@ -7662,11 +7743,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f8a5758d4ed17c40abb2a64c0410345, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.HookPoint
   useFixedAttachmentPoint: 1
   localAttachmentPoint: {x: 0, y: 0}
-  airChainGroup: 
+  airChainGroup:
   airChainOrder: 0
 --- !u!61 &1138296026
 BoxCollider2D:
@@ -7724,7 +7805,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSprite
   color: {r: 0.298, g: 0.765, b: 1, a: 1}
 --- !u!212 &1138296028
@@ -7903,6 +7984,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1181016047}
   - component: {fileID: 1181016048}
+  - component: {fileID: 1181016049}
   m_Layer: 0
   m_Name: Blue Toy Hook Visual
   m_TagString: Untagged
@@ -7920,7 +8002,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.072463766, y: 0.1984127, z: 1}
+  m_LocalScale: {x: 0.45000002, y: 1.6000001, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 9100000004}
@@ -7975,15 +8057,30 @@ SpriteRenderer:
   m_SortingOrder: 6
   m_MaskInteraction: 0
   m_Sprite: {fileID: 0}
-  m_Color: {r: 0.298, g: 0.765, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 13.8, y: 5.04}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1181016049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1181016046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d00bd5e0b5b4e878bb89da53c2e0a47, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::HimoHito.HimoHitoHookRingVisual
+  sortingLayerId: 0
+  sortingOrder: 6
+  worldDiameter: 0.72
 --- !u!1 &1235963837
 GameObject:
   m_ObjectHideFlags: 0
@@ -8030,11 +8127,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f8a5758d4ed17c40abb2a64c0410345, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.HookPoint
   useFixedAttachmentPoint: 1
   localAttachmentPoint: {x: 0, y: 0}
-  airChainGroup: 
+  airChainGroup:
   airChainOrder: 0
 --- !u!61 &1235963840
 BoxCollider2D:
@@ -8092,7 +8189,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSprite
   color: {r: 0.298, g: 0.765, b: 1, a: 1}
 --- !u!212 &1235963842
@@ -8367,7 +8464,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: caea6ce1b2764598a2e78008b4f433c7, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSwingSurface
 --- !u!50 &1301360673
 Rigidbody2D:
@@ -8452,7 +8549,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSprite
   color: {r: 1, g: 0.706, b: 0.235, a: 1}
 --- !u!212 &1301360676
@@ -8573,7 +8670,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78fb05e36b4b4c1ca7162bb78cd5005e, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.RopeAnchorRingVisual
   sortingLayerId: 0
   sortingOrder: 6
@@ -8688,7 +8785,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 085691a767a788d4cb3948e3318d8cbb, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.MainStageRespawnOnFall
   startNearGoalForEndingPreview: 0
   startWithPartDPreview: 0
@@ -8704,7 +8801,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f77f1ad228968ff49b9b6b46cdea3736, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.RopeController
   maximumShotDistance: 14
   ropeWidth: 0.16
@@ -8726,7 +8823,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c562371b2852814985dd2cb70b3fba0, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.PlayerMover
   moveSpeed: 6.5
   acceleration: 45
@@ -8745,6 +8842,10 @@ MonoBehaviour:
   jumpBufferTime: 0.15
   groundProbeDistance: 0.08
   ropePlatformContactGraceTime: 0.15
+  minimumLandingSoundSpeed: 1.25
+  minimumFootstepSpeed: 0.75
+  slowFootstepInterval: 0.38
+  fastFootstepInterval: 0.22
   solidSurfaceSkin: 0.01
   maximumCollisionSweepDistance: 2
 --- !u!114 &1380120224
@@ -8757,7 +8858,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7cfccc1ad82411c47b427f2e4b5bb76c, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.RopeResource
   maximumLength: 50
   currentLength: 50
@@ -8974,7 +9075,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSprite
   color: {r: 1, g: 0.365, b: 0.561, a: 1}
 --- !u!212 &1380120230
@@ -9046,7 +9147,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 74a582b16d6849cda6bd71fa1b4ea16f, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.RopePlatformBuilder
   platformWidth: 0.22
   curveSegments: 20
@@ -9082,7 +9183,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f8a5758d4ed17c40abb2a64c0410345, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.HookPoint
   useFixedAttachmentPoint: 1
   localAttachmentPoint: {x: 0, y: 0}
@@ -9144,7 +9245,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSprite
   color: {r: 0.298, g: 0.765, b: 1, a: 1}
 --- !u!212 &1391390607
@@ -9419,7 +9520,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSprite
   color: {r: 0.298, g: 0.765, b: 1, a: 1}
 --- !u!212 &1417814687
@@ -9507,7 +9608,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8c0e7e23f78f4df0b7bf28938e0a442a, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SwingPassThroughRailPlatform
 --- !u!114 &1417814690
 MonoBehaviour:
@@ -9519,7 +9620,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d8b1fa814f2c45d985f206cf6dd18640, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.OneWayRailPlatform
   surfaceArc: 160
   groundingTolerance: 0.12
@@ -9665,7 +9766,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c8a2e2a9f1f4cc2a3a1b0c4d5e6f708, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.MainStageCheckpoint
   sectionNumber: 9
   respawnPosition: {x: 167.8, y: -1.45}
@@ -9680,7 +9781,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: caea6ce1b2764598a2e78008b4f433c7, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSwingSurface
 --- !u!50 &1438313555
 Rigidbody2D:
@@ -9765,7 +9866,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSprite
   color: {r: 0.56, g: 0.29, b: 0.09, a: 1}
 --- !u!212 &1438313558
@@ -9875,7 +9976,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d6b4a2f17c8e49a1b3d5e7f901234abc, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.RopePlatformAnchor
   requiredRopeLength: 5
   pairedAnchorName: Main Section 4 Green Bridge Start Hook
@@ -9889,11 +9990,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f8a5758d4ed17c40abb2a64c0410345, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.HookPoint
   useFixedAttachmentPoint: 1
   localAttachmentPoint: {x: 0, y: 0}
-  airChainGroup: 
+  airChainGroup:
   airChainOrder: 0
 --- !u!61 &1462416138
 BoxCollider2D:
@@ -9951,7 +10052,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSprite
   color: {r: 0.33, g: 1, b: 0.76, a: 1}
 --- !u!212 &1462416140
@@ -10060,7 +10161,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 303043026}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.ToySpikeVisual
 --- !u!114 &1463597850
 MonoBehaviour:
@@ -10072,7 +10173,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9a7455ccf38b4ccebb03ba4d625fa2be, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.RopeSpikeHazard
 --- !u!61 &1463597851
 BoxCollider2D:
@@ -10130,7 +10231,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSprite
   color: {r: 1, g: 0.18, b: 0.25, a: 1}
 --- !u!212 &1463597853
@@ -10239,7 +10340,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d6b4a2f17c8e49a1b3d5e7f901234abc, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.RopePlatformAnchor
   requiredRopeLength: 6
   pairedAnchorName: Main Section 5 Green Shadow End Hook
@@ -10253,11 +10354,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f8a5758d4ed17c40abb2a64c0410345, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.HookPoint
   useFixedAttachmentPoint: 1
   localAttachmentPoint: {x: 0, y: 0}
-  airChainGroup: 
+  airChainGroup:
   airChainOrder: 0
 --- !u!61 &1468401603
 BoxCollider2D:
@@ -10315,7 +10416,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSprite
   color: {r: 0.33, g: 1, b: 0.76, a: 1}
 --- !u!212 &1468401605
@@ -10484,6 +10585,97 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &1497064200
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1497064201}
+  - component: {fileID: 1497064202}
+  m_Layer: 0
+  m_Name: Recovery Switch Artwork
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1497064201
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1497064200}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.47268456, z: 0}
+  m_LocalScale: {x: 0.10227802, y: 0.2630006, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 9100000064}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1497064202
+SpriteRenderer:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1497064200}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 4
+  m_MaskInteraction: 0
+  m_Sprite: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 11.95, y: 6.4}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_SpriteSortPoint: 0
 --- !u!1 &1498441517
 GameObject:
   m_ObjectHideFlags: 0
@@ -10494,6 +10686,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1498441518}
   - component: {fileID: 1498441519}
+  - component: {fileID: 1498441520}
   m_Layer: 0
   m_Name: Blue Toy Hook Visual
   m_TagString: Untagged
@@ -10511,7 +10704,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.072463766, y: 0.1984127, z: 1}
+  m_LocalScale: {x: 0.45000002, y: 1.6000001, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1974238592}
@@ -10566,15 +10759,30 @@ SpriteRenderer:
   m_SortingOrder: 6
   m_MaskInteraction: 0
   m_Sprite: {fileID: 0}
-  m_Color: {r: 0.298, g: 0.765, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 13.8, y: 5.04}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1498441520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498441517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d00bd5e0b5b4e878bb89da53c2e0a47, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::HimoHito.HimoHitoHookRingVisual
+  sortingLayerId: 0
+  sortingOrder: 6
+  worldDiameter: 0.72
 --- !u!1 &1508252060
 GameObject:
   m_ObjectHideFlags: 0
@@ -10605,7 +10813,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f8a5758d4ed17c40abb2a64c0410345, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.HookPoint
   useFixedAttachmentPoint: 1
   localAttachmentPoint: {x: 0, y: 0}
@@ -10667,7 +10875,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSprite
   color: {r: 0.298, g: 0.765, b: 1, a: 1}
 --- !u!212 &1508252064
@@ -10788,7 +10996,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78fb05e36b4b4c1ca7162bb78cd5005e, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.RopeAnchorRingVisual
   sortingLayerId: 0
   sortingOrder: 6
@@ -10948,7 +11156,7 @@ MonoScript:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 
+  m_Name:
   serializedVersion: 7
   m_DefaultReferences: {}
   m_Icon: {fileID: 0}
@@ -10988,7 +11196,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: caea6ce1b2764598a2e78008b4f433c7, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSwingSurface
 --- !u!50 &1535825981
 Rigidbody2D:
@@ -11073,7 +11281,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSprite
   color: {r: 1, g: 0.706, b: 0.235, a: 1}
 --- !u!212 &1535825984
@@ -11253,7 +11461,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78fb05e36b4b4c1ca7162bb78cd5005e, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.RopeAnchorRingVisual
   sortingLayerId: 0
   sortingOrder: 6
@@ -11354,7 +11562,7 @@ MonoScript:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 
+  m_Name:
   serializedVersion: 7
   m_DefaultReferences: {}
   m_Icon: {fileID: 0}
@@ -11394,7 +11602,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d6b4a2f17c8e49a1b3d5e7f901234abc, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.RopePlatformAnchor
   requiredRopeLength: 6
   pairedAnchorName: Main Section 5 Green Shadow Start Hook
@@ -11408,11 +11616,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f8a5758d4ed17c40abb2a64c0410345, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.HookPoint
   useFixedAttachmentPoint: 1
   localAttachmentPoint: {x: 0, y: 0}
-  airChainGroup: 
+  airChainGroup:
   airChainOrder: 0
 --- !u!61 &1621699055
 BoxCollider2D:
@@ -11470,7 +11678,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSprite
   color: {r: 0.33, g: 1, b: 0.76, a: 1}
 --- !u!212 &1621699057
@@ -11740,6 +11948,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1630339972}
   - component: {fileID: 1630339973}
+  - component: {fileID: 1630339974}
   m_Layer: 0
   m_Name: Blue Toy Hook Visual
   m_TagString: Untagged
@@ -11757,7 +11966,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.072463766, y: 0.1984127, z: 1}
+  m_LocalScale: {x: 0.45000002, y: 1.6000001, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 815952957}
@@ -11812,30 +12021,30 @@ SpriteRenderer:
   m_SortingOrder: 6
   m_MaskInteraction: 0
   m_Sprite: {fileID: 0}
-  m_Color: {r: 0.298, g: 0.765, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 13.8, y: 5.04}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!115 &1636353286
-MonoScript:
+--- !u!114 &1630339974
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  serializedVersion: 7
-  m_DefaultReferences: {}
-  m_Icon: {fileID: 0}
-  m_Type: 0
-  m_ExecutionOrder: 0
-  m_ClassName: MainStageSectionThreeRecoveryStairs
-  m_Namespace: HimoHito
-  m_AssemblyName: Assembly-CSharp
+  m_GameObject: {fileID: 1630339971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d00bd5e0b5b4e878bb89da53c2e0a47, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::HimoHito.HimoHitoHookRingVisual
+  sortingLayerId: 0
+  sortingOrder: 6
+  worldDiameter: 0.72
 --- !u!1 &1639130445
 GameObject:
   m_ObjectHideFlags: 0
@@ -12061,7 +12270,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78fb05e36b4b4c1ca7162bb78cd5005e, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.RopeAnchorRingVisual
   sortingLayerId: 0
   sortingOrder: 6
@@ -12247,7 +12456,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c8a2e2a9f1f4cc2a3a1b0c4d5e6f708, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.MainStageCheckpoint
   sectionNumber: 10
   respawnPosition: {x: 187, y: -1.45}
@@ -12262,7 +12471,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: caea6ce1b2764598a2e78008b4f433c7, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSwingSurface
 --- !u!50 &1717291295
 Rigidbody2D:
@@ -12347,7 +12556,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSprite
   color: {r: 0.56, g: 0.29, b: 0.09, a: 1}
 --- !u!212 &1717291298
@@ -12457,7 +12666,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: caea6ce1b2764598a2e78008b4f433c7, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSwingSurface
 --- !u!50 &1721261332
 Rigidbody2D:
@@ -12542,7 +12751,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSprite
   color: {r: 1, g: 0.706, b: 0.235, a: 1}
 --- !u!212 &1721261335
@@ -12742,7 +12951,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d6b4a2f17c8e49a1b3d5e7f901234abc, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.RopePlatformAnchor
   requiredRopeLength: 10
   pairedAnchorName: Main S10 Green Right Bank
@@ -12756,11 +12965,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f8a5758d4ed17c40abb2a64c0410345, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.HookPoint
   useFixedAttachmentPoint: 1
   localAttachmentPoint: {x: 0, y: 0}
-  airChainGroup: 
+  airChainGroup:
   airChainOrder: 0
 --- !u!61 &1747064523
 BoxCollider2D:
@@ -12818,7 +13027,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSprite
   color: {r: 0.33, g: 1, b: 0.76, a: 1}
 --- !u!212 &1747064525
@@ -12927,7 +13136,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d6b4a2f17c8e49a1b3d5e7f901234abc, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.RopePlatformAnchor
   requiredRopeLength: 14
   pairedAnchorName: Main S06 Green Upper Bridge Start Hook
@@ -12941,11 +13150,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f8a5758d4ed17c40abb2a64c0410345, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.HookPoint
   useFixedAttachmentPoint: 1
   localAttachmentPoint: {x: 0, y: 0}
-  airChainGroup: 
+  airChainGroup:
   airChainOrder: 0
 --- !u!61 &1748877036
 BoxCollider2D:
@@ -13003,7 +13212,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSprite
   color: {r: 0.33, g: 1, b: 0.76, a: 1}
 --- !u!212 &1748877038
@@ -13124,7 +13333,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78fb05e36b4b4c1ca7162bb78cd5005e, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.RopeAnchorRingVisual
   sortingLayerId: 0
   sortingOrder: 6
@@ -13218,7 +13427,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d6b4a2f17c8e49a1b3d5e7f901234abc, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.RopePlatformAnchor
   requiredRopeLength: 14
   pairedAnchorName: Main S06 Green Upper Bridge End Hook
@@ -13232,11 +13441,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f8a5758d4ed17c40abb2a64c0410345, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.HookPoint
   useFixedAttachmentPoint: 1
   localAttachmentPoint: {x: 0, y: 0}
-  airChainGroup: 
+  airChainGroup:
   airChainOrder: 0
 --- !u!61 &1764739394
 BoxCollider2D:
@@ -13294,7 +13503,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSprite
   color: {r: 0.33, g: 1, b: 0.76, a: 1}
 --- !u!212 &1764739396
@@ -13402,7 +13611,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f3386df7f82752d4ca56316d3b8be233, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.MainStagePreview
   player: {fileID: 1380120219}
   previewTarget: {fileID: 0}
@@ -13420,7 +13629,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a7f3c2d6e9b84a1da12f3e4759c86120, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.HorizontalCameraFollow
   target: {fileID: 0}
   smoothTime: 0.18
@@ -13607,7 +13816,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSprite
   color: {r: 0.298, g: 0.765, b: 1, a: 1}
 --- !u!212 &1829554972
@@ -13695,7 +13904,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8c0e7e23f78f4df0b7bf28938e0a442a, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SwingPassThroughRailPlatform
 --- !u!114 &1829554975
 MonoBehaviour:
@@ -13707,7 +13916,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d8b1fa814f2c45d985f206cf6dd18640, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.OneWayRailPlatform
   surfaceArc: 160
   groundingTolerance: 0.12
@@ -13760,11 +13969,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f8a5758d4ed17c40abb2a64c0410345, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.HookPoint
   useFixedAttachmentPoint: 1
   localAttachmentPoint: {x: 0, y: 0}
-  airChainGroup: 
+  airChainGroup:
   airChainOrder: 0
 --- !u!61 &1844922427
 BoxCollider2D:
@@ -13822,7 +14031,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSprite
   color: {r: 0.298, g: 0.765, b: 1, a: 1}
 --- !u!212 &1844922429
@@ -13910,6 +14119,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1870317076}
   - component: {fileID: 1870317077}
+  - component: {fileID: 1870317078}
   m_Layer: 0
   m_Name: Blue Toy Hook Visual
   m_TagString: Untagged
@@ -13927,7 +14137,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.072463766, y: 0.1984127, z: 1}
+  m_LocalScale: {x: 0.45000002, y: 1.6000001, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1508252065}
@@ -13982,15 +14192,30 @@ SpriteRenderer:
   m_SortingOrder: 6
   m_MaskInteraction: 0
   m_Sprite: {fileID: 0}
-  m_Color: {r: 0.298, g: 0.765, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 13.8, y: 5.04}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1870317078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870317075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d00bd5e0b5b4e878bb89da53c2e0a47, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::HimoHito.HimoHitoHookRingVisual
+  sortingLayerId: 0
+  sortingOrder: 6
+  worldDiameter: 0.72
 --- !u!1 &1883373426
 GameObject:
   m_ObjectHideFlags: 0
@@ -14294,11 +14519,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f8a5758d4ed17c40abb2a64c0410345, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.HookPoint
   useFixedAttachmentPoint: 1
   localAttachmentPoint: {x: 0, y: 0}
-  airChainGroup: 
+  airChainGroup:
   airChainOrder: 0
 --- !u!61 &1974238589
 BoxCollider2D:
@@ -14356,7 +14581,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSprite
   color: {r: 0.298, g: 0.765, b: 1, a: 1}
 --- !u!212 &1974238591
@@ -14556,7 +14781,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: caea6ce1b2764598a2e78008b4f433c7, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSwingSurface
 --- !u!50 &1999290176
 Rigidbody2D:
@@ -14641,7 +14866,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSprite
   color: {r: 1, g: 0.706, b: 0.235, a: 1}
 --- !u!212 &1999290179
@@ -14796,7 +15021,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSprite
   color: {r: 0.56, g: 0.29, b: 0.09, a: 1}
 --- !u!212 &2056289250
@@ -14885,7 +15110,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: caea6ce1b2764598a2e78008b4f433c7, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSwingSurface
 --- !u!50 &2056289253
 Rigidbody2D:
@@ -14920,7 +15145,7 @@ MonoScript:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 
+  m_Name:
   serializedVersion: 7
   m_DefaultReferences: {}
   m_Icon: {fileID: 0}
@@ -14959,7 +15184,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f8a5758d4ed17c40abb2a64c0410345, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.HookPoint
   useFixedAttachmentPoint: 1
   localAttachmentPoint: {x: 0, y: 0}
@@ -15021,7 +15246,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSprite
   color: {r: 0.298, g: 0.765, b: 1, a: 1}
 --- !u!212 &2061265745
@@ -15201,7 +15426,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78fb05e36b4b4c1ca7162bb78cd5005e, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.RopeAnchorRingVisual
   sortingLayerId: 0
   sortingOrder: 14
@@ -15374,7 +15599,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSprite
   color: {r: 0.56, g: 0.29, b: 0.09, a: 1}
 --- !u!212 &2109282679
@@ -15463,7 +15688,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c8a2e2a9f1f4cc2a3a1b0c4d5e6f708, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.MainStageCheckpoint
   sectionNumber: 4
   respawnPosition: {x: 50.6, y: -1.45}
@@ -15478,7 +15703,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: caea6ce1b2764598a2e78008b4f433c7, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSwingSurface
 --- !u!50 &2109282683
 Rigidbody2D:
@@ -15535,7 +15760,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSprite
   color: {r: 0.8, g: 0.48, b: 0.18, a: 1}
 --- !u!212 &2119291539
@@ -15714,6 +15939,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2128043421}
   - component: {fileID: 2128043422}
+  - component: {fileID: 2128043423}
   m_Layer: 0
   m_Name: Blue Toy Hook Visual
   m_TagString: Untagged
@@ -15731,7 +15957,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.072463766, y: 0.1984127, z: 1}
+  m_LocalScale: {x: 0.45000002, y: 1.6000001, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1138296029}
@@ -15786,15 +16012,30 @@ SpriteRenderer:
   m_SortingOrder: 6
   m_MaskInteraction: 0
   m_Sprite: {fileID: 0}
-  m_Color: {r: 0.298, g: 0.765, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 13.8, y: 5.04}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &2128043423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128043420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d00bd5e0b5b4e878bb89da53c2e0a47, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::HimoHito.HimoHitoHookRingVisual
+  sortingLayerId: 0
+  sortingOrder: 6
+  worldDiameter: 0.72
 --- !u!1 &9100000001
 GameObject:
   m_ObjectHideFlags: 0
@@ -15825,7 +16066,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSprite
   color: {r: 0.298, g: 0.765, b: 1, a: 1}
 --- !u!212 &9100000003
@@ -15913,11 +16154,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f8a5758d4ed17c40abb2a64c0410345, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.HookPoint
   useFixedAttachmentPoint: 1
   localAttachmentPoint: {x: 0, y: 0}
-  airChainGroup: 
+  airChainGroup:
   airChainOrder: 0
 --- !u!61 &9100000006
 BoxCollider2D:
@@ -15997,7 +16238,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSprite
   color: {r: 0.56, g: 0.29, b: 0.09, a: 1}
 --- !u!212 &9100000013
@@ -16084,8 +16325,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 9100000011}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1636353286}
-  m_Name: 
+  m_Script: {fileID: 11500000, guid: ef7044ee27094f14a4f8342aaf86891e, type: 3}
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.MainStageSectionThreeRecoveryStairs
 --- !u!114 &9100000016
 MonoBehaviour:
@@ -16097,7 +16338,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: caea6ce1b2764598a2e78008b4f433c7, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSwingSurface
 --- !u!50 &9100000017
 Rigidbody2D:
@@ -16203,7 +16444,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSprite
   color: {r: 0.56, g: 0.29, b: 0.09, a: 1}
 --- !u!212 &9100000023
@@ -16291,7 +16532,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: caea6ce1b2764598a2e78008b4f433c7, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSwingSurface
 --- !u!50 &9100000026
 Rigidbody2D:
@@ -16397,7 +16638,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSprite
   color: {r: 0.56, g: 0.29, b: 0.09, a: 1}
 --- !u!212 &9100000033
@@ -16485,7 +16726,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: caea6ce1b2764598a2e78008b4f433c7, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSwingSurface
 --- !u!50 &9100000036
 Rigidbody2D:
@@ -16591,7 +16832,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSprite
   color: {r: 0.56, g: 0.29, b: 0.09, a: 1}
 --- !u!212 &9100000043
@@ -16679,7 +16920,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: caea6ce1b2764598a2e78008b4f433c7, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSwingSurface
 --- !u!50 &9100000046
 Rigidbody2D:
@@ -16785,7 +17026,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSprite
   color: {r: 0.56, g: 0.29, b: 0.09, a: 1}
 --- !u!212 &9100000053
@@ -16873,7 +17114,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: caea6ce1b2764598a2e78008b4f433c7, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSwingSurface
 --- !u!50 &9100000056
 Rigidbody2D:
@@ -16961,6 +17202,7 @@ GameObject:
   - component: {fileID: 9100000062}
   - component: {fileID: 9100000065}
   - component: {fileID: 9100000066}
+  - component: {fileID: 9100000067}
   m_Layer: 0
   m_Name: Section 3 Recovery Switch
   m_TagString: Untagged
@@ -16978,7 +17220,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.SolidSprite
   color: {r: 1, g: 0.72, b: 0.18, a: 1}
 --- !u!212 &9100000063
@@ -16989,7 +17231,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9100000061}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -17052,7 +17294,8 @@ Transform:
   m_LocalPosition: {x: 45.6, y: -5.75, z: 0}
   m_LocalScale: {x: 0.9, y: 0.35, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1497064201}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &9100000065
@@ -17110,9 +17353,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 9100000061}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 520324706}
-  m_Name: 
+  m_Script: {fileID: 11500000, guid: 216a8b03e4c344e8a93a9f17a1c80bb4, type: 3}
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.MainStageSectionThreeRecoverySwitch
+  stairs: {fileID: 9100000015}
+  visual: {fileID: 9100000062}
+--- !u!114 &9100000067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9100000061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed3ec826d0cf4df6a7f9a9ce8053535e, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::HimoHito.RecoverySwitchVisual
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

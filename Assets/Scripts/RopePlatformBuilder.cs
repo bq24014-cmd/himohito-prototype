@@ -102,12 +102,14 @@ namespace HimoHito
             }
 
             GeneratedRopePlatform platform = CreatePlatform(start, end, ropeLength);
+            RopeResourceGauge.NotifyPlatformBuilt(ropeResource);
             PlacePlayerOnPlatform(platform);
             if (TryGetComponent(out PlayerMover mover))
             {
                 mover.RegisterGeneratedRopePlatformContact(platform);
             }
             audioFeedback?.PlayRopePlatformBuilt();
+            RopeBuildFluff.Play(platform.GetComponent<LineRenderer>());
             return true;
         }
 
@@ -372,6 +374,17 @@ namespace HimoHito
                     name = "Generated Rope Platform Material"
                 };
                 line.material = material;
+                Texture2D yarn = YarnRopeTexture.Load();
+                if (yarn != null)
+                {
+                    material.mainTexture = yarn;
+                    line.textureMode = LineTextureMode.Tile;
+                    float tileWorldLength = platformWidth * yarn.width / yarn.height;
+                    line.textureScale = new Vector2(1f / Mathf.Max(0.01f, tileWorldLength), 1f);
+                    Color tint = new Color(1f, 1f, 1f, ropeController.VisibleRopeColor.a);
+                    line.startColor = tint;
+                    line.endColor = tint;
+                }
             }
 
             EdgeCollider2D edge = platformObject.AddComponent<EdgeCollider2D>();

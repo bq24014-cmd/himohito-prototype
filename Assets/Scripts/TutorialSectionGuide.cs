@@ -612,7 +612,7 @@ namespace HimoHito
                 landingPoint,
                 4f,
                 new Color(0.45f, 0.95f, 0.76f));
-            DrawLine(
+            DrawYarnLine(
                 ropePoint,
                 hook.center,
                 6f,
@@ -659,7 +659,7 @@ namespace HimoHito
                 4f,
                 new Color(1f, 0.36f, 0.56f, 0.72f));
             Rect player = NormalizedRect(rect, 0.46f, 0.46f, 0.08f, 0.21f);
-            DrawLine(
+            DrawYarnLine(
                 hook.center,
                 new Vector2(player.center.x, player.y + player.height * 0.20f),
                 6f,
@@ -691,7 +691,8 @@ namespace HimoHito
                 new Vector2(rect.center.x, rect.y + rect.height * 0.72f),
                 rightRing.center,
                 9f,
-                new Color(1f, 0.36f, 0.56f));
+                Color.white,
+                true);
             DrawPlayer(NormalizedRect(rect, 0.47f, 0.45f, 0.08f, 0.22f));
             GUI.Label(
                 NormalizedRect(rect, 0.34f, 0.16f, 0.32f, 0.14f),
@@ -720,19 +721,22 @@ namespace HimoHito
                 new Vector2(rect.x + rect.width * 0.35f, rect.y + rect.height * 0.60f),
                 centerRing.center,
                 5f,
-                new Color(0.72f, 0.56f, 0.76f));
+                new Color(1f, 1f, 1f, 0.45f),
+                true);
             DrawCurve(
                 centerRing.center,
                 new Vector2(rect.x + rect.width * 0.65f, rect.y + rect.height * 0.60f),
                 rightRing.center,
                 5f,
-                new Color(0.72f, 0.56f, 0.76f));
+                new Color(1f, 1f, 1f, 0.45f),
+                true);
             DrawCurve(
                 leftRing.center,
                 new Vector2(rect.center.x, rect.y + rect.height * 0.88f),
                 rightRing.center,
                 9f,
-                new Color(1f, 0.36f, 0.56f));
+                Color.white,
+                true);
             DrawRect(
                 NormalizedRect(rect, 0.61f, 0.30f, 0.10f, 0.30f),
                 new Color(0.48f, 0.26f, 0.12f));
@@ -845,10 +849,12 @@ namespace HimoHito
             Vector2 control,
             Vector2 end,
             float width,
-            Color color)
+            Color color,
+            bool textured = false)
         {
             const int segments = 28;
             Vector2 previous = start;
+            float distance = 0f;
             for (int index = 1; index <= segments; index++)
             {
                 float t = index / (float)segments;
@@ -857,9 +863,39 @@ namespace HimoHito
                     inverse * inverse * start +
                     2f * inverse * t * control +
                     t * t * end;
-                DrawLine(previous, current, width, color);
+                if (textured)
+                    DrawYarnLine(previous, current, width, color, distance);
+                else
+                    DrawLine(previous, current, width, color);
+                distance += Vector2.Distance(previous, current);
                 previous = current;
             }
+        }
+
+        private static void DrawYarnLine(
+            Vector2 start, Vector2 end, float width, Color color, float distance = 0f)
+        {
+            Texture2D yarn = YarnRopeTexture.Load();
+            if (yarn == null)
+            {
+                DrawLine(start, end, width, new Color(1f, 0.36f, 0.56f, color.a));
+                return;
+            }
+            Vector2 delta = end - start;
+            if (delta.sqrMagnitude < 0.01f) return;
+            float tileLength = width * yarn.width / yarn.height;
+            Matrix4x4 previousMatrix = GUI.matrix;
+            Color previousColor = GUI.color;
+            // Retain the source pink; alpha distinguishes the old pair of bridges in T4.
+            GUI.color = new Color(1f, 1f, 1f, color.a);
+            GUIUtility.RotateAroundPivot(Mathf.Atan2(delta.y, delta.x) * Mathf.Rad2Deg, start);
+            GUI.DrawTextureWithTexCoords(
+                new Rect(start.x, start.y - width * 0.5f, delta.magnitude, width),
+                yarn,
+                new Rect(distance / tileLength, 0f, delta.magnitude / tileLength, 1f),
+                true);
+            GUI.matrix = previousMatrix;
+            GUI.color = previousColor;
         }
 
         private static void DrawDashedCurve(
