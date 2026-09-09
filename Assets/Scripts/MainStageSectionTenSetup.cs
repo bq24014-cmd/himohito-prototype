@@ -17,15 +17,15 @@ namespace HimoHito
         public const float MinimumRopeAtEntry = 11f;
 
         public static readonly Vector2 LeftAnchorPosition =
-            new Vector2(194f, -2.15f);
+            new Vector2(196f, -2.15f);
         public static readonly Vector2 RightAnchorPosition =
-            new Vector2(203f, -2.15f);
+            new Vector2(205f, -2.15f);
         public static readonly Vector2 GoalFloorPosition =
-            new Vector2(210.5f, -7.15f);
+            new Vector2(212.5f, -7.15f);
         public static readonly Vector2 GoalFloorSize =
             new Vector2(15f, 10f);
         public static readonly Vector2 GoalMarkerPosition =
-            new Vector2(214f, -0.95f);
+            new Vector2(216f, -0.95f);
         public static readonly Vector2 GoalMarkerSize =
             new Vector2(2.6f, 2.4f);
 

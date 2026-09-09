@@ -24,9 +24,9 @@ namespace HimoHito
         public const string LandingName =
             "Main Section 4 Landing";
 
-        // Slide-local (6.0, 4.0) is Main Landing 3's current right edge.
+        // Extend only the bank's right edge so the relay permits a return jump.
         public static readonly Vector2 StartEdgePosition =
-            new Vector2(60.6f, -2.15f);
+            new Vector2(61.6f, -2.15f);
         public static readonly Vector2 IntermediateTopPosition =
             new Vector2(66.2f, -0.65f);
         public static readonly Vector2 IntermediateColumnPosition =
@@ -34,7 +34,7 @@ namespace HimoHito
         public static readonly Vector2 IntermediateColumnSize =
             new Vector2(1.8f, 10f);
         public static readonly Vector2 BridgeStartMarkerPosition =
-            new Vector2(60.6f, -2.15f);
+            new Vector2(61.6f, -2.15f);
         public static readonly Vector2 BridgeStartMarkerSize =
             new Vector2(0.62f, 0.62f);
         public static readonly Vector2 BridgeAnchorPosition =
@@ -47,11 +47,11 @@ namespace HimoHito
         public static readonly Vector2 HookSize =
             new Vector2(1.6f, 0.45f);
         public static readonly Vector2 LandingPosition =
-            new Vector2(84.1f, -7.15f);
+            new Vector2(86.1f, -7.15f);
         public static readonly Vector2 LandingSize =
             new Vector2(6f, 10f);
         public static readonly Vector2 LandingRespawnPosition =
-            new Vector2(82.1f, -1.45f);
+            new Vector2(84.1f, -1.45f);
 
         private static readonly Color TerrainColor =
             new Color(0.56f, 0.29f, 0.09f);
