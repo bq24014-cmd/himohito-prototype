@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 29111728}
   - component: {fileID: 29111727}
   - component: {fileID: 29111726}
+  - component: {fileID: 29111733}
   m_Layer: 0
   m_Name: Main S10 Goal Floor
   m_TagString: Untagged
@@ -319,7 +320,7 @@ Transform:
   m_GameObject: {fileID: 29111725}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 210.5, y: -7.15, z: 0}
+  m_LocalPosition: {x: 212.5, y: -7.15, z: 0}
   m_LocalScale: {x: 15, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -327,6 +328,18 @@ Transform:
   - {fileID: 1603032879}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &29111733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 29111725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab1ec05b3d804a30a1ed4cf882f79a01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HimoHito.WoodenPlatformDepthVisual
 --- !u!1 &34308086
 GameObject:
   m_ObjectHideFlags: 0
@@ -342,6 +355,7 @@ GameObject:
   - component: {fileID: 34308089}
   - component: {fileID: 34308088}
   - component: {fileID: 34308087}
+  - component: {fileID: 34308094}
   m_Layer: 0
   m_Name: Main Section 4 Landing
   m_TagString: Untagged
@@ -362,7 +376,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.MainStageCheckpoint
   sectionNumber: 5
-  respawnPosition: {x: 82.1, y: -1.45}
+  respawnPosition: {x: 84.1, y: -1.45}
   minimumRopeAfterCheckpoint: 45
 --- !u!114 &34308088
 MonoBehaviour:
@@ -530,13 +544,25 @@ Transform:
   m_GameObject: {fileID: 34308086}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 84.1, y: -7.15, z: 0}
+  m_LocalPosition: {x: 86.1, y: -7.15, z: 0}
   m_LocalScale: {x: 6, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2124317523}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &34308094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 34308086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab1ec05b3d804a30a1ed4cf882f79a01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HimoHito.WoodenPlatformDepthVisual
 --- !u!1 &126668273
 GameObject:
   m_ObjectHideFlags: 0
@@ -962,6 +988,7 @@ GameObject:
   - component: {fileID: 197578221}
   - component: {fileID: 197578220}
   - component: {fileID: 197578219}
+  - component: {fileID: 197578226}
   m_Layer: 0
   m_Name: Main S06 Merge
   m_TagString: Untagged
@@ -982,7 +1009,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.MainStageCheckpoint
   sectionNumber: 7
-  respawnPosition: {x: 142.9, y: -1.45}
+  respawnPosition: {x: 144.9, y: -1.45}
   minimumRopeAfterCheckpoint: 25
 --- !u!114 &197578220
 MonoBehaviour:
@@ -1150,7 +1177,7 @@ Transform:
   m_GameObject: {fileID: 197578218}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 146.1, y: -7.15, z: 0}
+  m_LocalPosition: {x: 148.1, y: -7.15, z: 0}
   m_LocalScale: {x: 8, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1158,6 +1185,18 @@ Transform:
   - {fileID: 624379142}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &197578226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 197578218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab1ec05b3d804a30a1ed4cf882f79a01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HimoHito.WoodenPlatformDepthVisual
 --- !u!1 &227514496
 GameObject:
   m_ObjectHideFlags: 0
@@ -1185,7 +1224,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.096339114, y: 0.10341261, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1463597854}
@@ -1244,7 +1283,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 10.38, y: 9.67}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1263,6 +1302,7 @@ GameObject:
   - component: {fileID: 233133330}
   - component: {fileID: 233133329}
   - component: {fileID: 233133328}
+  - component: {fileID: 233133334}
   m_Layer: 0
   m_Name: Main S06 Upper Left
   m_TagString: Untagged
@@ -1436,13 +1476,25 @@ Transform:
   m_GameObject: {fileID: 233133327}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 127.7, y: 3.1, z: 0}
+  m_LocalPosition: {x: 129.7, y: 3.1, z: 0}
   m_LocalScale: {x: 3, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1526342390}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &233133334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 233133327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab1ec05b3d804a30a1ed4cf882f79a01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HimoHito.WoodenPlatformDepthVisual
 --- !u!115 &239381815
 MonoScript:
   m_ObjectHideFlags: 0
@@ -1654,6 +1706,7 @@ GameObject:
   - component: {fileID: 295987748}
   - component: {fileID: 295987747}
   - component: {fileID: 295987746}
+  - component: {fileID: 295987752}
   m_Layer: 0
   m_Name: Main S06 Upper Right
   m_TagString: Untagged
@@ -1827,13 +1880,25 @@ Transform:
   m_GameObject: {fileID: 295987745}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 131.4, y: 4.4, z: 0}
+  m_LocalPosition: {x: 133.4, y: 4.4, z: 0}
   m_LocalScale: {x: 2.6, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 699526631}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &295987752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 295987745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab1ec05b3d804a30a1ed4cf882f79a01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HimoHito.WoodenPlatformDepthVisual
 --- !u!115 &303043026
 MonoScript:
   m_ObjectHideFlags: 0
@@ -2209,7 +2274,7 @@ Transform:
   m_GameObject: {fileID: 350812393}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 92.3, y: -3.15, z: 0}
+  m_LocalPosition: {x: 94.3, y: -3.15, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2885,6 +2950,7 @@ GameObject:
   - component: {fileID: 519685051}
   - component: {fileID: 519685050}
   - component: {fileID: 519685049}
+  - component: {fileID: 519685055}
   m_Layer: 0
   m_Name: Main S05 Flashlight Source
   m_TagString: Untagged
@@ -3058,13 +3124,25 @@ Transform:
   m_GameObject: {fileID: 519685048}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 97, y: 3.35, z: 0}
+  m_LocalPosition: {x: 99, y: 3.35, z: 0}
   m_LocalScale: {x: 1.2, y: 0.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1300586303}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519685055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519685048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab1ec05b3d804a30a1ed4cf882f79a01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HimoHito.WoodenPlatformDepthVisual
 --- !u!1 &551520625
 GameObject:
   m_ObjectHideFlags: 0
@@ -3243,7 +3321,7 @@ Transform:
   m_GameObject: {fileID: 551520625}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 152.9, y: -0.35, z: 0}
+  m_LocalPosition: {x: 154.9, y: -0.35, z: 0}
   m_LocalScale: {x: 0.62, y: 0.62, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3352,7 +3430,7 @@ Transform:
   m_GameObject: {fileID: 559035989}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 60.6, y: -2.15, z: 0}
+  m_LocalPosition: {x: 61.6, y: -2.15, z: 0}
   m_LocalScale: {x: 0.62, y: 0.62, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3613,7 +3691,7 @@ Transform:
   m_GameObject: {fileID: 584080183}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 175, y: -2.15, z: 0}
+  m_LocalPosition: {x: 177, y: -2.15, z: 0}
   m_LocalScale: {x: 0.62, y: 0.62, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4210,7 +4288,7 @@ Transform:
   m_GameObject: {fileID: 669427072}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 92.3, y: 2.85, z: 0}
+  m_LocalPosition: {x: 94.3, y: 2.85, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4485,7 +4563,7 @@ Transform:
   m_GameObject: {fileID: 714001059}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 186, y: -2.15, z: 0}
+  m_LocalPosition: {x: 188, y: -2.15, z: 0}
   m_LocalScale: {x: 0.62, y: 0.62, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4689,7 +4767,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.096339114, y: 0.10341261, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 455616565}
@@ -4748,7 +4826,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 10.38, y: 9.67}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -5455,6 +5533,7 @@ GameObject:
   - component: {fileID: 839588648}
   - component: {fileID: 839588647}
   - component: {fileID: 839588646}
+  - component: {fileID: 839588653}
   m_Layer: 0
   m_Name: Main S05 Landing
   m_TagString: Untagged
@@ -5475,7 +5554,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.MainStageCheckpoint
   sectionNumber: 6
-  respawnPosition: {x: 107.4, y: -1.45}
+  respawnPosition: {x: 109.4, y: -1.45}
   minimumRopeAfterCheckpoint: 34
 --- !u!114 &839588647
 MonoBehaviour:
@@ -5643,7 +5722,7 @@ Transform:
   m_GameObject: {fileID: 839588645}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 110.1, y: -7.15, z: 0}
+  m_LocalPosition: {x: 112.1, y: -7.15, z: 0}
   m_LocalScale: {x: 8, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5651,6 +5730,18 @@ Transform:
   - {fileID: 1489583826}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &839588653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 839588645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab1ec05b3d804a30a1ed4cf882f79a01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HimoHito.WoodenPlatformDepthVisual
 --- !u!1 &858594157
 GameObject:
   m_ObjectHideFlags: 0
@@ -6106,6 +6197,7 @@ GameObject:
   - component: {fileID: 947926178}
   - component: {fileID: 947926177}
   - component: {fileID: 947926176}
+  - component: {fileID: 947926182}
   m_Layer: 0
   m_Name: Main Section 4 Intermediate Column
   m_TagString: Untagged
@@ -6286,6 +6378,18 @@ Transform:
   - {fileID: 1903771075}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &947926182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 947926175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab1ec05b3d804a30a1ed4cf882f79a01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HimoHito.WoodenPlatformDepthVisual
 --- !u!1 &962649615
 GameObject:
   m_ObjectHideFlags: 0
@@ -6464,7 +6568,7 @@ Transform:
   m_GameObject: {fileID: 962649615}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 150.1, y: -2.15, z: 0}
+  m_LocalPosition: {x: 152.1, y: -2.15, z: 0}
   m_LocalScale: {x: 0.62, y: 0.62, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6649,7 +6753,7 @@ Transform:
   m_GameObject: {fileID: 995937621}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 203, y: -2.15, z: 0}
+  m_LocalPosition: {x: 205, y: -2.15, z: 0}
   m_LocalScale: {x: 0.62, y: 0.62, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6868,6 +6972,7 @@ GameObject:
   - component: {fileID: 1090326790}
   - component: {fileID: 1090326789}
   - component: {fileID: 1090326788}
+  - component: {fileID: 1090326791}
   m_Layer: 0
   m_Name: Main Landing 2
   m_TagString: Untagged
@@ -7064,6 +7169,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1090326791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1090326783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab1ec05b3d804a30a1ed4cf882f79a01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HimoHito.WoodenPlatformDepthVisual
 --- !u!1 &1117728638
 GameObject:
   m_ObjectHideFlags: 0
@@ -7304,6 +7421,7 @@ GameObject:
   - component: {fileID: 1129056241}
   - component: {fileID: 1129056246}
   - component: {fileID: 1129056245}
+  - component: {fileID: 1129056247}
   m_Layer: 0
   m_Name: Main Start Ground
   m_TagString: Untagged
@@ -7485,6 +7603,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1129056247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1129056240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab1ec05b3d804a30a1ed4cf882f79a01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HimoHito.WoodenPlatformDepthVisual
 --- !u!1 &1135571035
 GameObject:
   m_ObjectHideFlags: 0
@@ -7876,7 +8006,7 @@ Transform:
   m_GameObject: {fileID: 1138296023}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 180.5, y: -1.05, z: 0}
+  m_LocalPosition: {x: 182.5, y: -1.05, z: 0}
   m_LocalScale: {x: 1.6, y: 0.45, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8110,7 +8240,7 @@ Transform:
   m_GameObject: {fileID: 1235963837}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 97, y: 2.95, z: 0}
+  m_LocalPosition: {x: 99, y: 2.95, z: 0}
   m_LocalScale: {x: 1.6, y: 0.45, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8447,6 +8577,7 @@ GameObject:
   - component: {fileID: 1301360674}
   - component: {fileID: 1301360673}
   - component: {fileID: 1301360672}
+  - component: {fileID: 1301360678}
   m_Layer: 0
   m_Name: Main S09 Hanging Beam
   m_TagString: Untagged
@@ -8620,13 +8751,25 @@ Transform:
   m_GameObject: {fileID: 1301360671}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 182, y: 1.55, z: 0}
+  m_LocalPosition: {x: 184, y: 1.55, z: 0}
   m_LocalScale: {x: 2, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 312861379}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1301360678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1301360671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab1ec05b3d804a30a1ed4cf882f79a01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HimoHito.WoodenPlatformDepthVisual
 --- !u!1 &1313190101
 GameObject:
   m_ObjectHideFlags: 0
@@ -9316,7 +9459,7 @@ Transform:
   m_GameObject: {fileID: 1391390603}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 126.8, y: 1.8, z: 0}
+  m_LocalPosition: {x: 128.8, y: 1.8, z: 0}
   m_LocalScale: {x: 1.6, y: 0.45, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9591,7 +9734,7 @@ Transform:
   m_GameObject: {fileID: 1417814682}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 88.6, y: -0.95, z: 0}
+  m_LocalPosition: {x: 90.6, y: -0.95, z: 0}
   m_LocalScale: {x: 3, y: 0.6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9749,6 +9892,7 @@ GameObject:
   - component: {fileID: 1438313555}
   - component: {fileID: 1438313554}
   - component: {fileID: 1438313553}
+  - component: {fileID: 1438313560}
   m_Layer: 0
   m_Name: Main S07 Landing
   m_TagString: Untagged
@@ -9769,7 +9913,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.MainStageCheckpoint
   sectionNumber: 9
-  respawnPosition: {x: 167.8, y: -1.45}
+  respawnPosition: {x: 169.8, y: -1.45}
   minimumRopeAfterCheckpoint: 23
 --- !u!114 &1438313554
 MonoBehaviour:
@@ -9937,7 +10081,7 @@ Transform:
   m_GameObject: {fileID: 1438313552}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 171, y: -7.15, z: 0}
+  m_LocalPosition: {x: 173, y: -7.15, z: 0}
   m_LocalScale: {x: 8, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9945,6 +10089,18 @@ Transform:
   - {fileID: 649770116}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1438313560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1438313552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab1ec05b3d804a30a1ed4cf882f79a01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HimoHito.WoodenPlatformDepthVisual
 --- !u!1 &1462416135
 GameObject:
   m_ObjectHideFlags: 0
@@ -10487,7 +10643,7 @@ Transform:
   m_GameObject: {fileID: 1468401600}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 90.1, y: -0.65, z: 0}
+  m_LocalPosition: {x: 92.1, y: -0.65, z: 0}
   m_LocalScale: {x: 0.62, y: 0.62, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10946,7 +11102,7 @@ Transform:
   m_GameObject: {fileID: 1508252060}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 133.6, y: 1.8, z: 0}
+  m_LocalPosition: {x: 135.6, y: 1.8, z: 0}
   m_LocalScale: {x: 1.6, y: 0.45, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11179,6 +11335,7 @@ GameObject:
   - component: {fileID: 1535825982}
   - component: {fileID: 1535825981}
   - component: {fileID: 1535825980}
+  - component: {fileID: 1535825986}
   m_Layer: 0
   m_Name: Main S07 Upper Step
   m_TagString: Untagged
@@ -11352,13 +11509,25 @@ Transform:
   m_GameObject: {fileID: 1535825979}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 158.5, y: 0.5, z: 0}
+  m_LocalPosition: {x: 160.5, y: 0.5, z: 0}
   m_LocalScale: {x: 3, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1643860448}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1535825986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1535825979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab1ec05b3d804a30a1ed4cf882f79a01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HimoHito.WoodenPlatformDepthVisual
 --- !u!1 &1590596615
 GameObject:
   m_ObjectHideFlags: 0
@@ -11749,7 +11918,7 @@ Transform:
   m_GameObject: {fileID: 1621699052}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 94.5, y: -0.65, z: 0}
+  m_LocalPosition: {x: 96.5, y: -0.65, z: 0}
   m_LocalScale: {x: 0.62, y: 0.62, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -12439,6 +12608,7 @@ GameObject:
   - component: {fileID: 1717291295}
   - component: {fileID: 1717291294}
   - component: {fileID: 1717291293}
+  - component: {fileID: 1717291300}
   m_Layer: 0
   m_Name: Main S09 Goal Floor
   m_TagString: Untagged
@@ -12459,7 +12629,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.MainStageCheckpoint
   sectionNumber: 10
-  respawnPosition: {x: 187, y: -1.45}
+  respawnPosition: {x: 189, y: -1.45}
   minimumRopeAfterCheckpoint: 11
 --- !u!114 &1717291294
 MonoBehaviour:
@@ -12627,7 +12797,7 @@ Transform:
   m_GameObject: {fileID: 1717291292}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 190, y: -7.15, z: 0}
+  m_LocalPosition: {x: 192, y: -7.15, z: 0}
   m_LocalScale: {x: 8, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -12635,6 +12805,18 @@ Transform:
   - {fileID: 1912621915}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1717291300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1717291292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab1ec05b3d804a30a1ed4cf882f79a01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HimoHito.WoodenPlatformDepthVisual
 --- !u!1 &1721261330
 GameObject:
   m_ObjectHideFlags: 0
@@ -12649,6 +12831,7 @@ GameObject:
   - component: {fileID: 1721261333}
   - component: {fileID: 1721261332}
   - component: {fileID: 1721261331}
+  - component: {fileID: 1721261337}
   m_Layer: 0
   m_Name: Main S06 Upper Final Step
   m_TagString: Untagged
@@ -12822,13 +13005,25 @@ Transform:
   m_GameObject: {fileID: 1721261330}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 136, y: 3.75, z: 0}
+  m_LocalPosition: {x: 138, y: 3.75, z: 0}
   m_LocalScale: {x: 4.6, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 146538105}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1721261337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1721261330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab1ec05b3d804a30a1ed4cf882f79a01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HimoHito.WoodenPlatformDepthVisual
 --- !u!1 &1735705277
 GameObject:
   m_ObjectHideFlags: 0
@@ -13098,7 +13293,7 @@ Transform:
   m_GameObject: {fileID: 1747064520}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 194, y: -2.15, z: 0}
+  m_LocalPosition: {x: 196, y: -2.15, z: 0}
   m_LocalScale: {x: 0.62, y: 0.62, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -13283,7 +13478,7 @@ Transform:
   m_GameObject: {fileID: 1748877033}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 126.2, y: 3.45, z: 0}
+  m_LocalPosition: {x: 128.2, y: 3.45, z: 0}
   m_LocalScale: {x: 0.62, y: 0.62, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -13574,7 +13769,7 @@ Transform:
   m_GameObject: {fileID: 1764739391}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 114.1, y: -2.15, z: 0}
+  m_LocalPosition: {x: 116.1, y: -2.15, z: 0}
   m_LocalScale: {x: 0.62, y: 0.62, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -13616,9 +13811,7 @@ MonoBehaviour:
   player: {fileID: 1380120219}
   previewTarget: {fileID: 0}
   holdDuration: 0.7
-  returnDuration: 1.4
-  returnSpeed: 30
-  previewOrthographicSize: 11.5
+  panSpeed: 12
 --- !u!114 &1790426394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13887,7 +14080,7 @@ Transform:
   m_GameObject: {fileID: 1829554967}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 96, y: -0.95, z: 0}
+  m_LocalPosition: {x: 98, y: -0.95, z: 0}
   m_LocalScale: {x: 3, y: 0.6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -14652,7 +14845,7 @@ Transform:
   m_GameObject: {fileID: 1974238587}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 162.35, y: 3.7, z: 0}
+  m_LocalPosition: {x: 164.35, y: 3.7, z: 0}
   m_LocalScale: {x: 1.6, y: 0.45, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -14764,6 +14957,7 @@ GameObject:
   - component: {fileID: 1999290177}
   - component: {fileID: 1999290176}
   - component: {fileID: 1999290175}
+  - component: {fileID: 1999290181}
   m_Layer: 0
   m_Name: Main S07 Middle Shelf
   m_TagString: Untagged
@@ -14937,13 +15131,25 @@ Transform:
   m_GameObject: {fileID: 1999290174}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 154.4, y: -0.7, z: 0}
+  m_LocalPosition: {x: 156.4, y: -0.7, z: 0}
   m_LocalScale: {x: 3, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 765052922}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1999290181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999290174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab1ec05b3d804a30a1ed4cf882f79a01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HimoHito.WoodenPlatformDepthVisual
 --- !u!1 &2056289247
 GameObject:
   m_ObjectHideFlags: 0
@@ -14958,6 +15164,7 @@ GameObject:
   - component: {fileID: 2056289248}
   - component: {fileID: 2056289253}
   - component: {fileID: 2056289252}
+  - component: {fileID: 2056289254}
   m_Layer: 0
   m_Name: Main Landing 1
   m_TagString: Untagged
@@ -15139,6 +15346,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &2056289254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2056289247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab1ec05b3d804a30a1ed4cf882f79a01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HimoHito.WoodenPlatformDepthVisual
 --- !u!115 &2060587148
 MonoScript:
   m_ObjectHideFlags: 0
@@ -15317,7 +15536,7 @@ Transform:
   m_GameObject: {fileID: 2061265741}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 119.4, y: 1.6, z: 0}
+  m_LocalPosition: {x: 121.4, y: 1.6, z: 0}
   m_LocalScale: {x: 1.6, y: 0.45, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -15536,6 +15755,7 @@ GameObject:
   - component: {fileID: 2109282683}
   - component: {fileID: 2109282682}
   - component: {fileID: 2109282681}
+  - component: {fileID: 2109282684}
   m_Layer: 0
   m_Name: Main Landing 3
   m_TagString: Untagged
@@ -15670,8 +15890,8 @@ Transform:
   m_GameObject: {fileID: 2109282676}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 53.6, y: -7.15, z: 0}
-  m_LocalScale: {x: 14, y: 10, z: 1}
+  m_LocalPosition: {x: 54.1, y: -7.15, z: 0}
+  m_LocalScale: {x: 15, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1292893308}
@@ -15732,6 +15952,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &2109282684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2109282676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab1ec05b3d804a30a1ed4cf882f79a01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HimoHito.WoodenPlatformDepthVisual
 --- !u!1 &2119291537
 GameObject:
   m_ObjectHideFlags: 0
@@ -15832,7 +16064,7 @@ Transform:
   m_GameObject: {fileID: 2119291537}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 214, y: -0.95, z: 0}
+  m_LocalPosition: {x: 216, y: -0.95, z: 0}
   m_LocalScale: {x: 2.6, y: 2.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -16234,6 +16466,7 @@ GameObject:
   - component: {fileID: 9100000017}
   - component: {fileID: 9100000016}
   - component: {fileID: 9100000015}
+  - component: {fileID: 9100000019}
   m_Layer: 0
   m_Name: Main Section 3 Low Dead End
   m_TagString: Untagged
@@ -16426,6 +16659,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &9100000019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9100000011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab1ec05b3d804a30a1ed4cf882f79a01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HimoHito.WoodenPlatformDepthVisual
 --- !u!1 &9100000021
 GameObject:
   m_ObjectHideFlags: 0
@@ -16440,6 +16685,7 @@ GameObject:
   - component: {fileID: 9100000027}
   - component: {fileID: 9100000026}
   - component: {fileID: 9100000025}
+  - component: {fileID: 9100000028}
   m_Layer: 0
   m_Name: Main Section 3 Return Step A
   m_TagString: Untagged
@@ -16620,6 +16866,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &9100000028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9100000021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab1ec05b3d804a30a1ed4cf882f79a01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HimoHito.WoodenPlatformDepthVisual
 --- !u!1 &9100000031
 GameObject:
   m_ObjectHideFlags: 0
@@ -16634,6 +16892,7 @@ GameObject:
   - component: {fileID: 9100000037}
   - component: {fileID: 9100000036}
   - component: {fileID: 9100000035}
+  - component: {fileID: 9100000038}
   m_Layer: 0
   m_Name: Main Section 3 Return Step B
   m_TagString: Untagged
@@ -16814,6 +17073,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &9100000038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9100000031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab1ec05b3d804a30a1ed4cf882f79a01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HimoHito.WoodenPlatformDepthVisual
 --- !u!1 &9100000041
 GameObject:
   m_ObjectHideFlags: 0
@@ -16828,6 +17099,7 @@ GameObject:
   - component: {fileID: 9100000047}
   - component: {fileID: 9100000046}
   - component: {fileID: 9100000045}
+  - component: {fileID: 9100000048}
   m_Layer: 0
   m_Name: Main Section 3 Return Step C
   m_TagString: Untagged
@@ -17008,6 +17280,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &9100000048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9100000041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab1ec05b3d804a30a1ed4cf882f79a01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HimoHito.WoodenPlatformDepthVisual
 --- !u!1 &9100000051
 GameObject:
   m_ObjectHideFlags: 0
@@ -17022,6 +17306,7 @@ GameObject:
   - component: {fileID: 9100000057}
   - component: {fileID: 9100000056}
   - component: {fileID: 9100000055}
+  - component: {fileID: 9100000058}
   m_Layer: 0
   m_Name: Main Section 3 Return Step D
   m_TagString: Untagged
@@ -17202,6 +17487,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &9100000058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9100000051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab1ec05b3d804a30a1ed4cf882f79a01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HimoHito.WoodenPlatformDepthVisual
 --- !u!1 &9100000061
 GameObject:
   m_ObjectHideFlags: 0

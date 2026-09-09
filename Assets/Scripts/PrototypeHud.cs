@@ -73,6 +73,8 @@ namespace HimoHito
 
         private void OnGUI()
         {
+            if (MainStagePreview.IsActive) return;
+
             HimoHitoGuiTheme.ApplyToSkin(GUI.skin);
 
             if (platformBuilder == null)
@@ -99,7 +101,7 @@ namespace HimoHito
             if (runController != null &&
                 runController.Outcome == PrototypeRunController.RunOutcome.Failed)
             {
-                DrawFailureScreen();
+                if (!runController.IsFallUnravelling) DrawFailureScreen();
                 return;
             }
 

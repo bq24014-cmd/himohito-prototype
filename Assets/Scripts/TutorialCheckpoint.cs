@@ -38,10 +38,14 @@ namespace HimoHito
                 collision.rigidbody.GetComponent<PrototypeRunController>();
             if (runController != null)
             {
+                int previousSection = runController.CurrentTutorialSection;
                 runController.TryReachTutorialSection(
                     sectionNumber,
                     respawnPosition,
                     startingRopeLength);
+                if (runController.CurrentTutorialSection > previousSection)
+                    SectionArrivalFeedback.Notify(collision.rigidbody.gameObject,
+                        sectionNumber, respawnPosition, checkpointCollider);
             }
         }
 

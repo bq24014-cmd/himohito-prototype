@@ -146,6 +146,8 @@ namespace HimoHito
         private Sprite[] idleFrames;
         private Sprite[] aimFrames;
         private readonly AimPoseState aimPose = new AimPoseState();
+        private readonly SignGlanceState signGlance = new SignGlanceState();
+        private TutorialSectionGuide signGuide;
         private bool isAimPoseDisplayed;
         private Sprite[] edgeFrames;
         private bool edgeArtReady;
@@ -241,6 +243,7 @@ namespace HimoHito
             playerMover = GetComponent<PlayerMover>();
             body = GetComponent<Rigidbody2D>();
             edgePlayerCollider = GetComponent<Collider2D>();
+            signGuide = GetComponent<TutorialSectionGuide>();
             sourceRenderer = GetComponent<SpriteRenderer>();
             CreateVisualBody();
             UpdateRemainingLengthScale();
@@ -249,6 +252,16 @@ namespace HimoHito
             wasRopeAttached = ropeController != null && ropeController.IsAttached;
             swingFacingLeft = visualRenderer != null && visualRenderer.flipX;
             ApplyVisualScale();
+            if (!TryGetComponent(out RopeResourceExpression _))
+                gameObject.AddComponent<RopeResourceExpression>();
+        }
+
+        // Only character art participates; never include shadows, UI, or foot particles.
+        public void CollectCharacterRenderers(System.Collections.Generic.List<SpriteRenderer> output)
+        {
+            if (visualRenderer != null) output.Add(visualRenderer);
+            else if (sourceRenderer != null) output.Add(sourceRenderer);
+            if (balanceBodyRenderer != null) output.Add(balanceBodyRenderer);
         }
 
         private void LateUpdate()
@@ -281,6 +294,8 @@ namespace HimoHito
 
         private void CreateVisualBody()
         {
+            if (!TryGetComponent(out PlayerContactShadow _))
+                gameObject.AddComponent<PlayerContactShadow>();
             GameObject visualObject = new GameObject("Rope Body Visual");
             visualObject.layer = gameObject.layer;
             visualTransform = visualObject.transform;
@@ -491,6 +506,20 @@ namespace HimoHito
                 !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D) && !Input.GetButton("Jump") &&
                 !Input.GetKey(KeyCode.R) && Time.time - softLandingStartedAt >= 0.4f;
             Vector2 aimDirection = ropeController != null ? ropeController.KeyboardAimDirection : Vector2.up;
+            Vector2 signPosition = default;
+            int signSection = 0;
+            if (signGuide == null && gameObject.scene.name == "Tutorial")
+                signGuide = GetComponent<TutorialSectionGuide>();
+            if (signGuide != null) signGuide.TryGetGlanceTarget(out signPosition, out signSection);
+            bool wasGlancing = signGlance.Blend > 0f;
+            signGlance.Advance(signSection, canShowAim && !edgePose.IsVisible, Input.anyKey, Time.deltaTime);
+            if (wasGlancing && Input.anyKey) aimPose.Reset();
+            if (signGlance.Blend > 0f)
+            {
+                Vector2 towardSign = signPosition - HeadReturnPoint;
+                if (towardSign.sqrMagnitude > .01f)
+                    aimDirection = Vector2.Lerp(aimDirection, towardSign.normalized, signGlance.Blend);
+            }
             aimPose.Advance(aimDirection.x, aimDirection.y,
                 visualRenderer != null && visualRenderer.flipX, Time.deltaTime, canShowAim);
             bool canShowEdge = canShowAim && edgeArtReady && aimPose.IsVisible;
@@ -498,7 +527,7 @@ namespace HimoHito
                 Time.deltaTime, canShowEdge);
             // Existing idle drawings look horizontally. Only use them when
             // they agree with the guide; never replace an up/down gaze on a timer.
-            bool canShowIdle = canShowGroundTransition && !groundMotionPose.IsActive && !edgePose.IsVisible &&
+            bool canShowIdle = canShowGroundTransition && signGlance.Blend <= 0f && !groundMotionPose.IsActive && !edgePose.IsVisible &&
                 (!aimPose.IsVisible || aimPose.IsLookingForward) &&
                 Mathf.Abs(playerMover.MovementInput) < 0.01f &&
                 body.linearVelocity.sqrMagnitude < 0.0225f && !Input.anyKey &&
@@ -1446,6 +1475,9 @@ namespace HimoHito
                     }
                 }
                 frames[frameIndex] = frame;
+                RopeFaceLandmarks.Register(frame, pixels, source.width);
+                if (PoseParts.TryGetValue(frame, out RopePoseParts facialParts))
+                    RopeFaceLandmarks.Register(facialParts.Head, pixels, source.width, true);
             }
 
             if (maximumContentWidth <= 0 || maximumContentHeight <= 0)

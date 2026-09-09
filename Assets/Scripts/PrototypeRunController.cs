@@ -55,6 +55,7 @@ namespace HimoHito
 
         public RunOutcome Outcome { get; private set; } = RunOutcome.WaitingToStart;
         public RunFailureReason FailureReason { get; private set; } = RunFailureReason.None;
+        public bool IsFallUnravelling => FallUnravelVisual.IsPlayingFor(gameObject);
         public int CurrentTutorialSection { get; private set; } = 1;
         public const int TutorialSectionCount = 4;
         public string CurrentTutorialObjective => CurrentTutorialSection switch
@@ -129,6 +130,9 @@ namespace HimoHito
 
         private void Update()
         {
+            if (MainStagePreview.IsActive) return;
+            if (IsFallUnravelling) return;
+
             if (Outcome == RunOutcome.WaitingToStart)
             {
                 UpdateStartScreen();
@@ -219,6 +223,7 @@ namespace HimoHito
                 playerMover.enabled = true;
                 ropeController.enabled = true;
                 Outcome = RunOutcome.Playing;
+                MainStagePreview.PlayFor(gameObject);
                 return;
             }
 
@@ -300,6 +305,12 @@ namespace HimoHito
             body.simulated = false;
             FailureReason = failureReason;
             Outcome = outcome;
+            if (failureReason == RunFailureReason.Fell)
+            {
+                playerMover.enabled = false;
+                ropeController.enabled = false;
+                FallUnravelVisual.Play(gameObject);
+            }
             if (failureReason == RunFailureReason.RopeExhausted)
             {
                 GetComponent<PrototypeAudioFeedback>()?.PlayRopeExhausted();
@@ -313,10 +324,12 @@ namespace HimoHito
             RestoreCheckpointState();
             body.position = checkpointPosition;
             ResetMotionAndResume();
+            RespawnWeaveVisual.Play(gameObject);
         }
 
         private void RestartTutorial()
         {
+            GetComponent<SectionArrivalFeedback>()?.ClearTrail();
             body.simulated = true;
             ropeController.DetachAndRefund();
             ropeResource.RestoreCapacityAndCurrent(
@@ -331,6 +344,7 @@ namespace HimoHito
                 startSelectedRopeLength);
             CaptureCheckpointState();
             ResetMotionAndResume();
+            MainStagePreview.PlayFor(gameObject);
         }
 
         private void CaptureCheckpointState()
@@ -356,6 +370,7 @@ namespace HimoHito
             ropeController.enabled = true;
             FailureReason = RunFailureReason.None;
             Outcome = RunOutcome.Playing;
+            Camera.main?.GetComponent<HorizontalCameraFollow>()?.ResetFraming();
         }
 
         private static void LoadNextStage()

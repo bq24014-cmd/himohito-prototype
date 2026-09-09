@@ -410,6 +410,8 @@ namespace HimoHito
                 changed = true;
             }
 
+            if (resourcePath == BlockResourcePath)
+                changed |= WoodenPlatformDepthVisual.Ensure(target);
             return changed;
         }
 
@@ -532,6 +534,8 @@ namespace HimoHito
                 SpriteMeshType.FullRect);
             processed.name = $"{source.name} Processed";
             processed.hideFlags = HideFlags.HideAndDontSave;
+            if (resourcePath == "Art/HimoHitoPlayer-v1")
+                RopeFaceLandmarks.Register(processed, pixels, source.width);
             ProcessedSprites[resourcePath] = processed;
             return processed;
         }
@@ -601,6 +605,8 @@ namespace HimoHito
                 background.AddComponent<TutorialBackgroundParallax>();
                 changed = true;
             }
+
+            if (Application.isPlaying) HangingDecorSway.Ensure(renderer);
 
             return changed;
         }

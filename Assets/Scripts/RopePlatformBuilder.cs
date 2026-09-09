@@ -82,6 +82,10 @@ namespace HimoHito
 
         private void Update()
         {
+            if (MainStagePreview.IsActive) return;
+            // Failure presentation must not accept Q/F while simulation is stopped.
+            if (body != null && !body.simulated) return;
+
             if (Input.GetKeyDown(KeyCode.Q) && IsPlatformBuildingUnlocked)
             {
                 TryBuildCurrentPlatform();

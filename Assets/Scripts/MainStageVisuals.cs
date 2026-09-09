@@ -390,6 +390,7 @@ namespace HimoHito
             changed |= RemoveExcessRepeatedBlockVisuals(
                 terrain,
                 stripCount);
+            changed |= WoodenPlatformDepthVisual.Ensure(terrain);
 
             if (sourceRenderer.enabled)
             {
@@ -841,6 +842,8 @@ namespace HimoHito
                 changed = true;
             }
 
+            if (resourcePath == BlockResourcePath)
+                changed |= WoodenPlatformDepthVisual.Ensure(target);
             return changed;
         }
 
@@ -984,6 +987,7 @@ namespace HimoHito
                 changed = true;
             }
             parallax.Configure(0.97f);
+            if (Application.isPlaying) HangingDecorSway.Ensure(renderer);
             return changed;
         }
 

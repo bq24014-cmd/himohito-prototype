@@ -45,6 +45,7 @@ namespace HimoHito
         public bool IsRopeExhausted { get; private set; }
         public bool IsFallFailure { get; private set; }
         public bool IsFailureVisible => IsRopeExhausted || IsFallFailure;
+        public bool IsFallUnravelling => FallUnravelVisual.IsPlayingFor(gameObject);
 
         private void Awake()
         {
@@ -105,6 +106,8 @@ namespace HimoHito
 
         private void Update()
         {
+            if (MainStagePreview.IsActive) return;
+
             goalZone ??= FindFirstObjectByType<MainStageGoalZone>();
             if (goalZone != null && goalZone.IsClear)
             {
@@ -113,6 +116,7 @@ namespace HimoHito
 
             if (IsFailureVisible)
             {
+                if (IsFallUnravelling) return;
                 if (Input.GetKeyDown(KeyCode.R))
                 {
                     RestartFromCheckpoint();
@@ -164,6 +168,7 @@ namespace HimoHito
             ropeController.enabled = false;
             IsRopeExhausted = false;
             IsFallFailure = true;
+            FallUnravelVisual.Play(gameObject);
         }
 
         public bool TryReachSection(
@@ -225,6 +230,8 @@ namespace HimoHito
             ropeController.enabled = true;
             IsRopeExhausted = false;
             IsFallFailure = false;
+            Camera.main?.GetComponent<HorizontalCameraFollow>()?.ResetFraming();
+            RespawnWeaveVisual.Play(gameObject);
         }
     }
 }

@@ -16,9 +16,12 @@ namespace HimoHito
         private Rigidbody2D owner;
         private float elapsed;
 
-        public static void Play(LineRenderer source, Rigidbody2D player)
+        public Vector3 TipPosition => line != null && line.positionCount > 0
+            ? line.GetPosition(line.positionCount - 1) : initialOrigin;
+
+        public static RopeRetractVisual Play(LineRenderer source, Rigidbody2D player)
         {
-            if (source == null || !source.enabled || source.positionCount < 2 || player == null) return;
+            if (source == null || !source.enabled || source.positionCount < 2 || player == null) return null;
             GameObject copy = new GameObject("Returning Yarn Visual");
             copy.transform.SetParent(player.transform, false);
             RopeRetractVisual effect = copy.AddComponent<RopeRetractVisual>();
@@ -57,6 +60,7 @@ namespace HimoHito
                     Vector3.Distance(effect.drawing[i - 1], effect.drawing[i]);
             }
             effect.line.SetPositions(effect.drawing);
+            return effect;
         }
 
         private void LateUpdate()

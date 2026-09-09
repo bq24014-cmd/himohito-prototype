@@ -2,40 +2,87 @@ using UnityEngine;
 
 namespace HimoHito
 {
-    /// <summary>Short, non-colliding yarn flecks at the player's landing point.</summary>
+    /// <summary>Short, non-colliding yarn fibres for landing, takeoff and wooden footsteps.</summary>
     public sealed class RopeLandingFluff : MonoBehaviour
     {
         private Material runtimeMaterial;
+        private Collider2D sourceFeet;
+        private static readonly RaycastHit2D[] StepHits = new RaycastHit2D[12];
 
-        public static void Play(Collider2D feet)
+        public static void PlayWoodenStep(Collider2D feet)
         {
-            if (feet == null) return;
+            if (feet == null || !feet.enabled || !feet.gameObject.activeInHierarchy ||
+                Time.timeScale <= 0f || feet.attachedRigidbody == null ||
+                !feet.attachedRigidbody.simulated) return;
+            // Read the first actual support, so wood below a bridge/rail is not mistaken for it.
+            Bounds bounds = feet.bounds;
+            var filter = new ContactFilter2D();
+            filter.SetLayerMask(Physics2D.GetLayerCollisionMask(feet.gameObject.layer));
+            filter.useTriggers = false;
+            int count = Physics2D.Raycast(new Vector2(bounds.center.x, bounds.min.y + .12f),
+                Vector2.down, filter, StepHits, .3f);
+            if (count == StepHits.Length) return;
+            for (int i = 0; i < count; i++)
+            {
+                Collider2D support = StepHits[i].collider;
+                if (support == null || support == feet ||
+                    support.attachedRigidbody == feet.attachedRigidbody ||
+                    Physics2D.GetIgnoreCollision(feet, support)) continue;
+                if (StepHits[i].fraction <= 0f || StepHits[i].normal.y < .8f ||
+                    support.GetComponent<GeneratedRopePlatform>() != null ||
+                    support.GetComponent<OneWayRailPlatform>() != null ||
+                    !support.TryGetComponent(out WoodenPlatformDepthVisual _)) return;
+                Emit(feet, false, false, walking: true);
+                return;
+            }
+        }
+
+        public static void Play(Collider2D feet, float impactSpeed = 4f)
+        {
+            Emit(feet, false, impactSpeed >= 8f);
+        }
+
+        public static void PlayTakeoff(Collider2D feet)
+        {
+            Emit(feet, true, false);
+        }
+
+        private static void Emit(Collider2D feet, bool takeoff, bool strongLanding, bool walking = false)
+        {
+            if (feet == null || Time.timeScale <= 0f ||
+                (feet.attachedRigidbody != null && !feet.attachedRigidbody.simulated)) return;
             Texture2D yarn = YarnRopeTexture.Load();
             Shader shader = Shader.Find("Sprites/Default");
             if (yarn == null || shader == null) return;
 
-            GameObject effect = new GameObject("Landing Yarn Fluff");
+            int count = walking ? 2 : strongLanding ? 5 : 3;
+            GameObject effect = new GameObject(walking ? "Footstep Yarn Fibres" :
+                takeoff ? "Takeoff Yarn Fluff" : "Landing Yarn Fluff");
             effect.transform.SetParent(feet.transform, false);
             RopeLandingFluff owner = effect.AddComponent<RopeLandingFluff>();
+            owner.sourceFeet = feet;
             ParticleSystem particles = effect.AddComponent<ParticleSystem>();
             particles.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
             var main = particles.main;
             main.playOnAwake = false;
             main.loop = false;
-            main.duration = 0.7f;
-            main.startLifetime = new ParticleSystem.MinMaxCurve(0.4f, 0.6f);
+            main.duration = walking ? .45f : 0.7f;
+            main.startLifetime = walking ? new ParticleSystem.MinMaxCurve(.28f, .42f) :
+                new ParticleSystem.MinMaxCurve(0.4f, takeoff ? 0.5f : 0.65f);
             main.startSpeed = 0f;
             main.startSize3D = true;
-            main.startSizeX = new ParticleSystem.MinMaxCurve(0.07f, 0.11f);
-            main.startSizeY = new ParticleSystem.MinMaxCurve(0.02f, 0.035f);
+            main.startSizeX = walking ? new ParticleSystem.MinMaxCurve(.055f, .09f) :
+                new ParticleSystem.MinMaxCurve(0.09f, 0.14f);
+            main.startSizeY = walking ? new ParticleSystem.MinMaxCurve(.018f, .026f) :
+                new ParticleSystem.MinMaxCurve(0.022f, 0.035f);
             main.startSizeZ = 1f;
             main.startRotation = new ParticleSystem.MinMaxCurve(-Mathf.PI, Mathf.PI);
             main.startColor = Color.white;
-            main.gravityModifier = 0.03f;
+            main.gravityModifier = walking ? .035f : 0.055f;
             main.simulationSpace = ParticleSystemSimulationSpace.World;
             main.scalingMode = ParticleSystemScalingMode.Shape;
             main.useUnscaledTime = false;
-            main.maxParticles = 5;
+            main.maxParticles = count;
             main.stopAction = ParticleSystemStopAction.Destroy;
             var emission = particles.emission;
             emission.enabled = false;
@@ -55,7 +102,7 @@ namespace HimoHito
             fade.color = gradient;
             owner.runtimeMaterial = new Material(shader)
             {
-                name = "Landing Yarn Fluff Material",
+                name = "Foot Yarn Fibre Material",
                 hideFlags = HideFlags.HideAndDontSave,
                 mainTexture = yarn
             };
@@ -70,21 +117,33 @@ namespace HimoHito
             }
             Bounds bounds = feet.bounds;
             particles.Play();
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < count; i++)
             {
-                float side = (i - 2f) / 2f;
+                float side = i / (float)(count - 1) * 2f - 1f;
+                float spread = walking ? .09f : strongLanding ? 0.48f : 0.3f;
+                float lift = walking ? .04f : takeoff ? 0.2f : strongLanding ? 0.38f : 0.28f;
                 particles.Emit(new ParticleSystem.EmitParams
                 {
                     position = new Vector3(bounds.center.x + side * bounds.extents.x * 0.75f,
                         bounds.min.y + 0.04f, feet.transform.position.z),
-                    velocity = new Vector3(side * 0.35f, 0.28f + (i % 3) * 0.07f, 0f)
+                    velocity = new Vector3(side * spread, lift + (i % 3) * (walking ? .015f : .05f), 0f)
                 }, 1);
             }
         }
 
+        private void Update()
+        {
+            // Failure, title and preview hide residual fibres along with the player.
+            if (sourceFeet == null ||
+                (sourceFeet.attachedRigidbody != null && !sourceFeet.attachedRigidbody.simulated))
+                Destroy(gameObject);
+        }
+
         private void OnDestroy()
         {
-            if (runtimeMaterial != null) Destroy(runtimeMaterial);
+            if (runtimeMaterial == null) return;
+            if (Application.isPlaying) Destroy(runtimeMaterial);
+            else DestroyImmediate(runtimeMaterial);
         }
     }
 }

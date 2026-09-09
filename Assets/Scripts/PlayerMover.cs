@@ -123,6 +123,10 @@ namespace HimoHito
 
         private void FixedUpdate()
         {
+            // Presentation only: a restart teleport must not look like an impact.
+            bool teleported = hasPreviousPhysicsPosition &&
+                Vector2.Distance(body.position, previousPhysicsPosition) > maximumCollisionSweepDistance;
+            float landingImpactSpeed = 0f;
             PreventSolidSurfaceTunneling();
             bool wasGrounded = IsGrounded;
             IsGrounded = CheckGrounded();
@@ -133,7 +137,10 @@ namespace HimoHito
             {
                 audioFeedback?.PlayPlayerLanded();
                 if (landingFluffAirTime >= 0.08f)
-                    RopeLandingFluff.Play(bodyCollider);
+                {
+                    if (!teleported) landingImpactSpeed = -previousVerticalSpeed;
+                    WoodenPlatformDepthVisual.NotifyLanding(bodyCollider, -previousVerticalSpeed);
+                }
             }
             landingFluffAirTime = IsGrounded ? 0f : landingFluffAirTime + Time.fixedDeltaTime;
             coyoteTimer = IsGrounded ? coyoteTime : coyoteTimer - Time.fixedDeltaTime;
@@ -170,12 +177,22 @@ namespace HimoHito
                 body.AddForce(takeoffImpulse, ForceMode2D.Impulse);
                 audioFeedback?.PlayPlayerJumped();
                 GetComponent<RopeBodyVisual>()?.PlayTakeoffElasticity();
+                // Coyote-time jumps happen in the air, so do not invent a floor puff.
+                if (IsGrounded) RopeLandingFluff.PlayTakeoff(bodyCollider);
                 ClearRecentRopePlatform();
                 jumpBufferTimer = 0f;
                 coyoteTimer = 0f;
                 jumpedThisStep = true;
             }
 
+            // A buffered jump uses only the takeoff flecks, not two stacked bursts.
+            if (!jumpedThisStep && landingImpactSpeed > 0f)
+                RopeLandingFluff.Play(bodyCollider, landingImpactSpeed);
+
+            if (IsGrounded && !isSwinging && !jumpedThisStep && body.simulated &&
+                groundedRopePlatform != null && groundedRopePlatform.IsSupportingPlayer())
+                RopeBridgeStepVisual.Press(groundedRopePlatform,
+                    new Vector2(bodyCollider.bounds.center.x, bodyCollider.bounds.min.y));
             UpdateFootstepAudio(isSwinging, jumpedThisStep);
 
             previousPhysicsPosition = body.position;
@@ -206,6 +223,8 @@ namespace HimoHito
             }
 
             audioFeedback?.PlayPlayerFootstep();
+            if (groundedRopePlatform == null)
+                RopeLandingFluff.PlayWoodenStep(bodyCollider);
             RopeBridgeStepVisual.Play(groundedRopePlatform,
                 new Vector2(bodyCollider.bounds.center.x, bodyCollider.bounds.min.y));
             float speedRatio = Mathf.InverseLerp(

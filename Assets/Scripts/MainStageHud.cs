@@ -19,9 +19,9 @@ namespace HimoHito
         private GUIStyle accentStyle;
         private GUIStyle clearTitleStyle;
         private GUIStyle clearBodyStyle;
-        private int displayedSection;
         private float sectionTitleUntil;
         private float stageStartedAt;
+        private bool wasPreviewing;
         private float clearElapsedSeconds = -1f;
 
         private void Awake()
@@ -38,7 +38,6 @@ namespace HimoHito
             {
                 playerBody = ropeController.GetComponent<Rigidbody2D>();
             }
-            displayedSection = respawn != null ? respawn.CurrentSection : 1;
             sectionTitleUntil = Time.unscaledTime + 1.2f;
             stageStartedAt = Time.time;
         }
@@ -50,6 +49,18 @@ namespace HimoHito
 
         private void OnGUI()
         {
+            if (MainStagePreview.IsActive)
+            {
+                wasPreviewing = true;
+                return;
+            }
+            if (wasPreviewing)
+            {
+                sectionTitleUntil = Time.unscaledTime + 1.2f;
+                stageStartedAt = Time.time;
+                wasPreviewing = false;
+            }
+
             HimoHitoGuiTheme.ApplyToSkin(GUI.skin);
             goal ??= FindFirstObjectByType<MainStageGoalZone>();
             EnsureStyles();
@@ -61,6 +72,7 @@ namespace HimoHito
 
             if (respawn != null && respawn.IsFailureVisible)
             {
+                if (respawn.IsFallUnravelling) return;
                 bool fell = respawn.IsFallFailure;
                 HimoHitoFailureScreen.Draw(
                     fell ? "足を踏み外しました" : "ヒモが尽きました",
@@ -71,7 +83,6 @@ namespace HimoHito
                 return;
             }
 
-            UpdateSectionTitle();
             DrawSectionTitle();
 
             GUILayout.BeginArea(new Rect(22f, 18f, Mathf.Min(360f, Screen.width - 44f), 174f), GUI.skin.box);
@@ -286,28 +297,19 @@ namespace HimoHito
                 accentStyle);
         }
 
-        private void UpdateSectionTitle()
-        {
-            int current = respawn != null ? respawn.CurrentSection : 1;
-            if (current == displayedSection)
-            {
-                return;
-            }
-
-            displayedSection = current;
-            sectionTitleUntil = Time.unscaledTime + 1.2f;
-        }
-
         private void DrawSectionTitle()
         {
-            if (Time.unscaledTime > sectionTitleUntil)
+            // Keep the existing start title. Accepted later checkpoints own
+            // their shared arrival notice, so two section titles never overlap.
+            if (Time.unscaledTime > sectionTitleUntil ||
+                (respawn != null && respawn.CurrentSection != 1))
             {
                 return;
             }
 
             GUI.Label(
                 new Rect(0f, Screen.height * 0.17f, Screen.width, 72f),
-                $"第{displayedSection}区間",
+                "第1区間",
                 clearTitleStyle);
         }
 

@@ -30,7 +30,10 @@ namespace HimoHitoEditor
             if (!scene.IsValid() || !scene.isLoaded) return;
             bool changed;
             if (scene.name == "Tutorial")
+            {
                 changed = TutorialFirstSectionVisuals.Apply(GameObject.Find("Player"));
+                changed |= TutorialSectionGuide.EnsureSigns();
+            }
             else if (scene.name == "MainStage")
                 changed = MainStageVisuals.Apply(GameObject.Find("Main Player"));
             else return;

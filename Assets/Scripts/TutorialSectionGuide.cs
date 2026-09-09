@@ -74,6 +74,30 @@ namespace HimoHito
         private GUIStyle closeStyle;
 
         public bool IsVisible => openSection > 0;
+        private Transform glanceSign;
+        private int glanceSection;
+        private readonly TutorialSignGreeting[] signGreetings = new TutorialSignGreeting[4];
+
+        // A read-only presentation target. Opening/closing the guide remains user-controlled.
+        public bool TryGetGlanceTarget(out Vector2 position, out int section)
+        {
+            position = default; section = 0;
+            if (IsVisible || runController == null || playerBody == null ||
+                runController.Outcome != PrototypeRunController.RunOutcome.Playing ||
+                (overlayControls != null && overlayControls.IsOverlayVisible)) return false;
+            int current = runController.CurrentTutorialSection;
+            if (!IsNearSign(current)) return false;
+            if (glanceSign == null || glanceSection != current)
+            {
+                GameObject sign = SceneObjectLookup.Find(SignPrefix + current, "Tutorial");
+                glanceSign = sign != null ? sign.transform : null;
+                glanceSection = current;
+            }
+            if (glanceSign == null || !glanceSign.gameObject.activeInHierarchy) return false;
+            position = (Vector2)glanceSign.position + Vector2.up * .5f;
+            section = current;
+            return true;
+        }
 
         private void Awake()
         {
@@ -97,6 +121,9 @@ namespace HimoHito
 
         private void Update()
         {
+            UpdateSignGreetings();
+            if (MainStagePreview.IsActive) return;
+
             if (runController == null || playerBody == null)
             {
                 return;
@@ -141,8 +168,31 @@ namespace HimoHito
             }
         }
 
+        private void UpdateSignGreetings()
+        {
+            if (playerBody == null || runController == null) return;
+            bool permitted = !MainStagePreview.IsActive && !IsVisible && playerBody.simulated &&
+                runController.Outcome == PrototypeRunController.RunOutcome.Playing &&
+                (overlayControls == null || !overlayControls.IsOverlayVisible);
+            for (int index = 0; index < signGreetings.Length; index++)
+            {
+                if (signGreetings[index] == null)
+                {
+                    GameObject sign = SceneObjectLookup.Find(SignPrefix + (index + 1), "Tutorial");
+                    Transform visual = sign != null ? sign.transform.Find(SignArtworkName) : null;
+                    if (visual == null || !visual.gameObject.activeInHierarchy) continue;
+                    if (!visual.TryGetComponent(out signGreetings[index]))
+                        signGreetings[index] = visual.gameObject.AddComponent<TutorialSignGreeting>();
+                }
+                signGreetings[index].Tick(playerBody.position, SignPositions[index], InteractionRange,
+                    permitted && runController.CurrentTutorialSection == index + 1, Time.deltaTime);
+            }
+        }
+
         private void OnDisable()
         {
+            foreach (TutorialSignGreeting greeting in signGreetings)
+                if (greeting != null) greeting.Cancel();
             if (IsVisible)
             {
                 CloseGuide();
@@ -151,6 +201,8 @@ namespace HimoHito
 
         private void OnGUI()
         {
+            if (MainStagePreview.IsActive) return;
+
             GUI.depth = -1100;
             HimoHitoGuiTheme.ApplyToSkin(GUI.skin);
             EnsureStyles();
@@ -239,6 +291,16 @@ namespace HimoHito
                     new Color(0.24f, 0.56f, 0.88f),
                     6);
                 changed |= EnsureSignArtwork(sign.transform);
+                Transform board = sign.transform.Find(SignArtworkName);
+                if (board != null && board.gameObject.activeSelf)
+                {
+                    if (!board.TryGetComponent(out TutorialSignInscription inscription))
+                    {
+                        inscription = board.gameObject.AddComponent<TutorialSignInscription>();
+                        changed = true;
+                    }
+                    changed |= inscription.Configure(section);
+                }
             }
             return changed;
         }

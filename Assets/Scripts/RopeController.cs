@@ -17,7 +17,14 @@ namespace HimoHito
         private const float RopeRevealDuration = 0.13f;
         private float ropeRevealStartedAt;
         private bool hookArrivalPending;
+        private HookYarnKnotVisual hookKnot;
         private LineRenderer aimHookOutline;
+        private LineRenderer aimHookHalo;
+        private LineRenderer aimHookTip;
+        private bool hasAvailableAimAnchor;
+        private Vector2 availableAimAnchor;
+        private HookPoint highlightedHook;
+        private float highlightElapsed;
         private Material aimHookMaterial;
         private AnimationCurve unavailableAimWidth;
         private readonly AnimationCurve availableAimWidth = AnimationCurve.Constant(0f, 1f, 1f);
@@ -183,7 +190,7 @@ namespace HimoHito
 
         private void OnDisable()
         {
-            if (aimHookOutline != null) aimHookOutline.enabled = false;
+            HideAimHookFeedback();
             DetachAndRefund();
         }
 
@@ -251,6 +258,7 @@ namespace HimoHito
             }
             ropeJoint.distance = jointDistance;
             ropeJoint.enabled = true;
+            HideAimHookFeedback();
             if (isPlatformBuildAttachment)
             {
                 BeginPlatformBuildHold();
@@ -268,6 +276,13 @@ namespace HimoHito
         public void DetachAndRefund(bool playReleaseSound = false)
         {
             hookArrivalPending = false;
+            if (!playReleaseSound)
+            {
+                ClearHookKnot();
+                // Retry can follow E in the same frame, before the released knot's update.
+                foreach (HookYarnKnotVisual knot in GetComponentsInChildren<HookYarnKnotVisual>(true))
+                    knot.Cancel();
+            }
             if (!playReleaseSound) ropeBodyVisual?.CancelActionPoses();
             if (!IsAttached)
             {
@@ -283,7 +298,12 @@ namespace HimoHito
                 : body.angularVelocity;
             HookPoint releasedHook = activeHookPoint;
             // Manual release only: copy the artwork before hiding the live rope.
-            if (playReleaseSound) RopeRetractVisual.Play(lineRenderer, body);
+            if (playReleaseSound)
+            {
+                RopeRetractVisual returning = RopeRetractVisual.Play(lineRenderer, body);
+                if (hookKnot != null) hookKnot.Release(returning);
+                hookKnot = null;
+            }
             ropeJoint.enabled = false;
             EndPlatformBuildHold();
             activeHookPoint = null;
@@ -380,6 +400,7 @@ namespace HimoHito
             }
 
             hookArrivalPending = false;
+            ClearHookKnot();
             ropeBodyVisual?.CancelActionPoses();
             ropeJoint.enabled = false;
             EndPlatformBuildHold();
@@ -733,14 +754,30 @@ namespace HimoHito
 
         private void UpdateAimHookFeedback()
         {
+            hasAvailableAimAnchor = false;
             if (aimHookOutline != null) aimHookOutline.enabled = false;
-            if (IsAttached || Time.timeScale <= 0f || body == null) return;
+            if (aimHookHalo != null) aimHookHalo.enabled = false;
+            if (aimHookTip != null) aimHookTip.enabled = false;
+            if (IsAttached || Time.timeScale <= 0f || body == null || !body.simulated)
+            {
+                highlightedHook = null; highlightElapsed = 0f;
+                return;
+            }
 
             Vector2 target = body.position + keyboardAimDirection * maximumShotDistance;
             bool available = TryResolveAvailableAttachment(target, out Vector2 anchor,
                 out HookPoint hook);
             if (!available && !TryResolveAttachmentPoint(target, out anchor, out hook,
-                    previewBeyondSelectedLength: true)) return;
+                    previewBeyondSelectedLength: true))
+            {
+                highlightedHook = null; highlightElapsed = 0f;
+                return;
+            }
+            if (!available || highlightedHook != hook) highlightElapsed = 0f;
+            highlightedHook = available ? hook : null;
+            if (available) highlightElapsed += Time.deltaTime;
+            hasAvailableAimAnchor = available;
+            availableAimAnchor = anchor;
 
             if (aimHookOutline == null)
             {
@@ -756,6 +793,10 @@ namespace HimoHito
                 aimHookOutline.positionCount = 65;
                 aimHookOutline.sortingLayerID = lineRenderer.sortingLayerID;
                 aimHookOutline.sortingOrder = lineRenderer.sortingOrder + 2;
+                aimHookHalo = CreateAimAccent("Soft Hook Halo", 65,
+                    aimHookOutline.sortingOrder - 1);
+                aimHookTip = CreateAimAccent("Hook Aim Tip", 17,
+                    aimHookOutline.sortingOrder + 1);
                 unavailableAimWidth = new AnimationCurve();
                 for (int i = 0; i <= 64; i++)
                 {
@@ -765,21 +806,75 @@ namespace HimoHito
                 }
             }
 
-            Color color = available ? new Color(1f, 0.91f, 0.65f, 0.8f)
+            float glow = Mathf.SmoothStep(0f, 1f, highlightElapsed / .2f);
+            float breathe = .5f + .5f * Mathf.Sin(highlightElapsed * Mathf.PI * 2f / 2.6f);
+            Color color = available ? new Color(1f, 0.94f, 0.76f,
+                glow * Mathf.Lerp(.55f, .82f, breathe))
                 : new Color(1f, 0.64f, 0.72f, 0.5f);
             aimHookOutline.startColor = aimHookOutline.endColor = color;
+            // Follow the authored ring's visual size, not its targeting collider.
+            float radius = GetAimRingRadius(hook);
             // A thin, complete ring means E can connect; a broken ring means it cannot.
             for (int i = 0; i <= 64; i++)
             {
                 float t = i / 64f;
                 float angle = t * Mathf.PI * 2f;
-                float radius = 0.49f;
                 aimHookOutline.SetPosition(i, new Vector3(anchor.x + Mathf.Cos(angle) * radius,
                     anchor.y + Mathf.Sin(angle) * radius, 0f));
+                aimHookHalo.SetPosition(i, aimHookOutline.GetPosition(i));
             }
             aimHookOutline.widthCurve = available ? availableAimWidth : unavailableAimWidth;
-            aimHookOutline.widthMultiplier = available ? 0.035f : 0.025f;
+            aimHookOutline.widthMultiplier = available ? Mathf.Lerp(.028f, .045f, glow * breathe) : 0.025f;
             aimHookOutline.enabled = true;
+            Color halo = new Color(color.r, color.g, color.b, color.a * .18f);
+            aimHookHalo.startColor = aimHookHalo.endColor = halo;
+            aimHookHalo.widthMultiplier = .12f;
+            aimHookHalo.enabled = available;
+            for (int i = 0; i < 17; i++)
+            {
+                float angle = i / 16f * Mathf.PI * 2f;
+                aimHookTip.SetPosition(i, new Vector3(anchor.x + Mathf.Cos(angle) * .045f,
+                    anchor.y + Mathf.Sin(angle) * .045f, 0f));
+            }
+            aimHookTip.startColor = aimHookTip.endColor = color;
+            aimHookTip.widthMultiplier = .022f;
+            aimHookTip.enabled = available;
+        }
+
+        private LineRenderer CreateAimAccent(string visualName, int count, int order)
+        {
+            GameObject visual = new GameObject(visualName);
+            visual.transform.SetParent(aimHookOutline.transform, false);
+            LineRenderer accent = visual.AddComponent<LineRenderer>();
+            accent.sharedMaterial = aimHookMaterial;
+            accent.useWorldSpace = true;
+            accent.loop = true;
+            accent.positionCount = count;
+            accent.numCornerVertices = 3;
+            accent.sortingLayerID = aimHookOutline.sortingLayerID;
+            accent.sortingOrder = order;
+            accent.enabled = false;
+            return accent;
+        }
+
+        private static float GetAimRingRadius(HookPoint hook)
+        {
+            HimoHitoHookRingVisual blue = hook.GetComponentInChildren<HimoHitoHookRingVisual>();
+            RopeAnchorRingVisual green = hook.GetComponentInChildren<RopeAnchorRingVisual>();
+            SpriteRenderer ring = blue != null ? blue.GetComponent<SpriteRenderer>() :
+                green != null ? green.GetComponent<SpriteRenderer>() : null;
+            return ring != null && ring.enabled && ring.sprite != null
+                ? Mathf.Max(ring.bounds.extents.x, ring.bounds.extents.y) + .035f : .49f;
+        }
+
+        private void HideAimHookFeedback()
+        {
+            hasAvailableAimAnchor = false;
+            highlightedHook = null;
+            highlightElapsed = 0f;
+            if (aimHookOutline != null) aimHookOutline.enabled = false;
+            if (aimHookHalo != null) aimHookHalo.enabled = false;
+            if (aimHookTip != null) aimHookTip.enabled = false;
         }
 
         private void DrawAimGuide()
@@ -792,9 +887,12 @@ namespace HimoHito
             lineRenderer.startWidth = minimumRopeWidth * 0.6f;
             lineRenderer.endWidth = minimumRopeWidth * 0.6f;
             lineRenderer.startColor = AimGuideColor;
-            lineRenderer.endColor = AimGuideColor;
+            lineRenderer.endColor = hasAvailableAimAnchor
+                ? new Color(1f, .94f, .76f, .7f) : AimGuideColor;
             lineRenderer.SetPosition(0, body.position);
-            lineRenderer.SetPosition(1, body.position + keyboardAimDirection * selectedRopeLength);
+            // Presentation only: never rotate keyboardAimDirection or change the shot resolver.
+            lineRenderer.SetPosition(1, hasAvailableAimAnchor ? availableAimAnchor :
+                body.position + keyboardAimDirection * selectedRopeLength);
         }
 
         private void DrawAttachedRope()
@@ -825,6 +923,8 @@ namespace HimoHito
                 audioFeedback?.PlayHookAttached();
                 if (activeHookPoint != null)
                 {
+                    ClearHookKnot();
+                    hookKnot = HookYarnKnotVisual.Play(lineRenderer, body, anchorPoint);
                     HimoHitoHookRingVisual blue = activeHookPoint.GetComponentInChildren<HimoHitoHookRingVisual>();
                     RopeAnchorRingVisual green = activeHookPoint.GetComponentInChildren<RopeAnchorRingVisual>();
                     Transform visual = blue != null ? blue.transform : green != null ? green.transform : null;
@@ -834,7 +934,7 @@ namespace HimoHito
                     {
                         HookArrivalVisualPulse pulse = visual.GetComponent<HookArrivalVisualPulse>();
                         if (pulse == null) pulse = visual.gameObject.AddComponent<HookArrivalVisualPulse>();
-                        pulse.Play();
+                        pulse.Play(GetRopeVisualOrigin());
                     }
                 }
             }
@@ -849,6 +949,12 @@ namespace HimoHito
             float slack = Mathf.Max(0f, activeRopeLength - directDistance);
             Vector2 point = Vector2.Lerp(start, end, t);
             return point + Vector2.down * (slack * 4f * t * (1f - t));
+        }
+
+        private void ClearHookKnot()
+        {
+            if (hookKnot != null) hookKnot.Cancel();
+            hookKnot = null;
         }
 
         private Vector2 GetRopeVisualOrigin()

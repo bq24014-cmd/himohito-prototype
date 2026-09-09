@@ -61,6 +61,8 @@ namespace HimoHito
 
         private void Update()
         {
+            if (MainStagePreview.IsActive) return;
+
             if (stairs == null || visual == null) RestoreReferences();
             if (trackedPlayer == null)
             {

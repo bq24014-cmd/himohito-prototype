@@ -500,6 +500,7 @@ GameObject:
   - component: {fileID: 145014432}
   - component: {fileID: 145014431}
   - component: {fileID: 145014430}
+  - component: {fileID: 145014437}
   m_Layer: 0
   m_Name: Tutorial T2 Landing
   m_TagString: Untagged
@@ -695,6 +696,18 @@ Transform:
   - {fileID: 1411980682}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &145014437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145014429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab1ec05b3d804a30a1ed4cf882f79a01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HimoHito.WoodenPlatformDepthVisual
 --- !u!1 &154412948
 GameObject:
   m_ObjectHideFlags: 0
@@ -2511,6 +2524,7 @@ GameObject:
   - component: {fileID: 779131354}
   - component: {fileID: 779131353}
   - component: {fileID: 779131352}
+  - component: {fileID: 779131359}
   m_Layer: 0
   m_Name: Tutorial T3 Landing
   m_TagString: Untagged
@@ -2706,6 +2720,18 @@ Transform:
   - {fileID: 1253995394}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &779131359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779131351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab1ec05b3d804a30a1ed4cf882f79a01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HimoHito.WoodenPlatformDepthVisual
 --- !u!1 &789474291
 GameObject:
   m_ObjectHideFlags: 0
@@ -3021,6 +3047,7 @@ GameObject:
   - component: {fileID: 916365242}
   - component: {fileID: 916365247}
   - component: {fileID: 916365246}
+  - component: {fileID: 916365248}
   m_Layer: 0
   m_Name: Start Ground
   m_TagString: Untagged
@@ -3201,6 +3228,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &916365248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 916365241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab1ec05b3d804a30a1ed4cf882f79a01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HimoHito.WoodenPlatformDepthVisual
 --- !u!1 &936714448
 GameObject:
   m_ObjectHideFlags: 0
@@ -5519,6 +5558,7 @@ GameObject:
   - component: {fileID: 1431599381}
   - component: {fileID: 1431599387}
   - component: {fileID: 1431599386}
+  - component: {fileID: 1431599388}
   m_Layer: 0
   m_Name: Tutorial Landing
   m_TagString: Untagged
@@ -5714,6 +5754,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1431599388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1431599380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab1ec05b3d804a30a1ed4cf882f79a01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HimoHito.WoodenPlatformDepthVisual
 --- !u!1 &1583521631
 GameObject:
   m_ObjectHideFlags: 0
@@ -6834,6 +6886,7 @@ GameObject:
   - component: {fileID: 1754056069}
   - component: {fileID: 1754056068}
   - component: {fileID: 1754056067}
+  - component: {fileID: 1754056074}
   m_Layer: 0
   m_Name: Tutorial T4 Goal Floor
   m_TagString: Untagged
@@ -7026,6 +7079,18 @@ Transform:
   - {fileID: 1395726933}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1754056074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1754056066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab1ec05b3d804a30a1ed4cf882f79a01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HimoHito.WoodenPlatformDepthVisual
 --- !u!1 &1780730936
 GameObject:
   m_ObjectHideFlags: 0
@@ -8178,6 +8243,7 @@ GameObject:
   - component: {fileID: 1966200981}
   - component: {fileID: 1966200980}
   - component: {fileID: 1966200979}
+  - component: {fileID: 1966200985}
   m_Layer: 0
   m_Name: Tutorial T4 Hanging Beam
   m_TagString: Untagged
@@ -8358,6 +8424,18 @@ Transform:
   - {fileID: 964379305}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1966200985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966200978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab1ec05b3d804a30a1ed4cf882f79a01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HimoHito.WoodenPlatformDepthVisual
 --- !u!1 &2060652468
 GameObject:
   m_ObjectHideFlags: 0

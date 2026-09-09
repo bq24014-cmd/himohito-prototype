@@ -14,6 +14,8 @@ namespace HimoHito
         [SerializeField, Range(0f, 1f)] private float horizontalFollow = 0.9f;
 
         private Transform cameraTransform;
+        private Camera viewCamera;
+        private SpriteRenderer backgroundRenderer;
         private Vector3 backgroundStartPosition;
         private float cameraStartX;
         private bool isInitialized;
@@ -21,6 +23,8 @@ namespace HimoHito
         private void Start()
         {
             TryInitialize();
+            if (TryGetComponent(out SpriteRenderer renderer))
+                HangingDecorSway.Ensure(renderer);
         }
 
         public void Configure(float followAmount)
@@ -37,8 +41,22 @@ namespace HimoHito
             }
 
             float cameraTravel = cameraTransform.position.x - cameraStartX;
+            float nextX = backgroundStartPosition.x + cameraTravel * horizontalFollow;
+            // The opening tour reaches the far end immediately. Keep the near artwork
+            // covering that view without stretching it or changing normal play's parallax.
+            if (MainStagePreview.IsActive && viewCamera != null && viewCamera.orthographic &&
+                backgroundRenderer != null && backgroundRenderer.sprite != null)
+            {
+                Bounds bounds = backgroundRenderer.bounds;
+                float margin = Mathf.Max(0f, bounds.extents.x -
+                    viewCamera.orthographicSize * viewCamera.aspect - 0.05f);
+                float centerOffset = bounds.center.x - transform.position.x;
+                nextX = Mathf.Clamp(nextX + centerOffset,
+                    cameraTransform.position.x - margin,
+                    cameraTransform.position.x + margin) - centerOffset;
+            }
             transform.position = new Vector3(
-                backgroundStartPosition.x + cameraTravel * horizontalFollow,
+                nextX,
                 backgroundStartPosition.y,
                 backgroundStartPosition.z);
         }
@@ -57,6 +75,8 @@ namespace HimoHito
             }
 
             cameraTransform = targetCamera.transform;
+            viewCamera = targetCamera;
+            TryGetComponent(out backgroundRenderer);
             transform.position = new Vector3(
                 cameraTransform.position.x,
                 transform.position.y,
