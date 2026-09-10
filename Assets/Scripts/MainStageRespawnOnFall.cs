@@ -106,10 +106,11 @@ namespace HimoHito
 
         private void Update()
         {
+            if (StageStartTransition.IsActive) return;
             if (MainStagePreview.IsActive) return;
 
             goalZone ??= FindFirstObjectByType<MainStageGoalZone>();
-            if (goalZone != null && goalZone.IsClear)
+            if (goalZone != null && goalZone.IsCompleting)
             {
                 return;
             }
@@ -134,7 +135,9 @@ namespace HimoHito
                 return;
             }
 
-            if (transform.position.y < fallThreshold)
+            // Interpolated Transform can still show the previous fall position
+            // between a retry teleport and the next physics step.
+            if (body.position.y < fallThreshold)
             {
                 EnterFallFailureState();
                 return;
@@ -224,6 +227,7 @@ namespace HimoHito
             platformBuilder.RestorePlatformStates(checkpointPlatformStates);
             MainStageSectionFiveSetup.RestoreRailShelvesAfterRestart();
             body.position = checkpointPosition;
+            transform.position = new Vector3(checkpointPosition.x, checkpointPosition.y, transform.position.z);
             body.linearVelocity = Vector2.zero;
             body.angularVelocity = 0f;
             playerMover.enabled = true;

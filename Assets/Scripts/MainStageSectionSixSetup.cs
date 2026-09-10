@@ -34,44 +34,44 @@ namespace HimoHito
         public const int UpperBridgeRopeLength = 14;
         public const int LowerRouteRopeLength = 8;
 
-        // Section five's right bank ends at X=116.1 with a top of Y=-2.15.
+        // Section five's right bank ends at X=119.1 with a top of Y=-2.15.
         // Only this start anchor remains on the bank; the remaining route is
         // raised three units to create the intended vertical separation.
         public static readonly Vector2 UpperBridgeStartHookPosition =
-            new Vector2(116.1f, -2.15f);
+            new Vector2(119.1f, -2.15f);
         public static readonly Vector2 UpperBridgeEndHookPosition =
-            new Vector2(128.2f, 3.45f);
+            new Vector2(131.2f, 3.45f);
         public static readonly Vector2 BridgeHookSize =
             new Vector2(0.62f, 0.62f);
 
         public static readonly Vector2 UpperShelfAPosition =
-            new Vector2(129.7f, 3.1f);
+            new Vector2(132.7f, 3.1f);
         public static readonly Vector2 UpperShelfASize =
             new Vector2(3f, 0.7f);
         public static readonly Vector2 UpperShelfBPosition =
-            new Vector2(133.4f, 4.4f);
+            new Vector2(136.4f, 4.4f);
         public static readonly Vector2 UpperShelfBSize =
             new Vector2(2.6f, 0.7f);
         public static readonly Vector2 UpperShelfCPosition =
-            new Vector2(138f, 3.75f);
+            new Vector2(141f, 3.75f);
         public static readonly Vector2 UpperShelfCSize =
             new Vector2(4.6f, 0.7f);
 
         public static readonly Vector2 LowerHookAPosition =
-            new Vector2(121.4f, 1.6f);
+            new Vector2(124.4f, 1.6f);
         public static readonly Vector2 LowerHookBPosition =
-            new Vector2(128.8f, 1.8f);
+            new Vector2(131.8f, 1.8f);
         public static readonly Vector2 LowerHookCPosition =
-            new Vector2(135.6f, 1.8f);
+            new Vector2(138.6f, 1.8f);
         public static readonly Vector2 NormalHookSize =
             new Vector2(1.6f, 0.45f);
 
         public static readonly Vector2 MergePosition =
-            new Vector2(148.1f, -7.15f);
+            new Vector2(151.1f, -7.15f);
         public static readonly Vector2 MergeSize =
             new Vector2(8f, 10f);
         public static readonly Vector2 MergeRespawnPosition =
-            new Vector2(144.9f, -1.45f);
+            new Vector2(147.9f, -1.45f);
 
         private static readonly Color TerrainColor =
             new Color(0.56f, 0.29f, 0.09f);

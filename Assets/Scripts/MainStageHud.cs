@@ -23,9 +23,13 @@ namespace HimoHito
         private float stageStartedAt;
         private bool wasPreviewing;
         private float clearElapsedSeconds = -1f;
+        private ClearJourneyView clearJourney;
 
         private void Awake()
         {
+            // Saved scenes may predate the overlay component added by the scene builder.
+            if (FindFirstObjectByType<StageOverlayControls>() == null)
+                gameObject.AddComponent<StageOverlayControls>();
             ropeResource = FindFirstObjectByType<RopeResource>();
             ropeController = FindFirstObjectByType<RopeController>();
             platformBuilder = FindFirstObjectByType<RopePlatformBuilder>();
@@ -69,6 +73,7 @@ namespace HimoHito
                 DrawClearScreen();
                 return;
             }
+            clearJourney = null;
 
             if (respawn != null && respawn.IsFailureVisible)
             {
@@ -85,7 +90,7 @@ namespace HimoHito
 
             DrawSectionTitle();
 
-            GUILayout.BeginArea(new Rect(22f, 18f, Mathf.Min(360f, Screen.width - 44f), 174f), GUI.skin.box);
+            HimoHitoUiParts.BeginHudArea(new Rect(22f, 18f, Mathf.Min(360f, Screen.width - 44f), HimoHitoUiParts.CompactHudHeight));
             GUILayout.Label("本編　" + $"第{(respawn != null ? respawn.CurrentSection : 1)}区間", titleStyle);
             if (ropeResource != null)
             {
@@ -337,48 +342,14 @@ namespace HimoHito
                 clearElapsedSeconds = Mathf.Max(0f, Time.time - stageStartedAt);
             }
 
-            GUILayout.BeginArea(new Rect(
-                0f,
-                Screen.height * 0.075f,
-                Screen.width,
-                Screen.height * 0.42f));
-            GUILayout.Label("CLEAR", clearTitleStyle);
-            if (ropeResource != null)
-            {
-                GUILayout.Label(
-                    $"残ったヒモ　{ropeResource.CurrentLength:0.0} / " +
-                    $"{ropeResource.MaximumLength:0.0}",
-                    clearBodyStyle);
-            }
-            if (platformBuilder != null)
-            {
-                GUILayout.Label(
-                    $"編んだ足場　{platformBuilder.GeneratedPlatformCount} 本",
-                    clearBodyStyle);
-            }
-            if (respawn != null)
-            {
-                GUILayout.Label($"補充　{respawn.RefillCount} 回", clearBodyStyle);
-            }
-            GUILayout.Label(
-                $"かかった時間　{FormatElapsed(clearElapsedSeconds)}",
-                clearBodyStyle);
-            GUILayout.Space(16f);
-            Rect retryButtonRow = GUILayoutUtility.GetRect(
-                1f,
-                60f,
-                GUILayout.ExpandWidth(true),
-                GUILayout.Height(60f));
-            Rect retryButton = new Rect(
-                retryButtonRow.x + Mathf.Max(0f, (retryButtonRow.width - 480f) * 0.5f),
-                retryButtonRow.y,
-                Mathf.Min(480f, retryButtonRow.width),
-                retryButtonRow.height);
-            HimoHitoUiParts.DrawWoodButtonLabel(
-                retryButton,
-                "R　本編を最初から再挑戦",
-                clearBodyStyle);
-            GUILayout.EndArea();
+            clearJourney ??= new ClearJourneyView(ropeResource, platformBuilder, false);
+            ClearJourneyView.Choice choice = clearJourney.Draw(false, FormatElapsed(clearElapsedSeconds), respawn != null ? respawn.RefillCount : 0);
+            if (choice == ClearJourneyView.Choice.None) return;
+            if (choice == ClearJourneyView.Choice.StageSelection)
+                goal.ReturnToStageSelectionFromClear();
+            else
+                goal.RetryAfterClear();
+            GUIUtility.ExitGUI();
         }
 
         private static string FormatElapsed(float seconds)

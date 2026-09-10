@@ -12,6 +12,10 @@ namespace HimoHito
         private int drawnSection;
         private float worldWidth;
         private int sortingLayer, sortingOrder;
+        private float animationTime;
+        private SpriteRenderer picturePlayer;
+        private float pictureHeight;
+        private LineRenderer[] firstRope, secondRope, mergedRope, middleRing, connectionRope;
         private static readonly Color Cream = new Color(1f, .91f, .68f);
         private static readonly Color Ink = new Color(.27f, .10f, .055f, .85f);
         private static readonly Color Blue = new Color(.20f, .71f, .94f);
@@ -30,6 +34,7 @@ namespace HimoHito
         private void Update()
         {
             if (drawing == null || drawnSection != section) Rebuild();
+            if (Application.isPlaying) AdvanceAnimation(Time.deltaTime);
         }
 
         private void Rebuild()
@@ -56,7 +61,7 @@ namespace HimoHito
             {
                 case 1:
                     Vector2 swingHead = PlayerPicture(new Vector2(.255f, .54f), .125f);
-                    Curve(swingHead, new Vector2(.34f, .72f), new Vector2(.42f, .80f), true);
+                    firstRope=Curve(swingHead, new Vector2(.34f, .72f), new Vector2(.42f, .80f), true);
                     Ring(new Vector2(.42f, .80f), Blue);
                     Arrow(new Vector2(.27f, .50f), new Vector2(.51f, .50f));
                     Key("E", new Vector2(.72f, .69f), .15f, .23f);
@@ -69,23 +74,130 @@ namespace HimoHito
                 case 3:
                     Shelf(.20f, .76f, -.055f);
                     Shelf(.55f, .76f, .055f);
-                    Curve(new Vector2(.20f, .76f), new Vector2(.375f, .48f), new Vector2(.55f, .76f), true);
+                    firstRope=Curve(new Vector2(.20f, .76f), new Vector2(.375f, .48f), new Vector2(.55f, .76f), true);
                     Ring(new Vector2(.20f, .76f), Green);
                     Ring(new Vector2(.55f, .76f), Green);
                     PlayerPicture(new Vector2(.375f, .625f), .125f);
                     Key("Q", new Vector2(.72f, .69f), .15f, .23f);
                     break;
                 case 4:
-                    Curve(new Vector2(.20f, .76f), new Vector2(.27f, .65f), new Vector2(.375f, .81f), false);
-                    Curve(new Vector2(.375f, .81f), new Vector2(.48f, .65f), new Vector2(.55f, .76f), false);
-                    Curve(new Vector2(.20f, .76f), new Vector2(.375f, .40f), new Vector2(.55f, .76f), true);
-                    Ring(new Vector2(.375f, .81f), Blue);
+                    firstRope=Curve(new Vector2(.20f, .76f), new Vector2(.27f, .65f), new Vector2(.375f, .81f), false);
+                    secondRope=Curve(new Vector2(.375f, .81f), new Vector2(.48f, .65f), new Vector2(.55f, .76f), false);
+                    mergedRope=Curve(new Vector2(.20f, .76f), new Vector2(.375f, .40f), new Vector2(.55f, .76f), true);
+                    middleRing=Ring(new Vector2(.375f, .81f), Blue);
                     Ring(new Vector2(.20f, .76f), Green);
                     Ring(new Vector2(.55f, .76f), Green);
                     Arrow(new Vector2(.375f, .72f), new Vector2(.375f, .62f));
                     PlayerPicture(new Vector2(.46f, .625f), .115f);
                     Key("F", new Vector2(.72f, .69f), .15f, .23f);
                     break;
+            }
+            if(section>=3)
+            {
+                connectionRope=Curve(Vector2.zero,Vector2.zero,Vector2.zero,true);
+                SetRopeAppearance(connectionRope,0f);
+            }
+            if(Application.isPlaying) AdvanceAnimation(0f);
+        }
+
+        private void AdvanceAnimation(float delta)
+        {
+            if(drawing==null || picturePlayer==null || delta<0f) return;
+            // The world signs use scaled time; unlike the open explanation they pause with gameplay.
+            if(delta>0f) animationTime=Mathf.Repeat(animationTime+Mathf.Min(delta,.1f),
+                TutorialGuideAnimation.Duration(section));
+            var frame=TutorialGuideAnimation.Sample(section,animationTime);
+            float opacity=frame.Opacity;
+            Vector2 feet;
+            if(section<=2)
+            {
+                float along=Mathf.Clamp01((frame.Feet.x-.29f)/.42f);
+                Vector2 a=section==1 ? new Vector2(.20f,.66f) : new Vector2(.235f,.69f);
+                Vector2 b=section==1 ? new Vector2(.375f,.38f) : new Vector2(.395f,frame.Danger ? .37f : .58f);
+                Vector2 c=section==1 ? new Vector2(.55f,.66f) : new Vector2(.56f,.69f);
+                feet=TutorialGuideAnimation.Curve(a,b,c,along);
+                Vector2 hook=section==1 ? new Vector2(.42f,.80f) : new Vector2(.395f,.838f);
+                Vector2 head=PictureCrown(feet);
+                AnimateCurve(firstRope,head,Vector2.Lerp(head,hook,.5f),hook,
+                    frame.Connection,opacity*frame.Connection);
+            }
+            else if(section==3)
+            {
+                Vector2 a=new Vector2(.20f,.76f), b=new Vector2(.375f,.48f), c=new Vector2(.55f,.76f);
+                float along=(frame.Feet.x-.30f)/.42f;
+                feet=along<0f || along>1f ? new Vector2(Mathf.Clamp(.20f+along*.35f,.17f,.60f),.76f) :
+                    TutorialGuideAnimation.Curve(a,b,c,along);
+                AnimateCurve(firstRope,a,b,c,frame.Bridge,opacity*(frame.Bridge>0f ? 1f : 0f));
+                Vector2 head=PictureCrown(feet);
+                AnimateCurve(connectionRope,head,Vector2.Lerp(head,c,.5f),c,
+                    frame.Connection,opacity*frame.Connection);
+            }
+            else
+            {
+                Vector2 a=new Vector2(.20f,.76f), center=new Vector2(.375f,.81f), c=new Vector2(.55f,.76f);
+                AnimateCurve(firstRope,a,new Vector2(.27f,.65f),center,frame.LeftBridge,
+                    frame.Merge>0f ? 0f : opacity*frame.LeftBridge);
+                AnimateCurve(secondRope,center,new Vector2(.48f,.65f),c,frame.RightBridge,
+                    frame.Merge>0f ? 0f : opacity*frame.RightBridge);
+                for(int i=0;i<25;i++)
+                {
+                    Vector2 point=SmallMergedPoint(i/24f,frame.Merge);
+                    foreach(var line in mergedRope) line.SetPosition(i,point);
+                }
+                SetRopeAppearance(mergedRope,frame.Merge>0f ? opacity : 0f);
+                float along=(frame.Feet.x-.24f)/.52f;
+                feet=along<0f || along>1f ? new Vector2(Mathf.Clamp(.20f+along*.35f,.155f,.59f),.76f) :
+                    SmallMergedPoint(along,frame.Merge);
+                Vector2 head=PictureCrown(feet);
+                Vector2 target=frame.ConnectionTarget.x<.6f ? center : c;
+                AnimateCurve(connectionRope,head,Vector2.Lerp(head,target,.5f),target,
+                    frame.Connection,opacity*frame.Connection);
+                for(int i=0;i<middleRing.Length;i++)
+                {
+                    Color color=i==0 ? Ink : Blue;
+                    color.a*=1f-frame.Merge;
+                    middleRing[i].startColor=middleRing[i].endColor=color;
+                }
+            }
+            SetPictureFeet(feet);
+            picturePlayer.color=new Color(1f,1f,1f,opacity);
+        }
+
+        private static Vector2 SmallMergedPoint(float along,float merge)
+        {
+            Vector2 a=new Vector2(.20f,.76f), center=new Vector2(.375f,.81f), c=new Vector2(.55f,.76f);
+            Vector2 pair=along<=.5f ? TutorialGuideAnimation.Curve(a,new Vector2(.27f,.65f),center,along*2f) :
+                TutorialGuideAnimation.Curve(center,new Vector2(.48f,.65f),c,(along-.5f)*2f);
+            return Vector2.Lerp(pair,TutorialGuideAnimation.Curve(a,new Vector2(.375f,.40f),c,along),merge);
+        }
+
+        private void AnimateCurve(LineRenderer[] lines,Vector2 a,Vector2 b,Vector2 c,float progress,float alpha)
+        {
+            if(lines==null) return;
+            for(int i=0;i<25;i++)
+            {
+                Vector2 point=TutorialGuideAnimation.Curve(a,b,c,i/24f*progress);
+                foreach(var line in lines) line.SetPosition(i,point);
+            }
+            SetRopeAppearance(lines,alpha);
+        }
+
+        private void SetRopeAppearance(LineRenderer[] lines,float alpha)
+        {
+            if(lines==null) return;
+            for(int i=0;i<lines.Length;i++)
+            {
+                Color color=i==0 ? Ink : Color.white;
+                color.a*=alpha;
+                lines[i].startColor=lines[i].endColor=color;
+                lines[i].enabled=alpha>.001f;
+                if(i==1 && yarn.mainTexture!=null && lines[i].sharedMaterial!=yarn)
+                {
+                    lines[i].sharedMaterial=yarn;
+                    Texture texture=yarn.mainTexture;
+                    float width=lines[i].startWidth/Mathf.Max(.001f,worldWidth);
+                    lines[i].textureScale=new Vector2(1f/Mathf.Max(.001f,width*texture.width/texture.height),1f);
+                }
             }
         }
 
@@ -113,7 +225,7 @@ namespace HimoHito
             Stroke(new[] { new Vector3(.50f, .515f), new Vector3(.526f, .545f) },
                 .010f, danger, false, "Too Long Cross");
             Vector2 head = PlayerPicture(new Vector2(.395f, .635f), .115f);
-            Curve(head, Vector2.Lerp(head, new Vector2(.395f, .838f), .5f),
+            firstRope=Curve(head, Vector2.Lerp(head, new Vector2(.395f, .838f), .5f),
                 new Vector2(.395f, .838f), true);
             Ring(new Vector2(.395f, .838f), Blue);
         }
@@ -132,25 +244,46 @@ namespace HimoHito
 
         private Vector2 PlayerPicture(Vector2 feet, float height)
         {
-            Sprite sprite = TutorialFirstSectionVisuals.LoadProcessedToySprite("Art/HimoHitoPlayer-v1");
+            Sprite sprite = CraftPlayerArt.LoadStandingSprite("Art/HimoHitoPlayer-v1");
             if (sprite == null) return feet + Vector2.up * height;
             var child = new GameObject("Small Player Picture") { hideFlags = HideFlags.HideAndDontSave };
             child.transform.SetParent(drawing, false);
             var renderer = child.AddComponent<SpriteRenderer>();
+            picturePlayer=renderer;
+            pictureHeight=height;
             renderer.sprite = sprite;
             renderer.sharedMaterial = paint;
             renderer.sortingLayerID = sortingLayer;
             renderer.sortingOrder = sortingOrder + 3;
-            Bounds bounds = sprite.bounds;
-            // Fit the original art uniformly. No opaque backing, no independent X/Y stretch.
-            float scale = height / Mathf.Max(.001f, bounds.size.y);
-            child.transform.localScale = Vector3.one * scale;
-            child.transform.localPosition = (Vector3)feet -
-                new Vector3(bounds.center.x, bounds.min.y, 0f) * scale;
-            return feet + Vector2.up * (height * .94f);
+            SetPictureFeet(feet);
+            return PictureCrown(feet);
         }
 
-        private void Curve(Vector2 a, Vector2 b, Vector2 c, bool active)
+        private void SetPictureFeet(Vector2 feet)
+        {
+            Bounds bounds = picturePlayer.sprite.bounds;
+            float scale = pictureHeight / Mathf.Max(.001f, bounds.size.y);
+            // Keep the existing diagram height and path, while cancelling any stretch
+            // inherited from the board's normalized drawing coordinates.
+            Vector3 parentScale = drawing.lossyScale;
+            float aspectCorrection = Mathf.Abs(parentScale.y) / Mathf.Max(.001f, Mathf.Abs(parentScale.x));
+            Vector3 localScale = new Vector3(scale * aspectCorrection, scale, scale);
+            picturePlayer.transform.localScale = localScale;
+            picturePlayer.transform.localPosition = (Vector3)feet -
+                Vector3.Scale(new Vector3(bounds.center.x, bounds.min.y, 0f), localScale);
+        }
+
+        private Vector2 PictureCrown(Vector2 feet)
+        {
+            if (picturePlayer == null ||
+                !CraftPlayerArt.TryGetStandingCrownPoint(picturePlayer.sprite, out Vector2 crown))
+                return feet + Vector2.up * (pictureHeight * .94f);
+            Bounds bounds = picturePlayer.sprite.bounds;
+            return feet + Vector2.Scale(crown - new Vector2(bounds.center.x, bounds.min.y),
+                picturePlayer.transform.localScale);
+        }
+
+        private LineRenderer[] Curve(Vector2 a, Vector2 b, Vector2 c, bool active)
         {
             var points = new Vector3[25];
             for (int i = 0; i < points.Length; i++)
@@ -158,11 +291,11 @@ namespace HimoHito
                 float t = i / (points.Length - 1f);
                 points[i] = (1f - t) * (1f - t) * a + 2f * (1f - t) * t * b + t * t * c;
             }
-            Stroke(points, active ? .018f : .013f,
+            return Stroke(points, active ? .018f : .013f,
                 active ? Color.white : new Color(.62f, .47f, .61f), active);
         }
 
-        private void Ring(Vector2 center, Color color)
+        private LineRenderer[] Ring(Vector2 center, Color color)
         {
             var points = new Vector3[33];
             for (int i = 0; i < points.Length; i++)
@@ -170,7 +303,7 @@ namespace HimoHito
                 float angle = i / (points.Length - 1f) * Mathf.PI * 2f;
                 points[i] = center + new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)) * .029f;
             }
-            Stroke(points, .014f, color, false);
+            return Stroke(points, .014f, color, false);
         }
 
         private void Shelf(float x, float y, float direction)
@@ -186,14 +319,15 @@ namespace HimoHito
                 to, to - direction * .028f - cross * .022f }, .009f, Cream, false);
         }
 
-        private void Stroke(Vector3[] points, float width, Color color, bool textured, string label = null)
+        private LineRenderer[] Stroke(Vector3[] points, float width, Color color, bool textured, string label = null)
         {
-            MakeLine(label != null ? label + " Outline" : "Paint Outline", points, width + .006f, Ink, paint, sortingOrder);
-            MakeLine(label ?? (textured ? "Yarn Picture" : "Paint Picture"), points, width, color,
+            var outline=MakeLine(label != null ? label + " Outline" : "Paint Outline", points, width + .006f, Ink, paint, sortingOrder);
+            var line=MakeLine(label ?? (textured ? "Yarn Picture" : "Paint Picture"), points, width, color,
                 textured && yarn.mainTexture != null ? yarn : paint, sortingOrder + 1);
+            return new[] { outline, line };
         }
 
-        private void MakeLine(string label, Vector3[] points, float width, Color color, Material material, int order)
+        private LineRenderer MakeLine(string label, Vector3[] points, float width, Color color, Material material, int order)
         {
             var child = new GameObject(label) { hideFlags = HideFlags.HideAndDontSave };
             child.transform.SetParent(drawing, false);
@@ -214,6 +348,7 @@ namespace HimoHito
                 Texture texture = material.mainTexture;
                 line.textureScale = new Vector2(1f / Mathf.Max(.001f, width * texture.width / texture.height), 1f);
             }
+            return line;
         }
 
         private void Key(string value, Vector2 center, float height, float maxWidth)
@@ -242,6 +377,9 @@ namespace HimoHito
 
         private void Clear()
         {
+            animationTime=0f;
+            picturePlayer=null;
+            firstRope=secondRope=mergedRope=middleRing=connectionRope=null;
             if (drawing != null)
             {
                 drawing.gameObject.SetActive(false);

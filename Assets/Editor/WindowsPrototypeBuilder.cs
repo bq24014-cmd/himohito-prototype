@@ -13,8 +13,6 @@ namespace HimoHitoEditor
     /// </summary>
     public static class WindowsPrototypeBuilder
     {
-        private const string TutorialScenePath = "Assets/Scenes/Tutorial.unity";
-        private const string MainStageScenePath = "Assets/Scenes/MainStage.unity";
         private const string BuildFolder = "Builds/Windows";
         private const string RuntimeFolder = "Builds/Windows/Game";
         private const string ExecutableName = "HimoHitoPrototype.exe";
@@ -26,7 +24,7 @@ namespace HimoHitoEditor
         {
             ProjectPresentationSettings.Apply();
 
-            string[] scenePaths = { TutorialScenePath, MainStageScenePath };
+            string[] scenePaths = HimoHito.StageCatalog.GetBuildScenePaths();
             foreach (string scenePath in scenePaths)
             {
                 if (!File.Exists(scenePath))

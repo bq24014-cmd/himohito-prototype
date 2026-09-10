@@ -25,9 +25,13 @@ namespace HimoHito
         private static readonly Vector2 HookPosition =
             new Vector2(17.25f, -0.85f);
         private static readonly Vector2 LandingPosition =
-            new Vector2(29f, -9.35f);
+            new Vector2(29.75f, -9.35f);
         private static readonly Vector2 LandingSize =
-            new Vector2(8f, 10f);
+            new Vector2(9.5f, 10f);
+        // Keep the section-two arrival edge at x = 25. Extend only the
+        // section-three departure edge for the jump back from return step D.
+        internal static float LandingRightEdge =>
+            LandingPosition.x + LandingSize.x * 0.5f;
         private static readonly Vector2 FrontSpikePosition =
             new Vector2(15.35f, -7.9f);
         private static readonly Vector2 FrontSpikeSize =

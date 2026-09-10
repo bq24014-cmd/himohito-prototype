@@ -15,13 +15,36 @@ namespace HimoHito
         public bool IsClear { get; private set; }
         public bool IsCompleting => isClearPending || IsClear;
         private bool isClearPending;
+        private bool clearNavigationStarted;
 
         private void Update()
         {
-            if (IsClear && Input.GetKeyDown(KeyCode.R))
+            if (!IsClear || clearNavigationStarted) return;
+            if (Input.GetKeyDown(KeyCode.Escape)) ReturnToStageSelectionFromClear();
+            else if (Input.GetKeyDown(KeyCode.R)) RetryAfterClear();
+        }
+
+        public void RetryAfterClear()
+        {
+            if (!IsClear || clearNavigationStarted) return;
+            clearNavigationStarted = true;
+            HimoHitoAudioSettings.Save();
+            Time.timeScale = 1f;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+
+        public void ReturnToStageSelectionFromClear()
+        {
+            if (!IsClear || clearNavigationStarted) return;
+            if (!Application.CanStreamedLevelBeLoaded(StageCatalog.TitleScenePath))
             {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                Debug.LogError("ステージ選択へ戻れません。TutorialをBuild Settingsに登録してください。");
+                return;
             }
+            clearNavigationStarted = true;
+            HimoHitoAudioSettings.Save();
+            Time.timeScale = 1f;
+            SceneManager.LoadScene(StageCatalog.TitleScenePath);
         }
 
         private void OnCollisionStay2D(Collision2D collision)
@@ -62,6 +85,7 @@ namespace HimoHito
             audioFeedback?.PlayClearRevealed();
             IsClear = true;
             isClearPending = false;
+            StageProgress.MarkSceneCleared(gameObject.scene.path);
         }
     }
 }

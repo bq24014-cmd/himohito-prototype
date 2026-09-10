@@ -6076,21 +6076,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!115 &1631930879
-MonoScript:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  serializedVersion: 7
-  m_DefaultReferences: {}
-  m_Icon: {fileID: 0}
-  m_Type: 0
-  m_ExecutionOrder: 0
-  m_ClassName: ToySpikeVisual
-  m_Namespace: HimoHito
-  m_AssemblyName: Assembly-CSharp
 --- !u!1 &1679935493
 GameObject:
   m_ObjectHideFlags: 0
@@ -6518,7 +6503,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1736035689}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1953898023}
+  m_Script: {fileID: 11500000, guid: 0914b408cbcb44bf9b1df205491df132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.ToySpikeVisual
 --- !u!114 &1736035691
@@ -6676,7 +6661,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1736035689}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1631930879}
+  m_Script: {fileID: 11500000, guid: 0914b408cbcb44bf9b1df205491df132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.ToySpikeVisual
 --- !u!1 &1746146656
@@ -6710,7 +6695,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1746146656}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1953898023}
+  m_Script: {fileID: 11500000, guid: 0914b408cbcb44bf9b1df205491df132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.ToySpikeVisual
 --- !u!114 &1746146658
@@ -6868,7 +6853,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1746146656}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1631930879}
+  m_Script: {fileID: 11500000, guid: 0914b408cbcb44bf9b1df205491df132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.ToySpikeVisual
 --- !u!1 &1754056066
@@ -7398,7 +7383,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1808654099}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1953898023}
+  m_Script: {fileID: 11500000, guid: 0914b408cbcb44bf9b1df205491df132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.ToySpikeVisual
 --- !u!114 &1808654101
@@ -7556,7 +7541,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1808654099}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1631930879}
+  m_Script: {fileID: 11500000, guid: 0914b408cbcb44bf9b1df205491df132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HimoHito.ToySpikeVisual
 --- !u!1 &1827499972
@@ -8107,21 +8092,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!115 &1953898023
-MonoScript:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  serializedVersion: 7
-  m_DefaultReferences: {}
-  m_Icon: {fileID: 0}
-  m_Type: 0
-  m_ExecutionOrder: 0
-  m_ClassName: ToySpikeVisual
-  m_Namespace: HimoHito
-  m_AssemblyName: Assembly-CSharp
 --- !u!1 &1961796053
 GameObject:
   m_ObjectHideFlags: 0

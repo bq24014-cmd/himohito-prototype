@@ -24,34 +24,34 @@ namespace HimoHito
         public const string LandingName =
             "Main Section 4 Landing";
 
-        // Extend only the bank's right edge so the relay permits a return jump.
+        // Section three's goal bank and this whole section share the +3 translation.
         public static readonly Vector2 StartEdgePosition =
-            new Vector2(61.6f, -2.15f);
+            new Vector2(64.6f, -2.15f);
         public static readonly Vector2 IntermediateTopPosition =
-            new Vector2(66.2f, -0.65f);
+            new Vector2(69.2f, -0.65f);
         public static readonly Vector2 IntermediateColumnPosition =
-            new Vector2(66.2f, -5.65f);
+            new Vector2(69.2f, -5.65f);
         public static readonly Vector2 IntermediateColumnSize =
             new Vector2(1.8f, 10f);
         public static readonly Vector2 BridgeStartMarkerPosition =
-            new Vector2(61.6f, -2.15f);
+            new Vector2(64.6f, -2.15f);
         public static readonly Vector2 BridgeStartMarkerSize =
             new Vector2(0.62f, 0.62f);
         public static readonly Vector2 BridgeAnchorPosition =
-            new Vector2(65.3f, -0.65f);
+            new Vector2(68.3f, -0.65f);
         public static readonly Vector2 BridgeAnchorSize =
             new Vector2(0.62f, 0.62f);
         public const int BridgeRopeLength = 5;
         public static readonly Vector2 FarHookPosition =
-            new Vector2(72.6f, 2.55f);
+            new Vector2(75.6f, 2.55f);
         public static readonly Vector2 HookSize =
             new Vector2(1.6f, 0.45f);
         public static readonly Vector2 LandingPosition =
-            new Vector2(86.1f, -7.15f);
+            new Vector2(89.1f, -7.15f);
         public static readonly Vector2 LandingSize =
             new Vector2(6f, 10f);
         public static readonly Vector2 LandingRespawnPosition =
-            new Vector2(84.1f, -1.45f);
+            new Vector2(87.1f, -1.45f);
 
         private static readonly Color TerrainColor =
             new Color(0.56f, 0.29f, 0.09f);

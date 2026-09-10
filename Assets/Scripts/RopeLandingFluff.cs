@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace HimoHito
 {
-    /// <summary>Short, non-colliding yarn fibres for landing, takeoff and wooden footsteps.</summary>
+    /// <summary>Short, non-colliding yarn fibres for footsteps, jumps and spike contact.</summary>
     public sealed class RopeLandingFluff : MonoBehaviour
     {
         private Material runtimeMaterial;
@@ -47,7 +47,13 @@ namespace HimoHito
             Emit(feet, true, false);
         }
 
-        private static void Emit(Collider2D feet, bool takeoff, bool strongLanding, bool walking = false)
+        public static void PlaySpikeContact(Collider2D player, Vector2 point, Vector2 velocity)
+        {
+            Emit(player, false, false, contactPoint: point, contactVelocity: velocity);
+        }
+
+        private static void Emit(Collider2D feet, bool takeoff, bool strongLanding, bool walking = false,
+            Vector2? contactPoint = null, Vector2 contactVelocity = default)
         {
             if (feet == null || Time.timeScale <= 0f ||
                 (feet.attachedRigidbody != null && !feet.attachedRigidbody.simulated)) return;
@@ -55,8 +61,9 @@ namespace HimoHito
             Shader shader = Shader.Find("Sprites/Default");
             if (yarn == null || shader == null) return;
 
-            int count = walking ? 2 : strongLanding ? 5 : 3;
-            GameObject effect = new GameObject(walking ? "Footstep Yarn Fibres" :
+            bool spikeContact = contactPoint.HasValue;
+            int count = spikeContact ? 4 : walking ? 2 : strongLanding ? 5 : 3;
+            GameObject effect = new GameObject(spikeContact ? "Spike Contact Yarn Fibres" : walking ? "Footstep Yarn Fibres" :
                 takeoff ? "Takeoff Yarn Fluff" : "Landing Yarn Fluff");
             effect.transform.SetParent(feet.transform, false);
             RopeLandingFluff owner = effect.AddComponent<RopeLandingFluff>();
@@ -71,7 +78,7 @@ namespace HimoHito
                 new ParticleSystem.MinMaxCurve(0.4f, takeoff ? 0.5f : 0.65f);
             main.startSpeed = 0f;
             main.startSize3D = true;
-            main.startSizeX = walking ? new ParticleSystem.MinMaxCurve(.055f, .09f) :
+            main.startSizeX = spikeContact ? new ParticleSystem.MinMaxCurve(.12f, .20f) : walking ? new ParticleSystem.MinMaxCurve(.055f, .09f) :
                 new ParticleSystem.MinMaxCurve(0.09f, 0.14f);
             main.startSizeY = walking ? new ParticleSystem.MinMaxCurve(.018f, .026f) :
                 new ParticleSystem.MinMaxCurve(0.022f, 0.035f);
@@ -122,11 +129,19 @@ namespace HimoHito
                 float side = i / (float)(count - 1) * 2f - 1f;
                 float spread = walking ? .09f : strongLanding ? 0.48f : 0.3f;
                 float lift = walking ? .04f : takeoff ? 0.2f : strongLanding ? 0.38f : 0.28f;
+                Vector3 position = new Vector3(bounds.center.x + side * bounds.extents.x * 0.75f,
+                    bounds.min.y + 0.04f, feet.transform.position.z);
+                Vector3 velocity = new Vector3(side * spread, lift + (i % 3) * (walking ? .015f : .05f), 0f);
+                if (spikeContact)
+                {
+                    position = new Vector3(contactPoint.Value.x, contactPoint.Value.y, feet.transform.position.z);
+                    Vector2 drift = Vector2.ClampMagnitude(contactVelocity * .06f, .55f);
+                    velocity = new Vector3(drift.x + side * .55f, drift.y + .12f + (i % 2) * .18f, 0f);
+                }
                 particles.Emit(new ParticleSystem.EmitParams
                 {
-                    position = new Vector3(bounds.center.x + side * bounds.extents.x * 0.75f,
-                        bounds.min.y + 0.04f, feet.transform.position.z),
-                    velocity = new Vector3(side * spread, lift + (i % 3) * (walking ? .015f : .05f), 0f)
+                    position = position,
+                    velocity = velocity
                 }, 1);
             }
         }

@@ -105,18 +105,39 @@ namespace HimoHito
                 return false;
             }
 
+            // Keep standing on an existing bridge while extending the route.
+            // Its sag depends on its own length; the new endpoint is not the
+            // player's position, even when both bridges share the same Hook.
+            GeneratedRopePlatform existingSupport = FindSupportingPlatform();
             GeneratedRopePlatform platform = CreatePlatform(start, end, ropeLength);
-            RopeResourceGauge.NotifyPlatformBuilt(ropeResource);
-            PlacePlayerOnPlatform(platform);
+            RopeResourceGauge.NotifyPlatformBuilt(ropeResource, ropeLength);
+            if (existingSupport == null)
+            {
+                PlacePlayerOnPlatform(platform);
+            }
             if (TryGetComponent(out PlayerMover mover))
             {
-                mover.RegisterGeneratedRopePlatformContact(platform);
+                mover.RegisterGeneratedRopePlatformContact(existingSupport != null ? existingSupport : platform);
             }
             audioFeedback?.PlayRopePlatformBuilt();
             RopeBuildFluff.Play(platform.GetComponent<LineRenderer>());
             RopeBridgeReveal.Play(platform.GetComponent<LineRenderer>(), transform.position);
             GetComponent<RopeBodyVisual>()?.PlayWeavePose();
             return true;
+        }
+
+        private GeneratedRopePlatform FindSupportingPlatform()
+        {
+            foreach (GameObject platformObject in generatedPlatforms)
+            {
+                if (platformObject != null && platformObject.activeInHierarchy &&
+                    platformObject.TryGetComponent(out GeneratedRopePlatform platform) &&
+                    platform.IsSupportingPlayer())
+                {
+                    return platform;
+                }
+            }
+            return null;
         }
 
         public bool TryRemoveAimedHook()
@@ -148,10 +169,13 @@ namespace HimoHito
             float combinedLength = joined[0].RopeLength + joined[1].RopeLength;
             Vector2[] firstCurve = BuildSaggingCurve(firstOuter, anchor, joined[0].RopeLength);
             Vector2[] secondCurve = BuildSaggingCurve(anchor, secondOuter, joined[1].RopeLength);
+            RopeBridgeBindings firstBindings = joined[0].GetComponent<RopeBridgeBindings>();
+            RopeBridgeBindings secondBindings = joined[1].GetComponent<RopeBridgeBindings>();
             RemovePlatform(joined[0].gameObject);
             RemovePlatform(joined[1].gameObject);
             GeneratedRopePlatform merged = CreatePlatform(firstOuter, secondOuter, combinedLength);
             RopeBridgeMergeVisual.Play(merged.GetComponent<LineRenderer>(), firstCurve, secondCurve);
+            merged.GetComponent<RopeBridgeBindings>()?.ReleaseCenter(firstBindings, secondBindings, anchor);
             if (!removedHooks.Contains(hook.gameObject))
             {
                 removedHooks.Add(hook.gameObject);
@@ -176,6 +200,21 @@ namespace HimoHito
                 }
             }
             return states.ToArray();
+        }
+
+        // A detached copy of the final physical curves, for the clear-screen keepsake only.
+        internal Vector2[][] CaptureJourneyCurves()
+        {
+            var curves = new List<Vector2[]>();
+            foreach (GameObject platform in generatedPlatforms)
+            {
+                if (platform == null || !platform.activeInHierarchy ||
+                    !platform.TryGetComponent(out EdgeCollider2D edge) || !edge.enabled) continue;
+                Vector2[] points = edge.points;
+                for (int i = 0; i < points.Length; i++) points[i] = edge.transform.TransformPoint(points[i] + edge.offset);
+                if (points.Length >= 2) curves.Add(points);
+            }
+            return curves.ToArray();
         }
 
         public void RestorePlatformStates(IReadOnlyList<PlatformState> states)
@@ -412,6 +451,7 @@ namespace HimoHito
                 bodyCollider,
                 ropeController);
             generatedPlatforms.Add(platformObject);
+            RopeBridgeBindings.Ensure(line);
             return generated;
         }
 
@@ -662,6 +702,17 @@ namespace HimoHito
             // pointB belongs to the bridge. It must be at or below the
             // player's centre; a nearby bridge above the player is not a floor.
             return separation.pointB.y <= playerCollider.bounds.center.y;
+        }
+
+        internal bool TryGetSupportedFoot(out Vector2 foot)
+        {
+            foot = default;
+            if (playerCollider == null || playerCollider.attachedRigidbody == null ||
+                !playerCollider.attachedRigidbody.simulated || (ropeController != null && ropeController.IsAttached)) return false;
+            var mover = playerCollider.GetComponent<PlayerMover>();
+            if (mover == null || !mover.enabled || mover.SupportedRopePlatform != this || !IsSupportingPlayer()) return false;
+            foot = new Vector2(playerCollider.bounds.center.x, playerCollider.bounds.min.y);
+            return true;
         }
 
         private void OnDestroy()

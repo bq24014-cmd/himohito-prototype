@@ -8,7 +8,11 @@ namespace HimoHito
     public sealed class WoodenPlatformDepthVisual : MonoBehaviour
     {
         private const string ChildName = "Wood Surface Shading";
-        private static Material sharedMaterial;
+        private Material sharedMaterial;
+        private Material grainMaterial;
+        private Texture2D grainTexture;
+        private Texture2D lastGrainTexture;
+        private bool lastHadGrain;
         private Mesh mesh;
         private MeshRenderer display;
         private BoxCollider2D floor;
@@ -27,6 +31,9 @@ namespace HimoHito
                 !target.TryGetComponent(out SpriteRenderer _)) return false;
             bool added = !target.TryGetComponent(out WoodenPlatformDepthVisual visual);
             if (added) visual = target.AddComponent<WoodenPlatformDepthVisual>();
+            // Explicit refresh is also the asset-reimport/fallback recovery path.
+            visual.grainTexture = CraftWoodPlatformVisual.TryLoadTextures(out _, out Texture2D loadedGrain)
+                ? loadedGrain : null;
             return visual.Refresh() || added;
         }
 
@@ -42,6 +49,7 @@ namespace HimoHito
             landingElapsed = 1f;
             if (mesh != null && restingVertices != null) mesh.vertices = restingVertices;
             if (display != null) display.enabled = false;
+            ReleaseResources();
         }
 
         public static void NotifyLanding(Collider2D player, float speed)
@@ -101,9 +109,13 @@ namespace HimoHito
             if (display != null) display.enabled = visible;
             if (!visible) return false;
             Vector3 scale = transform.lossyScale;
+            if (grainTexture == null)
+                grainTexture = CraftWoodPlatformVisual.TryLoadTextures(out _, out Texture2D loadedGrain)
+                    ? loadedGrain : null;
             if (mesh != null && display != null && lastSize == floor.size &&
                 lastOffset == floor.offset && lastScale == scale &&
-                lastOrder == source.sortingOrder && lastLayer == source.sortingLayerID) return false;
+                lastOrder == source.sortingOrder && lastLayer == source.sortingLayerID &&
+                lastHadGrain == (grainTexture != null) && lastGrainTexture == grainTexture) return false;
 
             if (display == null)
             {
@@ -129,7 +141,14 @@ namespace HimoHito
                 if (shader == null) return false;
                 sharedMaterial = new Material(shader) { name = "Wood Shading Material", hideFlags = HideFlags.HideAndDontSave };
             }
-            display.sharedMaterial = sharedMaterial;
+            if (grainTexture != null)
+            {
+                if (grainMaterial == null) grainMaterial = new Material(sharedMaterial.shader)
+                    { name = "Craft Wood Top Material", hideFlags = HideFlags.HideAndDontSave };
+                grainMaterial.mainTexture = grainTexture;
+                display.sharedMaterials = new[] { sharedMaterial, grainMaterial };
+            }
+            else display.sharedMaterials = new[] { sharedMaterial };
             display.sortingLayerID = source.sortingLayerID;
             display.sortingOrder = source.sortingOrder + 2;
             display.enabled = visible;
@@ -138,6 +157,7 @@ namespace HimoHito
             display.GetComponent<MeshFilter>().sharedMesh = mesh;
             lastSize = floor.size; lastOffset = floor.offset; lastScale = scale;
             lastOrder = source.sortingOrder; lastLayer = source.sortingLayerID;
+            lastGrainTexture = grainTexture; lastHadGrain = grainTexture != null;
             return true;
         }
 
@@ -149,26 +169,36 @@ namespace HimoHito
             float depth = Mathf.Min(.25f / sy, floor.size.y * .22f);
             float back = top - Mathf.Min(SurfaceInset / sy, depth * .2f), front = back - depth;
             float edge = Mathf.Min(.12f / sx, floor.size.x * .08f);
-            var vertices = new List<Vector3>(); var colors = new List<Color>(); var triangles = new List<int>();
-            void Quad(float x0, float y0, float x1, float y1, Color lower, Color upper)
+            var vertices = new List<Vector3>(); var colors = new List<Color>();
+            var uv = new List<Vector2>();
+            var triangles = new List<int>(); var topTriangles = new List<int>();
+            float grainWorldHeight = grainTexture != null ?
+                CraftWoodPlatformVisual.TextureWorldWidth * grainTexture.height / Mathf.Max(1f, grainTexture.width) : 1f;
+            void Quad(float x0, float y0, float x1, float y1, Color lower, Color upper, bool textured = false)
             {
                 int first = vertices.Count;
                 vertices.Add(new Vector3(x0,y0)); vertices.Add(new Vector3(x1,y0));
                 vertices.Add(new Vector3(x1,y1)); vertices.Add(new Vector3(x0,y1));
                 colors.Add(lower); colors.Add(lower); colors.Add(upper); colors.Add(upper);
-                triangles.Add(first); triangles.Add(first+2); triangles.Add(first+1);
-                triangles.Add(first); triangles.Add(first+3); triangles.Add(first+2);
+                for (int i = first; i < first + 4; i++)
+                    uv.Add(new Vector2((vertices[i].x - left) * sx / CraftWoodPlatformVisual.TextureWorldWidth,
+                        (vertices[i].y - back) * sy / Mathf.Max(.01f, grainWorldHeight)));
+                List<int> indices = textured && grainTexture != null ? topTriangles : triangles;
+                indices.Add(first); indices.Add(first+2); indices.Add(first+1);
+                indices.Add(first); indices.Add(first+3); indices.Add(first+2);
             }
             // Transparent face shading preserves the original grain, knots and seams.
             Quad(left,bottom,right,front, new Color(.12f,.055f,.02f,.48f), new Color(.12f,.055f,.02f,0f));
             Quad(right-edge,bottom,right,front, new Color(.14f,.065f,.025f,.45f), new Color(.14f,.065f,.025f,.26f));
             Quad(left,bottom,left+edge*.4f,front, new Color(1f,.70f,.33f,.08f), new Color(1f,.70f,.33f,.22f));
             // A shallow horizontal top, bounded by the existing collider silhouette.
-            Quad(left,front,right,back, new Color(.77f,.39f,.13f,1f), new Color(1f,.77f,.39f,1f));
+            Quad(left,front,right,back,
+                grainTexture != null ? new Color(.74f,.65f,.49f,1f) : new Color(.77f,.39f,.13f,1f),
+                grainTexture != null ? new Color(1f,.96f,.83f,1f) : new Color(1f,.77f,.39f,1f), true);
             Quad(left,front-.045f/sy,right,front, new Color(.29f,.13f,.04f,.68f), new Color(.55f,.25f,.055f,.75f));
             Quad(left,back-.025f/sy,right,back, new Color(1f,.86f,.57f,.30f), new Color(1f,.89f,.62f,.82f));
             // Subtle lengthwise wood streaks on the new top, not a flat orange bar.
-            for (int row=0;row<3;row++)
+            for (int row=0; grainTexture == null && row<3;row++)
             {
                 float y = front + depth * (.2f + row * .23f);
                 float inset = floor.size.x * (.025f + row*.035f);
@@ -177,7 +207,10 @@ namespace HimoHito
             }
             float underside = Mathf.Min(.4f/sy, floor.size.y*.12f);
             Quad(left,bottom,right,bottom+underside, new Color(.10f,.04f,.018f,.45f),new Color(.10f,.04f,.018f,0f));
-            mesh.Clear(); mesh.SetVertices(vertices); mesh.SetColors(colors); mesh.SetTriangles(triangles,0);
+            mesh.Clear(); mesh.SetVertices(vertices); mesh.SetColors(colors); mesh.SetUVs(0, uv);
+            mesh.subMeshCount = grainTexture != null ? 2 : 1;
+            mesh.SetTriangles(triangles,0);
+            if (grainTexture != null) mesh.SetTriangles(topTriangles,1);
             mesh.RecalculateBounds();
             restingVertices = mesh.vertices;
             landingVertices = new Vector3[restingVertices.Length];
@@ -186,8 +219,28 @@ namespace HimoHito
 
         private void OnDestroy()
         {
-            if (mesh != null) { if (Application.isPlaying) Destroy(mesh); else DestroyImmediate(mesh); }
+            ReleaseResources();
             if (display != null) { if (Application.isPlaying) Destroy(display.gameObject); else DestroyImmediate(display.gameObject); }
+        }
+
+        private void ReleaseResources()
+        {
+            if (display != null)
+            {
+                display.sharedMaterials = System.Array.Empty<Material>();
+                if (display.TryGetComponent(out MeshFilter filter)) filter.sharedMesh = null;
+            }
+            DestroyOwned(mesh); DestroyOwned(sharedMaterial); DestroyOwned(grainMaterial);
+            mesh = null; sharedMaterial = null; grainMaterial = null; grainTexture = null;
+            lastGrainTexture = null; lastHadGrain = false;
+            restingVertices = landingVertices = null;
+        }
+
+        private static void DestroyOwned(Object owned)
+        {
+            if (owned == null) return;
+            if (Application.isPlaying) Destroy(owned);
+            else DestroyImmediate(owned);
         }
     }
 }

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace HimoHito
 {
@@ -7,6 +8,8 @@ namespace HimoHito
     {
         private bool showHelp;
         private bool isPaused;
+        private bool confirmReturnToTitle;
+        private int lastHelpInputFrame = -1;
         private PrototypeRunController runController;
         private MainStageRespawnOnFall mainStageRespawn;
         private MainStageGoalZone mainStageGoal;
@@ -25,6 +28,7 @@ namespace HimoHito
 
         public bool IsHelpVisible => showHelp;
         public bool IsOverlayVisible => showHelp || isPaused;
+        public bool HelpInputConsumedThisFrame => lastHelpInputFrame == Time.frameCount;
 
         private void Awake()
         {
@@ -40,6 +44,7 @@ namespace HimoHito
 
         private void Update()
         {
+            if (StageStartTransition.IsActive) return;
             if (MainStagePreview.IsActive) return;
 
             if (IsResultScreenActive())
@@ -65,18 +70,35 @@ namespace HimoHito
 
             if (Input.GetKeyDown(KeyCode.Tab))
             {
-                showHelp = !showHelp;
-                if (showHelp)
-                {
-                    PlayOpenSound();
-                }
-                ApplyPauseState();
+                if (showHelp) CloseHelp();
+                else OpenHelp();
+                return;
+            }
+
+            if (showHelp && Input.GetKeyDown(KeyCode.Escape))
+            {
+                CloseHelp();
+                return;
             }
 
             bool isOnTitleScreen = runController != null &&
                 runController.Outcome == PrototypeRunController.RunOutcome.WaitingToStart;
             if (isOnTitleScreen)
             {
+                return;
+            }
+
+            if (isPaused && !showHelp && confirmReturnToTitle)
+            {
+                if (Input.GetKeyDown(KeyCode.Escape)) confirmReturnToTitle = false;
+                else if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter))
+                    ReturnToTitle();
+                return;
+            }
+
+            if (isPaused && !showHelp && Input.GetKeyDown(KeyCode.T))
+            {
+                confirmReturnToTitle = true;
                 return;
             }
 
@@ -89,6 +111,30 @@ namespace HimoHito
                 }
                 ApplyPauseState();
             }
+        }
+
+        public void OpenMenuHelp()
+        {
+            if (StageStartTransition.IsActive) return;
+            if (runController == null || !runController.IsStageSelectionOpen || IsOverlayVisible) return;
+            OpenHelp();
+        }
+
+        private void OpenHelp()
+        {
+            confirmReturnToTitle = false;
+            showHelp = true;
+            lastHelpInputFrame = Time.frameCount;
+            PlayOpenSound();
+            ApplyPauseState();
+        }
+
+        public void CloseHelp()
+        {
+            if (!showHelp) return;
+            showHelp = false;
+            lastHelpInputFrame = Time.frameCount;
+            ApplyPauseState();
         }
 
         private void PlayOpenSound()
@@ -119,6 +165,7 @@ namespace HimoHito
 
         private void OnGUI()
         {
+            if (StageStartTransition.IsActive) return;
             if (MainStagePreview.IsActive) return;
 
             if (IsResultScreenActive() ||
@@ -231,8 +278,9 @@ namespace HimoHito
             GUILayout.EndHorizontal();
 
             GUILayout.FlexibleSpace();
-            GUILayout.Label("Tab　閉じる", helpKeyStyle);
+            bool close = GUILayout.Button("Tab / Esc　閉じる", helpKeyStyle);
             GUILayout.EndArea();
+            if (close) { CloseHelp(); GUIUtility.ExitGUI(); }
         }
 
         private void DrawHelpRow(string key, string description)
@@ -267,6 +315,22 @@ namespace HimoHito
                 width,
                 height), GUI.skin.box);
             GUILayout.Label("PAUSE", titleStyle);
+            if (confirmReturnToTitle)
+            {
+                GUILayout.FlexibleSpace();
+                GUILayout.Label("ステージ選択へ戻りますか？", titleStyle);
+                GUILayout.Space(16f);
+                GUILayout.Label("現在の区間・ヒモ橋の進行はリセットされます。\n音量設定は保持されます。", bodyStyle);
+                GUILayout.FlexibleSpace();
+                Rect row = GUILayoutUtility.GetRect(1f, 52f, GUILayout.ExpandWidth(true), GUILayout.Height(52f));
+                bool cancel = HimoHitoUiParts.WoodButton(new Rect(row.x, row.y, (row.width - 12f) * .5f, row.height), "Esc　キャンセル", bodyStyle);
+                bool accept = HimoHitoUiParts.WoodButton(new Rect(row.x + (row.width + 12f) * .5f, row.y, (row.width - 12f) * .5f, row.height), "Enter　ステージ選択へ", bodyStyle);
+                GUILayout.EndArea();
+                GUI.matrix = previousMatrix;
+                if (cancel) confirmReturnToTitle = false;
+                if (accept) { ReturnToTitle(); GUIUtility.ExitGUI(); }
+                return;
+            }
             pauseScroll = GUILayout.BeginScrollView(pauseScroll);
             GUILayout.Space(12f);
             GUILayout.Label("音量設定", bodyStyle);
@@ -292,16 +356,35 @@ namespace HimoHito
                 GUILayout.ExpandWidth(true),
                 GUILayout.Height(58f));
             Rect resumeButton = new Rect(
-                resumeButtonRow.x + Mathf.Max(0f, (resumeButtonRow.width - 320f) * 0.5f),
+                resumeButtonRow.x,
                 resumeButtonRow.y,
-                Mathf.Min(320f, resumeButtonRow.width),
+                (resumeButtonRow.width - 12f) * .5f,
                 resumeButtonRow.height);
-            HimoHitoUiParts.DrawWoodButtonLabel(
+            bool resumeClicked = HimoHitoUiParts.WoodButton(
                 resumeButton,
-                "Escで再開",
-                titleStyle);
+                "Esc　ゲームに戻る",
+                bodyStyle);
+            Rect titleButton = new Rect(resumeButton.xMax + 12f, resumeButton.y,
+                resumeButton.width, resumeButton.height);
+            bool titleClicked = HimoHitoUiParts.WoodButton(titleButton, "T　ステージ選択へ", bodyStyle);
             GUILayout.EndArea();
             GUI.matrix = previousMatrix;
+            if (resumeClicked) { isPaused = false; ApplyPauseState(); }
+            if (titleClicked) confirmReturnToTitle = true;
+        }
+
+        private void ReturnToTitle()
+        {
+            if (!isPaused || showHelp || !confirmReturnToTitle) return;
+            if (!Application.CanStreamedLevelBeLoaded("Tutorial"))
+            {
+                Debug.LogError("ステージ選択へ戻れません。TutorialをBuild Settingsに登録してください。");
+                return;
+            }
+            HimoHitoAudioSettings.Save();
+            isPaused = showHelp = confirmReturnToTitle = false;
+            Time.timeScale = 1f;
+            SceneManager.LoadScene("Tutorial");
         }
 
         private void DrawVolumeRow(string label, bool music)

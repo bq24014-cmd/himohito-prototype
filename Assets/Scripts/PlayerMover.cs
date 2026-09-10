@@ -71,6 +71,7 @@ namespace HimoHito
 
         public bool IsGrounded { get; private set; }
         public float MovementInput => moveInput; // Read-only input for presentation.
+        public GeneratedRopePlatform SupportedRopePlatform => IsGrounded ? groundedRopePlatform : null;
 
         private void Awake()
         {
@@ -178,7 +179,12 @@ namespace HimoHito
                 audioFeedback?.PlayPlayerJumped();
                 GetComponent<RopeBodyVisual>()?.PlayTakeoffElasticity();
                 // Coyote-time jumps happen in the air, so do not invent a floor puff.
-                if (IsGrounded) RopeLandingFluff.PlayTakeoff(bodyCollider);
+                if (IsGrounded)
+                {
+                    RopeLandingFluff.PlayTakeoff(bodyCollider);
+                    RopeBridgeStepVisual.PlayTakeoff(groundedRopePlatform,
+                        new Vector2(bodyCollider.bounds.center.x, bodyCollider.bounds.min.y));
+                }
                 ClearRecentRopePlatform();
                 jumpBufferTimer = 0f;
                 coyoteTimer = 0f;
@@ -187,7 +193,11 @@ namespace HimoHito
 
             // A buffered jump uses only the takeoff flecks, not two stacked bursts.
             if (!jumpedThisStep && landingImpactSpeed > 0f)
+            {
                 RopeLandingFluff.Play(bodyCollider, landingImpactSpeed);
+                if (!isSwinging) RopeBridgeStepVisual.PlayLanding(groundedRopePlatform,
+                    new Vector2(bodyCollider.bounds.center.x, bodyCollider.bounds.min.y), landingImpactSpeed);
+            }
 
             if (IsGrounded && !isSwinging && !jumpedThisStep && body.simulated &&
                 groundedRopePlatform != null && groundedRopePlatform.IsSupportingPlayer())

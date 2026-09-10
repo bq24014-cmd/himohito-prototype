@@ -11,6 +11,8 @@ namespace HimoHito
         private const float InteractionRange = 3.25f;
         private const string SignPrefix = "Tutorial Guide Sign T";
         private const string SignArtworkPath = "Art/TutorialGuideSign-v1";
+        private const string CraftSignArtworkPath = "Art/HimoHitoCraftGuideSign-v1";
+        private static Sprite craftSignSprite;
         private const string SignArtworkName = "Picture-book Guide Sign Visual";
         private const string HelpBackgroundPath =
             "Art/HimoHitoControlsBackground-v1";
@@ -44,7 +46,7 @@ namespace HimoHito
         {
             "1　W / Sで長さ、矢印キーで向きを調整\n2　青いHookへ照準を合わせて E\n3　右へ歩いて振り子になり、対岸へ着地",
             "1　長さ8では底が下がり、トゲに当たる\n2　Eで外し、W / Sで長さ6～7を選ぶ\n3　もう一度 Eで掛け、トゲの上を渡る",
-            "1　対岸の緑フックへ長さ6で E\n2　接続中に Qでヒモを足場へ変える\n3　残量を6使ってできた橋を歩いて渡る",
+            "1　W / Sで長さ7にする（推奨）\n2　対岸の緑フックへ E → Qで足場にする\n3　残量を7使ってできた橋を歩いて渡る",
             "1　左岸→中央→右岸へ長さ6の足場を2本作る\n2　中央の青いHookへ照準を合わせる\n3　Fで中央を外し、深くたわんだ1本の橋を渡る"
         };
 
@@ -65,6 +67,7 @@ namespace HimoHito
         private bool wasPlatformBuilderEnabled;
         private bool disabledGameplay;
         private int openSection;
+        private float illustrationTime;
         private GUIStyle sectionLabelStyle;
         private GUIStyle promptStyle;
         private GUIStyle titleStyle;
@@ -115,12 +118,12 @@ namespace HimoHito
             overlayControls = FindFirstObjectByType<StageOverlayControls>();
             mainCamera = Camera.main;
             helpBackground = Resources.Load<Texture2D>(HelpBackgroundPath);
-            playerSprite = TutorialFirstSectionVisuals.LoadProcessedToySprite(
-                PlayerTexturePath);
+            playerSprite = CraftPlayerArt.LoadStandingSprite(PlayerTexturePath);
         }
 
         private void Update()
         {
+            if (StageStartTransition.IsActive) return;
             UpdateSignGreetings();
             if (MainStagePreview.IsActive) return;
 
@@ -131,6 +134,7 @@ namespace HimoHito
 
             if (IsVisible)
             {
+                AdvanceIllustration(Time.unscaledDeltaTime);
                 if (runController.Outcome !=
                     PrototypeRunController.RunOutcome.Playing ||
                     runController.CurrentTutorialSection != openSection)
@@ -201,6 +205,7 @@ namespace HimoHito
 
         private void OnGUI()
         {
+            if (StageStartTransition.IsActive) return;
             if (MainStagePreview.IsActive) return;
 
             GUI.depth = -1100;
@@ -308,7 +313,7 @@ namespace HimoHito
         private static bool EnsureSignArtwork(Transform parent)
         {
             bool changed = false;
-            Sprite artwork = Resources.Load<Sprite>(SignArtworkPath);
+            Sprite artwork = GetSignArtwork();
             Transform visual = parent.Find(SignArtworkName);
             if (visual == null)
             {
@@ -393,6 +398,26 @@ namespace HimoHito
             return changed;
         }
 
+        private static Sprite GetSignArtwork()
+        {
+            if (craftSignSprite != null && craftSignSprite.texture != null) return craftSignSprite;
+            if (Resources.Load<Texture2D>(CraftSignArtworkPath) != null)
+            {
+                Sprite cutout = TutorialFirstSectionVisuals.LoadProcessedToySprite(CraftSignArtworkPath, true);
+                if (cutout != null)
+                {
+                    // Keep the square canvas: inscription and greeting use its normalized coordinates.
+                    Texture2D texture = cutout.texture;
+                    craftSignSprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height),
+                        new Vector2(.5f, .5f), 100f, 0, SpriteMeshType.FullRect);
+                    craftSignSprite.name = "Craft Guide Sign Full Canvas";
+                    craftSignSprite.hideFlags = HideFlags.HideAndDontSave;
+                    return craftSignSprite;
+                }
+            }
+            return Resources.Load<Sprite>(SignArtworkPath);
+        }
+
         private static bool EnsureSignPiece(
             Transform parent,
             string pieceName,
@@ -470,7 +495,10 @@ namespace HimoHito
 
         private void OpenGuide(int section)
         {
+            GameObject sign = SceneObjectLookup.Find(SignPrefix + section, "Tutorial");
+            Vector2 target = sign != null ? (Vector2)sign.transform.position : SignPositions[section - 1];
             openSection = section;
+            illustrationTime = 0f;
             if (audioFeedback == null)
             {
                 audioFeedback = GetComponent<PrototypeAudioFeedback>();
@@ -495,12 +523,16 @@ namespace HimoHito
                 platformBuilder.enabled = false;
             }
             disabledGameplay = true;
+            // Disabling rope controls cancels action poses, so set the reading gaze afterwards.
+            GetComponent<RopeBodyVisual>()?.BeginReadingSign(target + Vector2.up * .5f);
             Time.timeScale = 0f;
         }
 
         private void CloseGuide()
         {
+            GetComponent<RopeBodyVisual>()?.EndReadingSign();
             openSection = 0;
+            illustrationTime = 0f;
             if (disabledGameplay)
             {
                 if (playerMover != null)
@@ -628,6 +660,14 @@ namespace HimoHito
                 closeStyle);
         }
 
+        private void AdvanceIllustration(float unscaledDelta)
+        {
+            // Advance once per Update, never per IMGUI layout/repaint event.
+            if (IsVisible)
+                illustrationTime = Mathf.Repeat(illustrationTime + Mathf.Clamp(unscaledDelta, 0f, .1f),
+                    TutorialGuideAnimation.Duration(openSection));
+        }
+
         private void DrawSectionIllustration(Rect rect, int section)
         {
             Rect inner = new Rect(
@@ -654,163 +694,158 @@ namespace HimoHito
 
         private void DrawSectionOneIllustration(Rect rect)
         {
-            Rect leftFloor = NormalizedRect(rect, 0.02f, 0.70f, 0.30f, 0.22f);
-            Rect rightFloor = NormalizedRect(rect, 0.70f, 0.70f, 0.28f, 0.22f);
-            DrawPlatform(leftFloor);
-            DrawPlatform(rightFloor);
-
-            Rect hook = NormalizedRect(rect, 0.47f, 0.08f, 0.10f, 0.13f);
-            Rect player = NormalizedRect(rect, 0.31f, 0.42f, 0.10f, 0.23f);
-            Vector2 ropePoint = new Vector2(
-                player.center.x,
-                player.y + player.height * 0.22f);
-            Vector2 landingPoint = new Vector2(
-                rightFloor.x + rightFloor.width * 0.30f,
-                rightFloor.y - rect.height * 0.04f);
-
-            DrawDashedCurve(
-                player.center,
-                new Vector2(rect.center.x, rect.y + rect.height * 0.82f),
-                landingPoint,
-                4f,
-                new Color(0.45f, 0.95f, 0.76f));
-            DrawYarnLine(
-                ropePoint,
-                hook.center,
-                6f,
-                new Color(1f, 0.36f, 0.56f));
-            DrawPlayer(player);
-            DrawRing(hook, new Color(0.24f, 0.64f, 0.96f));
-
-            GUI.Label(
-                NormalizedRect(rect, 0.12f, 0.20f, 0.30f, 0.12f),
-                "Eで掛ける",
-                diagramLabelStyle);
-            GUI.Label(
-                NormalizedRect(rect, 0.43f, 0.80f, 0.38f, 0.10f),
-                "A / Dで振る　→ 対岸へ",
-                diagramLabelStyle);
+            var f = TutorialGuideAnimation.Sample(1, illustrationTime);
+            DrawSwingBanks(rect);
+            Vector2 hook = DiagramPoint(rect, new Vector2(.5f,.15f));
+            DrawDashedCurve(DiagramPoint(rect,TutorialGuideAnimation.Swing(0f)),
+                DiagramPoint(rect,new Vector2(.5f,.88f)),
+                DiagramPoint(rect,TutorialGuideAnimation.Swing(1f)), 2f, new Color(.45f,.95f,.76f,.3f));
+            DrawDemoConnection(rect, f, hook);
+            DrawDemoPlayer(rect, f);
+            DrawDemoRing(hook, new Color(.24f,.64f,.96f));
+            DrawDemoCaption(rect, f.Caption);
         }
 
         private void DrawSectionTwoIllustration(Rect rect)
         {
-            Rect leftFloor = NormalizedRect(rect, 0.01f, 0.68f, 0.29f, 0.24f);
-            Rect rightFloor = NormalizedRect(rect, 0.70f, 0.68f, 0.29f, 0.24f);
-            DrawPlatform(leftFloor);
-            DrawPlatform(rightFloor);
-            Rect hook = NormalizedRect(rect, 0.45f, 0.07f, 0.10f, 0.13f);
-            GUIStyle spikeStyle = new GUIStyle(diagramLabelStyle)
+            var f = TutorialGuideAnimation.Sample(2, illustrationTime);
+            DrawSwingBanks(rect);
+            Vector2 hook = DiagramPoint(rect, new Vector2(.5f,.15f));
+            for (int path=0;path<2;path++)
             {
-                fontSize = 28
-            };
-            spikeStyle.normal.textColor = new Color(1f, 0.28f, 0.36f);
-            GUI.Label(
-                NormalizedRect(rect, 0.38f, 0.76f, 0.24f, 0.14f),
-                "▲ ▲ ▲",
-                spikeStyle);
-            DrawCurve(
-                new Vector2(leftFloor.xMax, leftFloor.y),
-                new Vector2(rect.center.x, rect.y + rect.height * 0.46f),
-                new Vector2(rightFloor.x, rightFloor.y),
-                6f,
-                new Color(0.45f, 0.95f, 0.76f));
-            DrawCurve(
-                new Vector2(leftFloor.xMax, leftFloor.y + 10f),
-                new Vector2(rect.center.x, rect.y + rect.height * 0.94f),
-                new Vector2(rightFloor.x, rightFloor.y + 10f),
-                4f,
-                new Color(1f, 0.36f, 0.56f, 0.72f));
-            Rect player = NormalizedRect(rect, 0.46f, 0.46f, 0.08f, 0.21f);
-            DrawYarnLine(
-                hook.center,
-                new Vector2(player.center.x, player.y + player.height * 0.20f),
-                6f,
-                new Color(1f, 0.36f, 0.56f));
-            DrawPlayer(player);
-            DrawRing(hook, new Color(0.24f, 0.64f, 0.96f));
-            GUI.Label(
-                NormalizedRect(rect, 0.05f, 0.24f, 0.34f, 0.12f),
-                "長さ6～7　通れる",
-                diagramLabelStyle);
-            GUI.Label(
-                NormalizedRect(rect, 0.59f, 0.46f, 0.35f, 0.12f),
-                "長さ8　トゲへ",
-                diagramLabelStyle);
+                bool danger=path==1;
+                DrawDashedCurve(DiagramPoint(rect,TutorialGuideAnimation.Swing(0f,danger)),
+                    DiagramPoint(rect,new Vector2(.5f,danger ? 1.08f : .88f)),
+                    DiagramPoint(rect,TutorialGuideAnimation.Swing(1f,danger)), 2f,
+                    danger ? new Color(1f,.36f,.56f,.32f) : new Color(.45f,.95f,.76f,.45f));
+            }
+            for (int i=0;i<3;i++)
+            {
+                Vector2 peak=DiagramPoint(rect,new Vector2(.44f+i*.06f,.83f));
+                float width=rect.width*.05f, height=rect.height*.065f;
+                for(int row=0;row<12;row++)
+                {
+                    float fraction=(row+1)/12f;
+                    DrawRect(new Rect(peak.x-width*fraction*.5f,peak.y+height*row/12f,
+                        width*fraction,height/12f+1f),new Color(1f,.28f,.36f));
+                }
+            }
+            DrawDemoConnection(rect,f,hook);
+            DrawDemoPlayer(rect,f);
+            DrawDemoRing(hook,new Color(.24f,.64f,.96f));
+            DrawDemoCaption(rect,f.Caption);
         }
 
         private void DrawSectionThreeIllustration(Rect rect)
         {
-            Rect leftFloor = NormalizedRect(rect, 0.01f, 0.62f, 0.31f, 0.30f);
-            Rect rightFloor = NormalizedRect(rect, 0.68f, 0.62f, 0.31f, 0.30f);
-            DrawPlatform(leftFloor);
-            DrawPlatform(rightFloor);
-            Rect leftRing = new Rect(leftFloor.xMax - 18f, leftFloor.y - 18f, 36f, 36f);
-            Rect rightRing = new Rect(rightFloor.x - 18f, rightFloor.y - 18f, 36f, 36f);
-            DrawRing(leftRing, new Color(0.33f, 1f, 0.76f));
-            DrawRing(rightRing, new Color(0.33f, 1f, 0.76f));
-            DrawCurve(
-                leftRing.center,
-                new Vector2(rect.center.x, rect.y + rect.height * 0.72f),
-                rightRing.center,
-                9f,
-                Color.white,
-                true);
-            DrawPlayer(NormalizedRect(rect, 0.47f, 0.45f, 0.08f, 0.22f));
-            GUI.Label(
-                NormalizedRect(rect, 0.34f, 0.16f, 0.32f, 0.14f),
-                "E → Q　足場化",
-                diagramLabelStyle);
-            GUI.Label(
-                NormalizedRect(rect, 0.38f, 0.80f, 0.24f, 0.10f),
-                "消費6",
+            var f=TutorialGuideAnimation.Sample(3,illustrationTime);
+            DrawPlatform(NormalizedRect(rect,.02f,.66f,.28f,.25f));
+            DrawPlatform(NormalizedRect(rect,.72f,.66f,.26f,.25f));
+            Vector2 left=DiagramPoint(rect,new Vector2(.30f,.66f));
+            Vector2 right=DiagramPoint(rect,new Vector2(.72f,.66f));
+            DrawDemoConnection(rect,f,right);
+            Vector2 previous=left;
+            float distance=0f;
+            for(int i=1;i<=36;i++)
+            {
+                float t=i/36f;
+                Vector2 point=DiagramPoint(rect,TutorialGuideAnimation.BridgePoint(t));
+                DrawYarnLine(previous,point,8f,new Color(1f,1f,1f,
+                    f.Opacity*(t<=f.Bridge ? 1f : .12f)),distance);
+                distance+=Vector2.Distance(previous,point);
+                previous=point;
+            }
+            DrawDemoRing(left,new Color(.33f,1f,.76f));
+            DrawDemoRing(right,new Color(.33f,1f,.76f));
+            DrawDemoPlayer(rect,f);
+            DrawDemoCaption(rect,f.Caption);
+            GUI.Label(NormalizedRect(rect,.2f,.88f,.6f,.1f),
+                f.Bridge>0f ? "残量の例　99 → 93（戻らない）" : "掛けるだけなら消費なし",
                 diagramLabelStyle);
         }
 
         private void DrawSectionFourIllustration(Rect rect)
         {
-            Rect leftFloor = NormalizedRect(rect, 0.01f, 0.68f, 0.22f, 0.24f);
-            Rect rightFloor = NormalizedRect(rect, 0.77f, 0.68f, 0.22f, 0.24f);
-            DrawPlatform(leftFloor);
-            DrawPlatform(rightFloor);
-            Rect leftRing = new Rect(leftFloor.xMax - 16f, leftFloor.y - 16f, 32f, 32f);
-            Rect centerRing = NormalizedRect(rect, 0.47f, 0.24f, 0.07f, 0.10f);
-            Rect rightRing = new Rect(rightFloor.x - 16f, rightFloor.y - 16f, 32f, 32f);
-            DrawRing(leftRing, new Color(0.33f, 1f, 0.76f));
-            DrawRing(centerRing, new Color(0.24f, 0.64f, 0.96f));
-            DrawRing(rightRing, new Color(0.33f, 1f, 0.76f));
-            DrawCurve(
-                leftRing.center,
-                new Vector2(rect.x + rect.width * 0.35f, rect.y + rect.height * 0.60f),
-                centerRing.center,
-                5f,
-                new Color(1f, 1f, 1f, 0.45f),
-                true);
-            DrawCurve(
-                centerRing.center,
-                new Vector2(rect.x + rect.width * 0.65f, rect.y + rect.height * 0.60f),
-                rightRing.center,
-                5f,
-                new Color(1f, 1f, 1f, 0.45f),
-                true);
-            DrawCurve(
-                leftRing.center,
-                new Vector2(rect.center.x, rect.y + rect.height * 0.88f),
-                rightRing.center,
-                9f,
-                Color.white,
-                true);
-            DrawRect(
-                NormalizedRect(rect, 0.61f, 0.30f, 0.10f, 0.30f),
-                new Color(0.48f, 0.26f, 0.12f));
-            DrawPlayer(NormalizedRect(rect, 0.45f, 0.57f, 0.08f, 0.21f));
-            GUI.Label(
-                NormalizedRect(rect, 0.42f, 0.06f, 0.16f, 0.12f),
-                "Fで外す",
-                diagramLabelStyle);
-            GUI.Label(
-                NormalizedRect(rect, 0.27f, 0.82f, 0.46f, 0.10f),
-                "1本になって梁の下へ",
-                diagramLabelStyle);
+            var f=TutorialGuideAnimation.Sample(4,illustrationTime);
+            DrawPlatform(NormalizedRect(rect,.02f,.67f,.22f,.25f));
+            DrawPlatform(NormalizedRect(rect,.76f,.67f,.22f,.25f));
+            Vector2 previous=DiagramPoint(rect,TutorialGuideAnimation.MergedPoint(0f,f.Merge));
+            float distance=0f;
+            for(int i=1;i<=48;i++)
+            {
+                float along=i/48f;
+                Vector2 point=DiagramPoint(rect,TutorialGuideAnimation.MergedPoint(along,f.Merge));
+                float built=along<=.5f ? f.LeftBridge : f.RightBridge;
+                float localProgress=along<=.5f ? along*2f : (along-.5f)*2f;
+                float alpha=built<=0f ? 0f : localProgress<=built ? 1f : .12f;
+                DrawYarnLine(previous,point,8f,new Color(1f,1f,1f,f.Opacity*alpha),distance);
+                distance+=Vector2.Distance(previous,point);
+                previous=point;
+            }
+            DrawPlatform(NormalizedRect(rect,.64f,.23f,.075f,.27f));
+            GUI.Label(NormalizedRect(rect,.62f,.15f,.12f,.08f),"梁",diagramLabelStyle);
+            DrawDemoRing(DiagramPoint(rect,new Vector2(.24f,.67f)),new Color(.33f,1f,.76f));
+            DrawDemoRing(DiagramPoint(rect,new Vector2(.76f,.67f)),new Color(.33f,1f,.76f));
+            DrawDemoRing(DiagramPoint(rect,new Vector2(.5f,.35f)),
+                new Color(.24f,.64f,.96f,(1f-f.Merge)*f.Opacity));
+            if(f.Connection>0f)
+                DrawDemoConnection(rect,f,DiagramPoint(rect,f.ConnectionTarget));
+            DrawDemoPlayer(rect,f);
+            DrawDemoCaption(rect,f.Caption);
+        }
+
+        private static Vector2 DiagramPoint(Rect rect, Vector2 normalized) =>
+            new Vector2(rect.x+rect.width*normalized.x,rect.y+rect.height*normalized.y);
+
+        private static void DrawSwingBanks(Rect rect)
+        {
+            DrawPlatform(NormalizedRect(rect,.02f,.64f,.27f,.28f));
+            DrawPlatform(NormalizedRect(rect,.71f,.64f,.27f,.28f));
+        }
+
+        private static void DrawDemoRing(Vector2 center, Color color)
+        {
+            DrawRing(new Rect(center.x-17f,center.y-17f,34f,34f),color);
+        }
+
+        private Rect DemoPlayerRect(Rect rect, Vector2 feet)
+        {
+            float height=rect.height*.17f;
+            float aspect=playerSprite!=null ? playerSprite.rect.width/Mathf.Max(1f,playerSprite.rect.height) : .55f;
+            Vector2 position=DiagramPoint(rect,feet);
+            return new Rect(position.x-height*aspect*.5f,position.y-height,height*aspect,height);
+        }
+
+        private void DrawDemoPlayer(Rect rect, TutorialGuideAnimation.Frame frame)
+        {
+            Color previous=GUI.color;
+            GUI.color=new Color(previous.r,previous.g,previous.b,previous.a*frame.Opacity);
+            DrawPlayer(DemoPlayerRect(rect,frame.Feet));
+            GUI.color=previous;
+        }
+
+        private void DrawDemoConnection(Rect rect, TutorialGuideAnimation.Frame frame, Vector2 hook)
+        {
+            Vector2 head=DemoPlayerCrown(rect,frame.Feet);
+            DrawYarnLine(head,Vector2.Lerp(head,hook,frame.Connection),5f,
+                new Color(1f,1f,1f,frame.Opacity*frame.Connection));
+        }
+
+        private Vector2 DemoPlayerCrown(Rect rect, Vector2 feet)
+        {
+            Rect player = DemoPlayerRect(rect, feet);
+            if (!CraftPlayerArt.TryGetStandingCrownPoint(playerSprite, out Vector2 crown))
+                return new Vector2(player.center.x, player.y + player.height * .06f);
+            Bounds bounds = playerSprite.bounds;
+            float x = (crown.x - bounds.min.x) / Mathf.Max(.001f, bounds.size.x);
+            float y = (crown.y - bounds.min.y) / Mathf.Max(.001f, bounds.size.y);
+            // IMGUI points downward; the sprite's local Y points upward.
+            return new Vector2(player.x + player.width * x, player.yMax - player.height * y);
+        }
+
+        private void DrawDemoCaption(Rect rect, string caption)
+        {
+            GUI.Label(NormalizedRect(rect,0f,-.015f,1f,.12f),caption,diagramLabelStyle);
         }
 
         private void DrawPlayer(Rect rect)

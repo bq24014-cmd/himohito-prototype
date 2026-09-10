@@ -72,7 +72,7 @@ namespace HimoHito
                 retryButton,
                 retryPrompt,
                 promptStyle);
-            GUILayout.Label("Esc　タイトルへ", bodyStyle);
+            GUILayout.Label("Esc　ステージ選択へ", bodyStyle);
             GUILayout.EndArea();
         }
 

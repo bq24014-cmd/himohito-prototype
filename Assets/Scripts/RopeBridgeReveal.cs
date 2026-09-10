@@ -16,6 +16,7 @@ namespace HimoHito
         public static void Play(LineRenderer line, Vector3 playerPosition)
         {
             if (line == null || line.positionCount < 2) return;
+            RopeBridgeBindings.Ensure(line)?.BeginWeave(Duration);
             RopeBridgeReveal effect = line.gameObject.AddComponent<RopeBridgeReveal>();
             effect.bridge = line;
             effect.startColor = line.startColor;

@@ -9,8 +9,6 @@ namespace HimoHito
     /// </summary>
     public static class MainStageVisuals
     {
-        private const string BackgroundResourcePath =
-            "Art/TutorialNightChildRoom-v1";
         private const string BlockResourcePath =
             "Art/TutorialBlockPlatform-v1";
         private const string RailResourcePath =
@@ -64,11 +62,8 @@ namespace HimoHito
             bool changed = false;
             changed |= RecoverySwitchVisual.Ensure(
                 FindSceneObject(MainStageSectionThreeSetup.RecoverySwitchName));
-            changed |= HimoHitoFarBackgroundLayer.Ensure(
-                FarBackgroundName,
-                60f,
-                0.78f);
-            changed |= EnsureBackground();
+            changed |= HimoHitoCraftRoomBackground.Ensure(
+                BackgroundName, FarBackgroundName);
             changed |= RestorePlayerVisual(player);
             changed |= GoalChestPresentation.Ensure(
                 FindSceneObject(MainStageSectionTenSetup.GoalMarkerName),
@@ -322,6 +317,8 @@ namespace HimoHito
             {
                 return false;
             }
+
+            if (CraftWoodPlatformVisual.TryEnsure(terrain, out bool woodChanged)) return woodChanged;
 
             bool changed = false;
             changed |= RemoveChild(terrain, "Orange Block Platform Visual");
@@ -699,7 +696,8 @@ namespace HimoHito
                 changed = true;
             }
 
-            Transform ropeBodyVisual = player.transform.Find("Rope Body Visual");
+            Transform ropeBodyVisual = player.transform.Find("Rope Body Visual") ??
+                player.transform.Find("Craft Player Presentation/Rope Body Visual");
             if (ropeBodyVisual != null)
             {
                 changed |= ApplyColor(ropeBodyVisual.gameObject, PlayerColor);
@@ -731,6 +729,14 @@ namespace HimoHito
                 return false;
             }
 
+            if (resourcePath == BlockResourcePath &&
+                CraftWoodPlatformVisual.TryEnsure(target, out bool woodChanged)) return woodChanged;
+
+            bool changed = false;
+            if (resourcePath == RailResourcePath &&
+                (target.TryGetComponent(out SwingPassThroughRailPlatform _) || target.TryGetComponent(out OneWayRailPlatform _)) &&
+                CraftRailPlatformVisual.TryEnsure(target, out changed)) return changed;
+
             Sprite processedSprite =
                 TutorialFirstSectionVisuals.LoadProcessedToySprite(resourcePath);
             if (processedSprite == null)
@@ -748,10 +754,9 @@ namespace HimoHito
                     return true;
                 }
 
-                return false;
+                return changed;
             }
 
-            bool changed = false;
             Transform visualTransform = target.transform.Find(visualName);
             if (visualTransform == null)
             {
@@ -811,6 +816,11 @@ namespace HimoHito
             if (renderer.sprite != processedSprite)
             {
                 renderer.sprite = processedSprite;
+                changed = true;
+            }
+            if (resourcePath == RailResourcePath && renderer.drawMode != SpriteDrawMode.Simple)
+            {
+                renderer.drawMode = SpriteDrawMode.Simple;
                 changed = true;
             }
             if (!renderer.enabled)
@@ -901,93 +911,6 @@ namespace HimoHito
                 changed = true;
             }
 
-            return changed;
-        }
-
-        private static bool EnsureBackground()
-        {
-            Sprite backgroundSprite =
-                Resources.Load<Sprite>(BackgroundResourcePath);
-            if (backgroundSprite == null)
-            {
-                Debug.LogWarning(
-                    $"Main-stage background was not found: {BackgroundResourcePath}");
-                return false;
-            }
-
-            bool changed = false;
-            GameObject background = FindSceneObject(BackgroundName);
-            if (background == null)
-            {
-                background = new GameObject(BackgroundName);
-                changed = true;
-            }
-            else if (!background.activeSelf)
-            {
-                background.SetActive(true);
-                changed = true;
-            }
-
-            Camera targetCamera = Camera.main;
-            float cameraX = targetCamera != null
-                ? targetCamera.transform.position.x
-                : 0f;
-            Vector3 targetPosition = new Vector3(cameraX, 0f, 1f);
-            if (background.transform.position != targetPosition)
-            {
-                background.transform.position = targetPosition;
-                changed = true;
-            }
-
-            float width = Mathf.Max(0.01f, backgroundSprite.bounds.size.x);
-            float scale = 60f / width;
-            Vector3 targetScale = new Vector3(scale, scale, 1f);
-            if (background.transform.localScale != targetScale)
-            {
-                background.transform.localScale = targetScale;
-                changed = true;
-            }
-
-            if (!background.TryGetComponent(out SpriteRenderer renderer))
-            {
-                renderer = background.AddComponent<SpriteRenderer>();
-                changed = true;
-            }
-            if (!renderer.enabled)
-            {
-                renderer.enabled = true;
-                changed = true;
-            }
-            if (renderer.forceRenderingOff)
-            {
-                renderer.forceRenderingOff = false;
-                changed = true;
-            }
-            if (renderer.sprite != backgroundSprite)
-            {
-                renderer.sprite = backgroundSprite;
-                changed = true;
-            }
-            Color foregroundTint = new Color(1f, 1f, 1f, 0.84f);
-            if (renderer.color != foregroundTint)
-            {
-                renderer.color = foregroundTint;
-                changed = true;
-            }
-            if (renderer.sortingOrder != -100)
-            {
-                renderer.sortingOrder = -100;
-                changed = true;
-            }
-
-            if (!background.TryGetComponent(
-                    out TutorialBackgroundParallax parallax))
-            {
-                parallax = background.AddComponent<TutorialBackgroundParallax>();
-                changed = true;
-            }
-            parallax.Configure(0.97f);
-            if (Application.isPlaying) HangingDecorSway.Ensure(renderer);
             return changed;
         }
 

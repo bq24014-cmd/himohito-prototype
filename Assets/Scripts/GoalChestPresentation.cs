@@ -111,6 +111,11 @@ namespace HimoHito
             chest = EnsureRenderer(chest, "Animated Goal Chest", 8);
             glow = EnsureRenderer(glow, "Goal Chest Warm Glow", 9);
             float progress = Application.isPlaying ? elapsed / OpeningDuration : 0f;
+            DrawFrame(progress);
+        }
+
+        private void DrawFrame(float progress)
+        {
             int frame = Mathf.Clamp(Mathf.RoundToInt(progress * 3f), 0, 3);
             chest.sprite = frames[frame];
             float width = Mathf.Abs(transform.lossyScale.x);
@@ -151,7 +156,9 @@ namespace HimoHito
         private static bool LoadFrames()
         {
             if (frames != null && frames[0] != null) return true;
-            Texture2D source = Resources.Load<Texture2D>("Art/ToyBoxOpening-v1");
+            // Same four poses and bottom-centred registration; only the material artwork changes.
+            Texture2D source = Resources.Load<Texture2D>("Art/HimoHitoCraftChestOpening-v1")
+                ?? Resources.Load<Texture2D>("Art/ToyBoxOpening-v1");
             if (source == null) return false;
             frames = new Sprite[4];
             int w = source.width / 2, h = source.height / 2;
@@ -172,6 +179,7 @@ namespace HimoHito
                     minY = Mathf.Min(minY, i / w); maxY = Mathf.Max(maxY, i / w);
                 }
                 Texture2D texture = new Texture2D(w, h, TextureFormat.RGBA32, false);
+                texture.name = source.name + " Frame " + frame;
                 texture.hideFlags = HideFlags.HideAndDontSave;
                 texture.filterMode = FilterMode.Bilinear;
                 texture.wrapMode = TextureWrapMode.Clamp;
@@ -180,6 +188,7 @@ namespace HimoHito
                     new Rect(minX, minY, maxX - minX + 1, maxY - minY + 1),
                     new Vector2(0.5f, 0f), 100f, 0, SpriteMeshType.FullRect);
                 frames[frame].hideFlags = HideFlags.HideAndDontSave;
+                frames[frame].name = texture.name;
             }
             Texture2D light = new Texture2D(64, 64, TextureFormat.RGBA32, false);
             light.hideFlags = HideFlags.HideAndDontSave;

@@ -12,10 +12,18 @@ namespace HimoHito
         private const string MainStageSceneName = "MainStage";
         private const string MainObjectPrefix = "Main ";
 
-        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
-        private static void ApplyAfterSceneLoad()
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
+        private static void RegisterSceneSetup()
         {
-            if (SceneManager.GetActiveScene().name == MainStageSceneName)
+            // Also run after Tutorial -> MainStage and scene reloads. Unsubscribe
+            // first so Enter Play Mode without domain reload cannot double-register.
+            SceneManager.sceneLoaded -= OnSceneLoaded;
+            SceneManager.sceneLoaded += OnSceneLoaded;
+        }
+
+        private static void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+        {
+            if (scene.name == MainStageSceneName && scene == SceneManager.GetActiveScene())
             {
                 ApplyCurrentScene();
             }
@@ -23,7 +31,8 @@ namespace HimoHito
 
         public static bool ApplyCurrentScene()
         {
-            bool changed = MainStageSectionTwoSetup.ApplyCurrentScene();
+            bool changed = EnsureSectionTwoCheckpoint();
+            changed |= MainStageSectionTwoSetup.ApplyCurrentScene();
             changed |= MainStageSectionThreeSetup.ApplyCurrentScene();
             changed |= MainStageSectionFourSetup.ApplyCurrentScene();
             changed |= MainStageSectionFiveSetup.ApplyCurrentScene();
@@ -64,6 +73,22 @@ namespace HimoHito
             }
 
             return changed;
+        }
+
+        private static bool EnsureSectionTwoCheckpoint()
+        {
+            GameObject landing = SceneObjectLookup.Find("Main Landing 1", MainStageSceneName);
+            if (landing == null || !landing.TryGetComponent(out Collider2D floor) ||
+                landing.TryGetComponent(out MainStageCheckpoint _))
+            {
+                return false;
+            }
+
+            // Repair the authored opening, without rebuilding or moving its bank.
+            Bounds bounds = floor.bounds;
+            landing.AddComponent<MainStageCheckpoint>().Configure(2,
+                new Vector2(bounds.center.x, bounds.max.y + 0.7f), 50f);
+            return true;
         }
 
         private static bool EnsureSolid(GameObject floor)

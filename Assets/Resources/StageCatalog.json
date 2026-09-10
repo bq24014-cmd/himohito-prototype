@@ -1,0 +1,31 @@
+{
+  "stages": [
+    {
+      "id": "tutorial",
+      "mapArt": "practice",
+      "title": "はじめての毛糸",
+      "subtitle": "TUTORIAL  /  チュートリアル",
+      "description": "掛ける・振る・編む。看板と一緒に、4つの区間で練習しよう。\nヒモ残量 99 ／ 第1区間から",
+      "scenePath": "Assets/Scenes/Tutorial.unity",
+      "available": true
+    },
+    {
+      "id": "main",
+      "mapArt": "toybox",
+      "title": "おもちゃ箱への道",
+      "subtitle": "STAGE 01  /  本編",
+      "description": "自分のヒモを使って、夜の子供部屋を冒険。\nヒモ残量 50 ／ 第1区間から",
+      "scenePath": "Assets/Scenes/MainStage.unity",
+      "available": true
+    },
+    {
+      "id": "upcoming",
+      "mapArt": "Art/HimoHitoStageMapUpcoming-v1",
+      "title": "つぎの冒険",
+      "subtitle": "COMING SOON  /  追加予定",
+      "description": "新しいステージを追加予定です。\n今はまだあそべません。お楽しみに。",
+      "scenePath": "",
+      "available": false
+    }
+  ]
+}

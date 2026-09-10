@@ -105,6 +105,7 @@ namespace HimoHito
             rampDuration = Mathf.Min(1f, cruiseDuration);
             travelDuration = cruiseDuration + rampDuration;
 
+            StageStartTransition.ReleasePlayerForPreview(player.gameObject);
             bodyWasSimulated = playerBody.simulated;
             moverWasEnabled = playerMover != null && playerMover.enabled;
             ropeWasEnabled = ropeController != null && ropeController.enabled;
@@ -127,6 +128,12 @@ namespace HimoHito
         private void Update()
         {
             if (!IsPreviewing) return;
+            if (StageStartTransition.IsActive)
+            {
+                // Tour is already parked at the goal; don't spend its hold/travel time under cloth.
+                beganFrame = Time.frameCount;
+                return;
+            }
             if (playerBody == null || previewCamera == null)
             {
                 RestoreState();
@@ -197,7 +204,7 @@ namespace HimoHito
 
         private void OnGUI()
         {
-            if (!IsPreviewing) return;
+            if (!IsPreviewing || StageStartTransition.IsActive) return;
             if (hintStyle == null)
             {
                 hintStyle = new GUIStyle(GUI.skin.label)

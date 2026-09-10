@@ -21,21 +21,21 @@ namespace HimoHito
         private const string SectionEightPrefix = "Main S08 ";
 
         public static readonly Vector2 LeftAnchorPosition =
-            new Vector2(177f, -2.15f);
+            new Vector2(180f, -2.15f);
         public static readonly Vector2 CenterHookPosition =
-            new Vector2(182.5f, -1.05f);
+            new Vector2(185.5f, -1.05f);
         public static readonly Vector2 RightAnchorPosition =
-            new Vector2(188f, -2.15f);
+            new Vector2(191f, -2.15f);
         public static readonly Vector2 BeamPosition =
-            new Vector2(184f, 1.55f);
+            new Vector2(187f, 1.55f);
         public static readonly Vector2 BeamSize =
             new Vector2(2f, 5f);
         public static readonly Vector2 GoalFloorPosition =
-            new Vector2(192f, -7.15f);
+            new Vector2(195f, -7.15f);
         public static readonly Vector2 GoalFloorSize =
             new Vector2(8f, 10f);
         public static readonly Vector2 GoalRespawnPosition =
-            new Vector2(189f, -1.45f);
+            new Vector2(192f, -1.45f);
 
         private static readonly Vector2 BridgeHookSize =
             new Vector2(0.62f, 0.62f);

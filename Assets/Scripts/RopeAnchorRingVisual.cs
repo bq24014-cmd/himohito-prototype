@@ -16,7 +16,7 @@ namespace HimoHito
 
         private const string ResourcePath =
             "Art/TutorialRopeAnchorRing-v1";
-        private static Sprite sharedSprite;
+        private const string CraftResourcePath = "Art/HimoHitoCraftHookGreen-v1";
 
         public bool Configure(
             int targetSortingLayerId,
@@ -71,20 +71,18 @@ namespace HimoHito
                     1f / Mathf.Max(0.01f, size.x),
                     1f / Mathf.Max(0.01f, size.y),
                     1f);
+                HookWoodMountVisual.Ensure(gameObject);
             }
         }
 
         private static Sprite GetSharedSprite()
         {
-            if (sharedSprite != null && sharedSprite.texture != null)
-            {
-                return sharedSprite;
-            }
-
-            sharedSprite =
-                TutorialFirstSectionVisuals.LoadProcessedToySprite(
-                    ResourcePath);
-            return sharedSprite;
+            // The common loader already caches sprites by resource path. Resolve
+            // the preferred path on Apply so later asset imports replace fallback art.
+            Sprite sprite = Resources.Load<Texture2D>(CraftResourcePath) != null
+                ? TutorialFirstSectionVisuals.LoadProcessedToySprite(CraftResourcePath, true) : null;
+            return sprite != null ? sprite :
+                TutorialFirstSectionVisuals.LoadProcessedToySprite(ResourcePath);
         }
     }
 }

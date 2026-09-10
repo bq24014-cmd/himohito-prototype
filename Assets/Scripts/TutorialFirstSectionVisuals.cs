@@ -10,8 +10,6 @@ namespace HimoHito
     /// </summary>
     public static class TutorialFirstSectionVisuals
     {
-        private const string BackgroundResourcePath =
-            "Art/TutorialNightChildRoom-v1";
         private const string BackgroundName =
             "Tutorial Night Child Room Background";
         private const string FarBackgroundName =
@@ -25,8 +23,8 @@ namespace HimoHito
         private const string HookVisualName = "Blue Toy Hook Visual";
         private const float HookVisualWorldDiameter = 0.72f;
 
-        private static readonly Dictionary<string, Sprite> ProcessedSprites =
-            new Dictionary<string, Sprite>();
+        private static readonly Dictionary<(string, bool), Sprite> ProcessedSprites =
+            new Dictionary<(string, bool), Sprite>();
 
         private static readonly Color PlayerColor =
             new Color(1f, 0.365f, 0.561f);
@@ -67,11 +65,8 @@ namespace HimoHito
             changed |= ApplyColor(FindSceneObject("Hook 2"), HookColor);
             changed |= ApplyColor(FindSceneObject("Hook 3"), HookColor);
             changed |= ApplyColor(FindSceneObject("Goal / Landing 3"), PlatformColor);
-            changed |= HimoHitoFarBackgroundLayer.Ensure(
-                FarBackgroundName,
-                40f,
-                0.78f);
-            changed |= EnsureBackground();
+            changed |= HimoHitoCraftRoomBackground.Ensure(
+                BackgroundName, FarBackgroundName);
             changed |= EnsureToyVisual(
                 "Start Ground",
                 "Orange Block Platform Visual",
@@ -248,9 +243,10 @@ namespace HimoHito
             return true;
         }
 
-        public static Sprite LoadProcessedToySprite(string resourcePath)
+        public static Sprite LoadProcessedToySprite(
+            string resourcePath, bool useMipMaps = false)
         {
-            return GetProcessedSprite(resourcePath);
+            return GetProcessedSprite(resourcePath, useMipMaps);
         }
 
         private static bool RemoveLegacyGoalToyBlockSupports()
@@ -301,13 +297,22 @@ namespace HimoHito
                 return false;
             }
 
+            if (resourcePath == BlockResourcePath &&
+                CraftWoodPlatformVisual.TryEnsure(target, out bool woodChanged)) return woodChanged;
+
+            bool changed = false;
+            if (resourcePath == RailResourcePath && targetName == "Landing 1")
+            {
+                if (!target.activeInHierarchy) return false;
+                if (CraftRailPlatformVisual.TryEnsure(target, out changed, allowTutorialLegacy: true)) return changed;
+            }
+
             Sprite processedSprite = GetProcessedSprite(resourcePath);
             if (processedSprite == null)
             {
-                return false;
+                return changed;
             }
 
-            bool changed = false;
             Transform visualTransform = target.transform.Find(visualName);
             if (visualTransform == null)
             {
@@ -384,6 +389,12 @@ namespace HimoHito
                 changed = true;
             }
 
+            if (resourcePath == RailResourcePath && renderer.drawMode != SpriteDrawMode.Simple)
+            {
+                renderer.drawMode = SpriteDrawMode.Simple;
+                changed = true;
+            }
+
             if (renderer.color != Color.white)
             {
                 renderer.color = Color.white;
@@ -428,9 +439,11 @@ namespace HimoHito
             return hookPoint.ConfigureFixedAttachmentPoint(Vector2.zero);
         }
 
-        private static Sprite GetProcessedSprite(string resourcePath)
+        private static Sprite GetProcessedSprite(
+            string resourcePath, bool useMipMaps = false)
         {
-            if (ProcessedSprites.TryGetValue(resourcePath, out Sprite cached) &&
+            var cacheKey = (resourcePath, useMipMaps);
+            if (ProcessedSprites.TryGetValue(cacheKey, out Sprite cached) &&
                 cached != null)
             {
                 return cached;
@@ -506,12 +519,14 @@ namespace HimoHito
                 source.width,
                 source.height,
                 TextureFormat.RGBA32,
-                false);
+                useMipMaps);
             transparentTexture.name = $"{source.name} Transparent";
-            transparentTexture.filterMode = FilterMode.Bilinear;
+            transparentTexture.filterMode = useMipMaps
+                ? FilterMode.Trilinear : FilterMode.Bilinear;
             transparentTexture.wrapMode = TextureWrapMode.Clamp;
             transparentTexture.hideFlags = HideFlags.HideAndDontSave;
-            transparentTexture.SetPixels32(pixels);
+            if (useMipMaps) SetAlphaWeightedMipMaps(transparentTexture, pixels);
+            else transparentTexture.SetPixels32(pixels);
             transparentTexture.Apply(false, true);
 
             const int padding = 2;
@@ -536,79 +551,81 @@ namespace HimoHito
             processed.hideFlags = HideFlags.HideAndDontSave;
             if (resourcePath == "Art/HimoHitoPlayer-v1")
                 RopeFaceLandmarks.Register(processed, pixels, source.width);
-            ProcessedSprites[resourcePath] = processed;
+            ProcessedSprites[cacheKey] = processed;
             return processed;
         }
 
-        private static bool EnsureBackground()
+        private static void SetAlphaWeightedMipMaps(Texture2D texture, Color32[] pixels)
         {
-            Sprite backgroundSprite =
-                Resources.Load<Sprite>(BackgroundResourcePath);
-            if (backgroundSprite == null)
+            int width = texture.width, height = texture.height;
+            for (int level = 0; level < texture.mipmapCount; level++)
             {
-                Debug.LogWarning(
-                    $"Tutorial background was not found: {BackgroundResourcePath}");
-                return false;
-            }
+                // RGB outside the silhouette must also be safe for bilinear sampling.
+                BleedTransparentEdges(pixels, width, height);
+                texture.SetPixels32(pixels, level);
+                if (level == texture.mipmapCount - 1) break;
 
-            bool changed = false;
-            GameObject background = FindSceneObject(BackgroundName);
-            if (background == null)
+                int nextWidth = Mathf.Max(1, width / 2);
+                int nextHeight = Mathf.Max(1, height / 2);
+                var next = new Color32[nextWidth * nextHeight];
+                for (int y = 0; y < nextHeight; y++)
+                {
+                    float bottom = (float)y * height / nextHeight;
+                    float top = (float)(y + 1) * height / nextHeight;
+                    for (int x = 0; x < nextWidth; x++)
+                    {
+                        float left = (float)x * width / nextWidth;
+                        float right = (float)(x + 1) * width / nextWidth;
+                        float alpha = 0f, red = 0f, green = 0f, blue = 0f;
+                        // Area weights include every edge pixel of odd/NPOT dimensions.
+                        for (int sy = Mathf.FloorToInt(bottom); sy < Mathf.CeilToInt(top); sy++)
+                        for (int sx = Mathf.FloorToInt(left); sx < Mathf.CeilToInt(right); sx++)
+                        {
+                            float area = (Mathf.Min(right, sx + 1) - Mathf.Max(left, sx)) *
+                                (Mathf.Min(top, sy + 1) - Mathf.Max(bottom, sy));
+                            Color32 sample = pixels[sy * width + sx];
+                            float weight = sample.a * area;
+                            alpha += weight;
+                            red += sample.r * weight;
+                            green += sample.g * weight;
+                            blue += sample.b * weight;
+                        }
+                        if (alpha > 0f)
+                            next[y * nextWidth + x] = new Color32(
+                                (byte)Mathf.RoundToInt(red / alpha),
+                                (byte)Mathf.RoundToInt(green / alpha),
+                                (byte)Mathf.RoundToInt(blue / alpha),
+                                (byte)Mathf.RoundToInt(alpha / ((right - left) * (top - bottom))));
+                    }
+                }
+                pixels = next;
+                width = nextWidth;
+                height = nextHeight;
+            }
+        }
+
+        private static void BleedTransparentEdges(Color32[] pixels, int width, int height)
+        {
+            for (int y = 0; y < height; y++)
+            for (int x = 0; x < width; x++)
             {
-                background = new GameObject(BackgroundName);
-                changed = true;
+                int index = y * width + x;
+                if (pixels[index].a != 0) continue;
+                float alpha = 0f, red = 0f, green = 0f, blue = 0f;
+                for (int sy = Mathf.Max(0, y - 1); sy <= Mathf.Min(height - 1, y + 1); sy++)
+                for (int sx = Mathf.Max(0, x - 1); sx <= Mathf.Min(width - 1, x + 1); sx++)
+                {
+                    Color32 sample = pixels[sy * width + sx];
+                    alpha += sample.a;
+                    red += sample.r * sample.a;
+                    green += sample.g * sample.a;
+                    blue += sample.b * sample.a;
+                }
+                pixels[index] = alpha > 0f
+                    ? new Color32((byte)Mathf.RoundToInt(red / alpha),
+                        (byte)Mathf.RoundToInt(green / alpha), (byte)Mathf.RoundToInt(blue / alpha), 0)
+                    : new Color32(0, 0, 0, 0);
             }
-
-            Vector3 targetPosition = new Vector3(-15f, 0f, 1f);
-            if (background.transform.position != targetPosition)
-            {
-                background.transform.position = targetPosition;
-                changed = true;
-            }
-
-            float width = Mathf.Max(0.01f, backgroundSprite.bounds.size.x);
-            float scale = 40f / width;
-            Vector3 targetScale = new Vector3(scale, scale, 1f);
-            if (background.transform.localScale != targetScale)
-            {
-                background.transform.localScale = targetScale;
-                changed = true;
-            }
-
-            if (!background.TryGetComponent(out SpriteRenderer renderer))
-            {
-                renderer = background.AddComponent<SpriteRenderer>();
-                changed = true;
-            }
-
-            if (renderer.sprite != backgroundSprite)
-            {
-                renderer.sprite = backgroundSprite;
-                changed = true;
-            }
-
-            Color foregroundTint = new Color(1f, 1f, 1f, 0.84f);
-            if (renderer.color != foregroundTint)
-            {
-                renderer.color = foregroundTint;
-                changed = true;
-            }
-
-            if (renderer.sortingOrder != -100)
-            {
-                renderer.sortingOrder = -100;
-                changed = true;
-            }
-
-            if (!background.TryGetComponent(out TutorialBackgroundParallax _))
-            {
-                background.AddComponent<TutorialBackgroundParallax>();
-                changed = true;
-            }
-
-            if (Application.isPlaying) HangingDecorSway.Ensure(renderer);
-
-            return changed;
         }
 
         private static bool ApplyColor(GameObject target, Color color)

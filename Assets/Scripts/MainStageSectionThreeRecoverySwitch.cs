@@ -69,31 +69,28 @@ namespace HimoHito
                 trackedPlayer = Object.FindFirstObjectByType<PlayerMover>();
             }
 
-            if (nearbyPlayer != null &&
-                stairs != null &&
-                !stairs.IsRevealed &&
-                Input.GetKeyDown(KeyCode.F))
-            {
-                stairs.Reveal();
-                SetVisualState(true);
-
-                RopeResource resource =
-                    nearbyPlayer.GetComponentInParent<RopeResource>();
-                if (resource != null)
-                {
-                    MainStageVisuals.Apply(resource.gameObject);
-                }
-            }
+            if (Input.GetKeyDown(KeyCode.F)) TryActivate();
 
             if (trackedPlayer != null &&
                 stairs != null &&
                 stairs.IsRevealed &&
-                trackedPlayer.transform.position.x <= 33.1f &&
+                trackedPlayer.transform.position.x <=
+                    MainStageSectionTwoSetup.LandingRightEdge + 0.1f &&
                 trackedPlayer.transform.position.y >= -5.2f)
             {
                 stairs.Hide();
                 SetVisualState(false);
             }
+        }
+
+        private void TryActivate()
+        {
+            if (MainStagePreview.IsActive || nearbyPlayer == null || !nearbyPlayer.enabled ||
+                Time.timeScale <= 0f || stairs == null || stairs.IsRevealed) return;
+            // Activation is immediate. The character gesture is presentation only.
+            stairs.Reveal();
+            SetVisualState(true);
+            nearbyPlayer.GetComponent<RopeBodyVisual>()?.PlaySwitchPressPose(transform);
         }
 
         private void OnTriggerEnter2D(Collider2D other)

@@ -22,6 +22,25 @@ namespace HimoHito
         private const string EdgeArtResourcePath = "Art/HimoHitoEdgeBalance-v1";
         private const string WeaveArtResourcePath = "Art/HimoHitoWeave-v1";
         private const string GoalArtResourcePath = "Art/HimoHitoGoal-v1";
+        private static Sprite[] cachedWallPushFrames;
+        private static Vector2 cachedWallPushContentSize;
+        private static Sprite[] cachedSwitchPressFrames;
+        private static Vector2 cachedSwitchPressContentSize;
+        private Sprite[] switchPressFrames;
+        private Vector2 switchPressBaseScale;
+        private readonly SwitchPressPoseState switchPressPose = new SwitchPressPoseState();
+        private Transform pressedSwitch;
+        private bool isSwitchPressDisplayed;
+        private static readonly System.Collections.Generic.Dictionary<Sprite, Vector2> SwitchSolePoints =
+            new System.Collections.Generic.Dictionary<Sprite, Vector2>();
+        private Sprite[] wallPushFrames;
+        private Vector2 wallPushBaseScale;
+        private readonly WallPushPoseState wallPushPose = new WallPushPoseState();
+        private bool isWallPushDisplayed;
+        private static readonly System.Collections.Generic.Dictionary<Sprite, float> WallHandOffsets =
+            new System.Collections.Generic.Dictionary<Sprite, float>();
+        private static readonly System.Collections.Generic.Dictionary<Sprite, float> WallFootOffsets =
+            new System.Collections.Generic.Dictionary<Sprite, float>();
         private const float GoalGestureDuration = 0.45f;
         private const int SwingFrameCount = 6;
         private const int WalkColumns = 4;
@@ -125,8 +144,10 @@ namespace HimoHito
         private SpriteRenderer sourceRenderer;
         private SpriteRenderer visualRenderer;
         private Transform visualTransform;
+        private Transform craftVisualRoot;
         private Vector2 visualBaseScale = Vector2.one;
         private Vector2 standingVisualBaseScale = Vector2.one;
+        private float craftHeadWorldWidth;
         private Vector2 walkingVisualBaseScale = Vector2.one;
         private Vector2 jumpingVisualBaseScale = Vector2.one;
         private Vector2 landingVisualBaseScale = Vector2.one;
@@ -147,7 +168,6 @@ namespace HimoHito
         private Sprite[] aimFrames;
         private readonly AimPoseState aimPose = new AimPoseState();
         private readonly SignGlanceState signGlance = new SignGlanceState();
-        private TutorialSectionGuide signGuide;
         private bool isAimPoseDisplayed;
         private Sprite[] edgeFrames;
         private bool edgeArtReady;
@@ -223,7 +243,8 @@ namespace HimoHito
                     // Swing cells pivot at the drawn crown, not the padded cell
                     // centre. The line must use that same attachment point.
                     if (isSwingPoseDisplayed) return visualTransform.position;
-                    if ((isIdlePoseDisplayed || isSwingReleasePoseDisplayed || isWeavePoseDisplayed || isAimPoseDisplayed) &&
+                    if ((CraftPlayerArt.IsCraftSprite(visualRenderer.sprite) ||
+                        isIdlePoseDisplayed || isSwingReleasePoseDisplayed || isWeavePoseDisplayed || isAimPoseDisplayed || isWallPushDisplayed || isSwitchPressDisplayed) &&
                         FrameCrownPoints.TryGetValue(visualRenderer.sprite, out Vector3 crown))
                     {
                         if (visualRenderer.flipX) crown.x = -crown.x;
@@ -243,7 +264,6 @@ namespace HimoHito
             playerMover = GetComponent<PlayerMover>();
             body = GetComponent<Rigidbody2D>();
             edgePlayerCollider = GetComponent<Collider2D>();
-            signGuide = GetComponent<TutorialSectionGuide>();
             sourceRenderer = GetComponent<SpriteRenderer>();
             CreateVisualBody();
             UpdateRemainingLengthScale();
@@ -266,6 +286,7 @@ namespace HimoHito
 
         private void LateUpdate()
         {
+            RemoveBridgeOffset();
             PrepareSwingAttachment();
             if (visualTransform != null)
                 visualTransform.localPosition -= elasticityOffset;
@@ -279,9 +300,40 @@ namespace HimoHito
 
             UpdateCharacterAnimation();
             ApplyVisualScale();
+            ApplyBridgeOffset();
             landingElapsed = Mathf.Min(
                 landingDuration,
                 landingElapsed + Time.deltaTime);
+        }
+
+        private Vector3 bridgeOffset;
+        private float bridgeOffsetY;
+
+        private void RemoveBridgeOffset()
+        {
+            if (visualTransform != null) visualTransform.localPosition -= bridgeOffset;
+            if (balanceBodyRenderer != null) balanceBodyRenderer.transform.localPosition -= bridgeOffset;
+            bridgeOffset = Vector3.zero;
+        }
+
+        private void ApplyBridgeOffset()
+        {
+            if (visualTransform == null) return;
+            bool canFollow = playerMover != null && playerMover.enabled && body != null && body.simulated &&
+                (ropeController == null || !ropeController.IsAttached);
+            if (!canFollow) bridgeOffsetY = 0f;
+            else if (Time.timeScale > 0f)
+            {
+                GeneratedRopePlatform support = playerMover.SupportedRopePlatform;
+                if (support != null && support.TryGetComponent(out RopeBridgeStepVisual bend) && edgePlayerCollider != null)
+                    bridgeOffsetY = bend.GetVerticalOffset(new Vector2(edgePlayerCollider.bounds.center.x,
+                        edgePlayerCollider.bounds.min.y));
+                else
+                    bridgeOffsetY = Mathf.MoveTowards(bridgeOffsetY, 0f, Time.deltaTime * 1.5f);
+            }
+            bridgeOffset = GetVisualCoordinateSpace().InverseTransformVector(Vector3.up * bridgeOffsetY);
+            visualTransform.localPosition += bridgeOffset;
+            if (balanceBodyRenderer != null) balanceBodyRenderer.transform.localPosition += bridgeOffset;
         }
 
         private void OnDestroy()
@@ -306,17 +358,25 @@ namespace HimoHito
             visualRenderer.sortingOrder = sourceRenderer.sortingOrder;
             visualRenderer.maskInteraction = sourceRenderer.maskInteraction;
 
-            Sprite playerArt =
-                TutorialFirstSectionVisuals.LoadProcessedToySprite(
-                    PlayerArtResourcePath);
+            Sprite playerArt = CraftPlayerArt.LoadStandingSprite(PlayerArtResourcePath);
             if (playerArt != null)
             {
                 visualRenderer.sprite = playerArt;
+                visualTransform.SetParent(GetVisualCoordinateSpace(), false);
                 visualRenderer.color = Color.white;
                 Vector2 spriteSize = playerArt.bounds.size;
                 visualBaseScale = new Vector2(
                     CharacterVisualWidth / Mathf.Max(0.01f, spriteSize.x),
                     CharacterVisualHeight / Mathf.Max(0.01f, spriteSize.y));
+                if (CraftPlayerArt.TryGetStandingHeadWidth(playerArt, out float standingHeadWidth))
+                {
+                    // Keep the existing height/foot level, not a stretched .9-by-1.15 box.
+                    // Every craft pose shares this round head's size in presentation units.
+                    float uniformScale = CharacterVisualHeight / Mathf.Max(0.01f, spriteSize.y);
+                    visualBaseScale = Vector2.one * uniformScale;
+                    craftHeadWorldWidth = standingHeadWidth * uniformScale;
+                    FrameHeadWidths[playerArt] = standingHeadWidth;
+                }
                 standingVisualBaseScale = visualBaseScale;
                 standingSprite = playerArt;
                 standingRopeLocalPoint = new Vector3(
@@ -329,6 +389,7 @@ namespace HimoHito
                     walkingVisualBaseScale = new Vector2(
                         CharacterVisualWidth / Mathf.Max(0.01f, walkContentSize.x),
                         CharacterVisualHeight / Mathf.Max(0.01f, walkContentSize.y));
+                    walkingVisualBaseScale = PreserveCraftAspect(walkingFrames, walkingVisualBaseScale, 0);
                 }
                 jumpingFrames = LoadJumpFrames(out Vector2 jumpContentSize);
                 if (jumpingFrames != null && jumpContentSize.sqrMagnitude > 0f)
@@ -336,6 +397,7 @@ namespace HimoHito
                     jumpingVisualBaseScale = new Vector2(
                         CharacterVisualWidth / Mathf.Max(0.01f, jumpContentSize.x),
                         CharacterVisualHeight / Mathf.Max(0.01f, jumpContentSize.y));
+                    jumpingVisualBaseScale = PreserveCraftAspect(jumpingFrames, jumpingVisualBaseScale, 2);
                 }
                 landingFrames = LoadLandingFrames(out Vector2 landingContentSize);
                 if (landingFrames != null && landingContentSize.sqrMagnitude > 0f)
@@ -343,6 +405,7 @@ namespace HimoHito
                     landingVisualBaseScale = new Vector2(
                         CharacterVisualWidth / Mathf.Max(0.01f, landingContentSize.x),
                         CharacterVisualHeight / Mathf.Max(0.01f, landingContentSize.y));
+                    landingVisualBaseScale = PreserveCraftAspect(landingFrames, landingVisualBaseScale, 5);
                 }
                 swingingFrames = LoadAnimationFrames(
                     SwingArtResourcePath, "Swing", 3, 2, false,
@@ -353,6 +416,7 @@ namespace HimoHito
                     swingingVisualBaseScale = new Vector2(
                         CharacterVisualWidth / swingContentSize.x,
                         CharacterVisualHeight / swingContentSize.y);
+                    swingingVisualBaseScale = PreserveCraftAspect(swingingFrames, swingingVisualBaseScale, 2);
                 }
                 groundTransitionFrames = LoadAnimationFrames(
                     GroundTransitionArtResourcePath, "Ground transition", 3, 2, true,
@@ -363,12 +427,14 @@ namespace HimoHito
                     groundTransitionBaseScale = new Vector2(
                         CharacterVisualWidth / groundContentSize.x,
                         CharacterVisualHeight / groundContentSize.y);
+                    groundTransitionBaseScale = PreserveCraftAspect(groundTransitionFrames, groundTransitionBaseScale, 5);
                     if (walkingFrames != null && FrameHeadWidths.TryGetValue(walkingFrames[0], out float headWidth))
                     {
                         // Existing walking art has its own normalization. Ease
                         // into that size, rather than popping at the hand-off.
                         transitionWalkScaleRatio = new Vector2(
-                            walkingVisualBaseScale.x * headWidth / CharacterVisualWidth,
+                            walkingVisualBaseScale.x * headWidth /
+                                (groundTransitionBaseScale.x * groundContentSize.x),
                             walkingVisualBaseScale.y * headWidth /
                                 (groundTransitionBaseScale.y * groundContentSize.x));
                     }
@@ -382,6 +448,7 @@ namespace HimoHito
                     idleVisualBaseScale = new Vector2(
                         CharacterVisualWidth / idleContentSize.x,
                         CharacterVisualHeight / idleContentSize.y);
+                    idleVisualBaseScale = PreserveCraftAspect(idleFrames, idleVisualBaseScale, 5);
                 }
                 aimFrames = LoadAnimationFrames(
                     AimArtResourcePath, "Aim", 3, 2, true,
@@ -392,6 +459,7 @@ namespace HimoHito
                     aimVisualBaseScale = new Vector2(
                         CharacterVisualWidth / aimContentSize.x,
                         CharacterVisualHeight / aimContentSize.y);
+                    aimVisualBaseScale = PreserveCraftAspect(aimFrames, aimVisualBaseScale, 5);
                 }
                 weaveFrames = LoadAnimationFrames(
                     WeaveArtResourcePath, "Weave", 3, 2, true,
@@ -402,11 +470,32 @@ namespace HimoHito
                     weaveVisualBaseScale = new Vector2(
                         CharacterVisualWidth / weaveContentSize.x,
                         CharacterVisualHeight / weaveContentSize.y);
+                    weaveVisualBaseScale = PreserveCraftAspect(weaveFrames, weaveVisualBaseScale, 5);
                 }
                 goalFrames = LoadAnimationFrames(
                     GoalArtResourcePath, "Goal", 3, 2, true,
                     ref cachedGoalFrames, ref cachedGoalContentSize,
                     out _, false, true, true);
+                wallPushFrames = LoadAnimationFrames(
+                    "Art/HimoHitoWallPush-v1", "Wall push", 3, 2, true,
+                    ref cachedWallPushFrames, ref cachedWallPushContentSize,
+                    out Vector2 pushSize, false, true, true);
+                if (wallPushFrames != null && pushSize.sqrMagnitude > 0f)
+                {
+                    wallPushBaseScale = new Vector2(CharacterVisualWidth / pushSize.x,
+                        CharacterVisualHeight / pushSize.y);
+                    wallPushBaseScale = PreserveCraftAspect(wallPushFrames, wallPushBaseScale, 5);
+                }
+                switchPressFrames = LoadAnimationFrames(
+                    "Art/HimoHitoSwitchPress-v1", "Switch press", 3, 2, true,
+                    ref cachedSwitchPressFrames, ref cachedSwitchPressContentSize,
+                    out Vector2 switchSize, false, true, true);
+                if (switchPressFrames != null && switchSize.sqrMagnitude > 0f)
+                {
+                    switchPressBaseScale = new Vector2(CharacterVisualWidth / switchSize.x,
+                        CharacterVisualHeight / switchSize.y);
+                    switchPressBaseScale = PreserveCraftAspect(switchPressFrames, switchPressBaseScale, 5);
+                }
                 edgeFrames = LoadAnimationFrames(
                     EdgeArtResourcePath, "Edge balance", 3, 2, true,
                     ref cachedEdgeFrames, ref cachedEdgeContentSize,
@@ -422,7 +511,7 @@ namespace HimoHito
                         PoseParts[aimFrames[5]].Neck.y / PoseParts[edgeFrames[5]].Neck.y;
                     GameObject bodyObject = new GameObject("Edge Balance Body Visual");
                     bodyObject.layer = gameObject.layer;
-                    bodyObject.transform.SetParent(transform, false);
+                    bodyObject.transform.SetParent(GetVisualCoordinateSpace(), false);
                     balanceBodyRenderer = bodyObject.AddComponent<SpriteRenderer>();
                     balanceBodyRenderer.sortingLayerID = visualRenderer.sortingLayerID;
                     balanceBodyRenderer.sortingOrder = visualRenderer.sortingOrder - 1;
@@ -441,13 +530,48 @@ namespace HimoHito
             sourceRenderer.enabled = false;
         }
 
+        private Transform GetVisualCoordinateSpace()
+        {
+            // Legacy fallback sprites keep their original player-local coordinates.
+            if (visualRenderer == null || !CraftPlayerArt.IsCraftSprite(visualRenderer.sprite))
+                return transform;
+            if (craftVisualRoot == null)
+            {
+                GameObject root = new GameObject("Craft Player Presentation");
+                root.layer = gameObject.layer;
+                craftVisualRoot = root.transform;
+                craftVisualRoot.SetParent(transform, false);
+            }
+            Vector3 playerScale = transform.lossyScale;
+            float horizontal = Mathf.Abs(playerScale.x);
+            float vertical = Mathf.Abs(playerScale.y);
+            // Cancel the player's .8/1.2 axis stretch BEFORE any child pose rotation.
+            // A reciprocal sprite scale alone would shear a swinging/tilted head.
+            // Y stays unchanged, preserving the existing sole height and collider.
+            craftVisualRoot.localScale = new Vector3(horizontal > .0001f
+                ? vertical / horizontal : 1f, 1f, 1f);
+            return craftVisualRoot;
+        }
+
+        private Vector2 PreserveCraftAspect(Sprite[] frames, Vector2 legacyScale, int neutralFrame)
+        {
+            if (frames == null || neutralFrame < 0 || neutralFrame >= frames.Length ||
+                !CraftPlayerArt.IsCraftSprite(frames[neutralFrame]) ||
+                !FrameHeadWidths.TryGetValue(frames[neutralFrame], out float headWidth) || headWidth <= 0f)
+                return legacyScale;
+            // If only this sheet is installed, keep its old height rather than enlarge it.
+            // With the full craft set, neutral head size matches standing in every mode.
+            float targetWidth = craftHeadWorldWidth > 0f ? craftHeadWorldWidth : headWidth * legacyScale.y;
+            return Vector2.one * (targetWidth / headWidth);
+        }
+
         private void UpdateCharacterAnimation()
         {
             // Goals already freeze physics and use a realtime clear delay.
             // Only this explicitly triggered finish follows that clock.
             if (TryShowGoalPose()) return;
             // Freeze all poses on a paused clock, including rotation smoothing.
-            if (Application.isPlaying && Time.deltaTime <= 0f) return;
+            if (Application.isPlaying && (Time.timeScale <= 0f || Time.deltaTime <= 0f)) return;
             if (balanceBodyRenderer != null) balanceBodyRenderer.enabled = false;
             bool isAttached = ropeController != null && ropeController.IsAttached;
             bool isGrounded = playerMover == null || playerMover.IsGrounded;
@@ -457,6 +581,8 @@ namespace HimoHito
             isSwingReleasePoseDisplayed = false;
             isWeavePoseDisplayed = false;
             isAimPoseDisplayed = false;
+            isWallPushDisplayed = false;
+            isSwitchPressDisplayed = false;
             swingReleasePose.Advance(Time.deltaTime,
                 playerMover != null && playerMover.enabled && body != null && body.simulated &&
                 !isGrounded && !isAttached);
@@ -492,11 +618,19 @@ namespace HimoHito
                 !isAttached;
 
             weavePose.Advance(Time.deltaTime, CanShowWeavePose() && !shouldShowLanding);
+            switchPressPose.Advance(Time.timeScale > 0f ? Time.deltaTime : 0f,
+                CanShowSwitchPress() && !shouldShowLanding);
 
-            bool canShowGroundTransition = !weavePose.IsActive && playerMover != null && playerMover.enabled &&
+            bool canShowGroundTransition = !weavePose.IsActive && !switchPressPose.IsActive && playerMover != null && playerMover.enabled &&
                 body != null && body.simulated && isGrounded && !isAttached &&
                 !shouldShowJump && !shouldShowLanding && !isReturningFromSwing &&
                 Time.time - takeoffStartedAt >= 0.10f;
+            wallPushPose.Advance(edgePlayerCollider,
+                playerMover != null ? playerMover.MovementInput : 0f,
+                body != null ? body.linearVelocity.x : 0f,
+                canShowGroundTransition && wallPushFrames != null &&
+                !Input.GetButton("Jump"), Time.deltaTime);
+            canShowGroundTransition &= !wallPushPose.IsVisible;
             groundMotionPose.Advance(playerMover != null ? playerMover.MovementInput : 0f,
                 body != null ? body.linearVelocity.x : 0f, Time.deltaTime, canShowGroundTransition);
             if (!canShowGroundTransition) groundTransitionWasDisplayed = false;
@@ -506,20 +640,10 @@ namespace HimoHito
                 !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D) && !Input.GetButton("Jump") &&
                 !Input.GetKey(KeyCode.R) && Time.time - softLandingStartedAt >= 0.4f;
             Vector2 aimDirection = ropeController != null ? ropeController.KeyboardAimDirection : Vector2.up;
-            Vector2 signPosition = default;
-            int signSection = 0;
-            if (signGuide == null && gameObject.scene.name == "Tutorial")
-                signGuide = GetComponent<TutorialSectionGuide>();
-            if (signGuide != null) signGuide.TryGetGlanceTarget(out signPosition, out signSection);
             bool wasGlancing = signGlance.Blend > 0f;
-            signGlance.Advance(signSection, canShowAim && !edgePose.IsVisible, Input.anyKey, Time.deltaTime);
-            if (wasGlancing && Input.anyKey) aimPose.Reset();
-            if (signGlance.Blend > 0f)
-            {
-                Vector2 towardSign = signPosition - HeadReturnPoint;
-                if (towardSign.sqrMagnitude > .01f)
-                    aimDirection = Vector2.Lerp(aimDirection, towardSign.normalized, signGlance.Blend);
-            }
+            signGlance.Advance(canShowAim, HasSignGazeCancelInput(), Time.deltaTime);
+            if (wasGlancing && !signGlance.IsActive) aimPose.Reset();
+            if (signGlance.IsActive) aimDirection = signGlance.Direction;
             aimPose.Advance(aimDirection.x, aimDirection.y,
                 visualRenderer != null && visualRenderer.flipX, Time.deltaTime, canShowAim);
             bool canShowEdge = canShowAim && edgeArtReady && aimPose.IsVisible;
@@ -559,9 +683,12 @@ namespace HimoHito
             }
 
             airborneElapsed = 0f;
+            if (TryShowSwitchPress()) return;
             if (TryShowWeavePose()) return;
+            if (TryShowWallPush()) return;
             if (TryShowGroundTransition()) return;
             if (TryShowEdgeBalance()) return;
+            if (TryShowSignCuriosity()) return;
             if (TryShowAimPose()) return;
             if (TryShowIdle()) return;
             UpdateWalkAnimation();
@@ -625,6 +752,7 @@ namespace HimoHito
 
         public void PlayWeavePose()
         {
+            switchPressPose.Reset();
             // Called only after successful creation and placement, never on raw
             // Q input or checkpoint restoration. Airborne builds are not queued.
             weavePose.Begin(CanShowWeavePose() && !isSwingPoseDisplayed &&
@@ -658,6 +786,50 @@ namespace HimoHito
                 -CharacterVisualHeight * 0.5f * currentBaseScale, 0f);
             visualTransform.localRotation = Quaternion.identity;
             isWeavePoseDisplayed = true;
+            isWalking = false;
+            walkFrameProgress = 0f;
+            return true;
+        }
+
+        public void PlaySwitchPressPose(Transform target)
+        {
+            pressedSwitch = target;
+            switchPressPose.Begin(CanShowSwitchPress() && landingElapsed >= landingDuration,
+                target != null && target.position.x < transform.position.x);
+            if (!switchPressPose.IsActive) return;
+            weavePose.Reset();
+            wallPushPose.Reset();
+            aimPose.Reset();
+            signGlance.Reset();
+            ClearEdgeBalance();
+        }
+
+        private bool CanShowSwitchPress()
+        {
+            // The switch still works anywhere in its original trigger. Do not teleport
+            // or stretch the player to invent hand contact from too far away or in midair.
+            return pressedSwitch != null && pressedSwitch.gameObject.activeInHierarchy &&
+                switchPressFrames != null && switchPressFrames.Length == 6 && CanShowWeavePose() &&
+                Mathf.Abs(pressedSwitch.position.x - transform.position.x) <= 1.2f;
+        }
+
+        private bool TryShowSwitchPress()
+        {
+            if (!switchPressPose.IsActive) return false;
+            Sprite frame = switchPressFrames[switchPressPose.FrameIndex];
+            visualRenderer.sprite = frame;
+            visualRenderer.flipX = switchPressPose.FacingLeft;
+            visualBaseScale = switchPressBaseScale * GroundFrameScale[frame];
+            Vector2 sole = Vector2.Scale(SwitchSolePoints[frame], visualBaseScale) * currentBaseScale;
+            if (switchPressPose.FacingLeft) sole.x = -sole.x;
+            float floorY = edgePlayerCollider != null
+                ? GetVisualCoordinateSpace().InverseTransformPoint(new Vector3(body.position.x,
+                    edgePlayerCollider.bounds.min.y - .075f, transform.position.z)).y
+                : -CharacterVisualHeight * .5f;
+            // Match the standing artwork's existing 0.075-unit sole inset, including small bodies.
+            visualTransform.localPosition = new Vector3(-sole.x, floorY - sole.y, 0f);
+            visualTransform.localRotation = Quaternion.identity;
+            isSwitchPressDisplayed = true;
             isWalking = false;
             walkFrameProgress = 0f;
             return true;
@@ -713,6 +885,67 @@ namespace HimoHito
             return true;
         }
 
+        public void BeginReadingSign(Vector2 target)
+        {
+            if (!usesCharacterArt || visualRenderer == null || aimFrames == null ||
+                body == null || !body.simulated ||
+                (ropeController != null && ropeController.IsAttached) ||
+                (playerMover != null && !playerMover.IsGrounded)) return;
+            signGlance.Begin(target - HeadReturnPoint);
+            if (!signGlance.IsActive) return;
+            idlePose.Reset();
+            aimPose.Reset();
+            // The guide covers the world immediately. Set its reading pose before time is paused.
+            for (int i = 0; i < 8; i++)
+                aimPose.Advance(signGlance.Direction.x, signGlance.Direction.y,
+                    visualRenderer.flipX, .05f, true);
+            if (!TryShowSignCuriosity()) TryShowAimPose();
+            ApplyVisualScale();
+        }
+
+        public void EndReadingSign() => signGlance.EndReading();
+
+        private static bool HasSignGazeCancelInput() =>
+            Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) ||
+            Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow) ||
+            Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow) ||
+            Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.E) ||
+            Input.GetKey(KeyCode.Q) || Input.GetKey(KeyCode.F) || Input.GetKey(KeyCode.R) ||
+            Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) ||
+            Input.GetMouseButton(0) || Input.GetMouseButton(1);
+
+        private bool TryShowSignCuriosity()
+        {
+            if (signGlance.Blend <= 0f || !aimPose.IsVisible || !edgeArtReady ||
+                balanceBodyRenderer == null) return false;
+            Sprite frame = aimFrames[aimPose.FrameIndex];
+            RopePoseParts parts = PoseParts[frame];
+            bool left = aimPose.FacingLeft;
+            visualBaseScale = aimVisualBaseScale * GroundFrameScale[frame];
+            Vector2 scale = visualBaseScale * currentBaseScale;
+            float correction = IdleFootOffsets[frame] * aimVisualBaseScale.x * currentBaseScale;
+            if (left) correction = -correction;
+            Vector3 feet = new Vector3(correction, -CharacterVisualHeight * .5f * currentBaseScale, 0f);
+            Transform lower = balanceBodyRenderer.transform;
+            balanceBodyRenderer.sprite = parts.Body;
+            balanceBodyRenderer.flipX = left;
+            balanceBodyRenderer.enabled = true;
+            lower.localPosition = feet;
+            lower.localRotation = Quaternion.identity;
+            lower.localScale = new Vector3(scale.x, scale.y, 1f);
+            Vector3 neck = parts.Neck;
+            if (left) neck.x = -neck.x;
+            visualRenderer.sprite = parts.Head;
+            visualRenderer.flipX = left;
+            visualTransform.localPosition = feet + Vector3.Scale(neck, lower.localScale);
+            visualTransform.localRotation = Quaternion.Euler(0f, 0f,
+                (left ? 9f : -9f) * signGlance.Tilt);
+            isAimPoseDisplayed = true;
+            isWalking = false;
+            walkFrameProgress = 0f;
+            return true;
+        }
+
         private bool TryShowAimPose()
         {
             if (!aimPose.IsVisible) return false;
@@ -729,6 +962,32 @@ namespace HimoHito
                 -CharacterVisualHeight * 0.5f * currentBaseScale, 0f);
             visualTransform.localRotation = Quaternion.identity;
             isAimPoseDisplayed = true;
+            isWalking = false;
+            walkFrameProgress = 0f;
+            return true;
+        }
+
+        private bool TryShowWallPush()
+        {
+            if (!wallPushPose.IsVisible || wallPushFrames == null) return false;
+            Sprite frame = wallPushFrames[wallPushPose.Frame];
+            visualRenderer.sprite = frame;
+            visualRenderer.flipX = wallPushPose.Side < 0;
+            visualBaseScale = wallPushBaseScale * GroundFrameScale[frame];
+            float wallLocalX = GetVisualCoordinateSpace().InverseTransformPoint(new Vector3(
+                wallPushPose.WallX, body.position.y, transform.position.z)).x;
+            float handX = WallHandOffsets[frame] * visualBaseScale.x * currentBaseScale;
+            float floorLocalY = edgePlayerCollider != null
+                ? GetVisualCoordinateSpace().InverseTransformPoint(new Vector3(body.position.x,
+                    edgePlayerCollider.bounds.min.y, transform.position.z)).y
+                : -CharacterVisualHeight * .5f;
+            // Keep the palms on the surface even when spent yarn makes the body smaller.
+            // This offsets artwork only, never the physical player or wall.
+            visualTransform.localPosition = new Vector3(
+                wallLocalX - wallPushPose.Side * (handX + .005f),
+                floorLocalY - WallFootOffsets[frame] * visualBaseScale.y * currentBaseScale, 0f);
+            visualTransform.localRotation = Quaternion.identity;
+            isWallPushDisplayed = true;
             isWalking = false;
             walkFrameProgress = 0f;
             return true;
@@ -817,10 +1076,16 @@ namespace HimoHito
 
         public void CancelActionPoses()
         {
+            switchPressPose.Reset();
+            pressedSwitch = null;
+            RemoveBridgeOffset();
+            bridgeOffsetY = 0f;
+            wallPushPose.Reset();
             swingReleasePose.Reset();
             weavePose.Reset();
             goalPose.Reset();
             aimPose.Reset();
+            signGlance.Reset();
             ClearEdgeBalance();
         }
 
@@ -1182,6 +1447,14 @@ namespace HimoHito
             visualRenderer.sprite = walkingFrames[frameIndex];
         }
 
+        // Read-only artwork access for the menu miniature; never instantiate a real player.
+        internal static Sprite GetDioramaWalkFrame(int index, out Vector2 contentSize)
+        {
+            Sprite[] frames = LoadWalkFrames(out contentSize);
+            if (frames == null || frames.Length != WalkFrameCount) return null;
+            return frames[Mathf.Clamp(index, 0, frames.Length - 1)];
+        }
+
         private static Sprite[] LoadWalkFrames(out Vector2 contentSize)
         {
             return LoadAnimationFrames(
@@ -1243,7 +1516,7 @@ namespace HimoHito
             }
 
             contentSize = Vector2.zero;
-            Texture2D source = Resources.Load<Texture2D>(resourcePath);
+            Texture2D source = CraftPlayerArt.LoadAnimationTexture(resourcePath, columns, rows);
             if (source == null)
             {
                 Debug.LogWarning(
@@ -1422,6 +1695,23 @@ namespace HimoHito
                     0,
                     SpriteMeshType.FullRect);
                 frame.name = $"{source.name} {animationName} {frameIndex + 1}";
+                if (animationName == "Switch press")
+                {
+                    // Crouched feet are behind the head, outside the standing-foot strip.
+                    // Sample the lowest strip; the rightmost cluster is the feet, not the trailing yarn.
+                    FindFrameContentBounds(pixels, source.width, cellX, cellY + minContentY,
+                        cellWidth, Mathf.Max(2, Mathf.RoundToInt(contentHeight * .04f)),
+                        out _, out _, out int soleRight, out _);
+                    SwitchSolePoints[frame] = new Vector2(
+                        (soleRight + .5f - measuredHeadWidth * .2f - framePivot.x * cellWidth) / SpritePixelsPerUnit,
+                        (minContentY + .5f - framePivot.y * cellHeight) / SpritePixelsPerUnit);
+                }
+                if (animationName == "Wall push")
+                {
+                    WallHandOffsets[frame] = (maxContentX + 1f - framePivot.x * cellWidth) / SpritePixelsPerUnit;
+                    // Wide braced feet extend outside the normal standing-foot sample strip.
+                    WallFootOffsets[frame] = (minContentY - framePivot.y * cellHeight) / SpritePixelsPerUnit;
+                }
                 frame.hideFlags = HideFlags.HideAndDontSave;
                 // Keep an artwork-space crown for changing-pivot presentations
                 // (idle and manual release), without changing normal rope physics.
@@ -1625,6 +1915,8 @@ namespace HimoHito
 
         public void PlayTakeoffElasticity()
         {
+            switchPressPose.Reset();
+            wallPushPose.Reset();
             weavePose.Reset();
             aimPose.Reset();
             ClearEdgeBalance();
@@ -1639,13 +1931,20 @@ namespace HimoHito
                 return;
             }
 
+            Transform presentation = GetVisualCoordinateSpace();
+            // Keep head and body in one space for neck registration. Retain local
+            // poses when a missing craft sheet temporarily falls back to old art.
+            if (visualTransform.parent != presentation)
+                visualTransform.SetParent(presentation, false);
+            if (balanceBodyRenderer != null && balanceBodyRenderer.transform.parent != presentation)
+                balanceBodyRenderer.transform.SetParent(presentation, false);
             visualTransform.localScale = new Vector3(
                 visualBaseScale.x * currentBaseScale,
                 visualBaseScale.y * currentBaseScale,
                 1f);
             // The six weave drawings already contain the knee bend. Do not add
             // whole-body squash on top of their registered, planted feet.
-            if (isWeavePoseDisplayed || isAimPoseDisplayed || !Application.isPlaying || playerMover == null || !playerMover.enabled ||
+            if (isWeavePoseDisplayed || isAimPoseDisplayed || isWallPushDisplayed || isSwitchPressDisplayed || !Application.isPlaying || playerMover == null || !playerMover.enabled ||
                 body == null || !body.simulated ||
                 (ropeController != null && ropeController.IsAttached)) return;
             float stretch = 0f;

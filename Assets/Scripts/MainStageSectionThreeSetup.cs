@@ -4,7 +4,7 @@ namespace HimoHito
 {
     /// <summary>
     /// Builds section three from slide 22 of the 0829 stage manual.
-    /// The upper Hook reaches the high shelf with length 8. The lower Hook
+    /// The upper Hook leads toward the high shelf. The lower Hook
     /// reaches only a low dead end with length 6, where stairs allow retreat.
     /// </summary>
     public static class MainStageSectionThreeSetup
@@ -30,7 +30,8 @@ namespace HimoHito
         public const string HighShelfName = "Main Landing 3";
 
         // Slide 22 local coordinates are translated so the start bank's
-        // right edge (6.6, 3.1) matches the current world edge (33, -4.35).
+        // right edge (6.6, 3.1) matches the original world edge (33, -4.35).
+        // The return bank now extends to x = 34.5 without moving these hooks.
         public static readonly Vector2 LowerHookPosition =
             new Vector2(38.2f, -1.65f);
         public static readonly Vector2 UpperHookPosition =
@@ -38,9 +39,10 @@ namespace HimoHito
         public static readonly Vector2 HookSize =
             new Vector2(1.6f, 0.45f);
         public static readonly Vector2 LowDeadEndPosition =
-            new Vector2(45.2f, -11.05f);
+            new Vector2(46.65f, -11.05f);
         public static readonly Vector2 LowDeadEndSize =
-            new Vector2(3f, 10f);
+            // Keep the left edge at 43.7; close the gap to the high bank at 49.6.
+            new Vector2(5.9f, 10f);
         public static readonly Vector2 ReturnStepAPosition =
             new Vector2(42.8f, -11.05f);
         public static readonly Vector2 ReturnStepASize =
@@ -62,11 +64,11 @@ namespace HimoHito
         public static readonly Vector2 RecoverySwitchSize =
             new Vector2(0.9f, 0.35f);
         public static readonly Vector2 HighShelfPosition =
-            new Vector2(54.1f, -7.15f);
+            new Vector2(57.1f, -7.15f);
         public static readonly Vector2 HighShelfSize =
             new Vector2(15f, 10f);
         public static readonly Vector2 HighShelfRespawnPosition =
-            new Vector2(50.6f, -1.45f);
+            new Vector2(53.6f, -1.45f);
 
         private static readonly Color HookColor =
             new Color(0.298f, 0.765f, 1f);

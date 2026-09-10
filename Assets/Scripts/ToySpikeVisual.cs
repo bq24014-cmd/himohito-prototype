@@ -2,93 +2,23 @@ using UnityEngine;
 
 namespace HimoHito
 {
-    /// <summary>Spike contact cuts an active rope and lets the player fall.</summary>
-    [RequireComponent(typeof(Collider2D))]
-    public sealed class RopeSpikeHazard : MonoBehaviour
-    {
-        private Collider2D detectionArea;
-        private RopeController playerRope;
-        private Collider2D playerCollider;
-
-        private void Awake()
-        {
-            CacheReferences();
-        }
-
-        private void FixedUpdate()
-        {
-            CacheReferences();
-            if (detectionArea == null ||
-                !detectionArea.enabled ||
-                playerCollider == null ||
-                !playerCollider.enabled ||
-                playerRope == null ||
-                !playerRope.IsAttached)
-            {
-                return;
-            }
-
-            // A fast pendulum can cross a small trigger between callbacks.
-            // Confirm the physical overlap every physics step as a fallback.
-            if (Physics2D.Distance(detectionArea, playerCollider).isOverlapped)
-            {
-                playerRope.DetachAndRefund();
-            }
-        }
-
-        private void OnTriggerEnter2D(Collider2D other) => Cut(other);
-        private void OnTriggerStay2D(Collider2D other) => Cut(other);
-
-        private static void Cut(Collider2D other)
-        {
-            RopeController rope = other.GetComponentInParent<RopeController>();
-            if (rope == null && other.attachedRigidbody != null)
-            {
-                rope = other.attachedRigidbody.GetComponent<RopeController>();
-            }
-            if (rope != null && rope.IsAttached)
-            {
-                rope.DetachAndRefund();
-            }
-        }
-
-        private void CacheReferences()
-        {
-            if (detectionArea == null || !detectionArea.enabled)
-            {
-                foreach (Collider2D candidate in GetComponents<Collider2D>())
-                {
-                    if (candidate.enabled && candidate.isTrigger)
-                    {
-                        detectionArea = candidate;
-                        break;
-                    }
-                }
-            }
-
-            if (playerRope == null)
-            {
-                playerRope = FindFirstObjectByType<RopeController>();
-            }
-            if (playerRope != null && playerCollider == null)
-            {
-                playerCollider = playerRope.GetComponent<Collider2D>();
-            }
-        }
-    }
-
     /// <summary>
-    /// Draws a spike as a painted wooden triangle so the hazard belongs in
-    /// the night-time toy room instead of looking like a prototype rectangle.
+    /// Draws a red felt triangle with a wooden rim to match the handcrafted
+    /// toy room. The painted wooden sprite remains a missing-asset fallback.
     /// </summary>
     [ExecuteAlways]
     [RequireComponent(typeof(SpriteRenderer))]
     public sealed class ToySpikeVisual : MonoBehaviour
     {
         private const string FaceName = "Wooden Toy Spike Face";
+        private const string CraftSpikeResourcePath = "Art/HimoHitoCraftSpike-v1";
         private const string PaintedSpikeResourcePath = "Art/WoodenToySpike-v1";
         private const int TextureSize = 64;
         private static Sprite sharedSprite;
+        private const float ContactDuration = .40f;
+        private Transform face;
+        private float contactElapsed = ContactDuration;
+        private float contactDirection = 1f;
 
         public bool Refresh()
         {
@@ -100,7 +30,7 @@ namespace HimoHito
                 changed = true;
             }
 
-            Transform face = transform.Find(FaceName);
+            face = transform.Find(FaceName);
             if (face == null)
             {
                 GameObject faceObject = new GameObject(FaceName);
@@ -155,7 +85,48 @@ namespace HimoHito
                 faceRenderer.sortingOrder = sourceRenderer.sortingOrder + 2;
                 changed = true;
             }
+            ApplyContactPose();
             return changed;
+        }
+
+        public void PlayContact(Vector2 contactPoint, Vector2 velocity)
+        {
+            if (!isActiveAndEnabled || Time.timeScale <= 0f) return;
+            if (face == null) Refresh();
+            contactDirection = Mathf.Abs(velocity.x) > .05f ? -Mathf.Sign(velocity.x) :
+                (contactPoint.x < transform.position.x ? -1f : 1f);
+            contactElapsed = 0f;
+            ApplyContactPose();
+        }
+
+        private void LateUpdate()
+        {
+            if (Application.isPlaying) AdvanceContact(Time.deltaTime);
+        }
+
+        private void AdvanceContact(float dt)
+        {
+            if (dt <= 0f || contactElapsed >= ContactDuration) return;
+            contactElapsed = Mathf.Min(ContactDuration, contactElapsed + dt);
+            ApplyContactPose();
+        }
+
+        private void ApplyContactPose()
+        {
+            if (face == null) return;
+            float t = Mathf.Clamp01(contactElapsed / ContactDuration);
+            float angle = t >= 1f ? 0f : contactDirection * 6f * Mathf.Sin(t * Mathf.PI * 2f) * (1f - t);
+            Quaternion rotation = Quaternion.Euler(0f, 0f, angle);
+            // Rock the painted face about its bottom, never the hazard collider/root.
+            Vector3 pivot = new Vector3(0f, -.5f, 0f);
+            face.localRotation = rotation;
+            face.localPosition = pivot - rotation * pivot;
+        }
+
+        private void OnDisable()
+        {
+            contactElapsed = ContactDuration;
+            ApplyContactPose();
         }
 
         private void OnEnable()
@@ -165,6 +136,10 @@ namespace HimoHito
 
         private static Sprite GetSharedSprite()
         {
+            Sprite craftSprite = TutorialFirstSectionVisuals.LoadProcessedToySprite(
+                CraftSpikeResourcePath, useMipMaps: true);
+            if (craftSprite != null) return craftSprite;
+
             Sprite paintedSprite = TutorialFirstSectionVisuals.LoadProcessedToySprite(
                 PaintedSpikeResourcePath);
             if (paintedSprite != null) return paintedSprite;
@@ -245,87 +220,6 @@ namespace HimoHito
             sharedSprite.name = "WoodenToySpike";
             sharedSprite.hideFlags = HideFlags.HideAndDontSave;
             return sharedSprite;
-        }
-    }
-
-    /// <summary>
-    /// A flashlight hazard that is disabled when a generated rope platform lies
-    /// between its source and the player. The visible spot fades to show success.
-    /// </summary>
-    [RequireComponent(typeof(Collider2D), typeof(SpriteRenderer))]
-    public sealed class PlatformOccludedLightHazard : MonoBehaviour
-    {
-        [SerializeField] private Transform lightSource;
-        [SerializeField, Range(0.02f, 1f)] private float blockedAlpha = 0.08f;
-        [SerializeField, Range(0.02f, 1f)] private float activeAlpha = 0.62f;
-        [SerializeField, Min(0.01f)] private float fadeDuration = 0.4f;
-
-        private SpriteRenderer spotRenderer;
-        private Collider2D triggerArea;
-        private RopeController playerRope;
-        private Collider2D playerCollider;
-        private float currentAlpha;
-
-        public bool IsBlocked { get; private set; }
-
-        public void Configure(Transform source)
-        {
-            lightSource = source;
-        }
-
-        private void Awake()
-        {
-            spotRenderer = GetComponent<SpriteRenderer>();
-            triggerArea = GetComponent<Collider2D>();
-            playerRope = FindFirstObjectByType<RopeController>();
-            if (playerRope != null)
-            {
-                playerCollider = playerRope.GetComponent<Collider2D>();
-            }
-            currentAlpha = activeAlpha;
-        }
-
-        private void FixedUpdate()
-        {
-            if (playerRope == null || playerCollider == null || lightSource == null)
-            {
-                return;
-            }
-
-            IsBlocked = IsBlockedByGeneratedPlatform();
-            float targetAlpha = IsBlocked ? blockedAlpha : activeAlpha;
-            currentAlpha = Mathf.MoveTowards(
-                currentAlpha,
-                targetAlpha,
-                Time.fixedDeltaTime / Mathf.Max(0.01f, fadeDuration));
-            Color color = spotRenderer.color;
-            color.a = currentAlpha;
-            spotRenderer.color = color;
-
-            if (!IsBlocked && playerRope.IsAttached &&
-                Physics2D.Distance(triggerArea, playerCollider).isOverlapped)
-            {
-                playerRope.DetachAndRefund();
-            }
-        }
-
-        private bool IsBlockedByGeneratedPlatform()
-        {
-            Vector2 source = lightSource.position;
-            Vector2 target = transform.position;
-            RaycastHit2D[] hits = Physics2D.LinecastAll(source, target);
-            foreach (RaycastHit2D hit in hits)
-            {
-                if (hit.collider == null || hit.collider == playerCollider)
-                {
-                    continue;
-                }
-                if (hit.collider.TryGetComponent(out GeneratedRopePlatform _))
-                {
-                    return true;
-                }
-            }
-            return false;
         }
     }
 }

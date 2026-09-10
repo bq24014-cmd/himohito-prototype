@@ -43,6 +43,11 @@ namespace HimoHito
         private PlayerMover playerMover;
         private StageOverlayControls overlayControls;
         private TutorialSectionGuide tutorialSectionGuide;
+        private int titleEnteredFrame;
+        private bool clearNavigationStarted;
+        public bool IsStageSelectionOpen => Outcome == RunOutcome.WaitingToStart;
+        public int SelectedStageIndex { get; private set; }
+        public string StageSelectionError { get; private set; } = string.Empty;
         private Vector2 startPosition;
         private float startRopeCapacity;
         private float startRopeLength;
@@ -130,6 +135,8 @@ namespace HimoHito
 
         private void Update()
         {
+            if (StageStartTransition.IsActive) return;
+            if (clearNavigationStarted) return;
             if (MainStagePreview.IsActive) return;
             if (IsFallUnravelling) return;
 
@@ -139,10 +146,16 @@ namespace HimoHito
                 return;
             }
 
+            if (Outcome == RunOutcome.Clear && Input.GetKeyDown(KeyCode.Escape))
+            {
+                ReturnToStageSelectionFromClear();
+                return;
+            }
+
             if (Outcome == RunOutcome.Clear &&
                 (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter)))
             {
-                LoadNextStage();
+                ContinueAfterClear();
                 return;
             }
 
@@ -199,6 +212,7 @@ namespace HimoHito
 
         private void EnterStartScreen()
         {
+            titleEnteredFrame = Time.frameCount;
             ropeController.DetachAndRefund();
             body.linearVelocity = Vector2.zero;
             body.angularVelocity = 0f;
@@ -207,30 +221,93 @@ namespace HimoHito
             ropeController.enabled = false;
             FailureReason = RunFailureReason.None;
             Outcome = RunOutcome.WaitingToStart;
+            SelectedStageIndex = 0;
+            StageSelectionError = string.Empty;
         }
 
         private void UpdateStartScreen()
         {
-            if (overlayControls != null && overlayControls.IsHelpVisible)
+            // The stage map is the only home screen. Returning from a scene or
+            // closing help must not reuse that frame's key as Start or Quit.
+            if (!CanUseTitleMenu())
             {
                 return;
             }
 
-            if (Input.GetKeyDown(KeyCode.Return) ||
-                Input.GetKeyDown(KeyCode.KeypadEnter))
-            {
-                body.simulated = true;
-                playerMover.enabled = true;
-                ropeController.enabled = true;
-                Outcome = RunOutcome.Playing;
-                MainStagePreview.PlayFor(gameObject);
-                return;
-            }
+            if (Input.GetKeyDown(KeyCode.Escape)) QuitFromTitle();
+            else if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
+                SelectStage(SelectedStageIndex - 1);
+            else if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
+                SelectStage(SelectedStageIndex + 1);
+            else if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter))
+                StartSelectedStage();
+        }
 
-            if (Input.GetKeyDown(KeyCode.Escape))
+        public bool CanUseTitleMenu() => Outcome == RunOutcome.WaitingToStart && !StageStartTransition.IsActive &&
+            (!Application.isPlaying || Time.frameCount > titleEnteredFrame) &&
+            !Input.GetKeyDown(KeyCode.Tab) &&
+            (overlayControls == null || (!overlayControls.IsOverlayVisible &&
+                !overlayControls.HelpInputConsumedThisFrame));
+
+        public void OpenStageSelection()
+        {
+            if (!CanUseTitleMenu()) return;
+            SelectStage(SelectedStageIndex);
+        }
+
+        public void OpenMenuHelp()
+        {
+            if (!CanUseTitleMenu()) return;
+            overlayControls?.OpenMenuHelp();
+        }
+
+        public void SelectStage(int index)
+        {
+            if (!CanUseTitleMenu() || !IsStageSelectionOpen) return;
+            SelectedStageIndex = Mathf.Clamp(index, 0, StageCatalog.Entries.Count - 1);
+            StageSelectionError = string.Empty;
+        }
+
+        public bool StartSelectedStage()
+        {
+            if (!CanUseTitleMenu() || !IsStageSelectionOpen) return false;
+            StageCatalog.Entry stage = StageCatalog.Entries[SelectedStageIndex];
+            if (!stage.available) { StageSelectionError = "このステージは追加予定です。今はまだあそべません。"; return false; }
+            if (stage.scenePath != StageCatalog.TitleScenePath && !Application.CanStreamedLevelBeLoaded(stage.scenePath))
             {
-                QuitApplication();
+                StageSelectionError = "ステージが見つかりません。Build Settingsを確認してください。";
+                return false;
             }
+            return StageStartTransition.Begin(this, stage,
+                StageSelectionView.SelectedIslandOrigin(SelectedStageIndex, StageCatalog.Entries.Count,
+                    Screen.width, Screen.height));
+        }
+
+        public void BeginGameFromTitle()
+        {
+            if (!CanUseTitleMenu()) return;
+            CommitTutorialStart();
+        }
+
+        internal void ReportStageStartError(string message) => StageSelectionError = message;
+
+        internal void CommitTutorialStart()
+        {
+            if (Outcome != RunOutcome.WaitingToStart) return;
+            Time.timeScale = 1f;
+            body.simulated = true;
+            playerMover.enabled = true;
+            ropeController.enabled = true;
+            Outcome = RunOutcome.Playing;
+            MainStagePreview.PlayFor(gameObject);
+        }
+
+        public void QuitFromTitle()
+        {
+            if (!CanUseTitleMenu()) return;
+            HimoHitoAudioSettings.Save();
+            Time.timeScale = 1f;
+            QuitApplication();
         }
 
         private static void QuitApplication()
@@ -272,6 +349,7 @@ namespace HimoHito
             yield return new WaitForSecondsRealtime(ClearRevealDelay);
             GetComponent<PrototypeAudioFeedback>()?.PlayClearRevealed();
             Outcome = RunOutcome.Clear;
+            StageProgress.MarkSceneCleared(gameObject.scene.path);
         }
 
         public void TryReachTutorialSection(
@@ -323,6 +401,8 @@ namespace HimoHito
             ropeController.DetachAndRefund();
             RestoreCheckpointState();
             body.position = checkpointPosition;
+            // Also reset the interpolated presentation before camera/reveal code runs.
+            transform.position = new Vector3(checkpointPosition.x, checkpointPosition.y, transform.position.z);
             ResetMotionAndResume();
             RespawnWeaveVisual.Play(gameObject);
         }
@@ -340,6 +420,7 @@ namespace HimoHito
             CurrentTutorialSection = startTutorialSection;
             checkpointPosition = startPosition;
             body.position = startPosition;
+            transform.position = new Vector3(startPosition.x, startPosition.y, transform.position.z);
             ropeController.RestoreSelectedRopeLength(
                 startSelectedRopeLength);
             CaptureCheckpointState();
@@ -373,11 +454,34 @@ namespace HimoHito
             Camera.main?.GetComponent<HorizontalCameraFollow>()?.ResetFraming();
         }
 
-        private static void LoadNextStage()
+        public void ReturnToStageSelectionFromClear()
+        {
+            if (Outcome != RunOutcome.Clear || clearNavigationStarted) return;
+            if (!Application.CanStreamedLevelBeLoaded(StageCatalog.TitleScenePath))
+            {
+                Debug.LogError("ステージ選択へ戻れません。TutorialをBuild Settingsに登録してください。");
+                return;
+            }
+            clearNavigationStarted = true;
+            HimoHitoAudioSettings.Save();
+            Time.timeScale = 1f;
+            SceneManager.LoadScene(StageCatalog.TitleScenePath);
+        }
+
+        public void ContinueAfterClear()
+        {
+            if (Outcome != RunOutcome.Clear || clearNavigationStarted) return;
+            LoadNextStage();
+        }
+
+        private void LoadNextStage()
         {
             const string MainStageSceneName = "MainStage";
             if (Application.CanStreamedLevelBeLoaded(MainStageSceneName))
             {
+                clearNavigationStarted = true;
+                HimoHitoAudioSettings.Save();
+                Time.timeScale = 1f;
                 SceneManager.LoadScene(MainStageSceneName);
                 return;
             }

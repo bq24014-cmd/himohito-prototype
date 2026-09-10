@@ -18,6 +18,7 @@ namespace HimoHito
         private float ropeRevealStartedAt;
         private bool hookArrivalPending;
         private HookYarnKnotVisual hookKnot;
+        private RopeMissVisual missVisual;
         private LineRenderer aimHookOutline;
         private LineRenderer aimHookHalo;
         private LineRenderer aimHookTip;
@@ -196,6 +197,7 @@ namespace HimoHito
 
         private void OnDestroy()
         {
+            if (missVisual != null) Destroy(missVisual.gameObject);
             if (aimHookMaterial != null) Destroy(aimHookMaterial);
             if (runtimeMaterial != null)
             {
@@ -232,9 +234,16 @@ namespace HimoHito
             if (!foundTarget)
             {
                 audioFeedback?.PlayRopeAttachMiss();
+                if (isActiveAndEnabled && body.simulated && Time.timeScale > 0f)
+                {
+                    if (missVisual == null) missVisual = RopeMissVisual.Create(this, lineRenderer, body);
+                    missVisual?.Play(worldTarget - body.position, SelectedRopeLength,
+                        GetVisibleRopeWidth(), GetVisibleRopeColor());
+                }
                 return false;
             }
 
+            if (missVisual != null) missVisual.Cancel();
             // Attaching and swinging are free. Rope is permanently consumed only
             // when Q converts the active rope into a platform.
             float selectedLength = SelectedRopeLength;
@@ -275,6 +284,7 @@ namespace HimoHito
 
         public void DetachAndRefund(bool playReleaseSound = false)
         {
+            if (missVisual != null) missVisual.Cancel();
             hookArrivalPending = false;
             if (!playReleaseSound)
             {
@@ -890,9 +900,14 @@ namespace HimoHito
             lineRenderer.endColor = hasAvailableAimAnchor
                 ? new Color(1f, .94f, .76f, .7f) : AimGuideColor;
             lineRenderer.SetPosition(0, body.position);
-            // Presentation only: never rotate keyboardAimDirection or change the shot resolver.
-            lineRenderer.SetPosition(1, hasAvailableAimAnchor ? availableAimAnchor :
-                body.position + keyboardAimDirection * selectedRopeLength);
+            // Snap only the visual direction, not the selected reach or physical aim.
+            // The line passes through the Hook and continues for the selected length.
+            Vector2 displayDirection = keyboardAimDirection;
+            Vector2 hookOffset = availableAimAnchor - body.position;
+            if (hasAvailableAimAnchor && hookOffset.sqrMagnitude > .0001f)
+                displayDirection = hookOffset.normalized;
+            lineRenderer.SetPosition(1,
+                body.position + displayDirection * selectedRopeLength);
         }
 
         private void DrawAttachedRope()

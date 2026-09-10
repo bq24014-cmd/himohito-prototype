@@ -32,28 +32,28 @@ namespace HimoHito
 
         // The merge floor from section six is the lower floor in the slide.
         public static readonly Vector2 BridgeStartHookPosition =
-            new Vector2(152.1f, -2.15f);
+            new Vector2(155.1f, -2.15f);
         public static readonly Vector2 BridgeEndHookPosition =
-            new Vector2(154.9f, -0.35f);
+            new Vector2(157.9f, -0.35f);
         public static readonly Vector2 MiddleShelfPosition =
-            new Vector2(156.4f, -0.7f);
+            new Vector2(159.4f, -0.7f);
         public static readonly Vector2 MiddleShelfSize =
             new Vector2(3f, 0.7f);
         // Jump impulse 10 against gravity 9.81 * 2.8 rises 1.82 at the apex.
         // The player reaches the 1.1-wide horizontal gap after about 0.20 s,
         // where the rise is only about 1.46. A 1.2 step keeps collision margin.
         public static readonly Vector2 UpperShelfPosition =
-            new Vector2(160.5f, 0.5f);
+            new Vector2(163.5f, 0.5f);
         public static readonly Vector2 UpperShelfSize =
             new Vector2(3f, 0.7f);
         public static readonly Vector2 UpperHookPosition =
-            new Vector2(164.35f, 3.7f);
+            new Vector2(167.35f, 3.7f);
         public static readonly Vector2 GoalFloorPosition =
-            new Vector2(173f, -7.15f);
+            new Vector2(176f, -7.15f);
         public static readonly Vector2 GoalFloorSize =
             new Vector2(8f, 10f);
         public static readonly Vector2 GoalRespawnPosition =
-            new Vector2(169.8f, -1.45f);
+            new Vector2(172.8f, -1.45f);
 
         private static readonly Vector2 BridgeHookSize =
             new Vector2(0.62f, 0.62f);

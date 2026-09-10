@@ -8,14 +8,12 @@ namespace HimoHito
     [RequireComponent(typeof(Collider2D))]
     public sealed class TutorialCheckpoint : MonoBehaviour
     {
-        private const float MinimumTopContactNormal = 0.6f;
-        private const float TopContactTolerance = 0.12f;
-
         [SerializeField, Range(2, 4)] private int sectionNumber = 2;
         [SerializeField] private Vector2 respawnPosition;
         [SerializeField, Range(1, 14)] private int startingRopeLength = 6;
 
         private Collider2D checkpointCollider;
+        private readonly CheckpointLandingGate landingGate = new CheckpointLandingGate();
 
         public int SectionNumber => sectionNumber;
         public Vector2 RespawnPosition => respawnPosition;
@@ -51,37 +49,11 @@ namespace HimoHito
 
         private bool IsPlayerLandingOnTop(Collision2D collision)
         {
-            if (collision.rigidbody == null)
-            {
-                return false;
-            }
-
             checkpointCollider ??= GetComponent<Collider2D>();
-            float surfaceTop = checkpointCollider.bounds.max.y;
-            if (collision.rigidbody.worldCenterOfMass.y <= surfaceTop)
-            {
-                return false;
-            }
-
-            Collider2D playerCollider =
-                collision.rigidbody.GetComponent<Collider2D>();
-            if (playerCollider != null &&
-                playerCollider.bounds.min.y <
-                surfaceTop - TopContactTolerance)
-            {
-                return false;
-            }
-
-            for (int index = 0; index < collision.contactCount; index++)
-            {
-                ContactPoint2D contact = collision.GetContact(index);
-                if (contact.point.y >= surfaceTop - TopContactTolerance &&
-                    Mathf.Abs(contact.normal.y) >= MinimumTopContactNormal)
-                {
-                    return true;
-                }
-            }
-            return false;
+            return landingGate.Evaluate(collision, checkpointCollider, respawnPosition, Time.fixedTime);
         }
+
+        private void OnCollisionExit2D(Collision2D collision) => landingGate.Exit(collision.rigidbody);
+        private void OnDisable() => landingGate.Reset();
     }
 }

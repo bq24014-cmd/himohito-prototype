@@ -15,22 +15,18 @@ namespace HimoHito
 
         private Camera mainCamera;
         private Collider2D playerCollider;
-        private Texture2D titleBackground;
         private Texture2D endingBackground;
         private GUIStyle titleStyle;
         private GUIStyle bodyStyle;
         private GUIStyle lengthStyle;
-        private GUIStyle startTitleStyle;
-        private GUIStyle startObjectiveStyle;
-        private GUIStyle startImportantStyle;
-        private GUIStyle startControlStyle;
-        private GUIStyle startPromptStyle;
         private GUIStyle weavePromptTitleStyle;
         private GUIStyle weavePromptBodyStyle;
         private GUIStyle weavePromptActionStyle;
         private GUIStyle clearTitleStyle;
         private GUIStyle clearBodyStyle;
         private GUIStyle clearPromptStyle;
+        private ClearJourneyView clearJourney;
+        private StageSelectionView stageSelection;
 
         private void Awake()
         {
@@ -65,8 +61,6 @@ namespace HimoHito
                 platformBuilder = FindFirstObjectByType<RopePlatformBuilder>();
             }
 
-            titleBackground = Resources.Load<Texture2D>(
-                "Art/HimoHitoTitleBackground-v1");
             endingBackground = Resources.Load<Texture2D>(
                 "Art/HimoHitoEndingBackground-v1");
         }
@@ -83,11 +77,13 @@ namespace HimoHito
             }
 
             EnsureStyles();
+            if (runController == null || runController.Outcome != PrototypeRunController.RunOutcome.Clear)
+                clearJourney = null;
 
             if (runController != null &&
                 runController.Outcome == PrototypeRunController.RunOutcome.WaitingToStart)
             {
-                DrawStartScreen();
+                (stageSelection ??= new StageSelectionView()).Draw(runController);
                 return;
             }
 
@@ -105,7 +101,7 @@ namespace HimoHito
                 return;
             }
 
-            GUILayout.BeginArea(new Rect(22f, 18f, Mathf.Min(360f, Screen.width - 44f), 174f), GUI.skin.box);
+            HimoHitoUiParts.BeginHudArea(new Rect(22f, 18f, Mathf.Min(360f, Screen.width - 44f), HimoHitoUiParts.CompactHudHeight));
             GUILayout.Label("チュートリアル　" + $"第{(runController != null ? runController.CurrentTutorialSection : 1)}区間 / {PrototypeRunController.TutorialSectionCount}", titleStyle);
             if (ropeResource != null)
             {
@@ -273,69 +269,6 @@ namespace HimoHito
             GUILayout.EndArea();
         }
 
-        private void DrawStartScreen()
-        {
-            Rect screenRect = new Rect(0f, 0f, Screen.width, Screen.height);
-            Color previousColor = GUI.color;
-            if (titleBackground != null)
-            {
-                GUI.DrawTexture(
-                    screenRect,
-                    titleBackground,
-                    ScaleMode.ScaleAndCrop,
-                    true);
-            }
-            else
-            {
-                GUI.color = new Color(0.04f, 0.05f, 0.11f, 1f);
-                GUI.Box(screenRect, GUIContent.none);
-            }
-
-            float shadeWidth = Mathf.Min(Screen.width * 0.58f, 1040f);
-            GUI.color = new Color(0.025f, 0.025f, 0.075f, 0.72f);
-            GUI.Box(new Rect(0f, 0f, shadeWidth, Screen.height), GUIContent.none);
-            GUI.color = previousColor;
-
-            float panelWidth = Mathf.Min(760f, shadeWidth - 72f);
-            float panelHeight = Mathf.Min(650f, Screen.height - 72f);
-            Rect panel = new Rect(
-                Mathf.Max(42f, shadeWidth * 0.09f),
-                (Screen.height - panelHeight) * 0.5f,
-                panelWidth,
-                panelHeight);
-
-            GUILayout.BeginArea(panel);
-            GUILayout.FlexibleSpace();
-            GUILayout.Label("HIMOHITO", startObjectiveStyle);
-            GUILayout.Label("ヒモヒト", startTitleStyle);
-            GUILayout.Space(20f);
-            GUILayout.Label(
-                "自分の体であるヒモを伸ばして進み、\n必要な場所では足場として編むアクションパズル",
-                startControlStyle);
-            GUILayout.Space(54f);
-            Rect startButtonRow = GUILayoutUtility.GetRect(
-                1f,
-                58f,
-                GUILayout.ExpandWidth(true),
-                GUILayout.Height(58f));
-            Rect startButton = new Rect(
-                startButtonRow.x,
-                startButtonRow.y,
-                Mathf.Min(390f, startButtonRow.width),
-                startButtonRow.height);
-            HimoHitoUiParts.DrawWoodButtonLabel(
-                startButton,
-                "Enter　はじめる",
-                startImportantStyle);
-            GUILayout.Label("Tab　操作説明", startPromptStyle);
-            GUILayout.Label("Esc　終了", startPromptStyle);
-            GUILayout.FlexibleSpace();
-            GUILayout.Label(
-                "制作：bq24014-cmd　／　Unity 6.3 LTS　／　使用素材はREADME参照",
-                bodyStyle);
-            GUILayout.EndArea();
-        }
-
         private void DrawClearScreen()
         {
             Color previousColor = GUI.color;
@@ -355,30 +288,14 @@ namespace HimoHito
             }
             GUI.color = previousColor;
 
-            GUILayout.BeginArea(new Rect(
-                0f,
-                Screen.height * 0.1f,
-                Screen.width,
-                Screen.height * 0.34f));
-            GUILayout.Label("チュートリアルクリア", clearTitleStyle);
-            GUILayout.Space(18f);
-            GUILayout.Label("ヒモを掛ける・長さを選ぶ・足場にする・まとめるを習得しました", clearBodyStyle);
-            GUILayout.Space(42f);
-            Rect clearButtonRow = GUILayoutUtility.GetRect(
-                1f,
-                62f,
-                GUILayout.ExpandWidth(true),
-                GUILayout.Height(62f));
-            Rect clearButton = new Rect(
-                clearButtonRow.x + Mathf.Max(0f, (clearButtonRow.width - 480f) * 0.5f),
-                clearButtonRow.y,
-                Mathf.Min(480f, clearButtonRow.width),
-                clearButtonRow.height);
-            HimoHitoUiParts.DrawWoodButtonLabel(
-                clearButton,
-                "Enter　本編ステージへ",
-                clearPromptStyle);
-            GUILayout.EndArea();
+            clearJourney ??= new ClearJourneyView(ropeResource, platformBuilder, true);
+            ClearJourneyView.Choice choice = clearJourney.Draw(true, string.Empty, 0);
+            if (choice == ClearJourneyView.Choice.None) return;
+            if (choice == ClearJourneyView.Choice.StageSelection)
+                runController.ReturnToStageSelectionFromClear();
+            else
+                runController.ContinueAfterClear();
+            GUIUtility.ExitGUI();
         }
 
         private void EnsureStyles()
@@ -404,41 +321,6 @@ namespace HimoHito
             {
                 fontSize = 14,
                 normal = { textColor = Color.white }
-            };
-            startTitleStyle = new GUIStyle(GUI.skin.label)
-            {
-                alignment = TextAnchor.MiddleLeft,
-                fontSize = 64,
-                fontStyle = FontStyle.Bold,
-                normal = { textColor = new Color(1f, 0.36f, 0.56f) }
-            };
-            startObjectiveStyle = new GUIStyle(GUI.skin.label)
-            {
-                alignment = TextAnchor.MiddleLeft,
-                fontSize = 20,
-                fontStyle = FontStyle.Bold,
-                normal = { textColor = new Color(0.72f, 0.79f, 1f) }
-            };
-            startImportantStyle = new GUIStyle(GUI.skin.label)
-            {
-                alignment = TextAnchor.MiddleLeft,
-                fontSize = 28,
-                fontStyle = FontStyle.Bold,
-                normal = { textColor = new Color(1f, 0.82f, 0.28f) }
-            };
-            startControlStyle = new GUIStyle(GUI.skin.label)
-            {
-                alignment = TextAnchor.MiddleLeft,
-                fontSize = 21,
-                wordWrap = true,
-                normal = { textColor = Color.white }
-            };
-            startPromptStyle = new GUIStyle(GUI.skin.label)
-            {
-                alignment = TextAnchor.MiddleLeft,
-                fontSize = 22,
-                fontStyle = FontStyle.Bold,
-                normal = { textColor = new Color(0.65f, 0.72f, 1f) }
             };
             weavePromptTitleStyle = new GUIStyle(GUI.skin.label)
             {
@@ -488,11 +370,6 @@ namespace HimoHito
                 titleStyle,
                 lengthStyle,
                 bodyStyle,
-                startTitleStyle,
-                startObjectiveStyle,
-                startImportantStyle,
-                startControlStyle,
-                startPromptStyle,
                 weavePromptTitleStyle,
                 weavePromptBodyStyle,
                 weavePromptActionStyle,

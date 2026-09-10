@@ -8,6 +8,9 @@ namespace HimoHito
     /// </summary>
     public static class HimoHitoUiParts
     {
+        // Four text rows plus the 30px gauge, with room inside the felt stitching.
+        public const float CompactHudHeight = 206f;
+
         private const string ResourcePath = "Art/HimoHitoUiParts-v1";
         private const float AtlasSourceWidth = 1881f;
         private const float AtlasSourceHeight = 836f;
@@ -25,6 +28,52 @@ namespace HimoHito
 
         private static Texture2D processedAtlas;
         private static Sprite connectorSprite;
+        private static Sprite woodMountSprite, mountingKnotSprite;
+        private static Sprite craftWood, craftHud;
+        private static GUIStyle hudAreaStyle;
+
+        private static Sprite CraftSprite(ref Sprite cached, string path)
+        {
+            if (cached != null && cached.texture != null) return cached;
+            if (Resources.Load<Texture2D>(path) == null) return null;
+            return cached = TutorialFirstSectionVisuals.LoadProcessedToySprite(path, true);
+        }
+
+        // Only UI drawing uses these; the old atlas sprites remain unchanged for world props.
+        private static Sprite CraftWood => CraftSprite(ref craftWood, "Art/HimoHitoCraftHookMount-v1");
+        private static Sprite CraftHud => CraftSprite(ref craftHud, "Art/HimoHitoCraftHudPanel-v1");
+
+        public static void BeginHudArea(Rect rect)
+        {
+            if (CraftHud == null) { GUILayout.BeginArea(rect, GUI.skin.box); return; }
+            DrawSlicedSprite(rect, CraftHud, .10f, 12f);
+            if (hudAreaStyle == null)
+            {
+                hudAreaStyle = new GUIStyle(GUI.skin.box);
+                hudAreaStyle.normal.background = null;
+                hudAreaStyle.padding = new RectOffset(14, 14, 12, 14);
+            }
+            GUILayout.BeginArea(rect, hudAreaStyle);
+        }
+
+        public static Sprite WoodMountSprite => AtlasSprite(ref woodMountSprite, ButtonRect, "Hook Wooden Mount");
+        public static Sprite MountingKnotSprite => AtlasSprite(ref mountingKnotSprite, KnotRect, "Hook Mounting Knot");
+
+        private static Sprite AtlasSprite(ref Sprite cached, RectInt region, string label)
+        {
+            EnsureAtlas();
+            if (processedAtlas == null) return null;
+            if (cached != null && cached.texture != null) return cached;
+            float sx = processedAtlas.width / AtlasSourceWidth;
+            float sy = processedAtlas.height / AtlasSourceHeight;
+            var rect = new Rect(region.x * sx, (AtlasSourceHeight - region.yMax) * sy,
+                region.width * sx, region.height * sy);
+            cached = Sprite.Create(processedAtlas, rect, new Vector2(.5f, .5f), rect.height,
+                0, SpriteMeshType.FullRect);
+            cached.name = label;
+            cached.hideFlags = HideFlags.HideAndDontSave;
+            return cached;
+        }
 
         public static bool IsAvailable
         {
@@ -72,6 +121,17 @@ namespace HimoHito
 
         public static void DrawGaugeFrame(Rect rect)
         {
+            if (CraftWood != null && rect.width >= 40f && rect.height > 0f)
+            {
+                // Keep the existing x+20 / y+9 / height 12 track fully exposed.
+                DrawSlicedSprite(new Rect(rect.x + 10f, rect.y + 1f, rect.width - 20f, 8f), CraftWood, .16f, 3f);
+                DrawSlicedSprite(new Rect(rect.x + 10f, rect.y + 21f, rect.width - 20f, 8f), CraftWood, .16f, 3f);
+                DrawSlicedSprite(new Rect(rect.x, rect.y + 1f, 20f, 28f), CraftWood, .16f, 5f);
+                DrawSlicedSprite(new Rect(rect.xMax - 20f, rect.y + 1f, 20f, 28f), CraftWood, .16f, 5f);
+                DrawKnot(new Rect(rect.x + 2f, rect.y + 6f, 12f, 18f));
+                DrawKnot(new Rect(rect.xMax - 14f, rect.y + 6f, 12f, 18f));
+                return;
+            }
             if (!IsAvailable)
             {
                 return;
@@ -117,6 +177,11 @@ namespace HimoHito
 
         public static void DrawWoodButton(Rect rect)
         {
+            if (CraftWood != null)
+            {
+                DrawSlicedSprite(rect, CraftWood, .16f, Mathf.Min(12f, rect.height * .22f));
+                return;
+            }
             if (!IsAvailable)
             {
                 return;
@@ -166,6 +231,17 @@ namespace HimoHito
             GUI.Label(rect, text, buttonLabelStyle);
         }
 
+        public static bool WoodButton(Rect rect, string text, GUIStyle style)
+        {
+            bool clicked = GUI.Button(rect, GUIContent.none, GUIStyle.none);
+            Color previous = GUI.color;
+            if (GUI.enabled && rect.Contains(Event.current.mousePosition))
+                GUI.color = previous * new Color(1f, .9f, .8f, 1f);
+            DrawWoodButtonLabel(rect, text, style);
+            GUI.color = previous;
+            return clicked;
+        }
+
         public static void DrawKnot(Rect rect)
         {
             DrawAtlasRegion(rect, KnotRect);
@@ -190,6 +266,33 @@ namespace HimoHito
                 sourceTopLeft.width / AtlasSourceWidth,
                 sourceTopLeft.height / AtlasSourceHeight);
             GUI.DrawTextureWithTexCoords(target, processedAtlas, uv, true);
+        }
+
+        // Nine-slicing keeps the rounded corners intact without stretching them with long labels.
+        private static void DrawSlicedSprite(Rect target, Sprite sprite, float borderRatio, float borderPixels)
+        {
+            if (target.width <= 0f || target.height <= 0f || sprite == null) return;
+            Rect source = sprite.textureRect;
+            float cut = Mathf.Min(source.width, source.height) * borderRatio;
+            float border = Mathf.Min(borderPixels, Mathf.Min(target.width, target.height) * .5f);
+            for (int row = 0; row < 3; row++)
+            for (int column = 0; column < 3; column++)
+            {
+                float sx = column == 0 ? 0f : column == 1 ? cut : source.width - cut;
+                float sy = row == 0 ? 0f : row == 1 ? cut : source.height - cut;
+                float sw = column == 1 ? source.width - cut * 2f : cut;
+                float sh = row == 1 ? source.height - cut * 2f : cut;
+                float dx = column == 0 ? 0f : column == 1 ? border : target.width - border;
+                float dy = row == 0 ? 0f : row == 1 ? border : target.height - border;
+                float dw = column == 1 ? target.width - border * 2f : border;
+                float dh = row == 1 ? target.height - border * 2f : border;
+                if (dw <= 0f || dh <= 0f) continue;
+                Rect uv = new Rect((source.x + sx) / sprite.texture.width,
+                    (source.yMax - sy - sh) / sprite.texture.height,
+                    sw / sprite.texture.width, sh / sprite.texture.height);
+                GUI.DrawTextureWithTexCoords(new Rect(target.x + dx, target.y + dy, dw, dh),
+                    sprite.texture, uv, true);
+            }
         }
 
         private static void EnsureAtlas()
