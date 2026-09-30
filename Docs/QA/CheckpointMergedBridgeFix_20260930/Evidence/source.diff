@@ -1,0 +1,110 @@
+diff --git a/Assets/Scripts/MainStageRespawnOnFall.cs b/Assets/Scripts/MainStageRespawnOnFall.cs
+index 79fef0e..c2d6310 100644
+--- a/Assets/Scripts/MainStageRespawnOnFall.cs
++++ b/Assets/Scripts/MainStageRespawnOnFall.cs
+@@ -36,6 +36,7 @@ namespace HimoHito
+         private float checkpointRopeLength;
+         private int checkpointSelectedRopeLength;
+         private RopePlatformBuilder.PlatformState[] checkpointPlatformStates;
++        private GameObject[] checkpointRemovedHooks;
+ 
+         public int CurrentSection { get; private set; } = 1;
+         public int RefillCount { get; private set; }
+@@ -202,6 +203,7 @@ namespace HimoHito
+             checkpointRopeLength = ropeResource.CurrentLength;
+             checkpointSelectedRopeLength = ropeController.SelectedRopeLength;
+             checkpointPlatformStates = platformBuilder.CapturePlatformStates();
++            checkpointRemovedHooks = platformBuilder.CaptureRemovedHooks();
+         }
+ 
+         private void ApplyEndingPreviewStart()
+@@ -224,7 +226,7 @@ namespace HimoHito
+             ropeController.DetachAndRefund();
+             ropeResource.RestoreCurrentLength(checkpointRopeLength);
+             ropeController.RestoreSelectedRopeLength(checkpointSelectedRopeLength);
+-            platformBuilder.RestorePlatformStates(checkpointPlatformStates);
++            platformBuilder.RestorePlatformStates(checkpointPlatformStates, checkpointRemovedHooks);
+             MainStageSectionFiveSetup.RestoreRailShelvesAfterRestart();
+             body.position = checkpointPosition;
+             transform.position = new Vector3(checkpointPosition.x, checkpointPosition.y, transform.position.z);
+diff --git a/Assets/Scripts/PrototypeRunController.cs b/Assets/Scripts/PrototypeRunController.cs
+index fd97acb..bfdb78f 100644
+--- a/Assets/Scripts/PrototypeRunController.cs
++++ b/Assets/Scripts/PrototypeRunController.cs
+@@ -57,6 +57,7 @@ namespace HimoHito
+         private float checkpointRopeLength;
+         private int checkpointSelectedRopeLength;
+         private RopePlatformBuilder.PlatformState[] checkpointPlatformStates;
++        private GameObject[] checkpointRemovedHooks;
+ 
+         public RunOutcome Outcome { get; private set; } = RunOutcome.WaitingToStart;
+         public RunFailureReason FailureReason { get; private set; } = RunFailureReason.None;
+@@ -433,13 +434,14 @@ namespace HimoHito
+             checkpointRopeLength = ropeResource.CurrentLength;
+             checkpointSelectedRopeLength = ropeController.SelectedRopeLength;
+             checkpointPlatformStates = platformBuilder.CapturePlatformStates();
++            checkpointRemovedHooks = platformBuilder.CaptureRemovedHooks();
+         }
+ 
+         private void RestoreCheckpointState()
+         {
+             ropeResource.RestoreCurrentLength(checkpointRopeLength);
+             ropeController.RestoreSelectedRopeLength(checkpointSelectedRopeLength);
+-            platformBuilder.RestorePlatformStates(checkpointPlatformStates);
++            platformBuilder.RestorePlatformStates(checkpointPlatformStates, checkpointRemovedHooks);
+         }
+ 
+         private void ResetMotionAndResume()
+diff --git a/Assets/Scripts/RopePlatformBuilder.cs b/Assets/Scripts/RopePlatformBuilder.cs
+index b70acfc..ef49dd6 100644
+--- a/Assets/Scripts/RopePlatformBuilder.cs
++++ b/Assets/Scripts/RopePlatformBuilder.cs
+@@ -217,17 +217,43 @@ namespace HimoHito
+             return curves.ToArray();
+         }
+ 
+-        public void RestorePlatformStates(IReadOnlyList<PlatformState> states)
++        // Checkpoints live in the same Scene and Play session as these Hook objects.
++        // Copy the collection so later merges/restarts cannot mutate the snapshot.
++        public GameObject[] CaptureRemovedHooks()
++        {
++            List<GameObject> hooks = new(removedHooks.Count);
++            foreach (GameObject hook in removedHooks)
++            {
++                if (hook != null && !hook.activeSelf)
++                {
++                    hooks.Add(hook);
++                }
++            }
++            return hooks.ToArray();
++        }
++
++        public void RestorePlatformStates(
++            IReadOnlyList<PlatformState> states,
++            IReadOnlyList<GameObject> removedHookStates = null)
+         {
+             ClearPlatforms();
+-            if (states == null)
++            if (states != null)
+             {
+-                return;
++                for (int i = 0; i < states.Count; i++)
++                {
++                    CreatePlatform(states[i].Start, states[i].End, states[i].RopeLength);
++                }
+             }
+ 
+-            for (int i = 0; i < states.Count; i++)
++            if (removedHookStates == null) return;
++            foreach (GameObject hook in removedHookStates)
+             {
+-                CreatePlatform(states[i].Start, states[i].End, states[i].RopeLength);
++                if (hook == null || hook.scene != gameObject.scene) continue;
++                hook.SetActive(false);
++                if (!removedHooks.Contains(hook))
++                {
++                    removedHooks.Add(hook);
++                }
+             }
+         }
+ 

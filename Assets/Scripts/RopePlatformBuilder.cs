@@ -217,17 +217,43 @@ namespace HimoHito
             return curves.ToArray();
         }
 
-        public void RestorePlatformStates(IReadOnlyList<PlatformState> states)
+        // Checkpoints live in the same Scene and Play session as these Hook objects.
+        // Copy the collection so later merges/restarts cannot mutate the snapshot.
+        public GameObject[] CaptureRemovedHooks()
+        {
+            List<GameObject> hooks = new(removedHooks.Count);
+            foreach (GameObject hook in removedHooks)
+            {
+                if (hook != null && !hook.activeSelf)
+                {
+                    hooks.Add(hook);
+                }
+            }
+            return hooks.ToArray();
+        }
+
+        public void RestorePlatformStates(
+            IReadOnlyList<PlatformState> states,
+            IReadOnlyList<GameObject> removedHookStates = null)
         {
             ClearPlatforms();
-            if (states == null)
+            if (states != null)
             {
-                return;
+                for (int i = 0; i < states.Count; i++)
+                {
+                    CreatePlatform(states[i].Start, states[i].End, states[i].RopeLength);
+                }
             }
 
-            for (int i = 0; i < states.Count; i++)
+            if (removedHookStates == null) return;
+            foreach (GameObject hook in removedHookStates)
             {
-                CreatePlatform(states[i].Start, states[i].End, states[i].RopeLength);
+                if (hook == null || hook.scene != gameObject.scene) continue;
+                hook.SetActive(false);
+                if (!removedHooks.Contains(hook))
+                {
+                    removedHooks.Add(hook);
+                }
             }
         }
 

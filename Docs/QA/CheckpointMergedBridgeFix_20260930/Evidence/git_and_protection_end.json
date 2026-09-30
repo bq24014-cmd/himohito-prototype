@@ -1,0 +1,27 @@
+{
+  "baselineFiles": 1453,
+  "unchanged": 1450,
+  "changedSource": [
+    "Assets\\Scripts\\MainStageRespawnOnFall.cs",
+    "Assets\\Scripts\\PrototypeRunController.cs",
+    "Assets\\Scripts\\RopePlatformBuilder.cs"
+  ],
+  "unexpectedChanges": 0,
+  "diagnosticSceneMatch": true,
+  "sourceDiffCheck": "PASS",
+  "fullDiffCheckExit": 2,
+  "otherLegacyTmpFiles": 2935,
+  "otherLegacyTmpNewerFiles": 0,
+  "branch": "main",
+  "head": "f0b0709b446a7f4372f2223aad38acaebaf8c6af",
+  "originMain": "f0b0709b446a7f4372f2223aad38acaebaf8c6af",
+  "staged": [],
+  "status": [
+    " M Assets/Scenes/MainStage.unity",
+    " M Assets/Scripts/MainStageRespawnOnFall.cs",
+    " M Assets/Scripts/PrototypeRunController.cs",
+    " M Assets/Scripts/RopePlatformBuilder.cs",
+    "?? Docs/QA/",
+    "?? output/"
+  ]
+}

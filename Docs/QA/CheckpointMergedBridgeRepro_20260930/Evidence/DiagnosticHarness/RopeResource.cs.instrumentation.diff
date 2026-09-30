@@ -1,0 +1,12 @@
+diff --git "a/C:\\Users\\\347\224\260\345\260\273\345\244\247\347\277\224\\Documents\\Codex\\2026-08-07\\new-chat\\outputs\\HimoHitoPrototype\\Assets\\Scripts\\RopeResource.cs" "b/C:\\Users\\\347\224\260\345\260\273\345\244\247\347\277\224\\Documents\\Codex\\2026-08-07\\new-chat\\outputs\\HimoHitoPrototype\\.codex_tmp\\CheckpointMergedBridgeRepro_20260930\\DiagnosticProject\\Assets\\Scripts\\RopeResource.cs"
+index 1191963..3995ac7 100644
+--- "a/C:\\Users\\\347\224\260\345\260\273\345\244\247\347\277\224\\Documents\\Codex\\2026-08-07\\new-chat\\outputs\\HimoHitoPrototype\\Assets\\Scripts\\RopeResource.cs"
++++ "b/C:\\Users\\\347\224\260\345\260\273\345\244\247\347\277\224\\Documents\\Codex\\2026-08-07\\new-chat\\outputs\\HimoHitoPrototype\\.codex_tmp\\CheckpointMergedBridgeRepro_20260930\\DiagnosticProject\\Assets\\Scripts\\RopeResource.cs"
+@@ -65,6 +65,7 @@ namespace HimoHito
+ 
+         public void RestoreCurrentLength(float amount)
+         {
++            ReproTrace.Record("RestoreCurrentLength.enter", gameObject);
+             RopeResourceGauge.ClearFlash(this);
+             currentLength = Mathf.Clamp(amount, 0f, maximumLength);
+         }

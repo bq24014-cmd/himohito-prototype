@@ -1,0 +1,41 @@
+diff --git "a/C:\\Users\\\347\224\260\345\260\273\345\244\247\347\277\224\\Documents\\Codex\\2026-08-07\\new-chat\\outputs\\HimoHitoPrototype\\Assets\\Scripts\\PrototypeRunController.cs" "b/C:\\Users\\\347\224\260\345\260\273\345\244\247\347\277\224\\Documents\\Codex\\2026-08-07\\new-chat\\outputs\\HimoHitoPrototype\\.codex_tmp\\CheckpointMergedBridgeFix_20260930\\DiagnosticProject\\Assets\\Scripts\\PrototypeRunController.cs"
+index bfdb78f..535961e 100644
+--- "a/C:\\Users\\\347\224\260\345\260\273\345\244\247\347\277\224\\Documents\\Codex\\2026-08-07\\new-chat\\outputs\\HimoHitoPrototype\\Assets\\Scripts\\PrototypeRunController.cs"
++++ "b/C:\\Users\\\347\224\260\345\260\273\345\244\247\347\277\224\\Documents\\Codex\\2026-08-07\\new-chat\\outputs\\HimoHitoPrototype\\.codex_tmp\\CheckpointMergedBridgeFix_20260930\\DiagnosticProject\\Assets\\Scripts\\PrototypeRunController.cs"
+@@ -398,6 +398,7 @@ namespace HimoHito
+ 
+         private void RestartFromCheckpoint()
+         {
++            FixTrace.Record("RestartFromCheckpoint.enter", gameObject);
+             body.simulated = true;
+             ropeController.DetachAndRefund();
+             RestoreCheckpointState();
+@@ -406,6 +407,7 @@ namespace HimoHito
+             transform.position = new Vector3(checkpointPosition.x, checkpointPosition.y, transform.position.z);
+             ResetMotionAndResume();
+             RespawnWeaveVisual.Play(gameObject);
++            FixTrace.Record("RestartFromCheckpoint.exit", gameObject);
+         }
+ 
+         private void RestartTutorial()
+@@ -431,10 +433,12 @@ namespace HimoHito
+ 
+         private void CaptureCheckpointState()
+         {
++            FixTrace.Record("CaptureCheckpointState.enter", gameObject);
+             checkpointRopeLength = ropeResource.CurrentLength;
+             checkpointSelectedRopeLength = ropeController.SelectedRopeLength;
+             checkpointPlatformStates = platformBuilder.CapturePlatformStates();
+             checkpointRemovedHooks = platformBuilder.CaptureRemovedHooks();
++            FixTrace.Record("CaptureCheckpointState.exit", gameObject);
+         }
+ 
+         private void RestoreCheckpointState()
+@@ -442,6 +446,7 @@ namespace HimoHito
+             ropeResource.RestoreCurrentLength(checkpointRopeLength);
+             ropeController.RestoreSelectedRopeLength(checkpointSelectedRopeLength);
+             platformBuilder.RestorePlatformStates(checkpointPlatformStates, checkpointRemovedHooks);
++            FixTrace.Record("RestorePlatformStates.exit", gameObject);
+         }
+ 
+         private void ResetMotionAndResume()

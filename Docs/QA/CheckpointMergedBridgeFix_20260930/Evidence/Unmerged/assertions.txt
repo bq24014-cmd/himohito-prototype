@@ -1,0 +1,14 @@
+PASS Authored checkpoint9 exists
+PASS Authored physical landing captured section9
+PASS First E attach
+PASS First Q bridge
+PASS Second E attach
+PASS Second Q bridge
+PASS Authored physical landing captured checkpoint10
+PASS Snapshot platform/removed counts
+PASS Restart1 Hook identity valid/unchanged
+PASS Restart1 center active contract
+PASS Restart1 platform count/endpoints/length exact
+PASS Restart1 removedHooks count/identity no growth
+PASS Restart1 rope38/selected6/section10 restored
+PASS Restart1 all authored Hook active states unchanged

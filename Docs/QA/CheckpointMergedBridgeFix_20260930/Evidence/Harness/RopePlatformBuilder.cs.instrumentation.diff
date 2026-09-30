@@ -1,0 +1,28 @@
+diff --git "a/C:\\Users\\\347\224\260\345\260\273\345\244\247\347\277\224\\Documents\\Codex\\2026-08-07\\new-chat\\outputs\\HimoHitoPrototype\\Assets\\Scripts\\RopePlatformBuilder.cs" "b/C:\\Users\\\347\224\260\345\260\273\345\244\247\347\277\224\\Documents\\Codex\\2026-08-07\\new-chat\\outputs\\HimoHitoPrototype\\.codex_tmp\\CheckpointMergedBridgeFix_20260930\\DiagnosticProject\\Assets\\Scripts\\RopePlatformBuilder.cs"
+index ef49dd6..74c0266 100644
+--- "a/C:\\Users\\\347\224\260\345\260\273\345\244\247\347\277\224\\Documents\\Codex\\2026-08-07\\new-chat\\outputs\\HimoHitoPrototype\\Assets\\Scripts\\RopePlatformBuilder.cs"
++++ "b/C:\\Users\\\347\224\260\345\260\273\345\244\247\347\277\224\\Documents\\Codex\\2026-08-07\\new-chat\\outputs\\HimoHitoPrototype\\.codex_tmp\\CheckpointMergedBridgeFix_20260930\\DiagnosticProject\\Assets\\Scripts\\RopePlatformBuilder.cs"
+@@ -329,6 +329,7 @@ namespace HimoHito
+ 
+         public void ClearPlatforms()
+         {
++            FixTrace.Record("ClearPlatforms.enter", gameObject);
+             RestoreRemovedHooks();
+             for (int i = generatedPlatforms.Count - 1; i >= 0; i--)
+             {
+@@ -338,6 +339,7 @@ namespace HimoHito
+ 
+         private void RestoreRemovedHooks()
+         {
++            FixTrace.Record("RestoreRemovedHooks.enter", gameObject);
+             foreach (GameObject hook in removedHooks)
+             {
+                 if (hook != null)
+@@ -346,6 +348,7 @@ namespace HimoHito
+                 }
+             }
+             removedHooks.Clear();
++            FixTrace.Record("RestoreRemovedHooks.exit", gameObject);
+         }
+ 
+         private bool CanBuild(

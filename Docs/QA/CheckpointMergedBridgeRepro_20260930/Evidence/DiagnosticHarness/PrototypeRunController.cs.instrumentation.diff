@@ -1,0 +1,40 @@
+diff --git "a/C:\\Users\\\347\224\260\345\260\273\345\244\247\347\277\224\\Documents\\Codex\\2026-08-07\\new-chat\\outputs\\HimoHitoPrototype\\Assets\\Scripts\\PrototypeRunController.cs" "b/C:\\Users\\\347\224\260\345\260\273\345\244\247\347\277\224\\Documents\\Codex\\2026-08-07\\new-chat\\outputs\\HimoHitoPrototype\\.codex_tmp\\CheckpointMergedBridgeRepro_20260930\\DiagnosticProject\\Assets\\Scripts\\PrototypeRunController.cs"
+index fd97acb..6b72d53 100644
+--- "a/C:\\Users\\\347\224\260\345\260\273\345\244\247\347\277\224\\Documents\\Codex\\2026-08-07\\new-chat\\outputs\\HimoHitoPrototype\\Assets\\Scripts\\PrototypeRunController.cs"
++++ "b/C:\\Users\\\347\224\260\345\260\273\345\244\247\347\277\224\\Documents\\Codex\\2026-08-07\\new-chat\\outputs\\HimoHitoPrototype\\.codex_tmp\\CheckpointMergedBridgeRepro_20260930\\DiagnosticProject\\Assets\\Scripts\\PrototypeRunController.cs"
+@@ -367,6 +367,7 @@ namespace HimoHito
+                 return;
+             }
+ 
++            ReproTrace.Record("TryReachTutorialSection.accept", gameObject);
+             CurrentTutorialSection = sectionNumber;
+             checkpointPosition = respawnPosition;
+             // Keep the player's selection across sections instead of applying the lesson preset.
+@@ -397,6 +398,7 @@ namespace HimoHito
+ 
+         private void RestartFromCheckpoint()
+         {
++            ReproTrace.Record("RestartFromCheckpoint.enter", gameObject);
+             body.simulated = true;
+             ropeController.DetachAndRefund();
+             RestoreCheckpointState();
+@@ -405,6 +407,7 @@ namespace HimoHito
+             transform.position = new Vector3(checkpointPosition.x, checkpointPosition.y, transform.position.z);
+             ResetMotionAndResume();
+             RespawnWeaveVisual.Play(gameObject);
++            ReproTrace.Record("RestartFromCheckpoint.exit", gameObject);
+         }
+ 
+         private void RestartTutorial()
+@@ -430,9 +433,11 @@ namespace HimoHito
+ 
+         private void CaptureCheckpointState()
+         {
++            ReproTrace.Record("CaptureCheckpointState.enter", gameObject);
+             checkpointRopeLength = ropeResource.CurrentLength;
+             checkpointSelectedRopeLength = ropeController.SelectedRopeLength;
+             checkpointPlatformStates = platformBuilder.CapturePlatformStates();
++            ReproTrace.Record("CaptureCheckpointState.exit", gameObject);
+         }
+ 
+         private void RestoreCheckpointState()

@@ -36,6 +36,7 @@ namespace HimoHito
         private float checkpointRopeLength;
         private int checkpointSelectedRopeLength;
         private RopePlatformBuilder.PlatformState[] checkpointPlatformStates;
+        private GameObject[] checkpointRemovedHooks;
 
         public int CurrentSection { get; private set; } = 1;
         public int RefillCount { get; private set; }
@@ -202,6 +203,7 @@ namespace HimoHito
             checkpointRopeLength = ropeResource.CurrentLength;
             checkpointSelectedRopeLength = ropeController.SelectedRopeLength;
             checkpointPlatformStates = platformBuilder.CapturePlatformStates();
+            checkpointRemovedHooks = platformBuilder.CaptureRemovedHooks();
         }
 
         private void ApplyEndingPreviewStart()
@@ -224,7 +226,7 @@ namespace HimoHito
             ropeController.DetachAndRefund();
             ropeResource.RestoreCurrentLength(checkpointRopeLength);
             ropeController.RestoreSelectedRopeLength(checkpointSelectedRopeLength);
-            platformBuilder.RestorePlatformStates(checkpointPlatformStates);
+            platformBuilder.RestorePlatformStates(checkpointPlatformStates, checkpointRemovedHooks);
             MainStageSectionFiveSetup.RestoreRailShelvesAfterRestart();
             body.position = checkpointPosition;
             transform.position = new Vector3(checkpointPosition.x, checkpointPosition.y, transform.position.z);

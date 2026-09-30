@@ -1,0 +1,28 @@
+PASS Authored checkpoint9 exists
+PASS Authored physical landing captured section9
+PASS First E attach
+PASS First Q bridge
+PASS Second E attach
+PASS Second Q bridge
+PASS F merge
+PASS Authored physical landing captured checkpoint10
+PASS Snapshot platform/removed counts
+PASS Snapshot contains exact central GameObject reference
+PASS Restart1 Hook identity valid/unchanged
+PASS Restart1 center active contract
+PASS Restart1 platform count/endpoints/length exact
+PASS Restart1 removedHooks count/identity no growth
+PASS Restart1 rope38/selected6/section10 restored
+PASS Restart1 all authored Hook active states unchanged
+PASS Restart2 Hook identity valid/unchanged
+PASS Restart2 center active contract
+PASS Restart2 platform count/endpoints/length exact
+PASS Restart2 removedHooks count/identity no growth
+PASS Restart2 rope38/selected6/section10 restored
+PASS Restart2 all authored Hook active states unchanged
+PASS Restart3 Hook identity valid/unchanged
+PASS Restart3 center active contract
+PASS Restart3 platform count/endpoints/length exact
+PASS Restart3 removedHooks count/identity no growth
+PASS Restart3 rope38/selected6/section10 restored
+PASS Restart3 all authored Hook active states unchanged

@@ -1,0 +1,2 @@
+Tutorial R3: no post-merge authored checkpoint; pre-merge restore expected.
+MainStage R1: merged bridge + center revived

@@ -1,0 +1,67 @@
+diff --git "a/C:\\Users\\\347\224\260\345\260\273\345\244\247\347\277\224\\Documents\\Codex\\2026-08-07\\new-chat\\outputs\\HimoHitoPrototype\\Assets\\Scripts\\RopePlatformBuilder.cs" "b/C:\\Users\\\347\224\260\345\260\273\345\244\247\347\277\224\\Documents\\Codex\\2026-08-07\\new-chat\\outputs\\HimoHitoPrototype\\.codex_tmp\\CheckpointMergedBridgeRepro_20260930\\DiagnosticProject\\Assets\\Scripts\\RopePlatformBuilder.cs"
+index b70acfc..714101a 100644
+--- "a/C:\\Users\\\347\224\260\345\260\273\345\244\247\347\277\224\\Documents\\Codex\\2026-08-07\\new-chat\\outputs\\HimoHitoPrototype\\Assets\\Scripts\\RopePlatformBuilder.cs"
++++ "b/C:\\Users\\\347\224\260\345\260\273\345\244\247\347\277\224\\Documents\\Codex\\2026-08-07\\new-chat\\outputs\\HimoHitoPrototype\\.codex_tmp\\CheckpointMergedBridgeRepro_20260930\\DiagnosticProject\\Assets\\Scripts\\RopePlatformBuilder.cs"
+@@ -181,12 +181,14 @@ namespace HimoHito
+                 removedHooks.Add(hook.gameObject);
+             }
+             hook.gameObject.SetActive(false);
++            ReproTrace.Record("Merge.exit", gameObject);
+             audioFeedback?.PlayRopePlatformsMerged();
+             return true;
+         }
+ 
+         public PlatformState[] CapturePlatformStates()
+         {
++            ReproTrace.Record("CapturePlatformStates.enter", gameObject);
+             List<PlatformState> states = new(generatedPlatforms.Count);
+             foreach (GameObject platformObject in generatedPlatforms)
+             {
+@@ -219,6 +221,7 @@ namespace HimoHito
+ 
+         public void RestorePlatformStates(IReadOnlyList<PlatformState> states)
+         {
++            ReproTrace.Record("RestorePlatformStates.enter", gameObject);
+             ClearPlatforms();
+             if (states == null)
+             {
+@@ -229,6 +232,7 @@ namespace HimoHito
+             {
+                 CreatePlatform(states[i].Start, states[i].End, states[i].RopeLength);
+             }
++            ReproTrace.Record("RestorePlatformStates.exit", gameObject);
+         }
+ 
+         public bool EnsureAuthoredPlatform(
+@@ -303,6 +307,7 @@ namespace HimoHito
+ 
+         public void ClearPlatforms()
+         {
++            ReproTrace.Record("ClearPlatforms.enter", gameObject);
+             RestoreRemovedHooks();
+             for (int i = generatedPlatforms.Count - 1; i >= 0; i--)
+             {
+@@ -312,6 +317,7 @@ namespace HimoHito
+ 
+         private void RestoreRemovedHooks()
+         {
++            ReproTrace.Record("RestoreRemovedHooks.enter", gameObject);
+             foreach (GameObject hook in removedHooks)
+             {
+                 if (hook != null)
+@@ -320,6 +326,7 @@ namespace HimoHito
+                 }
+             }
+             removedHooks.Clear();
++            ReproTrace.Record("RestoreRemovedHooks.exit", gameObject);
+         }
+ 
+         private bool CanBuild(
+@@ -452,6 +459,7 @@ namespace HimoHito
+                 ropeController);
+             generatedPlatforms.Add(platformObject);
+             RopeBridgeBindings.Ensure(line);
++            ReproTrace.Record("CreatePlatform.exit", gameObject);
+             return generated;
+         }
+ 

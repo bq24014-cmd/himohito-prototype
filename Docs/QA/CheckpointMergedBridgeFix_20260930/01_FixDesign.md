@@ -1,0 +1,37 @@
+# Fix design
+
+対象は前Taskで確定したMainStage CASE R1のみ。永続セーブ、Scene配置、Art、物理、残量計算、選択長、区間更新は変更しない。
+
+## Hook参照の寿命確認（実装前）
+
+- MainStageRespawnOnFall.RestartFromCheckpointはSceneをLoadせず、既存playerとcheckpoint状態を使う。
+- RopePlatformBuilder.ClearPlatformsは生成橋をDestroyし、removed HookはSetActive(true)するだけ。
+- MainStageSectionFiveSetup.RestoreRailShelvesAfterRestartはレール床/衝突/表示を復旧する。中央Hookの再生成は行わない。
+- MainStageSectionNineSetupはScene読込時のsetup。Destroy対象は旧Main S08 prefixのオブジェクトで、Main S09 Center Hookは対象外。checkpoint restartからこのsetupを再実行しない。
+- TutorialもRestartFromCheckpointはScene読込やTutorialSectionFourSetupの再実行を行わない。T4中央HookはFでSetActive(false)になるだけ。
+
+したがって同一Scene・同一Play session内のcheckpointには既存GameObject参照を使える。Scene再読込/永続Saveまで対応するstable ID設計は導入しない。Runtimeでは保存参照と中央InstanceIDの一致も検証する。
+
+## 最小変更
+
+1. RopePlatformBuilder.CaptureRemovedHooks()で、管理リスト内の有効かつactiveSelf=falseのHookを新しいGameObject[]へコピー。
+2. RestorePlatformStatesにremovedHookStatesの任意引数を追加。既存ClearPlatformsで現在の橋/解除状態をリセット、保存橋を再生成した後、保存HookをinactiveにしてremovedHooksへ再登録。
+3. MainStageRespawnOnFallとPrototypeRunControllerへcheckpointRemovedHooks配列を追加。橋と同じCaptureCheckpointStateで取得し、同じrestore呼出しへ両配列を渡す。
+
+既存ClearPlatformsの内部順（Hook通常状態へ戻す→橋撤去）は保持し、refactorしない。復元のresetフェーズ後に橋を作り直し、最後にcheckpointの解除状態を再適用する。
+
+SetActive(false)だけではなくリストを再構成するため、次のRでも一旦通常状態へ戻してから同じ解除状態を再適用できる。配列はliveリストと独立し、Clearの影響を受けない。重複はContainsで抑止。失効/他Scene参照は適用しないが、今回のRuntimeで失効した場合は不合格として停止する。
+
+PlatformStateのStart/End/RopeLengthは変更しない。null/省略のremovedHookStatesでは従来どおり解除なしの状態へ戻る。null platform配列でもHook状態は適用できる。
+
+## 検証方針
+
+Unity 6000.3.21f1の新しい隔離projectへ修正後のProduction Assets/Packages/ProjectSettingsをコピー。計測だけのinstrumentation、diagnostic driver、PNG保存用imageconversion module、専用PlayerPrefs company/productは隔離側のみ。
+
+MainStageのMergedは前回と同じ制御Runtime経路（既存checkpoint9へ準備位置移動、E/Qで2本、F、以降通常物理でcheckpoint10へ歩行）。UnmergedはFを実行せず、同じ既存checkpoint10床へ診断位置移動して物理着地で2本を保存する。新checkpointや手動snapshot captureは使わない。NormalはF/橋生成なしの既存checkpoint9。
+
+Tutorial smokeは通常開始から区間1〜4を移動/振り子/橋生成で通過するdriverを使用する。物理の位置移動やcheckpointを捏造しない。操作は既存E/Q/F/R相当メソッドと入力注入で行うため、手動キー操作の確認とは区別する。
+
+A/E: mergedでRを3回。B/D: unmergedとnormalの全Hook状態比較。C: 保存後に残量/選択を意図的に変えてからR。F: Tutorialの区間遷移、T3橋、入口snapshot再開、T4統合、その入口への戻り。
+
+失敗条件が生じたらProductionへの追加修正は重ねず停止。commit/pushはPASSでも行わない。

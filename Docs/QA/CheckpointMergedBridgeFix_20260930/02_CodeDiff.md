@@ -1,0 +1,19 @@
+# Source差分
+
+Production変更は以下の3ファイルのみ。詳細はEvidence/source.diff。
+
+- Assets/Scripts/RopePlatformBuilder.cs: CaptureRemovedHooks()を追加。配列コピーに有効な解除済みHookを保存。RestorePlatformStatesの任意第2引数で解除済みHook配列を受け取り、現在状態のclearと橋再生成の後にSetActive(false)とremovedHooksへの再登録を行う。同一Sceneの参照のみ適用、重複登録なし。
+- Assets/Scripts/MainStageRespawnOnFall.cs: checkpointRemovedHooksフィールド、CaptureCheckpointStateでの取得、RestartFromCheckpointでの引き渡し。
+- Assets/Scripts/PrototypeRunController.cs: 同じフィールドと取得、RestoreCheckpointStateでの引き渡し。
+
+PlatformState、CurrentLength計算、選択長復元、CurrentSection、checkpointPosition、入力、物理制約、Scene、Artは変更しない。既存ClearPlatforms/RestoreRemovedHooksの内部順序は保持する。
+
+差分は新しい解除状態の保存・再適用に限定。READMEの操作/物理仕様に変更はない。
+
+## 検証用コードとの区別
+
+検証は.codex_tmp/CheckpointMergedBridgeFix_20260930/DiagnosticProject内のみ。Production Assetsに診断コードを追加していない。
+
+Evidence/Harnessにはdriver、Editor runner、copy準備スクリプトを保存。隔離コピーの既存Sourceへ加えた差分はFixTrace.Record計測のみ。コピーのPackagesにPNG保存用imageconversion moduleを追加し、コピーのPlayerSettings company/productを診断専用に変更して既存PlayerPrefsとの混在を防止。
+
+Rは既存RestartFromCheckpointメソッド呼出し、E/Q/Fは既存操作メソッド呼出し、移動はPlayerMoverへの入力注入。実キーの手動確認や配布ビルド検証とは区別する。カメラ撮影はPNG出力時に一時変更して戻す。HUDはCamera.Render画像に含まれないため、残量等の根拠はJSONLとassertions。

@@ -1,0 +1,20 @@
+diff --git "a/C:\\Users\\\347\224\260\345\260\273\345\244\247\347\277\224\\Documents\\Codex\\2026-08-07\\new-chat\\outputs\\HimoHitoPrototype\\Assets\\Scripts\\RopeController.cs" "b/C:\\Users\\\347\224\260\345\260\273\345\244\247\347\277\224\\Documents\\Codex\\2026-08-07\\new-chat\\outputs\\HimoHitoPrototype\\.codex_tmp\\CheckpointMergedBridgeRepro_20260930\\DiagnosticProject\\Assets\\Scripts\\RopeController.cs"
+index 5b58638..160d03b 100644
+--- "a/C:\\Users\\\347\224\260\345\260\273\345\244\247\347\277\224\\Documents\\Codex\\2026-08-07\\new-chat\\outputs\\HimoHitoPrototype\\Assets\\Scripts\\RopeController.cs"
++++ "b/C:\\Users\\\347\224\260\345\260\273\345\244\247\347\277\224\\Documents\\Codex\\2026-08-07\\new-chat\\outputs\\HimoHitoPrototype\\.codex_tmp\\CheckpointMergedBridgeRepro_20260930\\DiagnosticProject\\Assets\\Scripts\\RopeController.cs"
+@@ -284,6 +284,7 @@ namespace HimoHito
+ 
+         public void DetachAndRefund(bool playReleaseSound = false)
+         {
++            ReproTrace.Record("DetachAndRefund.enter", gameObject);
+             if (missVisual != null) missVisual.Cancel();
+             hookArrivalPending = false;
+             if (!playReleaseSound)
+@@ -454,6 +455,7 @@ namespace HimoHito
+ 
+         public void RestoreSelectedRopeLength(int length)
+         {
++            ReproTrace.Record("RestoreSelectedRopeLength.enter", gameObject);
+             selectedRopeLength = length;
+             ClampSelectedRopeLength();
+         }

@@ -1,0 +1,974 @@
+[Licensing::Module] Trying to connect to existing licensing client channel...
+Built from '6000.3/staging' branch; Version is '6000.3.21f1 (c02631ffc030) revision 12592689'; Using compiler version '194234433'; Build Type 'Release'
+[Licensing::IpcConnector] Channel LicenseClient-田尻大翔 doesn't exist
+OS: 'Windows 11  (10.0.26200) Professional' Language: 'ja' Physical Memory: 16052 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
+System  architecture: x64
+Process architecture: x64
+Date: 2026-09-30T10:12:08Z
+[Licensing::Module] Successfully launched the LicensingClient (PId: 6084)
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\6000.3.21f1\Editor\Unity.exe
+-batchmode
+-projectPath
+C:/Users/田尻大翔/Documents/Codex/2026-08-07/new-chat/outputs/HimoHitoPrototype/.codex_tmp/CheckpointMergedBridgeRepro_20260930/DiagnosticProject
+-executeMethod
+CheckpointMergedBridgeRepro.Run
+-reproScene
+MainStage
+-reproEvidence
+C:/Users/田尻大翔/Documents/Codex/2026-08-07/new-chat/outputs/HimoHitoPrototype/Docs/QA/CheckpointMergedBridgeRepro_20260930/Evidence
+-logFile
+C:/Users/田尻大翔/Documents/Codex/2026-08-07/new-chat/outputs/HimoHitoPrototype/Docs/QA/CheckpointMergedBridgeRepro_20260930/Evidence/MainStage_runtime.log
+Successfully changed project path to: C:/Users/田尻大翔/Documents/Codex/2026-08-07/new-chat/outputs/HimoHitoPrototype/.codex_tmp/CheckpointMergedBridgeRepro_20260930/DiagnosticProject
+C:/Users/田尻大翔/Documents/Codex/2026-08-07/new-chat/outputs/HimoHitoPrototype/.codex_tmp/CheckpointMergedBridgeRepro_20260930/DiagnosticProject
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-gfx=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+Player connection [10320]  Target information:
+
+Player connection [10320]  * "[IP] 192.168.40.81 [Port] 55504 [Flags] 2 [Guid] 2066029134 [EditorId] 2066029134 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-UM0GV1L) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [10320] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [10320] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+[Package Manager] Connected to IPC stream "Upm-18996" after 0.8 seconds.
+[Licensing::Module] Licensing is not yet initialized.
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-田尻大翔" at "2026-09-30T10:12:10.8120867Z"
+[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 6084, path: "C:/Program Files/Unity/Hub/Editor/6000.3.21f1/Editor/Data/Resources/Licensing/Client/Unity.Licensing.Client.exe")
+[Licensing::Module] LicensingClient has failed validation; ignoring
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.18.1+9fbee8e
+  Session Id:              545ac42e16c14f528553fcd9be1746cc
+  Correlation Id:          780c1b683741cc05ab7ef8225fe76cad
+  External correlation Id: 5736711656239605638
+  Machine Id:              dNinDYak6EUa2pX7RMEoTuNEbYA=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-田尻大翔" (connect: 1.94s, validation: 0.15s, handshake: 0.16s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-田尻大翔-notifications" at "2026-09-30T10:12:11.1255159Z"
+[Licensing::Module] Connected to LicensingClient (PId: 6084, launch time: 0.01, total connection time: 2.25s)
+[Licensing::Module] Error: Access token is unavailable; failed to update
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: 15669713720629-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+[Licensing::Client] Successfully updated license, isAsync: True, time: 0.03
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] Licensing Background thread has ended after 2.37s
+[Licensing::Module] Licensing is initialized (took 1.03s).
+[Licensing::Client] Successfully resolved entitlement details
+Library Redirect Path: Library/
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Refreshing native plugins compatible for Editor in 0.01 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 6000.3.21f1 (c02631ffc030)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.3.21f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/田尻大翔/Documents/Codex/2026-08-07/new-chat/outputs/HimoHitoPrototype/.codex_tmp/CheckpointMergedBridgeRepro_20260930/DiagnosticProject/Assets
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+d3d12: failed to query info queue interface (0x80004002).
+Direct3D:
+    Version:         Direct3D 12 [level 12.1]
+    Renderer:        Intel(R) Iris(R) Xe Graphics (ID=0xa7a0)
+    Vendor:          Intel
+    VRAM:            8026 MB
+    App VRAM Budget: 7369 MB
+    Driver:          31.0.101.4255
+    Unified Memory Architecture
+    Cache Coherent UMA
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.3.21f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.3.21f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.3.21f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56996
+Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
+Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
+ImportWorker Server TCP listen port: 0
+AcceleratorClientConnectionCallback - disconnected - :0
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.3.21f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.006569 seconds.
+- Loaded All Assemblies, in  1.323 seconds
+Native extension for WindowsStandalone target not found
+Package Manager log level set to [2]
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:False
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.264 seconds
+Domain Reload Profiling: 2579ms
+	BeginReloadAssembly (459ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (14ms)
+	RebuildCommonClasses (133ms)
+	RebuildNativeTypeToScriptingClass (44ms)
+	initialDomainReloadingComplete (165ms)
+	LoadAllAssembliesAndSetupDomain (513ms)
+		LoadAssemblies (437ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (504ms)
+			TypeCache.Refresh (499ms)
+				TypeCache.ScanAssembly (463ms)
+			BuildScriptInfoCaches (0ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (1266ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1146ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (142ms)
+			SetLoadedEditorAssemblies (12ms)
+			BeforeProcessingInitializeOnLoad (240ms)
+			ProcessInitializeOnLoadAttributes (396ms)
+			ProcessInitializeOnLoadMethodAttributes (356ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+[Licensing::Client] Successfully resolved entitlement details
+Application.AssetDatabase Initial Refresh Start
+[Package Manager] Restoring resolved packages state from cache
+[Licensing::Client] Successfully resolved entitlement details
+[Package Manager] Registered 6 packages:
+  Built-in packages:
+    com.unity.modules.audio@1.0.0 (location: C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype\.codex_tmp\CheckpointMergedBridgeRepro_20260930\DiagnosticProject\Library\PackageCache\com.unity.modules.audio)
+    com.unity.modules.imgui@1.0.0 (location: C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype\.codex_tmp\CheckpointMergedBridgeRepro_20260930\DiagnosticProject\Library\PackageCache\com.unity.modules.imgui)
+    com.unity.modules.imageconversion@1.0.0 (location: C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype\.codex_tmp\CheckpointMergedBridgeRepro_20260930\DiagnosticProject\Library\PackageCache\com.unity.modules.imageconversion)
+    com.unity.modules.jsonserialize@1.0.0 (location: C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype\.codex_tmp\CheckpointMergedBridgeRepro_20260930\DiagnosticProject\Library\PackageCache\com.unity.modules.jsonserialize)
+    com.unity.modules.particlesystem@1.0.0 (location: C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype\.codex_tmp\CheckpointMergedBridgeRepro_20260930\DiagnosticProject\Library\PackageCache\com.unity.modules.particlesystem)
+    com.unity.modules.physics2d@1.0.0 (location: C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype\.codex_tmp\CheckpointMergedBridgeRepro_20260930\DiagnosticProject\Library\PackageCache\com.unity.modules.physics2d)
+[Subsystems] No new subsystems found in resolved package list.
+[Package Manager] Done registering packages in 0.02 seconds
+Starting: C:\Program Files\Unity\Hub\Editor\6000.3.21f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: C:/Users/田尻大翔/Documents/Codex/2026-08-07/new-chat/outputs/HimoHitoPrototype/.codex_tmp/CheckpointMergedBridgeRepro_20260930/DiagnosticProject
+DisplayProgressbar: Compiling Scripts
+ExitCode: 0 Duration: 0s279ms
+*** Tundra build success (0.14 seconds), 0 items updated, 155 evaluated
+AssetDatabase: script compilation time: 1.723132s
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.899 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Native extension for WindowsStandalone target not found
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.434 seconds
+Domain Reload Profiling: 2324ms
+	BeginReloadAssembly (634ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (63ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (183ms)
+	RebuildCommonClasses (102ms)
+	RebuildNativeTypeToScriptingClass (43ms)
+	initialDomainReloadingComplete (70ms)
+	LoadAllAssembliesAndSetupDomain (39ms)
+		LoadAssemblies (310ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (30ms)
+			TypeCache.Refresh (15ms)
+				TypeCache.ScanAssembly (4ms)
+			BuildScriptInfoCaches (2ms)
+			ResolveRequiredComponents (5ms)
+	FinalizeReload (1435ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (942ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (62ms)
+			SetLoadedEditorAssemblies (6ms)
+			BeforeProcessingInitializeOnLoad (330ms)
+			ProcessInitializeOnLoadAttributes (354ms)
+			ProcessInitializeOnLoadMethodAttributes (168ms)
+			AfterProcessingInitializeOnLoad (21ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (80ms)
+Asset Pipeline Refresh (id=629af5ab43e03c748b837993c0d0b0a4): Total: 4.445 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=1718 ms
+		Asset DB Callback time: managed=48 ms, native=25 ms
+		Scripting: domain reloads=1, domain reload time=900 ms, compile time=1729 ms, other=23 ms
+		Project Asset Count: scripts=43, non-scripts=99
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokeCustomDependenciesCallbacks: 0.003ms
+	InvokePackagesCallback: 31.290ms
+	ApplyChangesToAssetFolders: 0.787ms
+	Scan: 91.843ms
+	OnSourceAssetsModified: 0.004ms
+	CategorizeAssetsWithTransientArtifact: 1.058ms
+	ProcessAssetsWithTransientArtifactChanges: 5.999ms
+	CategorizeAssets: 1.526ms
+	ImportOutOfDateAssets: 1437.785ms (-291.970ms without children)
+		CompileScripts: 1728.925ms
+		ReloadNativeAssets: 0.001ms
+		UnloadImportedAssets: 0.207ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.056ms
+		InitializingProgressBar: 0.002ms
+		PostProcessAllAssetNotificationsAddChangedAssets: 0.001ms
+		OnDemandSchedulerStart: 0.563ms
+	PostProcessAllAssets: 48.268ms
+	GatherAllCurrentPrimaryArtifactRevisions: 0.006ms
+	UnloadStreamsBegin: 3.983ms
+	PersistCurrentRevisions: 0.017ms
+	UnloadStreamsEnd: 0.003ms
+	GenerateScriptTypeHashes: 0.002ms
+	Untracked: 2822.224ms
+
+Application.AssetDatabase Initial Refresh End
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Scanning for USB devices : 2.540ms
+Initializing Unity extensions:
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-ヒモヒト
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 138 unused Assets / (509.6 KB). Loaded Objects now: 766.
+Memory consumption went from 89.4 MB to 88.9 MB.
+Total: 11.030000 ms (FindLiveObjects: 0.113700 ms CreateObjectMapping: 0.021100 ms MarkObjects: 10.429600 ms  DeleteObjects: 0.463600 ms)
+
+Opening scene 'Assets/Scenes/MainStage.unity'
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/Scenes/MainStage.unity'
+	Deserialize:            63.922 ms
+	Integration:            9310.027 ms
+	Integration of assets:  0.020 ms
+	Thread Wait Time:       0.038 ms
+	Total Operation Time:   9374.008 ms
+Unloading 9 unused Assets / (4.7 KB). Loaded Objects now: 2397.
+Memory consumption went from 233.7 MB to 233.7 MB.
+Total: 12.677900 ms (FindLiveObjects: 0.234300 ms CreateObjectMapping: 0.027600 ms MarkObjects: 12.256500 ms  DeleteObjects: 0.156100 ms)
+
+Start importing ProjectSettings/ProjectSettings.asset using Guid(00000000000000004000000000000000) (LibraryAssetImporter) -> (artifact id: '16c316445bffb51283dc0e57db20994f') in 0.024737 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=1eeb37b929e91b44d800ae302f91ea51): Total: 0.195 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Start importing Assets/Scenes/MainStage.unity using Guid(f47cde71ad654939b3802f6bdeacb9c1) (DefaultImporter) -> (artifact id: '8ecaffa579898e87b1d5d3820ca82eed') in 0.0036036 seconds
+Refreshing native plugins compatible for Editor in 0.01 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=cd28ad07a498ee049b1abd4ade46c3a3): Total: 0.069 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+REPRO_RUN Unity=6000.3.21f1 scene=MainStage setup=controlled relocation; not full manual play
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CheckpointMergedBridgeRepro:Run () (at Assets/Editor/CheckpointMergedBridgeRepro.cs:23)
+
+(Filename: Assets/Editor/CheckpointMergedBridgeRepro.cs Line: 23)
+
+[Project] Loading completed in 22.395 seconds
+	Project init time: 				11.316 seconds
+		Template init time: 		0.000 seconds
+		Package Manager init time: 		1.883 seconds
+		Asset Database init time: 		1.195 seconds
+		Global illumination init time: 	0.008 seconds
+		Assemblies load time: 			2.645 seconds
+		Unity extensions init time: 	0.002 seconds
+		Asset Database refresh time: 	4.445 seconds
+	Scene opening time: 			10.374 seconds
+##utp:{"type":"ProjectInfo","version":2,"phase":"Immediate","time":1790763151213,"processId":18996,"projectLoad":22.395224,"projectInit":11.3159465,"templateInit":0.0,"packageManagerInit":1.882987,"assetDatabaseInit":1.1947294,"globalIlluminationInit":0.0075759,"assembliesLoad":2.6454989,"unityExtensionsInit":0.0024303,"assetDatabaseRefresh":4.4453466,"sceneOpening":10.3739291}
+##utp:{"type":"EditorInfo","version":2,"phase":"Immediate","time":1790763151214,"processId":18996,"editorVersion":"6000.3.21f1 (c02631ffc030)","branch":"6000.3/staging","buildType":"Release","platform":"Windows"}
+Reloading assemblies for play mode.
+Reloading assemblies after forced synchronous recompile.
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.959 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Native extension for WindowsStandalone target not found
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in 10.110 seconds
+Domain Reload Profiling: 11061ms
+	BeginReloadAssembly (692ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (223ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (80ms)
+	RebuildCommonClasses (110ms)
+	RebuildNativeTypeToScriptingClass (43ms)
+	initialDomainReloadingComplete (65ms)
+	LoadAllAssembliesAndSetupDomain (40ms)
+		LoadAssemblies (319ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (29ms)
+			TypeCache.Refresh (11ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (4ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (10112ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (836ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (67ms)
+			SetLoadedEditorAssemblies (7ms)
+			BeforeProcessingInitializeOnLoad (302ms)
+			ProcessInitializeOnLoadAttributes (310ms)
+			ProcessInitializeOnLoadMethodAttributes (129ms)
+			AfterProcessingInitializeOnLoad (20ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (8783ms)
+Asset Pipeline Refresh (id=d99ee09ce2513714f884cfa77420f423): Total: 11.213 seconds - Initiated by StopAssetImportingV2(ForceSynchronousImport | ForceDomainReload)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=10176 ms
+		Asset DB Callback time: managed=49 ms, native=1 ms
+		Scripting: domain reloads=1, domain reload time=979 ms, compile time=6 ms, other=0 ms
+		Project Asset Count: scripts=43, non-scripts=99
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokeCustomDependenciesCallbacks: 0.003ms
+	InvokePackagesCallback: 6.575ms
+	ApplyChangesToAssetFolders: 0.181ms
+	Scan: 0.001ms
+	OnSourceAssetsModified: 0.004ms
+	CategorizeAssetsWithTransientArtifact: 0.006ms
+	ProcessAssetsWithTransientArtifactChanges: 0.142ms
+	CategorizeAssets: 2.002ms
+	ImportOutOfDateAssets: 10113.364ms (10106.475ms without children)
+		CompileScripts: 6.123ms
+		CollectScriptTypesHashes: 0.002ms
+		ReloadNativeAssets: 0.001ms
+		UnloadImportedAssets: 0.105ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.057ms
+		InitializingProgressBar: 0.001ms
+		PostProcessAllAssetNotificationsAddChangedAssets: 0.001ms
+		OnDemandSchedulerStart: 0.599ms
+	PostProcessAllAssets: 49.524ms
+	GatherAllCurrentPrimaryArtifactRevisions: 0.026ms
+	UnloadStreamsBegin: 0.094ms
+	PersistCurrentRevisions: 0.018ms
+	UnloadStreamsEnd: 0.003ms
+	GenerateScriptTypeHashes: 0.001ms
+	Untracked: 1041.013ms
+
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            16.157 ms
+	Integration:            4046.116 ms
+	Integration of assets:  0.027 ms
+	Thread Wait Time:       0.012 ms
+	Total Operation Time:   4062.313 ms
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+Play開始地点：Tutorial
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHitoEditor.PlayStartSceneSelector:ConfigurePlayStartScene (string,string) (at Assets/Editor/PlayStartSceneSelector.cs:50)
+HimoHitoEditor.PlayStartSceneSelector:ConfigurePlayStartScene () (at Assets/Editor/PlayStartSceneSelector.cs:23)
+UnityEditor.EditorApplication:Internal_CallDelayFunctions ()
+
+(Filename: Assets/Editor/PlayStartSceneSelector.cs Line: 50)
+
+Start Indexing on Editor startup
+ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+  at System.Collections.Generic.List`1[T].get_Item (System.Int32 index) [0x00009] in <41d29b352f6a475ab1bf7c6628b82790>:0 
+  at UnityEditor.Search.SearchDatabase+<EnumerateAll>d__81.MoveNext () [0x00106] in <63453c9528324daaa566ad51effa49a4>:0 
+  at System.Linq.Enumerable.TryGetFirst[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Boolean& found) [0x00045] in <80564d689e48448fa2a7101993ee7201>:0 
+  at System.Linq.Enumerable.First[TSource] (System.Collections.Generic.IEnumerable`1[T] source) [0x00000] in <80564d689e48448fa2a7101993ee7201>:0 
+  at UnityEditor.Search.SearchDatabase.GetDefaultSearchDatabase () [0x00006] in <63453c9528324daaa566ad51effa49a4>:0 
+  at UnityEditor.Search.SearchInit.IndexationOnStartup () [0x0000c] in <63453c9528324daaa566ad51effa49a4>:0 
+  at UnityEditor.EditorApplication.Internal_CallDelayFunctions () [0x0002c] in <ebc962e8381145e6bdb44b1996e8e9b4>:0 
+
+REPRO_STATE {"sequence":0,"frame":2,"section":1,"generatedCount":0,"removedHooksCount":0,"checkpointSelected":7,"scene":"MainStage","label":"DetachAndRefund.enter","centerName":"UNASSIGNED","time":0.019999992102384568,"ropeCurrent":50.0,"checkpointRope":50.0,"selected":7,"centerSelf":false,"centerHierarchy":false,"attached":false,"playerPosition":{"x":-3.8499999046325685,"y":-4.232961654663086},"platforms":[],"checkpointPlatforms":[],"removedHooks":[]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.RopeController:DetachAndRefund (bool) (at Assets/Scripts/RopeController.cs:287)
+HimoHito.RopeController:OnDisable () (at Assets/Scripts/RopeController.cs:195)
+UnityEngine.Behaviour:set_enabled (bool)
+HimoHito.MainStagePreview:BeginPreview () (at Assets/Scripts/MainStagePreview.cs:116)
+HimoHito.MainStagePreview/<Start>d__33:MoveNext () (at Assets/Scripts/MainStagePreview.cs:76)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+Created GICache directory at C:/Users/田尻大翔/AppData/LocalLow/Unity/Caches/GiCache. Took: 0.066s, timestamps: [37.904 - 37.970]
+[Licensing::Client] Successfully resolved entitlement details
+REPRO_STATE {"sequence":1,"frame":407,"section":1,"generatedCount":0,"removedHooksCount":0,"checkpointSelected":7,"scene":"MainStage","label":"TryReachSection.accept","centerName":"Main S09 Center Hook","time":0.7799997329711914,"ropeCurrent":50.0,"checkpointRope":50.0,"selected":7,"centerSelf":true,"centerHierarchy":true,"attached":false,"playerPosition":{"x":172.8000030517578,"y":-1.5350018739700318},"platforms":[],"checkpointPlatforms":[],"removedHooks":[]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.MainStageRespawnOnFall:TryReachSection (int,UnityEngine.Vector2,single) (at Assets/Scripts/MainStageRespawnOnFall.cs:187)
+HimoHito.MainStageCheckpoint:OnCollisionStay2D (UnityEngine.Collision2D) (at Assets/Scripts/MainStageCheckpoint.cs:34)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+REPRO_STATE {"sequence":2,"frame":407,"section":9,"generatedCount":0,"removedHooksCount":0,"checkpointSelected":7,"scene":"MainStage","label":"CaptureCheckpointState.enter","centerName":"Main S09 Center Hook","time":0.7799997329711914,"ropeCurrent":50.0,"checkpointRope":50.0,"selected":7,"centerSelf":true,"centerHierarchy":true,"attached":false,"playerPosition":{"x":172.8000030517578,"y":-1.5350018739700318},"platforms":[],"checkpointPlatforms":[],"removedHooks":[]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.MainStageRespawnOnFall:CaptureCheckpointState () (at Assets/Scripts/MainStageRespawnOnFall.cs:203)
+HimoHito.MainStageRespawnOnFall:TryReachSection (int,UnityEngine.Vector2,single) (at Assets/Scripts/MainStageRespawnOnFall.cs:195)
+HimoHito.MainStageCheckpoint:OnCollisionStay2D (UnityEngine.Collision2D) (at Assets/Scripts/MainStageCheckpoint.cs:34)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+REPRO_STATE {"sequence":3,"frame":407,"section":9,"generatedCount":0,"removedHooksCount":0,"checkpointSelected":7,"scene":"MainStage","label":"CapturePlatformStates.enter","centerName":"Main S09 Center Hook","time":0.7799997329711914,"ropeCurrent":50.0,"checkpointRope":50.0,"selected":7,"centerSelf":true,"centerHierarchy":true,"attached":false,"playerPosition":{"x":172.8000030517578,"y":-1.5350018739700318},"platforms":[],"checkpointPlatforms":[],"removedHooks":[]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.RopePlatformBuilder:CapturePlatformStates () (at Assets/Scripts/RopePlatformBuilder.cs:191)
+HimoHito.MainStageRespawnOnFall:CaptureCheckpointState () (at Assets/Scripts/MainStageRespawnOnFall.cs:206)
+HimoHito.MainStageRespawnOnFall:TryReachSection (int,UnityEngine.Vector2,single) (at Assets/Scripts/MainStageRespawnOnFall.cs:195)
+HimoHito.MainStageCheckpoint:OnCollisionStay2D (UnityEngine.Collision2D) (at Assets/Scripts/MainStageCheckpoint.cs:34)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+REPRO_STATE {"sequence":4,"frame":407,"section":9,"generatedCount":0,"removedHooksCount":0,"checkpointSelected":7,"scene":"MainStage","label":"CaptureCheckpointState.exit","centerName":"Main S09 Center Hook","time":0.7799997329711914,"ropeCurrent":50.0,"checkpointRope":50.0,"selected":7,"centerSelf":true,"centerHierarchy":true,"attached":false,"playerPosition":{"x":172.8000030517578,"y":-1.5350018739700318},"platforms":[],"checkpointPlatforms":[],"removedHooks":[]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.MainStageRespawnOnFall:CaptureCheckpointState () (at Assets/Scripts/MainStageRespawnOnFall.cs:207)
+HimoHito.MainStageRespawnOnFall:TryReachSection (int,UnityEngine.Vector2,single) (at Assets/Scripts/MainStageRespawnOnFall.cs:195)
+HimoHito.MainStageCheckpoint:OnCollisionStay2D (UnityEngine.Collision2D) (at Assets/Scripts/MainStageCheckpoint.cs:34)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+REPRO_STATE {"sequence":5,"frame":628,"section":9,"generatedCount":0,"removedHooksCount":0,"checkpointSelected":7,"scene":"MainStage","label":"SETUP_COMPLETE: controlled relocation to authored entry checkpoint; earlier puzzles not traversed","centerName":"Main S09 Center Hook","time":1.25094735622406,"ropeCurrent":50.0,"checkpointRope":50.0,"selected":7,"centerSelf":true,"centerHierarchy":true,"attached":false,"playerPosition":{"x":172.8000030517578,"y":-1.5350003242492676},"platforms":[],"checkpointPlatforms":[],"removedHooks":[]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.ReproDriver/<Run>d__18:MoveNext () (at Assets/Scripts/ReproTrace.cs:161)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+REPRO_STATE {"sequence":6,"frame":628,"section":9,"generatedCount":0,"removedHooksCount":0,"checkpointSelected":7,"scene":"MainStage","label":"RestoreSelectedRopeLength.enter","centerName":"Main S09 Center Hook","time":1.25094735622406,"ropeCurrent":50.0,"checkpointRope":50.0,"selected":7,"centerSelf":true,"centerHierarchy":true,"attached":false,"playerPosition":{"x":172.8000030517578,"y":-1.5350003242492676},"platforms":[],"checkpointPlatforms":[],"removedHooks":[]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.RopeController:RestoreSelectedRopeLength (int) (at Assets/Scripts/RopeController.cs:458)
+HimoHito.ReproDriver/<Run>d__18:MoveNext () (at Assets/Scripts/ReproTrace.cs:162)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+REPRO_STATE {"sequence":7,"frame":738,"section":9,"generatedCount":0,"removedHooksCount":0,"checkpointSelected":7,"scene":"MainStage","label":"BEFORE_MERGE_0_BRIDGES","centerName":"Main S09 Center Hook","time":1.4511710405349732,"ropeCurrent":50.0,"checkpointRope":50.0,"selected":6,"centerSelf":true,"centerHierarchy":true,"attached":false,"playerPosition":{"x":179.35000610351563,"y":-1.535334825515747},"platforms":[],"checkpointPlatforms":[],"removedHooks":[]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.ReproDriver/<Run>d__18:MoveNext () (at Assets/Scripts/ReproTrace.cs:165)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+REPRO_STATE {"sequence":8,"frame":738,"section":9,"generatedCount":1,"removedHooksCount":0,"checkpointSelected":7,"scene":"MainStage","label":"CreatePlatform.exit","centerName":"Main S09 Center Hook","time":1.4511710405349732,"ropeCurrent":44.0,"checkpointRope":50.0,"selected":6,"centerSelf":true,"centerHierarchy":true,"attached":false,"playerPosition":{"x":179.35000610351563,"y":-1.535334825515747},"platforms":[{"start":{"x":185.5,"y":-1.0499999523162842},"end":{"x":180.0,"y":-2.1500000953674318},"ropeLength":6.0,"releaseCount":0,"wrapsCount":2}],"checkpointPlatforms":[],"removedHooks":[]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.RopePlatformBuilder:CreatePlatform (UnityEngine.Vector2,UnityEngine.Vector2,single) (at Assets/Scripts/RopePlatformBuilder.cs:462)
+HimoHito.RopePlatformBuilder:TryBuildCurrentPlatform () (at Assets/Scripts/RopePlatformBuilder.cs:112)
+HimoHito.ReproDriver/<Run>d__18:MoveNext () (at Assets/Scripts/ReproTrace.cs:167)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+REPRO_STATE {"sequence":9,"frame":1013,"section":9,"generatedCount":1,"removedHooksCount":0,"checkpointSelected":7,"scene":"MainStage","label":"BEFORE_SECOND_BUILD","centerName":"Main S09 Center Hook","time":2.492720127105713,"ropeCurrent":44.0,"checkpointRope":50.0,"selected":6,"centerSelf":true,"centerHierarchy":true,"attached":false,"playerPosition":{"x":185.14952087402345,"y":-0.32531994581222536},"platforms":[{"start":{"x":185.5,"y":-1.0499999523162842},"end":{"x":180.0,"y":-2.1500000953674318},"ropeLength":6.0,"releaseCount":0,"wrapsCount":2}],"checkpointPlatforms":[],"removedHooks":[]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.ReproDriver/<Run>d__18:MoveNext () (at Assets/Scripts/ReproTrace.cs:173)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+REPRO_STATE {"sequence":10,"frame":1013,"section":9,"generatedCount":2,"removedHooksCount":0,"checkpointSelected":7,"scene":"MainStage","label":"CreatePlatform.exit","centerName":"Main S09 Center Hook","time":2.492720127105713,"ropeCurrent":38.0,"checkpointRope":50.0,"selected":6,"centerSelf":true,"centerHierarchy":true,"attached":false,"playerPosition":{"x":185.14952087402345,"y":-0.32531994581222536},"platforms":[{"start":{"x":185.5,"y":-1.0499999523162842},"end":{"x":180.0,"y":-2.1500000953674318},"ropeLength":6.0,"releaseCount":0,"wrapsCount":2},{"start":{"x":191.0,"y":-2.1500000953674318},"end":{"x":185.5,"y":-1.0499999523162842},"ropeLength":6.0,"releaseCount":0,"wrapsCount":2}],"checkpointPlatforms":[],"removedHooks":[]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.RopePlatformBuilder:CreatePlatform (UnityEngine.Vector2,UnityEngine.Vector2,single) (at Assets/Scripts/RopePlatformBuilder.cs:462)
+HimoHito.RopePlatformBuilder:TryBuildCurrentPlatform () (at Assets/Scripts/RopePlatformBuilder.cs:112)
+HimoHito.ReproDriver/<Run>d__18:MoveNext () (at Assets/Scripts/ReproTrace.cs:176)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+REPRO_STATE {"sequence":11,"frame":1013,"section":9,"generatedCount":2,"removedHooksCount":0,"checkpointSelected":7,"scene":"MainStage","label":"BEFORE_MERGE_2_BRIDGES","centerName":"Main S09 Center Hook","time":2.492720127105713,"ropeCurrent":38.0,"checkpointRope":50.0,"selected":6,"centerSelf":true,"centerHierarchy":true,"attached":false,"playerPosition":{"x":185.14952087402345,"y":-0.32531994581222536},"platforms":[{"start":{"x":185.5,"y":-1.0499999523162842},"end":{"x":180.0,"y":-2.1500000953674318},"ropeLength":6.0,"releaseCount":0,"wrapsCount":2},{"start":{"x":191.0,"y":-2.1500000953674318},"end":{"x":185.5,"y":-1.0499999523162842},"ropeLength":6.0,"releaseCount":0,"wrapsCount":2}],"checkpointPlatforms":[],"removedHooks":[]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.ReproDriver/<Run>d__18:MoveNext () (at Assets/Scripts/ReproTrace.cs:178)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+REPRO_STATE {"sequence":12,"frame":1013,"section":9,"generatedCount":1,"removedHooksCount":0,"checkpointSelected":7,"scene":"MainStage","label":"CreatePlatform.exit","centerName":"Main S09 Center Hook","time":2.492720127105713,"ropeCurrent":38.0,"checkpointRope":50.0,"selected":6,"centerSelf":true,"centerHierarchy":true,"attached":false,"playerPosition":{"x":185.14952087402345,"y":-0.32531994581222536},"platforms":[{"start":{"x":180.0,"y":-2.1500000953674318},"end":{"x":191.0,"y":-2.1500000953674318},"ropeLength":12.0,"releaseCount":0,"wrapsCount":2}],"checkpointPlatforms":[],"removedHooks":[]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.RopePlatformBuilder:CreatePlatform (UnityEngine.Vector2,UnityEngine.Vector2,single) (at Assets/Scripts/RopePlatformBuilder.cs:462)
+HimoHito.RopePlatformBuilder:TryRemoveAimedHook () (at Assets/Scripts/RopePlatformBuilder.cs:176)
+HimoHito.ReproDriver/<Run>d__18:MoveNext () (at Assets/Scripts/ReproTrace.cs:179)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+REPRO_STATE {"sequence":13,"frame":1013,"section":9,"generatedCount":1,"removedHooksCount":1,"checkpointSelected":7,"scene":"MainStage","label":"Merge.exit","centerName":"Main S09 Center Hook","time":2.492720127105713,"ropeCurrent":38.0,"checkpointRope":50.0,"selected":6,"centerSelf":false,"centerHierarchy":false,"attached":false,"playerPosition":{"x":185.14952087402345,"y":-0.32531994581222536},"platforms":[{"start":{"x":180.0,"y":-2.1500000953674318},"end":{"x":191.0,"y":-2.1500000953674318},"ropeLength":12.0,"releaseCount":2,"wrapsCount":2}],"checkpointPlatforms":[],"removedHooks":["Main S09 Center Hook"]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.RopePlatformBuilder:TryRemoveAimedHook () (at Assets/Scripts/RopePlatformBuilder.cs:184)
+HimoHito.ReproDriver/<Run>d__18:MoveNext () (at Assets/Scripts/ReproTrace.cs:179)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+REPRO_STATE {"sequence":14,"frame":1013,"section":9,"generatedCount":1,"removedHooksCount":1,"checkpointSelected":7,"scene":"MainStage","label":"MERGE_IMMEDIATE_BINDING","centerName":"Main S09 Center Hook","time":2.492720127105713,"ropeCurrent":38.0,"checkpointRope":50.0,"selected":6,"centerSelf":false,"centerHierarchy":false,"attached":false,"playerPosition":{"x":185.14952087402345,"y":-0.32531994581222536},"platforms":[{"start":{"x":180.0,"y":-2.1500000953674318},"end":{"x":191.0,"y":-2.1500000953674318},"ropeLength":12.0,"releaseCount":2,"wrapsCount":2}],"checkpointPlatforms":[],"removedHooks":["Main S09 Center Hook"]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.ReproDriver/<Run>d__18:MoveNext () (at Assets/Scripts/ReproTrace.cs:180)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+REPRO_STATE {"sequence":15,"frame":1206,"section":9,"generatedCount":1,"removedHooksCount":1,"checkpointSelected":7,"scene":"MainStage","label":"REPRO_BEFORE_CHECKPOINT","centerName":"Main S09 Center Hook","time":3.2944180965423586,"ropeCurrent":38.0,"checkpointRope":50.0,"selected":6,"centerSelf":false,"centerHierarchy":false,"attached":false,"playerPosition":{"x":185.1500701904297,"y":-2.4058640003204347},"platforms":[{"start":{"x":180.0,"y":-2.1500000953674318},"end":{"x":191.0,"y":-2.1500000953674318},"ropeLength":12.0,"releaseCount":0,"wrapsCount":2}],"checkpointPlatforms":[],"removedHooks":["Main S09 Center Hook"]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.ReproDriver/<Run>d__18:MoveNext () (at Assets/Scripts/ReproTrace.cs:182)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+REPRO_STATE {"sequence":16,"frame":1660,"section":9,"generatedCount":1,"removedHooksCount":1,"checkpointSelected":7,"scene":"MainStage","label":"TryReachSection.accept","centerName":"Main S09 Center Hook","time":4.619998455047607,"ropeCurrent":38.0,"checkpointRope":50.0,"selected":6,"centerSelf":false,"centerHierarchy":false,"attached":false,"playerPosition":{"x":193.00942993164063,"y":-1.5350136756896973},"platforms":[{"start":{"x":180.0,"y":-2.1500000953674318},"end":{"x":191.0,"y":-2.1500000953674318},"ropeLength":12.0,"releaseCount":0,"wrapsCount":2}],"checkpointPlatforms":[],"removedHooks":["Main S09 Center Hook"]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.MainStageRespawnOnFall:TryReachSection (int,UnityEngine.Vector2,single) (at Assets/Scripts/MainStageRespawnOnFall.cs:187)
+HimoHito.MainStageCheckpoint:OnCollisionStay2D (UnityEngine.Collision2D) (at Assets/Scripts/MainStageCheckpoint.cs:34)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+REPRO_STATE {"sequence":17,"frame":1660,"section":10,"generatedCount":1,"removedHooksCount":1,"checkpointSelected":7,"scene":"MainStage","label":"CaptureCheckpointState.enter","centerName":"Main S09 Center Hook","time":4.619998455047607,"ropeCurrent":38.0,"checkpointRope":50.0,"selected":6,"centerSelf":false,"centerHierarchy":false,"attached":false,"playerPosition":{"x":193.00942993164063,"y":-1.5350136756896973},"platforms":[{"start":{"x":180.0,"y":-2.1500000953674318},"end":{"x":191.0,"y":-2.1500000953674318},"ropeLength":12.0,"releaseCount":0,"wrapsCount":2}],"checkpointPlatforms":[],"removedHooks":["Main S09 Center Hook"]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.MainStageRespawnOnFall:CaptureCheckpointState () (at Assets/Scripts/MainStageRespawnOnFall.cs:203)
+HimoHito.MainStageRespawnOnFall:TryReachSection (int,UnityEngine.Vector2,single) (at Assets/Scripts/MainStageRespawnOnFall.cs:195)
+HimoHito.MainStageCheckpoint:OnCollisionStay2D (UnityEngine.Collision2D) (at Assets/Scripts/MainStageCheckpoint.cs:34)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+REPRO_STATE {"sequence":18,"frame":1660,"section":10,"generatedCount":1,"removedHooksCount":1,"checkpointSelected":6,"scene":"MainStage","label":"CapturePlatformStates.enter","centerName":"Main S09 Center Hook","time":4.619998455047607,"ropeCurrent":38.0,"checkpointRope":38.0,"selected":6,"centerSelf":false,"centerHierarchy":false,"attached":false,"playerPosition":{"x":193.00942993164063,"y":-1.5350136756896973},"platforms":[{"start":{"x":180.0,"y":-2.1500000953674318},"end":{"x":191.0,"y":-2.1500000953674318},"ropeLength":12.0,"releaseCount":0,"wrapsCount":2}],"checkpointPlatforms":[],"removedHooks":["Main S09 Center Hook"]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.RopePlatformBuilder:CapturePlatformStates () (at Assets/Scripts/RopePlatformBuilder.cs:191)
+HimoHito.MainStageRespawnOnFall:CaptureCheckpointState () (at Assets/Scripts/MainStageRespawnOnFall.cs:206)
+HimoHito.MainStageRespawnOnFall:TryReachSection (int,UnityEngine.Vector2,single) (at Assets/Scripts/MainStageRespawnOnFall.cs:195)
+HimoHito.MainStageCheckpoint:OnCollisionStay2D (UnityEngine.Collision2D) (at Assets/Scripts/MainStageCheckpoint.cs:34)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+REPRO_STATE {"sequence":19,"frame":1660,"section":10,"generatedCount":1,"removedHooksCount":1,"checkpointSelected":6,"scene":"MainStage","label":"CaptureCheckpointState.exit","centerName":"Main S09 Center Hook","time":4.619998455047607,"ropeCurrent":38.0,"checkpointRope":38.0,"selected":6,"centerSelf":false,"centerHierarchy":false,"attached":false,"playerPosition":{"x":193.00942993164063,"y":-1.5350136756896973},"platforms":[{"start":{"x":180.0,"y":-2.1500000953674318},"end":{"x":191.0,"y":-2.1500000953674318},"ropeLength":12.0,"releaseCount":0,"wrapsCount":2}],"checkpointPlatforms":[{"start":{"x":180.0,"y":-2.1500000953674318},"end":{"x":191.0,"y":-2.1500000953674318},"ropeLength":12.0,"releaseCount":0,"wrapsCount":0}],"removedHooks":["Main S09 Center Hook"]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.MainStageRespawnOnFall:CaptureCheckpointState () (at Assets/Scripts/MainStageRespawnOnFall.cs:207)
+HimoHito.MainStageRespawnOnFall:TryReachSection (int,UnityEngine.Vector2,single) (at Assets/Scripts/MainStageRespawnOnFall.cs:195)
+HimoHito.MainStageCheckpoint:OnCollisionStay2D (UnityEngine.Collision2D) (at Assets/Scripts/MainStageCheckpoint.cs:34)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+REPRO_STATE {"sequence":20,"frame":1660,"section":10,"generatedCount":1,"removedHooksCount":1,"checkpointSelected":6,"scene":"MainStage","label":"CHECKPOINT_CAPTURE_OBSERVED","centerName":"Main S09 Center Hook","time":4.620906352996826,"ropeCurrent":38.0,"checkpointRope":38.0,"selected":6,"centerSelf":false,"centerHierarchy":false,"attached":false,"playerPosition":{"x":193.00942993164063,"y":-1.5350136756896973},"platforms":[{"start":{"x":180.0,"y":-2.1500000953674318},"end":{"x":191.0,"y":-2.1500000953674318},"ropeLength":12.0,"releaseCount":0,"wrapsCount":2}],"checkpointPlatforms":[{"start":{"x":180.0,"y":-2.1500000953674318},"end":{"x":191.0,"y":-2.1500000953674318},"ropeLength":12.0,"releaseCount":0,"wrapsCount":0}],"removedHooks":["Main S09 Center Hook"]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.ReproDriver/<Run>d__18:MoveNext () (at Assets/Scripts/ReproTrace.cs:204)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+REPRO_STATE {"sequence":21,"frame":1661,"section":10,"generatedCount":1,"removedHooksCount":1,"checkpointSelected":6,"scene":"MainStage","label":"RESTART_BEFORE","centerName":"Main S09 Center Hook","time":4.951874256134033,"ropeCurrent":38.0,"checkpointRope":38.0,"selected":6,"centerSelf":false,"centerHierarchy":false,"attached":false,"playerPosition":{"x":193.11444091796876,"y":-1.5350003242492676},"platforms":[{"start":{"x":180.0,"y":-2.1500000953674318},"end":{"x":191.0,"y":-2.1500000953674318},"ropeLength":12.0,"releaseCount":0,"wrapsCount":2}],"checkpointPlatforms":[{"start":{"x":180.0,"y":-2.1500000953674318},"end":{"x":191.0,"y":-2.1500000953674318},"ropeLength":12.0,"releaseCount":0,"wrapsCount":0}],"removedHooks":["Main S09 Center Hook"]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.ReproDriver/<Run>d__18:MoveNext () (at Assets/Scripts/ReproTrace.cs:206)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+REPRO_STATE {"sequence":22,"frame":1661,"section":10,"generatedCount":1,"removedHooksCount":1,"checkpointSelected":6,"scene":"MainStage","label":"RestartFromCheckpoint.enter","centerName":"Main S09 Center Hook","time":4.951874256134033,"ropeCurrent":38.0,"checkpointRope":38.0,"selected":6,"centerSelf":false,"centerHierarchy":false,"attached":false,"playerPosition":{"x":193.11444091796876,"y":-1.5350003242492676},"platforms":[{"start":{"x":180.0,"y":-2.1500000953674318},"end":{"x":191.0,"y":-2.1500000953674318},"ropeLength":12.0,"releaseCount":0,"wrapsCount":2}],"checkpointPlatforms":[{"start":{"x":180.0,"y":-2.1500000953674318},"end":{"x":191.0,"y":-2.1500000953674318},"ropeLength":12.0,"releaseCount":0,"wrapsCount":0}],"removedHooks":["Main S09 Center Hook"]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.MainStageRespawnOnFall:RestartFromCheckpoint () (at Assets/Scripts/MainStageRespawnOnFall.cs:225)
+System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+HimoHito.ReproTrace:Call (object,string,object[]) (at Assets/Scripts/ReproTrace.cs:19)
+HimoHito.ReproDriver/<Run>d__18:MoveNext () (at Assets/Scripts/ReproTrace.cs:207)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+REPRO_STATE {"sequence":23,"frame":1661,"section":10,"generatedCount":1,"removedHooksCount":1,"checkpointSelected":6,"scene":"MainStage","label":"DetachAndRefund.enter","centerName":"Main S09 Center Hook","time":4.951874256134033,"ropeCurrent":38.0,"checkpointRope":38.0,"selected":6,"centerSelf":false,"centerHierarchy":false,"attached":false,"playerPosition":{"x":193.11444091796876,"y":-1.5350003242492676},"platforms":[{"start":{"x":180.0,"y":-2.1500000953674318},"end":{"x":191.0,"y":-2.1500000953674318},"ropeLength":12.0,"releaseCount":0,"wrapsCount":2}],"checkpointPlatforms":[{"start":{"x":180.0,"y":-2.1500000953674318},"end":{"x":191.0,"y":-2.1500000953674318},"ropeLength":12.0,"releaseCount":0,"wrapsCount":0}],"removedHooks":["Main S09 Center Hook"]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.RopeController:DetachAndRefund (bool) (at Assets/Scripts/RopeController.cs:287)
+HimoHito.MainStageRespawnOnFall:RestartFromCheckpoint () (at Assets/Scripts/MainStageRespawnOnFall.cs:228)
+System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+HimoHito.ReproTrace:Call (object,string,object[]) (at Assets/Scripts/ReproTrace.cs:19)
+HimoHito.ReproDriver/<Run>d__18:MoveNext () (at Assets/Scripts/ReproTrace.cs:207)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+REPRO_STATE {"sequence":24,"frame":1661,"section":10,"generatedCount":1,"removedHooksCount":1,"checkpointSelected":6,"scene":"MainStage","label":"RestoreCurrentLength.enter","centerName":"Main S09 Center Hook","time":4.951874256134033,"ropeCurrent":38.0,"checkpointRope":38.0,"selected":6,"centerSelf":false,"centerHierarchy":false,"attached":false,"playerPosition":{"x":193.11444091796876,"y":-1.5350003242492676},"platforms":[{"start":{"x":180.0,"y":-2.1500000953674318},"end":{"x":191.0,"y":-2.1500000953674318},"ropeLength":12.0,"releaseCount":0,"wrapsCount":2}],"checkpointPlatforms":[{"start":{"x":180.0,"y":-2.1500000953674318},"end":{"x":191.0,"y":-2.1500000953674318},"ropeLength":12.0,"releaseCount":0,"wrapsCount":0}],"removedHooks":["Main S09 Center Hook"]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.RopeResource:RestoreCurrentLength (single) (at Assets/Scripts/RopeResource.cs:68)
+HimoHito.MainStageRespawnOnFall:RestartFromCheckpoint () (at Assets/Scripts/MainStageRespawnOnFall.cs:229)
+System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+HimoHito.ReproTrace:Call (object,string,object[]) (at Assets/Scripts/ReproTrace.cs:19)
+HimoHito.ReproDriver/<Run>d__18:MoveNext () (at Assets/Scripts/ReproTrace.cs:207)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+REPRO_STATE {"sequence":25,"frame":1661,"section":10,"generatedCount":1,"removedHooksCount":1,"checkpointSelected":6,"scene":"MainStage","label":"RestoreSelectedRopeLength.enter","centerName":"Main S09 Center Hook","time":4.951874256134033,"ropeCurrent":38.0,"checkpointRope":38.0,"selected":6,"centerSelf":false,"centerHierarchy":false,"attached":false,"playerPosition":{"x":193.11444091796876,"y":-1.5350003242492676},"platforms":[{"start":{"x":180.0,"y":-2.1500000953674318},"end":{"x":191.0,"y":-2.1500000953674318},"ropeLength":12.0,"releaseCount":0,"wrapsCount":2}],"checkpointPlatforms":[{"start":{"x":180.0,"y":-2.1500000953674318},"end":{"x":191.0,"y":-2.1500000953674318},"ropeLength":12.0,"releaseCount":0,"wrapsCount":0}],"removedHooks":["Main S09 Center Hook"]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.RopeController:RestoreSelectedRopeLength (int) (at Assets/Scripts/RopeController.cs:458)
+HimoHito.MainStageRespawnOnFall:RestartFromCheckpoint () (at Assets/Scripts/MainStageRespawnOnFall.cs:230)
+System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+HimoHito.ReproTrace:Call (object,string,object[]) (at Assets/Scripts/ReproTrace.cs:19)
+HimoHito.ReproDriver/<Run>d__18:MoveNext () (at Assets/Scripts/ReproTrace.cs:207)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+REPRO_STATE {"sequence":26,"frame":1661,"section":10,"generatedCount":1,"removedHooksCount":1,"checkpointSelected":6,"scene":"MainStage","label":"RestorePlatformStates.enter","centerName":"Main S09 Center Hook","time":4.951874256134033,"ropeCurrent":38.0,"checkpointRope":38.0,"selected":6,"centerSelf":false,"centerHierarchy":false,"attached":false,"playerPosition":{"x":193.11444091796876,"y":-1.5350003242492676},"platforms":[{"start":{"x":180.0,"y":-2.1500000953674318},"end":{"x":191.0,"y":-2.1500000953674318},"ropeLength":12.0,"releaseCount":0,"wrapsCount":2}],"checkpointPlatforms":[{"start":{"x":180.0,"y":-2.1500000953674318},"end":{"x":191.0,"y":-2.1500000953674318},"ropeLength":12.0,"releaseCount":0,"wrapsCount":0}],"removedHooks":["Main S09 Center Hook"]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.RopePlatformBuilder:RestorePlatformStates (System.Collections.Generic.IReadOnlyList`1<HimoHito.RopePlatformBuilder/PlatformState>) (at Assets/Scripts/RopePlatformBuilder.cs:224)
+HimoHito.MainStageRespawnOnFall:RestartFromCheckpoint () (at Assets/Scripts/MainStageRespawnOnFall.cs:231)
+System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+HimoHito.ReproTrace:Call (object,string,object[]) (at Assets/Scripts/ReproTrace.cs:19)
+HimoHito.ReproDriver/<Run>d__18:MoveNext () (at Assets/Scripts/ReproTrace.cs:207)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+REPRO_STATE {"sequence":27,"frame":1661,"section":10,"generatedCount":1,"removedHooksCount":1,"checkpointSelected":6,"scene":"MainStage","label":"ClearPlatforms.enter","centerName":"Main S09 Center Hook","time":4.951874256134033,"ropeCurrent":38.0,"checkpointRope":38.0,"selected":6,"centerSelf":false,"centerHierarchy":false,"attached":false,"playerPosition":{"x":193.11444091796876,"y":-1.5350003242492676},"platforms":[{"start":{"x":180.0,"y":-2.1500000953674318},"end":{"x":191.0,"y":-2.1500000953674318},"ropeLength":12.0,"releaseCount":0,"wrapsCount":2}],"checkpointPlatforms":[{"start":{"x":180.0,"y":-2.1500000953674318},"end":{"x":191.0,"y":-2.1500000953674318},"ropeLength":12.0,"releaseCount":0,"wrapsCount":0}],"removedHooks":["Main S09 Center Hook"]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.RopePlatformBuilder:ClearPlatforms () (at Assets/Scripts/RopePlatformBuilder.cs:310)
+HimoHito.RopePlatformBuilder:RestorePlatformStates (System.Collections.Generic.IReadOnlyList`1<HimoHito.RopePlatformBuilder/PlatformState>) (at Assets/Scripts/RopePlatformBuilder.cs:225)
+HimoHito.MainStageRespawnOnFall:RestartFromCheckpoint () (at Assets/Scripts/MainStageRespawnOnFall.cs:231)
+System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+HimoHito.ReproTrace:Call (object,string,object[]) (at Assets/Scripts/ReproTrace.cs:19)
+HimoHito.ReproDriver/<Run>d__18:MoveNext () (at Assets/Scripts/ReproTrace.cs:207)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+REPRO_STATE {"sequence":28,"frame":1661,"section":10,"generatedCount":1,"removedHooksCount":1,"checkpointSelected":6,"scene":"MainStage","label":"RestoreRemovedHooks.enter","centerName":"Main S09 Center Hook","time":4.951874256134033,"ropeCurrent":38.0,"checkpointRope":38.0,"selected":6,"centerSelf":false,"centerHierarchy":false,"attached":false,"playerPosition":{"x":193.11444091796876,"y":-1.5350003242492676},"platforms":[{"start":{"x":180.0,"y":-2.1500000953674318},"end":{"x":191.0,"y":-2.1500000953674318},"ropeLength":12.0,"releaseCount":0,"wrapsCount":2}],"checkpointPlatforms":[{"start":{"x":180.0,"y":-2.1500000953674318},"end":{"x":191.0,"y":-2.1500000953674318},"ropeLength":12.0,"releaseCount":0,"wrapsCount":0}],"removedHooks":["Main S09 Center Hook"]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.RopePlatformBuilder:RestoreRemovedHooks () (at Assets/Scripts/RopePlatformBuilder.cs:320)
+HimoHito.RopePlatformBuilder:ClearPlatforms () (at Assets/Scripts/RopePlatformBuilder.cs:311)
+HimoHito.RopePlatformBuilder:RestorePlatformStates (System.Collections.Generic.IReadOnlyList`1<HimoHito.RopePlatformBuilder/PlatformState>) (at Assets/Scripts/RopePlatformBuilder.cs:225)
+HimoHito.MainStageRespawnOnFall:RestartFromCheckpoint () (at Assets/Scripts/MainStageRespawnOnFall.cs:231)
+System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+HimoHito.ReproTrace:Call (object,string,object[]) (at Assets/Scripts/ReproTrace.cs:19)
+HimoHito.ReproDriver/<Run>d__18:MoveNext () (at Assets/Scripts/ReproTrace.cs:207)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+REPRO_STATE {"sequence":29,"frame":1661,"section":10,"generatedCount":1,"removedHooksCount":0,"checkpointSelected":6,"scene":"MainStage","label":"RestoreRemovedHooks.exit","centerName":"Main S09 Center Hook","time":4.951874256134033,"ropeCurrent":38.0,"checkpointRope":38.0,"selected":6,"centerSelf":true,"centerHierarchy":true,"attached":false,"playerPosition":{"x":193.11444091796876,"y":-1.5350003242492676},"platforms":[{"start":{"x":180.0,"y":-2.1500000953674318},"end":{"x":191.0,"y":-2.1500000953674318},"ropeLength":12.0,"releaseCount":0,"wrapsCount":2}],"checkpointPlatforms":[{"start":{"x":180.0,"y":-2.1500000953674318},"end":{"x":191.0,"y":-2.1500000953674318},"ropeLength":12.0,"releaseCount":0,"wrapsCount":0}],"removedHooks":[]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.RopePlatformBuilder:RestoreRemovedHooks () (at Assets/Scripts/RopePlatformBuilder.cs:329)
+HimoHito.RopePlatformBuilder:ClearPlatforms () (at Assets/Scripts/RopePlatformBuilder.cs:311)
+HimoHito.RopePlatformBuilder:RestorePlatformStates (System.Collections.Generic.IReadOnlyList`1<HimoHito.RopePlatformBuilder/PlatformState>) (at Assets/Scripts/RopePlatformBuilder.cs:225)
+HimoHito.MainStageRespawnOnFall:RestartFromCheckpoint () (at Assets/Scripts/MainStageRespawnOnFall.cs:231)
+System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+HimoHito.ReproTrace:Call (object,string,object[]) (at Assets/Scripts/ReproTrace.cs:19)
+HimoHito.ReproDriver/<Run>d__18:MoveNext () (at Assets/Scripts/ReproTrace.cs:207)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+REPRO_STATE {"sequence":30,"frame":1661,"section":10,"generatedCount":1,"removedHooksCount":0,"checkpointSelected":6,"scene":"MainStage","label":"CreatePlatform.exit","centerName":"Main S09 Center Hook","time":4.951874256134033,"ropeCurrent":38.0,"checkpointRope":38.0,"selected":6,"centerSelf":true,"centerHierarchy":true,"attached":false,"playerPosition":{"x":193.11444091796876,"y":-1.5350003242492676},"platforms":[{"start":{"x":180.0,"y":-2.1500000953674318},"end":{"x":191.0,"y":-2.1500000953674318},"ropeLength":12.0,"releaseCount":0,"wrapsCount":2}],"checkpointPlatforms":[{"start":{"x":180.0,"y":-2.1500000953674318},"end":{"x":191.0,"y":-2.1500000953674318},"ropeLength":12.0,"releaseCount":0,"wrapsCount":0}],"removedHooks":[]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.RopePlatformBuilder:CreatePlatform (UnityEngine.Vector2,UnityEngine.Vector2,single) (at Assets/Scripts/RopePlatformBuilder.cs:462)
+HimoHito.RopePlatformBuilder:RestorePlatformStates (System.Collections.Generic.IReadOnlyList`1<HimoHito.RopePlatformBuilder/PlatformState>) (at Assets/Scripts/RopePlatformBuilder.cs:233)
+HimoHito.MainStageRespawnOnFall:RestartFromCheckpoint () (at Assets/Scripts/MainStageRespawnOnFall.cs:231)
+System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+HimoHito.ReproTrace:Call (object,string,object[]) (at Assets/Scripts/ReproTrace.cs:19)
+HimoHito.ReproDriver/<Run>d__18:MoveNext () (at Assets/Scripts/ReproTrace.cs:207)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+REPRO_STATE {"sequence":31,"frame":1661,"section":10,"generatedCount":1,"removedHooksCount":0,"checkpointSelected":6,"scene":"MainStage","label":"RestorePlatformStates.exit","centerName":"Main S09 Center Hook","time":4.951874256134033,"ropeCurrent":38.0,"checkpointRope":38.0,"selected":6,"centerSelf":true,"centerHierarchy":true,"attached":false,"playerPosition":{"x":193.11444091796876,"y":-1.5350003242492676},"platforms":[{"start":{"x":180.0,"y":-2.1500000953674318},"end":{"x":191.0,"y":-2.1500000953674318},"ropeLength":12.0,"releaseCount":0,"wrapsCount":2}],"checkpointPlatforms":[{"start":{"x":180.0,"y":-2.1500000953674318},"end":{"x":191.0,"y":-2.1500000953674318},"ropeLength":12.0,"releaseCount":0,"wrapsCount":0}],"removedHooks":[]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.RopePlatformBuilder:RestorePlatformStates (System.Collections.Generic.IReadOnlyList`1<HimoHito.RopePlatformBuilder/PlatformState>) (at Assets/Scripts/RopePlatformBuilder.cs:235)
+HimoHito.MainStageRespawnOnFall:RestartFromCheckpoint () (at Assets/Scripts/MainStageRespawnOnFall.cs:231)
+System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+HimoHito.ReproTrace:Call (object,string,object[]) (at Assets/Scripts/ReproTrace.cs:19)
+HimoHito.ReproDriver/<Run>d__18:MoveNext () (at Assets/Scripts/ReproTrace.cs:207)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+REPRO_STATE {"sequence":32,"frame":1661,"section":10,"generatedCount":1,"removedHooksCount":0,"checkpointSelected":6,"scene":"MainStage","label":"RestartFromCheckpoint.exit","centerName":"Main S09 Center Hook","time":4.951874256134033,"ropeCurrent":38.0,"checkpointRope":38.0,"selected":6,"centerSelf":true,"centerHierarchy":true,"attached":false,"playerPosition":{"x":192.0,"y":-1.4500000476837159},"platforms":[{"start":{"x":180.0,"y":-2.1500000953674318},"end":{"x":191.0,"y":-2.1500000953674318},"ropeLength":12.0,"releaseCount":0,"wrapsCount":2}],"checkpointPlatforms":[{"start":{"x":180.0,"y":-2.1500000953674318},"end":{"x":191.0,"y":-2.1500000953674318},"ropeLength":12.0,"releaseCount":0,"wrapsCount":0}],"removedHooks":[]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.MainStageRespawnOnFall:RestartFromCheckpoint () (at Assets/Scripts/MainStageRespawnOnFall.cs:243)
+System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+HimoHito.ReproTrace:Call (object,string,object[]) (at Assets/Scripts/ReproTrace.cs:19)
+HimoHito.ReproDriver/<Run>d__18:MoveNext () (at Assets/Scripts/ReproTrace.cs:207)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+REPRO_STATE {"sequence":33,"frame":1661,"section":10,"generatedCount":1,"removedHooksCount":0,"checkpointSelected":6,"scene":"MainStage","label":"RESTART_COMPLETE","centerName":"Main S09 Center Hook","time":4.951874256134033,"ropeCurrent":38.0,"checkpointRope":38.0,"selected":6,"centerSelf":true,"centerHierarchy":true,"attached":false,"playerPosition":{"x":192.0,"y":-1.4500000476837159},"platforms":[{"start":{"x":180.0,"y":-2.1500000953674318},"end":{"x":191.0,"y":-2.1500000953674318},"ropeLength":12.0,"releaseCount":0,"wrapsCount":2}],"checkpointPlatforms":[{"start":{"x":180.0,"y":-2.1500000953674318},"end":{"x":191.0,"y":-2.1500000953674318},"ropeLength":12.0,"releaseCount":0,"wrapsCount":0}],"removedHooks":[]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.ReproDriver/<Run>d__18:MoveNext () (at Assets/Scripts/ReproTrace.cs:208)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+REPRO_STATE {"sequence":34,"frame":2168,"section":10,"generatedCount":0,"removedHooksCount":0,"checkpointSelected":6,"scene":"MainStage","label":"DetachAndRefund.enter","centerName":"UNASSIGNED","time":5.953195571899414,"ropeCurrent":38.0,"checkpointRope":38.0,"selected":6,"centerSelf":false,"centerHierarchy":false,"attached":false,"playerPosition":{"x":192.0,"y":-1.5350003242492676},"platforms":[],"checkpointPlatforms":[{"start":{"x":180.0,"y":-2.1500000953674318},"end":{"x":191.0,"y":-2.1500000953674318},"ropeLength":12.0,"releaseCount":0,"wrapsCount":0}],"removedHooks":[]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.RopeController:DetachAndRefund (bool) (at Assets/Scripts/RopeController.cs:287)
+HimoHito.RopeController:OnDisable () (at Assets/Scripts/RopeController.cs:195)
+HimoHito.ReproDriver/<Run>d__18:MoveNext () (at Assets/Scripts/ReproTrace.cs:216)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+[Physics::Module] Cleanup current backend.
+[Physics::Module] Id: 0xf2b8ea05
+Input System module state changed to: ShutdownInProgress.
+Input System polling thread exited.
+Input System module state changed to: Shutdown.
+[Licensing::IpcConnector] LicenseClient-田尻大翔-notifications channel disconnected successfully.
+[Licensing::IpcConnector] LicenseClient-田尻大翔 channel disconnected successfully.
+AcceleratorClientConnectionCallback - disconnected - :0
+Cleanup mono
+Checking for leaked weakptr:
+  Found no leaked weakptrs.
+[Package Manager] Server process was shutdown
+##utp:{"type":"MemoryLeaks","version":2,"phase":"Immediate","time":1790763175883,"processId":18996,"allocatedMemory":10191510,"memoryLabels":[{"Default":29313},{"Permanent":15236},{"NewDelete":68851},{"Thread":4237960},{"Manager":33885},{"VertexData":8},{"Geometry":816},{"Texture":296},{"Shader":79381},{"Material":24},{"GfxDevice":58512},{"Animation":184},{"Audio":2664},{"FreeType":8},{"FontEngine":736},{"Physics":2146},{"Physics2D":16},{"Serialization":720},{"Input":14984},{"JobScheduler":33024},{"TextLib":280},{"Mono":32},{"ScriptingNativeRuntime":155060},{"BaseObject":1692592},{"Resource":1336},{"Renderer":3000},{"Transform":4685},{"File":6862},{"WebCam":616},{"Culling":32},{"Terrain":11394},{"Wind":24},{"STL":40},{"String":26728},{"DynamicArray":90064},{"HashMap":47871},{"Utility":2660822},{"Curl":2478},{"PoolAlloc":2056},{"AI":80},{"TypeTree":5341},{"ScriptManager":512},{"RuntimeInitializeOnLoadManager":64},{"SpriteAtlas":112},{"GI":7792},{"Director":8240},{"CloudService":9040},{"WebRequest":552},{"VR":47994},{"SceneManager":504},{"Video":208},{"LazyScriptCache":32},{"Camera":17},{"Secure":2377},{"SerializationCache":1576},{"APIUpdating":10320},{"Subsystems":336},{"VirtualTexturing":57888},{"StaticSafetyDebugInfo":278528},{"Analytics":464},{"Hierarchy":608},{"CoreStats":13112},{"Identifiers":6480},{"Gui":96},{"EditorUtility":82937},{"VersionControl":4},{"Undo":947},{"AssetDatabase":324369},{"EditorGi":328},{"UnityConnect":29232},{"Upm":1896},{"AssetCompliance":64},{"DrivenProperties":72},{"LocalIPC":218},{"ProfilerEditor":9746},{"CoreBusinessMetrics":3496},{"Licensing":1232},{"AssetReference":32},{"IPCStream":32}]}

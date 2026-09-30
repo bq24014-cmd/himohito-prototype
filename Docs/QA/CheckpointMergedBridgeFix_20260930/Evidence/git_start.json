@@ -1,0 +1,11 @@
+{
+  "branch": "main",
+  "local": "f0b0709b446a7f4372f2223aad38acaebaf8c6af",
+  "remote": "f0b0709b446a7f4372f2223aad38acaebaf8c6af",
+  "status": [
+    " M Assets/Scenes/MainStage.unity",
+    "?? Docs/QA/",
+    "?? output/"
+  ],
+  "protectedFiles": 1453
+}

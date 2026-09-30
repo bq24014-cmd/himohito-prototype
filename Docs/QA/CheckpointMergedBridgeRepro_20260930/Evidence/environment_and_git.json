@@ -1,0 +1,36 @@
+{
+  "branch": "main",
+  "local": "f0b0709b446a7f4372f2223aad38acaebaf8c6af",
+  "remote": "f0b0709b446a7f4372f2223aad38acaebaf8c6af",
+  "status": [
+    " M Assets/Scenes/MainStage.unity",
+    "?? Docs/QA/",
+    "?? output/"
+  ],
+  "recent": [
+    "f0b0709 READMEを現行仕様と作品紹介に合わせて全面更新",
+    "dc83a56 仕様・検証記録と公開用の素材案内を更新",
+    "ccdedbb ステージ選択・進行修正とクラフト演出を統合",
+    "0397d2b クラフト素材とステージ選択用アートを追加",
+    "505bd98 ステージ案内と毛糸・表情・足元の演出を仕上げる"
+  ],
+  "protectedFiles": 464,
+  "mismatches": 0,
+  "sceneComparisons": [
+    {
+      "scene": "Tutorial",
+      "originalSHA": "DC1BED54CC083256CE895041B1C93578101E19B9738E7CF260619E8F7E1E4B92",
+      "diagnosticSHA": "DC1BED54CC083256CE895041B1C93578101E19B9738E7CF260619E8F7E1E4B92",
+      "matches": true
+    },
+    {
+      "scene": "MainStage",
+      "originalSHA": "57D2464751B5B9C2A78E6C56F34197E9BC2629983FADAA1DFF6E0BA0B4BC2284",
+      "diagnosticSHA": "57D2464751B5B9C2A78E6C56F34197E9BC2629983FADAA1DFF6E0BA0B4BC2284",
+      "matches": true
+    }
+  ],
+  "unity": "6000.3.21f1",
+  "setup": "controlled runtime; earlier puzzles skipped; authored checkpoint after merge via physics",
+  "date": "2026-09-30"
+}

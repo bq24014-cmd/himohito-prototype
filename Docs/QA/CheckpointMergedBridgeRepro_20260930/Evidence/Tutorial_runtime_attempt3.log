@@ -1,0 +1,1241 @@
+[Licensing::Module] Trying to connect to existing licensing client channel...
+Built from '6000.3/staging' branch; Version is '6000.3.21f1 (c02631ffc030) revision 12592689'; Using compiler version '194234433'; Build Type 'Release'
+[Licensing::IpcConnector] Channel LicenseClient-田尻大翔 doesn't exist
+OS: 'Windows 11  (10.0.26200) Professional' Language: 'ja' Physical Memory: 16052 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
+System  architecture: x64
+Process architecture: x64
+Date: 2026-09-30T10:10:20Z
+[Licensing::Module] Successfully launched the LicensingClient (PId: 8412)
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\6000.3.21f1\Editor\Unity.exe
+-batchmode
+-projectPath
+C:/Users/田尻大翔/Documents/Codex/2026-08-07/new-chat/outputs/HimoHitoPrototype/.codex_tmp/CheckpointMergedBridgeRepro_20260930/DiagnosticProject
+-executeMethod
+CheckpointMergedBridgeRepro.Run
+-reproScene
+Tutorial
+-reproEvidence
+C:/Users/田尻大翔/Documents/Codex/2026-08-07/new-chat/outputs/HimoHitoPrototype/Docs/QA/CheckpointMergedBridgeRepro_20260930/Evidence
+-logFile
+C:/Users/田尻大翔/Documents/Codex/2026-08-07/new-chat/outputs/HimoHitoPrototype/Docs/QA/CheckpointMergedBridgeRepro_20260930/Evidence/Tutorial_runtime_attempt3.log
+Successfully changed project path to: C:/Users/田尻大翔/Documents/Codex/2026-08-07/new-chat/outputs/HimoHitoPrototype/.codex_tmp/CheckpointMergedBridgeRepro_20260930/DiagnosticProject
+C:/Users/田尻大翔/Documents/Codex/2026-08-07/new-chat/outputs/HimoHitoPrototype/.codex_tmp/CheckpointMergedBridgeRepro_20260930/DiagnosticProject
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-gfx=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+Player connection [18480]  Target information:
+
+Player connection [18480]  * "[IP] 192.168.40.81 [Port] 55504 [Flags] 2 [Guid] 2093952226 [EditorId] 2093952226 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-UM0GV1L) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [18480] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [18480] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+[Package Manager] Connected to IPC stream "Upm-4032" after 0.8 seconds.
+[Licensing::Module] Licensing is not yet initialized.
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-田尻大翔" at "2026-09-30T10:10:22.4412725Z"
+[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 8412, path: "C:/Program Files/Unity/Hub/Editor/6000.3.21f1/Editor/Data/Resources/Licensing/Client/Unity.Licensing.Client.exe")
+[Licensing::Module] LicensingClient has failed validation; ignoring
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.18.1+9fbee8e
+  Session Id:              69338accad374c9b8f961035798ab4fd
+  Correlation Id:          2c959e6606389430544437c9201c57d3
+  External correlation Id: 213577622696080452
+  Machine Id:              dNinDYak6EUa2pX7RMEoTuNEbYA=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-田尻大翔" (connect: 1.94s, validation: 0.15s, handshake: 0.18s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-田尻大翔-notifications" at "2026-09-30T10:10:22.7779771Z"
+[Licensing::Module] Connected to LicensingClient (PId: 8412, launch time: 0.02, total connection time: 2.27s)
+[Licensing::Module] Error: Access token is unavailable; failed to update
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: 15669713720629-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+[Licensing::Client] Successfully updated license, isAsync: True, time: 0.03
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] Licensing Background thread has ended after 2.39s
+[Licensing::Module] Licensing is initialized (took 1.04s).
+[Licensing::Client] Successfully resolved entitlement details
+Library Redirect Path: Library/
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 6000.3.21f1 (c02631ffc030)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.3.21f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/田尻大翔/Documents/Codex/2026-08-07/new-chat/outputs/HimoHitoPrototype/.codex_tmp/CheckpointMergedBridgeRepro_20260930/DiagnosticProject/Assets
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+d3d12: failed to query info queue interface (0x80004002).
+Direct3D:
+    Version:         Direct3D 12 [level 12.1]
+    Renderer:        Intel(R) Iris(R) Xe Graphics (ID=0xa7a0)
+    Vendor:          Intel
+    VRAM:            8026 MB
+    App VRAM Budget: 7369 MB
+    Driver:          31.0.101.4255
+    Unified Memory Architecture
+    Cache Coherent UMA
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.3.21f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.3.21f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.3.21f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56032
+Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
+Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
+ImportWorker Server TCP listen port: 0
+AcceleratorClientConnectionCallback - disconnected - :0
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.3.21f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.006078 seconds.
+- Loaded All Assemblies, in  1.237 seconds
+Native extension for WindowsStandalone target not found
+Package Manager log level set to [2]
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:False
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.264 seconds
+Domain Reload Profiling: 2492ms
+	BeginReloadAssembly (418ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (10ms)
+	RebuildCommonClasses (115ms)
+	RebuildNativeTypeToScriptingClass (38ms)
+	initialDomainReloadingComplete (156ms)
+	LoadAllAssembliesAndSetupDomain (501ms)
+		LoadAssemblies (398ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (492ms)
+			TypeCache.Refresh (488ms)
+				TypeCache.ScanAssembly (451ms)
+			BuildScriptInfoCaches (0ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (1265ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1165ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (139ms)
+			SetLoadedEditorAssemblies (10ms)
+			BeforeProcessingInitializeOnLoad (242ms)
+			ProcessInitializeOnLoadAttributes (432ms)
+			ProcessInitializeOnLoadMethodAttributes (341ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+[Licensing::Client] Successfully resolved entitlement details
+Application.AssetDatabase Initial Refresh Start
+[Package Manager] Restoring resolved packages state from cache
+[Licensing::Client] Successfully resolved entitlement details
+[Package Manager] Registered 5 packages:
+  Built-in packages:
+    com.unity.modules.audio@1.0.0 (location: C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype\.codex_tmp\CheckpointMergedBridgeRepro_20260930\DiagnosticProject\Library\PackageCache\com.unity.modules.audio)
+    com.unity.modules.imgui@1.0.0 (location: C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype\.codex_tmp\CheckpointMergedBridgeRepro_20260930\DiagnosticProject\Library\PackageCache\com.unity.modules.imgui)
+    com.unity.modules.jsonserialize@1.0.0 (location: C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype\.codex_tmp\CheckpointMergedBridgeRepro_20260930\DiagnosticProject\Library\PackageCache\com.unity.modules.jsonserialize)
+    com.unity.modules.particlesystem@1.0.0 (location: C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype\.codex_tmp\CheckpointMergedBridgeRepro_20260930\DiagnosticProject\Library\PackageCache\com.unity.modules.particlesystem)
+    com.unity.modules.physics2d@1.0.0 (location: C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype\.codex_tmp\CheckpointMergedBridgeRepro_20260930\DiagnosticProject\Library\PackageCache\com.unity.modules.physics2d)
+[Subsystems] No new subsystems found in resolved package list.
+[Package Manager] Done registering packages in 0.02 seconds
+[Package Manager] Done resolving packages in 0.79 seconds
+[Licensing::Client] Successfully resolved entitlement details
+[Package Manager] Lock file was modified
+[Package Manager] Registered 6 packages:
+  Built-in packages:
+    com.unity.modules.audio@1.0.0 (location: C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype\.codex_tmp\CheckpointMergedBridgeRepro_20260930\DiagnosticProject\Library\PackageCache\com.unity.modules.audio)
+    com.unity.modules.imgui@1.0.0 (location: C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype\.codex_tmp\CheckpointMergedBridgeRepro_20260930\DiagnosticProject\Library\PackageCache\com.unity.modules.imgui)
+    com.unity.modules.imageconversion@1.0.0 (location: C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype\.codex_tmp\CheckpointMergedBridgeRepro_20260930\DiagnosticProject\Library\PackageCache\com.unity.modules.imageconversion)
+    com.unity.modules.jsonserialize@1.0.0 (location: C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype\.codex_tmp\CheckpointMergedBridgeRepro_20260930\DiagnosticProject\Library\PackageCache\com.unity.modules.jsonserialize)
+    com.unity.modules.particlesystem@1.0.0 (location: C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype\.codex_tmp\CheckpointMergedBridgeRepro_20260930\DiagnosticProject\Library\PackageCache\com.unity.modules.particlesystem)
+    com.unity.modules.physics2d@1.0.0 (location: C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype\.codex_tmp\CheckpointMergedBridgeRepro_20260930\DiagnosticProject\Library\PackageCache\com.unity.modules.physics2d)
+[Subsystems] No new subsystems found in resolved package list.
+[Package Manager] Done registering packages in 0.00 seconds
+[ScriptCompilation] Requested script compilation because: Assetdatabase observed changes in script compilation related files
+Starting: C:\Program Files\Unity\Hub\Editor\6000.3.21f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: C:/Users/田尻大翔/Documents/Codex/2026-08-07/new-chat/outputs/HimoHitoPrototype/.codex_tmp/CheckpointMergedBridgeRepro_20260930/DiagnosticProject
+DisplayProgressbar: Compiling Scripts
+Starting: C:\Program Files\Unity\Hub\Editor\6000.3.21f1\Editor\Data\netcorerun\netcorerun.exe "C:\Program Files\Unity\Hub\Editor\6000.3.21f1\Editor\Data\Tools\BuildPipeline\ScriptCompilationBuildProgram.exe" "Library/Bee/1900b0aE.dag.json" "Library/Bee/1900b0aE-inputdata.json" "Library\Bee\buildprogram0.traceevents"
+WorkingDir: C:/Users/田尻大翔/Documents/Codex/2026-08-07/new-chat/outputs/HimoHitoPrototype/.codex_tmp/CheckpointMergedBridgeRepro_20260930/DiagnosticProject
+ExitCode: 4 Duration: 1s672ms
+Rebuilding DAG because FileSignature timestamp changed: Library/Bee/1900b0aE-inputdata.json
+*** Tundra requires additional run (1.52 seconds), 1 items updated, 148 evaluated
+ExitCode: 0 Duration: 0s796ms
+Starting: C:\Program Files\Unity\Hub\Editor\6000.3.21f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --dagfilejson="Library\Bee\1900b0aE.dag.json" --profile="Library/Bee/backend2.traceevents" ScriptAssemblies
+WorkingDir: C:/Users/田尻大翔/Documents/Codex/2026-08-07/new-chat/outputs/HimoHitoPrototype/.codex_tmp/CheckpointMergedBridgeRepro_20260930/DiagnosticProject
+ExitCode: 0 Duration: 3s333ms
+Finished compiling graph: 158 nodes, 568 flattened edges (558 ToBuild, 4 ToUse), maximum node priority 18
+[146/155    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.dll.mvfrm.rsp
+[147/155    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.rsp
+[148/155    0s] MovedFromExtractor-Combine Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.dll.mvfrm
+[149/155    1s] Csc Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.dll (+2 others)
+[150/155    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp.pdb
+[151/155    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp.dll
+[152/155    0s] Csc Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp-Editor.dll (+2 others)
+[153/155    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.pdb
+[154/155    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
+*** Tundra build success (3.24 seconds), 9 items updated, 155 evaluated
+AssetDatabase: script compilation time: 7.037265s
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  1.860 seconds
+Start importing Assets using Guid(00000000000000001000000000000000) (DefaultImporter) -> (artifact id: '4b55c7cb15071bfc086d0e52a7664a41') in 0.0614876 seconds
+Start importing ProjectSettings/InputManager.asset using Guid(00000000000000002000000000000000) (LibraryAssetImporter) -> (artifact id: '3d278bdfa729973ecf92c670ca181c88') in 0.0089406 seconds
+Start importing ProjectSettings/TagManager.asset using Guid(00000000000000003000000000000000) (LibraryAssetImporter) -> (artifact id: '4aa03ef27a83f311e598313a3ec2fbc3') in 0.005134 seconds
+Start importing ProjectSettings/ProjectSettings.asset using Guid(00000000000000004000000000000000) (LibraryAssetImporter) -> (artifact id: 'f096649ad26627c45237ce4590518161') in 0.0040896 seconds
+Start importing ProjectSettings/AudioManager.asset using Guid(00000000000000006000000000000000) (LibraryAssetImporter) -> (artifact id: '7bb8de31f311db17f0fefe3abfd595f1') in 0.0039263 seconds
+Start importing ProjectSettings/TimeManager.asset using Guid(00000000000000007000000000000000) (LibraryAssetImporter) -> (artifact id: '52c307e924e96ceef905bcc2cea85a00') in 0.0055534 seconds
+Start importing ProjectSettings/DynamicsManager.asset using Guid(00000000000000008000000000000000) (LibraryAssetImporter) -> (artifact id: '913ceedd18932e74f6c2ac19d4bebe5c') in 0.0044214 seconds
+Start importing ProjectSettings/QualitySettings.asset using Guid(00000000000000009000000000000000) (LibraryAssetImporter) -> (artifact id: '0108565e686be3fe2e35cd30ef61dd30') in 0.0045468 seconds
+Start importing ProjectSettings/EditorBuildSettings.asset using Guid(0000000000000000b000000000000000) (LibraryAssetImporter) -> (artifact id: 'cc5024ba743cb4132310bf025be68d55') in 0.0051819 seconds
+Start importing ProjectSettings/EditorSettings.asset using Guid(0000000000000000c000000000000000) (LibraryAssetImporter) -> (artifact id: 'fdcca38f5f1944c9bec0b9f00395ab39') in 0.0050071 seconds
+Start importing ProjectSettings/NavMeshAreas.asset using Guid(00000000000000004100000000000000) (LibraryAssetImporter) -> (artifact id: '4ba0a6bb5cc18b1619eb3b3f4ce570d1') in 0.0046864 seconds
+Start importing ProjectSettings/Physics2DSettings.asset using Guid(00000000000000005100000000000000) (LibraryAssetImporter) -> (artifact id: '03a2f9665ad2b81ca54b808a512fd98e') in 0.0049717 seconds
+Start importing ProjectSettings/GraphicsSettings.asset using Guid(00000000000000006100000000000000) (LibraryAssetImporter) -> (artifact id: '041f8e671a93a484399854eca4c35b80') in 0.0048007 seconds
+Start importing ProjectSettings/ClusterInputManager.asset using Guid(00000000000000007100000000000000) (LibraryAssetImporter) -> (artifact id: '5a028a71a6163b7bc9a46219c48662ec') in 0.004257 seconds
+Start importing ProjectSettings/UnityConnectSettings.asset using Guid(0000000000000000a100000000000000) (LibraryAssetImporter) -> (artifact id: '5a6e69f8200d884ded3f19f546ea756a') in 0.0041975 seconds
+Start importing ProjectSettings/PresetManager.asset using Guid(0000000000000000b100000000000000) (LibraryAssetImporter) -> (artifact id: '669bd2cb5cdf99ef516d1350fa42393e') in 0.0045472 seconds
+Start importing ProjectSettings/VFXManager.asset using Guid(0000000000000000c100000000000000) (LibraryAssetImporter) -> (artifact id: 'dd6732d958402095937fd19a0cecb735') in 0.0044133 seconds
+Start importing ProjectSettings/VersionControlSettings.asset using Guid(0000000000000000d100000000000000) (LibraryAssetImporter) -> (artifact id: 'b89f810c452b248c014f182ae5caa680') in 0.0039981 seconds
+Start importing ProjectSettings/MemorySettings.asset using Guid(0000000000000000f100000000000000) (LibraryAssetImporter) -> (artifact id: '19f032dc933bd79e61da5c81f7ddd1ac') in 0.0047658 seconds
+Start importing ProjectSettings/MultiplayerManager.asset using Guid(00000000000000000200000000000000) (LibraryAssetImporter) -> (artifact id: 'f060d13f2990d90fc35c577bb4111c66') in 0.0062498 seconds
+Start importing Library/BuildInstructions using Guid(00000000000000002300000000000000) (DefaultImporter) -> (artifact id: 'ade3aeda13ad9960ede0e143cb33502a') in 0.0014566 seconds
+Start importing Packages/com.unity.modules.imgui using Guid(c060426bfd6e82575228df6656368eaa) (DefaultImporter) -> (artifact id: '7d484ab5933192f91b6a2fb9f7498a1e') in 0.0013248 seconds
+Start importing Assets/ThirdParty using Guid(24ce2b73e8f44746b691924fbbf24398) (DefaultImporter) -> (artifact id: 'c6765a6cebe590f80fb386ae8ba736ee') in 0.0020124 seconds
+Start importing Assets/Resources using Guid(15a49b176a9c400f9de451d475756713) (DefaultImporter) -> (artifact id: '200048a8567d858feebe48cf47bafb39') in 0.0015907 seconds
+Start importing Packages/com.unity.modules.imageconversion using Guid(850c54ee0b9e1aa740b1c67792eb1f26) (DefaultImporter) -> (artifact id: '77f78b27bd9bac81a00a007ef6f28867') in 0.0012642 seconds
+Start importing Assets/Editor using Guid(b5c6c95632f4b194a839511b20c64cfb) (DefaultImporter) -> (artifact id: '5bd0a3caeef15244ef9ec25cf5534a13') in 0.0014868 seconds
+Start importing Assets/Scripts using Guid(f647cba8605562d449948b1d7da1f6f0) (DefaultImporter) -> (artifact id: '4fc847c13cd837e11d41183dbcd4fb38') in 0.0014203 seconds
+Start importing Packages/com.unity.modules.physics2d using Guid(376c84ea405e0f2b80562c23bb977216) (DefaultImporter) -> (artifact id: 'f030ba7c21f8c3d36c2700ba9484429e') in 0.0011622 seconds
+Start importing Packages/com.unity.modules.particlesystem using Guid(48b10b41f58d5b49717f376cda59eeb8) (DefaultImporter) -> (artifact id: '52931c3585e961751803a41152ba5f0c') in 0.0011584 seconds
+Start importing Packages/com.unity.modules.jsonserialize using Guid(fc3a810351931f5e6183e16b9beb5563) (DefaultImporter) -> (artifact id: 'ae149b8f46567b37c6b77b16bb572fe8') in 0.0010866 seconds
+Start importing Packages/com.unity.modules.audio using Guid(2d6ba5cbe47e6ad3c87474c56174d4e0) (DefaultImporter) -> (artifact id: '2ad5535b0c9fde796c0a268a703c42c8') in 0.0025093 seconds
+Start importing Assets/Scenes using Guid(ed37427fe343e82409a70ed57fd72f70) (DefaultImporter) -> (artifact id: 'c73a0e388484101b61480aeb12e27818') in 0.0018226 seconds
+Start importing Assets/Resources/Audio using Guid(12c7acd5a72a4878b94fba744981b0a6) (DefaultImporter) -> (artifact id: '2a3b91fbfaa90dc1fa049f85b6e6cd5d') in 0.001726 seconds
+Start importing Assets/Resources/Fonts using Guid(85b53eae82124d1f84da41a0dd27d70e) (DefaultImporter) -> (artifact id: 'ade32b38b56cf2b31d15237b2b45ce0b') in 0.0015204 seconds
+Start importing Assets/ThirdParty/KenneyImpactSounds using Guid(49ecc179ca69445ebfe5229f2263f106) (DefaultImporter) -> (artifact id: '2bfd53624e81f08d28077abc50046972') in 0.0015243 seconds
+Start importing Assets/Resources/Art using Guid(69b9951cc96443eaaee6b446665170bf) (DefaultImporter) -> (artifact id: '680d370810a83daa43c3340029c92ffc') in 0.0015258 seconds
+Start importing Assets/ThirdParty/MPlusRounded1c using Guid(5c3a2289f67b48b49817cb2c52f47237) (DefaultImporter) -> (artifact id: '43c3ebcda2ba27bb8081eb48e93e4141') in 0.001478 seconds
+Start importing Packages/com.unity.modules.imageconversion/package.ModuleCompilationTrigger using Guid(830a36a23cf3ab1e61fa47940a6dc35e) (DefaultImporter) -> (artifact id: 'ee0f0c801f95c19382d8b454dc7586e1') in 0.0732977 seconds
+Start importing Packages/com.unity.modules.audio/package.ModuleCompilationTrigger using Guid(042dc296246916648e55a43d0eeb2036) (DefaultImporter) -> (artifact id: '93cfeb7be8bf6df4dc4fc167223dc2d5') in 0.0023417 seconds
+Start importing Packages/com.unity.modules.jsonserialize/package.ModuleCompilationTrigger using Guid(e6a135e3ea9cb46795d1b0e05ac3e1e5) (DefaultImporter) -> (artifact id: '8d26f1c211bce77f7cf17eccccd57b0d') in 0.0018906 seconds
+Start importing Packages/com.unity.modules.particlesystem/package.ModuleCompilationTrigger using Guid(17f093324b67f5bd57e55b546736750e) (DefaultImporter) -> (artifact id: '2ff549dcfdc7b1fa23811cebe1444f07') in 0.0019413 seconds
+Start importing Packages/com.unity.modules.imgui/package.ModuleCompilationTrigger using Guid(be13c398521e3c1ad21fb9da30ab2ab6) (DefaultImporter) -> (artifact id: 'ea0574aa05344c7e80357502346d73fc') in 0.0019211 seconds
+Start importing Packages/com.unity.modules.physics2d/package.ModuleCompilationTrigger using Guid(fe6a6957b37b61417b457a1e0541791d) (DefaultImporter) -> (artifact id: 'a5a6ae7d64235baf32ceb35097cc3c10') in 0.001784 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Native extension for WindowsStandalone target not found
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.444 seconds
+Domain Reload Profiling: 3295ms
+	BeginReloadAssembly (770ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (84ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (200ms)
+	RebuildCommonClasses (109ms)
+	RebuildNativeTypeToScriptingClass (37ms)
+	initialDomainReloadingComplete (63ms)
+	LoadAllAssembliesAndSetupDomain (871ms)
+		LoadAssemblies (1197ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (31ms)
+			TypeCache.Refresh (16ms)
+				TypeCache.ScanAssembly (4ms)
+			BuildScriptInfoCaches (4ms)
+			ResolveRequiredComponents (6ms)
+	FinalizeReload (1445ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1057ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (94ms)
+			SetLoadedEditorAssemblies (6ms)
+			BeforeProcessingInitializeOnLoad (357ms)
+			ProcessInitializeOnLoadAttributes (407ms)
+			ProcessInitializeOnLoadMethodAttributes (169ms)
+			AfterProcessingInitializeOnLoad (22ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (77ms)
+Start importing Library/BuildPlayer.prefs using Guid(00000000000000005000000000000000) (DefaultImporter) -> (artifact id: '083d37eb6b0e82b8f5c1ec86344d848d') in 0.0202969 seconds
+Start importing Assets/Scenes/MainStage.unity using Guid(f47cde71ad654939b3802f6bdeacb9c1) (DefaultImporter) -> (artifact id: '8ecaffa579898e87b1d5d3820ca82eed') in 0.0029216 seconds
+Start importing Assets/Scenes/Tutorial.unity using Guid(9cdde09beba3a9948b21ff389c954384) (DefaultImporter) -> (artifact id: '60b87483935d8a8c324ed9bb313d939e') in 0.0027458 seconds
+Start importing Assets/Resources/Art/HimoHitoEndingBackground-v1.png using Guid(60bb9eec31a84e658337764911b0557b) (TextureImporter) -> (artifact id: 'ad2a4fa4f7615816b1d0496f3b78b1e1') in 0.1988225 seconds
+Start importing Assets/Resources/Art/HimoHitoCraftWoodGrain-v1.png using Guid(905d2db9d513478baf2c80dd0e00a012) (TextureImporter) -> (artifact id: '0d9b164095316a3a5cd72b97a62ae8a1') in 0.1787767 seconds
+Start importing Assets/Resources/Art/TutorialGuideSign-v1.png using Guid(c0a74a768e0d4a5e9d72757bfb1a3691) (TextureImporter) -> (artifact id: 'b34bd6e088a92ea9f1aa8c0890e28a15') in 0.192142 seconds
+Start importing Assets/Resources/Art/HimoHitoCraftSpike-v1.png using Guid(f097aef7b0a049809189bbb4ac1c7b48) (TextureImporter) -> (artifact id: '441e7f9b88f480081bd09e54d8c91831') in 0.1155045 seconds
+Start importing Assets/Resources/Art/HimoHitoControlsBackground-v1.png using Guid(119bd32ef42b4c69a7769736c21dbb80) (TextureImporter) -> (artifact id: '31852b56ab1da4f27c3c4f8dd4e1c33f') in 0.1937857 seconds
+Start importing Assets/Resources/Art/HimoHitoWalkTransitions-v1.png using Guid(21f894b46cb94a728bceac3edf950891) (TextureImporter) -> (artifact id: 'c25bf04770c7cf7d06388a84936514b6') in 0.1102696 seconds
+Start importing Assets/Resources/Art/HimoHitoCraftHookMount-v1.png using Guid(4135dfb82dfc4a41adcf8974566e392d) (TextureImporter) -> (artifact id: '3b58af775886e10e5a6c3c59020c004f') in 0.1119142 seconds
+Start importing Assets/Resources/Art/HimoHitoStageMapPieces-v1.png using Guid(51f234cf38954df59880dce05e7b984a) (TextureImporter) -> (artifact id: '63a608e288c5faf9ad8783a97ad88557') in 0.1710894 seconds
+Start importing Assets/Resources/Art/HimoHitoStageMapBackground-v1.png using Guid(42a507fb1e7c4d94908496f4f88e85ab) (TextureImporter) -> (artifact id: 'f08f791cd582b8f5cb56cb7eae6dbe65') in 0.2003069 seconds
+Start importing Assets/Resources/Art/HimoHitoFarBackground-v1.png using Guid(03ba781b513841fa8b0e18a1af62a252) (TextureImporter) -> (artifact id: '7cabdf026859327d0d4c9be9d1f7d3de') in 0.1956275 seconds
+Start importing Assets/Resources/Art/HimoHitoWalk-v3.png using Guid(33ac9edeb4ad4fd396ef04c4ccae37a1) (TextureImporter) -> (artifact id: '065e21da6a02b50108cac6db07ba9b1d') in 0.1206266 seconds
+Start importing Assets/Resources/Art/TutorialBlockPlatform-v1.png using Guid(53b3e7d6386d4caca7ffb2882bd395f1) (TextureImporter) -> (artifact id: 'c86631ca3cf93fad3f9834c05512cc83') in 0.1220091 seconds
+Start importing Assets/Resources/Art/HimoHitoCraftPlayer-v1.png using Guid(b36d913a2af247a992bd830300000001) (TextureImporter) -> (artifact id: '16738ccd927f2a0cafbb4b062e63ca7d') in 0.1057467 seconds
+Start importing Assets/Resources/Art/HimoHitoCraftWalk-v1.png using Guid(b36d913a2af247a992bd830300000002) (TextureImporter) -> (artifact id: '9d40076aaae5f9a49f2f4abf89a1062c') in 0.1087495 seconds
+Start importing Assets/Resources/Art/HimoHitoCraftJump-v1.png using Guid(b36d913a2af247a992bd830300000003) (TextureImporter) -> (artifact id: '0a486e46c7a00ace00aaa528d8d59662') in 0.1134405 seconds
+Start importing Assets/Resources/Art/HimoHitoCraftSwing-v1.png using Guid(b36d913a2af247a992bd830300000004) (TextureImporter) -> (artifact id: '383377e0dd022bf2c23dc2e563dbc117') in 0.1149196 seconds
+Start importing Assets/Resources/Art/HimoHitoCraftIdle-v1.png using Guid(b36d913a2af247a992bd830300000005) (TextureImporter) -> (artifact id: '7bfb36849e98074857ab16c5dbfdbe29') in 0.1096203 seconds
+Start importing Assets/Resources/Art/HimoHitoCraftAim-v1.png using Guid(b36d913a2af247a992bd830300000006) (TextureImporter) -> (artifact id: '33a3e062efaed4e7da4c49824fb34a40') in 0.1202717 seconds
+Start importing Assets/Resources/Art/HimoHitoCraftWalkTransitions-v1.png using Guid(b36d913a2af247a992bd830300000007) (TextureImporter) -> (artifact id: '19afc14fea261986e56ce2d46b589e08') in 0.0998743 seconds
+Start importing Assets/Resources/Art/HimoHitoCraftLanding-v1.png using Guid(b36d913a2af247a992bd830300000008) (TextureImporter) -> (artifact id: 'afa706be06d5204f7c084eb284f5a7b6') in 0.1245614 seconds
+Start importing Assets/Resources/Art/HimoHitoCraftEdgeBalance-v1.png using Guid(b36d913a2af247a992bd830300000009) (TextureImporter) -> (artifact id: '0f62adf8c55dff0e3b41ae53ed89cbaa') in 0.0969783 seconds
+Start importing Assets/Resources/Art/HimoHitoCraftWeave-v1.png using Guid(b36d913a2af247a992bd83030000000a) (TextureImporter) -> (artifact id: '04be5c764f2579caa7334e185caf21f0') in 0.1140942 seconds
+Start importing Assets/Resources/Art/HimoHitoCraftGoal-v1.png using Guid(b36d913a2af247a992bd83030000000b) (TextureImporter) -> (artifact id: '3a87c232e87d3b6ae0aa4f75fed57056') in 0.119212 seconds
+Start importing Assets/Resources/Art/HimoHitoCraftWallPush-v1.png using Guid(b36d913a2af247a992bd83030000000c) (TextureImporter) -> (artifact id: '75b1fb10e3418a8998580b94cc6c1c2f') in 0.0998797 seconds
+Start importing Assets/Resources/Art/HimoHitoCraftSwitchPress-v1.png using Guid(b36d913a2af247a992bd83030000000d) (TextureImporter) -> (artifact id: '5cb11cee3fda332acf20209c2be3e878') in 0.1161253 seconds
+Start importing Assets/Resources/Art/HimoHitoFailureBackground-v1.png using Guid(95c9c2c8aa9f46de81229cf13a633fee) (TextureImporter) -> (artifact id: '88be5d632fb5c919a9325093b81cd5cc') in 0.1739573 seconds
+Start importing Assets/Resources/Art/HimoHitoCraftRoomMid-v1.png using Guid(26eed2660c084f7e8655718dbe2dca35) (TextureImporter) -> (artifact id: '35a1c21c024bdce53ed01dd0d5fb699b') in 0.1640469 seconds
+Start importing Assets/Resources/Art/TutorialRopeAnchorRing-v1.png using Guid(46f420de2d3a4a418204a1b272af3e97) (TextureImporter) -> (artifact id: '0789784538e0be03a7d1cef203ec1100') in 0.1086462 seconds
+Start importing Assets/Resources/Art/HimoHitoStageMapUpcoming-v1.png using Guid(5668abed389e4d0ab8f8f0840c19a9dd) (TextureImporter) -> (artifact id: 'b5baff1a959d21057f7889b1309d3416') in 0.1811836 seconds
+Start importing Assets/Resources/Art/HimoHitoSwing-v2.png using Guid(e68191c520a84cd8a84de8f1796a4d47) (TextureImporter) -> (artifact id: 'c1892269d468be132e425c911c2316e1') in 0.1080921 seconds
+Start importing Assets/Resources/Art/WoodenToySpike-v1.png using Guid(372491b625c94d608b2065a29a83bf9c) (TextureImporter) -> (artifact id: 'b46239c537b71949b80166d8f735e0dd') in 0.114858 seconds
+Start importing Assets/Resources/Art/HimoHitoPlayer-v1.png using Guid(47a9a5e20d5d4a62b7d3d87ab73f69d2) (TextureImporter) -> (artifact id: 'e21b42a528710f7f9eb770d8fc7d44ad') in 0.1215167 seconds
+Start importing Assets/Resources/Art/HimoHitoWeave-v1.png using Guid(474b3921276842e1b6e1b4dd211de2d0) (TextureImporter) -> (artifact id: '345f4e98e2b5d6ffccbde3053b256ba2') in 0.1121096 seconds
+Start importing Assets/Resources/Art/HimoHitoJump-v2.png using Guid(57956f836e2a46ee8591048f48c4b8e6) (TextureImporter) -> (artifact id: 'de0d95833ffd5578523d6720c2beb171') in 0.1141848 seconds
+Start importing Assets/Resources/Art/TutorialNightChildRoom-v1.png using Guid(a85306197474410aaf3b0a1e5ade76f3) (TextureImporter) -> (artifact id: 'a61a5ac55d3124c1088dd1edf280fef9') in 0.1766552 seconds
+Start importing Assets/Resources/Art/RecoverySwitch-v1.png using Guid(a89b6f10927244e7a2918600bcd5a541) (TextureImporter) -> (artifact id: 'e130894f094cf95a09008b034497111a') in 0.1035424 seconds
+Start importing Assets/Resources/Art/HimoHitoIdle-v1.png using Guid(49640119d9c94a42ab54649d755574a2) (TextureImporter) -> (artifact id: '99eeb9e0a573ba43de968041970892cb') in 0.104351 seconds
+Start importing Assets/Resources/Art/HimoHitoTitleBackground-v1.png using Guid(a94c1d6472b54f1b9e172f43c6a8d0e2) (TextureImporter) -> (artifact id: 'aba011590496eeb108b9907a1ec9962a') in 0.1720312 seconds
+Start importing Assets/Resources/Art/HimoHitoGoal-v1.png using Guid(d971f50ca47a4c179842b105513ac11c) (TextureImporter) -> (artifact id: 'e7b84c9a8a9a68d8d4715ba0374f26f7') in 0.1206268 seconds
+Start importing Assets/Resources/Art/HimoHitoCraftChestOpening-v1.png using Guid(d9b2d670c0284dd6a55f2211df7674af) (TextureImporter) -> (artifact id: '1925a83da136e3ea08744d5c5798661a') in 0.1309694 seconds
+Start importing Assets/Resources/Art/TutorialToyBoxGoal-v2.png using Guid(0a79c33d98fa47d9b62af3512f64389e) (TextureImporter) -> (artifact id: '3b1bd448bb7b454f45371d6a32478e9d') in 0.1269959 seconds
+Start importing Assets/Resources/Art/HimoHitoLanding-v1.png using Guid(4a684fb28a7c4e97a649955becd70f54) (TextureImporter) -> (artifact id: 'ec03a528682caa5118f7b01eafbedac6') in 0.1335247 seconds
+Start importing Assets/Resources/Art/HimoHitoStageCurtainCloth-v1.png using Guid(5ab39b2b5c1a4b5e845a74b0c07d641e) (TextureImporter) -> (artifact id: 'acba8163f3db6168c3d8d0b718d4f21f') in 0.1601566 seconds
+Start importing Assets/Resources/Art/ToyBoxOpening-v1.png using Guid(1b4714df89bc4a06a7b00ca8cf2f4d98) (TextureImporter) -> (artifact id: 'ac331918a7976c2e2970ff9498092d98') in 0.1156768 seconds
+Start importing Assets/Resources/Art/HimoHitoCraftHudPanel-v1.png using Guid(db86517fe10744e8876f83932f22c2b1) (TextureImporter) -> (artifact id: 'c640bafdf71e6537a57cdffe93ad3242') in 0.1469117 seconds
+Start importing Assets/Resources/Art/TutorialHookConnector-v1.png using Guid(0cf5cdde40ca47c8842641575371bc4e) (TextureImporter) -> (artifact id: 'eb34346f75db0f984a5fede043239c1a') in 0.1122064 seconds
+Start importing Assets/Resources/Art/HimoHitoCraftHookBlue-v1.png using Guid(aca965a532e54ff98bbd30b98a57f645) (TextureImporter) -> (artifact id: 'acd0af43b7bd038d6abd5fc058b6b31b') in 0.1154546 seconds
+Start importing Assets/Resources/Art/HimoHitoStageDiorama-v1.png using Guid(bc68e9b2ee9b48edbfebc4b0ff43c677) (TextureImporter) -> (artifact id: '531016156457021ce4a0202c5cd49235') in 0.1760861 seconds
+Start importing Assets/Resources/Art/HimoHitoEdgeBalance-v1.png using Guid(bcbd0e990d87433683095efc9e3fd79a) (TextureImporter) -> (artifact id: '800330c8cf5dfd0b36e87a8850a8c342') in 0.1082374 seconds
+Start importing Assets/Resources/Art/HimoHitoSwitchPress-v1.png using Guid(dc784581e1ca4035a6f47c7e1dc1a359) (TextureImporter) -> (artifact id: 'ceb2e642f1dbefbb5cd5c39dbdd56721') in 0.1152215 seconds
+Start importing Assets/Resources/Art/HimoHitoCraftWoodBlocks-v1.png using Guid(1d0066cbeb554814a68c4091ca9fa8ad) (TextureImporter) -> (artifact id: '28efcb29dca081f8e88ebb6a4f6325b3') in 0.1593786 seconds
+Start importing Assets/Resources/Art/HimoHitoCraftRecoverySwitch-v1.png using Guid(4db17f702e48474e8765fc0d221cb025) (TextureImporter) -> (artifact id: '75714572eacb62c7e7161138451f8010') in 0.1178388 seconds
+Start importing Assets/Resources/Art/HimoHitoUiParts-v1.png using Guid(5e8b60c60c51cfd48b80d302046de380) (TextureImporter) -> (artifact id: 'e902ea4663a8bfd42ba2850a67ac3e35') in 0.1037397 seconds
+Start importing Assets/Resources/Art/HimoHitoAppIcon-v1.png using Guid(6e890ec3e8174289903faa48d3033c6c) (TextureImporter) -> (artifact id: '26e21b3bc28bd5bd39f7d1d73080b921') in 0.2210692 seconds
+Start importing Assets/Resources/Art/HimoHitoYarnRope-v1.png using Guid(7ebd2a8e76a2446698e2027287591a32) (TextureImporter) -> (artifact id: '9dec09ce4501dd6d6e9dbeebcfc9d41d') in 0.1470433 seconds
+Start importing Assets/Resources/Art/TutorialRailPlatform-v1.png using Guid(9ed1eb7633994bfc98f17cb2ce2ad592) (TextureImporter) -> (artifact id: 'b4a701ecd55c568ecb44f1f719f13d33') in 0.1065291 seconds
+Start importing Assets/Resources/Art/HimoHitoCraftRail-v1.png using Guid(de607b977cdf45ee88bf5e1dcff9a57a) (TextureImporter) -> (artifact id: '429aee4daf9d82f70ed3e1ff4bcb265d') in 0.0964483 seconds
+Start importing Assets/Resources/Art/HimoHitoAim-v1.png using Guid(0f53025be5f34a7aa7aec6772c7b18dd) (TextureImporter) -> (artifact id: '475fedb420ff783e1e61a4e1de039b3a') in 0.1103046 seconds
+Start importing Assets/Resources/Art/HimoHitoCraftRoomFar-v1.png using Guid(5f40655b79394ae5b9c2bd19206c3d1d) (TextureImporter) -> (artifact id: '15d9065ba6f8f764c1beb4ac2a85e6c5') in 0.1855775 seconds
+Start importing Assets/Resources/Art/HimoHitoCraftGuideSign-v1.png using Guid(6ff3e6a0b2b742bfb9397512f2a3d541) (TextureImporter) -> (artifact id: '24beaf1cd56da72904c0715ae8c7b3ce') in 0.1088003 seconds
+Start importing Assets/Resources/Art/HimoHitoWallPush-v1.png using Guid(9f56962b08694fdc9f6217821fb9c20a) (TextureImporter) -> (artifact id: '8e32285030ed0f173cb95a3fa31c9d9e') in 0.137604 seconds
+Start importing Assets/Resources/Art/HimoHitoCraftHookGreen-v1.png using Guid(df028a2e957648eeb80ad1c5aa476b19) (TextureImporter) -> (artifact id: '53130befd97079091d59cd2572b3922d') in 0.1361174 seconds
+Start importing Assets/Resources/RespawnWeave.shader using Guid(74f36cd1d3e14bf1b026e98b20d8f125) (ShaderImporter)Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+ -> (artifact id: 'fe2a098a97179298efcfb796a8b0fdab') in 0.1721867 seconds
+Start importing Assets/Resources/TutorialSignGreeting.shader using Guid(f624e90b37ae4df8a5f4e75a04ac2039) (ShaderImporter) -> (artifact id: 'e48ca0d28fe6503b013349d74e3b18cb') in 0.0163462 seconds
+Start importing Assets/Resources/HangingDecorSway.shader using Guid(ea09584549024e33a70dd81d9383dbd1) (ShaderImporter) -> (artifact id: 'd54fa105bb790c881b785e90c618a4b4') in 0.0151212 seconds
+Start importing Assets/Resources/Fonts/MPlusRounded1c-Regular.ttf using Guid(b03eb138fcfd446cb68c5948838b0b20) (TrueTypeFontImporter) -> (artifact id: '25320fa9ff2791277ca289b0a3c288a2') in 0.0568845 seconds
+Start importing Assets/Resources/Fonts/MPlusRounded1c-Bold.ttf using Guid(768f5d55443e44bc93772d9f738e5de4) (TrueTypeFontImporter) -> (artifact id: '958f5607fd7c95d035a8a9cafbaff8de') in 0.0296995 seconds
+Start importing Packages/com.unity.modules.jsonserialize/package.json using Guid(40bf3cec17fa0b49fe04443c8332d638) (PackageManifestImporter) -> (artifact id: '4c54406cdf6f27a0dfd74653ac191550') in 0.0199996 seconds
+Start importing Packages/com.unity.modules.imgui/package.json using Guid(42fe78c8fe682715a2cb531422e6ccb3) (PackageManifestImporter) -> (artifact id: 'b643c636c8e55776455f8adce1983951') in 0.0085954 seconds
+Start importing Assets/ThirdParty/KenneyImpactSounds/License.txt using Guid(72a317b61dc44a089e56a63fcf4be9bc) (TextScriptImporter) -> (artifact id: '5524443009110b2d00b80f90df4041be') in 0.0083635 seconds
+Start importing Packages/com.unity.modules.imageconversion/package.json using Guid(953fab16d15d5885b3600fcd6388b2ad) (PackageManifestImporter) -> (artifact id: '4914195fadd462954a635b65250787ed') in 0.0064103 seconds
+Start importing Assets/Resources/StageCatalog.json using Guid(d5b1cae6a0a2471b876e9f47a83b60a6) (TextScriptImporter) -> (artifact id: '795a53e7452850e792c1372411d9ace8') in 0.0050469 seconds
+Start importing Packages/com.unity.modules.particlesystem/package.json using Guid(87d720faa37005c08600090e04d8c739) (PackageManifestImporter) -> (artifact id: 'd6aa8c20d84b997ec285a739a17be19d') in 0.0083601 seconds
+Start importing Packages/com.unity.modules.physics2d/package.json using Guid(f7a8357347c80dc69c08d0b1a05e2122) (PackageManifestImporter) -> (artifact id: 'e2187f6cfb7435ccc7f0487e9567b857') in 0.0071591 seconds
+Start importing Packages/com.unity.modules.audio/package.json using Guid(e9df95f53f1c1d0c9199e235d6c42b50) (PackageManifestImporter) -> (artifact id: '14bdb854ae6daae762f5873a0a889a4a') in 0.0071153 seconds
+Start importing Assets/ThirdParty/MPlusRounded1c/OFL.txt using Guid(6f3a7420a3ac4fbf810d7f59c93d1cd8) (TextScriptImporter) -> (artifact id: '284fa736d407de826d0229d38ef7ee76') in 0.0088366 seconds
+Start importing Assets/Resources/Audio/RopeAttachMissWhoosh.mp3 using Guid(a0c623313cd24137aa9b2b9eea6a06d4) (AudioImporter) -> (artifact id: '7162e68e7fd3cce5327201ae4935bacd') in 1.0074822 seconds
+Start importing Assets/Resources/Audio/PlayerJumpSoft.ogg using Guid(b0fabb5300d54da7b3f8d308427966d6) (AudioImporter) -> (artifact id: 'd8d4011005bb69de088be8f1d4984da9') in 0.1583179 seconds
+Start importing Assets/Resources/Audio/GoalClearXylophone.mp3 using Guid(228a3af47b1b42508a21701e8a10cbae) (AudioImporter) -> (artifact id: '33777e2a91d0fdeffbcbdea9029a67e4') in 0.1897381 seconds
+Start importing Assets/Resources/Audio/FailureYarnDrop.mp3 using Guid(83b579259e74491bb73501adf72ab0d7) (AudioImporter) -> (artifact id: 'ae77ec8db6629ae3a2ccb267b974cb25') in 0.182069 seconds
+Start importing Assets/Resources/Audio/RopeLengthClick.mp3 using Guid(2480126c207d4453bb4287505ae25524) (AudioImporter) -> (artifact id: '4b825ceea3f7cdebc3618f829779fcd6') in 0.1810431 seconds
+Start importing Assets/Resources/Audio/YasashiiOdori.mp3 using Guid(347b62b9e0f64384a965e9b2f2f8c679) (AudioImporter) -> (artifact id: '0c51adcca628cd9bc6289e0bc7472176') in 2.8269622 seconds
+Start importing Assets/Resources/Audio/RopeReleaseWind.wav using Guid(f58184b1b32c4a19919274da741af66e) (AudioImporter) -> (artifact id: '266693a7ce7a57c019599c622412a8f5') in 0.1631872 seconds
+Start importing Assets/Resources/Audio/FailurePianoNote.mp3 using Guid(f53f55c7606d47f49b5110764f713218) (AudioImporter) -> (artifact id: '35efa64db21ff5756cb46ceac57a7694') in 0.1971743 seconds
+Start importing Assets/Resources/Audio/HookAttachWood.ogg using Guid(76e9fb09e76b44ba88a73362818358a5) (AudioImporter) -> (artifact id: '681bc8556685474c358cb5c8df793014') in 0.1565589 seconds
+Start importing Assets/Resources/Audio/HookAttachSoft.ogg using Guid(b743d22cecfe4e5abd62bfeca36b49ee) (AudioImporter) -> (artifact id: '4d1e0591f632660abe7f929c79cd6bbd') in 0.1444262 seconds
+Start importing Assets/Resources/Audio/RopeShotRustling.mp3 using Guid(f7e9340ce9784a54b77c1dc1f73bb672) (AudioImporter) -> (artifact id: '01a83b4607ab362596f162edb00c8eb0') in 0.1979054 seconds
+Start importing Assets/Resources/Audio/UiPaperOpen.mp3 using Guid(a8d15bd907114663aef0521138785274) (AudioImporter) -> (artifact id: '6c322b3c67138423d3e710385115aabb') in 0.1948283 seconds
+Start importing Assets/Resources/Audio/PlayerLandingStep.mp3 using Guid(a9c532c96ee24a83b3361d1fe51406d7) (AudioImporter) -> (artifact id: 'f4f1988d0d09250b38e78b369142c292') in 0.1744599 seconds
+Start importing Assets/Resources/Audio/PlayerFootstepSoftA.ogg using Guid(c957bf9374144767a799eba8db3bd0e0) (AudioImporter) -> (artifact id: '3a51a3384ff587c118f6ae6789e85492') in 0.1599294 seconds
+Start importing Assets/Resources/Audio/RopePlatformBuildWood.ogg using Guid(4bd556dccffe49ce90bf436a0e18f8e8) (AudioImporter) -> (artifact id: 'fcb0fa84c82072c465b37624e5e8d8a6') in 0.1850374 seconds
+Start importing Assets/Resources/Audio/RopeLengthLimitWood.mp3 using Guid(6ba174d06cb54e65ad844c287f39dd77) (AudioImporter) -> (artifact id: '8b805a8fd4965259ddf452b5c4a3ebbd') in 0.1852353 seconds
+Start importing Assets/Resources/Audio/PlayerFootstepSoftD.ogg using Guid(2c5118ccb22945fda80e25bcc93d8109) (AudioImporter) -> (artifact id: '2dff5f335eccf15892ebc4f7a2b1aeb1') in 0.1538226 seconds
+Start importing Assets/Resources/Audio/RopePlatformMergeWood.ogg using Guid(0efb0e493ea84d81a8e164237a490d2e) (AudioImporter) -> (artifact id: '8500c159e5c59c82b2ded975642b45a0') in 0.1519911 seconds
+Start importing Assets/Resources/Audio/PlayerFootstepSoftC.ogg using Guid(9e97ebc6ce1f429db693c098003af615) (AudioImporter) -> (artifact id: '23bdaef25505ff798d150cc2f6ee0475') in 0.145808 seconds
+Start importing Assets/Resources/Audio/GoalTreasureChestOpen.mp3 using Guid(7ff7b0df9e664af4b05dbd8956f0e1d4) (AudioImporter) -> (artifact id: '6591bb0f2131e54b6594656d032d6c7e') in 0.193549 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Loading style catalogs (6)
+	StyleSheets/Extensions/base/common.uss
+	UIPackageResources/StyleSheets/Default/Variables/Public/common.uss
+	StyleSheets/Northstar/common.uss
+	StyleSheets/Extensions/fonts/inter.uss
+	StyleSheets/Extensions/base/dark.uss
+	UIPackageResources/StyleSheets/Default/Northstar/Palette/dark.uss
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=59c19e8de3925804a9fd9180d8d3aaff): Total: 29.310 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
+	Summary:
+		Imports: total=142 (actual=142, local cache=0, cache server=0)
+		Asset DB Process Time: managed=51 ms, native=17756 ms
+		Asset DB Callback time: managed=550 ms, native=2028 ms
+		Scripting: domain reloads=1, domain reload time=1861 ms, compile time=7042 ms, other=19 ms
+		Project Asset Count: scripts=43, non-scripts=99
+		Asset File Changes: new=3, changed=3, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokeCustomDependenciesCallbacks: 0.003ms
+	InvokePackagesCallback: 858.437ms
+	ApplyChangesToAssetFolders: 0.837ms
+	Scan: 109.707ms
+	OnSourceAssetsModified: 1.974ms
+	CategorizeAssetsWithTransientArtifact: 0.905ms
+	ProcessAssetsWithTransientArtifactChanges: 21.479ms
+	CategorizeAssets: 1.338ms
+	ImportOutOfDateAssets: 17478.169ms (-5589.610ms without children)
+		ImportManagerImport: 16007.623ms (31.697ms without children)
+			ImportInProcess: 15974.864ms
+			UpdateCategorizedAssets: 1.062ms
+		CompileScripts: 7041.747ms
+		ReloadNativeAssets: 0.001ms
+		UnloadImportedAssets: 0.765ms
+		ReloadImportedAssets: 0.045ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.033ms
+		InitializingProgressBar: 0.017ms
+		PostProcessAllAssetNotificationsAddChangedAssets: 0.002ms
+		OnDemandSchedulerStart: 17.548ms
+	PostProcessAllAssets: 1723.226ms
+	Hotreload: 3.530ms
+	GatherAllCurrentPrimaryArtifactRevisions: 0.008ms
+	UnloadStreamsBegin: 4.591ms
+	PersistCurrentRevisions: 0.527ms
+	UnloadStreamsEnd: 0.004ms
+	GenerateScriptTypeHashes: 0.002ms
+	Untracked: 9105.198ms
+
+Application.AssetDatabase Initial Refresh End
+Scanning for USB devices : 4.270ms
+Initializing Unity extensions:
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-ヒモヒト
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 138 unused Assets / (508.9 KB). Loaded Objects now: 777.
+Memory consumption went from 98.7 MB to 98.2 MB.
+Total: 16.434500 ms (FindLiveObjects: 0.136600 ms CreateObjectMapping: 0.029600 ms MarkObjects: 15.596400 ms  DeleteObjects: 0.669200 ms)
+
+Opening scene 'Assets/Scenes/Tutorial.unity'
+Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/Scenes/Tutorial.unity'
+	Deserialize:            32.974 ms
+	Integration:            5958.030 ms
+	Integration of assets:  0.013 ms
+	Thread Wait Time:       0.038 ms
+	Total Operation Time:   5991.055 ms
+Unloading 9 unused Assets / (5.0 KB). Loaded Objects now: 1354.
+Memory consumption went from 205.4 MB to 205.4 MB.
+Total: 14.240200 ms (FindLiveObjects: 0.192400 ms CreateObjectMapping: 0.022900 ms MarkObjects: 13.860300 ms  DeleteObjects: 0.161200 ms)
+
+REPRO_RUN Unity=6000.3.21f1 scene=Tutorial setup=controlled relocation; not full manual play
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CheckpointMergedBridgeRepro:Run () (at Assets/Editor/CheckpointMergedBridgeRepro.cs:23)
+
+(Filename: Assets/Editor/CheckpointMergedBridgeRepro.cs Line: 23)
+
+[Project] Loading completed in 43.592 seconds
+	Project init time: 				36.080 seconds
+		Template init time: 		0.000 seconds
+		Package Manager init time: 		1.870 seconds
+		Asset Database init time: 		1.087 seconds
+		Global illumination init time: 	0.007 seconds
+		Assemblies load time: 			2.553 seconds
+		Unity extensions init time: 	0.001 seconds
+		Asset Database refresh time: 	29.311 seconds
+	Scene opening time: 			6.624 seconds
+##utp:{"type":"ProjectInfo","version":2,"phase":"Immediate","time":1790763064000,"processId":4032,"projectLoad":43.591935400000007,"projectInit":36.0803041,"templateInit":0.0,"packageManagerInit":1.8696192,"assetDatabaseInit":1.0871447,"globalIlluminationInit":0.0070566,"assembliesLoad":2.5534792,"unityExtensionsInit":0.0010316,"assetDatabaseRefresh":29.3109153,"sceneOpening":6.6238182}
+##utp:{"type":"EditorInfo","version":2,"phase":"Immediate","time":1790763064000,"processId":4032,"editorVersion":"6000.3.21f1 (c02631ffc030)","branch":"6000.3/staging","buildType":"Release","platform":"Windows"}
+Reloading assemblies for play mode.
+Reloading assemblies after forced synchronous recompile.
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.857 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Native extension for WindowsStandalone target not found
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  7.394 seconds
+Domain Reload Profiling: 8240ms
+	BeginReloadAssembly (565ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (60ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (103ms)
+	RebuildCommonClasses (114ms)
+	RebuildNativeTypeToScriptingClass (38ms)
+	initialDomainReloadingComplete (67ms)
+	LoadAllAssembliesAndSetupDomain (61ms)
+		LoadAssemblies (338ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (45ms)
+			TypeCache.Refresh (8ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (23ms)
+			ResolveRequiredComponents (6ms)
+	FinalizeReload (7395ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (938ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (70ms)
+			SetLoadedEditorAssemblies (9ms)
+			BeforeProcessingInitializeOnLoad (324ms)
+			ProcessInitializeOnLoadAttributes (359ms)
+			ProcessInitializeOnLoadMethodAttributes (158ms)
+			AfterProcessingInitializeOnLoad (18ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (5932ms)
+Asset Pipeline Refresh (id=32b7914bd61e53f4ebbb93406abb7ccb): Total: 8.433 seconds - Initiated by StopAssetImportingV2(ForceSynchronousImport | ForceDomainReload)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=7490 ms
+		Asset DB Callback time: managed=56 ms, native=1 ms
+		Scripting: domain reloads=1, domain reload time=877 ms, compile time=7 ms, other=0 ms
+		Project Asset Count: scripts=43, non-scripts=99
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokeCustomDependenciesCallbacks: 0.003ms
+	InvokePackagesCallback: 5.975ms
+	ApplyChangesToAssetFolders: 0.172ms
+	Scan: 0.001ms
+	OnSourceAssetsModified: 0.004ms
+	CategorizeAssetsWithTransientArtifact: 0.006ms
+	ProcessAssetsWithTransientArtifactChanges: 0.183ms
+	CategorizeAssets: 2.136ms
+	ImportOutOfDateAssets: 7400.164ms (7392.419ms without children)
+		CompileScripts: 6.993ms
+		CollectScriptTypesHashes: 0.001ms
+		ReloadNativeAssets: 0.001ms
+		UnloadImportedAssets: 0.238ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.054ms
+		InitializingProgressBar: 0.001ms
+		PostProcessAllAssetNotificationsAddChangedAssets: 0.001ms
+		OnDemandSchedulerStart: 0.457ms
+	PostProcessAllAssets: 56.944ms
+	GatherAllCurrentPrimaryArtifactRevisions: 0.045ms
+	UnloadStreamsBegin: 0.224ms
+	PersistCurrentRevisions: 0.014ms
+	UnloadStreamsEnd: 0.002ms
+	GenerateScriptTypeHashes: 0.001ms
+	Untracked: 967.255ms
+
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            9.051 ms
+	Integration:            6696.202 ms
+	Integration of assets:  0.015 ms
+	Thread Wait Time:       0.032 ms
+	Total Operation Time:   6705.300 ms
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[Licensing::Client] Successfully resolved entitlement details
+Play開始地点：Tutorial
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHitoEditor.PlayStartSceneSelector:ConfigurePlayStartScene (string,string) (at Assets/Editor/PlayStartSceneSelector.cs:50)
+HimoHitoEditor.PlayStartSceneSelector:ConfigurePlayStartScene () (at Assets/Editor/PlayStartSceneSelector.cs:23)
+UnityEditor.EditorApplication:Internal_CallDelayFunctions ()
+
+(Filename: Assets/Editor/PlayStartSceneSelector.cs Line: 50)
+
+Start Indexing on Editor startup
+ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+  at System.Collections.Generic.List`1[T].get_Item (System.Int32 index) [0x00009] in <41d29b352f6a475ab1bf7c6628b82790>:0 
+  at UnityEditor.Search.SearchDatabase+<EnumerateAll>d__81.MoveNext () [0x00106] in <63453c9528324daaa566ad51effa49a4>:0 
+  at System.Linq.Enumerable.TryGetFirst[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Boolean& found) [0x00045] in <80564d689e48448fa2a7101993ee7201>:0 
+  at System.Linq.Enumerable.First[TSource] (System.Collections.Generic.IEnumerable`1[T] source) [0x00000] in <80564d689e48448fa2a7101993ee7201>:0 
+  at UnityEditor.Search.SearchDatabase.GetDefaultSearchDatabase () [0x00006] in <63453c9528324daaa566ad51effa49a4>:0 
+  at UnityEditor.Search.SearchInit.IndexationOnStartup () [0x0000c] in <63453c9528324daaa566ad51effa49a4>:0 
+  at UnityEditor.EditorApplication.Internal_CallDelayFunctions () [0x0002c] in <ebc962e8381145e6bdb44b1996e8e9b4>:0 
+
+REPRO_STATE {"sequence":0,"frame":2,"section":1,"generatedCount":0,"removedHooksCount":0,"checkpointSelected":6,"scene":"Tutorial","label":"DetachAndRefund.enter","centerName":"UNASSIGNED","time":0.019999992102384568,"ropeCurrent":99.0,"checkpointRope":99.0,"selected":6,"centerSelf":false,"centerHierarchy":false,"attached":false,"playerPosition":{"x":-4.0,"y":0.9200000166893005},"platforms":[],"checkpointPlatforms":[],"removedHooks":[]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.RopeController:DetachAndRefund (bool) (at Assets/Scripts/RopeController.cs:287)
+HimoHito.RopeController:OnDisable () (at Assets/Scripts/RopeController.cs:195)
+UnityEngine.Behaviour:set_enabled (bool)
+HimoHito.MainStagePreview:BeginPreview () (at Assets/Scripts/MainStagePreview.cs:116)
+HimoHito.MainStagePreview:PlayFor (UnityEngine.GameObject) (at Assets/Scripts/MainStagePreview.cs:55)
+HimoHito.PrototypeRunController:CommitTutorialStart () (at Assets/Scripts/PrototypeRunController.cs:302)
+HimoHito.PrototypeRunController:BeginGameFromTitle () (at Assets/Scripts/PrototypeRunController.cs:289)
+HimoHito.ReproDriver/<Run>d__18:MoveNext () (at Assets/Scripts/ReproTrace.cs:123)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+Created GICache directory at C:/Users/田尻大翔/AppData/LocalLow/Unity/Caches/GiCache. Took: 0.108s, timestamps: [58.934 - 59.042]
+AUTHORED_TUTORIAL_CHECKPOINT Tutorial Landing section=2 respawn=(12.00, 0.95)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproDriver/<Run>d__18:MoveNext () (at Assets/Scripts/ReproTrace.cs:134)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 134)
+
+AUTHORED_TUTORIAL_CHECKPOINT Tutorial T3 Landing section=4 respawn=(39.00, 0.95)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproDriver/<Run>d__18:MoveNext () (at Assets/Scripts/ReproTrace.cs:134)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 134)
+
+AUTHORED_TUTORIAL_CHECKPOINT Tutorial T2 Landing section=3 respawn=(27.00, 0.95)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproDriver/<Run>d__18:MoveNext () (at Assets/Scripts/ReproTrace.cs:134)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 134)
+
+REPRO_STATE {"sequence":1,"frame":402,"section":1,"generatedCount":0,"removedHooksCount":0,"checkpointSelected":6,"scene":"Tutorial","label":"TryReachTutorialSection.accept","centerName":"Tutorial T4 Center Hook","time":0.7599997520446777,"ropeCurrent":99.0,"checkpointRope":99.0,"selected":6,"centerSelf":true,"centerHierarchy":true,"attached":false,"playerPosition":{"x":12.0,"y":0.964998185634613},"platforms":[],"checkpointPlatforms":[],"removedHooks":[]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.PrototypeRunController:TryReachTutorialSection (int,UnityEngine.Vector2,int) (at Assets/Scripts/PrototypeRunController.cs:370)
+HimoHito.TutorialCheckpoint:OnCollisionStay2D (UnityEngine.Collision2D) (at Assets/Scripts/TutorialCheckpoint.cs:40)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+REPRO_STATE {"sequence":2,"frame":402,"section":2,"generatedCount":0,"removedHooksCount":0,"checkpointSelected":6,"scene":"Tutorial","label":"CaptureCheckpointState.enter","centerName":"Tutorial T4 Center Hook","time":0.7599997520446777,"ropeCurrent":99.0,"checkpointRope":99.0,"selected":6,"centerSelf":true,"centerHierarchy":true,"attached":false,"playerPosition":{"x":12.0,"y":0.964998185634613},"platforms":[],"checkpointPlatforms":[],"removedHooks":[]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.PrototypeRunController:CaptureCheckpointState () (at Assets/Scripts/PrototypeRunController.cs:436)
+HimoHito.PrototypeRunController:TryReachTutorialSection (int,UnityEngine.Vector2,int) (at Assets/Scripts/PrototypeRunController.cs:374)
+HimoHito.TutorialCheckpoint:OnCollisionStay2D (UnityEngine.Collision2D) (at Assets/Scripts/TutorialCheckpoint.cs:40)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+REPRO_STATE {"sequence":3,"frame":402,"section":2,"generatedCount":0,"removedHooksCount":0,"checkpointSelected":6,"scene":"Tutorial","label":"CapturePlatformStates.enter","centerName":"Tutorial T4 Center Hook","time":0.7599997520446777,"ropeCurrent":99.0,"checkpointRope":99.0,"selected":6,"centerSelf":true,"centerHierarchy":true,"attached":false,"playerPosition":{"x":12.0,"y":0.964998185634613},"platforms":[],"checkpointPlatforms":[],"removedHooks":[]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.RopePlatformBuilder:CapturePlatformStates () (at Assets/Scripts/RopePlatformBuilder.cs:191)
+HimoHito.PrototypeRunController:CaptureCheckpointState () (at Assets/Scripts/PrototypeRunController.cs:439)
+HimoHito.PrototypeRunController:TryReachTutorialSection (int,UnityEngine.Vector2,int) (at Assets/Scripts/PrototypeRunController.cs:374)
+HimoHito.TutorialCheckpoint:OnCollisionStay2D (UnityEngine.Collision2D) (at Assets/Scripts/TutorialCheckpoint.cs:40)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+REPRO_STATE {"sequence":4,"frame":402,"section":2,"generatedCount":0,"removedHooksCount":0,"checkpointSelected":6,"scene":"Tutorial","label":"CaptureCheckpointState.exit","centerName":"Tutorial T4 Center Hook","time":0.7599997520446777,"ropeCurrent":99.0,"checkpointRope":99.0,"selected":6,"centerSelf":true,"centerHierarchy":true,"attached":false,"playerPosition":{"x":12.0,"y":0.964998185634613},"platforms":[],"checkpointPlatforms":[],"removedHooks":[]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.PrototypeRunController:CaptureCheckpointState () (at Assets/Scripts/PrototypeRunController.cs:440)
+HimoHito.PrototypeRunController:TryReachTutorialSection (int,UnityEngine.Vector2,int) (at Assets/Scripts/PrototypeRunController.cs:374)
+HimoHito.TutorialCheckpoint:OnCollisionStay2D (UnityEngine.Collision2D) (at Assets/Scripts/TutorialCheckpoint.cs:40)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+REPRO_STATE {"sequence":5,"frame":793,"section":2,"generatedCount":0,"removedHooksCount":0,"checkpointSelected":6,"scene":"Tutorial","label":"TryReachTutorialSection.accept","centerName":"Tutorial T4 Center Hook","time":1.5599994659423829,"ropeCurrent":99.0,"checkpointRope":99.0,"selected":6,"centerSelf":true,"centerHierarchy":true,"attached":false,"playerPosition":{"x":27.0,"y":0.964998185634613},"platforms":[],"checkpointPlatforms":[],"removedHooks":[]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.PrototypeRunController:TryReachTutorialSection (int,UnityEngine.Vector2,int) (at Assets/Scripts/PrototypeRunController.cs:370)
+HimoHito.TutorialCheckpoint:OnCollisionStay2D (UnityEngine.Collision2D) (at Assets/Scripts/TutorialCheckpoint.cs:40)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+REPRO_STATE {"sequence":6,"frame":793,"section":3,"generatedCount":0,"removedHooksCount":0,"checkpointSelected":6,"scene":"Tutorial","label":"CaptureCheckpointState.enter","centerName":"Tutorial T4 Center Hook","time":1.5599994659423829,"ropeCurrent":99.0,"checkpointRope":99.0,"selected":6,"centerSelf":true,"centerHierarchy":true,"attached":false,"playerPosition":{"x":27.0,"y":0.964998185634613},"platforms":[],"checkpointPlatforms":[],"removedHooks":[]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.PrototypeRunController:CaptureCheckpointState () (at Assets/Scripts/PrototypeRunController.cs:436)
+HimoHito.PrototypeRunController:TryReachTutorialSection (int,UnityEngine.Vector2,int) (at Assets/Scripts/PrototypeRunController.cs:374)
+HimoHito.TutorialCheckpoint:OnCollisionStay2D (UnityEngine.Collision2D) (at Assets/Scripts/TutorialCheckpoint.cs:40)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+REPRO_STATE {"sequence":7,"frame":793,"section":3,"generatedCount":0,"removedHooksCount":0,"checkpointSelected":6,"scene":"Tutorial","label":"CapturePlatformStates.enter","centerName":"Tutorial T4 Center Hook","time":1.5599994659423829,"ropeCurrent":99.0,"checkpointRope":99.0,"selected":6,"centerSelf":true,"centerHierarchy":true,"attached":false,"playerPosition":{"x":27.0,"y":0.964998185634613},"platforms":[],"checkpointPlatforms":[],"removedHooks":[]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.RopePlatformBuilder:CapturePlatformStates () (at Assets/Scripts/RopePlatformBuilder.cs:191)
+HimoHito.PrototypeRunController:CaptureCheckpointState () (at Assets/Scripts/PrototypeRunController.cs:439)
+HimoHito.PrototypeRunController:TryReachTutorialSection (int,UnityEngine.Vector2,int) (at Assets/Scripts/PrototypeRunController.cs:374)
+HimoHito.TutorialCheckpoint:OnCollisionStay2D (UnityEngine.Collision2D) (at Assets/Scripts/TutorialCheckpoint.cs:40)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+REPRO_STATE {"sequence":8,"frame":793,"section":3,"generatedCount":0,"removedHooksCount":0,"checkpointSelected":6,"scene":"Tutorial","label":"CaptureCheckpointState.exit","centerName":"Tutorial T4 Center Hook","time":1.5599994659423829,"ropeCurrent":99.0,"checkpointRope":99.0,"selected":6,"centerSelf":true,"centerHierarchy":true,"attached":false,"playerPosition":{"x":27.0,"y":0.964998185634613},"platforms":[],"checkpointPlatforms":[],"removedHooks":[]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.PrototypeRunController:CaptureCheckpointState () (at Assets/Scripts/PrototypeRunController.cs:440)
+HimoHito.PrototypeRunController:TryReachTutorialSection (int,UnityEngine.Vector2,int) (at Assets/Scripts/PrototypeRunController.cs:374)
+HimoHito.TutorialCheckpoint:OnCollisionStay2D (UnityEngine.Collision2D) (at Assets/Scripts/TutorialCheckpoint.cs:40)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+REPRO_STATE {"sequence":9,"frame":1246,"section":3,"generatedCount":0,"removedHooksCount":0,"checkpointSelected":6,"scene":"Tutorial","label":"TryReachTutorialSection.accept","centerName":"Tutorial T4 Center Hook","time":2.3799991607666017,"ropeCurrent":99.0,"checkpointRope":99.0,"selected":6,"centerSelf":true,"centerHierarchy":true,"attached":false,"playerPosition":{"x":39.0,"y":0.964998185634613},"platforms":[],"checkpointPlatforms":[],"removedHooks":[]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.PrototypeRunController:TryReachTutorialSection (int,UnityEngine.Vector2,int) (at Assets/Scripts/PrototypeRunController.cs:370)
+HimoHito.TutorialCheckpoint:OnCollisionStay2D (UnityEngine.Collision2D) (at Assets/Scripts/TutorialCheckpoint.cs:40)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+REPRO_STATE {"sequence":10,"frame":1246,"section":4,"generatedCount":0,"removedHooksCount":0,"checkpointSelected":6,"scene":"Tutorial","label":"CaptureCheckpointState.enter","centerName":"Tutorial T4 Center Hook","time":2.3799991607666017,"ropeCurrent":99.0,"checkpointRope":99.0,"selected":6,"centerSelf":true,"centerHierarchy":true,"attached":false,"playerPosition":{"x":39.0,"y":0.964998185634613},"platforms":[],"checkpointPlatforms":[],"removedHooks":[]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.PrototypeRunController:CaptureCheckpointState () (at Assets/Scripts/PrototypeRunController.cs:436)
+HimoHito.PrototypeRunController:TryReachTutorialSection (int,UnityEngine.Vector2,int) (at Assets/Scripts/PrototypeRunController.cs:374)
+HimoHito.TutorialCheckpoint:OnCollisionStay2D (UnityEngine.Collision2D) (at Assets/Scripts/TutorialCheckpoint.cs:40)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+REPRO_STATE {"sequence":11,"frame":1246,"section":4,"generatedCount":0,"removedHooksCount":0,"checkpointSelected":6,"scene":"Tutorial","label":"CapturePlatformStates.enter","centerName":"Tutorial T4 Center Hook","time":2.3799991607666017,"ropeCurrent":99.0,"checkpointRope":99.0,"selected":6,"centerSelf":true,"centerHierarchy":true,"attached":false,"playerPosition":{"x":39.0,"y":0.964998185634613},"platforms":[],"checkpointPlatforms":[],"removedHooks":[]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.RopePlatformBuilder:CapturePlatformStates () (at Assets/Scripts/RopePlatformBuilder.cs:191)
+HimoHito.PrototypeRunController:CaptureCheckpointState () (at Assets/Scripts/PrototypeRunController.cs:439)
+HimoHito.PrototypeRunController:TryReachTutorialSection (int,UnityEngine.Vector2,int) (at Assets/Scripts/PrototypeRunController.cs:374)
+HimoHito.TutorialCheckpoint:OnCollisionStay2D (UnityEngine.Collision2D) (at Assets/Scripts/TutorialCheckpoint.cs:40)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+REPRO_STATE {"sequence":12,"frame":1246,"section":4,"generatedCount":0,"removedHooksCount":0,"checkpointSelected":6,"scene":"Tutorial","label":"CaptureCheckpointState.exit","centerName":"Tutorial T4 Center Hook","time":2.3799991607666017,"ropeCurrent":99.0,"checkpointRope":99.0,"selected":6,"centerSelf":true,"centerHierarchy":true,"attached":false,"playerPosition":{"x":39.0,"y":0.964998185634613},"platforms":[],"checkpointPlatforms":[],"removedHooks":[]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.PrototypeRunController:CaptureCheckpointState () (at Assets/Scripts/PrototypeRunController.cs:440)
+HimoHito.PrototypeRunController:TryReachTutorialSection (int,UnityEngine.Vector2,int) (at Assets/Scripts/PrototypeRunController.cs:374)
+HimoHito.TutorialCheckpoint:OnCollisionStay2D (UnityEngine.Collision2D) (at Assets/Scripts/TutorialCheckpoint.cs:40)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+REPRO_STATE {"sequence":13,"frame":1483,"section":4,"generatedCount":0,"removedHooksCount":0,"checkpointSelected":6,"scene":"Tutorial","label":"SETUP_COMPLETE: controlled relocation to authored entry checkpoint; earlier puzzles not traversed","centerName":"Tutorial T4 Center Hook","time":2.8427889347076418,"ropeCurrent":99.0,"checkpointRope":99.0,"selected":6,"centerSelf":true,"centerHierarchy":true,"attached":false,"playerPosition":{"x":39.0,"y":0.964999794960022},"platforms":[],"checkpointPlatforms":[],"removedHooks":[]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.ReproDriver/<Run>d__18:MoveNext () (at Assets/Scripts/ReproTrace.cs:161)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+REPRO_STATE {"sequence":14,"frame":1483,"section":4,"generatedCount":0,"removedHooksCount":0,"checkpointSelected":6,"scene":"Tutorial","label":"RestoreSelectedRopeLength.enter","centerName":"Tutorial T4 Center Hook","time":2.8427889347076418,"ropeCurrent":99.0,"checkpointRope":99.0,"selected":6,"centerSelf":true,"centerHierarchy":true,"attached":false,"playerPosition":{"x":39.0,"y":0.964999794960022},"platforms":[],"checkpointPlatforms":[],"removedHooks":[]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.RopeController:RestoreSelectedRopeLength (int) (at Assets/Scripts/RopeController.cs:458)
+HimoHito.ReproDriver/<Run>d__18:MoveNext () (at Assets/Scripts/ReproTrace.cs:162)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+REPRO_STATE {"sequence":15,"frame":1586,"section":4,"generatedCount":0,"removedHooksCount":0,"checkpointSelected":6,"scene":"Tutorial","label":"BEFORE_MERGE_0_BRIDGES","centerName":"Tutorial T4 Center Hook","time":3.044285535812378,"ropeCurrent":99.0,"checkpointRope":99.0,"selected":6,"centerSelf":true,"centerHierarchy":true,"attached":false,"playerPosition":{"x":41.349998474121097,"y":0.9646651148796082},"platforms":[],"checkpointPlatforms":[],"removedHooks":[]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.ReproDriver/<Run>d__18:MoveNext () (at Assets/Scripts/ReproTrace.cs:165)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+REPRO_STATE {"sequence":16,"frame":1586,"section":4,"generatedCount":1,"removedHooksCount":0,"checkpointSelected":6,"scene":"Tutorial","label":"CreatePlatform.exit","centerName":"Tutorial T4 Center Hook","time":3.044285535812378,"ropeCurrent":93.0,"checkpointRope":99.0,"selected":6,"centerSelf":true,"centerHierarchy":true,"attached":false,"playerPosition":{"x":41.349998474121097,"y":0.9646651148796082},"platforms":[{"start":{"x":47.0,"y":1.5499999523162842},"end":{"x":42.0,"y":0.3499999940395355},"ropeLength":6.0,"releaseCount":0,"wrapsCount":2}],"checkpointPlatforms":[],"removedHooks":[]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.RopePlatformBuilder:CreatePlatform (UnityEngine.Vector2,UnityEngine.Vector2,single) (at Assets/Scripts/RopePlatformBuilder.cs:462)
+HimoHito.RopePlatformBuilder:TryBuildCurrentPlatform () (at Assets/Scripts/RopePlatformBuilder.cs:112)
+HimoHito.ReproDriver/<Run>d__18:MoveNext () (at Assets/Scripts/ReproTrace.cs:167)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+REPRO_STATE {"sequence":17,"frame":1850,"section":4,"generatedCount":1,"removedHooksCount":0,"checkpointSelected":6,"scene":"Tutorial","label":"BEFORE_SECOND_BUILD","centerName":"Tutorial T4 Center Hook","time":4.092522621154785,"ropeCurrent":93.0,"checkpointRope":99.0,"selected":6,"centerSelf":true,"centerHierarchy":true,"attached":false,"playerPosition":{"x":46.459510803222659,"y":2.1919469833374025},"platforms":[{"start":{"x":47.0,"y":1.5499999523162842},"end":{"x":42.0,"y":0.3499999940395355},"ropeLength":6.0,"releaseCount":0,"wrapsCount":2}],"checkpointPlatforms":[],"removedHooks":[]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.ReproDriver/<Run>d__18:MoveNext () (at Assets/Scripts/ReproTrace.cs:173)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+REPRO_STATE {"sequence":18,"frame":1850,"section":4,"generatedCount":2,"removedHooksCount":0,"checkpointSelected":6,"scene":"Tutorial","label":"CreatePlatform.exit","centerName":"Tutorial T4 Center Hook","time":4.092522621154785,"ropeCurrent":87.0,"checkpointRope":99.0,"selected":6,"centerSelf":true,"centerHierarchy":true,"attached":false,"playerPosition":{"x":46.459510803222659,"y":2.1919469833374025},"platforms":[{"start":{"x":47.0,"y":1.5499999523162842},"end":{"x":42.0,"y":0.3499999940395355},"ropeLength":6.0,"releaseCount":0,"wrapsCount":2},{"start":{"x":52.0,"y":0.3499999940395355},"end":{"x":47.0,"y":1.5499999523162842},"ropeLength":6.0,"releaseCount":0,"wrapsCount":2}],"checkpointPlatforms":[],"removedHooks":[]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.RopePlatformBuilder:CreatePlatform (UnityEngine.Vector2,UnityEngine.Vector2,single) (at Assets/Scripts/RopePlatformBuilder.cs:462)
+HimoHito.RopePlatformBuilder:TryBuildCurrentPlatform () (at Assets/Scripts/RopePlatformBuilder.cs:112)
+HimoHito.ReproDriver/<Run>d__18:MoveNext () (at Assets/Scripts/ReproTrace.cs:176)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+REPRO_STATE {"sequence":19,"frame":1850,"section":4,"generatedCount":2,"removedHooksCount":0,"checkpointSelected":6,"scene":"Tutorial","label":"BEFORE_MERGE_2_BRIDGES","centerName":"Tutorial T4 Center Hook","time":4.092522621154785,"ropeCurrent":87.0,"checkpointRope":99.0,"selected":6,"centerSelf":true,"centerHierarchy":true,"attached":false,"playerPosition":{"x":46.459510803222659,"y":2.1919469833374025},"platforms":[{"start":{"x":47.0,"y":1.5499999523162842},"end":{"x":42.0,"y":0.3499999940395355},"ropeLength":6.0,"releaseCount":0,"wrapsCount":2},{"start":{"x":52.0,"y":0.3499999940395355},"end":{"x":47.0,"y":1.5499999523162842},"ropeLength":6.0,"releaseCount":0,"wrapsCount":2}],"checkpointPlatforms":[],"removedHooks":[]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.ReproDriver/<Run>d__18:MoveNext () (at Assets/Scripts/ReproTrace.cs:178)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+REPRO_STATE {"sequence":20,"frame":1850,"section":4,"generatedCount":1,"removedHooksCount":0,"checkpointSelected":6,"scene":"Tutorial","label":"CreatePlatform.exit","centerName":"Tutorial T4 Center Hook","time":4.092522621154785,"ropeCurrent":87.0,"checkpointRope":99.0,"selected":6,"centerSelf":true,"centerHierarchy":true,"attached":false,"playerPosition":{"x":46.459510803222659,"y":2.1919469833374025},"platforms":[{"start":{"x":42.0,"y":0.3499999940395355},"end":{"x":52.0,"y":0.3499999940395355},"ropeLength":12.0,"releaseCount":0,"wrapsCount":2}],"checkpointPlatforms":[],"removedHooks":[]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.RopePlatformBuilder:CreatePlatform (UnityEngine.Vector2,UnityEngine.Vector2,single) (at Assets/Scripts/RopePlatformBuilder.cs:462)
+HimoHito.RopePlatformBuilder:TryRemoveAimedHook () (at Assets/Scripts/RopePlatformBuilder.cs:176)
+HimoHito.ReproDriver/<Run>d__18:MoveNext () (at Assets/Scripts/ReproTrace.cs:179)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+REPRO_STATE {"sequence":21,"frame":1850,"section":4,"generatedCount":1,"removedHooksCount":1,"checkpointSelected":6,"scene":"Tutorial","label":"Merge.exit","centerName":"Tutorial T4 Center Hook","time":4.092522621154785,"ropeCurrent":87.0,"checkpointRope":99.0,"selected":6,"centerSelf":false,"centerHierarchy":false,"attached":false,"playerPosition":{"x":46.459510803222659,"y":2.1919469833374025},"platforms":[{"start":{"x":42.0,"y":0.3499999940395355},"end":{"x":52.0,"y":0.3499999940395355},"ropeLength":12.0,"releaseCount":2,"wrapsCount":2}],"checkpointPlatforms":[],"removedHooks":["Tutorial T4 Center Hook"]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.RopePlatformBuilder:TryRemoveAimedHook () (at Assets/Scripts/RopePlatformBuilder.cs:184)
+HimoHito.ReproDriver/<Run>d__18:MoveNext () (at Assets/Scripts/ReproTrace.cs:179)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+REPRO_STATE {"sequence":22,"frame":1850,"section":4,"generatedCount":1,"removedHooksCount":1,"checkpointSelected":6,"scene":"Tutorial","label":"MERGE_IMMEDIATE_BINDING","centerName":"Tutorial T4 Center Hook","time":4.092522621154785,"ropeCurrent":87.0,"checkpointRope":99.0,"selected":6,"centerSelf":false,"centerHierarchy":false,"attached":false,"playerPosition":{"x":46.459510803222659,"y":2.1919469833374025},"platforms":[{"start":{"x":42.0,"y":0.3499999940395355},"end":{"x":52.0,"y":0.3499999940395355},"ropeLength":12.0,"releaseCount":2,"wrapsCount":2}],"checkpointPlatforms":[],"removedHooks":["Tutorial T4 Center Hook"]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.ReproDriver/<Run>d__18:MoveNext () (at Assets/Scripts/ReproTrace.cs:180)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+REPRO_STATE {"sequence":23,"frame":2039,"section":4,"generatedCount":1,"removedHooksCount":1,"checkpointSelected":6,"scene":"Tutorial","label":"REPRO_BEFORE_CHECKPOINT","centerName":"Tutorial T4 Center Hook","time":4.8926100730896,"ropeCurrent":87.0,"checkpointRope":99.0,"selected":6,"centerSelf":false,"centerHierarchy":false,"attached":false,"playerPosition":{"x":46.461124420166019,"y":-0.8521010279655457},"platforms":[{"start":{"x":42.0,"y":0.3499999940395355},"end":{"x":52.0,"y":0.3499999940395355},"ropeLength":12.0,"releaseCount":0,"wrapsCount":2}],"checkpointPlatforms":[],"removedHooks":["Tutorial T4 Center Hook"]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.ReproDriver/<Run>d__18:MoveNext () (at Assets/Scripts/ReproTrace.cs:182)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+NOT REPRODUCIBLE WITH AUTHORED TUTORIAL FLOW: checkpoints only 2,3,4; T4 captured before merge; goal has no later checkpoint.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproDriver/<Run>d__18:MoveNext () (at Assets/Scripts/ReproTrace.cs:185)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 185)
+
+REPRO_STATE {"sequence":24,"frame":2039,"section":4,"generatedCount":1,"removedHooksCount":1,"checkpointSelected":6,"scene":"Tutorial","label":"RESTART_BEFORE","centerName":"Tutorial T4 Center Hook","time":4.8926100730896,"ropeCurrent":87.0,"checkpointRope":99.0,"selected":6,"centerSelf":false,"centerHierarchy":false,"attached":false,"playerPosition":{"x":46.461124420166019,"y":-0.8521010279655457},"platforms":[{"start":{"x":42.0,"y":0.3499999940395355},"end":{"x":52.0,"y":0.3499999940395355},"ropeLength":12.0,"releaseCount":0,"wrapsCount":2}],"checkpointPlatforms":[],"removedHooks":["Tutorial T4 Center Hook"]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.ReproDriver/<Run>d__18:MoveNext () (at Assets/Scripts/ReproTrace.cs:186)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+REPRO_STATE {"sequence":25,"frame":2039,"section":4,"generatedCount":1,"removedHooksCount":1,"checkpointSelected":6,"scene":"Tutorial","label":"RestartFromCheckpoint.enter","centerName":"Tutorial T4 Center Hook","time":4.8926100730896,"ropeCurrent":87.0,"checkpointRope":99.0,"selected":6,"centerSelf":false,"centerHierarchy":false,"attached":false,"playerPosition":{"x":46.461124420166019,"y":-0.8521010279655457},"platforms":[{"start":{"x":42.0,"y":0.3499999940395355},"end":{"x":52.0,"y":0.3499999940395355},"ropeLength":12.0,"releaseCount":0,"wrapsCount":2}],"checkpointPlatforms":[],"removedHooks":["Tutorial T4 Center Hook"]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.PrototypeRunController:RestartFromCheckpoint () (at Assets/Scripts/PrototypeRunController.cs:401)
+System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+HimoHito.ReproTrace:Call (object,string,object[]) (at Assets/Scripts/ReproTrace.cs:19)
+HimoHito.ReproDriver/<Run>d__18:MoveNext () (at Assets/Scripts/ReproTrace.cs:187)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+REPRO_STATE {"sequence":26,"frame":2039,"section":4,"generatedCount":1,"removedHooksCount":1,"checkpointSelected":6,"scene":"Tutorial","label":"DetachAndRefund.enter","centerName":"Tutorial T4 Center Hook","time":4.8926100730896,"ropeCurrent":87.0,"checkpointRope":99.0,"selected":6,"centerSelf":false,"centerHierarchy":false,"attached":false,"playerPosition":{"x":46.461124420166019,"y":-0.8521010279655457},"platforms":[{"start":{"x":42.0,"y":0.3499999940395355},"end":{"x":52.0,"y":0.3499999940395355},"ropeLength":12.0,"releaseCount":0,"wrapsCount":2}],"checkpointPlatforms":[],"removedHooks":["Tutorial T4 Center Hook"]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.RopeController:DetachAndRefund (bool) (at Assets/Scripts/RopeController.cs:287)
+HimoHito.PrototypeRunController:RestartFromCheckpoint () (at Assets/Scripts/PrototypeRunController.cs:403)
+System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+HimoHito.ReproTrace:Call (object,string,object[]) (at Assets/Scripts/ReproTrace.cs:19)
+HimoHito.ReproDriver/<Run>d__18:MoveNext () (at Assets/Scripts/ReproTrace.cs:187)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+REPRO_STATE {"sequence":27,"frame":2039,"section":4,"generatedCount":1,"removedHooksCount":1,"checkpointSelected":6,"scene":"Tutorial","label":"RestoreCurrentLength.enter","centerName":"Tutorial T4 Center Hook","time":4.8926100730896,"ropeCurrent":87.0,"checkpointRope":99.0,"selected":6,"centerSelf":false,"centerHierarchy":false,"attached":false,"playerPosition":{"x":46.461124420166019,"y":-0.8521010279655457},"platforms":[{"start":{"x":42.0,"y":0.3499999940395355},"end":{"x":52.0,"y":0.3499999940395355},"ropeLength":12.0,"releaseCount":0,"wrapsCount":2}],"checkpointPlatforms":[],"removedHooks":["Tutorial T4 Center Hook"]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.RopeResource:RestoreCurrentLength (single) (at Assets/Scripts/RopeResource.cs:68)
+HimoHito.PrototypeRunController:RestoreCheckpointState () (at Assets/Scripts/PrototypeRunController.cs:445)
+HimoHito.PrototypeRunController:RestartFromCheckpoint () (at Assets/Scripts/PrototypeRunController.cs:404)
+System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+HimoHito.ReproTrace:Call (object,string,object[]) (at Assets/Scripts/ReproTrace.cs:19)
+HimoHito.ReproDriver/<Run>d__18:MoveNext () (at Assets/Scripts/ReproTrace.cs:187)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+REPRO_STATE {"sequence":28,"frame":2039,"section":4,"generatedCount":1,"removedHooksCount":1,"checkpointSelected":6,"scene":"Tutorial","label":"RestoreSelectedRopeLength.enter","centerName":"Tutorial T4 Center Hook","time":4.8926100730896,"ropeCurrent":99.0,"checkpointRope":99.0,"selected":6,"centerSelf":false,"centerHierarchy":false,"attached":false,"playerPosition":{"x":46.461124420166019,"y":-0.8521010279655457},"platforms":[{"start":{"x":42.0,"y":0.3499999940395355},"end":{"x":52.0,"y":0.3499999940395355},"ropeLength":12.0,"releaseCount":0,"wrapsCount":2}],"checkpointPlatforms":[],"removedHooks":["Tutorial T4 Center Hook"]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.RopeController:RestoreSelectedRopeLength (int) (at Assets/Scripts/RopeController.cs:458)
+HimoHito.PrototypeRunController:RestoreCheckpointState () (at Assets/Scripts/PrototypeRunController.cs:446)
+HimoHito.PrototypeRunController:RestartFromCheckpoint () (at Assets/Scripts/PrototypeRunController.cs:404)
+System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+HimoHito.ReproTrace:Call (object,string,object[]) (at Assets/Scripts/ReproTrace.cs:19)
+HimoHito.ReproDriver/<Run>d__18:MoveNext () (at Assets/Scripts/ReproTrace.cs:187)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+REPRO_STATE {"sequence":29,"frame":2039,"section":4,"generatedCount":1,"removedHooksCount":1,"checkpointSelected":6,"scene":"Tutorial","label":"RestorePlatformStates.enter","centerName":"Tutorial T4 Center Hook","time":4.8926100730896,"ropeCurrent":99.0,"checkpointRope":99.0,"selected":6,"centerSelf":false,"centerHierarchy":false,"attached":false,"playerPosition":{"x":46.461124420166019,"y":-0.8521010279655457},"platforms":[{"start":{"x":42.0,"y":0.3499999940395355},"end":{"x":52.0,"y":0.3499999940395355},"ropeLength":12.0,"releaseCount":0,"wrapsCount":2}],"checkpointPlatforms":[],"removedHooks":["Tutorial T4 Center Hook"]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.RopePlatformBuilder:RestorePlatformStates (System.Collections.Generic.IReadOnlyList`1<HimoHito.RopePlatformBuilder/PlatformState>) (at Assets/Scripts/RopePlatformBuilder.cs:224)
+HimoHito.PrototypeRunController:RestoreCheckpointState () (at Assets/Scripts/PrototypeRunController.cs:447)
+HimoHito.PrototypeRunController:RestartFromCheckpoint () (at Assets/Scripts/PrototypeRunController.cs:404)
+System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+HimoHito.ReproTrace:Call (object,string,object[]) (at Assets/Scripts/ReproTrace.cs:19)
+HimoHito.ReproDriver/<Run>d__18:MoveNext () (at Assets/Scripts/ReproTrace.cs:187)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+REPRO_STATE {"sequence":30,"frame":2039,"section":4,"generatedCount":1,"removedHooksCount":1,"checkpointSelected":6,"scene":"Tutorial","label":"ClearPlatforms.enter","centerName":"Tutorial T4 Center Hook","time":4.8926100730896,"ropeCurrent":99.0,"checkpointRope":99.0,"selected":6,"centerSelf":false,"centerHierarchy":false,"attached":false,"playerPosition":{"x":46.461124420166019,"y":-0.8521010279655457},"platforms":[{"start":{"x":42.0,"y":0.3499999940395355},"end":{"x":52.0,"y":0.3499999940395355},"ropeLength":12.0,"releaseCount":0,"wrapsCount":2}],"checkpointPlatforms":[],"removedHooks":["Tutorial T4 Center Hook"]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.RopePlatformBuilder:ClearPlatforms () (at Assets/Scripts/RopePlatformBuilder.cs:310)
+HimoHito.RopePlatformBuilder:RestorePlatformStates (System.Collections.Generic.IReadOnlyList`1<HimoHito.RopePlatformBuilder/PlatformState>) (at Assets/Scripts/RopePlatformBuilder.cs:225)
+HimoHito.PrototypeRunController:RestoreCheckpointState () (at Assets/Scripts/PrototypeRunController.cs:447)
+HimoHito.PrototypeRunController:RestartFromCheckpoint () (at Assets/Scripts/PrototypeRunController.cs:404)
+System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+HimoHito.ReproTrace:Call (object,string,object[]) (at Assets/Scripts/ReproTrace.cs:19)
+HimoHito.ReproDriver/<Run>d__18:MoveNext () (at Assets/Scripts/ReproTrace.cs:187)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+REPRO_STATE {"sequence":31,"frame":2039,"section":4,"generatedCount":1,"removedHooksCount":1,"checkpointSelected":6,"scene":"Tutorial","label":"RestoreRemovedHooks.enter","centerName":"Tutorial T4 Center Hook","time":4.8926100730896,"ropeCurrent":99.0,"checkpointRope":99.0,"selected":6,"centerSelf":false,"centerHierarchy":false,"attached":false,"playerPosition":{"x":46.461124420166019,"y":-0.8521010279655457},"platforms":[{"start":{"x":42.0,"y":0.3499999940395355},"end":{"x":52.0,"y":0.3499999940395355},"ropeLength":12.0,"releaseCount":0,"wrapsCount":2}],"checkpointPlatforms":[],"removedHooks":["Tutorial T4 Center Hook"]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.RopePlatformBuilder:RestoreRemovedHooks () (at Assets/Scripts/RopePlatformBuilder.cs:320)
+HimoHito.RopePlatformBuilder:ClearPlatforms () (at Assets/Scripts/RopePlatformBuilder.cs:311)
+HimoHito.RopePlatformBuilder:RestorePlatformStates (System.Collections.Generic.IReadOnlyList`1<HimoHito.RopePlatformBuilder/PlatformState>) (at Assets/Scripts/RopePlatformBuilder.cs:225)
+HimoHito.PrototypeRunController:RestoreCheckpointState () (at Assets/Scripts/PrototypeRunController.cs:447)
+HimoHito.PrototypeRunController:RestartFromCheckpoint () (at Assets/Scripts/PrototypeRunController.cs:404)
+System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+HimoHito.ReproTrace:Call (object,string,object[]) (at Assets/Scripts/ReproTrace.cs:19)
+HimoHito.ReproDriver/<Run>d__18:MoveNext () (at Assets/Scripts/ReproTrace.cs:187)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+REPRO_STATE {"sequence":32,"frame":2039,"section":4,"generatedCount":1,"removedHooksCount":0,"checkpointSelected":6,"scene":"Tutorial","label":"RestoreRemovedHooks.exit","centerName":"Tutorial T4 Center Hook","time":4.8926100730896,"ropeCurrent":99.0,"checkpointRope":99.0,"selected":6,"centerSelf":true,"centerHierarchy":true,"attached":false,"playerPosition":{"x":46.461124420166019,"y":-0.8521010279655457},"platforms":[{"start":{"x":42.0,"y":0.3499999940395355},"end":{"x":52.0,"y":0.3499999940395355},"ropeLength":12.0,"releaseCount":0,"wrapsCount":2}],"checkpointPlatforms":[],"removedHooks":[]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.RopePlatformBuilder:RestoreRemovedHooks () (at Assets/Scripts/RopePlatformBuilder.cs:329)
+HimoHito.RopePlatformBuilder:ClearPlatforms () (at Assets/Scripts/RopePlatformBuilder.cs:311)
+HimoHito.RopePlatformBuilder:RestorePlatformStates (System.Collections.Generic.IReadOnlyList`1<HimoHito.RopePlatformBuilder/PlatformState>) (at Assets/Scripts/RopePlatformBuilder.cs:225)
+HimoHito.PrototypeRunController:RestoreCheckpointState () (at Assets/Scripts/PrototypeRunController.cs:447)
+HimoHito.PrototypeRunController:RestartFromCheckpoint () (at Assets/Scripts/PrototypeRunController.cs:404)
+System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+HimoHito.ReproTrace:Call (object,string,object[]) (at Assets/Scripts/ReproTrace.cs:19)
+HimoHito.ReproDriver/<Run>d__18:MoveNext () (at Assets/Scripts/ReproTrace.cs:187)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+REPRO_STATE {"sequence":33,"frame":2039,"section":4,"generatedCount":0,"removedHooksCount":0,"checkpointSelected":6,"scene":"Tutorial","label":"RestorePlatformStates.exit","centerName":"Tutorial T4 Center Hook","time":4.8926100730896,"ropeCurrent":99.0,"checkpointRope":99.0,"selected":6,"centerSelf":true,"centerHierarchy":true,"attached":false,"playerPosition":{"x":46.461124420166019,"y":-0.8521010279655457},"platforms":[],"checkpointPlatforms":[],"removedHooks":[]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.RopePlatformBuilder:RestorePlatformStates (System.Collections.Generic.IReadOnlyList`1<HimoHito.RopePlatformBuilder/PlatformState>) (at Assets/Scripts/RopePlatformBuilder.cs:235)
+HimoHito.PrototypeRunController:RestoreCheckpointState () (at Assets/Scripts/PrototypeRunController.cs:447)
+HimoHito.PrototypeRunController:RestartFromCheckpoint () (at Assets/Scripts/PrototypeRunController.cs:404)
+System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+HimoHito.ReproTrace:Call (object,string,object[]) (at Assets/Scripts/ReproTrace.cs:19)
+HimoHito.ReproDriver/<Run>d__18:MoveNext () (at Assets/Scripts/ReproTrace.cs:187)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+REPRO_STATE {"sequence":34,"frame":2039,"section":4,"generatedCount":0,"removedHooksCount":0,"checkpointSelected":6,"scene":"Tutorial","label":"RestartFromCheckpoint.exit","centerName":"Tutorial T4 Center Hook","time":4.8926100730896,"ropeCurrent":99.0,"checkpointRope":99.0,"selected":6,"centerSelf":true,"centerHierarchy":true,"attached":false,"playerPosition":{"x":39.0,"y":0.949999988079071},"platforms":[],"checkpointPlatforms":[],"removedHooks":[]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.PrototypeRunController:RestartFromCheckpoint () (at Assets/Scripts/PrototypeRunController.cs:410)
+System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+HimoHito.ReproTrace:Call (object,string,object[]) (at Assets/Scripts/ReproTrace.cs:19)
+HimoHito.ReproDriver/<Run>d__18:MoveNext () (at Assets/Scripts/ReproTrace.cs:187)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+REPRO_STATE {"sequence":35,"frame":2039,"section":4,"generatedCount":0,"removedHooksCount":0,"checkpointSelected":6,"scene":"Tutorial","label":"RESTART_COMPLETE","centerName":"Tutorial T4 Center Hook","time":4.8926100730896,"ropeCurrent":99.0,"checkpointRope":99.0,"selected":6,"centerSelf":true,"centerHierarchy":true,"attached":false,"playerPosition":{"x":39.0,"y":0.949999988079071},"platforms":[],"checkpointPlatforms":[],"removedHooks":[]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.ReproDriver/<Run>d__18:MoveNext () (at Assets/Scripts/ReproTrace.cs:188)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+REPRO_STATE {"sequence":36,"frame":2383,"section":4,"generatedCount":0,"removedHooksCount":0,"checkpointSelected":6,"scene":"Tutorial","label":"DetachAndRefund.enter","centerName":"Tutorial T4 Center Hook","time":5.894325256347656,"ropeCurrent":99.0,"checkpointRope":99.0,"selected":6,"centerSelf":true,"centerHierarchy":true,"attached":false,"playerPosition":{"x":39.0,"y":0.964999794960022},"platforms":[],"checkpointPlatforms":[],"removedHooks":[]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.ReproTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/ReproTrace.cs:68)
+HimoHito.RopeController:DetachAndRefund (bool) (at Assets/Scripts/RopeController.cs:287)
+HimoHito.RopeController:OnDisable () (at Assets/Scripts/RopeController.cs:195)
+HimoHito.ReproDriver/<Run>d__18:MoveNext () (at Assets/Scripts/ReproTrace.cs:194)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/ReproTrace.cs Line: 68)
+
+[Physics::Module] Cleanup current backend.
+[Physics::Module] Id: 0xf2b8ea05
+Input System module state changed to: ShutdownInProgress.
+Input System polling thread exited.
+Input System module state changed to: Shutdown.
+[Licensing::IpcConnector] LicenseClient-田尻大翔-notifications channel disconnected successfully.
+[Licensing::IpcConnector] LicenseClient-田尻大翔 channel disconnected successfully.
+AcceleratorClientConnectionCallback - disconnected - :0
+Cleanup mono
+Checking for leaked weakptr:
+  Found no leaked weakptrs.
+[Package Manager] Server process was shutdown
+##utp:{"type":"MemoryLeaks","version":2,"phase":"Immediate","time":1790763088535,"processId":4032,"allocatedMemory":17269193,"memoryLabels":[{"Default":29313},{"Permanent":15236},{"NewDelete":69123},{"Thread":4237960},{"Manager":33885},{"VertexData":8},{"Geometry":816},{"Texture":296},{"Shader":80341},{"Material":24},{"GfxDevice":58512},{"Animation":184},{"Audio":2664},{"Font":6932481},{"FreeType":9017},{"FontEngine":736},{"Physics":2146},{"Physics2D":16},{"Serialization":720},{"Input":14984},{"JobScheduler":33024},{"TextLib":280},{"Mono":32},{"ScriptingNativeRuntime":155060},{"BaseObject":1689312},{"Resource":1336},{"Renderer":3000},{"Transform":4685},{"File":3937},{"WebCam":616},{"Culling":32},{"Terrain":11394},{"Wind":24},{"STL":40},{"String":104325},{"DynamicArray":90064},{"HashMap":58407},{"Utility":2660822},{"Curl":2478},{"PoolAlloc":2056},{"AI":80},{"TypeTree":11341},{"ScriptManager":512},{"RuntimeInitializeOnLoadManager":64},{"SpriteAtlas":112},{"GI":7792},{"Director":8240},{"CloudService":31072},{"WebRequest":552},{"VR":47994},{"SceneManager":504},{"Video":208},{"LazyScriptCache":32},{"Camera":17},{"Secure":2377},{"Image":16384},{"SerializationCache":1576},{"APIUpdating":10320},{"Subsystems":336},{"VirtualTexturing":57888},{"StaticSafetyDebugInfo":278528},{"Analytics":464},{"Hierarchy":608},{"CoreStats":13112},{"Identifiers":6480},{"Gui":96},{"EditorUtility":91154},{"VersionControl":4},{"Undo":947},{"AssetDatabase":324769},{"EditorGi":328},{"UnityConnect":29232},{"Upm":1896},{"AssetCompliance":64},{"DrivenProperties":72},{"LocalIPC":218},{"ProfilerEditor":9746},{"CoreBusinessMetrics":3496},{"Licensing":1232},{"AssetReference":32},{"IPCStream":32}]}

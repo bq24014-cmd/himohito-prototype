@@ -57,6 +57,7 @@ namespace HimoHito
         private float checkpointRopeLength;
         private int checkpointSelectedRopeLength;
         private RopePlatformBuilder.PlatformState[] checkpointPlatformStates;
+        private GameObject[] checkpointRemovedHooks;
 
         public RunOutcome Outcome { get; private set; } = RunOutcome.WaitingToStart;
         public RunFailureReason FailureReason { get; private set; } = RunFailureReason.None;
@@ -433,13 +434,14 @@ namespace HimoHito
             checkpointRopeLength = ropeResource.CurrentLength;
             checkpointSelectedRopeLength = ropeController.SelectedRopeLength;
             checkpointPlatformStates = platformBuilder.CapturePlatformStates();
+            checkpointRemovedHooks = platformBuilder.CaptureRemovedHooks();
         }
 
         private void RestoreCheckpointState()
         {
             ropeResource.RestoreCurrentLength(checkpointRopeLength);
             ropeController.RestoreSelectedRopeLength(checkpointSelectedRopeLength);
-            platformBuilder.RestorePlatformStates(checkpointPlatformStates);
+            platformBuilder.RestorePlatformStates(checkpointPlatformStates, checkpointRemovedHooks);
         }
 
         private void ResetMotionAndResume()

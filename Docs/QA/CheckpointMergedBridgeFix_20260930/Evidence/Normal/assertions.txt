@@ -1,0 +1,4 @@
+PASS Authored checkpoint9 exists
+PASS Authored physical landing captured section9
+PASS D normal all Hook references/active states unchanged
+PASS C normal rope50/selected7 and platform0 restored

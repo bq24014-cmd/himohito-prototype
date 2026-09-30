@@ -1,0 +1,40 @@
+diff --git "a/C:\\Users\\\347\224\260\345\260\273\345\244\247\347\277\224\\Documents\\Codex\\2026-08-07\\new-chat\\outputs\\HimoHitoPrototype\\Assets\\Scripts\\MainStageRespawnOnFall.cs" "b/C:\\Users\\\347\224\260\345\260\273\345\244\247\347\277\224\\Documents\\Codex\\2026-08-07\\new-chat\\outputs\\HimoHitoPrototype\\.codex_tmp\\CheckpointMergedBridgeRepro_20260930\\DiagnosticProject\\Assets\\Scripts\\MainStageRespawnOnFall.cs"
+index 79fef0e..e3d6f13 100644
+--- "a/C:\\Users\\\347\224\260\345\260\273\345\244\247\347\277\224\\Documents\\Codex\\2026-08-07\\new-chat\\outputs\\HimoHitoPrototype\\Assets\\Scripts\\MainStageRespawnOnFall.cs"
++++ "b/C:\\Users\\\347\224\260\345\260\273\345\244\247\347\277\224\\Documents\\Codex\\2026-08-07\\new-chat\\outputs\\HimoHitoPrototype\\.codex_tmp\\CheckpointMergedBridgeRepro_20260930\\DiagnosticProject\\Assets\\Scripts\\MainStageRespawnOnFall.cs"
+@@ -184,6 +184,7 @@ namespace HimoHito
+                 return false;
+             }
+ 
++            ReproTrace.Record("TryReachSection.accept", gameObject);
+             CurrentSection = Mathf.Clamp(sectionNumber, 1, 10);
+             checkpointPosition = respawnPosition;
+             if (ropeResource.CurrentLength < minimumRopeAfterCheckpoint)
+@@ -199,9 +200,11 @@ namespace HimoHito
+ 
+         private void CaptureCheckpointState()
+         {
++            ReproTrace.Record("CaptureCheckpointState.enter", gameObject);
+             checkpointRopeLength = ropeResource.CurrentLength;
+             checkpointSelectedRopeLength = ropeController.SelectedRopeLength;
+             checkpointPlatformStates = platformBuilder.CapturePlatformStates();
++            ReproTrace.Record("CaptureCheckpointState.exit", gameObject);
+         }
+ 
+         private void ApplyEndingPreviewStart()
+@@ -219,6 +222,7 @@ namespace HimoHito
+ 
+         private void RestartFromCheckpoint()
+         {
++            ReproTrace.Record("RestartFromCheckpoint.enter", gameObject);
+             audioFeedback?.StopRopeExhaustedAudio();
+             body.simulated = true;
+             ropeController.DetachAndRefund();
+@@ -236,6 +240,7 @@ namespace HimoHito
+             IsFallFailure = false;
+             Camera.main?.GetComponent<HorizontalCameraFollow>()?.ResetFraming();
+             RespawnWeaveVisual.Play(gameObject);
++            ReproTrace.Record("RestartFromCheckpoint.exit", gameObject);
+         }
+     }
+ }

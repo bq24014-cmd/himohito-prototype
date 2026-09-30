@@ -1,0 +1,54 @@
+[
+  {
+    "test": "Merged",
+    "result": "PASS Merged",
+    "exceptions": [
+      "ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection."
+    ],
+    "compilerErrors": [],
+    "compilerWarnings": [],
+    "nullReference": [],
+    "licensing": [
+      "[Licensing::Module] Error: Access token is unavailable; failed to update"
+    ]
+  },
+  {
+    "test": "Unmerged",
+    "result": "PASS Unmerged",
+    "exceptions": [
+      "ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection."
+    ],
+    "compilerErrors": [],
+    "compilerWarnings": [],
+    "nullReference": [],
+    "licensing": [
+      "[Licensing::Module] Error: Access token is unavailable; failed to update"
+    ]
+  },
+  {
+    "test": "Normal",
+    "result": "PASS Normal",
+    "exceptions": [
+      "ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection."
+    ],
+    "compilerErrors": [],
+    "compilerWarnings": [],
+    "nullReference": [],
+    "licensing": [
+      "[Licensing::Module] Error: Access token is unavailable; failed to update"
+    ]
+  },
+  {
+    "test": "Tutorial",
+    "result": "PASS Tutorial",
+    "exceptions": [
+      "ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection."
+    ],
+    "compilerErrors": [],
+    "compilerWarnings": [],
+    "nullReference": [],
+    "licensing": [
+      "[Licensing::Module] Error: Access token is unavailable; failed to update"
+    ]
+  }
+]
