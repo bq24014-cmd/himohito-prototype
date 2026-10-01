@@ -1,0 +1,855 @@
+[Licensing::Module] Trying to connect to existing licensing client channel...
+Built from '6000.3/staging' branch; Version is '6000.3.21f1 (c02631ffc030) revision 12592689'; Using compiler version '194234433'; Build Type 'Release'
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-田尻大翔" at "2026-09-30T15:57:01.0329272Z"
+OS: 'Windows 11  (10.0.26200) Professional' Language: 'ja' Physical Memory: 16052 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
+System  architecture: x64
+Process architecture: x64
+Date: 2026-09-30T15:57:01Z
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\6000.3.21f1\Editor\Unity.exe
+-batchmode
+-force-d3d11
+-projectPath
+C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype\.codex_tmp\HumanPlaytestFixes_20260930\Project
+-executeMethod
+CheckpointMergedBridgeFix.Run
+-fixCase
+Tutorial
+-fixEvidence
+C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype\Docs\QA\HumanPlaytestFixes_20260930\Evidence\TutorialRegression
+-logFile
+C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype\Docs\QA\HumanPlaytestFixes_20260930\Evidence\TutorialRegression_unity.log
+Successfully changed project path to: C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype\.codex_tmp\HumanPlaytestFixes_20260930\Project
+C:/Users/田尻大翔/Documents/Codex/2026-08-07/new-chat/outputs/HimoHitoPrototype/.codex_tmp/HumanPlaytestFixes_20260930/Project
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-gfx=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+Player connection [5316]  Target information:
+
+Player connection [5316]  * "[IP] 192.168.40.81 [Port] 55505 [Flags] 2 [Guid] 528819529 [EditorId] 528819529 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-UM0GV1L) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [5316] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [5316] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+[Package Manager] Connected to IPC stream "Upm-16648" after 0.9 seconds.
+[Licensing::Module] Licensing is not yet initialized.
+[Licensing::Client] Error: HandshakeResponse reported an error:
+	ResponseCode: 505
+	ResponseStatus: Unsupported protocol version '1.18.1'.
+[Licensing::Module] Error: Failed to handshake to channel: "LicenseClient-田尻大翔"
+[Licensing::IpcConnector] LicenseClient-田尻大翔 channel disconnected successfully.
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-田尻大翔-6000.3.21" at "2026-09-30T15:57:08.1690819Z"
+[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 13432, path: "C:/Program Files/Unity/Hub/Editor/6000.3.21f1/Editor/Data/Resources/Licensing/Client/Unity.Licensing.Client.exe")
+[Licensing::Module] LicensingClient has failed validation; ignoring
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.18.1+9fbee8e
+  Session Id:              9aaf0a01d4254357bd96753b3bb16e1e
+  Correlation Id:          8285086f732106bd6d26c44468156621
+  External correlation Id: 5352648332701903839
+  Machine Id:              dNinDYak6EUa2pX7RMEoTuNEbYA=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-田尻大翔-6000.3.21" (connect: 0.00s, validation: 0.20s, handshake: 0.03s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-田尻大翔-6000.3.21-notifications" at "2026-09-30T15:57:08.4026929Z"
+[Licensing::Module] Error: Access token is unavailable; failed to update
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: 15669713720629-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+[Licensing::Client] Successfully updated license, isAsync: True, time: 0.01
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] Licensing Background thread has ended after 7.87s
+[Licensing::Module] Licensing is initialized (took 6.42s).
+[Licensing::Client] Successfully resolved entitlement details
+Library Redirect Path: Library/
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 6000.3.21f1 (c02631ffc030)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.3.21f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/田尻大翔/Documents/Codex/2026-08-07/new-chat/outputs/HimoHitoPrototype/.codex_tmp/HumanPlaytestFixes_20260930/Project/Assets
+Forcing GfxDevice: Direct3D 11
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: Intel(R) Iris(R) Xe Graphics (ID=0xa7a0)
+    Vendor:   Intel
+    VRAM:     8026 MB
+    Driver:   31.0.101.4255
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.3.21f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.3.21f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.3.21f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56648
+Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
+Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
+ImportWorker Server TCP listen port: 0
+AcceleratorClientConnectionCallback - disconnected - :0
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.3.21f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.005930 seconds.
+- Loaded All Assemblies, in  1.087 seconds
+Native extension for WindowsStandalone target not found
+Package Manager log level set to [2]
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:False
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.108 seconds
+Domain Reload Profiling: 2188ms
+	BeginReloadAssembly (385ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (21ms)
+	RebuildCommonClasses (97ms)
+	RebuildNativeTypeToScriptingClass (32ms)
+	initialDomainReloadingComplete (127ms)
+	LoadAllAssembliesAndSetupDomain (437ms)
+		LoadAssemblies (356ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (430ms)
+			TypeCache.Refresh (426ms)
+				TypeCache.ScanAssembly (394ms)
+			BuildScriptInfoCaches (0ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (1110ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1002ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (130ms)
+			SetLoadedEditorAssemblies (11ms)
+			BeforeProcessingInitializeOnLoad (214ms)
+			ProcessInitializeOnLoadAttributes (368ms)
+			ProcessInitializeOnLoadMethodAttributes (278ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+[Licensing::Client] Successfully resolved entitlement details
+Application.AssetDatabase Initial Refresh Start
+[Package Manager] Restoring resolved packages state from cache
+[Licensing::Client] Successfully resolved entitlement details
+[Package Manager] Registered 6 packages:
+  Built-in packages:
+    com.unity.modules.audio@1.0.0 (location: C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype\.codex_tmp\HumanPlaytestFixes_20260930\Project\Library\PackageCache\com.unity.modules.audio)
+    com.unity.modules.imgui@1.0.0 (location: C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype\.codex_tmp\HumanPlaytestFixes_20260930\Project\Library\PackageCache\com.unity.modules.imgui)
+    com.unity.modules.jsonserialize@1.0.0 (location: C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype\.codex_tmp\HumanPlaytestFixes_20260930\Project\Library\PackageCache\com.unity.modules.jsonserialize)
+    com.unity.modules.particlesystem@1.0.0 (location: C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype\.codex_tmp\HumanPlaytestFixes_20260930\Project\Library\PackageCache\com.unity.modules.particlesystem)
+    com.unity.modules.physics2d@1.0.0 (location: C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype\.codex_tmp\HumanPlaytestFixes_20260930\Project\Library\PackageCache\com.unity.modules.physics2d)
+    com.unity.modules.imageconversion@1.0.0 (location: C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype\.codex_tmp\HumanPlaytestFixes_20260930\Project\Library\PackageCache\com.unity.modules.imageconversion)
+[Subsystems] No new subsystems found in resolved package list.
+[Package Manager] Done registering packages in 0.02 seconds
+[ScriptCompilation] Requested script compilation because: Assetdatabase observed changes in script compilation related files
+Starting: C:\Program Files\Unity\Hub\Editor\6000.3.21f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: C:/Users/田尻大翔/Documents/Codex/2026-08-07/new-chat/outputs/HimoHitoPrototype/.codex_tmp/HumanPlaytestFixes_20260930/Project
+DisplayProgressbar: Compiling Scripts
+ExitCode: 0 Duration: 6s210ms
+[149/155    4s] Csc Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.dll (+2 others)
+[152/155    0s] Csc Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp-Editor.dll (+2 others)
+[153/155    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.pdb
+[154/155    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
+*** Tundra build success (5.96 seconds), 4 items updated, 155 evaluated
+AssetDatabase: script compilation time: 7.755905s
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  1.183 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Native extension for WindowsStandalone target not found
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.185 seconds
+Domain Reload Profiling: 2359ms
+	BeginReloadAssembly (631ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (48ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (178ms)
+	RebuildCommonClasses (97ms)
+	RebuildNativeTypeToScriptingClass (34ms)
+	initialDomainReloadingComplete (59ms)
+	LoadAllAssembliesAndSetupDomain (353ms)
+		LoadAssemblies (619ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (26ms)
+			TypeCache.Refresh (14ms)
+				TypeCache.ScanAssembly (3ms)
+			BuildScriptInfoCaches (2ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (1186ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (809ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (63ms)
+			SetLoadedEditorAssemblies (7ms)
+			BeforeProcessingInitializeOnLoad (287ms)
+			ProcessInitializeOnLoadAttributes (314ms)
+			ProcessInitializeOnLoadMethodAttributes (120ms)
+			AfterProcessingInitializeOnLoad (19ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (67ms)
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=d35b2f01ca897c649bb4be0ebdacf8f0): Total: 10.679 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=1505 ms
+		Asset DB Callback time: managed=180 ms, native=26 ms
+		Scripting: domain reloads=1, domain reload time=1184 ms, compile time=7761 ms, other=20 ms
+		Project Asset Count: scripts=43, non-scripts=99
+		Asset File Changes: new=0, changed=1, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokeCustomDependenciesCallbacks: 0.003ms
+	InvokePackagesCallback: 27.143ms
+	ApplyChangesToAssetFolders: 0.647ms
+	Scan: 143.416ms
+	OnSourceAssetsModified: 2.054ms
+	CategorizeAssetsWithTransientArtifact: 0.939ms
+	ProcessAssetsWithTransientArtifactChanges: 5.978ms
+	CategorizeAssets: 1.484ms
+	ImportOutOfDateAssets: 1191.388ms (-6570.175ms without children)
+		CompileScripts: 7760.816ms
+		ReloadNativeAssets: 0.001ms
+		UnloadImportedAssets: 0.203ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.043ms
+		InitializingProgressBar: 0.001ms
+		PostProcessAllAssetNotificationsAddChangedAssets: 0.001ms
+		OnDemandSchedulerStart: 0.496ms
+	PostProcessAllAssets: 181.996ms
+	Hotreload: 1.308ms
+	GatherAllCurrentPrimaryArtifactRevisions: 0.006ms
+	UnloadStreamsBegin: 3.263ms
+	PersistCurrentRevisions: 0.013ms
+	UnloadStreamsEnd: 0.003ms
+	GenerateScriptTypeHashes: 0.002ms
+	Untracked: 9119.096ms
+
+Application.AssetDatabase Initial Refresh End
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Scanning for USB devices : 2.417ms
+Initializing Unity extensions:
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-FullSystems_20260930
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 142 unused Assets / (509.8 KB). Loaded Objects now: 771.
+Memory consumption went from 88.9 MB to 88.4 MB.
+Total: 10.387400 ms (FindLiveObjects: 0.091800 ms CreateObjectMapping: 0.021200 ms MarkObjects: 9.802300 ms  DeleteObjects: 0.469500 ms)
+
+Opening scene 'Assets/Scenes/Tutorial.unity'
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/Scenes/Tutorial.unity'
+	Deserialize:            20.057 ms
+	Integration:            5367.863 ms
+	Integration of assets:  0.015 ms
+	Thread Wait Time:       0.292 ms
+	Total Operation Time:   5388.227 ms
+Unloading 9 unused Assets / (1.4 KB). Loaded Objects now: 1350.
+Memory consumption went from 196.8 MB to 196.8 MB.
+Total: 9.895700 ms (FindLiveObjects: 0.163900 ms CreateObjectMapping: 0.018500 ms MarkObjects: 9.315800 ms  DeleteObjects: 0.394500 ms)
+
+FIX_RUN Unity=6000.3.21f1 scene=Tutorial test=Tutorial
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CheckpointMergedBridgeFix:Run () (at Assets/Editor/CheckpointMergedBridgeFix.cs:24)
+
+(Filename: Assets/Editor/CheckpointMergedBridgeFix.cs Line: 24)
+
+[Project] Loading completed in 29.981 seconds
+	Project init time: 				23.547 seconds
+		Template init time: 		0.000 seconds
+		Package Manager init time: 		7.342 seconds
+		Asset Database init time: 		1.963 seconds
+		Global illumination init time: 	0.005 seconds
+		Assemblies load time: 			2.251 seconds
+		Unity extensions init time: 	0.001 seconds
+		Asset Database refresh time: 	10.679 seconds
+	Scene opening time: 			5.810 seconds
+##utp:{"type":"ProjectInfo","version":2,"phase":"Immediate","time":1790783850961,"processId":16648,"projectLoad":29.9810504,"projectInit":23.5466937,"templateInit":0.0,"packageManagerInit":7.3416575,"assetDatabaseInit":1.9628031,"globalIlluminationInit":0.0048562,"assembliesLoad":2.2509423,"unityExtensionsInit":0.0012394,"assetDatabaseRefresh":10.6789743,"sceneOpening":5.8099335}
+##utp:{"type":"EditorInfo","version":2,"phase":"Immediate","time":1790783850961,"processId":16648,"editorVersion":"6000.3.21f1 (c02631ffc030)","branch":"6000.3/staging","buildType":"Release","platform":"Windows"}
+Reloading assemblies for play mode.
+Reloading assemblies after forced synchronous recompile.
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.694 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Native extension for WindowsStandalone target not found
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  6.503 seconds
+Domain Reload Profiling: 7189ms
+	BeginReloadAssembly (459ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (43ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (74ms)
+	RebuildCommonClasses (100ms)
+	RebuildNativeTypeToScriptingClass (32ms)
+	initialDomainReloadingComplete (57ms)
+	LoadAllAssembliesAndSetupDomain (35ms)
+		LoadAssemblies (287ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (25ms)
+			TypeCache.Refresh (9ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (5ms)
+			ResolveRequiredComponents (5ms)
+	FinalizeReload (6505ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (779ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (65ms)
+			SetLoadedEditorAssemblies (7ms)
+			BeforeProcessingInitializeOnLoad (279ms)
+			ProcessInitializeOnLoadAttributes (301ms)
+			ProcessInitializeOnLoadMethodAttributes (109ms)
+			AfterProcessingInitializeOnLoad (18ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (5308ms)
+Asset Pipeline Refresh (id=cd2a86ceda482b64b832dccd5d7cbf0d): Total: 7.321 seconds - Initiated by StopAssetImportingV2(ForceSynchronousImport | ForceDomainReload)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=6565 ms
+		Asset DB Callback time: managed=36 ms, native=0 ms
+		Scripting: domain reloads=1, domain reload time=713 ms, compile time=5 ms, other=0 ms
+		Project Asset Count: scripts=43, non-scripts=99
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokeCustomDependenciesCallbacks: 0.002ms
+	InvokePackagesCallback: 4.771ms
+	ApplyChangesToAssetFolders: 0.139ms
+	Scan: 0.001ms
+	OnSourceAssetsModified: 0.003ms
+	CategorizeAssetsWithTransientArtifact: 0.004ms
+	ProcessAssetsWithTransientArtifactChanges: 0.149ms
+	CategorizeAssets: 1.393ms
+	ImportOutOfDateAssets: 6506.790ms (6501.132ms without children)
+		CompileScripts: 4.712ms
+		CollectScriptTypesHashes: 0.001ms
+		ReloadNativeAssets: 0.001ms
+		UnloadImportedAssets: 0.182ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.045ms
+		InitializingProgressBar: 0.001ms
+		PostProcessAllAssetNotificationsAddChangedAssets: 0.001ms
+		OnDemandSchedulerStart: 0.716ms
+	PostProcessAllAssets: 36.704ms
+	GatherAllCurrentPrimaryArtifactRevisions: 0.035ms
+	UnloadStreamsBegin: 0.216ms
+	PersistCurrentRevisions: 0.014ms
+	UnloadStreamsEnd: 0.002ms
+	GenerateScriptTypeHashes: 0.001ms
+	Untracked: 770.506ms
+
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            7.170 ms
+	Integration:            5513.245 ms
+	Integration of assets:  0.010 ms
+	Thread Wait Time:       0.052 ms
+	Total Operation Time:   5520.476 ms
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+Play開始地点：Tutorial
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHitoEditor.PlayStartSceneSelector:ConfigurePlayStartScene (string,string) (at Assets/Editor/PlayStartSceneSelector.cs:50)
+HimoHitoEditor.PlayStartSceneSelector:ConfigurePlayStartScene () (at Assets/Editor/PlayStartSceneSelector.cs:23)
+UnityEditor.EditorApplication:Internal_CallDelayFunctions ()
+
+(Filename: Assets/Editor/PlayStartSceneSelector.cs Line: 50)
+
+Start Indexing on Editor startup
+ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+  at System.Collections.Generic.List`1[T].get_Item (System.Int32 index) [0x00009] in <41d29b352f6a475ab1bf7c6628b82790>:0 
+  at UnityEditor.Search.SearchDatabase+<EnumerateAll>d__81.MoveNext () [0x00106] in <63453c9528324daaa566ad51effa49a4>:0 
+  at System.Linq.Enumerable.TryGetFirst[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Boolean& found) [0x00045] in <80564d689e48448fa2a7101993ee7201>:0 
+  at System.Linq.Enumerable.First[TSource] (System.Collections.Generic.IEnumerable`1[T] source) [0x00000] in <80564d689e48448fa2a7101993ee7201>:0 
+  at UnityEditor.Search.SearchDatabase.GetDefaultSearchDatabase () [0x00006] in <63453c9528324daaa566ad51effa49a4>:0 
+  at UnityEditor.Search.SearchInit.IndexationOnStartup () [0x0000c] in <63453c9528324daaa566ad51effa49a4>:0 
+  at UnityEditor.EditorApplication.Internal_CallDelayFunctions () [0x0002c] in <ebc962e8381145e6bdb44b1996e8e9b4>:0 
+
+Created GICache directory at C:/Users/田尻大翔/AppData/LocalLow/Unity/Caches/GiCache. Took: 0.054s, timestamps: [42.991 - 43.045]
+[Licensing::Client] Successfully resolved entitlement details
+ASSERT PASS Tutorial normal start
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.FixDriver:Check (bool,string) (at Assets/Scripts/FixTrace.cs:63)
+HimoHito.FixDriver/<TutorialRun>d__27:MoveNext () (at Assets/Scripts/FixTrace.cs:208)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/FixTrace.cs Line: 63)
+
+ASSERT PASS Tutorial swing E section1
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.FixDriver:Check (bool,string) (at Assets/Scripts/FixTrace.cs:63)
+HimoHito.FixDriver/<SwingToNext>d__26:MoveNext () (at Assets/Scripts/FixTrace.cs:191)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/FixTrace.cs Line: 63)
+
+FIX_STATE {"test":"Tutorial","scene":"Tutorial","label":"SWING_RELEASE","centerName":"Tutorial T4 Center Hook","sequence":0,"frame":1322,"section":1,"generatedCount":0,"removedCount":0,"savedRemovedCount":0,"selected":6,"savedSelected":6,"centerInstanceId":20160,"time":2.0006041526794435,"rope":99.0,"savedRope":99.0,"maximum":99.0,"activeLength":0.0,"centerSelf":true,"centerHierarchy":true,"centerValid":true,"position":{"x":6.082854747772217,"y":1.5033763647079468},"platforms":[],"savedPlatforms":[],"removedIds":[],"savedRemovedIds":[]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.FixTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/FixTrace.cs:49)
+HimoHito.FixDriver/<SwingToNext>d__26:MoveNext () (at Assets/Scripts/FixTrace.cs:195)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/FixTrace.cs Line: 49)
+
+ASSERT PASS Tutorial physical section transition 2
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.FixDriver:Check (bool,string) (at Assets/Scripts/FixTrace.cs:63)
+HimoHito.FixDriver/<SwingToNext>d__26:MoveNext () (at Assets/Scripts/FixTrace.cs:200)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/FixTrace.cs Line: 63)
+
+ASSERT PASS Tutorial section2 checkpoint restart
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.FixDriver:Check (bool,string) (at Assets/Scripts/FixTrace.cs:63)
+HimoHito.FixDriver/<TutorialRun>d__27:MoveNext () (at Assets/Scripts/FixTrace.cs:212)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/FixTrace.cs Line: 63)
+
+ASSERT PASS Tutorial swing E section2
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.FixDriver:Check (bool,string) (at Assets/Scripts/FixTrace.cs:63)
+HimoHito.FixDriver/<SwingToNext>d__26:MoveNext () (at Assets/Scripts/FixTrace.cs:191)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/FixTrace.cs Line: 63)
+
+FIX_STATE {"test":"Tutorial","scene":"Tutorial","label":"SWING_RELEASE","centerName":"Tutorial T4 Center Hook","sequence":1,"frame":3780,"section":2,"generatedCount":0,"removedCount":0,"savedRemovedCount":0,"selected":6,"savedSelected":6,"centerInstanceId":20160,"time":5.483024597167969,"rope":99.0,"savedRope":99.0,"maximum":99.0,"activeLength":0.0,"centerSelf":true,"centerHierarchy":true,"centerValid":true,"position":{"x":22.10616683959961,"y":1.1251404285430909},"platforms":[],"savedPlatforms":[],"removedIds":[],"savedRemovedIds":[]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.FixTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/FixTrace.cs:49)
+HimoHito.FixDriver/<SwingToNext>d__26:MoveNext () (at Assets/Scripts/FixTrace.cs:195)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/FixTrace.cs Line: 49)
+
+ASSERT PASS Tutorial physical section transition 3
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.FixDriver:Check (bool,string) (at Assets/Scripts/FixTrace.cs:63)
+HimoHito.FixDriver/<SwingToNext>d__26:MoveNext () (at Assets/Scripts/FixTrace.cs:200)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/FixTrace.cs Line: 63)
+
+ASSERT PASS Tutorial T3 E attach
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.FixDriver:Check (bool,string) (at Assets/Scripts/FixTrace.cs:63)
+HimoHito.FixDriver/<TutorialRun>d__27:MoveNext () (at Assets/Scripts/FixTrace.cs:217)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/FixTrace.cs Line: 63)
+
+ASSERT PASS Tutorial T3 Q length7
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.FixDriver:Check (bool,string) (at Assets/Scripts/FixTrace.cs:63)
+HimoHito.FixDriver/<TutorialRun>d__27:MoveNext () (at Assets/Scripts/FixTrace.cs:218)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/FixTrace.cs Line: 63)
+
+ASSERT PASS Tutorial physical section4 transition
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.FixDriver:Check (bool,string) (at Assets/Scripts/FixTrace.cs:63)
+HimoHito.FixDriver/<TutorialRun>d__27:MoveNext () (at Assets/Scripts/FixTrace.cs:222)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/FixTrace.cs Line: 63)
+
+FIX_STATE {"test":"Tutorial","scene":"Tutorial","label":"TUTORIAL_T4_CHECKPOINT_CAPTURED","centerName":"Tutorial T4 Center Hook","sequence":2,"frame":5539,"section":4,"generatedCount":1,"removedCount":0,"savedRemovedCount":0,"selected":7,"savedSelected":7,"centerInstanceId":20160,"time":8.080562591552735,"rope":92.0,"savedRope":92.0,"maximum":99.0,"activeLength":0.0,"centerSelf":true,"centerHierarchy":true,"centerValid":true,"position":{"x":38.26795196533203,"y":0.964998185634613},"platforms":[{"start":{"x":36.0,"y":0.3499999940395355},"end":{"x":30.0,"y":0.3499999940395355},"ropeLength":7.0}],"savedPlatforms":[{"start":{"x":36.0,"y":0.3499999940395355},"end":{"x":30.0,"y":0.3499999940395355},"ropeLength":7.0}],"removedIds":[],"savedRemovedIds":[]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.FixTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/FixTrace.cs:49)
+HimoHito.FixDriver/<TutorialRun>d__27:MoveNext () (at Assets/Scripts/FixTrace.cs:223)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/FixTrace.cs Line: 49)
+
+ASSERT PASS Tutorial T4 preserves T3 bridge/rope92/selection7
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.FixDriver:Check (bool,string) (at Assets/Scripts/FixTrace.cs:63)
+HimoHito.FixDriver/<TutorialRun>d__27:MoveNext () (at Assets/Scripts/FixTrace.cs:225)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/FixTrace.cs Line: 63)
+
+ASSERT PASS Tutorial T4 first E/Q
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.FixDriver:Check (bool,string) (at Assets/Scripts/FixTrace.cs:63)
+HimoHito.FixDriver/<TutorialRun>d__27:MoveNext () (at Assets/Scripts/FixTrace.cs:228)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/FixTrace.cs Line: 63)
+
+ASSERT PASS Tutorial T4 second E/Q
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.FixDriver:Check (bool,string) (at Assets/Scripts/FixTrace.cs:63)
+HimoHito.FixDriver/<TutorialRun>d__27:MoveNext () (at Assets/Scripts/FixTrace.cs:230)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/FixTrace.cs Line: 63)
+
+ASSERT PASS Tutorial T4 F merge
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.FixDriver:Check (bool,string) (at Assets/Scripts/FixTrace.cs:63)
+HimoHito.FixDriver/<TutorialRun>d__27:MoveNext () (at Assets/Scripts/FixTrace.cs:232)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/FixTrace.cs Line: 63)
+
+FIX_STATE {"test":"Tutorial","scene":"Tutorial","label":"TUTORIAL_MERGED","centerName":"Tutorial T4 Center Hook","sequence":3,"frame":7564,"section":4,"generatedCount":2,"removedCount":1,"savedRemovedCount":0,"selected":6,"savedSelected":7,"centerInstanceId":20160,"time":11.411947250366211,"rope":80.0,"savedRope":92.0,"maximum":99.0,"activeLength":0.0,"centerSelf":false,"centerHierarchy":false,"centerValid":true,"position":{"x":46.461124420166019,"y":-0.8521010279655457},"platforms":[{"start":{"x":36.0,"y":0.3499999940395355},"end":{"x":30.0,"y":0.3499999940395355},"ropeLength":7.0},{"start":{"x":42.0,"y":0.3499999940395355},"end":{"x":52.0,"y":0.3499999940395355},"ropeLength":12.0}],"savedPlatforms":[{"start":{"x":36.0,"y":0.3499999940395355},"end":{"x":30.0,"y":0.3499999940395355},"ropeLength":7.0}],"removedIds":[20160],"savedRemovedIds":[]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.FixTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/FixTrace.cs:49)
+HimoHito.FixDriver/<TutorialRun>d__27:MoveNext () (at Assets/Scripts/FixTrace.cs:233)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/FixTrace.cs Line: 49)
+
+ASSERT PASS Tutorial T3 bridge plus mergedT4, centerinactive, rope80
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.FixDriver:Check (bool,string) (at Assets/Scripts/FixTrace.cs:63)
+HimoHito.FixDriver/<TutorialRun>d__27:MoveNext () (at Assets/Scripts/FixTrace.cs:234)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/FixTrace.cs Line: 63)
+
+FIX_STATE {"test":"Tutorial","scene":"Tutorial","label":"TUTORIAL_RESTART_AFTER_MERGE","centerName":"Tutorial T4 Center Hook","sequence":4,"frame":7564,"section":4,"generatedCount":1,"removedCount":0,"savedRemovedCount":0,"selected":7,"savedSelected":7,"centerInstanceId":20160,"time":11.411947250366211,"rope":92.0,"savedRope":92.0,"maximum":99.0,"activeLength":0.0,"centerSelf":true,"centerHierarchy":true,"centerValid":true,"position":{"x":39.0,"y":0.949999988079071},"platforms":[{"start":{"x":36.0,"y":0.3499999940395355},"end":{"x":30.0,"y":0.3499999940395355},"ropeLength":7.0}],"savedPlatforms":[{"start":{"x":36.0,"y":0.3499999940395355},"end":{"x":30.0,"y":0.3499999940395355},"ropeLength":7.0}],"removedIds":[],"savedRemovedIds":[]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.FixTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/FixTrace.cs:49)
+HimoHito.FixDriver/<TutorialRun>d__27:MoveNext () (at Assets/Scripts/FixTrace.cs:235)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/FixTrace.cs Line: 49)
+
+ASSERT PASS Tutorial restores authored pre-merge T4 checkpoint
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.FixDriver:Check (bool,string) (at Assets/Scripts/FixTrace.cs:63)
+HimoHito.FixDriver/<TutorialRun>d__27:MoveNext () (at Assets/Scripts/FixTrace.cs:236)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/FixTrace.cs Line: 63)
+
+ASSERT PASS Tutorial goal first E/Q
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.FixDriver:Check (bool,string) (at Assets/Scripts/FixTrace.cs:63)
+HimoHito.FixDriver/<TutorialRun>d__27:MoveNext () (at Assets/Scripts/FixTrace.cs:241)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/FixTrace.cs Line: 63)
+
+ASSERT PASS Tutorial goal second E/Q
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.FixDriver:Check (bool,string) (at Assets/Scripts/FixTrace.cs:63)
+HimoHito.FixDriver/<TutorialRun>d__27:MoveNext () (at Assets/Scripts/FixTrace.cs:243)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/FixTrace.cs Line: 63)
+
+ASSERT PASS Tutorial goal F merge
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.FixDriver:Check (bool,string) (at Assets/Scripts/FixTrace.cs:63)
+HimoHito.FixDriver/<TutorialRun>d__27:MoveNext () (at Assets/Scripts/FixTrace.cs:245)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/FixTrace.cs Line: 63)
+
+FIX_STATE {"test":"Tutorial","scene":"Tutorial","label":"ACTUAL_GOAL_CLEARING","centerName":"Tutorial T4 Center Hook","sequence":5,"frame":10836,"section":4,"generatedCount":2,"removedCount":1,"savedRemovedCount":0,"selected":6,"savedSelected":7,"centerInstanceId":20160,"time":17.66070556640625,"rope":80.0,"savedRope":92.0,"maximum":99.0,"activeLength":0.0,"centerSelf":false,"centerHierarchy":false,"centerValid":true,"position":{"x":63.44233322143555,"y":0.9650769233703613},"platforms":[{"start":{"x":36.0,"y":0.3499999940395355},"end":{"x":30.0,"y":0.3499999940395355},"ropeLength":7.0},{"start":{"x":42.0,"y":0.3499999940395355},"end":{"x":52.0,"y":0.3499999940395355},"ropeLength":12.0}],"savedPlatforms":[{"start":{"x":36.0,"y":0.3499999940395355},"end":{"x":30.0,"y":0.3499999940395355},"ropeLength":7.0}],"removedIds":[20160],"savedRemovedIds":[]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.FixTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/FixTrace.cs:49)
+HimoHito.FixDriver/<TutorialRun>d__27:MoveNext () (at Assets/Scripts/FixTrace.cs:249)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/FixTrace.cs Line: 49)
+
+ASSERT PASS Tutorial actual goal reached / physics locked
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.FixDriver:Check (bool,string) (at Assets/Scripts/FixTrace.cs:63)
+HimoHito.FixDriver/<TutorialRun>d__27:MoveNext () (at Assets/Scripts/FixTrace.cs:250)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/FixTrace.cs Line: 63)
+
+ASSERT PASS Tutorial actual clear revealed
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.FixDriver:Check (bool,string) (at Assets/Scripts/FixTrace.cs:63)
+HimoHito.FixDriver/<TutorialRun>d__27:MoveNext () (at Assets/Scripts/FixTrace.cs:252)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/FixTrace.cs Line: 63)
+
+ASSERT PASS Tutorial clear progress flag
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.FixDriver:Check (bool,string) (at Assets/Scripts/FixTrace.cs:63)
+HimoHito.FixDriver/<TutorialRun>d__27:MoveNext () (at Assets/Scripts/FixTrace.cs:253)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/FixTrace.cs Line: 63)
+
+FIX_STATE {"test":"Tutorial","scene":"Tutorial","label":"TUTORIAL_ACTUAL_CLEAR","centerName":"Tutorial T4 Center Hook","sequence":6,"frame":12047,"section":4,"generatedCount":2,"removedCount":1,"savedRemovedCount":0,"selected":6,"savedSelected":7,"centerInstanceId":20160,"time":19.26758575439453,"rope":80.0,"savedRope":92.0,"maximum":99.0,"activeLength":0.0,"centerSelf":false,"centerHierarchy":false,"centerValid":true,"position":{"x":63.44233322143555,"y":0.9650769233703613},"platforms":[{"start":{"x":36.0,"y":0.3499999940395355},"end":{"x":30.0,"y":0.3499999940395355},"ropeLength":7.0},{"start":{"x":42.0,"y":0.3499999940395355},"end":{"x":52.0,"y":0.3499999940395355},"ropeLength":12.0}],"savedPlatforms":[{"start":{"x":36.0,"y":0.3499999940395355},"end":{"x":30.0,"y":0.3499999940395355},"ropeLength":7.0}],"removedIds":[20160],"savedRemovedIds":[]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.FixTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/FixTrace.cs:49)
+HimoHito.FixDriver/<TutorialRun>d__27:MoveNext () (at Assets/Scripts/FixTrace.cs:254)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/FixTrace.cs Line: 49)
+
+Unloading 45 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 14.182000 ms
+Loaded scene 'Assets/Scenes/MainStage.unity'
+	Deserialize:            32.742 ms
+	Integration:            3610.974 ms
+	Integration of assets:  0.040 ms
+	Thread Wait Time:       0.052 ms
+	Total Operation Time:   3643.809 ms
+Unloading 32 unused Assets / (3.5 MB). Loaded Objects now: 2953.
+Memory consumption went from 463.8 MB to 460.3 MB.
+Total: 12.132400 ms (FindLiveObjects: 0.369400 ms CreateObjectMapping: 0.032000 ms MarkObjects: 10.310900 ms  DeleteObjects: 1.418000 ms)
+
+ASSERT PASS Tutorial clear Continue API loads MainStage
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.FixDriver:Check (bool,string) (at Assets/Scripts/FixTrace.cs:63)
+HimoHito.FixDriver/<TutorialRun>d__27:MoveNext () (at Assets/Scripts/FixTrace.cs:256)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/FixTrace.cs Line: 63)
+
+ASSERT PASS BGM singleton across Tutorial -> MainStage
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.FixDriver:Check (bool,string) (at Assets/Scripts/FixTrace.cs:63)
+HimoHito.FixDriver/<TutorialRun>d__27:MoveNext () (at Assets/Scripts/FixTrace.cs:257)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/FixTrace.cs Line: 63)
+
+FIX_STATE {"test":"Tutorial","scene":"MainStage","label":"TEST_COMPLETE_PASS","centerName":"UNASSIGNED","sequence":7,"frame":12048,"section":1,"generatedCount":0,"removedCount":0,"savedRemovedCount":0,"selected":7,"savedSelected":7,"centerInstanceId":0,"time":19.547025680541993,"rope":50.0,"savedRope":50.0,"maximum":50.0,"activeLength":0.0,"centerSelf":false,"centerHierarchy":false,"centerValid":false,"position":{"x":-3.8499999046325685,"y":-4.232961654663086},"platforms":[],"savedPlatforms":[],"removedIds":[],"savedRemovedIds":[]}
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHito.FixTrace:Record (string,UnityEngine.GameObject) (at Assets/Scripts/FixTrace.cs:49)
+HimoHito.FixDriver:Pass () (at Assets/Scripts/FixTrace.cs:77)
+HimoHito.FixDriver/<Run>d__25:MoveNext () (at Assets/Scripts/FixTrace.cs:124)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/FixTrace.cs Line: 49)
+
+[Physics::Module] Cleanup current backend.
+[Physics::Module] Id: 0xf2b8ea05
+Input System module state changed to: ShutdownInProgress.
+Input System polling thread exited.
+Input System module state changed to: Shutdown.
+[Licensing::IpcConnector] LicenseClient-田尻大翔-6000.3.21-notifications channel disconnected successfully.
+[Licensing::IpcConnector] LicenseClient-田尻大翔-6000.3.21 channel disconnected successfully.
+AcceleratorClientConnectionCallback - disconnected - :0
+Cleanup mono
+Checking for leaked weakptr:
+  Found no leaked weakptrs.
+[Package Manager] Server process was shutdown
+##utp:{"type":"MemoryLeaks","version":2,"phase":"Immediate","time":1790783888423,"processId":16648,"allocatedMemory":10183617,"memoryLabels":[{"Default":29313},{"Permanent":15236},{"NewDelete":68795},{"Thread":4230344},{"Manager":33885},{"VertexData":488},{"Geometry":816},{"Texture":296},{"Shader":79381},{"Material":24},{"GfxDevice":56232},{"Audio":2664},{"FreeType":8},{"FontEngine":736},{"Physics":2146},{"Physics2D":16},{"Serialization":720},{"Input":14984},{"JobScheduler":33024},{"TextLib":280},{"Mono":32},{"ScriptingNativeRuntime":155060},{"BaseObject":1687952},{"Resource":1336},{"Renderer":3000},{"Transform":4685},{"File":6862},{"WebCam":616},{"Culling":32},{"Terrain":11394},{"Wind":24},{"STL":40},{"String":24094},{"DynamicArray":89878},{"HashMap":46221},{"Utility":2660822},{"Curl":2478},{"PoolAlloc":2056},{"AI":80},{"TypeTree":11341},{"ScriptManager":512},{"RuntimeInitializeOnLoadManager":64},{"SpriteAtlas":112},{"GI":7792},{"Director":8240},{"CloudService":9184},{"WebRequest":6345},{"VR":47994},{"SceneManager":504},{"Video":208},{"LazyScriptCache":32},{"Camera":17},{"Secure":2377},{"SerializationCache":1576},{"APIUpdating":10320},{"Subsystems":336},{"VirtualTexturing":57888},{"StaticSafetyDebugInfo":278528},{"Analytics":464},{"Hierarchy":608},{"CoreStats":13112},{"Identifiers":6480},{"Gui":96},{"EditorUtility":82649},{"VersionControl":4},{"Undo":947},{"AssetDatabase":324289},{"EditorGi":328},{"UnityConnect":29232},{"Upm":1896},{"AssetCompliance":64},{"DrivenProperties":72},{"LocalIPC":218},{"ProfilerEditor":9746},{"CoreBusinessMetrics":3496},{"Licensing":664},{"AssetReference":32},{"IPCStream":32}]}

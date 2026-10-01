@@ -1,0 +1,170 @@
+CONTROLLED_SETUP position=(-3.85, -10.00)
+PASS fall failure locks 1
+PASS failure waits for user 1
+PASS retry playable FALL_R_1
+PASS fall no resource drift 1
+PASS fall no Hook/collider growth 1
+CONTROLLED_SETUP position=(-3.85, -10.00)
+PASS fall failure locks 2
+PASS failure waits for user 2
+PASS retry playable FALL_R_2
+PASS fall no resource drift 2
+PASS fall no Hook/collider growth 2
+CONTROLLED_SETUP position=(-3.85, -10.00)
+PASS fall failure locks 3
+PASS failure waits for user 3
+PASS retry playable FALL_R_3
+PASS fall no resource drift 3
+PASS fall no Hook/collider growth 3
+CONTROLLED_SETUP position=(-3.85, -10.00)
+PASS fall failure locks 4
+PASS failure waits for user 4
+PASS retry playable FALL_R_4
+PASS fall no resource drift 4
+PASS fall no Hook/collider growth 4
+CONTROLLED_SETUP position=(-3.85, -10.00)
+PASS fall failure locks 5
+PASS failure waits for user 5
+PASS retry playable FALL_R_5
+PASS fall no resource drift 5
+PASS fall no Hook/collider growth 5
+PASS exhaustion entered 1
+PASS retry playable EXHAUSTED_R_1
+PASS exhaustion restores rope 1
+PASS exhaustion entered 2
+PASS retry playable EXHAUSTED_R_2
+PASS exhaustion restores rope 2
+PASS exhaustion entered 3
+PASS retry playable EXHAUSTED_R_3
+PASS exhaustion restores rope 3
+PASS checkpoint object exists 2
+CONTROLLED_SETUP position=(9.50, -3.65)
+PASS controlled physical top landing captures 2
+PASS checkpoint object exists 3
+CONTROLLED_SETUP position=(29.00, -3.15)
+PASS controlled physical top landing captures 3
+CONTROLLED_SETUP position=(45.60, -5.30)
+PASS low switch floor does not advance checkpoint4
+PASS physical proximity switch reveals stairs via F handler API
+PASS retry playable STAIRS_R
+PASS return checkpoint hides recovery stairs
+PASS checkpoint object exists 4
+CONTROLLED_SETUP position=(53.60, -0.95)
+PASS controlled physical top landing captures 4
+CONTROLLED_SETUP position=(63.95, -1.42)
+PASS S4_BRIDGE E attach
+PASS S4_BRIDGE E no permanent spend
+PASS S4_BRIDGE Q build
+PASS S4_BRIDGE Q exact resource cost
+PASS physical walk target 68.5 actual (68.56, 0.07)
+PASS S4 bridge supports walking
+PASS S4 bridge supports E to swing hook
+PASS detach preserves instantaneous momentum
+PASS detach no permanent spend
+PASS retry playable S4_R
+PASS checkpoint object exists 5
+CONTROLLED_SETUP position=(87.10, -0.95)
+PASS controlled physical top landing captures 5
+PASS S5 hazard unblocked without bridge
+CONTROLLED_SETUP position=(94.45, 0.08)
+PASS S5_SHADOW E attach
+PASS S5_SHADOW E no permanent spend
+PASS S5_SHADOW Q build
+PASS S5_SHADOW Q exact resource cost
+PASS S5 authored bridge occludes light
+PASS retry playable S5_BRIDGE_R_1
+PASS S5 retry removes unsaved shadow bridge 1
+PASS S5 rail shelves active 1
+CONTROLLED_SETUP position=(94.45, 0.08)
+PASS S5_REBUILD_1 E attach
+PASS S5_REBUILD_1 E no permanent spend
+PASS S5_REBUILD_1 Q build
+PASS S5_REBUILD_1 Q exact resource cost
+PASS retry playable S5_BRIDGE_R_2
+PASS S5 retry removes unsaved shadow bridge 2
+PASS S5 rail shelves active 2
+CONTROLLED_SETUP position=(94.45, 0.08)
+PASS S5_REBUILD_2 E attach
+PASS S5_REBUILD_2 E no permanent spend
+PASS S5_REBUILD_2 Q build
+PASS S5_REBUILD_2 Q exact resource cost
+PASS retry playable S5_BRIDGE_R_3
+PASS S5 retry removes unsaved shadow bridge 3
+PASS S5 rail shelves active 3
+CONTROLLED_SETUP position=(94.45, 0.08)
+PASS S5_REBUILD_3 E attach
+PASS S5_REBUILD_3 E no permanent spend
+PASS S5_REBUILD_3 Q build
+PASS S5_REBUILD_3 Q exact resource cost
+PASS retry playable S5_FINAL_R
+PASS checkpoint object exists 6
+CONTROLLED_SETUP position=(112.40, -0.95)
+PASS controlled physical top landing captures 6
+CONTROLLED_SETUP position=(118.45, -1.42)
+PASS S6_UPPER E attach
+PASS S6_UPPER E no permanent spend
+PASS S6_UPPER Q build
+PASS S6_UPPER Q exact resource cost
+PASS physical walk target 131.6 actual (131.65, 4.17)
+PASS retry playable S6_R
+CONTROLLED_SETUP position=(118.40, -1.45)
+PASS S6 lower initial grounded E
+PASS S6 air-chain window opens after manual detach
+PASS S6 immediate sequential air reattach API
+PASS S6 1.5sec window expires
+PASS retry playable S6_AFTER_CHAIN_R
+PASS checkpoint object exists 7
+CONTROLLED_SETUP position=(147.90, -0.95)
+PASS controlled physical top landing captures 7
+CONTROLLED_SETUP position=(154.45, -1.42)
+PASS S7_BRIDGE E attach
+PASS S7_BRIDGE E no permanent spend
+PASS S7_BRIDGE Q build
+PASS S7_BRIDGE Q exact resource cost
+PASS physical walk target 159.7 actual (159.82, 0.27)
+PASS retry playable S7_R
+PASS checkpoint object exists 9
+CONTROLLED_SETUP position=(172.80, -0.95)
+PASS controlled physical top landing captures 9
+PASS KNOWN CONTENT STRUCTURE physical progression7 ->9
+CONTROLLED_SETUP position=(179.35, -1.42)
+PASS S9_LEFT E attach
+PASS S9_LEFT E no permanent spend
+PASS S9_LEFT Q build
+PASS S9_LEFT Q exact resource cost
+PASS physical walk target 184.85 actual (184.93, -0.39)
+PASS S9 second E
+PASS S9 second Q
+PASS S9 F merge
+PASS F no extra spend
+PASS S9 merged bridge actual physical checkpoint10
+PASS retry playable MERGED_R_1
+PASS merged snapshot endpoints/length12 count1 R1
+PASS merged removed Hook identity inactive R1
+PASS merged resource checkpoint R1
+PASS merged no collider growth R1
+PASS retry playable MERGED_R_2
+PASS merged snapshot endpoints/length12 count1 R2
+PASS merged removed Hook identity inactive R2
+PASS merged resource checkpoint R2
+PASS merged no collider growth R2
+PASS retry playable MERGED_R_3
+PASS merged snapshot endpoints/length12 count1 R3
+PASS merged removed Hook identity inactive R3
+PASS merged resource checkpoint R3
+PASS merged no collider growth R3
+PASS physical walk target 198.35 actual (198.45, -1.54)
+PASS S10 length10 bridge from real current position
+PASS S10 consumes10
+PASS S10 actual chest clear starts / physics locked
+PASS Main clear state revealed
+PASS Main progress flag
+PASS Main clear return API reaches Stage Selection
+PASS BGM singleton on clear return
+PASS upcoming stage refuses launch with message
+PASS new selection clears error
+PASS menu help pauses
+PASS help close resumes
+PASS menu main reselect transition starts
+PASS fresh MainStage after clear and reselect
+PASS BGM singleton after menu reselect

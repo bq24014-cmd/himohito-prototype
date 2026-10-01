@@ -1,0 +1,23 @@
+{
+  "utc": "2026-09-30T22:07:01.0395046Z",
+  "protectedFiles": 2386,
+  "changedFiles": [],
+  "stagedFiles": [],
+  "head": "7644fdcdf7adb793fcc6e3ac9d6540f317766ec6",
+  "remote": "7644fdcdf7adb793fcc6e3ac9d6540f317766ec6",
+  "branch": "main",
+  "status": [
+    " M Assets/Scenes/MainStage.unity",
+    " M Assets/Scripts/PlayerMover.cs",
+    " M Assets/Scripts/RopeController.cs",
+    " M Assets/Scripts/TutorialSectionGuide.cs",
+    " M Assets/Scripts/TutorialSignInscription.cs",
+    " M Docs/LEARNING_LOG.md",
+    " M README.md",
+    "?? Docs/QA/FullGameRegression_20260930/",
+    "?? Docs/QA/HumanPlaytestFixes_20260930/",
+    "?? Docs/QA/HumanPlaytest_20260930/",
+    "?? output/"
+  ],
+  "pass": true
+}

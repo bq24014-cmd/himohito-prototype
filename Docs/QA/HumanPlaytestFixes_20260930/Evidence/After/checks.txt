@@ -1,0 +1,84 @@
+SIGN 1 sprite=Craft Guide Sign Full Canvas bounds=Center: (-6.08, 1.35, 0.00), Extents: (1.18, 1.18, 0.10)
+SIGN_TEXT section=1 renderer=Operation Key E color=RGBA(0.271, 0.102, 0.055, 1.000) fontSize=64 characterSize=1 position=(-5.56, 1.77, -0.01) scale=(0.04, 0.04, 0.02)
+CONTROLLED_SETUP (-5.28, 1.10)
+PASS sign key exists 1
+SIGN 3 sprite=Craft Guide Sign Full Canvas bounds=Center: (25.10, 1.35, 0.00), Extents: (1.15, 1.15, 0.10)
+SIGN_TEXT section=3 renderer=Operation Key Q color=RGBA(0.271, 0.102, 0.055, 1.000) fontSize=64 characterSize=1 position=(25.61, 1.79, -0.01) scale=(0.04, 0.04, 0.02)
+CONTROLLED_SETUP (25.90, 1.10)
+PASS sign key exists 3
+SIGN 2 sprite=Craft Guide Sign Full Canvas bounds=Center: (10.10, 1.35, 0.00), Extents: (1.15, 1.15, 0.10)
+SIGN_TEXT section=2 renderer=Operation Key W color=RGBA(0.271, 0.102, 0.055, 1.000) fontSize=64 characterSize=1 position=(10.61, 1.95, -0.01) scale=(0.03, 0.03, 0.01)
+SIGN_TEXT section=2 renderer=Operation Key S color=RGBA(0.271, 0.102, 0.055, 1.000) fontSize=64 characterSize=1 position=(10.61, 1.60, -0.01) scale=(0.03, 0.03, 0.01)
+CONTROLLED_SETUP (10.90, 1.10)
+PASS sign key exists 2
+SIGN 4 sprite=Craft Guide Sign Full Canvas bounds=Center: (37.10, 1.35, 0.00), Extents: (1.15, 1.15, 0.10)
+SIGN_TEXT section=4 renderer=Operation Key F color=RGBA(0.271, 0.102, 0.055, 1.000) fontSize=64 characterSize=1 position=(37.61, 1.79, -0.01) scale=(0.04, 0.04, 0.02)
+CONTROLLED_SETUP (37.90, 1.10)
+PASS sign key exists 4
+CONTROLLED_SETUP (62.70, 1.40)
+PASS Tutorial physical goal enters Clear
+CLEAR_INPUT Tutorial trial=1 key=A simulated=False move=0 footstepDelta=0 jumpBuffer=0
+CLEAR_INPUT Tutorial trial=2 key=D simulated=False move=0 footstepDelta=0 jumpBuffer=0
+CLEAR_INPUT Tutorial trial=3 key=A simulated=False move=0 footstepDelta=0 jumpBuffer=0
+CLEAR_INPUT Tutorial trial=4 key=D simulated=False move=0 footstepDelta=0 jumpBuffer=0
+CLEAR_INPUT Tutorial trial=5 key=A simulated=False move=0 footstepDelta=0 jumpBuffer=0
+CLEAR_INPUT Tutorial trial=6 key=D simulated=False move=0 footstepDelta=0 jumpBuffer=0
+CLEAR_INPUT Tutorial trial=7 key=A simulated=False move=0 footstepDelta=0 jumpBuffer=0
+CLEAR_INPUT Tutorial trial=8 key=D simulated=False move=0 footstepDelta=0 jumpBuffer=0
+CLEAR_INPUT Tutorial trial=9 key=A simulated=False move=0 footstepDelta=0 jumpBuffer=0
+CLEAR_INPUT Tutorial trial=10 key=D simulated=False move=0 footstepDelta=0 jumpBuffer=0
+CLEAR_INPUT Tutorial trial=11 key=A simulated=False move=0 footstepDelta=0 jumpBuffer=0
+CLEAR_INPUT Tutorial trial=12 key=D simulated=False move=0 footstepDelta=0 jumpBuffer=0
+CLEAR_INPUT Tutorial trial=13 key=A simulated=False move=0 footstepDelta=0 jumpBuffer=0
+CLEAR_INPUT Tutorial trial=14 key=D simulated=False move=0 footstepDelta=0 jumpBuffer=0
+CLEAR_INPUT Tutorial trial=15 key=A simulated=False move=0 footstepDelta=0 jumpBuffer=0
+CLEAR_INPUT Tutorial trial=16 key=D simulated=False move=0 footstepDelta=0 jumpBuffer=0
+CLEAR_INPUT Tutorial trial=17 key=A simulated=False move=0 footstepDelta=0 jumpBuffer=0
+CLEAR_INPUT Tutorial trial=18 key=D simulated=False move=0 footstepDelta=0 jumpBuffer=0
+CLEAR_INPUT Tutorial trial=19 key=A simulated=False move=0 footstepDelta=0 jumpBuffer=0
+CLEAR_INPUT Tutorial trial=20 key=D simulated=False move=0 footstepDelta=0 jumpBuffer=0
+CLEAR_RESULT Tutorial trials=20 actualAudioPlayOneShotCalls=0 inputReads=0 simulated=False moverEnabled=True positionDelta=0
+PASS Tutorial clear footstep zero
+PASS Tutorial clear skips movement/jump input reads
+PASS Tutorial clear remains locked
+PASS normal MainStage actual footstep playback
+NORMAL_FOOTSTEPS 1
+CONTROLLED_SETUP (172.80, -0.95)
+PASS physical checkpoint9
+CONTROLLED_SETUP (179.35, -1.42)
+PASS S9 first bridge E/Q
+PASS physical walk target=184.55 position=(184.67, -0.51)
+BEFORE_POSITION_REPLAY (184.67, -0.51)
+SWEEP left_of_center position=(184.67, -0.51) selected=6 rightRaySamples=24 rightRayRange=[-17.75,-12] rightSelectedSamples=0 rightSelectedRange=[999,-999] centerSamples=308 centerRange=[-87.75,-11] centerStealsRightSamples=24
+PASS physical walk target=184.85 position=(184.90, -0.40)
+BEFORE_POSITION_REPLAY (184.90, -0.40)
+SWEEP near_center position=(184.90, -0.40) selected=6 rightRaySamples=27 rightRayRange=[-19.5,-13] rightSelectedSamples=27 rightSelectedRange=[-19.5,-13] centerSamples=322 centerRange=[-100,-19.75] centerStealsRightSamples=0
+PASS physical walk target=185.05 position=(185.06, -0.33)
+BEFORE_POSITION_REPLAY (185.06, -0.33)
+SWEEP at_center position=(185.06, -0.33) selected=6 rightRaySamples=29 rightRayRange=[-20.75,-13.75] rightSelectedSamples=29 rightSelectedRange=[-20.75,-13.75] centerSamples=313 centerRange=[-100,-22] centerStealsRightSamples=0
+CONTROLLED_SETUP (218.70, -0.80)
+PASS Main physical goal enters Clear
+CLEAR_INPUT MainStage trial=1 key=A simulated=False move=0 footstepDelta=0 jumpBuffer=0
+CLEAR_INPUT MainStage trial=2 key=D simulated=False move=0 footstepDelta=0 jumpBuffer=0
+CLEAR_INPUT MainStage trial=3 key=A simulated=False move=0 footstepDelta=0 jumpBuffer=0
+CLEAR_INPUT MainStage trial=4 key=D simulated=False move=0 footstepDelta=0 jumpBuffer=0
+CLEAR_INPUT MainStage trial=5 key=A simulated=False move=0 footstepDelta=0 jumpBuffer=0
+CLEAR_INPUT MainStage trial=6 key=D simulated=False move=0 footstepDelta=0 jumpBuffer=0
+CLEAR_INPUT MainStage trial=7 key=A simulated=False move=0 footstepDelta=0 jumpBuffer=0
+CLEAR_INPUT MainStage trial=8 key=D simulated=False move=0 footstepDelta=0 jumpBuffer=0
+CLEAR_INPUT MainStage trial=9 key=A simulated=False move=0 footstepDelta=0 jumpBuffer=0
+CLEAR_INPUT MainStage trial=10 key=D simulated=False move=0 footstepDelta=0 jumpBuffer=0
+CLEAR_INPUT MainStage trial=11 key=A simulated=False move=0 footstepDelta=0 jumpBuffer=0
+CLEAR_INPUT MainStage trial=12 key=D simulated=False move=0 footstepDelta=0 jumpBuffer=0
+CLEAR_INPUT MainStage trial=13 key=A simulated=False move=0 footstepDelta=0 jumpBuffer=0
+CLEAR_INPUT MainStage trial=14 key=D simulated=False move=0 footstepDelta=0 jumpBuffer=0
+CLEAR_INPUT MainStage trial=15 key=A simulated=False move=0 footstepDelta=0 jumpBuffer=0
+CLEAR_INPUT MainStage trial=16 key=D simulated=False move=0 footstepDelta=0 jumpBuffer=0
+CLEAR_INPUT MainStage trial=17 key=A simulated=False move=0 footstepDelta=0 jumpBuffer=0
+CLEAR_INPUT MainStage trial=18 key=D simulated=False move=0 footstepDelta=0 jumpBuffer=0
+CLEAR_INPUT MainStage trial=19 key=A simulated=False move=0 footstepDelta=0 jumpBuffer=0
+CLEAR_INPUT MainStage trial=20 key=D simulated=False move=0 footstepDelta=0 jumpBuffer=0
+CLEAR_RESULT MainStage trials=20 actualAudioPlayOneShotCalls=0 inputReads=0 simulated=False moverEnabled=True positionDelta=0
+PASS MainStage clear footstep zero
+PASS MainStage clear skips movement/jump input reads
+PASS MainStage clear remains locked

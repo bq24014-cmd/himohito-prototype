@@ -535,9 +535,6 @@ namespace HimoHito
             float shotDistance = previewBeyondSelectedLength
                 ? maximumShotDistance : Mathf.Min(SelectedRopeLength, maximumShotDistance);
             float hookSearchDistance = GetHookSearchDistance(shotDistance);
-            RopePlatformBuilder platformBuilder = GetComponent<RopePlatformBuilder>();
-            HookPoint builtConnectionFallback = null;
-            Vector2 builtConnectionAnchor = default;
             RaycastHit2D[] hits = Physics2D.RaycastAll(
                 origin,
                 offset.normalized,
@@ -580,30 +577,12 @@ namespace HimoHito
                     continue;
                 }
 
-                // A bridge endpoint under the player must not hide an unbuilt
-                // destination further along the same ray (e.g. the second S9 bridge).
-                // Keep it as a fallback so aiming at an existing Hook still works.
-                if (platformBuilder != null &&
-                    candidateHook.TryGetComponent(out RopePlatformAnchor platformAnchor) &&
-                    platformAnchor.TryGetPairedAnchor(out Vector2 pairedAnchor) &&
-                    platformBuilder.HasPlatformBetween(candidateAnchor, pairedAnchor))
-                {
-                    if (builtConnectionFallback == null)
-                    {
-                        builtConnectionFallback = candidateHook;
-                        builtConnectionAnchor = candidateAnchor;
-                    }
-                    continue;
-                }
-
                 resolvedAnchor = candidateAnchor;
                 hookPoint = candidateHook;
                 return true;
             }
 
-            resolvedAnchor = builtConnectionAnchor;
-            hookPoint = builtConnectionFallback;
-            return builtConnectionFallback != null;
+            return false;
         }
 
         private bool CanAttachToHook(HookPoint candidateHook)

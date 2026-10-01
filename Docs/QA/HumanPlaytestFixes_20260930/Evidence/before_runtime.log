@@ -1,0 +1,1838 @@
+[Licensing::Module] Trying to connect to existing licensing client channel...
+Built from '6000.3/staging' branch; Version is '6000.3.21f1 (c02631ffc030) revision 12592689'; Using compiler version '194234433'; Build Type 'Release'
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-田尻大翔" at "2026-09-30T15:26:02.3656068Z"
+OS: 'Windows 11  (10.0.26200) Professional' Language: 'ja' Physical Memory: 16052 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
+System  architecture: x64
+Process architecture: x64
+Date: 2026-09-30T15:26:02Z
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\6000.3.21f1\Editor\Unity.exe
+-batchmode
+-force-d3d11
+-projectPath
+C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype\.codex_tmp\HumanPlaytestFixes_20260930\Project
+-executeMethod
+HumanProbeEntry.Run
+-humanEvidence
+C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype\Docs\QA\HumanPlaytestFixes_20260930\Evidence\Before
+-logFile
+C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype\Docs\QA\HumanPlaytestFixes_20260930\Evidence\before_runtime.log
+Successfully changed project path to: C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype\.codex_tmp\HumanPlaytestFixes_20260930\Project
+C:/Users/田尻大翔/Documents/Codex/2026-08-07/new-chat/outputs/HimoHitoPrototype/.codex_tmp/HumanPlaytestFixes_20260930/Project
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-gfx=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+Player connection [9336]  Target information:
+
+Player connection [9336]  * "[IP] 192.168.40.81 [Port] 55505 [Flags] 2 [Guid] 911873474 [EditorId] 911873474 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-UM0GV1L) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [9336] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [9336] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+[Package Manager] Connected to IPC stream "Upm-10852" after 0.8 seconds.
+[Licensing::Module] Licensing is not yet initialized.
+[Licensing::Client] Error: HandshakeResponse reported an error:
+	ResponseCode: 505
+	ResponseStatus: Unsupported protocol version '1.18.1'.
+[Licensing::Module] Error: Failed to handshake to channel: "LicenseClient-田尻大翔"
+[Licensing::IpcConnector] LicenseClient-田尻大翔 channel disconnected successfully.
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-田尻大翔-6000.3.21" at "2026-09-30T15:26:09.6695508Z"
+[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 13432, path: "C:/Program Files/Unity/Hub/Editor/6000.3.21f1/Editor/Data/Resources/Licensing/Client/Unity.Licensing.Client.exe")
+[Licensing::Module] LicensingClient has failed validation; ignoring
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.18.1+9fbee8e
+  Session Id:              3c4827f7c66745b6b5051e56b8968d5b
+  Correlation Id:          8285086f732106bd6d26c44468156621
+  External correlation Id: 5713194369438374821
+  Machine Id:              dNinDYak6EUa2pX7RMEoTuNEbYA=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-田尻大翔-6000.3.21" (connect: 0.00s, validation: 0.01s, handshake: 0.05s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-田尻大翔-6000.3.21-notifications" at "2026-09-30T15:26:09.7292392Z"
+[Licensing::Module] Error: Access token is unavailable; failed to update
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: 15669713720629-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+[Licensing::Client] Successfully updated license, isAsync: True, time: 0.02
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] Licensing Background thread has ended after 7.45s
+[Licensing::Module] Licensing is initialized (took 6.15s).
+[Licensing::Client] Successfully resolved entitlement details
+Library Redirect Path: Library/
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 6000.3.21f1 (c02631ffc030)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.3.21f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/田尻大翔/Documents/Codex/2026-08-07/new-chat/outputs/HimoHitoPrototype/.codex_tmp/HumanPlaytestFixes_20260930/Project/Assets
+Forcing GfxDevice: Direct3D 11
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: Intel(R) Iris(R) Xe Graphics (ID=0xa7a0)
+    Vendor:   Intel
+    VRAM:     8026 MB
+    Driver:   31.0.101.4255
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.3.21f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.3.21f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.3.21f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56852
+Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
+Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
+ImportWorker Server TCP listen port: 0
+AcceleratorClientConnectionCallback - disconnected - :0
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.3.21f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.007681 seconds.
+- Loaded All Assemblies, in  1.239 seconds
+Native extension for WindowsStandalone target not found
+Package Manager log level set to [2]
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:False
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.224 seconds
+Domain Reload Profiling: 2454ms
+	BeginReloadAssembly (465ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (10ms)
+	RebuildCommonClasses (105ms)
+	RebuildNativeTypeToScriptingClass (36ms)
+	initialDomainReloadingComplete (151ms)
+	LoadAllAssembliesAndSetupDomain (471ms)
+		LoadAssemblies (446ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (460ms)
+			TypeCache.Refresh (457ms)
+				TypeCache.ScanAssembly (424ms)
+			BuildScriptInfoCaches (0ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (1225ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1116ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (132ms)
+			SetLoadedEditorAssemblies (10ms)
+			BeforeProcessingInitializeOnLoad (229ms)
+			ProcessInitializeOnLoadAttributes (401ms)
+			ProcessInitializeOnLoadMethodAttributes (344ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+[Licensing::Client] Successfully resolved entitlement details
+Application.AssetDatabase Initial Refresh Start
+[Package Manager] Done resolving packages in 0.72 seconds
+[Licensing::Client] Successfully resolved entitlement details
+[Package Manager] Registered 6 packages:
+  Built-in packages:
+    com.unity.modules.audio@1.0.0 (location: C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype\.codex_tmp\HumanPlaytestFixes_20260930\Project\Library\PackageCache\com.unity.modules.audio)
+    com.unity.modules.imgui@1.0.0 (location: C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype\.codex_tmp\HumanPlaytestFixes_20260930\Project\Library\PackageCache\com.unity.modules.imgui)
+    com.unity.modules.jsonserialize@1.0.0 (location: C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype\.codex_tmp\HumanPlaytestFixes_20260930\Project\Library\PackageCache\com.unity.modules.jsonserialize)
+    com.unity.modules.particlesystem@1.0.0 (location: C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype\.codex_tmp\HumanPlaytestFixes_20260930\Project\Library\PackageCache\com.unity.modules.particlesystem)
+    com.unity.modules.physics2d@1.0.0 (location: C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype\.codex_tmp\HumanPlaytestFixes_20260930\Project\Library\PackageCache\com.unity.modules.physics2d)
+    com.unity.modules.imageconversion@1.0.0 (location: C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype\.codex_tmp\HumanPlaytestFixes_20260930\Project\Library\PackageCache\com.unity.modules.imageconversion)
+[Subsystems] No new subsystems found in resolved package list.
+[Package Manager] Done registering packages in 0.01 seconds
+[ScriptCompilation] Requested script compilation because: Assetdatabase observed changes in script compilation related files
+Starting: C:\Program Files\Unity\Hub\Editor\6000.3.21f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: C:/Users/田尻大翔/Documents/Codex/2026-08-07/new-chat/outputs/HimoHitoPrototype/.codex_tmp/HumanPlaytestFixes_20260930/Project
+ExitCode: 4 Duration: 0s265ms
+[             ] Require frontend run.  Library/Bee/1900b0aE.dag couldn't be loaded
+Starting: C:\Program Files\Unity\Hub\Editor\6000.3.21f1\Editor\Data\netcorerun\netcorerun.exe "C:\Program Files\Unity\Hub\Editor\6000.3.21f1\Editor\Data\Tools\BuildPipeline\ScriptCompilationBuildProgram.exe" "Library/Bee/1900b0aE.dag.json" "Library/Bee/1900b0aE-inputdata.json" "Library\Bee\buildprogram0.traceevents"
+WorkingDir: C:/Users/田尻大翔/Documents/Codex/2026-08-07/new-chat/outputs/HimoHitoPrototype/.codex_tmp/HumanPlaytestFixes_20260930/Project
+DisplayProgressbar: Compiling Scripts
+ExitCode: 0 Duration: 0s866ms
+Starting: C:\Program Files\Unity\Hub\Editor\6000.3.21f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --dagfilejson="Library\Bee\1900b0aE.dag.json" --profile="Library/Bee/backend2.traceevents" ScriptAssemblies
+WorkingDir: C:/Users/田尻大翔/Documents/Codex/2026-08-07/new-chat/outputs/HimoHitoPrototype/.codex_tmp/HumanPlaytestFixes_20260930/Project
+ExitCode: 0 Duration: 12s
+Finished compiling graph: 158 nodes, 568 flattened edges (558 ToBuild, 4 ToUse), maximum node priority 18
+[  1/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEditor.ShaderCompilationModule.dll_AAB42E503893C4B1.mvfrm
+[  2/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEditor.TextCoreFontEngineModule.dll_5834B916B6AF848E.mvfrm
+[  3/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEditor.ShaderFoundryModule.dll_82C0D8E7D444AE27.mvfrm
+[  4/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEditor.ShaderBuildSettingsModule.dll_2752E48C906E867F.mvfrm
+[  5/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEditor.UIAutomationModule.dll_6ADE791D77773F6C.mvfrm
+[  6/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEditor.TreeModule.dll_3B90E8039CE5BA4F.mvfrm
+[  7/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEditor.TextRenderingModule.dll_8D842AE003F1E2F2.mvfrm
+[  8/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEditor.SubstanceModule.dll_8532039AEDD8FDC3.mvfrm
+[  9/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEditor.SceneViewModule.dll_1A0259C95343F2C4.mvfrm
+[ 10/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEditor.SketchUpModule.dll_FDAF8D3C8B7559A8.mvfrm
+[ 11/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEditor.TextCoreTextEngineModule.dll_A01CEF8846333DAC.mvfrm
+[ 12/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEditor.SpriteShapeModule.dll_FD0CD83E917F5C8F.mvfrm
+[ 13/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEditor.TilemapModule.dll_8B9D5CC44AE30791.mvfrm
+[ 14/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEditor.SceneTemplateModule.dll_43E108A4B1953199.mvfrm
+[ 15/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEditor.SpriteMaskModule.dll_CF698A6AC367D642.mvfrm
+[ 16/155    1s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEditor.TerrainModule.dll_ECA0F54333262688.mvfrm
+[ 17/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEditor.PropertiesModule.dll_1378571914E3A504.mvfrm
+[ 18/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEditor.PlayModeModule.dll_5B8E99A5DF0CCCF8.mvfrm
+[ 19/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEditor.QuickSearchModule.dll_A58847818BB08018.mvfrm
+[ 20/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.InsightsModule.dll_AA7832FD4E8BE497.mvfrm
+[ 21/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEditor.HierarchyModule.dll_C8C67D9D1C006478.mvfrm
+[ 22/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEditor.GridModule.dll_BB560EE32D74BB07.mvfrm
+[ 23/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEditor.GraphicsStateCollectionSerializerModule.dll_8F6D00143C8E2579.mvfrm
+[ 24/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEditor.MediaModule.dll_9939381169A6BC37.mvfrm
+[ 25/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEditor.GraphViewModule.dll_DB5276C15E2125B6.mvfrm
+[ 26/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEditor.GridAndSnapModule.dll_2431ACF5B63E40AE.mvfrm
+[ 27/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEditor.PhysicsModule.dll_D25A79D45D67DD9A.mvfrm
+[ 28/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEditor.SafeModeModule.dll_159AA7EC4043BD91.mvfrm
+[ 29/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEditor.PresetsUIModule.dll_96B8AFA360797DBB.mvfrm
+[ 30/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEditor.QuickInstallModule.dll_991CD86C1C89E4DF.mvfrm
+[ 31/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEditor.Physics2DModule.dll_4097F1F1F3FB400C.mvfrm
+[ 32/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEditor.GIModule.dll_A1E0CDE61419A5B3.mvfrm
+[ 33/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEditor.DeviceSimulatorModule.dll_23F257FF5C0FA5B1.mvfrm
+[ 34/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEditor.AssetComplianceModule.dll_5CCD67EDD6CB89DE.mvfrm
+[ 35/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEditor.ClothModule.dll_34617B7AC577128D.mvfrm
+[ 36/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEditor.EmbreeModule.dll_B67646F3D328CF59.mvfrm
+[ 37/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEditor.CoreBusinessMetricsModule.dll_9F17975DE3B68437.mvfrm
+[ 38/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEditor.DiagnosticsModule.dll_1A78C67432D983BF.mvfrm
+[ 39/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEditor.BuildProfileModule.dll_BA3D8A2CDB0376AC.mvfrm
+[ 40/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEditor.AccessibilityModule.dll_EA4582143912D611.mvfrm
+[ 41/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.UnityCurlModule.dll_DCF4941BA891EC49.mvfrm
+[ 42/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.dll_5C157879E519046A.mvfrm
+[ 43/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEditor.AdaptivePerformanceModule.dll_1F2C9DE3BD6F553D.mvfrm
+[ 44/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEditor.EditorToolbarModule.dll_204197E6B2A88761.mvfrm
+[ 45/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.VirtualTexturingModule.dll_305F9EA6A9498F19.mvfrm
+[ 46/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.VFXModule.dll_D3E27AC5124FAF60.mvfrm
+[ 47/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEditor.CoreModule.dll_DDE4F2F515202510.mvfrm
+[ 48/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.UnityConsentModule.dll_747CB2DE0779F2C1.mvfrm
+[ 49/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.UnityConnectModule.dll_A2D71BB1FA6F5C71.mvfrm
+[ 50/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.TextRenderingModule.dll_19C51D077CEA6617.mvfrm
+[ 51/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.UnityAnalyticsCommonModule.dll_F7F3DA0F29FEBE58.mvfrm
+[ 52/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.SpriteShapeModule.dll_02D2A7CDA3B96D14.mvfrm
+[ 53/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.SubstanceModule.dll_3B17F483D358AFA8.mvfrm
+[ 54/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.TextCoreTextEngineModule.dll_1E7C6ADB5930FC77.mvfrm
+[ 55/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.StreamingModule.dll_5E6CE03A8805B19A.mvfrm
+[ 56/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.TLSModule.dll_5303E2563BE245F3.mvfrm
+[ 57/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.TextCoreFontEngineModule.dll_D6943469C9AD4359.mvfrm
+[ 58/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.ShaderRuntimeModule.dll_065E1D6A020EC3AB.mvfrm
+[ 59/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.ShaderVariantAnalyticsModule.dll_A33DCB341258A222.mvfrm
+[ 60/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.SpriteMaskModule.dll_D017F7B2C5ABEF8D.mvfrm
+[ 61/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll_52E3F004F5F9C4BA.mvfrm
+[ 62/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.SharedInternalsModule.dll_19A256F6C51D6679.mvfrm
+[ 63/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.RenderAs2DModule.dll_555E86E6F6820886.mvfrm
+[ 64/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.PropertiesModule.dll_1426C4611727BE4F.mvfrm
+[ 65/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.PhysicsBackendPhysXModule.dll_B9D01A26DB70EB01.mvfrm
+[ 66/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.PerformanceReportingModule.dll_5CB51CCB10161FFA.mvfrm
+[ 67/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.Physics2DModule.dll_F67DE2DAD97AF1F1.mvfrm
+[ 68/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.MarshallingModule.dll_91DA1907D23F625C.mvfrm
+[ 69/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.MultiplayerModule.dll_691996FFA6DEC282.mvfrm
+[ 70/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.ParticleSystemModule.dll_6D50CD3401FAA241.mvfrm
+[ 71/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.JSONSerializeModule.dll_D69DFD77B146B9C0.mvfrm
+[ 72/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.LocalizationModule.dll_7360D70B48EB2185.mvfrm
+[ 73/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEditor.MultiplayerModule.dll_6353C77094A4B1FD.mvfrm
+[ 74/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.ImageConversionModule.dll_959118214DEF6B29.mvfrm
+[ 75/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.InputLegacyModule.dll_7AB695918608EAFB.mvfrm
+[ 76/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.InputModule.dll_FA1BA294930F88F2.mvfrm
+[ 77/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.InputForUIModule.dll_E99DDF3C045CF6CF.mvfrm
+[ 78/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.IdentifiersModule.dll_C1FB0268B0900322.mvfrm
+[ 79/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.IMGUIModule.dll_CC057A4AE308F82F.mvfrm
+[ 80/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.HotReloadModule.dll_2B20B0F013B115DE.mvfrm
+[ 81/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.GridModule.dll_DE76E235D57A2632.mvfrm
+[ 82/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.DSPGraphModule.dll_1602CBD6366F6639.mvfrm
+[ 83/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.GraphicsStateCollectionSerializerModule.dll_9860CD04098D6EDE.mvfrm
+[ 84/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.GameCenterModule.dll_E6EB8522A43C5A13.mvfrm
+[ 85/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.GIModule.dll_E04F5F757F96D97E.mvfrm
+[ 86/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.CoreModule.dll_0105C647BD25903B.mvfrm
+[ 87/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.ClusterRendererModule.dll_299F1A70CBCAB335.mvfrm
+[ 88/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.ClusterInputModule.dll_35140CB8B16F2E8C.mvfrm
+[ 89/155    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.rsp2
+[ 90/155    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.UnityAdditionalFile.txt
+[ 91/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.ContentLoadModule.dll_8287D3B3BC99DCF7.mvfrm
+[ 92/155    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.dll.mvfrm.rsp
+[ 93/155    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.rsp
+[ 94/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.CrashReportingModule.dll_1A3E83E793E916B3.mvfrm
+[ 95/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.ARModule.dll_0185DB6B4105502D.mvfrm
+[ 96/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.AudioModule.dll_93A5DAE41CD7644E.mvfrm
+[ 97/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEditor.XRModule.dll_8AA90C8FFFA6961B.mvfrm
+[ 98/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEditor.dll_297131A186A57785.mvfrm
+[ 99/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEditor.VideoModule.dll_F282A2EAADEC4F4E.mvfrm
+[100/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEditor.VectorGraphicsModule.dll_4973A1CD7814847F.mvfrm
+[101/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEditor.UIToolkitAuthoringModule.dll_8B8B4DA3D536084E.mvfrm
+[102/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEditor.UmbraModule.dll_484DCA987880DF1C.mvfrm
+[103/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEditor.VFXModule.dll_C7C0D871A29FA15B.mvfrm
+[104/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEditor.UIElementsSamplesModule.dll_9EE5CBD8558FCFE1.mvfrm
+[105/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEditor.UnityConnectModule.dll_B57797A2FFE75BC6.mvfrm
+[106/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEditor.UIBuilderModule.dll_2FDB23DDD0D99EEA.mvfrm
+[107/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEditor.UIElementsModule.dll_3E55523494DBFA4C.mvfrm
+[108/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEditor.Graphs.dll_7236269B09219F42.mvfrm
+[109/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.AIModule.dll_48131667E3E7F164.mvfrm
+[110/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.AnimationModule.dll_A9D7F2EA387DFA5C.mvfrm
+[111/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEditor.WindowsStandalone.Extensions.dll_5A982575EA622D90.mvfrm
+[112/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.UnityWebRequestAudioModule.dll_D4B170A99680EA92.mvfrm
+[113/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.WindModule.dll_7754A1704E5C0EA4.mvfrm
+[114/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.XRModule.dll_C9179E1F6B23C9E6.mvfrm
+[115/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.VideoModule.dll_B8AF5F4EDF697FF3.mvfrm
+[116/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.VehiclesModule.dll_887463EC3E3864B3.mvfrm
+[117/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.VectorGraphicsModule.dll_049803689401188A.mvfrm
+[118/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.VRModule.dll_9658DB1AE1E97C88.mvfrm
+[119/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.UnityWebRequestAssetBundleModule.dll_859021CDD1FF7CCE.mvfrm
+[120/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.UnityWebRequestModule.dll_A7301FCB58E405A8.mvfrm
+[121/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.UnityWebRequestWWWModule.dll_E93EB03748F0B8E3.mvfrm
+[122/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.UnityWebRequestTextureModule.dll_E283AD83668C66A7.mvfrm
+[123/155    0s] MovedFromExtractor-Combine Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.dll.mvfrm
+[124/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.UIModule.dll_4386B495402EF710.mvfrm
+[125/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.UmbraModule.dll_0E7A86FCA9FE0FC1.mvfrm
+[126/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.UnityAnalyticsModule.dll_8CF03DFDAE21F43D.mvfrm
+[127/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.TilemapModule.dll_7E18156EAFF1EED6.mvfrm
+[128/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.UIElementsModule.dll_3F03BF7C97201397.mvfrm
+[129/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.TerrainPhysicsModule.dll_6DCB76071B3D9CCE.mvfrm
+[130/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.TerrainModule.dll_DF1BADED98350DCD.mvfrm
+[131/155    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp-Editor.rsp2
+[132/155    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp-Editor.UnityAdditionalFile.txt
+[133/155    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp-Editor.dll.mvfrm.rsp
+[134/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.SubsystemsModule.dll_3AC55E1493F3D7A0.mvfrm
+[135/155    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp-Editor.rsp
+[136/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.ScreenCaptureModule.dll_F085AAFCC5B2E622.mvfrm
+[137/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.ClothModule.dll_FA8E37DEF6F44332.mvfrm
+[138/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.PhysicsModule.dll_C4D5327EC276C4DF.mvfrm
+[139/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.HierarchyModule.dll_7EAC6E860180165D.mvfrm
+[140/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.DirectorModule.dll_10B16A6CC40E9518.mvfrm
+[141/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.NVIDIAModule.dll_0E875EDB30C5EA07.mvfrm
+[142/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.AssetBundleModule.dll_E9717A72EE17350A.mvfrm
+[143/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.HierarchyCoreModule.dll_EDA1111620B8B22C.mvfrm
+[144/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.AccessibilityModule.dll_7686743BB20B5936.mvfrm
+[145/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.AndroidJNIModule.dll_BC9E3B07DDFB6922.mvfrm
+[146/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.AdaptivePerformanceModule.dll_DFBC3299F8B4A842.mvfrm
+[147/155    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/UnityEngine.AMDModule.dll_54741EF114B1CAA0.mvfrm
+[148/155    0s] MovedFromExtractor-Combine Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp-Editor.dll.mvfrm
+[149/155    5s] Csc Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.dll (+2 others)
+[150/155    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp.pdb
+[151/155    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp.dll
+[152/155    0s] Csc Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp-Editor.dll (+2 others)
+[153/155    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.pdb
+[154/155    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
+*** Tundra build success (12.09 seconds), 154 items updated, 155 evaluated
+AssetDatabase: script compilation time: 14.750959s
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  1.882 seconds
+Start importing Assets using Guid(00000000000000001000000000000000) (DefaultImporter) -> (artifact id: '4b55c7cb15071bfc086d0e52a7664a41') in 0.0520403 seconds
+Start importing ProjectSettings/InputManager.asset using Guid(00000000000000002000000000000000) (LibraryAssetImporter) -> (artifact id: '3d278bdfa729973ecf92c670ca181c88') in 0.0068794 seconds
+Start importing ProjectSettings/TagManager.asset using Guid(00000000000000003000000000000000) (LibraryAssetImporter) -> (artifact id: '4aa03ef27a83f311e598313a3ec2fbc3') in 0.0064525 seconds
+Start importing ProjectSettings/ProjectSettings.asset using Guid(00000000000000004000000000000000) (LibraryAssetImporter) -> (artifact id: 'f096649ad26627c45237ce4590518161') in 0.0115214 seconds
+Start importing ProjectSettings/AudioManager.asset using Guid(00000000000000006000000000000000) (LibraryAssetImporter) -> (artifact id: '7bb8de31f311db17f0fefe3abfd595f1') in 0.006824 seconds
+Start importing ProjectSettings/TimeManager.asset using Guid(00000000000000007000000000000000) (LibraryAssetImporter) -> (artifact id: '52c307e924e96ceef905bcc2cea85a00') in 0.0059632 seconds
+Start importing ProjectSettings/DynamicsManager.asset using Guid(00000000000000008000000000000000) (LibraryAssetImporter) -> (artifact id: '913ceedd18932e74f6c2ac19d4bebe5c') in 0.005149 seconds
+Start importing ProjectSettings/QualitySettings.asset using Guid(00000000000000009000000000000000) (LibraryAssetImporter) -> (artifact id: '0108565e686be3fe2e35cd30ef61dd30') in 0.006978 seconds
+Start importing ProjectSettings/EditorBuildSettings.asset using Guid(0000000000000000b000000000000000) (LibraryAssetImporter) -> (artifact id: 'cc5024ba743cb4132310bf025be68d55') in 0.0060401 seconds
+Start importing ProjectSettings/EditorSettings.asset using Guid(0000000000000000c000000000000000) (LibraryAssetImporter) -> (artifact id: 'fdcca38f5f1944c9bec0b9f00395ab39') in 0.0063605 seconds
+Start importing ProjectSettings/NavMeshAreas.asset using Guid(00000000000000004100000000000000) (LibraryAssetImporter) -> (artifact id: '4ba0a6bb5cc18b1619eb3b3f4ce570d1') in 0.0064589 seconds
+Start importing ProjectSettings/Physics2DSettings.asset using Guid(00000000000000005100000000000000) (LibraryAssetImporter) -> (artifact id: '03a2f9665ad2b81ca54b808a512fd98e') in 0.0062304 seconds
+Start importing ProjectSettings/GraphicsSettings.asset using Guid(00000000000000006100000000000000) (LibraryAssetImporter) -> (artifact id: '041f8e671a93a484399854eca4c35b80') in 0.0064028 seconds
+Start importing ProjectSettings/ClusterInputManager.asset using Guid(00000000000000007100000000000000) (LibraryAssetImporter) -> (artifact id: '5a028a71a6163b7bc9a46219c48662ec') in 0.0060619 seconds
+Start importing ProjectSettings/UnityConnectSettings.asset using Guid(0000000000000000a100000000000000) (LibraryAssetImporter) -> (artifact id: '5a6e69f8200d884ded3f19f546ea756a') in 0.0066566 seconds
+Start importing ProjectSettings/PresetManager.asset using Guid(0000000000000000b100000000000000) (LibraryAssetImporter) -> (artifact id: '669bd2cb5cdf99ef516d1350fa42393e') in 0.0051999 seconds
+Start importing ProjectSettings/VFXManager.asset using Guid(0000000000000000c100000000000000) (LibraryAssetImporter) -> (artifact id: 'dd6732d958402095937fd19a0cecb735') in 0.0057313 seconds
+Start importing ProjectSettings/VersionControlSettings.asset using Guid(0000000000000000d100000000000000) (LibraryAssetImporter) -> (artifact id: 'b89f810c452b248c014f182ae5caa680') in 0.0061031 seconds
+Start importing ProjectSettings/MemorySettings.asset using Guid(0000000000000000f100000000000000) (LibraryAssetImporter) -> (artifact id: '19f032dc933bd79e61da5c81f7ddd1ac') in 0.0068431 seconds
+Start importing ProjectSettings/MultiplayerManager.asset using Guid(00000000000000000200000000000000) (LibraryAssetImporter) -> (artifact id: 'f060d13f2990d90fc35c577bb4111c66') in 0.006454 seconds
+Start importing Library/BuildInstructions using Guid(00000000000000002300000000000000) (DefaultImporter) -> (artifact id: 'ade3aeda13ad9960ede0e143cb33502a') in 0.0020065 seconds
+Start importing Packages/com.unity.modules.imgui using Guid(c060426bfd6e82575228df6656368eaa) (DefaultImporter) -> (artifact id: '7d484ab5933192f91b6a2fb9f7498a1e') in 0.0018661 seconds
+Start importing Assets/ThirdParty using Guid(24ce2b73e8f44746b691924fbbf24398) (DefaultImporter) -> (artifact id: 'c6765a6cebe590f80fb386ae8ba736ee') in 0.0017132 seconds
+Start importing Assets/Resources using Guid(15a49b176a9c400f9de451d475756713) (DefaultImporter) -> (artifact id: '200048a8567d858feebe48cf47bafb39') in 0.0023411 seconds
+Start importing Packages/com.unity.modules.imageconversion using Guid(850c54ee0b9e1aa740b1c67792eb1f26) (DefaultImporter) -> (artifact id: '77f78b27bd9bac81a00a007ef6f28867') in 0.001369 seconds
+Start importing Assets/Editor using Guid(b5c6c95632f4b194a839511b20c64cfb) (DefaultImporter) -> (artifact id: '5bd0a3caeef15244ef9ec25cf5534a13') in 0.0015023 seconds
+Start importing Assets/Scripts using Guid(f647cba8605562d449948b1d7da1f6f0) (DefaultImporter) -> (artifact id: '4fc847c13cd837e11d41183dbcd4fb38') in 0.0015076 seconds
+Start importing Packages/com.unity.modules.physics2d using Guid(376c84ea405e0f2b80562c23bb977216) (DefaultImporter) -> (artifact id: 'f030ba7c21f8c3d36c2700ba9484429e') in 0.0012096 seconds
+Start importing Packages/com.unity.modules.particlesystem using Guid(48b10b41f58d5b49717f376cda59eeb8) (DefaultImporter) -> (artifact id: '52931c3585e961751803a41152ba5f0c') in 0.0012806 seconds
+Start importing Packages/com.unity.modules.jsonserialize using Guid(fc3a810351931f5e6183e16b9beb5563) (DefaultImporter) -> (artifact id: 'ae149b8f46567b37c6b77b16bb572fe8') in 0.0012656 seconds
+Start importing Packages/com.unity.modules.audio using Guid(2d6ba5cbe47e6ad3c87474c56174d4e0) (DefaultImporter) -> (artifact id: '2ad5535b0c9fde796c0a268a703c42c8') in 0.0013308 seconds
+Start importing Assets/Scenes using Guid(ed37427fe343e82409a70ed57fd72f70) (DefaultImporter) -> (artifact id: 'c73a0e388484101b61480aeb12e27818') in 0.0021071 seconds
+Start importing Assets/Resources/Audio using Guid(12c7acd5a72a4878b94fba744981b0a6) (DefaultImporter) -> (artifact id: '2a3b91fbfaa90dc1fa049f85b6e6cd5d') in 0.00185 seconds
+Start importing Assets/Resources/Fonts using Guid(85b53eae82124d1f84da41a0dd27d70e) (DefaultImporter) -> (artifact id: 'ade32b38b56cf2b31d15237b2b45ce0b') in 0.0015376 seconds
+Start importing Assets/ThirdParty/KenneyImpactSounds using Guid(49ecc179ca69445ebfe5229f2263f106) (DefaultImporter) -> (artifact id: '2bfd53624e81f08d28077abc50046972') in 0.0016953 seconds
+Start importing Assets/Resources/Art using Guid(69b9951cc96443eaaee6b446665170bf) (DefaultImporter) -> (artifact id: '680d370810a83daa43c3340029c92ffc') in 0.0015312 seconds
+Start importing Assets/ThirdParty/MPlusRounded1c using Guid(5c3a2289f67b48b49817cb2c52f47237) (DefaultImporter) -> (artifact id: '43c3ebcda2ba27bb8081eb48e93e4141') in 0.0016284 seconds
+Start importing Packages/com.unity.modules.imageconversion/package.ModuleCompilationTrigger using Guid(830a36a23cf3ab1e61fa47940a6dc35e) (DefaultImporter) -> (artifact id: 'ee0f0c801f95c19382d8b454dc7586e1') in 0.089132 seconds
+Start importing Packages/com.unity.modules.audio/package.ModuleCompilationTrigger using Guid(042dc296246916648e55a43d0eeb2036) (DefaultImporter) -> (artifact id: '93cfeb7be8bf6df4dc4fc167223dc2d5') in 0.0026096 seconds
+Start importing Packages/com.unity.modules.jsonserialize/package.ModuleCompilationTrigger using Guid(e6a135e3ea9cb46795d1b0e05ac3e1e5) (DefaultImporter) -> (artifact id: '8d26f1c211bce77f7cf17eccccd57b0d') in 0.0023175 seconds
+Start importing Packages/com.unity.modules.particlesystem/package.ModuleCompilationTrigger using Guid(17f093324b67f5bd57e55b546736750e) (DefaultImporter) -> (artifact id: '2ff549dcfdc7b1fa23811cebe1444f07') in 0.0033812 seconds
+Start importing Packages/com.unity.modules.imgui/package.ModuleCompilationTrigger using Guid(be13c398521e3c1ad21fb9da30ab2ab6) (DefaultImporter) -> (artifact id: 'ea0574aa05344c7e80357502346d73fc') in 0.0020137 seconds
+Start importing Packages/com.unity.modules.physics2d/package.ModuleCompilationTrigger using Guid(fe6a6957b37b61417b457a1e0541791d) (DefaultImporter) -> (artifact id: 'a5a6ae7d64235baf32ceb35097cc3c10') in 0.0026624 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Native extension for WindowsStandalone target not found
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.319 seconds
+Domain Reload Profiling: 3192ms
+	BeginReloadAssembly (719ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (60ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (186ms)
+	RebuildCommonClasses (116ms)
+	RebuildNativeTypeToScriptingClass (40ms)
+	initialDomainReloadingComplete (80ms)
+	LoadAllAssembliesAndSetupDomain (916ms)
+		LoadAssemblies (1241ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (31ms)
+			TypeCache.Refresh (15ms)
+				TypeCache.ScanAssembly (4ms)
+			BuildScriptInfoCaches (3ms)
+			ResolveRequiredComponents (7ms)
+	FinalizeReload (1320ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (920ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (61ms)
+			SetLoadedEditorAssemblies (6ms)
+			BeforeProcessingInitializeOnLoad (299ms)
+			ProcessInitializeOnLoadAttributes (389ms)
+			ProcessInitializeOnLoadMethodAttributes (145ms)
+			AfterProcessingInitializeOnLoad (20ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (76ms)
+Start importing Library/BuildPlayer.prefs using Guid(00000000000000005000000000000000) (DefaultImporter) -> (artifact id: '083d37eb6b0e82b8f5c1ec86344d848d') in 0.0152926 seconds
+Start importing Assets/Scenes/MainStage.unity using Guid(f47cde71ad654939b3802f6bdeacb9c1) (DefaultImporter) -> (artifact id: '8ecaffa579898e87b1d5d3820ca82eed') in 0.0028859 seconds
+Start importing Assets/Scenes/Tutorial.unity using Guid(9cdde09beba3a9948b21ff389c954384) (DefaultImporter) -> (artifact id: '60b87483935d8a8c324ed9bb313d939e') in 0.0026423 seconds
+Start importing Assets/Resources/Art/HimoHitoEndingBackground-v1.png using Guid(60bb9eec31a84e658337764911b0557b) (TextureImporter) -> (artifact id: 'ad2a4fa4f7615816b1d0496f3b78b1e1') in 0.1942812 seconds
+Start importing Assets/Resources/Art/HimoHitoCraftWoodGrain-v1.png using Guid(905d2db9d513478baf2c80dd0e00a012) (TextureImporter) -> (artifact id: '0d9b164095316a3a5cd72b97a62ae8a1') in 0.1484626 seconds
+Start importing Assets/Resources/Art/TutorialGuideSign-v1.png using Guid(c0a74a768e0d4a5e9d72757bfb1a3691) (TextureImporter) -> (artifact id: 'b34bd6e088a92ea9f1aa8c0890e28a15') in 0.1904811 seconds
+Start importing Assets/Resources/Art/HimoHitoCraftSpike-v1.png using Guid(f097aef7b0a049809189bbb4ac1c7b48) (TextureImporter) -> (artifact id: '441e7f9b88f480081bd09e54d8c91831') in 0.1137752 seconds
+Start importing Assets/Resources/Art/HimoHitoControlsBackground-v1.png using Guid(119bd32ef42b4c69a7769736c21dbb80) (TextureImporter) -> (artifact id: '31852b56ab1da4f27c3c4f8dd4e1c33f') in 0.2026199 seconds
+Start importing Assets/Resources/Art/HimoHitoWalkTransitions-v1.png using Guid(21f894b46cb94a728bceac3edf950891) (TextureImporter) -> (artifact id: 'c25bf04770c7cf7d06388a84936514b6') in 0.1245716 seconds
+Start importing Assets/Resources/Art/HimoHitoCraftHookMount-v1.png using Guid(4135dfb82dfc4a41adcf8974566e392d) (TextureImporter) -> (artifact id: '3b58af775886e10e5a6c3c59020c004f') in 0.1033599 seconds
+Start importing Assets/Resources/Art/HimoHitoStageMapPieces-v1.png using Guid(51f234cf38954df59880dce05e7b984a) (TextureImporter) -> (artifact id: '63a608e288c5faf9ad8783a97ad88557') in 0.1576564 seconds
+Start importing Assets/Resources/Art/HimoHitoStageMapBackground-v1.png using Guid(42a507fb1e7c4d94908496f4f88e85ab) (TextureImporter) -> (artifact id: 'f08f791cd582b8f5cb56cb7eae6dbe65') in 0.1782641 seconds
+Start importing Assets/Resources/Art/HimoHitoFarBackground-v1.png using Guid(03ba781b513841fa8b0e18a1af62a252) (TextureImporter) -> (artifact id: '7cabdf026859327d0d4c9be9d1f7d3de') in 0.1831911 seconds
+Start importing Assets/Resources/Art/HimoHitoWalk-v3.png using Guid(33ac9edeb4ad4fd396ef04c4ccae37a1) (TextureImporter) -> (artifact id: '065e21da6a02b50108cac6db07ba9b1d') in 0.1283649 seconds
+Start importing Assets/Resources/Art/TutorialBlockPlatform-v1.png using Guid(53b3e7d6386d4caca7ffb2882bd395f1) (TextureImporter) -> (artifact id: 'c86631ca3cf93fad3f9834c05512cc83') in 0.1065604 seconds
+Start importing Assets/Resources/Art/HimoHitoCraftPlayer-v1.png using Guid(b36d913a2af247a992bd830300000001) (TextureImporter) -> (artifact id: '16738ccd927f2a0cafbb4b062e63ca7d') in 0.1004986 seconds
+Start importing Assets/Resources/Art/HimoHitoCraftWalk-v1.png using Guid(b36d913a2af247a992bd830300000002) (TextureImporter) -> (artifact id: '9d40076aaae5f9a49f2f4abf89a1062c') in 0.0985363 seconds
+Start importing Assets/Resources/Art/HimoHitoCraftJump-v1.png using Guid(b36d913a2af247a992bd830300000003) (TextureImporter) -> (artifact id: '0a486e46c7a00ace00aaa528d8d59662') in 0.1058461 seconds
+Start importing Assets/Resources/Art/HimoHitoCraftSwing-v1.png using Guid(b36d913a2af247a992bd830300000004) (TextureImporter) -> (artifact id: '383377e0dd022bf2c23dc2e563dbc117') in 0.1092372 seconds
+Start importing Assets/Resources/Art/HimoHitoCraftIdle-v1.png using Guid(b36d913a2af247a992bd830300000005) (TextureImporter) -> (artifact id: '7bfb36849e98074857ab16c5dbfdbe29') in 0.087325 seconds
+Start importing Assets/Resources/Art/HimoHitoCraftAim-v1.png using Guid(b36d913a2af247a992bd830300000006) (TextureImporter) -> (artifact id: '33a3e062efaed4e7da4c49824fb34a40') in 0.1029288 seconds
+Start importing Assets/Resources/Art/HimoHitoCraftWalkTransitions-v1.png using Guid(b36d913a2af247a992bd830300000007) (TextureImporter) -> (artifact id: '19afc14fea261986e56ce2d46b589e08') in 0.1060977 seconds
+Start importing Assets/Resources/Art/HimoHitoCraftLanding-v1.png using Guid(b36d913a2af247a992bd830300000008) (TextureImporter) -> (artifact id: 'afa706be06d5204f7c084eb284f5a7b6') in 0.1131905 seconds
+Start importing Assets/Resources/Art/HimoHitoCraftEdgeBalance-v1.png using Guid(b36d913a2af247a992bd830300000009) (TextureImporter) -> (artifact id: '0f62adf8c55dff0e3b41ae53ed89cbaa') in 0.1001009 seconds
+Start importing Assets/Resources/Art/HimoHitoCraftWeave-v1.png using Guid(b36d913a2af247a992bd83030000000a) (TextureImporter) -> (artifact id: '04be5c764f2579caa7334e185caf21f0') in 0.1290038 seconds
+Start importing Assets/Resources/Art/HimoHitoCraftGoal-v1.png using Guid(b36d913a2af247a992bd83030000000b) (TextureImporter) -> (artifact id: '3a87c232e87d3b6ae0aa4f75fed57056') in 0.1093809 seconds
+Start importing Assets/Resources/Art/HimoHitoCraftWallPush-v1.png using Guid(b36d913a2af247a992bd83030000000c) (TextureImporter) -> (artifact id: '75b1fb10e3418a8998580b94cc6c1c2f') in 0.1110887 seconds
+Start importing Assets/Resources/Art/HimoHitoCraftSwitchPress-v1.png using Guid(b36d913a2af247a992bd83030000000d) (TextureImporter) -> (artifact id: '5cb11cee3fda332acf20209c2be3e878') in 0.1132432 seconds
+Start importing Assets/Resources/Art/HimoHitoFailureBackground-v1.png using Guid(95c9c2c8aa9f46de81229cf13a633fee) (TextureImporter) -> (artifact id: '88be5d632fb5c919a9325093b81cd5cc') in 0.1717386 seconds
+Start importing Assets/Resources/Art/HimoHitoCraftRoomMid-v1.png using Guid(26eed2660c084f7e8655718dbe2dca35) (TextureImporter) -> (artifact id: '35a1c21c024bdce53ed01dd0d5fb699b') in 0.1690566 seconds
+Start importing Assets/Resources/Art/TutorialRopeAnchorRing-v1.png using Guid(46f420de2d3a4a418204a1b272af3e97) (TextureImporter) -> (artifact id: '0789784538e0be03a7d1cef203ec1100') in 0.1131662 seconds
+Start importing Assets/Resources/Art/HimoHitoStageMapUpcoming-v1.png using Guid(5668abed389e4d0ab8f8f0840c19a9dd) (TextureImporter) -> (artifact id: 'b5baff1a959d21057f7889b1309d3416') in 0.1771609 seconds
+Start importing Assets/Resources/Art/HimoHitoSwing-v2.png using Guid(e68191c520a84cd8a84de8f1796a4d47) (TextureImporter) -> (artifact id: 'c1892269d468be132e425c911c2316e1') in 0.1035364 seconds
+Start importing Assets/Resources/Art/WoodenToySpike-v1.png using Guid(372491b625c94d608b2065a29a83bf9c) (TextureImporter) -> (artifact id: 'b46239c537b71949b80166d8f735e0dd') in 0.1166495 seconds
+Start importing Assets/Resources/Art/HimoHitoPlayer-v1.png using Guid(47a9a5e20d5d4a62b7d3d87ab73f69d2) (TextureImporter) -> (artifact id: 'e21b42a528710f7f9eb770d8fc7d44ad') in 0.109834 seconds
+Start importing Assets/Resources/Art/HimoHitoWeave-v1.png using Guid(474b3921276842e1b6e1b4dd211de2d0) (TextureImporter) -> (artifact id: '345f4e98e2b5d6ffccbde3053b256ba2') in 0.1119043 seconds
+Start importing Assets/Resources/Art/HimoHitoJump-v2.png using Guid(57956f836e2a46ee8591048f48c4b8e6) (TextureImporter) -> (artifact id: 'de0d95833ffd5578523d6720c2beb171') in 0.1126061 seconds
+Start importing Assets/Resources/Art/TutorialNightChildRoom-v1.png using Guid(a85306197474410aaf3b0a1e5ade76f3) (TextureImporter) -> (artifact id: 'a61a5ac55d3124c1088dd1edf280fef9') in 0.174588 seconds
+Start importing Assets/Resources/Art/RecoverySwitch-v1.png using Guid(a89b6f10927244e7a2918600bcd5a541) (TextureImporter) -> (artifact id: 'e130894f094cf95a09008b034497111a') in 0.1175959 seconds
+Start importing Assets/Resources/Art/HimoHitoIdle-v1.png using Guid(49640119d9c94a42ab54649d755574a2) (TextureImporter) -> (artifact id: '99eeb9e0a573ba43de968041970892cb') in 0.1106457 seconds
+Start importing Assets/Resources/Art/HimoHitoTitleBackground-v1.png using Guid(a94c1d6472b54f1b9e172f43c6a8d0e2) (TextureImporter) -> (artifact id: 'aba011590496eeb108b9907a1ec9962a') in 0.1845517 seconds
+Start importing Assets/Resources/Art/HimoHitoGoal-v1.png using Guid(d971f50ca47a4c179842b105513ac11c) (TextureImporter) -> (artifact id: 'e7b84c9a8a9a68d8d4715ba0374f26f7') in 0.1161538 seconds
+Start importing Assets/Resources/Art/HimoHitoCraftChestOpening-v1.png using Guid(d9b2d670c0284dd6a55f2211df7674af) (TextureImporter) -> (artifact id: '1925a83da136e3ea08744d5c5798661a') in 0.1210939 seconds
+Start importing Assets/Resources/Art/TutorialToyBoxGoal-v2.png using Guid(0a79c33d98fa47d9b62af3512f64389e) (TextureImporter) -> (artifact id: '3b1bd448bb7b454f45371d6a32478e9d') in 0.1293594 seconds
+Start importing Assets/Resources/Art/HimoHitoLanding-v1.png using Guid(4a684fb28a7c4e97a649955becd70f54) (TextureImporter) -> (artifact id: 'ec03a528682caa5118f7b01eafbedac6') in 0.119509 seconds
+Start importing Assets/Resources/Art/HimoHitoStageCurtainCloth-v1.png using Guid(5ab39b2b5c1a4b5e845a74b0c07d641e) (TextureImporter) -> (artifact id: 'acba8163f3db6168c3d8d0b718d4f21f') in 0.1809577 seconds
+Start importing Assets/Resources/Art/ToyBoxOpening-v1.png using Guid(1b4714df89bc4a06a7b00ca8cf2f4d98) (TextureImporter) -> (artifact id: 'ac331918a7976c2e2970ff9498092d98') in 0.1229429 seconds
+Start importing Assets/Resources/Art/HimoHitoCraftHudPanel-v1.png using Guid(db86517fe10744e8876f83932f22c2b1) (TextureImporter) -> (artifact id: 'c640bafdf71e6537a57cdffe93ad3242') in 0.1664599 seconds
+Start importing Assets/Resources/Art/TutorialHookConnector-v1.png using Guid(0cf5cdde40ca47c8842641575371bc4e) (TextureImporter) -> (artifact id: 'eb34346f75db0f984a5fede043239c1a') in 0.1116472 seconds
+Start importing Assets/Resources/Art/HimoHitoCraftHookBlue-v1.png using Guid(aca965a532e54ff98bbd30b98a57f645) (TextureImporter) -> (artifact id: 'acd0af43b7bd038d6abd5fc058b6b31b') in 0.1062728 seconds
+Start importing Assets/Resources/Art/HimoHitoStageDiorama-v1.png using Guid(bc68e9b2ee9b48edbfebc4b0ff43c677) (TextureImporter) -> (artifact id: '531016156457021ce4a0202c5cd49235') in 0.1651675 seconds
+Start importing Assets/Resources/Art/HimoHitoEdgeBalance-v1.png using Guid(bcbd0e990d87433683095efc9e3fd79a) (TextureImporter) -> (artifact id: '800330c8cf5dfd0b36e87a8850a8c342') in 0.1102725 seconds
+Start importing Assets/Resources/Art/HimoHitoSwitchPress-v1.png using Guid(dc784581e1ca4035a6f47c7e1dc1a359) (TextureImporter) -> (artifact id: 'ceb2e642f1dbefbb5cd5c39dbdd56721') in 0.1165747 seconds
+Start importing Assets/Resources/Art/HimoHitoCraftWoodBlocks-v1.png using Guid(1d0066cbeb554814a68c4091ca9fa8ad) (TextureImporter) -> (artifact id: '28efcb29dca081f8e88ebb6a4f6325b3') in 0.1644515 seconds
+Start importing Assets/Resources/Art/HimoHitoCraftRecoverySwitch-v1.png using Guid(4db17f702e48474e8765fc0d221cb025) (TextureImporter) -> (artifact id: '75714572eacb62c7e7161138451f8010') in 0.1136524 seconds
+Start importing Assets/Resources/Art/HimoHitoUiParts-v1.png using Guid(5e8b60c60c51cfd48b80d302046de380) (TextureImporter) -> (artifact id: 'e902ea4663a8bfd42ba2850a67ac3e35') in 0.0948156 seconds
+Start importing Assets/Resources/Art/HimoHitoAppIcon-v1.png using Guid(6e890ec3e8174289903faa48d3033c6c) (TextureImporter) -> (artifact id: '26e21b3bc28bd5bd39f7d1d73080b921') in 0.1682806 seconds
+Start importing Assets/Resources/Art/HimoHitoYarnRope-v1.png using Guid(7ebd2a8e76a2446698e2027287591a32) (TextureImporter) -> (artifact id: '9dec09ce4501dd6d6e9dbeebcfc9d41d') in 0.1052784 seconds
+Start importing Assets/Resources/Art/TutorialRailPlatform-v1.png using Guid(9ed1eb7633994bfc98f17cb2ce2ad592) (TextureImporter) -> (artifact id: 'b4a701ecd55c568ecb44f1f719f13d33') in 0.1119647 seconds
+Start importing Assets/Resources/Art/HimoHitoCraftRail-v1.png using Guid(de607b977cdf45ee88bf5e1dcff9a57a) (TextureImporter) -> (artifact id: '429aee4daf9d82f70ed3e1ff4bcb265d') in 0.1147238 seconds
+Start importing Assets/Resources/Art/HimoHitoAim-v1.png using Guid(0f53025be5f34a7aa7aec6772c7b18dd) (TextureImporter) -> (artifact id: '475fedb420ff783e1e61a4e1de039b3a') in 0.1210908 seconds
+Start importing Assets/Resources/Art/HimoHitoCraftRoomFar-v1.png using Guid(5f40655b79394ae5b9c2bd19206c3d1d) (TextureImporter) -> (artifact id: '15d9065ba6f8f764c1beb4ac2a85e6c5') in 0.1825985 seconds
+Start importing Assets/Resources/Art/HimoHitoCraftGuideSign-v1.png using Guid(6ff3e6a0b2b742bfb9397512f2a3d541) (TextureImporter) -> (artifact id: '24beaf1cd56da72904c0715ae8c7b3ce') in 0.1141656 seconds
+Start importing Assets/Resources/Art/HimoHitoWallPush-v1.png using Guid(9f56962b08694fdc9f6217821fb9c20a) (TextureImporter) -> (artifact id: '8e32285030ed0f173cb95a3fa31c9d9e') in 0.1243441 seconds
+Start importing Assets/Resources/Art/HimoHitoCraftHookGreen-v1.png using Guid(df028a2e957648eeb80ad1c5aa476b19) (TextureImporter) -> (artifact id: '53130befd97079091d59cd2572b3922d') in 0.1220468 seconds
+Start importing Assets/Resources/RespawnWeave.shader using Guid(74f36cd1d3e14bf1b026e98b20d8f125) (ShaderImporter)Launched and connected shader compiler UnityShaderCompiler.exe after 0.29 seconds
+ -> (artifact id: 'fe2a098a97179298efcfb796a8b0fdab') in 0.4910122 seconds
+Start importing Assets/Resources/TutorialSignGreeting.shader using Guid(f624e90b37ae4df8a5f4e75a04ac2039) (ShaderImporter) -> (artifact id: 'e48ca0d28fe6503b013349d74e3b18cb') in 0.0125953 seconds
+Start importing Assets/Resources/HangingDecorSway.shader using Guid(ea09584549024e33a70dd81d9383dbd1) (ShaderImporter) -> (artifact id: 'd54fa105bb790c881b785e90c618a4b4') in 0.0149307 seconds
+Start importing Assets/Resources/Fonts/MPlusRounded1c-Regular.ttf using Guid(b03eb138fcfd446cb68c5948838b0b20) (TrueTypeFontImporter) -> (artifact id: '25320fa9ff2791277ca289b0a3c288a2') in 0.0612512 seconds
+Start importing Assets/Resources/Fonts/MPlusRounded1c-Bold.ttf using Guid(768f5d55443e44bc93772d9f738e5de4) (TrueTypeFontImporter) -> (artifact id: '958f5607fd7c95d035a8a9cafbaff8de') in 0.0250809 seconds
+Start importing Packages/com.unity.modules.jsonserialize/package.json using Guid(40bf3cec17fa0b49fe04443c8332d638) (PackageManifestImporter) -> (artifact id: '4c54406cdf6f27a0dfd74653ac191550') in 0.00966 seconds
+Start importing Packages/com.unity.modules.imgui/package.json using Guid(42fe78c8fe682715a2cb531422e6ccb3) (PackageManifestImporter) -> (artifact id: 'b643c636c8e55776455f8adce1983951') in 0.0185886 seconds
+Start importing Assets/ThirdParty/KenneyImpactSounds/License.txt using Guid(72a317b61dc44a089e56a63fcf4be9bc) (TextScriptImporter) -> (artifact id: '5524443009110b2d00b80f90df4041be') in 0.008075 seconds
+Start importing Packages/com.unity.modules.imageconversion/package.json using Guid(953fab16d15d5885b3600fcd6388b2ad) (PackageManifestImporter) -> (artifact id: '4914195fadd462954a635b65250787ed') in 0.0049693 seconds
+Start importing Assets/Resources/StageCatalog.json using Guid(d5b1cae6a0a2471b876e9f47a83b60a6) (TextScriptImporter) -> (artifact id: '795a53e7452850e792c1372411d9ace8') in 0.0044935 seconds
+Start importing Packages/com.unity.modules.particlesystem/package.json using Guid(87d720faa37005c08600090e04d8c739) (PackageManifestImporter) -> (artifact id: 'd6aa8c20d84b997ec285a739a17be19d') in 0.0047573 seconds
+Start importing Packages/com.unity.modules.physics2d/package.json using Guid(f7a8357347c80dc69c08d0b1a05e2122) (PackageManifestImporter) -> (artifact id: 'e2187f6cfb7435ccc7f0487e9567b857') in 0.0050933 seconds
+Start importing Packages/com.unity.modules.audio/package.json using Guid(e9df95f53f1c1d0c9199e235d6c42b50) (PackageManifestImporter) -> (artifact id: '14bdb854ae6daae762f5873a0a889a4a') in 0.0098217 seconds
+Start importing Assets/ThirdParty/MPlusRounded1c/OFL.txt using Guid(6f3a7420a3ac4fbf810d7f59c93d1cd8) (TextScriptImporter) -> (artifact id: '284fa736d407de826d0229d38ef7ee76') in 0.0086319 seconds
+Start importing Assets/Resources/Audio/RopeAttachMissWhoosh.mp3 using Guid(a0c623313cd24137aa9b2b9eea6a06d4) (AudioImporter) -> (artifact id: '7162e68e7fd3cce5327201ae4935bacd') in 1.3108659 seconds
+Start importing Assets/Resources/Audio/PlayerJumpSoft.ogg using Guid(b0fabb5300d54da7b3f8d308427966d6) (AudioImporter) -> (artifact id: 'd8d4011005bb69de088be8f1d4984da9') in 0.1565652 seconds
+Start importing Assets/Resources/Audio/GoalClearXylophone.mp3 using Guid(228a3af47b1b42508a21701e8a10cbae) (AudioImporter) -> (artifact id: '33777e2a91d0fdeffbcbdea9029a67e4') in 0.1780218 seconds
+Start importing Assets/Resources/Audio/FailureYarnDrop.mp3 using Guid(83b579259e74491bb73501adf72ab0d7) (AudioImporter) -> (artifact id: 'ae77ec8db6629ae3a2ccb267b974cb25') in 0.2189972 seconds
+Start importing Assets/Resources/Audio/RopeLengthClick.mp3 using Guid(2480126c207d4453bb4287505ae25524) (AudioImporter) -> (artifact id: '4b825ceea3f7cdebc3618f829779fcd6') in 0.1734333 seconds
+Start importing Assets/Resources/Audio/YasashiiOdori.mp3 using Guid(347b62b9e0f64384a965e9b2f2f8c679) (AudioImporter) -> (artifact id: '0c51adcca628cd9bc6289e0bc7472176') in 3.1656419 seconds
+Start importing Assets/Resources/Audio/RopeReleaseWind.wav using Guid(f58184b1b32c4a19919274da741af66e) (AudioImporter) -> (artifact id: '266693a7ce7a57c019599c622412a8f5') in 0.142397 seconds
+Start importing Assets/Resources/Audio/FailurePianoNote.mp3 using Guid(f53f55c7606d47f49b5110764f713218) (AudioImporter) -> (artifact id: '35efa64db21ff5756cb46ceac57a7694') in 0.2411417 seconds
+Start importing Assets/Resources/Audio/HookAttachWood.ogg using Guid(76e9fb09e76b44ba88a73362818358a5) (AudioImporter) -> (artifact id: '681bc8556685474c358cb5c8df793014') in 0.1558674 seconds
+Start importing Assets/Resources/Audio/HookAttachSoft.ogg using Guid(b743d22cecfe4e5abd62bfeca36b49ee) (AudioImporter) -> (artifact id: '4d1e0591f632660abe7f929c79cd6bbd') in 0.1469939 seconds
+Start importing Assets/Resources/Audio/RopeShotRustling.mp3 using Guid(f7e9340ce9784a54b77c1dc1f73bb672) (AudioImporter) -> (artifact id: '01a83b4607ab362596f162edb00c8eb0') in 0.1948852 seconds
+Start importing Assets/Resources/Audio/UiPaperOpen.mp3 using Guid(a8d15bd907114663aef0521138785274) (AudioImporter) -> (artifact id: '6c322b3c67138423d3e710385115aabb') in 0.2411442 seconds
+Start importing Assets/Resources/Audio/PlayerLandingStep.mp3 using Guid(a9c532c96ee24a83b3361d1fe51406d7) (AudioImporter) -> (artifact id: 'f4f1988d0d09250b38e78b369142c292') in 0.1844308 seconds
+Start importing Assets/Resources/Audio/PlayerFootstepSoftA.ogg using Guid(c957bf9374144767a799eba8db3bd0e0) (AudioImporter) -> (artifact id: '3a51a3384ff587c118f6ae6789e85492') in 0.1364106 seconds
+Start importing Assets/Resources/Audio/RopePlatformBuildWood.ogg using Guid(4bd556dccffe49ce90bf436a0e18f8e8) (AudioImporter) -> (artifact id: 'fcb0fa84c82072c465b37624e5e8d8a6') in 0.1727937 seconds
+Start importing Assets/Resources/Audio/RopeLengthLimitWood.mp3 using Guid(6ba174d06cb54e65ad844c287f39dd77) (AudioImporter) -> (artifact id: '8b805a8fd4965259ddf452b5c4a3ebbd') in 0.2158876 seconds
+Start importing Assets/Resources/Audio/PlayerFootstepSoftD.ogg using Guid(2c5118ccb22945fda80e25bcc93d8109) (AudioImporter) -> (artifact id: '2dff5f335eccf15892ebc4f7a2b1aeb1') in 0.1580904 seconds
+Start importing Assets/Resources/Audio/RopePlatformMergeWood.ogg using Guid(0efb0e493ea84d81a8e164237a490d2e) (AudioImporter) -> (artifact id: '8500c159e5c59c82b2ded975642b45a0') in 0.1337002 seconds
+Start importing Assets/Resources/Audio/PlayerFootstepSoftC.ogg using Guid(9e97ebc6ce1f429db693c098003af615) (AudioImporter) -> (artifact id: '23bdaef25505ff798d150cc2f6ee0475') in 0.1170084 seconds
+Start importing Assets/Resources/Audio/GoalTreasureChestOpen.mp3 using Guid(7ff7b0df9e664af4b05dbd8956f0e1d4) (AudioImporter) -> (artifact id: '6591bb0f2131e54b6594656d032d6c7e') in 0.2080896 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Loading style catalogs (6)
+	StyleSheets/Extensions/base/common.uss
+	UIPackageResources/StyleSheets/Default/Variables/Public/common.uss
+	StyleSheets/Northstar/common.uss
+	StyleSheets/Extensions/fonts/inter.uss
+	StyleSheets/Extensions/base/dark.uss
+	UIPackageResources/StyleSheets/Default/Northstar/Palette/dark.uss
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=bd7c7f9d2f1f6144bb0a35a8d4f367e5): Total: 39.795 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
+	Summary:
+		Imports: total=142 (actual=142, local cache=0, cache server=0)
+		Asset DB Process Time: managed=50 ms, native=19575 ms
+		Asset DB Callback time: managed=524 ms, native=2980 ms
+		Scripting: domain reloads=1, domain reload time=1883 ms, compile time=14756 ms, other=23 ms
+		Project Asset Count: scripts=43, non-scripts=99
+		Asset File Changes: new=270, changed=270, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokeCustomDependenciesCallbacks: 0.005ms
+	InvokePackagesCallback: 760.613ms
+	ApplyChangesToAssetFolders: 0.771ms
+	Scan: 1195.407ms
+	OnSourceAssetsModified: 6.926ms
+	CategorizeAssetsWithTransientArtifact: 1.308ms
+	ProcessAssetsWithTransientArtifactChanges: 6.343ms
+	CategorizeAssets: 3.999ms
+	ImportOutOfDateAssets: 18207.162ms (-13411.198ms without children)
+		ImportManagerImport: 16859.853ms (39.713ms without children)
+			ImportInProcess: 16818.315ms
+			UpdateCategorizedAssets: 1.825ms
+		CompileScripts: 14756.303ms
+		ReloadNativeAssets: 0.002ms
+		UnloadImportedAssets: 0.323ms
+		ReloadImportedAssets: 0.040ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.080ms
+		InitializingProgressBar: 0.020ms
+		PostProcessAllAssetNotificationsAddChangedAssets: 0.003ms
+		OnDemandSchedulerStart: 1.738ms
+	PostProcessAllAssets: 2764.359ms
+	Hotreload: 5.573ms
+	GatherAllCurrentPrimaryArtifactRevisions: 0.086ms
+	UnloadStreamsBegin: 4.517ms
+	PersistCurrentRevisions: 0.280ms
+	UnloadStreamsEnd: 0.341ms
+	GenerateScriptTypeHashes: 0.002ms
+	Untracked: 16836.979ms
+
+Application.AssetDatabase Initial Refresh End
+Scanning for USB devices : 5.218ms
+Initializing Unity extensions:
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-ヒモヒト
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 142 unused Assets / (509.7 KB). Loaded Objects now: 781.
+Memory consumption went from 97.2 MB to 96.7 MB.
+Total: 16.273700 ms (FindLiveObjects: 0.139900 ms CreateObjectMapping: 0.028700 ms MarkObjects: 15.460000 ms  DeleteObjects: 0.642200 ms)
+
+Opening scene 'Assets/Scenes/Tutorial.unity'
+Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/Scenes/Tutorial.unity'
+	Deserialize:            24.434 ms
+	Integration:            5717.243 ms
+	Integration of assets:  0.011 ms
+	Thread Wait Time:       0.032 ms
+	Total Operation Time:   5741.721 ms
+Unloading 9 unused Assets / (3.5 KB). Loaded Objects now: 1358.
+Memory consumption went from 204.5 MB to 204.5 MB.
+Total: 14.074100 ms (FindLiveObjects: 0.190400 ms CreateObjectMapping: 0.022300 ms MarkObjects: 13.200900 ms  DeleteObjects: 0.657600 ms)
+
+[Project] Loading completed in 58.683 seconds
+	Project init time: 				51.716 seconds
+		Template init time: 		0.000 seconds
+		Package Manager init time: 		6.911 seconds
+		Asset Database init time: 		1.184 seconds
+		Global illumination init time: 	0.007 seconds
+		Assemblies load time: 			2.537 seconds
+		Unity extensions init time: 	0.001 seconds
+		Asset Database refresh time: 	39.795 seconds
+	Scene opening time: 			6.445 seconds
+##utp:{"type":"ProjectInfo","version":2,"phase":"Immediate","time":1790782020959,"processId":10852,"projectLoad":58.6830864,"projectInit":51.7157748,"templateInit":0.0,"packageManagerInit":6.9105229,"assetDatabaseInit":1.183537,"globalIlluminationInit":0.0067452,"assembliesLoad":2.5365475,"unityExtensionsInit":0.0012316,"assetDatabaseRefresh":39.7949947,"sceneOpening":6.4450927}
+##utp:{"type":"EditorInfo","version":2,"phase":"Immediate","time":1790782020959,"processId":10852,"editorVersion":"6000.3.21f1 (c02631ffc030)","branch":"6000.3/staging","buildType":"Release","platform":"Windows"}
+Reloading assemblies for play mode.
+Reloading assemblies after forced synchronous recompile.
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.778 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Native extension for WindowsStandalone target not found
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  7.169 seconds
+Domain Reload Profiling: 7939ms
+	BeginReloadAssembly (525ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (57ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (80ms)
+	RebuildCommonClasses (101ms)
+	RebuildNativeTypeToScriptingClass (39ms)
+	initialDomainReloadingComplete (67ms)
+	LoadAllAssembliesAndSetupDomain (36ms)
+		LoadAssemblies (324ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (23ms)
+			TypeCache.Refresh (8ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (5ms)
+			ResolveRequiredComponents (5ms)
+	FinalizeReload (7170ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (924ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (86ms)
+			SetLoadedEditorAssemblies (8ms)
+			BeforeProcessingInitializeOnLoad (321ms)
+			ProcessInitializeOnLoadAttributes (322ms)
+			ProcessInitializeOnLoadMethodAttributes (163ms)
+			AfterProcessingInitializeOnLoad (23ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (5720ms)
+Asset Pipeline Refresh (id=ba35b7dcbc9edd840a9733ed766f2d3c): Total: 8.142 seconds - Initiated by StopAssetImportingV2(ForceSynchronousImport | ForceDomainReload)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=7284 ms
+		Asset DB Callback time: managed=52 ms, native=1 ms
+		Scripting: domain reloads=1, domain reload time=797 ms, compile time=7 ms, other=0 ms
+		Project Asset Count: scripts=43, non-scripts=99
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokeCustomDependenciesCallbacks: 0.003ms
+	InvokePackagesCallback: 6.680ms
+	ApplyChangesToAssetFolders: 0.167ms
+	Scan: 0.002ms
+	OnSourceAssetsModified: 0.005ms
+	CategorizeAssetsWithTransientArtifact: 0.007ms
+	ProcessAssetsWithTransientArtifactChanges: 0.158ms
+	CategorizeAssets: 1.790ms
+	ImportOutOfDateAssets: 7179.109ms (7170.331ms without children)
+		CompileScripts: 6.820ms
+		CollectScriptTypesHashes: 0.001ms
+		ReloadNativeAssets: 0.001ms
+		UnloadImportedAssets: 0.240ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.063ms
+		InitializingProgressBar: 0.001ms
+		PostProcessAllAssetNotificationsAddChangedAssets: 0.001ms
+		OnDemandSchedulerStart: 1.650ms
+	PostProcessAllAssets: 52.103ms
+	GatherAllCurrentPrimaryArtifactRevisions: 0.032ms
+	UnloadStreamsBegin: 0.226ms
+	PersistCurrentRevisions: 0.018ms
+	UnloadStreamsEnd: 0.003ms
+	GenerateScriptTypeHashes: 0.001ms
+	Untracked: 901.756ms
+
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            6.870 ms
+	Integration:            6215.621 ms
+	Integration of assets:  0.010 ms
+	Thread Wait Time:       0.047 ms
+	Total Operation Time:   6222.548 ms
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[Licensing::Client] Successfully resolved entitlement details
+Play開始地点：Tutorial
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHitoEditor.PlayStartSceneSelector:ConfigurePlayStartScene (string,string) (at Assets/Editor/PlayStartSceneSelector.cs:50)
+HimoHitoEditor.PlayStartSceneSelector:ConfigurePlayStartScene () (at Assets/Editor/PlayStartSceneSelector.cs:23)
+UnityEditor.EditorApplication:Internal_CallDelayFunctions ()
+
+(Filename: Assets/Editor/PlayStartSceneSelector.cs Line: 50)
+
+Start Indexing on Editor startup
+ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+  at System.Collections.Generic.List`1[T].get_Item (System.Int32 index) [0x00009] in <41d29b352f6a475ab1bf7c6628b82790>:0 
+  at UnityEditor.Search.SearchDatabase+<EnumerateAll>d__81.MoveNext () [0x00106] in <63453c9528324daaa566ad51effa49a4>:0 
+  at System.Linq.Enumerable.TryGetFirst[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Boolean& found) [0x00045] in <80564d689e48448fa2a7101993ee7201>:0 
+  at System.Linq.Enumerable.First[TSource] (System.Collections.Generic.IEnumerable`1[T] source) [0x00000] in <80564d689e48448fa2a7101993ee7201>:0 
+  at UnityEditor.Search.SearchDatabase.GetDefaultSearchDatabase () [0x00006] in <63453c9528324daaa566ad51effa49a4>:0 
+  at UnityEditor.Search.SearchInit.IndexationOnStartup () [0x0000c] in <63453c9528324daaa566ad51effa49a4>:0 
+  at UnityEditor.EditorApplication.Internal_CallDelayFunctions () [0x0002c] in <ebc962e8381145e6bdb44b1996e8e9b4>:0 
+
+Created GICache directory at C:/Users/田尻大翔/AppData/LocalLow/Unity/Caches/GiCache. Took: 0.143s, timestamps: [73.265 - 73.408]
+HUMAN_FIX_PROBE SIGN 4 sprite=Craft Guide Sign Full Canvas bounds=Center: (37.10, 1.35, 0.00), Extents: (1.15, 1.15, 0.10)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe/<Run>d__23:MoveNext () (at Assets/Scripts/HumanProbe.cs:100)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE SIGN_TEXT section=4 renderer=Operation Key F color=RGBA(1.000, 0.910, 0.678, 1.000) fontSize=64 characterSize=1 position=(37.61, 1.79, -0.01) scale=(0.04, 0.04, 0.02)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe/<Run>d__23:MoveNext () (at Assets/Scripts/HumanProbe.cs:101)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE CONTROLLED_SETUP (37.90, 1.10)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe:Position (UnityEngine.Vector2) (at Assets/Scripts/HumanProbe.cs:34)
+HumanProbe/<Run>d__23:MoveNext () (at Assets/Scripts/HumanProbe.cs:102)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE PASS sign key exists 4
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe:Check (bool,string) (at Assets/Scripts/HumanProbe.cs:28)
+HumanProbe/<Run>d__23:MoveNext () (at Assets/Scripts/HumanProbe.cs:104)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE SIGN 2 sprite=Craft Guide Sign Full Canvas bounds=Center: (10.10, 1.35, 0.00), Extents: (1.15, 1.15, 0.10)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe/<Run>d__23:MoveNext () (at Assets/Scripts/HumanProbe.cs:100)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE SIGN_TEXT section=2 renderer=Operation Key W color=RGBA(1.000, 0.910, 0.678, 1.000) fontSize=64 characterSize=1 position=(10.61, 1.95, -0.01) scale=(0.03, 0.03, 0.01)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe/<Run>d__23:MoveNext () (at Assets/Scripts/HumanProbe.cs:101)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE SIGN_TEXT section=2 renderer=Operation Key S color=RGBA(1.000, 0.910, 0.678, 1.000) fontSize=64 characterSize=1 position=(10.61, 1.60, -0.01) scale=(0.03, 0.03, 0.01)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe/<Run>d__23:MoveNext () (at Assets/Scripts/HumanProbe.cs:101)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE CONTROLLED_SETUP (10.90, 1.10)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe:Position (UnityEngine.Vector2) (at Assets/Scripts/HumanProbe.cs:34)
+HumanProbe/<Run>d__23:MoveNext () (at Assets/Scripts/HumanProbe.cs:102)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE PASS sign key exists 2
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe:Check (bool,string) (at Assets/Scripts/HumanProbe.cs:28)
+HumanProbe/<Run>d__23:MoveNext () (at Assets/Scripts/HumanProbe.cs:104)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE SIGN 3 sprite=Craft Guide Sign Full Canvas bounds=Center: (25.10, 1.35, 0.00), Extents: (1.15, 1.15, 0.10)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe/<Run>d__23:MoveNext () (at Assets/Scripts/HumanProbe.cs:100)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE SIGN_TEXT section=3 renderer=Operation Key Q color=RGBA(1.000, 0.910, 0.678, 1.000) fontSize=64 characterSize=1 position=(25.61, 1.79, -0.01) scale=(0.04, 0.04, 0.02)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe/<Run>d__23:MoveNext () (at Assets/Scripts/HumanProbe.cs:101)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE CONTROLLED_SETUP (25.90, 1.10)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe:Position (UnityEngine.Vector2) (at Assets/Scripts/HumanProbe.cs:34)
+HumanProbe/<Run>d__23:MoveNext () (at Assets/Scripts/HumanProbe.cs:102)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE PASS sign key exists 3
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe:Check (bool,string) (at Assets/Scripts/HumanProbe.cs:28)
+HumanProbe/<Run>d__23:MoveNext () (at Assets/Scripts/HumanProbe.cs:104)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE SIGN 1 sprite=Craft Guide Sign Full Canvas bounds=Center: (-6.10, 1.35, 0.00), Extents: (1.15, 1.15, 0.10)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe/<Run>d__23:MoveNext () (at Assets/Scripts/HumanProbe.cs:100)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE SIGN_TEXT section=1 renderer=Operation Key E color=RGBA(1.000, 0.910, 0.678, 1.000) fontSize=64 characterSize=1 position=(-5.59, 1.79, -0.01) scale=(0.04, 0.04, 0.02)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe/<Run>d__23:MoveNext () (at Assets/Scripts/HumanProbe.cs:101)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE CONTROLLED_SETUP (-5.30, 1.10)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe:Position (UnityEngine.Vector2) (at Assets/Scripts/HumanProbe.cs:34)
+HumanProbe/<Run>d__23:MoveNext () (at Assets/Scripts/HumanProbe.cs:102)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE PASS sign key exists 1
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe:Check (bool,string) (at Assets/Scripts/HumanProbe.cs:28)
+HumanProbe/<Run>d__23:MoveNext () (at Assets/Scripts/HumanProbe.cs:104)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE CONTROLLED_SETUP (62.70, 1.40)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe:Position (UnityEngine.Vector2) (at Assets/Scripts/HumanProbe.cs:34)
+HumanProbe/<Run>d__23:MoveNext () (at Assets/Scripts/HumanProbe.cs:108)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE PASS Tutorial physical goal enters Clear
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe:Check (bool,string) (at Assets/Scripts/HumanProbe.cs:28)
+HumanProbe/<Run>d__23:MoveNext () (at Assets/Scripts/HumanProbe.cs:109)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE CLEAR_INPUT Tutorial trial=1 key=A simulated=False move=-1 footstepDelta=1 jumpBuffer=-0.4777745
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe/<FootstepClear>d__20:MoveNext () (at Assets/Scripts/HumanProbe.cs:53)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE CLEAR_INPUT Tutorial trial=2 key=D simulated=False move=1 footstepDelta=2 jumpBuffer=-0.2904065
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe/<FootstepClear>d__20:MoveNext () (at Assets/Scripts/HumanProbe.cs:53)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE CLEAR_INPUT Tutorial trial=3 key=A simulated=False move=-1 footstepDelta=3 jumpBuffer=-0.2945014
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe/<FootstepClear>d__20:MoveNext () (at Assets/Scripts/HumanProbe.cs:53)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE CLEAR_INPUT Tutorial trial=4 key=D simulated=False move=1 footstepDelta=4 jumpBuffer=-0.2987976
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe/<FootstepClear>d__20:MoveNext () (at Assets/Scripts/HumanProbe.cs:53)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE CLEAR_INPUT Tutorial trial=5 key=A simulated=False move=-1 footstepDelta=5 jumpBuffer=-0.2809147
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe/<FootstepClear>d__20:MoveNext () (at Assets/Scripts/HumanProbe.cs:53)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE CLEAR_INPUT Tutorial trial=6 key=D simulated=False move=1 footstepDelta=6 jumpBuffer=-0.2843571
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe/<FootstepClear>d__20:MoveNext () (at Assets/Scripts/HumanProbe.cs:53)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE CLEAR_INPUT Tutorial trial=7 key=A simulated=False move=-1 footstepDelta=7 jumpBuffer=-0.287228
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe/<FootstepClear>d__20:MoveNext () (at Assets/Scripts/HumanProbe.cs:53)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE CLEAR_INPUT Tutorial trial=8 key=D simulated=False move=1 footstepDelta=8 jumpBuffer=-0.2898793
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe/<FootstepClear>d__20:MoveNext () (at Assets/Scripts/HumanProbe.cs:53)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE CLEAR_INPUT Tutorial trial=9 key=A simulated=False move=-1 footstepDelta=9 jumpBuffer=-0.2924908
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe/<FootstepClear>d__20:MoveNext () (at Assets/Scripts/HumanProbe.cs:53)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE CLEAR_INPUT Tutorial trial=10 key=D simulated=False move=1 footstepDelta=10 jumpBuffer=-0.2978546
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe/<FootstepClear>d__20:MoveNext () (at Assets/Scripts/HumanProbe.cs:53)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE CLEAR_INPUT Tutorial trial=11 key=A simulated=False move=-1 footstepDelta=11 jumpBuffer=-0.2992763
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe/<FootstepClear>d__20:MoveNext () (at Assets/Scripts/HumanProbe.cs:53)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE CLEAR_INPUT Tutorial trial=12 key=D simulated=False move=1 footstepDelta=12 jumpBuffer=-0.2817997
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe/<FootstepClear>d__20:MoveNext () (at Assets/Scripts/HumanProbe.cs:53)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE CLEAR_INPUT Tutorial trial=13 key=A simulated=False move=-1 footstepDelta=13 jumpBuffer=-0.285908
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe/<FootstepClear>d__20:MoveNext () (at Assets/Scripts/HumanProbe.cs:53)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE CLEAR_INPUT Tutorial trial=14 key=D simulated=False move=1 footstepDelta=14 jumpBuffer=-0.2889777
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe/<FootstepClear>d__20:MoveNext () (at Assets/Scripts/HumanProbe.cs:53)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE CLEAR_INPUT Tutorial trial=15 key=A simulated=False move=-1 footstepDelta=15 jumpBuffer=-0.2922071
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe/<FootstepClear>d__20:MoveNext () (at Assets/Scripts/HumanProbe.cs:53)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE CLEAR_INPUT Tutorial trial=16 key=D simulated=False move=1 footstepDelta=16 jumpBuffer=-0.2948485
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe/<FootstepClear>d__20:MoveNext () (at Assets/Scripts/HumanProbe.cs:53)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE CLEAR_INPUT Tutorial trial=17 key=A simulated=False move=-1 footstepDelta=17 jumpBuffer=-0.2994298
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe/<FootstepClear>d__20:MoveNext () (at Assets/Scripts/HumanProbe.cs:53)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE CLEAR_INPUT Tutorial trial=18 key=D simulated=False move=1 footstepDelta=18 jumpBuffer=-0.2840572
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe/<FootstepClear>d__20:MoveNext () (at Assets/Scripts/HumanProbe.cs:53)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE CLEAR_INPUT Tutorial trial=19 key=A simulated=False move=-1 footstepDelta=19 jumpBuffer=-0.2872325
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe/<FootstepClear>d__20:MoveNext () (at Assets/Scripts/HumanProbe.cs:53)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE CLEAR_INPUT Tutorial trial=20 key=D simulated=False move=1 footstepDelta=20 jumpBuffer=-0.2898609
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe/<FootstepClear>d__20:MoveNext () (at Assets/Scripts/HumanProbe.cs:53)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE CLEAR_RESULT Tutorial trials=20 actualAudioPlayOneShotCalls=20 inputReads=22191 simulated=False moverEnabled=True positionDelta=0
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe/<FootstepClear>d__20:MoveNext () (at Assets/Scripts/HumanProbe.cs:57)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE FAIL Tutorial clear footstep zero
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe:Check (bool,string) (at Assets/Scripts/HumanProbe.cs:28)
+HumanProbe/<FootstepClear>d__20:MoveNext () (at Assets/Scripts/HumanProbe.cs:58)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE FAIL Tutorial clear skips movement/jump input reads
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe:Check (bool,string) (at Assets/Scripts/HumanProbe.cs:28)
+HumanProbe/<FootstepClear>d__20:MoveNext () (at Assets/Scripts/HumanProbe.cs:58)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE PASS Tutorial clear remains locked
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe:Check (bool,string) (at Assets/Scripts/HumanProbe.cs:28)
+HumanProbe/<FootstepClear>d__20:MoveNext () (at Assets/Scripts/HumanProbe.cs:59)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+Unloading 45 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 14.420900 ms
+Loaded scene 'Assets/Scenes/MainStage.unity'
+	Deserialize:            37.717 ms
+	Integration:            3897.805 ms
+	Integration of assets:  0.054 ms
+	Thread Wait Time:       0.004 ms
+	Total Operation Time:   3935.581 ms
+Unloading 31 unused Assets / (3.5 MB). Loaded Objects now: 2910.
+Memory consumption went from 470.8 MB to 467.3 MB.
+Total: 11.792000 ms (FindLiveObjects: 0.304900 ms CreateObjectMapping: 0.028100 ms MarkObjects: 10.171700 ms  DeleteObjects: 1.284600 ms)
+
+HUMAN_FIX_PROBE PASS normal MainStage actual footstep playback
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe:Check (bool,string) (at Assets/Scripts/HumanProbe.cs:28)
+HumanProbe/<Run>d__23:MoveNext () (at Assets/Scripts/HumanProbe.cs:113)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE NORMAL_FOOTSTEPS 1
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe/<Run>d__23:MoveNext () (at Assets/Scripts/HumanProbe.cs:113)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE CONTROLLED_SETUP (172.80, -0.95)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe:Position (UnityEngine.Vector2) (at Assets/Scripts/HumanProbe.cs:34)
+HumanProbe/<Run>d__23:MoveNext () (at Assets/Scripts/HumanProbe.cs:115)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE PASS physical checkpoint9
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe:Check (bool,string) (at Assets/Scripts/HumanProbe.cs:28)
+HumanProbe/<Run>d__23:MoveNext () (at Assets/Scripts/HumanProbe.cs:116)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE CONTROLLED_SETUP (179.35, -1.42)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe:Position (UnityEngine.Vector2) (at Assets/Scripts/HumanProbe.cs:34)
+HumanProbe/<Run>d__23:MoveNext () (at Assets/Scripts/HumanProbe.cs:117)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE PASS S9 first bridge E/Q
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe:Check (bool,string) (at Assets/Scripts/HumanProbe.cs:28)
+HumanProbe/<Run>d__23:MoveNext () (at Assets/Scripts/HumanProbe.cs:118)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE PASS physical walk target=184.55 position=(184.67, -0.51)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe:Check (bool,string) (at Assets/Scripts/HumanProbe.cs:28)
+HumanProbe/<Walk>d__21:MoveNext () (at Assets/Scripts/HumanProbe.cs:66)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE SWEEP left_of_center position=(184.67, -0.51) selected=6 rightRaySamples=24 rightRayRange=[-17.75,-12] rightSelectedSamples=0 rightSelectedRange=[999,-999] centerSamples=308 centerRange=[-87.75,-11] centerStealsRightSamples=24
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe:Sweep (string) (at Assets/Scripts/HumanProbe.cs:90)
+HumanProbe/<Run>d__23:MoveNext () (at Assets/Scripts/HumanProbe.cs:119)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE PASS physical walk target=184.85 position=(184.90, -0.40)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe:Check (bool,string) (at Assets/Scripts/HumanProbe.cs:28)
+HumanProbe/<Walk>d__21:MoveNext () (at Assets/Scripts/HumanProbe.cs:66)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE SWEEP near_center position=(184.90, -0.40) selected=6 rightRaySamples=27 rightRayRange=[-19.5,-13] rightSelectedSamples=16 rightSelectedRange=[-16.75,-13] centerSamples=333 centerRange=[-100,-17] centerStealsRightSamples=11
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe:Sweep (string) (at Assets/Scripts/HumanProbe.cs:90)
+HumanProbe/<Run>d__23:MoveNext () (at Assets/Scripts/HumanProbe.cs:119)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE PASS physical walk target=185.05 position=(185.06, -0.33)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe:Check (bool,string) (at Assets/Scripts/HumanProbe.cs:28)
+HumanProbe/<Walk>d__21:MoveNext () (at Assets/Scripts/HumanProbe.cs:66)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE SWEEP at_center position=(185.06, -0.33) selected=6 rightRaySamples=29 rightRayRange=[-20.75,-13.75] rightSelectedSamples=29 rightSelectedRange=[-20.75,-13.75] centerSamples=313 centerRange=[-100,-22] centerStealsRightSamples=0
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe:Sweep (string) (at Assets/Scripts/HumanProbe.cs:90)
+HumanProbe/<Run>d__23:MoveNext () (at Assets/Scripts/HumanProbe.cs:119)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE CONTROLLED_SETUP (218.70, -0.80)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe:Position (UnityEngine.Vector2) (at Assets/Scripts/HumanProbe.cs:34)
+HumanProbe/<Run>d__23:MoveNext () (at Assets/Scripts/HumanProbe.cs:122)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+TrimDiskCacheJob: Current cache size 0mb
+HUMAN_FIX_PROBE PASS Main physical goal enters Clear
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe:Check (bool,string) (at Assets/Scripts/HumanProbe.cs:28)
+HumanProbe/<Run>d__23:MoveNext () (at Assets/Scripts/HumanProbe.cs:123)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE CLEAR_INPUT MainStage trial=1 key=A simulated=False move=-1 footstepDelta=1 jumpBuffer=-0.4782683
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe/<FootstepClear>d__20:MoveNext () (at Assets/Scripts/HumanProbe.cs:53)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE CLEAR_INPUT MainStage trial=2 key=D simulated=False move=1 footstepDelta=2 jumpBuffer=-0.2894159
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe/<FootstepClear>d__20:MoveNext () (at Assets/Scripts/HumanProbe.cs:53)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE CLEAR_INPUT MainStage trial=3 key=A simulated=False move=-1 footstepDelta=3 jumpBuffer=-0.2927284
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe/<FootstepClear>d__20:MoveNext () (at Assets/Scripts/HumanProbe.cs:53)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE CLEAR_INPUT MainStage trial=4 key=D simulated=False move=1 footstepDelta=4 jumpBuffer=-0.2968981
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe/<FootstepClear>d__20:MoveNext () (at Assets/Scripts/HumanProbe.cs:53)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE CLEAR_INPUT MainStage trial=5 key=A simulated=False move=-1 footstepDelta=5 jumpBuffer=-0.2811309
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe/<FootstepClear>d__20:MoveNext () (at Assets/Scripts/HumanProbe.cs:53)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE CLEAR_INPUT MainStage trial=6 key=D simulated=False move=1 footstepDelta=6 jumpBuffer=-0.2840995
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe/<FootstepClear>d__20:MoveNext () (at Assets/Scripts/HumanProbe.cs:53)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE CLEAR_INPUT MainStage trial=7 key=A simulated=False move=-1 footstepDelta=7 jumpBuffer=-0.2881262
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe/<FootstepClear>d__20:MoveNext () (at Assets/Scripts/HumanProbe.cs:53)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE CLEAR_INPUT MainStage trial=8 key=D simulated=False move=1 footstepDelta=8 jumpBuffer=-0.2907651
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe/<FootstepClear>d__20:MoveNext () (at Assets/Scripts/HumanProbe.cs:53)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE CLEAR_INPUT MainStage trial=9 key=A simulated=False move=-1 footstepDelta=9 jumpBuffer=-0.2938118
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe/<FootstepClear>d__20:MoveNext () (at Assets/Scripts/HumanProbe.cs:53)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE CLEAR_INPUT MainStage trial=10 key=D simulated=False move=1 footstepDelta=10 jumpBuffer=-0.297723
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe/<FootstepClear>d__20:MoveNext () (at Assets/Scripts/HumanProbe.cs:53)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE CLEAR_INPUT MainStage trial=11 key=A simulated=False move=-1 footstepDelta=11 jumpBuffer=-0.2811734
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe/<FootstepClear>d__20:MoveNext () (at Assets/Scripts/HumanProbe.cs:53)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE CLEAR_INPUT MainStage trial=12 key=D simulated=False move=1 footstepDelta=12 jumpBuffer=-0.2840281
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe/<FootstepClear>d__20:MoveNext () (at Assets/Scripts/HumanProbe.cs:53)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE CLEAR_INPUT MainStage trial=13 key=A simulated=False move=-1 footstepDelta=13 jumpBuffer=-0.2868728
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe/<FootstepClear>d__20:MoveNext () (at Assets/Scripts/HumanProbe.cs:53)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE CLEAR_INPUT MainStage trial=14 key=D simulated=False move=1 footstepDelta=14 jumpBuffer=-0.2902937
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe/<FootstepClear>d__20:MoveNext () (at Assets/Scripts/HumanProbe.cs:53)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE CLEAR_INPUT MainStage trial=15 key=A simulated=False move=-1 footstepDelta=15 jumpBuffer=-0.2923741
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe/<FootstepClear>d__20:MoveNext () (at Assets/Scripts/HumanProbe.cs:53)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE CLEAR_INPUT MainStage trial=16 key=D simulated=False move=1 footstepDelta=16 jumpBuffer=-0.2952824
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe/<FootstepClear>d__20:MoveNext () (at Assets/Scripts/HumanProbe.cs:53)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE CLEAR_INPUT MainStage trial=17 key=A simulated=False move=-1 footstepDelta=17 jumpBuffer=-0.2990155
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe/<FootstepClear>d__20:MoveNext () (at Assets/Scripts/HumanProbe.cs:53)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE CLEAR_INPUT MainStage trial=18 key=D simulated=False move=1 footstepDelta=18 jumpBuffer=-0.2828955
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe/<FootstepClear>d__20:MoveNext () (at Assets/Scripts/HumanProbe.cs:53)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE CLEAR_INPUT MainStage trial=19 key=A simulated=False move=-1 footstepDelta=19 jumpBuffer=-0.2853308
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe/<FootstepClear>d__20:MoveNext () (at Assets/Scripts/HumanProbe.cs:53)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE CLEAR_INPUT MainStage trial=20 key=D simulated=False move=1 footstepDelta=20 jumpBuffer=-0.2889811
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe/<FootstepClear>d__20:MoveNext () (at Assets/Scripts/HumanProbe.cs:53)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE CLEAR_RESULT MainStage trials=20 actualAudioPlayOneShotCalls=20 inputReads=19800 simulated=False moverEnabled=True positionDelta=0
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe/<FootstepClear>d__20:MoveNext () (at Assets/Scripts/HumanProbe.cs:57)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE FAIL MainStage clear footstep zero
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe:Check (bool,string) (at Assets/Scripts/HumanProbe.cs:28)
+HumanProbe/<FootstepClear>d__20:MoveNext () (at Assets/Scripts/HumanProbe.cs:58)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE FAIL MainStage clear skips movement/jump input reads
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe:Check (bool,string) (at Assets/Scripts/HumanProbe.cs:28)
+HumanProbe/<FootstepClear>d__20:MoveNext () (at Assets/Scripts/HumanProbe.cs:58)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+HUMAN_FIX_PROBE PASS MainStage clear remains locked
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HumanProbe:Log (string) (at Assets/Scripts/HumanProbe.cs:27)
+HumanProbe:Check (bool,string) (at Assets/Scripts/HumanProbe.cs:28)
+HumanProbe/<FootstepClear>d__20:MoveNext () (at Assets/Scripts/HumanProbe.cs:59)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/Scripts/HumanProbe.cs Line: 27)
+
+[Physics::Module] Cleanup current backend.
+[Physics::Module] Id: 0xf2b8ea05
+Input System module state changed to: ShutdownInProgress.
+Input System polling thread exited.
+Input System module state changed to: Shutdown.
+[Licensing::IpcConnector] LicenseClient-田尻大翔-6000.3.21-notifications channel disconnected successfully.
+[Licensing::IpcConnector] LicenseClient-田尻大翔-6000.3.21 channel disconnected successfully.
+AcceleratorClientConnectionCallback - disconnected - :0
+Cleanup mono
+Checking for leaked weakptr:
+  Found no leaked weakptrs.
+[Package Manager] Server process was shutdown
+##utp:{"type":"MemoryLeaks","version":2,"phase":"Immediate","time":1790782079887,"processId":10852,"allocatedMemory":17166008,"memoryLabels":[{"Default":29313},{"Permanent":15236},{"NewDelete":68651},{"Thread":4230344},{"Manager":33885},{"VertexData":392},{"Geometry":816},{"Texture":296},{"Shader":80341},{"Material":24},{"GfxDevice":56160},{"Animation":288},{"Audio":2664},{"Font":6932481},{"FreeType":9017},{"FontEngine":736},{"Physics":2146},{"Physics2D":16},{"Serialization":720},{"Input":14984},{"JobScheduler":33024},{"TextLib":280},{"Mono":32},{"ScriptingNativeRuntime":155060},{"BaseObject":1697200},{"Resource":1336},{"Renderer":3000},{"Transform":4685},{"File":6862},{"WebCam":616},{"Culling":32},{"Terrain":11394},{"Wind":24},{"STL":40},{"String":14677},{"DynamicArray":89430},{"HashMap":56757},{"Utility":2660822},{"Curl":2478},{"PoolAlloc":2056},{"AI":80},{"TypeTree":11341},{"ScriptManager":512},{"RuntimeInitializeOnLoadManager":64},{"SpriteAtlas":112},{"GI":7792},{"Director":8240},{"CloudService":6880},{"WebRequest":12206},{"VR":47994},{"SceneManager":504},{"Video":208},{"LazyScriptCache":32},{"Camera":17},{"Secure":2377},{"Image":16384},{"SerializationCache":1576},{"APIUpdating":10320},{"Subsystems":336},{"VirtualTexturing":57888},{"StaticSafetyDebugInfo":278528},{"Analytics":464},{"Hierarchy":608},{"CoreStats":13112},{"Identifiers":6480},{"Gui":96},{"EditorUtility":92146},{"VersionControl":4},{"Undo":947},{"AssetDatabase":324769},{"EditorGi":328},{"UnityConnect":29232},{"Upm":1896},{"AssetCompliance":64},{"DrivenProperties":72},{"LocalIPC":218},{"ProfilerEditor":9746},{"CoreBusinessMetrics":3496},{"Licensing":664},{"AssetReference":32},{"IPCStream":32}]}

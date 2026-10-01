@@ -1,0 +1,34 @@
+{
+  "baselineFiles": 10876,
+  "changedBaselineFiles": [
+    "README.md",
+    "Assets\\Scripts\\PlayerMover.cs",
+    "Assets\\Scripts\\RopeController.cs",
+    "Assets\\Scripts\\TutorialSectionGuide.cs",
+    "Assets\\Scripts\\TutorialSignInscription.cs",
+    "Docs\\LEARNING_LOG.md"
+  ],
+  "unexpectedChanges": [],
+  "missingFiles": [],
+  "head": "7644fdcdf7adb793fcc6e3ac9d6540f317766ec6",
+  "originMain": "7644fdcdf7adb793fcc6e3ac9d6540f317766ec6",
+  "branch": "main",
+  "staged": [],
+  "status": [
+    " M Assets/Scenes/MainStage.unity",
+    " M Assets/Scripts/PlayerMover.cs",
+    " M Assets/Scripts/RopeController.cs",
+    " M Assets/Scripts/TutorialSectionGuide.cs",
+    " M Assets/Scripts/TutorialSignInscription.cs",
+    " M Docs/LEARNING_LOG.md",
+    " M README.md",
+    "?? Docs/QA/FullGameRegression_20260930/",
+    "?? Docs/QA/HumanPlaytestFixes_20260930/",
+    "?? Docs/QA/HumanPlaytest_20260930/",
+    "?? output/"
+  ],
+  "mainStagePreserved": true,
+  "outputPreserved": true,
+  "priorTmpPreserved": true,
+  "pass": true
+}

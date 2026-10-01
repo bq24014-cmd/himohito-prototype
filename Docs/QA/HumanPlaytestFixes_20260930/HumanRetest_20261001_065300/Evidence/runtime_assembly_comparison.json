@@ -1,0 +1,6 @@
+{
+  "currentSha256": "0EE54CD72172C4362B2BB3679B387527D217F7CA1DBEE0A8ECEC4F5DED27F5A3",
+  "previousSha256": "6AAD69FE3018B21DCEF0829787550A2580A734ED2A9849E5716974CF4DF7C584",
+  "runtimeAssemblyChanged": true,
+  "note": "Unity engine exe can be identical across builds; updated runtime code is in Assembly-CSharp.dll; source-input hashes in BuildManifest.json"
+}

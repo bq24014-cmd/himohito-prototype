@@ -1,0 +1,23 @@
+PASS Tutorial normal start
+PASS Tutorial swing E section1
+PASS Tutorial physical section transition 2
+PASS Tutorial section2 checkpoint restart
+PASS Tutorial swing E section2
+PASS Tutorial physical section transition 3
+PASS Tutorial T3 E attach
+PASS Tutorial T3 Q length7
+PASS Tutorial physical section4 transition
+PASS Tutorial T4 preserves T3 bridge/rope92/selection7
+PASS Tutorial T4 first E/Q
+PASS Tutorial T4 second E/Q
+PASS Tutorial T4 F merge
+PASS Tutorial T3 bridge plus mergedT4, centerinactive, rope80
+PASS Tutorial restores authored pre-merge T4 checkpoint
+PASS Tutorial goal first E/Q
+PASS Tutorial goal second E/Q
+PASS Tutorial goal F merge
+PASS Tutorial actual goal reached / physics locked
+PASS Tutorial actual clear revealed
+PASS Tutorial clear progress flag
+PASS Tutorial clear Continue API loads MainStage
+PASS BGM singleton across Tutorial -> MainStage

@@ -1,0 +1,14 @@
+{
+  "utc": "2026-09-30T15:15:12.3112884Z",
+  "head": "7644fdcdf7adb793fcc6e3ac9d6540f317766ec6",
+  "remote": "7644fdcdf7adb793fcc6e3ac9d6540f317766ec6",
+  "branch": "main",
+  "status": [
+    " M Assets/Scenes/MainStage.unity",
+    "?? Docs/QA/FullGameRegression_20260930/",
+    "?? Docs/QA/HumanPlaytestFixes_20260930/",
+    "?? Docs/QA/HumanPlaytest_20260930/",
+    "?? output/"
+  ],
+  "protectedFiles": 10876
+}

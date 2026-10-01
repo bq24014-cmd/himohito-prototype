@@ -760,7 +760,7 @@ namespace HimoHito
             DrawDemoPlayer(rect,f);
             DrawDemoCaption(rect,f.Caption);
             GUI.Label(NormalizedRect(rect,.2f,.88f,.6f,.1f),
-                f.Bridge>0f ? "残量の例　99 → 92（戻らない）" : "掛けるだけなら消費なし",
+                f.Bridge>0f ? "残量の例　99 → 93（戻らない）" : "掛けるだけなら消費なし",
                 diagramLabelStyle);
         }
 

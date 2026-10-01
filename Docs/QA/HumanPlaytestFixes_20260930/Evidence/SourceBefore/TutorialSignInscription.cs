@@ -16,7 +16,7 @@ namespace HimoHito
         private SpriteRenderer picturePlayer;
         private float pictureHeight;
         private LineRenderer[] firstRope, secondRope, mergedRope, middleRing, connectionRope;
-        private static readonly Color DiagramInk = new Color(.27f, .10f, .055f);
+        private static readonly Color Cream = new Color(1f, .91f, .68f);
         private static readonly Color Ink = new Color(.27f, .10f, .055f, .85f);
         private static readonly Color Blue = new Color(.20f, .71f, .94f);
         private static readonly Color Green = new Color(.30f, .93f, .69f);
@@ -206,9 +206,9 @@ namespace HimoHito
             Color danger = new Color(1f, .29f, .34f);
             // Feet trajectories, not two pre-built bridges. The longer swing reaches the spikes.
             Stroke(new[] { new Vector3(.15f, .69f), new Vector3(.235f, .69f),
-                new Vector3(.235f, .515f) }, .013f, DiagramInk, false, "Left Bank");
+                new Vector3(.235f, .515f) }, .013f, Cream, false, "Left Bank");
             Stroke(new[] { new Vector3(.56f, .515f), new Vector3(.56f, .69f),
-                new Vector3(.615f, .69f) }, .013f, DiagramInk, false, "Right Bank");
+                new Vector3(.615f, .69f) }, .013f, Cream, false, "Right Bank");
             DashedPath(.58f, Green, "Safe Swing Path");
             DashedPath(.37f, danger, "Too Long Swing Path");
             for (int i = 0; i < 3; i++)
@@ -308,7 +308,7 @@ namespace HimoHito
 
         private void Shelf(float x, float y, float direction)
         {
-            Stroke(new[] { new Vector3(x + direction, y), new Vector3(x, y) }, .017f, DiagramInk, false);
+            Stroke(new[] { new Vector3(x + direction, y), new Vector3(x, y) }, .017f, Cream, false);
         }
 
         private void Arrow(Vector2 from, Vector2 to)
@@ -316,7 +316,7 @@ namespace HimoHito
             Vector2 direction = (to - from).normalized;
             Vector2 cross = new Vector2(-direction.y, direction.x);
             Stroke(new Vector3[] { from, to, to - direction * .028f + cross * .022f,
-                to, to - direction * .028f - cross * .022f }, .009f, DiagramInk, false);
+                to, to - direction * .028f - cross * .022f }, .009f, Cream, false);
         }
 
         private LineRenderer[] Stroke(Vector3[] points, float width, Color color, bool textured, string label = null)
@@ -363,7 +363,7 @@ namespace HimoHito
             text.characterSize = 1f;
             text.anchor = TextAnchor.MiddleCenter;
             text.alignment = TextAlignment.Center;
-            text.color = DiagramInk;
+            text.color = Cream;
             text.text = value;
             var renderer = child.GetComponent<MeshRenderer>();
             renderer.sharedMaterial = font.material;

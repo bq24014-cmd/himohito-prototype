@@ -1,0 +1,23 @@
+{
+  "buildId": "HumanPlaytestFixes_20261001_065300",
+  "utc": "2026-09-30T22:05:30.5078869Z",
+  "buildSuccess": true,
+  "exeStartupSuccess": true,
+  "exe": "C:\\Users\\Public\\HimoHitoHumanRetest_20261001_065300\\Game\\HimoHitoPrototype.exe",
+  "exeSha256": "837986201D89BE25426B8415CB3BC945F077E5B13F4722D6763D04EBD38C5472",
+  "fileCount": 145,
+  "pid": 24904,
+  "mode": "STARTUP_SMOKE_NOT_HUMAN_PLAYTEST",
+  "aliveBeforeIntentionalStop": true,
+  "secondsObserved": 82.4,
+  "workingSetBytes": 983572480,
+  "engineInitialized": true,
+  "assembliesLoaded": true,
+  "graphicsReady": true,
+  "runtimeErrors": [],
+  "pass": true,
+  "termination": "Only this owned smoke process was intentionally stopped; no user Unity/game processes targeted",
+  "humanKeyboardTestPerformed": false,
+  "productionGuiVerified": false,
+  "humanRetest": "NOT PERFORMED - FIVE ITEMS UNRATED"
+}

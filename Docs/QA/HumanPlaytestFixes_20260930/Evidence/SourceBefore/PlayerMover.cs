@@ -109,8 +109,6 @@ namespace HimoHito
 
         private void Update()
         {
-            if (ClearInputWhileSimulationStopped()) return;
-
             // Arrow keys are reserved for rope aiming, so movement uses A/D only.
             float left = Input.GetKey(KeyCode.A) ? -1f : 0f;
             float right = Input.GetKey(KeyCode.D) ? 1f : 0f;
@@ -126,8 +124,6 @@ namespace HimoHito
 
         private void FixedUpdate()
         {
-            if (ClearInputWhileSimulationStopped()) return;
-
             // Presentation only: a restart teleport must not look like an impact.
             bool teleported = hasPreviousPhysicsPosition &&
                 Vector2.Distance(body.position, previousPhysicsPosition) > maximumCollisionSweepDistance;
@@ -213,17 +209,6 @@ namespace HimoHito
             hasPreviousPhysicsPosition = true;
             previousVerticalSpeed = body.linearVelocity.y;
             hasPreviousVerticalSpeed = true;
-        }
-
-        private bool ClearInputWhileSimulationStopped()
-        {
-            if (body != null && body.simulated) return false;
-
-            // Clear/failure presentation owns the pose while physics is stopped.
-            // Do not read keys, move the body, or carry buffered steps/jumps into retry.
-            moveInput = 0f;
-            jumpBufferTimer = coyoteTimer = footstepTimer = 0f;
-            return true;
         }
 
         private void UpdateFootstepAudio(bool isSwinging, bool jumpedThisStep)

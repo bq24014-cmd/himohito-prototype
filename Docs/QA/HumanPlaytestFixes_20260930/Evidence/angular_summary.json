@@ -1,0 +1,206 @@
+[
+  {
+    "label": "Before",
+    "sample": "left_of_center",
+    "position": [
+      "184.67150",
+      "-0.51270"
+    ],
+    "selected": "6",
+    "target": "Main S09 Green Right Bank",
+    "sampleCount": 0,
+    "availableHighlightCount": 0,
+    "minimum": null,
+    "maximum": null,
+    "span": 0,
+    "samplingStep": 0.25,
+    "rightDistance": "6.53685"
+  },
+  {
+    "label": "Before",
+    "sample": "left_of_center",
+    "position": [
+      "184.67150",
+      "-0.51270"
+    ],
+    "selected": "6",
+    "target": "Main S09 Center Hook",
+    "sampleCount": 308,
+    "availableHighlightCount": 308,
+    "minimum": -87.75,
+    "maximum": -11.0,
+    "span": 76.75,
+    "samplingStep": 0.25,
+    "rightDistance": "6.53685"
+  },
+  {
+    "label": "Before",
+    "sample": "near_center",
+    "position": [
+      "184.90390",
+      "-0.40253"
+    ],
+    "selected": "6",
+    "target": "Main S09 Green Right Bank",
+    "sampleCount": 16,
+    "availableHighlightCount": 16,
+    "minimum": -16.75,
+    "maximum": -13.0,
+    "span": 3.75,
+    "samplingStep": 0.25,
+    "rightDistance": "6.34157"
+  },
+  {
+    "label": "Before",
+    "sample": "near_center",
+    "position": [
+      "184.90390",
+      "-0.40253"
+    ],
+    "selected": "6",
+    "target": "Main S09 Center Hook",
+    "sampleCount": 333,
+    "availableHighlightCount": 333,
+    "minimum": -100.0,
+    "maximum": -17.0,
+    "span": 83.0,
+    "samplingStep": 0.25,
+    "rightDistance": "6.34157"
+  },
+  {
+    "label": "Before",
+    "sample": "at_center",
+    "position": [
+      "185.06340",
+      "-0.32724"
+    ],
+    "selected": "6",
+    "target": "Main S09 Green Right Bank",
+    "sampleCount": 29,
+    "availableHighlightCount": 29,
+    "minimum": -20.75,
+    "maximum": -13.75,
+    "span": 7.0,
+    "samplingStep": 0.25,
+    "rightDistance": "6.21014"
+  },
+  {
+    "label": "Before",
+    "sample": "at_center",
+    "position": [
+      "185.06340",
+      "-0.32724"
+    ],
+    "selected": "6",
+    "target": "Main S09 Center Hook",
+    "sampleCount": 313,
+    "availableHighlightCount": 313,
+    "minimum": -100.0,
+    "maximum": -22.0,
+    "span": 78.0,
+    "samplingStep": 0.25,
+    "rightDistance": "6.21014"
+  },
+  {
+    "label": "After",
+    "sample": "left_of_center",
+    "position": [
+      "184.67150",
+      "-0.51270"
+    ],
+    "selected": "6",
+    "target": "Main S09 Green Right Bank",
+    "sampleCount": 0,
+    "availableHighlightCount": 0,
+    "minimum": null,
+    "maximum": null,
+    "span": 0,
+    "samplingStep": 0.25,
+    "rightDistance": "6.53688"
+  },
+  {
+    "label": "After",
+    "sample": "left_of_center",
+    "position": [
+      "184.67150",
+      "-0.51270"
+    ],
+    "selected": "6",
+    "target": "Main S09 Center Hook",
+    "sampleCount": 308,
+    "availableHighlightCount": 308,
+    "minimum": -87.75,
+    "maximum": -11.0,
+    "span": 76.75,
+    "samplingStep": 0.25,
+    "rightDistance": "6.53688"
+  },
+  {
+    "label": "After",
+    "sample": "near_center",
+    "position": [
+      "184.90390",
+      "-0.40253"
+    ],
+    "selected": "6",
+    "target": "Main S09 Green Right Bank",
+    "sampleCount": 27,
+    "availableHighlightCount": 27,
+    "minimum": -19.5,
+    "maximum": -13.0,
+    "span": 6.5,
+    "samplingStep": 0.25,
+    "rightDistance": "6.34162"
+  },
+  {
+    "label": "After",
+    "sample": "near_center",
+    "position": [
+      "184.90390",
+      "-0.40253"
+    ],
+    "selected": "6",
+    "target": "Main S09 Center Hook",
+    "sampleCount": 322,
+    "availableHighlightCount": 322,
+    "minimum": -100.0,
+    "maximum": -19.75,
+    "span": 80.25,
+    "samplingStep": 0.25,
+    "rightDistance": "6.34162"
+  },
+  {
+    "label": "After",
+    "sample": "at_center",
+    "position": [
+      "185.06340",
+      "-0.32724"
+    ],
+    "selected": "6",
+    "target": "Main S09 Green Right Bank",
+    "sampleCount": 29,
+    "availableHighlightCount": 29,
+    "minimum": -20.75,
+    "maximum": -13.75,
+    "span": 7.0,
+    "samplingStep": 0.25,
+    "rightDistance": "6.21013"
+  },
+  {
+    "label": "After",
+    "sample": "at_center",
+    "position": [
+      "185.06340",
+      "-0.32724"
+    ],
+    "selected": "6",
+    "target": "Main S09 Center Hook",
+    "sampleCount": 313,
+    "availableHighlightCount": 313,
+    "minimum": -100.0,
+    "maximum": -22.0,
+    "span": 78.0,
+    "samplingStep": 0.25,
+    "rightDistance": "6.21013"
+  }
+]

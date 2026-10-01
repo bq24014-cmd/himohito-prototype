@@ -1,0 +1,2 @@
+failures=0
+Diagnostic input seam; NOT OS keypresses.

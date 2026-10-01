@@ -1,0 +1,3 @@
+Assets/Scenes/MainStage.unity:354: trailing whitespace.
++  m_Name: 
+Assets/Scenes/MainStage.unity:590: trailing whitespace.

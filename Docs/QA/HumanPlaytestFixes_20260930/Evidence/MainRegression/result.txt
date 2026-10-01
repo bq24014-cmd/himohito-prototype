@@ -1,0 +1,3 @@
+tests=148 failures=0 runtimeErrors=1 frames=48387
+mean_ms=1.361 p95_ms=1.848 max_ms=2243.991
+DIAGNOSTIC_EDITOR_BATCH_TIMINGS_NOT_PLAYER_FPS
