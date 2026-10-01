@@ -1,0 +1,301 @@
+{
+  "scene_sha": "57D2464751B5B9C2A78E6C56F34197E9BC2629983FADAA1DFF6E0BA0B4BC2284",
+  "expanded_sha": "57D2464751B5B9C2A78E6C56F34197E9BC2629983FADAA1DFF6E0BA0B4BC2284",
+  "exact_zip_inventory": [
+    "MainStage.unity"
+  ],
+  "patch_exists": true,
+  "readme_exists": true,
+  "qa_evidence_exists": true,
+  "recheck_exists": true,
+  "total_saved_bytes": 3710246,
+  "maximum_file_bytes": 526828,
+  "github_file_limit_bytes": 104857600,
+  "files": [
+    {
+      "path": "Docs/Archive/SubmissionScene_20260911/MainStage_submission_20260911.zip",
+      "bytes": 27812
+    },
+    {
+      "path": "Docs/Archive/SubmissionScene_20260911/MainStage_submission_vs_HEAD.patch",
+      "bytes": 39711
+    },
+    {
+      "path": "Docs/Archive/SubmissionScene_20260911/README.md",
+      "bytes": 1508
+    },
+    {
+      "path": "Docs/Archive/SubmissionScene_20260911/SHA256.txt",
+      "bytes": 318
+    },
+    {
+      "path": "Docs/QA/MainStageSceneDiffAudit_20261001/00_README.md",
+      "bytes": 2133
+    },
+    {
+      "path": "Docs/QA/MainStageSceneDiffAudit_20261001/01_GitState.md",
+      "bytes": 2118
+    },
+    {
+      "path": "Docs/QA/MainStageSceneDiffAudit_20261001/02_SerializedDiff.md",
+      "bytes": 90161
+    },
+    {
+      "path": "Docs/QA/MainStageSceneDiffAudit_20261001/03_AuthorityMap.md",
+      "bytes": 161039
+    },
+    {
+      "path": "Docs/QA/MainStageSceneDiffAudit_20261001/04_SubmissionSnapshotComparison.md",
+      "bytes": 1742
+    },
+    {
+      "path": "Docs/QA/MainStageSceneDiffAudit_20261001/05_RuntimeAB.md",
+      "bytes": 3375
+    },
+    {
+      "path": "Docs/QA/MainStageSceneDiffAudit_20261001/06_VisualAB.md",
+      "bytes": 1999
+    },
+    {
+      "path": "Docs/QA/MainStageSceneDiffAudit_20261001/07_WhitespaceAnalysis.md",
+      "bytes": 2063
+    },
+    {
+      "path": "Docs/QA/MainStageSceneDiffAudit_20261001/08_FinalDecision.md",
+      "bytes": 3574
+    },
+    {
+      "path": "Docs/QA/MainStageSceneDiffAudit_20261001/Evidence/analyze.py",
+      "bytes": 7729
+    },
+    {
+      "path": "Docs/QA/MainStageSceneDiffAudit_20261001/Evidence/A_unity.log",
+      "bytes": 74621
+    },
+    {
+      "path": "Docs/QA/MainStageSceneDiffAudit_20261001/Evidence/B_unity.log",
+      "bytes": 26578
+    },
+    {
+      "path": "Docs/QA/MainStageSceneDiffAudit_20261001/Evidence/classification_summary.json",
+      "bytes": 667
+    },
+    {
+      "path": "Docs/QA/MainStageSceneDiffAudit_20261001/Evidence/classified_property_diff.json",
+      "bytes": 344561
+    },
+    {
+      "path": "Docs/QA/MainStageSceneDiffAudit_20261001/Evidence/Classify.py",
+      "bytes": 7669
+    },
+    {
+      "path": "Docs/QA/MainStageSceneDiffAudit_20261001/Evidence/CompareAB.py",
+      "bytes": 3794
+    },
+    {
+      "path": "Docs/QA/MainStageSceneDiffAudit_20261001/Evidence/document_order_noise.json",
+      "bytes": 2
+    },
+    {
+      "path": "Docs/QA/MainStageSceneDiffAudit_20261001/Evidence/fileid_remap.json",
+      "bytes": 2
+    },
+    {
+      "path": "Docs/QA/MainStageSceneDiffAudit_20261001/Evidence/git_branch_end.txt",
+      "bytes": 5
+    },
+    {
+      "path": "Docs/QA/MainStageSceneDiffAudit_20261001/Evidence/git_diff_all_start.txt",
+      "bytes": 212
+    },
+    {
+      "path": "Docs/QA/MainStageSceneDiffAudit_20261001/Evidence/git_head_end.txt",
+      "bytes": 41
+    },
+    {
+      "path": "Docs/QA/MainStageSceneDiffAudit_20261001/Evidence/git_index_end.txt",
+      "bytes": 0
+    },
+    {
+      "path": "Docs/QA/MainStageSceneDiffAudit_20261001/Evidence/git_index_start.txt",
+      "bytes": 0
+    },
+    {
+      "path": "Docs/QA/MainStageSceneDiffAudit_20261001/Evidence/git_origin_main_end.txt",
+      "bytes": 41
+    },
+    {
+      "path": "Docs/QA/MainStageSceneDiffAudit_20261001/Evidence/git_status_end.txt",
+      "bytes": 599
+    },
+    {
+      "path": "Docs/QA/MainStageSceneDiffAudit_20261001/Evidence/git_status_short_end.txt",
+      "bytes": 201
+    },
+    {
+      "path": "Docs/QA/MainStageSceneDiffAudit_20261001/Evidence/git_status_short_start.txt",
+      "bytes": 201
+    },
+    {
+      "path": "Docs/QA/MainStageSceneDiffAudit_20261001/Evidence/git_status_start.txt",
+      "bytes": 599
+    },
+    {
+      "path": "Docs/QA/MainStageSceneDiffAudit_20261001/Evidence/HEAD_MainStage.unity",
+      "bytes": 511101
+    },
+    {
+      "path": "Docs/QA/MainStageSceneDiffAudit_20261001/Evidence/isolated_inputs_verification.json",
+      "bytes": 1430
+    },
+    {
+      "path": "Docs/QA/MainStageSceneDiffAudit_20261001/Evidence/isolated_input_manifest.json",
+      "bytes": 71654
+    },
+    {
+      "path": "Docs/QA/MainStageSceneDiffAudit_20261001/Evidence/PrepareAB.ps1",
+      "bytes": 1300
+    },
+    {
+      "path": "Docs/QA/MainStageSceneDiffAudit_20261001/Evidence/property_diff.json",
+      "bytes": 220599
+    },
+    {
+      "path": "Docs/QA/MainStageSceneDiffAudit_20261001/Evidence/protected_hashes_start.json",
+      "bytes": 329332
+    },
+    {
+      "path": "Docs/QA/MainStageSceneDiffAudit_20261001/Evidence/protection_result.json",
+      "bytes": 683
+    },
+    {
+      "path": "Docs/QA/MainStageSceneDiffAudit_20261001/Evidence/Recheck.py",
+      "bytes": 5610
+    },
+    {
+      "path": "Docs/QA/MainStageSceneDiffAudit_20261001/Evidence/Recheck_20261001.json",
+      "bytes": 3335
+    },
+    {
+      "path": "Docs/QA/MainStageSceneDiffAudit_20261001/Evidence/RunAB.ps1",
+      "bytes": 964
+    },
+    {
+      "path": "Docs/QA/MainStageSceneDiffAudit_20261001/Evidence/runtime_comparison.json",
+      "bytes": 240
+    },
+    {
+      "path": "Docs/QA/MainStageSceneDiffAudit_20261001/Evidence/scene.diff",
+      "bytes": 39711
+    },
+    {
+      "path": "Docs/QA/MainStageSceneDiffAudit_20261001/Evidence/SceneAuditEntry.cs",
+      "bytes": 8286
+    },
+    {
+      "path": "Docs/QA/MainStageSceneDiffAudit_20261001/Evidence/scene_diff_check.txt",
+      "bytes": 3401
+    },
+    {
+      "path": "Docs/QA/MainStageSceneDiffAudit_20261001/Evidence/serialized_summary.json",
+      "bytes": 904
+    },
+    {
+      "path": "Docs/QA/MainStageSceneDiffAudit_20261001/Evidence/Source_CraftRailPlatformVisual.txt",
+      "bytes": 16046
+    },
+    {
+      "path": "Docs/QA/MainStageSceneDiffAudit_20261001/Evidence/Source_MainStageFloorCollisionSetup.txt",
+      "bytes": 5215
+    },
+    {
+      "path": "Docs/QA/MainStageSceneDiffAudit_20261001/Evidence/Source_MainStageSceneSync.txt",
+      "bytes": 1720
+    },
+    {
+      "path": "Docs/QA/MainStageSceneDiffAudit_20261001/Evidence/Source_MainStageSectionFiveSetup.txt",
+      "bytes": 18491
+    },
+    {
+      "path": "Docs/QA/MainStageSceneDiffAudit_20261001/Evidence/Source_MainStageVisuals.txt",
+      "bytes": 39402
+    },
+    {
+      "path": "Docs/QA/MainStageSceneDiffAudit_20261001/Evidence/Source_ToySpikeVisual.txt",
+      "bytes": 9334
+    },
+    {
+      "path": "Docs/QA/MainStageSceneDiffAudit_20261001/Evidence/Submission_MainStage.unity",
+      "bytes": 526828
+    },
+    {
+      "path": "Docs/QA/MainStageSceneDiffAudit_20261001/Evidence/submission_manifest_scene_entry.json",
+      "bytes": 139
+    },
+    {
+      "path": "Docs/QA/MainStageSceneDiffAudit_20261001/Evidence/submission_provenance_readme.txt",
+      "bytes": 1363
+    },
+    {
+      "path": "Docs/QA/MainStageSceneDiffAudit_20261001/Evidence/VerifyProtection.py",
+      "bytes": 2495
+    },
+    {
+      "path": "Docs/QA/MainStageSceneDiffAudit_20261001/Evidence/visual_comparison.json",
+      "bytes": 949
+    },
+    {
+      "path": "Docs/QA/MainStageSceneDiffAudit_20261001/Evidence/whitespace_warnings.json",
+      "bytes": 6921
+    },
+    {
+      "path": "Docs/QA/MainStageSceneDiffAudit_20261001/Evidence/WorkingTree_MainStage.unity",
+      "bytes": 526828
+    },
+    {
+      "path": "Docs/QA/MainStageSceneDiffAudit_20261001/Evidence/RuntimeA/runtime.json",
+      "bytes": 44743
+    },
+    {
+      "path": "Docs/QA/MainStageSceneDiffAudit_20261001/Evidence/RuntimeA/S02_FarSpike.png",
+      "bytes": 46587
+    },
+    {
+      "path": "Docs/QA/MainStageSceneDiffAudit_20261001/Evidence/RuntimeA/S02_FrontSpike.png",
+      "bytes": 122203
+    },
+    {
+      "path": "Docs/QA/MainStageSceneDiffAudit_20261001/Evidence/RuntimeA/S05_Rails.png",
+      "bytes": 54121
+    },
+    {
+      "path": "Docs/QA/MainStageSceneDiffAudit_20261001/Evidence/RuntimeA/success.txt",
+      "bytes": 94
+    },
+    {
+      "path": "Docs/QA/MainStageSceneDiffAudit_20261001/Evidence/RuntimeB/runtime.json",
+      "bytes": 44743
+    },
+    {
+      "path": "Docs/QA/MainStageSceneDiffAudit_20261001/Evidence/RuntimeB/S02_FarSpike.png",
+      "bytes": 46587
+    },
+    {
+      "path": "Docs/QA/MainStageSceneDiffAudit_20261001/Evidence/RuntimeB/S02_FrontSpike.png",
+      "bytes": 122203
+    },
+    {
+      "path": "Docs/QA/MainStageSceneDiffAudit_20261001/Evidence/RuntimeB/S05_Rails.png",
+      "bytes": 54121
+    },
+    {
+      "path": "Docs/QA/MainStageSceneDiffAudit_20261001/Evidence/RuntimeB/success.txt",
+      "bytes": 94
+    },
+    {
+      "path": "Docs/QA/MainStageSceneDiffAudit_20261001/Evidence/__pycache__/analyze.cpython-312.pyc",
+      "bytes": 15394
+    }
+  ],
+  "pass": true
+}

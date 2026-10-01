@@ -1,0 +1,22 @@
+{
+  "head": "4919233cd1d0815afb438bd35a7336492ec09548",
+  "task": "C:\\Users\\田尻大翔\\Documents\\Codex\\2026-08-07\\new-chat\\outputs\\HimoHitoPrototype\\.codex_tmp\\MainStageCleanReproduction_20261001\\DeterministicAB_20261001_154205",
+  "copies": {
+    "A": {
+      "project": "C:\\Users\\田尻大翔\\Documents\\Codex\\2026-08-07\\new-chat\\outputs\\HimoHitoPrototype\\.codex_tmp\\MainStageCleanReproduction_20261001\\DeterministicAB_20261001_154205\\CopyA",
+      "scene_before_sha256": "B6191C44EE8FC841784B4C10EB1940DBA5220EAE112165FD09353D32AF879151",
+      "bgm_sha256": "25C52DA234D42C7A5E5CC91D45AEED14829F845EA15932A88AC94AB006781E83",
+      "initial_committed_files": 461
+    },
+    "B": {
+      "project": "C:\\Users\\田尻大翔\\Documents\\Codex\\2026-08-07\\new-chat\\outputs\\HimoHitoPrototype\\.codex_tmp\\MainStageCleanReproduction_20261001\\DeterministicAB_20261001_154205\\CopyB",
+      "scene_before_sha256": "B6191C44EE8FC841784B4C10EB1940DBA5220EAE112165FD09353D32AF879151",
+      "bgm_sha256": "25C52DA234D42C7A5E5CC91D45AEED14829F845EA15932A88AC94AB006781E83",
+      "initial_committed_files": 461
+    }
+  },
+  "unity": "6000.3.21f1",
+  "production_read_only": true,
+  "cause_project": "C:\\Users\\田尻大翔\\Documents\\Codex\\2026-08-07\\new-chat\\outputs\\HimoHitoPrototype\\.codex_tmp\\MainStageCleanReproduction_20261001\\DeterministicAB_20261001_154205\\CauseProject",
+  "trace_build_project": "C:\\Users\\田尻大翔\\Documents\\Codex\\2026-08-07\\new-chat\\outputs\\HimoHitoPrototype\\.codex_tmp\\MainStageCleanReproduction_20261001\\DeterministicAB_20261001_154205\\TraceBuildProject"
+}

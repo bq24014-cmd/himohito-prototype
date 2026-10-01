@@ -1,0 +1,14 @@
+Assets/Scenes/MainStage.unity
+  at System.Environment.get_StackTrace () [0x00000] in <41d29b352f6a475ab1bf7c6628b82790>:0 
+  at SyncProbe.Saving (UnityEngine.SceneManagement.Scene scene, System.String path) [0x00000] in C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype\.codex_tmp\MainStageCleanReproduction_20261001\DeterministicAB_20261001_154205\CauseProject\Assets\Editor\SyncProbe.cs:80 
+  at UnityEditor.SceneManagement.EditorSceneManager.Internal_SceneSaving (UnityEngine.SceneManagement.Scene scene, System.String path) [0x00000] in <ebc962e8381145e6bdb44b1996e8e9b4>:0 
+  at UnityEditor.SceneManagement.EditorSceneManager.SaveSceneInternal_Injected (UnityEngine.SceneManagement.Scene& , UnityEngine.Bindings.ManagedSpanWrapper& , System.Boolean ) [0x00000] in <ebc962e8381145e6bdb44b1996e8e9b4>:0 
+  at UnityEditor.SceneManagement.EditorSceneManager.SaveSceneInternal (UnityEngine.SceneManagement.Scene scene, System.String dstScenePath, System.Boolean saveAsCopy) [0x00000] in <ebc962e8381145e6bdb44b1996e8e9b4>:0 
+  at UnityEditor.SceneManagement.EditorSceneManager.SaveScene (UnityEngine.SceneManagement.Scene scene, System.String dstScenePath, System.Boolean saveAsCopy) [0x00000] in <ebc962e8381145e6bdb44b1996e8e9b4>:0 
+  at UnityEditor.SceneManagement.EditorSceneManager.SaveScene (UnityEngine.SceneManagement.Scene scene) [0x00000] in <ebc962e8381145e6bdb44b1996e8e9b4>:0 
+  at HimoHitoEditor.MainStageSceneSync.Sync (UnityEngine.SceneManagement.Scene scene) [0x00032] in C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype\.codex_tmp\MainStageCleanReproduction_20261001\DeterministicAB_20261001_154205\CauseProject\Assets\Editor\MainStageSceneSync.cs:49 
+  at HimoHitoEditor.MainStageSceneSync.OnSceneOpened (UnityEngine.SceneManagement.Scene scene, UnityEditor.SceneManagement.OpenSceneMode mode) [0x00000] in C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype\.codex_tmp\MainStageCleanReproduction_20261001\DeterministicAB_20261001_154205\CauseProject\Assets\Editor\MainStageSceneSync.cs:21 
+  at UnityEditor.SceneManagement.EditorSceneManager.Internal_SceneOpened (UnityEngine.SceneManagement.Scene scene, UnityEditor.SceneManagement.OpenSceneMode mode) [0x00000] in <ebc962e8381145e6bdb44b1996e8e9b4>:0 
+  at UnityEditor.SceneManagement.EditorSceneManager.OpenScene_Injected (UnityEngine.Bindings.ManagedSpanWrapper& , UnityEditor.SceneManagement.OpenSceneMode , UnityEngine.SceneManagement.Scene& ) [0x00000] in <ebc962e8381145e6bdb44b1996e8e9b4>:0 
+  at UnityEditor.SceneManagement.EditorSceneManager.OpenScene (System.String scenePath, UnityEditor.SceneManagement.OpenSceneMode mode) [0x00000] in <ebc962e8381145e6bdb44b1996e8e9b4>:0 
+  at SyncProbe.Run () [0x00095] in C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype\.codex_tmp\MainStageCleanReproduction_20261001\DeterministicAB_20261001_154205\CauseProject\Assets\Editor\SyncProbe.cs:34 

@@ -1,0 +1,15 @@
+{
+  "result": "FAIL",
+  "reason": "BGM missing; committed BackgroundMusicBuildCheck stops build",
+  "build_failure_present": true,
+  "exe_exists": false,
+  "exe_launch": "NOT_RUN_NO_EXE",
+  "ignored_bgm_sha256": "25C52DA234D42C7A5E5CC91D45AEED14829F845EA15932A88AC94AB006781E83",
+  "ignored_bgm_committed": false,
+  "ignored_by": {
+    "exit": 0,
+    "stdout": "Assets/Resources/Audio/YasashiiOdori.mp3\n",
+    "stderr": ""
+  },
+  "attempt_path": "C:\\Users\\田尻大翔\\Documents\\Codex\\2026-08-07\\new-chat\\outputs\\HimoHitoPrototype\\.codex_tmp\\MainStageCleanReproduction_20261001\\BuildProject\\Builds\\Windows\\Game"
+}

@@ -1,0 +1,3 @@
+# Preserve archival evidence bytes independently of Windows checkout settings.
+*.zip -text
+*.patch -text

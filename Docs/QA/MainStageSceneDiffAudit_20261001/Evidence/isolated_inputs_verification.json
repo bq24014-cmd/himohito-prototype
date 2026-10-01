@@ -1,0 +1,30 @@
+{
+  "non_scene_input_changes_after_AB": [],
+  "latest_HEAD_tracked_input_mismatches": [],
+  "pre_existing_ignored_resources_shared_AB": [
+    {
+      "path": "Assets/Resources/Audio/YasashiiOdori.mp3",
+      "sha256": "25C52DA234D42C7A5E5CC91D45AEED14829F845EA15932A88AC94AB006781E83",
+      "scope": "Pre-existing ignored resource; identical in A and B; no source/config divergence."
+    }
+  ],
+  "git_LFS_payloads_verified_against_HEAD_oid": [
+    "Assets/Resources/Audio/FailurePianoNote.mp3",
+    "Assets/Resources/Audio/FailureYarnDrop.mp3",
+    "Assets/Resources/Audio/GoalClearXylophone.mp3",
+    "Assets/Resources/Audio/GoalTreasureChestOpen.mp3",
+    "Assets/Resources/Audio/PlayerLandingStep.mp3",
+    "Assets/Resources/Audio/RopeAttachMissWhoosh.mp3",
+    "Assets/Resources/Audio/RopeLengthClick.mp3",
+    "Assets/Resources/Audio/RopeLengthLimitWood.mp3",
+    "Assets/Resources/Audio/RopeReleaseWind.wav",
+    "Assets/Resources/Audio/RopeShotRustling.mp3",
+    "Assets/Resources/Audio/UiPaperOpen.mp3"
+  ],
+  "production_runtime_scripts": 113,
+  "qa_extra_file": "Assets/Editor/SceneAuditEntry.cs (+ Unity-generated .meta)",
+  "isolated_scene_after_B_sha": "57D2464751B5B9C2A78E6C56F34197E9BC2629983FADAA1DFF6E0BA0B4BC2284",
+  "isolated_scene_after_A_sha_observed_before_B": "B6191C44EE8FC841784B4C10EB1940DBA5220EAE112165FD09353D32AF879151",
+  "a_scene_was_not_serialized": true,
+  "b_scene_was_not_serialized": true
+}

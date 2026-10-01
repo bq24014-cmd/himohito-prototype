@@ -1,0 +1,21 @@
+{
+  "protected_existing_files": 2186,
+  "production_or_existing_file_changes": [],
+  "copies": {
+    "BuildProject": {
+      "committed_source_differences": [],
+      "committed_scene_differences": [
+        "Assets/Scenes/MainStage.unity"
+      ],
+      "bgm_sha256": "25C52DA234D42C7A5E5CC91D45AEED14829F845EA15932A88AC94AB006781E83"
+    },
+    "QAProject": {
+      "committed_source_differences": [],
+      "committed_scene_differences": [],
+      "bgm_sha256": "25C52DA234D42C7A5E5CC91D45AEED14829F845EA15932A88AC94AB006781E83"
+    }
+  },
+  "original_bgm_sha256": "25C52DA234D42C7A5E5CC91D45AEED14829F845EA15932A88AC94AB006781E83",
+  "scene_sha256": "B6191C44EE8FC841784B4C10EB1940DBA5220EAE112165FD09353D32AF879151",
+  "protection_pass": false
+}

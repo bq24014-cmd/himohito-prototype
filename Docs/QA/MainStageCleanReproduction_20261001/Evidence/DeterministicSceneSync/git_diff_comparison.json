@@ -1,0 +1,6 @@
+{
+  "equal": true,
+  "normalization": "Only A/B filenames in diff headers replaced. No hunk/body/value normalization. Raw git diffs retained.",
+  "sha256_A": "374F9E2B43292F3AA3E770BDAAD3A9869DF8CF2E30F3E2A20683ACAB631520F1",
+  "sha256_B": "374F9E2B43292F3AA3E770BDAAD3A9869DF8CF2E30F3E2A20683ACAB631520F1"
+}

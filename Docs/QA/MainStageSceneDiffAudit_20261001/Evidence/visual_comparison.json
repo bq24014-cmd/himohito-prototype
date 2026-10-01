@@ -1,0 +1,38 @@
+[
+  {
+    "label": "S05_Rails",
+    "resolution": [
+      1280,
+      720
+    ],
+    "sha_a": "B5F9B41CDCAD36DD1F05266007F389B92DF53BDA14FB299E38880C7327C60B83",
+    "sha_b": "B5F9B41CDCAD36DD1F05266007F389B92DF53BDA14FB299E38880C7327C60B83",
+    "different_pixels": 0,
+    "bbox": null,
+    "identical": true
+  },
+  {
+    "label": "S02_FrontSpike",
+    "resolution": [
+      1280,
+      720
+    ],
+    "sha_a": "B42AED90073FDFD467D3BF83B53BE5BAC39791D5EF60316FF03C44B839A56ABD",
+    "sha_b": "B42AED90073FDFD467D3BF83B53BE5BAC39791D5EF60316FF03C44B839A56ABD",
+    "different_pixels": 0,
+    "bbox": null,
+    "identical": true
+  },
+  {
+    "label": "S02_FarSpike",
+    "resolution": [
+      1280,
+      720
+    ],
+    "sha_a": "3852F8AD04E15672067BE7E68368E12DE16B3527DB654E228B03674433CC609F",
+    "sha_b": "3852F8AD04E15672067BE7E68368E12DE16B3527DB654E228B03674433CC609F",
+    "different_pixels": 0,
+    "bbox": null,
+    "identical": true
+  }
+]

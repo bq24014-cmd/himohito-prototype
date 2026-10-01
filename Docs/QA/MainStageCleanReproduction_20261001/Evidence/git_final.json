@@ -1,0 +1,47 @@
+{
+  "status": {
+    "exit": 0,
+    "stdout": "On branch main\nYour branch is up to date with 'origin/main'.\n\nChanges not staged for commit:\n  (use \"git add <file>...\" to update what will be committed)\n  (use \"git restore <file>...\" to discard changes in working directory)\n\tmodified:   Docs/LEARNING_LOG.md\n\tmodified:   README.md\n\nUntracked files:\n  (use \"git add <file>...\" to include in what will be committed)\n\tDocs/Archive/\n\tDocs/QA/FullGameRegression_20260930/\n\tDocs/QA/HumanPlaytest_20260930/\n\tDocs/QA/MainStageCleanReproduction_20261001/\n\tDocs/QA/MainStageSceneDiffAudit_20261001/\n\toutput/\n\nno changes added to commit (use \"git add\" and/or \"git commit -a\")\n",
+    "stderr": ""
+  },
+  "status_short": {
+    "exit": 0,
+    "stdout": " M Docs/LEARNING_LOG.md\n M README.md\n?? Docs/Archive/\n?? Docs/QA/FullGameRegression_20260930/\n?? Docs/QA/HumanPlaytest_20260930/\n?? Docs/QA/MainStageCleanReproduction_20261001/\n?? Docs/QA/MainStageSceneDiffAudit_20261001/\n?? output/\n",
+    "stderr": ""
+  },
+  "index": {
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "head": {
+    "exit": 0,
+    "stdout": "4919233cd1d0815afb438bd35a7336492ec09548\n",
+    "stderr": ""
+  },
+  "origin_main": {
+    "exit": 0,
+    "stdout": "4919233cd1d0815afb438bd35a7336492ec09548\n",
+    "stderr": ""
+  },
+  "branch": {
+    "exit": 0,
+    "stdout": "main\n",
+    "stderr": ""
+  },
+  "scene_diff": {
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "scene_diff_check": {
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "patch_applies_to_head": {
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  }
+}

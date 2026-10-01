@@ -1,0 +1,1349 @@
+{
+    "scene": "MainStage",
+    "nodes": [
+        {
+            "path": "Main S05 Left Shelf",
+            "activeSelf": true,
+            "activeInHierarchy": true,
+            "layer": 0,
+            "tag": "Untagged",
+            "position": {
+                "x": 93.5999984741211,
+                "y": -0.949999988079071,
+                "z": 0.0
+            },
+            "localPosition": {
+                "x": 93.5999984741211,
+                "y": -0.949999988079071,
+                "z": 0.0
+            },
+            "localScale": {
+                "x": 3.0,
+                "y": 0.6000000238418579,
+                "z": 1.0
+            },
+            "lossyScale": {
+                "x": 3.0,
+                "y": 0.6000000238418579,
+                "z": 1.0
+            },
+            "localRotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 1.0
+            },
+            "components": [
+                "HimoHito.CraftRailPlatformVisual",
+                "HimoHito.OneWayRailPlatform",
+                "HimoHito.SolidSprite",
+                "HimoHito.SwingPassThroughRailPlatform",
+                "UnityEngine.BoxCollider2D",
+                "UnityEngine.PlatformEffector2D",
+                "UnityEngine.Rigidbody2D",
+                "UnityEngine.SpriteRenderer",
+                "UnityEngine.Transform"
+            ],
+            "fields": [
+                {
+                    "component": "HimoHito.CraftRailPlatformVisual",
+                    "property": "allowTutorialLegacy",
+                    "value": "False"
+                },
+                {
+                    "component": "HimoHito.CraftRailPlatformVisual",
+                    "property": "m_Script",
+                    "value": "MonoScript:CraftRailPlatformVisual"
+                },
+                {
+                    "component": "HimoHito.OneWayRailPlatform",
+                    "property": "groundingTolerance",
+                    "value": "0.12"
+                },
+                {
+                    "component": "HimoHito.OneWayRailPlatform",
+                    "property": "m_Script",
+                    "value": "MonoScript:OneWayRailPlatform"
+                },
+                {
+                    "component": "HimoHito.OneWayRailPlatform",
+                    "property": "surfaceArc",
+                    "value": "160"
+                },
+                {
+                    "component": "HimoHito.SolidSprite",
+                    "property": "m_Script",
+                    "value": "MonoScript:SolidSprite"
+                },
+                {
+                    "component": "HimoHito.SwingPassThroughRailPlatform",
+                    "property": "m_Script",
+                    "value": "MonoScript:SwingPassThroughRailPlatform"
+                }
+            ],
+            "boxes": [
+                {
+                    "enabled": true,
+                    "isTrigger": false,
+                    "usedByEffector": true,
+                    "size": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "offset": {
+                        "x": 0.0,
+                        "y": 0.0
+                    }
+                }
+            ],
+            "renderers": [
+                {
+                    "enabled": false,
+                    "sortingLayerID": 0,
+                    "sortingOrder": 0,
+                    "drawMode": "Simple",
+                    "tileMode": "Continuous",
+                    "sprite": "PrototypeSquare",
+                    "texture": "PrototypeWhitePixel",
+                    "size": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "spriteSize": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "rect": {
+                        "serializedVersion": "2",
+                        "x": 0.0,
+                        "y": 0.0,
+                        "width": 1.0,
+                        "height": 1.0
+                    },
+                    "color": {
+                        "r": 0.2980000078678131,
+                        "g": 0.7649999856948853,
+                        "b": 1.0,
+                        "a": 1.0
+                    },
+                    "bounds": {
+                        "m_Center": {
+                            "x": 93.5999984741211,
+                            "y": -0.949999988079071,
+                            "z": 0.0
+                        },
+                        "m_Extent": {
+                            "x": 1.5,
+                            "y": 0.30000001192092898,
+                            "z": 0.10000000149011612
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "path": "Main S05 Left Shelf/Blue Railway Platform Visual",
+            "activeSelf": true,
+            "activeInHierarchy": true,
+            "layer": 0,
+            "tag": "Untagged",
+            "position": {
+                "x": 93.5999984741211,
+                "y": -0.9199999570846558,
+                "z": 0.0
+            },
+            "localPosition": {
+                "x": 0.0,
+                "y": 0.05000000074505806,
+                "z": 0.0
+            },
+            "localScale": {
+                "x": 0.3333333432674408,
+                "y": 1.6666666269302369,
+                "z": 1.0
+            },
+            "lossyScale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "localRotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 1.0
+            },
+            "components": [
+                "UnityEngine.SpriteRenderer",
+                "UnityEngine.Transform"
+            ],
+            "fields": [],
+            "boxes": [],
+            "renderers": [
+                {
+                    "enabled": true,
+                    "sortingLayerID": 0,
+                    "sortingOrder": 1,
+                    "drawMode": "Tiled",
+                    "tileMode": "Continuous",
+                    "sprite": "Craft Rail Fixed Caps",
+                    "texture": "HimoHitoCraftRail-v1 Transparent",
+                    "size": {
+                        "x": 3.0,
+                        "y": 0.5400000214576721
+                    },
+                    "spriteSize": {
+                        "x": 3.8935623168945314,
+                        "y": 0.5400000214576721
+                    },
+                    "rect": {
+                        "serializedVersion": "2",
+                        "x": 48.0,
+                        "y": 442.0,
+                        "width": 1680.0,
+                        "height": 233.0
+                    },
+                    "color": {
+                        "r": 1.0,
+                        "g": 1.0,
+                        "b": 1.0,
+                        "a": 1.0
+                    },
+                    "bounds": {
+                        "m_Center": {
+                            "x": 93.5999984741211,
+                            "y": -0.9199999570846558,
+                            "z": 0.0
+                        },
+                        "m_Extent": {
+                            "x": 1.5,
+                            "y": 0.27000001072883608,
+                            "z": 0.10000000149011612
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "path": "Main S05 Left Shelf/Blue Railway Platform Visual/Craft Rail Tie 0",
+            "activeSelf": true,
+            "activeInHierarchy": true,
+            "layer": 0,
+            "tag": "Untagged",
+            "position": {
+                "x": 92.5999984741211,
+                "y": -1.25,
+                "z": 0.0
+            },
+            "localPosition": {
+                "x": -1.0,
+                "y": -0.33000001311302187,
+                "z": 0.0
+            },
+            "localScale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "lossyScale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "localRotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 1.0
+            },
+            "components": [
+                "UnityEngine.SpriteRenderer",
+                "UnityEngine.Transform"
+            ],
+            "fields": [],
+            "boxes": [],
+            "renderers": [
+                {
+                    "enabled": true,
+                    "sortingLayerID": 0,
+                    "sortingOrder": 2,
+                    "drawMode": "Simple",
+                    "tileMode": "Continuous",
+                    "sprite": "Craft Rail Whole Wooden Tie",
+                    "texture": "HimoHitoCraftRail-v1 Transparent",
+                    "size": {
+                        "x": 0.2814754247665405,
+                        "y": 0.3400000035762787
+                    },
+                    "spriteSize": {
+                        "x": 0.2814754247665405,
+                        "y": 0.3400000035762787
+                    },
+                    "rect": {
+                        "serializedVersion": "2",
+                        "x": 786.0,
+                        "y": 87.0,
+                        "width": 202.0,
+                        "height": 244.0
+                    },
+                    "color": {
+                        "r": 1.0,
+                        "g": 1.0,
+                        "b": 1.0,
+                        "a": 1.0
+                    },
+                    "bounds": {
+                        "m_Center": {
+                            "x": 92.5999984741211,
+                            "y": -1.0800000429153443,
+                            "z": 0.0
+                        },
+                        "m_Extent": {
+                            "x": 0.14073771238327027,
+                            "y": 0.17000000178813935,
+                            "z": 0.10000000149011612
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "path": "Main S05 Left Shelf/Blue Railway Platform Visual/Craft Rail Tie 1",
+            "activeSelf": true,
+            "activeInHierarchy": true,
+            "layer": 0,
+            "tag": "Untagged",
+            "position": {
+                "x": 93.5999984741211,
+                "y": -1.25,
+                "z": 0.0
+            },
+            "localPosition": {
+                "x": 0.0,
+                "y": -0.33000001311302187,
+                "z": 0.0
+            },
+            "localScale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "lossyScale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "localRotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 1.0
+            },
+            "components": [
+                "UnityEngine.SpriteRenderer",
+                "UnityEngine.Transform"
+            ],
+            "fields": [],
+            "boxes": [],
+            "renderers": [
+                {
+                    "enabled": true,
+                    "sortingLayerID": 0,
+                    "sortingOrder": 2,
+                    "drawMode": "Simple",
+                    "tileMode": "Continuous",
+                    "sprite": "Craft Rail Whole Wooden Tie",
+                    "texture": "HimoHitoCraftRail-v1 Transparent",
+                    "size": {
+                        "x": 0.2814754247665405,
+                        "y": 0.3400000035762787
+                    },
+                    "spriteSize": {
+                        "x": 0.2814754247665405,
+                        "y": 0.3400000035762787
+                    },
+                    "rect": {
+                        "serializedVersion": "2",
+                        "x": 786.0,
+                        "y": 87.0,
+                        "width": 202.0,
+                        "height": 244.0
+                    },
+                    "color": {
+                        "r": 1.0,
+                        "g": 1.0,
+                        "b": 1.0,
+                        "a": 1.0
+                    },
+                    "bounds": {
+                        "m_Center": {
+                            "x": 93.5999984741211,
+                            "y": -1.0800000429153443,
+                            "z": 0.0
+                        },
+                        "m_Extent": {
+                            "x": 0.14073771238327027,
+                            "y": 0.17000000178813935,
+                            "z": 0.10000000149011612
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "path": "Main S05 Left Shelf/Blue Railway Platform Visual/Craft Rail Tie 2",
+            "activeSelf": true,
+            "activeInHierarchy": true,
+            "layer": 0,
+            "tag": "Untagged",
+            "position": {
+                "x": 94.5999984741211,
+                "y": -1.25,
+                "z": 0.0
+            },
+            "localPosition": {
+                "x": 1.0,
+                "y": -0.33000001311302187,
+                "z": 0.0
+            },
+            "localScale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "lossyScale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "localRotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 1.0
+            },
+            "components": [
+                "UnityEngine.SpriteRenderer",
+                "UnityEngine.Transform"
+            ],
+            "fields": [],
+            "boxes": [],
+            "renderers": [
+                {
+                    "enabled": true,
+                    "sortingLayerID": 0,
+                    "sortingOrder": 2,
+                    "drawMode": "Simple",
+                    "tileMode": "Continuous",
+                    "sprite": "Craft Rail Whole Wooden Tie",
+                    "texture": "HimoHitoCraftRail-v1 Transparent",
+                    "size": {
+                        "x": 0.2814754247665405,
+                        "y": 0.3400000035762787
+                    },
+                    "spriteSize": {
+                        "x": 0.2814754247665405,
+                        "y": 0.3400000035762787
+                    },
+                    "rect": {
+                        "serializedVersion": "2",
+                        "x": 786.0,
+                        "y": 87.0,
+                        "width": 202.0,
+                        "height": 244.0
+                    },
+                    "color": {
+                        "r": 1.0,
+                        "g": 1.0,
+                        "b": 1.0,
+                        "a": 1.0
+                    },
+                    "bounds": {
+                        "m_Center": {
+                            "x": 94.5999984741211,
+                            "y": -1.0800000429153443,
+                            "z": 0.0
+                        },
+                        "m_Extent": {
+                            "x": 0.14073771238327027,
+                            "y": 0.17000000178813935,
+                            "z": 0.10000000149011612
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "path": "Main S05 Right Shelf",
+            "activeSelf": true,
+            "activeInHierarchy": true,
+            "layer": 0,
+            "tag": "Untagged",
+            "position": {
+                "x": 101.0,
+                "y": -0.949999988079071,
+                "z": 0.0
+            },
+            "localPosition": {
+                "x": 101.0,
+                "y": -0.949999988079071,
+                "z": 0.0
+            },
+            "localScale": {
+                "x": 3.0,
+                "y": 0.6000000238418579,
+                "z": 1.0
+            },
+            "lossyScale": {
+                "x": 3.0,
+                "y": 0.6000000238418579,
+                "z": 1.0
+            },
+            "localRotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 1.0
+            },
+            "components": [
+                "HimoHito.CraftRailPlatformVisual",
+                "HimoHito.OneWayRailPlatform",
+                "HimoHito.SolidSprite",
+                "HimoHito.SwingPassThroughRailPlatform",
+                "UnityEngine.BoxCollider2D",
+                "UnityEngine.PlatformEffector2D",
+                "UnityEngine.Rigidbody2D",
+                "UnityEngine.SpriteRenderer",
+                "UnityEngine.Transform"
+            ],
+            "fields": [
+                {
+                    "component": "HimoHito.CraftRailPlatformVisual",
+                    "property": "allowTutorialLegacy",
+                    "value": "False"
+                },
+                {
+                    "component": "HimoHito.CraftRailPlatformVisual",
+                    "property": "m_Script",
+                    "value": "MonoScript:CraftRailPlatformVisual"
+                },
+                {
+                    "component": "HimoHito.OneWayRailPlatform",
+                    "property": "groundingTolerance",
+                    "value": "0.12"
+                },
+                {
+                    "component": "HimoHito.OneWayRailPlatform",
+                    "property": "m_Script",
+                    "value": "MonoScript:OneWayRailPlatform"
+                },
+                {
+                    "component": "HimoHito.OneWayRailPlatform",
+                    "property": "surfaceArc",
+                    "value": "160"
+                },
+                {
+                    "component": "HimoHito.SolidSprite",
+                    "property": "m_Script",
+                    "value": "MonoScript:SolidSprite"
+                },
+                {
+                    "component": "HimoHito.SwingPassThroughRailPlatform",
+                    "property": "m_Script",
+                    "value": "MonoScript:SwingPassThroughRailPlatform"
+                }
+            ],
+            "boxes": [
+                {
+                    "enabled": true,
+                    "isTrigger": false,
+                    "usedByEffector": true,
+                    "size": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "offset": {
+                        "x": 0.0,
+                        "y": 0.0
+                    }
+                }
+            ],
+            "renderers": [
+                {
+                    "enabled": false,
+                    "sortingLayerID": 0,
+                    "sortingOrder": 0,
+                    "drawMode": "Simple",
+                    "tileMode": "Continuous",
+                    "sprite": "PrototypeSquare",
+                    "texture": "PrototypeWhitePixel",
+                    "size": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "spriteSize": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "rect": {
+                        "serializedVersion": "2",
+                        "x": 0.0,
+                        "y": 0.0,
+                        "width": 1.0,
+                        "height": 1.0
+                    },
+                    "color": {
+                        "r": 0.2980000078678131,
+                        "g": 0.7649999856948853,
+                        "b": 1.0,
+                        "a": 1.0
+                    },
+                    "bounds": {
+                        "m_Center": {
+                            "x": 101.0,
+                            "y": -0.949999988079071,
+                            "z": 0.0
+                        },
+                        "m_Extent": {
+                            "x": 1.5,
+                            "y": 0.30000001192092898,
+                            "z": 0.10000000149011612
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "path": "Main S05 Right Shelf/Blue Railway Platform Visual",
+            "activeSelf": true,
+            "activeInHierarchy": true,
+            "layer": 0,
+            "tag": "Untagged",
+            "position": {
+                "x": 101.0,
+                "y": -0.9199999570846558,
+                "z": 0.0
+            },
+            "localPosition": {
+                "x": 0.0,
+                "y": 0.05000000074505806,
+                "z": 0.0
+            },
+            "localScale": {
+                "x": 0.3333333432674408,
+                "y": 1.6666666269302369,
+                "z": 1.0
+            },
+            "lossyScale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "localRotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 1.0
+            },
+            "components": [
+                "UnityEngine.SpriteRenderer",
+                "UnityEngine.Transform"
+            ],
+            "fields": [],
+            "boxes": [],
+            "renderers": [
+                {
+                    "enabled": true,
+                    "sortingLayerID": 0,
+                    "sortingOrder": 1,
+                    "drawMode": "Tiled",
+                    "tileMode": "Continuous",
+                    "sprite": "Craft Rail Fixed Caps",
+                    "texture": "HimoHitoCraftRail-v1 Transparent",
+                    "size": {
+                        "x": 3.0,
+                        "y": 0.5400000214576721
+                    },
+                    "spriteSize": {
+                        "x": 3.8935623168945314,
+                        "y": 0.5400000214576721
+                    },
+                    "rect": {
+                        "serializedVersion": "2",
+                        "x": 48.0,
+                        "y": 442.0,
+                        "width": 1680.0,
+                        "height": 233.0
+                    },
+                    "color": {
+                        "r": 1.0,
+                        "g": 1.0,
+                        "b": 1.0,
+                        "a": 1.0
+                    },
+                    "bounds": {
+                        "m_Center": {
+                            "x": 101.0,
+                            "y": -0.9199999570846558,
+                            "z": 0.0
+                        },
+                        "m_Extent": {
+                            "x": 1.5,
+                            "y": 0.27000001072883608,
+                            "z": 0.10000000149011612
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "path": "Main S05 Right Shelf/Blue Railway Platform Visual/Craft Rail Tie 0",
+            "activeSelf": true,
+            "activeInHierarchy": true,
+            "layer": 0,
+            "tag": "Untagged",
+            "position": {
+                "x": 100.0,
+                "y": -1.25,
+                "z": 0.0
+            },
+            "localPosition": {
+                "x": -1.0,
+                "y": -0.33000001311302187,
+                "z": 0.0
+            },
+            "localScale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "lossyScale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "localRotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 1.0
+            },
+            "components": [
+                "UnityEngine.SpriteRenderer",
+                "UnityEngine.Transform"
+            ],
+            "fields": [],
+            "boxes": [],
+            "renderers": [
+                {
+                    "enabled": true,
+                    "sortingLayerID": 0,
+                    "sortingOrder": 2,
+                    "drawMode": "Simple",
+                    "tileMode": "Continuous",
+                    "sprite": "Craft Rail Whole Wooden Tie",
+                    "texture": "HimoHitoCraftRail-v1 Transparent",
+                    "size": {
+                        "x": 0.2814754247665405,
+                        "y": 0.3400000035762787
+                    },
+                    "spriteSize": {
+                        "x": 0.2814754247665405,
+                        "y": 0.3400000035762787
+                    },
+                    "rect": {
+                        "serializedVersion": "2",
+                        "x": 786.0,
+                        "y": 87.0,
+                        "width": 202.0,
+                        "height": 244.0
+                    },
+                    "color": {
+                        "r": 1.0,
+                        "g": 1.0,
+                        "b": 1.0,
+                        "a": 1.0
+                    },
+                    "bounds": {
+                        "m_Center": {
+                            "x": 100.0,
+                            "y": -1.0800000429153443,
+                            "z": 0.0
+                        },
+                        "m_Extent": {
+                            "x": 0.14073771238327027,
+                            "y": 0.17000000178813935,
+                            "z": 0.10000000149011612
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "path": "Main S05 Right Shelf/Blue Railway Platform Visual/Craft Rail Tie 1",
+            "activeSelf": true,
+            "activeInHierarchy": true,
+            "layer": 0,
+            "tag": "Untagged",
+            "position": {
+                "x": 101.0,
+                "y": -1.25,
+                "z": 0.0
+            },
+            "localPosition": {
+                "x": 0.0,
+                "y": -0.33000001311302187,
+                "z": 0.0
+            },
+            "localScale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "lossyScale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "localRotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 1.0
+            },
+            "components": [
+                "UnityEngine.SpriteRenderer",
+                "UnityEngine.Transform"
+            ],
+            "fields": [],
+            "boxes": [],
+            "renderers": [
+                {
+                    "enabled": true,
+                    "sortingLayerID": 0,
+                    "sortingOrder": 2,
+                    "drawMode": "Simple",
+                    "tileMode": "Continuous",
+                    "sprite": "Craft Rail Whole Wooden Tie",
+                    "texture": "HimoHitoCraftRail-v1 Transparent",
+                    "size": {
+                        "x": 0.2814754247665405,
+                        "y": 0.3400000035762787
+                    },
+                    "spriteSize": {
+                        "x": 0.2814754247665405,
+                        "y": 0.3400000035762787
+                    },
+                    "rect": {
+                        "serializedVersion": "2",
+                        "x": 786.0,
+                        "y": 87.0,
+                        "width": 202.0,
+                        "height": 244.0
+                    },
+                    "color": {
+                        "r": 1.0,
+                        "g": 1.0,
+                        "b": 1.0,
+                        "a": 1.0
+                    },
+                    "bounds": {
+                        "m_Center": {
+                            "x": 101.0,
+                            "y": -1.0800000429153443,
+                            "z": 0.0
+                        },
+                        "m_Extent": {
+                            "x": 0.14073771238327027,
+                            "y": 0.17000000178813935,
+                            "z": 0.10000000149011612
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "path": "Main S05 Right Shelf/Blue Railway Platform Visual/Craft Rail Tie 2",
+            "activeSelf": true,
+            "activeInHierarchy": true,
+            "layer": 0,
+            "tag": "Untagged",
+            "position": {
+                "x": 102.0,
+                "y": -1.25,
+                "z": 0.0
+            },
+            "localPosition": {
+                "x": 1.0,
+                "y": -0.33000001311302187,
+                "z": 0.0
+            },
+            "localScale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "lossyScale": {
+                "x": 1.0,
+                "y": 1.0,
+                "z": 1.0
+            },
+            "localRotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 1.0
+            },
+            "components": [
+                "UnityEngine.SpriteRenderer",
+                "UnityEngine.Transform"
+            ],
+            "fields": [],
+            "boxes": [],
+            "renderers": [
+                {
+                    "enabled": true,
+                    "sortingLayerID": 0,
+                    "sortingOrder": 2,
+                    "drawMode": "Simple",
+                    "tileMode": "Continuous",
+                    "sprite": "Craft Rail Whole Wooden Tie",
+                    "texture": "HimoHitoCraftRail-v1 Transparent",
+                    "size": {
+                        "x": 0.2814754247665405,
+                        "y": 0.3400000035762787
+                    },
+                    "spriteSize": {
+                        "x": 0.2814754247665405,
+                        "y": 0.3400000035762787
+                    },
+                    "rect": {
+                        "serializedVersion": "2",
+                        "x": 786.0,
+                        "y": 87.0,
+                        "width": 202.0,
+                        "height": 244.0
+                    },
+                    "color": {
+                        "r": 1.0,
+                        "g": 1.0,
+                        "b": 1.0,
+                        "a": 1.0
+                    },
+                    "bounds": {
+                        "m_Center": {
+                            "x": 102.0,
+                            "y": -1.0800000429153443,
+                            "z": 0.0
+                        },
+                        "m_Extent": {
+                            "x": 0.14073771238327027,
+                            "y": 0.17000000178813935,
+                            "z": 0.10000000149011612
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "path": "Main Section 2 Far Spike",
+            "activeSelf": true,
+            "activeInHierarchy": true,
+            "layer": 0,
+            "tag": "Untagged",
+            "position": {
+                "x": 19.549999237060548,
+                "y": -8.199999809265137,
+                "z": 0.0
+            },
+            "localPosition": {
+                "x": 19.549999237060548,
+                "y": -8.199999809265137,
+                "z": 0.0
+            },
+            "localScale": {
+                "x": 0.699999988079071,
+                "y": 0.30000001192092898,
+                "z": 1.0
+            },
+            "lossyScale": {
+                "x": 0.699999988079071,
+                "y": 0.30000001192092898,
+                "z": 1.0
+            },
+            "localRotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 1.0
+            },
+            "components": [
+                "HimoHito.RopeSpikeHazard",
+                "HimoHito.SolidSprite",
+                "HimoHito.ToySpikeVisual",
+                "UnityEngine.BoxCollider2D",
+                "UnityEngine.SpriteRenderer",
+                "UnityEngine.Transform"
+            ],
+            "fields": [
+                {
+                    "component": "HimoHito.RopeSpikeHazard",
+                    "property": "m_Script",
+                    "value": "MonoScript:RopeSpikeHazard"
+                },
+                {
+                    "component": "HimoHito.SolidSprite",
+                    "property": "m_Script",
+                    "value": "MonoScript:SolidSprite"
+                },
+                {
+                    "component": "HimoHito.ToySpikeVisual",
+                    "property": "m_Script",
+                    "value": "MonoScript:ToySpikeVisual"
+                }
+            ],
+            "boxes": [
+                {
+                    "enabled": true,
+                    "isTrigger": true,
+                    "usedByEffector": false,
+                    "size": {
+                        "x": 0.8600000143051148,
+                        "y": 0.8999999761581421
+                    },
+                    "offset": {
+                        "x": 0.0,
+                        "y": -0.029999999329447748
+                    }
+                }
+            ],
+            "renderers": [
+                {
+                    "enabled": false,
+                    "sortingLayerID": 0,
+                    "sortingOrder": 0,
+                    "drawMode": "Simple",
+                    "tileMode": "Continuous",
+                    "sprite": "PrototypeSquare",
+                    "texture": "PrototypeWhitePixel",
+                    "size": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "spriteSize": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "rect": {
+                        "serializedVersion": "2",
+                        "x": 0.0,
+                        "y": 0.0,
+                        "width": 1.0,
+                        "height": 1.0
+                    },
+                    "color": {
+                        "r": 1.0,
+                        "g": 0.18000000715255738,
+                        "b": 0.25,
+                        "a": 1.0
+                    },
+                    "bounds": {
+                        "m_Center": {
+                            "x": 19.549999237060548,
+                            "y": -8.199999809265137,
+                            "z": 0.0
+                        },
+                        "m_Extent": {
+                            "x": 0.3499999940395355,
+                            "y": 0.15000000596046449,
+                            "z": 0.10000000149011612
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "path": "Main Section 2 Far Spike/Wooden Toy Spike Face",
+            "activeSelf": true,
+            "activeInHierarchy": true,
+            "layer": 0,
+            "tag": "Untagged",
+            "position": {
+                "x": 19.549999237060548,
+                "y": -8.199999809265137,
+                "z": 0.0
+            },
+            "localPosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "localScale": {
+                "x": 0.09372071176767349,
+                "y": 0.10030090063810349,
+                "z": 1.0
+            },
+            "lossyScale": {
+                "x": 0.06560450047254563,
+                "y": 0.030090270563960077,
+                "z": 1.0
+            },
+            "localRotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 1.0
+            },
+            "components": [
+                "UnityEngine.SpriteRenderer",
+                "UnityEngine.Transform"
+            ],
+            "fields": [],
+            "boxes": [],
+            "renderers": [
+                {
+                    "enabled": true,
+                    "sortingLayerID": 0,
+                    "sortingOrder": 2,
+                    "drawMode": "Simple",
+                    "tileMode": "Continuous",
+                    "sprite": "HimoHitoCraftSpike-v1 Processed",
+                    "texture": "HimoHitoCraftSpike-v1 Transparent",
+                    "size": {
+                        "x": 10.670000076293946,
+                        "y": 9.970000267028809
+                    },
+                    "spriteSize": {
+                        "x": 10.670000076293946,
+                        "y": 9.970000267028809
+                    },
+                    "rect": {
+                        "serializedVersion": "2",
+                        "x": 92.0,
+                        "y": 129.0,
+                        "width": 1067.0,
+                        "height": 997.0
+                    },
+                    "color": {
+                        "r": 1.0,
+                        "g": 1.0,
+                        "b": 1.0,
+                        "a": 1.0
+                    },
+                    "bounds": {
+                        "m_Center": {
+                            "x": 19.549999237060548,
+                            "y": -8.199999809265137,
+                            "z": 0.0
+                        },
+                        "m_Extent": {
+                            "x": 0.3500000238418579,
+                            "y": 0.15000000596046449,
+                            "z": 0.10000000149011612
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "path": "Main Section 2 Front Spike",
+            "activeSelf": true,
+            "activeInHierarchy": true,
+            "layer": 0,
+            "tag": "Untagged",
+            "position": {
+                "x": 15.350000381469727,
+                "y": -7.900000095367432,
+                "z": 0.0
+            },
+            "localPosition": {
+                "x": 15.350000381469727,
+                "y": -7.900000095367432,
+                "z": 0.0
+            },
+            "localScale": {
+                "x": 0.8999999761581421,
+                "y": 0.8999999761581421,
+                "z": 1.0
+            },
+            "lossyScale": {
+                "x": 0.8999999761581421,
+                "y": 0.8999999761581421,
+                "z": 1.0
+            },
+            "localRotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 1.0
+            },
+            "components": [
+                "HimoHito.RopeSpikeHazard",
+                "HimoHito.SolidSprite",
+                "HimoHito.ToySpikeVisual",
+                "UnityEngine.BoxCollider2D",
+                "UnityEngine.SpriteRenderer",
+                "UnityEngine.Transform"
+            ],
+            "fields": [
+                {
+                    "component": "HimoHito.RopeSpikeHazard",
+                    "property": "m_Script",
+                    "value": "MonoScript:RopeSpikeHazard"
+                },
+                {
+                    "component": "HimoHito.SolidSprite",
+                    "property": "m_Script",
+                    "value": "MonoScript:SolidSprite"
+                },
+                {
+                    "component": "HimoHito.ToySpikeVisual",
+                    "property": "m_Script",
+                    "value": "MonoScript:ToySpikeVisual"
+                }
+            ],
+            "boxes": [
+                {
+                    "enabled": true,
+                    "isTrigger": true,
+                    "usedByEffector": false,
+                    "size": {
+                        "x": 0.8600000143051148,
+                        "y": 0.8999999761581421
+                    },
+                    "offset": {
+                        "x": 0.0,
+                        "y": -0.029999999329447748
+                    }
+                }
+            ],
+            "renderers": [
+                {
+                    "enabled": false,
+                    "sortingLayerID": 0,
+                    "sortingOrder": 0,
+                    "drawMode": "Simple",
+                    "tileMode": "Continuous",
+                    "sprite": "PrototypeSquare",
+                    "texture": "PrototypeWhitePixel",
+                    "size": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "spriteSize": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "rect": {
+                        "serializedVersion": "2",
+                        "x": 0.0,
+                        "y": 0.0,
+                        "width": 1.0,
+                        "height": 1.0
+                    },
+                    "color": {
+                        "r": 1.0,
+                        "g": 0.18000000715255738,
+                        "b": 0.25,
+                        "a": 1.0
+                    },
+                    "bounds": {
+                        "m_Center": {
+                            "x": 15.350000381469727,
+                            "y": -7.900000095367432,
+                            "z": 0.0
+                        },
+                        "m_Extent": {
+                            "x": 0.44999998807907107,
+                            "y": 0.44999998807907107,
+                            "z": 0.10000000149011612
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "path": "Main Section 2 Front Spike/Wooden Toy Spike Face",
+            "activeSelf": true,
+            "activeInHierarchy": true,
+            "layer": 0,
+            "tag": "Untagged",
+            "position": {
+                "x": 15.350000381469727,
+                "y": -7.900000095367432,
+                "z": 0.0
+            },
+            "localPosition": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "localScale": {
+                "x": 0.09372071176767349,
+                "y": 0.10030090063810349,
+                "z": 1.0
+            },
+            "lossyScale": {
+                "x": 0.0843486413359642,
+                "y": 0.09027080982923508,
+                "z": 1.0
+            },
+            "localRotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 1.0
+            },
+            "components": [
+                "UnityEngine.SpriteRenderer",
+                "UnityEngine.Transform"
+            ],
+            "fields": [],
+            "boxes": [],
+            "renderers": [
+                {
+                    "enabled": true,
+                    "sortingLayerID": 0,
+                    "sortingOrder": 2,
+                    "drawMode": "Simple",
+                    "tileMode": "Continuous",
+                    "sprite": "HimoHitoCraftSpike-v1 Processed",
+                    "texture": "HimoHitoCraftSpike-v1 Transparent",
+                    "size": {
+                        "x": 10.670000076293946,
+                        "y": 9.970000267028809
+                    },
+                    "spriteSize": {
+                        "x": 10.670000076293946,
+                        "y": 9.970000267028809
+                    },
+                    "rect": {
+                        "serializedVersion": "2",
+                        "x": 92.0,
+                        "y": 129.0,
+                        "width": 1067.0,
+                        "height": 997.0
+                    },
+                    "color": {
+                        "r": 1.0,
+                        "g": 1.0,
+                        "b": 1.0,
+                        "a": 1.0
+                    },
+                    "bounds": {
+                        "m_Center": {
+                            "x": 15.350000381469727,
+                            "y": -7.900000095367432,
+                            "z": 0.0
+                        },
+                        "m_Extent": {
+                            "x": 0.45000001788139346,
+                            "y": 0.44999998807907107,
+                            "z": 0.10000000149011612
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,9 @@
+{
+  "utc": "2026-10-01T05:03:22.798674+00:00",
+  "head": "4919233cd1d0815afb438bd35a7336492ec09548",
+  "origin_main": "4919233cd1d0815afb438bd35a7336492ec09548",
+  "branch": "main",
+  "status": " M Assets/Scenes/MainStage.unity\n M Docs/LEARNING_LOG.md\n M README.md\n?? Docs/Archive/\n?? Docs/QA/FullGameRegression_20260930/\n?? Docs/QA/HumanPlaytest_20260930/\n?? Docs/QA/MainStageCleanReproduction_20261001/\n?? Docs/QA/MainStageSceneDiffAudit_20261001/\n?? output/\n",
+  "scene_sha": "57D2464751B5B9C2A78E6C56F34197E9BC2629983FADAA1DFF6E0BA0B4BC2284",
+  "production_scene_restore_not_yet_performed": true
+}

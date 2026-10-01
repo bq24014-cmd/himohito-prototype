@@ -1,0 +1,10 @@
+{
+  "original_path": "C:\\Users\\田尻大翔\\Documents\\Codex\\2026-08-07\\new-chat\\outputs\\HimoHitoPrototype\\Assets\\Resources\\Audio\\YasashiiOdori.mp3",
+  "filename": "YasashiiOdori.mp3",
+  "file_size": 1786604,
+  "sha256": "25C52DA234D42C7A5E5CC91D45AEED14829F845EA15932A88AC94AB006781E83",
+  "git_tracked": false,
+  "ignore_rule": ".gitignore:42:/Assets/Resources/Audio/YasashiiOdori.mp3\tAssets/Resources/Audio/YasashiiOdori.mp3",
+  "documented_reason": ".gitignore comment: DOVA-SYNDROME: licensed for use in the game, not standalone redistribution. README: 音源単体の再配布を避けるためGit管理外。",
+  "reason_is_repository_documentation_not_new_license_adjudication": true
+}

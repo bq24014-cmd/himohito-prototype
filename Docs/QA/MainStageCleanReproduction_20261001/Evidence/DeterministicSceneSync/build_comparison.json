@@ -1,0 +1,19 @@
+{
+  "A": {
+    "before_sha": "B6191C44EE8FC841784B4C10EB1940DBA5220EAE112165FD09353D32AF879151",
+    "after_sha": "71D9DF053D63FD2F1B673CCC5A02FA26CCC6AE0956F3272A82C307FC97DE602A",
+    "scene_size": 526820,
+    "build_success": true,
+    "source_changes": []
+  },
+  "B": {
+    "before_sha": "B6191C44EE8FC841784B4C10EB1940DBA5220EAE112165FD09353D32AF879151",
+    "after_sha": "71D9DF053D63FD2F1B673CCC5A02FA26CCC6AE0956F3272A82C307FC97DE602A",
+    "scene_size": 526820,
+    "build_success": true,
+    "source_changes": []
+  },
+  "post_scene_byte_identical": true,
+  "patch_content_identical": true,
+  "third_prior_build_hash_equal": true
+}

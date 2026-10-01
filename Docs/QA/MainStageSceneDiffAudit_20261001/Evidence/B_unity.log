@@ -1,0 +1,442 @@
+Built from '6000.3/staging' branch; Version is '6000.3.21f1 (c02631ffc030) revision 12592689'; Using compiler version '194234433'; Build Type 'Release'
+[Licensing::Module] Trying to connect to existing licensing client channel...
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-田尻大翔" at "2026-10-01T04:28:15.5361067Z"
+OS: 'Windows 11  (10.0.26200) Professional' Language: 'ja' Physical Memory: 16052 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
+System  architecture: x64
+Process architecture: x64
+Date: 2026-10-01T04:28:15Z
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\6000.3.21f1\Editor\Unity.exe
+-batchmode
+-force-d3d11
+-projectPath
+C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype\.codex_tmp\MainStageSceneDiffAudit_20261001\Project
+-executeMethod
+SceneAuditEntry.Run
+-sceneAuditEvidence
+C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype\Docs\QA\MainStageSceneDiffAudit_20261001\Evidence\RuntimeB
+-logFile
+C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype\Docs\QA\MainStageSceneDiffAudit_20261001\Evidence\B_unity.log
+Successfully changed project path to: C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype\.codex_tmp\MainStageSceneDiffAudit_20261001\Project
+C:/Users/田尻大翔/Documents/Codex/2026-08-07/new-chat/outputs/HimoHitoPrototype/.codex_tmp/MainStageSceneDiffAudit_20261001/Project
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-gfx=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+Player connection [28896]  Target information:
+
+Player connection [28896]  * "[IP] 192.168.40.81 [Port] 55505 [Flags] 2 [Guid] 6912245 [EditorId] 6912245 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-UM0GV1L) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [28896] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [28896] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+[Package Manager] Connected to IPC stream "Upm-5136" after 0.7 seconds.
+[Licensing::Module] Licensing is not yet initialized.
+[Licensing::Client] Error: HandshakeResponse reported an error:
+	ResponseCode: 505
+	ResponseStatus: Unsupported protocol version '1.18.1'.
+[Licensing::Module] Error: Failed to handshake to channel: "LicenseClient-田尻大翔"
+[Licensing::IpcConnector] LicenseClient-田尻大翔 channel disconnected successfully.
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-田尻大翔-6000.3.21" at "2026-10-01T04:28:22.6783078Z"
+[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 13432, path: "C:/Program Files/Unity/Hub/Editor/6000.3.21f1/Editor/Data/Resources/Licensing/Client/Unity.Licensing.Client.exe")
+[Licensing::Module] LicensingClient has failed validation; ignoring
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.18.1+9fbee8e
+  Session Id:              c7f2c2c1dc7443df82262c3e8cf8dbff
+  Correlation Id:          8285086f732106bd6d26c44468156621
+  External correlation Id: 4825573882755079685
+  Machine Id:              dNinDYak6EUa2pX7RMEoTuNEbYA=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-田尻大翔-6000.3.21" (connect: 0.00s, validation: 0.01s, handshake: 0.05s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-田尻大翔-6000.3.21-notifications" at "2026-10-01T04:28:22.7332689Z"
+[Licensing::Module] Error: Access token is unavailable; failed to update
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: 15669713720629-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+[Licensing::Client] Successfully updated license, isAsync: True, time: 0.01
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] Licensing Background thread has ended after 7.24s
+[Licensing::Module] Licensing is initialized (took 5.90s).
+[Licensing::Client] Successfully resolved entitlement details
+Library Redirect Path: Library/
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 6000.3.21f1 (c02631ffc030)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.3.21f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/田尻大翔/Documents/Codex/2026-08-07/new-chat/outputs/HimoHitoPrototype/.codex_tmp/MainStageSceneDiffAudit_20261001/Project/Assets
+Forcing GfxDevice: Direct3D 11
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: Intel(R) Iris(R) Xe Graphics (ID=0xa7a0)
+    Vendor:   Intel
+    VRAM:     8026 MB
+    Driver:   31.0.101.4255
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.3.21f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.3.21f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.3.21f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56136
+Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
+Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
+ImportWorker Server TCP listen port: 0
+AcceleratorClientConnectionCallback - disconnected - :0
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.3.21f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.009218 seconds.
+- Loaded All Assemblies, in  1.391 seconds
+Native extension for WindowsStandalone target not found
+Package Manager log level set to [2]
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:False
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.365 seconds
+Domain Reload Profiling: 2742ms
+	BeginReloadAssembly (470ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (21ms)
+	RebuildCommonClasses (115ms)
+	RebuildNativeTypeToScriptingClass (48ms)
+	initialDomainReloadingComplete (250ms)
+	LoadAllAssembliesAndSetupDomain (493ms)
+		LoadAssemblies (440ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (483ms)
+			TypeCache.Refresh (477ms)
+				TypeCache.ScanAssembly (442ms)
+			BuildScriptInfoCaches (0ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (1367ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1262ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (131ms)
+			SetLoadedEditorAssemblies (11ms)
+			BeforeProcessingInitializeOnLoad (254ms)
+			ProcessInitializeOnLoadAttributes (513ms)
+			ProcessInitializeOnLoadMethodAttributes (353ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+[Licensing::Client] Successfully resolved entitlement details
+Application.AssetDatabase Initial Refresh Start
+[Package Manager] Restoring resolved packages state from cache
+[Licensing::Client] Successfully resolved entitlement details
+[Package Manager] Registered 5 packages:
+  Built-in packages:
+    com.unity.modules.audio@1.0.0 (location: C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype\.codex_tmp\MainStageSceneDiffAudit_20261001\Project\Library\PackageCache\com.unity.modules.audio)
+    com.unity.modules.imgui@1.0.0 (location: C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype\.codex_tmp\MainStageSceneDiffAudit_20261001\Project\Library\PackageCache\com.unity.modules.imgui)
+    com.unity.modules.jsonserialize@1.0.0 (location: C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype\.codex_tmp\MainStageSceneDiffAudit_20261001\Project\Library\PackageCache\com.unity.modules.jsonserialize)
+    com.unity.modules.particlesystem@1.0.0 (location: C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype\.codex_tmp\MainStageSceneDiffAudit_20261001\Project\Library\PackageCache\com.unity.modules.particlesystem)
+    com.unity.modules.physics2d@1.0.0 (location: C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype\.codex_tmp\MainStageSceneDiffAudit_20261001\Project\Library\PackageCache\com.unity.modules.physics2d)
+[Subsystems] No new subsystems found in resolved package list.
+[Package Manager] Done registering packages in 0.02 seconds
+Starting: C:\Program Files\Unity\Hub\Editor\6000.3.21f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: C:/Users/田尻大翔/Documents/Codex/2026-08-07/new-chat/outputs/HimoHitoPrototype/.codex_tmp/MainStageSceneDiffAudit_20261001/Project
+DisplayProgressbar: Compiling Scripts
+ExitCode: 0 Duration: 0s295ms
+*** Tundra build success (0.15 seconds), 0 items updated, 155 evaluated
+AssetDatabase: script compilation time: 2.568913s
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.988 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Native extension for WindowsStandalone target not found
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.518 seconds
+Domain Reload Profiling: 2496ms
+	BeginReloadAssembly (730ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (94ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (193ms)
+	RebuildCommonClasses (110ms)
+	RebuildNativeTypeToScriptingClass (35ms)
+	initialDomainReloadingComplete (64ms)
+	LoadAllAssembliesAndSetupDomain (39ms)
+		LoadAssemblies (348ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (30ms)
+			TypeCache.Refresh (13ms)
+				TypeCache.ScanAssembly (3ms)
+			BuildScriptInfoCaches (2ms)
+			ResolveRequiredComponents (6ms)
+	FinalizeReload (1519ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (953ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (65ms)
+			SetLoadedEditorAssemblies (8ms)
+			BeforeProcessingInitializeOnLoad (322ms)
+			ProcessInitializeOnLoadAttributes (411ms)
+			ProcessInitializeOnLoadMethodAttributes (131ms)
+			AfterProcessingInitializeOnLoad (17ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (80ms)
+Start importing Assets/Scenes/MainStage.unity using Guid(f47cde71ad654939b3802f6bdeacb9c1) (DefaultImporter) -> (artifact id: '8ecaffa579898e87b1d5d3820ca82eed') in 0.0234989 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Asset Pipeline Refresh (id=d75bc3749494548408f99d80cce8d0dc): Total: 5.676 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=5 ms, native=1832 ms
+		Asset DB Callback time: managed=228 ms, native=26 ms
+		Scripting: domain reloads=1, domain reload time=989 ms, compile time=2573 ms, other=19 ms
+		Project Asset Count: scripts=41, non-scripts=98
+		Asset File Changes: new=0, changed=1, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokeCustomDependenciesCallbacks: 0.003ms
+	InvokePackagesCallback: 27.220ms
+	ApplyChangesToAssetFolders: 0.590ms
+	Scan: 111.496ms
+	OnSourceAssetsModified: 1.948ms
+	CategorizeAssetsWithTransientArtifact: 0.874ms
+	ProcessAssetsWithTransientArtifactChanges: 5.623ms
+	CategorizeAssets: 1.591ms
+	ImportOutOfDateAssets: 1547.513ms (-1053.060ms without children)
+		ImportManagerImport: 26.212ms (2.083ms without children)
+			ImportInProcess: 24.075ms
+			UpdateCategorizedAssets: 0.055ms
+		CompileScripts: 2573.403ms
+		ReloadNativeAssets: 0.001ms
+		UnloadImportedAssets: 0.300ms
+		ReloadImportedAssets: 0.000ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.051ms
+		InitializingProgressBar: 0.012ms
+		PostProcessAllAssetNotificationsAddChangedAssets: 0.001ms
+		OnDemandSchedulerStart: 0.593ms
+	PostProcessAllAssets: 229.903ms
+	Hotreload: 1.905ms
+	GatherAllCurrentPrimaryArtifactRevisions: 0.004ms
+	UnloadStreamsBegin: 3.890ms
+	PersistCurrentRevisions: 0.110ms
+	UnloadStreamsEnd: 0.002ms
+	GenerateScriptTypeHashes: 0.002ms
+	Untracked: 3742.962ms
+
+Application.AssetDatabase Initial Refresh End
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Scanning for USB devices : 3.004ms
+Initializing Unity extensions:
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-ヒモヒト
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 137 unused Assets / (509.6 KB). Loaded Objects now: 768.
+Memory consumption went from 89.6 MB to 89.1 MB.
+Total: 14.086900 ms (FindLiveObjects: 0.112600 ms CreateObjectMapping: 0.026200 ms MarkObjects: 13.297500 ms  DeleteObjects: 0.647700 ms)
+
+Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 0 unused Assets / (0 B). Loaded Objects now: 768.
+Memory consumption went from 89.0 MB to 89.0 MB.
+Total: 10.545100 ms (FindLiveObjects: 0.096400 ms CreateObjectMapping: 0.023600 ms MarkObjects: 10.412700 ms  DeleteObjects: 0.009500 ms)
+
+[Project] Loading completed in 18.473 seconds
+	Project init time: 				17.604 seconds
+		Template init time: 		0.000 seconds
+		Package Manager init time: 		6.650 seconds
+		Asset Database init time: 		1.156 seconds
+		Global illumination init time: 	0.007 seconds
+		Assemblies load time: 			2.821 seconds
+		Unity extensions init time: 	0.001 seconds
+		Asset Database refresh time: 	5.676 seconds
+	Scene opening time: 			0.299 seconds
+##utp:{"type":"ProjectInfo","version":2,"phase":"Immediate","time":1790828913965,"processId":5136,"projectLoad":18.4727171,"projectInit":17.6037299,"templateInit":0.0,"packageManagerInit":6.6499035,"assetDatabaseInit":1.1555142,"globalIlluminationInit":0.0071842,"assembliesLoad":2.8207026,"unityExtensionsInit":0.001301,"assetDatabaseRefresh":5.6759574,"sceneOpening":0.2985447}
+##utp:{"type":"EditorInfo","version":2,"phase":"Immediate","time":1790828913965,"processId":5136,"editorVersion":"6000.3.21f1 (c02631ffc030)","branch":"6000.3/staging","buildType":"Release","platform":"Windows"}
+Reloading assemblies for play mode.
+Reloading assemblies after forced synchronous recompile.
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.797 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Native extension for WindowsStandalone target not found
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.327 seconds
+Domain Reload Profiling: 2115ms
+	BeginReloadAssembly (513ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (67ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (74ms)
+	RebuildCommonClasses (106ms)
+	RebuildNativeTypeToScriptingClass (49ms)
+	initialDomainReloadingComplete (72ms)
+	LoadAllAssembliesAndSetupDomain (46ms)
+		LoadAssemblies (312ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (34ms)
+			TypeCache.Refresh (8ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (8ms)
+			ResolveRequiredComponents (7ms)
+	FinalizeReload (1329ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (813ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (63ms)
+			SetLoadedEditorAssemblies (7ms)
+			BeforeProcessingInitializeOnLoad (308ms)
+			ProcessInitializeOnLoadAttributes (303ms)
+			ProcessInitializeOnLoadMethodAttributes (105ms)
+			AfterProcessingInitializeOnLoad (26ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (61ms)
+Asset Pipeline Refresh (id=4bd78ae5ea18bf6439aa74a268b90aa6): Total: 2.276 seconds - Initiated by StopAssetImportingV2(ForceSynchronousImport | ForceDomainReload)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=1409 ms
+		Asset DB Callback time: managed=41 ms, native=1 ms
+		Scripting: domain reloads=1, domain reload time=817 ms, compile time=6 ms, other=0 ms
+		Project Asset Count: scripts=41, non-scripts=98
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokeCustomDependenciesCallbacks: 0.003ms
+	InvokePackagesCallback: 6.087ms
+	ApplyChangesToAssetFolders: 0.165ms
+	Scan: 0.001ms
+	OnSourceAssetsModified: 0.004ms
+	CategorizeAssetsWithTransientArtifact: 0.006ms
+	ProcessAssetsWithTransientArtifactChanges: 0.180ms
+	CategorizeAssets: 1.595ms
+	ImportOutOfDateAssets: 1331.102ms (1324.600ms without children)
+		CompileScripts: 5.741ms
+		CollectScriptTypesHashes: 0.001ms
+		ReloadNativeAssets: 0.001ms
+		UnloadImportedAssets: 0.124ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.062ms
+		InitializingProgressBar: 0.001ms
+		PostProcessAllAssetNotificationsAddChangedAssets: 0.001ms
+		OnDemandSchedulerStart: 0.571ms
+	PostProcessAllAssets: 41.493ms
+	GatherAllCurrentPrimaryArtifactRevisions: 0.027ms
+	UnloadStreamsBegin: 0.117ms
+	PersistCurrentRevisions: 0.017ms
+	UnloadStreamsEnd: 0.003ms
+	GenerateScriptTypeHashes: 0.001ms
+	Untracked: 894.920ms
+
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            1.160 ms
+	Integration:            45.728 ms
+	Integration of assets:  0.005 ms
+	Thread Wait Time:       66.911 ms
+	Total Operation Time:   113.803 ms
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+Play開始地点：Tutorial
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHitoEditor.PlayStartSceneSelector:ConfigurePlayStartScene (string,string) (at Assets/Editor/PlayStartSceneSelector.cs:50)
+HimoHitoEditor.PlayStartSceneSelector:ConfigurePlayStartScene () (at Assets/Editor/PlayStartSceneSelector.cs:23)
+UnityEditor.EditorApplication:Internal_CallDelayFunctions ()
+
+(Filename: Assets/Editor/PlayStartSceneSelector.cs Line: 50)
+
+Start Indexing on Editor startup
+ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+  at System.Collections.Generic.List`1[T].get_Item (System.Int32 index) [0x00009] in <41d29b352f6a475ab1bf7c6628b82790>:0 
+  at UnityEditor.Search.SearchDatabase+<EnumerateAll>d__81.MoveNext () [0x00106] in <63453c9528324daaa566ad51effa49a4>:0 
+  at System.Linq.Enumerable.TryGetFirst[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Boolean& found) [0x00045] in <80564d689e48448fa2a7101993ee7201>:0 
+  at System.Linq.Enumerable.First[TSource] (System.Collections.Generic.IEnumerable`1[T] source) [0x00000] in <80564d689e48448fa2a7101993ee7201>:0 
+  at UnityEditor.Search.SearchDatabase.GetDefaultSearchDatabase () [0x00006] in <63453c9528324daaa566ad51effa49a4>:0 
+  at UnityEditor.Search.SearchInit.IndexationOnStartup () [0x0000c] in <63453c9528324daaa566ad51effa49a4>:0 
+  at UnityEditor.EditorApplication.Internal_CallDelayFunctions () [0x0002c] in <ebc962e8381145e6bdb44b1996e8e9b4>:0 
+
+UnloadTime: 0.431700 ms
+Loaded scene 'Assets/Scenes/MainStage.unity'
+	Deserialize:            77.166 ms
+	Integration:            11722.882 ms
+	Integration of assets:  0.008 ms
+	Thread Wait Time:       461.536 ms
+	Total Operation Time:   12261.592 ms
+Unloading 24 unused Assets / (13.5 KB). Loaded Objects now: 2697.
+Memory consumption went from 392.3 MB to 392.3 MB.
+Total: 11.999400 ms (FindLiveObjects: 0.229300 ms CreateObjectMapping: 0.025300 ms MarkObjects: 10.860500 ms  DeleteObjects: 0.882600 ms)
+
+Created GICache directory at C:/Users/田尻大翔/AppData/LocalLow/Unity/Caches/GiCache. Took: 0.090s, timestamps: [20.963 - 21.053]
+[Licensing::Client] Successfully resolved entitlement details
+SCENE_AUDIT_CAPTURE_PASS C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype\Docs\QA\MainStageSceneDiffAudit_20261001\Evidence\RuntimeB
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+SceneAuditEntry:Tick () (at Assets/Editor/SceneAuditEntry.cs:88)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/SceneAuditEntry.cs Line: 88)
+
+[Physics::Module] Cleanup current backend.
+[Physics::Module] Id: 0xf2b8ea05
+Input System module state changed to: ShutdownInProgress.
+Input System polling thread exited.
+Input System module state changed to: Shutdown.
+[Licensing::IpcConnector] LicenseClient-田尻大翔-6000.3.21-notifications channel disconnected successfully.
+[Licensing::IpcConnector] LicenseClient-田尻大翔-6000.3.21 channel disconnected successfully.
+AcceleratorClientConnectionCallback - disconnected - :0
+Cleanup mono
+Checking for leaked weakptr:
+  Found no leaked weakptrs.
+[Package Manager] Server process was shutdown
+##utp:{"type":"MemoryLeaks","version":2,"phase":"Immediate","time":1790828929997,"processId":5136,"allocatedMemory":10153260,"memoryLabels":[{"Default":29313},{"Permanent":15236},{"NewDelete":67803},{"Thread":4230344},{"Manager":33885},{"VertexData":200},{"Geometry":816},{"Texture":296},{"Shader":79381},{"Material":24},{"GfxDevice":56016},{"Animation":392},{"Audio":2664},{"FreeType":8},{"FontEngine":736},{"Physics":2146},{"Physics2D":16},{"Serialization":720},{"Input":14984},{"JobScheduler":33024},{"TextLib":280},{"Mono":32},{"ScriptingNativeRuntime":155060},{"BaseObject":1677280},{"Resource":1336},{"Renderer":3000},{"Transform":4685},{"File":6862},{"WebCam":616},{"Culling":32},{"Terrain":11394},{"Wind":24},{"STL":40},{"String":24026},{"DynamicArray":88534},{"HashMap":45313},{"Utility":2660822},{"Curl":2478},{"PoolAlloc":2056},{"AI":80},{"TypeTree":5341},{"ScriptManager":512},{"RuntimeInitializeOnLoadManager":64},{"SpriteAtlas":112},{"GI":7792},{"Director":8240},{"CloudService":9184},{"WebRequest":552},{"VR":47994},{"SceneManager":504},{"Video":208},{"LazyScriptCache":32},{"Camera":17},{"Secure":2377},{"SerializationCache":1576},{"APIUpdating":10320},{"Subsystems":336},{"VirtualTexturing":57888},{"StaticSafetyDebugInfo":278528},{"Analytics":464},{"Hierarchy":608},{"CoreStats":13112},{"Identifiers":6480},{"Gui":96},{"EditorUtility":82621},{"VersionControl":4},{"Undo":947},{"AssetDatabase":319721},{"EditorGi":328},{"UnityConnect":29232},{"Upm":1896},{"AssetCompliance":64},{"DrivenProperties":72},{"LocalIPC":218},{"ProfilerEditor":9746},{"CoreBusinessMetrics":3496},{"Licensing":664},{"AssetReference":32},{"IPCStream":32}]}

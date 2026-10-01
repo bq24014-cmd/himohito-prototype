@@ -1,0 +1,69 @@
+{
+  "baseline_head": "4919233cd1d0815afb438bd35a7336492ec09548",
+  "condition": "clean HEAD + documented external BGM dependency",
+  "build_success": true,
+  "exe_exists": true,
+  "exe_sha256": "837986201D89BE25426B8415CB3BC945F077E5B13F4722D6763D04EBD38C5472",
+  "full_runtime": "tests=148 failures=0 runtimeErrors=1 frames=39803\nmean_ms=2.043 p95_ms=2.381 max_ms=14208.890\nDIAGNOSTIC_EDITOR_BATCH_TIMINGS_NOT_PLAYER_FPS\n",
+  "focused_runtime": "tests=32 failures=0 runtimeErrors=1\nUnmodified production source. Controlled diagnostic, NOT OS keyboard / human playthrough.\n",
+  "runtime_error_classification": "Each run recorded one UnityEditor.Search.SearchDatabase startup/index exception; diagnostic assertions all pass. Raw exceptions retained. Not a Player gameplay stack.",
+  "production_scene_diff": 0,
+  "build_copy_scene_diff_zero": false,
+  "build_copy_scene_sha256": "71D9DF053D63FD2F1B673CCC5A02FA26CCC6AE0956F3272A82C307FC97DE602A",
+  "head_scene_sha256": "B6191C44EE8FC841784B4C10EB1940DBA5220EAE112165FD09353D32AF879151",
+  "raw_capture_directory": "C:\\Users\\田尻大翔\\Documents\\Codex\\2026-08-07\\new-chat\\outputs\\HimoHitoPrototype\\.codex_tmp\\MainStageCleanReproduction_20261001\\ExternalBGM_20261001_151833\\RawCapturesExternal",
+  "png_pixel_checks": [
+    {
+      "ppm": "main_clear.ppm",
+      "png": "main_clear.png",
+      "pixel_equal": true
+    },
+    {
+      "ppm": "sign_1_detail.ppm",
+      "png": "sign_1_detail.png",
+      "pixel_equal": true
+    },
+    {
+      "ppm": "sign_1_world.ppm",
+      "png": "sign_1_world.png",
+      "pixel_equal": true
+    },
+    {
+      "ppm": "sign_2_detail.ppm",
+      "png": "sign_2_detail.png",
+      "pixel_equal": true
+    },
+    {
+      "ppm": "sign_2_world.ppm",
+      "png": "sign_2_world.png",
+      "pixel_equal": true
+    },
+    {
+      "ppm": "sign_3_detail.ppm",
+      "png": "sign_3_detail.png",
+      "pixel_equal": true
+    },
+    {
+      "ppm": "sign_3_world.ppm",
+      "png": "sign_3_world.png",
+      "pixel_equal": true
+    },
+    {
+      "ppm": "sign_4_detail.ppm",
+      "png": "sign_4_detail.png",
+      "pixel_equal": true
+    },
+    {
+      "ppm": "sign_4_world.ppm",
+      "png": "sign_4_world.png",
+      "pixel_equal": true
+    },
+    {
+      "ppm": "tutorial_clear.ppm",
+      "png": "tutorial_clear.png",
+      "pixel_equal": true
+    }
+  ],
+  "exe_ui_smoke": "HUMAN PASS: Stage Selection -> Tutorial start -> return Stage Selection -> MainStage start. User answer: 完璧. Not a full exe keyboard playthrough.",
+  "final_gate": "FAIL: BuildProject MainStage Scene automatically changed during the committed Build path. Production unchanged. No stage / commit / push."
+}

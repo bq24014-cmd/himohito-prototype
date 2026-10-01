@@ -1,0 +1,2 @@
+tests=32 failures=0 runtimeErrors=1
+Unmodified production source. Controlled diagnostic, NOT OS keyboard / human playthrough.

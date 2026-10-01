@@ -1,0 +1,75 @@
+{
+  "task": "MainStage Scene Diff Audit — repeated request revalidation",
+  "start_utc": "2026-10-01T04:55:43.864539+00:00",
+  "end_utc": "2026-10-01T04:55:59.285435+00:00",
+  "head": "4919233cd1d0815afb438bd35a7336492ec09548",
+  "origin_main": "4919233cd1d0815afb438bd35a7336492ec09548",
+  "branch": "main",
+  "scene_start_sha256": "57D2464751B5B9C2A78E6C56F34197E9BC2629983FADAA1DFF6E0BA0B4BC2284",
+  "scene_end_sha256": "57D2464751B5B9C2A78E6C56F34197E9BC2629983FADAA1DFF6E0BA0B4BC2284",
+  "scene_byte_invariant": true,
+  "scene_matches_prior_evidence": true,
+  "head_scene_matches_prior_evidence": true,
+  "full_diff_matches_prior_evidence": true,
+  "diff_check_exit": 2,
+  "diff_check_matches_prior_evidence": true,
+  "protected_files_checked": 2113,
+  "protected_file_changes": [],
+  "production_inputs_match_prior_AB": true,
+  "production_input_changes": [],
+  "existing_qa_files_checked": 66,
+  "existing_qa_file_changes": [],
+  "working_equals_submission_scene": true,
+  "submission_sha256": "57D2464751B5B9C2A78E6C56F34197E9BC2629983FADAA1DFF6E0BA0B4BC2284",
+  "previous_runtime_evidence_equal": true,
+  "previous_runtime_node_count": 14,
+  "previous_visual_evidence": [
+    {
+      "label": "S05_Rails",
+      "sha_a": "B5F9B41CDCAD36DD1F05266007F389B92DF53BDA14FB299E38880C7327C60B83",
+      "sha_b": "B5F9B41CDCAD36DD1F05266007F389B92DF53BDA14FB299E38880C7327C60B83",
+      "identical": true
+    },
+    {
+      "label": "S02_FrontSpike",
+      "sha_a": "B42AED90073FDFD467D3BF83B53BE5BAC39791D5EF60316FF03C44B839A56ABD",
+      "sha_b": "B42AED90073FDFD467D3BF83B53BE5BAC39791D5EF60316FF03C44B839A56ABD",
+      "identical": true
+    },
+    {
+      "label": "S02_FarSpike",
+      "sha_a": "3852F8AD04E15672067BE7E68368E12DE16B3527DB654E228B03674433CC609F",
+      "sha_b": "3852F8AD04E15672067BE7E68368E12DE16B3527DB654E228B03674433CC609F",
+      "identical": true
+    }
+  ],
+  "previous_visual_evidence_intact": true,
+  "unity_rerun": false,
+  "unity_rerun_reason": "Identical HEAD, scene bytes, and production inputs; intact previous scoped A/B evidence is reused, not presented as a new runtime test or Human PASS.",
+  "classification": {
+    "unit_definition": "16 changed existing property entries + 20 added Unity documents = 36 semantic/structural units; full leaf/default table counted separately. Added-object default rows are not claimed to be separate gameplay changes.",
+    "semantic_structural_units": 36,
+    "existing_content_property_rows": 16,
+    "new_documents": 20,
+    "new_document_property_rows": 508,
+    "complete_property_rows": 570,
+    "classification_rows": {
+      "C": 390,
+      "D": 134,
+      "E": 46
+    },
+    "whitespace_only_rows": 46,
+    "relocated_unchanged_documents": 0,
+    "diff_check_trailing_warnings": 49,
+    "line_ending_only_deltas": 0,
+    "removed_documents": 0,
+    "fileid_remaps": 0
+  },
+  "decision": "CASE S4",
+  "index_empty": true,
+  "git_status_short": " M Assets/Scenes/MainStage.unity\n M Docs/LEARNING_LOG.md\n M README.md\n?? Docs/QA/FullGameRegression_20260930/\n?? Docs/QA/HumanPlaytest_20260930/\n?? Docs/QA/MainStageSceneDiffAudit_20261001/\n?? output/\n",
+  "scene_source_changes": false,
+  "stage_commit_push_performed": false,
+  "desert_loop_access": false,
+  "pass": true
+}

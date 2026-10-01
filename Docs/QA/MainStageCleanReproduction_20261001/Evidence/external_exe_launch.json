@@ -1,0 +1,11 @@
+{
+  "build_source": "C:\\Users\\田尻大翔\\Documents\\Codex\\2026-08-07\\new-chat\\outputs\\HimoHitoPrototype\\.codex_tmp\\MainStageCleanReproduction_20261001\\ExternalBGM_20261001_151833\\BuildProject\\Builds\\Windows\\Game",
+  "output": "C:\\Users\\田尻大翔\\Documents\\Codex\\2026-08-07\\new-chat\\outputs\\HimoHitoPrototype\\output\\MainStageCleanReproduction_ExternalBGM_20261001_151833\\Game",
+  "ascii_launch_directory": "C:\\Users\\Public\\HimoHitoCleanRepro_ExternalBGM_20261001_151833",
+  "exe": "C:\\Users\\Public\\HimoHitoCleanRepro_ExternalBGM_20261001_151833\\HimoHitoPrototype.exe",
+  "process_id": 6388,
+  "launch_time": "2026-10-01T15:29:54.547023+09:00",
+  "copied_files": 145,
+  "all_copied_hashes_match": true,
+  "ui_smoke": "HUMAN PASS: Stage Selection -> Tutorial start -> return Stage Selection -> MainStage start. User answer: 完璧. Not a full exe keyboard playthrough."
+}

@@ -1,0 +1,13 @@
+{
+  "head": "4919233cd1d0815afb438bd35a7336492ec09548",
+  "export": "git archive HEAD Assets Packages ProjectSettings",
+  "resolved_LFS": [],
+  "main_scene_head_sha": "B6191C44EE8FC841784B4C10EB1940DBA5220EAE112165FD09353D32AF879151",
+  "input_files": 461,
+  "runtime_scripts": 113,
+  "uncommitted_inputs_used": false,
+  "ignored_bgm_included": false,
+  "old_build_used": false,
+  "build_project": "C:\\Users\\田尻大翔\\Documents\\Codex\\2026-08-07\\new-chat\\outputs\\HimoHitoPrototype\\.codex_tmp\\MainStageCleanReproduction_20261001\\BuildProject",
+  "qa_project": "C:\\Users\\田尻大翔\\Documents\\Codex\\2026-08-07\\new-chat\\outputs\\HimoHitoPrototype\\.codex_tmp\\MainStageCleanReproduction_20261001\\QAProject"
+}

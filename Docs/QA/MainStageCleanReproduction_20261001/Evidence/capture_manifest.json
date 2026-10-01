@@ -1,0 +1,162 @@
+[
+  {
+    "raw": "FocusedRuntime/main_clear.ppm",
+    "raw_sha256": "A69CCA21B8A716B5DE968A6FE2BD664958B365A0F96B3B82B5277A8671473AAA",
+    "png": "FocusedRuntime/main_clear.png",
+    "png_sha256": "C4C62BF49164095409C2CD0D2BF1195FEA995795D40E912D1A61BAC7C7BDB225",
+    "pixel_identical": true,
+    "raw_retained_under": ".codex_tmp/MainStageCleanReproduction_20261001/RawCaptures/FocusedRuntime/main_clear.ppm"
+  },
+  {
+    "raw": "FocusedRuntime/sign_1_detail.ppm",
+    "raw_sha256": "1ED103E73182ADDCB29C1354CD0DBE4A4FFD4E34C03A45BAB1D10EA59AF5B3AD",
+    "png": "FocusedRuntime/sign_1_detail.png",
+    "png_sha256": "4DDD29A6A6DD7894F0BFD11B9766C9EA4A875F51BD32F9DAFAAECAA402D0F419",
+    "pixel_identical": true,
+    "raw_retained_under": ".codex_tmp/MainStageCleanReproduction_20261001/RawCaptures/FocusedRuntime/sign_1_detail.ppm"
+  },
+  {
+    "raw": "FocusedRuntime/sign_1_world.ppm",
+    "raw_sha256": "1F972E845B746A68D39E57CD753C89C3684D6775732656405DAF1719F8F8C6A6",
+    "png": "FocusedRuntime/sign_1_world.png",
+    "png_sha256": "8C170E4B8DD825CD8C547F6630C7B59834491F5782B6A2FF92209F1631D91E10",
+    "pixel_identical": true,
+    "raw_retained_under": ".codex_tmp/MainStageCleanReproduction_20261001/RawCaptures/FocusedRuntime/sign_1_world.ppm"
+  },
+  {
+    "raw": "FocusedRuntime/sign_2_detail.ppm",
+    "raw_sha256": "2ED8A77E3BF23A042D0E268966DD51CC44A84E679536EF0E321A0F8CB5678367",
+    "png": "FocusedRuntime/sign_2_detail.png",
+    "png_sha256": "9E2E874432AA0BEC4B6E720C809F0E302748E9F6844F1BC37C2C7CBCE84844ED",
+    "pixel_identical": true,
+    "raw_retained_under": ".codex_tmp/MainStageCleanReproduction_20261001/RawCaptures/FocusedRuntime/sign_2_detail.ppm"
+  },
+  {
+    "raw": "FocusedRuntime/sign_2_world.ppm",
+    "raw_sha256": "180B8718F3F3CF63AB6BBB19E979C9380D0F498EA63BA2B3C84AF4411E90F170",
+    "png": "FocusedRuntime/sign_2_world.png",
+    "png_sha256": "E23E1CC00A13F188B5209D5BE713D1B2CD845D7D3E023B0B068590C584C06915",
+    "pixel_identical": true,
+    "raw_retained_under": ".codex_tmp/MainStageCleanReproduction_20261001/RawCaptures/FocusedRuntime/sign_2_world.ppm"
+  },
+  {
+    "raw": "FocusedRuntime/sign_3_detail.ppm",
+    "raw_sha256": "125D16AFC45ACA86C7ED6B1E0D363AA094A364CF6F257F4BFFB648A271760025",
+    "png": "FocusedRuntime/sign_3_detail.png",
+    "png_sha256": "B85C0530F724D4294FA94B83CB3C1511698BF04D806E15D93BAA3CEC2DBA1378",
+    "pixel_identical": true,
+    "raw_retained_under": ".codex_tmp/MainStageCleanReproduction_20261001/RawCaptures/FocusedRuntime/sign_3_detail.ppm"
+  },
+  {
+    "raw": "FocusedRuntime/sign_3_world.ppm",
+    "raw_sha256": "6FF41CCB64220C98C1069B72576ACD4217065200D5A43BCD5E3BFF862582CFD5",
+    "png": "FocusedRuntime/sign_3_world.png",
+    "png_sha256": "B4443C824BC089572563B74B84807023484D3EE048D56E26D0B9F46CB7B5B2B4",
+    "pixel_identical": true,
+    "raw_retained_under": ".codex_tmp/MainStageCleanReproduction_20261001/RawCaptures/FocusedRuntime/sign_3_world.ppm"
+  },
+  {
+    "raw": "FocusedRuntime/sign_4_detail.ppm",
+    "raw_sha256": "204348966837A130B09F3C56DD3851189D9EEBB30FCFEC4E3904CB34C2600735",
+    "png": "FocusedRuntime/sign_4_detail.png",
+    "png_sha256": "BBE00643336DAC55482E3D06E03B8543A2BD84BCEA34A0E7F5B81BA723E7B214",
+    "pixel_identical": true,
+    "raw_retained_under": ".codex_tmp/MainStageCleanReproduction_20261001/RawCaptures/FocusedRuntime/sign_4_detail.ppm"
+  },
+  {
+    "raw": "FocusedRuntime/sign_4_world.ppm",
+    "raw_sha256": "85A6A62F4B83C3F546108A78BFE1ACAD46521F98EB1401DB8D5E843C69E461B3",
+    "png": "FocusedRuntime/sign_4_world.png",
+    "png_sha256": "7418F0BF35FFFE83908AF271EF822C92F6C631E343B258F4617F4EF9F42DD35F",
+    "pixel_identical": true,
+    "raw_retained_under": ".codex_tmp/MainStageCleanReproduction_20261001/RawCaptures/FocusedRuntime/sign_4_world.ppm"
+  },
+  {
+    "raw": "FocusedRuntime/tutorial_clear.ppm",
+    "raw_sha256": "347F716340D418B6DA19674F2BB9E1A1762C698DC3A46BD45A8974CD6475A16D",
+    "png": "FocusedRuntime/tutorial_clear.png",
+    "png_sha256": "7FAA98867BD45F6EAF60381E533DF4A00A5548BB6B6B20F569320F85ABB95DCA",
+    "pixel_identical": true,
+    "raw_retained_under": ".codex_tmp/MainStageCleanReproduction_20261001/RawCaptures/FocusedRuntime/tutorial_clear.ppm"
+  },
+  {
+    "raw": "FocusedRuntime2/main_clear.ppm",
+    "raw_sha256": "248E52F34ACFFC8BCBF3F3342FAF68B24A36EB042210EA080EB20CF85A911206",
+    "png": "FocusedRuntime2/main_clear.png",
+    "png_sha256": "CA685771AADFA38B04C115BBF50E9577C34797E0AFBCBA861EAA1AE472D2E41B",
+    "pixel_identical": true,
+    "raw_retained_under": ".codex_tmp/MainStageCleanReproduction_20261001/RawCaptures/FocusedRuntime2/main_clear.ppm"
+  },
+  {
+    "raw": "FocusedRuntime2/sign_1_detail.ppm",
+    "raw_sha256": "8AA8883183C878C722C79DF3134EF060E042FC0662896BCBC7FE8AB1C34A3E9D",
+    "png": "FocusedRuntime2/sign_1_detail.png",
+    "png_sha256": "4B86838421C61B56D74CCF9139DD6967AD76405428CEB40E8078EAF6E4FB6774",
+    "pixel_identical": true,
+    "raw_retained_under": ".codex_tmp/MainStageCleanReproduction_20261001/RawCaptures/FocusedRuntime2/sign_1_detail.ppm"
+  },
+  {
+    "raw": "FocusedRuntime2/sign_1_world.ppm",
+    "raw_sha256": "F55D6BF87BF4BEB1A46E4CA1346384FB02BA4D4C3A34A69544AE0BD0A8E02D30",
+    "png": "FocusedRuntime2/sign_1_world.png",
+    "png_sha256": "611956C229CCC3ED163C74C4D12BEC1E76D4EF1EBF77B1AB80217C69678BB2B8",
+    "pixel_identical": true,
+    "raw_retained_under": ".codex_tmp/MainStageCleanReproduction_20261001/RawCaptures/FocusedRuntime2/sign_1_world.ppm"
+  },
+  {
+    "raw": "FocusedRuntime2/sign_2_detail.ppm",
+    "raw_sha256": "4375214C2CDA27AB39A67287087E15E70E9EE91210A0F3E213E3F019CA3A40E7",
+    "png": "FocusedRuntime2/sign_2_detail.png",
+    "png_sha256": "008D146A710056E70ACA6D89E1AE4261A5B5DC868D57126FA1BF6B06838D14D3",
+    "pixel_identical": true,
+    "raw_retained_under": ".codex_tmp/MainStageCleanReproduction_20261001/RawCaptures/FocusedRuntime2/sign_2_detail.ppm"
+  },
+  {
+    "raw": "FocusedRuntime2/sign_2_world.ppm",
+    "raw_sha256": "689A0D7EA59288DAEB967684E3023F1027EEA2649D63AFA2A1E46C7204924323",
+    "png": "FocusedRuntime2/sign_2_world.png",
+    "png_sha256": "69744217FAB5A3BB64973FE22C9DE36F6CCDC39C5BC7FC0F299E3D7A52A63A0C",
+    "pixel_identical": true,
+    "raw_retained_under": ".codex_tmp/MainStageCleanReproduction_20261001/RawCaptures/FocusedRuntime2/sign_2_world.ppm"
+  },
+  {
+    "raw": "FocusedRuntime2/sign_3_detail.ppm",
+    "raw_sha256": "803DCBDE956392061690A64BF99829B847C13E9689FC2F80E35D282B019DE67A",
+    "png": "FocusedRuntime2/sign_3_detail.png",
+    "png_sha256": "A3D36577D65C9A35A26F4A017459CF8CF75156411A03064EED564EBE3E9CFF3E",
+    "pixel_identical": true,
+    "raw_retained_under": ".codex_tmp/MainStageCleanReproduction_20261001/RawCaptures/FocusedRuntime2/sign_3_detail.ppm"
+  },
+  {
+    "raw": "FocusedRuntime2/sign_3_world.ppm",
+    "raw_sha256": "51E7924C13F4A2D5E0BC477F17CC398391406842EE03E09B4844C967FD020249",
+    "png": "FocusedRuntime2/sign_3_world.png",
+    "png_sha256": "0815665C2F1438B736723FC65AB353CE96B5EBFD0EC95363251DC5012331D25E",
+    "pixel_identical": true,
+    "raw_retained_under": ".codex_tmp/MainStageCleanReproduction_20261001/RawCaptures/FocusedRuntime2/sign_3_world.ppm"
+  },
+  {
+    "raw": "FocusedRuntime2/sign_4_detail.ppm",
+    "raw_sha256": "89764410C35C9BAD382DDCA19B6884E4DA238E8FEB6E2938F692DAFB68677C15",
+    "png": "FocusedRuntime2/sign_4_detail.png",
+    "png_sha256": "EF248C4AC720965CCFF09EB3116591FB3139B8AFCC147ED75E78E2A23C365117",
+    "pixel_identical": true,
+    "raw_retained_under": ".codex_tmp/MainStageCleanReproduction_20261001/RawCaptures/FocusedRuntime2/sign_4_detail.ppm"
+  },
+  {
+    "raw": "FocusedRuntime2/sign_4_world.ppm",
+    "raw_sha256": "9389516748BC730E1843FAEF031C06900154DFEF1934BA51F81557A6CAD605C7",
+    "png": "FocusedRuntime2/sign_4_world.png",
+    "png_sha256": "E853450C23002C0B7B75A17B61AFD73D2C99EA94BC27412174F097A8D513C93C",
+    "pixel_identical": true,
+    "raw_retained_under": ".codex_tmp/MainStageCleanReproduction_20261001/RawCaptures/FocusedRuntime2/sign_4_world.ppm"
+  },
+  {
+    "raw": "FocusedRuntime2/tutorial_clear.ppm",
+    "raw_sha256": "C9FC43701D13946C22CC8726B497BDA9C4532A1C1F34A12F868DE6F3ECB6E8AC",
+    "png": "FocusedRuntime2/tutorial_clear.png",
+    "png_sha256": "E858FAB7BC507C10D9BCBCEBA9A99603982A9D2B2DB951D2B2576FD7FC701FA5",
+    "pixel_identical": true,
+    "raw_retained_under": ".codex_tmp/MainStageCleanReproduction_20261001/RawCaptures/FocusedRuntime2/tutorial_clear.ppm"
+  }
+]

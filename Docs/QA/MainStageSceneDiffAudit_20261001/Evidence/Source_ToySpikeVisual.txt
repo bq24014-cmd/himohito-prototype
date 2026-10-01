@@ -1,0 +1,225 @@
+1: using UnityEngine;
+2: 
+3: namespace HimoHito
+4: {
+5:     /// <summary>
+6:     /// Draws a red felt triangle with a wooden rim to match the handcrafted
+7:     /// toy room. The painted wooden sprite remains a missing-asset fallback.
+8:     /// </summary>
+9:     [ExecuteAlways]
+10:     [RequireComponent(typeof(SpriteRenderer))]
+11:     public sealed class ToySpikeVisual : MonoBehaviour
+12:     {
+13:         private const string FaceName = "Wooden Toy Spike Face";
+14:         private const string CraftSpikeResourcePath = "Art/HimoHitoCraftSpike-v1";
+15:         private const string PaintedSpikeResourcePath = "Art/WoodenToySpike-v1";
+16:         private const int TextureSize = 64;
+17:         private static Sprite sharedSprite;
+18:         private const float ContactDuration = .40f;
+19:         private Transform face;
+20:         private float contactElapsed = ContactDuration;
+21:         private float contactDirection = 1f;
+22: 
+23:         public bool Refresh()
+24:         {
+25:             bool changed = false;
+26:             SpriteRenderer sourceRenderer = GetComponent<SpriteRenderer>();
+27:             if (sourceRenderer.enabled)
+28:             {
+29:                 sourceRenderer.enabled = false;
+30:                 changed = true;
+31:             }
+32: 
+33:             face = transform.Find(FaceName);
+34:             if (face == null)
+35:             {
+36:                 GameObject faceObject = new GameObject(FaceName);
+37:                 face = faceObject.transform;
+38:                 face.SetParent(transform, false);
+39:                 changed = true;
+40:             }
+41: 
+42:             if (face.localPosition != Vector3.zero)
+43:             {
+44:                 face.localPosition = Vector3.zero;
+45:                 changed = true;
+46:             }
+47:             if (face.localRotation != Quaternion.identity)
+48:             {
+49:                 face.localRotation = Quaternion.identity;
+50:                 changed = true;
+51:             }
+52:             Sprite targetSprite = GetSharedSprite();
+53:             // Fit the new artwork inside the same local hazard bounds; never resize the collider.
+54:             Vector3 visualScale = new Vector3(1f / targetSprite.bounds.size.x,
+55:                 1f / targetSprite.bounds.size.y, 1f);
+56:             if (face.localScale != visualScale)
+57:             {
+58:                 face.localScale = visualScale;
+59:                 changed = true;
+60:             }
+61: 
+62:             if (!face.TryGetComponent(out SpriteRenderer faceRenderer))
+63:             {
+64:                 faceRenderer = face.gameObject.AddComponent<SpriteRenderer>();
+65:                 changed = true;
+66:             }
+67: 
+68:             if (faceRenderer.sprite != targetSprite)
+69:             {
+70:                 faceRenderer.sprite = targetSprite;
+71:                 changed = true;
+72:             }
+73:             if (faceRenderer.color != Color.white)
+74:             {
+75:                 faceRenderer.color = Color.white;
+76:                 changed = true;
+77:             }
+78:             if (faceRenderer.sortingLayerID != sourceRenderer.sortingLayerID)
+79:             {
+80:                 faceRenderer.sortingLayerID = sourceRenderer.sortingLayerID;
+81:                 changed = true;
+82:             }
+83:             if (faceRenderer.sortingOrder != sourceRenderer.sortingOrder + 2)
+84:             {
+85:                 faceRenderer.sortingOrder = sourceRenderer.sortingOrder + 2;
+86:                 changed = true;
+87:             }
+88:             ApplyContactPose();
+89:             return changed;
+90:         }
+91: 
+92:         public void PlayContact(Vector2 contactPoint, Vector2 velocity)
+93:         {
+94:             if (!isActiveAndEnabled || Time.timeScale <= 0f) return;
+95:             if (face == null) Refresh();
+96:             contactDirection = Mathf.Abs(velocity.x) > .05f ? -Mathf.Sign(velocity.x) :
+97:                 (contactPoint.x < transform.position.x ? -1f : 1f);
+98:             contactElapsed = 0f;
+99:             ApplyContactPose();
+100:         }
+101: 
+102:         private void LateUpdate()
+103:         {
+104:             if (Application.isPlaying) AdvanceContact(Time.deltaTime);
+105:         }
+106: 
+107:         private void AdvanceContact(float dt)
+108:         {
+109:             if (dt <= 0f || contactElapsed >= ContactDuration) return;
+110:             contactElapsed = Mathf.Min(ContactDuration, contactElapsed + dt);
+111:             ApplyContactPose();
+112:         }
+113: 
+114:         private void ApplyContactPose()
+115:         {
+116:             if (face == null) return;
+117:             float t = Mathf.Clamp01(contactElapsed / ContactDuration);
+118:             float angle = t >= 1f ? 0f : contactDirection * 6f * Mathf.Sin(t * Mathf.PI * 2f) * (1f - t);
+119:             Quaternion rotation = Quaternion.Euler(0f, 0f, angle);
+120:             // Rock the painted face about its bottom, never the hazard collider/root.
+121:             Vector3 pivot = new Vector3(0f, -.5f, 0f);
+122:             face.localRotation = rotation;
+123:             face.localPosition = pivot - rotation * pivot;
+124:         }
+125: 
+126:         private void OnDisable()
+127:         {
+128:             contactElapsed = ContactDuration;
+129:             ApplyContactPose();
+130:         }
+131: 
+132:         private void OnEnable()
+133:         {
+134:             Refresh();
+135:         }
+136: 
+137:         private static Sprite GetSharedSprite()
+138:         {
+139:             Sprite craftSprite = TutorialFirstSectionVisuals.LoadProcessedToySprite(
+140:                 CraftSpikeResourcePath, useMipMaps: true);
+141:             if (craftSprite != null) return craftSprite;
+142: 
+143:             Sprite paintedSprite = TutorialFirstSectionVisuals.LoadProcessedToySprite(
+144:                 PaintedSpikeResourcePath);
+145:             if (paintedSprite != null) return paintedSprite;
+146: 
+147:             // Retain a visible hazard if the art has not finished importing.
+148:             if (sharedSprite != null)
+149:             {
+150:                 return sharedSprite;
+151:             }
+152: 
+153:             Color clear = new Color(0f, 0f, 0f, 0f);
+154:             Color litWood = new Color(0.95f, 0.36f, 0.29f, 1f);
+155:             Color warmWood = new Color(0.78f, 0.18f, 0.20f, 1f);
+156:             Color shadedWood = new Color(0.49f, 0.10f, 0.16f, 1f);
+157:             Color rim = new Color(1f, 0.58f, 0.38f, 1f);
+158:             Color[] pixels = new Color[TextureSize * TextureSize];
+159: 
+160:             for (int y = 0; y < TextureSize; y++)
+161:             {
+162:                 float vertical = (y + 0.5f) / TextureSize;
+163:                 float halfWidth = 0.47f * (1f - vertical);
+164:                 for (int x = 0; x < TextureSize; x++)
+165:                 {
+166:                     float horizontal = (x + 0.5f) / TextureSize - 0.5f;
+167:                     Color color = clear;
+168:                     if (vertical >= 0.04f &&
+169:                         Mathf.Abs(horizontal) <= halfWidth)
+170:                     {
+171:                         float edgeDistance = halfWidth - Mathf.Abs(horizontal);
+172:                         if (edgeDistance < 0.025f || vertical < 0.075f)
+173:                         {
+174:                             color = shadedWood;
+175:                         }
+176:                         else if (horizontal < -0.08f)
+177:                         {
+178:                             color = litWood;
+179:                         }
+180:                         else if (horizontal > 0.18f)
+181:                         {
+182:                             color = shadedWood;
+183:                         }
+184:                         else
+185:                         {
+186:                             color = warmWood;
+187:                         }
+188: 
+189:                         if (horizontal < -0.13f &&
+190:                             edgeDistance > 0.055f &&
+191:                             vertical > 0.18f &&
+192:                             vertical < 0.82f)
+193:                         {
+194:                             color = Color.Lerp(color, rim, 0.55f);
+195:                         }
+196:                     }
+197:                     pixels[y * TextureSize + x] = color;
+198:                 }
+199:             }
+200: 
+201:             Texture2D texture = new Texture2D(
+202:                 TextureSize,
+203:                 TextureSize,
+204:                 TextureFormat.RGBA32,
+205:                 false)
+206:             {
+207:                 name = "WoodenToySpikeTexture",
+208:                 filterMode = FilterMode.Bilinear,
+209:                 wrapMode = TextureWrapMode.Clamp,
+210:                 hideFlags = HideFlags.HideAndDontSave
+211:             };
+212:             texture.SetPixels(pixels);
+213:             texture.Apply();
+214: 
+215:             sharedSprite = Sprite.Create(
+216:                 texture,
+217:                 new Rect(0f, 0f, TextureSize, TextureSize),
+218:                 new Vector2(0.5f, 0.5f),
+219:                 TextureSize);
+220:             sharedSprite.name = "WoodenToySpike";
+221:             sharedSprite.hideFlags = HideFlags.HideAndDontSave;
+222:             return sharedSprite;
+223:         }
+224:     }
+225: }

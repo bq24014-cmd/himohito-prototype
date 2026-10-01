@@ -1,0 +1,366 @@
+{
+  "A": {
+    "before_sha": "B6191C44EE8FC841784B4C10EB1940DBA5220EAE112165FD09353D32AF879151",
+    "after_sha": "71D9DF053D63FD2F1B673CCC5A02FA26CCC6AE0956F3272A82C307FC97DE602A",
+    "scene_size": 526820,
+    "build_success": true,
+    "source_changes": []
+  },
+  "B": {
+    "before_sha": "B6191C44EE8FC841784B4C10EB1940DBA5220EAE112165FD09353D32AF879151",
+    "after_sha": "71D9DF053D63FD2F1B673CCC5A02FA26CCC6AE0956F3272A82C307FC97DE602A",
+    "scene_size": 526820,
+    "build_success": true,
+    "source_changes": []
+  },
+  "post_scene_byte_identical": true,
+  "patch_content_identical": true,
+  "third_prior_build_hash_equal": true,
+  "all_scene_objects_A_B": [
+    367,
+    367
+  ],
+  "all_scene_components_A_B": [
+    1078,
+    1078
+  ],
+  "all_snapshot_raw_differences": [
+    {
+      "path": "/nodes/0/components/2/fields/70/value",
+      "a": "19840",
+      "b": "19838"
+    },
+    {
+      "path": "/nodes/1/components/4/fields/61/value",
+      "a": "19824",
+      "b": "19822"
+    },
+    {
+      "path": "/nodes/11/components/4/fields/61/value",
+      "a": "19824",
+      "b": "19822"
+    },
+    {
+      "path": "/nodes/21/components/4/fields/61/value",
+      "a": "19824",
+      "b": "19822"
+    },
+    {
+      "path": "/nodes/22/components/4/fields/61/value",
+      "a": "19824",
+      "b": "19822"
+    },
+    {
+      "path": "/nodes/56/components/10/fields/69/value",
+      "a": "19876",
+      "b": "19870"
+    },
+    {
+      "path": "/nodes/57/components/4/fields/61/value",
+      "a": "19824",
+      "b": "19822"
+    },
+    {
+      "path": "/nodes/77/components/6/fields/65/value",
+      "a": "19890",
+      "b": "19886"
+    },
+    {
+      "path": "/nodes/77/components/7/fields/74/value",
+      "a": "19878",
+      "b": "19874"
+    },
+    {
+      "path": "/nodes/83/components/6/fields/65/value",
+      "a": "19890",
+      "b": "19886"
+    },
+    {
+      "path": "/nodes/83/components/7/fields/74/value",
+      "a": "19878",
+      "b": "19874"
+    },
+    {
+      "path": "/nodes/88/components/4/fields/61/value",
+      "a": "19824",
+      "b": "19822"
+    },
+    {
+      "path": "/nodes/88/components/5/fields/64/value",
+      "a": "19886",
+      "b": "19882"
+    },
+    {
+      "path": "/nodes/89/components/2/fields/66/value",
+      "a": "19966",
+      "b": "19968"
+    },
+    {
+      "path": "/nodes/98/components/4/fields/61/value",
+      "a": "19824",
+      "b": "19822"
+    },
+    {
+      "path": "/nodes/98/components/5/fields/64/value",
+      "a": "19886",
+      "b": "19882"
+    },
+    {
+      "path": "/nodes/99/components/2/fields/66/value",
+      "a": "19966",
+      "b": "19968"
+    },
+    {
+      "path": "/nodes/108/components/4/fields/73/value",
+      "a": "19824",
+      "b": "19822"
+    },
+    {
+      "path": "/nodes/118/components/4/fields/73/value",
+      "a": "19824",
+      "b": "19822"
+    },
+    {
+      "path": "/nodes/128/components/4/fields/73/value",
+      "a": "19824",
+      "b": "19822"
+    },
+    {
+      "path": "/nodes/155/components/4/fields/61/value",
+      "a": "19824",
+      "b": "19822"
+    },
+    {
+      "path": "/nodes/155/components/5/fields/64/value",
+      "a": "19886",
+      "b": "19882"
+    },
+    {
+      "path": "/nodes/156/components/2/fields/66/value",
+      "a": "19966",
+      "b": "19968"
+    },
+    {
+      "path": "/nodes/165/components/4/fields/61/value",
+      "a": "19824",
+      "b": "19822"
+    },
+    {
+      "path": "/nodes/165/components/5/fields/64/value",
+      "a": "19886",
+      "b": "19882"
+    },
+    {
+      "path": "/nodes/166/components/2/fields/66/value",
+      "a": "19966",
+      "b": "19968"
+    },
+    {
+      "path": "/nodes/184/components/4/fields/61/value",
+      "a": "19824",
+      "b": "19822"
+    },
+    {
+      "path": "/nodes/198/components/4/fields/61/value",
+      "a": "19824",
+      "b": "19822"
+    },
+    {
+      "path": "/nodes/198/components/5/fields/64/value",
+      "a": "19886",
+      "b": "19882"
+    },
+    {
+      "path": "/nodes/213/components/4/fields/61/value",
+      "a": "19824",
+      "b": "19822"
+    },
+    {
+      "path": "/nodes/213/components/5/fields/64/value",
+      "a": "19886",
+      "b": "19882"
+    },
+    {
+      "path": "/nodes/214/components/2/fields/66/value",
+      "a": "19966",
+      "b": "19968"
+    },
+    {
+      "path": "/nodes/223/components/4/fields/61/value",
+      "a": "19824",
+      "b": "19822"
+    },
+    {
+      "path": "/nodes/223/components/5/fields/64/value",
+      "a": "19886",
+      "b": "19882"
+    },
+    {
+      "path": "/nodes/224/components/2/fields/66/value",
+      "a": "19966",
+      "b": "19968"
+    },
+    {
+      "path": "/nodes/242/components/4/fields/61/value",
+      "a": "19824",
+      "b": "19822"
+    },
+    {
+      "path": "/nodes/242/components/5/fields/64/value",
+      "a": "19886",
+      "b": "19882"
+    },
+    {
+      "path": "/nodes/243/components/2/fields/66/value",
+      "a": "19966",
+      "b": "19968"
+    },
+    {
+      "path": "/nodes/252/components/4/fields/61/value",
+      "a": "19824",
+      "b": "19822"
+    },
+    {
+      "path": "/nodes/252/components/5/fields/64/value",
+      "a": "19886",
+      "b": "19882"
+    },
+    {
+      "path": "/nodes/253/components/2/fields/66/value",
+      "a": "19966",
+      "b": "19968"
+    },
+    {
+      "path": "/nodes/262/components/3/fields/67/value",
+      "a": "19808",
+      "b": "20060"
+    },
+    {
+      "path": "/nodes/266/components/4/fields/61/value",
+      "a": "19838",
+      "b": "19836"
+    },
+    {
+      "path": "/nodes/268/components/4/fields/61/value",
+      "a": "19838",
+      "b": "19836"
+    },
+    {
+      "path": "/nodes/290/components/4/fields/61/value",
+      "a": "19824",
+      "b": "19822"
+    },
+    {
+      "path": "/nodes/300/components/4/fields/61/value",
+      "a": "19824",
+      "b": "19822"
+    },
+    {
+      "path": "/nodes/300/components/5/fields/64/value",
+      "a": "19886",
+      "b": "19882"
+    },
+    {
+      "path": "/nodes/301/components/2/fields/66/value",
+      "a": "19966",
+      "b": "19968"
+    },
+    {
+      "path": "/nodes/310/components/4/fields/61/value",
+      "a": "19824",
+      "b": "19822"
+    },
+    {
+      "path": "/nodes/310/components/5/fields/64/value",
+      "a": "19886",
+      "b": "19882"
+    },
+    {
+      "path": "/nodes/311/components/2/fields/66/value",
+      "a": "19966",
+      "b": "19968"
+    },
+    {
+      "path": "/nodes/328/components/4/fields/61/value",
+      "a": "19824",
+      "b": "19822"
+    },
+    {
+      "path": "/nodes/328/components/5/fields/64/value",
+      "a": "19886",
+      "b": "19882"
+    },
+    {
+      "path": "/nodes/329/components/2/fields/66/value",
+      "a": "19966",
+      "b": "19968"
+    },
+    {
+      "path": "/nodes/338/components/4/fields/61/value",
+      "a": "19824",
+      "b": "19822"
+    },
+    {
+      "path": "/nodes/338/components/5/fields/64/value",
+      "a": "19886",
+      "b": "19882"
+    },
+    {
+      "path": "/nodes/339/components/2/fields/66/value",
+      "a": "19966",
+      "b": "19968"
+    },
+    {
+      "path": "/nodes/353/components/3/fields/111/value",
+      "a": "19862",
+      "b": "19860"
+    }
+  ],
+  "all_snapshot_semantic_differences": [],
+  "normalized_reference_child_counts": [
+    14856,
+    14856
+  ],
+  "serialized_file_structure_equal": true,
+  "runtime_14_node_counts": [
+    14,
+    14
+  ],
+  "runtime_14_differences": [],
+  "runtime_14_vs_previous_CASE_S4_HEAD": [],
+  "visual": [
+    {
+      "capture": "S05_Rails",
+      "different_pixels": 0,
+      "resolution": [
+        1280,
+        720
+      ],
+      "ppm_sha_A": "70029278DF48EB7863BB6072BC9A6CECD49DC020B226221F3B8A8E77E61FE492",
+      "ppm_sha_B": "70029278DF48EB7863BB6072BC9A6CECD49DC020B226221F3B8A8E77E61FE492"
+    },
+    {
+      "capture": "S02_FrontSpike",
+      "different_pixels": 0,
+      "resolution": [
+        1280,
+        720
+      ],
+      "ppm_sha_A": "64BCAE1B75EC481DE35FE2B8A709A4365C4955B5603FC04B3F60B3E84E2E9B8A",
+      "ppm_sha_B": "64BCAE1B75EC481DE35FE2B8A709A4365C4955B5603FC04B3F60B3E84E2E9B8A"
+    },
+    {
+      "capture": "S02_FarSpike",
+      "different_pixels": 0,
+      "resolution": [
+        1280,
+        720
+      ],
+      "ppm_sha_A": "CF3863F57F99512571E35556B9C666E785981576B7F6EC12A0748D36AA03685E",
+      "ppm_sha_B": "CF3863F57F99512571E35556B9C666E785981576B7F6EC12A0748D36AA03685E"
+    }
+  ],
+  "cause_stack_has_sync_save": true,
+  "cause_scene_sha256": "EEED2B03DE460B4AE3EBD4EB1DEE65B49543DA1C8BDE5E51A2D0028AF1B2318E",
+  "cause_scene_matches_AB": false
+}

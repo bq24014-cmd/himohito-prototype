@@ -1,0 +1,938 @@
+1: using UnityEngine;
+2: using UnityEngine.SceneManagement;
+3: 
+4: namespace HimoHito
+5: {
+6:     /// <summary>
+7:     /// Extends the adopted night-child-room toy language to the main stage.
+8:     /// Only renderers are changed; colliders, positions, and physics stay intact.
+9:     /// </summary>
+10:     public static class MainStageVisuals
+11:     {
+12:         private const string BlockResourcePath =
+13:             "Art/TutorialBlockPlatform-v1";
+14:         private const string RailResourcePath =
+15:             "Art/TutorialRailPlatform-v1";
+16:         private const string ToyBoxResourcePath =
+17:             "Art/TutorialToyBoxGoal-v2";
+18:         private const string BackgroundName =
+19:             "Main Stage Night Child Room Background";
+20:         private const string FarBackgroundName =
+21:             "Main Stage Far Child Room Background";
+22:         private const string HookVisualName = "Blue Toy Hook Visual";
+23:         private const string BridgeAnchorVisualName =
+24:             "Green Rope Anchor Ring Visual";
+25:         private const string GoalVisualName = "Open Toy Box Goal Visual";
+26:         private const string BlockTileVisualPrefix =
+27:             "Orange Block Platform Tile ";
+28:         private const float MaximumBlockStripWorldWidth = 7.5f;
+29:         private const float HookVisualWorldDiameter = 0.72f;
+30: 
+31:         private static readonly Color PlayerColor =
+32:             new Color(1f, 0.365f, 0.561f);
+33:         private static readonly Color BlockColor =
+34:             new Color(1f, 0.706f, 0.235f);
+35:         private static readonly Color TerrainBodyColor =
+36:             new Color(0.56f, 0.29f, 0.09f);
+37:         private static readonly Color TerrainTopColor =
+38:             new Color(0.96f, 0.49f, 0.10f);
+39:         private static readonly Color BeamFaceColor =
+40:             new Color(0.35f, 0.22f, 0.16f);
+41:         private static readonly Color BeamEdgeColor =
+42:             new Color(0.62f, 0.40f, 0.24f);
+43:         private static readonly Color BeamBracketColor =
+44:             new Color(0.25f, 0.15f, 0.12f);
+45:         private static readonly Color RailColor =
+46:             new Color(0.298f, 0.765f, 1f);
+47:         private static readonly Color HookColor = RailColor;
+48:         private static int lastReloadRestoreFrame = -1;
+49:         private static bool isRestoringAfterReload;
+50: 
+51:         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
+52:         private static void EnsureMainStageVisualsAfterSceneLoad()
+53:         {
+54:             if (SceneManager.GetActiveScene().name == "MainStage")
+55:             {
+56:                 Apply(FindSceneObject("Main Player"));
+57:             }
+58:         }
+59: 
+60:         public static bool Apply(GameObject player)
+61:         {
+62:             bool changed = false;
+63:             changed |= RecoverySwitchVisual.Ensure(
+64:                 FindSceneObject(MainStageSectionThreeSetup.RecoverySwitchName));
+65:             changed |= HimoHitoCraftRoomBackground.Ensure(
+66:                 BackgroundName, FarBackgroundName);
+67:             changed |= RestorePlayerVisual(player);
+68:             changed |= GoalChestPresentation.Ensure(
+69:                 FindSceneObject(MainStageSectionTenSetup.GoalMarkerName),
+70:                 FindSceneObject(MainStageSectionTenSetup.GoalFloorName));
+71: 
+72:             foreach (GameObject candidate in
+73:                      Resources.FindObjectsOfTypeAll<GameObject>())
+74:             {
+75:                 if (candidate == null ||
+76:                     !candidate.scene.IsValid() ||
+77:                     !candidate.activeInHierarchy ||
+78:                     !candidate.name.StartsWith(
+79:                         "Main ",
+80:                         System.StringComparison.Ordinal))
+81:                 {
+82:                     continue;
+83:                 }
+84: 
+85:                 if (candidate == player)
+86:                 {
+87:                     continue;
+88:                 }
+89: 
+90:                 if (candidate.TryGetComponent(out RopeSpikeHazard _))
+91:                 {
+92:                     changed |= RemoveRepeatedBlockVisuals(candidate);
+93:                     changed |= RemoveChild(
+94:                         candidate,
+95:                         "Orange Block Platform Visual");
+96:                     changed |= RemoveChild(
+97:                         candidate,
+98:                         "Blue Railway Platform Visual");
+99:                     changed |= ApplyColor(
+100:                         candidate,
+101:                         new Color(1f, 0.18f, 0.25f));
+102:                     if (!candidate.TryGetComponent(
+103:                             out ToySpikeVisual spikeVisual))
+104:                     {
+105:                         spikeVisual = candidate.AddComponent<ToySpikeVisual>();
+106:                         changed = true;
+107:                     }
+108:                     changed |= spikeVisual.Refresh();
+109:                     continue;
+110:                 }
+111: 
+112:                 if (candidate.TryGetComponent(out HookPoint _))
+113:                 {
+114:                     changed |= EnsureHookVisual(candidate);
+115:                     continue;
+116:                 }
+117: 
+118:                 if (candidate.name == MainStageSectionTwoSetup.BoardName)
+119:                 {
+120:                     changed |= EnsureLengthWindowBeamVisual(candidate);
+121:                     continue;
+122:                 }
+123: 
+124:                 if (candidate.TryGetComponent(out BoxCollider2D _) &&
+125:                     candidate.TryGetComponent(out SolidSprite _))
+126:                 {
+127:                     if (IsBankTerrain(candidate.name))
+128:                     {
+129:                         changed |= EnsureBankTerrainVisual(candidate);
+130:                         continue;
+131:                     }
+132: 
+133:                     bool isStartGround = candidate.name == "Main Start Ground";
+134:                     bool isSwingPassThroughRail =
+135:                         candidate.TryGetComponent(
+136:                             out SwingPassThroughRailPlatform _);
+137:                     bool isSolidToyBoard =
+138:                         !isSwingPassThroughRail &&
+139:                         (isStartGround ||
+140:                          candidate.TryGetComponent(out SolidSwingSurface _));
+141:                     changed |= RemoveRepeatedBlockVisuals(candidate);
+142:                     changed |= RemoveChild(
+143:                         candidate,
+144:                         isSolidToyBoard
+145:                             ? "Blue Railway Platform Visual"
+146:                             : "Orange Block Platform Visual");
+147:                     changed |= ApplyColor(
+148:                         candidate,
+149:                         isSolidToyBoard ? BlockColor : RailColor);
+150:                     changed |= EnsureToyVisual(
+151:                         candidate,
+152:                         isSolidToyBoard
+153:                             ? "Orange Block Platform Visual"
+154:                             : "Blue Railway Platform Visual",
+155:                         isSolidToyBoard ? BlockResourcePath : RailResourcePath,
+156:                         1);
+157:                 }
+158:             }
+159: 
+160:             return changed;
+161:         }
+162: 
+163:         public static void RestoreSceneVisualsAfterReload()
+164:         {
+165:             if (!Application.isPlaying ||
+166:                 SceneManager.GetActiveScene().name != "MainStage" ||
+167:                 isRestoringAfterReload ||
+168:                 lastReloadRestoreFrame == Time.frameCount)
+169:             {
+170:                 return;
+171:             }
+172: 
+173:             lastReloadRestoreFrame = Time.frameCount;
+174:             isRestoringAfterReload = true;
+175:             try
+176:             {
+177:                 Apply(FindSceneObject("Main Player"));
+178:             }
+179:             finally
+180:             {
+181:                 isRestoringAfterReload = false;
+182:             }
+183:         }
+184: 
+185:         /// <summary>Rebuilds only the two section-five rail images.</summary>
+186:         public static bool RestoreSectionFiveRailVisuals()
+187:         {
+188:             bool changed = false;
+189:             changed |= EnsureToyVisual(
+190:                 FindSceneObject(MainStageSectionFiveSetup.LeftShelfName),
+191:                 "Blue Railway Platform Visual",
+192:                 RailResourcePath,
+193:                 1);
+194:             changed |= EnsureToyVisual(
+195:                 FindSceneObject(MainStageSectionFiveSetup.RightShelfName),
+196:                 "Blue Railway Platform Visual",
+197:                 RailResourcePath,
+198:                 1);
+199:             return changed;
+200:         }
+201: 
+202:         /// <summary>
+203:         /// Restores one main-stage hook independently of the scene-wide visual
+204:         /// pass. HookPoint calls this when it is enabled so a hook cannot keep a
+205:         /// textureless child after scene reloads or Play-mode transitions.
+206:         /// </summary>
+207:         public static bool EnsureHookVisual(GameObject hook)
+208:         {
+209:             if (hook == null ||
+210:                 !hook.scene.IsValid() ||
+211:                 hook.scene.name != "MainStage" ||
+212:                 !hook.TryGetComponent(out HookPoint hookPoint))
+213:             {
+214:                 return false;
+215:             }
+216: 
+217:             bool isBridgeAnchor = hook.TryGetComponent(
+218:                 out RopePlatformAnchor _) &&
+219:                 hook.name != MainStageSectionNineSetup.CenterHookName;
+220:             Color hookColor = isBridgeAnchor
+221:                 ? MainStageSectionFourSetup.BridgeAnchorColor
+222:                 : HookColor;
+223: 
+224:             bool changed = ApplyColor(hook, hookColor);
+225:             if (isBridgeAnchor)
+226:             {
+227:                 changed |= RemoveChild(hook, HookVisualName);
+228:                 changed |= EnsureBridgeAnchorRingVisual(hook, hookColor);
+229:             }
+230:             else
+231:             {
+232:                 changed |= RemoveChild(hook, BridgeAnchorVisualName);
+233:                 changed |= EnsurePartDHookRingVisual(hook);
+234:             }
+235: 
+236:             changed |= hookPoint.ConfigureFixedAttachmentPoint(Vector2.zero);
+237:             return changed;
+238:         }
+239: 
+240:         private static bool EnsurePartDHookRingVisual(GameObject target)
+241:         {
+242:             if (target == null ||
+243:                 !target.TryGetComponent(out SpriteRenderer sourceRenderer))
+244:             {
+245:                 return false;
+246:             }
+247: 
+248:             bool changed = false;
+249:             Transform visualTransform = target.transform.Find(HookVisualName);
+250:             if (visualTransform == null)
+251:             {
+252:                 GameObject visualObject = new GameObject(HookVisualName);
+253:                 visualTransform = visualObject.transform;
+254:                 visualTransform.SetParent(target.transform, false);
+255:                 changed = true;
+256:             }
+257:             if (!visualTransform.gameObject.activeSelf)
+258:             {
+259:                 visualTransform.gameObject.SetActive(true);
+260:                 changed = true;
+261:             }
+262:             if (!visualTransform.TryGetComponent(out SpriteRenderer _))
+263:             {
+264:                 visualTransform.gameObject.AddComponent<SpriteRenderer>();
+265:                 changed = true;
+266:             }
+267:             if (!visualTransform.TryGetComponent(
+268:                     out HimoHitoHookRingVisual ringVisual))
+269:             {
+270:                 ringVisual = visualTransform.gameObject.AddComponent<
+271:                     HimoHitoHookRingVisual>();
+272:                 changed = true;
+273:             }
+274: 
+275:             changed |= ringVisual.Configure(
+276:                 sourceRenderer.sortingLayerID,
+277:                 sourceRenderer.sortingOrder + 6,
+278:                 HookVisualWorldDiameter);
+279:             if (sourceRenderer.enabled)
+280:             {
+281:                 sourceRenderer.enabled = false;
+282:                 changed = true;
+283:             }
+284:             return changed;
+285:         }
+286: 
+287:         private static bool IsBankTerrain(string objectName)
+288:         {
+289:             return objectName == "Main Start Ground" ||
+290:                    objectName == "Main Landing 1" ||
+291:                    objectName == "Main Landing 2" ||
+292:                    objectName == MainStageSectionThreeSetup.LowDeadEndName ||
+293:                    objectName == MainStageSectionThreeSetup.HighShelfName ||
+294:                    objectName == MainStageSectionThreeSetup.ReturnStepAName ||
+295:                    objectName == MainStageSectionThreeSetup.ReturnStepBName ||
+296:                    objectName == MainStageSectionThreeSetup.ReturnStepCName ||
+297:                    objectName == MainStageSectionThreeSetup.ReturnStepDName ||
+298:                    objectName == MainStageSectionFourSetup.IntermediateColumnName ||
+299:                    objectName == MainStageSectionFourSetup.LandingName ||
+300:                    objectName == MainStageSectionFiveSetup.LandingName ||
+301:                    objectName == MainStageSectionSixSetup.MergeName ||
+302:                    objectName == MainStageSectionSevenSetup.GoalFloorName ||
+303:                    objectName == MainStageSectionNineSetup.GoalFloorName ||
+304:                    objectName == MainStageSectionTenSetup.GoalFloorName ||
+305:                    objectName == "Main S01 Start Shelf" ||
+306:                    objectName == "Main S01 Landing" ||
+307:                    objectName == "Main S02 Raised Landing" ||
+308:                    objectName == "Main S03 Lower Dead End" ||
+309:                    objectName == "Main S03 High Shelf";
+310:         }
+311: 
+312:         private static bool EnsureBankTerrainVisual(GameObject terrain)
+313:         {
+314:             if (terrain == null ||
+315:                 !terrain.TryGetComponent(out SpriteRenderer sourceRenderer) ||
+316:                 !terrain.TryGetComponent(out BoxCollider2D terrainCollider))
+317:             {
+318:                 return false;
+319:             }
+320: 
+321:             if (CraftWoodPlatformVisual.TryEnsure(terrain, out bool woodChanged)) return woodChanged;
+322: 
+323:             bool changed = false;
+324:             changed |= RemoveChild(terrain, "Orange Block Platform Visual");
+325:             changed |= RemoveChild(terrain, "Blue Railway Platform Visual");
+326:             changed |= RemoveChild(terrain, "Terrain Top Edge");
+327:             changed |= ApplyColor(terrain, TerrainBodyColor);
+328: 
+329:             Sprite blockSprite =
+330:                 TutorialFirstSectionVisuals.LoadProcessedToySprite(
+331:                     BlockResourcePath);
+332:             if (blockSprite == null)
+333:             {
+334:                 changed |= RemoveRepeatedBlockVisuals(terrain);
+335:                 changed |= EnsureSolidVisualPart(
+336:                     terrain,
+337:                     "Terrain Top Edge",
+338:                     new Vector2(0f, 0.475f),
+339:                     new Vector2(1f, 0.05f),
+340:                     TerrainTopColor,
+341:                     sourceRenderer.sortingOrder + 2);
+342: 
+343:                 if (!sourceRenderer.enabled)
+344:                 {
+345:                     sourceRenderer.enabled = true;
+346:                     changed = true;
+347:                 }
+348: 
+349:                 return changed;
+350:             }
+351: 
+352:             float worldWidth = Mathf.Max(
+353:                 0.01f,
+354:                 terrainCollider.bounds.size.x);
+355:             int stripCount = Mathf.Max(
+356:                 1,
+357:                 Mathf.CeilToInt(
+358:                     worldWidth / MaximumBlockStripWorldWidth));
+359:             Vector2 spriteSize = blockSprite.bounds.size;
+360:             float localStripWidth = terrainCollider.size.x / stripCount;
+361:             float localLeft = terrainCollider.offset.x -
+362:                               terrainCollider.size.x * 0.5f;
+363: 
+364:             for (int stripIndex = 0;
+365:                  stripIndex < stripCount;
+366:                  stripIndex++)
+367:             {
+368:                 string visualName = BlockTileVisualPrefix +
+369:                                     (stripIndex + 1).ToString("D2");
+370:                 Vector2 localPosition = new Vector2(
+371:                     localLeft + localStripWidth * (stripIndex + 0.5f),
+372:                     terrainCollider.offset.y);
+373:                 Vector2 localScale = new Vector2(
+374:                     localStripWidth /
+375:                     Mathf.Max(0.01f, spriteSize.x),
+376:                     terrainCollider.size.y /
+377:                     Mathf.Max(0.01f, spriteSize.y));
+378:                 changed |= EnsureSpriteVisualPart(
+379:                     terrain,
+380:                     visualName,
+381:                     blockSprite,
+382:                     localPosition,
+383:                     localScale,
+384:                     sourceRenderer.sortingOrder + 1);
+385:             }
+386: 
+387:             changed |= RemoveExcessRepeatedBlockVisuals(
+388:                 terrain,
+389:                 stripCount);
+390:             changed |= WoodenPlatformDepthVisual.Ensure(terrain);
+391: 
+392:             if (sourceRenderer.enabled)
+393:             {
+394:                 sourceRenderer.enabled = false;
+395:                 changed = true;
+396:             }
+397: 
+398:             return changed;
+399:         }
+400: 
+401:         private static bool EnsureSpriteVisualPart(
+402:             GameObject parent,
+403:             string partName,
+404:             Sprite sprite,
+405:             Vector2 localPosition,
+406:             Vector2 localScale,
+407:             int sortingOrder)
+408:         {
+409:             bool changed = false;
+410:             Transform partTransform = parent.transform.Find(partName);
+411:             if (partTransform == null)
+412:             {
+413:                 GameObject partObject = new GameObject(partName);
+414:                 partTransform = partObject.transform;
+415:                 partTransform.SetParent(parent.transform, false);
+416:                 changed = true;
+417:             }
+418:             if (!partTransform.gameObject.activeSelf)
+419:             {
+420:                 partTransform.gameObject.SetActive(true);
+421:                 changed = true;
+422:             }
+423: 
+424:             Vector3 targetPosition = new Vector3(
+425:                 localPosition.x,
+426:                 localPosition.y,
+427:                 0f);
+428:             Vector3 targetScale = new Vector3(
+429:                 localScale.x,
+430:                 localScale.y,
+431:                 1f);
+432:             if (partTransform.localPosition != targetPosition)
+433:             {
+434:                 partTransform.localPosition = targetPosition;
+435:                 changed = true;
+436:             }
+437:             if (partTransform.localRotation != Quaternion.identity)
+438:             {
+439:                 partTransform.localRotation = Quaternion.identity;
+440:                 changed = true;
+441:             }
+442:             if (partTransform.localScale != targetScale)
+443:             {
+444:                 partTransform.localScale = targetScale;
+445:                 changed = true;
+446:             }
+447: 
+448:             if (!partTransform.TryGetComponent(out SpriteRenderer renderer))
+449:             {
+450:                 renderer = partTransform.gameObject.AddComponent<SpriteRenderer>();
+451:                 changed = true;
+452:             }
+453:             if (renderer.sprite != sprite)
+454:             {
+455:                 renderer.sprite = sprite;
+456:                 changed = true;
+457:             }
+458:             if (!renderer.enabled)
+459:             {
+460:                 renderer.enabled = true;
+461:                 changed = true;
+462:             }
+463:             if (renderer.color != Color.white)
+464:             {
+465:                 renderer.color = Color.white;
+466:                 changed = true;
+467:             }
+468:             if (parent.TryGetComponent(out SpriteRenderer sourceRenderer) &&
+469:                 renderer.sortingLayerID != sourceRenderer.sortingLayerID)
+470:             {
+471:                 renderer.sortingLayerID = sourceRenderer.sortingLayerID;
+472:                 changed = true;
+473:             }
+474:             if (renderer.sortingOrder != sortingOrder)
+475:             {
+476:                 renderer.sortingOrder = sortingOrder;
+477:                 changed = true;
+478:             }
+479: 
+480:             return changed;
+481:         }
+482: 
+483:         private static bool RemoveRepeatedBlockVisuals(GameObject parent)
+484:         {
+485:             return RemoveRepeatedBlockVisuals(parent, 0);
+486:         }
+487: 
+488:         private static bool RemoveExcessRepeatedBlockVisuals(
+489:             GameObject parent,
+490:             int retainedStripCount)
+491:         {
+492:             return RemoveRepeatedBlockVisuals(parent, retainedStripCount);
+493:         }
+494: 
+495:         private static bool RemoveRepeatedBlockVisuals(
+496:             GameObject parent,
+497:             int retainedStripCount)
+498:         {
+499:             if (parent == null)
+500:             {
+501:                 return false;
+502:             }
+503: 
+504:             bool changed = false;
+505:             for (int childIndex = parent.transform.childCount - 1;
+506:                  childIndex >= 0;
+507:                  childIndex--)
+508:             {
+509:                 Transform child = parent.transform.GetChild(childIndex);
+510:                 if (!child.name.StartsWith(
+511:                         BlockTileVisualPrefix,
+512:                         System.StringComparison.Ordinal))
+513:                 {
+514:                     continue;
+515:                 }
+516: 
+517:                 string suffix = child.name.Substring(
+518:                     BlockTileVisualPrefix.Length);
+519:                 bool keep = int.TryParse(suffix, out int stripNumber) &&
+520:                             stripNumber >= 1 &&
+521:                             stripNumber <= retainedStripCount;
+522:                 if (keep)
+523:                 {
+524:                     continue;
+525:                 }
+526: 
+527:                 if (Application.isPlaying)
+528:                 {
+529:                     Object.Destroy(child.gameObject);
+530:                 }
+531:                 else
+532:                 {
+533:                     Object.DestroyImmediate(child.gameObject);
+534:                 }
+535:                 changed = true;
+536:             }
+537: 
+538:             return changed;
+539:         }
+540: 
+541:         private static bool EnsureLengthWindowBeamVisual(GameObject board)
+542:         {
+543:             if (board == null ||
+544:                 !board.TryGetComponent(out SpriteRenderer sourceRenderer))
+545:             {
+546:                 return false;
+547:             }
+548: 
+549:             bool changed = false;
+550:             changed |= RemoveChild(board, "Orange Block Platform Visual");
+551:             changed |= EnsureSolidVisualPart(
+552:                 board,
+553:                 "Wooden Beam Face",
+554:                 Vector2.zero,
+555:                 new Vector2(1f, 0.72f),
+556:                 BeamFaceColor,
+557:                 sourceRenderer.sortingOrder + 2);
+558:             changed |= EnsureSolidVisualPart(
+559:                 board,
+560:                 "Wooden Beam Lower Edge",
+561:                 new Vector2(0f, -0.42f),
+562:                 new Vector2(1.06f, 0.22f),
+563:                 BeamEdgeColor,
+564:                 sourceRenderer.sortingOrder + 3);
+565:             changed |= EnsureSolidVisualPart(
+566:                 board,
+567:                 "Wooden Beam Left Bracket",
+568:                 new Vector2(-0.36f, -0.74f),
+569:                 new Vector2(0.08f, 0.56f),
+570:                 BeamBracketColor,
+571:                 sourceRenderer.sortingOrder + 1);
+572:             changed |= EnsureSolidVisualPart(
+573:                 board,
+574:                 "Wooden Beam Right Bracket",
+575:                 new Vector2(0.36f, -0.74f),
+576:                 new Vector2(0.08f, 0.56f),
+577:                 BeamBracketColor,
+578:                 sourceRenderer.sortingOrder + 1);
+579: 
+580:             if (sourceRenderer.enabled)
+581:             {
+582:                 sourceRenderer.enabled = false;
+583:                 changed = true;
+584:             }
+585: 
+586:             return changed;
+587:         }
+588: 
+589:         private static bool EnsureSolidVisualPart(
+590:             GameObject parent,
+591:             string partName,
+592:             Vector2 localPosition,
+593:             Vector2 localScale,
+594:             Color color,
+595:             int sortingOrder)
+596:         {
+597:             bool changed = false;
+598:             Transform partTransform = parent.transform.Find(partName);
+599:             if (partTransform == null)
+600:             {
+601:                 GameObject partObject = new GameObject(partName);
+602:                 partTransform = partObject.transform;
+603:                 partTransform.SetParent(parent.transform, false);
+604:                 changed = true;
+605:             }
+606: 
+607:             Vector3 targetPosition = new Vector3(
+608:                 localPosition.x,
+609:                 localPosition.y,
+610:                 0f);
+611:             Vector3 targetScale = new Vector3(
+612:                 localScale.x,
+613:                 localScale.y,
+614:                 1f);
+615:             if (partTransform.localPosition != targetPosition)
+616:             {
+617:                 partTransform.localPosition = targetPosition;
+618:                 changed = true;
+619:             }
+620:             if (partTransform.localRotation != Quaternion.identity)
+621:             {
+622:                 partTransform.localRotation = Quaternion.identity;
+623:                 changed = true;
+624:             }
+625:             if (partTransform.localScale != targetScale)
+626:             {
+627:                 partTransform.localScale = targetScale;
+628:                 changed = true;
+629:             }
+630: 
+631:             if (!partTransform.TryGetComponent(out SpriteRenderer renderer))
+632:             {
+633:                 renderer = partTransform.gameObject.AddComponent<SpriteRenderer>();
+634:                 changed = true;
+635:             }
+636:             if (!partTransform.TryGetComponent(out SolidSprite solidSprite))
+637:             {
+638:                 solidSprite = partTransform.gameObject.AddComponent<SolidSprite>();
+639:                 changed = true;
+640:             }
+641:             if (solidSprite.Color != color)
+642:             {
+643:                 solidSprite.Color = color;
+644:                 changed = true;
+645:             }
+646:             if (renderer.sortingOrder != sortingOrder)
+647:             {
+648:                 renderer.sortingOrder = sortingOrder;
+649:                 changed = true;
+650:             }
+651: 
+652:             return changed;
+653:         }
+654: 
+655:         private static bool RemoveChild(GameObject parent, string childName)
+656:         {
+657:             Transform child = parent != null
+658:                 ? parent.transform.Find(childName)
+659:                 : null;
+660:             if (child == null)
+661:             {
+662:                 return false;
+663:             }
+664: 
+665:             if (Application.isPlaying)
+666:             {
+667:                 Object.Destroy(child.gameObject);
+668:             }
+669:             else
+670:             {
+671:                 Object.DestroyImmediate(child.gameObject);
+672:             }
+673:             return true;
+674:         }
+675: 
+676:         private static bool RestorePlayerVisual(GameObject player)
+677:         {
+678:             if (player == null)
+679:             {
+680:                 return false;
+681:             }
+682: 
+683:             bool changed = ApplyColor(player, PlayerColor);
+684:             Transform wrongRailVisual =
+685:                 player.transform.Find("Blue Railway Platform Visual");
+686:             if (wrongRailVisual != null)
+687:             {
+688:                 if (Application.isPlaying)
+689:                 {
+690:                     Object.Destroy(wrongRailVisual.gameObject);
+691:                 }
+692:                 else
+693:                 {
+694:                     Object.DestroyImmediate(wrongRailVisual.gameObject);
+695:                 }
+696:                 changed = true;
+697:             }
+698: 
+699:             Transform ropeBodyVisual = player.transform.Find("Rope Body Visual") ??
+700:                 player.transform.Find("Craft Player Presentation/Rope Body Visual");
+701:             if (ropeBodyVisual != null)
+702:             {
+703:                 changed |= ApplyColor(ropeBodyVisual.gameObject, PlayerColor);
+704:             }
+705: 
+706:             if (player.TryGetComponent(out SpriteRenderer sourceRenderer))
+707:             {
+708:                 bool shouldEnableSource = ropeBodyVisual == null;
+709:                 if (sourceRenderer.enabled != shouldEnableSource)
+710:                 {
+711:                     sourceRenderer.enabled = shouldEnableSource;
+712:                     changed = true;
+713:                 }
+714:             }
+715: 
+716:             return changed;
+717:         }
+718: 
+719:         private static bool EnsureToyVisual(
+720:             GameObject target,
+721:             string visualName,
+722:             string resourcePath,
+723:             int sortingOrderOffset,
+724:             Color? tint = null)
+725:         {
+726:             if (target == null ||
+727:                 !target.TryGetComponent(out SpriteRenderer sourceRenderer))
+728:             {
+729:                 return false;
+730:             }
+731: 
+732:             if (resourcePath == BlockResourcePath &&
+733:                 CraftWoodPlatformVisual.TryEnsure(target, out bool woodChanged)) return woodChanged;
+734: 
+735:             bool changed = false;
+736:             if (resourcePath == RailResourcePath &&
+737:                 (target.TryGetComponent(out SwingPassThroughRailPlatform _) || target.TryGetComponent(out OneWayRailPlatform _)) &&
+738:                 CraftRailPlatformVisual.TryEnsure(target, out changed)) return changed;
+739: 
+740:             Sprite processedSprite =
+741:                 TutorialFirstSectionVisuals.LoadProcessedToySprite(resourcePath);
+742:             if (processedSprite == null)
+743:             {
+744:                 // A Play-mode transition can destroy SolidSprite's temporary
+745:                 // sprite while leaving the renderer enabled. Reapply the same
+746:                 // color to rebuild a visible fallback before exposing it.
+747:                 if (target.TryGetComponent(out SolidSprite fallbackVisual))
+748:                 {
+749:                     fallbackVisual.Color = fallbackVisual.Color;
+750:                 }
+751:                 if (!sourceRenderer.enabled)
+752:                 {
+753:                     sourceRenderer.enabled = true;
+754:                     return true;
+755:                 }
+756: 
+757:                 return changed;
+758:             }
+759: 
+760:             Transform visualTransform = target.transform.Find(visualName);
+761:             if (visualTransform == null)
+762:             {
+763:                 GameObject visualObject = new GameObject(visualName);
+764:                 visualTransform = visualObject.transform;
+765:                 visualTransform.SetParent(target.transform, false);
+766:                 changed = true;
+767:             }
+768:             if (!visualTransform.gameObject.activeSelf)
+769:             {
+770:                 visualTransform.gameObject.SetActive(true);
+771:                 changed = true;
+772:             }
+773: 
+774:             Vector2 spriteSize = processedSprite.bounds.size;
+775:             Vector3 targetScale = new Vector3(
+776:                 1f / Mathf.Max(0.01f, spriteSize.x),
+777:                 1f / Mathf.Max(0.01f, spriteSize.y),
+778:                 1f);
+779:             Vector3 targetLocalPosition = Vector3.zero;
+780:             if (target.name == MainStageSectionTenSetup.GoalMarkerName &&
+781:                 visualName == GoalVisualName)
+782:             {
+783:                 // Align only the artwork with the visible wooden surface.
+784:                 // Keep the goal trigger and its gameplay position unchanged.
+785:                 float floorTop = MainStageSectionTenSetup.GoalFloorPosition.y +
+786:                     MainStageSectionTenSetup.GoalFloorSize.y * 0.5f;
+787:                 const float woodSurfaceInset = 0.16f;
+788:                 float visualWorldHeight = spriteSize.y * targetScale.y *
+789:                     Mathf.Abs(target.transform.lossyScale.y);
+790:                 targetLocalPosition = target.transform.InverseTransformPoint(
+791:                     new Vector3(target.transform.position.x,
+792:                         floorTop - woodSurfaceInset + visualWorldHeight * 0.5f,
+793:                         target.transform.position.z));
+794:             }
+795:             if (visualTransform.localPosition != targetLocalPosition)
+796:             {
+797:                 visualTransform.localPosition = targetLocalPosition;
+798:                 changed = true;
+799:             }
+800:             if (visualTransform.localRotation != Quaternion.identity)
+801:             {
+802:                 visualTransform.localRotation = Quaternion.identity;
+803:                 changed = true;
+804:             }
+805:             if (visualTransform.localScale != targetScale)
+806:             {
+807:                 visualTransform.localScale = targetScale;
+808:                 changed = true;
+809:             }
+810: 
+811:             if (!visualTransform.TryGetComponent(out SpriteRenderer renderer))
+812:             {
+813:                 renderer = visualTransform.gameObject.AddComponent<SpriteRenderer>();
+814:                 changed = true;
+815:             }
+816:             if (renderer.sprite != processedSprite)
+817:             {
+818:                 renderer.sprite = processedSprite;
+819:                 changed = true;
+820:             }
+821:             if (resourcePath == RailResourcePath && renderer.drawMode != SpriteDrawMode.Simple)
+822:             {
+823:                 renderer.drawMode = SpriteDrawMode.Simple;
+824:                 changed = true;
+825:             }
+826:             if (!renderer.enabled)
+827:             {
+828:                 renderer.enabled = true;
+829:                 changed = true;
+830:             }
+831:             Color targetColor = tint ?? Color.white;
+832:             if (renderer.color != targetColor)
+833:             {
+834:                 renderer.color = targetColor;
+835:                 changed = true;
+836:             }
+837:             if (renderer.sortingLayerID != sourceRenderer.sortingLayerID)
+838:             {
+839:                 renderer.sortingLayerID = sourceRenderer.sortingLayerID;
+840:                 changed = true;
+841:             }
+842: 
+843:             int targetOrder = sourceRenderer.sortingOrder + sortingOrderOffset;
+844:             if (renderer.sortingOrder != targetOrder)
+845:             {
+846:                 renderer.sortingOrder = targetOrder;
+847:                 changed = true;
+848:             }
+849:             if (sourceRenderer.enabled)
+850:             {
+851:                 sourceRenderer.enabled = false;
+852:                 changed = true;
+853:             }
+854: 
+855:             if (resourcePath == BlockResourcePath)
+856:                 changed |= WoodenPlatformDepthVisual.Ensure(target);
+857:             return changed;
+858:         }
+859: 
+860:         private static bool EnsureBridgeAnchorRingVisual(
+861:             GameObject target,
+862:             Color tint)
+863:         {
+864:             if (target == null ||
+865:                 !target.TryGetComponent(out SpriteRenderer sourceRenderer))
+866:             {
+867:                 return false;
+868:             }
+869: 
+870:             bool changed = false;
+871:             Transform visualTransform =
+872:                 target.transform.Find(BridgeAnchorVisualName);
+873:             if (visualTransform == null)
+874:             {
+875:                 GameObject visualObject =
+876:                     new GameObject(BridgeAnchorVisualName);
+877:                 visualTransform = visualObject.transform;
+878:                 visualTransform.SetParent(target.transform, false);
+879:                 changed = true;
+880:             }
+881: 
+882:             if (visualTransform.localPosition != Vector3.zero)
+883:             {
+884:                 visualTransform.localPosition = Vector3.zero;
+885:                 changed = true;
+886:             }
+887:             if (visualTransform.localRotation != Quaternion.identity)
+888:             {
+889:                 visualTransform.localRotation = Quaternion.identity;
+890:                 changed = true;
+891:             }
+892:             if (!visualTransform.TryGetComponent(out SpriteRenderer renderer))
+893:             {
+894:                 renderer = visualTransform.gameObject.AddComponent<SpriteRenderer>();
+895:                 changed = true;
+896:             }
+897:             if (!visualTransform.TryGetComponent(
+898:                     out RopeAnchorRingVisual ringVisual))
+899:             {
+900:                 ringVisual = visualTransform.gameObject.AddComponent<
+901:                     RopeAnchorRingVisual>();
+902:                 changed = true;
+903:             }
+904:             int targetOrder = sourceRenderer.sortingOrder + 6;
+905:             changed |= ringVisual.Configure(
+906:                 sourceRenderer.sortingLayerID,
+907:                 targetOrder);
+908:             if (sourceRenderer.enabled)
+909:             {
+910:                 sourceRenderer.enabled = false;
+911:                 changed = true;
+912:             }
+913: 
+914:             return changed;
+915:         }
+916: 
+917:         private static bool ApplyColor(GameObject target, Color color)
+918:         {
+919:             if (target == null || !target.TryGetComponent(out SolidSprite visual))
+920:             {
+921:                 return false;
+922:             }
+923: 
+924:             if (visual.Color == color)
+925:             {
+926:                 return false;
+927:             }
+928: 
+929:             visual.Color = color;
+930:             return true;
+931:         }
+932: 
+933:         private static GameObject FindSceneObject(string objectName)
+934:         {
+935:             return SceneObjectLookup.Find(objectName);
+936:         }
+937:     }
+938: }

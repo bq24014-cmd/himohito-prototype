@@ -1,0 +1,1107 @@
+[Licensing::Module] Trying to connect to existing licensing client channel...
+Built from '6000.3/staging' branch; Version is '6000.3.21f1 (c02631ffc030) revision 12592689'; Using compiler version '194234433'; Build Type 'Release'
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-田尻大翔" at "2026-10-01T05:17:26.3796247Z"
+OS: 'Windows 11  (10.0.26200) Professional' Language: 'ja' Physical Memory: 16052 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
+System  architecture: x64
+Process architecture: x64
+Date: 2026-10-01T05:17:26Z
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\6000.3.21f1\Editor\Unity.exe
+-batchmode
+-force-d3d11
+-projectPath
+C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype\.codex_tmp\MainStageCleanReproduction_20261001\QAProject
+-executeMethod
+CleanEntry.Run
+-cleanMode
+Focused
+-cleanEvidence
+C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype\Docs\QA\MainStageCleanReproduction_20261001\Evidence\FocusedRuntime
+-logFile
+C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype\Docs\QA\MainStageCleanReproduction_20261001\Evidence\FocusedRuntime.log
+Successfully changed project path to: C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype\.codex_tmp\MainStageCleanReproduction_20261001\QAProject
+C:/Users/田尻大翔/Documents/Codex/2026-08-07/new-chat/outputs/HimoHitoPrototype/.codex_tmp/MainStageCleanReproduction_20261001/QAProject
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-gfx=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+Player connection [2992]  Target information:
+
+Player connection [2992]  * "[IP] 192.168.40.81 [Port] 55505 [Flags] 2 [Guid] 3938898619 [EditorId] 3938898619 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-UM0GV1L) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [2992] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [2992] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+[Package Manager] Connected to IPC stream "Upm-3396" after 0.7 seconds.
+[Licensing::Module] Licensing is not yet initialized.
+[Licensing::Client] Error: HandshakeResponse reported an error:
+	ResponseCode: 505
+	ResponseStatus: Unsupported protocol version '1.18.1'.
+[Licensing::Module] Error: Failed to handshake to channel: "LicenseClient-田尻大翔"
+[Licensing::IpcConnector] LicenseClient-田尻大翔 channel disconnected successfully.
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-田尻大翔-6000.3.21" at "2026-10-01T05:17:33.0587497Z"
+[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 13432, path: "C:/Program Files/Unity/Hub/Editor/6000.3.21f1/Editor/Data/Resources/Licensing/Client/Unity.Licensing.Client.exe")
+[Licensing::Module] LicensingClient has failed validation; ignoring
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.18.1+9fbee8e
+  Session Id:              a996b0c6688e4ac3906fb9e52ce2f2f4
+  Correlation Id:          8285086f732106bd6d26c44468156621
+  External correlation Id: 7457220634219993468
+  Machine Id:              dNinDYak6EUa2pX7RMEoTuNEbYA=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-田尻大翔-6000.3.21" (connect: 0.00s, validation: 0.01s, handshake: 0.04s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-田尻大翔-6000.3.21-notifications" at "2026-10-01T05:17:33.1058566Z"
+[Licensing::Module] Error: Access token is unavailable; failed to update
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: 15669713720629-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+[Licensing::Client] Successfully updated license, isAsync: True, time: 0.01
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] Licensing Background thread has ended after 6.77s
+[Licensing::Module] Licensing is initialized (took 5.58s).
+[Licensing::Client] Successfully resolved entitlement details
+Library Redirect Path: Library/
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 6000.3.21f1 (c02631ffc030)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.3.21f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/田尻大翔/Documents/Codex/2026-08-07/new-chat/outputs/HimoHitoPrototype/.codex_tmp/MainStageCleanReproduction_20261001/QAProject/Assets
+Forcing GfxDevice: Direct3D 11
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: Intel(R) Iris(R) Xe Graphics (ID=0xa7a0)
+    Vendor:   Intel
+    VRAM:     8026 MB
+    Driver:   31.0.101.4255
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.3.21f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.3.21f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.3.21f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56396
+Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
+Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
+ImportWorker Server TCP listen port: 0
+AcceleratorClientConnectionCallback - disconnected - :0
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.3.21f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.021795 seconds.
+- Loaded All Assemblies, in  1.610 seconds
+Native extension for WindowsStandalone target not found
+Package Manager log level set to [2]
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:False
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.261 seconds
+Domain Reload Profiling: 2862ms
+	BeginReloadAssembly (645ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (6ms)
+	RebuildCommonClasses (189ms)
+	RebuildNativeTypeToScriptingClass (51ms)
+	initialDomainReloadingComplete (166ms)
+	LoadAllAssembliesAndSetupDomain (549ms)
+		LoadAssemblies (629ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (539ms)
+			TypeCache.Refresh (535ms)
+				TypeCache.ScanAssembly (483ms)
+			BuildScriptInfoCaches (0ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (1262ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1158ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (132ms)
+			SetLoadedEditorAssemblies (10ms)
+			BeforeProcessingInitializeOnLoad (248ms)
+			ProcessInitializeOnLoadAttributes (428ms)
+			ProcessInitializeOnLoadMethodAttributes (339ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+[Licensing::Client] Successfully resolved entitlement details
+Application.AssetDatabase Initial Refresh Start
+[Package Manager] Restoring resolved packages state from cache
+[Licensing::Client] Successfully resolved entitlement details
+[Package Manager] Registered 5 packages:
+  Built-in packages:
+    com.unity.modules.audio@1.0.0 (location: C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype\.codex_tmp\MainStageCleanReproduction_20261001\QAProject\Library\PackageCache\com.unity.modules.audio)
+    com.unity.modules.imgui@1.0.0 (location: C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype\.codex_tmp\MainStageCleanReproduction_20261001\QAProject\Library\PackageCache\com.unity.modules.imgui)
+    com.unity.modules.jsonserialize@1.0.0 (location: C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype\.codex_tmp\MainStageCleanReproduction_20261001\QAProject\Library\PackageCache\com.unity.modules.jsonserialize)
+    com.unity.modules.particlesystem@1.0.0 (location: C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype\.codex_tmp\MainStageCleanReproduction_20261001\QAProject\Library\PackageCache\com.unity.modules.particlesystem)
+    com.unity.modules.physics2d@1.0.0 (location: C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype\.codex_tmp\MainStageCleanReproduction_20261001\QAProject\Library\PackageCache\com.unity.modules.physics2d)
+[Subsystems] No new subsystems found in resolved package list.
+[Package Manager] Done registering packages in 0.02 seconds
+Starting: C:\Program Files\Unity\Hub\Editor\6000.3.21f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: C:/Users/田尻大翔/Documents/Codex/2026-08-07/new-chat/outputs/HimoHitoPrototype/.codex_tmp/MainStageCleanReproduction_20261001/QAProject
+DisplayProgressbar: Compiling Scripts
+ExitCode: 0 Duration: 0s285ms
+*** Tundra build success (0.12 seconds), 0 items updated, 155 evaluated
+AssetDatabase: script compilation time: 1.680000s
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.989 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Native extension for WindowsStandalone target not found
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.487 seconds
+Domain Reload Profiling: 2467ms
+	BeginReloadAssembly (725ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (88ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (174ms)
+	RebuildCommonClasses (101ms)
+	RebuildNativeTypeToScriptingClass (35ms)
+	initialDomainReloadingComplete (62ms)
+	LoadAllAssembliesAndSetupDomain (56ms)
+		LoadAssemblies (375ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (30ms)
+			TypeCache.Refresh (15ms)
+				TypeCache.ScanAssembly (3ms)
+			BuildScriptInfoCaches (3ms)
+			ResolveRequiredComponents (6ms)
+	FinalizeReload (1488ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (973ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (70ms)
+			SetLoadedEditorAssemblies (7ms)
+			BeforeProcessingInitializeOnLoad (354ms)
+			ProcessInitializeOnLoadAttributes (359ms)
+			ProcessInitializeOnLoadMethodAttributes (162ms)
+			AfterProcessingInitializeOnLoad (20ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (77ms)
+Asset Pipeline Refresh (id=a5ede5ed45b7c78418c26171768844bb): Total: 4.635 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=1797 ms
+		Asset DB Callback time: managed=110 ms, native=27 ms
+		Scripting: domain reloads=1, domain reload time=990 ms, compile time=1687 ms, other=22 ms
+		Project Asset Count: scripts=42, non-scripts=97
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokeCustomDependenciesCallbacks: 0.004ms
+	InvokePackagesCallback: 36.076ms
+	ApplyChangesToAssetFolders: 0.634ms
+	Scan: 115.507ms
+	OnSourceAssetsModified: 0.005ms
+	CategorizeAssetsWithTransientArtifact: 0.913ms
+	ProcessAssetsWithTransientArtifactChanges: 7.216ms
+	CategorizeAssets: 4.560ms
+	ImportOutOfDateAssets: 1491.591ms (-196.062ms without children)
+		CompileScripts: 1686.547ms
+		ReloadNativeAssets: 0.001ms
+		UnloadImportedAssets: 0.291ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.061ms
+		InitializingProgressBar: 0.001ms
+		PostProcessAllAssetNotificationsAddChangedAssets: 0.001ms
+		OnDemandSchedulerStart: 0.749ms
+	PostProcessAllAssets: 110.816ms
+	GatherAllCurrentPrimaryArtifactRevisions: 0.005ms
+	UnloadStreamsBegin: 4.054ms
+	PersistCurrentRevisions: 0.018ms
+	UnloadStreamsEnd: 0.002ms
+	GenerateScriptTypeHashes: 0.002ms
+	Untracked: 2863.967ms
+
+Application.AssetDatabase Initial Refresh End
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Scanning for USB devices : 2.861ms
+Initializing Unity extensions:
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-ヒモヒト
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 139 unused Assets / (509.7 KB). Loaded Objects now: 767.
+Memory consumption went from 88.6 MB to 88.1 MB.
+Total: 18.463900 ms (FindLiveObjects: 0.130700 ms CreateObjectMapping: 0.028400 ms MarkObjects: 17.746500 ms  DeleteObjects: 0.554900 ms)
+
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 0 unused Assets / (2.2 KB). Loaded Objects now: 769.
+Memory consumption went from 86.6 MB to 86.6 MB.
+Total: 11.570300 ms (FindLiveObjects: 0.089100 ms CreateObjectMapping: 0.016900 ms MarkObjects: 11.451600 ms  DeleteObjects: 0.010100 ms)
+
+[Project] Loading completed in 17.424 seconds
+	Project init time: 				16.549 seconds
+		Template init time: 		0.000 seconds
+		Package Manager init time: 		6.306 seconds
+		Asset Database init time: 		1.167 seconds
+		Global illumination init time: 	0.009 seconds
+		Assemblies load time: 			2.928 seconds
+		Unity extensions init time: 	0.002 seconds
+		Asset Database refresh time: 	4.636 seconds
+	Scene opening time: 			0.431 seconds
+##utp:{"type":"ProjectInfo","version":2,"phase":"Immediate","time":1790831863726,"processId":3396,"projectLoad":17.4238267,"projectInit":16.5490791,"templateInit":0.0,"packageManagerInit":6.3064002,"assetDatabaseInit":1.1671161,"globalIlluminationInit":0.0089339,"assembliesLoad":2.9283099,"unityExtensionsInit":0.002145,"assetDatabaseRefresh":4.6356664,"sceneOpening":0.4310462}
+##utp:{"type":"EditorInfo","version":2,"phase":"Immediate","time":1790831863726,"processId":3396,"editorVersion":"6000.3.21f1 (c02631ffc030)","branch":"6000.3/staging","buildType":"Release","platform":"Windows"}
+Reloading assemblies for play mode.
+Reloading assemblies after forced synchronous recompile.
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.889 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Native extension for WindowsStandalone target not found
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.400 seconds
+Domain Reload Profiling: 2280ms
+	BeginReloadAssembly (616ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (84ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (109ms)
+	RebuildCommonClasses (119ms)
+	RebuildNativeTypeToScriptingClass (35ms)
+	initialDomainReloadingComplete (70ms)
+	LoadAllAssembliesAndSetupDomain (38ms)
+		LoadAssemblies (363ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (26ms)
+			TypeCache.Refresh (10ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (5ms)
+			ResolveRequiredComponents (7ms)
+	FinalizeReload (1401ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (873ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (74ms)
+			SetLoadedEditorAssemblies (7ms)
+			BeforeProcessingInitializeOnLoad (302ms)
+			ProcessInitializeOnLoadAttributes (324ms)
+			ProcessInitializeOnLoadMethodAttributes (147ms)
+			AfterProcessingInitializeOnLoad (18ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (60ms)
+Asset Pipeline Refresh (id=0d134c1abe169204f872e3280e28df7c): Total: 2.425 seconds - Initiated by StopAssetImportingV2(ForceSynchronousImport | ForceDomainReload)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=1465 ms
+		Asset DB Callback time: managed=43 ms, native=1 ms
+		Scripting: domain reloads=1, domain reload time=908 ms, compile time=5 ms, other=0 ms
+		Project Asset Count: scripts=42, non-scripts=97
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokeCustomDependenciesCallbacks: 0.003ms
+	InvokePackagesCallback: 5.248ms
+	ApplyChangesToAssetFolders: 0.155ms
+	Scan: 0.001ms
+	OnSourceAssetsModified: 0.004ms
+	CategorizeAssetsWithTransientArtifact: 0.005ms
+	ProcessAssetsWithTransientArtifactChanges: 0.176ms
+	CategorizeAssets: 1.939ms
+	ImportOutOfDateAssets: 1403.024ms (1397.258ms without children)
+		CompileScripts: 5.007ms
+		CollectScriptTypesHashes: 0.001ms
+		ReloadNativeAssets: 0.001ms
+		UnloadImportedAssets: 0.107ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.057ms
+		InitializingProgressBar: 0.001ms
+		PostProcessAllAssetNotificationsAddChangedAssets: 0.001ms
+		OnDemandSchedulerStart: 0.590ms
+	PostProcessAllAssets: 43.926ms
+	GatherAllCurrentPrimaryArtifactRevisions: 0.024ms
+	UnloadStreamsBegin: 0.112ms
+	PersistCurrentRevisions: 0.017ms
+	UnloadStreamsEnd: 0.002ms
+	GenerateScriptTypeHashes: 0.001ms
+	Untracked: 969.997ms
+
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            1.921 ms
+	Integration:            50.735 ms
+	Integration of assets:  0.004 ms
+	Thread Wait Time:       63.580 ms
+	Total Operation Time:   116.241 ms
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+Play開始地点：Tutorial
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHitoEditor.PlayStartSceneSelector:ConfigurePlayStartScene (string,string) (at Assets/Editor/PlayStartSceneSelector.cs:50)
+HimoHitoEditor.PlayStartSceneSelector:ConfigurePlayStartScene () (at Assets/Editor/PlayStartSceneSelector.cs:23)
+UnityEditor.EditorApplication:Internal_CallDelayFunctions ()
+
+(Filename: Assets/Editor/PlayStartSceneSelector.cs Line: 50)
+
+Start Indexing on Editor startup
+ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+  at System.Collections.Generic.List`1[T].get_Item (System.Int32 index) [0x00009] in <41d29b352f6a475ab1bf7c6628b82790>:0 
+  at UnityEditor.Search.SearchDatabase+<EnumerateAll>d__81.MoveNext () [0x00106] in <63453c9528324daaa566ad51effa49a4>:0 
+  at System.Linq.Enumerable.TryGetFirst[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Boolean& found) [0x00045] in <80564d689e48448fa2a7101993ee7201>:0 
+  at System.Linq.Enumerable.First[TSource] (System.Collections.Generic.IEnumerable`1[T] source) [0x00000] in <80564d689e48448fa2a7101993ee7201>:0 
+  at UnityEditor.Search.SearchDatabase.GetDefaultSearchDatabase () [0x00006] in <63453c9528324daaa566ad51effa49a4>:0 
+  at UnityEditor.Search.SearchInit.IndexationOnStartup () [0x0000c] in <63453c9528324daaa566ad51effa49a4>:0 
+  at UnityEditor.EditorApplication.Internal_CallDelayFunctions () [0x0002c] in <ebc962e8381145e6bdb44b1996e8e9b4>:0 
+
+UnloadTime: 0.435900 ms
+BGM missing: download GANO's 優しい踊り from the official page and place it at Assets/Resources/Audio/YasashiiOdori.mp3 (see README).
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogWarning (object,UnityEngine.Object)
+HimoHito.HimoHitoBackgroundMusic:InitializeAudio () (at Assets/Scripts/HimoHitoBackgroundMusic.cs:82)
+HimoHito.HimoHitoBackgroundMusic:Awake () (at Assets/Scripts/HimoHitoBackgroundMusic.cs:65)
+UnityEngine.GameObject:Internal_AddComponentWithType (System.Type)
+UnityEngine.GameObject:AddComponent (System.Type)
+UnityEngine.GameObject:AddComponent<HimoHito.HimoHitoBackgroundMusic> ()
+HimoHito.HimoHitoBackgroundMusic:SceneLoaded (UnityEngine.SceneManagement.Scene,UnityEngine.SceneManagement.LoadSceneMode) (at Assets/Scripts/HimoHitoBackgroundMusic.cs:51)
+UnityEngine.SceneManagement.SceneManager:Internal_SceneLoaded (UnityEngine.SceneManagement.Scene,UnityEngine.SceneManagement.LoadSceneMode)
+
+(Filename: Assets/Scripts/HimoHitoBackgroundMusic.cs Line: 82)
+
+Loaded scene 'Assets/Scenes/Tutorial.unity'
+	Deserialize:            69.648 ms
+	Integration:            11340.328 ms
+	Integration of assets:  0.008 ms
+	Thread Wait Time:       527.580 ms
+	Total Operation Time:   11937.564 ms
+Unloading 26 unused Assets / (20.5 KB). Loaded Objects now: 2119.
+Memory consumption went from 389.2 MB to 389.2 MB.
+Total: 16.168200 ms (FindLiveObjects: 0.337400 ms CreateObjectMapping: 0.050300 ms MarkObjects: 14.266000 ms  DeleteObjects: 1.511500 ms)
+
+Created GICache directory at C:/Users/田尻大翔/AppData/LocalLow/Unity/Caches/GiCache. Took: 0.079s, timestamps: [20.083 - 20.162]
+[Licensing::Client] Successfully resolved entitlement details
+CLEAN_FOCUSED CONTROLLED_SETUP (10.90, 1.10)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CleanFocused:Log (string) (at Assets/QA/CleanFocused.cs:20)
+CleanFocused:Position (UnityEngine.Vector2) (at Assets/QA/CleanFocused.cs:33)
+CleanFocused/<Run>d__28:MoveNext () (at Assets/QA/CleanFocused.cs:104)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/CleanFocused.cs Line: 20)
+
+CLEAN_FOCUSED PASS Tutorial sign keys present 2
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CleanFocused:Log (string) (at Assets/QA/CleanFocused.cs:20)
+CleanFocused:Check (bool,string) (at Assets/QA/CleanFocused.cs:21)
+CleanFocused/<Run>d__28:MoveNext () (at Assets/QA/CleanFocused.cs:106)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/CleanFocused.cs Line: 20)
+
+CLEAN_FOCUSED SIGN_TEXT section=2 key=W color=RGBA(0.271, 0.102, 0.055, 1.000)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CleanFocused:Log (string) (at Assets/QA/CleanFocused.cs:20)
+CleanFocused/<Run>d__28:MoveNext () (at Assets/QA/CleanFocused.cs:107)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/CleanFocused.cs Line: 20)
+
+CLEAN_FOCUSED FAIL Tutorial dark ink maintained 2/W
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CleanFocused:Log (string) (at Assets/QA/CleanFocused.cs:20)
+CleanFocused:Check (bool,string) (at Assets/QA/CleanFocused.cs:21)
+CleanFocused/<Run>d__28:MoveNext () (at Assets/QA/CleanFocused.cs:107)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/CleanFocused.cs Line: 20)
+
+CLEAN_FOCUSED SIGN_TEXT section=2 key=S color=RGBA(0.271, 0.102, 0.055, 1.000)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CleanFocused:Log (string) (at Assets/QA/CleanFocused.cs:20)
+CleanFocused/<Run>d__28:MoveNext () (at Assets/QA/CleanFocused.cs:107)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/CleanFocused.cs Line: 20)
+
+CLEAN_FOCUSED FAIL Tutorial dark ink maintained 2/S
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CleanFocused:Log (string) (at Assets/QA/CleanFocused.cs:20)
+CleanFocused:Check (bool,string) (at Assets/QA/CleanFocused.cs:21)
+CleanFocused/<Run>d__28:MoveNext () (at Assets/QA/CleanFocused.cs:107)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/CleanFocused.cs Line: 20)
+
+CLEAN_FOCUSED CONTROLLED_SETUP (25.90, 1.10)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CleanFocused:Log (string) (at Assets/QA/CleanFocused.cs:20)
+CleanFocused:Position (UnityEngine.Vector2) (at Assets/QA/CleanFocused.cs:33)
+CleanFocused/<Run>d__28:MoveNext () (at Assets/QA/CleanFocused.cs:104)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/CleanFocused.cs Line: 20)
+
+CLEAN_FOCUSED PASS Tutorial sign keys present 3
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CleanFocused:Log (string) (at Assets/QA/CleanFocused.cs:20)
+CleanFocused:Check (bool,string) (at Assets/QA/CleanFocused.cs:21)
+CleanFocused/<Run>d__28:MoveNext () (at Assets/QA/CleanFocused.cs:106)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/CleanFocused.cs Line: 20)
+
+CLEAN_FOCUSED SIGN_TEXT section=3 key=Q color=RGBA(0.271, 0.102, 0.055, 1.000)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CleanFocused:Log (string) (at Assets/QA/CleanFocused.cs:20)
+CleanFocused/<Run>d__28:MoveNext () (at Assets/QA/CleanFocused.cs:107)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/CleanFocused.cs Line: 20)
+
+CLEAN_FOCUSED FAIL Tutorial dark ink maintained 3/Q
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CleanFocused:Log (string) (at Assets/QA/CleanFocused.cs:20)
+CleanFocused:Check (bool,string) (at Assets/QA/CleanFocused.cs:21)
+CleanFocused/<Run>d__28:MoveNext () (at Assets/QA/CleanFocused.cs:107)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/CleanFocused.cs Line: 20)
+
+CLEAN_FOCUSED CONTROLLED_SETUP (-5.30, 1.10)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CleanFocused:Log (string) (at Assets/QA/CleanFocused.cs:20)
+CleanFocused:Position (UnityEngine.Vector2) (at Assets/QA/CleanFocused.cs:33)
+CleanFocused/<Run>d__28:MoveNext () (at Assets/QA/CleanFocused.cs:104)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/CleanFocused.cs Line: 20)
+
+CLEAN_FOCUSED PASS Tutorial sign keys present 1
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CleanFocused:Log (string) (at Assets/QA/CleanFocused.cs:20)
+CleanFocused:Check (bool,string) (at Assets/QA/CleanFocused.cs:21)
+CleanFocused/<Run>d__28:MoveNext () (at Assets/QA/CleanFocused.cs:106)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/CleanFocused.cs Line: 20)
+
+CLEAN_FOCUSED SIGN_TEXT section=1 key=E color=RGBA(0.271, 0.102, 0.055, 1.000)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CleanFocused:Log (string) (at Assets/QA/CleanFocused.cs:20)
+CleanFocused/<Run>d__28:MoveNext () (at Assets/QA/CleanFocused.cs:107)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/CleanFocused.cs Line: 20)
+
+CLEAN_FOCUSED FAIL Tutorial dark ink maintained 1/E
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CleanFocused:Log (string) (at Assets/QA/CleanFocused.cs:20)
+CleanFocused:Check (bool,string) (at Assets/QA/CleanFocused.cs:21)
+CleanFocused/<Run>d__28:MoveNext () (at Assets/QA/CleanFocused.cs:107)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/CleanFocused.cs Line: 20)
+
+CLEAN_FOCUSED CONTROLLED_SETUP (37.90, 1.10)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CleanFocused:Log (string) (at Assets/QA/CleanFocused.cs:20)
+CleanFocused:Position (UnityEngine.Vector2) (at Assets/QA/CleanFocused.cs:33)
+CleanFocused/<Run>d__28:MoveNext () (at Assets/QA/CleanFocused.cs:104)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/CleanFocused.cs Line: 20)
+
+CLEAN_FOCUSED PASS Tutorial sign keys present 4
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CleanFocused:Log (string) (at Assets/QA/CleanFocused.cs:20)
+CleanFocused:Check (bool,string) (at Assets/QA/CleanFocused.cs:21)
+CleanFocused/<Run>d__28:MoveNext () (at Assets/QA/CleanFocused.cs:106)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/CleanFocused.cs Line: 20)
+
+CLEAN_FOCUSED SIGN_TEXT section=4 key=F color=RGBA(0.271, 0.102, 0.055, 1.000)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CleanFocused:Log (string) (at Assets/QA/CleanFocused.cs:20)
+CleanFocused/<Run>d__28:MoveNext () (at Assets/QA/CleanFocused.cs:107)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/CleanFocused.cs Line: 20)
+
+CLEAN_FOCUSED FAIL Tutorial dark ink maintained 4/F
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CleanFocused:Log (string) (at Assets/QA/CleanFocused.cs:20)
+CleanFocused:Check (bool,string) (at Assets/QA/CleanFocused.cs:21)
+CleanFocused/<Run>d__28:MoveNext () (at Assets/QA/CleanFocused.cs:107)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/CleanFocused.cs Line: 20)
+
+CLEAN_FOCUSED PASS Tutorial sign3 99→92 committed source
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CleanFocused:Log (string) (at Assets/QA/CleanFocused.cs:20)
+CleanFocused:Check (bool,string) (at Assets/QA/CleanFocused.cs:21)
+CleanFocused/<Run>d__28:MoveNext () (at Assets/QA/CleanFocused.cs:111)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/CleanFocused.cs Line: 20)
+
+CLEAN_FOCUSED FAIL FULL_REPRO_DEPENDENCY BGM clip available
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CleanFocused:Log (string) (at Assets/QA/CleanFocused.cs:20)
+CleanFocused:Check (bool,string) (at Assets/QA/CleanFocused.cs:21)
+CleanFocused/<Run>d__28:MoveNext () (at Assets/QA/CleanFocused.cs:113)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/CleanFocused.cs Line: 20)
+
+CLEAN_FOCUSED CONTROLLED_SETUP (62.70, 1.40)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CleanFocused:Log (string) (at Assets/QA/CleanFocused.cs:20)
+CleanFocused:Position (UnityEngine.Vector2) (at Assets/QA/CleanFocused.cs:33)
+CleanFocused/<Run>d__28:MoveNext () (at Assets/QA/CleanFocused.cs:114)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/CleanFocused.cs Line: 20)
+
+CLEAN_FOCUSED FAIL Tutorial real GoalZone enters Clear
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CleanFocused:Log (string) (at Assets/QA/CleanFocused.cs:20)
+CleanFocused:Check (bool,string) (at Assets/QA/CleanFocused.cs:21)
+CleanFocused/<Run>d__28:MoveNext () (at Assets/QA/CleanFocused.cs:115)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/CleanFocused.cs Line: 20)
+
+CLEAN_FOCUSED FAIL Tutorial Clear physics stopped / audio source present
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CleanFocused:Log (string) (at Assets/QA/CleanFocused.cs:20)
+CleanFocused:Check (bool,string) (at Assets/QA/CleanFocused.cs:21)
+CleanFocused/<ClearInput>d__25:MoveNext () (at Assets/QA/CleanFocused.cs:55)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/CleanFocused.cs Line: 20)
+
+CLEAN_FOCUSED FAIL Tutorial 20 cached A/D trials clear movement/jump/footstep timers
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CleanFocused:Log (string) (at Assets/QA/CleanFocused.cs:20)
+CleanFocused:Check (bool,string) (at Assets/QA/CleanFocused.cs:21)
+CleanFocused/<ClearInput>d__25:MoveNext () (at Assets/QA/CleanFocused.cs:65)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/CleanFocused.cs Line: 20)
+
+CLEAN_FOCUSED PASS Tutorial footstep AudioSource silent in 20 trials
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CleanFocused:Log (string) (at Assets/QA/CleanFocused.cs:20)
+CleanFocused:Check (bool,string) (at Assets/QA/CleanFocused.cs:21)
+CleanFocused/<ClearInput>d__25:MoveNext () (at Assets/QA/CleanFocused.cs:66)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/CleanFocused.cs Line: 20)
+
+CLEAN_FOCUSED FAIL Tutorial remains locked
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CleanFocused:Log (string) (at Assets/QA/CleanFocused.cs:20)
+CleanFocused:Check (bool,string) (at Assets/QA/CleanFocused.cs:21)
+CleanFocused/<ClearInput>d__25:MoveNext () (at Assets/QA/CleanFocused.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/CleanFocused.cs Line: 20)
+
+CLEAN_FOCUSED NOT_OS_KEY_TEST Tutorial uses unmodified Update/FixedUpdate guards
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CleanFocused:Log (string) (at Assets/QA/CleanFocused.cs:20)
+CleanFocused/<ClearInput>d__25:MoveNext () (at Assets/QA/CleanFocused.cs:68)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/CleanFocused.cs Line: 20)
+
+Unloading 52 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 14.297700 ms
+Loaded scene 'Assets/Scenes/MainStage.unity'
+	Deserialize:            29.064 ms
+	Integration:            3852.204 ms
+	Integration of assets:  0.040 ms
+	Thread Wait Time:       0.010 ms
+	Total Operation Time:   3881.318 ms
+Unloading 9 unused Assets / (3.5 MB). Loaded Objects now: 2864.
+Memory consumption went from 331.5 MB to 328.1 MB.
+Total: 13.415500 ms (FindLiveObjects: 0.312500 ms CreateObjectMapping: 0.032500 ms MarkObjects: 12.334800 ms  DeleteObjects: 0.732100 ms)
+
+CLEAN_FOCUSED CONTROLLED_SETUP (172.80, -0.95)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CleanFocused:Log (string) (at Assets/QA/CleanFocused.cs:20)
+CleanFocused:Position (UnityEngine.Vector2) (at Assets/QA/CleanFocused.cs:33)
+CleanFocused/<Run>d__28:MoveNext () (at Assets/QA/CleanFocused.cs:118)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/CleanFocused.cs Line: 20)
+
+CLEAN_FOCUSED PASS S9 real checkpoint captured
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CleanFocused:Log (string) (at Assets/QA/CleanFocused.cs:20)
+CleanFocused:Check (bool,string) (at Assets/QA/CleanFocused.cs:21)
+CleanFocused/<Run>d__28:MoveNext () (at Assets/QA/CleanFocused.cs:119)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/CleanFocused.cs Line: 20)
+
+CLEAN_FOCUSED CONTROLLED_SETUP (179.35, -1.42)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CleanFocused:Log (string) (at Assets/QA/CleanFocused.cs:20)
+CleanFocused:Position (UnityEngine.Vector2) (at Assets/QA/CleanFocused.cs:33)
+CleanFocused/<Run>d__28:MoveNext () (at Assets/QA/CleanFocused.cs:120)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/CleanFocused.cs Line: 20)
+
+CLEAN_FOCUSED PASS S9 first bridge
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CleanFocused:Log (string) (at Assets/QA/CleanFocused.cs:20)
+CleanFocused:Check (bool,string) (at Assets/QA/CleanFocused.cs:21)
+CleanFocused/<Run>d__28:MoveNext () (at Assets/QA/CleanFocused.cs:121)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/CleanFocused.cs Line: 20)
+
+CLEAN_FOCUSED PASS S9 physical walk 184.55 actual=(184.67, -0.51)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CleanFocused:Log (string) (at Assets/QA/CleanFocused.cs:20)
+CleanFocused:Check (bool,string) (at Assets/QA/CleanFocused.cs:21)
+CleanFocused/<Walk>d__26:MoveNext () (at Assets/QA/CleanFocused.cs:74)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/CleanFocused.cs Line: 20)
+
+CLEAN_FOCUSED SWEEP left position=(184.67, -0.51) rightRay=24 rightSelected=0 centerStealsRight=24 mismatch=0
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CleanFocused:Log (string) (at Assets/QA/CleanFocused.cs:20)
+CleanFocused:Sweep (string) (at Assets/QA/CleanFocused.cs:95)
+CleanFocused/<Run>d__28:MoveNext () (at Assets/QA/CleanFocused.cs:122)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/CleanFocused.cs Line: 20)
+
+CLEAN_FOCUSED FAIL S9 right Hook resolver/highlight left
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CleanFocused:Log (string) (at Assets/QA/CleanFocused.cs:20)
+CleanFocused:Check (bool,string) (at Assets/QA/CleanFocused.cs:21)
+CleanFocused:Sweep (string) (at Assets/QA/CleanFocused.cs:96)
+CleanFocused/<Run>d__28:MoveNext () (at Assets/QA/CleanFocused.cs:122)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/CleanFocused.cs Line: 20)
+
+CLEAN_FOCUSED PASS S9 physical walk 184.85 actual=(185.59, -0.33)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CleanFocused:Log (string) (at Assets/QA/CleanFocused.cs:20)
+CleanFocused:Check (bool,string) (at Assets/QA/CleanFocused.cs:21)
+CleanFocused/<Walk>d__26:MoveNext () (at Assets/QA/CleanFocused.cs:74)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/CleanFocused.cs Line: 20)
+
+CLEAN_FOCUSED SWEEP near position=(185.59, -0.33) rightRay=31 rightSelected=31 centerStealsRight=0 mismatch=0
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CleanFocused:Log (string) (at Assets/QA/CleanFocused.cs:20)
+CleanFocused:Sweep (string) (at Assets/QA/CleanFocused.cs:95)
+CleanFocused/<Run>d__28:MoveNext () (at Assets/QA/CleanFocused.cs:122)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/CleanFocused.cs Line: 20)
+
+CLEAN_FOCUSED PASS S9 right Hook resolver/highlight near
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CleanFocused:Log (string) (at Assets/QA/CleanFocused.cs:20)
+CleanFocused:Check (bool,string) (at Assets/QA/CleanFocused.cs:21)
+CleanFocused:Sweep (string) (at Assets/QA/CleanFocused.cs:96)
+CleanFocused/<Run>d__28:MoveNext () (at Assets/QA/CleanFocused.cs:122)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/CleanFocused.cs Line: 20)
+
+CLEAN_FOCUSED PASS S9 physical walk 185.05 actual=(185.59, -0.33)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CleanFocused:Log (string) (at Assets/QA/CleanFocused.cs:20)
+CleanFocused:Check (bool,string) (at Assets/QA/CleanFocused.cs:21)
+CleanFocused/<Walk>d__26:MoveNext () (at Assets/QA/CleanFocused.cs:74)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/CleanFocused.cs Line: 20)
+
+CLEAN_FOCUSED SWEEP center position=(185.59, -0.33) rightRay=31 rightSelected=31 centerStealsRight=0 mismatch=0
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CleanFocused:Log (string) (at Assets/QA/CleanFocused.cs:20)
+CleanFocused:Sweep (string) (at Assets/QA/CleanFocused.cs:95)
+CleanFocused/<Run>d__28:MoveNext () (at Assets/QA/CleanFocused.cs:122)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/CleanFocused.cs Line: 20)
+
+CLEAN_FOCUSED PASS S9 right Hook resolver/highlight center
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CleanFocused:Log (string) (at Assets/QA/CleanFocused.cs:20)
+CleanFocused:Check (bool,string) (at Assets/QA/CleanFocused.cs:21)
+CleanFocused:Sweep (string) (at Assets/QA/CleanFocused.cs:96)
+CleanFocused/<Run>d__28:MoveNext () (at Assets/QA/CleanFocused.cs:122)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/CleanFocused.cs Line: 20)
+
+CLEAN_FOCUSED CONTROLLED_SETUP (218.70, -0.80)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CleanFocused:Log (string) (at Assets/QA/CleanFocused.cs:20)
+CleanFocused:Position (UnityEngine.Vector2) (at Assets/QA/CleanFocused.cs:33)
+CleanFocused/<Run>d__28:MoveNext () (at Assets/QA/CleanFocused.cs:123)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/CleanFocused.cs Line: 20)
+
+CLEAN_FOCUSED PASS Main real GoalZone enters Clear
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CleanFocused:Log (string) (at Assets/QA/CleanFocused.cs:20)
+CleanFocused:Check (bool,string) (at Assets/QA/CleanFocused.cs:21)
+CleanFocused/<Run>d__28:MoveNext () (at Assets/QA/CleanFocused.cs:124)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/CleanFocused.cs Line: 20)
+
+CLEAN_FOCUSED PASS MainStage Clear physics stopped / audio source present
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CleanFocused:Log (string) (at Assets/QA/CleanFocused.cs:20)
+CleanFocused:Check (bool,string) (at Assets/QA/CleanFocused.cs:21)
+CleanFocused/<ClearInput>d__25:MoveNext () (at Assets/QA/CleanFocused.cs:55)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/CleanFocused.cs Line: 20)
+
+CLEAN_FOCUSED PASS MainStage 20 cached A/D trials clear movement/jump/footstep timers
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CleanFocused:Log (string) (at Assets/QA/CleanFocused.cs:20)
+CleanFocused:Check (bool,string) (at Assets/QA/CleanFocused.cs:21)
+CleanFocused/<ClearInput>d__25:MoveNext () (at Assets/QA/CleanFocused.cs:65)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/CleanFocused.cs Line: 20)
+
+CLEAN_FOCUSED PASS MainStage footstep AudioSource silent in 20 trials
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CleanFocused:Log (string) (at Assets/QA/CleanFocused.cs:20)
+CleanFocused:Check (bool,string) (at Assets/QA/CleanFocused.cs:21)
+CleanFocused/<ClearInput>d__25:MoveNext () (at Assets/QA/CleanFocused.cs:66)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/CleanFocused.cs Line: 20)
+
+CLEAN_FOCUSED PASS MainStage remains locked
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CleanFocused:Log (string) (at Assets/QA/CleanFocused.cs:20)
+CleanFocused:Check (bool,string) (at Assets/QA/CleanFocused.cs:21)
+CleanFocused/<ClearInput>d__25:MoveNext () (at Assets/QA/CleanFocused.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/CleanFocused.cs Line: 20)
+
+CLEAN_FOCUSED NOT_OS_KEY_TEST MainStage uses unmodified Update/FixedUpdate guards
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CleanFocused:Log (string) (at Assets/QA/CleanFocused.cs:20)
+CleanFocused/<ClearInput>d__25:MoveNext () (at Assets/QA/CleanFocused.cs:68)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/CleanFocused.cs Line: 20)
+
+[Physics::Module] Cleanup current backend.
+[Physics::Module] Id: 0xf2b8ea05
+Input System module state changed to: ShutdownInProgress.
+Input System polling thread exited.
+Input System module state changed to: Shutdown.
+[Licensing::IpcConnector] LicenseClient-田尻大翔-6000.3.21-notifications channel disconnected successfully.
+[Licensing::IpcConnector] LicenseClient-田尻大翔-6000.3.21 channel disconnected successfully.
+AcceleratorClientConnectionCallback - disconnected - :0
+Cleanup mono
+Checking for leaked weakptr:
+  Found no leaked weakptrs.
+[Package Manager] Server process was shutdown
+##utp:{"type":"MemoryLeaks","version":2,"phase":"Immediate","time":1790831908649,"processId":3396,"allocatedMemory":10172878,"memoryLabels":[{"Default":29313},{"Permanent":15236},{"NewDelete":68379},{"Thread":4230344},{"Manager":33885},{"VertexData":296},{"Geometry":816},{"Texture":296},{"Shader":79381},{"Material":24},{"GfxDevice":56088},{"Animation":288},{"Audio":2664},{"FreeType":8},{"FontEngine":736},{"Physics":2146},{"Physics2D":16},{"Serialization":720},{"Input":14984},{"JobScheduler":33024},{"TextLib":280},{"Mono":32},{"ScriptingNativeRuntime":155060},{"BaseObject":1685632},{"Resource":1336},{"Renderer":3000},{"Transform":4685},{"File":6862},{"WebCam":616},{"Culling":32},{"Terrain":11394},{"Wind":24},{"STL":40},{"String":24110},{"DynamicArray":88982},{"HashMap":45338},{"Utility":2660822},{"Curl":2478},{"PoolAlloc":2056},{"AI":80},{"TypeTree":5341},{"ScriptManager":512},{"RuntimeInitializeOnLoadManager":64},{"SpriteAtlas":112},{"GI":7792},{"Director":8240},{"CloudService":9184},{"WebRequest":10633},{"VR":47994},{"SceneManager":504},{"Video":208},{"LazyScriptCache":32},{"Camera":17},{"Secure":2377},{"SerializationCache":1576},{"APIUpdating":10320},{"Subsystems":336},{"VirtualTexturing":57888},{"StaticSafetyDebugInfo":278528},{"Analytics":464},{"Hierarchy":608},{"CoreStats":13112},{"Identifiers":6480},{"Gui":96},{"EditorUtility":82649},{"VersionControl":4},{"Undo":947},{"AssetDatabase":319681},{"EditorGi":328},{"UnityConnect":29232},{"Upm":1896},{"AssetCompliance":64},{"DrivenProperties":72},{"LocalIPC":218},{"ProfilerEditor":9746},{"CoreBusinessMetrics":3496},{"Licensing":664},{"AssetReference":32},{"IPCStream":32}]}

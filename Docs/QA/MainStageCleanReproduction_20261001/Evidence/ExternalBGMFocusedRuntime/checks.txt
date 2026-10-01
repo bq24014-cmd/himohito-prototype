@@ -1,0 +1,54 @@
+PASS Stage Selection runtime state / movement locked
+PASS Tutorial starts after menu frame guard
+CONTROLLED_SETUP (-5.28, 1.10)
+PASS Tutorial sign keys present 1
+SIGN_TEXT section=1 key=E color=RGBA(0.271, 0.102, 0.055, 1.000)
+PASS Tutorial dark ink maintained 1/E
+CONTROLLED_SETUP (10.90, 1.10)
+PASS Tutorial sign keys present 2
+SIGN_TEXT section=2 key=W color=RGBA(0.271, 0.102, 0.055, 1.000)
+PASS Tutorial dark ink maintained 2/W
+SIGN_TEXT section=2 key=S color=RGBA(0.271, 0.102, 0.055, 1.000)
+PASS Tutorial dark ink maintained 2/S
+CONTROLLED_SETUP (25.90, 1.10)
+PASS Tutorial sign keys present 3
+SIGN_TEXT section=3 key=Q color=RGBA(0.271, 0.102, 0.055, 1.000)
+PASS Tutorial dark ink maintained 3/Q
+CONTROLLED_SETUP (37.90, 1.10)
+PASS Tutorial sign keys present 4
+SIGN_TEXT section=4 key=F color=RGBA(0.271, 0.102, 0.055, 1.000)
+PASS Tutorial dark ink maintained 4/F
+PASS Tutorial sign3 99→92 committed source
+PASS FULL_REPRO_DEPENDENCY BGM clip available
+PASS BGM AudioSource clip loaded / loop / playing
+BGM_RUNTIME clip=YasashiiOdori samples=3287808 channels=2 frequency=44100 timeSamples=85612
+CONTROLLED_SETUP (62.70, 1.40)
+PASS Tutorial real GoalZone enters Clear
+PASS Tutorial Clear physics stopped / audio source present
+PASS Tutorial 20 cached A/D trials clear movement/jump/footstep timers
+PASS Tutorial footstep AudioSource silent in 20 trials
+PASS Tutorial remains locked
+NOT_OS_KEY_TEST Tutorial uses unmodified Update/FixedUpdate guards
+CONTROLLED_SETUP (172.80, -0.95)
+PASS S9 real checkpoint captured
+CONTROLLED_SETUP (179.35, -1.42)
+PASS S9 first bridge
+PASS S9 physical walk 184.55 actual=(184.67, -0.51)
+CONTROLLED_SETUP (184.67, -0.51)
+SWEEP left position=(184.67, -0.51) rightRay=24 rightSelected=0 centerStealsRight=24 mismatch=0
+PASS S9 out-of-reach left boundary matches approved baseline
+PASS S9 physical walk 184.85 actual=(185.59, -0.33)
+CONTROLLED_SETUP (184.90, -0.40)
+SWEEP near position=(184.90, -0.40) rightRay=27 rightSelected=27 centerStealsRight=0 mismatch=0
+PASS S9 right Hook resolver/highlight near
+PASS S9 physical walk 185.05 actual=(185.59, -0.33)
+CONTROLLED_SETUP (185.06, -0.33)
+SWEEP center position=(185.06, -0.33) rightRay=28 rightSelected=28 centerStealsRight=0 mismatch=0
+PASS S9 right Hook resolver/highlight center
+CONTROLLED_SETUP (218.70, -0.80)
+PASS Main real GoalZone enters Clear
+PASS MainStage Clear physics stopped / audio source present
+PASS MainStage 20 cached A/D trials clear movement/jump/footstep timers
+PASS MainStage footstep AudioSource silent in 20 trials
+PASS MainStage remains locked
+NOT_OS_KEY_TEST MainStage uses unmodified Update/FixedUpdate guards

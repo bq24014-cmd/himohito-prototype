@@ -1,0 +1,22 @@
+{
+  "BuildProject": {
+    "production_scripts_and_main_scene_exact_head": true,
+    "input_deltas_after_editor_import": [
+      {
+        "path": "Assets/Resources/Audio/YasashiiOdori.mp3.meta",
+        "expected": "646890829E2C505FA4E7556B57F9D77F6E30E1418A2BD06146AB70EB0E5D3854",
+        "actual": "MISSING"
+      }
+    ]
+  },
+  "QAProject": {
+    "production_scripts_and_main_scene_exact_head": true,
+    "input_deltas_after_editor_import": [
+      {
+        "path": "Assets/Resources/Audio/YasashiiOdori.mp3.meta",
+        "expected": "646890829E2C505FA4E7556B57F9D77F6E30E1418A2BD06146AB70EB0E5D3854",
+        "actual": "MISSING"
+      }
+    ]
+  }
+}

@@ -1,0 +1,127 @@
+1: using UnityEngine;
+2: using UnityEngine.SceneManagement;
+3: 
+4: namespace HimoHito
+5: {
+6:     /// <summary>
+7:     /// Applies the 0829 manual's C-2 rule: authored terrain is solid from every
+8:     /// direction. Generated rope bridges keep their own collision behaviour.
+9:     /// </summary>
+10:     public static class MainStageFloorCollisionSetup
+11:     {
+12:         private const string MainStageSceneName = "MainStage";
+13:         private const string MainObjectPrefix = "Main ";
+14: 
+15:         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
+16:         private static void RegisterSceneSetup()
+17:         {
+18:             // Also run after Tutorial -> MainStage and scene reloads. Unsubscribe
+19:             // first so Enter Play Mode without domain reload cannot double-register.
+20:             SceneManager.sceneLoaded -= OnSceneLoaded;
+21:             SceneManager.sceneLoaded += OnSceneLoaded;
+22:         }
+23: 
+24:         private static void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+25:         {
+26:             if (scene.name == MainStageSceneName && scene == SceneManager.GetActiveScene())
+27:             {
+28:                 ApplyCurrentScene();
+29:             }
+30:         }
+31: 
+32:         public static bool ApplyCurrentScene()
+33:         {
+34:             bool changed = EnsureSectionTwoCheckpoint();
+35:             changed |= MainStageSectionTwoSetup.ApplyCurrentScene();
+36:             changed |= MainStageSectionThreeSetup.ApplyCurrentScene();
+37:             changed |= MainStageSectionFourSetup.ApplyCurrentScene();
+38:             changed |= MainStageSectionFiveSetup.ApplyCurrentScene();
+39:             changed |= MainStageSectionSixSetup.ApplyCurrentScene();
+40:             changed |= MainStageSectionSevenSetup.ApplyCurrentScene();
+41:             changed |= MainStageSectionNineSetup.ApplyCurrentScene();
+42:             changed |= MainStageSectionTenSetup.ApplyCurrentScene();
+43:             foreach (GameObject candidate in
+44:                      Resources.FindObjectsOfTypeAll<GameObject>())
+45:             {
+46:                 if (!candidate.scene.IsValid() ||
+47:                     candidate.scene.name != MainStageSceneName ||
+48:                     !candidate.name.StartsWith(
+49:                         MainObjectPrefix,
+50:                         System.StringComparison.Ordinal) ||
+51:                     !candidate.TryGetComponent(out BoxCollider2D floorCollider) ||
+52:                     floorCollider.isTrigger ||
+53:                     candidate.TryGetComponent(out RopeResource _) ||
+54:                     candidate.TryGetComponent(out HookPoint _) ||
+55:                     candidate.TryGetComponent(
+56:                         out SwingPassThroughRailPlatform _))
+57:                 {
+58:                     continue;
+59:                 }
+60: 
+61:                 if (!candidate.TryGetComponent(out SolidSprite _))
+62:                 {
+63:                     continue;
+64:                 }
+65: 
+66:                 changed |= EnsureSolid(candidate);
+67:             }
+68: 
+69:             RopeResource player = Object.FindFirstObjectByType<RopeResource>();
+70:             if (player != null)
+71:             {
+72:                 changed |= MainStageVisuals.Apply(player.gameObject);
+73:             }
+74: 
+75:             return changed;
+76:         }
+77: 
+78:         private static bool EnsureSectionTwoCheckpoint()
+79:         {
+80:             GameObject landing = SceneObjectLookup.Find("Main Landing 1", MainStageSceneName);
+81:             if (landing == null || !landing.TryGetComponent(out Collider2D floor) ||
+82:                 landing.TryGetComponent(out MainStageCheckpoint _))
+83:             {
+84:                 return false;
+85:             }
+86: 
+87:             // Repair the authored opening, without rebuilding or moving its bank.
+88:             Bounds bounds = floor.bounds;
+89:             landing.AddComponent<MainStageCheckpoint>().Configure(2,
+90:                 new Vector2(bounds.center.x, bounds.max.y + 0.7f), 50f);
+91:             return true;
+92:         }
+93: 
+94:         private static bool EnsureSolid(GameObject floor)
+95:         {
+96:             bool changed = false;
+97:             if (floor.TryGetComponent(out OneWayRailPlatform oneWayRail))
+98:             {
+99:                 if (Application.isPlaying)
+100:                 {
+101:                     Object.Destroy(oneWayRail);
+102:                 }
+103:                 else
+104:                 {
+105:                     Object.DestroyImmediate(oneWayRail);
+106:                 }
+107:                 changed = true;
+108:             }
+109: 
+110:             if (floor.TryGetComponent(out PlatformEffector2D effector) &&
+111:                 effector.enabled)
+112:             {
+113:                 effector.enabled = false;
+114:                 changed = true;
+115:             }
+116: 
+117:             if (!floor.TryGetComponent(out SolidSwingSurface _))
+118:             {
+119:                 floor.AddComponent<SolidSwingSurface>();
+120:                 changed = true;
+121:             }
+122: 
+123:             return changed;
+124:         }
+125: 
+126:     }
+127: }

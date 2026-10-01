@@ -1,0 +1,22 @@
+{
+  "baseline_head": "4919233cd1d0815afb438bd35a7336492ec09548",
+  "task": "C:\\Users\\田尻大翔\\Documents\\Codex\\2026-08-07\\new-chat\\outputs\\HimoHitoPrototype\\.codex_tmp\\MainStageCleanReproduction_20261001\\ExternalBGM_20261001_151833",
+  "copies": {
+    "BuildProject": {
+      "project": "C:\\Users\\田尻大翔\\Documents\\Codex\\2026-08-07\\new-chat\\outputs\\HimoHitoPrototype\\.codex_tmp\\MainStageCleanReproduction_20261001\\ExternalBGM_20261001_151833\\BuildProject",
+      "copy_destination": "C:\\Users\\田尻大翔\\Documents\\Codex\\2026-08-07\\new-chat\\outputs\\HimoHitoPrototype\\.codex_tmp\\MainStageCleanReproduction_20261001\\ExternalBGM_20261001_151833\\BuildProject\\Assets\\Resources\\Audio\\YasashiiOdori.mp3",
+      "copied_sha256": "25C52DA234D42C7A5E5CC91D45AEED14829F845EA15932A88AC94AB006781E83",
+      "original_sha256_after_copy": "25C52DA234D42C7A5E5CC91D45AEED14829F845EA15932A88AC94AB006781E83",
+      "committed_input_differences": []
+    },
+    "QAProject": {
+      "project": "C:\\Users\\田尻大翔\\Documents\\Codex\\2026-08-07\\new-chat\\outputs\\HimoHitoPrototype\\.codex_tmp\\MainStageCleanReproduction_20261001\\ExternalBGM_20261001_151833\\QAProject",
+      "copy_destination": "C:\\Users\\田尻大翔\\Documents\\Codex\\2026-08-07\\new-chat\\outputs\\HimoHitoPrototype\\.codex_tmp\\MainStageCleanReproduction_20261001\\ExternalBGM_20261001_151833\\QAProject\\Assets\\Resources\\Audio\\YasashiiOdori.mp3",
+      "copied_sha256": "25C52DA234D42C7A5E5CC91D45AEED14829F845EA15932A88AC94AB006781E83",
+      "original_sha256_after_copy": "25C52DA234D42C7A5E5CC91D45AEED14829F845EA15932A88AC94AB006781E83",
+      "committed_input_differences": []
+    }
+  },
+  "condition": "clean HEAD + documented external BGM dependency",
+  "old_builds_used_or_overwritten": false
+}

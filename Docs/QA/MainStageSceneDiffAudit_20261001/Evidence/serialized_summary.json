@@ -1,0 +1,20 @@
+{
+  "branch": "main",
+  "head": "4919233cd1d0815afb438bd35a7336492ec09548",
+  "origin_main": "4919233cd1d0815afb438bd35a7336492ec09548",
+  "head_scene_sha256": "B6191C44EE8FC841784B4C10EB1940DBA5220EAE112165FD09353D32AF879151",
+  "working_scene_sha256": "57D2464751B5B9C2A78E6C56F34197E9BC2629983FADAA1DFF6E0BA0B4BC2284",
+  "head_CRLF": 0,
+  "working_CRLF": 0,
+  "head_LF": 18607,
+  "working_LF": 19187,
+  "added_documents": 20,
+  "removed_documents": 0,
+  "fileid_remap": {},
+  "property_rows": 570,
+  "whitespace_only_property_rows": 46,
+  "diff_check_trailing_warnings": 49,
+  "submission_scene_path": "C:\\Users\\田尻大翔\\Documents\\Codex\\2026-08-07\\new-chat\\outputs\\HimoHitoPrototype\\.codex_tmp\\SubmissionBuild20260911\\Assets\\Scenes\\MainStage.unity",
+  "submission_scene_sha256": "57D2464751B5B9C2A78E6C56F34197E9BC2629983FADAA1DFF6E0BA0B4BC2284",
+  "working_equals_submission": true
+}

@@ -1,0 +1,24 @@
+[
+  {
+    "label": "A",
+    "exe": "C:\\Users\\Public\\HimoHitoDeterministicAB_20261001_154205_A\\HimoHitoPrototype.exe",
+    "output": "C:\\Users\\田尻大翔\\Documents\\Codex\\2026-08-07\\new-chat\\outputs\\HimoHitoPrototype\\output\\DeterministicSceneSyncAB_20261001_154205\\A\\Game",
+    "process_id": 11592,
+    "started": "2026-10-01T15:52:26.1715281+09:00",
+    "copied_files": 145,
+    "copy_sha_match": true,
+    "ui_verified": true,
+    "human_confirmation": "はい: A/B両方Stage Selection表示・開始操作正常"
+  },
+  {
+    "label": "B",
+    "exe": "C:\\Users\\Public\\HimoHitoDeterministicAB_20261001_154205_B\\HimoHitoPrototype.exe",
+    "output": "C:\\Users\\田尻大翔\\Documents\\Codex\\2026-08-07\\new-chat\\outputs\\HimoHitoPrototype\\output\\DeterministicSceneSyncAB_20261001_154205\\B\\Game",
+    "process_id": 24592,
+    "started": "2026-10-01T15:54:04.5575485+09:00",
+    "copied_files": 145,
+    "copy_sha_match": true,
+    "ui_verified": true,
+    "human_confirmation": "はい: A/B両方Stage Selection表示・開始操作正常"
+  }
+]

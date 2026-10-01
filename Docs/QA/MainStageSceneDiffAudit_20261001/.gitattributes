@@ -1,0 +1,2 @@
+# Raw audit evidence must retain its measured bytes and hashes.
+Evidence/** -text

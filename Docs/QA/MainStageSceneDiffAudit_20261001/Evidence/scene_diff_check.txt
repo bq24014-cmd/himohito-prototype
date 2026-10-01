@@ -1,0 +1,98 @@
+Assets/Scenes/MainStage.unity:354: trailing whitespace.
++  m_Name: 
+Assets/Scenes/MainStage.unity:590: trailing whitespace.
++  m_Name: 
+Assets/Scenes/MainStage.unity:709: trailing whitespace.
++  m_Name: 
+Assets/Scenes/MainStage.unity:919: trailing whitespace.
++  m_Name: 
+Assets/Scenes/MainStage.unity:1039: trailing whitespace.
++  m_Name: 
+Assets/Scenes/MainStage.unity:1276: trailing whitespace.
++  m_Name: 
+Assets/Scenes/MainStage.unity:2291: trailing whitespace.
++  m_Name: 
+Assets/Scenes/MainStage.unity:2933: trailing whitespace.
++  m_Name: 
+Assets/Scenes/MainStage.unity:3423: trailing whitespace.
++  m_Name: 
+Assets/Scenes/MainStage.unity:4541: trailing whitespace.
++  m_Name: 
+Assets/Scenes/MainStage.unity:5228: trailing whitespace.
++  m_Name: 
+Assets/Scenes/MainStage.unity:5439: trailing whitespace.
++  m_Name: 
+Assets/Scenes/MainStage.unity:5820: trailing whitespace.
++  m_Name: 
+Assets/Scenes/MainStage.unity:6057: trailing whitespace.
++  m_Name: 
+Assets/Scenes/MainStage.unity:6267: trailing whitespace.
++  m_Name: 
+Assets/Scenes/MainStage.unity:6391: trailing whitespace.
++  m_Name: 
+Assets/Scenes/MainStage.unity:6754: trailing whitespace.
++  m_Name: 
+Assets/Scenes/MainStage.unity:7634: trailing whitespace.
++  m_Name: 
+Assets/Scenes/MainStage.unity:8081: trailing whitespace.
++  m_Name: 
+Assets/Scenes/MainStage.unity:8201: trailing whitespace.
++  m_Name: 
+Assets/Scenes/MainStage.unity:8320: trailing whitespace.
++  m_Name: 
+Assets/Scenes/MainStage.unity:8807: trailing whitespace.
++  m_Name: 
+Assets/Scenes/MainStage.unity:9470: trailing whitespace.
++  m_Name: 
+Assets/Scenes/MainStage.unity:9607: trailing whitespace.
++  m_Name: 
+Assets/Scenes/MainStage.unity:9680: trailing whitespace.
++  m_Name: 
+Assets/Scenes/MainStage.unity:10603: trailing whitespace.
++  m_Name: 
+Assets/Scenes/MainStage.unity:10932: trailing whitespace.
++  m_Name: 
+Assets/Scenes/MainStage.unity:11874: trailing whitespace.
++  m_Name: 
+Assets/Scenes/MainStage.unity:12163: trailing whitespace.
++  m_Name: 
+Assets/Scenes/MainStage.unity:12474: trailing whitespace.
++  m_Name: 
+Assets/Scenes/MainStage.unity:12593: trailing whitespace.
++  m_Name: 
+Assets/Scenes/MainStage.unity:13156: trailing whitespace.
++  m_Name: 
+Assets/Scenes/MainStage.unity:13171: trailing whitespace.
++  m_Name: 
+Assets/Scenes/MainStage.unity:13475: trailing whitespace.
++  m_Name: 
+Assets/Scenes/MainStage.unity:13803: trailing whitespace.
++  m_Name: 
+Assets/Scenes/MainStage.unity:14023: trailing whitespace.
++  m_Name: 
+Assets/Scenes/MainStage.unity:14603: trailing whitespace.
++  m_Name: 
+Assets/Scenes/MainStage.unity:15157: trailing whitespace.
++  m_Name: 
+Assets/Scenes/MainStage.unity:15448: trailing whitespace.
++  m_Name: 
+Assets/Scenes/MainStage.unity:16475: trailing whitespace.
++  m_Name: 
+Assets/Scenes/MainStage.unity:16712: trailing whitespace.
++  m_Name: 
+Assets/Scenes/MainStage.unity:17001: trailing whitespace.
++  m_Name: 
+Assets/Scenes/MainStage.unity:17329: trailing whitespace.
++  m_Name: 
+Assets/Scenes/MainStage.unity:17659: trailing whitespace.
++  m_Name: 
+Assets/Scenes/MainStage.unity:18062: trailing whitespace.
++  m_Name: 
+Assets/Scenes/MainStage.unity:18282: trailing whitespace.
++  m_Name: 
+Assets/Scenes/MainStage.unity:18502: trailing whitespace.
++  m_Name: 
+Assets/Scenes/MainStage.unity:18722: trailing whitespace.
++  m_Name: 
+Assets/Scenes/MainStage.unity:18942: trailing whitespace.
++  m_Name: 

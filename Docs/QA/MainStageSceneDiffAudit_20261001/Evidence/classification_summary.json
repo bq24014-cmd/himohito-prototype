@@ -1,0 +1,19 @@
+{
+  "unit_definition": "16 changed existing property entries + 20 added Unity documents = 36 semantic/structural units; full leaf/default table counted separately. Added-object default rows are not claimed to be separate gameplay changes.",
+  "semantic_structural_units": 36,
+  "existing_content_property_rows": 16,
+  "new_documents": 20,
+  "new_document_property_rows": 508,
+  "complete_property_rows": 570,
+  "classification_rows": {
+    "C": 390,
+    "D": 134,
+    "E": 46
+  },
+  "whitespace_only_rows": 46,
+  "relocated_unchanged_documents": 0,
+  "diff_check_trailing_warnings": 49,
+  "line_ending_only_deltas": 0,
+  "removed_documents": 0,
+  "fileid_remaps": 0
+}

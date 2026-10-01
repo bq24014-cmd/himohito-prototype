@@ -1,0 +1,456 @@
+1: using UnityEngine;
+2: 
+3: namespace HimoHito
+4: {
+5:     /// <summary>
+6:     /// Builds section five from slide 24 of the 0829 stage manual.
+7:     /// A length-six bridge between the green shelf Hooks blocks the light,
+8:     /// then the central blue Hook provides the final swing to the right bank.
+9:     /// </summary>
+10:     public static class MainStageSectionFiveSetup
+11:     {
+12:         public const string LeftShelfName = "Main S05 Left Shelf";
+13:         public const string RightShelfName = "Main S05 Right Shelf";
+14:         public const string BridgeStartHookName =
+15:             "Main Section 5 Green Shadow Start Hook";
+16:         public const string BridgeEndHookName =
+17:             "Main Section 5 Green Shadow End Hook";
+18:         public const string LightMountName = "Main S05 Flashlight Source";
+19:         public const string LightOcclusionOriginName =
+20:             "Main S05 Light Occlusion Origin";
+21:         public const string LightSpotName = "Main S05 Flashlight Spot";
+22:         public const string CentralHookName = "Main S05 Central Hook";
+23:         public const string LandingName = "Main S05 Landing";
+24: 
+25:         public const int BridgeRopeLength = 6;
+26:         public const int SwingRopeLength = 7;
+27: 
+28:         // Section four's landing top is Y=-2.15. The shelf tops are 1.5 higher.
+29:         public static readonly Vector2 LeftShelfPosition =
+30:             new Vector2(93.6f, -0.95f);
+31:         public static readonly Vector2 RightShelfPosition =
+32:             new Vector2(101f, -0.95f);
+33:         public static readonly Vector2 ShelfSize = new Vector2(3f, 0.6f);
+34:         public static readonly Vector2 BridgeStartHookPosition =
+35:             new Vector2(95.1f, -0.65f);
+36:         public static readonly Vector2 BridgeEndHookPosition =
+37:             new Vector2(99.5f, -0.65f);
+38:         public static readonly Vector2 BridgeHookSize =
+39:             new Vector2(0.62f, 0.62f);
+40:         public static readonly Vector2 CentralHookPosition =
+41:             new Vector2(102f, 2.95f);
+42:         public static readonly Vector2 LightMountPosition =
+43:             new Vector2(102f, 3.35f);
+44:         public static readonly Vector2 LightOcclusionOriginPosition =
+45:             new Vector2(97.3f, 2.85f);
+46:         public static readonly Vector2 LightSpotPosition =
+47:             new Vector2(97.3f, -3.15f);
+48:         public const float LightSpotDiameter = 4f;
+49:         public static readonly Vector2 LandingPosition =
+50:             new Vector2(115.1f, -7.15f);
+51:         public static readonly Vector2 LandingSize = new Vector2(8f, 10f);
+52:         public static readonly Vector2 LandingRespawnPosition =
+53:             new Vector2(112.4f, -1.45f);
+54: 
+55:         private static readonly Color ShelfColor =
+56:             new Color(0.56f, 0.29f, 0.09f);
+57:         private static readonly Color HookColor =
+58:             new Color(0.298f, 0.765f, 1f);
+59:         private static readonly Color BridgeHookColor =
+60:             new Color(0.33f, 1f, 0.76f);
+61:         private static readonly Color MountColor =
+62:             new Color(0.42f, 0.24f, 0.12f);
+63:         private static readonly Color LightColor =
+64:             new Color(1f, 0.82f, 0.56f, 0.62f);
+65: 
+66:         public static bool ApplyCurrentScene()
+67:         {
+68:             bool changed = false;
+69:             changed |= DisableLegacyOverlappingObjects();
+70:             changed |= EnsureRailShelf(
+71:                 LeftShelfName,
+72:                 LeftShelfPosition,
+73:                 ShelfSize);
+74:             changed |= EnsureRailShelf(
+75:                 RightShelfName,
+76:                 RightShelfPosition,
+77:                 ShelfSize);
+78:             changed |= EnsureBridgeHook(
+79:                 BridgeStartHookName,
+80:                 BridgeStartHookPosition,
+81:                 BridgeEndHookName,
+82:                 false);
+83:             changed |= EnsureBridgeHook(
+84:                 BridgeEndHookName,
+85:                 BridgeEndHookPosition,
+86:                 BridgeStartHookName,
+87:                 true);
+88: 
+89:             GameObject centralHook = EnsureObject(
+90:                 CentralHookName,
+91:                 CentralHookPosition,
+92:                 new Vector2(1.6f, 0.45f),
+93:                 HookColor,
+94:                 out bool centralHookChanged);
+95:             changed |= centralHookChanged;
+96:             if (!centralHook.TryGetComponent(out HookPoint centralHookPoint))
+97:             {
+98:                 centralHookPoint = centralHook.AddComponent<HookPoint>();
+99:                 changed = true;
+100:             }
+101:             changed |= centralHookPoint.ConfigureFixedAttachmentPoint(Vector2.zero);
+102: 
+103:             changed |= EnsureLightMount();
+104:             GameObject lightOcclusionOrigin = EnsureLightOcclusionOrigin(
+105:                 out bool lightOcclusionOriginChanged);
+106:             changed |= lightOcclusionOriginChanged;
+107:             changed |= EnsureLightSpot(
+108:                 lightOcclusionOrigin != null
+109:                     ? lightOcclusionOrigin.transform
+110:                     : centralHook.transform);
+111:             changed |= EnsureTerrain(
+112:                 LandingName,
+113:                 LandingPosition,
+114:                 LandingSize);
+115: 
+116:             GameObject landing = FindSceneObject(LandingName);
+117:             if (landing != null)
+118:             {
+119:                 if (!landing.TryGetComponent(out MainStageCheckpoint checkpoint))
+120:                 {
+121:                     checkpoint = landing.AddComponent<MainStageCheckpoint>();
+122:                     changed = true;
+123:                 }
+124:                 checkpoint.Configure(6, LandingRespawnPosition, 34f);
+125:             }
+126: 
+127:             return changed;
+128:         }
+129: 
+130:         /// <summary>
+131:         /// Reasserts both authored rail shelves after R or a fall. Generated
+132:         /// rope platforms are restored separately by RopePlatformBuilder.
+133:         /// </summary>
+134:         public static void RestoreRailShelvesAfterRestart()
+135:         {
+136:             EnsureRailShelf(
+137:                 LeftShelfName,
+138:                 LeftShelfPosition,
+139:                 ShelfSize);
+140:             EnsureRailShelf(
+141:                 RightShelfName,
+142:                 RightShelfPosition,
+143:                 ShelfSize);
+144: 
+145:             RestoreRailCollision(FindSceneObject(LeftShelfName));
+146:             RestoreRailCollision(FindSceneObject(RightShelfName));
+147:             MainStageVisuals.RestoreSectionFiveRailVisuals();
+148:         }
+149: 
+150:         private static void RestoreRailCollision(GameObject shelf)
+151:         {
+152:             if (shelf == null)
+153:             {
+154:                 return;
+155:             }
+156:             if (shelf.TryGetComponent(out OneWayRailPlatform oneWayRail))
+157:             {
+158:                 oneWayRail.RestoreAfterRestart();
+159:             }
+160:             if (shelf.TryGetComponent(
+161:                     out SwingPassThroughRailPlatform swingRail))
+162:             {
+163:                 swingRail.enabled = true;
+164:                 swingRail.RestoreAfterRestart();
+165:             }
+166:         }
+167: 
+168:         private static bool DisableLegacyOverlappingObjects()
+169:         {
+170:             bool changed = false;
+171:             string[] legacyNames =
+172:             {
+173:                 MainStageSectionSixSetup.HookName,
+174:                 MainStageSectionSixSetup.FlashlightSpotName,
+175:                 MainStageSectionSixSetup.LandingName,
+176:                 // This old section-seven Hook sits inside the rebuilt
+177:                 // section-five camera and looks like an unintended shortcut.
+178:                 MainStageSectionSevenSetup.HookName
+179:             };
+180:             foreach (string legacyName in legacyNames)
+181:             {
+182:                 GameObject legacy = FindSceneObject(legacyName);
+183:                 if (legacy != null && legacy.activeSelf)
+184:                 {
+185:                     legacy.SetActive(false);
+186:                     changed = true;
+187:                 }
+188:             }
+189:             return changed;
+190:         }
+191: 
+192:         private static bool EnsureTerrain(
+193:             string objectName,
+194:             Vector2 position,
+195:             Vector2 size)
+196:         {
+197:             GameObject terrain = EnsureObject(
+198:                 objectName,
+199:                 position,
+200:                 size,
+201:                 ShelfColor,
+202:                 out bool changed);
+203:             if (!terrain.TryGetComponent(out SolidSwingSurface _))
+204:             {
+205:                 terrain.AddComponent<SolidSwingSurface>();
+206:                 changed = true;
+207:             }
+208:             if (terrain.TryGetComponent(out BoxCollider2D collider) &&
+209:                 (!collider.enabled || collider.isTrigger))
+210:             {
+211:                 collider.enabled = true;
+212:                 collider.isTrigger = false;
+213:                 changed = true;
+214:             }
+215:             return changed;
+216:         }
+217: 
+218:         private static bool EnsureRailShelf(
+219:             string objectName,
+220:             Vector2 position,
+221:             Vector2 size)
+222:         {
+223:             GameObject shelf = EnsureObject(
+224:                 objectName,
+225:                 position,
+226:                 size,
+227:                 HookColor,
+228:                 out bool changed);
+229:             if (shelf.TryGetComponent(out SolidSwingSurface solidSurface))
+230:             {
+231:                 if (Application.isPlaying)
+232:                 {
+233:                     Object.Destroy(solidSurface);
+234:                 }
+235:                 else
+236:                 {
+237:                     Object.DestroyImmediate(solidSurface);
+238:                 }
+239:                 changed = true;
+240:             }
+241:             if (!shelf.TryGetComponent(out PlatformEffector2D effector))
+242:             {
+243:                 effector = shelf.AddComponent<PlatformEffector2D>();
+244:                 changed = true;
+245:             }
+246:             if (!effector.enabled)
+247:             {
+248:                 effector.enabled = true;
+249:                 changed = true;
+250:             }
+251:             if (!shelf.TryGetComponent(out OneWayRailPlatform oneWayRail))
+252:             {
+253:                 oneWayRail = shelf.AddComponent<OneWayRailPlatform>();
+254:                 changed = true;
+255:             }
+256:             oneWayRail.RestoreAfterRestart();
+257:             if (!shelf.TryGetComponent(
+258:                     out SwingPassThroughRailPlatform swingRail))
+259:             {
+260:                 swingRail = shelf.AddComponent<SwingPassThroughRailPlatform>();
+261:                 changed = true;
+262:             }
+263:             if (!swingRail.enabled)
+264:             {
+265:                 swingRail.enabled = true;
+266:                 changed = true;
+267:             }
+268:             if (shelf.TryGetComponent(out BoxCollider2D collider) &&
+269:                 (!collider.enabled || collider.isTrigger))
+270:             {
+271:                 collider.enabled = true;
+272:                 collider.isTrigger = false;
+273:                 changed = true;
+274:             }
+275:             return changed;
+276:         }
+277: 
+278:         private static bool EnsureBridgeHook(
+279:             string objectName,
+280:             Vector2 position,
+281:             string pairedHookName,
+282:             bool canAttach)
+283:         {
+284:             GameObject hook = EnsureObject(
+285:                 objectName,
+286:                 position,
+287:                 BridgeHookSize,
+288:                 BridgeHookColor,
+289:                 out bool changed);
+290:             if (!hook.TryGetComponent(out HookPoint hookPoint))
+291:             {
+292:                 hookPoint = hook.AddComponent<HookPoint>();
+293:                 changed = true;
+294:             }
+295:             changed |= hookPoint.ConfigureFixedAttachmentPoint(Vector2.zero);
+296:             if (!hook.TryGetComponent(out RopePlatformAnchor platformAnchor))
+297:             {
+298:                 platformAnchor = hook.AddComponent<RopePlatformAnchor>();
+299:                 changed = true;
+300:             }
+301:             changed |= platformAnchor.Configure(
+302:                 BridgeRopeLength,
+303:                 pairedHookName);
+304:             if (hook.TryGetComponent(out BoxCollider2D collider) &&
+305:                 collider.enabled != canAttach)
+306:             {
+307:                 collider.enabled = canAttach;
+308:                 changed = true;
+309:             }
+310:             return changed;
+311:         }
+312: 
+313:         private static bool EnsureLightMount()
+314:         {
+315:             GameObject mount = EnsureObject(
+316:                 LightMountName,
+317:                 LightMountPosition,
+318:                 new Vector2(1.2f, 0.8f),
+319:                 MountColor,
+320:                 out bool changed);
+321:             if (mount.TryGetComponent(out BoxCollider2D collider) &&
+322:                 collider.enabled)
+323:             {
+324:                 collider.enabled = false;
+325:                 changed = true;
+326:             }
+327:             return changed;
+328:         }
+329: 
+330:         private static GameObject EnsureLightOcclusionOrigin(out bool changed)
+331:         {
+332:             changed = false;
+333:             GameObject origin = FindSceneObject(LightOcclusionOriginName);
+334:             if (origin == null)
+335:             {
+336:                 origin = new GameObject(LightOcclusionOriginName);
+337:                 changed = true;
+338:             }
+339:             if (!origin.activeSelf)
+340:             {
+341:                 origin.SetActive(true);
+342:                 changed = true;
+343:             }
+344: 
+345:             Vector3 targetPosition = new Vector3(
+346:                 LightOcclusionOriginPosition.x,
+347:                 LightOcclusionOriginPosition.y,
+348:                 0f);
+349:             if (origin.transform.position != targetPosition)
+350:             {
+351:                 origin.transform.position = targetPosition;
+352:                 changed = true;
+353:             }
+354:             return origin;
+355:         }
+356: 
+357:         private static bool EnsureLightSpot(Transform source)
+358:         {
+359:             bool changed = false;
+360:             GameObject spot = FindSceneObject(LightSpotName);
+361:             if (spot == null)
+362:             {
+363:                 spot = new GameObject(LightSpotName);
+364:                 changed = true;
+365:             }
+366: 
+367:             Vector3 targetPosition = new Vector3(
+368:                 LightSpotPosition.x,
+369:                 LightSpotPosition.y,
+370:                 0f);
+371:             Vector3 targetScale = new Vector3(
+372:                 LightSpotDiameter,
+373:                 LightSpotDiameter,
+374:                 1f);
+375:             changed |= spot.transform.position != targetPosition ||
+376:                        spot.transform.localScale != targetScale;
+377:             FlashlightSpotVisual.ConfigureSpot(
+378:                 spot,
+379:                 LightSpotPosition,
+380:                 LightSpotDiameter,
+381:                 LightColor);
+382:             if (!spot.TryGetComponent(out PlatformOccludedLightHazard hazard))
+383:             {
+384:                 hazard = spot.AddComponent<PlatformOccludedLightHazard>();
+385:                 changed = true;
+386:             }
+387:             hazard.Configure(source);
+388:             return changed;
+389:         }
+390: 
+391:         private static GameObject EnsureObject(
+392:             string objectName,
+393:             Vector2 position,
+394:             Vector2 size,
+395:             Color color,
+396:             out bool changed)
+397:         {
+398:             changed = false;
+399:             GameObject target = FindSceneObject(objectName);
+400:             if (target == null)
+401:             {
+402:                 target = new GameObject(objectName);
+403:                 changed = true;
+404:             }
+405:             if (!target.activeSelf)
+406:             {
+407:                 target.SetActive(true);
+408:                 changed = true;
+409:             }
+410: 
+411:             Vector3 targetPosition = new Vector3(position.x, position.y, 0f);
+412:             Vector3 targetScale = new Vector3(size.x, size.y, 1f);
+413:             if (target.transform.position != targetPosition)
+414:             {
+415:                 target.transform.position = targetPosition;
+416:                 changed = true;
+417:             }
+418:             if (target.transform.localScale != targetScale)
+419:             {
+420:                 target.transform.localScale = targetScale;
+421:                 changed = true;
+422:             }
+423:             if (!target.TryGetComponent(out SpriteRenderer _))
+424:             {
+425:                 target.AddComponent<SpriteRenderer>();
+426:                 changed = true;
+427:             }
+428:             if (!target.TryGetComponent(out SolidSprite visual))
+429:             {
+430:                 visual = target.AddComponent<SolidSprite>();
+431:                 changed = true;
+432:             }
+433:             if (visual.Color != color)
+434:             {
+435:                 visual.Color = color;
+436:                 changed = true;
+437:             }
+438:             if (!target.TryGetComponent(out BoxCollider2D collider))
+439:             {
+440:                 collider = target.AddComponent<BoxCollider2D>();
+441:                 changed = true;
+442:             }
+443:             if (collider.size != Vector2.one)
+444:             {
+445:                 collider.size = Vector2.one;
+446:                 changed = true;
+447:             }
+448:             return target;
+449:         }
+450: 
+451:         private static GameObject FindSceneObject(string objectName)
+452:         {
+453:             return SceneObjectLookup.Find(objectName, "MainStage");
+454:         }
+455:     }
+456: }

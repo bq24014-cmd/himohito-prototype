@@ -1,0 +1,32 @@
+[
+  {
+    "copy": "A",
+    "process_id": 29004,
+    "arguments": [
+      "-batchmode",
+      "-force-d3d11",
+      "-projectPath",
+      "\"C:\\Users\\田尻大翔\\Documents\\Codex\\2026-08-07\\new-chat\\outputs\\HimoHitoPrototype\\.codex_tmp\\MainStageCleanReproduction_20261001\\DeterministicAB_20261001_154205\\CopyA\"",
+      "-executeMethod",
+      "HimoHitoEditor.WindowsPrototypeBuilder.BuildFromCommandLine",
+      "-logFile",
+      "\"C:\\Users\\田尻大翔\\Documents\\Codex\\2026-08-07\\new-chat\\outputs\\HimoHitoPrototype\\Docs\\QA\\MainStageCleanReproduction_20261001\\Evidence\\DeterministicSceneSync\\BuildA.log\""
+    ],
+    "started": "2026-10-01T15:43:30.0192609+09:00"
+  },
+  {
+    "copy": "B",
+    "process_id": 2892,
+    "arguments": [
+      "-batchmode",
+      "-force-d3d11",
+      "-projectPath",
+      "\"C:\\Users\\田尻大翔\\Documents\\Codex\\2026-08-07\\new-chat\\outputs\\HimoHitoPrototype\\.codex_tmp\\MainStageCleanReproduction_20261001\\DeterministicAB_20261001_154205\\CopyB\"",
+      "-executeMethod",
+      "HimoHitoEditor.WindowsPrototypeBuilder.BuildFromCommandLine",
+      "-logFile",
+      "\"C:\\Users\\田尻大翔\\Documents\\Codex\\2026-08-07\\new-chat\\outputs\\HimoHitoPrototype\\Docs\\QA\\MainStageCleanReproduction_20261001\\Evidence\\DeterministicSceneSync\\BuildB.log\""
+    ],
+    "started": "2026-10-01T15:43:30.1013721+09:00"
+  }
+]

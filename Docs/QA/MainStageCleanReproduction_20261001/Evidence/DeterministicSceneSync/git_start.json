@@ -1,0 +1,8 @@
+{
+  "HEAD": "4919233cd1d0815afb438bd35a7336492ec09548",
+  "origin/main": "4919233cd1d0815afb438bd35a7336492ec09548",
+  "branch": "main",
+  "index": "",
+  "status": "M Docs/LEARNING_LOG.md\n M README.md\n?? Docs/Archive/\n?? Docs/Dependencies/\n?? Docs/QA/FullGameRegression_20260930/\n?? Docs/QA/HumanPlaytest_20260930/\n?? Docs/QA/MainStageCleanReproduction_20261001/\n?? Docs/QA/MainStageSceneDiffAudit_20261001/\n?? output/",
+  "production_diff": ""
+}

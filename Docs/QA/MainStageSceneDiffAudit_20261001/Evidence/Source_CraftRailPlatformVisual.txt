@@ -1,0 +1,287 @@
+1: using System.Collections.Generic;
+2: using UnityEngine;
+3: 
+4: namespace HimoHito
+5: {
+6:     /// <summary>Tiled rail artwork fitted to the existing box; no collider or gameplay writes.</summary>
+7:     [ExecuteAlways, DisallowMultipleComponent]
+8:     public sealed class CraftRailPlatformVisual : MonoBehaviour
+9:     {
+10:         public const string VisualName = "Blue Railway Platform Visual";
+11:         public const string ResourcePath = "Art/HimoHitoCraftRail-v1";
+12:         public const float NativeHeight = .6f;
+13:         public const float BodyNativeHeight = .54f;
+14:         public const float TieNativeHeight = .34f;
+15:         public const float TieNativePitch = 1f;
+16:         public const float CapHeightRatio = .5f;
+17:         private const string LegacyResourcePath = "Art/TutorialRailPlatform-v1";
+18:         private const string TiePrefix = "Craft Rail Tie ";
+19:         [SerializeField] private bool allowTutorialLegacy;
+20:         private BoxCollider2D floor;
+21:         private SpriteRenderer source, display;
+22:         private Texture2D sourceTexture;
+23:         private Sprite processed, tiled, tieSprite;
+24:         private readonly List<SpriteRenderer> ties = new List<SpriteRenderer>();
+25:         private int tieCount;
+26:         private bool usingCraft;
+27: 
+28:         public static bool TryEnsure(GameObject target, out bool changed, bool allowTutorialLegacy = false)
+29:         {
+30:             changed = false;
+31:             if (!Eligible(target, allowTutorialLegacy)) return false;
+32:             if (Resources.Load<Texture2D>(ResourcePath) == null)
+33:             {
+34:                 if (target.TryGetComponent(out CraftRailPlatformVisual existing)) changed = existing.RestoreLegacy();
+35:                 return false;
+36:             }
+37:             if (!target.TryGetComponent(out CraftRailPlatformVisual visual))
+38:             {
+39:                 visual = target.AddComponent<CraftRailPlatformVisual>();
+40:                 changed = true;
+41:             }
+42:             visual.allowTutorialLegacy = allowTutorialLegacy;
+43:             if (!visual.enabled) { visual.enabled = true; changed = true; }
+44:             changed |= visual.Refresh();
+45:             return visual.usingCraft;
+46:         }
+47: 
+48:         private static bool Eligible(GameObject target, bool legacy)
+49:             => target != null && target.activeInHierarchy && target.TryGetComponent(out BoxCollider2D _) &&
+50:                 target.TryGetComponent(out SpriteRenderer _) &&
+51:                 (target.TryGetComponent(out SwingPassThroughRailPlatform _) ||
+52:                  target.TryGetComponent(out OneWayRailPlatform _) ||
+53:                  (legacy && target.name == "Landing 1" && target.scene.name == "Tutorial"));
+54: 
+55:         public bool Refresh() => Refresh(true);
+56:         private void OnEnable() => Refresh(true);
+57:         private void LateUpdate() => Refresh(false);
+58: 
+59:         private bool Refresh(bool restoreVisibility)
+60:         {
+61:             if (!enabled || !Eligible(gameObject, allowTutorialLegacy)) return RestoreLegacy();
+62:             if (floor == null) floor = GetComponent<BoxCollider2D>();
+63:             if (source == null) source = GetComponent<SpriteRenderer>();
+64:             if (!TryLoadParts()) return RestoreLegacy();
+65:             DiscoverDisplayAndTies(true);
+66:             // Hiding an existing rail belongs to gameplay. Only an explicit refresh restores visibility.
+67:             if (!restoreVisibility && usingCraft && (!display.enabled || !display.gameObject.activeSelf))
+68:                 return SetTieVisibility(false);
+69:             Vector3 parentScale = transform.lossyScale;
+70:             float sx = Mathf.Max(.0001f, Mathf.Abs(parentScale.x));
+71:             float sy = Mathf.Max(.0001f, Mathf.Abs(parentScale.y));
+72:             float worldHeight = floor.size.y * sy;
+73:             if (worldHeight <= .0001f || floor.size.x <= .0001f) return RestoreLegacy();
+74:             float uniformScale = worldHeight / NativeHeight;
+75:             Vector3 localScale = new Vector3(uniformScale / sx, uniformScale / sy, 1f);
+76:             float bodyLift = (NativeHeight - BodyNativeHeight) * .5f;
+77:             Vector3 localPosition = new Vector3(floor.offset.x, floor.offset.y + bodyLift * uniformScale / sy, 0f);
+78:             float nativeWidth = floor.size.x * sx / uniformScale;
+79:             Vector2 size = new Vector2(nativeWidth, BodyNativeHeight);
+80:             float tieScale = Mathf.Min(1f, nativeWidth / tieSprite.bounds.size.x);
+81:             float margin = NativeHeight * .5f + tieSprite.bounds.size.x * tieScale * .5f;
+82:             int count = Mathf.Clamp(Mathf.FloorToInt((nativeWidth - margin * 2f) / TieNativePitch) + 1, 1, 128);
+83:             Transform body = display.transform;
+84:             if (usingCraft && display.sprite == tiled && display.drawMode == SpriteDrawMode.Tiled &&
+85:                 display.tileMode == SpriteTileMode.Continuous && display.size == size &&
+86:                 body.localPosition == localPosition && body.localRotation == Quaternion.identity &&
+87:                 body.localScale == localScale && display.sortingLayerID == source.sortingLayerID &&
+88:                 display.sortingOrder == source.sortingOrder + 1 && display.color == Color.white &&
+89:                 body.gameObject.layer == gameObject.layer && tieCount == count && ties.Count >= count &&
+90:                 !source.enabled && display.enabled && body.gameObject.activeSelf) return SetTieVisibility(true);
+91: 
+92:             body.localPosition = localPosition;
+93:             body.localRotation = Quaternion.identity;
+94:             body.localScale = localScale;
+95:             body.gameObject.layer = gameObject.layer;
+96:             body.gameObject.SetActive(true);
+97:             display.sprite = tiled;
+98:             display.drawMode = SpriteDrawMode.Tiled;
+99:             display.tileMode = SpriteTileMode.Continuous;
+100:             display.size = size;
+101:             display.color = Color.white;
+102:             display.sortingLayerID = source.sortingLayerID;
+103:             display.sortingOrder = source.sortingOrder + 1;
+104:             display.enabled = true;
+105:             source.enabled = false;
+106:             UpdateTies(count, tieScale, -NativeHeight * .5f - bodyLift);
+107:             usingCraft = true;
+108:             return true;
+109:         }
+110: 
+111:         private bool TryLoadParts()
+112:         {
+113:             if (sourceTexture != null && processed != null && processed.texture != null && tiled != null && tieSprite != null)
+114:                 return true;
+115:             sourceTexture = Resources.Load<Texture2D>(ResourcePath);
+116:             processed = sourceTexture != null
+117:                 ? TutorialFirstSectionVisuals.LoadProcessedToySprite(ResourcePath, useMipMaps: true) : null;
+118:             if (processed == null) return false;
+119:             Color32[] pixels;
+120:             try { pixels = sourceTexture.GetPixels32(); }
+121:             catch (UnityException) { return false; }
+122:             int split = sourceTexture.height - Mathf.RoundToInt(sourceTexture.height * .56f);
+123:             if (!TryCrop(pixels, sourceTexture.width, split, sourceTexture.height, out Rect body) ||
+124:                 !TryCrop(pixels, sourceTexture.width, 0, split, out Rect tie)) return false;
+125:             ReleaseOwnedSprites();
+126:             float cap = Mathf.Min(body.height * CapHeightRatio, body.width * .45f);
+127:             tiled = Sprite.Create(processed.texture, body, new Vector2(.5f, .5f), body.height / BodyNativeHeight,
+128:                 0, SpriteMeshType.FullRect, new Vector4(cap, 0f, cap, 0f), false);
+129:             tiled.name = "Craft Rail Fixed Caps";
+130:             tiled.hideFlags = HideFlags.HideAndDontSave;
+131:             tieSprite = Sprite.Create(processed.texture, tie, new Vector2(.5f, 0f), tie.height / TieNativeHeight,
+132:                 0, SpriteMeshType.FullRect);
+133:             tieSprite.name = "Craft Rail Whole Wooden Tie";
+134:             tieSprite.hideFlags = HideFlags.HideAndDontSave;
+135:             return true;
+136:         }
+137: 
+138:         private void DiscoverDisplayAndTies(bool create)
+139:         {
+140:             if (display == null)
+141:             {
+142:                 Transform child = transform.Find(VisualName);
+143:                 if (child == null && create)
+144:                 {
+145:                     child = new GameObject(VisualName).transform;
+146:                     child.SetParent(transform, false);
+147:                 }
+148:                 if (child == null) return;
+149:                 if (!child.TryGetComponent(out display) && create)
+150:                     display = child.gameObject.AddComponent<SpriteRenderer>();
+151:             }
+152:             if (display == null || ties.Count > 0) return;
+153:             foreach (Transform part in display.transform)
+154:                 if (part.name.StartsWith(TiePrefix, System.StringComparison.Ordinal) &&
+155:                     part.TryGetComponent(out SpriteRenderer tie)) ties.Add(tie);
+156:         }
+157: 
+158:         // Regions use source pixel coordinates; the shared processed texture keeps the full atlas extent.
+159:         private static bool TryCrop(Color32[] pixels, int width, int bottom, int top, out Rect rect)
+160:         {
+161:             int minX = width, maxX = -1, minY = top, maxY = bottom - 1;
+162:             for (int y = bottom; y < top; y++)
+163:                 for (int x = 0; x < width; x++)
+164:                 {
+165:                     Color32 p = pixels[y * width + x];
+166:                     int low = Mathf.Min(p.r, Mathf.Min(p.g, p.b)), high = Mathf.Max(p.r, Mathf.Max(p.g, p.b));
+167:                     if (p.a == 0 || (low >= 205 && high - low <= 28)) continue;
+168:                     minX = Mathf.Min(minX, x); maxX = Mathf.Max(maxX, x);
+169:                     minY = Mathf.Min(minY, y); maxY = Mathf.Max(maxY, y);
+170:                 }
+171:             rect = default;
+172:             if (maxX < minX || maxY < minY) return false;
+173:             minX = Mathf.Max(0, minX - 2); maxX = Mathf.Min(width - 1, maxX + 2);
+174:             minY = Mathf.Max(bottom, minY - 2); maxY = Mathf.Min(top - 1, maxY + 2);
+175:             rect = new Rect(minX, minY, maxX - minX + 1, maxY - minY + 1);
+176:             return true;
+177:         }
+178: 
+179:         private void UpdateTies(int count, float scale, float bottom)
+180:         {
+181:             while (ties.Count < count)
+182:             {
+183:                 GameObject child = new GameObject(TiePrefix + ties.Count);
+184:                 child.transform.SetParent(display.transform, false);
+185:                 ties.Add(child.AddComponent<SpriteRenderer>());
+186:             }
+187:             tieCount = count;
+188:             for (int i = 0; i < ties.Count; i++)
+189:             {
+190:                 SpriteRenderer tie = ties[i];
+191:                 tie.gameObject.SetActive(i < count);
+192:                 tie.enabled = i < count;
+193:                 if (i >= count) continue;
+194:                 tie.transform.localPosition = new Vector3((i - (count - 1) * .5f) * TieNativePitch, bottom, 0f);
+195:                 tie.transform.localRotation = Quaternion.identity;
+196:                 tie.transform.localScale = new Vector3(scale, scale, 1f);
+197:                 tie.gameObject.layer = gameObject.layer;
+198:                 tie.sprite = tieSprite;
+199:                 tie.drawMode = SpriteDrawMode.Simple;
+200:                 tie.color = Color.white;
+201:                 tie.sortingLayerID = source.sortingLayerID;
+202:                 tie.sortingOrder = source.sortingOrder + 2;
+203:             }
+204:         }
+205: 
+206:         private bool SetTieVisibility(bool visible)
+207:         {
+208:             bool changed = false;
+209:             for (int i = 0; i < ties.Count; i++)
+210:                 if (ties[i] != null && ties[i].enabled != (visible && i < tieCount))
+211:                 { ties[i].enabled = visible && i < tieCount; changed = true; }
+212:             return changed;
+213:         }
+214: 
+215:         private bool RestoreLegacy()
+216:         {
+217:             DiscoverDisplayAndTies(false);
+218:             bool changed = usingCraft;
+219:             usingCraft = false;
+220:             changed |= SetTieVisibility(false);
+221:             tieCount = 0;
+222:             if (source == null) source = GetComponent<SpriteRenderer>();
+223:             if (floor == null) floor = GetComponent<BoxCollider2D>();
+224:             Sprite legacy = Resources.Load<Texture2D>(LegacyResourcePath) != null
+225:                 ? TutorialFirstSectionVisuals.LoadProcessedToySprite(LegacyResourcePath) : null;
+226:             if (display != null)
+227:             {
+228:                 if (display.drawMode != SpriteDrawMode.Simple) { display.drawMode = SpriteDrawMode.Simple; changed = true; }
+229:                 if (display.sprite != legacy) { display.sprite = legacy; changed = true; }
+230:                 if (legacy != null && floor != null)
+231:                 {
+232:                     Vector3 scale = new Vector3(floor.size.x / Mathf.Max(.0001f, legacy.bounds.size.x),
+233:                         floor.size.y / Mathf.Max(.0001f, legacy.bounds.size.y), 1f);
+234:                     Vector3 position = new Vector3(floor.offset.x, floor.offset.y, 0f);
+235:                     if (display.transform.localScale != scale) { display.transform.localScale = scale; changed = true; }
+236:                     if (display.transform.localPosition != position) { display.transform.localPosition = position; changed = true; }
+237:                     if (display.transform.localRotation != Quaternion.identity) { display.transform.localRotation = Quaternion.identity; changed = true; }
+238:                 }
+239:                 bool visible = legacy != null;
+240:                 if (display.enabled != visible) { display.enabled = visible; changed = true; }
+241:             }
+242:             if (source != null)
+243:             {
+244:                 bool visible = legacy == null || display == null || !display.gameObject.activeSelf;
+245:                 if (visible && source.sprite == null && TryGetComponent(out SolidSprite fallback)) fallback.Color = fallback.Color;
+246:                 if (source.enabled != visible) { source.enabled = visible; changed = true; }
+247:             }
+248:             ReleaseSprites();
+249:             return changed;
+250:         }
+251: 
+252:         private void OnDisable()
+253:         {
+254:             if (gameObject.activeInHierarchy) RestoreLegacy();
+255:             else ReleaseSprites();
+256:         }
+257:         private void OnDestroy()
+258:         {
+259:             if (gameObject.activeInHierarchy) RestoreLegacy();
+260:             ReleaseSprites();
+261:             foreach (SpriteRenderer tie in ties)
+262:                 if (tie != null) DestroyOwned(tie.gameObject);
+263:             ties.Clear();
+264:         }
+265:         private void ReleaseSprites()
+266:         {
+267:             ReleaseOwnedSprites();
+268:             processed = null;
+269:             sourceTexture = null;
+270:         }
+271:         private void ReleaseOwnedSprites()
+272:         {
+273:             if (display != null && display.sprite == tiled) display.sprite = null;
+274:             foreach (SpriteRenderer tie in ties)
+275:                 if (tie != null && tie.sprite == tieSprite) tie.sprite = null;
+276:             DestroyOwned(tiled);
+277:             DestroyOwned(tieSprite);
+278:             tiled = null;
+279:             tieSprite = null;
+280:         }
+281:         private static void DestroyOwned(Object value)
+282:         {
+283:             if (value == null) return;
+284:             if (Application.isPlaying) Destroy(value); else DestroyImmediate(value);
+285:         }
+286:     }
+287: }

@@ -1,0 +1,727 @@
+[
+  {
+    "file": "HimoHitoPrototype.exe",
+    "sha256": "837986201D89BE25426B8415CB3BC945F077E5B13F4722D6763D04EBD38C5472",
+    "size": 667136
+  },
+  {
+    "file": "UnityCrashHandler64.exe",
+    "sha256": "38A87BF9C83B54CDA605F4FEACED264E6010B69C1F47C80C567213C5C07CC971",
+    "size": 1669552
+  },
+  {
+    "file": "UnityPlayer.dll",
+    "sha256": "35F489B6A7753D536CE2E7B1BD1F729AFB8B4E70B43CAAA01AF03D1C20F64D6C",
+    "size": 36734888
+  },
+  {
+    "file": "D3D12\\D3D12Core.dll",
+    "sha256": "625BD40005B1C3708695D5256ECF230D278E6B8EDBA5A88AF70F3D91324F3052",
+    "size": 4725304
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\app.info",
+    "sha256": "E2CC5A686D4572037144453CCCE77196D188D3E5232DF8440F8C641CE45ED9B0",
+    "size": 24
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\boot.config",
+    "sha256": "F70E1D905689D05859079F602D4F2BBE43D0B1F6B26EDE45B8957F6D9E91EEA9",
+    "size": 156
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\globalgamemanagers",
+    "sha256": "E5A31D3B17C4879AF2D660587AAA23239DF69483E7C89918FB71549A7D8ED367",
+    "size": 32564
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\globalgamemanagers.assets",
+    "sha256": "827865055D4C07B0BEB61300CF8A12A34DF83DEE224CD0838EDAC90C71D34CBE",
+    "size": 22936
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\globalgamemanagers.assets.resS",
+    "sha256": "F3E7B44E7AD1E34ECB256EAD15CF32362D6C611CBDDC2AED251A3AA822A7529E",
+    "size": 7513792
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\level0",
+    "sha256": "054F89A24151191DCC87BBFFC680E76156B7CCD79C7BBB04C411875753AE3EA0",
+    "size": 43860
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\level1",
+    "sha256": "9C2699EA4759E5D9826251D11AF76E8F95218199F6C31B32EA4BA6016184AC32",
+    "size": 94256
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\resources.assets",
+    "sha256": "4D971007F2CF8D9413FF6A392495B777B88C8B16697F28AACFAD0D54EDE9F99F",
+    "size": 235022828
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\resources.assets.resS",
+    "sha256": "7D145009353CC96DA3406A2D10AC951B3513D5EA849C0BEC4BC48B32A52BBA90",
+    "size": 51903120
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\resources.resource",
+    "sha256": "87F2F537780A7CC87429E143B03AFD73F3869C555971A6F531D24398465CA5E3",
+    "size": 949184
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\RuntimeInitializeOnLoads.json",
+    "sha256": "873C8384D130AD1CE2A363CA7EA0EFB0203D96E41AD1A53C5981CEEAABDFEFBF",
+    "size": 1440
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\ScriptingAssemblies.json",
+    "sha256": "C71237B688554BBC092453CA07736F826929D43D30D07A76E70BC852C0BB8B56",
+    "size": 3163
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\sharedassets0.assets",
+    "sha256": "129E734DDB11E8BB117945FD7D1DE8AED0947E53D9EA2ED1C9E0121B7238AD74",
+    "size": 16664
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\sharedassets0.assets.resS",
+    "sha256": "85538E8B7FD8EE2E0EB8C27C7C708E8328841DEB261AA420E62AEB1125FF3F52",
+    "size": 16254480
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\sharedassets1.assets",
+    "sha256": "A8AB416DCDCE44417DB857DBCAAFFCBD408F50696A2DD3DB071A05E44D0E286A",
+    "size": 861
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\Assembly-CSharp.dll",
+    "sha256": "C49A1AEDAB308E761F6185B629618A7284EB1384553A5DD03B692E3302FB8268",
+    "size": 365056
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\Mono.Security.dll",
+    "sha256": "618009319DBF3AE374F9B5DC0D0522E1E1BDD172200C120A5471747B7991A584",
+    "size": 241152
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\mscorlib.dll",
+    "sha256": "6C76E06E6D44CF0F39BF59E6A90770968B70093AD4C1572DFBC5E46E431C5FBF",
+    "size": 4632064
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\netstandard.dll",
+    "sha256": "6AE62E082DC494A2433984177F60CA4DB5FAE69B1F360A8B33754172B310B8C5",
+    "size": 90112
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\System.ComponentModel.Composition.dll",
+    "sha256": "0C3E81771A5FE9657BEA02887996DE72606C3CB247E4FBE413F743F40E2AF244",
+    "size": 257024
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\System.Configuration.dll",
+    "sha256": "04907729E87A101E62D3A5C93CFA16688BEE745D05440D6DAA0C541964BE27AB",
+    "size": 124928
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\System.Core.dll",
+    "sha256": "A5E7D47313DA0ECA0B92A901A30498F5E970916FAF63B70B74DD62B09760ED72",
+    "size": 1113088
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\System.Data.DataSetExtensions.dll",
+    "sha256": "498F14C37D83F946A47A79E01DE777E62F269EE9C3820F2026B59AB1C1B9222F",
+    "size": 29696
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\System.Data.dll",
+    "sha256": "427478545CE66B632414CA838088EA073F250ED16B21C70005F48CB571350E47",
+    "size": 2125312
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\System.dll",
+    "sha256": "7019D6B6DBFA07CF30F62E7D3CCB969F70CBF001FD72112938FFB535C7F75D81",
+    "size": 2641920
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\System.Drawing.dll",
+    "sha256": "E182E688223ACEDB8135227E8FBFF17D5ED22F47F81141AA9CB96EF1AB9926FC",
+    "size": 489984
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\System.EnterpriseServices.dll",
+    "sha256": "84AF394AD863E31407EB2B9555CA7E96A9F1966630F5D7F0EEC54F0011F6BABC",
+    "size": 44544
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\System.IO.Compression.dll",
+    "sha256": "80421A67B4162A5F1B4AAD6A8327C6D1FB4B04DEDD39DAE14A770B812594FAE2",
+    "size": 114688
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\System.IO.Compression.FileSystem.dll",
+    "sha256": "2730D2A27F9362259A406EA14727E5F0A71BC21A6825BE94F8623A84BD9F9C79",
+    "size": 18432
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\System.Net.Http.dll",
+    "sha256": "3CD3AC19050D5031C13644CD87958AD8029B79CE16C7747FAF3D0542E7FB45A3",
+    "size": 122880
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\System.Numerics.dll",
+    "sha256": "AC9224B32355A09F09B706CAB568384F64CF8116825C5911CEF1E13221C61C38",
+    "size": 119296
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\System.Runtime.Serialization.dll",
+    "sha256": "1152EF687DBE39E0CCB6B9A68F6501004415A729072DF29ABAB3BC7C66840217",
+    "size": 934400
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\System.Security.dll",
+    "sha256": "2101A4DD4475285F96B1AC3BA1715A52AA8067690709E675CC49A9EB8ED901A4",
+    "size": 320000
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\System.ServiceModel.Internals.dll",
+    "sha256": "888EC94A59C127854871B76AFA49FDCEFDF723C0F0B6FD78E87F73A8495B63B5",
+    "size": 215040
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\System.Transactions.dll",
+    "sha256": "F65DBC257D26A361DCC01EDD58BF3E542D186C8EE492A4F7A62B0DD7D59F7050",
+    "size": 35328
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\System.Xml.dll",
+    "sha256": "79194220ADFCF027A334C87B1ADCC6D07B9660A4061E04B3D9500C10D30F7D49",
+    "size": 3160064
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\System.Xml.Linq.dll",
+    "sha256": "4F5D6BF313CBF091E7BFF83D07DD03ED93D0ECB3DDB025AE786AADD6B5F477FB",
+    "size": 136704
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.AccessibilityModule.dll",
+    "sha256": "5FE0CBD2577F438F23FE693D7552E563104EA2C1395BA8D82DD723926ACAE7B0",
+    "size": 51120
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.AdaptivePerformanceModule.dll",
+    "sha256": "CA471A9BDCEC2DC61DEF7C56CAF7B64DADF4B180871D31D7DF4E4EDD3BB39253",
+    "size": 124840
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.AIModule.dll",
+    "sha256": "6FA059ABFAAB5646E208CA655FAF4DDDA7078F85345A7B560481E4DC06823C0A",
+    "size": 77224
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.AMDModule.dll",
+    "sha256": "0C0419D0287D1A91D2F0D0BC2886FFC689FE0A1BFEBEFBDA83C45A0CFC72BB9D",
+    "size": 21936
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.AndroidJNIModule.dll",
+    "sha256": "C524952E7F8A28AD7F06587F41DB380D5A7BA7501D679802CF6EAA8BE2E5E16A",
+    "size": 121776
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.AnimationModule.dll",
+    "sha256": "57BEE9441929AEE22A22E8A9FAEE22F1936A3F89ADBEE7B292C53070C184418F",
+    "size": 225200
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.ARModule.dll",
+    "sha256": "4B27527D6D9A8E2FB387CA100FF299D41895B931ECE01E0182EFD99829CD1ED0",
+    "size": 25520
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.AssetBundleModule.dll",
+    "sha256": "9292A8D1519D690AB8432A77D09C9BDA50D7EE8A6FF924B604A9291C6E732C37",
+    "size": 41904
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.AudioModule.dll",
+    "sha256": "F84B1472A440AE16D203E20217F00F2F1F931A4CAB147DFCDF231BA23DBBA1E9",
+    "size": 142760
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.ClothModule.dll",
+    "sha256": "0B2F31FF4A80AE196C4169FAD9331EEAF8299531323388AAA2501060F2BA7ED3",
+    "size": 36272
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.ClusterInputModule.dll",
+    "sha256": "FE06F194A17ED7DA295321D2422FBC341CB750EE9FA3CF48D84E470C812FC041",
+    "size": 28072
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.ClusterRendererModule.dll",
+    "sha256": "80154809AEB25EE254EC84A5AE5E7FAF4E9D8482582CA0ED5968AE323E5410A2",
+    "size": 26536
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.ContentLoadModule.dll",
+    "sha256": "BA38652B3AD59C6EEAA8F30441F87BD721455ADF532E98E7F7B5101C30602506",
+    "size": 32688
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.CoreModule.dll",
+    "sha256": "C7DCC8ECB507AD2422819075F744C2F7D6ED24BE358C1D700A5495A599088FF8",
+    "size": 1984432
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.CrashReportingModule.dll",
+    "sha256": "84B286D0806B943E5F99CBA72AA6F0817BED290C31B892654DDAC26B13082403",
+    "size": 26536
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.DirectorModule.dll",
+    "sha256": "B0C1A232A157F05A95F58DE2B548145654B9C1203FC024266611262E98EDC2AD",
+    "size": 41904
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.dll",
+    "sha256": "2D0B9C7225454780EDFF8AFF2FABFEADF7755CD27BC793232498638A22736C90",
+    "size": 197544
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.DSPGraphModule.dll",
+    "sha256": "47D8ACA596E9F38AA3093B079A48B485576C86FDE50A0414643892FBDA6882CA",
+    "size": 31664
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.GameCenterModule.dll",
+    "sha256": "72D7FBFA8AAEB3870E5335D9A3685845DD818EF5DD293446F20F8DD7D9DFD053",
+    "size": 46000
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.GIModule.dll",
+    "sha256": "DB42CE5CB9588255F6E4A7C7AED9E37EEF7D5BA23851EA08C9904FFD871AED00",
+    "size": 24488
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.GraphicsStateCollectionSerializerModule.dll",
+    "sha256": "4B41B4532922646E139B95DB837772B67144FE92283A8EF61FDCC0EF2C8BDE24",
+    "size": 14248
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.GridModule.dll",
+    "sha256": "26CCD37002C6D3FF804BBEE1273597E813D76261B46A204B13A937899412B7FB",
+    "size": 30640
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.HierarchyCoreModule.dll",
+    "sha256": "20E7EB9C32B3A7319A16FA2CBB7FA1F609FAB59F05668168AB714B3FB660D136",
+    "size": 109480
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.HierarchyModule.dll",
+    "sha256": "8CA0DF6F739EBBE48FAF7131EF33AB0335F75E0A9BD6FDDF10EE2F931DC7E9E8",
+    "size": 102320
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.HotReloadModule.dll",
+    "sha256": "16B9C1B681769C99732532EEF4BB5730891B214BFAECAC23F9E2E33496E638D5",
+    "size": 24496
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.IdentifiersModule.dll",
+    "sha256": "729DE2F1C6065AB95A32026A93673A821DB7BE3B58DB373CC2A817D21DC7BFC6",
+    "size": 16808
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.ImageConversionModule.dll",
+    "sha256": "74E56289B009C7E0B91D4D090A878C6E81E9AC441D4297CADDE58B5309FB2637",
+    "size": 31152
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.IMGUIModule.dll",
+    "sha256": "E0F10F0B4E25788B97DBB72717C5078EE7C2683C1F4F3FCFC4A0119A1ADD8059",
+    "size": 214448
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.InputForUIModule.dll",
+    "sha256": "6FF753EA5C2A12D058D75A3B0D715E91C18B83720AD6FFD0FD074E7D09A36D30",
+    "size": 57776
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.InputLegacyModule.dll",
+    "sha256": "B002E871CD0D5BE3C209CF6A394C01CAF6582D40FC2D3B6C6D96AE98F106C244",
+    "size": 45480
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.InputModule.dll",
+    "sha256": "18F88539FAC7C1BF45ACC5A78B0A67524BFECD7342C31B83071E7E6BDEE1CABD",
+    "size": 28592
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.InsightsModule.dll",
+    "sha256": "E6536786D5B0DC8BCC398554EC670DE73182A819FF3FD67F5A85A7F483FCAC22",
+    "size": 14248
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.JSONSerializeModule.dll",
+    "sha256": "7DB8D1D97657334A09835C9C55581D9132E405DF9BEE2BA0997AE5AE5F1749EC",
+    "size": 27048
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.LocalizationModule.dll",
+    "sha256": "EFF06AC2E87FFF93E5005BE854C6D06A702446666F665884DD21F1C75D64AD53",
+    "size": 27056
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.MarshallingModule.dll",
+    "sha256": "70F4FBD1F9F2498A86645BF4726F69241DF2D326039CEA06A04F3E75B49FDD21",
+    "size": 83880
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.MultiplayerModule.dll",
+    "sha256": "01B53E3E2BD846587EBFB13BB4187F8262CC74E46E1C6727A7FA6B204E4C6196",
+    "size": 17840
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.NVIDIAModule.dll",
+    "sha256": "D7D2CE48E293BC2F5A67ECCB67222B9B800930F6216F13794F1515F03CB2620D",
+    "size": 40880
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.ParticleSystemModule.dll",
+    "sha256": "681C482EBF3B6EA8BFB94FB07E85B8F0ABE9EFF4CB7054E7DF9A030C12B0F356",
+    "size": 171944
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.PerformanceReportingModule.dll",
+    "sha256": "4AA15450584EB70B0EC5A354B51A6FDCF51D3BF4095AA53AA174A6A4ED38EFF0",
+    "size": 25000
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.Physics2DModule.dll",
+    "sha256": "C252CFE2142EBC8DDE58B5B64152221BA35A3F1335181838846778499F1278AA",
+    "size": 586672
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.PhysicsBackendPhysXModule.dll",
+    "sha256": "06807B1B499C595C84943273861EA9B6120DB70217C01D90A8B34024E803C1F9",
+    "size": 14248
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.PhysicsModule.dll",
+    "sha256": "894F8C085424EC77BC461A6D78E020453D331B0468D106AB63D136DC75ABE348",
+    "size": 183720
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.PropertiesModule.dll",
+    "sha256": "D20D3C941738708E4BDF7FD2681AA9E6CF03D0D27C43586F6E5D5A16D615BE7F",
+    "size": 134056
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.RenderAs2DModule.dll",
+    "sha256": "8E6F00229937943FDE61CC83F372014D516EBAE0993787851C69057A1EB6E0B6",
+    "size": 25520
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll",
+    "sha256": "106080C721564DA7B987BC8F7E81B5DD3D60DCF3616175257C0144C83D00B9BE",
+    "size": 24488
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.ScreenCaptureModule.dll",
+    "sha256": "4C667D6D32A60380A1FA2F5D5CAB0BF090006A05FB3BDA963B063E1C7FF9ED1A",
+    "size": 26544
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.ShaderRuntimeModule.dll",
+    "sha256": "BDFF8EB6ECC1F673070E3B77F50519266BB7B05630382E2751D3675EAC024965",
+    "size": 25520
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.ShaderVariantAnalyticsModule.dll",
+    "sha256": "0A87C2896AED1B2EDE48220E6A9F594817B2CBFA5393E13056FFCEDF2CEEB48A",
+    "size": 24488
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.SharedInternalsModule.dll",
+    "sha256": "7368ED2C202BDB6F0B448C7D657446FB3077F7360377A5B7D3ED464A6C66E564",
+    "size": 38312
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.SpriteMaskModule.dll",
+    "sha256": "6E98EFBA3BC7A58D62830C94DB76CA5EC4708840470879B97109AFD3E315B761",
+    "size": 28584
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.SpriteShapeModule.dll",
+    "sha256": "6922237E7F9D504CF4FA01347B0743ED17DCF78294BBBB4611A0B47600E4AB86",
+    "size": 32680
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.StreamingModule.dll",
+    "sha256": "2D57B776CB7E74F874713ECC4853DE0E6C48605B26FEA68423C78C8D8E93CDF3",
+    "size": 26024
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.SubstanceModule.dll",
+    "sha256": "957A8EB8DF11A0945C88CC8372113A465642066A66E22D5C2B012F699FF38C78",
+    "size": 29096
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.SubsystemsModule.dll",
+    "sha256": "94855B2C070F312B888B92A4F67BA9BE92B8C0DB0F56E232668BD733B01180C5",
+    "size": 41896
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.TerrainModule.dll",
+    "sha256": "78CF42D5CF89FD1B7449143BBA7780C32D580C2292FFCAE91711B0091996708A",
+    "size": 134064
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.TerrainPhysicsModule.dll",
+    "sha256": "678109BD11AAFE3BBCE87076C3FCC5DC1A794ECE9E3693373D22CD2D7A41C536",
+    "size": 25520
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.TextCoreFontEngineModule.dll",
+    "sha256": "AC3E80CDBF4BE816C04994C7DC8090B880BBCEEF488124E2B9090A7D67F1D5FC",
+    "size": 81832
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.TextCoreTextEngineModule.dll",
+    "sha256": "202509CBFC8E0E2A2494D111092BAD3FABC52274BDB704B90AB63411FFDB6112",
+    "size": 334256
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.TextRenderingModule.dll",
+    "sha256": "F965903427DE78124BEB450984870A12BF171F2A4DBA19183C31AB0A3DB34F08",
+    "size": 39344
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.TilemapModule.dll",
+    "sha256": "9819A26B2232629206CF3D433DDEDB4F70BF4EA673F3619391FF160C9EB2C7CE",
+    "size": 58800
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.TLSModule.dll",
+    "sha256": "C5FD1DE4364A4E6B69F92A977B3BB5A026AFD523627554488DCEA48C6E514CC7",
+    "size": 32176
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.UIElementsModule.dll",
+    "sha256": "107D0827C925EF0EBFCB04E91E3659541B19170CC67C5FD1801FF0F3015EEE72",
+    "size": 2452400
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.UIModule.dll",
+    "sha256": "70C34BF9E8583E1F6596260BC732AD62804F37D8737357F542B5390DD384CB37",
+    "size": 49576
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.UmbraModule.dll",
+    "sha256": "AE9C7F3EEC1E5169D3CF3F1B0C1A3791A4249D51A0CF920BF10E5C06C5FDF835",
+    "size": 24496
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.UnityAnalyticsCommonModule.dll",
+    "sha256": "84E67D6060EF586AC3D72FB8081A444B651B214CF191BD4000725AF00C6FFD8D",
+    "size": 35760
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.UnityAnalyticsModule.dll",
+    "sha256": "6F36ACE3BE6317A4040C4149A1F425E7FABB68337679468683AFF9BF22679069",
+    "size": 60848
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.UnityConnectModule.dll",
+    "sha256": "AF8A8B8ECAE05AF2FEE9DA10D39BA0927DADB84BF35496A2E5847A3CA789F7CE",
+    "size": 27560
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.UnityConsentModule.dll",
+    "sha256": "7432A75D5762FB98166822C5110B9F41B6DEE26D0B39BE915FFC86301393477D",
+    "size": 16304
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.UnityCurlModule.dll",
+    "sha256": "7773EFF1C627D39593691C07D2EAA24BFF9F7CBB00814B1F062F3B5D69274E31",
+    "size": 26024
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.UnityWebRequestAssetBundleModule.dll",
+    "sha256": "42259360BDF52536B2A226973139E588181D913C382C72D5DA5177A00E535539",
+    "size": 28592
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.UnityWebRequestAudioModule.dll",
+    "sha256": "1F38F74CFD1D6799222A1C29CC0A26CA4C0C3E8C4F42BC190259AD3E007E1D66",
+    "size": 28592
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.UnityWebRequestModule.dll",
+    "sha256": "D4FB3B2F13DCC6FD201510BE2223937B0739C48139C993240C156F1DAD463AB8",
+    "size": 70064
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.UnityWebRequestTextureModule.dll",
+    "sha256": "CCF540A963B40622313F35ED7A145A3DD59C2DDC160AB4BDBF82CE4FB49D4CAD",
+    "size": 27568
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.UnityWebRequestWWWModule.dll",
+    "sha256": "4FFD40AFED9CEB3F92A24D79CA85785FB81E6EE52B57213B21171EDB3E7F3EA5",
+    "size": 36784
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.VectorGraphicsModule.dll",
+    "sha256": "8202DEC45FDF3B3D9D08423658801718F6ECEAFF7BA89C348E96C1E661426283",
+    "size": 252848
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.VehiclesModule.dll",
+    "sha256": "504A06145C529AFBB6544EEF0DB44497F30DE0870A5BF3236E0169757FFE6C11",
+    "size": 31664
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.VFXModule.dll",
+    "sha256": "6BACED6ED71EC0A752D27E68410ACD8DC38842703BA7A60CD0704C6AFB53A935",
+    "size": 78256
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.VideoModule.dll",
+    "sha256": "2378779E8D8924FBC7A3410761E6CE095242B9994A5E3F5F10D2951D4C6ABF6E",
+    "size": 49072
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.VirtualTexturingModule.dll",
+    "sha256": "2039FD49320FF3490155E14C7FC19F3A2244F3AAC80BDA4AFD63CBBD9B464484",
+    "size": 42920
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.VRModule.dll",
+    "sha256": "3FBA43BDDB5C237460A5CCEB8AB6A765020AEBE19845929D384208FF06392370",
+    "size": 31664
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.WindModule.dll",
+    "sha256": "DF0DFAA0672816B9D6832424DD15F61DB76512248BF557482CCA2EAB6F63E9F5",
+    "size": 26544
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Managed\\UnityEngine.XRModule.dll",
+    "sha256": "2D59FE7AA7E4AD173CC6465D88EF950CA97E1F4E162550E71120681A0B9340F7",
+    "size": 88496
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Resources\\unity default resources",
+    "sha256": "32B58BDB9CF090212B46A8CA7436DCDAE89E4EF43E9D55A835233C21D1347734",
+    "size": 5883716
+  },
+  {
+    "file": "HimoHitoPrototype_Data\\Resources\\unity_builtin_extra",
+    "sha256": "C088D22DDE55C5E3614C2C81C2E7069913F7F5CE8EADA79865FC02E97202A06B",
+    "size": 326504
+  },
+  {
+    "file": "MonoBleedingEdge\\EmbedRuntime\\mono-2.0-bdwgc.dll",
+    "sha256": "872A64A28333D54346F5E38D8420FF40E50769DC546B241EDE1889531B6A9150",
+    "size": 7828904
+  },
+  {
+    "file": "MonoBleedingEdge\\EmbedRuntime\\MonoPosixHelper.dll",
+    "sha256": "3E2781B551C03139020719C43B2EFFF0F3021B663889C3EA095A1F769D688D84",
+    "size": 611248
+  },
+  {
+    "file": "MonoBleedingEdge\\etc\\mono\\browscap.ini",
+    "sha256": "4DDD50F31FB968F30BEDEFC253A46DC3F2890192D05CDAA9E0A64A056EEE807E",
+    "size": 311984
+  },
+  {
+    "file": "MonoBleedingEdge\\etc\\mono\\config",
+    "sha256": "5776169973A26A387B8B3E5C0F2301A7AB9A6DD7C7D3EFA22A96ABC47FBF8662",
+    "size": 3815
+  },
+  {
+    "file": "MonoBleedingEdge\\etc\\mono\\2.0\\DefaultWsdlHelpGenerator.aspx",
+    "sha256": "751861040B69EA63A3827507B7C8DA9C7F549DC181C1C8AF4B7CA78CC97D710A",
+    "size": 60575
+  },
+  {
+    "file": "MonoBleedingEdge\\etc\\mono\\2.0\\machine.config",
+    "sha256": "E91782A27FA39FC6C1D6EE8B08529F5D35052310D0006034B878EB04B8F2AF30",
+    "size": 29066
+  },
+  {
+    "file": "MonoBleedingEdge\\etc\\mono\\2.0\\settings.map",
+    "sha256": "49C6160F9D54AF4270A3B4E997FC4A8301F79B9E2070118FA46DDBCBBC44F9A2",
+    "size": 2622
+  },
+  {
+    "file": "MonoBleedingEdge\\etc\\mono\\2.0\\web.config",
+    "sha256": "CF2B54339E069B9E42F7D6795EECBF562C50C1011F4CA8F65F578FE52D97FF92",
+    "size": 11635
+  },
+  {
+    "file": "MonoBleedingEdge\\etc\\mono\\2.0\\Browsers\\Compat.browser",
+    "sha256": "8A1082057AC5681DCD4E9C227ED7FB8EB42AC1618963B5DE3B65739DD77E2741",
+    "size": 1605
+  },
+  {
+    "file": "MonoBleedingEdge\\etc\\mono\\4.0\\DefaultWsdlHelpGenerator.aspx",
+    "sha256": "751861040B69EA63A3827507B7C8DA9C7F549DC181C1C8AF4B7CA78CC97D710A",
+    "size": 60575
+  },
+  {
+    "file": "MonoBleedingEdge\\etc\\mono\\4.0\\machine.config",
+    "sha256": "E60AEC2C5115D65B3ACB3C55EA21576DBD770F579166C017125571E46AE560ED",
+    "size": 33598
+  },
+  {
+    "file": "MonoBleedingEdge\\etc\\mono\\4.0\\settings.map",
+    "sha256": "CE1DB1AD8A9512073164E3ECCDC193F7EDA036E1A9733CAEC4635DE21B2865C8",
+    "size": 2622
+  },
+  {
+    "file": "MonoBleedingEdge\\etc\\mono\\4.0\\web.config",
+    "sha256": "E38BB8CC68FE5B4EDECDFD288D094B9E8CED7629039B2A347682ABA0D8BD7492",
+    "size": 18802
+  },
+  {
+    "file": "MonoBleedingEdge\\etc\\mono\\4.0\\Browsers\\Compat.browser",
+    "sha256": "8A1082057AC5681DCD4E9C227ED7FB8EB42AC1618963B5DE3B65739DD77E2741",
+    "size": 1605
+  },
+  {
+    "file": "MonoBleedingEdge\\etc\\mono\\4.5\\DefaultWsdlHelpGenerator.aspx",
+    "sha256": "751861040B69EA63A3827507B7C8DA9C7F549DC181C1C8AF4B7CA78CC97D710A",
+    "size": 60575
+  },
+  {
+    "file": "MonoBleedingEdge\\etc\\mono\\4.5\\machine.config",
+    "sha256": "EE950004B576FB28DC85F4B0435ED04BF96612DE2E8B53BE84D07AFE85A0DE6C",
+    "size": 34056
+  },
+  {
+    "file": "MonoBleedingEdge\\etc\\mono\\4.5\\settings.map",
+    "sha256": "CE1DB1AD8A9512073164E3ECCDC193F7EDA036E1A9733CAEC4635DE21B2865C8",
+    "size": 2622
+  },
+  {
+    "file": "MonoBleedingEdge\\etc\\mono\\4.5\\web.config",
+    "sha256": "C4CBDDD4FD9347B58CC5A72B36DC4BA1AD2BB699E65869D05CD3FB9865F0D824",
+    "size": 18811
+  },
+  {
+    "file": "MonoBleedingEdge\\etc\\mono\\4.5\\Browsers\\Compat.browser",
+    "sha256": "8A1082057AC5681DCD4E9C227ED7FB8EB42AC1618963B5DE3B65739DD77E2741",
+    "size": 1605
+  },
+  {
+    "file": "MonoBleedingEdge\\etc\\mono\\mconfig\\config.xml",
+    "sha256": "0C56E34C69124510FA8C19E7B4C2CA6C1C4FF460AE19F798DD0CA035809E396D",
+    "size": 25817
+  }
+]

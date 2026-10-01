@@ -1,0 +1,7 @@
+{
+  "node_count_a": 14,
+  "node_count_b": 14,
+  "differences": [],
+  "identical": true,
+  "compared": "affected roots + all descendants; transforms, active, components, colliders, renderers and serialized MonoBehaviour visible properties"
+}

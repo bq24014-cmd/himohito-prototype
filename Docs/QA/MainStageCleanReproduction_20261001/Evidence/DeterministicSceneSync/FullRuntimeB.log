@@ -1,0 +1,2830 @@
+[Licensing::Module] Trying to connect to existing licensing client channel...
+Built from '6000.3/staging' branch; Version is '6000.3.21f1 (c02631ffc030) revision 12592689'; Using compiler version '194234433'; Build Type 'Release'
+OS: 'Windows 11  (10.0.26200) Professional' Language: 'ja' Physical Memory: 16052 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
+System  architecture: x64
+Process architecture: x64
+Date: 2026-10-01T06:54:31Z
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-田尻大翔" at "2026-10-01T06:54:31.165442Z"
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\6000.3.21f1\Editor\Unity.exe
+-batchmode
+-force-d3d11
+-projectPath
+C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype\.codex_tmp\MainStageCleanReproduction_20261001\DeterministicAB_20261001_154205\CopyB
+-executeMethod
+CleanEntry.Run
+-cleanMode
+Full
+-cleanEvidence
+C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype\Docs\QA\MainStageCleanReproduction_20261001\Evidence\DeterministicSceneSync\FullRuntimeB
+-logFile
+C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype\Docs\QA\MainStageCleanReproduction_20261001\Evidence\DeterministicSceneSync\FullRuntimeB.log
+Successfully changed project path to: C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype\.codex_tmp\MainStageCleanReproduction_20261001\DeterministicAB_20261001_154205\CopyB
+C:/Users/田尻大翔/Documents/Codex/2026-08-07/new-chat/outputs/HimoHitoPrototype/.codex_tmp/MainStageCleanReproduction_20261001/DeterministicAB_20261001_154205/CopyB
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-gfx=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+Player connection [9400]  Target information:
+
+Player connection [9400]  * "[IP] 192.168.40.81 [Port] 55506 [Flags] 2 [Guid] 1194933688 [EditorId] 1194933688 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-UM0GV1L) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [9400] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [9400] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+[Package Manager] Connected to IPC stream "Upm-12188" after 0.9 seconds.
+[Licensing::Module] Licensing is not yet initialized.
+[Licensing::Client] Error: HandshakeResponse reported an error:
+	ResponseCode: 505
+	ResponseStatus: Unsupported protocol version '1.18.1'.
+[Licensing::Module] Error: Failed to handshake to channel: "LicenseClient-田尻大翔"
+[Licensing::IpcConnector] LicenseClient-田尻大翔 channel disconnected successfully.
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-田尻大翔-6000.3.21" at "2026-10-01T06:54:40.9238173Z"
+[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 13432, path: "C:/Program Files/Unity/Hub/Editor/6000.3.21f1/Editor/Data/Resources/Licensing/Client/Unity.Licensing.Client.exe")
+[Licensing::Module] LicensingClient has failed validation; ignoring
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.18.1+9fbee8e
+  Session Id:              1cd709ab64424457b805097623eb4e9e
+  Correlation Id:          8285086f732106bd6d26c44468156621
+  External correlation Id: 833616054609296458
+  Machine Id:              dNinDYak6EUa2pX7RMEoTuNEbYA=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-田尻大翔-6000.3.21" (connect: 0.01s, validation: 0.12s, handshake: 0.05s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-田尻大翔-6000.3.21-notifications" at "2026-10-01T06:54:41.1367839Z"
+[Licensing::Module] Error: Access token is unavailable; failed to update
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: 15669713720629-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+[Licensing::Client] Successfully updated license, isAsync: True, time: 0.05
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] Licensing Background thread has ended after 10.53s
+[Licensing::Module] Licensing is initialized (took 8.65s).
+[Licensing::Client] Successfully resolved entitlement details
+Library Redirect Path: Library/
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Refreshing native plugins compatible for Editor in 0.01 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 6000.3.21f1 (c02631ffc030)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.3.21f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/田尻大翔/Documents/Codex/2026-08-07/new-chat/outputs/HimoHitoPrototype/.codex_tmp/MainStageCleanReproduction_20261001/DeterministicAB_20261001_154205/CopyB/Assets
+Forcing GfxDevice: Direct3D 11
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: Intel(R) Iris(R) Xe Graphics (ID=0xa7a0)
+    Vendor:   Intel
+    VRAM:     8026 MB
+    Driver:   31.0.101.4255
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.3.21f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.3.21f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.3.21f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56188
+Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
+Using cacheserver namespaces - metadata:defaultmetadata, artifacts:defaultartifacts
+ImportWorker Server TCP listen port: 0
+AcceleratorClientConnectionCallback - disconnected - :0
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.3.21f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.011410 seconds.
+- Loaded All Assemblies, in  1.591 seconds
+Native extension for WindowsStandalone target not found
+Package Manager log level set to [2]
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:False
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.590 seconds
+Domain Reload Profiling: 3166ms
+	BeginReloadAssembly (530ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (14ms)
+	RebuildCommonClasses (147ms)
+	RebuildNativeTypeToScriptingClass (44ms)
+	initialDomainReloadingComplete (197ms)
+	LoadAllAssembliesAndSetupDomain (657ms)
+		LoadAssemblies (506ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (642ms)
+			TypeCache.Refresh (637ms)
+				TypeCache.ScanAssembly (590ms)
+			BuildScriptInfoCaches (0ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (1591ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1452ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (160ms)
+			SetLoadedEditorAssemblies (14ms)
+			BeforeProcessingInitializeOnLoad (343ms)
+			ProcessInitializeOnLoadAttributes (526ms)
+			ProcessInitializeOnLoadMethodAttributes (408ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+[Licensing::Client] Successfully resolved entitlement details
+Application.AssetDatabase Initial Refresh Start
+[Package Manager] Restoring resolved packages state from cache
+[Licensing::Client] Successfully resolved entitlement details
+[Package Manager] Registered 5 packages:
+  Built-in packages:
+    com.unity.modules.audio@1.0.0 (location: C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype\.codex_tmp\MainStageCleanReproduction_20261001\DeterministicAB_20261001_154205\CopyB\Library\PackageCache\com.unity.modules.audio)
+    com.unity.modules.imgui@1.0.0 (location: C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype\.codex_tmp\MainStageCleanReproduction_20261001\DeterministicAB_20261001_154205\CopyB\Library\PackageCache\com.unity.modules.imgui)
+    com.unity.modules.jsonserialize@1.0.0 (location: C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype\.codex_tmp\MainStageCleanReproduction_20261001\DeterministicAB_20261001_154205\CopyB\Library\PackageCache\com.unity.modules.jsonserialize)
+    com.unity.modules.particlesystem@1.0.0 (location: C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype\.codex_tmp\MainStageCleanReproduction_20261001\DeterministicAB_20261001_154205\CopyB\Library\PackageCache\com.unity.modules.particlesystem)
+    com.unity.modules.physics2d@1.0.0 (location: C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype\.codex_tmp\MainStageCleanReproduction_20261001\DeterministicAB_20261001_154205\CopyB\Library\PackageCache\com.unity.modules.physics2d)
+[Subsystems] No new subsystems found in resolved package list.
+[Package Manager] Done registering packages in 0.10 seconds
+Starting: C:\Program Files\Unity\Hub\Editor\6000.3.21f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: C:/Users/田尻大翔/Documents/Codex/2026-08-07/new-chat/outputs/HimoHitoPrototype/.codex_tmp/MainStageCleanReproduction_20261001/DeterministicAB_20261001_154205/CopyB
+DisplayProgressbar: Compiling Scripts
+ExitCode: 0 Duration: 0s495ms
+*** Tundra build success (0.16 seconds), 0 items updated, 155 evaluated
+AssetDatabase: script compilation time: 2.028978s
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  1.137 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Native extension for WindowsStandalone target not found
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.829 seconds
+Domain Reload Profiling: 2953ms
+	BeginReloadAssembly (823ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (78ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (212ms)
+	RebuildCommonClasses (124ms)
+	RebuildNativeTypeToScriptingClass (41ms)
+	initialDomainReloadingComplete (83ms)
+	LoadAllAssembliesAndSetupDomain (53ms)
+		LoadAssemblies (423ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (35ms)
+			TypeCache.Refresh (16ms)
+				TypeCache.ScanAssembly (5ms)
+			BuildScriptInfoCaches (4ms)
+			ResolveRequiredComponents (8ms)
+	FinalizeReload (1830ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1160ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (91ms)
+			SetLoadedEditorAssemblies (9ms)
+			BeforeProcessingInitializeOnLoad (404ms)
+			ProcessInitializeOnLoadAttributes (444ms)
+			ProcessInitializeOnLoadMethodAttributes (176ms)
+			AfterProcessingInitializeOnLoad (35ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (106ms)
+Asset Pipeline Refresh (id=1b4618a4aa84ab1479a9dba519c7a5e8): Total: 5.677 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=2187 ms
+		Asset DB Callback time: managed=173 ms, native=108 ms
+		Scripting: domain reloads=1, domain reload time=1138 ms, compile time=2035 ms, other=32 ms
+		Project Asset Count: scripts=42, non-scripts=98
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokeCustomDependenciesCallbacks: 0.003ms
+	InvokePackagesCallback: 115.868ms
+	ApplyChangesToAssetFolders: 0.758ms
+	Scan: 106.949ms
+	OnSourceAssetsModified: 0.006ms
+	CategorizeAssetsWithTransientArtifact: 1.239ms
+	ProcessAssetsWithTransientArtifactChanges: 9.306ms
+	CategorizeAssets: 2.395ms
+	ImportOutOfDateAssets: 1839.368ms (-199.697ms without children)
+		CompileScripts: 2035.363ms
+		ReloadNativeAssets: 0.001ms
+		UnloadImportedAssets: 0.217ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.059ms
+		InitializingProgressBar: 0.002ms
+		PostProcessAllAssetNotificationsAddChangedAssets: 0.002ms
+		OnDemandSchedulerStart: 3.422ms
+	PostProcessAllAssets: 174.095ms
+	GatherAllCurrentPrimaryArtifactRevisions: 0.004ms
+	UnloadStreamsBegin: 3.583ms
+	PersistCurrentRevisions: 0.016ms
+	UnloadStreamsEnd: 0.004ms
+	GenerateScriptTypeHashes: 0.002ms
+	Untracked: 3422.993ms
+
+Application.AssetDatabase Initial Refresh End
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Scanning for USB devices : 3.979ms
+Initializing Unity extensions:
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-ヒモヒト
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 141 unused Assets / (509.7 KB). Loaded Objects now: 769.
+Memory consumption went from 89.2 MB to 88.7 MB.
+Total: 16.420100 ms (FindLiveObjects: 0.129500 ms CreateObjectMapping: 0.027500 ms MarkObjects: 15.608000 ms  DeleteObjects: 0.651800 ms)
+
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 0 unused Assets / (2.2 KB). Loaded Objects now: 771.
+Memory consumption went from 87.2 MB to 87.2 MB.
+Total: 13.159300 ms (FindLiveObjects: 0.078600 ms CreateObjectMapping: 0.015400 ms MarkObjects: 13.045300 ms  DeleteObjects: 0.016200 ms)
+
+[Project] Loading completed in 23.491 seconds
+	Project init time: 				21.997 seconds
+		Template init time: 		0.000 seconds
+		Package Manager init time: 		9.711 seconds
+		Asset Database init time: 		1.473 seconds
+		Global illumination init time: 	0.008 seconds
+		Assemblies load time: 			3.260 seconds
+		Unity extensions init time: 	0.003 seconds
+		Asset Database refresh time: 	5.677 seconds
+	Scene opening time: 			0.610 seconds
+##utp:{"type":"ProjectInfo","version":2,"phase":"Immediate","time":1790837694517,"processId":12188,"projectLoad":23.4911396,"projectInit":21.9970455,"templateInit":0.0,"packageManagerInit":9.7108355,"assetDatabaseInit":1.4728298,"globalIlluminationInit":0.0081409,"assembliesLoad":3.2600212,"unityExtensionsInit":0.0027328,"assetDatabaseRefresh":5.6769047,"sceneOpening":0.6102379}
+##utp:{"type":"EditorInfo","version":2,"phase":"Immediate","time":1790837694517,"processId":12188,"editorVersion":"6000.3.21f1 (c02631ffc030)","branch":"6000.3/staging","buildType":"Release","platform":"Windows"}
+Reloading assemblies for play mode.
+Reloading assemblies after forced synchronous recompile.
+Begin MonoManager ReloadAssembly
+Curl error 23: Failure writing output to destination, passed 293 returned 0
+- Loaded All Assemblies, in  0.943 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Native extension for WindowsStandalone target not found
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.804 seconds
+Domain Reload Profiling: 2722ms
+	BeginReloadAssembly (650ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (101ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (96ms)
+	RebuildCommonClasses (117ms)
+	RebuildNativeTypeToScriptingClass (42ms)
+	initialDomainReloadingComplete (66ms)
+	LoadAllAssembliesAndSetupDomain (42ms)
+		LoadAssemblies (367ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (29ms)
+			TypeCache.Refresh (11ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (7ms)
+			ResolveRequiredComponents (6ms)
+	FinalizeReload (1806ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1173ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (66ms)
+			SetLoadedEditorAssemblies (7ms)
+			BeforeProcessingInitializeOnLoad (377ms)
+			ProcessInitializeOnLoadAttributes (534ms)
+			ProcessInitializeOnLoadMethodAttributes (172ms)
+			AfterProcessingInitializeOnLoad (17ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (54ms)
+Asset Pipeline Refresh (id=5471b0a4aa0afa245acfd639b32edb91): Total: 2.889 seconds - Initiated by StopAssetImportingV2(ForceSynchronousImport | ForceDomainReload)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=1880 ms
+		Asset DB Callback time: managed=36 ms, native=1 ms
+		Scripting: domain reloads=1, domain reload time=966 ms, compile time=5 ms, other=0 ms
+		Project Asset Count: scripts=42, non-scripts=98
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokeCustomDependenciesCallbacks: 0.003ms
+	InvokePackagesCallback: 6.982ms
+	ApplyChangesToAssetFolders: 0.165ms
+	Scan: 0.001ms
+	OnSourceAssetsModified: 0.004ms
+	CategorizeAssetsWithTransientArtifact: 0.005ms
+	ProcessAssetsWithTransientArtifactChanges: 0.145ms
+	CategorizeAssets: 1.427ms
+	ImportOutOfDateAssets: 1807.581ms (1802.017ms without children)
+		CompileScripts: 4.728ms
+		CollectScriptTypesHashes: 0.001ms
+		ReloadNativeAssets: 0.001ms
+		UnloadImportedAssets: 0.121ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.062ms
+		InitializingProgressBar: 0.002ms
+		PostProcessAllAssetNotificationsAddChangedAssets: 0.001ms
+		OnDemandSchedulerStart: 0.649ms
+	PostProcessAllAssets: 36.030ms
+	GatherAllCurrentPrimaryArtifactRevisions: 0.027ms
+	UnloadStreamsBegin: 0.147ms
+	PersistCurrentRevisions: 0.018ms
+	UnloadStreamsEnd: 0.003ms
+	GenerateScriptTypeHashes: 0.001ms
+	Untracked: 1036.018ms
+
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            1.021 ms
+	Integration:            45.336 ms
+	Integration of assets:  0.004 ms
+	Thread Wait Time:       169.519 ms
+	Total Operation Time:   215.880 ms
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+Play開始地点：Tutorial
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HimoHitoEditor.PlayStartSceneSelector:ConfigurePlayStartScene (string,string) (at Assets/Editor/PlayStartSceneSelector.cs:50)
+HimoHitoEditor.PlayStartSceneSelector:ConfigurePlayStartScene () (at Assets/Editor/PlayStartSceneSelector.cs:23)
+UnityEditor.EditorApplication:Internal_CallDelayFunctions ()
+
+(Filename: Assets/Editor/PlayStartSceneSelector.cs Line: 50)
+
+Start Indexing on Editor startup
+ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+  at System.Collections.Generic.List`1[T].get_Item (System.Int32 index) [0x00009] in <41d29b352f6a475ab1bf7c6628b82790>:0 
+  at UnityEditor.Search.SearchDatabase+<EnumerateAll>d__81.MoveNext () [0x00106] in <63453c9528324daaa566ad51effa49a4>:0 
+  at System.Linq.Enumerable.TryGetFirst[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Boolean& found) [0x00045] in <80564d689e48448fa2a7101993ee7201>:0 
+  at System.Linq.Enumerable.First[TSource] (System.Collections.Generic.IEnumerable`1[T] source) [0x00000] in <80564d689e48448fa2a7101993ee7201>:0 
+  at UnityEditor.Search.SearchDatabase.GetDefaultSearchDatabase () [0x00006] in <63453c9528324daaa566ad51effa49a4>:0 
+  at UnityEditor.Search.SearchInit.IndexationOnStartup () [0x0000c] in <63453c9528324daaa566ad51effa49a4>:0 
+  at UnityEditor.EditorApplication.Internal_CallDelayFunctions () [0x0002c] in <ebc962e8381145e6bdb44b1996e8e9b4>:0 
+
+UnloadTime: 0.444100 ms
+Loaded scene 'Assets/Scenes/MainStage.unity'
+	Deserialize:            494.832 ms
+	Integration:            14305.115 ms
+	Integration of assets:  0.008 ms
+	Thread Wait Time:       840.554 ms
+	Total Operation Time:   15640.509 ms
+Unloading 24 unused Assets / (13.5 KB). Loaded Objects now: 2703.
+Memory consumption went from 392.7 MB to 392.7 MB.
+Total: 15.248300 ms (FindLiveObjects: 0.377100 ms CreateObjectMapping: 0.034800 ms MarkObjects: 13.493200 ms  DeleteObjects: 1.340600 ms)
+
+Created GICache directory at C:/Users/田尻大翔/AppData/LocalLow/Unity/Caches/GiCache. Took: 0.755s, timestamps: [26.785 - 27.540]
+[Licensing::Client] Successfully resolved entitlement details
+FULL_QA CONTROLLED_SETUP position=(-3.85, -10.00)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Position (UnityEngine.Vector2) (at Assets/QA/FullSystems.cs:87)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:129)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS fall failure locks 1
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:130)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS failure waits for user 1
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:131)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS retry playable FALL_R_1
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Retry>d__32:MoveNext () (at Assets/QA/FullSystems.cs:105)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS fall no resource drift 1
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:132)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS fall no Hook/collider growth 1
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:133)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA CONTROLLED_SETUP position=(-3.85, -10.00)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Position (UnityEngine.Vector2) (at Assets/QA/FullSystems.cs:87)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:129)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS fall failure locks 2
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:130)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS failure waits for user 2
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:131)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS retry playable FALL_R_2
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Retry>d__32:MoveNext () (at Assets/QA/FullSystems.cs:105)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS fall no resource drift 2
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:132)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS fall no Hook/collider growth 2
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:133)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA CONTROLLED_SETUP position=(-3.85, -10.00)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Position (UnityEngine.Vector2) (at Assets/QA/FullSystems.cs:87)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:129)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS fall failure locks 3
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:130)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS failure waits for user 3
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:131)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS retry playable FALL_R_3
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Retry>d__32:MoveNext () (at Assets/QA/FullSystems.cs:105)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS fall no resource drift 3
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:132)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS fall no Hook/collider growth 3
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:133)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA CONTROLLED_SETUP position=(-3.85, -10.00)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Position (UnityEngine.Vector2) (at Assets/QA/FullSystems.cs:87)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:129)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS fall failure locks 4
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:130)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS failure waits for user 4
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:131)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS retry playable FALL_R_4
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Retry>d__32:MoveNext () (at Assets/QA/FullSystems.cs:105)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS fall no resource drift 4
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:132)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS fall no Hook/collider growth 4
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:133)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA CONTROLLED_SETUP position=(-3.85, -10.00)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Position (UnityEngine.Vector2) (at Assets/QA/FullSystems.cs:87)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:129)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS fall failure locks 5
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:130)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS failure waits for user 5
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:131)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS retry playable FALL_R_5
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Retry>d__32:MoveNext () (at Assets/QA/FullSystems.cs:105)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS fall no resource drift 5
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:132)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS fall no Hook/collider growth 5
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:133)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS exhaustion entered 1
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:137)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS retry playable EXHAUSTED_R_1
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Retry>d__32:MoveNext () (at Assets/QA/FullSystems.cs:105)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS exhaustion restores rope 1
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:138)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS exhaustion entered 2
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:137)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS retry playable EXHAUSTED_R_2
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Retry>d__32:MoveNext () (at Assets/QA/FullSystems.cs:105)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS exhaustion restores rope 2
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:138)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS exhaustion entered 3
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:137)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS retry playable EXHAUSTED_R_3
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Retry>d__32:MoveNext () (at Assets/QA/FullSystems.cs:105)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS exhaustion restores rope 3
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:138)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS checkpoint object exists 2
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<EnterSection>d__31:MoveNext () (at Assets/QA/FullSystems.cs:98)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA CONTROLLED_SETUP position=(9.50, -3.65)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Position (UnityEngine.Vector2) (at Assets/QA/FullSystems.cs:87)
+FullSystems/<EnterSection>d__31:MoveNext () (at Assets/QA/FullSystems.cs:99)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS controlled physical top landing captures 2
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<EnterSection>d__31:MoveNext () (at Assets/QA/FullSystems.cs:100)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS checkpoint object exists 3
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<EnterSection>d__31:MoveNext () (at Assets/QA/FullSystems.cs:98)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA CONTROLLED_SETUP position=(29.00, -3.15)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Position (UnityEngine.Vector2) (at Assets/QA/FullSystems.cs:87)
+FullSystems/<EnterSection>d__31:MoveNext () (at Assets/QA/FullSystems.cs:99)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS controlled physical top landing captures 3
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<EnterSection>d__31:MoveNext () (at Assets/QA/FullSystems.cs:100)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA CONTROLLED_SETUP position=(45.60, -5.30)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Position (UnityEngine.Vector2) (at Assets/QA/FullSystems.cs:87)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:142)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS low switch floor does not advance checkpoint4
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:142)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS physical proximity switch reveals stairs via F handler API
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:143)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS retry playable STAIRS_R
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Retry>d__32:MoveNext () (at Assets/QA/FullSystems.cs:105)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS return checkpoint hides recovery stairs
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:144)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS checkpoint object exists 4
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<EnterSection>d__31:MoveNext () (at Assets/QA/FullSystems.cs:98)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA CONTROLLED_SETUP position=(53.60, -0.95)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Position (UnityEngine.Vector2) (at Assets/QA/FullSystems.cs:87)
+FullSystems/<EnterSection>d__31:MoveNext () (at Assets/QA/FullSystems.cs:99)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS controlled physical top landing captures 4
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<EnterSection>d__31:MoveNext () (at Assets/QA/FullSystems.cs:100)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA CONTROLLED_SETUP position=(63.95, -1.42)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Position (UnityEngine.Vector2) (at Assets/QA/FullSystems.cs:87)
+FullSystems/<Bridge>d__34:MoveNext () (at Assets/QA/FullSystems.cs:115)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS S4_BRIDGE E attach
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Bridge>d__34:MoveNext () (at Assets/QA/FullSystems.cs:116)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS S4_BRIDGE E no permanent spend
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Bridge>d__34:MoveNext () (at Assets/QA/FullSystems.cs:116)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS S4_BRIDGE Q build
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Bridge>d__34:MoveNext () (at Assets/QA/FullSystems.cs:117)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS S4_BRIDGE Q exact resource cost
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Bridge>d__34:MoveNext () (at Assets/QA/FullSystems.cs:117)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS physical walk target 68.5 actual (68.56, 0.07)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Walk>d__33:MoveNext () (at Assets/QA/FullSystems.cs:111)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS S4 bridge supports walking
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:147)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS S4 bridge supports E to swing hook
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:150)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS detach preserves instantaneous momentum
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:151)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS detach no permanent spend
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:151)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS retry playable S4_R
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Retry>d__32:MoveNext () (at Assets/QA/FullSystems.cs:105)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS checkpoint object exists 5
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<EnterSection>d__31:MoveNext () (at Assets/QA/FullSystems.cs:98)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA CONTROLLED_SETUP position=(87.10, -0.95)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Position (UnityEngine.Vector2) (at Assets/QA/FullSystems.cs:87)
+FullSystems/<EnterSection>d__31:MoveNext () (at Assets/QA/FullSystems.cs:99)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS controlled physical top landing captures 5
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<EnterSection>d__31:MoveNext () (at Assets/QA/FullSystems.cs:100)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS S5 hazard unblocked without bridge
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:154)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA CONTROLLED_SETUP position=(94.45, 0.08)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Position (UnityEngine.Vector2) (at Assets/QA/FullSystems.cs:87)
+FullSystems/<Bridge>d__34:MoveNext () (at Assets/QA/FullSystems.cs:115)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS S5_SHADOW E attach
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Bridge>d__34:MoveNext () (at Assets/QA/FullSystems.cs:116)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS S5_SHADOW E no permanent spend
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Bridge>d__34:MoveNext () (at Assets/QA/FullSystems.cs:116)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS S5_SHADOW Q build
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Bridge>d__34:MoveNext () (at Assets/QA/FullSystems.cs:117)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS S5_SHADOW Q exact resource cost
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Bridge>d__34:MoveNext () (at Assets/QA/FullSystems.cs:117)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS S5 authored bridge occludes light
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:156)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS retry playable S5_BRIDGE_R_1
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Retry>d__32:MoveNext () (at Assets/QA/FullSystems.cs:105)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS S5 retry removes unsaved shadow bridge 1
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:159)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS S5 rail shelves active 1
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:160)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA CONTROLLED_SETUP position=(94.45, 0.08)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Position (UnityEngine.Vector2) (at Assets/QA/FullSystems.cs:87)
+FullSystems/<Bridge>d__34:MoveNext () (at Assets/QA/FullSystems.cs:115)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS S5_REBUILD_1 E attach
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Bridge>d__34:MoveNext () (at Assets/QA/FullSystems.cs:116)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS S5_REBUILD_1 E no permanent spend
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Bridge>d__34:MoveNext () (at Assets/QA/FullSystems.cs:116)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS S5_REBUILD_1 Q build
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Bridge>d__34:MoveNext () (at Assets/QA/FullSystems.cs:117)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS S5_REBUILD_1 Q exact resource cost
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Bridge>d__34:MoveNext () (at Assets/QA/FullSystems.cs:117)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS retry playable S5_BRIDGE_R_2
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Retry>d__32:MoveNext () (at Assets/QA/FullSystems.cs:105)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS S5 retry removes unsaved shadow bridge 2
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:159)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS S5 rail shelves active 2
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:160)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA CONTROLLED_SETUP position=(94.45, 0.08)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Position (UnityEngine.Vector2) (at Assets/QA/FullSystems.cs:87)
+FullSystems/<Bridge>d__34:MoveNext () (at Assets/QA/FullSystems.cs:115)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS S5_REBUILD_2 E attach
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Bridge>d__34:MoveNext () (at Assets/QA/FullSystems.cs:116)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS S5_REBUILD_2 E no permanent spend
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Bridge>d__34:MoveNext () (at Assets/QA/FullSystems.cs:116)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS S5_REBUILD_2 Q build
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Bridge>d__34:MoveNext () (at Assets/QA/FullSystems.cs:117)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS S5_REBUILD_2 Q exact resource cost
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Bridge>d__34:MoveNext () (at Assets/QA/FullSystems.cs:117)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS retry playable S5_BRIDGE_R_3
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Retry>d__32:MoveNext () (at Assets/QA/FullSystems.cs:105)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS S5 retry removes unsaved shadow bridge 3
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:159)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS S5 rail shelves active 3
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:160)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA CONTROLLED_SETUP position=(94.45, 0.08)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Position (UnityEngine.Vector2) (at Assets/QA/FullSystems.cs:87)
+FullSystems/<Bridge>d__34:MoveNext () (at Assets/QA/FullSystems.cs:115)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS S5_REBUILD_3 E attach
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Bridge>d__34:MoveNext () (at Assets/QA/FullSystems.cs:116)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS S5_REBUILD_3 E no permanent spend
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Bridge>d__34:MoveNext () (at Assets/QA/FullSystems.cs:116)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS S5_REBUILD_3 Q build
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Bridge>d__34:MoveNext () (at Assets/QA/FullSystems.cs:117)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS S5_REBUILD_3 Q exact resource cost
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Bridge>d__34:MoveNext () (at Assets/QA/FullSystems.cs:117)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+TrimDiskCacheJob: Current cache size 0mb
+FULL_QA PASS retry playable S5_FINAL_R
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Retry>d__32:MoveNext () (at Assets/QA/FullSystems.cs:105)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS checkpoint object exists 6
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<EnterSection>d__31:MoveNext () (at Assets/QA/FullSystems.cs:98)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA CONTROLLED_SETUP position=(112.40, -0.95)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Position (UnityEngine.Vector2) (at Assets/QA/FullSystems.cs:87)
+FullSystems/<EnterSection>d__31:MoveNext () (at Assets/QA/FullSystems.cs:99)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS controlled physical top landing captures 6
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<EnterSection>d__31:MoveNext () (at Assets/QA/FullSystems.cs:100)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA CONTROLLED_SETUP position=(118.45, -1.42)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Position (UnityEngine.Vector2) (at Assets/QA/FullSystems.cs:87)
+FullSystems/<Bridge>d__34:MoveNext () (at Assets/QA/FullSystems.cs:115)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS S6_UPPER E attach
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Bridge>d__34:MoveNext () (at Assets/QA/FullSystems.cs:116)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS S6_UPPER E no permanent spend
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Bridge>d__34:MoveNext () (at Assets/QA/FullSystems.cs:116)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS S6_UPPER Q build
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Bridge>d__34:MoveNext () (at Assets/QA/FullSystems.cs:117)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS S6_UPPER Q exact resource cost
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Bridge>d__34:MoveNext () (at Assets/QA/FullSystems.cs:117)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS physical walk target 131.6 actual (131.65, 4.42)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Walk>d__33:MoveNext () (at Assets/QA/FullSystems.cs:111)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS retry playable S6_R
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Retry>d__32:MoveNext () (at Assets/QA/FullSystems.cs:105)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA CONTROLLED_SETUP position=(118.40, -1.45)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Position (UnityEngine.Vector2) (at Assets/QA/FullSystems.cs:87)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:167)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS S6 lower initial grounded E
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:168)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS S6 air-chain window opens after manual detach
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:172)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS S6 immediate sequential air reattach API
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:173)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS S6 1.5sec window expires
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:174)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS retry playable S6_AFTER_CHAIN_R
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Retry>d__32:MoveNext () (at Assets/QA/FullSystems.cs:105)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS checkpoint object exists 7
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<EnterSection>d__31:MoveNext () (at Assets/QA/FullSystems.cs:98)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA CONTROLLED_SETUP position=(147.90, -0.95)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Position (UnityEngine.Vector2) (at Assets/QA/FullSystems.cs:87)
+FullSystems/<EnterSection>d__31:MoveNext () (at Assets/QA/FullSystems.cs:99)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS controlled physical top landing captures 7
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<EnterSection>d__31:MoveNext () (at Assets/QA/FullSystems.cs:100)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA CONTROLLED_SETUP position=(154.45, -1.42)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Position (UnityEngine.Vector2) (at Assets/QA/FullSystems.cs:87)
+FullSystems/<Bridge>d__34:MoveNext () (at Assets/QA/FullSystems.cs:115)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS S7_BRIDGE E attach
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Bridge>d__34:MoveNext () (at Assets/QA/FullSystems.cs:116)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS S7_BRIDGE E no permanent spend
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Bridge>d__34:MoveNext () (at Assets/QA/FullSystems.cs:116)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS S7_BRIDGE Q build
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Bridge>d__34:MoveNext () (at Assets/QA/FullSystems.cs:117)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS S7_BRIDGE Q exact resource cost
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Bridge>d__34:MoveNext () (at Assets/QA/FullSystems.cs:117)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS physical walk target 159.7 actual (159.76, 0.27)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Walk>d__33:MoveNext () (at Assets/QA/FullSystems.cs:111)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS retry playable S7_R
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Retry>d__32:MoveNext () (at Assets/QA/FullSystems.cs:105)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS checkpoint object exists 9
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<EnterSection>d__31:MoveNext () (at Assets/QA/FullSystems.cs:98)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA CONTROLLED_SETUP position=(172.80, -0.95)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Position (UnityEngine.Vector2) (at Assets/QA/FullSystems.cs:87)
+FullSystems/<EnterSection>d__31:MoveNext () (at Assets/QA/FullSystems.cs:99)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS controlled physical top landing captures 9
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<EnterSection>d__31:MoveNext () (at Assets/QA/FullSystems.cs:100)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS KNOWN CONTENT STRUCTURE physical progression7 ->9
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:180)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA CONTROLLED_SETUP position=(179.35, -1.42)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Position (UnityEngine.Vector2) (at Assets/QA/FullSystems.cs:87)
+FullSystems/<Bridge>d__34:MoveNext () (at Assets/QA/FullSystems.cs:115)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS S9_LEFT E attach
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Bridge>d__34:MoveNext () (at Assets/QA/FullSystems.cs:116)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS S9_LEFT E no permanent spend
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Bridge>d__34:MoveNext () (at Assets/QA/FullSystems.cs:116)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS S9_LEFT Q build
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Bridge>d__34:MoveNext () (at Assets/QA/FullSystems.cs:117)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS S9_LEFT Q exact resource cost
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Bridge>d__34:MoveNext () (at Assets/QA/FullSystems.cs:117)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS physical walk target 184.85 actual (184.93, -0.39)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Walk>d__33:MoveNext () (at Assets/QA/FullSystems.cs:111)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS S9 second E
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:184)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS S9 second Q
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:184)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS S9 F merge
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:185)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS F no extra spend
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:185)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS S9 merged bridge actual physical checkpoint10
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:187)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS retry playable MERGED_R_1
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Retry>d__32:MoveNext () (at Assets/QA/FullSystems.cs:105)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS merged snapshot endpoints/length12 count1 R1
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:196)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS merged removed Hook identity inactive R1
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:197)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS merged resource checkpoint R1
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:198)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS merged no collider growth R1
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:199)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS retry playable MERGED_R_2
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Retry>d__32:MoveNext () (at Assets/QA/FullSystems.cs:105)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS merged snapshot endpoints/length12 count1 R2
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:196)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS merged removed Hook identity inactive R2
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:197)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS merged resource checkpoint R2
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:198)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS merged no collider growth R2
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:199)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS retry playable MERGED_R_3
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Retry>d__32:MoveNext () (at Assets/QA/FullSystems.cs:105)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS merged snapshot endpoints/length12 count1 R3
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:196)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS merged removed Hook identity inactive R3
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:197)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS merged resource checkpoint R3
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:198)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS merged no collider growth R3
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:199)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS physical walk target 198.35 actual (198.45, -1.54)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Walk>d__33:MoveNext () (at Assets/QA/FullSystems.cs:111)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS S10 length10 bridge from real current position
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:202)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS S10 consumes10
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:202)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS S10 actual chest clear starts / physics locked
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:204)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS Main clear state revealed
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:205)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS Main progress flag
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:205)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+Unloading 54 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 22.494400 ms
+Loaded scene 'Assets/Scenes/Tutorial.unity'
+	Deserialize:            69.330 ms
+	Integration:            2562.490 ms
+	Integration of assets:  6.884 ms
+	Thread Wait Time:       -0.047 ms
+	Total Operation Time:   2638.658 ms
+Unloading 12 unused Assets / (13.7 KB). Loaded Objects now: 2541.
+Memory consumption went from 345.2 MB to 345.2 MB.
+Total: 16.768200 ms (FindLiveObjects: 0.949200 ms CreateObjectMapping: 0.431500 ms MarkObjects: 14.591500 ms  DeleteObjects: 0.793700 ms)
+
+FULL_QA PASS Main clear return API reaches Stage Selection
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:209)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS BGM singleton on clear return
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:209)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS upcoming stage refuses launch with message
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:212)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS new selection clears error
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:213)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS menu help pauses
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:214)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS help close resumes
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:214)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS menu main reselect transition starts
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:215)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 3.806100 ms
+Loaded scene 'Assets/Scenes/MainStage.unity'
+	Deserialize:            77.708 ms
+	Integration:            885.408 ms
+	Integration of assets:  0.138 ms
+	Thread Wait Time:       1.794 ms
+	Total Operation Time:   965.048 ms
+Unloading 9 unused Assets / (3.5 MB). Loaded Objects now: 2672.
+Memory consumption went from 328.8 MB to 325.3 MB.
+Total: 15.046900 ms (FindLiveObjects: 0.441600 ms CreateObjectMapping: 0.104500 ms MarkObjects: 13.938400 ms  DeleteObjects: 0.559400 ms)
+
+FULL_QA PASS fresh MainStage after clear and reselect
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:217)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+FULL_QA PASS BGM singleton after menu reselect
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+FullSystems:Log (string) (at Assets/QA/FullSystems.cs:30)
+FullSystems:Check (bool,string) (at Assets/QA/FullSystems.cs:31)
+FullSystems/<Routine>d__35:MoveNext () (at Assets/QA/FullSystems.cs:218)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+(Filename: Assets/QA/FullSystems.cs Line: 30)
+
+[Physics::Module] Cleanup current backend.
+[Physics::Module] Id: 0xf2b8ea05
+Input System module state changed to: ShutdownInProgress.
+Input System polling thread exited.
+Input System module state changed to: Shutdown.
+[Licensing::IpcConnector] LicenseClient-田尻大翔-6000.3.21-notifications channel disconnected successfully.
+[Licensing::IpcConnector] LicenseClient-田尻大翔-6000.3.21 channel disconnected successfully.
+AcceleratorClientConnectionCallback - disconnected - :0
+Cleanup mono
+Checking for leaked weakptr:
+  Found no leaked weakptrs.
+[Package Manager] Server process was shutdown
+##utp:{"type":"MemoryLeaks","version":2,"phase":"Immediate","time":1790837780610,"processId":12188,"allocatedMemory":10149825,"memoryLabels":[{"Default":29313},{"Permanent":15236},{"NewDelete":69187},{"Thread":4230344},{"Manager":33885},{"VertexData":104},{"Geometry":816},{"Texture":296},{"Shader":79381},{"Material":24},{"GfxDevice":55944},{"Audio":2664},{"FreeType":8},{"FontEngine":736},{"Physics":2146},{"Physics2D":16},{"Serialization":720},{"Input":14984},{"JobScheduler":33024},{"TextLib":280},{"Mono":32},{"ScriptingNativeRuntime":155060},{"BaseObject":1681456},{"Resource":1336},{"Renderer":3000},{"Transform":4685},{"File":6862},{"WebCam":616},{"Culling":32},{"Terrain":11394},{"Wind":24},{"STL":40},{"String":14720},{"DynamicArray":88086},{"HashMap":45478},{"Utility":2660822},{"Curl":2478},{"PoolAlloc":2056},{"AI":80},{"TypeTree":5341},{"ScriptManager":512},{"RuntimeInitializeOnLoadManager":64},{"SpriteAtlas":112},{"GI":7792},{"Director":8240},{"CloudService":6880},{"WebRequest":4662},{"VR":47994},{"SceneManager":504},{"Video":208},{"LazyScriptCache":32},{"Camera":17},{"Secure":2377},{"SerializationCache":1576},{"APIUpdating":10320},{"Subsystems":336},{"VirtualTexturing":57888},{"StaticSafetyDebugInfo":278528},{"Analytics":464},{"Hierarchy":608},{"CoreStats":13112},{"Identifiers":6480},{"Gui":96},{"EditorUtility":82657},{"VersionControl":4},{"Undo":947},{"AssetDatabase":319681},{"EditorGi":328},{"UnityConnect":29232},{"Upm":1896},{"AssetCompliance":64},{"DrivenProperties":72},{"LocalIPC":218},{"ProfilerEditor":9746},{"CoreBusinessMetrics":3496},{"Licensing":664},{"AssetReference":32},{"IPCStream":32}]}

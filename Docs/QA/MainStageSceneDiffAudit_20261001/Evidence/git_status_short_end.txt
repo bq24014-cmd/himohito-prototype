@@ -1,0 +1,7 @@
+ M Assets/Scenes/MainStage.unity
+ M Docs/LEARNING_LOG.md
+ M README.md
+?? Docs/QA/FullGameRegression_20260930/
+?? Docs/QA/HumanPlaytest_20260930/
+?? Docs/QA/MainStageSceneDiffAudit_20261001/
+?? output/
