@@ -1,0 +1,22 @@
+{
+  "builds": {
+    "baseline": {
+      "path": "C:\\Users\\\u7530\u5c3b\u5927\u7fd4\\Documents\\Codex\\2026-08-07\\new-chat\\outputs\\HimoHitoPrototype\\output\\Tutorial2p5DProductionIntegration_20261001_Baseline05\\Game",
+      "result": "Succeeded",
+      "reported_bytes": 398151260,
+      "seconds": 27.4712335,
+      "exe_sha256": "837986201D89BE25426B8415CB3BC945F077E5B13F4722D6763D04EBD38C5472"
+    },
+    "production": {
+      "path": "C:\\Users\\\u7530\u5c3b\u5927\u7fd4\\Documents\\Codex\\2026-08-07\\new-chat\\outputs\\HimoHitoPrototype\\output\\Tutorial2p5DProductionIntegration_20261001_Production04\\Game",
+      "result": "Succeeded",
+      "reported_bytes": 420986444,
+      "seconds": 27.4669466,
+      "exe_sha256": "837986201D89BE25426B8415CB3BC945F077E5B13F4722D6763D04EBD38C5472"
+    }
+  },
+  "delta_bytes": 22835184,
+  "delta_mib": 21.777328491210938,
+  "delta_percent": 5.735303713468093,
+  "scope": "Same working-tree baseline / production, Windows64 release; identical inactive QA probe in both; production isolated Resources also contains tiny legacy comparison shader. Not a clean Git-only build; documented external BGM and existing working-tree state are retained."
+}

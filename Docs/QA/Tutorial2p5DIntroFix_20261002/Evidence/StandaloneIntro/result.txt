@@ -1,0 +1,11 @@
+checks=13
+failures=0
+runtimeErrors=0
+playingFrames=2156
+hiddenAfterCommit=0
+doubleDrawFrames=0
+maxOwnedDrawable=15
+maxLegacyDrawable=0
+sequenceFrames=39
+variant=After
+Natural existing curtain + unskipped camera intro. Cached-input movement is automated QA, not Human keyboard approval.

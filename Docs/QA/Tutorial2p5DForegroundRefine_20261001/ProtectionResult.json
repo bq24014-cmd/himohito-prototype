@@ -1,0 +1,10 @@
+{
+  "protected_file_count": 3175,
+  "mismatches": [],
+  "new_production_files": [],
+  "HEAD": "702a4bc044b0eb35bedb552753ca8495599bc1ee",
+  "origin_main": "702a4bc044b0eb35bedb552753ca8495599bc1ee",
+  "staged": "",
+  "status": "M Assets/Scenes/MainStage.unity\n M Docs/LEARNING_LOG.md\n M README.md\n?? Docs/QA/FullGameRegression_20260930/\n?? Docs/QA/HumanPlaytest_20260930/\n?? Docs/QA/MainStageCleanReproduction_20261001/Evidence/ArchiveExpansion/\n?? Docs/QA/MainStageSceneDiffAudit_20261001/Evidence/__pycache__/\n?? Docs/QA/Tutorial2p5DForegroundRefine_20261001/\n?? Docs/QA/Tutorial2p5DProof_20261001/\n?? Docs/VisualConcepts/\n?? output/",
+  "PASS": true
+}

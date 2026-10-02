@@ -1,0 +1,53 @@
+{
+  "method": "built-in image_gen; uniform canvas normalization; actual Far -> Mid -> Near alpha-over",
+  "files": {
+    "Tutorial2p5D_Far.png": {
+      "original": "C:/Users/田尻大翔/.codex/generated_images/019fdfa3-5ee1-7911-8a24-63282af5bae4/exec-ad02670b-b489-436a-b30d-f67676acaedb.png",
+      "original_sha256": "F62C8E92FE2652BA476A72C0A12E2CCFC4A06EF15769D6CC2DBDA292C30F3470",
+      "original_size": [
+        1672,
+        941
+      ],
+      "exported_sha256": "6C7E66A3CDCC5E9D6BD68F4C5E4303512ADA2956CDB82E29327C1E5AEF2F74CA",
+      "alpha": {
+        "width": 1920,
+        "height": 1080,
+        "zero": 0,
+        "partial": 0,
+        "full": 2073600
+      }
+    },
+    "Tutorial2p5D_Mid.png": {
+      "original": "C:/Users/田尻大翔/.codex/generated_images/019fdfa3-5ee1-7911-8a24-63282af5bae4/exec-497ecff1-1ef0-4f4c-aca4-233a8bb53735.png",
+      "original_sha256": "986DCF989B799FEA27018B2CB460631892C42A246F9D9716F47D620D810CEDB9",
+      "original_size": [
+        1672,
+        941
+      ],
+      "exported_sha256": "8378E1A3CFB787A27EE5DF301B112D43AD598558167DBBF5A6DC4C11A816BFD4",
+      "alpha": {
+        "width": 1920,
+        "height": 1080,
+        "zero": 64672,
+        "partial": 2008419,
+        "full": 509
+      }
+    },
+    "Tutorial2p5D_Near.png": {
+      "original": "C:/Users/田尻大翔/.codex/generated_images/019fdfa3-5ee1-7911-8a24-63282af5bae4/exec-8eacd9e2-db7d-4ea7-8ea6-3528e91958d4.png",
+      "original_sha256": "44193982A5EA3EE8DF7883EECDAF437C4D74DE98FBAF25C461C9D642DE80FDA7",
+      "original_size": [
+        1672,
+        941
+      ],
+      "exported_sha256": "93C41624926C5DC17737193124794F66906DF7CDA083CA2E49281EB6A4FDADCE",
+      "alpha": {
+        "width": 1920,
+        "height": 1080,
+        "zero": 1829673,
+        "partial": 243251,
+        "full": 676
+      }
+    }
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "production": [
+    {
+      "path": "Assets/Resources/Art/Tutorial2p5D/Tutorial2p5D_Far.png",
+      "bytes": 3601894,
+      "sha256": "6C7E66A3CDCC5E9D6BD68F4C5E4303512ADA2956CDB82E29327C1E5AEF2F74CA",
+      "isolated_source_equal": true
+    },
+    {
+      "path": "Assets/Resources/Art/Tutorial2p5D/Tutorial2p5D_Far.png.meta",
+      "bytes": 2684,
+      "sha256": "91C452CB34AEE6EBA78FFD3D8F204444F7B0B08C7A736E0D437623909F0A5B57",
+      "isolated_source_equal": true
+    },
+    {
+      "path": "Assets/Resources/Art/Tutorial2p5D/Tutorial2p5D_Mid.png",
+      "bytes": 4779102,
+      "sha256": "8378E1A3CFB787A27EE5DF301B112D43AD598558167DBBF5A6DC4C11A816BFD4",
+      "isolated_source_equal": true
+    },
+    {
+      "path": "Assets/Resources/Art/Tutorial2p5D/Tutorial2p5D_Mid.png.meta",
+      "bytes": 2684,
+      "sha256": "361DF8D72808E36DAD51004865A969CA945FB66F363DBEDF9FB50EDA9DBFB85F",
+      "isolated_source_equal": true
+    },
+    {
+      "path": "Assets/Resources/Art/Tutorial2p5D/Tutorial2p5D_NearRefined.png",
+      "bytes": 811179,
+      "sha256": "4CDAA97410DE24143A1CF8D9834AA9CFB3AEDC70A541CC9DC9D6418BFBE82495",
+      "isolated_source_equal": true
+    },
+    {
+      "path": "Assets/Resources/Art/Tutorial2p5D/Tutorial2p5D_NearRefined.png.meta",
+      "bytes": 2684,
+      "sha256": "56D21B81CAA98BA8BAA5DD47FE1C88F985CDBAF39447E5BCBCEF695568A49672",
+      "isolated_source_equal": true
+    },
+    {
+      "path": "Assets/Resources/Art/Tutorial2p5D.meta",
+      "bytes": 172,
+      "sha256": "27A99B37323282C3F53F3D52800EF8E250B39ED97B27685BC178F08D61E20251",
+      "isolated_source_equal": true
+    },
+    {
+      "path": "Assets/Resources/TutorialBackgroundEdge.shader",
+      "bytes": 1452,
+      "sha256": "F6B2BA1886E770AAD5AB0B5B52D129C39BC3034CF296D65574AA68AB860C99C2",
+      "isolated_source_equal": true
+    },
+    {
+      "path": "Assets/Resources/TutorialBackgroundEdge.shader.meta",
+      "bytes": 60,
+      "sha256": "000EE209745BB48433997D3698596722C755E1B99990840E8F528F124FBA72C2",
+      "isolated_source_equal": true
+    },
+    {
+      "path": "Assets/Resources/TutorialBackgroundFloor.shader",
+      "bytes": 1506,
+      "sha256": "DD4FF11BC4BFD514C0D3EB1887C577CE2C2D4C05F1C465F66D35EFEB243973CC",
+      "isolated_source_equal": true
+    },
+    {
+      "path": "Assets/Resources/TutorialBackgroundFloor.shader.meta",
+      "bytes": 60,
+      "sha256": "590450B43AAF32A12DF56821E81AAE56BA673EE011B0DE939B870478E64362A6",
+      "isolated_source_equal": true
+    },
+    {
+      "path": "Assets/Scripts/HimoHitoCraftRoomBackground.cs",
+      "bytes": 23164,
+      "sha256": "11AF0ED7649B6D82ADBB5874DFA0D85AF59DFF8534FB6F375BD92EBE98D53076",
+      "isolated_source_equal": true
+    },
+    {
+      "path": "Assets/Scripts/TutorialCraftRoomLayers.cs",
+      "bytes": 9853,
+      "sha256": "1AE69EDB11D8328B405C0EE0F5FEACC869640BF92312072D119AFA13044E4CF6",
+      "isolated_source_equal": true
+    },
+    {
+      "path": "Assets/Scripts/TutorialCraftRoomLayers.cs.meta",
+      "bytes": 60,
+      "sha256": "C27F91FB272A59B7E44E883CE58F24983A4BEA96DAB84B884947FF3D63094DB3",
+      "isolated_source_equal": true
+    }
+  ],
+  "preexisting_gameplay_source_differences": [],
+  "scene_bgm_protection": {
+    "Assets/Scenes/Tutorial.unity": {
+      "before": "DC1BED54CC083256CE895041B1C93578101E19B9738E7CF260619E8F7E1E4B92",
+      "after": "DC1BED54CC083256CE895041B1C93578101E19B9738E7CF260619E8F7E1E4B92",
+      "unchanged": true
+    },
+    "Assets/Scenes/MainStage.unity": {
+      "before": "57D2464751B5B9C2A78E6C56F34197E9BC2629983FADAA1DFF6E0BA0B4BC2284",
+      "after": "57D2464751B5B9C2A78E6C56F34197E9BC2629983FADAA1DFF6E0BA0B4BC2284",
+      "unchanged": true
+    },
+    "Assets/Resources/Audio/YasashiiOdori.mp3": {
+      "before": "25C52DA234D42C7A5E5CC91D45AEED14829F845EA15932A88AC94AB006781E83",
+      "after": "25C52DA234D42C7A5E5CC91D45AEED14829F845EA15932A88AC94AB006781E83",
+      "unchanged": true
+    }
+  },
+  "diagnostics_in_production": false,
+  "HEAD": "702a4bc044b0eb35bedb552753ca8495599bc1ee",
+  "origin_main": "702a4bc044b0eb35bedb552753ca8495599bc1ee",
+  "staged": ""
+}

@@ -1,0 +1,36 @@
+{
+  "results": {
+    "baseline": {
+      "result": "PASS",
+      "recorded": 240,
+      "used": 230,
+      "median_frame_ms": 2.59735,
+      "p95_frame_ms": 3.8733,
+      "observed_mean_fps": 364.7315385581496,
+      "median_main_thread_ms": 2.58875,
+      "texture_bytes": 99123026,
+      "resolution": "1600x900",
+      "vsync": "0",
+      "targetFrameRate": "-1",
+      "2p5d_visible": "False",
+      "legacy_hidden": "False"
+    },
+    "production": {
+      "result": "PASS",
+      "recorded": 240,
+      "used": 230,
+      "median_frame_ms": 2.4611,
+      "p95_frame_ms": 3.632,
+      "observed_mean_fps": 387.9151936430482,
+      "median_main_thread_ms": 2.4553000000000003,
+      "texture_bytes": 99123026,
+      "resolution": "1600x900",
+      "vsync": "0",
+      "targetFrameRate": "-1",
+      "2p5d_visible": "True",
+      "legacy_hidden": "True"
+    }
+  },
+  "texture_delta_bytes": 0,
+  "scope": "Sequential Windows standalone hidden helper windows, runInBackground enabled only by explicit diagnostic flag, Section1 stationary,1600x900,vsync0,uncapped,240 frames (230 used). Camera/input/physics unchanged. Main Thread includes waits and CSV IO; not pure CPU busy time, not full-playthrough FPS or a low-spec guarantee."
+}

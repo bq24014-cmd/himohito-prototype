@@ -1,0 +1,29 @@
+{
+  "protected_files": 3866,
+  "authorized_source_changes": [
+    "Assets/Scripts/HimoHitoCraftRoomBackground.cs"
+  ],
+  "unexpected_changes": [],
+  "new_production_assets": [
+    "Assets/Resources/TutorialBackgroundEdge.shader",
+    "Assets/Resources/TutorialBackgroundEdge.shader.meta",
+    "Assets/Resources/TutorialBackgroundFloor.shader",
+    "Assets/Resources/TutorialBackgroundFloor.shader.meta",
+    "Assets/Scripts/TutorialCraftRoomLayers.cs",
+    "Assets/Scripts/TutorialCraftRoomLayers.cs.meta",
+    "Assets/Resources/Art/Tutorial2p5D.meta",
+    "Assets/Resources/Art/Tutorial2p5D/Tutorial2p5D_Far.png",
+    "Assets/Resources/Art/Tutorial2p5D/Tutorial2p5D_Far.png.meta",
+    "Assets/Resources/Art/Tutorial2p5D/Tutorial2p5D_Mid.png",
+    "Assets/Resources/Art/Tutorial2p5D/Tutorial2p5D_Mid.png.meta",
+    "Assets/Resources/Art/Tutorial2p5D/Tutorial2p5D_NearRefined.png",
+    "Assets/Resources/Art/Tutorial2p5D/Tutorial2p5D_NearRefined.png.meta"
+  ],
+  "unexpected_new": [],
+  "HEAD": "702a4bc044b0eb35bedb552753ca8495599bc1ee",
+  "origin_main": "702a4bc044b0eb35bedb552753ca8495599bc1ee",
+  "branch": "main",
+  "staged": "",
+  "status": "M Assets/Scenes/MainStage.unity\n M Assets/Scripts/HimoHitoCraftRoomBackground.cs\n M Docs/LEARNING_LOG.md\n M README.md\n?? Assets/Resources/Art/Tutorial2p5D.meta\n?? Assets/Resources/Art/Tutorial2p5D/\n?? Assets/Resources/TutorialBackgroundEdge.shader\n?? Assets/Resources/TutorialBackgroundEdge.shader.meta\n?? Assets/Resources/TutorialBackgroundFloor.shader\n?? Assets/Resources/TutorialBackgroundFloor.shader.meta\n?? Assets/Scripts/TutorialCraftRoomLayers.cs\n?? Assets/Scripts/TutorialCraftRoomLayers.cs.meta\n?? Docs/QA/FullGameRegression_20260930/\n?? Docs/QA/HumanPlaytest_20260930/\n?? Docs/QA/MainStageCleanReproduction_20261001/Evidence/ArchiveExpansion/\n?? Docs/QA/MainStageSceneDiffAudit_20261001/Evidence/__pycache__/\n?? Docs/QA/Tutorial2p5DAllSections_20261001/\n?? Docs/QA/Tutorial2p5DForegroundRefine_20261001/\n?? Docs/QA/Tutorial2p5DProductionIntegration_20261001/\n?? Docs/QA/Tutorial2p5DProof_20261001/\n?? Docs/VisualConcepts/\n?? output/",
+  "PASS": true
+}

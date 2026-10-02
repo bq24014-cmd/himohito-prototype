@@ -1,0 +1,8 @@
+capture=1600x900
+mid_edge_world_x=74.95271
+mid_edge_viewport_x=0.9105525
+floor_edge_world_x=72.3026
+floor_edge_viewport_x=0.8248808
+floor_edge_pixel_x=1319.809
+source_right_column=1919 completely transparent
+Coordinates use the actual 1600x900 capture projection; inspect both Mid and floor boundaries.

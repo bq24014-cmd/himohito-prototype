@@ -1,0 +1,7 @@
+checks=6
+failures=1
+runtimeErrors=0
+editorSearchStartupErrors=1
+physicalTransitions=0
+motionFrames=1
+Controlled cached-input/API route with real physics, NOT OS keyboard or Human approval. No body teleport on route.

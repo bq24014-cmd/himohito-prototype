@@ -1,0 +1,4 @@
+Probe installed; background execution enabled for both comparisons
+Start scene=Tutorial
+Title started
+240 frame recording

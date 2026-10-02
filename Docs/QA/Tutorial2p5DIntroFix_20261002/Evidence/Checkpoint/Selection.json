@@ -1,0 +1,4344 @@
+{
+  "Baseline": "702a4bc044b0eb35bedb552753ca8495599bc1ee",
+  "Files": [
+    {
+      "Path": "Assets/Resources/Art/Tutorial2p5D.meta",
+      "Group": "production",
+      "Bytes": 172,
+      "SHA256": "27A99B37323282C3F53F3D52800EF8E250B39ED97B27685BC178F08D61E20251"
+    },
+    {
+      "Path": "Assets/Resources/Art/Tutorial2p5D/Tutorial2p5D_Far.png",
+      "Group": "production",
+      "Bytes": 3601894,
+      "SHA256": "6C7E66A3CDCC5E9D6BD68F4C5E4303512ADA2956CDB82E29327C1E5AEF2F74CA"
+    },
+    {
+      "Path": "Assets/Resources/Art/Tutorial2p5D/Tutorial2p5D_Far.png.meta",
+      "Group": "production",
+      "Bytes": 2684,
+      "SHA256": "91C452CB34AEE6EBA78FFD3D8F204444F7B0B08C7A736E0D437623909F0A5B57"
+    },
+    {
+      "Path": "Assets/Resources/Art/Tutorial2p5D/Tutorial2p5D_Mid.png",
+      "Group": "production",
+      "Bytes": 4779102,
+      "SHA256": "8378E1A3CFB787A27EE5DF301B112D43AD598558167DBBF5A6DC4C11A816BFD4"
+    },
+    {
+      "Path": "Assets/Resources/Art/Tutorial2p5D/Tutorial2p5D_Mid.png.meta",
+      "Group": "production",
+      "Bytes": 2684,
+      "SHA256": "361DF8D72808E36DAD51004865A969CA945FB66F363DBEDF9FB50EDA9DBFB85F"
+    },
+    {
+      "Path": "Assets/Resources/Art/Tutorial2p5D/Tutorial2p5D_NearRefined.png",
+      "Group": "production",
+      "Bytes": 811179,
+      "SHA256": "4CDAA97410DE24143A1CF8D9834AA9CFB3AEDC70A541CC9DC9D6418BFBE82495"
+    },
+    {
+      "Path": "Assets/Resources/Art/Tutorial2p5D/Tutorial2p5D_NearRefined.png.meta",
+      "Group": "production",
+      "Bytes": 2684,
+      "SHA256": "56D21B81CAA98BA8BAA5DD47FE1C88F985CDBAF39447E5BCBCEF695568A49672"
+    },
+    {
+      "Path": "Assets/Resources/TutorialBackgroundEdge.shader",
+      "Group": "production",
+      "Bytes": 1452,
+      "SHA256": "F6B2BA1886E770AAD5AB0B5B52D129C39BC3034CF296D65574AA68AB860C99C2"
+    },
+    {
+      "Path": "Assets/Resources/TutorialBackgroundEdge.shader.meta",
+      "Group": "production",
+      "Bytes": 60,
+      "SHA256": "000EE209745BB48433997D3698596722C755E1B99990840E8F528F124FBA72C2"
+    },
+    {
+      "Path": "Assets/Resources/TutorialBackgroundFloor.shader",
+      "Group": "production",
+      "Bytes": 1506,
+      "SHA256": "DD4FF11BC4BFD514C0D3EB1887C577CE2C2D4C05F1C465F66D35EFEB243973CC"
+    },
+    {
+      "Path": "Assets/Resources/TutorialBackgroundFloor.shader.meta",
+      "Group": "production",
+      "Bytes": 60,
+      "SHA256": "590450B43AAF32A12DF56821E81AAE56BA673EE011B0DE939B870478E64362A6"
+    },
+    {
+      "Path": "Assets/Scripts/HimoHitoCraftRoomBackground.cs",
+      "Group": "production",
+      "Bytes": 23164,
+      "SHA256": "11AF0ED7649B6D82ADBB5874DFA0D85AF59DFF8534FB6F375BD92EBE98D53076"
+    },
+    {
+      "Path": "Assets/Scripts/TutorialCraftRoomLayers.cs",
+      "Group": "production",
+      "Bytes": 9773,
+      "SHA256": "E08312BCC8B61F31C9139EA0122AEA57726721263B4FB744A7AF7CDB10B7CE4F"
+    },
+    {
+      "Path": "Assets/Scripts/TutorialCraftRoomLayers.cs.meta",
+      "Group": "production",
+      "Bytes": 60,
+      "SHA256": "C27F91FB272A59B7E44E883CE58F24983A4BEA96DAB84B884947FF3D63094DB3"
+    },
+    {
+      "Path": "Docs/Maintenance/DiskUsageAudit_20261002/00_README.md",
+      "Group": "disk_audit",
+      "Bytes": 5866,
+      "SHA256": "492FD65274AA9ECB311A56C5BAF153DA7945219C08C780F1D60FE7D190843D7C"
+    },
+    {
+      "Path": "Docs/Maintenance/DiskUsageAudit_20261002/01_TopFolders.md",
+      "Group": "disk_audit",
+      "Bytes": 5777,
+      "SHA256": "27F14FAB0CDB0A72152F0A1F2B9C0C457716072BFA84394573C777EF75114494"
+    },
+    {
+      "Path": "Docs/Maintenance/DiskUsageAudit_20261002/02_HimoHito.md",
+      "Group": "disk_audit",
+      "Bytes": 6038,
+      "SHA256": "40CA57B369BE008C28DBB9043C8D2334479438133D0F236EA8C2CA3FD8915BC7"
+    },
+    {
+      "Path": "Docs/Maintenance/DiskUsageAudit_20261002/03_DesertLoop.md",
+      "Group": "disk_audit",
+      "Bytes": 5688,
+      "SHA256": "3007F841B670840530CE5809EB246FD7FCDA4D3B07A8518DDB97C61C19D789AA"
+    },
+    {
+      "Path": "Docs/Maintenance/DiskUsageAudit_20261002/04_CodexTemp.md",
+      "Group": "disk_audit",
+      "Bytes": 3828,
+      "SHA256": "B69BFDCBEFFDA000E1E2AA6184B49790343CA09301A890ADF6D7B78814D5B3F4"
+    },
+    {
+      "Path": "Docs/Maintenance/DiskUsageAudit_20261002/05_Visualizations.md",
+      "Group": "disk_audit",
+      "Bytes": 3284,
+      "SHA256": "0ECDC2C68E1319F1F72CD693118A31681A4D11DC4D984B9621DDD09153F862AF"
+    },
+    {
+      "Path": "Docs/Maintenance/DiskUsageAudit_20261002/06_DeleteCandidates.md",
+      "Group": "disk_audit",
+      "Bytes": 4771,
+      "SHA256": "88645CB1A452E26622EEB92F58EBBC0B0CCAD0C404EB0FC7815FC622C0741E95"
+    },
+    {
+      "Path": "Docs/Maintenance/DiskUsageAudit_20261002/07_RecommendedCleanup.md",
+      "Group": "disk_audit",
+      "Bytes": 3927,
+      "SHA256": "23BEA73E31FBD989610C7486E294D7AD52C05D2DD102664AE165BD38E91522BD"
+    },
+    {
+      "Path": "Docs/Maintenance/DiskUsageAudit_20261002/08_AdditionalSafetyConditions.md",
+      "Group": "disk_audit",
+      "Bytes": 6572,
+      "SHA256": "B2A36A278C7CC78B4167D00C678F7D657D7D46C37BD555F1C71B4C1B2263C135"
+    },
+    {
+      "Path": "Docs/Maintenance/DiskUsageAudit_20261002/Evidence/AdditionalSafety_AllRepoFileStates.csv",
+      "Group": "disk_audit",
+      "Bytes": 20000120,
+      "SHA256": "37535A976563C7C8AD3305149C7B0269A9131B9247BF48D574A81EA533F260E8"
+    },
+    {
+      "Path": "Docs/Maintenance/DiskUsageAudit_20261002/Evidence/AdditionalSafety_CDriveTimeline.json",
+      "Group": "disk_audit",
+      "Bytes": 1309,
+      "SHA256": "8E9318B44A97BEBF3CAC54BEC50BE1E5BF3DEEB63727DABE190727A5AC89FF53"
+    },
+    {
+      "Path": "Docs/Maintenance/DiskUsageAudit_20261002/Evidence/AdditionalSafety_DriveEnd.json",
+      "Group": "disk_audit",
+      "Bytes": 401,
+      "SHA256": "619B780880E0576FB425B2A9EDF1611B4782C7311F9AF91D9635F1620FC1DFD9"
+    },
+    {
+      "Path": "Docs/Maintenance/DiskUsageAudit_20261002/Evidence/AdditionalSafety_DriveStart.json",
+      "Group": "disk_audit",
+      "Bytes": 295,
+      "SHA256": "609F4230898040635BB30F16822EA0BCA606453A7C69E69B9F74E90330E505D5"
+    },
+    {
+      "Path": "Docs/Maintenance/DiskUsageAudit_20261002/Evidence/AdditionalSafety_FileGitStates.csv",
+      "Group": "disk_audit",
+      "Bytes": 4605029,
+      "SHA256": "2D15AB56A88D19740FEF2330C6D3E75FEB36839E69B1734E72E356C9B82868C7"
+    },
+    {
+      "Path": "Docs/Maintenance/DiskUsageAudit_20261002/Evidence/AdditionalSafety_FolderGitStates.csv",
+      "Group": "disk_audit",
+      "Bytes": 72247,
+      "SHA256": "9EEDFA3CF4DABCEF3FA3CF24E9100FB958A24CADCA4BCB1CDEE797D0E2FC8AB7"
+    },
+    {
+      "Path": "Docs/Maintenance/DiskUsageAudit_20261002/Evidence/AdditionalSafety_GitStateSummary.json",
+      "Group": "disk_audit",
+      "Bytes": 253,
+      "SHA256": "04A1D737CE70A4257E6CE77331C0639FD8B65C0D91FB4882CB9D26D6AFF84DC8"
+    },
+    {
+      "Path": "Docs/Maintenance/DiskUsageAudit_20261002/Evidence/AdditionalSafety_PreexistingAuditHashes.json",
+      "Group": "disk_audit",
+      "Bytes": 3822,
+      "SHA256": "CF4744CEB77BC68F72EAE0F39DDB7948C6F0F719091B371DA4A423732BAB82B6"
+    },
+    {
+      "Path": "Docs/Maintenance/DiskUsageAudit_20261002/Evidence/AdditionalSafety_Protected2p5DGitStates.json",
+      "Group": "disk_audit",
+      "Bytes": 10725,
+      "SHA256": "C9AB71413B5476B7B6AB6F08F8C07ADD78607E44101BEDC9FAB3A5144832B89C"
+    },
+    {
+      "Path": "Docs/Maintenance/DiskUsageAudit_20261002/Evidence/AdditionalSafety_ProtectionEnd.json",
+      "Group": "disk_audit",
+      "Bytes": 719112,
+      "SHA256": "C20C4FC7A0BDE5A7B73F00E10BCA2962092F7282334B22A94E024821B06D7DCD"
+    },
+    {
+      "Path": "Docs/Maintenance/DiskUsageAudit_20261002/Evidence/AdditionalSafety_ProtectionStart.json",
+      "Group": "disk_audit",
+      "Bytes": 719112,
+      "SHA256": "D780FF4C6A1479F60F6D4E05149194B4CD95242B16B3A2A986B4450F6AEC1947"
+    },
+    {
+      "Path": "Docs/Maintenance/DiskUsageAudit_20261002/Evidence/AdditionalSafety_RepositoryStates.json",
+      "Group": "disk_audit",
+      "Bytes": 10857195,
+      "SHA256": "DD7AE92C76288674E0572ED749CD014CD87E5345A6BACBAEF82FA0C3E7100280"
+    },
+    {
+      "Path": "Docs/Maintenance/DiskUsageAudit_20261002/Evidence/AdditionalSafety_Verification.json",
+      "Group": "disk_audit",
+      "Bytes": 676,
+      "SHA256": "0955953ED6EE60DED31D16ECF2DAE2D2842CC35873DF94F83A26E9FB8F84AA0B"
+    },
+    {
+      "Path": "Docs/Maintenance/DiskUsageAudit_20261002/Evidence/AdditionalSafety.py",
+      "Group": "disk_audit",
+      "Bytes": 10994,
+      "SHA256": "9514A94A51884B8E6F7568866A12EB710AD576668BC17E744394CA8B11BCE407"
+    },
+    {
+      "Path": "Docs/Maintenance/DiskUsageAudit_20261002/Evidence/AdditionalSafetyFolders.py",
+      "Group": "disk_audit",
+      "Bytes": 7262,
+      "SHA256": "1E8C3D95C658AD805C805E050A6A8407600455A89252D38981E406113F233403"
+    },
+    {
+      "Path": "Docs/Maintenance/DiskUsageAudit_20261002/Evidence/Analyze.py",
+      "Group": "disk_audit",
+      "Bytes": 17554,
+      "SHA256": "00D4167AB6EB01035C39A6AAE33093F47E9B1B7F9CCB46E762818054563B74B7"
+    },
+    {
+      "Path": "Docs/Maintenance/DiskUsageAudit_20261002/Evidence/CandidateSummary.json",
+      "Group": "disk_audit",
+      "Bytes": 2374,
+      "SHA256": "09F389A8783937E375683A9220E3E0C50A4102E262B5520CF3EF22524E2D8A64"
+    },
+    {
+      "Path": "Docs/Maintenance/DiskUsageAudit_20261002/Evidence/DesertFreezeRawDumps.csv",
+      "Group": "disk_audit",
+      "Bytes": 72783,
+      "SHA256": "DCC948A5B71ED166DABEC9794649D8D3C4215315E3225E063E58D164439A61FD"
+    },
+    {
+      "Path": "Docs/Maintenance/DiskUsageAudit_20261002/Evidence/DesertLogs_Table.md",
+      "Group": "disk_audit",
+      "Bytes": 12900,
+      "SHA256": "5162BDEC71BF491945AFBDDE98532430CC4B370CC7D6E494ABEFDE48B553CEAF"
+    },
+    {
+      "Path": "Docs/Maintenance/DiskUsageAudit_20261002/Evidence/DesertVisualizations_Table.md",
+      "Group": "disk_audit",
+      "Bytes": 4486,
+      "SHA256": "512AD41593B09A31850925370237867523F87FF6AF84157D288B48DFC23CA101"
+    },
+    {
+      "Path": "Docs/Maintenance/DiskUsageAudit_20261002/Evidence/DirectorySurvey.json",
+      "Group": "disk_audit",
+      "Bytes": 16554611,
+      "SHA256": "941AD54FC5B70FAB363C2A0641597B6A6F6629BC6BC873FF3E4DA968BDB1A3D6"
+    },
+    {
+      "Path": "Docs/Maintenance/DiskUsageAudit_20261002/Evidence/DirectorySurveyWithDesert.json",
+      "Group": "disk_audit",
+      "Bytes": 53524956,
+      "SHA256": "AE367D79919C3F433226846A3EDA082ECF760C0759F4AB87398FE5670DE90C4B"
+    },
+    {
+      "Path": "Docs/Maintenance/DiskUsageAudit_20261002/Evidence/ExtraSurvey.py",
+      "Group": "disk_audit",
+      "Bytes": 1444,
+      "SHA256": "13CA8AA001C6C0698209BFDBA3103829452C03DA2024FB45C9CC13A5A84EEB78"
+    },
+    {
+      "Path": "Docs/Maintenance/DiskUsageAudit_20261002/Evidence/FolderInventory.csv",
+      "Group": "disk_audit",
+      "Bytes": 94981,
+      "SHA256": "C86039653F509C92C92074A33E892813A0948890EC7E1471E27E24A7AED58C77"
+    },
+    {
+      "Path": "Docs/Maintenance/DiskUsageAudit_20261002/Evidence/GitInventory.py",
+      "Group": "disk_audit",
+      "Bytes": 2816,
+      "SHA256": "E4F66C2016A76DFBE16ED283C4B777C7A82F77036C53381C660076DDE244E530"
+    },
+    {
+      "Path": "Docs/Maintenance/DiskUsageAudit_20261002/Evidence/GitRepositories.json",
+      "Group": "disk_audit",
+      "Bytes": 9481114,
+      "SHA256": "047C12023A571107D6ACAF21E5BEAB2340CD166B2972AF77E7FD79897BBC433B"
+    },
+    {
+      "Path": "Docs/Maintenance/DiskUsageAudit_20261002/Evidence/HimoBuilds_Table.md",
+      "Group": "disk_audit",
+      "Bytes": 1305,
+      "SHA256": "968A439700862C3BE73BE4AB4CAD9B6DAE87567DD0B87F781E9CA1029928CE05"
+    },
+    {
+      "Path": "Docs/Maintenance/DiskUsageAudit_20261002/Evidence/HimoOutput_Table.md",
+      "Group": "disk_audit",
+      "Bytes": 4599,
+      "SHA256": "A6B2CB7CD54FDB2E42CED7F066BC03E033C418B75B6679692852AB590ADA7AFC"
+    },
+    {
+      "Path": "Docs/Maintenance/DiskUsageAudit_20261002/Evidence/HimoProtectionStart.json",
+      "Group": "disk_audit",
+      "Bytes": 2856,
+      "SHA256": "FD0765C53BACC90148AC4F91ADCB8B590B94AED9F8CD843B0B63A1C63A43664D"
+    },
+    {
+      "Path": "Docs/Maintenance/DiskUsageAudit_20261002/Evidence/HimoQA_Table.md",
+      "Group": "disk_audit",
+      "Bytes": 3215,
+      "SHA256": "B9E8FCBA2B4F126AEDE57367E63989486D52A1627B240F93E2358E07B9844B29"
+    },
+    {
+      "Path": "Docs/Maintenance/DiskUsageAudit_20261002/Evidence/HimoTemp_Table.md",
+      "Group": "disk_audit",
+      "Bytes": 4958,
+      "SHA256": "8B0EBB790F76D998007B3B05CA3D6EC89F386190298C45FBFB391CDA3E72DE80"
+    },
+    {
+      "Path": "Docs/Maintenance/DiskUsageAudit_20261002/Evidence/HimoVisualizations_Table.md",
+      "Group": "disk_audit",
+      "Bytes": 1664,
+      "SHA256": "9640053F04556A43F340B022F15EEA9FA6DB9DD1709C010B1C3169C4879613E7"
+    },
+    {
+      "Path": "Docs/Maintenance/DiskUsageAudit_20261002/Evidence/LowRisk_Table.md",
+      "Group": "disk_audit",
+      "Bytes": 15012,
+      "SHA256": "841A9DA6DF5B361DEA5FB9793192934F0F992AA9CFDE4C54D99CDFA686AA49BF"
+    },
+    {
+      "Path": "Docs/Maintenance/DiskUsageAudit_20261002/Evidence/LowRiskCandidates.csv",
+      "Group": "disk_audit",
+      "Bytes": 46672,
+      "SHA256": "07AE17DF7D78752DD14EFCADD6E8B9731E27C94CAA48C2537D36D984BA064FBD"
+    },
+    {
+      "Path": "Docs/Maintenance/DiskUsageAudit_20261002/Evidence/MediumRisk_Table.md",
+      "Group": "disk_audit",
+      "Bytes": 844,
+      "SHA256": "E6359BB13C9DBEDC82594B3A37BD8D2185492B00F53AFEC67B43B86442199C50"
+    },
+    {
+      "Path": "Docs/Maintenance/DiskUsageAudit_20261002/Evidence/MediumRiskCandidates.csv",
+      "Group": "disk_audit",
+      "Bytes": 2661,
+      "SHA256": "88733824DC36C37232F5EDC3E9019EDE43EE850441A83239971F297509EEDE21"
+    },
+    {
+      "Path": "Docs/Maintenance/DiskUsageAudit_20261002/Evidence/Protection.py",
+      "Group": "disk_audit",
+      "Bytes": 4668,
+      "SHA256": "0A454F8953E889201CFD9F6BCF12E5803B44133472F93C32259A9A04434EA203"
+    },
+    {
+      "Path": "Docs/Maintenance/DiskUsageAudit_20261002/Evidence/ProtectionComparison.json",
+      "Group": "disk_audit",
+      "Bytes": 469,
+      "SHA256": "277F2CCF72BC29B62D969385C98ACF3008962F7AA053676ACAA8922D78D16C10"
+    },
+    {
+      "Path": "Docs/Maintenance/DiskUsageAudit_20261002/Evidence/ProtectionEnd.json",
+      "Group": "disk_audit",
+      "Bytes": 7729331,
+      "SHA256": "5E27EE4DBCDEB92F4F546C36668014D6431485463606C1ABC3D487707FB067C6"
+    },
+    {
+      "Path": "Docs/Maintenance/DiskUsageAudit_20261002/Evidence/ProtectionStart.json",
+      "Group": "disk_audit",
+      "Bytes": 7729331,
+      "SHA256": "5E27EE4DBCDEB92F4F546C36668014D6431485463606C1ABC3D487707FB067C6"
+    },
+    {
+      "Path": "Docs/Maintenance/DiskUsageAudit_20261002/Evidence/RemoteRefs.json",
+      "Group": "disk_audit",
+      "Bytes": 900,
+      "SHA256": "0E64EB4B183BC16FA99A538DA801A36ECDAED152F1EF6CEB736DD226705511AC"
+    },
+    {
+      "Path": "Docs/Maintenance/DiskUsageAudit_20261002/Evidence/Survey.py",
+      "Group": "disk_audit",
+      "Bytes": 5628,
+      "SHA256": "BEEC7E40F8A2233186831D40615F52EB177BA7BE998F73C4456970142685D4A8"
+    },
+    {
+      "Path": "Docs/Maintenance/DiskUsageAudit_20261002/Evidence/Top30_Table.md",
+      "Group": "disk_audit",
+      "Bytes": 4372,
+      "SHA256": "5AD4D7661929962C0D2C0A84C1B3797770ED3E985AC9DCC60FB4D03C09AD5A83"
+    },
+    {
+      "Path": "Docs/Maintenance/DiskUsageAudit_20261002/Evidence/Top30.csv",
+      "Group": "disk_audit",
+      "Bytes": 15546,
+      "SHA256": "5D1D8AEDEB270C345ADC2F2AF31A421EEDD9B913931F6530C9B2CE2B0A8D1A3B"
+    },
+    {
+      "Path": "Docs/Maintenance/DiskUsageAudit_20261002/Evidence/UnityCaches.csv",
+      "Group": "disk_audit",
+      "Bytes": 97840,
+      "SHA256": "BE2255AD01D0E40EF2CC1B8D27EFF743F3DB3EED55C76767C8C8FFCCF974A8F9"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/01_Implementation.md",
+      "Group": "production_qa",
+      "Bytes": 5428,
+      "SHA256": "7A4431ED6630903D8012FB60DA1ED35A5F6BB908EE4C6BD98966A80F3860F5D0"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/02_HumanChecklist.md",
+      "Group": "production_qa",
+      "Bytes": 2989,
+      "SHA256": "EF7381B600F143A5C9BE4BFEBD88E69C1A6032A8E5135520AE03A58E3D4BC879"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/03_FinalDecision.md",
+      "Group": "production_qa",
+      "Bytes": 3207,
+      "SHA256": "8306FCBFD8E5AD31DFAD4A0AAA0547D979285045435DD915754B6B334D2B3179"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/04_HumanReview.md",
+      "Group": "production_qa",
+      "Bytes": 982,
+      "SHA256": "647523921D68202384ACE18A033E1E77CF6E874E892323AFC2C20DA5CE5EFB21"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/ChangeManifest.json",
+      "Group": "production_qa",
+      "Bytes": 21736,
+      "SHA256": "5AE1BF6B41D83D79B30C315C6B2DDE0FFFC5E1B94ADD3432032E52C0E0B23355"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Evidence/AllSectionsQA.cs",
+      "Group": "production_qa",
+      "Bytes": 18549,
+      "SHA256": "86A3D7AE25B1D1C764F0CC05866CD389174750C71CB0810C2CBF6EE5A1754B53"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Evidence/CollectFinal.py",
+      "Group": "production_qa",
+      "Bytes": 4352,
+      "SHA256": "BCBC31195B49C1333BA04CCB751611E5FF27BE50DEE16D0BEFDA7F66A1C950C8"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Evidence/PackageEvidence.py",
+      "Group": "production_qa",
+      "Bytes": 3860,
+      "SHA256": "E7503B030BDFC0CC8F135A88A3BF54793F50ACAF3A76AEB8E0AC6A2DD5B88057"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Evidence/PlayerTrial.log",
+      "Group": "production_qa",
+      "Bytes": 1740,
+      "SHA256": "0271FFE18DC518E4B15A04F3C46131B8931EA36DFB894BB5644A12D26802BC4E"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Evidence/Prepare.py",
+      "Group": "production_qa",
+      "Bytes": 3140,
+      "SHA256": "62811B56B566125F2FABE1312CF51E02353A92B16EB37C5A8EB10A9BAA5B7912"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Evidence/Runtime01/checks.txt",
+      "Group": "production_qa",
+      "Bytes": 295,
+      "SHA256": "60DDC681AF5231CE05023DE1125134FAFDB04E468931059D1A4744A985ED85B2"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Evidence/Runtime01/editor_search_errors.txt",
+      "Group": "production_qa",
+      "Bytes": 954,
+      "SHA256": "115FA176968F68364020A58294FCFBDD3CC9582B5FF3FD8F839A284323530F56"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Evidence/Runtime01/motion.csv",
+      "Group": "production_qa",
+      "Bytes": 132,
+      "SHA256": "F5A508A82B0FD061FB5F21FB9F10045E7937B06198CA531D4EEE8FFE0B2F4038"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Evidence/Runtime01/result.txt",
+      "Group": "production_qa",
+      "Bytes": 216,
+      "SHA256": "F356F1116DA1765AD091C2F9889A6B973D8C3A5ED3A5579D6475BE525AEF7AF3"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Evidence/Runtime02/checks.txt",
+      "Group": "production_qa",
+      "Bytes": 6053,
+      "SHA256": "C46113AA911534B8DA752E2AFE723D41A5CCAF67E33D6A393B2C0F1B674B5881"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Evidence/Runtime02/editor_search_errors.txt",
+      "Group": "production_qa",
+      "Bytes": 954,
+      "SHA256": "115FA176968F68364020A58294FCFBDD3CC9582B5FF3FD8F839A284323530F56"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Evidence/Runtime02/motion.csv",
+      "Group": "production_qa",
+      "Bytes": 2162,
+      "SHA256": "B93199F27D0D78BF7D66E135E51BB849001F767DAEBF01D018D1D71084C474EA"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Evidence/Runtime02/render_timing.csv",
+      "Group": "production_qa",
+      "Bytes": 491,
+      "SHA256": "79ADA89CDDC4F977DB2A5AC3556C4A684297D014D0646FAC6B9BF82D82921E9A"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Evidence/Runtime02/result.txt",
+      "Group": "production_qa",
+      "Bytes": 290,
+      "SHA256": "4C6A579E95EB304607600E755D69C7D704B2150A5D73E1E432F937D9AC1D5565"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Evidence/TrialEntry.cs",
+      "Group": "production_qa",
+      "Bytes": 3612,
+      "SHA256": "0624AD0998102091618F20F690C9A85223518E4F064346F50ADC8ED05DC5B13B"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Evidence/TutorialAllBackground.cs",
+      "Group": "production_qa",
+      "Bytes": 9625,
+      "SHA256": "31B201CDF051B7079B14081FA632D9C6E9EA41027539378221FAF6A4192C51B6"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Evidence/UnityBuild.log",
+      "Group": "production_qa",
+      "Bytes": 155161,
+      "SHA256": "E87A4EAB2DB60C1E619C843876CBD6F4C85DD69C6DDD02B6E3034F7C0BFE65C8"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Evidence/UnityTrial01.log",
+      "Group": "production_qa",
+      "Bytes": 82689,
+      "SHA256": "A979454E085C7661484430F7BCB00E65D5CA153244072C045D1A918DA089723C"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Evidence/UnityTrial02.log",
+      "Group": "production_qa",
+      "Bytes": 137177,
+      "SHA256": "6509AE62E08AD680ACC7D6D8DFF8B58B85525F4D93C425D4DBF7399609D0F14C"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/EvidenceManifest.json",
+      "Group": "production_qa",
+      "Bytes": 12344,
+      "SHA256": "2C35C93A98FEFAF96ECCDF0EDBBBE924A892D17DBA863E75D5DD9615724B4958"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Preparation.json",
+      "Group": "production_qa",
+      "Bytes": 3191,
+      "SHA256": "76121CE9A66C419A2581EC69DCC835138EC507DFE5805494B7DAA087D8685E85"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/ProtectionResult.json",
+      "Group": "production_qa",
+      "Bytes": 719,
+      "SHA256": "4EB572711BA12D6FBF4F77B5664988CAD32609EDB06B46A999950FDAEF7BBCF3"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/README.md",
+      "Group": "production_qa",
+      "Bytes": 7868,
+      "SHA256": "5CBD8DB79C4BD1187ED827FE62BEF07A3AE6D66DA5795A0DD46FE4DAF0B01398"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/AllSections_Overview.png",
+      "Group": "production_qa",
+      "Bytes": 2281912,
+      "SHA256": "F2C6E77DB554E60B50B42BDAB0E0D0C01B4A84CCDC3F9C5E0208AEDDEA14CF5C"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/Motion_000.png",
+      "Group": "production_qa",
+      "Bytes": 403937,
+      "SHA256": "AE72CC881E4BD081CCC4E67158032767E80D341D0831BE6A5A561BE872BCC70B"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/Motion_001.png",
+      "Group": "production_qa",
+      "Bytes": 404385,
+      "SHA256": "366A4800FD6C829D373573240B867C1A89D2DA097E2E789FC9748B09238A5929"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/Motion_002.png",
+      "Group": "production_qa",
+      "Bytes": 405296,
+      "SHA256": "ED7BCF75466F8C27272430720B1B632D66FB3D697B590E718CC04917A2DB4CFC"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/Motion_003.png",
+      "Group": "production_qa",
+      "Bytes": 387810,
+      "SHA256": "E4458BB1FBDA042D8E503CCED6AA304A075FC515BF210CC89EEF81645B075085"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/Motion_004.png",
+      "Group": "production_qa",
+      "Bytes": 382397,
+      "SHA256": "FBAC67DF58F032C200B69DDEDBE3274382D24F2EAC97400E132F2D0AD6A8FE26"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/Motion_005.png",
+      "Group": "production_qa",
+      "Bytes": 394189,
+      "SHA256": "E69FB946E8CB58601542518697C2CF978E8B228AA205EC66AE85B0762666A3E8"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/Motion_006.png",
+      "Group": "production_qa",
+      "Bytes": 392420,
+      "SHA256": "C8D3938192CA7CAE0319148844FC0D97667654811F6CF6AB16149DE987848CCC"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/Motion_007.png",
+      "Group": "production_qa",
+      "Bytes": 391958,
+      "SHA256": "01ED2CBEEAA989BE059330C67C6AADCFD3F7F0BC0E3543991640E82AA0705228"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/Motion_008.png",
+      "Group": "production_qa",
+      "Bytes": 392037,
+      "SHA256": "12E46994E3626222499697B88DB0B08F4B285979FB3E75AC1918EE5532458F9B"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/Motion_009.png",
+      "Group": "production_qa",
+      "Bytes": 395304,
+      "SHA256": "87BCB0E609A31BE00650EB6B487F194D533F957B06AA4D6F8D19861DC1D4BA01"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/Motion_010.png",
+      "Group": "production_qa",
+      "Bytes": 386629,
+      "SHA256": "73930B1F2EF71E5EB3149708C70477206D9FCE3C0DECFCE818C7A67517C128BA"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/Motion_011.png",
+      "Group": "production_qa",
+      "Bytes": 383662,
+      "SHA256": "F37ED71C3B76FB7CBE3549508BB24DFB5F74E831CA3C578CEDE74ACCDCEB200C"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/Motion_012.png",
+      "Group": "production_qa",
+      "Bytes": 384745,
+      "SHA256": "AF1A90740BCCF189C7FD6624CAB4B760F640E0FD22355AAF765A0D72F4216CA5"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/Motion_013.png",
+      "Group": "production_qa",
+      "Bytes": 385042,
+      "SHA256": "A4E87845F3EAEB413A0B2093CE9F0AB830495FBAEEC4FE95C2C903A757034491"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/Motion_014.png",
+      "Group": "production_qa",
+      "Bytes": 388361,
+      "SHA256": "1C736479023D03473C7D532F4A8692059DDD4319F2D554467A3761CB4B0E5EAC"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/Motion_015.png",
+      "Group": "production_qa",
+      "Bytes": 385257,
+      "SHA256": "8D8AA77696FF2E3801BE66C3F7B471C3694D9F72338DE816C7480369A02A83CF"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/Motion_016.png",
+      "Group": "production_qa",
+      "Bytes": 380334,
+      "SHA256": "7006E6729E4C2AB165CFE063A370B30D4611189D5EC598E8E7591D0D259F6880"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/Motion_017.png",
+      "Group": "production_qa",
+      "Bytes": 380538,
+      "SHA256": "462D3D15D79EB15329816C00E1324F8FF1DE80DC84816355CADA5772E639B6A8"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/Motion_018.png",
+      "Group": "production_qa",
+      "Bytes": 380442,
+      "SHA256": "DAB31C0BE1ADE3515CFF5CBC67C9876557AFFA1550C7BFC7DA8A5D487E44667F"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/Motion_019.png",
+      "Group": "production_qa",
+      "Bytes": 376179,
+      "SHA256": "40FF6A36C9B50BEB7C01737EAC5763E17BD06E6F0C8F31AD736BA4D018949364"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/Motion_020.png",
+      "Group": "production_qa",
+      "Bytes": 374579,
+      "SHA256": "6700BE78DC0B65A8A1A9564BB6640726E3745265FAA90A8DD049C975041B4B69"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/Motion_021.png",
+      "Group": "production_qa",
+      "Bytes": 371318,
+      "SHA256": "AFC5BEB69400C332B3EADCBD0F7B9D9EE522E62425A91DB7B90A261C1FAAA3FE"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/Motion_022.png",
+      "Group": "production_qa",
+      "Bytes": 380742,
+      "SHA256": "E6BF24FB1862E543F808D0F1C2AAEFB701E5C0F64B2C5839F0B8B0264E11C27D"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/Motion_023.png",
+      "Group": "production_qa",
+      "Bytes": 380961,
+      "SHA256": "397952BA81ABBFEF6F45497D90E37A1867BF3F3ADEBDEB4BB6A945CA4AFDF60C"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/Motion_024.png",
+      "Group": "production_qa",
+      "Bytes": 375997,
+      "SHA256": "13857AB89ABE422D5A277118EC422261CA4D43DB979D4634D0954C59008F18C1"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/Motion_025.png",
+      "Group": "production_qa",
+      "Bytes": 373618,
+      "SHA256": "061FDD705AE61234308C08FBA351F4DD485EE140B6627921FB0C6191D55983A4"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/Motion_026.png",
+      "Group": "production_qa",
+      "Bytes": 369837,
+      "SHA256": "A0AF47EF799CD5E8A4917DEDF7FCDB4EDE4823E56E81694AB710E77936799D7C"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/Motion_027.png",
+      "Group": "production_qa",
+      "Bytes": 365115,
+      "SHA256": "F223B35F8B8C80BAF633E1666CE15277CAB58F219054E22A6D31630A7313173E"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/Motion_028.png",
+      "Group": "production_qa",
+      "Bytes": 352598,
+      "SHA256": "BFDF1C4E72495EE0AA63DCE56F2956AC169B391223B3DC430CDB8D7F9B406871"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/Motion_029.png",
+      "Group": "production_qa",
+      "Bytes": 375441,
+      "SHA256": "5B86FFB3E279CEBF842F6E1A6796402707A9F5C355D5AF64FEF6585EAFF34AAD"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/Motion_030.png",
+      "Group": "production_qa",
+      "Bytes": 382491,
+      "SHA256": "9D3383BE4078B05F6270A6729F16D179423B7BABCD67A54BEF585891106987E7"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/S1_Attached_After.png",
+      "Group": "production_qa",
+      "Bytes": 1931075,
+      "SHA256": "3598317CE3FB757993EC4C69BE8C391857FFBD952CC34D9496C73DFAE26B547E"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/S1_Attached_Before.png",
+      "Group": "production_qa",
+      "Bytes": 1931075,
+      "SHA256": "3598317CE3FB757993EC4C69BE8C391857FFBD952CC34D9496C73DFAE26B547E"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/S1_Attached_Comparison.png",
+      "Group": "production_qa",
+      "Bytes": 625238,
+      "SHA256": "A095685B3E2119E6257898C6D3A3C4700B5F7F5C24DAF8AAAAE7C0AFECED50A4"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/S1_Jump_After.png",
+      "Group": "production_qa",
+      "Bytes": 1962720,
+      "SHA256": "E884F3F654EB67C1ABA4289C155F01FDBB472287B6AF9A1EDC0C030967112F0C"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/S1_Jump_Before.png",
+      "Group": "production_qa",
+      "Bytes": 1962720,
+      "SHA256": "E884F3F654EB67C1ABA4289C155F01FDBB472287B6AF9A1EDC0C030967112F0C"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/S1_Jump_Comparison.png",
+      "Group": "production_qa",
+      "Bytes": 638654,
+      "SHA256": "DBF26DA345231CB0E8CEE87866AE0AB1624CE69EB24A3042C3AB7A291CCB4A8B"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/S1_SignWorldOnly.png",
+      "Group": "production_qa",
+      "Bytes": 1962714,
+      "SHA256": "A3BC9202F749FEFF282EAA2AFB4C595C98AD9DD6E657231BF4D79F9EF18550A7"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/S1_Standing_After.png",
+      "Group": "production_qa",
+      "Bytes": 1962134,
+      "SHA256": "0CBA850B881CFF3C1F62F07218D4C647AE6CBF1F34C27F63EED02B23F540330E"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/S1_Standing_Before.png",
+      "Group": "production_qa",
+      "Bytes": 1962134,
+      "SHA256": "0CBA850B881CFF3C1F62F07218D4C647AE6CBF1F34C27F63EED02B23F540330E"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/S1_Standing_Comparison.png",
+      "Group": "production_qa",
+      "Bytes": 638055,
+      "SHA256": "F2E39D029AF2E205BBA13D7827A700E801FC0468225BBE29610732E41FFC3A74"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/S1_Walk_After.png",
+      "Group": "production_qa",
+      "Bytes": 1961863,
+      "SHA256": "787B57721CAAB33C14513F7DB4789CDFB534451EF095C6FF0020007783F42ECC"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/S1_Walk_Before.png",
+      "Group": "production_qa",
+      "Bytes": 1961863,
+      "SHA256": "787B57721CAAB33C14513F7DB4789CDFB534451EF095C6FF0020007783F42ECC"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/S1_Walk_Comparison.png",
+      "Group": "production_qa",
+      "Bytes": 638204,
+      "SHA256": "3D759B6007743B1BEDCEFAA89836C297D137D7A50BF3F5FCDD0F738A727A18BF"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/S2_Attached_After.png",
+      "Group": "production_qa",
+      "Bytes": 1916205,
+      "SHA256": "2E035C01B025E143FD7804ED16B16E284DE5E4A777ABDC2EF8CCCE269D0F67D0"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/S2_Attached_Before.png",
+      "Group": "production_qa",
+      "Bytes": 1712753,
+      "SHA256": "CEAEBCCB94AEDC1CEEB031C1FE20F32523770084022F084647CDCC82F9F20D9E"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/S2_Attached_Comparison.png",
+      "Group": "production_qa",
+      "Bytes": 1036437,
+      "SHA256": "9F233671F723B3F943D65A71630CF67159C9E6CA162EACF72E06DB144C160B37"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/S2_Jump_After.png",
+      "Group": "production_qa",
+      "Bytes": 1928305,
+      "SHA256": "434BE31DA7B33951F4833A801FF5CF549360DFC21743F3EC1E4E9BD1FC452255"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/S2_Jump_Before.png",
+      "Group": "production_qa",
+      "Bytes": 1724084,
+      "SHA256": "18C0476C6847FA8C332482A1B1A285C2BEA6EBF7E827B0656110BABF842D9489"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/S2_Jump_Comparison.png",
+      "Group": "production_qa",
+      "Bytes": 1044160,
+      "SHA256": "8636E770D29AED7E9695112FA4EDAB299DDA1DCB209C4FF0778555328C9BC509"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/S2_SignWorldOnly.png",
+      "Group": "production_qa",
+      "Bytes": 1928183,
+      "SHA256": "98ABC092E7B62159B19F03AE1D6004725DA16804C018890201216DA79E830AAD"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/S2_Standing_After.png",
+      "Group": "production_qa",
+      "Bytes": 1927766,
+      "SHA256": "D7CE222245AA623C4FCC9DBAE9CBA70FE78A99B0D0B7E9A3E1BE2A7EB3EBF46D"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/S2_Standing_Before.png",
+      "Group": "production_qa",
+      "Bytes": 1724110,
+      "SHA256": "A4FC5E0485E5ADC9D235DA2C4FDDE652499C13C9B87C561F829D1C7585DD050A"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/S2_Standing_Comparison.png",
+      "Group": "production_qa",
+      "Bytes": 1044576,
+      "SHA256": "FFECED2A1760A88785582F07E9B2B2BE00A104A59AEAD875DAC9889287C78865"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/S2_Walk_After.png",
+      "Group": "production_qa",
+      "Bytes": 1928697,
+      "SHA256": "95DE13C24AB4C8FA89A1E6B9D33BDE8AC61499C3B1F3026D6499188D1A1FA225"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/S2_Walk_Before.png",
+      "Group": "production_qa",
+      "Bytes": 1724666,
+      "SHA256": "8844867EF920598412BC4941EEFACD807B87E854D2AEC4F5FE3CDD7C80E32308"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/S2_Walk_Comparison.png",
+      "Group": "production_qa",
+      "Bytes": 1043497,
+      "SHA256": "2503229FF3AA244824086ACC6AFAFFE2A7C3256D61F76F47F967DCD726975A0E"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/S3_Attached_After.png",
+      "Group": "production_qa",
+      "Bytes": 1884916,
+      "SHA256": "1453420DBBB5D8C936B2829DBE2936435E2EA006EAF78E0AB6B50A144A566825"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/S3_Attached_Before.png",
+      "Group": "production_qa",
+      "Bytes": 1736896,
+      "SHA256": "A70C49D39268F583E1C221FDA56402000F43F5A81CB182C9CFFEB30DD53A72C4"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/S3_Attached_Comparison.png",
+      "Group": "production_qa",
+      "Bytes": 1020468,
+      "SHA256": "241C1BD5872FD1565C6AB9B14FD98EBDD1847D4A91C26D871C2432894F8B6E0A"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/S3_Bridge_After.png",
+      "Group": "production_qa",
+      "Bytes": 1887202,
+      "SHA256": "4E4A9D42B99C219545035504DBD6F0F66E54C767AC958CDB89C728794B5AD555"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/S3_Bridge_Before.png",
+      "Group": "production_qa",
+      "Bytes": 1739930,
+      "SHA256": "2FB4086A2934E3D8F77E252C7B557C14C74DDCB430F3F1BCEDE6E1E635CFE560"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/S3_Bridge_Comparison.png",
+      "Group": "production_qa",
+      "Bytes": 1021863,
+      "SHA256": "3A75756F45BB62FA66F07CE2FB429C42A40687198F6538A1E4F1AEDF3D9831E3"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/S3_Jump_After.png",
+      "Group": "production_qa",
+      "Bytes": 1887575,
+      "SHA256": "3F1BE8CC37B33DF0D54557C64A8AC71032AFC39BADE452899AE10DC5C80B86A3"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/S3_Jump_Before.png",
+      "Group": "production_qa",
+      "Bytes": 1735912,
+      "SHA256": "33E26305868B98C8973B8C6A014B4A94244D5CB5849DFB6E0E016616D577FACD"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/S3_Jump_Comparison.png",
+      "Group": "production_qa",
+      "Bytes": 1018604,
+      "SHA256": "75D544076C1AD3D0DB38F9F1796EAF3BA7C837CFBB9504EBF51CB541B166439A"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/S3_SignWorldOnly.png",
+      "Group": "production_qa",
+      "Bytes": 1887829,
+      "SHA256": "581186E3BB75F8BD32D37F460E0EEF128139E5914EDFEFB1509452FBE24C4E1C"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/S3_Standing_After.png",
+      "Group": "production_qa",
+      "Bytes": 1885797,
+      "SHA256": "34D5173855156D8616BD2CB69CC38F8FFCFBFD592F3BEF1FA9DECA163D3CDA7D"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/S3_Standing_Before.png",
+      "Group": "production_qa",
+      "Bytes": 1732466,
+      "SHA256": "35803E5B1B15FBD90FFA4AECC0114C3BB373B3BF9285D3F699BE3921F587B914"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/S3_Standing_Comparison.png",
+      "Group": "production_qa",
+      "Bytes": 1013511,
+      "SHA256": "7B451251FCE52AC75A5F02DCAF6F9B84FA9CEB381C6005C7ACC12ECC4291D211"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/S3_Walk_After.png",
+      "Group": "production_qa",
+      "Bytes": 1886911,
+      "SHA256": "3A96B721A8E4F5ED54743E4D327FEF070FC89A84C637557C6BE874E4618663F3"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/S3_Walk_Before.png",
+      "Group": "production_qa",
+      "Bytes": 1734524,
+      "SHA256": "5B2BD017B53A737CED18A37E0D7BAE9BB92F8F7D41A0AF2D1F4BBAAE7CD92434"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/S3_Walk_Comparison.png",
+      "Group": "production_qa",
+      "Bytes": 1018020,
+      "SHA256": "09B778FB6B20D4B3A39328DF0775FEDD347C033220ED09B3BADCDB6A368A5362"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/S4_Clear_After.png",
+      "Group": "production_qa",
+      "Bytes": 1893247,
+      "SHA256": "BF35641BC013F09CB98D3ECAFCF10B81C27E43106FA1D7E314919E345FC3396F"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/S4_Clear_Before.png",
+      "Group": "production_qa",
+      "Bytes": 1789188,
+      "SHA256": "53DA4B27C1C4AF399319D9E6EAEDE5454FFE338F69E667BC05726BEDCE90B59D"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/S4_Clear_Comparison.png",
+      "Group": "production_qa",
+      "Bytes": 1004945,
+      "SHA256": "C4E3776C95434DD28C6E5ACF81F94824027FD9EC4B1BB7A6118028FE51347CAA"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/S4_FirstBridge_After.png",
+      "Group": "production_qa",
+      "Bytes": 1901748,
+      "SHA256": "9B1B8CEE8A011C863CCA576D11EEAB8C45724816A8896A7751A4D40761F69FAE"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/S4_FirstBridge_Before.png",
+      "Group": "production_qa",
+      "Bytes": 1741343,
+      "SHA256": "A675354B30639F58760FDEE33408B0EE1086B7F960538F3CE13B38C3FFDDC906"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/S4_FirstBridge_Comparison.png",
+      "Group": "production_qa",
+      "Bytes": 999980,
+      "SHA256": "401AE63AA492E80C7C6814936F05F302C3602D1A78784CDE4DB0325CE16608C1"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/S4_Jump_After.png",
+      "Group": "production_qa",
+      "Bytes": 1899614,
+      "SHA256": "60F54A01C0B063DAF266CAAFA63170CFC17C19C4EF8EFDCDD296DE6157E91703"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/S4_Jump_Before.png",
+      "Group": "production_qa",
+      "Bytes": 1754640,
+      "SHA256": "FACE040F9282090368DFAA19838DE633C5E69BFF05F1963BC6AA134AF3BE214C"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/S4_Jump_Comparison.png",
+      "Group": "production_qa",
+      "Bytes": 1007031,
+      "SHA256": "E6D6F9C8345C85E247EB47B862F522D88F8C4BDDA538379C60DD4183AF21B0F5"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/S4_Merged_After.png",
+      "Group": "production_qa",
+      "Bytes": 1893341,
+      "SHA256": "9334D9EBE70A43E211775C61A0689D51AD4CA5FF85B254FDFAF07698A856838C"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/S4_Merged_Before.png",
+      "Group": "production_qa",
+      "Bytes": 1742622,
+      "SHA256": "CB07ABDDC77949DFC183F3A69F5DEB380208008A7A01FA538B996E445C4DCD21"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/S4_Merged_Comparison.png",
+      "Group": "production_qa",
+      "Bytes": 988866,
+      "SHA256": "AE322DD29019CCD9B0270B31EBB394CC006170F57092FEBE26AB64494243FC5F"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/S4_Restored_After.png",
+      "Group": "production_qa",
+      "Bytes": 1902875,
+      "SHA256": "23428DA82B6BF34715279187832A048F9B8C95B0142A8E7E3C2A322BF8854CC4"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/S4_Restored_Before.png",
+      "Group": "production_qa",
+      "Bytes": 1756622,
+      "SHA256": "9A26D8919BCE377F513FA39C2A2EC146FF7890CADD48AAE1AA11EEF6092CB998"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/S4_Restored_Comparison.png",
+      "Group": "production_qa",
+      "Bytes": 1008259,
+      "SHA256": "286E9E6E943C1F8B4E2902F2C8DB9DC052F49C7177B6012C32C26A4D447A4828"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/S4_SignWorldOnly.png",
+      "Group": "production_qa",
+      "Bytes": 1899036,
+      "SHA256": "4916DAD2B2E65991B5F34208194B17D56D5DC8ECADFCF849FB2F6D41F330C215"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/S4_Standing_After.png",
+      "Group": "production_qa",
+      "Bytes": 1900341,
+      "SHA256": "B010B37843830194C0B28B47CC0F1972CD7D5173DDED9C01453CC64A754D8340"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/S4_Standing_Before.png",
+      "Group": "production_qa",
+      "Bytes": 1754245,
+      "SHA256": "1F1CE87F3CEBFB02DB8F04F9E2269DE801383CFCC202DF0C5EC07A3866116971"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/S4_Standing_Comparison.png",
+      "Group": "production_qa",
+      "Bytes": 1006552,
+      "SHA256": "D4E4CA59C5775AC99EF3F440DA88C8670CAF1CB769B0C6525B309AF7819D524E"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/S4_TwoBridges_After.png",
+      "Group": "production_qa",
+      "Bytes": 1890872,
+      "SHA256": "2424664BFA6E4576CE79BFD90623026F67E2741453ED5CB8C7D9EBB7B5DAE808"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/S4_TwoBridges_Before.png",
+      "Group": "production_qa",
+      "Bytes": 1739220,
+      "SHA256": "6B54923360389058B38E371EFC07E0F59F9D0D682148B13541E90B70B3362CCE"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/S4_TwoBridges_Comparison.png",
+      "Group": "production_qa",
+      "Bytes": 985779,
+      "SHA256": "FA543DD26B3D6335929C30F0CBF5737237E823999B885BF37CD20E7F0D68E5E5"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/S4_Walk_After.png",
+      "Group": "production_qa",
+      "Bytes": 1898409,
+      "SHA256": "AEFF20CB77124BF78751C3BA65BEE0B04B7A29F3C7CBD0BA18C3CE6C07FB4D05"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/S4_Walk_Before.png",
+      "Group": "production_qa",
+      "Bytes": 1754039,
+      "SHA256": "697322D3EC0D451CE024F4E7EB1251BC03792F6E699670220E9920939C9E4C48"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/S4_Walk_Comparison.png",
+      "Group": "production_qa",
+      "Bytes": 1006681,
+      "SHA256": "F26E7322A096793F2452271FF6EB9FDF9C090D766D3A05CED0FA1069B1D1E5F5"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/Section1_ActualMotion.gif",
+      "Group": "production_qa",
+      "Bytes": 1159985,
+      "SHA256": "4B386E0B878E9A0545314132C63BA92D2E7D17152627EA3A46A0B237FC1F3B80"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/Section2_ActualMotion.gif",
+      "Group": "production_qa",
+      "Bytes": 1579460,
+      "SHA256": "8C0D9075680ADF80155320338819A76FC6050DB1EBF95B0765DACFE04070850C"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/Section3_ActualMotion.gif",
+      "Group": "production_qa",
+      "Bytes": 900127,
+      "SHA256": "75B926D95CD47E45532476E21DEC1EE289FA7F7E822BE95C434836BA029E1DCE"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DAllSections_20261001/Screenshots/Section4_ActualMotion.gif",
+      "Group": "production_qa",
+      "Bytes": 3298266,
+      "SHA256": "8598D3C6D365B223ECFA3A9A58FDC99BB6833E27E7FB4B71333CE395793944FB"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/01_Implementation.md",
+      "Group": "production_qa",
+      "Bytes": 3719,
+      "SHA256": "92771D0D3FE63DA509AFFB15D216B8B6A99D95F87A3187A487BB7C3950354561"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/02_Evaluation_FinalDecision.md",
+      "Group": "production_qa",
+      "Bytes": 4661,
+      "SHA256": "20EB346D9F901E2E214970382D9CEC33ACD911FB3CEBF7913DEAD31FDA72F3A9"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/03_HumanReview.md",
+      "Group": "production_qa",
+      "Bytes": 2230,
+      "SHA256": "8BC4FB5181DC144109E220833B1E7D910598856C48285CA534805A7CBC00B130"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/04_BuildLaunch.md",
+      "Group": "production_qa",
+      "Bytes": 1880,
+      "SHA256": "18F15F0EBFE6A9CF10626EBEADCD6D66FE110C7643BA7A1AB274A0E2A0CA3A0B"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/AssetManifest.json",
+      "Group": "production_qa",
+      "Bytes": 863,
+      "SHA256": "A69A6E82AA475F7B425150945E95B825CA23FD1DAE61A059DA58919DE93EB95B"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Assets/Tutorial2p5D_NearRefined.png",
+      "Group": "production_qa",
+      "Bytes": 811179,
+      "SHA256": "4CDAA97410DE24143A1CF8D9834AA9CFB3AEDC70A541CC9DC9D6418BFBE82495"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/ChangeManifest.json",
+      "Group": "production_qa",
+      "Bytes": 17905,
+      "SHA256": "871202E49C04F2D6038CC1395D926CB234C8BC09CB76C688EF88C793C22B68BE"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Evidence/CollectFinal.py",
+      "Group": "production_qa",
+      "Bytes": 3273,
+      "SHA256": "9FDE91D0A9C8D40E582DE6EB7881D91E6CC17919D5842EDC59207606E44711AB"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Evidence/FloorBlend.shader",
+      "Group": "production_qa",
+      "Bytes": 1413,
+      "SHA256": "F0D0B76F033F039A38C25CD286F02036F037ABCFED5FBC12FC491626F04466D2"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Evidence/NormalizeAssets.js",
+      "Group": "production_qa",
+      "Bytes": 1655,
+      "SHA256": "EE97FA7BEEFA0E4487C9FB476E93E1CCBA3B869AB30D3324351C7A4837742CFE"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Evidence/PackageEvidence.py",
+      "Group": "production_qa",
+      "Bytes": 3446,
+      "SHA256": "763B53975B5BB9BAE46CB6F594D6764613E32B3503C49506E84089394737AED0"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Evidence/Prepare.py",
+      "Group": "production_qa",
+      "Bytes": 3081,
+      "SHA256": "554B1B1CDC3E641A074415BEF22DA3C4A6104F2C99CDAEAE69B9D4F92524DE9E"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Evidence/ProofEntry.cs",
+      "Group": "production_qa",
+      "Bytes": 3915,
+      "SHA256": "281297E1B45762908A9C489B49A5D373E1C0BFC60E65260289DDF146912A08B8"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Evidence/ProofRuntimeQA.cs",
+      "Group": "production_qa",
+      "Bytes": 12530,
+      "SHA256": "0AF06680453D7D3E9F0C0DEFFC4CC362DE2324765FE276AE1265937E427DE6C3"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Evidence/Runtime_Attempt02/checks.txt",
+      "Group": "production_qa",
+      "Bytes": 1647,
+      "SHA256": "A0339CCF43ECA91E86B60453BA6CF1164C850573B36D3A51A4B2DD8860A4B254"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Evidence/Runtime_Attempt02/editor_search_errors.txt",
+      "Group": "production_qa",
+      "Bytes": 954,
+      "SHA256": "115FA176968F68364020A58294FCFBDD3CC9582B5FF3FD8F839A284323530F56"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Evidence/Runtime_Attempt02/motion.csv",
+      "Group": "production_qa",
+      "Bytes": 1948,
+      "SHA256": "53A5F2D3762E74F145B439B1DA4C17B73F0529CD9D1C61C76172453F2560A4C8"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Evidence/Runtime_Attempt02/render_timing.csv",
+      "Group": "production_qa",
+      "Bytes": 551,
+      "SHA256": "8E2740563EE0B9C00A489531B1085B16E3F70DBCAE1CC4A1BCE8E6509843044C"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Evidence/Runtime_Attempt02/result.txt",
+      "Group": "production_qa",
+      "Bytes": 133,
+      "SHA256": "7633309B7B415034E59CE14EBB3106CD8CF245CEF1B9D3E7F36833139BC1C757"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Evidence/Runtime/checks.txt",
+      "Group": "production_qa",
+      "Bytes": 1590,
+      "SHA256": "350CEAC17E596F632559FC082406FD75AE385F13051AD61744828CD7FD0568C4"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Evidence/Runtime/editor_search_errors.txt",
+      "Group": "production_qa",
+      "Bytes": 954,
+      "SHA256": "115FA176968F68364020A58294FCFBDD3CC9582B5FF3FD8F839A284323530F56"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Evidence/Runtime/motion.csv",
+      "Group": "production_qa",
+      "Bytes": 1950,
+      "SHA256": "D4BB216B976DD50C36F5189943807BA4D5B301487E3E6686F955DC79A85D5A70"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Evidence/Runtime/render_timing.csv",
+      "Group": "production_qa",
+      "Bytes": 551,
+      "SHA256": "74EFF61824107E0E5C24B7590B3649CC3D13E9930A1D2084BF0D29E72EBA6802"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Evidence/Runtime/result.txt",
+      "Group": "production_qa",
+      "Bytes": 133,
+      "SHA256": "7633309B7B415034E59CE14EBB3106CD8CF245CEF1B9D3E7F36833139BC1C757"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Evidence/Tutorial2p5DBackground.cs",
+      "Group": "production_qa",
+      "Bytes": 10384,
+      "SHA256": "B290F55B5E43CBCBE2F7AC59DA7082BBA2630FF26852A5C88E4F7088EF65B1FA"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Evidence/UnityBuild.log",
+      "Group": "production_qa",
+      "Bytes": 155327,
+      "SHA256": "679F7DED45B150F181C59E38F3F2C5912831EF3691143509B640BCD6BDE6E24A"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Evidence/UnityRefine_Attempt02.log",
+      "Group": "production_qa",
+      "Bytes": 58624,
+      "SHA256": "3B7A4A765303E31CB84938BD8F030561AA427A13FBCC7F5FEEBF2F268D8B8BF0"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Evidence/UnityRefine.log",
+      "Group": "production_qa",
+      "Bytes": 109529,
+      "SHA256": "BE984E2153ADC5CAC03DF366BC91F635D4D3AF61BDCD240E417A1DA9D7245972"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/EvidenceManifest.json",
+      "Group": "production_qa",
+      "Bytes": 6780,
+      "SHA256": "0B609F1B5F0D1D1CBEDF6C67A6CB92AF0C47C65440410903E8411ADCA7460F80"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/GenerationPrompts.md",
+      "Group": "production_qa",
+      "Bytes": 3600,
+      "SHA256": "6FB1D9C335DD981B4AAA23D825B60363FD3CC64BEF4DB0147F314D4FF11E6C4E"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Preparation.json",
+      "Group": "production_qa",
+      "Bytes": 768,
+      "SHA256": "D3D1E657E575F5B6FDFE10DD6171B55DADBD4F42FFECC2AF41D08A5BEFD54B14"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/ProtectionResult.json",
+      "Group": "production_qa",
+      "Bytes": 673,
+      "SHA256": "7E93F955D7130611485908F7C9D5D4D74ED22F63E917D82A0145A4FA7FB6FA0D"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/README.md",
+      "Group": "production_qa",
+      "Bytes": 7043,
+      "SHA256": "AB3324C12D14EEEF62A253B55A8785C1FCC7648D9ED7338443E7B4096331E61E"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Screenshots/01_Standing_After.png",
+      "Group": "production_qa",
+      "Bytes": 1961844,
+      "SHA256": "0ACC26DB5524EF2B60908244BB4F06440FE8A4D093DAF129492075D71667EC2C"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Screenshots/01_Standing_Before.png",
+      "Group": "production_qa",
+      "Bytes": 1956125,
+      "SHA256": "08777A85FFA4C653CDC2F03F37CBFB2E640C55E7011D3E53B8D63A0E79425632"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Screenshots/01_Standing_Comparison.png",
+      "Group": "production_qa",
+      "Bytes": 752869,
+      "SHA256": "1B0F749F021D2AB663D9C301738539C7105C2F668F0D4A4A5AC704F94F6DC93E"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Screenshots/02_Right_After.png",
+      "Group": "production_qa",
+      "Bytes": 1932317,
+      "SHA256": "2B9A6E56C6BB866685B9DCDD36FF0CE88E4A8D2B9CE91A581FA2CB9D1F70327B"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Screenshots/02_Right_Before.png",
+      "Group": "production_qa",
+      "Bytes": 1927915,
+      "SHA256": "A5DBE380440D655226FF356666463E9DEDD5E4F6B753953497FDC564E814D0F0"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Screenshots/02_Right_Comparison.png",
+      "Group": "production_qa",
+      "Bytes": 720565,
+      "SHA256": "060987F534535B1033BF6C8D176A2DE6909F1A4989C765142A4BC42A5258F20A"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Screenshots/03_Aim_After.png",
+      "Group": "production_qa",
+      "Bytes": 1931542,
+      "SHA256": "3EB9E0BC123A555A43FA15D46049AF7C65A7184D31F54AB1DED11A710BF36000"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Screenshots/03_Aim_Before.png",
+      "Group": "production_qa",
+      "Bytes": 1927777,
+      "SHA256": "C3D205C374038004C7B4EA183152FADFCCD6C27272D18206615822D4C321F920"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Screenshots/03_Aim_Comparison.png",
+      "Group": "production_qa",
+      "Bytes": 720740,
+      "SHA256": "B35CEC984814C501F3C0EF9393438F4A13BC0974197603B32D9DD5E9B14CDA69"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Screenshots/04_Jump_After.png",
+      "Group": "production_qa",
+      "Bytes": 1930612,
+      "SHA256": "E949F695B1EC5CD64F1B12F5E5FBA3CB2649CB9FB3AD0DA931C93527DFB3CF3D"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Screenshots/04_Jump_Before.png",
+      "Group": "production_qa",
+      "Bytes": 1926888,
+      "SHA256": "9D6BF31D9365080BCAEB640388FAA691AE6F4FBD41E8D97D8224FBEBB645F265"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Screenshots/04_Jump_Comparison.png",
+      "Group": "production_qa",
+      "Bytes": 720592,
+      "SHA256": "A924BDCB112E1C10A8CFB6C7077B848A6BF9DBAF0F486A8EA7D2B32BEE7E3931"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Screenshots/05_Attached_After.png",
+      "Group": "production_qa",
+      "Bytes": 1933477,
+      "SHA256": "A445FD608453B4BEAF1E9DF716C83ABFF925AA0AE9759FD52DA45408AFFA3959"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Screenshots/05_Attached_Before.png",
+      "Group": "production_qa",
+      "Bytes": 1929646,
+      "SHA256": "0C1558985B5B439F2ECD204DF11C158882AE1F599F4CC5ABC13E7BBCCEC507BE"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Screenshots/05_Attached_Comparison.png",
+      "Group": "production_qa",
+      "Bytes": 720473,
+      "SHA256": "A3742DAFD6E0DE920E0408184D8E5CFDE8BAB22449E43F2FC6B49DA5A31D45D5"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Screenshots/06_Section2_ScopeOnly.png",
+      "Group": "production_qa",
+      "Bytes": 1729399,
+      "SHA256": "8605C293CB9176BDFEBEE6BF5ABABD2596570601E66F47AF7195981DDA95679E"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Screenshots/ActualUnityMotion.gif",
+      "Group": "production_qa",
+      "Bytes": 9969592,
+      "SHA256": "711074DB12EAA5CFAB5C3A9CA0180F3DADC11B6A1B19C38A6EFF6B156635D2A6"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Screenshots/Motion_000.png",
+      "Group": "production_qa",
+      "Bytes": 1933529,
+      "SHA256": "6BD861C3A0C8FA8C229ACBE6B3857D7875DD0142BD73C5033BC6E33A088D8D07"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Screenshots/Motion_001.png",
+      "Group": "production_qa",
+      "Bytes": 1937431,
+      "SHA256": "0E099F44EB0DA339E7E86C27B5E5BE2BBDE2D396909F55E02C72AA6493AC102D"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Screenshots/Motion_002.png",
+      "Group": "production_qa",
+      "Bytes": 1938683,
+      "SHA256": "E6FD082D00871B0305122261219E767E075C65145C0531211DC9056A545C672D"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Screenshots/Motion_003.png",
+      "Group": "production_qa",
+      "Bytes": 1940912,
+      "SHA256": "EE6AEFF14EAF4C60E23F6C3F42C70D6B440DBD0E4BB3A324389D2883F97244F9"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Screenshots/Motion_004.png",
+      "Group": "production_qa",
+      "Bytes": 1942487,
+      "SHA256": "62F3DD3612A7121A7F9292F78050C5F02D627746FC4F40F5C5B0FA666B85CDB7"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Screenshots/Motion_005.png",
+      "Group": "production_qa",
+      "Bytes": 1946059,
+      "SHA256": "A674E66F974513A91BF06BDEB7F76934FC00A314FAD5090D7A0490AD516682D3"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Screenshots/Motion_006.png",
+      "Group": "production_qa",
+      "Bytes": 1947592,
+      "SHA256": "57112452014D3BB96F3C0088ED78C9FE126309F0BDF8E7943687120B5AF9603F"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Screenshots/Motion_007.png",
+      "Group": "production_qa",
+      "Bytes": 1949996,
+      "SHA256": "49AC070A98ACE23C6394873EE3CA45BF4DB819B3F79B48F387AE4F8F663B160D"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Screenshots/Motion_008.png",
+      "Group": "production_qa",
+      "Bytes": 1952014,
+      "SHA256": "EACC470E917484CD2B04E3CD7FADB3FD0D00385C72F8169620B25F26D01590CD"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Screenshots/Motion_009.png",
+      "Group": "production_qa",
+      "Bytes": 1952866,
+      "SHA256": "3AF2895C1C20648BAD77060274FE9C008236FE0CB2CF493C8866249D5C05A3B7"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Screenshots/Motion_010.png",
+      "Group": "production_qa",
+      "Bytes": 1953911,
+      "SHA256": "0704CFEDB544A9E6BEE2729108D93076C14DB62D54ADC40A89B7DA629DA6A9AF"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Screenshots/Motion_011.png",
+      "Group": "production_qa",
+      "Bytes": 1954420,
+      "SHA256": "D91DFAF666CFD43FA7CA77CC4DAAAF162137D4205324828C4E0875CEDFFAE091"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Screenshots/Motion_012.png",
+      "Group": "production_qa",
+      "Bytes": 1953793,
+      "SHA256": "94E3496CEABB25D900C1ADBCDFCD8E6DBC7E0A33ABB9E7A61DF4211C72156935"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Screenshots/Motion_013.png",
+      "Group": "production_qa",
+      "Bytes": 1951565,
+      "SHA256": "377D13D7F68A0B5CC336E924FB9B0FC96BEB764439447D4DEE7E0A9D3EEEB638"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Screenshots/Motion_014.png",
+      "Group": "production_qa",
+      "Bytes": 1946278,
+      "SHA256": "1F9118F56FDC8A0F1A157A938275CA67DE3CC83FB114FF8C2130C0A4E8334CC0"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Screenshots/Motion_015.png",
+      "Group": "production_qa",
+      "Bytes": 1938286,
+      "SHA256": "B92BDBCC036132E1743BFD5D360AC32FAAADFBC81A846BC65627A712711BE2D3"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Screenshots/Motion_016.png",
+      "Group": "production_qa",
+      "Bytes": 1929783,
+      "SHA256": "D2E7FC67A0C1F392A59F7285E6F82DEEBC9BF672A5A4560C044A373BB49306BD"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Screenshots/Motion_017.png",
+      "Group": "production_qa",
+      "Bytes": 1920269,
+      "SHA256": "33E0EBC0C98580635DEC46BB54CA599538D69749B593872A74436CF9676E5990"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Screenshots/Motion_018.png",
+      "Group": "production_qa",
+      "Bytes": 1908432,
+      "SHA256": "9EDD4FE69EB329A17A8B818DF14A1257F83240556EF5B83C0385DCDBF7BB14E6"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Screenshots/Motion_019.png",
+      "Group": "production_qa",
+      "Bytes": 1905438,
+      "SHA256": "CB6C7E5A9BD0F565FCD06FF7F7417656E56CD9BD77F29645BBFE3EC0922674B8"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Screenshots/Motion_020.png",
+      "Group": "production_qa",
+      "Bytes": 1907997,
+      "SHA256": "63F76C8D85FE9AF257C4ABDA1C544AD12F276352D0A2A3E83CD1C61C00B8DFBC"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Screenshots/Motion_021.png",
+      "Group": "production_qa",
+      "Bytes": 1912116,
+      "SHA256": "062CFEA26031719A8E5A9685BCF0B9A735E4154225DCE8FC648FA35A6F4C0FE9"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Screenshots/Motion_022.png",
+      "Group": "production_qa",
+      "Bytes": 1921818,
+      "SHA256": "C8C9D602BC78F540A50EC2F15399CC6E774A4E1148FCDC90A703EEB1969B94CA"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Screenshots/Motion_023.png",
+      "Group": "production_qa",
+      "Bytes": 1923458,
+      "SHA256": "2EC888775936DF5B0297A4DDF76672441889629926CED398BD11DC1054581DB2"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Screenshots/Motion_024.png",
+      "Group": "production_qa",
+      "Bytes": 1923911,
+      "SHA256": "586360897A983AEDF1E7D0A5A88D1E949FA9DD31ACAA803C697712DC0CC5EA22"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Screenshots/Motion_025.png",
+      "Group": "production_qa",
+      "Bytes": 1925963,
+      "SHA256": "829BA245B02B7AB1E3B10887F9A9DECEEBD1789F1C4364D6F5307626701480B0"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Screenshots/Motion_026.png",
+      "Group": "production_qa",
+      "Bytes": 1927783,
+      "SHA256": "3DB500D200EAE5B19C1DA1A216F4CAC23248122C3BC4C54B8D97CE24FEA11AD6"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Screenshots/Motion_027.png",
+      "Group": "production_qa",
+      "Bytes": 1924636,
+      "SHA256": "09C782DBD22350F9B7FF7E1D810524F98EADA6D8E36EFF62A95A84CF0C779CA9"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Screenshots/Motion_028.png",
+      "Group": "production_qa",
+      "Bytes": 1923887,
+      "SHA256": "8BCF97D8C83778850CA3B67DB4B272803445C17FD8799B3757C976E4AE0445C3"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Screenshots/Motion_029.png",
+      "Group": "production_qa",
+      "Bytes": 1923948,
+      "SHA256": "900D0737F0E88EDD6A19BD7BA9D17581CD007D0E3135FFE07EF08C7F2D013525"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DForegroundRefine_20261001/Screenshots/Motion_ContactSheet.png",
+      "Group": "production_qa",
+      "Bytes": 3525398,
+      "SHA256": "E21DEFDDC0BE27563A31BBF96E5EB93DF424EC55ADF6BE4D1DABD172DF6E9F0A"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/00_README.md",
+      "Group": "production_qa",
+      "Bytes": 1545,
+      "SHA256": "E07CF7142E2A4C54D14E58F780AA0A2CA1CBEE8292FF760B7AB40B4203F8026C"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/01_RootCause.md",
+      "Group": "production_qa",
+      "Bytes": 2057,
+      "SHA256": "B210DBC395DE14A4E7724A00E84027403CB654D17AC9FBD97C1BF0D728D2DB8D"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/02_Fix.md",
+      "Group": "production_qa",
+      "Bytes": 1554,
+      "SHA256": "82824763BED6FB273FD0029C062878AFC3818E8B3DFC57E7672F24DCC33AA646"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/03_IntroTimeline.md",
+      "Group": "production_qa",
+      "Bytes": 2792,
+      "SHA256": "1F655831CFF8437BB59DC022C26DFE810E61CA4E729307580CA87B9DDA7EFCCF"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/04_Regression.md",
+      "Group": "production_qa",
+      "Bytes": 4480,
+      "SHA256": "0061B49CC069FC113409A007E01CDEE4591A2E924B160A358E28AF9D2CBDE9E8"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/05_HumanReviewPacket.md",
+      "Group": "production_qa",
+      "Bytes": 2981,
+      "SHA256": "498D299745E133B7BAB2C9F2210F04B41228E043ADC2073F5BDDEA1891FAFE31"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/06_FinalDecision.md",
+      "Group": "production_qa",
+      "Bytes": 3255,
+      "SHA256": "A103E53DEF21021C06E9A316A4FFA7758DEDD87C3FF52B2ABE2A2AF8AE0E4BCF"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/07_HumanApproval.md",
+      "Group": "production_qa",
+      "Bytes": 855,
+      "SHA256": "330BCAB5F3D3BBB0DD9A619D92FE05DF1C8CF27D1BB94C6E80F00ACDC90F7E98"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/08_CheckpointScope.md",
+      "Group": "production_qa",
+      "Bytes": 2524,
+      "SHA256": "2F84A432A4BE34A7176ECF6C9F9CC64CB500781365D3C22F7C6E4C932A77A5A6"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Evidence/Checkpoint/CheckpointGuard.ps1",
+      "Group": "production_qa",
+      "Bytes": 2757,
+      "SHA256": "B29360DE111B650C1B01E8822C4B731E5341CF8F6BC372780A6C49F33A009661"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Evidence/Checkpoint/ProtectionStart.json",
+      "Group": "production_qa",
+      "Bytes": 101823,
+      "SHA256": "B6E12F95B654092A363636963138D760EC6650A936AC29862C0E1B31DB992CF6"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Evidence/Checkpoint/SelectFiles.ps1",
+      "Group": "production_qa",
+      "Bytes": 4342,
+      "SHA256": "389E58D7A53E2911CB1E6D19822A94FA6DB21952A6B1EDBD6CD08888DE3D06E5"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Evidence/IntroEntry.cs",
+      "Group": "production_qa",
+      "Bytes": 3323,
+      "SHA256": "698D23F5958F3D83ADEA444FAE8C156C77B9B051C9D4E072A697C630F9CC9EBD"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Evidence/IntroTimelineQA.cs",
+      "Group": "production_qa",
+      "Bytes": 10485,
+      "SHA256": "730909A68E64C139BF47C51A21FA1F5D29FD32569BBA7BA76E9DAC4234FF9923"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Evidence/PackageEvidence.py",
+      "Group": "production_qa",
+      "Bytes": 7384,
+      "SHA256": "A1CB96465C0830B50F84084661D390951FBAE5BBE178024425CF189A766454CC"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Evidence/Prepare.py",
+      "Group": "production_qa",
+      "Bytes": 5051,
+      "SHA256": "6137785EF86A82B8DAF54D9C2038F493EA4AB64222540CA9530895E2BF447B53"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Evidence/Regression/checks.txt",
+      "Group": "production_qa",
+      "Bytes": 6610,
+      "SHA256": "DA99D5BB3EE22EF674EF98CFC45C75762F994405467DB70FDC46D05DFD6BA02A"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Evidence/Regression/editor_search_errors.txt",
+      "Group": "production_qa",
+      "Bytes": 954,
+      "SHA256": "115FA176968F68364020A58294FCFBDD3CC9582B5FF3FD8F839A284323530F56"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Evidence/Regression/frame_timing.csv",
+      "Group": "production_qa",
+      "Bytes": 7972,
+      "SHA256": "FBC308456E84BCD152F74A898444D977496375C987EA2D7D7873F91004F5A403"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Evidence/Regression/motion.csv",
+      "Group": "production_qa",
+      "Bytes": 2432,
+      "SHA256": "8945D9C696227E63598EB658D6C9D74A2D7F68517B8A768F910588142264B81C"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Evidence/Regression/render_timing.csv",
+      "Group": "production_qa",
+      "Bytes": 491,
+      "SHA256": "3F07B58A584236D46BB635A14B94D1063D4424124865C8B979ED25A127C04DCF"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Evidence/Regression/result.txt",
+      "Group": "production_qa",
+      "Bytes": 290,
+      "SHA256": "9E5E716CC5ADB16EF5CA2C159BE46FE1140C16376B541504198568BE923967A9"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Evidence/Regression/seam_position.txt",
+      "Group": "production_qa",
+      "Bytes": 303,
+      "SHA256": "76A451A6ABC2DB37B131694A09B4B8FC39B356E6D2C8E753BFD02507D7B1C429"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Evidence/StandaloneIntro/checks.txt",
+      "Group": "production_qa",
+      "Bytes": 716,
+      "SHA256": "1D289016A98FC9726E3908A50C37E9E560B1E12BB93DD77362A9AE7F60751805"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Evidence/StandaloneIntro/frames.csv",
+      "Group": "production_qa",
+      "Bytes": 349706,
+      "SHA256": "D43281FE5BB8A6799A07913D1C86CF121B53BC73AD491FBEF455C108697CDCE6"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Evidence/StandaloneIntro/result.txt",
+      "Group": "production_qa",
+      "Bytes": 286,
+      "SHA256": "B1702AC4518B406B156AD42904407DF344F14EA11436447FF0D1A0F2CBB1B6FD"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Evidence/TimelineAfter/checks.txt",
+      "Group": "production_qa",
+      "Bytes": 716,
+      "SHA256": "1D289016A98FC9726E3908A50C37E9E560B1E12BB93DD77362A9AE7F60751805"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Evidence/TimelineAfter/frames.csv",
+      "Group": "production_qa",
+      "Bytes": 279652,
+      "SHA256": "632E823F4C1D71EFC30664FF11FF220539BB0D3EC14E0777895BAA139B82FB9B"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Evidence/TimelineAfter/result.txt",
+      "Group": "production_qa",
+      "Bytes": 286,
+      "SHA256": "3EEE49A08D44DDA6B704543150312E055C617BED2A710774C070D39F9F24A03A"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Evidence/TimelineBefore/checks.txt",
+      "Group": "production_qa",
+      "Bytes": 716,
+      "SHA256": "1D289016A98FC9726E3908A50C37E9E560B1E12BB93DD77362A9AE7F60751805"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Evidence/TimelineBefore/frames.csv",
+      "Group": "production_qa",
+      "Bytes": 284795,
+      "SHA256": "18329CF8920B7A243FD3EAD7C9552503A93B844079F6D3DAAC6C6B7ACAEB1B4B"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Evidence/TimelineBefore/result.txt",
+      "Group": "production_qa",
+      "Bytes": 290,
+      "SHA256": "75B2CDF7BBBB422DB9DB786763D4E8B85E010DE3B1700E44C791E2C545614351"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Evidence/TimingSummary.json",
+      "Group": "production_qa",
+      "Bytes": 478,
+      "SHA256": "17A3FCE21DFF10AA875436C9C40F7AF21C34A9C49C20C993FDD1B550722619EA"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Evidence/VisibilityCondition.patch",
+      "Group": "production_qa",
+      "Bytes": 718,
+      "SHA256": "E5A6CEDE7D852E4721C23D98080A36D9F3356D7E879DBCDF700BB384E21E7079"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Evidence/WindowsBuildResult.txt",
+      "Group": "production_qa",
+      "Bytes": 45,
+      "SHA256": "EE1A5E3A61100FB04BA3F613F7F68F5B90E81B405990E7128E9CF61A71440E90"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/EvidenceManifest.json",
+      "Group": "production_qa",
+      "Bytes": 29599,
+      "SHA256": "AE0399D165A69A8C9BCEACB477F8943867DA659C3C89DE9E6CA9695291DCB2D5"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Preparation.json",
+      "Group": "production_qa",
+      "Bytes": 1491,
+      "SHA256": "39E2F2AC11098E21EAF3ADC0FE49458FA8549AD47D72E6789A26A6FC62F8D697"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/ProtectionResult.json",
+      "Group": "production_qa",
+      "Bytes": 1734,
+      "SHA256": "3309695730AA7E0B58B550B47749F4EAEEEB9F5FDD7EB2838A203CFE5E4A91F1"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/A_TutorialCommitted_Comparison.png",
+      "Group": "production_qa",
+      "Bytes": 1001731,
+      "SHA256": "9EC80018B47B396BBF22137FC391937F42EA1452CC01EB81E938F7BD8AF3D086"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/After/A_TutorialCommitted.png",
+      "Group": "production_qa",
+      "Bytes": 1888444,
+      "SHA256": "A765B463AF47C3D8A72628FDB2DAF0835D314B43DDC0645BBEA81D39948C93A3"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/After/B_IntroStart.png",
+      "Group": "production_qa",
+      "Bytes": 1888603,
+      "SHA256": "B69885B074B1B1B7F4047BC624A4D19A3FA9A9E881989DBAFEA170BC23EFD6D7"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/After/C_IntroMiddle.png",
+      "Group": "production_qa",
+      "Bytes": 1866735,
+      "SHA256": "8D17B2B4AD88069F5129B64D559EB0D7728F9CCDF00B25F70813553EF7FDAFD0"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/After/D_IntroNearEnd.png",
+      "Group": "production_qa",
+      "Bytes": 1958829,
+      "SHA256": "6A6A4A8A8014FC7DB57D6912C90DE7240F5B5EB1ABCC2B54895FC345C4855BAB"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/After/E_GameplayResumed.png",
+      "Group": "production_qa",
+      "Bytes": 1959792,
+      "SHA256": "47573FE39E959765FBCE26FC4E2DC50C749434E2956867522BAA2EE1526447CA"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/After/F_AfterMovement.png",
+      "Group": "production_qa",
+      "Bytes": 1950157,
+      "SHA256": "1156812D93F087A8DE718B99B2672E074253E470888DBDDE511B91B513FB1F89"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/After/Menu_Contract.png",
+      "Group": "production_qa",
+      "Bytes": 1712662,
+      "SHA256": "07CF2566117D14DBBF784C33C15AE85F705C09783A0E871888FE63E0190C8BE4"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/After/Sequence_000.png",
+      "Group": "production_qa",
+      "Bytes": 796141,
+      "SHA256": "F46D18AFF9E524A451B11E62BBDB613AEC94EBEDECF4E6D261F0BECD5ABA0430"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/After/Sequence_001.png",
+      "Group": "production_qa",
+      "Bytes": 796181,
+      "SHA256": "731A0C716AC52FF9371A5A3BA0E0DA7CAA3823EA358F68A3D0035C0E9B0379A8"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/After/Sequence_002.png",
+      "Group": "production_qa",
+      "Bytes": 796197,
+      "SHA256": "255C8B9671558930A8F3F969122EF6584E42861BA47E12CC49451C44129B8433"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/After/Sequence_003.png",
+      "Group": "production_qa",
+      "Bytes": 796239,
+      "SHA256": "811F7A5303601DF0B674A2A8C7CC292D005365C56B5312B83088E39D99E96326"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/After/Sequence_004.png",
+      "Group": "production_qa",
+      "Bytes": 796239,
+      "SHA256": "9ED421C4DAC93FCEA85BF2A35E5B251A462675B7CC6E8F8B3336C83BE2F1479E"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/After/Sequence_005.png",
+      "Group": "production_qa",
+      "Bytes": 796275,
+      "SHA256": "F795A85206FFB7640ECEA4088269A9279DFC40BF543E0369F70AA35C6E30975D"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/After/Sequence_006.png",
+      "Group": "production_qa",
+      "Bytes": 796475,
+      "SHA256": "D89DCEAC21F5D7FD0665022D12D5C1F148BC50DD640DF51FD73C274209C4CF1C"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/After/Sequence_007.png",
+      "Group": "production_qa",
+      "Bytes": 795537,
+      "SHA256": "7F11824BF6CA7284CC97ABC4938906AEFF67F3E2C81A05796EF8F5B417B2F12D"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/After/Sequence_008.png",
+      "Group": "production_qa",
+      "Bytes": 793239,
+      "SHA256": "553CE238CD5AF9849170056242B028FCE3EB0F2429ABB7679232899121949B52"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/After/Sequence_009.png",
+      "Group": "production_qa",
+      "Bytes": 782990,
+      "SHA256": "1B103332E11F9BC52286E54C9F7F00BB96FDFB18E9CCA6DFAA957C9E45B9009D"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/After/Sequence_010.png",
+      "Group": "production_qa",
+      "Bytes": 779193,
+      "SHA256": "8BD934BDC12C0753ADA0A28B0DA92FD7FD0ECCF17BAD696AB9104697F1C36AFC"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/After/Sequence_011.png",
+      "Group": "production_qa",
+      "Bytes": 774042,
+      "SHA256": "0901B5C472064CE70DE270113E8F99659C54E93C160D8BBB2371A1F94D3F68B4"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/After/Sequence_012.png",
+      "Group": "production_qa",
+      "Bytes": 761446,
+      "SHA256": "0B5BB9E7D2FAD6A8141695075D46F459FB4B2DA62BB9D263BE86199938AC88A2"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/After/Sequence_013.png",
+      "Group": "production_qa",
+      "Bytes": 758516,
+      "SHA256": "D18EBD9760AC31B9604C4F6FDF693D64120562B9090CB3DA25CA4E835A76AB68"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/After/Sequence_014.png",
+      "Group": "production_qa",
+      "Bytes": 771683,
+      "SHA256": "50E96A24D9BAEB4D4CD47AF31F62E68325B7D762D925BA2B9F0731C3B5E3F75A"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/After/Sequence_015.png",
+      "Group": "production_qa",
+      "Bytes": 788992,
+      "SHA256": "6D5E18A15451071A707E17573E27CF8A0960AF8E38306FB61CA509E723D435BE"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/After/Sequence_016.png",
+      "Group": "production_qa",
+      "Bytes": 793652,
+      "SHA256": "190F5487BFCC2A1B1BC331D65F31861AD9B57EB770BD62DFB7451283F21A4AB3"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/After/Sequence_017.png",
+      "Group": "production_qa",
+      "Bytes": 786152,
+      "SHA256": "CA248DD5903E05AB107D38F2137A40B3CDC210C1FEE1F68056ABC476C4885827"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/After/Sequence_018.png",
+      "Group": "production_qa",
+      "Bytes": 788272,
+      "SHA256": "6400C60F9ADDCAE185639AD5E653EFB9785F065012995DB2E0ED90101BB42DAF"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/After/Sequence_019.png",
+      "Group": "production_qa",
+      "Bytes": 796032,
+      "SHA256": "E2B9ED4BA6ED21122EF7CBE410A4EB62531E365F3ED5887E02C6E9AEECB5B1DD"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/After/Sequence_020.png",
+      "Group": "production_qa",
+      "Bytes": 793871,
+      "SHA256": "8609BD08E2E25BAA6109C9CE8F899DCFF85CF0DA540DA8A96529C3E5663BA77D"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/After/Sequence_021.png",
+      "Group": "production_qa",
+      "Bytes": 797660,
+      "SHA256": "CD5B17757394B7C34A28096752E359ADC8518780E948D82F88B2CE627725D994"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/After/Sequence_022.png",
+      "Group": "production_qa",
+      "Bytes": 796681,
+      "SHA256": "503952D9131D4F10F1A6F141576EEB763CFD13730580BE92AB2F3FEC892CBB61"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/After/Sequence_023.png",
+      "Group": "production_qa",
+      "Bytes": 792454,
+      "SHA256": "53BB6CB88D9E5E2187FC2C9A74D20D938C49A8CAB76541AC28DC797718FBE119"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/After/Sequence_024.png",
+      "Group": "production_qa",
+      "Bytes": 793290,
+      "SHA256": "743292865AF9C9543AA07BA910D587AF54435E79661F90C1A969660AA659F1E9"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/After/Sequence_025.png",
+      "Group": "production_qa",
+      "Bytes": 799395,
+      "SHA256": "19F5D92DF79C4077B23D3A0C709C075A73BFC9B050911905DB72B555AECE5037"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/After/Sequence_026.png",
+      "Group": "production_qa",
+      "Bytes": 798070,
+      "SHA256": "3A0024E2E838061E9262F0D458FDC1E642FCB5E7E9821C24D8CCAE2E3A82B5EC"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/After/Sequence_027.png",
+      "Group": "production_qa",
+      "Bytes": 804163,
+      "SHA256": "CCEE378CC1249B566303EAE51EDFD65CF66C7F2A5B02CC1ECB1AD648832089C4"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/After/Sequence_028.png",
+      "Group": "production_qa",
+      "Bytes": 814979,
+      "SHA256": "F863FC31AB3D5D40BD63C07A634217E42EBC886A0C23B0EF99ECB84EC49EF2D4"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/After/Sequence_029.png",
+      "Group": "production_qa",
+      "Bytes": 818836,
+      "SHA256": "0D1D6D0F69708483C40E0741D05D1831C91A2FED16D9013E6CB94C915BB9B39E"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/After/Sequence_030.png",
+      "Group": "production_qa",
+      "Bytes": 815894,
+      "SHA256": "F1C7FBBEC057D2DF317142EB66AAF086CB81B020587B855406EEFA382F8066F0"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/After/Sequence_031.png",
+      "Group": "production_qa",
+      "Bytes": 816747,
+      "SHA256": "6C553A911F57116D7BCA99F9E1641C6AA825D6768966B6BCDEEC67BCABA1FBC2"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/After/Sequence_032.png",
+      "Group": "production_qa",
+      "Bytes": 813790,
+      "SHA256": "C2C4A5D38F5524DD0EE14B28B4CD7D7090DDFC57C5D4E76A7C9D719521DA5475"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/After/Sequence_033.png",
+      "Group": "production_qa",
+      "Bytes": 807733,
+      "SHA256": "77EB2748164D789ED1CADD4ED6BEB076D9F9BA47FF4E5C725C269FE6E3C4EEE5"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/After/Sequence_034.png",
+      "Group": "production_qa",
+      "Bytes": 811606,
+      "SHA256": "8430116A2E376E22C20D507A5A3BE7A40541A72ED9F8CB167EE96060ECD21F76"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/After/Sequence_035.png",
+      "Group": "production_qa",
+      "Bytes": 825282,
+      "SHA256": "AC0B36A3013F2E7A3BC7D298CA367495924E2C2A941D1858ED84272302618F74"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/After/Sequence_036.png",
+      "Group": "production_qa",
+      "Bytes": 835407,
+      "SHA256": "3ABCD73DEBA4FF821CF058D90A0269DC0A164EC6B1F9539D04ACC138575C9C5B"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/After/Sequence_037.png",
+      "Group": "production_qa",
+      "Bytes": 838852,
+      "SHA256": "D0251420D673736B9B20E9036814C14ED3A8BE54553A0C0C196599DC1D6758F1"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/After/Sequence_038.png",
+      "Group": "production_qa",
+      "Bytes": 839200,
+      "SHA256": "42F0867821038192B60964439A0795DA3ED1D9CB978AD05D865EFCDFD9E2457E"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/AllSections_Regression_Overview.png",
+      "Group": "production_qa",
+      "Bytes": 2244186,
+      "SHA256": "D10665F591268DEBC7447320D9675444EF22645E08C306B10BD2A7C8AC6ECBB1"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/B_IntroStart_Comparison.png",
+      "Group": "production_qa",
+      "Bytes": 999672,
+      "SHA256": "4A720D9A6C6E78F0583E69405760690C4B2868833D7C8E8B582A7DE899536F77"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Before/A_TutorialCommitted.png",
+      "Group": "production_qa",
+      "Bytes": 1775182,
+      "SHA256": "7B62530F77A45D05D40015D4DD4157D3F27EB737038273B8EB4B69EF145E72CA"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Before/B_IntroStart.png",
+      "Group": "production_qa",
+      "Bytes": 1775397,
+      "SHA256": "87A37E29D571E23ED4B227C5B5C2D59B052C2C2D01F70131AEBDFD3E86C018B9"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Before/C_IntroMiddle.png",
+      "Group": "production_qa",
+      "Bytes": 1745455,
+      "SHA256": "41F24AC57C75A3465B16DD3860BC4A71DA37EEA2FE913D4326F5E1021DD058EC"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Before/D_IntroNearEnd.png",
+      "Group": "production_qa",
+      "Bytes": 1713870,
+      "SHA256": "05E3285C000E087E83A35A2248F0462F817B8BE613B94C0352963BE08BBEC3EC"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Before/E_GameplayResumed.png",
+      "Group": "production_qa",
+      "Bytes": 1959795,
+      "SHA256": "59CC2E8D5F3F8686E229675EA2721E15DFC53C0EFEC2208C33418419D2773F38"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Before/F_AfterMovement.png",
+      "Group": "production_qa",
+      "Bytes": 1944076,
+      "SHA256": "1450C4BD0C176ADDB1C7C83CD0E52A92767D906170F089033AD0F36443A48AFF"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Before/Menu_Contract.png",
+      "Group": "production_qa",
+      "Bytes": 1712662,
+      "SHA256": "07CF2566117D14DBBF784C33C15AE85F705C09783A0E871888FE63E0190C8BE4"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Before/Sequence_000.png",
+      "Group": "production_qa",
+      "Bytes": 753983,
+      "SHA256": "E68BA4F9525E6A834C98AA6CB9F0ABEBFE3031F4B3862F8CAB474786F0478BA4"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Before/Sequence_001.png",
+      "Group": "production_qa",
+      "Bytes": 753994,
+      "SHA256": "AFCB8995DD7AB7D632A603EB9A848DCA6E2F164136322A9963953DC9AC0D3B61"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Before/Sequence_002.png",
+      "Group": "production_qa",
+      "Bytes": 754016,
+      "SHA256": "2C47F090C701BB3456CF27972B5DD7117E6C2D23D868ABCE3F50A09A15E64EC8"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Before/Sequence_003.png",
+      "Group": "production_qa",
+      "Bytes": 754054,
+      "SHA256": "08D74E8D5EBEC24F925F4935FE9892BA68C178BF742C02F0802705FE7FD0CA3C"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Before/Sequence_004.png",
+      "Group": "production_qa",
+      "Bytes": 754117,
+      "SHA256": "D7B4AE82BAAAA89349B2A08049A1A4D11C0FB26FA75BA6C09D6E59B6FAC97376"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Before/Sequence_005.png",
+      "Group": "production_qa",
+      "Bytes": 754142,
+      "SHA256": "8A0A98C8536EA817F0AC8C47E155CE8235207A0B996CF6D8A82F9D2D49E4042C"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Before/Sequence_006.png",
+      "Group": "production_qa",
+      "Bytes": 754154,
+      "SHA256": "B446988DA73E06C18F9FAAD14966A4A45031810FBA39422D91082FCBE9488007"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Before/Sequence_007.png",
+      "Group": "production_qa",
+      "Bytes": 754586,
+      "SHA256": "193E897E88664D575EA0B63399C5A44587E386D9BDBB6EFD8E228F89585CD136"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Before/Sequence_008.png",
+      "Group": "production_qa",
+      "Bytes": 755584,
+      "SHA256": "9CBF1BE1C063FA412E7B224ADD066564F9146FA6106292863F079063CDB70DE8"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Before/Sequence_009.png",
+      "Group": "production_qa",
+      "Bytes": 755952,
+      "SHA256": "12A678A668C810CD5A2FDD7F4242296C9B6FEF1F4AC484A24981B32D238DE880"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Before/Sequence_010.png",
+      "Group": "production_qa",
+      "Bytes": 751726,
+      "SHA256": "01AE6259FBD270F749CA9242F1F1B8E3F209CD74B4DE610A31CFE282A8990E17"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Before/Sequence_011.png",
+      "Group": "production_qa",
+      "Bytes": 743386,
+      "SHA256": "9024C13125D2E2BA39FE7C859DFC5E0F8A90D01A5F5643380E50F8F50F017C5D"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Before/Sequence_012.png",
+      "Group": "production_qa",
+      "Bytes": 732249,
+      "SHA256": "1B24BCD7CA58CAF25B3B8D9F265443DA8B89B2312A71927289B7F27A070C178D"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Before/Sequence_013.png",
+      "Group": "production_qa",
+      "Bytes": 720202,
+      "SHA256": "1B2E2967934087CF76A88D5637B3A923BA8445F57E68801AB39E6AFB2467FC22"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Before/Sequence_014.png",
+      "Group": "production_qa",
+      "Bytes": 718762,
+      "SHA256": "D45B82FA685590E761CFBA0A011DAE35327DB43A4D8621F8C10337FF844F5CD0"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Before/Sequence_015.png",
+      "Group": "production_qa",
+      "Bytes": 725727,
+      "SHA256": "7CAC2E3F3D5FDC2C2F9253563103F27B09DC041AA4E4E986F7F55EFB7EAE30A1"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Before/Sequence_016.png",
+      "Group": "production_qa",
+      "Bytes": 728941,
+      "SHA256": "90317C1C43B9874A550A25384279FE946EFF0C76CCABE02882F4389012913DC3"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Before/Sequence_017.png",
+      "Group": "production_qa",
+      "Bytes": 725068,
+      "SHA256": "C9058266D02E83FEBC157272561FBCCFBFAC6DB55B1244DB1598C33700943B24"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Before/Sequence_018.png",
+      "Group": "production_qa",
+      "Bytes": 724324,
+      "SHA256": "BED46DA7235C42D6275F6A658091412D998AE15118DA81DF65248E6A400D82C0"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Before/Sequence_019.png",
+      "Group": "production_qa",
+      "Bytes": 735459,
+      "SHA256": "0E53BDDDF8B16FD037B0A21E6BE61259DD0749277F71C5A2DE5A768BCADC92A2"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Before/Sequence_020.png",
+      "Group": "production_qa",
+      "Bytes": 742514,
+      "SHA256": "06FFCB1A6A568333447D6EA3A4D9233FE652B1F9B4E190CA973A86B5ECF485C3"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Before/Sequence_021.png",
+      "Group": "production_qa",
+      "Bytes": 747189,
+      "SHA256": "616908E663787EC54F4304A0C56A226E1D598AFFBDFDD41B2489336FDCE30E74"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Before/Sequence_022.png",
+      "Group": "production_qa",
+      "Bytes": 745671,
+      "SHA256": "77CFBAE5A43784E0D2D22C75456741671FD9837DDCA3A10F072AB831AA51F2AB"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Before/Sequence_023.png",
+      "Group": "production_qa",
+      "Bytes": 730986,
+      "SHA256": "18CCA894BB45CE580E7C81567F5642CDCDBF033B81A75853B523F244B005EB8E"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Before/Sequence_024.png",
+      "Group": "production_qa",
+      "Bytes": 726173,
+      "SHA256": "57340B043ABBB4E5F0BA5ED108D01E70DB4928C175437AD3D293274DB85941BB"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Before/Sequence_025.png",
+      "Group": "production_qa",
+      "Bytes": 732306,
+      "SHA256": "054929787D0E2413EC663F9C7EAD45A746D64838FA9525957EF85162F19F06A7"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Before/Sequence_026.png",
+      "Group": "production_qa",
+      "Bytes": 742622,
+      "SHA256": "3943335232D0583A834CCB291AC60C2A9DE3737C5379FAE93BB76A461C207A48"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Before/Sequence_027.png",
+      "Group": "production_qa",
+      "Bytes": 739728,
+      "SHA256": "BACD301F8875CBF7E5CBF2905E4D58EAEABE5CA6F160D28668A98603AEB40226"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Before/Sequence_028.png",
+      "Group": "production_qa",
+      "Bytes": 738000,
+      "SHA256": "F3A0764E310C84D968234E4F3F5BE522F9B0E1A37432FFFFCF6D01D5B15BDBBC"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Before/Sequence_029.png",
+      "Group": "production_qa",
+      "Bytes": 737158,
+      "SHA256": "5E1F585C673419260061B69E281C038455F256F54D267C43B04DB62109102BFE"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Before/Sequence_030.png",
+      "Group": "production_qa",
+      "Bytes": 737065,
+      "SHA256": "88D9CB364E41DDC63E1D120A81F6A16C66944BEA0FF0980D9661B811CCA93011"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Before/Sequence_031.png",
+      "Group": "production_qa",
+      "Bytes": 742257,
+      "SHA256": "6463958DB5356A10CB50C597893A49897FE2F880275BEE2BBE7D7FB5536E4F2C"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Before/Sequence_032.png",
+      "Group": "production_qa",
+      "Bytes": 742125,
+      "SHA256": "3D3C7AE8DA3EBC81EC68A69560FFA3FDB587B850308E7BAEC826F9E5880CCC80"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Before/Sequence_033.png",
+      "Group": "production_qa",
+      "Bytes": 737420,
+      "SHA256": "73B63904698DD674E6BADB408A867CF7005F8428328C03881814E6BC371129E0"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Before/Sequence_034.png",
+      "Group": "production_qa",
+      "Bytes": 735833,
+      "SHA256": "C929A000D72BFA621BBD8BA171744092B34641B5AC4D23C46F0936A85F7E4105"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Before/Sequence_035.png",
+      "Group": "production_qa",
+      "Bytes": 733436,
+      "SHA256": "137DF05168A334AB624E3A420E75A8DB23772E9833494593F6D559A68F29B7D9"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Before/Sequence_036.png",
+      "Group": "production_qa",
+      "Bytes": 740747,
+      "SHA256": "73F370F9DCD5FBCB8B80AF0DBAD29781B2EF5FBDB4E8CFCD4059D9DE266D0414"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Before/Sequence_037.png",
+      "Group": "production_qa",
+      "Bytes": 744054,
+      "SHA256": "788E8DC64C2434039646D19F9D1419024A6D911B359EABDCB1270CAA2B12E222"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Before/Sequence_038.png",
+      "Group": "production_qa",
+      "Bytes": 744304,
+      "SHA256": "12ECD26B174D84B3B67C5D63D767AA7BB40F4AE0E1A30E8E8B11DEC9FB2F723D"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/C_IntroMiddle_Comparison.png",
+      "Group": "production_qa",
+      "Bytes": 1089835,
+      "SHA256": "CBF84E0FD9EDC15AE0FA232A06D31CDE1A86A1BBD555FA666BA4357B4CBF97A2"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/D_IntroNearEnd_Comparison.png",
+      "Group": "production_qa",
+      "Bytes": 1144739,
+      "SHA256": "C4A6B43AB343CBCB214CF03D076B0454A1B384F43F1B56BEFC2AA356163023DE"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/E_GameplayResumed_Comparison.png",
+      "Group": "production_qa",
+      "Bytes": 638174,
+      "SHA256": "B1ABBE15C9DEE43AFCF94021AA8910DDCCA98494672600C7B2357EE29EF0121C"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/F_AfterMovement_Comparison.png",
+      "Group": "production_qa",
+      "Bytes": 1185753,
+      "SHA256": "D549F07240D5BE5D86B5B17BD7188C51BF49C459C23A1CFAF1AE8AE8565395FF"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Intro_BeforeAfter_Overview.png",
+      "Group": "production_qa",
+      "Bytes": 2728889,
+      "SHA256": "53CF96281C48A7A13936CB915236DB0AFFAF9227DC0D1F5D77422D64D4226C20"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Intro_BeforeAfter.gif",
+      "Group": "production_qa",
+      "Bytes": 10952271,
+      "SHA256": "5A0076A9633F8C14CF69CF17203F05B650AA73B01CE7E8146A58BF3456C6D417"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Regression/Goal_Far_Only.png",
+      "Group": "production_qa",
+      "Bytes": 1710258,
+      "SHA256": "8BD9260F46B42DCC993BD25D3EAE2A3055C5DEC20B4D431D876C867A9E54699E"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Regression/Goal_Mid_Only.png",
+      "Group": "production_qa",
+      "Bytes": 1837783,
+      "SHA256": "A090F8C189A407D5C96B27151A61EFE18809147E145F08F7198DDE5F7AFB3F38"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Regression/Goal_NearRefined_Only.png",
+      "Group": "production_qa",
+      "Bytes": 683537,
+      "SHA256": "5AC2E7A35AEDCE4F2B72B7CA962A099CF83FBC6BB11996401B5CEDE98F8B5D6A"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Regression/S1_Attached_After.png",
+      "Group": "production_qa",
+      "Bytes": 1931048,
+      "SHA256": "FE8A35316FFFE4EE4E490242BF29536D54E59A17E2637E2CD9125497CDE23380"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Regression/S1_Jump_After.png",
+      "Group": "production_qa",
+      "Bytes": 1962748,
+      "SHA256": "809F8E2777A66169281EB6B2B604C6DE93C2674413FC87C0CCAD0B9EFDC3A958"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Regression/S1_SignWorldOnly.png",
+      "Group": "production_qa",
+      "Bytes": 1962691,
+      "SHA256": "6D20788739FFDE195A2EBADFC2992F1AD990062B15A04B38D068CC224CE1E414"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Regression/S1_Standing_After.png",
+      "Group": "production_qa",
+      "Bytes": 1962222,
+      "SHA256": "70C30858CF94D0819876F9DC27B6A4483D19957A8FB7E783ED46E52D04CBAE01"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Regression/S1_Walk_After.png",
+      "Group": "production_qa",
+      "Bytes": 1961929,
+      "SHA256": "4BA50AB3C5C12F98E6D1DFCE2680A65B9A4983DDB1FC8C4BEE0D5A35C38E005B"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Regression/S2_Attached_After.png",
+      "Group": "production_qa",
+      "Bytes": 1916459,
+      "SHA256": "3B49298CFA5B6C41567389FF2309318D1FF18935EFAFFCEBC9FEF72B6C330BF2"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Regression/S2_Jump_After.png",
+      "Group": "production_qa",
+      "Bytes": 1927971,
+      "SHA256": "48A370E1B02E9964586866DCBE9B5EBF3228832E21C24F5F51C1690D176C9D30"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Regression/S2_SignWorldOnly.png",
+      "Group": "production_qa",
+      "Bytes": 1928234,
+      "SHA256": "C86EF1F4EF1E221D917CFFF86DDBC9313E591AA502DE5531379221F16804CB53"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Regression/S2_Standing_After.png",
+      "Group": "production_qa",
+      "Bytes": 1927688,
+      "SHA256": "2C3BB78C1270239FF877EDFE53F1454FA9B4DBE58C854230836EB2FCFB28FAC6"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Regression/S2_Walk_After.png",
+      "Group": "production_qa",
+      "Bytes": 1928160,
+      "SHA256": "3D59100289EC85270A34C7EB374F0953DF383A28B1B55E1175CB2F41776F48A2"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Regression/S3_Attached_After.png",
+      "Group": "production_qa",
+      "Bytes": 1884463,
+      "SHA256": "2D82595512B83DE5D64B41746C91C8BB17C6BA04A5885E5B43BF70AD2CF4BF05"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Regression/S3_Bridge_After.png",
+      "Group": "production_qa",
+      "Bytes": 1886795,
+      "SHA256": "D9E7428230DA9A853A0D7A3A89A48AE307A1C674EC5B144DA0B932ACB95A894F"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Regression/S3_Jump_After.png",
+      "Group": "production_qa",
+      "Bytes": 1895895,
+      "SHA256": "D26D62605889BC17E07272480E0AD8D725C924930F06DB1D62ABE55702A2DA70"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Regression/S3_SignWorldOnly.png",
+      "Group": "production_qa",
+      "Bytes": 1896794,
+      "SHA256": "4341F3982F9503826233C1461C9F61862E66FAAC76C5F45FDFC52739D060B3CC"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Regression/S3_Standing_After.png",
+      "Group": "production_qa",
+      "Bytes": 1895372,
+      "SHA256": "AF24582657E8F95D31920453B5F59B71D02DEF77CACEA533FCEF8307B28D388A"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Regression/S3_Walk_After.png",
+      "Group": "production_qa",
+      "Bytes": 1896607,
+      "SHA256": "244D90A89FE21FCDC635CF4A74B9D884E2C14A531C503F9597CECCEAF6185BA7"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Regression/S4_Clear_After.png",
+      "Group": "production_qa",
+      "Bytes": 1893041,
+      "SHA256": "4EF0369CB2F8FCDAB245451053AEBDF5D535AAD3CC5992E272C0A10AEA257952"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Regression/S4_FirstBridge_After.png",
+      "Group": "production_qa",
+      "Bytes": 1901797,
+      "SHA256": "C087727D20FF3E3D863BC81CF009A8146826511EA9F029F169BB29206555B741"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Regression/S4_Jump_After.png",
+      "Group": "production_qa",
+      "Bytes": 1897728,
+      "SHA256": "6105E4ECF1B495DE2E6EE8AFBEF32ADD34199E2709A8118371AC7880DA1DFE1B"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Regression/S4_Merged_After.png",
+      "Group": "production_qa",
+      "Bytes": 1893027,
+      "SHA256": "FE66ECFF8AC0C5405D6F47FEDF64CB85FE0694928DBE953ACC4D2D2C7841AFF5"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Regression/S4_Restored_After.png",
+      "Group": "production_qa",
+      "Bytes": 1902051,
+      "SHA256": "D47625E64317BAE58F27BD5080ED9509CF4CF7A0B33A277C014E49D5BB2E5371"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Regression/S4_SignWorldOnly.png",
+      "Group": "production_qa",
+      "Bytes": 1897775,
+      "SHA256": "1CAF18418F707D8CE9BE82B2FE69598FE5401E9FAB99410421B3B8A57A25484A"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Regression/S4_Standing_After.png",
+      "Group": "production_qa",
+      "Bytes": 1898887,
+      "SHA256": "E309F68A81D716B6201227A84F8142C334D32A6D91C7EA83D4255FE0967715D7"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Regression/S4_TwoBridges_After.png",
+      "Group": "production_qa",
+      "Bytes": 1890087,
+      "SHA256": "342560EA5326B7FBD5FB168D21B3111D3C3965F09678C85DF1F258A71E9507CB"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DIntroFix_20261002/Screenshots/Regression/S4_Walk_After.png",
+      "Group": "production_qa",
+      "Bytes": 1896102,
+      "SHA256": "9F6F3F29613EA1EA25AABE5B1450C003CAB88E62F9CF5C3A902FD3DF1B5564FD"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/00_README.md",
+      "Group": "production_qa",
+      "Bytes": 2069,
+      "SHA256": "F26ADBD0D52CF40E4E0BE2284402AEF85EF1AB769CB159B7014A6A0499ECD262"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/01_IntegrationPlan.md",
+      "Group": "production_qa",
+      "Bytes": 2296,
+      "SHA256": "A11E8C8ABA2A841F2E8FEC0F4FA627D92602957E2E835C530A018EBA27BDA08D"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/02_SeamFix.md",
+      "Group": "production_qa",
+      "Bytes": 2208,
+      "SHA256": "BC2FF51F86B9A8964E60F6959B563463B7FE80A169DF540D59ED6C3D701678BE"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/03_ProductionDiff.md",
+      "Group": "production_qa",
+      "Bytes": 2598,
+      "SHA256": "FCA930E262BCA89FB57657CBB93978D1F6C48BAF0878425E3AA8F0DF7AD64DBA"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/04_AllSectionsRegression.md",
+      "Group": "production_qa",
+      "Bytes": 3141,
+      "SHA256": "B7782698B018AF1FBAD75C8C36461B3B20F06D50EDD92BFF5D5DBE0EBD59D6F2"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/05_Performance.md",
+      "Group": "production_qa",
+      "Bytes": 3044,
+      "SHA256": "642709AC36B8902FBCD2465A94A1F93B73E5B99E68D611067FDF5DD31F458A4D"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/06_HumanReviewPacket.md",
+      "Group": "production_qa",
+      "Bytes": 2585,
+      "SHA256": "2DE813EF5746B3B23D26B3A8B5EF3482E3636C282B38028C871A8F7270C08A5E"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/07_FinalDecision.md",
+      "Group": "production_qa",
+      "Bytes": 3175,
+      "SHA256": "6ECB983F37BF6D0540925B4F6EBE39792D715708534D8F8A7A1DBE0CFDB9F288"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/BuildSummary.json",
+      "Group": "production_qa",
+      "Bytes": 1219,
+      "SHA256": "62FAE276253B6B43438DB989EE4065CF7CBA8770A4153FD8A07EAFAF4476C571"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Evidence/AnalyzeEdges.py",
+      "Group": "production_qa",
+      "Bytes": 1180,
+      "SHA256": "99D7328262CB25B37EA6CE09CBD350269D40EF09DD7617DC9FE2581AB5CB0B9B"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Evidence/Attempts.md",
+      "Group": "production_qa",
+      "Bytes": 2697,
+      "SHA256": "C8CB413B05E2D0674B4C70C3E8EF0E4A55D71C4E73C39863FD00926C7F029183"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Evidence/CollectEvidence.py",
+      "Group": "production_qa",
+      "Bytes": 7690,
+      "SHA256": "9993D3217E1F3B35B013B6C243755E7DCA32C37FADCD88D47FA02AAB3CB5CD54"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Evidence/HumanLaunch.log",
+      "Group": "production_qa",
+      "Bytes": 1991,
+      "SHA256": "020D054822AA5C152F2534FEE1B11C762FA43BFB69BE65C9085DEEBA1D0BDA5B"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Evidence/IntegrationEntry.cs",
+      "Group": "production_qa",
+      "Bytes": 2922,
+      "SHA256": "8053A15554B1E5A05A452739D68635FEC80F0B3E607F0FBEA67007D6FD2EBC77"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Evidence/IntegrationQA.cs",
+      "Group": "production_qa",
+      "Bytes": 22308,
+      "SHA256": "9480F09E3E53ECC6387C8714949DC8ACA7E18E2D4D68EDCCE60B93B86F7F16C7"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Evidence/PackageEvidence.py",
+      "Group": "production_qa",
+      "Bytes": 4811,
+      "SHA256": "9880A6F5103E22381A8C7EE2FC5E39F7B310B4012FAC43B51D3772EB41C9F0AE"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Evidence/Prepare.py",
+      "Group": "production_qa",
+      "Bytes": 4032,
+      "SHA256": "F49B984CAFBBC4EA1B1427C80856F140F8626CD9E572DBDA14FA9A9C532EB5BD"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Evidence/PrepareIntegration.py",
+      "Group": "production_qa",
+      "Bytes": 1048,
+      "SHA256": "58222A38BF35922640EBF0D6A28FBF6438CA3491E77A3F3C12D3724F86446468"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Evidence/Production.patch",
+      "Group": "production_qa",
+      "Bytes": 1057,
+      "SHA256": "7F1DD93DFB3679711C928CB5E6FFC13C51B497BFFF988C95965E7946DEA4FA8E"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Evidence/ReferenceTrial.cs",
+      "Group": "production_qa",
+      "Bytes": 9931,
+      "SHA256": "980CE8B31B6BA56C4FAD3D59664E9DA21AF25B329733031EC5CBAE7A0F30BAD9"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Evidence/Runtime01/checks.txt",
+      "Group": "production_qa",
+      "Bytes": 6305,
+      "SHA256": "57B183002B4F4DAEF64189B11EA45A73D38472A22226597208ADBB6FBEF1D0E2"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Evidence/Runtime01/editor_search_errors.txt",
+      "Group": "production_qa",
+      "Bytes": 954,
+      "SHA256": "115FA176968F68364020A58294FCFBDD3CC9582B5FF3FD8F839A284323530F56"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Evidence/Runtime01/frame_timing.csv",
+      "Group": "production_qa",
+      "Bytes": 7971,
+      "SHA256": "3D49DF2FBC54AA1607066E0DE5EAF33395AF6FA23A4903EA1DCE96B378558F6D"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Evidence/Runtime01/motion.csv",
+      "Group": "production_qa",
+      "Bytes": 2161,
+      "SHA256": "63C36C35099C89356376F17DEEA31D3FBBA1BE469034E96EB429CA7AC6FC231E"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Evidence/Runtime01/render_timing.csv",
+      "Group": "production_qa",
+      "Bytes": 491,
+      "SHA256": "730882223BA18567DDE26B22D00556A882B34FAD89CA120ED348E6CF085CFE9E"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Evidence/Runtime01/result.txt",
+      "Group": "production_qa",
+      "Bytes": 290,
+      "SHA256": "6672E0018AC93DC53C5294641F83D6DAD9857C64316C7325055CE50F11109BED"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Evidence/Runtime01/seam_position.txt",
+      "Group": "production_qa",
+      "Bytes": 103,
+      "SHA256": "001B0BF034DD810D3241C7C1FD86FEF2BB2D9CC838E85C02790D9BFB7931C932"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Evidence/Runtime02/checks.txt",
+      "Group": "production_qa",
+      "Bytes": 6305,
+      "SHA256": "57B183002B4F4DAEF64189B11EA45A73D38472A22226597208ADBB6FBEF1D0E2"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Evidence/Runtime02/editor_search_errors.txt",
+      "Group": "production_qa",
+      "Bytes": 954,
+      "SHA256": "115FA176968F68364020A58294FCFBDD3CC9582B5FF3FD8F839A284323530F56"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Evidence/Runtime02/frame_timing.csv",
+      "Group": "production_qa",
+      "Bytes": 7972,
+      "SHA256": "BE2D072EA8BF432F95748FDB923AA56423621DFD68FA4E67F177DA1A1657193A"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Evidence/Runtime02/motion.csv",
+      "Group": "production_qa",
+      "Bytes": 2162,
+      "SHA256": "1A6047B44DAACF7DA4B39307D79B25F96B8910CD6E1DAB27442A8338AB41DB15"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Evidence/Runtime02/render_timing.csv",
+      "Group": "production_qa",
+      "Bytes": 491,
+      "SHA256": "D551AFDF58F2760C4AE973B0D6CE299F5279790A0DCC33C167F7B709A88CB1E8"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Evidence/Runtime02/result.txt",
+      "Group": "production_qa",
+      "Bytes": 290,
+      "SHA256": "6672E0018AC93DC53C5294641F83D6DAD9857C64316C7325055CE50F11109BED"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Evidence/Runtime02/seam_position.txt",
+      "Group": "production_qa",
+      "Bytes": 103,
+      "SHA256": "001B0BF034DD810D3241C7C1FD86FEF2BB2D9CC838E85C02790D9BFB7931C932"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Evidence/Runtime04/checks.txt",
+      "Group": "production_qa",
+      "Bytes": 6610,
+      "SHA256": "3B1724ED1CBED1B77286E9AFA28D4718B3F5A8DD406CFB76F37A54E03FC57BEF"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Evidence/Runtime04/editor_search_errors.txt",
+      "Group": "production_qa",
+      "Bytes": 954,
+      "SHA256": "115FA176968F68364020A58294FCFBDD3CC9582B5FF3FD8F839A284323530F56"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Evidence/Runtime04/frame_timing.csv",
+      "Group": "production_qa",
+      "Bytes": 7970,
+      "SHA256": "92BD828B4B5F6937C75108BDBFC5EF0D72CC775A886E8A98A1298B1E271D1A1F"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Evidence/Runtime04/motion.csv",
+      "Group": "production_qa",
+      "Bytes": 2433,
+      "SHA256": "3C3B54BF6E3841F5757A2769A04C04B789C60D050C20E307C280BAC5DE66A1E1"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Evidence/Runtime04/render_timing.csv",
+      "Group": "production_qa",
+      "Bytes": 491,
+      "SHA256": "0AD66BDBEFA1CAEC77A8D3F3083410F29E30088ADE91A67A5E03991B55E5C968"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Evidence/Runtime04/result.txt",
+      "Group": "production_qa",
+      "Bytes": 290,
+      "SHA256": "9E5E716CC5ADB16EF5CA2C159BE46FE1140C16376B541504198568BE923967A9"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Evidence/Runtime04/seam_position.txt",
+      "Group": "production_qa",
+      "Bytes": 311,
+      "SHA256": "6A59A45CBF8F3EFE1CBFFBA2F9B7F25A2356B12592C98EF7F64BAD3A54AAFDAA"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Evidence/Runtime05/checks.txt",
+      "Group": "production_qa",
+      "Bytes": 6610,
+      "SHA256": "3B1724ED1CBED1B77286E9AFA28D4718B3F5A8DD406CFB76F37A54E03FC57BEF"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Evidence/Runtime05/editor_search_errors.txt",
+      "Group": "production_qa",
+      "Bytes": 954,
+      "SHA256": "115FA176968F68364020A58294FCFBDD3CC9582B5FF3FD8F839A284323530F56"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Evidence/Runtime05/frame_timing.csv",
+      "Group": "production_qa",
+      "Bytes": 7971,
+      "SHA256": "6E622A67BE5E2153B8CDEA95E8EC450F0F2BB64B1CDC560CD909F03DC226ACA6"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Evidence/Runtime05/motion.csv",
+      "Group": "production_qa",
+      "Bytes": 2432,
+      "SHA256": "FBAB41C849F94BC321049BD10396731B6A972C7048F965E90DE1FC876E914EA6"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Evidence/Runtime05/render_timing.csv",
+      "Group": "production_qa",
+      "Bytes": 491,
+      "SHA256": "1EB1653281D50689D870970EBA1B1E165895CBC03177DE87A101E33807A640E8"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Evidence/Runtime05/result.txt",
+      "Group": "production_qa",
+      "Bytes": 290,
+      "SHA256": "9E5E716CC5ADB16EF5CA2C159BE46FE1140C16376B541504198568BE923967A9"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Evidence/Runtime05/seam_position.txt",
+      "Group": "production_qa",
+      "Bytes": 303,
+      "SHA256": "76A451A6ABC2DB37B131694A09B4B8FC39B356E6D2C8E753BFD02507D7B1C429"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Evidence/SeamPixels.json",
+      "Group": "production_qa",
+      "Bytes": 1498,
+      "SHA256": "8FA4276FC217BB3B3ACF70CC7AAED77D53C45390DE6BDFB398BA3A8E1B7FCB51"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Evidence/SourceEdges.json",
+      "Group": "production_qa",
+      "Bytes": 11270,
+      "SHA256": "C547E5A6A6E3FA0020DA40AF20A212AE9FA3A9BB726F9E39DD395AF60B13EAE6"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Evidence/StandaloneBaseline.log",
+      "Group": "production_qa",
+      "Bytes": 1986,
+      "SHA256": "278A2287643326F64314FDDDEC0095B71EB0AC3BCBAAF095873E233EAB2F7523"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Evidence/StandaloneBaseline/frames.csv",
+      "Group": "production_qa",
+      "Bytes": 5685,
+      "SHA256": "AE504C3A946E0D73B40AF6B320BCE0A4F8632ED49A8B774A6EB01C83602C32A1"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Evidence/StandaloneBaseline/result.txt",
+      "Group": "production_qa",
+      "Bytes": 230,
+      "SHA256": "41ABA60077D2703C73E8212664D8CB594B14379398D67F16B8B9EE158E45A8EA"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Evidence/StandaloneBaselineAdoption.log",
+      "Group": "production_qa",
+      "Bytes": 1986,
+      "SHA256": "48BC29C9F4C34EFE933CC49F5B199144018A03E7CD42DCC5C17B2077470E3809"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Evidence/StandaloneBaselineAdoption/frames.csv",
+      "Group": "production_qa",
+      "Bytes": 5683,
+      "SHA256": "C805FE8F19A4371D5AC9D96ACF27E7953AB558918E2A30C48BCD56AE8F41422D"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Evidence/StandaloneBaselineAdoption/result.txt",
+      "Group": "production_qa",
+      "Bytes": 269,
+      "SHA256": "DE070F99D6D6664D1448B07D401A2C071AF25714F347D2E566ECCFFEFA83341E"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Evidence/StandaloneBaselineAdoption/steps.txt",
+      "Group": "production_qa",
+      "Bytes": 122,
+      "SHA256": "061FDA4280F65297E4B14A65FD28DB6FC92230C8949F4278C18D779874330800"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Evidence/StandaloneBaselineFinal.log",
+      "Group": "production_qa",
+      "Bytes": 1985,
+      "SHA256": "2B4E154D3E9E9018E07E8180C756DB37D182F0FE27656D3729EE6046D1EDC8E9"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Evidence/StandaloneBaselineFinal/frames.csv",
+      "Group": "production_qa",
+      "Bytes": 5683,
+      "SHA256": "912061B13572F567894027F4C8B135D1FD35396C9C82FD48075F6889C1B6A304"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Evidence/StandaloneBaselineFinal/result.txt",
+      "Group": "production_qa",
+      "Bytes": 230,
+      "SHA256": "41ABA60077D2703C73E8212664D8CB594B14379398D67F16B8B9EE158E45A8EA"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Evidence/StandaloneBaselineFinal/steps.txt",
+      "Group": "production_qa",
+      "Bytes": 122,
+      "SHA256": "061FDA4280F65297E4B14A65FD28DB6FC92230C8949F4278C18D779874330800"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Evidence/StandaloneFrameProbe.cs",
+      "Group": "production_qa",
+      "Bytes": 5094,
+      "SHA256": "BCC9B80A12AA6901F4667CFFFD40520166F9780A47F27E6E160D6AA130F004E2"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Evidence/StandaloneProduction.log",
+      "Group": "production_qa",
+      "Bytes": 1769,
+      "SHA256": "FEDB3276BAB6D4FF17451F3FA35A60BA3C2A613D041A6E5FFE7CD9735DECBE00"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Evidence/StandaloneProductionAdoption.log",
+      "Group": "production_qa",
+      "Bytes": 1991,
+      "SHA256": "FDE855539B52AF65E6ABEA56AABB5D81E9FFF8848B6895DB812C0CB8BD1AC385"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Evidence/StandaloneProductionAdoption/frames.csv",
+      "Group": "production_qa",
+      "Bytes": 5683,
+      "SHA256": "2D04445372F3D607CE5B12138F2C14E0F042BA67CCA4AAED50B018F4E64F9195"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Evidence/StandaloneProductionAdoption/result.txt",
+      "Group": "production_qa",
+      "Bytes": 267,
+      "SHA256": "2CA4F7ED55613DC5FC3C2CF983BB156293AF731D9B759406437017317F2A8F95"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Evidence/StandaloneProductionAdoption/steps.txt",
+      "Group": "production_qa",
+      "Bytes": 122,
+      "SHA256": "061FDA4280F65297E4B14A65FD28DB6FC92230C8949F4278C18D779874330800"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Evidence/StandaloneProductionFinal.log",
+      "Group": "production_qa",
+      "Bytes": 1992,
+      "SHA256": "488D8D746CC0DF82FA3E6A1A37CD08396359BF2D63EBA842BE585737D177996B"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Evidence/StandaloneProductionFinal/frames.csv",
+      "Group": "production_qa",
+      "Bytes": 5685,
+      "SHA256": "F0E139A23173BD801C8BCF9B44AA0EC9B9CC538720C2DCB54890AAED668BFCD8"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Evidence/StandaloneProductionFinal/result.txt",
+      "Group": "production_qa",
+      "Bytes": 230,
+      "SHA256": "41ABA60077D2703C73E8212664D8CB594B14379398D67F16B8B9EE158E45A8EA"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Evidence/StandaloneProductionFinal/steps.txt",
+      "Group": "production_qa",
+      "Bytes": 122,
+      "SHA256": "061FDA4280F65297E4B14A65FD28DB6FC92230C8949F4278C18D779874330800"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/EvidenceManifest.json",
+      "Group": "production_qa",
+      "Bytes": 13351,
+      "SHA256": "9D3DD5DE31F9CAE09D03D39622A7890D53A12A335E43E2FD5580372D5889A9C0"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/PerformanceSummary.json",
+      "Group": "production_qa",
+      "Bytes": 997,
+      "SHA256": "A512980483ACF7124CFE7966D31F9ADB59CC125BF892908EAF9FE625E8310F4A"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Preparation.json",
+      "Group": "production_qa",
+      "Bytes": 538,
+      "SHA256": "EBB95089FB12E6B05328315500C3747B14C28D92A1547A3AB6DF6E461448E210"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/ProductionManifest.json",
+      "Group": "production_qa",
+      "Bytes": 4235,
+      "SHA256": "A58050D696FEBFE972E4A52976C1DCEA5E4A18CC7B1EF8863574EDAD4D88DEE1"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/ProtectionResult.json",
+      "Group": "production_qa",
+      "Bytes": 2159,
+      "SHA256": "7B77100B9E03DCD9E482B2B256A968D05236F8DF7B66EB3C78B7389D720C8C62"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/AllSections_Overview.png",
+      "Group": "production_qa",
+      "Bytes": 2244489,
+      "SHA256": "30B31BDF88FECE296FC70230246CE6232C1CE1DB5C5426B73178C3BB4C97AD52"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/Goal_Far_Only.png",
+      "Group": "production_qa",
+      "Bytes": 1710205,
+      "SHA256": "702FF1D5DF6AD18B28EB22C8EFBAEF87D2C06D8A19F4FFB7B672CD9585299C8A"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/Goal_Mid_Only.png",
+      "Group": "production_qa",
+      "Bytes": 1837786,
+      "SHA256": "D06C7873E9C6A9BE7978E4824E4EE6D22E023C31A1627CCE3B28A14CA6781B16"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/Goal_NearRefined_Only.png",
+      "Group": "production_qa",
+      "Bytes": 683604,
+      "SHA256": "B4CCDD35789ABA46E2BE196FCEC269AB01EA47AA0CBEE36EB60A9AE3D45A5E6A"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/GoalSeam_Closeup.png",
+      "Group": "production_qa",
+      "Bytes": 85763,
+      "SHA256": "7FC2A27F71E18E40CE58343A0F2BEF6F64BE5B58E54CAE732FA880BBC89C508A"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/Motion_000.png",
+      "Group": "production_qa",
+      "Bytes": 403713,
+      "SHA256": "0FA277B9D8DC0007A7CA5E47643196180AFBF4FE30A5E4EFC1C970635EE53463"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/Motion_001.png",
+      "Group": "production_qa",
+      "Bytes": 403935,
+      "SHA256": "075B85CB8826DED0BAE5B323AB31A24B7A448AA357C62EA3982BFA0A8762C4E3"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/Motion_002.png",
+      "Group": "production_qa",
+      "Bytes": 403996,
+      "SHA256": "1C58115BABD881B4233B30B74538EF3741064550D8C94DBED9F22D04E13B36D9"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/Motion_003.png",
+      "Group": "production_qa",
+      "Bytes": 405140,
+      "SHA256": "B645DC5DC1EE995CA973B8A7F7F86DF15AF818B1EF032C736E07C8E45B43919A"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/Motion_004.png",
+      "Group": "production_qa",
+      "Bytes": 388617,
+      "SHA256": "A50C1C97D3880F49AA7C95FADCACFE79079194DAC5636FFB1E91F4123405D8F9"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/Motion_005.png",
+      "Group": "production_qa",
+      "Bytes": 380937,
+      "SHA256": "46A520B65FFAC5893FC6C3E0483FDBF3D8E6C4A12E9196C3745CF147A297B7D9"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/Motion_006.png",
+      "Group": "production_qa",
+      "Bytes": 393548,
+      "SHA256": "DEB7E38FBF9CA3D8E5F868A9524E6AB7483ACC12FCE78A7DF5F6CF8A5FFD7CB6"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/Motion_007.png",
+      "Group": "production_qa",
+      "Bytes": 392370,
+      "SHA256": "5402A4B593F1DC5EB39ABF1E65BFCFDF9B5C6E314085C86C177A7F1322C73C1A"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/Motion_008.png",
+      "Group": "production_qa",
+      "Bytes": 392306,
+      "SHA256": "7A59FEF56168C23B4565777501BB2233153D71A679027990E44AA5038BE5F723"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/Motion_009.png",
+      "Group": "production_qa",
+      "Bytes": 391584,
+      "SHA256": "6534A626F78AB8D81766D66191AFEA9C7EC15D5DEDCA6F159C615DD2B570E84D"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/Motion_010.png",
+      "Group": "production_qa",
+      "Bytes": 392032,
+      "SHA256": "D8BE2A1D44F88BFD863078278A6E8496321728F0CD86589F2475172B364B9B6B"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/Motion_011.png",
+      "Group": "production_qa",
+      "Bytes": 394955,
+      "SHA256": "2117B6067EE3E082FFB6D0C67412B044087D8FBF3F06BE4FF145B700FEE15BF6"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/Motion_012.png",
+      "Group": "production_qa",
+      "Bytes": 390471,
+      "SHA256": "A3C3BE8F5A9014BCC30FD1F14A6D0CA03D100C38F295A06D1E0B4BD4CC19D4D1"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/Motion_013.png",
+      "Group": "production_qa",
+      "Bytes": 384233,
+      "SHA256": "B65E8D2F7A5CC117EB313B19F454613EB6162E1980AC6D73AD6EBB33205AE512"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/Motion_014.png",
+      "Group": "production_qa",
+      "Bytes": 383722,
+      "SHA256": "8CD06CE9CCE4CEAD44BC0EFE1827A30EF22E83F7D35024D0755AB6CD1F856991"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/Motion_015.png",
+      "Group": "production_qa",
+      "Bytes": 384196,
+      "SHA256": "7D635BF3A3D0849C01C10713FAE57189DB45889FCEEBFCAF662CD17DDA75B6F3"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/Motion_016.png",
+      "Group": "production_qa",
+      "Bytes": 384015,
+      "SHA256": "0778181155780824A32C82109E372C47E3EF7BE58550DE71BEFEA75490131B29"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/Motion_017.png",
+      "Group": "production_qa",
+      "Bytes": 383894,
+      "SHA256": "3DA1CC3FD845015B607A613461D530569DAFC66D6715CF3C2FBE2857C63960D2"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/Motion_018.png",
+      "Group": "production_qa",
+      "Bytes": 387392,
+      "SHA256": "9CC69E365A852FBAA41C2C0F3095765EE0F7398059E9D36E9C598D277FD74990"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/Motion_019.png",
+      "Group": "production_qa",
+      "Bytes": 385563,
+      "SHA256": "06A0B64A34281858BF493E82FC3814CD66E24C92040368EF81938CEB33ADA0C0"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/Motion_020.png",
+      "Group": "production_qa",
+      "Bytes": 380329,
+      "SHA256": "74F026ED9D8D695E7B711F158BF6E340F13FAF4FEC0AC182B4C119010A9C7B02"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/Motion_021.png",
+      "Group": "production_qa",
+      "Bytes": 380172,
+      "SHA256": "F857C8FE14D05CD0696073DDEB0092373CF15F73C5454D8DDE927E4E054D94A5"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/Motion_022.png",
+      "Group": "production_qa",
+      "Bytes": 380530,
+      "SHA256": "F71BD3D5C0B5DA9D383EFB7D254E073210AF4A1E09B33A8E369BAE6A7F618A52"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/Motion_023.png",
+      "Group": "production_qa",
+      "Bytes": 380079,
+      "SHA256": "DF3C6093B3F364B3357C1D12C54FDC7CD3F716D6D24860B5784AFF3AB59DC412"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/Motion_024.png",
+      "Group": "production_qa",
+      "Bytes": 376266,
+      "SHA256": "7F865F64CF98A94F51B48EDFFD08197ED80472562891CC93B8E2196DFB25022F"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/Motion_025.png",
+      "Group": "production_qa",
+      "Bytes": 374459,
+      "SHA256": "88401929D262520921D7B10C989CB39DB3AE8FC8AE36F43FF348B4561F3A9157"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/Motion_026.png",
+      "Group": "production_qa",
+      "Bytes": 369873,
+      "SHA256": "9FD65426F54D6FF3605F5FF1B663F1B26466E24D6B2482191AF563B84630E644"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/Motion_027.png",
+      "Group": "production_qa",
+      "Bytes": 380652,
+      "SHA256": "FC4D14C70B44CFE5BEE2912C5460D57E0A245431758C0C46852BCE6C0C7D3EEE"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/Motion_028.png",
+      "Group": "production_qa",
+      "Bytes": 380295,
+      "SHA256": "57472A20E26F874629C3378D954D02EBBBA5429D3702DE06ACB9B76BF55DC976"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/Motion_029.png",
+      "Group": "production_qa",
+      "Bytes": 375894,
+      "SHA256": "F8976678A8B8ADAB9D5C8BE05BAB3A4C45E808FF7C5126FE758DB0B3E898D814"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/Motion_030.png",
+      "Group": "production_qa",
+      "Bytes": 371772,
+      "SHA256": "FFFBAFA476FEB0B0CAB1425D4EBCBEA7BB0A8A992ADDA2EA34B9D65A4D5297AE"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/Motion_031.png",
+      "Group": "production_qa",
+      "Bytes": 370395,
+      "SHA256": "C8585FB9BB36A96F0CA88F1CD2D6EA102EE9496E84037D290AB95084925D4F4A"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/Motion_032.png",
+      "Group": "production_qa",
+      "Bytes": 362322,
+      "SHA256": "85720BE9499EA0140021706A69358FF453CA1FFC8ED665FA0F2AC58F1919895A"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/Motion_033.png",
+      "Group": "production_qa",
+      "Bytes": 356176,
+      "SHA256": "1288B033B5D7032755926C62204C603FA6D7AE10ED6177CBC8CEA82ECDB1A30B"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/Motion_034.png",
+      "Group": "production_qa",
+      "Bytes": 375716,
+      "SHA256": "E62A4686D8D01A7EF75566754B6D4AC57191C94187680F27F11424F0E156BEB4"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/S1_Attached_After.png",
+      "Group": "production_qa",
+      "Bytes": 1930995,
+      "SHA256": "2E01ED4B20A4A6921136EA2F187F5AB3D94A8B13461F32BDE1C6D5D8BAB617BA"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/S1_Attached_Before.png",
+      "Group": "production_qa",
+      "Bytes": 1930995,
+      "SHA256": "2E01ED4B20A4A6921136EA2F187F5AB3D94A8B13461F32BDE1C6D5D8BAB617BA"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/S1_Attached_Comparison.png",
+      "Group": "production_qa",
+      "Bytes": 626251,
+      "SHA256": "762D9E6F7FE2A6FDCD06075C50B3E5BD26827083EC498F4B4272710C19D35FD8"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/S1_Jump_After.png",
+      "Group": "production_qa",
+      "Bytes": 1962625,
+      "SHA256": "7313193A9E1B71E59AB7D46612A990458F6CE66DBDB0B5FDF785FB83ABD8599E"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/S1_Jump_Before.png",
+      "Group": "production_qa",
+      "Bytes": 1962625,
+      "SHA256": "7313193A9E1B71E59AB7D46612A990458F6CE66DBDB0B5FDF785FB83ABD8599E"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/S1_Jump_Comparison.png",
+      "Group": "production_qa",
+      "Bytes": 638990,
+      "SHA256": "7C24D93AE461BECC6ECD4119C9221267A5F69DF24DEE8CF0026AC452E2B76012"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/S1_SignWorldOnly.png",
+      "Group": "production_qa",
+      "Bytes": 1962711,
+      "SHA256": "68B3C69DCDF92D19404829D078490E05A35E98C7444280D9FC41479C7CDB01F4"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/S1_Standing_After.png",
+      "Group": "production_qa",
+      "Bytes": 1962145,
+      "SHA256": "9A26208CD243D8C2652CDA04A3070795C1E1EC624C9A16B630A5D96628ED3F81"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/S1_Standing_Before.png",
+      "Group": "production_qa",
+      "Bytes": 1962145,
+      "SHA256": "9A26208CD243D8C2652CDA04A3070795C1E1EC624C9A16B630A5D96628ED3F81"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/S1_Standing_Comparison.png",
+      "Group": "production_qa",
+      "Bytes": 638737,
+      "SHA256": "BF361E0B0CBE5BF0E7CFA9E02E3D680335C5FAB400D72AA047AC285A395E2C4E"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/S1_Walk_After.png",
+      "Group": "production_qa",
+      "Bytes": 1962470,
+      "SHA256": "1B47724490F5EB28FC440AA0F2C56C5BAE8BDCE1532878E93F33EDCD1869D613"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/S1_Walk_Before.png",
+      "Group": "production_qa",
+      "Bytes": 1962470,
+      "SHA256": "1B47724490F5EB28FC440AA0F2C56C5BAE8BDCE1532878E93F33EDCD1869D613"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/S1_Walk_Comparison.png",
+      "Group": "production_qa",
+      "Bytes": 638652,
+      "SHA256": "C0D3AD77E876A2992E3C056E034B460F384079BB38A2E864487AAC6D139093D5"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/S2_Attached_After.png",
+      "Group": "production_qa",
+      "Bytes": 1915743,
+      "SHA256": "A66792D4F638F47EAA2D28178A505D1A2DCE48AC1EC1164B6CA0329BCB051CAB"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/S2_Attached_Before.png",
+      "Group": "production_qa",
+      "Bytes": 1915743,
+      "SHA256": "A66792D4F638F47EAA2D28178A505D1A2DCE48AC1EC1164B6CA0329BCB051CAB"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/S2_Attached_Comparison.png",
+      "Group": "production_qa",
+      "Bytes": 621544,
+      "SHA256": "B927DA3178F025711D97B9D2E4FFCD81F266A83CE97BD2B81DEDCA9C96DC3C77"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/S2_Jump_After.png",
+      "Group": "production_qa",
+      "Bytes": 1928210,
+      "SHA256": "01B9A76F5224AD6DC584664E0E210E81F614BD7FCBAB9BAC110887FC4F600E82"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/S2_Jump_Before.png",
+      "Group": "production_qa",
+      "Bytes": 1928210,
+      "SHA256": "01B9A76F5224AD6DC584664E0E210E81F614BD7FCBAB9BAC110887FC4F600E82"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/S2_Jump_Comparison.png",
+      "Group": "production_qa",
+      "Bytes": 626587,
+      "SHA256": "810CAAE52A08B030555ED1A14345879DEFA2F8403391F6FBB3F582334CDB7A28"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/S2_SignWorldOnly.png",
+      "Group": "production_qa",
+      "Bytes": 1928382,
+      "SHA256": "A7C028EB0F647019A8AE8E0DD10B94843C57325E07FA7DAD691F3F7D8CAD88CC"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/S2_Standing_After.png",
+      "Group": "production_qa",
+      "Bytes": 1927524,
+      "SHA256": "310B2A36DB7021096FF9B239482DFFBA7660B26CFEF63888D5006D3BA43E2645"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/S2_Standing_Before.png",
+      "Group": "production_qa",
+      "Bytes": 1927524,
+      "SHA256": "310B2A36DB7021096FF9B239482DFFBA7660B26CFEF63888D5006D3BA43E2645"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/S2_Standing_Comparison.png",
+      "Group": "production_qa",
+      "Bytes": 626730,
+      "SHA256": "E6692A040384BD349E9D4EC15DCDE594F3B96ACA8999FC76A1EC9DD3493A7912"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/S2_Walk_After.png",
+      "Group": "production_qa",
+      "Bytes": 1928043,
+      "SHA256": "E975D59584F45B25985ADF5B33DFB3DC4F03B5D2494FF9B4B7856E3477619733"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/S2_Walk_Before.png",
+      "Group": "production_qa",
+      "Bytes": 1928043,
+      "SHA256": "E975D59584F45B25985ADF5B33DFB3DC4F03B5D2494FF9B4B7856E3477619733"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/S2_Walk_Comparison.png",
+      "Group": "production_qa",
+      "Bytes": 626594,
+      "SHA256": "7DCDE0B05D133F9FF94F55F9E4CE801ED4D74116EDFBFCF3106E4AA40FC58275"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/S3_Attached_After.png",
+      "Group": "production_qa",
+      "Bytes": 1884475,
+      "SHA256": "930D23DEF03EB1C389412E6580E0AFB1F410BE7EE0C77FCFE1A1838E3A54CD7B"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/S3_Attached_Before.png",
+      "Group": "production_qa",
+      "Bytes": 1886274,
+      "SHA256": "80FD5CA60E3021DBE441FE773410EB47CAA7E41A788B4865CC7380D69C01811B"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/S3_Attached_Comparison.png",
+      "Group": "production_qa",
+      "Bytes": 616751,
+      "SHA256": "1B859D3D9DF1DB1E44A4FA940740E88D5D86E9C3715FB1F47B37D800998EFB26"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/S3_Bridge_After.png",
+      "Group": "production_qa",
+      "Bytes": 1886791,
+      "SHA256": "B73E676F1DBD8529193B3C3AEB3DC0845308A85BE203FD695A070FCDECDAAD85"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/S3_Bridge_Before.png",
+      "Group": "production_qa",
+      "Bytes": 1888644,
+      "SHA256": "17C396B27205865A18018046F5299E96F9452630B3DFE915490E76274A4CFEA6"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/S3_Bridge_Comparison.png",
+      "Group": "production_qa",
+      "Bytes": 617262,
+      "SHA256": "AE5EDA5ABD1349458D57285D8095C4DEBC33E6791BD8639300EA3799EB16948B"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/S3_Jump_After.png",
+      "Group": "production_qa",
+      "Bytes": 1896324,
+      "SHA256": "9D3F0A9B36D61A8119F3E1E8BBD6051A8C31B25BFC89DB574A9DCF4E33267B7C"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/S3_Jump_Before.png",
+      "Group": "production_qa",
+      "Bytes": 1896324,
+      "SHA256": "9D3F0A9B36D61A8119F3E1E8BBD6051A8C31B25BFC89DB574A9DCF4E33267B7C"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/S3_Jump_Comparison.png",
+      "Group": "production_qa",
+      "Bytes": 614381,
+      "SHA256": "141E636DCAD08B082C6DF496E162E8C915869940E7FE0DC5239F06F56476B39A"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/S3_SignWorldOnly.png",
+      "Group": "production_qa",
+      "Bytes": 1896887,
+      "SHA256": "92DA61BCBE135B29252935DCBD0B7B57CA8CABFB1C227A826DBB5B479B9F77F7"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/S3_Standing_After.png",
+      "Group": "production_qa",
+      "Bytes": 1895321,
+      "SHA256": "84F167B8638C109D07FCC4352F73EA61E17064869ED560E25FC5AAC683319CA0"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/S3_Standing_Before.png",
+      "Group": "production_qa",
+      "Bytes": 1895321,
+      "SHA256": "84F167B8638C109D07FCC4352F73EA61E17064869ED560E25FC5AAC683319CA0"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/S3_Standing_Comparison.png",
+      "Group": "production_qa",
+      "Bytes": 614082,
+      "SHA256": "F5D8ED5DFF100BD48ED3BC2977A5F74784685557C9F1F73E781E981DC5319117"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/S3_Walk_After.png",
+      "Group": "production_qa",
+      "Bytes": 1896606,
+      "SHA256": "2E6751C9AD8B118E00FA26E1664DF2EE1D7E7C61B58967A158C5645B33AAF79D"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/S3_Walk_Before.png",
+      "Group": "production_qa",
+      "Bytes": 1896606,
+      "SHA256": "2E6751C9AD8B118E00FA26E1664DF2EE1D7E7C61B58967A158C5645B33AAF79D"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/S3_Walk_Comparison.png",
+      "Group": "production_qa",
+      "Bytes": 614341,
+      "SHA256": "BDED0E16A68E2A93555222568988BAB3455112E81F487CDCECF50C0FCDFB0E85"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/S4_Clear_After.png",
+      "Group": "production_qa",
+      "Bytes": 1893012,
+      "SHA256": "EC4A9FD8D58E8119F1FD6EEE8FBDA19F71FA15761E686B0D0E79F5569AA37B2C"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/S4_Clear_Before.png",
+      "Group": "production_qa",
+      "Bytes": 1894938,
+      "SHA256": "75ED34440B33FBE666E6DA222AA8686B4CFDF4A915057C01D66D16883E59D22F"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/S4_Clear_Comparison.png",
+      "Group": "production_qa",
+      "Bytes": 614378,
+      "SHA256": "3F71C4B87F7D8EC0B34A4F0496F17D64AE8E0591C73A790DEC22A6A24F4867E8"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/S4_FirstBridge_After.png",
+      "Group": "production_qa",
+      "Bytes": 1901783,
+      "SHA256": "BEA97D6817CA195634EA2888E5A0F5314BEC9B33E4BB0118CC335EFBB558A830"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/S4_FirstBridge_Before.png",
+      "Group": "production_qa",
+      "Bytes": 1902292,
+      "SHA256": "754B050B88B4252DBB60338481391E4135A1A6B301A44C748F66B6D5989E46A7"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/S4_FirstBridge_Comparison.png",
+      "Group": "production_qa",
+      "Bytes": 616601,
+      "SHA256": "FF9E74B04645F4CEF5F43D471F089BAAA77FF69050EE5A3C61F7EDE03BF77CF4"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/S4_Jump_After.png",
+      "Group": "production_qa",
+      "Bytes": 1898010,
+      "SHA256": "58209D7C5B2A7F4A6D6EB0D607387D2B3D31A1354B4985D04DA51BC9D73B3FE6"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/S4_Jump_Before.png",
+      "Group": "production_qa",
+      "Bytes": 1899089,
+      "SHA256": "90204E41D366AEF5787D952E9CC08FCF7736DC93C44C24C4991E089F49972485"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/S4_Jump_Comparison.png",
+      "Group": "production_qa",
+      "Bytes": 617472,
+      "SHA256": "A5EAF06E4E8EEF40ED9FA6269A5B060CD13C3E8A3E6FEFEC6355E3E36C0B6551"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/S4_Merged_After.png",
+      "Group": "production_qa",
+      "Bytes": 1893014,
+      "SHA256": "136001D5E1A810F102697BD27E3A7F7CFA9AE6384077BF4136603ADE50690BBF"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/S4_Merged_Before.png",
+      "Group": "production_qa",
+      "Bytes": 1893519,
+      "SHA256": "C92AF89E088C7546435186B5DBBFB87E89D81B1C512EFDF48CB0EA94F741EA45"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/S4_Merged_Comparison.png",
+      "Group": "production_qa",
+      "Bytes": 613418,
+      "SHA256": "4E35AC5DEDD0D7A76BA1EFCA0C312AF32B5375AB6865476FF2DD04E10224EC4A"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/S4_Restored_After.png",
+      "Group": "production_qa",
+      "Bytes": 1902059,
+      "SHA256": "6A38FD3D12CC7CEB6E07F2C4F76F803CD5EC40BCC8E72841F8C133EFDD0486ED"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/S4_Restored_Before.png",
+      "Group": "production_qa",
+      "Bytes": 1903136,
+      "SHA256": "53FA3A955D488FD03892B53B5B7630A896D6E1A16CD0EC5205CB1DD1A5872444"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/S4_Restored_Comparison.png",
+      "Group": "production_qa",
+      "Bytes": 618555,
+      "SHA256": "2DC93983A9D36266FAB6123843E202713F8C4EAC89AB9664457791EE1D6E70F1"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/S4_SignWorldOnly.png",
+      "Group": "production_qa",
+      "Bytes": 1897897,
+      "SHA256": "5AEA12EC99E943CD13DCD154F6740B5FDEDD1CDB182147C7A98E4D6AB747484D"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/S4_Standing_After.png",
+      "Group": "production_qa",
+      "Bytes": 1898903,
+      "SHA256": "1E4A4BE6BF573C491F281BEE4D6C7073B7EA1B34C49D4023485A496CADDB7D2F"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/S4_Standing_Before.png",
+      "Group": "production_qa",
+      "Bytes": 1899910,
+      "SHA256": "1B8D5C5221DCD07432E532D53890AED87C546B0AA16708FC3F9AF035DE80924D"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/S4_Standing_Comparison.png",
+      "Group": "production_qa",
+      "Bytes": 617417,
+      "SHA256": "883ED9C8DCB90CEAD4E933377325D3A8056AA56EC0433A3E115663BDBD71F38A"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/S4_TwoBridges_After.png",
+      "Group": "production_qa",
+      "Bytes": 1890079,
+      "SHA256": "21C836AB6898B04E272A3BE914823DA9A783C887F7AE432D3A44C5BBC6FD3EF5"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/S4_TwoBridges_Before.png",
+      "Group": "production_qa",
+      "Bytes": 1890555,
+      "SHA256": "7D337BF84F210397EACD4550568D1A57A9C267CC0F6A0FC92B3195D7A42EB44D"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/S4_TwoBridges_Comparison.png",
+      "Group": "production_qa",
+      "Bytes": 611967,
+      "SHA256": "EBBDE017DBAF567CE311B7A81AE08A7344562F9C0E99B9B5B0EAF45FAB346194"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/S4_Walk_After.png",
+      "Group": "production_qa",
+      "Bytes": 1896348,
+      "SHA256": "A2298D98DB2C4175C9F4099E0D1EF93A5E4A3E9D9919708736DE1EC315CFD4EF"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/S4_Walk_Before.png",
+      "Group": "production_qa",
+      "Bytes": 1897376,
+      "SHA256": "260A052C41518A493209B65FBFE5717A98C59B070536910AB4F39DEF4B1942FE"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/S4_Walk_Comparison.png",
+      "Group": "production_qa",
+      "Bytes": 617168,
+      "SHA256": "93DDF2E2F8F2E57E2B1AA4D440503E74964387CB41F965F04F49DD6A6E543BFB"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/Section1_ActualMotion.gif",
+      "Group": "production_qa",
+      "Bytes": 1620919,
+      "SHA256": "B4D63B1CCB07FFB29798EE47DDEFE14C6659D9685A11AFDD0A2199870A9CFF6D"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/Section2_ActualMotion.gif",
+      "Group": "production_qa",
+      "Bytes": 1581915,
+      "SHA256": "9DF04D05FA203F257AB3ED4A836038C9CBDE0CF7E28C910E76E72032E314DA96"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/Section3_ActualMotion.gif",
+      "Group": "production_qa",
+      "Bytes": 1332519,
+      "SHA256": "4220CC519C6DB76FE924919D16F1FDAAACA68B981CD379DE42C15470ED9AD121"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/Screenshots/Section4_ActualMotion.gif",
+      "Group": "production_qa",
+      "Bytes": 3282917,
+      "SHA256": "B40EF31B85E1043603A688A99DDA427963801F6553C540E4EB37BC4D64F105D5"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProductionIntegration_20261001/StandalonePerformance.json",
+      "Group": "production_qa",
+      "Bytes": 1269,
+      "SHA256": "49D72F2DA2B8DF04489E3F6DD7C6C8F61B95D46A372750FAC569E312A8E037D0"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/01_Implementation.md",
+      "Group": "production_qa",
+      "Bytes": 4922,
+      "SHA256": "FBD6CF20044239F62A60B80DE024BA1A0520CF2FBF1C5ED15E7C931D27056A79"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/02_HumanReview.md",
+      "Group": "production_qa",
+      "Bytes": 1692,
+      "SHA256": "7E70C71335FDDF2FA83AE79E8B604EFB7BB8E491DBEB5578AB0B9923ACBDDC58"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/03_FinalDecision.md",
+      "Group": "production_qa",
+      "Bytes": 4741,
+      "SHA256": "8ABF4B4FB40FADF09DB08D260FEBD161DDD49A0BB764EF951D50F46AFD618466"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/04_BuildAndProtection.md",
+      "Group": "production_qa",
+      "Bytes": 3677,
+      "SHA256": "AB5BF9F55A9CFCC53A2199778D5AD88A3AF9C7449F97AD502D8AAFF1825CD6D7"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/05_HumanReviewResult.md",
+      "Group": "production_qa",
+      "Bytes": 1319,
+      "SHA256": "4FAE2940F6F92FFB5B31F262D5BCCC2325A0A465BFFBFAA6F7984CBFE6C8888B"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/ChangeManifest.json",
+      "Group": "production_qa",
+      "Bytes": 15195,
+      "SHA256": "8A56DBA2FBA851D63F343539690279C74651039BB8E85331DC72E10366BD0508"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/Evidence/CollectFinal.py",
+      "Group": "production_qa",
+      "Bytes": 3229,
+      "SHA256": "4FC80FED5B5D434A371679E0EB217B944A95BF4F5A4EDD3C727453CA057E58B6"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/Evidence/PackageEvidence.py",
+      "Group": "production_qa",
+      "Bytes": 3449,
+      "SHA256": "4FBE806C62D034D34F4A4D70E7083D8242F8BA9C907F0BBC5402FCD4E02ADCBA"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/Evidence/Prepare.py",
+      "Group": "production_qa",
+      "Bytes": 4985,
+      "SHA256": "79F50415B2C0498C875FB532BFFBED030FDDFEAFEB3EE910B2FB8D552DF445B5"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/Evidence/ProofEntry.cs",
+      "Group": "production_qa",
+      "Bytes": 3882,
+      "SHA256": "BE286D1370E98BF006538B485705CE5FCBC56D9213C03F7EE41F132CA9B1AA17"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/Evidence/ProofRuntimeQA.cs",
+      "Group": "production_qa",
+      "Bytes": 12025,
+      "SHA256": "BF13EFA33C94CA9F4651AFF160C304A761BC95C3537969F903F756097F9326C5"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/Evidence/Runtime/checks.txt",
+      "Group": "production_qa",
+      "Bytes": 1457,
+      "SHA256": "73C18EE53190EB914CD4AA0D767831C09E3254B31F47BDA0D8D3D891C4B2CD11"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/Evidence/Runtime/errors.txt",
+      "Group": "production_qa",
+      "Bytes": 954,
+      "SHA256": "115FA176968F68364020A58294FCFBDD3CC9582B5FF3FD8F839A284323530F56"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/Evidence/Runtime/motion.csv",
+      "Group": "production_qa",
+      "Bytes": 2062,
+      "SHA256": "E3327712D29AC7ADA4774A42AD5CCAB3573795C31E226EF982C1DF5418509A90"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/Evidence/Runtime/render_timing.csv",
+      "Group": "production_qa",
+      "Bytes": 551,
+      "SHA256": "01E581B327DED4F804B9443D6FB43622442CD027567C1F181E3FBFDB3B8DC894"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/Evidence/Runtime/result.txt",
+      "Group": "production_qa",
+      "Bytes": 105,
+      "SHA256": "1E4DEE6A6DA8C08DE93A78A0200C939CD0986ABE54792313B24B20479BEB5AF9"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/Evidence/RuntimeAttempt02/checks.txt",
+      "Group": "production_qa",
+      "Bytes": 1517,
+      "SHA256": "1B341F6453A97BE9787B077919E895FBC39157C7169A8C7E91E92D19DBD5A96C"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/Evidence/RuntimeAttempt02/editor_search_errors.txt",
+      "Group": "production_qa",
+      "Bytes": 954,
+      "SHA256": "115FA176968F68364020A58294FCFBDD3CC9582B5FF3FD8F839A284323530F56"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/Evidence/RuntimeAttempt02/motion.csv",
+      "Group": "production_qa",
+      "Bytes": 1948,
+      "SHA256": "99923ECA5D609F7852F67035A2AA4C80B5CB1A1F2BF50CE015EBD595666319D9"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/Evidence/RuntimeAttempt02/render_timing.csv",
+      "Group": "production_qa",
+      "Bytes": 551,
+      "SHA256": "219C94E695272D9D295796052938E63797FCA60585C764CD21232836B37A4A34"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/Evidence/RuntimeAttempt02/result.txt",
+      "Group": "production_qa",
+      "Bytes": 133,
+      "SHA256": "4E16CAE1A8D3BA8799994AA5A66BBC099058B087C0DC02DE9FD5D51C973037A8"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/Evidence/Tutorial2p5DBackground.cs",
+      "Group": "production_qa",
+      "Bytes": 5375,
+      "SHA256": "5BB5C2B211B0514F8BD47D9BFBAA36D00C80B45C6F5934AF176A72200CC20BD8"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/Evidence/UnityBuild.log",
+      "Group": "production_qa",
+      "Bytes": 153428,
+      "SHA256": "B5206CC9E512D08DCB23A4A4F9803F56D86B95070483F13C763BD05C2938C78B"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/Evidence/UnityProof_Attempt02.log",
+      "Group": "production_qa",
+      "Bytes": 56542,
+      "SHA256": "730F1C7C97C5A6C1DC2AECB64C261405DE883E571F1A5AED5AFAD324AE4F3A4A"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/Evidence/UnityProof_Retry.log",
+      "Group": "production_qa",
+      "Bytes": 105774,
+      "SHA256": "1F56A9B7E6F584496FF9B61C17C7600E08795C36EE3C38740C37087C4644FA14"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/Evidence/UnityProof.log",
+      "Group": "production_qa",
+      "Bytes": 10466,
+      "SHA256": "6CD30761876B0124F15C07C7413492CF7C5C87B3D1770821DDBC944ED3B9AF47"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/EvidenceManifest.json",
+      "Group": "production_qa",
+      "Bytes": 6780,
+      "SHA256": "00DBE16F24BF97874E47E018027A611C93ABB653E2247036E864E773333F8C64"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/Preparation.json",
+      "Group": "production_qa",
+      "Bytes": 1813,
+      "SHA256": "43186614FE49BD9DDB9951FD8F1F18D6D1DA0897EA017E1AD89B14A4DDC491A7"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/ProtectionResult.json",
+      "Group": "production_qa",
+      "Bytes": 622,
+      "SHA256": "584804E8B044F6BCDCFEC54BB7E589208C5158162BA8D196D91280868083632F"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/README.md",
+      "Group": "production_qa",
+      "Bytes": 4744,
+      "SHA256": "76AF2E6D15A72CA8FEC6DBCFEAE31B70DCE8CDDCD57F7F26921D7CB54879B661"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/Screenshots/01_Standing_After.png",
+      "Group": "production_qa",
+      "Bytes": 1956121,
+      "SHA256": "60888A0C9E519F97A3D05DC41926C0018B07C638212EE7DCF3517759165C9DAC"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/Screenshots/01_Standing_Before.png",
+      "Group": "production_qa",
+      "Bytes": 1715455,
+      "SHA256": "96CD71254550356B437F53ADB1776B800A860E4235EDD687974C854B30347DEC"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/Screenshots/01_Standing_Comparison.png",
+      "Group": "production_qa",
+      "Bytes": 1083688,
+      "SHA256": "A189BB7C7662B6AE6C476874412012ED034813C3A4B5D7D675B6C69DF04CFC06"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/Screenshots/02_Right_After.png",
+      "Group": "production_qa",
+      "Bytes": 1927925,
+      "SHA256": "C1766A1C20A1E9C4D38F9903053053FBA6EFD8347470CA737FDDE8A309722500"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/Screenshots/02_Right_Before.png",
+      "Group": "production_qa",
+      "Bytes": 1710536,
+      "SHA256": "316CB76B1B155ECC9B284CE197DA024A0BDE851054E94F7E18C14A1A1DFCC523"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/Screenshots/02_Right_Comparison.png",
+      "Group": "production_qa",
+      "Bytes": 1048281,
+      "SHA256": "40551537DFEC3E26393A0AF78777FA21AF700A25E0C202A1512BD654FF652763"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/Screenshots/03_Aim_After.png",
+      "Group": "production_qa",
+      "Bytes": 1927696,
+      "SHA256": "C3F010D4D4FAB2A2EBC7C6527CB46281B266ABB167649DB2F3334BA2137C67B6"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/Screenshots/03_Aim_Before.png",
+      "Group": "production_qa",
+      "Bytes": 1711381,
+      "SHA256": "A785592B6326A56EF0AB346EC404BCF599BF81E96E01AE88A843AF461F1193DB"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/Screenshots/03_Aim_Comparison.png",
+      "Group": "production_qa",
+      "Bytes": 1049229,
+      "SHA256": "D2A3CAA043DA0C3EF23D559EB7B0FD83A9E344FF5153059AFD29AEC8CB69679B"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/Screenshots/04_Jump_After.png",
+      "Group": "production_qa",
+      "Bytes": 1926987,
+      "SHA256": "0907A2C2F2EDF4559927CE4B7674AC3C7EFB53B8D67BA4B458B666A80C1CC982"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/Screenshots/04_Jump_Before.png",
+      "Group": "production_qa",
+      "Bytes": 1710089,
+      "SHA256": "270EE509955CF0550E4D0AD4DCDDE316E24935F52DF4807E0F39A4B0F0BBA4DD"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/Screenshots/04_Jump_Comparison.png",
+      "Group": "production_qa",
+      "Bytes": 1048210,
+      "SHA256": "F24598E87D74B835E1DA052DCE266D90824A94666AE90935AC2C4F8FEF49AEF4"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/Screenshots/05_Attached_After.png",
+      "Group": "production_qa",
+      "Bytes": 1929525,
+      "SHA256": "ABB203DD39A42DC9E612A7121C019273E453B4D476B293BDD08F37B0BF5F04F0"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/Screenshots/05_Attached_Before.png",
+      "Group": "production_qa",
+      "Bytes": 1713969,
+      "SHA256": "CC5EB715A4A1F7D4D8262553AD2FD2C27B5B2397326A1C02DA5AE527EA098D39"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/Screenshots/05_Attached_Comparison.png",
+      "Group": "production_qa",
+      "Bytes": 1048902,
+      "SHA256": "422075940E9D09234FC3D9E27EEE59BF2F2328CEA5F475650774FBADE1A71FF3"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/Screenshots/06_Section2_ScopeOnly.png",
+      "Group": "production_qa",
+      "Bytes": 1729723,
+      "SHA256": "16276242620386321B09D7E1EEA61A0920E240D6D7CCF3CEFC942D1B876B4A53"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/Screenshots/ActualUnityMotion.gif",
+      "Group": "production_qa",
+      "Bytes": 9908141,
+      "SHA256": "5CC621FCCCF5F485AAFDF656F9F245C96572227232774D38C360BE33C5E4D255"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/Screenshots/Motion_000.png",
+      "Group": "production_qa",
+      "Bytes": 1929670,
+      "SHA256": "4F300970E671EF49426ECBFB7131F4BEEB800C1892E75341E69A35589DE73DA6"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/Screenshots/Motion_001.png",
+      "Group": "production_qa",
+      "Bytes": 1932641,
+      "SHA256": "1513B354662D4730F726BF1CFAF49BFC9348B6DFF8A03ABC5E4B5E88277B22E7"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/Screenshots/Motion_002.png",
+      "Group": "production_qa",
+      "Bytes": 1934415,
+      "SHA256": "9274AE7E07F7EC17CF08FB7C33AA25DD27E3B16B043FC2D085D26934453F2D7F"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/Screenshots/Motion_003.png",
+      "Group": "production_qa",
+      "Bytes": 1937222,
+      "SHA256": "D8B4D6C4512114FDF8F8CEB85738AEB0DB54C352D3D8F5969090409B4D9E736D"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/Screenshots/Motion_004.png",
+      "Group": "production_qa",
+      "Bytes": 1939535,
+      "SHA256": "DC6145A368D728FACB635F37B84D26185161CCFDDF55F7BD9477252A1CDA630A"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/Screenshots/Motion_005.png",
+      "Group": "production_qa",
+      "Bytes": 1942092,
+      "SHA256": "71B6559FECE0BC2BC17AFD2493AEB36DBA48D7CF5E192170A453D986B22C3B86"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/Screenshots/Motion_006.png",
+      "Group": "production_qa",
+      "Bytes": 1944459,
+      "SHA256": "917D1A03B22411C320DACD81ECBC23A4F278D56A56CEA82B8D0B95B3ABF4AA73"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/Screenshots/Motion_007.png",
+      "Group": "production_qa",
+      "Bytes": 1946514,
+      "SHA256": "3642C347C549427450442003FBFC5F944E1ED604A432BD54211320251B3D1F89"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/Screenshots/Motion_008.png",
+      "Group": "production_qa",
+      "Bytes": 1947815,
+      "SHA256": "BB0AA7E9741EEC2DC21500BAA0B5D27DA290C5B97EBF277EE5858ED754BA15C5"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/Screenshots/Motion_009.png",
+      "Group": "production_qa",
+      "Bytes": 1948866,
+      "SHA256": "CCD9891B82066706127B4028C8297E47F16110D4A30200F608101DD6239271F2"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/Screenshots/Motion_010.png",
+      "Group": "production_qa",
+      "Bytes": 1948550,
+      "SHA256": "A5EC5AAFA8617713123F4F6FCF86388935F754EB20C5A3B6C5069F466ED6A9CC"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/Screenshots/Motion_011.png",
+      "Group": "production_qa",
+      "Bytes": 1950228,
+      "SHA256": "EF385827341E568BA19A8C593F78335257642617367044CE5FC5A8CAE6742035"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/Screenshots/Motion_012.png",
+      "Group": "production_qa",
+      "Bytes": 1950186,
+      "SHA256": "43B72E307519A9CEB4FD0EC77438D7A1BE072960916DBF6D712AA1D3157D8FF3"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/Screenshots/Motion_013.png",
+      "Group": "production_qa",
+      "Bytes": 1948007,
+      "SHA256": "707D1D89E5E9DA17E995F06D95B297AD030BC06C0443CC059773CAC8786ACE8F"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/Screenshots/Motion_014.png",
+      "Group": "production_qa",
+      "Bytes": 1943239,
+      "SHA256": "D54480B6E927F3FBD4E5E0780AFD186DAE9DC625E71B76E3A2A66093C3F8300F"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/Screenshots/Motion_015.png",
+      "Group": "production_qa",
+      "Bytes": 1934843,
+      "SHA256": "A30077C16644066278C7F62582789D21506DD1E72A119567F2D74D95CA6BE47B"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/Screenshots/Motion_016.png",
+      "Group": "production_qa",
+      "Bytes": 1925980,
+      "SHA256": "AC8EADDA22FD18D369CCE0F0195C69D50C08C20B474B0BD4B8E4FD56655BB0C2"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/Screenshots/Motion_017.png",
+      "Group": "production_qa",
+      "Bytes": 1919317,
+      "SHA256": "E5BD522BF6F75D523C7B6B4A2795DCD2DC7F3A7EDA82B5088FAC4551466A2968"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/Screenshots/Motion_018.png",
+      "Group": "production_qa",
+      "Bytes": 1907129,
+      "SHA256": "F121585BC4F8C177AB738473DA8ADDDB9C0072C27A6CE09E9BC204DCF1C8D154"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/Screenshots/Motion_019.png",
+      "Group": "production_qa",
+      "Bytes": 1901350,
+      "SHA256": "18B53BE8903E33E82967BCDB03D1A8131633508CBFFA310BF055D657F326B0FD"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/Screenshots/Motion_020.png",
+      "Group": "production_qa",
+      "Bytes": 1898763,
+      "SHA256": "2CA4B978DD849D83D58E755790BC56189DD8ADE998F13ADBF39EAF7C4697E773"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/Screenshots/Motion_021.png",
+      "Group": "production_qa",
+      "Bytes": 1900801,
+      "SHA256": "10352F5D7A534C5876A0021F6195191C47DF5F16E40B09AEEA3ACD60B2C059A3"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/Screenshots/Motion_022.png",
+      "Group": "production_qa",
+      "Bytes": 1902954,
+      "SHA256": "4D56E93855FE6797D280C7A1FC74F733A4CED8160174A7070D3E5A0DAC695707"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/Screenshots/Motion_023.png",
+      "Group": "production_qa",
+      "Bytes": 1910007,
+      "SHA256": "98C8398614D6553CDF4E53B9FC3CE90CB56269D31098005288F122540E711232"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/Screenshots/Motion_024.png",
+      "Group": "production_qa",
+      "Bytes": 1910008,
+      "SHA256": "2405D11E1C522FE4804E51D8E096F9825D70816DCAC4AA35FCB5D9BF2CF92CEF"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/Screenshots/Motion_025.png",
+      "Group": "production_qa",
+      "Bytes": 1904753,
+      "SHA256": "098F99A9A77059D0888DA3D50B04FA4D163299EE3E307FAFC711DF10CBCEE11E"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/Screenshots/Motion_026.png",
+      "Group": "production_qa",
+      "Bytes": 1905009,
+      "SHA256": "3DE5EAC6163974FDFE7260629B2849DB3D3284055D1963AB37F0E1B857C956BC"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/Screenshots/Motion_027.png",
+      "Group": "production_qa",
+      "Bytes": 1903864,
+      "SHA256": "E2538EF7B5E433D619265ED5E81BEB6FDA8162CAD5F0A6459E525A2EBEC49103"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/Screenshots/Motion_028.png",
+      "Group": "production_qa",
+      "Bytes": 1905235,
+      "SHA256": "D5781ED644252077D6FB51A4FDF6D46CB98751751F508DA3AFC92BA21366C35F"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/Screenshots/Motion_029.png",
+      "Group": "production_qa",
+      "Bytes": 1905912,
+      "SHA256": "9D9332EBB3464A08F98A9262F3601E738B0AF2BA883D9DA2217B915F57CB1869"
+    },
+    {
+      "Path": "Docs/QA/Tutorial2p5DProof_20261001/Screenshots/Motion_ContactSheet.png",
+      "Group": "production_qa",
+      "Bytes": 3502653,
+      "SHA256": "E3C8718176C226C364E488E0B33077B56CD5DA241DD1FA1E341E1101C2BD29CF"
+    },
+    {
+      "Path": "Docs/VisualConcepts/Tutorial2p5D_20261001/AssetManifest.json",
+      "Group": "production_qa",
+      "Bytes": 1846,
+      "SHA256": "292E5F2F4D4B1A45F230D659B083EE981897425D9CADBC8EF51C6A2D06F7EF66"
+    },
+    {
+      "Path": "Docs/VisualConcepts/Tutorial2p5D_20261001/GenerationPrompts.md",
+      "Group": "production_qa",
+      "Bytes": 6390,
+      "SHA256": "473D1C6C46CD0971186B2559D88013FF1C012BD8775E70145685D4245BB9F47C"
+    },
+    {
+      "Path": "Docs/VisualConcepts/Tutorial2p5D_20261001/README.md",
+      "Group": "production_qa",
+      "Bytes": 5777,
+      "SHA256": "C3AEAAAF106381B0D694A626A0CFE5A79B626379A92DAF9F36BC89E14C90AED4"
+    },
+    {
+      "Path": "Docs/VisualConcepts/Tutorial2p5D_20261001/Tutorial2p5D_BeforeAfter.png",
+      "Group": "production_qa",
+      "Bytes": 2483025,
+      "SHA256": "FFD9F9312D38868E55AA7C823E8EF9C49986C65E92618587E4503C282B5ADE2B"
+    },
+    {
+      "Path": "Docs/VisualConcepts/Tutorial2p5D_20261001/Tutorial2p5D_BeforeReference.png",
+      "Group": "production_qa",
+      "Bytes": 2426010,
+      "SHA256": "7D9CF072E2B3C626758FB1101B04D33657C32ECC9B075E83F8F6A794F4630F6D"
+    },
+    {
+      "Path": "Docs/VisualConcepts/Tutorial2p5D_20261001/Tutorial2p5D_CompositePreview.png",
+      "Group": "production_qa",
+      "Bytes": 4910726,
+      "SHA256": "B4DF7831BC64086ABBFE9590E873E0EC51CE258323943A176B418272CA29B947"
+    },
+    {
+      "Path": "Docs/VisualConcepts/Tutorial2p5D_20261001/Tutorial2p5D_Far.png",
+      "Group": "production_qa",
+      "Bytes": 3601894,
+      "SHA256": "6C7E66A3CDCC5E9D6BD68F4C5E4303512ADA2956CDB82E29327C1E5AEF2F74CA"
+    },
+    {
+      "Path": "Docs/VisualConcepts/Tutorial2p5D_20261001/Tutorial2p5D_Mid.png",
+      "Group": "production_qa",
+      "Bytes": 4779102,
+      "SHA256": "8378E1A3CFB787A27EE5DF301B112D43AD598558167DBBF5A6DC4C11A816BFD4"
+    },
+    {
+      "Path": "Docs/VisualConcepts/Tutorial2p5D_20261001/Tutorial2p5D_Near.png",
+      "Group": "production_qa",
+      "Bytes": 748984,
+      "SHA256": "93C41624926C5DC17737193124794F66906DF7CDA083CA2E49281EB6A4FDADCE"
+    },
+    {
+      "Path": "Docs/VisualConcepts/Tutorial2p5D_20261001/Validation.json",
+      "Group": "production_qa",
+      "Bytes": 1363,
+      "SHA256": "0EAE0B6B6136D0CF6C3350A526AD3046B0B50F5A45046C3426E6621BE0BAF95C"
+    }
+  ],
+  "Note": "Selection.json and LocalOnly.json are also explicitly staged as checkpoint manifests."
+}

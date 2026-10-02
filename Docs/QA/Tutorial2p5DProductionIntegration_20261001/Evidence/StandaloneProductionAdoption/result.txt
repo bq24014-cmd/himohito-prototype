@@ -1,0 +1,11 @@
+PASS
+scene=Tutorial
+section=1
+frames=240
+textureBytes=99123026
+resolution=1600x900
+vsync=0
+targetFrameRate=-1
+2p5d_visible=True
+legacy_hidden=True
+Stationary Section1, real standalone frame timing, no recording clock. Main Thread includes waiting; not pure busy CPU.

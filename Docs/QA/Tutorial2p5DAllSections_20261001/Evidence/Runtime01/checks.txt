@@ -1,0 +1,6 @@
+PASS Stage Selection remains original
+PASS Background has no physics components
+PASS Section 1 entered through authored route
+PASS S1_Standing Before physics/camera/rope unchanged
+PASS S1_Standing After physics/camera/rope unchanged, background active
+FAIL Walk -4 -> -4.35 actual=(-5.72, 0.96)

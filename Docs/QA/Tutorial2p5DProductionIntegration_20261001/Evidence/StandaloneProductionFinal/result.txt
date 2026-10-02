@@ -1,0 +1,9 @@
+PASS
+scene=Tutorial
+section=1
+frames=240
+textureBytes=99123026
+resolution=1600x900
+vsync=0
+targetFrameRate=-1
+Stationary Section1, real standalone frame timing, no recording clock. Main Thread includes waiting; not pure busy CPU.

@@ -1,0 +1,185 @@
+{
+  "actual_unity_captures": [
+    {
+      "path": "Screenshots/01_Standing_After.png",
+      "sha256": "0ACC26DB5524EF2B60908244BB4F06440FE8A4D093DAF129492075D71667EC2C"
+    },
+    {
+      "path": "Screenshots/01_Standing_Before.png",
+      "sha256": "08777A85FFA4C653CDC2F03F37CBFB2E640C55E7011D3E53B8D63A0E79425632"
+    },
+    {
+      "path": "Screenshots/02_Right_After.png",
+      "sha256": "2B9A6E56C6BB866685B9DCDD36FF0CE88E4A8D2B9CE91A581FA2CB9D1F70327B"
+    },
+    {
+      "path": "Screenshots/02_Right_Before.png",
+      "sha256": "A5DBE380440D655226FF356666463E9DEDD5E4F6B753953497FDC564E814D0F0"
+    },
+    {
+      "path": "Screenshots/03_Aim_After.png",
+      "sha256": "3EB9E0BC123A555A43FA15D46049AF7C65A7184D31F54AB1DED11A710BF36000"
+    },
+    {
+      "path": "Screenshots/03_Aim_Before.png",
+      "sha256": "C3D205C374038004C7B4EA183152FADFCCD6C27272D18206615822D4C321F920"
+    },
+    {
+      "path": "Screenshots/04_Jump_After.png",
+      "sha256": "E949F695B1EC5CD64F1B12F5E5FBA3CB2649CB9FB3AD0DA931C93527DFB3CF3D"
+    },
+    {
+      "path": "Screenshots/04_Jump_Before.png",
+      "sha256": "9D6BF31D9365080BCAEB640388FAA691AE6F4FBD41E8D97D8224FBEBB645F265"
+    },
+    {
+      "path": "Screenshots/05_Attached_After.png",
+      "sha256": "A445FD608453B4BEAF1E9DF716C83ABFF925AA0AE9759FD52DA45408AFFA3959"
+    },
+    {
+      "path": "Screenshots/05_Attached_Before.png",
+      "sha256": "0C1558985B5B439F2ECD204DF11C158882AE1F599F4CC5ABC13E7BBCCEC507BE"
+    },
+    {
+      "path": "Screenshots/06_Section2_ScopeOnly.png",
+      "sha256": "8605C293CB9176BDFEBEE6BF5ABABD2596570601E66F47AF7195981DDA95679E"
+    },
+    {
+      "path": "Screenshots/Motion_000.png",
+      "sha256": "6BD861C3A0C8FA8C229ACBE6B3857D7875DD0142BD73C5033BC6E33A088D8D07"
+    },
+    {
+      "path": "Screenshots/Motion_001.png",
+      "sha256": "0E099F44EB0DA339E7E86C27B5E5BE2BBDE2D396909F55E02C72AA6493AC102D"
+    },
+    {
+      "path": "Screenshots/Motion_002.png",
+      "sha256": "E6FD082D00871B0305122261219E767E075C65145C0531211DC9056A545C672D"
+    },
+    {
+      "path": "Screenshots/Motion_003.png",
+      "sha256": "EE6AEFF14EAF4C60E23F6C3F42C70D6B440DBD0E4BB3A324389D2883F97244F9"
+    },
+    {
+      "path": "Screenshots/Motion_004.png",
+      "sha256": "62F3DD3612A7121A7F9292F78050C5F02D627746FC4F40F5C5B0FA666B85CDB7"
+    },
+    {
+      "path": "Screenshots/Motion_005.png",
+      "sha256": "A674E66F974513A91BF06BDEB7F76934FC00A314FAD5090D7A0490AD516682D3"
+    },
+    {
+      "path": "Screenshots/Motion_006.png",
+      "sha256": "57112452014D3BB96F3C0088ED78C9FE126309F0BDF8E7943687120B5AF9603F"
+    },
+    {
+      "path": "Screenshots/Motion_007.png",
+      "sha256": "49AC070A98ACE23C6394873EE3CA45BF4DB819B3F79B48F387AE4F8F663B160D"
+    },
+    {
+      "path": "Screenshots/Motion_008.png",
+      "sha256": "EACC470E917484CD2B04E3CD7FADB3FD0D00385C72F8169620B25F26D01590CD"
+    },
+    {
+      "path": "Screenshots/Motion_009.png",
+      "sha256": "3AF2895C1C20648BAD77060274FE9C008236FE0CB2CF493C8866249D5C05A3B7"
+    },
+    {
+      "path": "Screenshots/Motion_010.png",
+      "sha256": "0704CFEDB544A9E6BEE2729108D93076C14DB62D54ADC40A89B7DA629DA6A9AF"
+    },
+    {
+      "path": "Screenshots/Motion_011.png",
+      "sha256": "D91DFAF666CFD43FA7CA77CC4DAAAF162137D4205324828C4E0875CEDFFAE091"
+    },
+    {
+      "path": "Screenshots/Motion_012.png",
+      "sha256": "94E3496CEABB25D900C1ADBCDFCD8E6DBC7E0A33ABB9E7A61DF4211C72156935"
+    },
+    {
+      "path": "Screenshots/Motion_013.png",
+      "sha256": "377D13D7F68A0B5CC336E924FB9B0FC96BEB764439447D4DEE7E0A9D3EEEB638"
+    },
+    {
+      "path": "Screenshots/Motion_014.png",
+      "sha256": "1F9118F56FDC8A0F1A157A938275CA67DE3CC83FB114FF8C2130C0A4E8334CC0"
+    },
+    {
+      "path": "Screenshots/Motion_015.png",
+      "sha256": "B92BDBCC036132E1743BFD5D360AC32FAAADFBC81A846BC65627A712711BE2D3"
+    },
+    {
+      "path": "Screenshots/Motion_016.png",
+      "sha256": "D2E7FC67A0C1F392A59F7285E6F82DEEBC9BF672A5A4560C044A373BB49306BD"
+    },
+    {
+      "path": "Screenshots/Motion_017.png",
+      "sha256": "33E0EBC0C98580635DEC46BB54CA599538D69749B593872A74436CF9676E5990"
+    },
+    {
+      "path": "Screenshots/Motion_018.png",
+      "sha256": "9EDD4FE69EB329A17A8B818DF14A1257F83240556EF5B83C0385DCDBF7BB14E6"
+    },
+    {
+      "path": "Screenshots/Motion_019.png",
+      "sha256": "CB6C7E5A9BD0F565FCD06FF7F7417656E56CD9BD77F29645BBFE3EC0922674B8"
+    },
+    {
+      "path": "Screenshots/Motion_020.png",
+      "sha256": "63F76C8D85FE9AF257C4ABDA1C544AD12F276352D0A2A3E83CD1C61C00B8DFBC"
+    },
+    {
+      "path": "Screenshots/Motion_021.png",
+      "sha256": "062CFEA26031719A8E5A9685BCF0B9A735E4154225DCE8FC648FA35A6F4C0FE9"
+    },
+    {
+      "path": "Screenshots/Motion_022.png",
+      "sha256": "C8C9D602BC78F540A50EC2F15399CC6E774A4E1148FCDC90A703EEB1969B94CA"
+    },
+    {
+      "path": "Screenshots/Motion_023.png",
+      "sha256": "2EC888775936DF5B0297A4DDF76672441889629926CED398BD11DC1054581DB2"
+    },
+    {
+      "path": "Screenshots/Motion_024.png",
+      "sha256": "586360897A983AEDF1E7D0A5A88D1E949FA9DD31ACAA803C697712DC0CC5EA22"
+    },
+    {
+      "path": "Screenshots/Motion_025.png",
+      "sha256": "829BA245B02B7AB1E3B10887F9A9DECEEBD1789F1C4364D6F5307626701480B0"
+    },
+    {
+      "path": "Screenshots/Motion_026.png",
+      "sha256": "3DB500D200EAE5B19C1DA1A216F4CAC23248122C3BC4C54B8D97CE24FEA11AD6"
+    },
+    {
+      "path": "Screenshots/Motion_027.png",
+      "sha256": "09C782DBD22350F9B7FF7E1D810524F98EADA6D8E36EFF62A95A84CF0C779CA9"
+    },
+    {
+      "path": "Screenshots/Motion_028.png",
+      "sha256": "8BCF97D8C83778850CA3B67DB4B272803445C17FD8799B3757C976E4AE0445C3"
+    },
+    {
+      "path": "Screenshots/Motion_029.png",
+      "sha256": "900D0737F0E88EDD6A19BD7BA9D17581CD007D0E3135FFE07EF08C7F2D013525"
+    }
+  ],
+  "rendering": "Camera.Render world-camera captures; IMGUI HUD/menu excluded. No gameplay camera transform or zoom changed for captures.",
+  "animation": "30 captured Unity frames; GIF resized and fixed 150ms/frame for preview, not a real-time FPS measurement. Original PNG frames and simulation-time CSV retained.",
+  "performance": {
+    "baseline": {
+      "samples": 15,
+      "median_render_cpu_ms": 2.7994,
+      "min": 2.0394,
+      "max": 5.0214
+    },
+    "proof": {
+      "samples": 15,
+      "median_render_cpu_ms": 2.8564,
+      "min": 1.9961,
+      "max": 6.8745
+    }
+  },
+  "performance_limit": "Editor Camera.Render CPU-call timings, alternating modes after 10 warmups. Not GPU timing, standalone FPS, or proof of no performance regression."
+}

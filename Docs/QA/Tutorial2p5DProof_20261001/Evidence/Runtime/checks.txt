@@ -1,0 +1,30 @@
+PASS Stage Selection unchanged / proof hidden
+PASS Tutorial Section 1 starts
+PASS Three independent background sprite planes active
+PASS Proof owns no collider or rigidbody
+PASS 01_Standing baseline restored / physics-camera unchanged
+PASS 01_Standing proof active / physics-camera unchanged
+PASS Physical walk to -1.8 actual=(-1.66, 0.96)
+PASS 02_Right baseline restored / physics-camera unchanged
+PASS 02_Right proof active / physics-camera unchanged
+PASS Unmodified gameplay camera follows physical walk
+PASS Layer 0 independent parallax delta=-0.02280223
+PASS Layer 0 depth=7
+PASS Layer 1 independent parallax delta=-0.1824185
+PASS Layer 1 depth=5
+PASS Layer 2 independent parallax delta=-0.501651
+PASS Layer 2 depth=3
+FAIL Hook aiming resolves existing target
+PASS 03_Aim baseline restored / physics-camera unchanged
+PASS 03_Aim proof active / physics-camera unchanged
+PASS Jump through unchanged PlayerMover physics
+PASS 04_Jump baseline restored / physics-camera unchanged
+PASS 04_Jump proof active / physics-camera unchanged
+FAIL Existing RopeController Hook attach succeeds
+FAIL Existing DistanceJoint rope remains attached
+PASS 05_Attached baseline restored / physics-camera unchanged
+PASS 05_Attached proof active / physics-camera unchanged
+FAIL Section 2: old background fully restored
+PROOF_TEXTURE_RUNTIME_BYTES 47695488 (not frame rate / GPU benchmark)
+PASS MainStage: no proof component installed
+PASS MainStage: existing background remains

@@ -1,0 +1,4 @@
+tests=29
+failures=4
+runtimeErrors=1
+Controlled cached-input diagnostic, NOT OS-keyboard or Human Review.

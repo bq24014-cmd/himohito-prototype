@@ -1,0 +1,18 @@
+# Diagnostic attempts
+
+試行を隠さず記録する。以下はProductionのGameplay不具合ではなく、このTask用の隔離診断コードの問題。
+
+- Runtime01：123 checks PASS。比較撮影は正常だが、QA referenceのLateUpdateがinactive時にも旧Rendererを戻し得たため、referenceだけ修正してRuntime02を再実施。
+- Runtime02：123 checks PASS / runtimeErrors0 / transitions3。比較画像と旧背景二重表示は確認済み。
+- Baseline01：初回uninstrumented Windows Build成功、398145997 bytes。
+- Baseline02 / Production01：性能probeのScreenCaptureが無効なUnity moduleへ依存しコンパイル停止。Packagesは変更せず、probeからその撮影呼出しを削除。
+- Baseline03 / Production02：Windows Build両方成功。baselineの240frame測定は完了。production helperを非表示起動した際にフレーム進行が止まったため、測定未完として保持。指定した自分のprobeプロセスだけ終了。
+- Runtime03：診断ファイルを既存DiagnosticsでなくScriptsへ重複コピーしてCS0111。重複した当Taskの隔離コピーだけ除去し、Diagnosticsへ正しく配置。Production Assetsは無関係。
+- Baseline04 / Production03：両方同じprobeを使用し、明示的な性能flagの場合にだけrunInBackground=true。通常Humanの挙動は変更なし。
+- Runtime04：全区間R復帰と1600x900の床境界座標を追加した最終Editor回帰。最終結果は同名Evidence参照。
+- StandaloneBaselineFinal / StandaloneProductionFinal：両方起動・Playing・240framesは成立したが、texture memoryが完全に同じだったため採用判定せず調査。保存済みSceneのstandalone起動ではHimoHitoCraftRoomBackground.OnEnableのみが通り、静的Ensureへ追加した新3層初期化を通らなかったと判明。Editorのsetupでは静的Ensureを通るためEditor回帰だけでは検出できなかった。
+- Productionの背景入口OnEnableにも同一のEnsureを追加。GameplayやSceneには触らない。
+- Baseline05 / Production04：同じ強化probeで新規Build。Productionだけ`--expect-2p5d`で3層visibleとlegacyHiddenを必須assert。StandaloneBaselineAdoption / StandaloneProductionAdoptionを最終実Build性能として採用する。
+- Runtime05：この最終SourceでEditor回帰を再実行。撮影projectionに合わせたMid/床境界の座標も記録。Runtime04の「Mid境界画面外」という末尾メモを訂正（座標そのものは正しかった）。
+
+既存Buildは上書きせず、試行ごとに新しい出力名を使用。Unity logsはLogs Evidenceへ保存する。

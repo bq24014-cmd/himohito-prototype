@@ -1,0 +1,21 @@
+{
+  "generated_by": "built-in imagegen, two precise lighting/contact-shadow edits",
+  "source": "C:/Users/田尻大翔/.codex/generated_images/019fdfa3-5ee1-7911-8a24-63282af5bae4/exec-90bac767-2386-48e9-bd94-c0a8bfc12517.png",
+  "source_sha256": "A51F696FB71C4F4DE98117DA577779F7D967EEA37A1D3DD3459528F07C308FA7",
+  "source_size": [
+    1672,
+    941
+  ],
+  "output": "C:\\Users\\田尻大翔\\Documents\\Codex\\2026-08-07\\new-chat\\outputs\\HimoHitoPrototype\\Docs\\QA\\Tutorial2p5DForegroundRefine_20261001\\Assets\\Tutorial2p5D_NearRefined.png",
+  "output_sha256": "4CDAA97410DE24143A1CF8D9834AA9CFB3AEDC70A541CC9DC9D6418BFBE82495",
+  "output_size": [
+    1920,
+    1080
+  ],
+  "alpha": {
+    "zero": 1804458,
+    "partial": 268262,
+    "full": 880
+  },
+  "normalization": "Uniform contain resizing only, no recoloring / matte removal / painted screenshot"
+}

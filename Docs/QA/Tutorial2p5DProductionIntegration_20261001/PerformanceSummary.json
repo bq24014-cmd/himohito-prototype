@@ -1,0 +1,35 @@
+{
+  "render_call": {
+    "before": {
+      "samples": 15,
+      "median_render_cpu_ms": 1.8515,
+      "min": 1.4859,
+      "max": 2.5319
+    },
+    "all": {
+      "samples": 15,
+      "median_render_cpu_ms": 2.035,
+      "min": 1.6216,
+      "max": 3.2743
+    }
+  },
+  "editor_frames": {
+    "original": {
+      "samples": 120,
+      "median_frame_ms": 3.3613,
+      "p95_frame_ms": 4.3992,
+      "mean_observed_fps": 280.7370188957069,
+      "main_thread_valid": 120,
+      "median_main_thread_ms": 3.3568
+    },
+    "production": {
+      "samples": 120,
+      "median_frame_ms": 3.37925,
+      "p95_frame_ms": 4.0048,
+      "mean_observed_fps": 293.94733051731794,
+      "main_thread_valid": 120,
+      "median_main_thread_ms": 3.38495
+    }
+  },
+  "scope": "Batchmode Editor final Clear view,120 samples/mode, no captures, uncapped diagnostic recording clock reset. Main Thread recorder CPU counter may include waiting. No standalone gameplay/FPS guarantee."
+}

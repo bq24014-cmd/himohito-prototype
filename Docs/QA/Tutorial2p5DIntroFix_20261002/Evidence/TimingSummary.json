@@ -1,0 +1,26 @@
+{
+  "render_timing.csv": {
+    "all": {
+      "samples": 15,
+      "median_ms": 1.7119,
+      "max_ms": 2.0603
+    },
+    "before": {
+      "samples": 15,
+      "median_ms": 1.5301,
+      "max_ms": 1.926
+    }
+  },
+  "frame_timing.csv": {
+    "original": {
+      "samples": 120,
+      "median_ms": 3.61975,
+      "max_ms": 17.8373
+    },
+    "production": {
+      "samples": 120,
+      "median_ms": 3.3335999999999997,
+      "max_ms": 5.7437
+    }
+  }
+}

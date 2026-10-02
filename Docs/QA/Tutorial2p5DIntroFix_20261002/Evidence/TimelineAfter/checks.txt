@@ -1,0 +1,13 @@
+PASS Menu retains legacy background, new layers hidden
+PASS Real StartSelectedStage curtain route accepted; no intro skip
+PASS A_TutorialCommitted expected layer/legacy visibility
+PASS B_IntroStart expected layer/legacy visibility
+PASS C_IntroMiddle expected layer/legacy visibility
+PASS D_IntroNearEnd expected layer/legacy visibility
+PASS E_GameplayResumed expected layer/legacy visibility
+PASS Normal camera intro restored control states
+PASS F_AfterMovement expected layer/legacy visibility
+PASS Real cached move input advances player after intro
+PASS All six milestones captured
+PASS No simultaneous legacy/new drawable renderers in any observed frame
+PASS Expected AFTER continuity / BEFORE failure reproduced

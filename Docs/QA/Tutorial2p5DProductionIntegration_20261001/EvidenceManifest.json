@@ -1,0 +1,360 @@
+{
+  "runtime_evidence": "Evidence/Runtime05",
+  "captures": [
+    {
+      "path": "Screenshots/Goal_Far_Only.png",
+      "sha256": "702FF1D5DF6AD18B28EB22C8EFBAEF87D2C06D8A19F4FFB7B672CD9585299C8A"
+    },
+    {
+      "path": "Screenshots/Goal_Mid_Only.png",
+      "sha256": "D06C7873E9C6A9BE7978E4824E4EE6D22E023C31A1627CCE3B28A14CA6781B16"
+    },
+    {
+      "path": "Screenshots/Goal_NearRefined_Only.png",
+      "sha256": "B4CCDD35789ABA46E2BE196FCEC269AB01EA47AA0CBEE36EB60A9AE3D45A5E6A"
+    },
+    {
+      "path": "Screenshots/Motion_000.png",
+      "sha256": "0FA277B9D8DC0007A7CA5E47643196180AFBF4FE30A5E4EFC1C970635EE53463"
+    },
+    {
+      "path": "Screenshots/Motion_001.png",
+      "sha256": "075B85CB8826DED0BAE5B323AB31A24B7A448AA357C62EA3982BFA0A8762C4E3"
+    },
+    {
+      "path": "Screenshots/Motion_002.png",
+      "sha256": "1C58115BABD881B4233B30B74538EF3741064550D8C94DBED9F22D04E13B36D9"
+    },
+    {
+      "path": "Screenshots/Motion_003.png",
+      "sha256": "B645DC5DC1EE995CA973B8A7F7F86DF15AF818B1EF032C736E07C8E45B43919A"
+    },
+    {
+      "path": "Screenshots/Motion_004.png",
+      "sha256": "A50C1C97D3880F49AA7C95FADCACFE79079194DAC5636FFB1E91F4123405D8F9"
+    },
+    {
+      "path": "Screenshots/Motion_005.png",
+      "sha256": "46A520B65FFAC5893FC6C3E0483FDBF3D8E6C4A12E9196C3745CF147A297B7D9"
+    },
+    {
+      "path": "Screenshots/Motion_006.png",
+      "sha256": "DEB7E38FBF9CA3D8E5F868A9524E6AB7483ACC12FCE78A7DF5F6CF8A5FFD7CB6"
+    },
+    {
+      "path": "Screenshots/Motion_007.png",
+      "sha256": "5402A4B593F1DC5EB39ABF1E65BFCFDF9B5C6E314085C86C177A7F1322C73C1A"
+    },
+    {
+      "path": "Screenshots/Motion_008.png",
+      "sha256": "7A59FEF56168C23B4565777501BB2233153D71A679027990E44AA5038BE5F723"
+    },
+    {
+      "path": "Screenshots/Motion_009.png",
+      "sha256": "6534A626F78AB8D81766D66191AFEA9C7EC15D5DEDCA6F159C615DD2B570E84D"
+    },
+    {
+      "path": "Screenshots/Motion_010.png",
+      "sha256": "D8BE2A1D44F88BFD863078278A6E8496321728F0CD86589F2475172B364B9B6B"
+    },
+    {
+      "path": "Screenshots/Motion_011.png",
+      "sha256": "2117B6067EE3E082FFB6D0C67412B044087D8FBF3F06BE4FF145B700FEE15BF6"
+    },
+    {
+      "path": "Screenshots/Motion_012.png",
+      "sha256": "A3C3BE8F5A9014BCC30FD1F14A6D0CA03D100C38F295A06D1E0B4BD4CC19D4D1"
+    },
+    {
+      "path": "Screenshots/Motion_013.png",
+      "sha256": "B65E8D2F7A5CC117EB313B19F454613EB6162E1980AC6D73AD6EBB33205AE512"
+    },
+    {
+      "path": "Screenshots/Motion_014.png",
+      "sha256": "8CD06CE9CCE4CEAD44BC0EFE1827A30EF22E83F7D35024D0755AB6CD1F856991"
+    },
+    {
+      "path": "Screenshots/Motion_015.png",
+      "sha256": "7D635BF3A3D0849C01C10713FAE57189DB45889FCEEBFCAF662CD17DDA75B6F3"
+    },
+    {
+      "path": "Screenshots/Motion_016.png",
+      "sha256": "0778181155780824A32C82109E372C47E3EF7BE58550DE71BEFEA75490131B29"
+    },
+    {
+      "path": "Screenshots/Motion_017.png",
+      "sha256": "3DA1CC3FD845015B607A613461D530569DAFC66D6715CF3C2FBE2857C63960D2"
+    },
+    {
+      "path": "Screenshots/Motion_018.png",
+      "sha256": "9CC69E365A852FBAA41C2C0F3095765EE0F7398059E9D36E9C598D277FD74990"
+    },
+    {
+      "path": "Screenshots/Motion_019.png",
+      "sha256": "06A0B64A34281858BF493E82FC3814CD66E24C92040368EF81938CEB33ADA0C0"
+    },
+    {
+      "path": "Screenshots/Motion_020.png",
+      "sha256": "74F026ED9D8D695E7B711F158BF6E340F13FAF4FEC0AC182B4C119010A9C7B02"
+    },
+    {
+      "path": "Screenshots/Motion_021.png",
+      "sha256": "F857C8FE14D05CD0696073DDEB0092373CF15F73C5454D8DDE927E4E054D94A5"
+    },
+    {
+      "path": "Screenshots/Motion_022.png",
+      "sha256": "F71BD3D5C0B5DA9D383EFB7D254E073210AF4A1E09B33A8E369BAE6A7F618A52"
+    },
+    {
+      "path": "Screenshots/Motion_023.png",
+      "sha256": "DF3C6093B3F364B3357C1D12C54FDC7CD3F716D6D24860B5784AFF3AB59DC412"
+    },
+    {
+      "path": "Screenshots/Motion_024.png",
+      "sha256": "7F865F64CF98A94F51B48EDFFD08197ED80472562891CC93B8E2196DFB25022F"
+    },
+    {
+      "path": "Screenshots/Motion_025.png",
+      "sha256": "88401929D262520921D7B10C989CB39DB3AE8FC8AE36F43FF348B4561F3A9157"
+    },
+    {
+      "path": "Screenshots/Motion_026.png",
+      "sha256": "9FD65426F54D6FF3605F5FF1B663F1B26466E24D6B2482191AF563B84630E644"
+    },
+    {
+      "path": "Screenshots/Motion_027.png",
+      "sha256": "FC4D14C70B44CFE5BEE2912C5460D57E0A245431758C0C46852BCE6C0C7D3EEE"
+    },
+    {
+      "path": "Screenshots/Motion_028.png",
+      "sha256": "57472A20E26F874629C3378D954D02EBBBA5429D3702DE06ACB9B76BF55DC976"
+    },
+    {
+      "path": "Screenshots/Motion_029.png",
+      "sha256": "F8976678A8B8ADAB9D5C8BE05BAB3A4C45E808FF7C5126FE758DB0B3E898D814"
+    },
+    {
+      "path": "Screenshots/Motion_030.png",
+      "sha256": "FFFBAFA476FEB0B0CAB1425D4EBCBEA7BB0A8A992ADDA2EA34B9D65A4D5297AE"
+    },
+    {
+      "path": "Screenshots/Motion_031.png",
+      "sha256": "C8585FB9BB36A96F0CA88F1CD2D6EA102EE9496E84037D290AB95084925D4F4A"
+    },
+    {
+      "path": "Screenshots/Motion_032.png",
+      "sha256": "85720BE9499EA0140021706A69358FF453CA1FFC8ED665FA0F2AC58F1919895A"
+    },
+    {
+      "path": "Screenshots/Motion_033.png",
+      "sha256": "1288B033B5D7032755926C62204C603FA6D7AE10ED6177CBC8CEA82ECDB1A30B"
+    },
+    {
+      "path": "Screenshots/Motion_034.png",
+      "sha256": "E62A4686D8D01A7EF75566754B6D4AC57191C94187680F27F11424F0E156BEB4"
+    },
+    {
+      "path": "Screenshots/S1_Attached_After.png",
+      "sha256": "2E01ED4B20A4A6921136EA2F187F5AB3D94A8B13461F32BDE1C6D5D8BAB617BA"
+    },
+    {
+      "path": "Screenshots/S1_Attached_Before.png",
+      "sha256": "2E01ED4B20A4A6921136EA2F187F5AB3D94A8B13461F32BDE1C6D5D8BAB617BA"
+    },
+    {
+      "path": "Screenshots/S1_Jump_After.png",
+      "sha256": "7313193A9E1B71E59AB7D46612A990458F6CE66DBDB0B5FDF785FB83ABD8599E"
+    },
+    {
+      "path": "Screenshots/S1_Jump_Before.png",
+      "sha256": "7313193A9E1B71E59AB7D46612A990458F6CE66DBDB0B5FDF785FB83ABD8599E"
+    },
+    {
+      "path": "Screenshots/S1_SignWorldOnly.png",
+      "sha256": "68B3C69DCDF92D19404829D078490E05A35E98C7444280D9FC41479C7CDB01F4"
+    },
+    {
+      "path": "Screenshots/S1_Standing_After.png",
+      "sha256": "9A26208CD243D8C2652CDA04A3070795C1E1EC624C9A16B630A5D96628ED3F81"
+    },
+    {
+      "path": "Screenshots/S1_Standing_Before.png",
+      "sha256": "9A26208CD243D8C2652CDA04A3070795C1E1EC624C9A16B630A5D96628ED3F81"
+    },
+    {
+      "path": "Screenshots/S1_Walk_After.png",
+      "sha256": "1B47724490F5EB28FC440AA0F2C56C5BAE8BDCE1532878E93F33EDCD1869D613"
+    },
+    {
+      "path": "Screenshots/S1_Walk_Before.png",
+      "sha256": "1B47724490F5EB28FC440AA0F2C56C5BAE8BDCE1532878E93F33EDCD1869D613"
+    },
+    {
+      "path": "Screenshots/S2_Attached_After.png",
+      "sha256": "A66792D4F638F47EAA2D28178A505D1A2DCE48AC1EC1164B6CA0329BCB051CAB"
+    },
+    {
+      "path": "Screenshots/S2_Attached_Before.png",
+      "sha256": "A66792D4F638F47EAA2D28178A505D1A2DCE48AC1EC1164B6CA0329BCB051CAB"
+    },
+    {
+      "path": "Screenshots/S2_Jump_After.png",
+      "sha256": "01B9A76F5224AD6DC584664E0E210E81F614BD7FCBAB9BAC110887FC4F600E82"
+    },
+    {
+      "path": "Screenshots/S2_Jump_Before.png",
+      "sha256": "01B9A76F5224AD6DC584664E0E210E81F614BD7FCBAB9BAC110887FC4F600E82"
+    },
+    {
+      "path": "Screenshots/S2_SignWorldOnly.png",
+      "sha256": "A7C028EB0F647019A8AE8E0DD10B94843C57325E07FA7DAD691F3F7D8CAD88CC"
+    },
+    {
+      "path": "Screenshots/S2_Standing_After.png",
+      "sha256": "310B2A36DB7021096FF9B239482DFFBA7660B26CFEF63888D5006D3BA43E2645"
+    },
+    {
+      "path": "Screenshots/S2_Standing_Before.png",
+      "sha256": "310B2A36DB7021096FF9B239482DFFBA7660B26CFEF63888D5006D3BA43E2645"
+    },
+    {
+      "path": "Screenshots/S2_Walk_After.png",
+      "sha256": "E975D59584F45B25985ADF5B33DFB3DC4F03B5D2494FF9B4B7856E3477619733"
+    },
+    {
+      "path": "Screenshots/S2_Walk_Before.png",
+      "sha256": "E975D59584F45B25985ADF5B33DFB3DC4F03B5D2494FF9B4B7856E3477619733"
+    },
+    {
+      "path": "Screenshots/S3_Attached_After.png",
+      "sha256": "930D23DEF03EB1C389412E6580E0AFB1F410BE7EE0C77FCFE1A1838E3A54CD7B"
+    },
+    {
+      "path": "Screenshots/S3_Attached_Before.png",
+      "sha256": "80FD5CA60E3021DBE441FE773410EB47CAA7E41A788B4865CC7380D69C01811B"
+    },
+    {
+      "path": "Screenshots/S3_Bridge_After.png",
+      "sha256": "B73E676F1DBD8529193B3C3AEB3DC0845308A85BE203FD695A070FCDECDAAD85"
+    },
+    {
+      "path": "Screenshots/S3_Bridge_Before.png",
+      "sha256": "17C396B27205865A18018046F5299E96F9452630B3DFE915490E76274A4CFEA6"
+    },
+    {
+      "path": "Screenshots/S3_Jump_After.png",
+      "sha256": "9D3F0A9B36D61A8119F3E1E8BBD6051A8C31B25BFC89DB574A9DCF4E33267B7C"
+    },
+    {
+      "path": "Screenshots/S3_Jump_Before.png",
+      "sha256": "9D3F0A9B36D61A8119F3E1E8BBD6051A8C31B25BFC89DB574A9DCF4E33267B7C"
+    },
+    {
+      "path": "Screenshots/S3_SignWorldOnly.png",
+      "sha256": "92DA61BCBE135B29252935DCBD0B7B57CA8CABFB1C227A826DBB5B479B9F77F7"
+    },
+    {
+      "path": "Screenshots/S3_Standing_After.png",
+      "sha256": "84F167B8638C109D07FCC4352F73EA61E17064869ED560E25FC5AAC683319CA0"
+    },
+    {
+      "path": "Screenshots/S3_Standing_Before.png",
+      "sha256": "84F167B8638C109D07FCC4352F73EA61E17064869ED560E25FC5AAC683319CA0"
+    },
+    {
+      "path": "Screenshots/S3_Walk_After.png",
+      "sha256": "2E6751C9AD8B118E00FA26E1664DF2EE1D7E7C61B58967A158C5645B33AAF79D"
+    },
+    {
+      "path": "Screenshots/S3_Walk_Before.png",
+      "sha256": "2E6751C9AD8B118E00FA26E1664DF2EE1D7E7C61B58967A158C5645B33AAF79D"
+    },
+    {
+      "path": "Screenshots/S4_Clear_After.png",
+      "sha256": "EC4A9FD8D58E8119F1FD6EEE8FBDA19F71FA15761E686B0D0E79F5569AA37B2C"
+    },
+    {
+      "path": "Screenshots/S4_Clear_Before.png",
+      "sha256": "75ED34440B33FBE666E6DA222AA8686B4CFDF4A915057C01D66D16883E59D22F"
+    },
+    {
+      "path": "Screenshots/S4_FirstBridge_After.png",
+      "sha256": "BEA97D6817CA195634EA2888E5A0F5314BEC9B33E4BB0118CC335EFBB558A830"
+    },
+    {
+      "path": "Screenshots/S4_FirstBridge_Before.png",
+      "sha256": "754B050B88B4252DBB60338481391E4135A1A6B301A44C748F66B6D5989E46A7"
+    },
+    {
+      "path": "Screenshots/S4_Jump_After.png",
+      "sha256": "58209D7C5B2A7F4A6D6EB0D607387D2B3D31A1354B4985D04DA51BC9D73B3FE6"
+    },
+    {
+      "path": "Screenshots/S4_Jump_Before.png",
+      "sha256": "90204E41D366AEF5787D952E9CC08FCF7736DC93C44C24C4991E089F49972485"
+    },
+    {
+      "path": "Screenshots/S4_Merged_After.png",
+      "sha256": "136001D5E1A810F102697BD27E3A7F7CFA9AE6384077BF4136603ADE50690BBF"
+    },
+    {
+      "path": "Screenshots/S4_Merged_Before.png",
+      "sha256": "C92AF89E088C7546435186B5DBBFB87E89D81B1C512EFDF48CB0EA94F741EA45"
+    },
+    {
+      "path": "Screenshots/S4_Restored_After.png",
+      "sha256": "6A38FD3D12CC7CEB6E07F2C4F76F803CD5EC40BCC8E72841F8C133EFDD0486ED"
+    },
+    {
+      "path": "Screenshots/S4_Restored_Before.png",
+      "sha256": "53FA3A955D488FD03892B53B5B7630A896D6E1A16CD0EC5205CB1DD1A5872444"
+    },
+    {
+      "path": "Screenshots/S4_SignWorldOnly.png",
+      "sha256": "5AEA12EC99E943CD13DCD154F6740B5FDEDD1CDB182147C7A98E4D6AB747484D"
+    },
+    {
+      "path": "Screenshots/S4_Standing_After.png",
+      "sha256": "1E4A4BE6BF573C491F281BEE4D6C7073B7EA1B34C49D4023485A496CADDB7D2F"
+    },
+    {
+      "path": "Screenshots/S4_Standing_Before.png",
+      "sha256": "1B8D5C5221DCD07432E532D53890AED87C546B0AA16708FC3F9AF035DE80924D"
+    },
+    {
+      "path": "Screenshots/S4_TwoBridges_After.png",
+      "sha256": "21C836AB6898B04E272A3BE914823DA9A783C887F7AE432D3A44C5BBC6FD3EF5"
+    },
+    {
+      "path": "Screenshots/S4_TwoBridges_Before.png",
+      "sha256": "7D337BF84F210397EACD4550568D1A57A9C267CC0F6A0FC92B3195D7A42EB44D"
+    },
+    {
+      "path": "Screenshots/S4_Walk_After.png",
+      "sha256": "A2298D98DB2C4175C9F4099E0D1EF93A5E4A3E9D9919708736DE1EC315CFD4EF"
+    },
+    {
+      "path": "Screenshots/S4_Walk_Before.png",
+      "sha256": "260A052C41518A493209B65FBFE5717A98C59B070536910AB4F39DEF4B1942FE"
+    }
+  ],
+  "camera": "Real unmodified gameplay Camera.Render, 1600x900. IMGUI/HUD excluded. No camera pose/zoom override for screenshot.",
+  "comparison": "Before: approved T1 all sections. After: production integration with edge clamp. Same physical state within each pair.",
+  "motion_frames": 35,
+  "gif_limit": "Sampled actual route frames, resized and fixed180ms/frame. Not realtime video or FPS measurement.",
+  "performance": {
+    "before": {
+      "samples": 15,
+      "median_render_cpu_ms": 1.8515,
+      "min": 1.4859,
+      "max": 2.5319
+    },
+    "all": {
+      "samples": 15,
+      "median_render_cpu_ms": 2.035,
+      "min": 1.6216,
+      "max": 3.2743
+    }
+  },
+  "performance_limit": "Editor Camera.Render CPU-call timings at final Clear view, warmed alternate15 samples each. Before here is original Section4 background (not T1). Not GPU timing or standalone FPS."
+}

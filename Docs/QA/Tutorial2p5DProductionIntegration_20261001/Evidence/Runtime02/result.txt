@@ -1,0 +1,7 @@
+checks=123
+failures=0
+runtimeErrors=0
+editorSearchStartupErrors=1
+physicalTransitions=3
+motionFrames=31
+Controlled cached-input/API route with real physics, NOT OS keyboard or Human approval. No body teleport on route. Diagnostic capture clock 1/60s; production physics timestep unchanged.

@@ -1,0 +1,917 @@
+{
+  "camera": {
+    "Before": {
+      "preview_samples": 1756,
+      "max_error_vs_existing_pan_formula": 6.5204671528817926e-06,
+      "y_z_size_states": [
+        [
+          "0",
+          "-10",
+          "8.7"
+        ]
+      ]
+    },
+    "After": {
+      "preview_samples": 1724,
+      "max_error_vs_existing_pan_formula": 6.411602626599233e-06,
+      "y_z_size_states": [
+        [
+          "0",
+          "-10",
+          "8.7"
+        ]
+      ]
+    }
+  },
+  "camera_pair_state_equal": true,
+  "source_byte_exact_expected_replacement": true,
+  "source_normalized_exact_expected_replacement": true,
+  "source_before_sha": "1AE69EDB11D8328B405C0EE0F5FEACC869640BF92312072D119AFA13044E4CF6",
+  "source_after_sha": "E08312BCC8B61F31C9139EA0122AEA57726721263B4FB744A7AF7CDB10B7CE4F",
+  "milestones": {
+    "Before": [
+      {
+        "label": "A_TutorialCommitted",
+        "frame": "156",
+        "realtime": "0.639600754",
+        "preview_elapsed": "0",
+        "preview_total": "7.2833333",
+        "preview_active": "True",
+        "curtain_active": "True",
+        "curtain_phase": "Opening",
+        "outcome": "Playing",
+        "far": "False",
+        "mid": "False",
+        "near": "False",
+        "legacy_drawable": "6",
+        "owned_drawable": "0",
+        "camera_x": "63",
+        "camera_y": "0",
+        "camera_z": "-10",
+        "orthographic_size": "8.7",
+        "body_simulated": "False",
+        "mover_enabled": "False",
+        "rope_enabled": "False",
+        "player_x": "-4",
+        "player_y": "0.92",
+        "unscaled_dt": "0.00321409432"
+      },
+      {
+        "label": "B_IntroStart",
+        "frame": "286",
+        "realtime": "1.26053047",
+        "preview_elapsed": "0",
+        "preview_total": "7.2833333",
+        "preview_active": "True",
+        "curtain_active": "False",
+        "curtain_phase": "None",
+        "outcome": "Playing",
+        "far": "False",
+        "mid": "False",
+        "near": "False",
+        "legacy_drawable": "6",
+        "owned_drawable": "0",
+        "camera_x": "63",
+        "camera_y": "0",
+        "camera_z": "-10",
+        "orthographic_size": "8.7",
+        "body_simulated": "False",
+        "mover_enabled": "False",
+        "rope_enabled": "False",
+        "player_x": "-4",
+        "player_y": "0.92",
+        "unscaled_dt": "0.00294430275"
+      },
+      {
+        "label": "C_IntroMiddle",
+        "frame": "1088",
+        "realtime": "4.910202",
+        "preview_elapsed": "3.656683",
+        "preview_total": "7.2833333",
+        "preview_active": "True",
+        "curtain_active": "False",
+        "curtain_phase": "None",
+        "outcome": "Playing",
+        "far": "False",
+        "mid": "False",
+        "near": "False",
+        "legacy_drawable": "6",
+        "owned_drawable": "0",
+        "camera_x": "33.5198059",
+        "camera_y": "0",
+        "camera_z": "-10",
+        "orthographic_size": "8.7",
+        "body_simulated": "False",
+        "mover_enabled": "False",
+        "rope_enabled": "False",
+        "player_x": "-4",
+        "player_y": "0.92",
+        "unscaled_dt": "0.0166034"
+      },
+      {
+        "label": "D_IntroNearEnd",
+        "frame": "1838",
+        "realtime": "8.320343",
+        "preview_elapsed": "7.06711245",
+        "preview_total": "7.2833333",
+        "preview_active": "True",
+        "curtain_active": "False",
+        "curtain_phase": "None",
+        "outcome": "Playing",
+        "far": "False",
+        "mid": "False",
+        "near": "False",
+        "legacy_drawable": "6",
+        "owned_drawable": "0",
+        "camera_x": "-3.90250635",
+        "camera_y": "0",
+        "camera_z": "-10",
+        "orthographic_size": "8.7",
+        "body_simulated": "False",
+        "mover_enabled": "False",
+        "rope_enabled": "False",
+        "player_x": "-4",
+        "player_y": "0.92",
+        "unscaled_dt": "0.003429606"
+      },
+      {
+        "label": "E_GameplayResumed",
+        "frame": "1869",
+        "realtime": "8.539337",
+        "preview_elapsed": "7.285032",
+        "preview_total": "7.2833333",
+        "preview_active": "False",
+        "curtain_active": "False",
+        "curtain_phase": "None",
+        "outcome": "Playing",
+        "far": "True",
+        "mid": "True",
+        "near": "True",
+        "legacy_drawable": "0",
+        "owned_drawable": "15",
+        "camera_x": "-4",
+        "camera_y": "0",
+        "camera_z": "-10",
+        "orthographic_size": "8.7",
+        "body_simulated": "True",
+        "mover_enabled": "True",
+        "rope_enabled": "True",
+        "player_x": "-4",
+        "player_y": "0.92",
+        "unscaled_dt": "0.00305269985"
+      },
+      {
+        "label": "F_AfterMovement",
+        "frame": "1919",
+        "realtime": "9.004818",
+        "preview_elapsed": "7.285032",
+        "preview_total": "7.2833333",
+        "preview_active": "False",
+        "curtain_active": "False",
+        "curtain_phase": "None",
+        "outcome": "Playing",
+        "far": "True",
+        "mid": "True",
+        "near": "True",
+        "legacy_drawable": "0",
+        "owned_drawable": "15",
+        "camera_x": "-2.51996136",
+        "camera_y": "0",
+        "camera_z": "-10",
+        "orthographic_size": "8.7",
+        "body_simulated": "True",
+        "mover_enabled": "True",
+        "rope_enabled": "True",
+        "player_x": "-1.38626707",
+        "player_y": "0.964999735",
+        "unscaled_dt": "0.007013095"
+      }
+    ],
+    "After": [
+      {
+        "label": "A_TutorialCommitted",
+        "frame": "173",
+        "realtime": "0.6362572",
+        "preview_elapsed": "0",
+        "preview_total": "7.2833333",
+        "preview_active": "True",
+        "curtain_active": "True",
+        "curtain_phase": "Opening",
+        "outcome": "Playing",
+        "far": "True",
+        "mid": "True",
+        "near": "True",
+        "legacy_drawable": "0",
+        "owned_drawable": "15",
+        "camera_x": "63",
+        "camera_y": "0",
+        "camera_z": "-10",
+        "orthographic_size": "8.7",
+        "body_simulated": "False",
+        "mover_enabled": "False",
+        "rope_enabled": "False",
+        "player_x": "-4",
+        "player_y": "0.92",
+        "unscaled_dt": "0.00255150232"
+      },
+      {
+        "label": "B_IntroStart",
+        "frame": "268",
+        "realtime": "1.25858688",
+        "preview_elapsed": "0",
+        "preview_total": "7.2833333",
+        "preview_active": "True",
+        "curtain_active": "False",
+        "curtain_phase": "None",
+        "outcome": "Playing",
+        "far": "True",
+        "mid": "True",
+        "near": "True",
+        "legacy_drawable": "0",
+        "owned_drawable": "15",
+        "camera_x": "63",
+        "camera_y": "0",
+        "camera_z": "-10",
+        "orthographic_size": "8.7",
+        "body_simulated": "False",
+        "mover_enabled": "False",
+        "rope_enabled": "False",
+        "player_x": "-4",
+        "player_y": "0.92",
+        "unscaled_dt": "0.004794303"
+      },
+      {
+        "label": "C_IntroMiddle",
+        "frame": "1067",
+        "realtime": "4.894373",
+        "preview_elapsed": "3.64170074",
+        "preview_total": "7.2833333",
+        "preview_active": "True",
+        "curtain_active": "False",
+        "curtain_phase": "None",
+        "outcome": "Playing",
+        "far": "True",
+        "mid": "True",
+        "near": "True",
+        "legacy_drawable": "0",
+        "owned_drawable": "15",
+        "camera_x": "33.6995926",
+        "camera_y": "0",
+        "camera_z": "-10",
+        "orthographic_size": "8.7",
+        "body_simulated": "False",
+        "mover_enabled": "False",
+        "rope_enabled": "False",
+        "player_x": "-4",
+        "player_y": "0.92",
+        "unscaled_dt": "0.0315305963"
+      },
+      {
+        "label": "D_IntroNearEnd",
+        "frame": "1832",
+        "realtime": "8.348602",
+        "preview_elapsed": "7.095941",
+        "preview_total": "7.2833333",
+        "preview_active": "True",
+        "curtain_active": "False",
+        "curtain_phase": "None",
+        "outcome": "Playing",
+        "far": "True",
+        "mid": "True",
+        "near": "True",
+        "legacy_drawable": "0",
+        "owned_drawable": "15",
+        "camera_x": "-3.93617177",
+        "camera_y": "0",
+        "camera_z": "-10",
+        "orthographic_size": "8.7",
+        "body_simulated": "False",
+        "mover_enabled": "False",
+        "rope_enabled": "False",
+        "player_x": "-4",
+        "player_y": "0.92",
+        "unscaled_dt": "0.0358191"
+      },
+      {
+        "label": "E_GameplayResumed",
+        "frame": "1854",
+        "realtime": "8.547998",
+        "preview_elapsed": "7.294213",
+        "preview_total": "7.2833333",
+        "preview_active": "False",
+        "curtain_active": "False",
+        "curtain_phase": "None",
+        "outcome": "Playing",
+        "far": "True",
+        "mid": "True",
+        "near": "True",
+        "legacy_drawable": "0",
+        "owned_drawable": "15",
+        "camera_x": "-4",
+        "camera_y": "0",
+        "camera_z": "-10",
+        "orthographic_size": "8.7",
+        "body_simulated": "True",
+        "mover_enabled": "True",
+        "rope_enabled": "True",
+        "player_x": "-4",
+        "player_y": "0.92",
+        "unscaled_dt": "0.0325988941"
+      },
+      {
+        "label": "F_AfterMovement",
+        "frame": "1905",
+        "realtime": "8.958546",
+        "preview_elapsed": "7.294213",
+        "preview_total": "7.2833333",
+        "preview_active": "False",
+        "curtain_active": "False",
+        "curtain_phase": "None",
+        "outcome": "Playing",
+        "far": "True",
+        "mid": "True",
+        "near": "True",
+        "legacy_drawable": "0",
+        "owned_drawable": "15",
+        "camera_x": "-2.899876",
+        "camera_y": "0",
+        "camera_z": "-10",
+        "orthographic_size": "8.7",
+        "body_simulated": "True",
+        "mover_enabled": "True",
+        "rope_enabled": "True",
+        "player_x": "-1.897477",
+        "player_y": "0.964998841",
+        "unscaled_dt": "0.004353798"
+      }
+    ]
+  },
+  "captures": [
+    {
+      "path": "Screenshots/Before/A_TutorialCommitted.png",
+      "sha256": "7B62530F77A45D05D40015D4DD4157D3F27EB737038273B8EB4B69EF145E72CA"
+    },
+    {
+      "path": "Screenshots/Before/B_IntroStart.png",
+      "sha256": "87A37E29D571E23ED4B227C5B5C2D59B052C2C2D01F70131AEBDFD3E86C018B9"
+    },
+    {
+      "path": "Screenshots/Before/C_IntroMiddle.png",
+      "sha256": "41F24AC57C75A3465B16DD3860BC4A71DA37EEA2FE913D4326F5E1021DD058EC"
+    },
+    {
+      "path": "Screenshots/Before/D_IntroNearEnd.png",
+      "sha256": "05E3285C000E087E83A35A2248F0462F817B8BE613B94C0352963BE08BBEC3EC"
+    },
+    {
+      "path": "Screenshots/Before/E_GameplayResumed.png",
+      "sha256": "59CC2E8D5F3F8686E229675EA2721E15DFC53C0EFEC2208C33418419D2773F38"
+    },
+    {
+      "path": "Screenshots/Before/F_AfterMovement.png",
+      "sha256": "1450C4BD0C176ADDB1C7C83CD0E52A92767D906170F089033AD0F36443A48AFF"
+    },
+    {
+      "path": "Screenshots/Before/Menu_Contract.png",
+      "sha256": "07CF2566117D14DBBF784C33C15AE85F705C09783A0E871888FE63E0190C8BE4"
+    },
+    {
+      "path": "Screenshots/Before/Sequence_000.png",
+      "sha256": "E68BA4F9525E6A834C98AA6CB9F0ABEBFE3031F4B3862F8CAB474786F0478BA4"
+    },
+    {
+      "path": "Screenshots/Before/Sequence_001.png",
+      "sha256": "AFCB8995DD7AB7D632A603EB9A848DCA6E2F164136322A9963953DC9AC0D3B61"
+    },
+    {
+      "path": "Screenshots/Before/Sequence_002.png",
+      "sha256": "2C47F090C701BB3456CF27972B5DD7117E6C2D23D868ABCE3F50A09A15E64EC8"
+    },
+    {
+      "path": "Screenshots/Before/Sequence_003.png",
+      "sha256": "08D74E8D5EBEC24F925F4935FE9892BA68C178BF742C02F0802705FE7FD0CA3C"
+    },
+    {
+      "path": "Screenshots/Before/Sequence_004.png",
+      "sha256": "D7B4AE82BAAAA89349B2A08049A1A4D11C0FB26FA75BA6C09D6E59B6FAC97376"
+    },
+    {
+      "path": "Screenshots/Before/Sequence_005.png",
+      "sha256": "8A0A98C8536EA817F0AC8C47E155CE8235207A0B996CF6D8A82F9D2D49E4042C"
+    },
+    {
+      "path": "Screenshots/Before/Sequence_006.png",
+      "sha256": "B446988DA73E06C18F9FAAD14966A4A45031810FBA39422D91082FCBE9488007"
+    },
+    {
+      "path": "Screenshots/Before/Sequence_007.png",
+      "sha256": "193E897E88664D575EA0B63399C5A44587E386D9BDBB6EFD8E228F89585CD136"
+    },
+    {
+      "path": "Screenshots/Before/Sequence_008.png",
+      "sha256": "9CBF1BE1C063FA412E7B224ADD066564F9146FA6106292863F079063CDB70DE8"
+    },
+    {
+      "path": "Screenshots/Before/Sequence_009.png",
+      "sha256": "12A678A668C810CD5A2FDD7F4242296C9B6FEF1F4AC484A24981B32D238DE880"
+    },
+    {
+      "path": "Screenshots/Before/Sequence_010.png",
+      "sha256": "01AE6259FBD270F749CA9242F1F1B8E3F209CD74B4DE610A31CFE282A8990E17"
+    },
+    {
+      "path": "Screenshots/Before/Sequence_011.png",
+      "sha256": "9024C13125D2E2BA39FE7C859DFC5E0F8A90D01A5F5643380E50F8F50F017C5D"
+    },
+    {
+      "path": "Screenshots/Before/Sequence_012.png",
+      "sha256": "1B24BCD7CA58CAF25B3B8D9F265443DA8B89B2312A71927289B7F27A070C178D"
+    },
+    {
+      "path": "Screenshots/Before/Sequence_013.png",
+      "sha256": "1B2E2967934087CF76A88D5637B3A923BA8445F57E68801AB39E6AFB2467FC22"
+    },
+    {
+      "path": "Screenshots/Before/Sequence_014.png",
+      "sha256": "D45B82FA685590E761CFBA0A011DAE35327DB43A4D8621F8C10337FF844F5CD0"
+    },
+    {
+      "path": "Screenshots/Before/Sequence_015.png",
+      "sha256": "7CAC2E3F3D5FDC2C2F9253563103F27B09DC041AA4E4E986F7F55EFB7EAE30A1"
+    },
+    {
+      "path": "Screenshots/Before/Sequence_016.png",
+      "sha256": "90317C1C43B9874A550A25384279FE946EFF0C76CCABE02882F4389012913DC3"
+    },
+    {
+      "path": "Screenshots/Before/Sequence_017.png",
+      "sha256": "C9058266D02E83FEBC157272561FBCCFBFAC6DB55B1244DB1598C33700943B24"
+    },
+    {
+      "path": "Screenshots/Before/Sequence_018.png",
+      "sha256": "BED46DA7235C42D6275F6A658091412D998AE15118DA81DF65248E6A400D82C0"
+    },
+    {
+      "path": "Screenshots/Before/Sequence_019.png",
+      "sha256": "0E53BDDDF8B16FD037B0A21E6BE61259DD0749277F71C5A2DE5A768BCADC92A2"
+    },
+    {
+      "path": "Screenshots/Before/Sequence_020.png",
+      "sha256": "06FFCB1A6A568333447D6EA3A4D9233FE652B1F9B4E190CA973A86B5ECF485C3"
+    },
+    {
+      "path": "Screenshots/Before/Sequence_021.png",
+      "sha256": "616908E663787EC54F4304A0C56A226E1D598AFFBDFDD41B2489336FDCE30E74"
+    },
+    {
+      "path": "Screenshots/Before/Sequence_022.png",
+      "sha256": "77CFBAE5A43784E0D2D22C75456741671FD9837DDCA3A10F072AB831AA51F2AB"
+    },
+    {
+      "path": "Screenshots/Before/Sequence_023.png",
+      "sha256": "18CCA894BB45CE580E7C81567F5642CDCDBF033B81A75853B523F244B005EB8E"
+    },
+    {
+      "path": "Screenshots/Before/Sequence_024.png",
+      "sha256": "57340B043ABBB4E5F0BA5ED108D01E70DB4928C175437AD3D293274DB85941BB"
+    },
+    {
+      "path": "Screenshots/Before/Sequence_025.png",
+      "sha256": "054929787D0E2413EC663F9C7EAD45A746D64838FA9525957EF85162F19F06A7"
+    },
+    {
+      "path": "Screenshots/Before/Sequence_026.png",
+      "sha256": "3943335232D0583A834CCB291AC60C2A9DE3737C5379FAE93BB76A461C207A48"
+    },
+    {
+      "path": "Screenshots/Before/Sequence_027.png",
+      "sha256": "BACD301F8875CBF7E5CBF2905E4D58EAEABE5CA6F160D28668A98603AEB40226"
+    },
+    {
+      "path": "Screenshots/Before/Sequence_028.png",
+      "sha256": "F3A0764E310C84D968234E4F3F5BE522F9B0E1A37432FFFFCF6D01D5B15BDBBC"
+    },
+    {
+      "path": "Screenshots/Before/Sequence_029.png",
+      "sha256": "5E1F585C673419260061B69E281C038455F256F54D267C43B04DB62109102BFE"
+    },
+    {
+      "path": "Screenshots/Before/Sequence_030.png",
+      "sha256": "88D9CB364E41DDC63E1D120A81F6A16C66944BEA0FF0980D9661B811CCA93011"
+    },
+    {
+      "path": "Screenshots/Before/Sequence_031.png",
+      "sha256": "6463958DB5356A10CB50C597893A49897FE2F880275BEE2BBE7D7FB5536E4F2C"
+    },
+    {
+      "path": "Screenshots/Before/Sequence_032.png",
+      "sha256": "3D3C7AE8DA3EBC81EC68A69560FFA3FDB587B850308E7BAEC826F9E5880CCC80"
+    },
+    {
+      "path": "Screenshots/Before/Sequence_033.png",
+      "sha256": "73B63904698DD674E6BADB408A867CF7005F8428328C03881814E6BC371129E0"
+    },
+    {
+      "path": "Screenshots/Before/Sequence_034.png",
+      "sha256": "C929A000D72BFA621BBD8BA171744092B34641B5AC4D23C46F0936A85F7E4105"
+    },
+    {
+      "path": "Screenshots/Before/Sequence_035.png",
+      "sha256": "137DF05168A334AB624E3A420E75A8DB23772E9833494593F6D559A68F29B7D9"
+    },
+    {
+      "path": "Screenshots/Before/Sequence_036.png",
+      "sha256": "73F370F9DCD5FBCB8B80AF0DBAD29781B2EF5FBDB4E8CFCD4059D9DE266D0414"
+    },
+    {
+      "path": "Screenshots/Before/Sequence_037.png",
+      "sha256": "788E8DC64C2434039646D19F9D1419024A6D911B359EABDCB1270CAA2B12E222"
+    },
+    {
+      "path": "Screenshots/Before/Sequence_038.png",
+      "sha256": "12ECD26B174D84B3B67C5D63D767AA7BB40F4AE0E1A30E8E8B11DEC9FB2F723D"
+    },
+    {
+      "path": "Screenshots/After/A_TutorialCommitted.png",
+      "sha256": "A765B463AF47C3D8A72628FDB2DAF0835D314B43DDC0645BBEA81D39948C93A3"
+    },
+    {
+      "path": "Screenshots/After/B_IntroStart.png",
+      "sha256": "B69885B074B1B1B7F4047BC624A4D19A3FA9A9E881989DBAFEA170BC23EFD6D7"
+    },
+    {
+      "path": "Screenshots/After/C_IntroMiddle.png",
+      "sha256": "8D17B2B4AD88069F5129B64D559EB0D7728F9CCDF00B25F70813553EF7FDAFD0"
+    },
+    {
+      "path": "Screenshots/After/D_IntroNearEnd.png",
+      "sha256": "6A6A4A8A8014FC7DB57D6912C90DE7240F5B5EB1ABCC2B54895FC345C4855BAB"
+    },
+    {
+      "path": "Screenshots/After/E_GameplayResumed.png",
+      "sha256": "47573FE39E959765FBCE26FC4E2DC50C749434E2956867522BAA2EE1526447CA"
+    },
+    {
+      "path": "Screenshots/After/F_AfterMovement.png",
+      "sha256": "1156812D93F087A8DE718B99B2672E074253E470888DBDDE511B91B513FB1F89"
+    },
+    {
+      "path": "Screenshots/After/Menu_Contract.png",
+      "sha256": "07CF2566117D14DBBF784C33C15AE85F705C09783A0E871888FE63E0190C8BE4"
+    },
+    {
+      "path": "Screenshots/After/Sequence_000.png",
+      "sha256": "F46D18AFF9E524A451B11E62BBDB613AEC94EBEDECF4E6D261F0BECD5ABA0430"
+    },
+    {
+      "path": "Screenshots/After/Sequence_001.png",
+      "sha256": "731A0C716AC52FF9371A5A3BA0E0DA7CAA3823EA358F68A3D0035C0E9B0379A8"
+    },
+    {
+      "path": "Screenshots/After/Sequence_002.png",
+      "sha256": "255C8B9671558930A8F3F969122EF6584E42861BA47E12CC49451C44129B8433"
+    },
+    {
+      "path": "Screenshots/After/Sequence_003.png",
+      "sha256": "811F7A5303601DF0B674A2A8C7CC292D005365C56B5312B83088E39D99E96326"
+    },
+    {
+      "path": "Screenshots/After/Sequence_004.png",
+      "sha256": "9ED421C4DAC93FCEA85BF2A35E5B251A462675B7CC6E8F8B3336C83BE2F1479E"
+    },
+    {
+      "path": "Screenshots/After/Sequence_005.png",
+      "sha256": "F795A85206FFB7640ECEA4088269A9279DFC40BF543E0369F70AA35C6E30975D"
+    },
+    {
+      "path": "Screenshots/After/Sequence_006.png",
+      "sha256": "D89DCEAC21F5D7FD0665022D12D5C1F148BC50DD640DF51FD73C274209C4CF1C"
+    },
+    {
+      "path": "Screenshots/After/Sequence_007.png",
+      "sha256": "7F11824BF6CA7284CC97ABC4938906AEFF67F3E2C81A05796EF8F5B417B2F12D"
+    },
+    {
+      "path": "Screenshots/After/Sequence_008.png",
+      "sha256": "553CE238CD5AF9849170056242B028FCE3EB0F2429ABB7679232899121949B52"
+    },
+    {
+      "path": "Screenshots/After/Sequence_009.png",
+      "sha256": "1B103332E11F9BC52286E54C9F7F00BB96FDFB18E9CCA6DFAA957C9E45B9009D"
+    },
+    {
+      "path": "Screenshots/After/Sequence_010.png",
+      "sha256": "8BD934BDC12C0753ADA0A28B0DA92FD7FD0ECCF17BAD696AB9104697F1C36AFC"
+    },
+    {
+      "path": "Screenshots/After/Sequence_011.png",
+      "sha256": "0901B5C472064CE70DE270113E8F99659C54E93C160D8BBB2371A1F94D3F68B4"
+    },
+    {
+      "path": "Screenshots/After/Sequence_012.png",
+      "sha256": "0B5BB9E7D2FAD6A8141695075D46F459FB4B2DA62BB9D263BE86199938AC88A2"
+    },
+    {
+      "path": "Screenshots/After/Sequence_013.png",
+      "sha256": "D18EBD9760AC31B9604C4F6FDF693D64120562B9090CB3DA25CA4E835A76AB68"
+    },
+    {
+      "path": "Screenshots/After/Sequence_014.png",
+      "sha256": "50E96A24D9BAEB4D4CD47AF31F62E68325B7D762D925BA2B9F0731C3B5E3F75A"
+    },
+    {
+      "path": "Screenshots/After/Sequence_015.png",
+      "sha256": "6D5E18A15451071A707E17573E27CF8A0960AF8E38306FB61CA509E723D435BE"
+    },
+    {
+      "path": "Screenshots/After/Sequence_016.png",
+      "sha256": "190F5487BFCC2A1B1BC331D65F31861AD9B57EB770BD62DFB7451283F21A4AB3"
+    },
+    {
+      "path": "Screenshots/After/Sequence_017.png",
+      "sha256": "CA248DD5903E05AB107D38F2137A40B3CDC210C1FEE1F68056ABC476C4885827"
+    },
+    {
+      "path": "Screenshots/After/Sequence_018.png",
+      "sha256": "6400C60F9ADDCAE185639AD5E653EFB9785F065012995DB2E0ED90101BB42DAF"
+    },
+    {
+      "path": "Screenshots/After/Sequence_019.png",
+      "sha256": "E2B9ED4BA6ED21122EF7CBE410A4EB62531E365F3ED5887E02C6E9AEECB5B1DD"
+    },
+    {
+      "path": "Screenshots/After/Sequence_020.png",
+      "sha256": "8609BD08E2E25BAA6109C9CE8F899DCFF85CF0DA540DA8A96529C3E5663BA77D"
+    },
+    {
+      "path": "Screenshots/After/Sequence_021.png",
+      "sha256": "CD5B17757394B7C34A28096752E359ADC8518780E948D82F88B2CE627725D994"
+    },
+    {
+      "path": "Screenshots/After/Sequence_022.png",
+      "sha256": "503952D9131D4F10F1A6F141576EEB763CFD13730580BE92AB2F3FEC892CBB61"
+    },
+    {
+      "path": "Screenshots/After/Sequence_023.png",
+      "sha256": "53BB6CB88D9E5E2187FC2C9A74D20D938C49A8CAB76541AC28DC797718FBE119"
+    },
+    {
+      "path": "Screenshots/After/Sequence_024.png",
+      "sha256": "743292865AF9C9543AA07BA910D587AF54435E79661F90C1A969660AA659F1E9"
+    },
+    {
+      "path": "Screenshots/After/Sequence_025.png",
+      "sha256": "19F5D92DF79C4077B23D3A0C709C075A73BFC9B050911905DB72B555AECE5037"
+    },
+    {
+      "path": "Screenshots/After/Sequence_026.png",
+      "sha256": "3A0024E2E838061E9262F0D458FDC1E642FCB5E7E9821C24D8CCAE2E3A82B5EC"
+    },
+    {
+      "path": "Screenshots/After/Sequence_027.png",
+      "sha256": "CCEE378CC1249B566303EAE51EDFD65CF66C7F2A5B02CC1ECB1AD648832089C4"
+    },
+    {
+      "path": "Screenshots/After/Sequence_028.png",
+      "sha256": "F863FC31AB3D5D40BD63C07A634217E42EBC886A0C23B0EF99ECB84EC49EF2D4"
+    },
+    {
+      "path": "Screenshots/After/Sequence_029.png",
+      "sha256": "0D1D6D0F69708483C40E0741D05D1831C91A2FED16D9013E6CB94C915BB9B39E"
+    },
+    {
+      "path": "Screenshots/After/Sequence_030.png",
+      "sha256": "F1C7FBBEC057D2DF317142EB66AAF086CB81B020587B855406EEFA382F8066F0"
+    },
+    {
+      "path": "Screenshots/After/Sequence_031.png",
+      "sha256": "6C553A911F57116D7BCA99F9E1641C6AA825D6768966B6BCDEEC67BCABA1FBC2"
+    },
+    {
+      "path": "Screenshots/After/Sequence_032.png",
+      "sha256": "C2C4A5D38F5524DD0EE14B28B4CD7D7090DDFC57C5D4E76A7C9D719521DA5475"
+    },
+    {
+      "path": "Screenshots/After/Sequence_033.png",
+      "sha256": "77EB2748164D789ED1CADD4ED6BEB076D9F9BA47FF4E5C725C269FE6E3C4EEE5"
+    },
+    {
+      "path": "Screenshots/After/Sequence_034.png",
+      "sha256": "8430116A2E376E22C20D507A5A3BE7A40541A72ED9F8CB167EE96060ECD21F76"
+    },
+    {
+      "path": "Screenshots/After/Sequence_035.png",
+      "sha256": "AC0B36A3013F2E7A3BC7D298CA367495924E2C2A941D1858ED84272302618F74"
+    },
+    {
+      "path": "Screenshots/After/Sequence_036.png",
+      "sha256": "3ABCD73DEBA4FF821CF058D90A0269DC0A164EC6B1F9539D04ACC138575C9C5B"
+    },
+    {
+      "path": "Screenshots/After/Sequence_037.png",
+      "sha256": "D0251420D673736B9B20E9036814C14ED3A8BE54553A0C0C196599DC1D6758F1"
+    },
+    {
+      "path": "Screenshots/After/Sequence_038.png",
+      "sha256": "42F0867821038192B60964439A0795DA3ED1D9CB978AD05D865EFCDFD9E2457E"
+    }
+  ],
+  "gif_pairs": [
+    {
+      "before": "Sequence_000",
+      "after": "Sequence_000",
+      "after_progress": 0.0
+    },
+    {
+      "before": "Sequence_000",
+      "after": "Sequence_001",
+      "after_progress": 0.0
+    },
+    {
+      "before": "Sequence_000",
+      "after": "Sequence_002",
+      "after_progress": 0.0
+    },
+    {
+      "before": "Sequence_004",
+      "after": "Sequence_003",
+      "after_progress": 0.022367684312895583
+    },
+    {
+      "before": "Sequence_004",
+      "after": "Sequence_004",
+      "after_progress": 0.05028756064204833
+    },
+    {
+      "before": "Sequence_005",
+      "after": "Sequence_005",
+      "after_progress": 0.07789325692399661
+    },
+    {
+      "before": "Sequence_006",
+      "after": "Sequence_006",
+      "after_progress": 0.10558379375553223
+    },
+    {
+      "before": "Sequence_007",
+      "after": "Sequence_007",
+      "after_progress": 0.13330107479771658
+    },
+    {
+      "before": "Sequence_008",
+      "after": "Sequence_008",
+      "after_progress": 0.1611325023392792
+    },
+    {
+      "before": "Sequence_009",
+      "after": "Sequence_009",
+      "after_progress": 0.1889969679130296
+    },
+    {
+      "before": "Sequence_011",
+      "after": "Sequence_010",
+      "after_progress": 0.2168158170105987
+    },
+    {
+      "before": "Sequence_012",
+      "after": "Sequence_011",
+      "after_progress": 0.2446175118746797
+    },
+    {
+      "before": "Sequence_012",
+      "after": "Sequence_012",
+      "after_progress": 0.27219307676060905
+    },
+    {
+      "before": "Sequence_013",
+      "after": "Sequence_013",
+      "after_progress": 0.29976201144055836
+    },
+    {
+      "before": "Sequence_014",
+      "after": "Sequence_014",
+      "after_progress": 0.3273891818187148
+    },
+    {
+      "before": "Sequence_016",
+      "after": "Sequence_015",
+      "after_progress": 0.3578958826448324
+    },
+    {
+      "before": "Sequence_017",
+      "after": "Sequence_016",
+      "after_progress": 0.3853608072556559
+    },
+    {
+      "before": "Sequence_018",
+      "after": "Sequence_017",
+      "after_progress": 0.4128483959398096
+    },
+    {
+      "before": "Sequence_019",
+      "after": "Sequence_018",
+      "after_progress": 0.4404171013291401
+    },
+    {
+      "before": "Sequence_020",
+      "after": "Sequence_019",
+      "after_progress": 0.4680302945905277
+    },
+    {
+      "before": "Sequence_021",
+      "after": "Sequence_020",
+      "after_progress": 0.49567553499165007
+    },
+    {
+      "before": "Sequence_022",
+      "after": "Sequence_021",
+      "after_progress": 0.5231716678406026
+    },
+    {
+      "before": "Sequence_022",
+      "after": "Sequence_022",
+      "after_progress": 0.5508502542373009
+    },
+    {
+      "before": "Sequence_023",
+      "after": "Sequence_023",
+      "after_progress": 0.5787210095135973
+    },
+    {
+      "before": "Sequence_024",
+      "after": "Sequence_024",
+      "after_progress": 0.6066240302362655
+    },
+    {
+      "before": "Sequence_025",
+      "after": "Sequence_025",
+      "after_progress": 0.6342077397446579
+    },
+    {
+      "before": "Sequence_026",
+      "after": "Sequence_026",
+      "after_progress": 0.661901330260418
+    },
+    {
+      "before": "Sequence_027",
+      "after": "Sequence_027",
+      "after_progress": 0.6893995569308904
+    },
+    {
+      "before": "Sequence_028",
+      "after": "Sequence_028",
+      "after_progress": 0.7171218870348828
+    },
+    {
+      "before": "Sequence_029",
+      "after": "Sequence_029",
+      "after_progress": 0.7449890368191717
+    },
+    {
+      "before": "Sequence_031",
+      "after": "Sequence_030",
+      "after_progress": 0.775471501489572
+    },
+    {
+      "before": "Sequence_032",
+      "after": "Sequence_031",
+      "after_progress": 0.8032979281615465
+    },
+    {
+      "before": "Sequence_033",
+      "after": "Sequence_032",
+      "after_progress": 0.8310130472815243
+    },
+    {
+      "before": "Sequence_034",
+      "after": "Sequence_033",
+      "after_progress": 0.8586255952339844
+    },
+    {
+      "before": "Sequence_035",
+      "after": "Sequence_034",
+      "after_progress": 0.8864007363222002
+    },
+    {
+      "before": "Sequence_036",
+      "after": "Sequence_035",
+      "after_progress": 0.9142239858774552
+    },
+    {
+      "before": "Sequence_037",
+      "after": "Sequence_036",
+      "after_progress": 0.9417605535092016
+    },
+    {
+      "before": "Sequence_038",
+      "after": "Sequence_037",
+      "after_progress": 0.9693531394478404
+    },
+    {
+      "before": "Sequence_038",
+      "after": "Sequence_038",
+      "after_progress": 0.9970179450664437
+    }
+  ],
+  "limits": "Camera.Render world captures exclude IMGUI/menu/cloth/HUD. Actual poses retained; no camera override. A is commit behind opening cloth, not initial menu click. GIF uses nearest recorded intro progress, resized fixed200ms samples, not frame-exact realtime video or FPS measurement."
+}

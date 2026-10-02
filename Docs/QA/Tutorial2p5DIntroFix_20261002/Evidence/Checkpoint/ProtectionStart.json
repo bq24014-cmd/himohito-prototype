@@ -1,0 +1,2672 @@
+{
+  "TimestampUtc": "2026-10-02T01:09:55.8410758Z",
+  "CDriveFreeBytes": 24552824832,
+  "SourceCount": 479,
+  "Sources": [
+    {
+      "Path": ".gitattributes",
+      "Bytes": 696,
+      "SHA256": "5558D3C83CFAAA3BBDECF0FFC1FB62A00AB9A57A14E86F12A5A6FCFE18E56017"
+    },
+    {
+      "Path": ".gitignore",
+      "Bytes": 718,
+      "SHA256": "E28E21B860B5D8FEE86981996B5B51899D61D05C94AEB74A0B7F1874E9FC3310"
+    },
+    {
+      "Path": "Assets/Editor.meta",
+      "Bytes": 172,
+      "SHA256": "36FFBA68EFCD47D9E465A2F4E7CE997BC158D63AEA78FC86049BD8244273C29F"
+    },
+    {
+      "Path": "Assets/Editor/BackgroundMusicBuildCheck.cs",
+      "Bytes": 790,
+      "SHA256": "E397C759208ABA90132EF7A5771296438E6B4399096E25B035DA92287868CBAF"
+    },
+    {
+      "Path": "Assets/Editor/BackgroundMusicBuildCheck.cs.meta",
+      "Bytes": 60,
+      "SHA256": "57F84633DD261CDBB36E849D3B2F9872B8AD98AA16CFC5240623827309D912DB"
+    },
+    {
+      "Path": "Assets/Editor/MainStageSceneBuilder.cs",
+      "Bytes": 18345,
+      "SHA256": "589BCEBC4848E66827C36E6CE2CADD96E71CF2115F4EF63672E3E5EE7F99E6EF"
+    },
+    {
+      "Path": "Assets/Editor/MainStageSceneBuilder.cs.meta",
+      "Bytes": 59,
+      "SHA256": "36DB828457511B589E9BDF1FEBCC043FD8951A537BF0D9EC9223165A7359564F"
+    },
+    {
+      "Path": "Assets/Editor/MainStageSceneSync.cs",
+      "Bytes": 1517,
+      "SHA256": "F68CF3C9BD75C64C088BE1C923D4F92E311E4A0B0697C4DBC33D6ED311B60C2E"
+    },
+    {
+      "Path": "Assets/Editor/MainStageSceneSync.cs.meta",
+      "Bytes": 60,
+      "SHA256": "E78FB9B31AF90BD16F0ECAF95395E5C7B75EA1250BA4BE162FF9C2331DF1A98C"
+    },
+    {
+      "Path": "Assets/Editor/PlayStartSceneSelector.cs",
+      "Bytes": 1708,
+      "SHA256": "C2A758BC8F71451BD243721A0E0DEBA1BF1736A2EB9DC0CCC9253F0F9CAB8316"
+    },
+    {
+      "Path": "Assets/Editor/PlayStartSceneSelector.cs.meta",
+      "Bytes": 240,
+      "SHA256": "E556A85CD9B324A258CA76D3E9E490B46FC3E2BEA062F4A484D1D5002F88C87A"
+    },
+    {
+      "Path": "Assets/Editor/ProjectPresentationSettings.cs",
+      "Bytes": 3025,
+      "SHA256": "F05D287D817C48A9A45240760FA0239080BA3736A06292C325F9F68B439D452E"
+    },
+    {
+      "Path": "Assets/Editor/ProjectPresentationSettings.cs.meta",
+      "Bytes": 240,
+      "SHA256": "6B7C7771CE647F2D0A18891F83AC50C2920FD45D6E36D1AB8AE1FDD6861F1B50"
+    },
+    {
+      "Path": "Assets/Editor/PrototypeSceneBuilder.cs",
+      "Bytes": 7782,
+      "SHA256": "5035277B2774EF0646E8EABC05B003E176AC4ADAAE0278C53B218B9FE9314C2D"
+    },
+    {
+      "Path": "Assets/Editor/PrototypeSceneBuilder.cs.meta",
+      "Bytes": 59,
+      "SHA256": "A3051C34A7EE4E653408F54217605F4F2F3980E9F85A4E84AB1C8F0331A39A3D"
+    },
+    {
+      "Path": "Assets/Editor/StageManual0829Builder.cs",
+      "Bytes": 546,
+      "SHA256": "FD0E73C0C6B9F30938DFEA043E72174FECD7C214120E11535D8D09C5F709801E"
+    },
+    {
+      "Path": "Assets/Editor/StageManual0829Builder.cs.meta",
+      "Bytes": 60,
+      "SHA256": "1D6B1A30129CCEC679C87BA95298ED42435C48D62D7A55AE0E422954C4617E0D"
+    },
+    {
+      "Path": "Assets/Editor/StageVisualPreview.cs",
+      "Bytes": 2656,
+      "SHA256": "E9E3DB32A02D30111456DA57A9CF0521CEF35DE44DF5F68CD732C1DA5509BDA9"
+    },
+    {
+      "Path": "Assets/Editor/StageVisualPreview.cs.meta",
+      "Bytes": 60,
+      "SHA256": "7DC064A8DD64EA376261502A8D38C4C5CE4EB36DDA9D866F41318846C43CC953"
+    },
+    {
+      "Path": "Assets/Editor/WindowsPrototypeBuilder.cs",
+      "Bytes": 4605,
+      "SHA256": "7F56774E4C3DC407570249C500598C46728E411E68B01CF7D4A886C485552D50"
+    },
+    {
+      "Path": "Assets/Editor/WindowsPrototypeBuilder.cs.meta",
+      "Bytes": 240,
+      "SHA256": "935CC13D3755C1BBA171751B6B553FEDF268BBAB3846F321516DE528F7339273"
+    },
+    {
+      "Path": "Assets/Resources.meta",
+      "Bytes": 169,
+      "SHA256": "0497AD41B3916F201FBF9EE83B18D0558D9EEDF90A37C1B0C143949E84AB9862"
+    },
+    {
+      "Path": "Assets/Resources/Art.meta",
+      "Bytes": 169,
+      "SHA256": "965B87515762F5B3F4AF30DDC3EA700D16CFF90B8A2643E7C2F6389D8912FFBF"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoAim-v1.png",
+      "Bytes": 1646526,
+      "SHA256": "CFDEF87FAEF66CB6DA242772F8ADA7393CD74D55F1DE1C346890D054BD65BC60"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoAim-v1.png.meta",
+      "Bytes": 558,
+      "SHA256": "0361FF2D1D84F901158ABB6D36EB24F8501378C40D01647740E8C3FEDA37A06D"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoAppIcon-v1.png",
+      "Bytes": 1835328,
+      "SHA256": "6D66E0237D0F49C996B6458302AECD3A6782198AF247A9CD41272E6131202954"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoAppIcon-v1.png.meta",
+      "Bytes": 2274,
+      "SHA256": "D3AE06A95271D22C1BA6DA8613E803E76C725D4D033EC57D48321D71ADA403BB"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoControlsBackground-v1.png",
+      "Bytes": 1893718,
+      "SHA256": "5C81E004A9E112B5FE7AEA6582A822CF33DC992BD5FDC01FFE0236EF404D748F"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoControlsBackground-v1.png.meta",
+      "Bytes": 2274,
+      "SHA256": "B4A448361B3EF3D89317B0DB9E5A2487DB4E31C16C0AE33DC0CF06C63CE4177A"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoCraftAim-v1.png",
+      "Bytes": 1272939,
+      "SHA256": "7C4D8CAE091196CCB1C89726B91E379AE88AE9060C514E52473EB57237519392"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoCraftAim-v1.png.meta",
+      "Bytes": 2241,
+      "SHA256": "253EF28391B6F9A4282D222FB026805AFCFBACEB0AE9847E0AAFE9E63812B045"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoCraftChestOpening-v1.png",
+      "Bytes": 1385650,
+      "SHA256": "25536A108988364F1EDC376B72741BB328E4325B45CF81B7D73FD51BF2C6AA89"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoCraftChestOpening-v1.png.meta",
+      "Bytes": 558,
+      "SHA256": "F87E03B7D5F84E813E0DC9E96B3239320D16AED7112CB17FAB9ADD26A5E2ECA1"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoCraftEdgeBalance-v1.png",
+      "Bytes": 1285329,
+      "SHA256": "7300B09ABBD44C9DBC566FA3A5254A6612FC017124F75809A49AF0FDFF998DE1"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoCraftEdgeBalance-v1.png.meta",
+      "Bytes": 2241,
+      "SHA256": "9DE6D064379D66CB024CE9023C0F6F5A9D0D7CB9338A74D7DE27587D57C832E4"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoCraftGoal-v1.png",
+      "Bytes": 1372173,
+      "SHA256": "D381F3E23A1FFCCA36B68A9A1792DEEBA6DC0DD5049F295353ACA3A59360F3A1"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoCraftGoal-v1.png.meta",
+      "Bytes": 2241,
+      "SHA256": "DA55FF4C8172899871262AB3298FC1C0E2A531B60C9714767D3D0D434D5BD645"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoCraftGuideSign-v1.png",
+      "Bytes": 1468276,
+      "SHA256": "A6752FCA65A055AD8F875F5513CC2EA91C16CEC16918D007180643F78D490940"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoCraftGuideSign-v1.png.meta",
+      "Bytes": 2274,
+      "SHA256": "662E85A6C19E5F4B7A4E30E56FBFD0174F3FBD9A1BE71D704DBC77B9FC6D2E8E"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoCraftHookBlue-v1.png",
+      "Bytes": 1651188,
+      "SHA256": "E9CA423CB894DE1D24453A5ABC9BF9304FF286062EF0D45127358B94506CC02D"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoCraftHookBlue-v1.png.meta",
+      "Bytes": 2274,
+      "SHA256": "8238E839C5E25F45F1A6AEDC9FFD4AF1ACDB283AF6C337880AFC2546878EAAF9"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoCraftHookGreen-v1.png",
+      "Bytes": 1985929,
+      "SHA256": "5063F9C95568BB9DE0CF92BF4D6C0A57C259FC1DC0D28C8945DCAE7290065C39"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoCraftHookGreen-v1.png.meta",
+      "Bytes": 2274,
+      "SHA256": "626B89BEA6EDE89AAA72D935E6B6325B6468AEEFF71AD90CBD23937A98EBD7EA"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoCraftHookMount-v1.png",
+      "Bytes": 2117216,
+      "SHA256": "522C597546BE9CDAC12FF79B0E85A717903BFA7822F65BE339F3CCE7236196F1"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoCraftHookMount-v1.png.meta",
+      "Bytes": 2274,
+      "SHA256": "60B816E9FDCDE8992E0CD99E26242E8759A97A29F48B4670A539CF97F7F07D7E"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoCraftHudPanel-v1.png",
+      "Bytes": 2701353,
+      "SHA256": "D40CD6DFCFA2C406AC3D973819045F35833D7C9D843B2E9684FF46EAB590AACA"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoCraftHudPanel-v1.png.meta",
+      "Bytes": 2274,
+      "SHA256": "F262509AA39C658301BED641D182263FDCD362C2EA6065CA52D83BA9727621E1"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoCraftIdle-v1.png",
+      "Bytes": 1184869,
+      "SHA256": "F71393E5C0E128DCA18FBB6FE3B1DB2326BA14CF23A62EF0C5C82CAD0C7155F7"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoCraftIdle-v1.png.meta",
+      "Bytes": 2241,
+      "SHA256": "EF6B1F39CB48AC392FA859E4204508E9A1437C9BBA59DE84696614B6D3124C9F"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoCraftJump-v1.png",
+      "Bytes": 1170094,
+      "SHA256": "8F8DE21B522EABC9B25095F040848DC0F6ACA011407B79E68A68DE68E4DB9383"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoCraftJump-v1.png.meta",
+      "Bytes": 2241,
+      "SHA256": "668AAC7D9238DCB20718120E5CD0FAC02F2762A91CC70460668BCE692CE6641C"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoCraftLanding-v1.png",
+      "Bytes": 1337194,
+      "SHA256": "05C28E1BA1B8151D2DB283C814B15C301DEBD9A81A37CC2C60198A60253FCF87"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoCraftLanding-v1.png.meta",
+      "Bytes": 2241,
+      "SHA256": "C8EC80AF9CC68571D3E16470CCF3E2CDD15FB1350AB67BB2843C44679065CC91"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoCraftPlayer-v1.png",
+      "Bytes": 1386922,
+      "SHA256": "5A7024583C02675C71AD428F2C3BE6DF4D06CCCF287497EE5AAC73441E14F83D"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoCraftPlayer-v1.png.meta",
+      "Bytes": 2241,
+      "SHA256": "FECC74A6463C0A641BF524BF8AE7D3F9FEDAE614922C903793A59CFCF6AC7767"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoCraftRail-v1.png",
+      "Bytes": 1178279,
+      "SHA256": "35C8FF1D220975FC24255BE2553F635DF67965357EB96F0176B20D40701FB175"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoCraftRail-v1.png.meta",
+      "Bytes": 558,
+      "SHA256": "6CA8DC2B14CC69D0A9AFE881FD135F97E264FD9070B2019C313516A12AC7D713"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoCraftRecoverySwitch-v1.png",
+      "Bytes": 1852782,
+      "SHA256": "7C9540E0A8CB402CAFBAD34FC8F0926F9FB9F421B4FF861EE9E1F8E58FC754C6"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoCraftRecoverySwitch-v1.png.meta",
+      "Bytes": 558,
+      "SHA256": "2AF036541891A124AAAEE4C27BD13A7F1B3EE3B1BD15C389E6B8AE2A9F1556B4"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoCraftRoomFar-v1.png",
+      "Bytes": 2133400,
+      "SHA256": "E15965D0EE4560B3CF24C215A316EAC333A8519E5CD9985EEFDD81BFAE368F2E"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoCraftRoomFar-v1.png.meta",
+      "Bytes": 2274,
+      "SHA256": "6076DB34034D0C5B61DFB9F81E8960BBDDCD386B8B5AF469CB8F52E542F2F237"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoCraftRoomMid-v1.png",
+      "Bytes": 1233266,
+      "SHA256": "B35FC0929C8752331473B083C4B283790801A1A1033D8F1EA5844DB55CCFB827"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoCraftRoomMid-v1.png.meta",
+      "Bytes": 2274,
+      "SHA256": "CE0242B737368DF7BC26011ADAAD72B11CCF447AA23716A35666205D7FFCCE79"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoCraftSpike-v1.png",
+      "Bytes": 1676075,
+      "SHA256": "CB7EEFD00B9BE6A34685061E5C602AE596B11B853D664F28F8E9F2B379BA4AFB"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoCraftSpike-v1.png.meta",
+      "Bytes": 558,
+      "SHA256": "C77BDDB4A6C94A53FE234BEA344A0E0AE0A597DDDF7C1F65E63DEB0BB1A14248"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoCraftSwing-v1.png",
+      "Bytes": 1291870,
+      "SHA256": "3EBFCA430C5EFC7E7AA011CFA828F7FE8E3E9F56AB28D0C5EACC65871335EBD2"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoCraftSwing-v1.png.meta",
+      "Bytes": 2241,
+      "SHA256": "C85EF22AA3CADC223448D32CA103657BA3875ABB5F7E891F63F88B00A8BD6986"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoCraftSwitchPress-v1.png",
+      "Bytes": 1457236,
+      "SHA256": "1C1F68C57E1BF3B8884AD9E2E836418FB15749D744CAC82E1532CBD9500F9193"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoCraftSwitchPress-v1.png.meta",
+      "Bytes": 2241,
+      "SHA256": "4F0BF7011EC16994F6353C5ED90F2801B6D15491B11D26CAFBD82C0AFC5F6D0B"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoCraftWalk-v1.png",
+      "Bytes": 1502545,
+      "SHA256": "B36DA1C6FCA45BC47232B869724B723D0D771AE694A011149B7855F82FBF9D99"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoCraftWalk-v1.png.meta",
+      "Bytes": 2241,
+      "SHA256": "CEA6FF8C8E8603820F6E483BE30419799108F69D1EEA06A488410CDD53E57EA6"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoCraftWalkTransitions-v1.png",
+      "Bytes": 1159149,
+      "SHA256": "0931E91671111433FB261A9C43C9AEFAF893147AF3096E6B5CB5B545F533BA5E"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoCraftWalkTransitions-v1.png.meta",
+      "Bytes": 2241,
+      "SHA256": "73ED44C3DB03172C89143535E66918B2E959CAF588179F0C7968470FE3A9905B"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoCraftWallPush-v1.png",
+      "Bytes": 1497095,
+      "SHA256": "492950112CCCA6DB1716CC2CF870978E1F88BA5F99057FE889C25E293C911C10"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoCraftWallPush-v1.png.meta",
+      "Bytes": 2241,
+      "SHA256": "FAC9A0A251F0F40B109DA8282BE970CBB2B9958E45B83646610012F37D2C8198"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoCraftWeave-v1.png",
+      "Bytes": 1233128,
+      "SHA256": "7BEF7D090AF2A59BDC6DF3D8A776E0053196D684C1D1C8BE2782A8BF91D27C66"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoCraftWeave-v1.png.meta",
+      "Bytes": 2241,
+      "SHA256": "BDF6AE85D681F9408422154C2B9E31B07985101E256F498E2B43860E47F87423"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoCraftWoodBlocks-v1.png",
+      "Bytes": 2561513,
+      "SHA256": "AEB2A9764B44770E660A33202529745ED836172821112DC4F3047B752147D0A2"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoCraftWoodBlocks-v1.png.meta",
+      "Bytes": 2274,
+      "SHA256": "2F871000598535CE666C01ED0D780BAABB2282FDAD4EA969ECC2CEFEFCF4C268"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoCraftWoodGrain-v1.png",
+      "Bytes": 2367170,
+      "SHA256": "4BB21AC9B56271EAC8FC48055F940EA81541F9D1B90E82470E190E1B074E7963"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoCraftWoodGrain-v1.png.meta",
+      "Bytes": 2274,
+      "SHA256": "E6AE5852EB92FCB0409F5018B63CE3EC943EA342BC84FCD54DE7FB869C7575C8"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoEdgeBalance-v1.png",
+      "Bytes": 1500724,
+      "SHA256": "C592E05128FE51251CB27BC00A79F37F13F3E1463D7B2F03533DEE17B88A89B2"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoEdgeBalance-v1.png.meta",
+      "Bytes": 558,
+      "SHA256": "19BBD4DF78B81C668E00DCFF52CF3D8F7AB3011BBC10D5DA93759E19B65DE862"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoEndingBackground-v1.png",
+      "Bytes": 1566620,
+      "SHA256": "BF0FE9346D3CF1E2764C118912DC81285153ADB5E4E917055DCB9372188A696C"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoEndingBackground-v1.png.meta",
+      "Bytes": 2274,
+      "SHA256": "FF6A0E28A46A9FCAC494538599581E188EDFDB982D6B1E8E1C44536F6DCB2C34"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoFailureBackground-v1.png",
+      "Bytes": 1480085,
+      "SHA256": "614222E765650D38053E529C8976B4E7B8468EAC3B3A593A7D7B12A262C86888"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoFailureBackground-v1.png.meta",
+      "Bytes": 2274,
+      "SHA256": "A7434680C74259D4F57CD3DDCA1EA502CC693E4354444CF8EC5E7410221628EA"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoFarBackground-v1.png",
+      "Bytes": 1463029,
+      "SHA256": "410834C59F2BC439FA6EE847C2E587CDB10AC41B474C43FF85CED459DCD20624"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoFarBackground-v1.png.meta",
+      "Bytes": 2274,
+      "SHA256": "17DE27724CF6BF862B2CB4C6A3FFF14308F9B44799CDBAF6DA5777B2F00EA926"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoGoal-v1.png",
+      "Bytes": 1595379,
+      "SHA256": "19993363985116835D67AFFA909D46FFEF665C5ACCE0826F3B72D8011C57BF46"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoGoal-v1.png.meta",
+      "Bytes": 558,
+      "SHA256": "2FB6B1B11C93931B043C7557BD892F01CEABB9B36B9956B03120BD36A350B37C"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoIdle-v1.png",
+      "Bytes": 1466010,
+      "SHA256": "2E537CF7832FEC74D2C65E7423608E9082DB1C4CAABF251E1C6FB0A8303B9755"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoIdle-v1.png.meta",
+      "Bytes": 558,
+      "SHA256": "F6929C7ECB380EE915C25225E1262F8843529E0166FE6EF8162E6CDD4D8AFE40"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoJump-v2.png",
+      "Bytes": 1353580,
+      "SHA256": "89AB094647436F3599EC73E3712DE5E4FF65CC272B1E18310661E022040B74D2"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoJump-v2.png.meta",
+      "Bytes": 2241,
+      "SHA256": "63BF2CA3F61BA99AD8E7853C8986DC70F35C202D35828A13C9204ED582444FE3"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoLanding-v1.png",
+      "Bytes": 1568973,
+      "SHA256": "D3480C36F86C25609059E263DBBFFB90E466269B8D0F6BA1B8A1350E27C30805"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoLanding-v1.png.meta",
+      "Bytes": 2241,
+      "SHA256": "F03DE08D68500861505FD3D84DECF06748FFDD0BCA713E6AB325D4C9FFEE72A5"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoPlayer-v1.png",
+      "Bytes": 1444442,
+      "SHA256": "9E286B682646BD92BA33CAAC263579803672289B96C8E4E0F8887087FDF7C8C4"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoPlayer-v1.png.meta",
+      "Bytes": 2241,
+      "SHA256": "1B8DEA434B15E6CAFB652473870C5FDB124B485E656E4DB933D579F3C1741DD9"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoStageCurtainCloth-v1.png",
+      "Bytes": 3140082,
+      "SHA256": "883B0C69C9CF2313D4CC002C9151990A57C552A042D564DCEB8B7B3F54E5B62E"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoStageCurtainCloth-v1.png.meta",
+      "Bytes": 688,
+      "SHA256": "3917E56FF240345662C6FDB1DAFAA4CE3185C07EB0E8145A49BA933C8E32E5EF"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoStageDiorama-v1.png",
+      "Bytes": 1758042,
+      "SHA256": "06F968B22BED0D2289D4CC9821FCD79F29709B9468BFDDC6EEE1BDC744BEDCA4"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoStageDiorama-v1.png.meta",
+      "Bytes": 2274,
+      "SHA256": "5D19790FB4843173086C9D66FAF853B202C9DCDCCE413657753ECDC30B2AB0B2"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoStageMapBackground-v1.png",
+      "Bytes": 2495217,
+      "SHA256": "3F7996FFC8EF1C36F1E7C973D06C7A87946DC5DD63EACDC4644BB301E1D2A2EB"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoStageMapBackground-v1.png.meta",
+      "Bytes": 2274,
+      "SHA256": "DD4A4BDBB9FB770763EA2DEDE6744E93766651B0CF1032E122C1C9F8EDC314DF"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoStageMapPieces-v1.png",
+      "Bytes": 1585527,
+      "SHA256": "4D926EF634F22454EDE63DCE104F8E5B83E3A886795568834A79579CB7DCA918"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoStageMapPieces-v1.png.meta",
+      "Bytes": 2274,
+      "SHA256": "B072F660CF480F38A23C4F39EF02F6B33C965070CD26AEFD7C552EC9EB305163"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoStageMapUpcoming-v1.png",
+      "Bytes": 2314488,
+      "SHA256": "D51588EF5F8906B59DF0C262AB6FED0792AE112BBD382FEDF5FB93236D35B846"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoStageMapUpcoming-v1.png.meta",
+      "Bytes": 2274,
+      "SHA256": "9F43B22811B94AE9205721D1BF3442177C592020B5B042C078EA245DAF94CF1B"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoSwing-v2.png",
+      "Bytes": 1401606,
+      "SHA256": "60466B797D03F34B168EE2BC23940BB8AD17FE6B28928DED929D2DE183C847E1"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoSwing-v2.png.meta",
+      "Bytes": 558,
+      "SHA256": "EE846189630C678C880A0D501F1722EA5DF11EDDB6BC5C1F09AC5B81955F3EDC"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoSwitchPress-v1.png",
+      "Bytes": 1421926,
+      "SHA256": "006C6D7D8BD02904E47565CB602C75ACDEA7465B7BD0F0FA9B7DFD67AD9AF8A7"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoSwitchPress-v1.png.meta",
+      "Bytes": 558,
+      "SHA256": "BE8C47164C52C340A0C91AFD3A699E3B532702DE80DA4B7B70D83D2DEA6C76B2"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoTitleBackground-v1.png",
+      "Bytes": 1453260,
+      "SHA256": "63313D5D4442AE15BE624DCF6F257F761451F68D48D7209D4FA565D7AEB50510"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoTitleBackground-v1.png.meta",
+      "Bytes": 2274,
+      "SHA256": "FE2707F9C0AEDE88113BDE5C5A5C6493B4B2A888051894755CE1C3ACC9CBD71D"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoUiParts-v1.png",
+      "Bytes": 893463,
+      "SHA256": "DE6526F4478B6339871B1EF4532698557A8F34FDCBC52ECBD2CBF0C85ABB2327"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoUiParts-v1.png.meta",
+      "Bytes": 2652,
+      "SHA256": "079C0663DB6156D293F09082554BC773AB0ED1EBDDAF0DBFF57ACE31F55071EE"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoWalk-v3.png",
+      "Bytes": 1660339,
+      "SHA256": "945022ED8FDBBB4E74EDAF774D3AE3CB076F83B6FE19F65081AFFB454E21488C"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoWalk-v3.png.meta",
+      "Bytes": 2241,
+      "SHA256": "43473A12FEE3BC6AABB973D36CD1929E618FB630762E65E9526432A5D235FBC2"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoWalkTransitions-v1.png",
+      "Bytes": 1441191,
+      "SHA256": "0BBCCEE46A940F65B9E3A781721AA885E40F1889808A33AA5336E1C052CD9BA0"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoWalkTransitions-v1.png.meta",
+      "Bytes": 558,
+      "SHA256": "1BB45F06E2F367AA31F15F66DA6EFDFE85645ECFCEAEE897D8FD5E3D23CEC0D4"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoWallPush-v1.png",
+      "Bytes": 1778646,
+      "SHA256": "CCE3CF6948854A627ADAED6155977EE238761461C2027147886E9F265F38522F"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoWallPush-v1.png.meta",
+      "Bytes": 558,
+      "SHA256": "DB9CA27B7E584A39138AFB7D887FA98E56277A6D4323252E5FDE6A5CA8E78782"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoWeave-v1.png",
+      "Bytes": 1386168,
+      "SHA256": "B75481CC83DB481D45A4E67EE11685DC3DF4D07DA2F809B693916E7DBA7A680D"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoWeave-v1.png.meta",
+      "Bytes": 558,
+      "SHA256": "45028DE0AFBA5D6BFAD494A9CAD821B93A88426DD977713A2130146363EE0319"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoYarnRope-v1.png",
+      "Bytes": 1291178,
+      "SHA256": "6EF96D57555733D217280BED8EC07631FFA5CFD92F9E329AF802746060032C9D"
+    },
+    {
+      "Path": "Assets/Resources/Art/HimoHitoYarnRope-v1.png.meta",
+      "Bytes": 571,
+      "SHA256": "9E5A0BA424D3EB7965C2FE76AF6A716D2EB02950203E7EAF74017B03DDEF6567"
+    },
+    {
+      "Path": "Assets/Resources/Art/RecoverySwitch-v1.png",
+      "Bytes": 1295519,
+      "SHA256": "C14C82945987D41F70834917C29924AA4B0C332127060DB8598E246DDDD265AE"
+    },
+    {
+      "Path": "Assets/Resources/Art/RecoverySwitch-v1.png.meta",
+      "Bytes": 558,
+      "SHA256": "58AE20C9CAC5EBC10003D0BB339AD38E6771F7658577CC48B8497EE2D2E6F134"
+    },
+    {
+      "Path": "Assets/Resources/Art/ToyBoxOpening-v1.png",
+      "Bytes": 1606766,
+      "SHA256": "A77BCD40B19BF11B8D096729F971BF122E28A58BB45AF91F83B65ECDB5E06200"
+    },
+    {
+      "Path": "Assets/Resources/Art/ToyBoxOpening-v1.png.meta",
+      "Bytes": 558,
+      "SHA256": "62FA55EF8FC408A6B6B0B0CA0919807D14F447DEC949AD16CF5E81F63E579104"
+    },
+    {
+      "Path": "Assets/Resources/Art/Tutorial2p5D.meta",
+      "Bytes": 172,
+      "SHA256": "27A99B37323282C3F53F3D52800EF8E250B39ED97B27685BC178F08D61E20251"
+    },
+    {
+      "Path": "Assets/Resources/Art/Tutorial2p5D/Tutorial2p5D_Far.png",
+      "Bytes": 3601894,
+      "SHA256": "6C7E66A3CDCC5E9D6BD68F4C5E4303512ADA2956CDB82E29327C1E5AEF2F74CA"
+    },
+    {
+      "Path": "Assets/Resources/Art/Tutorial2p5D/Tutorial2p5D_Far.png.meta",
+      "Bytes": 2684,
+      "SHA256": "91C452CB34AEE6EBA78FFD3D8F204444F7B0B08C7A736E0D437623909F0A5B57"
+    },
+    {
+      "Path": "Assets/Resources/Art/Tutorial2p5D/Tutorial2p5D_Mid.png",
+      "Bytes": 4779102,
+      "SHA256": "8378E1A3CFB787A27EE5DF301B112D43AD598558167DBBF5A6DC4C11A816BFD4"
+    },
+    {
+      "Path": "Assets/Resources/Art/Tutorial2p5D/Tutorial2p5D_Mid.png.meta",
+      "Bytes": 2684,
+      "SHA256": "361DF8D72808E36DAD51004865A969CA945FB66F363DBEDF9FB50EDA9DBFB85F"
+    },
+    {
+      "Path": "Assets/Resources/Art/Tutorial2p5D/Tutorial2p5D_NearRefined.png",
+      "Bytes": 811179,
+      "SHA256": "4CDAA97410DE24143A1CF8D9834AA9CFB3AEDC70A541CC9DC9D6418BFBE82495"
+    },
+    {
+      "Path": "Assets/Resources/Art/Tutorial2p5D/Tutorial2p5D_NearRefined.png.meta",
+      "Bytes": 2684,
+      "SHA256": "56D21B81CAA98BA8BAA5DD47FE1C88F985CDBAF39447E5BCBCEF695568A49672"
+    },
+    {
+      "Path": "Assets/Resources/Art/TutorialBlockPlatform-v1.png",
+      "Bytes": 913756,
+      "SHA256": "00D32DA700D9619B888D65FE76B39C37887BF86459C332A090094AF11A60DEDC"
+    },
+    {
+      "Path": "Assets/Resources/Art/TutorialBlockPlatform-v1.png.meta",
+      "Bytes": 2241,
+      "SHA256": "E3BD5238CF6EA9E53BCB2A7B91AB9DD632577730C063B4350E283C8512122FBA"
+    },
+    {
+      "Path": "Assets/Resources/Art/TutorialGuideSign-v1.png",
+      "Bytes": 2166835,
+      "SHA256": "EEC53C525EFE2EDE7B26E6E516428376621C2D61416D39AEF1AAA716FE850E67"
+    },
+    {
+      "Path": "Assets/Resources/Art/TutorialGuideSign-v1.png.meta",
+      "Bytes": 2274,
+      "SHA256": "325692ED4112AB71DBEAFFFE688B1F96F0F4D88C5A112D5EA98C0B2302176250"
+    },
+    {
+      "Path": "Assets/Resources/Art/TutorialHookConnector-v1.png",
+      "Bytes": 1337031,
+      "SHA256": "25AB33B82548A11877967031636D21B3470A528435716A2BC2193699F3589B28"
+    },
+    {
+      "Path": "Assets/Resources/Art/TutorialHookConnector-v1.png.meta",
+      "Bytes": 2241,
+      "SHA256": "788F13D531CEE3F0800F0B6DC8A4FA1DA4F8D81FED362903B79344807BD87A1F"
+    },
+    {
+      "Path": "Assets/Resources/Art/TutorialNightChildRoom-v1.png",
+      "Bytes": 1433097,
+      "SHA256": "E5C4F8FE19A870A5C493E4B916738EE95477FB7E6A5B8E9F2E582FA68110A680"
+    },
+    {
+      "Path": "Assets/Resources/Art/TutorialNightChildRoom-v1.png.meta",
+      "Bytes": 2274,
+      "SHA256": "52B28C394C2AAD790BAA49486EF868B6D2C7AAB5197B36D28976DBCE615A0F1A"
+    },
+    {
+      "Path": "Assets/Resources/Art/TutorialRailPlatform-v1.png",
+      "Bytes": 925264,
+      "SHA256": "63E369CA7357396588BE9CCBC36D83F94A0B1A1C15AD56C1310FFA5232B6ED73"
+    },
+    {
+      "Path": "Assets/Resources/Art/TutorialRailPlatform-v1.png.meta",
+      "Bytes": 2241,
+      "SHA256": "F48C2F142ABBA54C3F2E3528335A0369BC73EBB8FB8392E4A4C2E672AB423CF0"
+    },
+    {
+      "Path": "Assets/Resources/Art/TutorialRopeAnchorRing-v1.png",
+      "Bytes": 1193049,
+      "SHA256": "F831AC2C76810FE46437122E623446EC1728DC5ED6AE0009D7A90E10EA7A376C"
+    },
+    {
+      "Path": "Assets/Resources/Art/TutorialRopeAnchorRing-v1.png.meta",
+      "Bytes": 2241,
+      "SHA256": "5BC040ECEB3EB34385FBEDF40B3A14D367ACB928081D182B9DA7ED0718DA29F8"
+    },
+    {
+      "Path": "Assets/Resources/Art/TutorialToyBoxGoal-v2.png",
+      "Bytes": 1617849,
+      "SHA256": "343EF3BF6BBC22A0FC214DAD202A96206C1DCBD12F57C5A19744735DC81AB2B9"
+    },
+    {
+      "Path": "Assets/Resources/Art/TutorialToyBoxGoal-v2.png.meta",
+      "Bytes": 2244,
+      "SHA256": "C2623BD24DAAA815D8B222998E3274DF8E29796CC2106629ED0609FDD4D186FA"
+    },
+    {
+      "Path": "Assets/Resources/Art/WoodenToySpike-v1.png",
+      "Bytes": 1362956,
+      "SHA256": "364F66ACC04B4E1A8A0EA9092F6A8A2B83B866E8D74C98D853DBA973643112AC"
+    },
+    {
+      "Path": "Assets/Resources/Art/WoodenToySpike-v1.png.meta",
+      "Bytes": 558,
+      "SHA256": "105DA97F67695664BB1F09A40626DCF8098D4F1694FC56B867A7D751ABA82EDB"
+    },
+    {
+      "Path": "Assets/Resources/Audio.meta",
+      "Bytes": 169,
+      "SHA256": "8D2662B1C0B1DBE4E77786320C4F9A6465ADCD106AE511DE7D655630823563CA"
+    },
+    {
+      "Path": "Assets/Resources/Audio/FailurePianoNote.mp3",
+      "Bytes": 42004,
+      "SHA256": "11C7B07407AD4AB7256BF2E878C9F8CC159F3F62C3E2F369CAD549A83389684E"
+    },
+    {
+      "Path": "Assets/Resources/Audio/FailurePianoNote.mp3.meta",
+      "Bytes": 480,
+      "SHA256": "C5B512607D1C45129C528CE4F9F05F5C63CC3ABE7B00BD997E01A68F1C96E89B"
+    },
+    {
+      "Path": "Assets/Resources/Audio/FailureYarnDrop.mp3",
+      "Bytes": 18180,
+      "SHA256": "AA708C7E2FEAC430404253F559350E1A3DB8F26B98599632ECB5E89F77BCCE09"
+    },
+    {
+      "Path": "Assets/Resources/Audio/FailureYarnDrop.mp3.meta",
+      "Bytes": 480,
+      "SHA256": "FF48B37B0073C68CC884ACA976CAAA383E2B266AB0B6DF7B1A4B51CBDF2808CE"
+    },
+    {
+      "Path": "Assets/Resources/Audio/GoalClearXylophone.mp3",
+      "Bytes": 28544,
+      "SHA256": "4B9C4D8CD8B8C015C722021735159E291F772C158BCAC183F7FE0B124FE23CBE"
+    },
+    {
+      "Path": "Assets/Resources/Audio/GoalClearXylophone.mp3.meta",
+      "Bytes": 480,
+      "SHA256": "C281F65DC289FBE540415A47AA7EAB464C33D98F15D5A6FFBD3CFE9915A16338"
+    },
+    {
+      "Path": "Assets/Resources/Audio/GoalTreasureChestOpen.mp3",
+      "Bytes": 26496,
+      "SHA256": "66C6308DE148169D4D7E2670B0FEA37ABC1377676430962092150B9E143AB33A"
+    },
+    {
+      "Path": "Assets/Resources/Audio/GoalTreasureChestOpen.mp3.meta",
+      "Bytes": 480,
+      "SHA256": "CAB6433A0D62089EF6DC301C6023268BC954B07127EF6511EB64F1E02BBF12BF"
+    },
+    {
+      "Path": "Assets/Resources/Audio/HookAttachSoft.ogg",
+      "Bytes": 5351,
+      "SHA256": "7D3BA0BB5E60A11B5D3E558C141303DCF494256675FBF753C0D252D2CF0481E3"
+    },
+    {
+      "Path": "Assets/Resources/Audio/HookAttachSoft.ogg.meta",
+      "Bytes": 480,
+      "SHA256": "0F87CB008AFF28917178BB6D08AFD5F21CAB7801B437B8362DEC2850434B6934"
+    },
+    {
+      "Path": "Assets/Resources/Audio/HookAttachWood.ogg",
+      "Bytes": 6366,
+      "SHA256": "B183CF7A5BD783817E0E4B82AF34AC6658FA1927049089DADC8B15C2ECC771DC"
+    },
+    {
+      "Path": "Assets/Resources/Audio/HookAttachWood.ogg.meta",
+      "Bytes": 480,
+      "SHA256": "CBB17E9108C60F463A4E9334C7A8ABF1853101F08489DCA5592E4627A608AE0C"
+    },
+    {
+      "Path": "Assets/Resources/Audio/PlayerFootstepSoftA.ogg",
+      "Bytes": 6353,
+      "SHA256": "B9524658B52A99A20590F8FEEFC103088637FD13EA8EC35811AEE785E1F2F330"
+    },
+    {
+      "Path": "Assets/Resources/Audio/PlayerFootstepSoftA.ogg.meta",
+      "Bytes": 480,
+      "SHA256": "6B0A2B6D559E173E4E232A9E3706B0A648E65B966B818B56233CAB34E37E4248"
+    },
+    {
+      "Path": "Assets/Resources/Audio/PlayerFootstepSoftC.ogg",
+      "Bytes": 6301,
+      "SHA256": "4AE7454338D57C7D102145919AE653C7D010EB542797C4F25A1C7470BE3A7E4C"
+    },
+    {
+      "Path": "Assets/Resources/Audio/PlayerFootstepSoftC.ogg.meta",
+      "Bytes": 480,
+      "SHA256": "9B44EFF01ED7B878A1B64D97140C8577E9BB003B48B1E7532AD4A68D71220487"
+    },
+    {
+      "Path": "Assets/Resources/Audio/PlayerFootstepSoftD.ogg",
+      "Bytes": 6301,
+      "SHA256": "4AE7454338D57C7D102145919AE653C7D010EB542797C4F25A1C7470BE3A7E4C"
+    },
+    {
+      "Path": "Assets/Resources/Audio/PlayerFootstepSoftD.ogg.meta",
+      "Bytes": 480,
+      "SHA256": "25F33D14109118FECAE04477A0284447728B9641FD38972393099A766B6B9223"
+    },
+    {
+      "Path": "Assets/Resources/Audio/PlayerJumpSoft.ogg",
+      "Bytes": 6411,
+      "SHA256": "9AF3C3F76705107339E72036E4053BDCA3EAA50AD31C8C929F42CE8D40E5D781"
+    },
+    {
+      "Path": "Assets/Resources/Audio/PlayerJumpSoft.ogg.meta",
+      "Bytes": 480,
+      "SHA256": "9A002E3E18A0787E8D5F7DA198F6DD753393F29D7F9247DE01BADB35AA40C500"
+    },
+    {
+      "Path": "Assets/Resources/Audio/PlayerLandingStep.mp3",
+      "Bytes": 9403,
+      "SHA256": "A021F0572C76F6208FB43E30D0478126F959C430CB2F30BB3D284BD4A0DB9E2B"
+    },
+    {
+      "Path": "Assets/Resources/Audio/PlayerLandingStep.mp3.meta",
+      "Bytes": 480,
+      "SHA256": "D813BCA7A1FF9F72E5238E20C9E566007474965C6FDA620EFADE948C5EB45964"
+    },
+    {
+      "Path": "Assets/Resources/Audio/RopeAttachMissWhoosh.mp3",
+      "Bytes": 25920,
+      "SHA256": "2B86A5253D2FD7E54A4A834A6230A15CDB834197D76C4632C11DB11FD3085B29"
+    },
+    {
+      "Path": "Assets/Resources/Audio/RopeAttachMissWhoosh.mp3.meta",
+      "Bytes": 480,
+      "SHA256": "71B0B5092591BD80C20E4108B7E139492AD4401AEA0322712EB01BA965987BA3"
+    },
+    {
+      "Path": "Assets/Resources/Audio/RopeLengthClick.mp3",
+      "Bytes": 27072,
+      "SHA256": "3AAD062888F14B9BB00B8C255FCA5E3597B6F8E7BE0CF51A1B3FFF3A4681D1BE"
+    },
+    {
+      "Path": "Assets/Resources/Audio/RopeLengthClick.mp3.meta",
+      "Bytes": 480,
+      "SHA256": "4097C9EC6A111A67D5202481175D608065D46BD73C76C3F0BC71208CEEA3E291"
+    },
+    {
+      "Path": "Assets/Resources/Audio/RopeLengthLimitWood.mp3",
+      "Bytes": 12537,
+      "SHA256": "BF5507016F304CBC680FEC2C6FFB5B345C6F12EFAEB2EDCC71F9EF6F9A375E10"
+    },
+    {
+      "Path": "Assets/Resources/Audio/RopeLengthLimitWood.mp3.meta",
+      "Bytes": 480,
+      "SHA256": "CA626974A499CA05E9B32C5903F3B86CC946D5D1A67B3D6B76ECA06D742B9BCA"
+    },
+    {
+      "Path": "Assets/Resources/Audio/RopePlatformBuildWood.ogg",
+      "Bytes": 12138,
+      "SHA256": "0602A7B3EAB5F53484F10FE775EE4204E7A2BA9703C886B302E012F7F6FAB8DE"
+    },
+    {
+      "Path": "Assets/Resources/Audio/RopePlatformBuildWood.ogg.meta",
+      "Bytes": 480,
+      "SHA256": "9F64361B0585B2C48A0C8020718F1ECA105FC8E1B7CD0925B5E346D4B94F9EE8"
+    },
+    {
+      "Path": "Assets/Resources/Audio/RopePlatformMergeWood.ogg",
+      "Bytes": 6395,
+      "SHA256": "E10009F67DDAEB3A59A3E1129CFC1615D84BA60AB578EAE07E7092AC223F099C"
+    },
+    {
+      "Path": "Assets/Resources/Audio/RopePlatformMergeWood.ogg.meta",
+      "Bytes": 480,
+      "SHA256": "2E8EE3B8DFD60606B566C3983FF00F5B88386E838D09D2CBAB7BC4CAE79468A5"
+    },
+    {
+      "Path": "Assets/Resources/Audio/RopeReleaseWind.wav",
+      "Bytes": 8864,
+      "SHA256": "A9437302A5551E066A9696518D0534072F8EE5AB9118F6159C0B42DA008180FC"
+    },
+    {
+      "Path": "Assets/Resources/Audio/RopeReleaseWind.wav.meta",
+      "Bytes": 480,
+      "SHA256": "B1893CEC4087B091340D30F7A751E554AAD45A1C341DB5FE8D46E74BB87F1100"
+    },
+    {
+      "Path": "Assets/Resources/Audio/RopeShotRustling.mp3",
+      "Bytes": 20352,
+      "SHA256": "B4CC01E1BD609002C62B9DF8B2B220BF3E44E57315E7109CFA52399B3732837B"
+    },
+    {
+      "Path": "Assets/Resources/Audio/RopeShotRustling.mp3.meta",
+      "Bytes": 480,
+      "SHA256": "611484A48756E54CBB0389998A2065372E0C01799241322DBCB0FCE677763BE8"
+    },
+    {
+      "Path": "Assets/Resources/Audio/UiPaperOpen.mp3",
+      "Bytes": 23822,
+      "SHA256": "D0E6C7FACFFE9322BEA6D359AE2BC1BBF79B9DF373B3D6D7C012CFEF8362C89D"
+    },
+    {
+      "Path": "Assets/Resources/Audio/UiPaperOpen.mp3.meta",
+      "Bytes": 480,
+      "SHA256": "F64313224FF806DD71881D0F810119070B3219C33340499B880648276EEB1474"
+    },
+    {
+      "Path": "Assets/Resources/Audio/YasashiiOdori.mp3",
+      "Bytes": 1786604,
+      "SHA256": "25C52DA234D42C7A5E5CC91D45AEED14829F845EA15932A88AC94AB006781E83"
+    },
+    {
+      "Path": "Assets/Resources/Audio/YasashiiOdori.mp3.meta",
+      "Bytes": 482,
+      "SHA256": "646890829E2C505FA4E7556B57F9D77F6E30E1418A2BD06146AB70EB0E5D3854"
+    },
+    {
+      "Path": "Assets/Resources/Fonts.meta",
+      "Bytes": 169,
+      "SHA256": "6E4E8D52D509B39119B68991FF5D8AEBBB3D224C841F04BAB36CBA0718B26BBA"
+    },
+    {
+      "Path": "Assets/Resources/Fonts/MPlusRounded1c-Bold.ttf",
+      "Bytes": 3542592,
+      "SHA256": "C358630584E8E2D8FBD6121D0F4693255FFEF6D1E6D4F3441FD6E5A963A11F9E"
+    },
+    {
+      "Path": "Assets/Resources/Fonts/MPlusRounded1c-Bold.ttf.meta",
+      "Bytes": 478,
+      "SHA256": "09E60F4899ED8538C03222BF7BD902413646A5A8541DBD14C6EA1248E31A16EA"
+    },
+    {
+      "Path": "Assets/Resources/Fonts/MPlusRounded1c-Regular.ttf",
+      "Bytes": 3389792,
+      "SHA256": "B75708B53E45B06D17D470AEECA5B766E3D1B3999F03F13EC4EB863CA846C14C"
+    },
+    {
+      "Path": "Assets/Resources/Fonts/MPlusRounded1c-Regular.ttf.meta",
+      "Bytes": 478,
+      "SHA256": "34AA3C11AF839ABE8CCA05442738DE2E24EE5D70629FA9F83B85E0A74FD3C4F2"
+    },
+    {
+      "Path": "Assets/Resources/HangingDecorSway.shader",
+      "Bytes": 4443,
+      "SHA256": "9239E1984F9533BCBAFD69CBC6A1A2EE2CF8250D943D9E485959B0B3A401EDDC"
+    },
+    {
+      "Path": "Assets/Resources/HangingDecorSway.shader.meta",
+      "Bytes": 201,
+      "SHA256": "D7E1DC0F32AB10B2AA3DF1AC8284551D5CD7CAED6DBC8B2DBACD5EF12100CCFB"
+    },
+    {
+      "Path": "Assets/Resources/RespawnWeave.shader",
+      "Bytes": 2462,
+      "SHA256": "ECCEB8ACE705BE3BE357CC79F4128A5C85F2E898EDDF6C7E738DDB165983840E"
+    },
+    {
+      "Path": "Assets/Resources/RespawnWeave.shader.meta",
+      "Bytes": 201,
+      "SHA256": "B39566B3A98D1F04AFFCE1CBA8B87B88232A5F4AD2612E4A9CB16A87A74978B8"
+    },
+    {
+      "Path": "Assets/Resources/StageCatalog.json",
+      "Bytes": 1090,
+      "SHA256": "A103566BC870E259C2C83BCAB40A3587BBEF543EF8A4184018ED0068F77D8DD3"
+    },
+    {
+      "Path": "Assets/Resources/StageCatalog.json.meta",
+      "Bytes": 155,
+      "SHA256": "2B9100894C095E09A27D8641D7C67EA705529E1779CDBEC882791598ADAFE24F"
+    },
+    {
+      "Path": "Assets/Resources/TutorialBackgroundEdge.shader",
+      "Bytes": 1452,
+      "SHA256": "F6B2BA1886E770AAD5AB0B5B52D129C39BC3034CF296D65574AA68AB860C99C2"
+    },
+    {
+      "Path": "Assets/Resources/TutorialBackgroundEdge.shader.meta",
+      "Bytes": 60,
+      "SHA256": "000EE209745BB48433997D3698596722C755E1B99990840E8F528F124FBA72C2"
+    },
+    {
+      "Path": "Assets/Resources/TutorialBackgroundFloor.shader",
+      "Bytes": 1506,
+      "SHA256": "DD4FF11BC4BFD514C0D3EB1887C577CE2C2D4C05F1C465F66D35EFEB243973CC"
+    },
+    {
+      "Path": "Assets/Resources/TutorialBackgroundFloor.shader.meta",
+      "Bytes": 60,
+      "SHA256": "590450B43AAF32A12DF56821E81AAE56BA673EE011B0DE939B870478E64362A6"
+    },
+    {
+      "Path": "Assets/Resources/TutorialSignGreeting.shader",
+      "Bytes": 1700,
+      "SHA256": "F708BDD98FBA1CCBE05E7B9FD67E1984D3DE1499FD1820EB6B97EDA75B5C651B"
+    },
+    {
+      "Path": "Assets/Resources/TutorialSignGreeting.shader.meta",
+      "Bytes": 60,
+      "SHA256": "26406A8830531C8F3157F07ACF98E9549AE06CD4808BE2C814CDB854623739C5"
+    },
+    {
+      "Path": "Assets/Scenes.meta",
+      "Bytes": 172,
+      "SHA256": "85306993A3B5B77F3B4E794EF5469E6C61BD625508F5ADDAB2B79374CF29AE0E"
+    },
+    {
+      "Path": "Assets/Scenes/MainStage.unity",
+      "Bytes": 526828,
+      "SHA256": "57D2464751B5B9C2A78E6C56F34197E9BC2629983FADAA1DFF6E0BA0B4BC2284"
+    },
+    {
+      "Path": "Assets/Scenes/MainStage.unity.meta",
+      "Bytes": 152,
+      "SHA256": "F7B0A7AD65F0DC8924098617F166B8ADFE31C81AD58435FA369B82FD7DD5FF32"
+    },
+    {
+      "Path": "Assets/Scenes/Tutorial.unity",
+      "Bytes": 238203,
+      "SHA256": "DC1BED54CC083256CE895041B1C93578101E19B9738E7CF260619E8F7E1E4B92"
+    },
+    {
+      "Path": "Assets/Scenes/Tutorial.unity.meta",
+      "Bytes": 155,
+      "SHA256": "311B10F78990C3DE7133AD820B04EC157F5D469AE773FE458F621E8FCA4EA117"
+    },
+    {
+      "Path": "Assets/Scripts.meta",
+      "Bytes": 172,
+      "SHA256": "5AC8D2AB0DDF79994740A9114BCC361D58C1D9588D85DC044237CBD2F948A1BE"
+    },
+    {
+      "Path": "Assets/Scripts/AimPoseState.cs",
+      "Bytes": 2838,
+      "SHA256": "4152C691E84225BD3CC4E80AD8D469EB90D53F0BB805102EE61D46A50EE58B9B"
+    },
+    {
+      "Path": "Assets/Scripts/AimPoseState.cs.meta",
+      "Bytes": 60,
+      "SHA256": "FA7E895F7C6B1515D3224A48DC2B363E2518542EE900AF5090DAE33E035C290A"
+    },
+    {
+      "Path": "Assets/Scripts/AmbientDustVisual.cs",
+      "Bytes": 4796,
+      "SHA256": "F0EABB94EA2C577289B260836F957CC27005B02EF5CD430B4D2DC2FC1EF737D2"
+    },
+    {
+      "Path": "Assets/Scripts/AmbientDustVisual.cs.meta",
+      "Bytes": 60,
+      "SHA256": "7095C25AC9C58E849D7172748B814403CE0B2B542F1544761B025DB262D8EDB7"
+    },
+    {
+      "Path": "Assets/Scripts/CheckpointLandingGate.cs",
+      "Bytes": 2968,
+      "SHA256": "06CC7EED90C4DECAD30630AB6C60BDC17645EFA01387F5983BD1CB65C7703414"
+    },
+    {
+      "Path": "Assets/Scripts/CheckpointLandingGate.cs.meta",
+      "Bytes": 60,
+      "SHA256": "980D4A2761B77BB59244A7D78001AC009BBD792A2C709B66B4ADB5E1573F06E2"
+    },
+    {
+      "Path": "Assets/Scripts/CheckpointYarnFlag.cs",
+      "Bytes": 5832,
+      "SHA256": "711BED76832024B804E2D494A3E12EC412CE5FA9DE5572F4BE7F5368786FA02E"
+    },
+    {
+      "Path": "Assets/Scripts/CheckpointYarnFlag.cs.meta",
+      "Bytes": 60,
+      "SHA256": "0F0C74986863F3EAAF5AD7641B2B1EC4AA245E84F2EFF2D0BD2AA013B50DEAB5"
+    },
+    {
+      "Path": "Assets/Scripts/ClearJourneySnapshot.cs",
+      "Bytes": 4919,
+      "SHA256": "8C8F9935831B7632E3878368D74CE437D015A957380D710D48328E2C3BF2FF0D"
+    },
+    {
+      "Path": "Assets/Scripts/ClearJourneySnapshot.cs.meta",
+      "Bytes": 60,
+      "SHA256": "F43DBE0D71B9A6E8D39A0CA52553A2C6E264977E77C6C81CC02BC7589C654138"
+    },
+    {
+      "Path": "Assets/Scripts/ClearJourneyView.cs",
+      "Bytes": 8561,
+      "SHA256": "D06A4CB0A7A0B8E8A1F7D1AA8D0E4E6E790321A3D2D94313AEAA4B253F19369E"
+    },
+    {
+      "Path": "Assets/Scripts/ClearJourneyView.cs.meta",
+      "Bytes": 60,
+      "SHA256": "F5C7DA3EAAA1AFA5F921DC09EBCB40230E3A1D4D30D67BEAD7C0223D23B95247"
+    },
+    {
+      "Path": "Assets/Scripts/CraftPlayerArt.cs",
+      "Bytes": 8312,
+      "SHA256": "8AE014DDD8D74247A9F6DB9A6AE0B939BB82201B14E946162FC37F7C1BFCE967"
+    },
+    {
+      "Path": "Assets/Scripts/CraftPlayerArt.cs.meta",
+      "Bytes": 60,
+      "SHA256": "063249C5BF0214128F5C9A6F02034B6B7E78A5E3896514A12F77BB98F01576F6"
+    },
+    {
+      "Path": "Assets/Scripts/CraftRailPlatformVisual.cs",
+      "Bytes": 14719,
+      "SHA256": "0ADAB78B1A325720A0E6BB0C16060132BDFDBB1878DA09A3961A30DF30360744"
+    },
+    {
+      "Path": "Assets/Scripts/CraftRailPlatformVisual.cs.meta",
+      "Bytes": 60,
+      "SHA256": "A9B29A07C7FBFCB23057FEADC137CEBA17AE2F3DB24F1C66712AC64BB64B1716"
+    },
+    {
+      "Path": "Assets/Scripts/CraftWoodPlatformVisual.cs",
+      "Bytes": 9881,
+      "SHA256": "71ECC00408A83E8E0CE55032C07F41C44C03C3D2E6BB8992FDE6522F0709CA0D"
+    },
+    {
+      "Path": "Assets/Scripts/CraftWoodPlatformVisual.cs.meta",
+      "Bytes": 240,
+      "SHA256": "E749E265482C3050F10EAC93D990C0E90E2ADEA7BC2E44D0A5A15119D4EC7B91"
+    },
+    {
+      "Path": "Assets/Scripts/EdgeBalancePoseState.cs",
+      "Bytes": 2481,
+      "SHA256": "8E8F6E199234B25BB4E9B118DB1E2537C0BC704AD80C5C7817CA3E63FB0E3BE0"
+    },
+    {
+      "Path": "Assets/Scripts/EdgeBalancePoseState.cs.meta",
+      "Bytes": 60,
+      "SHA256": "06385A43BD71A90900A579913D125B0CE03C8E9EBD305C9E369EDB058A19A08D"
+    },
+    {
+      "Path": "Assets/Scripts/EdgeBalanceSupportProbe.cs",
+      "Bytes": 2691,
+      "SHA256": "E980EA98B5C18BD8000734E9E69597329A65A2D764D8DCB77E4E4CDA6BD8C294"
+    },
+    {
+      "Path": "Assets/Scripts/EdgeBalanceSupportProbe.cs.meta",
+      "Bytes": 60,
+      "SHA256": "93455189E88A7E49724A51033BD4CFEC9561636DF0EF1448828113325688B605"
+    },
+    {
+      "Path": "Assets/Scripts/FallUnravelVisual.cs",
+      "Bytes": 8528,
+      "SHA256": "35CA8B8B0B5416BE087ED3B6A631959FD1C3B0C1F27A0EDEE13297C062E2C9CB"
+    },
+    {
+      "Path": "Assets/Scripts/FallUnravelVisual.cs.meta",
+      "Bytes": 60,
+      "SHA256": "77EB593430A72FA2A274E072199712ADB3321B14C01C4100AF0371287015456B"
+    },
+    {
+      "Path": "Assets/Scripts/FlashlightSpotVisual.cs",
+      "Bytes": 5318,
+      "SHA256": "ADB847D08F01F3631ABA56611494A2DBD2501E6273566E7E6573A5F1F50DB877"
+    },
+    {
+      "Path": "Assets/Scripts/FlashlightSpotVisual.cs.meta",
+      "Bytes": 60,
+      "SHA256": "A48D97C7E73FD98E3D4C93C74EFAB4AA222009270FFF4995EFFD38D17C776026"
+    },
+    {
+      "Path": "Assets/Scripts/GoalChestPresentation.cs",
+      "Bytes": 10316,
+      "SHA256": "D2C59AC777A4D2AD0E9732F14A81CF745C7D2B00EBD188F046838CF3D35DB6C4"
+    },
+    {
+      "Path": "Assets/Scripts/GoalChestPresentation.cs.meta",
+      "Bytes": 60,
+      "SHA256": "F66146A8F9C693357F9DA34FF8CB839180A349EB082A2BCB0AF489A70B13AE62"
+    },
+    {
+      "Path": "Assets/Scripts/GoalPoseState.cs",
+      "Bytes": 1635,
+      "SHA256": "69AE28224897432BF8C05A30AFCCF1A9EEA7A53457E51878DCCDB8C4F606C753"
+    },
+    {
+      "Path": "Assets/Scripts/GoalPoseState.cs.meta",
+      "Bytes": 60,
+      "SHA256": "F721B99D5C7EF528304C463ACA29311AD55446C8028AAE431A6981A335237FD2"
+    },
+    {
+      "Path": "Assets/Scripts/GoalZone.cs",
+      "Bytes": 2081,
+      "SHA256": "51214E54F3C0E636165C5F199481284AD60D80B896E66F93DD28B21EB816FA72"
+    },
+    {
+      "Path": "Assets/Scripts/GoalZone.cs.meta",
+      "Bytes": 60,
+      "SHA256": "E9FCA2CF20A7034184B20C10C8C99A18237FDCD0F617FF1038E1C3B5867F6F01"
+    },
+    {
+      "Path": "Assets/Scripts/GroundMotionPoseState.cs",
+      "Bytes": 3677,
+      "SHA256": "BD60DD029D09F1B1333FF319E72EDF475571F99BC910AFE2F3433D75EE4643B5"
+    },
+    {
+      "Path": "Assets/Scripts/GroundMotionPoseState.cs.meta",
+      "Bytes": 60,
+      "SHA256": "98B0BACC6624C3D2C2E521DD1068047D83DFBF6FB1B710572E167DB0D7DE93E3"
+    },
+    {
+      "Path": "Assets/Scripts/HangingDecorSway.cs",
+      "Bytes": 3616,
+      "SHA256": "2AFC9BFE699AAF238E764757B3B347CB9D3E96B42E27119C3CA688465FC116C2"
+    },
+    {
+      "Path": "Assets/Scripts/HangingDecorSway.cs.meta",
+      "Bytes": 60,
+      "SHA256": "263756BE6C254CCE8EB55B374498D2F2A4E1A2A5841A1CCFBA90F62558F4CE6C"
+    },
+    {
+      "Path": "Assets/Scripts/HimoHitoAudioSettings.cs",
+      "Bytes": 1489,
+      "SHA256": "71F2755B123103D85FE0CC3BE9D16D60C23B5760D615E75A1D247212F3D28F9A"
+    },
+    {
+      "Path": "Assets/Scripts/HimoHitoAudioSettings.cs.meta",
+      "Bytes": 60,
+      "SHA256": "DF06E617DBD2EC39D027EC36A2ACD3748EFB360FDE0B92B786D7522CC11DAD25"
+    },
+    {
+      "Path": "Assets/Scripts/HimoHitoBackgroundMusic.cs",
+      "Bytes": 5488,
+      "SHA256": "41846555AB18AC06900C3774BB2E4B22BD5D27E1F063745D83C7F321999260ED"
+    },
+    {
+      "Path": "Assets/Scripts/HimoHitoBackgroundMusic.cs.meta",
+      "Bytes": 60,
+      "SHA256": "68A1713A7A0C35851470CF3C38966E51E9ECCEC8129F3104ED3B4D2E83E1B46F"
+    },
+    {
+      "Path": "Assets/Scripts/HimoHitoCraftRoomBackground.cs",
+      "Bytes": 23164,
+      "SHA256": "11AF0ED7649B6D82ADBB5874DFA0D85AF59DFF8534FB6F375BD92EBE98D53076"
+    },
+    {
+      "Path": "Assets/Scripts/HimoHitoCraftRoomBackground.cs.meta",
+      "Bytes": 240,
+      "SHA256": "B6A374BCCDC96D44C4643B60DD5694351D219E807511E2EFACF5E368CB679078"
+    },
+    {
+      "Path": "Assets/Scripts/HimoHitoFailureScreen.cs",
+      "Bytes": 4431,
+      "SHA256": "60B4E7BF917B46AB16C9F234EEACDB1D846D502B110CA85E36550C06739FB363"
+    },
+    {
+      "Path": "Assets/Scripts/HimoHitoFailureScreen.cs.meta",
+      "Bytes": 240,
+      "SHA256": "FF6C33F63B91B5280093F00A6EAD6932B9EB59343DF449BEE27A42F59EC7588D"
+    },
+    {
+      "Path": "Assets/Scripts/HimoHitoFarBackgroundLayer.cs",
+      "Bytes": 5304,
+      "SHA256": "62C1260152D92212E7DE19342944FC7FEC33C2742C915FFC99EF0C03F5463968"
+    },
+    {
+      "Path": "Assets/Scripts/HimoHitoFarBackgroundLayer.cs.meta",
+      "Bytes": 240,
+      "SHA256": "171D2D237E2678B9C8BC207EA4BA45E27A9578EAD4F27B1D437A5654AB5F98CE"
+    },
+    {
+      "Path": "Assets/Scripts/HimoHitoGuiTheme.cs",
+      "Bytes": 2162,
+      "SHA256": "83FE49227EE8EDDB4960BAFF1EA421928F569B1E10DCE577E09A24C49C45F456"
+    },
+    {
+      "Path": "Assets/Scripts/HimoHitoGuiTheme.cs.meta",
+      "Bytes": 240,
+      "SHA256": "73D67CB8EE5F70D4709BAF8028EE3FF5A28957832C14F1033302A48FCC7B54FB"
+    },
+    {
+      "Path": "Assets/Scripts/HimoHitoHookRingVisual.cs",
+      "Bytes": 3198,
+      "SHA256": "E25D894B135DC5BF5DF795D84B21217DC70FC23AC85873933D6E0281268C87E5"
+    },
+    {
+      "Path": "Assets/Scripts/HimoHitoHookRingVisual.cs.meta",
+      "Bytes": 60,
+      "SHA256": "B8CA922DE2E1794DD3B657D81D3978A315293130C0651B0645F6F44CA705E239"
+    },
+    {
+      "Path": "Assets/Scripts/HimoHitoUiParts.cs",
+      "Bytes": 14578,
+      "SHA256": "0696CD16C13616C677F40C05349018F42108822C5578A8852F5F7671CFD9C764"
+    },
+    {
+      "Path": "Assets/Scripts/HimoHitoUiParts.cs.meta",
+      "Bytes": 59,
+      "SHA256": "DB834C5DAC3563598751D2322987052C8A739F1F54CD62D26700414DFC312515"
+    },
+    {
+      "Path": "Assets/Scripts/HookArrivalVisualPulse.cs",
+      "Bytes": 3915,
+      "SHA256": "C159AF88F607FFCC880A1D680C4181AF21A11BC808D77CB426C8E710A5922B09"
+    },
+    {
+      "Path": "Assets/Scripts/HookArrivalVisualPulse.cs.meta",
+      "Bytes": 60,
+      "SHA256": "E25F698E35DC40D587410760EA3679CD1CCB944750C1780B6735DE9A955E8F45"
+    },
+    {
+      "Path": "Assets/Scripts/HookPoint.cs",
+      "Bytes": 2886,
+      "SHA256": "1AA04BE9A155C303221F387742F7242C92CBB026A3677B0049556C638F3CF3A8"
+    },
+    {
+      "Path": "Assets/Scripts/HookPoint.cs.meta",
+      "Bytes": 59,
+      "SHA256": "5EC5DFFF60BFED05318388F1A0BA6E92EE2CD5188106A22B36547E03C8BA6583"
+    },
+    {
+      "Path": "Assets/Scripts/HookWoodMountVisual.cs",
+      "Bytes": 6703,
+      "SHA256": "AE9628FAF6AD81839A9E129D3EF2B11E55017E215A00EAA724058120C7967094"
+    },
+    {
+      "Path": "Assets/Scripts/HookWoodMountVisual.cs.meta",
+      "Bytes": 60,
+      "SHA256": "1712EEC22028F4FF0A5A28281D6F1BC86169BCE4AF673363891429D9F186C838"
+    },
+    {
+      "Path": "Assets/Scripts/HookYarnKnotVisual.cs",
+      "Bytes": 8175,
+      "SHA256": "DCDD827912ED6BA8CAD9EA1B02A61FDD4C4B4D95DA38AB00FB100F9AAA794ED4"
+    },
+    {
+      "Path": "Assets/Scripts/HookYarnKnotVisual.cs.meta",
+      "Bytes": 60,
+      "SHA256": "65B3692086D6EA41C5182BD18F3530129DC5D1DBD654C46BCEEF1AE1FA6F0BCF"
+    },
+    {
+      "Path": "Assets/Scripts/HorizontalCameraFollow.cs",
+      "Bytes": 5887,
+      "SHA256": "BD2EEF76F57DC4B7C4E3AD594EB2868FBF8252C19D6F93DFEFE1A4DE95EA504D"
+    },
+    {
+      "Path": "Assets/Scripts/HorizontalCameraFollow.cs.meta",
+      "Bytes": 60,
+      "SHA256": "0AA12334BA28385DC63858B706CD47D913A1BEA8AADB2502472ED2DB8F0E18E3"
+    },
+    {
+      "Path": "Assets/Scripts/IdlePoseState.cs",
+      "Bytes": 2004,
+      "SHA256": "6C6413724CD951944CEEF692F259CF2941761B3052A74B0F17D7285CBE38E5F1"
+    },
+    {
+      "Path": "Assets/Scripts/IdlePoseState.cs.meta",
+      "Bytes": 60,
+      "SHA256": "B91832F2E5024950979396FD71AA008D46A8782BA4E63922E9C953C77DD6A36E"
+    },
+    {
+      "Path": "Assets/Scripts/MainStageCheckpoint.cs",
+      "Bytes": 2032,
+      "SHA256": "66663105DEC1F99517EFCD12D21B38711DF56C8AA5A8E0175135793A04449033"
+    },
+    {
+      "Path": "Assets/Scripts/MainStageCheckpoint.cs.meta",
+      "Bytes": 60,
+      "SHA256": "315E576EE7E91C15094F25BE535968D47EFAAED7F8499B15D83B7847F46C7BE9"
+    },
+    {
+      "Path": "Assets/Scripts/MainStageFloorCollisionSetup.cs",
+      "Bytes": 4688,
+      "SHA256": "E5C1AF6E2339D7EBFEF9485E4B2C79E1C39B1D355B33CEAE2D5D0045D480AF3F"
+    },
+    {
+      "Path": "Assets/Scripts/MainStageFloorCollisionSetup.cs.meta",
+      "Bytes": 60,
+      "SHA256": "C188C54C2E7DD1F952AC5723BD58F2A12DA8E9BDAE47E49188264F6575DF2B59"
+    },
+    {
+      "Path": "Assets/Scripts/MainStageGoalZone.cs",
+      "Bytes": 3418,
+      "SHA256": "54BB45CC0DCDF0CFAFC08FAD10E865059E058B15E635601D81E66305D162E9D9"
+    },
+    {
+      "Path": "Assets/Scripts/MainStageGoalZone.cs.meta",
+      "Bytes": 60,
+      "SHA256": "C71AE1507774AD3258231B19E558330EE0633F86A6CAE38014A3AFD1D7DFD9D4"
+    },
+    {
+      "Path": "Assets/Scripts/MainStageHud.cs",
+      "Bytes": 16980,
+      "SHA256": "30D2177386B912C1C8FC86961460208B53FD2F45DF0597552055C19E41ECAE50"
+    },
+    {
+      "Path": "Assets/Scripts/MainStageHud.cs.meta",
+      "Bytes": 59,
+      "SHA256": "44DCF7ED66F25B637D2C0AADEAC4FC0D9A359B8E662CA8B05C9A0EEC965FCDF4"
+    },
+    {
+      "Path": "Assets/Scripts/MainStagePreview.cs",
+      "Bytes": 9740,
+      "SHA256": "54F936699CBD72D62542B839619D0A7F01F2ADDCD0FAE9EEF6FE1A55B66A7DCD"
+    },
+    {
+      "Path": "Assets/Scripts/MainStagePreview.cs.meta",
+      "Bytes": 59,
+      "SHA256": "05E76D5C6342F12F6D0F3CDCBC13D74BE0D48AA55F564691BC7A6F68D84ABE21"
+    },
+    {
+      "Path": "Assets/Scripts/MainStageRespawnOnFall.cs",
+      "Bytes": 9002,
+      "SHA256": "314060136DFB7846AE7EBBC43CFAF0028625B839B4B9A05E9171D4F5830C4D8C"
+    },
+    {
+      "Path": "Assets/Scripts/MainStageRespawnOnFall.cs.meta",
+      "Bytes": 59,
+      "SHA256": "9F834FDB1ED94331BAE143DBDD5B772E74FD6E1EF8BBFA48CFDBA379705311A2"
+    },
+    {
+      "Path": "Assets/Scripts/MainStageSectionFiveSetup.cs",
+      "Bytes": 16319,
+      "SHA256": "B7419423F4814C47A3B031C1C5221FBBD26B9272695050E76FFA299879D6DEF7"
+    },
+    {
+      "Path": "Assets/Scripts/MainStageSectionFiveSetup.cs.meta",
+      "Bytes": 60,
+      "SHA256": "37DCA4F418178EA97E01B0C7582E9BC5C54459BC68C0EF2C592F1BD992FF28DA"
+    },
+    {
+      "Path": "Assets/Scripts/MainStageSectionFourSetup.cs",
+      "Bytes": 10688,
+      "SHA256": "C1173EA1C61B95A6DDD3994456ED34B0D5E1167C04A4EDDDD43FD6E13012A6DC"
+    },
+    {
+      "Path": "Assets/Scripts/MainStageSectionFourSetup.cs.meta",
+      "Bytes": 60,
+      "SHA256": "B64827BD46C50CB6E0F48DBB92C38601C8E02B6302DE42AC72E02C16292300C9"
+    },
+    {
+      "Path": "Assets/Scripts/MainStageSectionNineSetup.cs",
+      "Bytes": 9625,
+      "SHA256": "794454C44069D0430C9136AF0CADE40B72C513E3708C7A594B5E1CD62A5566DA"
+    },
+    {
+      "Path": "Assets/Scripts/MainStageSectionNineSetup.cs.meta",
+      "Bytes": 240,
+      "SHA256": "D3BC712787CA52A1F986EA259F227554B450C1C4B6A6F5F08D9FD59EC3096946"
+    },
+    {
+      "Path": "Assets/Scripts/MainStageSectionSevenSetup.cs",
+      "Bytes": 11154,
+      "SHA256": "C5D3845135FA2A83DE7B1C10200F5630FFFBF25F96D144B977187E80C4D95513"
+    },
+    {
+      "Path": "Assets/Scripts/MainStageSectionSevenSetup.cs.meta",
+      "Bytes": 60,
+      "SHA256": "EE678D1D2DA8DB8F2F10A86746CDC40094E20D727492BD6B16B9948C1DF6CF9B"
+    },
+    {
+      "Path": "Assets/Scripts/MainStageSectionSixSetup.cs",
+      "Bytes": 12264,
+      "SHA256": "71B394FDF99A0EDCBB4085774AA1F4FC263054A799EEC641179FAE527A74E482"
+    },
+    {
+      "Path": "Assets/Scripts/MainStageSectionSixSetup.cs.meta",
+      "Bytes": 60,
+      "SHA256": "7E9F65D1F76E04978A1D3DD18432E70267354E2405E8AE1072FC8AFE4E738E7E"
+    },
+    {
+      "Path": "Assets/Scripts/MainStageSectionTenSetup.cs",
+      "Bytes": 9092,
+      "SHA256": "80095B57B5EA63B2768FFAEAC76DBE15270EFB3B9D0669E84F65B2CCDE134E11"
+    },
+    {
+      "Path": "Assets/Scripts/MainStageSectionTenSetup.cs.meta",
+      "Bytes": 60,
+      "SHA256": "B2D021BB3A99C8EBE6B2F9E2578395CF19321FA0EAB211637B19C8DDBF38591A"
+    },
+    {
+      "Path": "Assets/Scripts/MainStageSectionThreeRecoveryStairs.cs",
+      "Bytes": 7367,
+      "SHA256": "299FD4EF8B12C0C741ECC2C55B24A5110F6DB45C46F53EA31810330AC2EE8714"
+    },
+    {
+      "Path": "Assets/Scripts/MainStageSectionThreeRecoveryStairs.cs.meta",
+      "Bytes": 60,
+      "SHA256": "47A1DA51DC0E49771C8072599DB9BA14DB98550F817120961031A207ED994C60"
+    },
+    {
+      "Path": "Assets/Scripts/MainStageSectionThreeRecoverySwitch.cs",
+      "Bytes": 5221,
+      "SHA256": "740694FF88F82362DA4C42170D5C415206D4D1808A83B07EB2D5CA75F32F0F1A"
+    },
+    {
+      "Path": "Assets/Scripts/MainStageSectionThreeRecoverySwitch.cs.meta",
+      "Bytes": 60,
+      "SHA256": "6E59E3656CBDC0F9DE4A5633EF270802932B2B1B45495DE5978D91DB2E07FD8D"
+    },
+    {
+      "Path": "Assets/Scripts/MainStageSectionThreeSetup.cs",
+      "Bytes": 12907,
+      "SHA256": "B5F3F8CDF4644D93BC0FAACD3462D06BCEBB83366F0CC7AF64A9D22E7AFEFF08"
+    },
+    {
+      "Path": "Assets/Scripts/MainStageSectionThreeSetup.cs.meta",
+      "Bytes": 60,
+      "SHA256": "2D049BA7E98EE2BCEE976E8A6C41F632A40CCAA07BD6160C54AD0572F862F2B3"
+    },
+    {
+      "Path": "Assets/Scripts/MainStageSectionTwoSetup.cs",
+      "Bytes": 8585,
+      "SHA256": "4169465AF91057F291D7A077BA26D17E6DFB9CD3F6716C904379FA39CD75DCFC"
+    },
+    {
+      "Path": "Assets/Scripts/MainStageSectionTwoSetup.cs.meta",
+      "Bytes": 60,
+      "SHA256": "1C3FF22AAA0CF189B81DACA63B3A3FDF48643FFC23DD8CDEF91FB6146795EC94"
+    },
+    {
+      "Path": "Assets/Scripts/MainStageVisuals.cs",
+      "Bytes": 34820,
+      "SHA256": "60A0EF8FE8FCD9F7E127AB043A982A7753C97EA918FD2F01CBE3E5B5C68EBAA6"
+    },
+    {
+      "Path": "Assets/Scripts/MainStageVisuals.cs.meta",
+      "Bytes": 60,
+      "SHA256": "E02B9411DD9B374D867E8C74CC3EBB15B930917A6914BB25E38B12268C3D371F"
+    },
+    {
+      "Path": "Assets/Scripts/OneWayRailPlatform.cs",
+      "Bytes": 1853,
+      "SHA256": "CF0DF28CAA39A81E58A9A4410195635F000BC4D0BCE2975CD032CEFB7070A6BC"
+    },
+    {
+      "Path": "Assets/Scripts/OneWayRailPlatform.cs.meta",
+      "Bytes": 60,
+      "SHA256": "2CAA513CE1F20E23F0ECC8C4078D005914812CE25842765397267F72AF1E946E"
+    },
+    {
+      "Path": "Assets/Scripts/PlatformOccludedLightHazard.cs",
+      "Bytes": 2910,
+      "SHA256": "41417E56B6C7EE947AC420760A946932CDAF7C38A41358B1E592E47144AECC8E"
+    },
+    {
+      "Path": "Assets/Scripts/PlatformOccludedLightHazard.cs.meta",
+      "Bytes": 60,
+      "SHA256": "DD3F16144608303F0931F701F08B8CF182B08EC668266DBAE002038F1E37AD7F"
+    },
+    {
+      "Path": "Assets/Scripts/PlayerContactShadow.cs",
+      "Bytes": 4457,
+      "SHA256": "E383575D312F582C7754D271D79657EF218D11C91FD1A10F19154D60917B2C28"
+    },
+    {
+      "Path": "Assets/Scripts/PlayerContactShadow.cs.meta",
+      "Bytes": 60,
+      "SHA256": "1CC3B10FB7045996E209B27A365AB9DF27F67A0F47D3B422DF0206DAD534A63C"
+    },
+    {
+      "Path": "Assets/Scripts/PlayerMover.cs",
+      "Bytes": 31311,
+      "SHA256": "02F6BAB1132599184CC6450C5053990B612998FF657372F56CD9877CB5201F8D"
+    },
+    {
+      "Path": "Assets/Scripts/PlayerMover.cs.meta",
+      "Bytes": 59,
+      "SHA256": "3DB8CD444A164915B7CC62EFE0919A8E1AB87CB017E26D160F9F1EFA31FF24DD"
+    },
+    {
+      "Path": "Assets/Scripts/PrototypeAudioFeedback.cs",
+      "Bytes": 13487,
+      "SHA256": "4841E3528ABCE8D6A41DD05423E7C468BC659454613D700BE0C620178B51BA80"
+    },
+    {
+      "Path": "Assets/Scripts/PrototypeAudioFeedback.cs.meta",
+      "Bytes": 243,
+      "SHA256": "1292BC2142F87E02A71BDFD768F4BB054E1FBB04361B91AEE981BFAD412A289B"
+    },
+    {
+      "Path": "Assets/Scripts/PrototypeHud.cs",
+      "Bytes": 14025,
+      "SHA256": "2E6D442C4933DDA55AA3680ED1A835372E53274FE0C7404498684DC23ABB6780"
+    },
+    {
+      "Path": "Assets/Scripts/PrototypeHud.cs.meta",
+      "Bytes": 59,
+      "SHA256": "BD345ACB412CF7EA7FC0AE27FD0558A9282F573560A11C9525154CC39F32E3CC"
+    },
+    {
+      "Path": "Assets/Scripts/PrototypeRunController.cs",
+      "Bytes": 18686,
+      "SHA256": "EC6FD5170E7C00A97593B28E109B7FC3FBC5D6F922B5AA1B68823467E3623977"
+    },
+    {
+      "Path": "Assets/Scripts/PrototypeRunController.cs.meta",
+      "Bytes": 60,
+      "SHA256": "D6F2FEF8E64A4FB2F6E6AE9AD8AAEC16028DD2A512B4F0C0B16C55A46E0BA1C8"
+    },
+    {
+      "Path": "Assets/Scripts/RecoverySwitchVisual.cs",
+      "Bytes": 4804,
+      "SHA256": "05BD902295BE5CB3939B76163E898100A7CA876C5406405B73F942823A643F7B"
+    },
+    {
+      "Path": "Assets/Scripts/RecoverySwitchVisual.cs.meta",
+      "Bytes": 60,
+      "SHA256": "3A96B6E5B033D67C6E958C4EBAD1E7360DCFD426B471B1ABEE7582520CC8B719"
+    },
+    {
+      "Path": "Assets/Scripts/RespawnWeaveVisual.cs",
+      "Bytes": 7565,
+      "SHA256": "DF4C69C06EEA02C41CDC709D7770E6E682C2931A03ED429319562630F26C2F0D"
+    },
+    {
+      "Path": "Assets/Scripts/RespawnWeaveVisual.cs.meta",
+      "Bytes": 60,
+      "SHA256": "0F6BEBDD8C304D5596F070E79EB14493B703D08DB7F4F5DCBE89BA388F374DFD"
+    },
+    {
+      "Path": "Assets/Scripts/RopeAnchorRingVisual.cs",
+      "Bytes": 3219,
+      "SHA256": "75473BAE5602BC705F8ACCAB8D742D965669230C890718C2A1751A72ED5B808E"
+    },
+    {
+      "Path": "Assets/Scripts/RopeAnchorRingVisual.cs.meta",
+      "Bytes": 60,
+      "SHA256": "88213284322020E451B65238A3FEF4CDB37E75D5354C6C3730A65BE00EB6A834"
+    },
+    {
+      "Path": "Assets/Scripts/RopeBodyVisual.cs",
+      "Bytes": 96724,
+      "SHA256": "456589434AD42597EFD0133E8615D2D616F61696022EA5DE506EAE102E3C2D01"
+    },
+    {
+      "Path": "Assets/Scripts/RopeBodyVisual.cs.meta",
+      "Bytes": 242,
+      "SHA256": "3D6A30F18948954A2AA3D83DF0BB98D5B849A97FBC7A5571DF23B4C426CDECD9"
+    },
+    {
+      "Path": "Assets/Scripts/RopeBridgeBindings.cs",
+      "Bytes": 9765,
+      "SHA256": "04AFBF9636F7DF82EB881FB9E517EF50730EE17E22696115AD0F537F04C07E1C"
+    },
+    {
+      "Path": "Assets/Scripts/RopeBridgeBindings.cs.meta",
+      "Bytes": 60,
+      "SHA256": "4ED5F395B3DB9E1C36E03640E13BD7BEE631F543227AAF3DE8EB89C03D837C87"
+    },
+    {
+      "Path": "Assets/Scripts/RopeBridgeMergeVisual.cs",
+      "Bytes": 3853,
+      "SHA256": "54820280BC1F2225234305198CC6595A0A79B7E0E6E498EBE4FB7FCC7A48CC71"
+    },
+    {
+      "Path": "Assets/Scripts/RopeBridgeMergeVisual.cs.meta",
+      "Bytes": 60,
+      "SHA256": "B3F6B833BCA472B61AF9F0AC769A7098997AD9CB01FE19D71040B144E0AE1CCA"
+    },
+    {
+      "Path": "Assets/Scripts/RopeBridgeReveal.cs",
+      "Bytes": 3875,
+      "SHA256": "1826DD30B1295B0BA48CE45ECBEE3DCE78A38A7830CEA3388F4E1A60A53BC1ED"
+    },
+    {
+      "Path": "Assets/Scripts/RopeBridgeReveal.cs.meta",
+      "Bytes": 60,
+      "SHA256": "26CF756B6B70BD7D3887C0BA610150C7B82FAFE7077817E5A033A4DB4E81B14F"
+    },
+    {
+      "Path": "Assets/Scripts/RopeBridgeStepVisual.cs",
+      "Bytes": 10199,
+      "SHA256": "ED5709A5074A0FF9F28FD704AC5FBB679C89BD99A2AA0619DBB74B9A8D5C34D6"
+    },
+    {
+      "Path": "Assets/Scripts/RopeBridgeStepVisual.cs.meta",
+      "Bytes": 60,
+      "SHA256": "1CEC3882A566ACFAD575D0D42F6233D4CCC1E516C8F43594E799AA5D08D8D5E9"
+    },
+    {
+      "Path": "Assets/Scripts/RopeBuildFluff.cs",
+      "Bytes": 4406,
+      "SHA256": "A7B848900A01D16303D5D86E68B968FB6A0F93FAC7D6DF6FFD93695667EB0A47"
+    },
+    {
+      "Path": "Assets/Scripts/RopeBuildFluff.cs.meta",
+      "Bytes": 60,
+      "SHA256": "1F62DE7AA8772ECAE0E1171699AD65E65A94EF2338067745631DBC4E2375F5E4"
+    },
+    {
+      "Path": "Assets/Scripts/RopeController.cs",
+      "Bytes": 40981,
+      "SHA256": "3EF4A50076994279839F398652180256F5EC37C01B954EEEFC67C79B831E25D6"
+    },
+    {
+      "Path": "Assets/Scripts/RopeController.cs.meta",
+      "Bytes": 59,
+      "SHA256": "A828A1D41C632C9A6CCF89614CED8E5E9C9FF9D6EB5C80D01B3B03BAA67FBC29"
+    },
+    {
+      "Path": "Assets/Scripts/RopeFaceLandmarks.cs",
+      "Bytes": 4356,
+      "SHA256": "636719EF91339B0D8D866DA902AEC3F0EBF9C0E153ADBD6D92E3A9B2597B5A43"
+    },
+    {
+      "Path": "Assets/Scripts/RopeFaceLandmarks.cs.meta",
+      "Bytes": 60,
+      "SHA256": "31E5683F50922E826230BD948797DF3F8E4343844E2BE5B5EFDFB5CE8BCCFACA"
+    },
+    {
+      "Path": "Assets/Scripts/RopeLandingFluff.cs",
+      "Bytes": 8160,
+      "SHA256": "94298C179FC93E795CBA53086C63F6981DA92C252663FD8A61FB5ABF70A0FDC0"
+    },
+    {
+      "Path": "Assets/Scripts/RopeLandingFluff.cs.meta",
+      "Bytes": 60,
+      "SHA256": "7776635486AA2BFFF91AE8AE90DFD129E30893969976C6867E85B9082E027261"
+    },
+    {
+      "Path": "Assets/Scripts/RopeMissVisual.cs",
+      "Bytes": 5306,
+      "SHA256": "4CDD94DE898A5240E2192F04E3C4AB891CB0222756BA1D9A585D1CBD4100BA64"
+    },
+    {
+      "Path": "Assets/Scripts/RopeMissVisual.cs.meta",
+      "Bytes": 60,
+      "SHA256": "1AD84E2233F2A11A2F6617BC6AD821DE831AF70151AC2F06219BCAE9F03E91ED"
+    },
+    {
+      "Path": "Assets/Scripts/RopePlatformAnchor.cs",
+      "Bytes": 2007,
+      "SHA256": "BB3309FE1E78FCE3261683E25BD71DFBDED4C4BF210A062C9E60E3F1409709C0"
+    },
+    {
+      "Path": "Assets/Scripts/RopePlatformAnchor.cs.meta",
+      "Bytes": 60,
+      "SHA256": "DE999D75CEA1A6AD07DA6F99E442D2E2B0D07EDEE5F57ED0667BF7014CFA197F"
+    },
+    {
+      "Path": "Assets/Scripts/RopePlatformBuilder.cs",
+      "Bytes": 28353,
+      "SHA256": "11ECB4C1870CB8EF0449343155559211A5E1D9E1321132BCE0DCF8E14E279FD2"
+    },
+    {
+      "Path": "Assets/Scripts/RopePlatformBuilder.cs.meta",
+      "Bytes": 243,
+      "SHA256": "8E92B8DB909CC3B43AB8812160BAF0507CD7C66220E759712443EC7C50BB824F"
+    },
+    {
+      "Path": "Assets/Scripts/RopePoseParts.cs",
+      "Bytes": 2627,
+      "SHA256": "DC3A769D4BC9424D8427EFF168F25D421C64CEFC11D083A4B6E0F76D0919D632"
+    },
+    {
+      "Path": "Assets/Scripts/RopePoseParts.cs.meta",
+      "Bytes": 60,
+      "SHA256": "CFB642A173D2E79D54C987AC8E64E817BFDCFD220AEBFF82D43E5CFCE039D75E"
+    },
+    {
+      "Path": "Assets/Scripts/RopeResource.cs",
+      "Bytes": 2196,
+      "SHA256": "026476F48B89BAC7158ABEBC1744BF41553BAE4981C41B7148B41DCED63860EB"
+    },
+    {
+      "Path": "Assets/Scripts/RopeResource.cs.meta",
+      "Bytes": 59,
+      "SHA256": "BD5A719D4713D860ED1E7B58D469883D495811695278D9085FA2F9A93B730681"
+    },
+    {
+      "Path": "Assets/Scripts/RopeResourceExpression.cs",
+      "Bytes": 5498,
+      "SHA256": "5EA7FE809C488CAF41BA016048BDA01CBD3B46825AE10DF1613ECBBB06553A6D"
+    },
+    {
+      "Path": "Assets/Scripts/RopeResourceExpression.cs.meta",
+      "Bytes": 60,
+      "SHA256": "D4505AFEDA2E83570C0F0A67B2F2A3353C4B0DF32BB18B4A94C966B50795D887"
+    },
+    {
+      "Path": "Assets/Scripts/RopeResourceGauge.cs",
+      "Bytes": 9178,
+      "SHA256": "7456E77B6B3D4E7B48882A34697CF186A55D6FAC18312E7E863D4C72FD0CA97A"
+    },
+    {
+      "Path": "Assets/Scripts/RopeResourceGauge.cs.meta",
+      "Bytes": 240,
+      "SHA256": "18D570A82EBD2B6A4E066EDE79E312395F59A0F10E40BB61A698F3A7EC78B94B"
+    },
+    {
+      "Path": "Assets/Scripts/RopeRetractVisual.cs",
+      "Bytes": 4822,
+      "SHA256": "136E4C27E2E6F5CB556E131290BEFE8E8854DC41C8BA767CE5A1D2468DC0C932"
+    },
+    {
+      "Path": "Assets/Scripts/RopeRetractVisual.cs.meta",
+      "Bytes": 60,
+      "SHA256": "4BE47DAA07BC98F62DDA7A35168B03280C0CF35661823E87454FE3A950EE00F6"
+    },
+    {
+      "Path": "Assets/Scripts/RopeSpikeHazard.cs",
+      "Bytes": 3339,
+      "SHA256": "F8A1234C574E1E6DAA4B66027F1E00AE2D52E0AF1DEF791099EE4A1206169EDC"
+    },
+    {
+      "Path": "Assets/Scripts/RopeSpikeHazard.cs.meta",
+      "Bytes": 60,
+      "SHA256": "408F89A26C608F0A466B71383584BA5398F83E990B09911967059C5D38D03E4E"
+    },
+    {
+      "Path": "Assets/Scripts/RopeSwingPoseState.cs",
+      "Bytes": 2193,
+      "SHA256": "40EC9F8D42A85A65E78EE6CAA52326FEE53CFF2B9C8E244C40C2B8968CFDBD41"
+    },
+    {
+      "Path": "Assets/Scripts/RopeSwingPoseState.cs.meta",
+      "Bytes": 60,
+      "SHA256": "3181082EEA8F32AFD61A701D6517446FFBA1BBCD9A0D67868F2DF395717A7918"
+    },
+    {
+      "Path": "Assets/Scripts/SceneObjectLookup.cs",
+      "Bytes": 925,
+      "SHA256": "A47876C57246A83F1EAB7C2104CC512D4CB72D1F515EF1669C5BB5BE591E22BC"
+    },
+    {
+      "Path": "Assets/Scripts/SceneObjectLookup.cs.meta",
+      "Bytes": 60,
+      "SHA256": "2692251CD7C244E620FC0C84AB384BF1042537D753C995B9317EBB66DB756C8C"
+    },
+    {
+      "Path": "Assets/Scripts/SectionArrivalFeedback.cs",
+      "Bytes": 6303,
+      "SHA256": "62E6E94AB52EA8B1548798240C991A6BDFF7DA687BAE3BB0E63CE89FBAF76424"
+    },
+    {
+      "Path": "Assets/Scripts/SectionArrivalFeedback.cs.meta",
+      "Bytes": 60,
+      "SHA256": "85E3F9D87EAA665A50F777C43CE017E8838CBED49B61665E2A046649E11A54EA"
+    },
+    {
+      "Path": "Assets/Scripts/SignGlanceState.cs",
+      "Bytes": 1682,
+      "SHA256": "8F2885952D8E40F759EF8CD23CCF483E1D08744275C21945E690D0CB07B2BA1C"
+    },
+    {
+      "Path": "Assets/Scripts/SignGlanceState.cs.meta",
+      "Bytes": 60,
+      "SHA256": "8EA7B35FB0ECA01E3F9F7647D26AAFA8B1812CBA7F08C4B199CBCE7E4E2C3F04"
+    },
+    {
+      "Path": "Assets/Scripts/SolidSprite.cs",
+      "Bytes": 2200,
+      "SHA256": "080914786FB9155C52B1FD8151E3E952882E2D58F581613EA3F53866D85254CB"
+    },
+    {
+      "Path": "Assets/Scripts/SolidSprite.cs.meta",
+      "Bytes": 59,
+      "SHA256": "4FF1C36B389536A23610AE248037CEC364C0FDBC496B06B0D24E74D28533D71E"
+    },
+    {
+      "Path": "Assets/Scripts/SolidSwingSurface.cs",
+      "Bytes": 1197,
+      "SHA256": "20A480CAB35AE1FCA61B9222C6051F238A98C39F522162499F724876B95B9F74"
+    },
+    {
+      "Path": "Assets/Scripts/SolidSwingSurface.cs.meta",
+      "Bytes": 60,
+      "SHA256": "561FB76169E7A806D81BE0EC119144E29C0D746AEE1A338C47DCBD4ECBC26174"
+    },
+    {
+      "Path": "Assets/Scripts/StageCatalog.cs",
+      "Bytes": 2455,
+      "SHA256": "230747D74843DF78DABDD4488540F404D51F03D8520F63C8E1727268E5DA320F"
+    },
+    {
+      "Path": "Assets/Scripts/StageCatalog.cs.meta",
+      "Bytes": 60,
+      "SHA256": "9E205114503A40EC839A56D8A4F7F934D7B2880392E0DACBDC6D310B4B8B38E9"
+    },
+    {
+      "Path": "Assets/Scripts/StageDioramaPlayerArt.cs",
+      "Bytes": 4784,
+      "SHA256": "FAFF5F458B000A8F2E94CC28C3C724743E0B2260538388154522AD45279F088B"
+    },
+    {
+      "Path": "Assets/Scripts/StageDioramaPlayerArt.cs.meta",
+      "Bytes": 60,
+      "SHA256": "731A986187C42480A8765DF8998EC7B3647C3C103CC609E7AB8EE05B9F467DF2"
+    },
+    {
+      "Path": "Assets/Scripts/StageOverlayControls.cs",
+      "Bytes": 19202,
+      "SHA256": "7D63DCBAA1DBCE7FB04A8E387B0013050D343084F3FC6D267F4064A69A28755A"
+    },
+    {
+      "Path": "Assets/Scripts/StageOverlayControls.cs.meta",
+      "Bytes": 60,
+      "SHA256": "7D4F32291EEA86C1E542B3FE1BD69B7FD8ED7A22010511E4112F24E220F48CAB"
+    },
+    {
+      "Path": "Assets/Scripts/StageProgress.cs",
+      "Bytes": 1459,
+      "SHA256": "4119BAB062A2C0F0DDEA9101FE71FFB9FA53BB508AB73F1A98FE6B65C215CFA6"
+    },
+    {
+      "Path": "Assets/Scripts/StageProgress.cs.meta",
+      "Bytes": 60,
+      "SHA256": "8C7146993E9C95EA62F96B0CE038033564BCEDA236083E43329E4AFE95FEDAFE"
+    },
+    {
+      "Path": "Assets/Scripts/StageSelectionDioramaArt.cs",
+      "Bytes": 8678,
+      "SHA256": "88EEF368D70B72B01C9B211310D77EB7250309C2271F2A4D36872DC5333A104D"
+    },
+    {
+      "Path": "Assets/Scripts/StageSelectionDioramaArt.cs.meta",
+      "Bytes": 60,
+      "SHA256": "C38C0A2C8E7D9219B25903707073E75D1D52EC104AA8C0ABACDB2EC85AB501D5"
+    },
+    {
+      "Path": "Assets/Scripts/StageSelectionDioramaState.cs",
+      "Bytes": 5035,
+      "SHA256": "2071017134B4DF89D25C4C68F8F2E26C358DC658AEF482146E00F5068C3C3BA5"
+    },
+    {
+      "Path": "Assets/Scripts/StageSelectionDioramaState.cs.meta",
+      "Bytes": 60,
+      "SHA256": "997A011EC184E10F0BC1E628FF4FF3A26CABD3EAC257A8AF9F4B2D17507F93B1"
+    },
+    {
+      "Path": "Assets/Scripts/StageSelectionView.cs",
+      "Bytes": 21125,
+      "SHA256": "DE0E76B56065337BB46CF256AD5778A9C9BB9CB1FA74AEE6E8C8C724FFAB3CB5"
+    },
+    {
+      "Path": "Assets/Scripts/StageSelectionView.cs.meta",
+      "Bytes": 60,
+      "SHA256": "FDD0815BEB53499476D52E632C623EC390BDACED3FB78B0ABB98B89C8E753173"
+    },
+    {
+      "Path": "Assets/Scripts/StageSelectionWeave.cs",
+      "Bytes": 1792,
+      "SHA256": "7B430326CB537648A167720F3CD53DEA99411FCC0CC432CC6D4D6072DE5047DE"
+    },
+    {
+      "Path": "Assets/Scripts/StageSelectionWeave.cs.meta",
+      "Bytes": 60,
+      "SHA256": "22E20CFF94D3D2DA93B6DBAA1D2C48FB311F68F8BD6BC66A83003582E7F8675D"
+    },
+    {
+      "Path": "Assets/Scripts/StageStartCurtainView.cs",
+      "Bytes": 7576,
+      "SHA256": "C629C33C89DB55241BC6B71DDAEFA16C8B9DB35DE1D6D181AC559F7E4F87CB31"
+    },
+    {
+      "Path": "Assets/Scripts/StageStartCurtainView.cs.meta",
+      "Bytes": 60,
+      "SHA256": "7C09E082641D579F7003E2BBEE1B8CD241B36FE62C0DB5DF5399DFA50B439E00"
+    },
+    {
+      "Path": "Assets/Scripts/StageStartTransition.cs",
+      "Bytes": 8991,
+      "SHA256": "294E890FAC62F18212AB7628E65B799D1E299CCB362F7EE579602AE8FBDEBF3F"
+    },
+    {
+      "Path": "Assets/Scripts/StageStartTransition.cs.meta",
+      "Bytes": 60,
+      "SHA256": "8112BCD1B1273F25AE4D2F1EEC1BDA60CB6AAE3F91CF123C91B9AA57D92E0530"
+    },
+    {
+      "Path": "Assets/Scripts/SwingAttachPoseState.cs",
+      "Bytes": 1524,
+      "SHA256": "599A1E81F768B83A623B19970BA1904E1B6B171D93A06ABB566D6610CF7404C3"
+    },
+    {
+      "Path": "Assets/Scripts/SwingAttachPoseState.cs.meta",
+      "Bytes": 60,
+      "SHA256": "5634AA4FDC87ABDAC6D04CF9733158398DDFEDD922EF6C381C67B506417D3BBE"
+    },
+    {
+      "Path": "Assets/Scripts/SwingPassThroughRailPlatform.cs",
+      "Bytes": 3151,
+      "SHA256": "376683C77BD3A719A78A1807460D3673EFD7D64FDE865EFAD67E000F80C2017A"
+    },
+    {
+      "Path": "Assets/Scripts/SwingPassThroughRailPlatform.cs.meta",
+      "Bytes": 60,
+      "SHA256": "8958C466DF5A1F2EB35B26392AE1EA1371801BEBAE72743E6CBD122F5057562D"
+    },
+    {
+      "Path": "Assets/Scripts/SwingReleasePoseState.cs",
+      "Bytes": 2429,
+      "SHA256": "D1725F4B8A25868A348B0E3813CE0EF75304209A568A804F4E428AA5C8DC9CA4"
+    },
+    {
+      "Path": "Assets/Scripts/SwingReleasePoseState.cs.meta",
+      "Bytes": 60,
+      "SHA256": "46615B9A352618AF291D8B63B84769E41CA548C398CF564D8FF96F8CE5F9098B"
+    },
+    {
+      "Path": "Assets/Scripts/SwitchPressPoseState.cs",
+      "Bytes": 1153,
+      "SHA256": "6D24E23F1E75A2BCD3A2511F2B409FE518CD2B8DE47E2130D7F21A7E2B63E2F8"
+    },
+    {
+      "Path": "Assets/Scripts/SwitchPressPoseState.cs.meta",
+      "Bytes": 60,
+      "SHA256": "03E350BC3C7CFBC027A2D43442FE8418C01A454B00F64191912A58FE67EC81AA"
+    },
+    {
+      "Path": "Assets/Scripts/ToySpikeVisual.cs",
+      "Bytes": 8317,
+      "SHA256": "E363B753A12B0FBC77A721A54573C2E062AF0FBFD35EF49E06FB2E757CE5EF13"
+    },
+    {
+      "Path": "Assets/Scripts/ToySpikeVisual.cs.meta",
+      "Bytes": 60,
+      "SHA256": "F9FA4D6C305AADF3DF5B655E083ABE859C0FA72B30850BB61B6A6566814A0857"
+    },
+    {
+      "Path": "Assets/Scripts/TutorialBackgroundParallax.cs",
+      "Bytes": 3241,
+      "SHA256": "3E60492A7707B9C05FD01A5AA3686188C1F90E20A651C2E522C4A805D5A547D0"
+    },
+    {
+      "Path": "Assets/Scripts/TutorialBackgroundParallax.cs.meta",
+      "Bytes": 240,
+      "SHA256": "DE11AFD501F8926699A2D6FC88BBC2F7FFCC01B6B78F9B62560A4365AB8F9035"
+    },
+    {
+      "Path": "Assets/Scripts/TutorialCheckpoint.cs",
+      "Bytes": 2243,
+      "SHA256": "57D1506A5409688BD8CB5CF2FB25E79DF9976943F6A2032893D94623AF940ED4"
+    },
+    {
+      "Path": "Assets/Scripts/TutorialCheckpoint.cs.meta",
+      "Bytes": 60,
+      "SHA256": "01E3ED4EDE18BB4BC37FB995B5E8D117422AA0A68CE5ED5B73C285AB195BAF80"
+    },
+    {
+      "Path": "Assets/Scripts/TutorialCraftRoomLayers.cs",
+      "Bytes": 9773,
+      "SHA256": "E08312BCC8B61F31C9139EA0122AEA57726721263B4FB744A7AF7CDB10B7CE4F"
+    },
+    {
+      "Path": "Assets/Scripts/TutorialCraftRoomLayers.cs.meta",
+      "Bytes": 60,
+      "SHA256": "C27F91FB272A59B7E44E883CE58F24983A4BEA96DAB84B884947FF3D63094DB3"
+    },
+    {
+      "Path": "Assets/Scripts/TutorialFirstSectionVisuals.cs",
+      "Bytes": 25578,
+      "SHA256": "E64F5436AB426B5670511A22FE809771A43A5D3CCE69E8DC4F8425A90F818F66"
+    },
+    {
+      "Path": "Assets/Scripts/TutorialFirstSectionVisuals.cs.meta",
+      "Bytes": 60,
+      "SHA256": "6ADDF772A206432EADDC8368AD8438A87E354D06DB3364A103F6DCF19CCF0F7B"
+    },
+    {
+      "Path": "Assets/Scripts/TutorialGuideAnimation.cs",
+      "Bytes": 5693,
+      "SHA256": "BB2CBBC6C7AFA6EA22478D500932BEFB5CDDAB983C6DFF75EA9F2C374E59A8E5"
+    },
+    {
+      "Path": "Assets/Scripts/TutorialGuideAnimation.cs.meta",
+      "Bytes": 60,
+      "SHA256": "937ABEE514249A134F09AF887E0F182DB471DBAF052C9B6398ACB5D4C2D842AA"
+    },
+    {
+      "Path": "Assets/Scripts/TutorialSectionFourSetup.cs",
+      "Bytes": 13124,
+      "SHA256": "CA097254C033E04E2C486BDD900D800CB3226B2AA9A4CC62838BE7AEEE89B37C"
+    },
+    {
+      "Path": "Assets/Scripts/TutorialSectionFourSetup.cs.meta",
+      "Bytes": 60,
+      "SHA256": "E18000A22F5532D1D44E30861849CCCDF5832C284DDDE8393FBB9E4295CF1878"
+    },
+    {
+      "Path": "Assets/Scripts/TutorialSectionGuide.cs",
+      "Bytes": 44503,
+      "SHA256": "380F0E643FE2E76BC3D561C3157982B268AEE650B3648357AF8D3A1BF336F385"
+    },
+    {
+      "Path": "Assets/Scripts/TutorialSectionGuide.cs.meta",
+      "Bytes": 60,
+      "SHA256": "393D6F2D3D6FC8ED9B3D627A5E3A6F417B906978C4CCA0DEBCAD6297818140C5"
+    },
+    {
+      "Path": "Assets/Scripts/TutorialSectionOneSetup.cs",
+      "Bytes": 7690,
+      "SHA256": "64398AE8E596131799DBAAE7EC914911A08CCFF24217006DBFF2FCD97D6178DC"
+    },
+    {
+      "Path": "Assets/Scripts/TutorialSectionOneSetup.cs.meta",
+      "Bytes": 60,
+      "SHA256": "1A90A634BC069A8E3E0E0CBD4C685E6C7DE93315B005396907AA39F65F8C8D32"
+    },
+    {
+      "Path": "Assets/Scripts/TutorialSectionThreeSetup.cs",
+      "Bytes": 8855,
+      "SHA256": "B5A4788208FD57ACEE9735EAFF24780F2C55FE7D56AFE3F14A97099ADEE0E076"
+    },
+    {
+      "Path": "Assets/Scripts/TutorialSectionThreeSetup.cs.meta",
+      "Bytes": 60,
+      "SHA256": "7ADB34AB8AD5E682119D8B311FCF637FA251EB4CA2EC4D3D0528A5A458270DE9"
+    },
+    {
+      "Path": "Assets/Scripts/TutorialSectionTwoSetup.cs",
+      "Bytes": 8189,
+      "SHA256": "CCD88A949811ADA96D1751EBDCB8273D94E6094D8A06975C8522A4ED30AE99E1"
+    },
+    {
+      "Path": "Assets/Scripts/TutorialSectionTwoSetup.cs.meta",
+      "Bytes": 60,
+      "SHA256": "BDF9F932D94BDFF8F3C018D3BE5FA61AF6BC925609B78D355C3BF66AE7A38BDF"
+    },
+    {
+      "Path": "Assets/Scripts/TutorialSignGreeting.cs",
+      "Bytes": 4157,
+      "SHA256": "974F45580BBB8A3E70D468C01BBBC2B2EB0C145F34F9A8783FFAFFC8EF7307DD"
+    },
+    {
+      "Path": "Assets/Scripts/TutorialSignGreeting.cs.meta",
+      "Bytes": 60,
+      "SHA256": "1E2548015F79F29271324C85DEA760F14FD3AC1B9EE5E7A765989FD63215AAA5"
+    },
+    {
+      "Path": "Assets/Scripts/TutorialSignInscription.cs",
+      "Bytes": 20076,
+      "SHA256": "5B0194605AC744E2AECF3106C1911DAD2CFE6C34BB61F9ACB859E9CD22C1AB1E"
+    },
+    {
+      "Path": "Assets/Scripts/TutorialSignInscription.cs.meta",
+      "Bytes": 60,
+      "SHA256": "ECF3888F367FE37B003E94614DF490A74BB5F2D52233481DD5FFF28D8C61ABF1"
+    },
+    {
+      "Path": "Assets/Scripts/WallPushPoseState.cs",
+      "Bytes": 3069,
+      "SHA256": "BDD0787939BCBE38230171093959219DCA289830535DE321689687F70D5E552B"
+    },
+    {
+      "Path": "Assets/Scripts/WallPushPoseState.cs.meta",
+      "Bytes": 60,
+      "SHA256": "D5F9274E43B77C45234129F99949925C71D4B59BF21AB56CD5501A0D77A5FC5B"
+    },
+    {
+      "Path": "Assets/Scripts/WeavePoseState.cs",
+      "Bytes": 1411,
+      "SHA256": "2CCB520FDF01A90949A2426DF48723421AA6DE40559F6064444108F5F1310B0D"
+    },
+    {
+      "Path": "Assets/Scripts/WeavePoseState.cs.meta",
+      "Bytes": 60,
+      "SHA256": "E62BFE1A54629F4F199FAA6B02FABD0E049F055F37486FAA1C8C18C9ADE87EC1"
+    },
+    {
+      "Path": "Assets/Scripts/WoodenPlatformDepthVisual.cs",
+      "Bytes": 13135,
+      "SHA256": "6610FF28909CCB02BBE0C651B145572BF6827DD85EA649F1ABC702CE9AB20A88"
+    },
+    {
+      "Path": "Assets/Scripts/WoodenPlatformDepthVisual.cs.meta",
+      "Bytes": 60,
+      "SHA256": "D3DA17BEE846A641C4EEA8C56B5C2BB430B0A8B7AD604EC77D5541D950F426C9"
+    },
+    {
+      "Path": "Assets/Scripts/YarnRopeTexture.cs",
+      "Bytes": 2677,
+      "SHA256": "5F306EB66ABB54423B131F3166D6BD0DD72EE7CFA764AC20FB863016966C86B9"
+    },
+    {
+      "Path": "Assets/Scripts/YarnRopeTexture.cs.meta",
+      "Bytes": 60,
+      "SHA256": "94D9FC5C1F289A3884743D26CEDAE5E155C1441EB2D7936F660FF738EF922D14"
+    },
+    {
+      "Path": "Assets/ThirdParty.meta",
+      "Bytes": 169,
+      "SHA256": "4049AC374B0EB14389D7794B67595B926B6C365C3FFFA47DCD433DEA9B09E633"
+    },
+    {
+      "Path": "Assets/ThirdParty/KenneyImpactSounds.meta",
+      "Bytes": 169,
+      "SHA256": "9B55BFF5855CEE2649E79E54E7C2602CF9FEF337198385BED01446B730BB0ADC"
+    },
+    {
+      "Path": "Assets/ThirdParty/KenneyImpactSounds/License.txt",
+      "Bytes": 397,
+      "SHA256": "EF8E73E456D2C18367C9421EEFFCC22299AA57CA7944AA6BA9CDE7E9B6D1E690"
+    },
+    {
+      "Path": "Assets/ThirdParty/KenneyImpactSounds/License.txt.meta",
+      "Bytes": 155,
+      "SHA256": "EA4085AE9C42A4E1053E0795BC53091BC08D32B64A0ED3FB503B99EA17FD7C93"
+    },
+    {
+      "Path": "Assets/ThirdParty/MPlusRounded1c.meta",
+      "Bytes": 169,
+      "SHA256": "1F64F5099355F3D626CC219CB900FACEF6B740311F5F0C67614B79928064EF8C"
+    },
+    {
+      "Path": "Assets/ThirdParty/MPlusRounded1c/OFL.txt",
+      "Bytes": 4396,
+      "SHA256": "9B7CBB54C083E9C21E63952C08389C5FC7691351FB70729E47C91917BFE60097"
+    },
+    {
+      "Path": "Assets/ThirdParty/MPlusRounded1c/OFL.txt.meta",
+      "Bytes": 155,
+      "SHA256": "D4866A5741CD6A8A7771E11BE9A92098EC99E578745B90A1A9E202F7605AA959"
+    },
+    {
+      "Path": "Docs/LEARNING_LOG.md",
+      "Bytes": 490929,
+      "SHA256": "828F77E02A3CEE098BDDA6DEA41C15ADE06C9D2734E0612860BF831D036797B9"
+    },
+    {
+      "Path": "Packages/manifest.json",
+      "Bytes": 248,
+      "SHA256": "3525BCC13BA17777DE452692EF273585380245FE804DD2CA1712E3BC5D274034"
+    },
+    {
+      "Path": "Packages/packages-lock.json",
+      "Bytes": 728,
+      "SHA256": "9A330D81395090EFA172F2BF18AED2592CD0B37818086C09ECDA2D8DA378324F"
+    },
+    {
+      "Path": "ProjectSettings/AudioManager.asset",
+      "Bytes": 523,
+      "SHA256": "9543C41DBFC7D3951217C4DD9481ED026EB8E529B85ECF4463969A0FEA747729"
+    },
+    {
+      "Path": "ProjectSettings/ClusterInputManager.asset",
+      "Bytes": 114,
+      "SHA256": "40E65DD214BF254955D2C8829CA8CE2130FD3510485560CE012E9A1DDD93E623"
+    },
+    {
+      "Path": "ProjectSettings/DynamicsManager.asset",
+      "Bytes": 1574,
+      "SHA256": "D102DD312EF330F5E5CA255C070FB34F68F59EC633D1E9FD67E2F2F6F88F66C8"
+    },
+    {
+      "Path": "ProjectSettings/EditorBuildSettings.asset",
+      "Bytes": 382,
+      "SHA256": "FB2BD05132E21002EC8C35627A220CBD5EFAFA43F54AE4561923C9B482C97D28"
+    },
+    {
+      "Path": "ProjectSettings/EditorSettings.asset",
+      "Bytes": 1603,
+      "SHA256": "4A87C54B3541C7BD242AAD68C3FC28661083DB1117EC56149694EE592156415E"
+    },
+    {
+      "Path": "ProjectSettings/GraphicsSettings.asset",
+      "Bytes": 1552,
+      "SHA256": "72C16E187F9D88C212DA1DDEE71196C43B4E2870E7B92E456B61D1A9B8650B1D"
+    },
+    {
+      "Path": "ProjectSettings/InputManager.asset",
+      "Bytes": 5816,
+      "SHA256": "D0F454DDB880912ABCAE92E3E12957A7446786BA89E24937E019FF3BBC0D4300"
+    },
+    {
+      "Path": "ProjectSettings/MemorySettings.asset",
+      "Bytes": 1192,
+      "SHA256": "1E8379A461B10AE09F3F696911088C16875D63E87ED5F2D95DF9E1892703F9FD"
+    },
+    {
+      "Path": "ProjectSettings/MultiplayerManager.asset",
+      "Bytes": 232,
+      "SHA256": "CE4075D7A7DD8AC7FFE55DE2427692C63F90DAE398208BD80CEC0F27CBE09F4B"
+    },
+    {
+      "Path": "ProjectSettings/NavMeshAreas.asset",
+      "Bytes": 1361,
+      "SHA256": "7EBBF8F53B8033104E1878B95CA07A28D0954092D81C220F14196A42F651E658"
+    },
+    {
+      "Path": "ProjectSettings/PackageManagerSettings.asset",
+      "Bytes": 1132,
+      "SHA256": "8F19147A8CCA86D1B47FA1AF6CD2E2D45B16747F409F55B61CDE7DC2BC4C599D"
+    },
+    {
+      "Path": "ProjectSettings/Physics2DSettings.asset",
+      "Bytes": 1863,
+      "SHA256": "2856152070913F89167241C250B20DAD2D36BB1B7E774F2A83AB1D0FBC54D223"
+    },
+    {
+      "Path": "ProjectSettings/PresetManager.asset",
+      "Bytes": 146,
+      "SHA256": "29C125923FE6E29F90190D4FCE1C82D660E7051546E2C9D02908D18C9CF2436C"
+    },
+    {
+      "Path": "ProjectSettings/ProjectSettings.asset",
+      "Bytes": 22057,
+      "SHA256": "DF9AFFF7A8D16AA525C8C951D9002A42FA9905355D21493796F0FD8BDA0596FE"
+    },
+    {
+      "Path": "ProjectSettings/ProjectVersion.txt",
+      "Bytes": 85,
+      "SHA256": "C996A482FD926D9F094CFB99105C9319B992208C119A36427312AB8A04D25A42"
+    },
+    {
+      "Path": "ProjectSettings/QualitySettings.asset",
+      "Bytes": 9468,
+      "SHA256": "A462F1C2F636DDE2B05537954B128CA5793687E9A12CC3CFEAD00A8D968485F7"
+    },
+    {
+      "Path": "ProjectSettings/SceneTemplateSettings.json",
+      "Bytes": 3535,
+      "SHA256": "BB9098B3BFCDE78D93E264B96F7B77B5430E64E8C57A7AAD7F5A5D9C3945E16A"
+    },
+    {
+      "Path": "ProjectSettings/TagManager.asset",
+      "Bytes": 411,
+      "SHA256": "DA4B5EEFC927F8B91BCF9E56A186D2B852F49D9CBE91D466638D26C79D6A83CE"
+    },
+    {
+      "Path": "ProjectSettings/TimeManager.asset",
+      "Bytes": 305,
+      "SHA256": "3396F52FDC16D445024E01D7A2D99DB6F0A37569D1D73C0302E9FFB857D90287"
+    },
+    {
+      "Path": "ProjectSettings/UnityConnectSettings.asset",
+      "Bytes": 1063,
+      "SHA256": "11251DAE0356B6F43DD2C67BB511F6B7ECDA4E5DE425186BBA3297E6F3DC1C6F"
+    },
+    {
+      "Path": "ProjectSettings/VersionControlSettings.asset",
+      "Bytes": 172,
+      "SHA256": "E199CDFA6A8F2BF33CFD47E549198F13E3EB2A5099E908FDB4E0F14D939CCC6B"
+    },
+    {
+      "Path": "ProjectSettings/VFXManager.asset",
+      "Bytes": 525,
+      "SHA256": "2973A6AF930E142F62CDE00076BEDA8A3CC3A66D9BFCDE7A58BA7D4BE2251C26"
+    },
+    {
+      "Path": "README.md",
+      "Bytes": 23603,
+      "SHA256": "60331B91A2A9F6D147F5D00F614C9622F8EBCB00342EED7F5316EFBFEB054E7F"
+    }
+  ],
+  "Generated": [
+    {
+      "Root": "output",
+      "Exists": true,
+      "Files": 2366,
+      "Bytes": 6554879657.0,
+      "MetadataSHA256": "67020755F62CCB81D22F3419E69931D68BA533632C1AD9486F2FA3C1FE026A7A",
+      "ExecutableHashes": [
+        {
+          "Path": "output/DeterministicSceneSyncAB_20261001_154205/A/Game/HimoHitoPrototype.exe",
+          "SHA256": "837986201D89BE25426B8415CB3BC945F077E5B13F4722D6763D04EBD38C5472"
+        },
+        {
+          "Path": "output/DeterministicSceneSyncAB_20261001_154205/A/Game/UnityCrashHandler64.exe",
+          "SHA256": "38A87BF9C83B54CDA605F4FEACED264E6010B69C1F47C80C567213C5C07CC971"
+        },
+        {
+          "Path": "output/DeterministicSceneSyncAB_20261001_154205/B/Game/HimoHitoPrototype.exe",
+          "SHA256": "837986201D89BE25426B8415CB3BC945F077E5B13F4722D6763D04EBD38C5472"
+        },
+        {
+          "Path": "output/DeterministicSceneSyncAB_20261001_154205/B/Game/UnityCrashHandler64.exe",
+          "SHA256": "38A87BF9C83B54CDA605F4FEACED264E6010B69C1F47C80C567213C5C07CC971"
+        },
+        {
+          "Path": "output/HumanPlaytest_20260930_231714/Game/HimoHitoPrototype.exe",
+          "SHA256": "837986201D89BE25426B8415CB3BC945F077E5B13F4722D6763D04EBD38C5472"
+        },
+        {
+          "Path": "output/HumanPlaytest_20260930_231714/Game/UnityCrashHandler64.exe",
+          "SHA256": "38A87BF9C83B54CDA605F4FEACED264E6010B69C1F47C80C567213C5C07CC971"
+        },
+        {
+          "Path": "output/HumanPlaytestFixes_20261001_065300/Game/HimoHitoPrototype.exe",
+          "SHA256": "837986201D89BE25426B8415CB3BC945F077E5B13F4722D6763D04EBD38C5472"
+        },
+        {
+          "Path": "output/HumanPlaytestFixes_20261001_065300/Game/UnityCrashHandler64.exe",
+          "SHA256": "38A87BF9C83B54CDA605F4FEACED264E6010B69C1F47C80C567213C5C07CC971"
+        },
+        {
+          "Path": "output/MainStageCleanReproduction_ExternalBGM_20261001_151833/Game/HimoHitoPrototype.exe",
+          "SHA256": "837986201D89BE25426B8415CB3BC945F077E5B13F4722D6763D04EBD38C5472"
+        },
+        {
+          "Path": "output/MainStageCleanReproduction_ExternalBGM_20261001_151833/Game/UnityCrashHandler64.exe",
+          "SHA256": "38A87BF9C83B54CDA605F4FEACED264E6010B69C1F47C80C567213C5C07CC971"
+        },
+        {
+          "Path": "output/Tutorial2p5DAllSections_20261001_Trial01/Game/HimoHitoTutorialAll2p5D.exe",
+          "SHA256": "837986201D89BE25426B8415CB3BC945F077E5B13F4722D6763D04EBD38C5472"
+        },
+        {
+          "Path": "output/Tutorial2p5DAllSections_20261001_Trial01/Game/UnityCrashHandler64.exe",
+          "SHA256": "38A87BF9C83B54CDA605F4FEACED264E6010B69C1F47C80C567213C5C07CC971"
+        },
+        {
+          "Path": "output/Tutorial2p5DForegroundRefine_20261001_Refine01/Game/HimoHitoForegroundRefine.exe",
+          "SHA256": "837986201D89BE25426B8415CB3BC945F077E5B13F4722D6763D04EBD38C5472"
+        },
+        {
+          "Path": "output/Tutorial2p5DForegroundRefine_20261001_Refine01/Game/UnityCrashHandler64.exe",
+          "SHA256": "38A87BF9C83B54CDA605F4FEACED264E6010B69C1F47C80C567213C5C07CC971"
+        },
+        {
+          "Path": "output/Tutorial2p5DIntroFix_20261002_Review01/Game/HimoHitoIntroFix.exe",
+          "SHA256": "837986201D89BE25426B8415CB3BC945F077E5B13F4722D6763D04EBD38C5472"
+        },
+        {
+          "Path": "output/Tutorial2p5DIntroFix_20261002_Review01/Game/UnityCrashHandler64.exe",
+          "SHA256": "38A87BF9C83B54CDA605F4FEACED264E6010B69C1F47C80C567213C5C07CC971"
+        },
+        {
+          "Path": "output/Tutorial2p5DProductionIntegration_20261001_Baseline01/Game/HimoHitoProduction2p5D.exe",
+          "SHA256": "837986201D89BE25426B8415CB3BC945F077E5B13F4722D6763D04EBD38C5472"
+        },
+        {
+          "Path": "output/Tutorial2p5DProductionIntegration_20261001_Baseline01/Game/UnityCrashHandler64.exe",
+          "SHA256": "38A87BF9C83B54CDA605F4FEACED264E6010B69C1F47C80C567213C5C07CC971"
+        },
+        {
+          "Path": "output/Tutorial2p5DProductionIntegration_20261001_Baseline03/Game/HimoHitoProduction2p5D.exe",
+          "SHA256": "837986201D89BE25426B8415CB3BC945F077E5B13F4722D6763D04EBD38C5472"
+        },
+        {
+          "Path": "output/Tutorial2p5DProductionIntegration_20261001_Baseline03/Game/UnityCrashHandler64.exe",
+          "SHA256": "38A87BF9C83B54CDA605F4FEACED264E6010B69C1F47C80C567213C5C07CC971"
+        },
+        {
+          "Path": "output/Tutorial2p5DProductionIntegration_20261001_Baseline04/Game/HimoHitoProduction2p5D.exe",
+          "SHA256": "837986201D89BE25426B8415CB3BC945F077E5B13F4722D6763D04EBD38C5472"
+        },
+        {
+          "Path": "output/Tutorial2p5DProductionIntegration_20261001_Baseline04/Game/UnityCrashHandler64.exe",
+          "SHA256": "38A87BF9C83B54CDA605F4FEACED264E6010B69C1F47C80C567213C5C07CC971"
+        },
+        {
+          "Path": "output/Tutorial2p5DProductionIntegration_20261001_Baseline05/Game/HimoHitoProduction2p5D.exe",
+          "SHA256": "837986201D89BE25426B8415CB3BC945F077E5B13F4722D6763D04EBD38C5472"
+        },
+        {
+          "Path": "output/Tutorial2p5DProductionIntegration_20261001_Baseline05/Game/UnityCrashHandler64.exe",
+          "SHA256": "38A87BF9C83B54CDA605F4FEACED264E6010B69C1F47C80C567213C5C07CC971"
+        },
+        {
+          "Path": "output/Tutorial2p5DProductionIntegration_20261001_Production02/Game/HimoHitoProduction2p5D.exe",
+          "SHA256": "837986201D89BE25426B8415CB3BC945F077E5B13F4722D6763D04EBD38C5472"
+        },
+        {
+          "Path": "output/Tutorial2p5DProductionIntegration_20261001_Production02/Game/UnityCrashHandler64.exe",
+          "SHA256": "38A87BF9C83B54CDA605F4FEACED264E6010B69C1F47C80C567213C5C07CC971"
+        },
+        {
+          "Path": "output/Tutorial2p5DProductionIntegration_20261001_Production03/Game/HimoHitoProduction2p5D.exe",
+          "SHA256": "837986201D89BE25426B8415CB3BC945F077E5B13F4722D6763D04EBD38C5472"
+        },
+        {
+          "Path": "output/Tutorial2p5DProductionIntegration_20261001_Production03/Game/UnityCrashHandler64.exe",
+          "SHA256": "38A87BF9C83B54CDA605F4FEACED264E6010B69C1F47C80C567213C5C07CC971"
+        },
+        {
+          "Path": "output/Tutorial2p5DProductionIntegration_20261001_Production04/Game/HimoHitoProduction2p5D.exe",
+          "SHA256": "837986201D89BE25426B8415CB3BC945F077E5B13F4722D6763D04EBD38C5472"
+        },
+        {
+          "Path": "output/Tutorial2p5DProductionIntegration_20261001_Production04/Game/UnityCrashHandler64.exe",
+          "SHA256": "38A87BF9C83B54CDA605F4FEACED264E6010B69C1F47C80C567213C5C07CC971"
+        },
+        {
+          "Path": "output/Tutorial2p5DProof_20261001_Proof01/Game/HimoHito2p5DProof.exe",
+          "SHA256": "837986201D89BE25426B8415CB3BC945F077E5B13F4722D6763D04EBD38C5472"
+        },
+        {
+          "Path": "output/Tutorial2p5DProof_20261001_Proof01/Game/UnityCrashHandler64.exe",
+          "SHA256": "38A87BF9C83B54CDA605F4FEACED264E6010B69C1F47C80C567213C5C07CC971"
+        }
+      ]
+    },
+    {
+      "Root": "Builds",
+      "Exists": true,
+      "Files": 889,
+      "Bytes": 1887755629.0,
+      "MetadataSHA256": "F0B30E733410F27DA8E56B74BC5DEDD34FEA6F2A7E723565D3A476992F632B97",
+      "ExecutableHashes": [
+        {
+          "Path": "Builds/HimoHitoPrototype_Friend_2026-08-28-230228/HimoHitoPrototype.exe",
+          "SHA256": "48EFAB523AA684C653BD1254A6962D3410127B5C02DC1310F6F16F4810666556"
+        },
+        {
+          "Path": "Builds/HimoHitoPrototype_Friend_2026-08-28-230228/UnityCrashHandler64.exe",
+          "SHA256": "38A87BF9C83B54CDA605F4FEACED264E6010B69C1F47C80C567213C5C07CC971"
+        },
+        {
+          "Path": "Builds/Share/HimoHitoPrototype-Windows-20260904-2213/HimoHitoPrototype.exe",
+          "SHA256": "837986201D89BE25426B8415CB3BC945F077E5B13F4722D6763D04EBD38C5472"
+        },
+        {
+          "Path": "Builds/Share/HimoHitoPrototype-Windows-20260904-2213/UnityCrashHandler64.exe",
+          "SHA256": "38A87BF9C83B54CDA605F4FEACED264E6010B69C1F47C80C567213C5C07CC971"
+        },
+        {
+          "Path": "Builds/Share/HimoHitoPrototype-Windows-20260904-fixed/HimoHitoPrototype.exe",
+          "SHA256": "837986201D89BE25426B8415CB3BC945F077E5B13F4722D6763D04EBD38C5472"
+        },
+        {
+          "Path": "Builds/Share/HimoHitoPrototype-Windows-20260904-fixed/UnityCrashHandler64.exe",
+          "SHA256": "38A87BF9C83B54CDA605F4FEACED264E6010B69C1F47C80C567213C5C07CC971"
+        },
+        {
+          "Path": "Builds/Submission/1230460_TH_作品提出/1230460_TH_作品提出/Game/HimoHitoPrototype.exe",
+          "SHA256": "837986201D89BE25426B8415CB3BC945F077E5B13F4722D6763D04EBD38C5472"
+        },
+        {
+          "Path": "Builds/Submission/1230460_TH_作品提出/1230460_TH_作品提出/Game/UnityCrashHandler64.exe",
+          "SHA256": "38A87BF9C83B54CDA605F4FEACED264E6010B69C1F47C80C567213C5C07CC971"
+        },
+        {
+          "Path": "Builds/Submission/1230460_TH_作品提出/Game/HimoHitoPrototype.exe",
+          "SHA256": "837986201D89BE25426B8415CB3BC945F077E5B13F4722D6763D04EBD38C5472"
+        },
+        {
+          "Path": "Builds/Submission/1230460_TH_作品提出/Game/UnityCrashHandler64.exe",
+          "SHA256": "38A87BF9C83B54CDA605F4FEACED264E6010B69C1F47C80C567213C5C07CC971"
+        },
+        {
+          "Path": "Builds/Windows/Game/HimoHitoPrototype.exe",
+          "SHA256": "837986201D89BE25426B8415CB3BC945F077E5B13F4722D6763D04EBD38C5472"
+        },
+        {
+          "Path": "Builds/Windows/Game/UnityCrashHandler64.exe",
+          "SHA256": "38A87BF9C83B54CDA605F4FEACED264E6010B69C1F47C80C567213C5C07CC971"
+        }
+      ]
+    },
+    {
+      "Root": ".codex_tmp",
+      "Exists": true,
+      "Files": 33432,
+      "Bytes": 19719204926.0,
+      "MetadataSHA256": "785453B8AE8D424BE649E6735CD1EE2DC738B64768B07B7B687BE0B3B9BEE378",
+      "ExecutableHashes": [
+        {
+          "Path": ".codex_tmp/FullGameRegression_20260930/DiagnosticProject/Builds/Windows/Game/HimoHitoPrototype.exe",
+          "SHA256": "837986201D89BE25426B8415CB3BC945F077E5B13F4722D6763D04EBD38C5472"
+        },
+        {
+          "Path": ".codex_tmp/FullGameRegression_20260930/DiagnosticProject/Builds/Windows/Game/UnityCrashHandler64.exe",
+          "SHA256": "38A87BF9C83B54CDA605F4FEACED264E6010B69C1F47C80C567213C5C07CC971"
+        },
+        {
+          "Path": ".codex_tmp/HumanPlaytest_20260930_231714/Project/Builds/Windows/Game/HimoHitoPrototype.exe",
+          "SHA256": "837986201D89BE25426B8415CB3BC945F077E5B13F4722D6763D04EBD38C5472"
+        },
+        {
+          "Path": ".codex_tmp/HumanPlaytest_20260930_231714/Project/Builds/Windows/Game/UnityCrashHandler64.exe",
+          "SHA256": "38A87BF9C83B54CDA605F4FEACED264E6010B69C1F47C80C567213C5C07CC971"
+        },
+        {
+          "Path": ".codex_tmp/HumanPlaytestFixes_20261001_065300/Project/Builds/Windows/Game/HimoHitoPrototype.exe",
+          "SHA256": "837986201D89BE25426B8415CB3BC945F077E5B13F4722D6763D04EBD38C5472"
+        },
+        {
+          "Path": ".codex_tmp/HumanPlaytestFixes_20261001_065300/Project/Builds/Windows/Game/UnityCrashHandler64.exe",
+          "SHA256": "38A87BF9C83B54CDA605F4FEACED264E6010B69C1F47C80C567213C5C07CC971"
+        },
+        {
+          "Path": ".codex_tmp/MainStageCleanReproduction_20261001/DeterministicAB_20261001_154205/CopyA/Builds/Windows/Game/HimoHitoPrototype.exe",
+          "SHA256": "837986201D89BE25426B8415CB3BC945F077E5B13F4722D6763D04EBD38C5472"
+        },
+        {
+          "Path": ".codex_tmp/MainStageCleanReproduction_20261001/DeterministicAB_20261001_154205/CopyA/Builds/Windows/Game/UnityCrashHandler64.exe",
+          "SHA256": "38A87BF9C83B54CDA605F4FEACED264E6010B69C1F47C80C567213C5C07CC971"
+        },
+        {
+          "Path": ".codex_tmp/MainStageCleanReproduction_20261001/DeterministicAB_20261001_154205/CopyB/Builds/Windows/Game/HimoHitoPrototype.exe",
+          "SHA256": "837986201D89BE25426B8415CB3BC945F077E5B13F4722D6763D04EBD38C5472"
+        },
+        {
+          "Path": ".codex_tmp/MainStageCleanReproduction_20261001/DeterministicAB_20261001_154205/CopyB/Builds/Windows/Game/UnityCrashHandler64.exe",
+          "SHA256": "38A87BF9C83B54CDA605F4FEACED264E6010B69C1F47C80C567213C5C07CC971"
+        },
+        {
+          "Path": ".codex_tmp/MainStageCleanReproduction_20261001/DeterministicAB_20261001_154205/TraceBuildProject/Builds/Windows/Game/HimoHitoPrototype.exe",
+          "SHA256": "837986201D89BE25426B8415CB3BC945F077E5B13F4722D6763D04EBD38C5472"
+        },
+        {
+          "Path": ".codex_tmp/MainStageCleanReproduction_20261001/DeterministicAB_20261001_154205/TraceBuildProject/Builds/Windows/Game/UnityCrashHandler64.exe",
+          "SHA256": "38A87BF9C83B54CDA605F4FEACED264E6010B69C1F47C80C567213C5C07CC971"
+        },
+        {
+          "Path": ".codex_tmp/MainStageCleanReproduction_20261001/ExternalBGM_20261001_151833/BuildProject/Builds/Windows/Game/HimoHitoPrototype.exe",
+          "SHA256": "837986201D89BE25426B8415CB3BC945F077E5B13F4722D6763D04EBD38C5472"
+        },
+        {
+          "Path": ".codex_tmp/MainStageCleanReproduction_20261001/ExternalBGM_20261001_151833/BuildProject/Builds/Windows/Game/UnityCrashHandler64.exe",
+          "SHA256": "38A87BF9C83B54CDA605F4FEACED264E6010B69C1F47C80C567213C5C07CC971"
+        },
+        {
+          "Path": ".codex_tmp/SubmissionBuild20260911/Builds/Windows/Game/HimoHitoPrototype.exe",
+          "SHA256": "837986201D89BE25426B8415CB3BC945F077E5B13F4722D6763D04EBD38C5472"
+        },
+        {
+          "Path": ".codex_tmp/SubmissionBuild20260911/Builds/Windows/Game/UnityCrashHandler64.exe",
+          "SHA256": "38A87BF9C83B54CDA605F4FEACED264E6010B69C1F47C80C567213C5C07CC971"
+        }
+      ]
+    }
+  ],
+  "Scope": "Assets/ProjectSettings/Packages/docs byte hashes; output/Builds/.codex_tmp file path+size+mtime and exe hashes. No cleanup."
+}

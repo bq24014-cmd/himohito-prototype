@@ -1,0 +1,124 @@
+PASS Stage Selection remains original
+PASS Background has no physics components
+PASS Section 1 entered through authored route
+PASS S1_Standing T1 Before physics/camera/rope unchanged
+PASS S1_Standing Production After state unchanged / legacy renderers hidden
+PASS Walk -4 -> -4.35 actual=(-4.29, 0.96)
+PASS Walk -4.286516 -> -4 actual=(-4.06, 0.96)
+PASS S1_Walk T1 Before physics/camera/rope unchanged
+PASS S1_Walk Production After state unchanged / legacy renderers hidden
+PASS Section 1 normal jump through PlayerMover
+PASS S1_Jump T1 Before physics/camera/rope unchanged
+PASS S1_Jump Production After state unchanged / legacy renderers hidden
+PASS Section 1 jump lands
+PASS Section 1 sign opens through existing UI path
+PASS Section 1 sign pause preserves background/camera
+PASS Section 1 sign closes/resumes
+PASS Walk -4.063402 -> -1.3 actual=(-1.37, 0.96)
+PASS S1 Hook aim resolves
+PASS S1 E attach
+PASS S1_Attached T1 Before physics/camera/rope unchanged
+PASS S1_Attached Production After state unchanged / legacy renderers hidden
+PASS Physical swing landing checkpoint 2
+PASS Actual section 1->2 preserves background phase
+PASS S2 checkpoint R restores section/resource/selection
+PASS Section 2 entered through authored route
+PASS S2_Standing T1 Before physics/camera/rope unchanged
+PASS S2_Standing Production After state unchanged / legacy renderers hidden
+PASS Walk 12 -> 11.65 actual=(11.71, 0.96)
+PASS Walk 11.71348 -> 12 actual=(11.94, 0.96)
+PASS S2_Walk T1 Before physics/camera/rope unchanged
+PASS S2_Walk Production After state unchanged / legacy renderers hidden
+PASS Section 2 normal jump through PlayerMover
+PASS S2_Jump T1 Before physics/camera/rope unchanged
+PASS S2_Jump Production After state unchanged / legacy renderers hidden
+PASS Section 2 jump lands
+PASS Section 2 sign opens through existing UI path
+PASS Section 2 sign pause preserves background/camera
+PASS Section 2 sign closes/resumes
+PASS Walk 11.9366 -> 14.7 actual=(14.63, 0.96)
+PASS S2 Hook aim resolves
+PASS S2 E attach
+PASS S2_Attached T1 Before physics/camera/rope unchanged
+PASS S2_Attached Production After state unchanged / legacy renderers hidden
+PASS Physical swing landing checkpoint 3
+PASS Actual section 2->3 preserves background phase
+PASS Section 3 entered through authored route
+PASS S3_Standing T1 Before physics/camera/rope unchanged
+PASS S3_Standing Production After state unchanged / legacy renderers hidden
+PASS Walk 28.85572 -> 28.50572 actual=(28.57, 0.96)
+PASS Walk 28.5692 -> 28.85572 actual=(28.79, 0.96)
+PASS S3_Walk T1 Before physics/camera/rope unchanged
+PASS S3_Walk Production After state unchanged / legacy renderers hidden
+PASS Section 3 normal jump through PlayerMover
+PASS S3_Jump T1 Before physics/camera/rope unchanged
+PASS S3_Jump Production After state unchanged / legacy renderers hidden
+PASS Section 3 jump lands
+PASS Section 3 sign opens through existing UI path
+PASS Section 3 sign pause preserves background/camera
+PASS Section 3 sign closes/resumes
+PASS Walk 28.79231 -> 29.4 actual=(29.33, 0.96)
+PASS S3 right green Hook aim
+PASS S3 E
+PASS S3_Attached T1 Before physics/camera/rope unchanged
+PASS S3_Attached Production After state unchanged / legacy renderers hidden
+PASS S3 Q length7
+PASS S3_Bridge T1 Before physics/camera/rope unchanged
+PASS S3_Bridge Production After state unchanged / legacy renderers hidden
+PASS S3 physical bridge walk reaches S4
+PASS Actual section 3->4 preserves background phase
+PASS S4 R preserves S3 bridge / rope92 / selected7
+PASS Section 4 entered through authored route
+PASS S4_Standing T1 Before physics/camera/rope unchanged
+PASS S4_Standing Production After state unchanged / legacy renderers hidden
+PASS Walk 39 -> 38.65 actual=(38.71, 0.96)
+PASS Walk 38.71348 -> 39 actual=(38.94, 0.96)
+PASS S4_Walk T1 Before physics/camera/rope unchanged
+PASS S4_Walk Production After state unchanged / legacy renderers hidden
+PASS Section 4 normal jump through PlayerMover
+PASS S4_Jump T1 Before physics/camera/rope unchanged
+PASS S4_Jump Production After state unchanged / legacy renderers hidden
+PASS Section 4 jump lands
+PASS Section 4 sign opens through existing UI path
+PASS Section 4 sign pause preserves background/camera
+PASS Section 4 sign closes/resumes
+PASS Walk 38.9366 -> 41.35 actual=(41.29, 0.96)
+PASS S4 first E/Q
+PASS S4_FirstBridge T1 Before physics/camera/rope unchanged
+PASS S4_FirstBridge Production After state unchanged / legacy renderers hidden
+PASS Walk 42.32478 -> 46.35 actual=(46.28, 2.03)
+PASS S4 second right Hook aim
+PASS S4 second E/Q
+PASS S4_TwoBridges T1 Before physics/camera/rope unchanged
+PASS S4_TwoBridges Production After state unchanged / legacy renderers hidden
+PASS S4 F merge
+PASS S4_Merged T1 Before physics/camera/rope unchanged
+PASS S4_Merged Production After state unchanged / legacy renderers hidden
+PASS S3 bridge + merged S4, center inactive, rope80
+PASS S4 R restores pre-merge checkpoint / center / resource
+PASS S4_Restored T1 Before physics/camera/rope unchanged
+PASS S4_Restored Production After state unchanged / legacy renderers hidden
+PASS Walk 39 -> 41.35 actual=(41.28, 0.96)
+PASS S4 first E/Q
+PASS S4_FirstBridge T1 Before physics/camera/rope unchanged
+PASS S4_FirstBridge Production After state unchanged / legacy renderers hidden
+PASS Walk 42.32478 -> 46.35 actual=(46.28, 2.03)
+PASS S4 second right Hook aim
+PASS S4 second E/Q
+PASS S4_TwoBridges T1 Before physics/camera/rope unchanged
+PASS S4_TwoBridges Production After state unchanged / legacy renderers hidden
+PASS S4 F merge
+PASS S4_Merged T1 Before physics/camera/rope unchanged
+PASS S4_Merged Production After state unchanged / legacy renderers hidden
+PASS S3 bridge + merged S4, center inactive, rope80
+PASS Actual goal reached / Clearing physics locked
+PASS Clearing keeps continuous room backing
+PASS Clear reached / background remains
+PASS S4_Clear T1 Before physics/camera/rope unchanged
+PASS S4_Clear Production After state unchanged / legacy renderers hidden
+PASS Mid edge-clamp shader active
+PASS Floor edge-clamp / sprite flip shader active
+PASS All three actual Tutorial transitions observed
+THREE_ACTIVE_TEXTURE_RUNTIME_BYTES 47695488; helpers reuse Mid and a small 128x64 shadow; not total process/GPU memory
+PASS Clear -> Stage Selection / original background restored
+PASS MainStage original / no trial component

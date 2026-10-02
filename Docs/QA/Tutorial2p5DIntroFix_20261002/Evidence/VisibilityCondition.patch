@@ -1,0 +1,12 @@
+--- BeforeProduction/TutorialCraftRoomLayers.cs
++++ Assets/Scripts/TutorialCraftRoomLayers.cs
+@@ -107,8 +107,7 @@
+         public void Refresh()
+         {
+             if (Layers == null || view == null || run == null) return;
+-            bool show = enabled && run.Outcome != PrototypeRunController.RunOutcome.WaitingToStart &&
+-                !MainStagePreview.IsActive && !StageStartTransition.IsActive;
++            bool show = enabled && run.Outcome != PrototypeRunController.RunOutcome.WaitingToStart;
+             Visible = show;
+             for (int i = 0; i < legacy.Length; i++) if (legacy[i] != null) legacy[i].forceRenderingOff = show || legacyOff[i];
+             float h = view.orthographicSize * 2;

@@ -1,0 +1,47 @@
+{
+  "scope": "Image assets and static concept previews only; no Unity integration",
+  "layers": {
+    "Far": {
+      "width": 1920,
+      "height": 1080,
+      "has_alpha": false
+    },
+    "Mid": {
+      "width": 1920,
+      "height": 1080,
+      "has_alpha": true
+    },
+    "Near": {
+      "width": 1920,
+      "height": 1080,
+      "has_alpha": true
+    }
+  },
+  "mid_window_alpha": "Verified transparent panes; nearly opaque room shell",
+  "near_center_x_43_to_71_percent": {
+    "nonzero_alpha_pixels": 13,
+    "max_alpha": 1,
+    "visible_prop_pixels": 0,
+    "PASS": true
+  },
+  "exact_alpha_composite": true,
+  "visual_review": "Composite and comparison inspected; layout/style acceptable as concept",
+  "before_after_limit": "Existing gameplay screenshot versus background-only concept; not identical live camera comparison",
+  "production_protection": {
+    "production_files": 462,
+    "changed": [],
+    "PASS": true
+  },
+  "existing_mainstage_dirty_state_preserved": true,
+  "git": {
+    "HEAD": "702a4bc044b0eb35bedb552753ca8495599bc1ee",
+    "staged_files": [],
+    "commit_performed": false,
+    "push_performed": false
+  },
+  "future_limits": [
+    "Parallax movement not implemented or runtime-tested",
+    "Not seamless tile art; overscan needed for camera motion",
+    "1672x941 generated originals scaled to 1920x1080 delivery canvas"
+  ]
+}

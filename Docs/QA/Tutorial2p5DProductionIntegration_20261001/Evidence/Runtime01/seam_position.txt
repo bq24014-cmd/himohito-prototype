@@ -1,0 +1,3 @@
+mid_edge_world_x=74.87228
+mid_edge_viewport_x=1.047705
+source_right_column=1919 completely transparent

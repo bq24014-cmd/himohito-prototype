@@ -91,6 +91,9 @@ namespace HimoHito
             CacheUsers.Add(background);
             changed |= background.EnsureTiles();
             changed |= background.RefreshLayout(true);
+            // Tutorial runtime owns the adopted three-layer presentation.
+            // Existing craft layers remain the menu/preview/asset fallback.
+            changed |= TutorialCraftRoomLayers.Ensure(root);
             return changed;
         }
 
@@ -106,6 +109,8 @@ namespace HimoHito
             CacheUsers.Add(this);
             EnsureTiles();
             RefreshLayout(true);
+            // Saved scenes enter through OnEnable in standalone, not editor setup.
+            TutorialCraftRoomLayers.Ensure(gameObject);
         }
 
         private void LateUpdate() => RefreshLayout(false);
