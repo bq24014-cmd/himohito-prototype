@@ -1,0 +1,23 @@
+{
+  "utc": "2026-10-02T15:40:29.6860446+00:00",
+  "branch": "main",
+  "HEAD": "c21463ce60f63ccbff78486a98210eac3aa21b1f",
+  "origin_main": "c21463ce60f63ccbff78486a98210eac3aa21b1f",
+  "remote": "https://github.com/bq24014-cmd/himohito-prototype.git",
+  "approved_production_hashes_matched": 490,
+  "prior_artifacts_metadata_matched": 6223,
+  "dirty_hashes": {
+    "Assets/Scenes/MainStage.unity": "57D2464751B5B9C2A78E6C56F34197E9BC2629983FADAA1DFF6E0BA0B4BC2284",
+    "README.md": "60331B91A2A9F6D147F5D00F614C9622F8EBCB00342EED7F5316EFBFEB054E7F",
+    "Docs/LEARNING_LOG.md": "828F77E02A3CEE098BDDA6DEA41C15ADE06C9D2734E0612860BF831D036797B9",
+    "Docs/QA/MainStageCleanReproduction_20261001/Evidence/DeterministicSceneSync/ExeA.log": "18736EF2397759C9AD2DD22728D6F97F2669309CE9336334EFE7970CCE62139B",
+    "Docs/QA/MainStageCleanReproduction_20261001/Evidence/DeterministicSceneSync/ExeB.log": "C13F3FD5CD1010519225AF10D53A4829D21CCD9F1CF898B8B2FDEC8DC275B2A2"
+  },
+  "tracked_status": " M Assets/Scenes/MainStage.unity\n M Docs/LEARNING_LOG.md\n M Docs/QA/MainStageCleanReproduction_20261001/Evidence/DeterministicSceneSync/ExeA.log\n M Docs/QA/MainStageCleanReproduction_20261001/Evidence/DeterministicSceneSync/ExeB.log\n M README.md",
+  "staged": "",
+  "bgm_sha256": "25C52DA234D42C7A5E5CC91D45AEED14829F845EA15932A88AC94AB006781E83",
+  "bgm_tracked": false,
+  "bgm_ignore_rule": ".gitignore:42:/Assets/Resources/Audio/YasashiiOdori.mp3\tAssets/Resources/Audio/YasashiiOdori.mp3",
+  "human_approval": "問題なし・採用してよい",
+  "gameplay_source_modified": false
+}

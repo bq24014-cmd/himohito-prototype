@@ -1,0 +1,13 @@
+{
+  "build_result_original": "Succeeded\nbytes=452434382\nseconds=86.0578124\nplayerAssemblyAudit=FAIL\n",
+  "initial_audit_failure": "QA Reflection AmbiguousMatchException on Cecil DeclaringType; Build itself Succeeded",
+  "reaudit_pass": true,
+  "reaudit_evidence": "PlayerAssemblyAudit02/PLAYER_ASSEMBLY_AUDIT.json",
+  "unchanged_dll_sha256": "2D74107A4709606F588981D6A550816F12FE9EE34247D29896FAB31B6AB1D302",
+  "exe_sha256": "837986201D89BE25426B8415CB3BC945F077E5B13F4722D6763D04EBD38C5472",
+  "production_source_sha256": "6D1A10060B01F6F9FB97A3852D5A830B401CCFAE1A50F5162C90863C84328F8C",
+  "build_location": "output/TutorialTerrainHybridProduction_20261003/Windows",
+  "human_review": "PASS / APPROVED",
+  "raw_unity_logs": "LOCAL ONLY; retain original files; do not publish device/licensing metadata",
+  "no_rebuild_or_binary_replacement": true
+}

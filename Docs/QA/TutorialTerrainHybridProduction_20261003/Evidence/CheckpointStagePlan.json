@@ -1,0 +1,376 @@
+{
+  "scope": "13 Production files + selected necessary QA; no Build/BGM/cache/raw PPM/other Proof",
+  "base_head": "c21463ce60f63ccbff78486a98210eac3aa21b1f",
+  "file_count": 61,
+  "files": [
+    {
+      "path": "Assets/Scripts/TutorialTerrainHybridVisual.cs",
+      "sha256": "6D1A10060B01F6F9FB97A3852D5A830B401CCFAE1A50F5162C90863C84328F8C",
+      "bytes": 9702,
+      "self_manifest": false
+    },
+    {
+      "path": "Assets/Scripts/TutorialTerrainHybridVisual.cs.meta",
+      "sha256": "B1C32D154C1B04F91E97082A0DCEB27698B646FE5A71283F9B205E00143DA948",
+      "bytes": 60,
+      "self_manifest": false
+    },
+    {
+      "path": "Assets/Resources/Art/TutorialTerrainHybrid.meta",
+      "sha256": "423F332E2A061E8A0525C87DBB45F68D659708BB39F06C7A9B4B4C382782197F",
+      "bytes": 172,
+      "self_manifest": false
+    },
+    {
+      "path": "Assets/Resources/Art/TutorialTerrainHybrid/Start.png",
+      "sha256": "0DE73BBFFB98EFE88E39824E2C360B56B4EB9009E09DB4AA77FE79F53117ACA5",
+      "bytes": 2426692,
+      "self_manifest": false
+    },
+    {
+      "path": "Assets/Resources/Art/TutorialTerrainHybrid/Start.png.meta",
+      "sha256": "C9961E8F35119B40A873542FF5BD267C8E8FB644894E0EF5ADF78358EF894B32",
+      "bytes": 2683,
+      "self_manifest": false
+    },
+    {
+      "path": "Assets/Resources/Art/TutorialTerrainHybrid/Landing1.png",
+      "sha256": "10771B0C8089529D012197CCB22D65E2D0451822E22B96F5FDFBEB373C4EDE6E",
+      "bytes": 2601223,
+      "self_manifest": false
+    },
+    {
+      "path": "Assets/Resources/Art/TutorialTerrainHybrid/Landing1.png.meta",
+      "sha256": "9452C4D54C8345A68ED54233AC76270805EAA6227933504396548FF6396E9AAC",
+      "bytes": 2683,
+      "self_manifest": false
+    },
+    {
+      "path": "Assets/Resources/Art/TutorialTerrainHybrid/BridgeBank.png",
+      "sha256": "4F5AAA9B875835E101979B3B0389116BD37C31F5AEF5753885430AB97638F0E2",
+      "bytes": 2538180,
+      "self_manifest": false
+    },
+    {
+      "path": "Assets/Resources/Art/TutorialTerrainHybrid/BridgeBank.png.meta",
+      "sha256": "EF4A1E680240CD86AACEEB285839FB33BF8A1376BB440D7EA12248F21FA688C9",
+      "bytes": 2683,
+      "self_manifest": false
+    },
+    {
+      "path": "Assets/Resources/Art/TutorialTerrainHybrid/MergeBank.png",
+      "sha256": "463F3EF800CE14DBF57CEC9E60F85FF634831A783C4F7BEE1FCC7B534BAE76CD",
+      "bytes": 2544630,
+      "self_manifest": false
+    },
+    {
+      "path": "Assets/Resources/Art/TutorialTerrainHybrid/MergeBank.png.meta",
+      "sha256": "F08901E01BED1477D29154E51F1A682027F124D295AF4CAC9133A1CBCFDE9AAF",
+      "bytes": 2683,
+      "self_manifest": false
+    },
+    {
+      "path": "Assets/Resources/Art/TutorialTerrainHybrid/Goal.png",
+      "sha256": "E348D4F29C125AC28689A7BBE513F0A35993EF9A5E4702717F5FD8D00EDB6B5C",
+      "bytes": 3103430,
+      "self_manifest": false
+    },
+    {
+      "path": "Assets/Resources/Art/TutorialTerrainHybrid/Goal.png.meta",
+      "sha256": "1F7C2CF502EEBDA0199FCFDDA63662159CBED60B69D353726EE69F1B69FD8463",
+      "bytes": 2683,
+      "self_manifest": false
+    },
+    {
+      "path": "Docs/QA/TutorialTerrainHybridProduction_20261003/00_README.md",
+      "sha256": "BB2B4E7BDF63EFD4AF1AC3D1EF9423F1CF17441ABA53732835D1C63E915A0569",
+      "bytes": 2847,
+      "self_manifest": false
+    },
+    {
+      "path": "Docs/QA/TutorialTerrainHybridProduction_20261003/01_ProductionIntegration.md",
+      "sha256": "08910F986D22EFFA24B649C04A0DAD5A90D279850E0AF56F0719D2B18FFC44F7",
+      "bytes": 3546,
+      "self_manifest": false
+    },
+    {
+      "path": "Docs/QA/TutorialTerrainHybridProduction_20261003/02_ProductionDiff.md",
+      "sha256": "7E3A4BA88C65DA0EB74AF533A381DF1C9922E1B5C0C47F0BCF1B7F6CF217E521",
+      "bytes": 3772,
+      "self_manifest": false
+    },
+    {
+      "path": "Docs/QA/TutorialTerrainHybridProduction_20261003/03_GameplayRegression.md",
+      "sha256": "C822E0D662B2B87ED2E9527D5519F8AF37DD5B9F3456B5C0B34DAACC606FC859",
+      "bytes": 10709,
+      "self_manifest": false
+    },
+    {
+      "path": "Docs/QA/TutorialTerrainHybridProduction_20261003/04_VisualRegression.md",
+      "sha256": "C674191C33FB98AB81EF17AFB188514EDE64D8576FF37E6055D9C3F7C6398A44",
+      "bytes": 4427,
+      "self_manifest": false
+    },
+    {
+      "path": "Docs/QA/TutorialTerrainHybridProduction_20261003/05_HumanReviewPacket.md",
+      "sha256": "F99B90560E2922F33EE24D0828EAAD8613185773A377C1EDAA09F2CCB5C3DEB5",
+      "bytes": 2667,
+      "self_manifest": false
+    },
+    {
+      "path": "Docs/QA/TutorialTerrainHybridProduction_20261003/06_FinalDecision.md",
+      "sha256": "567AC3B8B490A467716D83BE901F41D81B688009B6F4F6077DC7071E225B1CF7",
+      "bytes": 4510,
+      "self_manifest": false
+    },
+    {
+      "path": "Docs/QA/TutorialTerrainHybridProduction_20261003/07_HumanApprovalAndCheckpoint.md",
+      "sha256": "E08CFD2721137B9F395E531C363A5E66FDB0A188A506F2C57D0AE2D16DB411CC",
+      "bytes": 3606,
+      "self_manifest": false
+    },
+    {
+      "path": "Docs/QA/TutorialTerrainHybridProduction_20261003/LaunchReview.ps1",
+      "sha256": "C4EB20EE22C710F9D2E3406F8BB21BDD461D3584E589B79E77F6F12C9849493C",
+      "bytes": 2579,
+      "self_manifest": false
+    },
+    {
+      "path": "Docs/QA/TutorialTerrainHybridProduction_20261003/Evidence/FinalSourceIdentity.json",
+      "sha256": "1E994AF0250B0C092602F3D594BEBA96BF48555376291911C65C2EB918B10FEE",
+      "bytes": 8085,
+      "self_manifest": false
+    },
+    {
+      "path": "Docs/QA/TutorialTerrainHybridProduction_20261003/Evidence/FinalSourceIdentity.ps1",
+      "sha256": "4C7AFADC05BFB11129304C81B5A2406F6130CB652AC5D065E225E153BC8C97C4",
+      "bytes": 3828,
+      "self_manifest": false
+    },
+    {
+      "path": "Docs/QA/TutorialTerrainHybridProduction_20261003/Evidence/ImageComparison_Runtime01.json",
+      "sha256": "08B361285936ACAC3CC2D9EBF6FBB7305A890F0FCCE0D56DCCA42BA2C5DABE22",
+      "bytes": 318220,
+      "self_manifest": false
+    },
+    {
+      "path": "Docs/QA/TutorialTerrainHybridProduction_20261003/Evidence/Launch_20261003_002502.json",
+      "sha256": "A9069172D1C8B1FC11359DA5331CE8B26D17A32B281D767F75C6C5BABDB3A579",
+      "bytes": 1005,
+      "self_manifest": false
+    },
+    {
+      "path": "Docs/QA/TutorialTerrainHybridProduction_20261003/Evidence/LaunchCheck_20261003_002534.json",
+      "sha256": "D0D9476759FF9227AC6D8EFCA07B2B18CF56B5A2558D8F86BF8174A9036FE247",
+      "bytes": 520,
+      "self_manifest": false
+    },
+    {
+      "path": "Docs/QA/TutorialTerrainHybridProduction_20261003/Evidence/PackageProductionComparisons.py",
+      "sha256": "10ADB520D99B83C9743811B9FA438A4363E33A0386412A5E364CFA9DB254CF00",
+      "bytes": 16677,
+      "self_manifest": false
+    },
+    {
+      "path": "Docs/QA/TutorialTerrainHybridProduction_20261003/Evidence/ProductionProtection.ps1",
+      "sha256": "1401E8ED8097ABDC107766E6C21B924B10DBE227A1CFC7FCA2F7C30C39F3D7DF",
+      "bytes": 6627,
+      "self_manifest": false
+    },
+    {
+      "path": "Docs/QA/TutorialTerrainHybridProduction_20261003/Evidence/ProtectionEnd.json",
+      "sha256": "2D7CBF9A8F5458DEDA227ED2549F83816C2A924DC6AB232FFF1FD10F8DD4C419",
+      "bytes": 60258,
+      "self_manifest": false
+    },
+    {
+      "path": "Docs/QA/TutorialTerrainHybridProduction_20261003/Evidence/RecordFinalState.ps1",
+      "sha256": "FB81029FB7E7037BD0419847FBEAECA1BD7127EFF7A55C2A311A121BA8B8EE25",
+      "bytes": 2510,
+      "self_manifest": false
+    },
+    {
+      "path": "Docs/QA/TutorialTerrainHybridProduction_20261003/Evidence/TerrainProductionEntry.cs",
+      "sha256": "4C4829F7A9588D9AB090A78AB4A97F3882F0FAC3CB0D5FFE3FC99BF4C58A2024",
+      "bytes": 11615,
+      "self_manifest": false
+    },
+    {
+      "path": "Docs/QA/TutorialTerrainHybridProduction_20261003/Evidence/TerrainProductionQA.cs",
+      "sha256": "F62B63210BF812F47E2EC1C4EEBEF672A8EDA4ADC633C872BB8A599B4908D254",
+      "bytes": 45253,
+      "self_manifest": false
+    },
+    {
+      "path": "Docs/QA/TutorialTerrainHybridProduction_20261003/Evidence/TerrainProductionQaFacade.cs",
+      "sha256": "0779B09AB357671B8D1ADCC0AE140782BBA1298871BA32A08715E7A3EFBA8BEB",
+      "bytes": 4283,
+      "self_manifest": false
+    },
+    {
+      "path": "Docs/QA/TutorialTerrainHybridProduction_20261003/Evidence/VerificationCopyIdentity.json",
+      "sha256": "B12C4E27B68AB5945F8377512048C97968C22A1D890D247DEDE561E6347C9C19",
+      "bytes": 59254,
+      "self_manifest": false
+    },
+    {
+      "path": "Docs/QA/TutorialTerrainHybridProduction_20261003/Evidence/CheckpointGuard.ps1",
+      "sha256": "51E762A5903936568FB4910BC1D867DCABF504206879321A4A20B2589FB3CCE4",
+      "bytes": 12216,
+      "self_manifest": false
+    },
+    {
+      "path": "Docs/QA/TutorialTerrainHybridProduction_20261003/Evidence/CheckpointStart.json",
+      "sha256": "14766971D9674B3BC31148BF881F8B61B1C8C4DD7B480A67EBB31A0C61150615",
+      "bytes": 1606,
+      "self_manifest": false
+    },
+    {
+      "path": "Docs/QA/TutorialTerrainHybridProduction_20261003/Evidence/BuildValidationSummary.json",
+      "sha256": "A83BD45EF31C9423C368CB082E98EE0EFFC5F5DE726DA5D98D122D7E4757B031",
+      "bytes": 867,
+      "self_manifest": false
+    },
+    {
+      "path": "Docs/QA/TutorialTerrainHybridProduction_20261003/Evidence/CheckpointStagePlan.json",
+      "sha256": null,
+      "bytes": null,
+      "self_manifest": true
+    },
+    {
+      "path": "Docs/QA/TutorialTerrainHybridProduction_20261003/Evidence/PlayerAssemblyAudit02/PLAYER_ASSEMBLY_AUDIT.json",
+      "sha256": "89093775611635BEC150D83541D41D4CAE770E96719BEE8BBB8C8518642A2340",
+      "bytes": 1433,
+      "self_manifest": false
+    },
+    {
+      "path": "Docs/QA/TutorialTerrainHybridProduction_20261003/Evidence/Runtime01/aim_resolution.csv",
+      "sha256": "7CF0CF50C621D4FCC6A9215F395FC40F719C953275574DB6B48EE43E2B7AB0F9",
+      "bytes": 1675,
+      "self_manifest": false
+    },
+    {
+      "path": "Docs/QA/TutorialTerrainHybridProduction_20261003/Evidence/Runtime01/captures.csv",
+      "sha256": "5F0C7647E6B71277B2618A046030A046C758E7929BD8C4E040796271A7C3D86D",
+      "bytes": 12705,
+      "self_manifest": false
+    },
+    {
+      "path": "Docs/QA/TutorialTerrainHybridProduction_20261003/Evidence/Runtime01/checks.txt",
+      "sha256": "CABABF318769CFCF2BC8EBFEF18828C9FB706C45750A2CED2D3E5CE657200CE4",
+      "bytes": 79304,
+      "self_manifest": false
+    },
+    {
+      "path": "Docs/QA/TutorialTerrainHybridProduction_20261003/Evidence/Runtime01/editor_search_errors.txt",
+      "sha256": "115FA176968F68364020A58294FCFBDD3CC9582B5FF3FD8F839A284323530F56",
+      "bytes": 954,
+      "self_manifest": false
+    },
+    {
+      "path": "Docs/QA/TutorialTerrainHybridProduction_20261003/Evidence/Runtime01/intro.csv",
+      "sha256": "1906385E0C38DDCAEA015D87C3232C147ECC0BA5EF78286AFB8B0466AD48F80F",
+      "bytes": 239514,
+      "self_manifest": false
+    },
+    {
+      "path": "Docs/QA/TutorialTerrainHybridProduction_20261003/Evidence/Runtime01/result.txt",
+      "sha256": "4A5EADA48C92C75473A6745EA7B178EA4D0354EBBD77249468ECFEBA9DE26934",
+      "bytes": 766,
+      "self_manifest": false
+    },
+    {
+      "path": "Docs/QA/TutorialTerrainHybridProduction_20261003/Evidence/Runtime01/route.csv",
+      "sha256": "87792F5E1BCE38829224AC4DA73FD5F2BF569FD8D19D60E487D5BBD6C7B38266",
+      "bytes": 54768,
+      "self_manifest": false
+    },
+    {
+      "path": "Docs/QA/TutorialTerrainHybridProduction_20261003/Evidence/Runtime01/terrain_projection.csv",
+      "sha256": "5888EF0B0770844D16B1028068CF2F8AA9F5038E31ADBC862061630193FB47F5",
+      "bytes": 65890,
+      "self_manifest": false
+    },
+    {
+      "path": "Docs/QA/TutorialTerrainHybridProduction_20261003/Evidence/Runtime01/terrain_runtime_audit.txt",
+      "sha256": "3383E0288D3547A54DFCD60EE300435F52639257B283AAD5F256EE25C7EDEBB2",
+      "bytes": 25477,
+      "self_manifest": false
+    },
+    {
+      "path": "Docs/QA/TutorialTerrainHybridProduction_20261003/Screenshots/Final/AllFiveTerrain_Comparison.png",
+      "sha256": "274CAEA8BE729EAF8B237D0BDB6A6B480AE01BE4A6FBC8D4190A1AEAD4F599AA",
+      "bytes": 5375541,
+      "self_manifest": false
+    },
+    {
+      "path": "Docs/QA/TutorialTerrainHybridProduction_20261003/Screenshots/Final/Overview_Comparison.png",
+      "sha256": "4A573B9E788CCC6B47953ED087CFE2BA7B2EE865AA5FA40599D8EF579A9756C2",
+      "bytes": 4303831,
+      "self_manifest": false
+    },
+    {
+      "path": "Docs/QA/TutorialTerrainHybridProduction_20261003/Screenshots/Final/Comparison_S1_Standing.png",
+      "sha256": "D55E5DBBF930F47D05A9109C5998C8CEC6EAA588735997AE0EF3794FED86AEF8",
+      "bytes": 1037843,
+      "self_manifest": false
+    },
+    {
+      "path": "Docs/QA/TutorialTerrainHybridProduction_20261003/Screenshots/Final/Comparison_S2_Standing.png",
+      "sha256": "406A49867F3930DE2284B96C1E542ADCD7CE4E47B814F12AD831341809784126",
+      "bytes": 1071566,
+      "self_manifest": false
+    },
+    {
+      "path": "Docs/QA/TutorialTerrainHybridProduction_20261003/Screenshots/Final/Comparison_S3_Standing.png",
+      "sha256": "F1E45DB55BFDB35EC9BB9E70C7B9B169B7371D50D1762A582B3D852C37A983E2",
+      "bytes": 1102712,
+      "self_manifest": false
+    },
+    {
+      "path": "Docs/QA/TutorialTerrainHybridProduction_20261003/Screenshots/Final/Comparison_S4_Standing.png",
+      "sha256": "CC99C02BAB95CAA18A7A06B54BD18CFE9FE441CE7C069C5FF38C78DD3AB5DEE1",
+      "bytes": 1090707,
+      "self_manifest": false
+    },
+    {
+      "path": "Docs/QA/TutorialTerrainHybridProduction_20261003/Screenshots/Final/Comparison_S4_WideStanding.png",
+      "sha256": "0856DE7AB995DCB5D040471F8F475B7BDBA8906DAA068907B2C4104583C78A97",
+      "bytes": 1144300,
+      "self_manifest": false
+    },
+    {
+      "path": "Docs/QA/TutorialTerrainHybridProduction_20261003/Screenshots/Final/Comparison_S4_Merged.png",
+      "sha256": "CE3C4F89938B1F3ADDCE70A756F3515506850CD8304B306BC97084A1E6C4DE9F",
+      "bytes": 1107813,
+      "self_manifest": false
+    },
+    {
+      "path": "Docs/QA/TutorialTerrainHybridProduction_20261003/Screenshots/Final/Comparison_S4_Clearing.png",
+      "sha256": "E6CF3E82D6F7F4C1ED785972EC72F93D40B6E6D915942E9069E2178F9B4F010A",
+      "bytes": 1102725,
+      "self_manifest": false
+    },
+    {
+      "path": "Docs/QA/TutorialTerrainHybridProduction_20261003/Screenshots/Final/Comparison_S4_Clear.png",
+      "sha256": "067CD79862338911F2FB86A1E017224BE15D498DECFC71C5BBC5082088CE22A1",
+      "bytes": 1102164,
+      "self_manifest": false
+    },
+    {
+      "path": "Docs/QA/TutorialTerrainHybridProduction_20261003/Screenshots/Final/Comparison_Intro_Middle.png",
+      "sha256": "57BE5465C2A26C5206230E1E8A1E64F41A7CE24D18AD3CA853E7532FBE3C709D",
+      "bytes": 1042216,
+      "self_manifest": false
+    },
+    {
+      "path": "Docs/QA/TutorialTerrainHybridProduction_20261003/Screenshots/Final/Comparison_Intro_NearEnd.png",
+      "sha256": "8090FD3C2A564945D727174860D9989BAD61B0176CCA38ABC0CA61CE89C4AAB7",
+      "bytes": 1069278,
+      "self_manifest": false
+    }
+  ],
+  "self_manifest_hash": "Not embedded to avoid self reference; index/worktree equality checked before commit",
+  "local_only": "Raw PPM, unselected PNG, raw Unity/player logs, ProtectionStart metadata, FinalState/full status, duplicate candidate Source, retired helper, all prior QA/Builds remain on disk",
+  "estimated_bytes_without_self": 34862173.0
+}

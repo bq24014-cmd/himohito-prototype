@@ -1,0 +1,941 @@
+PASS Only five audited Tutorial normal-terrain targets prepared
+PASS Audited target exists: Start Ground
+PASS Start Ground authored Transform unchanged
+PASS Start Ground authored Collider unchanged
+PASS Start Ground one original static body/Collider; no visual physics
+PASS Audited target exists: Tutorial Landing
+PASS Tutorial Landing authored Transform unchanged
+PASS Tutorial Landing authored Collider unchanged
+PASS Tutorial Landing one original static body/Collider; no visual physics
+PASS Audited target exists: Tutorial T2 Landing
+PASS Tutorial T2 Landing authored Transform unchanged
+PASS Tutorial T2 Landing authored Collider unchanged
+PASS Tutorial T2 Landing one original static body/Collider; no visual physics
+PASS Audited target exists: Tutorial T3 Landing
+PASS Tutorial T3 Landing authored Transform unchanged
+PASS Tutorial T3 Landing authored Collider unchanged
+PASS Tutorial T3 Landing one original static body/Collider; no visual physics
+PASS Audited target exists: Tutorial T4 Goal Floor
+PASS Tutorial T4 Goal Floor authored Transform unchanged
+PASS Tutorial T4 Goal Floor authored Collider unchanged
+PASS Tutorial T4 Goal Floor one original static body/Collider; no visual physics
+PASS Production terrain class declares no public proof API/method/property/field
+PASS Tutorial has exactly one production terrain component
+PASS No former F7 review or shape-proof runtime helper is installed
+PASS Adopted 2.5D background remains visual-only
+PASS Existing seam-fix shaders remain in use
+PASS Stage Selection retains adopted pre-start background contract
+PASS Intro_Menu False preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS Intro_Menu False preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS Intro_Menu False five original terrain Transform/Collider/RB identities unchanged
+PASS Intro_Menu True preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS Intro_Menu True preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS Intro_Menu True five original terrain Transform/Collider/RB identities unchanged
+PASS Intro_Menu Start Ground visual bounds/walk line exactly match authored Collider
+PASS Intro_Menu Tutorial Landing visual bounds/walk line exactly match authored Collider
+PASS Intro_Menu Tutorial T2 Landing visual bounds/walk line exactly match authored Collider
+PASS Intro_Menu Tutorial T3 Landing visual bounds/walk line exactly match authored Collider
+PASS Intro_Menu Tutorial T4 Goal Floor visual bounds/walk line exactly match authored Collider
+PASS Intro_Menu restores synchronous gameplay/background state
+PASS Existing Tutorial StartSelectedStage curtain route accepted
+PASS Intro_Committed False preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS Intro_Committed False preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS Intro_Committed False five original terrain Transform/Collider/RB identities unchanged
+PASS Intro_Committed True preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS Intro_Committed True preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS Intro_Committed True five original terrain Transform/Collider/RB identities unchanged
+PASS Intro_Committed Start Ground visual bounds/walk line exactly match authored Collider
+PASS Intro_Committed Tutorial Landing visual bounds/walk line exactly match authored Collider
+PASS Intro_Committed Tutorial T2 Landing visual bounds/walk line exactly match authored Collider
+PASS Intro_Committed Tutorial T3 Landing visual bounds/walk line exactly match authored Collider
+PASS Intro_Committed Tutorial T4 Goal Floor visual bounds/walk line exactly match authored Collider
+PASS Intro_Committed restores synchronous gameplay/background state
+PASS Intro_Committed adopted 2.5D background continuously visible
+PASS Intro_Start False preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS Intro_Start False preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS Intro_Start False five original terrain Transform/Collider/RB identities unchanged
+PASS Intro_Start True preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS Intro_Start True preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS Intro_Start True five original terrain Transform/Collider/RB identities unchanged
+PASS Intro_Start Start Ground visual bounds/walk line exactly match authored Collider
+PASS Intro_Start Tutorial Landing visual bounds/walk line exactly match authored Collider
+PASS Intro_Start Tutorial T2 Landing visual bounds/walk line exactly match authored Collider
+PASS Intro_Start Tutorial T3 Landing visual bounds/walk line exactly match authored Collider
+PASS Intro_Start Tutorial T4 Goal Floor visual bounds/walk line exactly match authored Collider
+PASS Intro_Start restores synchronous gameplay/background state
+PASS Intro_Start adopted 2.5D background continuously visible
+PASS Intro_Middle False preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS Intro_Middle False preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS Intro_Middle False five original terrain Transform/Collider/RB identities unchanged
+PASS Intro_Middle True preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS Intro_Middle True preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS Intro_Middle True five original terrain Transform/Collider/RB identities unchanged
+PASS Intro_Middle Start Ground visual bounds/walk line exactly match authored Collider
+PASS Intro_Middle Tutorial Landing visual bounds/walk line exactly match authored Collider
+PASS Intro_Middle Tutorial T2 Landing visual bounds/walk line exactly match authored Collider
+PASS Intro_Middle Tutorial T3 Landing visual bounds/walk line exactly match authored Collider
+PASS Intro_Middle Tutorial T4 Goal Floor visual bounds/walk line exactly match authored Collider
+PASS Intro_Middle restores synchronous gameplay/background state
+PASS Intro_Middle adopted 2.5D background continuously visible
+PASS Intro_NearEnd False preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS Intro_NearEnd False preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS Intro_NearEnd False five original terrain Transform/Collider/RB identities unchanged
+PASS Intro_NearEnd True preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS Intro_NearEnd True preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS Intro_NearEnd True five original terrain Transform/Collider/RB identities unchanged
+PASS Intro_NearEnd Start Ground visual bounds/walk line exactly match authored Collider
+PASS Intro_NearEnd Tutorial Landing visual bounds/walk line exactly match authored Collider
+PASS Intro_NearEnd Tutorial T2 Landing visual bounds/walk line exactly match authored Collider
+PASS Intro_NearEnd Tutorial T3 Landing visual bounds/walk line exactly match authored Collider
+PASS Intro_NearEnd Tutorial T4 Goal Floor visual bounds/walk line exactly match authored Collider
+PASS Intro_NearEnd restores synchronous gameplay/background state
+PASS Intro_NearEnd adopted 2.5D background continuously visible
+PASS Intro_Resumed False preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS Intro_Resumed False preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS Intro_Resumed False five original terrain Transform/Collider/RB identities unchanged
+PASS Intro_Resumed True preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS Intro_Resumed True preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS Intro_Resumed True five original terrain Transform/Collider/RB identities unchanged
+PASS Intro_Resumed Start Ground visual bounds/walk line exactly match authored Collider
+PASS Intro_Resumed Tutorial Landing visual bounds/walk line exactly match authored Collider
+PASS Intro_Resumed Tutorial T2 Landing visual bounds/walk line exactly match authored Collider
+PASS Intro_Resumed Tutorial T3 Landing visual bounds/walk line exactly match authored Collider
+PASS Intro_Resumed Tutorial T4 Goal Floor visual bounds/walk line exactly match authored Collider
+PASS Intro_Resumed restores synchronous gameplay/background state
+PASS Intro_Resumed adopted 2.5D background continuously visible
+PASS Natural unskipped Intro completes all milestones and restores gameplay controls
+PASS Intro Fix preserved: no hidden adopted background or legacy/new double draw after commit
+PASS Physical S1 floor-edge fall invokes existing failure path without fixture teleport
+PASS S1_Failed False preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S1_Failed False preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S1_Failed False five original terrain Transform/Collider/RB identities unchanged
+PASS S1_Failed True preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S1_Failed True preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S1_Failed True five original terrain Transform/Collider/RB identities unchanged
+PASS S1_Failed Start Ground visual bounds/walk line exactly match authored Collider
+PASS S1_Failed Tutorial Landing visual bounds/walk line exactly match authored Collider
+PASS S1_Failed Tutorial T2 Landing visual bounds/walk line exactly match authored Collider
+PASS S1_Failed Tutorial T3 Landing visual bounds/walk line exactly match authored Collider
+PASS S1_Failed Tutorial T4 Goal Floor visual bounds/walk line exactly match authored Collider
+PASS S1_Failed restores synchronous gameplay/background state
+PASS S1_Failed adopted 2.5D background continuously visible
+PASS Existing fall-unravel effect finishes before normal R retry
+PASS Normal R failure retry restores S1 checkpoint/control/resource/bridges
+PASS S1_Retry False preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S1_Retry False preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S1_Retry False five original terrain Transform/Collider/RB identities unchanged
+PASS S1_Retry True preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S1_Retry True preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S1_Retry True five original terrain Transform/Collider/RB identities unchanged
+PASS S1_Retry Start Ground visual bounds/walk line exactly match authored Collider
+PASS S1_Retry Tutorial Landing visual bounds/walk line exactly match authored Collider
+PASS S1_Retry Tutorial T2 Landing visual bounds/walk line exactly match authored Collider
+PASS S1_Retry Tutorial T3 Landing visual bounds/walk line exactly match authored Collider
+PASS S1_Retry Tutorial T4 Goal Floor visual bounds/walk line exactly match authored Collider
+PASS S1_Retry restores synchronous gameplay/background state
+PASS S1_Retry adopted 2.5D background continuously visible
+PASS Section 1 reached through authored physical route
+PASS S1 normal checkpoint R preserves resource/selection/bridge state
+PASS S1_Standing False preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S1_Standing False preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S1_Standing False five original terrain Transform/Collider/RB identities unchanged
+PASS S1_Standing True preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S1_Standing True preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S1_Standing True five original terrain Transform/Collider/RB identities unchanged
+PASS S1_Standing Start Ground visual bounds/walk line exactly match authored Collider
+PASS S1_Standing Tutorial Landing visual bounds/walk line exactly match authored Collider
+PASS S1_Standing Tutorial T2 Landing visual bounds/walk line exactly match authored Collider
+PASS S1_Standing Tutorial T3 Landing visual bounds/walk line exactly match authored Collider
+PASS S1_Standing Tutorial T4 Goal Floor visual bounds/walk line exactly match authored Collider
+PASS S1_Standing restores synchronous gameplay/background state
+PASS S1_Standing adopted 2.5D background continuously visible
+PASS Physical Walk -4 -> -4.4; actual=(-4.34, 0.96)
+PASS S1_Walk False preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S1_Walk False preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S1_Walk False five original terrain Transform/Collider/RB identities unchanged
+PASS S1_Walk True preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S1_Walk True preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S1_Walk True five original terrain Transform/Collider/RB identities unchanged
+PASS S1_Walk Start Ground visual bounds/walk line exactly match authored Collider
+PASS S1_Walk Tutorial Landing visual bounds/walk line exactly match authored Collider
+PASS S1_Walk Tutorial T2 Landing visual bounds/walk line exactly match authored Collider
+PASS S1_Walk Tutorial T3 Landing visual bounds/walk line exactly match authored Collider
+PASS S1_Walk Tutorial T4 Goal Floor visual bounds/walk line exactly match authored Collider
+PASS S1_Walk restores synchronous gameplay/background state
+PASS S1_Walk adopted 2.5D background continuously visible
+PASS Physical Walk -4.33972931 -> -3.6; actual=(-3.67, 0.96)
+PASS S1_Walk image taken during actual horizontal movement
+PASS Physical Walk -3.66606331 -> -4; actual=(-3.94, 0.96)
+PASS S1_Jump starts grounded/detached
+PASS S1_Jump normal PlayerMover jump rises
+PASS S1_Jump False preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S1_Jump False preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S1_Jump False five original terrain Transform/Collider/RB identities unchanged
+PASS S1_Jump True preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S1_Jump True preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S1_Jump True five original terrain Transform/Collider/RB identities unchanged
+PASS S1_Jump Start Ground visual bounds/walk line exactly match authored Collider
+PASS S1_Jump Tutorial Landing visual bounds/walk line exactly match authored Collider
+PASS S1_Jump Tutorial T2 Landing visual bounds/walk line exactly match authored Collider
+PASS S1_Jump Tutorial T3 Landing visual bounds/walk line exactly match authored Collider
+PASS S1_Jump Tutorial T4 Goal Floor visual bounds/walk line exactly match authored Collider
+PASS S1_Jump restores synchronous gameplay/background state
+PASS S1_Jump adopted 2.5D background continuously visible
+PASS S1_Jump lands on same authored upper face
+PASS S1 existing sign UI pause opens
+PASS S1 sign pause preserves adopted background/camera
+PASS S1_SignWorldOnly False preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S1_SignWorldOnly False preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S1_SignWorldOnly False five original terrain Transform/Collider/RB identities unchanged
+PASS S1_SignWorldOnly True preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S1_SignWorldOnly True preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S1_SignWorldOnly True five original terrain Transform/Collider/RB identities unchanged
+PASS S1_SignWorldOnly Start Ground visual bounds/walk line exactly match authored Collider
+PASS S1_SignWorldOnly Tutorial Landing visual bounds/walk line exactly match authored Collider
+PASS S1_SignWorldOnly Tutorial T2 Landing visual bounds/walk line exactly match authored Collider
+PASS S1_SignWorldOnly Tutorial T3 Landing visual bounds/walk line exactly match authored Collider
+PASS S1_SignWorldOnly Tutorial T4 Goal Floor visual bounds/walk line exactly match authored Collider
+PASS S1_SignWorldOnly restores synchronous gameplay/background state
+PASS S1_SignWorldOnly adopted 2.5D background continuously visible
+PASS S1 sign closes and resumes normally
+PASS Physical Walk -3.94036245 -> -1.3; actual=(-1.36, 0.96)
+PASS S1 actual E candidate resolver selects intended Hook / anchor
+PASS S1 actual visual aim feedback highlights intended E Hook
+PASS S1_Aim False preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S1_Aim False preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S1_Aim False five original terrain Transform/Collider/RB identities unchanged
+PASS S1_Aim True preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S1_Aim True preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S1_Aim True five original terrain Transform/Collider/RB identities unchanged
+PASS S1_Aim Start Ground visual bounds/walk line exactly match authored Collider
+PASS S1_Aim Tutorial Landing visual bounds/walk line exactly match authored Collider
+PASS S1_Aim Tutorial T2 Landing visual bounds/walk line exactly match authored Collider
+PASS S1_Aim Tutorial T3 Landing visual bounds/walk line exactly match authored Collider
+PASS S1_Aim Tutorial T4 Goal Floor visual bounds/walk line exactly match authored Collider
+PASS S1_Aim restores synchronous gameplay/background state
+PASS S1_Aim adopted 2.5D background continuously visible
+PASS S1 existing keyboard-direction E attach succeeds
+PASS S1 free E / selected rope / original Hook / DistanceJoint contract
+PASS S1_Attached False preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S1_Attached False preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S1_Attached False five original terrain Transform/Collider/RB identities unchanged
+PASS S1_Attached True preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S1_Attached True preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S1_Attached True five original terrain Transform/Collider/RB identities unchanged
+PASS S1_Attached Start Ground visual bounds/walk line exactly match authored Collider
+PASS S1_Attached Tutorial Landing visual bounds/walk line exactly match authored Collider
+PASS S1_Attached Tutorial T2 Landing visual bounds/walk line exactly match authored Collider
+PASS S1_Attached Tutorial T3 Landing visual bounds/walk line exactly match authored Collider
+PASS S1_Attached Tutorial T4 Goal Floor visual bounds/walk line exactly match authored Collider
+PASS S1_Attached restores synchronous gameplay/background state
+PASS S1_Attached adopted 2.5D background continuously visible
+PASS S1 E release preserves linear/angular momentum and rope resource
+PASS S1_Released False preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S1_Released False preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S1_Released False five original terrain Transform/Collider/RB identities unchanged
+PASS S1_Released True preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S1_Released True preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S1_Released True five original terrain Transform/Collider/RB identities unchanged
+PASS S1_Released Start Ground visual bounds/walk line exactly match authored Collider
+PASS S1_Released Tutorial Landing visual bounds/walk line exactly match authored Collider
+PASS S1_Released Tutorial T2 Landing visual bounds/walk line exactly match authored Collider
+PASS S1_Released Tutorial T3 Landing visual bounds/walk line exactly match authored Collider
+PASS S1_Released Tutorial T4 Goal Floor visual bounds/walk line exactly match authored Collider
+PASS S1_Released restores synchronous gameplay/background state
+PASS S1_Released adopted 2.5D background continuously visible
+PASS S1 real swing/landing reaches checkpoint 2
+PASS Section 1 -> 2 background parallax phase unchanged
+PASS Section 2 reached through authored physical route
+PASS S2 normal checkpoint R preserves resource/selection/bridge state
+PASS S2_Standing False preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S2_Standing False preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S2_Standing False five original terrain Transform/Collider/RB identities unchanged
+PASS S2_Standing True preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S2_Standing True preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S2_Standing True five original terrain Transform/Collider/RB identities unchanged
+PASS S2_Standing Start Ground visual bounds/walk line exactly match authored Collider
+PASS S2_Standing Tutorial Landing visual bounds/walk line exactly match authored Collider
+PASS S2_Standing Tutorial T2 Landing visual bounds/walk line exactly match authored Collider
+PASS S2_Standing Tutorial T3 Landing visual bounds/walk line exactly match authored Collider
+PASS S2_Standing Tutorial T4 Goal Floor visual bounds/walk line exactly match authored Collider
+PASS S2_Standing restores synchronous gameplay/background state
+PASS S2_Standing adopted 2.5D background continuously visible
+PASS Physical Walk 12 -> 11.6; actual=(11.66, 0.96)
+PASS S2_Walk False preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S2_Walk False preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S2_Walk False five original terrain Transform/Collider/RB identities unchanged
+PASS S2_Walk True preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S2_Walk True preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S2_Walk True five original terrain Transform/Collider/RB identities unchanged
+PASS S2_Walk Start Ground visual bounds/walk line exactly match authored Collider
+PASS S2_Walk Tutorial Landing visual bounds/walk line exactly match authored Collider
+PASS S2_Walk Tutorial T2 Landing visual bounds/walk line exactly match authored Collider
+PASS S2_Walk Tutorial T3 Landing visual bounds/walk line exactly match authored Collider
+PASS S2_Walk Tutorial T4 Goal Floor visual bounds/walk line exactly match authored Collider
+PASS S2_Walk restores synchronous gameplay/background state
+PASS S2_Walk adopted 2.5D background continuously visible
+PASS Physical Walk 11.6602707 -> 12.4; actual=(12.33, 0.96)
+PASS S2_Walk image taken during actual horizontal movement
+PASS Physical Walk 12.3339367 -> 12; actual=(12.06, 0.96)
+PASS S2_Jump starts grounded/detached
+PASS S2_Jump normal PlayerMover jump rises
+PASS S2_Jump False preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S2_Jump False preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S2_Jump False five original terrain Transform/Collider/RB identities unchanged
+PASS S2_Jump True preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S2_Jump True preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S2_Jump True five original terrain Transform/Collider/RB identities unchanged
+PASS S2_Jump Start Ground visual bounds/walk line exactly match authored Collider
+PASS S2_Jump Tutorial Landing visual bounds/walk line exactly match authored Collider
+PASS S2_Jump Tutorial T2 Landing visual bounds/walk line exactly match authored Collider
+PASS S2_Jump Tutorial T3 Landing visual bounds/walk line exactly match authored Collider
+PASS S2_Jump Tutorial T4 Goal Floor visual bounds/walk line exactly match authored Collider
+PASS S2_Jump restores synchronous gameplay/background state
+PASS S2_Jump adopted 2.5D background continuously visible
+PASS S2_Jump lands on same authored upper face
+PASS S2 existing sign UI pause opens
+PASS S2 sign pause preserves adopted background/camera
+PASS S2_SignWorldOnly False preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S2_SignWorldOnly False preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S2_SignWorldOnly False five original terrain Transform/Collider/RB identities unchanged
+PASS S2_SignWorldOnly True preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S2_SignWorldOnly True preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S2_SignWorldOnly True five original terrain Transform/Collider/RB identities unchanged
+PASS S2_SignWorldOnly Start Ground visual bounds/walk line exactly match authored Collider
+PASS S2_SignWorldOnly Tutorial Landing visual bounds/walk line exactly match authored Collider
+PASS S2_SignWorldOnly Tutorial T2 Landing visual bounds/walk line exactly match authored Collider
+PASS S2_SignWorldOnly Tutorial T3 Landing visual bounds/walk line exactly match authored Collider
+PASS S2_SignWorldOnly Tutorial T4 Goal Floor visual bounds/walk line exactly match authored Collider
+PASS S2_SignWorldOnly restores synchronous gameplay/background state
+PASS S2_SignWorldOnly adopted 2.5D background continuously visible
+PASS S2 sign closes and resumes normally
+PASS S2 checkpoint preserves 99 rope / selected 6
+PASS Physical Walk 12.0596371 -> 14.7; actual=(14.64, 0.96)
+PASS S2 actual E candidate resolver selects intended Hook / anchor
+PASS S2 actual visual aim feedback highlights intended E Hook
+PASS S2_Aim False preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S2_Aim False preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S2_Aim False five original terrain Transform/Collider/RB identities unchanged
+PASS S2_Aim True preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S2_Aim True preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S2_Aim True five original terrain Transform/Collider/RB identities unchanged
+PASS S2_Aim Start Ground visual bounds/walk line exactly match authored Collider
+PASS S2_Aim Tutorial Landing visual bounds/walk line exactly match authored Collider
+PASS S2_Aim Tutorial T2 Landing visual bounds/walk line exactly match authored Collider
+PASS S2_Aim Tutorial T3 Landing visual bounds/walk line exactly match authored Collider
+PASS S2_Aim Tutorial T4 Goal Floor visual bounds/walk line exactly match authored Collider
+PASS S2_Aim restores synchronous gameplay/background state
+PASS S2_Aim adopted 2.5D background continuously visible
+PASS S2 existing keyboard-direction E attach succeeds
+PASS S2 free E / selected rope / original Hook / DistanceJoint contract
+PASS S2_Attached False preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S2_Attached False preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S2_Attached False five original terrain Transform/Collider/RB identities unchanged
+PASS S2_Attached True preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S2_Attached True preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S2_Attached True five original terrain Transform/Collider/RB identities unchanged
+PASS S2_Attached Start Ground visual bounds/walk line exactly match authored Collider
+PASS S2_Attached Tutorial Landing visual bounds/walk line exactly match authored Collider
+PASS S2_Attached Tutorial T2 Landing visual bounds/walk line exactly match authored Collider
+PASS S2_Attached Tutorial T3 Landing visual bounds/walk line exactly match authored Collider
+PASS S2_Attached Tutorial T4 Goal Floor visual bounds/walk line exactly match authored Collider
+PASS S2_Attached restores synchronous gameplay/background state
+PASS S2_Attached adopted 2.5D background continuously visible
+PASS S2 E release preserves linear/angular momentum and rope resource
+PASS S2_Released False preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S2_Released False preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S2_Released False five original terrain Transform/Collider/RB identities unchanged
+PASS S2_Released True preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S2_Released True preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S2_Released True five original terrain Transform/Collider/RB identities unchanged
+PASS S2_Released Start Ground visual bounds/walk line exactly match authored Collider
+PASS S2_Released Tutorial Landing visual bounds/walk line exactly match authored Collider
+PASS S2_Released Tutorial T2 Landing visual bounds/walk line exactly match authored Collider
+PASS S2_Released Tutorial T3 Landing visual bounds/walk line exactly match authored Collider
+PASS S2_Released Tutorial T4 Goal Floor visual bounds/walk line exactly match authored Collider
+PASS S2_Released restores synchronous gameplay/background state
+PASS S2_Released adopted 2.5D background continuously visible
+PASS S2 real swing/landing reaches checkpoint 3
+PASS Section 2 -> 3 background parallax phase unchanged
+PASS Section 3 reached through authored physical route
+PASS S3 normal checkpoint R preserves resource/selection/bridge state
+PASS S3_Standing False preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S3_Standing False preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S3_Standing False five original terrain Transform/Collider/RB identities unchanged
+PASS S3_Standing True preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S3_Standing True preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S3_Standing True five original terrain Transform/Collider/RB identities unchanged
+PASS S3_Standing Start Ground visual bounds/walk line exactly match authored Collider
+PASS S3_Standing Tutorial Landing visual bounds/walk line exactly match authored Collider
+PASS S3_Standing Tutorial T2 Landing visual bounds/walk line exactly match authored Collider
+PASS S3_Standing Tutorial T3 Landing visual bounds/walk line exactly match authored Collider
+PASS S3_Standing Tutorial T4 Goal Floor visual bounds/walk line exactly match authored Collider
+PASS S3_Standing restores synchronous gameplay/background state
+PASS S3_Standing adopted 2.5D background continuously visible
+PASS Physical Walk 27 -> 26.6; actual=(26.66, 0.96)
+PASS S3_Walk False preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S3_Walk False preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S3_Walk False five original terrain Transform/Collider/RB identities unchanged
+PASS S3_Walk True preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S3_Walk True preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S3_Walk True five original terrain Transform/Collider/RB identities unchanged
+PASS S3_Walk Start Ground visual bounds/walk line exactly match authored Collider
+PASS S3_Walk Tutorial Landing visual bounds/walk line exactly match authored Collider
+PASS S3_Walk Tutorial T2 Landing visual bounds/walk line exactly match authored Collider
+PASS S3_Walk Tutorial T3 Landing visual bounds/walk line exactly match authored Collider
+PASS S3_Walk Tutorial T4 Goal Floor visual bounds/walk line exactly match authored Collider
+PASS S3_Walk restores synchronous gameplay/background state
+PASS S3_Walk adopted 2.5D background continuously visible
+PASS Physical Walk 26.66027 -> 27.4; actual=(27.33, 0.96)
+PASS S3_Walk image taken during actual horizontal movement
+PASS Physical Walk 27.3339367 -> 27; actual=(27.06, 0.96)
+PASS S3_Jump starts grounded/detached
+PASS S3_Jump normal PlayerMover jump rises
+PASS S3_Jump False preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S3_Jump False preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S3_Jump False five original terrain Transform/Collider/RB identities unchanged
+PASS S3_Jump True preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S3_Jump True preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S3_Jump True five original terrain Transform/Collider/RB identities unchanged
+PASS S3_Jump Start Ground visual bounds/walk line exactly match authored Collider
+PASS S3_Jump Tutorial Landing visual bounds/walk line exactly match authored Collider
+PASS S3_Jump Tutorial T2 Landing visual bounds/walk line exactly match authored Collider
+PASS S3_Jump Tutorial T3 Landing visual bounds/walk line exactly match authored Collider
+PASS S3_Jump Tutorial T4 Goal Floor visual bounds/walk line exactly match authored Collider
+PASS S3_Jump restores synchronous gameplay/background state
+PASS S3_Jump adopted 2.5D background continuously visible
+PASS S3_Jump lands on same authored upper face
+PASS S3 existing sign UI pause opens
+PASS S3 sign pause preserves adopted background/camera
+PASS S3_SignWorldOnly False preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S3_SignWorldOnly False preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S3_SignWorldOnly False five original terrain Transform/Collider/RB identities unchanged
+PASS S3_SignWorldOnly True preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S3_SignWorldOnly True preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S3_SignWorldOnly True five original terrain Transform/Collider/RB identities unchanged
+PASS S3_SignWorldOnly Start Ground visual bounds/walk line exactly match authored Collider
+PASS S3_SignWorldOnly Tutorial Landing visual bounds/walk line exactly match authored Collider
+PASS S3_SignWorldOnly Tutorial T2 Landing visual bounds/walk line exactly match authored Collider
+PASS S3_SignWorldOnly Tutorial T3 Landing visual bounds/walk line exactly match authored Collider
+PASS S3_SignWorldOnly Tutorial T4 Goal Floor visual bounds/walk line exactly match authored Collider
+PASS S3_SignWorldOnly restores synchronous gameplay/background state
+PASS S3_SignWorldOnly adopted 2.5D background continuously visible
+PASS S3 sign closes and resumes normally
+PASS Physical Walk 27.0596371 -> 29.4; actual=(29.34, 0.96)
+PASS S3 actual E candidate resolver selects intended Hook / anchor
+PASS S3 actual visual aim feedback highlights intended E Hook
+PASS S3_Aim False preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S3_Aim False preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S3_Aim False five original terrain Transform/Collider/RB identities unchanged
+PASS S3_Aim True preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S3_Aim True preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S3_Aim True five original terrain Transform/Collider/RB identities unchanged
+PASS S3_Aim Start Ground visual bounds/walk line exactly match authored Collider
+PASS S3_Aim Tutorial Landing visual bounds/walk line exactly match authored Collider
+PASS S3_Aim Tutorial T2 Landing visual bounds/walk line exactly match authored Collider
+PASS S3_Aim Tutorial T3 Landing visual bounds/walk line exactly match authored Collider
+PASS S3_Aim Tutorial T4 Goal Floor visual bounds/walk line exactly match authored Collider
+PASS S3_Aim restores synchronous gameplay/background state
+PASS S3_Aim adopted 2.5D background continuously visible
+PASS S3 existing keyboard-direction E attach succeeds
+PASS S3 free E / selected rope / original Hook / DistanceJoint contract
+PASS S3_Attached False preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S3_Attached False preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S3_Attached False five original terrain Transform/Collider/RB identities unchanged
+PASS S3_Attached True preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S3_Attached True preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S3_Attached True five original terrain Transform/Collider/RB identities unchanged
+PASS S3_Attached Start Ground visual bounds/walk line exactly match authored Collider
+PASS S3_Attached Tutorial Landing visual bounds/walk line exactly match authored Collider
+PASS S3_Attached Tutorial T2 Landing visual bounds/walk line exactly match authored Collider
+PASS S3_Attached Tutorial T3 Landing visual bounds/walk line exactly match authored Collider
+PASS S3_Attached Tutorial T4 Goal Floor visual bounds/walk line exactly match authored Collider
+PASS S3_Attached restores synchronous gameplay/background state
+PASS S3_Attached adopted 2.5D background continuously visible
+PASS S3 existing Q creates bridge
+PASS S3 Q consumes only selected rope length
+PASS S3_Bridge False preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S3_Bridge False preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S3_Bridge False five original terrain Transform/Collider/RB identities unchanged
+PASS S3_Bridge True preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S3_Bridge True preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S3_Bridge True five original terrain Transform/Collider/RB identities unchanged
+PASS S3_Bridge Start Ground visual bounds/walk line exactly match authored Collider
+PASS S3_Bridge Tutorial Landing visual bounds/walk line exactly match authored Collider
+PASS S3_Bridge Tutorial T2 Landing visual bounds/walk line exactly match authored Collider
+PASS S3_Bridge Tutorial T3 Landing visual bounds/walk line exactly match authored Collider
+PASS S3_Bridge Tutorial T4 Goal Floor visual bounds/walk line exactly match authored Collider
+PASS S3_Bridge restores synchronous gameplay/background state
+PASS S3_Bridge adopted 2.5D background continuously visible
+PASS S3_BridgeWalk False preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S3_BridgeWalk False preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S3_BridgeWalk False five original terrain Transform/Collider/RB identities unchanged
+PASS S3_BridgeWalk True preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S3_BridgeWalk True preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S3_BridgeWalk True five original terrain Transform/Collider/RB identities unchanged
+PASS S3_BridgeWalk Start Ground visual bounds/walk line exactly match authored Collider
+PASS S3_BridgeWalk Tutorial Landing visual bounds/walk line exactly match authored Collider
+PASS S3_BridgeWalk Tutorial T2 Landing visual bounds/walk line exactly match authored Collider
+PASS S3_BridgeWalk Tutorial T3 Landing visual bounds/walk line exactly match authored Collider
+PASS S3_BridgeWalk Tutorial T4 Goal Floor visual bounds/walk line exactly match authored Collider
+PASS S3_BridgeWalk restores synchronous gameplay/background state
+PASS S3_BridgeWalk adopted 2.5D background continuously visible
+PASS Section 3 -> 4 background parallax phase unchanged
+PASS Physical Walk 30.4625549 -> 39; actual=(38.94, 0.96)
+PASS S3_BridgeWalk image taken during actual horizontal movement
+PASS S3 actual bridge traversal reaches S4 checkpoint
+PASS Section 4 reached through authored physical route
+PASS S4 normal checkpoint R preserves resource/selection/bridge state
+PASS S4_Standing False preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S4_Standing False preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S4_Standing False five original terrain Transform/Collider/RB identities unchanged
+PASS S4_Standing True preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S4_Standing True preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S4_Standing True five original terrain Transform/Collider/RB identities unchanged
+PASS S4_Standing Start Ground visual bounds/walk line exactly match authored Collider
+PASS S4_Standing Tutorial Landing visual bounds/walk line exactly match authored Collider
+PASS S4_Standing Tutorial T2 Landing visual bounds/walk line exactly match authored Collider
+PASS S4_Standing Tutorial T3 Landing visual bounds/walk line exactly match authored Collider
+PASS S4_Standing Tutorial T4 Goal Floor visual bounds/walk line exactly match authored Collider
+PASS S4_Standing restores synchronous gameplay/background state
+PASS S4_Standing adopted 2.5D background continuously visible
+PASS Physical Walk 39 -> 38.6; actual=(38.66, 0.96)
+PASS S4_Walk False preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S4_Walk False preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S4_Walk False five original terrain Transform/Collider/RB identities unchanged
+PASS S4_Walk True preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S4_Walk True preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S4_Walk True five original terrain Transform/Collider/RB identities unchanged
+PASS S4_Walk Start Ground visual bounds/walk line exactly match authored Collider
+PASS S4_Walk Tutorial Landing visual bounds/walk line exactly match authored Collider
+PASS S4_Walk Tutorial T2 Landing visual bounds/walk line exactly match authored Collider
+PASS S4_Walk Tutorial T3 Landing visual bounds/walk line exactly match authored Collider
+PASS S4_Walk Tutorial T4 Goal Floor visual bounds/walk line exactly match authored Collider
+PASS S4_Walk restores synchronous gameplay/background state
+PASS S4_Walk adopted 2.5D background continuously visible
+PASS Physical Walk 38.6602669 -> 39.4; actual=(39.33, 0.96)
+PASS S4_Walk image taken during actual horizontal movement
+PASS Physical Walk 39.33394 -> 39; actual=(39.06, 0.96)
+PASS S4_Jump starts grounded/detached
+PASS S4_Jump normal PlayerMover jump rises
+PASS S4_Jump False preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S4_Jump False preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S4_Jump False five original terrain Transform/Collider/RB identities unchanged
+PASS S4_Jump True preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S4_Jump True preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S4_Jump True five original terrain Transform/Collider/RB identities unchanged
+PASS S4_Jump Start Ground visual bounds/walk line exactly match authored Collider
+PASS S4_Jump Tutorial Landing visual bounds/walk line exactly match authored Collider
+PASS S4_Jump Tutorial T2 Landing visual bounds/walk line exactly match authored Collider
+PASS S4_Jump Tutorial T3 Landing visual bounds/walk line exactly match authored Collider
+PASS S4_Jump Tutorial T4 Goal Floor visual bounds/walk line exactly match authored Collider
+PASS S4_Jump restores synchronous gameplay/background state
+PASS S4_Jump adopted 2.5D background continuously visible
+PASS S4_Jump lands on same authored upper face
+PASS S4 existing sign UI pause opens
+PASS S4 sign pause preserves adopted background/camera
+PASS S4_SignWorldOnly False preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S4_SignWorldOnly False preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S4_SignWorldOnly False five original terrain Transform/Collider/RB identities unchanged
+PASS S4_SignWorldOnly True preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S4_SignWorldOnly True preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S4_SignWorldOnly True five original terrain Transform/Collider/RB identities unchanged
+PASS S4_SignWorldOnly Start Ground visual bounds/walk line exactly match authored Collider
+PASS S4_SignWorldOnly Tutorial Landing visual bounds/walk line exactly match authored Collider
+PASS S4_SignWorldOnly Tutorial T2 Landing visual bounds/walk line exactly match authored Collider
+PASS S4_SignWorldOnly Tutorial T3 Landing visual bounds/walk line exactly match authored Collider
+PASS S4_SignWorldOnly Tutorial T4 Goal Floor visual bounds/walk line exactly match authored Collider
+PASS S4_SignWorldOnly restores synchronous gameplay/background state
+PASS S4_SignWorldOnly adopted 2.5D background continuously visible
+PASS S4 sign closes and resumes normally
+PASS S4 checkpoint R preserves S3 bridge / 92 resource / selected 7
+PASS Physical Walk 39.05964 -> 41.35; actual=(41.29, 0.96)
+PASS S4_First actual E candidate resolver selects intended Hook / anchor
+PASS S4_First actual visual aim feedback highlights intended E Hook
+PASS S4_First_Aim False preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S4_First_Aim False preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S4_First_Aim False five original terrain Transform/Collider/RB identities unchanged
+PASS S4_First_Aim True preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S4_First_Aim True preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S4_First_Aim True five original terrain Transform/Collider/RB identities unchanged
+PASS S4_First_Aim Start Ground visual bounds/walk line exactly match authored Collider
+PASS S4_First_Aim Tutorial Landing visual bounds/walk line exactly match authored Collider
+PASS S4_First_Aim Tutorial T2 Landing visual bounds/walk line exactly match authored Collider
+PASS S4_First_Aim Tutorial T3 Landing visual bounds/walk line exactly match authored Collider
+PASS S4_First_Aim Tutorial T4 Goal Floor visual bounds/walk line exactly match authored Collider
+PASS S4_First_Aim restores synchronous gameplay/background state
+PASS S4_First_Aim adopted 2.5D background continuously visible
+PASS S4_First existing keyboard-direction E attach succeeds
+PASS S4_First free E / selected rope / original Hook / DistanceJoint contract
+PASS S4_First_Attached False preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S4_First_Attached False preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S4_First_Attached False five original terrain Transform/Collider/RB identities unchanged
+PASS S4_First_Attached True preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S4_First_Attached True preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S4_First_Attached True five original terrain Transform/Collider/RB identities unchanged
+PASS S4_First_Attached Start Ground visual bounds/walk line exactly match authored Collider
+PASS S4_First_Attached Tutorial Landing visual bounds/walk line exactly match authored Collider
+PASS S4_First_Attached Tutorial T2 Landing visual bounds/walk line exactly match authored Collider
+PASS S4_First_Attached Tutorial T3 Landing visual bounds/walk line exactly match authored Collider
+PASS S4_First_Attached Tutorial T4 Goal Floor visual bounds/walk line exactly match authored Collider
+PASS S4_First_Attached restores synchronous gameplay/background state
+PASS S4_First_Attached adopted 2.5D background continuously visible
+PASS S4_First existing Q creates bridge
+PASS S4_First Q consumes only selected rope length
+PASS S4_First_Bridge False preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S4_First_Bridge False preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S4_First_Bridge False five original terrain Transform/Collider/RB identities unchanged
+PASS S4_First_Bridge True preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S4_First_Bridge True preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S4_First_Bridge True five original terrain Transform/Collider/RB identities unchanged
+PASS S4_First_Bridge Start Ground visual bounds/walk line exactly match authored Collider
+PASS S4_First_Bridge Tutorial Landing visual bounds/walk line exactly match authored Collider
+PASS S4_First_Bridge Tutorial T2 Landing visual bounds/walk line exactly match authored Collider
+PASS S4_First_Bridge Tutorial T3 Landing visual bounds/walk line exactly match authored Collider
+PASS S4_First_Bridge Tutorial T4 Goal Floor visual bounds/walk line exactly match authored Collider
+PASS S4_First_Bridge restores synchronous gameplay/background state
+PASS S4_First_Bridge adopted 2.5D background continuously visible
+PASS Physical Walk 42.32478 -> 46.35; actual=(46.28, 2.03)
+PASS S4_Second actual E candidate resolver selects intended Hook / anchor
+PASS S4_Second actual visual aim feedback highlights intended E Hook
+PASS S4_Second separate F picker correctly retains center Hook while E selects right endpoint
+PASS S4_Second_Aim False preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S4_Second_Aim False preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S4_Second_Aim False five original terrain Transform/Collider/RB identities unchanged
+PASS S4_Second_Aim True preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S4_Second_Aim True preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S4_Second_Aim True five original terrain Transform/Collider/RB identities unchanged
+PASS S4_Second_Aim Start Ground visual bounds/walk line exactly match authored Collider
+PASS S4_Second_Aim Tutorial Landing visual bounds/walk line exactly match authored Collider
+PASS S4_Second_Aim Tutorial T2 Landing visual bounds/walk line exactly match authored Collider
+PASS S4_Second_Aim Tutorial T3 Landing visual bounds/walk line exactly match authored Collider
+PASS S4_Second_Aim Tutorial T4 Goal Floor visual bounds/walk line exactly match authored Collider
+PASS S4_Second_Aim restores synchronous gameplay/background state
+PASS S4_Second_Aim adopted 2.5D background continuously visible
+PASS S4_Second existing keyboard-direction E attach succeeds
+PASS S4_Second free E / selected rope / original Hook / DistanceJoint contract
+PASS S4_Second_Attached False preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S4_Second_Attached False preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S4_Second_Attached False five original terrain Transform/Collider/RB identities unchanged
+PASS S4_Second_Attached True preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S4_Second_Attached True preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S4_Second_Attached True five original terrain Transform/Collider/RB identities unchanged
+PASS S4_Second_Attached Start Ground visual bounds/walk line exactly match authored Collider
+PASS S4_Second_Attached Tutorial Landing visual bounds/walk line exactly match authored Collider
+PASS S4_Second_Attached Tutorial T2 Landing visual bounds/walk line exactly match authored Collider
+PASS S4_Second_Attached Tutorial T3 Landing visual bounds/walk line exactly match authored Collider
+PASS S4_Second_Attached Tutorial T4 Goal Floor visual bounds/walk line exactly match authored Collider
+PASS S4_Second_Attached restores synchronous gameplay/background state
+PASS S4_Second_Attached adopted 2.5D background continuously visible
+PASS S4_Second existing Q creates bridge
+PASS S4_Second Q consumes only selected rope length
+PASS S4_Second_Bridge False preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S4_Second_Bridge False preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S4_Second_Bridge False five original terrain Transform/Collider/RB identities unchanged
+PASS S4_Second_Bridge True preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S4_Second_Bridge True preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S4_Second_Bridge True five original terrain Transform/Collider/RB identities unchanged
+PASS S4_Second_Bridge Start Ground visual bounds/walk line exactly match authored Collider
+PASS S4_Second_Bridge Tutorial Landing visual bounds/walk line exactly match authored Collider
+PASS S4_Second_Bridge Tutorial T2 Landing visual bounds/walk line exactly match authored Collider
+PASS S4_Second_Bridge Tutorial T3 Landing visual bounds/walk line exactly match authored Collider
+PASS S4_Second_Bridge Tutorial T4 Goal Floor visual bounds/walk line exactly match authored Collider
+PASS S4_Second_Bridge restores synchronous gameplay/background state
+PASS S4_Second_Bridge adopted 2.5D background continuously visible
+PASS S4_TwoBridges False preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S4_TwoBridges False preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S4_TwoBridges False five original terrain Transform/Collider/RB identities unchanged
+PASS S4_TwoBridges True preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S4_TwoBridges True preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S4_TwoBridges True five original terrain Transform/Collider/RB identities unchanged
+PASS S4_TwoBridges Start Ground visual bounds/walk line exactly match authored Collider
+PASS S4_TwoBridges Tutorial Landing visual bounds/walk line exactly match authored Collider
+PASS S4_TwoBridges Tutorial T2 Landing visual bounds/walk line exactly match authored Collider
+PASS S4_TwoBridges Tutorial T3 Landing visual bounds/walk line exactly match authored Collider
+PASS S4_TwoBridges Tutorial T4 Goal Floor visual bounds/walk line exactly match authored Collider
+PASS S4_TwoBridges restores synchronous gameplay/background state
+PASS S4_TwoBridges adopted 2.5D background continuously visible
+PASS S4 existing F merge succeeds
+PASS S4 merged bridge/center removal adds no resource cost
+PASS S4_Merged False preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S4_Merged False preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S4_Merged False five original terrain Transform/Collider/RB identities unchanged
+PASS S4_Merged True preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S4_Merged True preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S4_Merged True five original terrain Transform/Collider/RB identities unchanged
+PASS S4_Merged Start Ground visual bounds/walk line exactly match authored Collider
+PASS S4_Merged Tutorial Landing visual bounds/walk line exactly match authored Collider
+PASS S4_Merged Tutorial T2 Landing visual bounds/walk line exactly match authored Collider
+PASS S4_Merged Tutorial T3 Landing visual bounds/walk line exactly match authored Collider
+PASS S4_Merged Tutorial T4 Goal Floor visual bounds/walk line exactly match authored Collider
+PASS S4_Merged restores synchronous gameplay/background state
+PASS S4_Merged adopted 2.5D background continuously visible
+PASS S4 post-merge R restores original checkpoint bridges/hooks/resource/selection
+PASS S4_Restored False preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S4_Restored False preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S4_Restored False five original terrain Transform/Collider/RB identities unchanged
+PASS S4_Restored True preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S4_Restored True preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S4_Restored True five original terrain Transform/Collider/RB identities unchanged
+PASS S4_Restored Start Ground visual bounds/walk line exactly match authored Collider
+PASS S4_Restored Tutorial Landing visual bounds/walk line exactly match authored Collider
+PASS S4_Restored Tutorial T2 Landing visual bounds/walk line exactly match authored Collider
+PASS S4_Restored Tutorial T3 Landing visual bounds/walk line exactly match authored Collider
+PASS S4_Restored Tutorial T4 Goal Floor visual bounds/walk line exactly match authored Collider
+PASS S4_Restored restores synchronous gameplay/background state
+PASS S4_Restored adopted 2.5D background continuously visible
+PASS Physical Walk 39 -> 41.35; actual=(41.28, 0.96)
+PASS S4_Rebuilt_First actual E candidate resolver selects intended Hook / anchor
+PASS S4_Rebuilt_First actual visual aim feedback highlights intended E Hook
+PASS S4_Rebuilt_First_Aim False preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S4_Rebuilt_First_Aim False preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S4_Rebuilt_First_Aim False five original terrain Transform/Collider/RB identities unchanged
+PASS S4_Rebuilt_First_Aim True preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S4_Rebuilt_First_Aim True preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S4_Rebuilt_First_Aim True five original terrain Transform/Collider/RB identities unchanged
+PASS S4_Rebuilt_First_Aim Start Ground visual bounds/walk line exactly match authored Collider
+PASS S4_Rebuilt_First_Aim Tutorial Landing visual bounds/walk line exactly match authored Collider
+PASS S4_Rebuilt_First_Aim Tutorial T2 Landing visual bounds/walk line exactly match authored Collider
+PASS S4_Rebuilt_First_Aim Tutorial T3 Landing visual bounds/walk line exactly match authored Collider
+PASS S4_Rebuilt_First_Aim Tutorial T4 Goal Floor visual bounds/walk line exactly match authored Collider
+PASS S4_Rebuilt_First_Aim restores synchronous gameplay/background state
+PASS S4_Rebuilt_First_Aim adopted 2.5D background continuously visible
+PASS S4_Rebuilt_First existing keyboard-direction E attach succeeds
+PASS S4_Rebuilt_First free E / selected rope / original Hook / DistanceJoint contract
+PASS S4_Rebuilt_First_Attached False preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S4_Rebuilt_First_Attached False preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S4_Rebuilt_First_Attached False five original terrain Transform/Collider/RB identities unchanged
+PASS S4_Rebuilt_First_Attached True preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S4_Rebuilt_First_Attached True preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S4_Rebuilt_First_Attached True five original terrain Transform/Collider/RB identities unchanged
+PASS S4_Rebuilt_First_Attached Start Ground visual bounds/walk line exactly match authored Collider
+PASS S4_Rebuilt_First_Attached Tutorial Landing visual bounds/walk line exactly match authored Collider
+PASS S4_Rebuilt_First_Attached Tutorial T2 Landing visual bounds/walk line exactly match authored Collider
+PASS S4_Rebuilt_First_Attached Tutorial T3 Landing visual bounds/walk line exactly match authored Collider
+PASS S4_Rebuilt_First_Attached Tutorial T4 Goal Floor visual bounds/walk line exactly match authored Collider
+PASS S4_Rebuilt_First_Attached restores synchronous gameplay/background state
+PASS S4_Rebuilt_First_Attached adopted 2.5D background continuously visible
+PASS S4_Rebuilt_First existing Q creates bridge
+PASS S4_Rebuilt_First Q consumes only selected rope length
+PASS S4_Rebuilt_First_Bridge False preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S4_Rebuilt_First_Bridge False preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S4_Rebuilt_First_Bridge False five original terrain Transform/Collider/RB identities unchanged
+PASS S4_Rebuilt_First_Bridge True preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S4_Rebuilt_First_Bridge True preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S4_Rebuilt_First_Bridge True five original terrain Transform/Collider/RB identities unchanged
+PASS S4_Rebuilt_First_Bridge Start Ground visual bounds/walk line exactly match authored Collider
+PASS S4_Rebuilt_First_Bridge Tutorial Landing visual bounds/walk line exactly match authored Collider
+PASS S4_Rebuilt_First_Bridge Tutorial T2 Landing visual bounds/walk line exactly match authored Collider
+PASS S4_Rebuilt_First_Bridge Tutorial T3 Landing visual bounds/walk line exactly match authored Collider
+PASS S4_Rebuilt_First_Bridge Tutorial T4 Goal Floor visual bounds/walk line exactly match authored Collider
+PASS S4_Rebuilt_First_Bridge restores synchronous gameplay/background state
+PASS S4_Rebuilt_First_Bridge adopted 2.5D background continuously visible
+PASS Physical Walk 42.32478 -> 46.35; actual=(46.28, 2.03)
+PASS S4_Rebuilt_Second actual E candidate resolver selects intended Hook / anchor
+PASS S4_Rebuilt_Second actual visual aim feedback highlights intended E Hook
+PASS S4_Rebuilt_Second separate F picker correctly retains center Hook while E selects right endpoint
+PASS S4_Rebuilt_Second_Aim False preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S4_Rebuilt_Second_Aim False preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S4_Rebuilt_Second_Aim False five original terrain Transform/Collider/RB identities unchanged
+PASS S4_Rebuilt_Second_Aim True preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S4_Rebuilt_Second_Aim True preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S4_Rebuilt_Second_Aim True five original terrain Transform/Collider/RB identities unchanged
+PASS S4_Rebuilt_Second_Aim Start Ground visual bounds/walk line exactly match authored Collider
+PASS S4_Rebuilt_Second_Aim Tutorial Landing visual bounds/walk line exactly match authored Collider
+PASS S4_Rebuilt_Second_Aim Tutorial T2 Landing visual bounds/walk line exactly match authored Collider
+PASS S4_Rebuilt_Second_Aim Tutorial T3 Landing visual bounds/walk line exactly match authored Collider
+PASS S4_Rebuilt_Second_Aim Tutorial T4 Goal Floor visual bounds/walk line exactly match authored Collider
+PASS S4_Rebuilt_Second_Aim restores synchronous gameplay/background state
+PASS S4_Rebuilt_Second_Aim adopted 2.5D background continuously visible
+PASS S4_Rebuilt_Second existing keyboard-direction E attach succeeds
+PASS S4_Rebuilt_Second free E / selected rope / original Hook / DistanceJoint contract
+PASS S4_Rebuilt_Second_Attached False preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S4_Rebuilt_Second_Attached False preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S4_Rebuilt_Second_Attached False five original terrain Transform/Collider/RB identities unchanged
+PASS S4_Rebuilt_Second_Attached True preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S4_Rebuilt_Second_Attached True preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S4_Rebuilt_Second_Attached True five original terrain Transform/Collider/RB identities unchanged
+PASS S4_Rebuilt_Second_Attached Start Ground visual bounds/walk line exactly match authored Collider
+PASS S4_Rebuilt_Second_Attached Tutorial Landing visual bounds/walk line exactly match authored Collider
+PASS S4_Rebuilt_Second_Attached Tutorial T2 Landing visual bounds/walk line exactly match authored Collider
+PASS S4_Rebuilt_Second_Attached Tutorial T3 Landing visual bounds/walk line exactly match authored Collider
+PASS S4_Rebuilt_Second_Attached Tutorial T4 Goal Floor visual bounds/walk line exactly match authored Collider
+PASS S4_Rebuilt_Second_Attached restores synchronous gameplay/background state
+PASS S4_Rebuilt_Second_Attached adopted 2.5D background continuously visible
+PASS S4_Rebuilt_Second existing Q creates bridge
+PASS S4_Rebuilt_Second Q consumes only selected rope length
+PASS S4_Rebuilt_Second_Bridge False preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S4_Rebuilt_Second_Bridge False preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S4_Rebuilt_Second_Bridge False five original terrain Transform/Collider/RB identities unchanged
+PASS S4_Rebuilt_Second_Bridge True preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S4_Rebuilt_Second_Bridge True preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S4_Rebuilt_Second_Bridge True five original terrain Transform/Collider/RB identities unchanged
+PASS S4_Rebuilt_Second_Bridge Start Ground visual bounds/walk line exactly match authored Collider
+PASS S4_Rebuilt_Second_Bridge Tutorial Landing visual bounds/walk line exactly match authored Collider
+PASS S4_Rebuilt_Second_Bridge Tutorial T2 Landing visual bounds/walk line exactly match authored Collider
+PASS S4_Rebuilt_Second_Bridge Tutorial T3 Landing visual bounds/walk line exactly match authored Collider
+PASS S4_Rebuilt_Second_Bridge Tutorial T4 Goal Floor visual bounds/walk line exactly match authored Collider
+PASS S4_Rebuilt_Second_Bridge restores synchronous gameplay/background state
+PASS S4_Rebuilt_Second_Bridge adopted 2.5D background continuously visible
+PASS S4_Rebuilt_TwoBridges False preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S4_Rebuilt_TwoBridges False preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S4_Rebuilt_TwoBridges False five original terrain Transform/Collider/RB identities unchanged
+PASS S4_Rebuilt_TwoBridges True preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S4_Rebuilt_TwoBridges True preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S4_Rebuilt_TwoBridges True five original terrain Transform/Collider/RB identities unchanged
+PASS S4_Rebuilt_TwoBridges Start Ground visual bounds/walk line exactly match authored Collider
+PASS S4_Rebuilt_TwoBridges Tutorial Landing visual bounds/walk line exactly match authored Collider
+PASS S4_Rebuilt_TwoBridges Tutorial T2 Landing visual bounds/walk line exactly match authored Collider
+PASS S4_Rebuilt_TwoBridges Tutorial T3 Landing visual bounds/walk line exactly match authored Collider
+PASS S4_Rebuilt_TwoBridges Tutorial T4 Goal Floor visual bounds/walk line exactly match authored Collider
+PASS S4_Rebuilt_TwoBridges restores synchronous gameplay/background state
+PASS S4_Rebuilt_TwoBridges adopted 2.5D background continuously visible
+PASS S4_Rebuilt existing F merge succeeds
+PASS S4_Rebuilt merged bridge/center removal adds no resource cost
+PASS S4_Rebuilt_Merged False preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S4_Rebuilt_Merged False preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S4_Rebuilt_Merged False five original terrain Transform/Collider/RB identities unchanged
+PASS S4_Rebuilt_Merged True preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S4_Rebuilt_Merged True preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S4_Rebuilt_Merged True five original terrain Transform/Collider/RB identities unchanged
+PASS S4_Rebuilt_Merged Start Ground visual bounds/walk line exactly match authored Collider
+PASS S4_Rebuilt_Merged Tutorial Landing visual bounds/walk line exactly match authored Collider
+PASS S4_Rebuilt_Merged Tutorial T2 Landing visual bounds/walk line exactly match authored Collider
+PASS S4_Rebuilt_Merged Tutorial T3 Landing visual bounds/walk line exactly match authored Collider
+PASS S4_Rebuilt_Merged Tutorial T4 Goal Floor visual bounds/walk line exactly match authored Collider
+PASS S4_Rebuilt_Merged restores synchronous gameplay/background state
+PASS S4_Rebuilt_Merged adopted 2.5D background continuously visible
+PASS Physical Walk 46.28205 -> 53.5; actual=(53.43, 0.97)
+PASS Wide normal floor reached through S4 merged bridge
+PASS S4_WideStanding False preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S4_WideStanding False preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S4_WideStanding False five original terrain Transform/Collider/RB identities unchanged
+PASS S4_WideStanding True preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S4_WideStanding True preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S4_WideStanding True five original terrain Transform/Collider/RB identities unchanged
+PASS S4_WideStanding Start Ground visual bounds/walk line exactly match authored Collider
+PASS S4_WideStanding Tutorial Landing visual bounds/walk line exactly match authored Collider
+PASS S4_WideStanding Tutorial T2 Landing visual bounds/walk line exactly match authored Collider
+PASS S4_WideStanding Tutorial T3 Landing visual bounds/walk line exactly match authored Collider
+PASS S4_WideStanding Tutorial T4 Goal Floor visual bounds/walk line exactly match authored Collider
+PASS S4_WideStanding restores synchronous gameplay/background state
+PASS S4_WideStanding adopted 2.5D background continuously visible
+PASS Physical Walk 53.4339 -> 53.1; actual=(53.16, 0.97)
+PASS S4_WideWalk False preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S4_WideWalk False preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S4_WideWalk False five original terrain Transform/Collider/RB identities unchanged
+PASS S4_WideWalk True preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S4_WideWalk True preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S4_WideWalk True five original terrain Transform/Collider/RB identities unchanged
+PASS S4_WideWalk Start Ground visual bounds/walk line exactly match authored Collider
+PASS S4_WideWalk Tutorial Landing visual bounds/walk line exactly match authored Collider
+PASS S4_WideWalk Tutorial T2 Landing visual bounds/walk line exactly match authored Collider
+PASS S4_WideWalk Tutorial T3 Landing visual bounds/walk line exactly match authored Collider
+PASS S4_WideWalk Tutorial T4 Goal Floor visual bounds/walk line exactly match authored Collider
+PASS S4_WideWalk restores synchronous gameplay/background state
+PASS S4_WideWalk adopted 2.5D background continuously visible
+PASS Physical Walk 53.159626 -> 53.9; actual=(53.83, 0.97)
+PASS S4_WideWalk image taken during actual horizontal movement
+PASS S4_WideJump starts grounded/detached
+PASS S4_WideJump normal PlayerMover jump rises
+PASS S4_WideJump False preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S4_WideJump False preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S4_WideJump False five original terrain Transform/Collider/RB identities unchanged
+PASS S4_WideJump True preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S4_WideJump True preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S4_WideJump True five original terrain Transform/Collider/RB identities unchanged
+PASS S4_WideJump Start Ground visual bounds/walk line exactly match authored Collider
+PASS S4_WideJump Tutorial Landing visual bounds/walk line exactly match authored Collider
+PASS S4_WideJump Tutorial T2 Landing visual bounds/walk line exactly match authored Collider
+PASS S4_WideJump Tutorial T3 Landing visual bounds/walk line exactly match authored Collider
+PASS S4_WideJump Tutorial T4 Goal Floor visual bounds/walk line exactly match authored Collider
+PASS S4_WideJump restores synchronous gameplay/background state
+PASS S4_WideJump adopted 2.5D background continuously visible
+PASS S4_WideJump lands on same authored upper face
+PASS S4_Wide actual E candidate resolver selects intended Hook / anchor
+PASS S4_Wide actual visual aim feedback highlights intended E Hook
+PASS S4_Wide_Aim False preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S4_Wide_Aim False preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S4_Wide_Aim False five original terrain Transform/Collider/RB identities unchanged
+PASS S4_Wide_Aim True preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S4_Wide_Aim True preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S4_Wide_Aim True five original terrain Transform/Collider/RB identities unchanged
+PASS S4_Wide_Aim Start Ground visual bounds/walk line exactly match authored Collider
+PASS S4_Wide_Aim Tutorial Landing visual bounds/walk line exactly match authored Collider
+PASS S4_Wide_Aim Tutorial T2 Landing visual bounds/walk line exactly match authored Collider
+PASS S4_Wide_Aim Tutorial T3 Landing visual bounds/walk line exactly match authored Collider
+PASS S4_Wide_Aim Tutorial T4 Goal Floor visual bounds/walk line exactly match authored Collider
+PASS S4_Wide_Aim restores synchronous gameplay/background state
+PASS S4_Wide_Aim adopted 2.5D background continuously visible
+PASS S4_Wide existing keyboard-direction E attach succeeds
+PASS S4_Wide free E / selected rope / original Hook / DistanceJoint contract
+PASS S4_Wide_Attached False preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S4_Wide_Attached False preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S4_Wide_Attached False five original terrain Transform/Collider/RB identities unchanged
+PASS S4_Wide_Attached True preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S4_Wide_Attached True preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S4_Wide_Attached True five original terrain Transform/Collider/RB identities unchanged
+PASS S4_Wide_Attached Start Ground visual bounds/walk line exactly match authored Collider
+PASS S4_Wide_Attached Tutorial Landing visual bounds/walk line exactly match authored Collider
+PASS S4_Wide_Attached Tutorial T2 Landing visual bounds/walk line exactly match authored Collider
+PASS S4_Wide_Attached Tutorial T3 Landing visual bounds/walk line exactly match authored Collider
+PASS S4_Wide_Attached Tutorial T4 Goal Floor visual bounds/walk line exactly match authored Collider
+PASS S4_Wide_Attached restores synchronous gameplay/background state
+PASS S4_Wide_Attached adopted 2.5D background continuously visible
+PASS Wide E release preserves momentum/resource
+PASS Final route has only S3 bridge + merged S4 / rope 80
+PASS Physical goal arrival triggers original Clearing / physics lock
+PASS S4_Clearing False preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S4_Clearing False preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S4_Clearing False five original terrain Transform/Collider/RB identities unchanged
+PASS S4_Clearing True preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S4_Clearing True preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S4_Clearing True five original terrain Transform/Collider/RB identities unchanged
+PASS S4_Clearing Start Ground visual bounds/walk line exactly match authored Collider
+PASS S4_Clearing Tutorial Landing visual bounds/walk line exactly match authored Collider
+PASS S4_Clearing Tutorial T2 Landing visual bounds/walk line exactly match authored Collider
+PASS S4_Clearing Tutorial T3 Landing visual bounds/walk line exactly match authored Collider
+PASS S4_Clearing Tutorial T4 Goal Floor visual bounds/walk line exactly match authored Collider
+PASS S4_Clearing restores synchronous gameplay/background state
+PASS S4_Clearing adopted 2.5D background continuously visible
+PASS Clear completed with unchanged adopted background
+PASS S4_Clear False preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S4_Clear False preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S4_Clear False five original terrain Transform/Collider/RB identities unchanged
+PASS S4_Clear True preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S4_Clear True preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S4_Clear True five original terrain Transform/Collider/RB identities unchanged
+PASS S4_Clear Start Ground visual bounds/walk line exactly match authored Collider
+PASS S4_Clear Tutorial Landing visual bounds/walk line exactly match authored Collider
+PASS S4_Clear Tutorial T2 Landing visual bounds/walk line exactly match authored Collider
+PASS S4_Clear Tutorial T3 Landing visual bounds/walk line exactly match authored Collider
+PASS S4_Clear Tutorial T4 Goal Floor visual bounds/walk line exactly match authored Collider
+PASS S4_Clear restores synchronous gameplay/background state
+PASS S4_Clear adopted 2.5D background continuously visible
+PASS All three real Tutorial section transitions observed
+PASS Lifecycle baseline: exactly five drawable Hybrid children
+PASS Lifecycle disable synchronously preserves physics/camera/background/excluded renderers
+PASS Lifecycle disable clears private ready/owned references; one disabled production component remains
+PASS Lifecycle disable immediately hides owned renderers and restores original wood renderer flags
+PASS Lifecycle deferred disposal removes all five owned renderer children
+PASS Lifecycle enable synchronously preserves physics/camera/background/excluded renderers
+PASS Lifecycle re-enable prepares five targets with private ready and one production component
+PASS Lifecycle re-enable has exactly five owned renderers, no duplicates
+PASS Lifecycle re-enable adds no Collider/Rigidbody components
+PASS S4_LifecycleRestored False preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S4_LifecycleRestored False preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S4_LifecycleRestored False five original terrain Transform/Collider/RB identities unchanged
+PASS S4_LifecycleRestored True preserves all Collider/RB/Joint/Hook/Rope/Camera/run/physics state
+PASS S4_LifecycleRestored True preserves background/Far/Mid/Near/shader/prop/sign/hook/bridge/player renderers
+PASS S4_LifecycleRestored True five original terrain Transform/Collider/RB identities unchanged
+PASS S4_LifecycleRestored Start Ground visual bounds/walk line exactly match authored Collider
+PASS S4_LifecycleRestored Tutorial Landing visual bounds/walk line exactly match authored Collider
+PASS S4_LifecycleRestored Tutorial T2 Landing visual bounds/walk line exactly match authored Collider
+PASS S4_LifecycleRestored Tutorial T3 Landing visual bounds/walk line exactly match authored Collider
+PASS S4_LifecycleRestored Tutorial T4 Goal Floor visual bounds/walk line exactly match authored Collider
+PASS S4_LifecycleRestored restores synchronous gameplay/background state
+PASS S4_LifecycleRestored adopted 2.5D background continuously visible
+PASS Clear -> Stage Selection restores original background contract
+PASS MainStage has no Hybrid manager / no production terrain application
+PASS MainStage original background / no Tutorial layer component
+PASS MainStage contains zero Hybrid-named visual renderers; S6 proof not installed

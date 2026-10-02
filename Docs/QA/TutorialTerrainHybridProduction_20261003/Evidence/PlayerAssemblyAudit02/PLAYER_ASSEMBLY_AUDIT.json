@@ -1,0 +1,37 @@
+{
+    "passed": true,
+    "playerAssembly": "C:/Users/田尻大翔/Documents/Codex/2026-08-07/new-chat/outputs/HimoHitoPrototype/output/TutorialTerrainHybridProduction_20261003/Windows\\HimoHitoTutorialTerrainHybridProduction_Data\\Managed\\Assembly-CSharp.dll",
+    "sha256": "2D74107A4709606F588981D6A550816F12FE9EE34247D29896FAB31B6AB1D302",
+    "cecilAssembly": "C:/Program Files/Unity/Hub/Editor/6000.3.21f1/Editor/Data\\Managed\\Unity.Cecil.dll",
+    "inspectedTypeCount": 156,
+    "failures": [],
+    "terrainMembers": [
+        "Fields:ResourceRoot",
+        "Fields:ChildName",
+        "Fields:floors",
+        "Fields:ready",
+        "Fields:unavailable",
+        "Methods:ResetStatics",
+        "Methods:Bootstrap",
+        "Methods:SceneLoaded",
+        "Methods:EnsureScene",
+        "Methods:Awake",
+        "Methods:LateUpdate",
+        "Methods:TryPrepare",
+        "Methods:ValidFloor",
+        "Methods:Fail",
+        "Methods:CreateVisual",
+        "Methods:ApplyVisibility",
+        "Methods:OnEnable",
+        "Methods:OnDisable",
+        "Methods:OnDestroy",
+        "Methods:ReleaseVisuals",
+        "Methods:ReleaseOwned",
+        "Methods:.ctor"
+    ],
+    "forbiddenTypesFound": [],
+    "legitimateProbeTypes": [
+        "HimoHito.EdgeBalanceSupportProbe"
+    ],
+    "scope": "Actual built Windows player Assembly-CSharp.dll, not Editor/Library assembly; no type loading or executing from player assembly"
+}

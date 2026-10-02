@@ -1,0 +1,9 @@
+label,frame,expected_e_hook,raw_f_picker_found,raw_f_picker_hook,e_resolver_found,e_resolver_hook,feedback_available,feedback_hook,aim_x,aim_y,player_x,player_y,e_anchor_x,e_anchor_y,selected,remaining
+S1,3301,Tutorial Hook,True,Tutorial Hook,True,Tutorial Hook,True,Tutorial Hook,0.562441349,0.8268371,-1.356947,0.9649998,2,5.9,6,99
+S2,3765,Tutorial T2 Hook,True,Tutorial T2 Hook,True,Tutorial T2 Hook,True,Tutorial T2 Hook,0.594962537,0.803753436,14.6430559,0.9649998,18,5.5,6,99
+S3,4201,Tutorial T3 Green Bridge End Hook,True,Tutorial T3 Green Bridge End Hook,True,Tutorial T3 Green Bridge End Hook,True,Tutorial T3 Green Bridge End Hook,0.995769739,-0.09188371,29.3350735,0.9649998,36,0.35,7,99
+S4_First,4647,Tutorial T4 Center Hook,True,Tutorial T4 Center Hook,True,Tutorial T4 Center Hook,True,Tutorial T4 Center Hook,0.9947952,0.101894543,41.28865,0.9649998,47,1.55,6,92
+S4_Second,4731,Tutorial T4 Green Right Bank,True,Tutorial T4 Center Hook,True,Tutorial T4 Green Right Bank,True,Tutorial T4 Green Right Bank,0.959266067,-0.282504261,46.2801781,2.03449,52,0.35,6,86
+S4_Rebuilt_First,4888,Tutorial T4 Center Hook,True,Tutorial T4 Center Hook,True,Tutorial T4 Center Hook,True,Tutorial T4 Center Hook,0.994803667,0.101811968,41.28397,0.9649998,47,1.55,6,92
+S4_Rebuilt_Second,4971,Tutorial T4 Green Right Bank,True,Tutorial T4 Center Hook,True,Tutorial T4 Green Right Bank,True,Tutorial T4 Green Right Bank,0.959258437,-0.2825301,46.2803268,2.03461361,52,0.35,6,86
+S4_Wide,5223,Tutorial T4 Green Right Bank,True,Tutorial T4 Green Right Bank,True,Tutorial T4 Green Right Bank,True,Tutorial T4 Green Right Bank,-0.9481168,-0.317922264,53.8339539,0.96497494,52,0.35,6,80

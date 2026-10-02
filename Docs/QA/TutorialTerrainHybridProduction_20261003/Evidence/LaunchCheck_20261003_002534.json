@@ -1,0 +1,11 @@
+{
+  "log": "C:\\Users\\田尻大翔\\Documents\\Codex\\2026-08-07\\new-chat\\outputs\\HimoHitoPrototype\\Docs\\QA\\TutorialTerrainHybridProduction_20261003\\Evidence\\HumanPlayer_20261003_002502.log",
+  "human_review": "PENDING; process/input readiness only, not screen or keyboard verification",
+  "utc": "2026-10-02T15:25:34.8847306+00:00",
+  "alive": true,
+  "error_lines": [],
+  "responding": true,
+  "input_initialized": true,
+  "pid": 11072,
+  "window_title": "TutorialTerrainHybridProduction_20261003"
+}

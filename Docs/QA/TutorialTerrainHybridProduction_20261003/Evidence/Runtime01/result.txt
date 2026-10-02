@@ -1,0 +1,14 @@
+checks=941
+failures=0
+runtimeErrors=0
+editorSearchStartupErrors=1
+physicalTransitions=3
+worldCameraCaptures=118
+introFrames=2509
+introHiddenAfterCommit=0
+introDoubleDraw=0
+Controlled cached-input/API route with real forces/collisions; NOT OS keyboard/Human approval.
+No fixture teleport or direct camera assignment; natural intro is not skipped. Existing R/checkpoint API performs its authored respawn.
+Diagnostic capture clock 1/60 s; production fixedDeltaTime and physics unchanged. Screen-space Overlay UI is not included in world-camera images.
+Before/After switches exist only in the isolated UNITY_EDITOR QA facade; production has no public proof API, F7, or renderer toggle.
+MainStage read-only runtime negative check only; no S6 proof or reachability claim.

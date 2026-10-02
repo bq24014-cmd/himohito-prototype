@@ -1,0 +1,195 @@
+{
+  "utc": "2026-10-02T15:21:29.6104545+00:00",
+  "original_production_changes": [],
+  "new_production_files": [
+    {
+      "sha256": "423F332E2A061E8A0525C87DBB45F68D659708BB39F06C7A9B4B4C382782197F",
+      "bytes": 172,
+      "path": "Assets/Resources/Art/TutorialTerrainHybrid.meta"
+    },
+    {
+      "sha256": "4F5AAA9B875835E101979B3B0389116BD37C31F5AEF5753885430AB97638F0E2",
+      "bytes": 2538180,
+      "path": "Assets/Resources/Art/TutorialTerrainHybrid/BridgeBank.png"
+    },
+    {
+      "sha256": "EF4A1E680240CD86AACEEB285839FB33BF8A1376BB440D7EA12248F21FA688C9",
+      "bytes": 2683,
+      "path": "Assets/Resources/Art/TutorialTerrainHybrid/BridgeBank.png.meta"
+    },
+    {
+      "sha256": "E348D4F29C125AC28689A7BBE513F0A35993EF9A5E4702717F5FD8D00EDB6B5C",
+      "bytes": 3103430,
+      "path": "Assets/Resources/Art/TutorialTerrainHybrid/Goal.png"
+    },
+    {
+      "sha256": "1F7C2CF502EEBDA0199FCFDDA63662159CBED60B69D353726EE69F1B69FD8463",
+      "bytes": 2683,
+      "path": "Assets/Resources/Art/TutorialTerrainHybrid/Goal.png.meta"
+    },
+    {
+      "sha256": "10771B0C8089529D012197CCB22D65E2D0451822E22B96F5FDFBEB373C4EDE6E",
+      "bytes": 2601223,
+      "path": "Assets/Resources/Art/TutorialTerrainHybrid/Landing1.png"
+    },
+    {
+      "sha256": "9452C4D54C8345A68ED54233AC76270805EAA6227933504396548FF6396E9AAC",
+      "bytes": 2683,
+      "path": "Assets/Resources/Art/TutorialTerrainHybrid/Landing1.png.meta"
+    },
+    {
+      "sha256": "463F3EF800CE14DBF57CEC9E60F85FF634831A783C4F7BEE1FCC7B534BAE76CD",
+      "bytes": 2544630,
+      "path": "Assets/Resources/Art/TutorialTerrainHybrid/MergeBank.png"
+    },
+    {
+      "sha256": "F08901E01BED1477D29154E51F1A682027F124D295AF4CAC9133A1CBCFDE9AAF",
+      "bytes": 2683,
+      "path": "Assets/Resources/Art/TutorialTerrainHybrid/MergeBank.png.meta"
+    },
+    {
+      "sha256": "0DE73BBFFB98EFE88E39824E2C360B56B4EB9009E09DB4AA77FE79F53117ACA5",
+      "bytes": 2426692,
+      "path": "Assets/Resources/Art/TutorialTerrainHybrid/Start.png"
+    },
+    {
+      "sha256": "C9961E8F35119B40A873542FF5BD267C8E8FB644894E0EF5ADF78358EF894B32",
+      "bytes": 2683,
+      "path": "Assets/Resources/Art/TutorialTerrainHybrid/Start.png.meta"
+    },
+    {
+      "sha256": "6D1A10060B01F6F9FB97A3852D5A830B401CCFAE1A50F5162C90863C84328F8C",
+      "bytes": 9702,
+      "path": "Assets/Scripts/TutorialTerrainHybridVisual.cs"
+    },
+    {
+      "sha256": "B1C32D154C1B04F91E97082A0DCEB27698B646FE5A71283F9B205E00143DA948",
+      "bytes": 60,
+      "path": "Assets/Scripts/TutorialTerrainHybridVisual.cs.meta"
+    }
+  ],
+  "approved_non_code": [
+    {
+      "production_sha256": "423F332E2A061E8A0525C87DBB45F68D659708BB39F06C7A9B4B4C382782197F",
+      "approved_sha256": "423F332E2A061E8A0525C87DBB45F68D659708BB39F06C7A9B4B4C382782197F",
+      "equal": true,
+      "path": "Assets/Resources/Art/TutorialTerrainHybrid.meta"
+    },
+    {
+      "production_sha256": "4F5AAA9B875835E101979B3B0389116BD37C31F5AEF5753885430AB97638F0E2",
+      "approved_sha256": "4F5AAA9B875835E101979B3B0389116BD37C31F5AEF5753885430AB97638F0E2",
+      "equal": true,
+      "path": "Assets/Resources/Art/TutorialTerrainHybrid/BridgeBank.png"
+    },
+    {
+      "production_sha256": "EF4A1E680240CD86AACEEB285839FB33BF8A1376BB440D7EA12248F21FA688C9",
+      "approved_sha256": "EF4A1E680240CD86AACEEB285839FB33BF8A1376BB440D7EA12248F21FA688C9",
+      "equal": true,
+      "path": "Assets/Resources/Art/TutorialTerrainHybrid/BridgeBank.png.meta"
+    },
+    {
+      "production_sha256": "E348D4F29C125AC28689A7BBE513F0A35993EF9A5E4702717F5FD8D00EDB6B5C",
+      "approved_sha256": "E348D4F29C125AC28689A7BBE513F0A35993EF9A5E4702717F5FD8D00EDB6B5C",
+      "equal": true,
+      "path": "Assets/Resources/Art/TutorialTerrainHybrid/Goal.png"
+    },
+    {
+      "production_sha256": "1F7C2CF502EEBDA0199FCFDDA63662159CBED60B69D353726EE69F1B69FD8463",
+      "approved_sha256": "1F7C2CF502EEBDA0199FCFDDA63662159CBED60B69D353726EE69F1B69FD8463",
+      "equal": true,
+      "path": "Assets/Resources/Art/TutorialTerrainHybrid/Goal.png.meta"
+    },
+    {
+      "production_sha256": "10771B0C8089529D012197CCB22D65E2D0451822E22B96F5FDFBEB373C4EDE6E",
+      "approved_sha256": "10771B0C8089529D012197CCB22D65E2D0451822E22B96F5FDFBEB373C4EDE6E",
+      "equal": true,
+      "path": "Assets/Resources/Art/TutorialTerrainHybrid/Landing1.png"
+    },
+    {
+      "production_sha256": "9452C4D54C8345A68ED54233AC76270805EAA6227933504396548FF6396E9AAC",
+      "approved_sha256": "9452C4D54C8345A68ED54233AC76270805EAA6227933504396548FF6396E9AAC",
+      "equal": true,
+      "path": "Assets/Resources/Art/TutorialTerrainHybrid/Landing1.png.meta"
+    },
+    {
+      "production_sha256": "463F3EF800CE14DBF57CEC9E60F85FF634831A783C4F7BEE1FCC7B534BAE76CD",
+      "approved_sha256": "463F3EF800CE14DBF57CEC9E60F85FF634831A783C4F7BEE1FCC7B534BAE76CD",
+      "equal": true,
+      "path": "Assets/Resources/Art/TutorialTerrainHybrid/MergeBank.png"
+    },
+    {
+      "production_sha256": "F08901E01BED1477D29154E51F1A682027F124D295AF4CAC9133A1CBCFDE9AAF",
+      "approved_sha256": "F08901E01BED1477D29154E51F1A682027F124D295AF4CAC9133A1CBCFDE9AAF",
+      "equal": true,
+      "path": "Assets/Resources/Art/TutorialTerrainHybrid/MergeBank.png.meta"
+    },
+    {
+      "production_sha256": "0DE73BBFFB98EFE88E39824E2C360B56B4EB9009E09DB4AA77FE79F53117ACA5",
+      "approved_sha256": "0DE73BBFFB98EFE88E39824E2C360B56B4EB9009E09DB4AA77FE79F53117ACA5",
+      "equal": true,
+      "path": "Assets/Resources/Art/TutorialTerrainHybrid/Start.png"
+    },
+    {
+      "production_sha256": "C9961E8F35119B40A873542FF5BD267C8E8FB644894E0EF5ADF78358EF894B32",
+      "approved_sha256": "C9961E8F35119B40A873542FF5BD267C8E8FB644894E0EF5ADF78358EF894B32",
+      "equal": true,
+      "path": "Assets/Resources/Art/TutorialTerrainHybrid/Start.png.meta"
+    },
+    {
+      "production_sha256": "B1C32D154C1B04F91E97082A0DCEB27698B646FE5A71283F9B205E00143DA948",
+      "approved_sha256": "B1C32D154C1B04F91E97082A0DCEB27698B646FE5A71283F9B205E00143DA948",
+      "equal": true,
+      "path": "Assets/Scripts/TutorialTerrainHybridVisual.cs.meta"
+    }
+  ],
+  "new_meta_guids": [
+    {
+      "guid": "573bb26d941342968959c7d9840f6e6c",
+      "count": 1,
+      "path": "Assets/Resources/Art/TutorialTerrainHybrid.meta"
+    },
+    {
+      "guid": "388210dbe33d4a4c8f77ade91e354704",
+      "count": 1,
+      "path": "Assets/Resources/Art/TutorialTerrainHybrid/BridgeBank.png.meta"
+    },
+    {
+      "guid": "0d246498615b48a48c67f157cfa3c959",
+      "count": 1,
+      "path": "Assets/Resources/Art/TutorialTerrainHybrid/Goal.png.meta"
+    },
+    {
+      "guid": "2ab12fe0c93e429aa158067c6df0c592",
+      "count": 1,
+      "path": "Assets/Resources/Art/TutorialTerrainHybrid/Landing1.png.meta"
+    },
+    {
+      "guid": "4fc0111b29e5451d89b091751d768821",
+      "count": 1,
+      "path": "Assets/Resources/Art/TutorialTerrainHybrid/MergeBank.png.meta"
+    },
+    {
+      "guid": "a1f764d9205a4c998d043698f667380b",
+      "count": 1,
+      "path": "Assets/Resources/Art/TutorialTerrainHybrid/Start.png.meta"
+    },
+    {
+      "guid": "6849bdfbc28f4863aa354ed1c366c4cd",
+      "count": 1,
+      "path": "Assets/Scripts/TutorialTerrainHybridVisual.cs.meta"
+    }
+  ],
+  "forbidden_source_tokens": null,
+  "isolated_matching": 487,
+  "isolated_differences": [
+    {
+      "production": "DF9AFFF7A8D16AA525C8C951D9002A42FA9905355D21493796F0FD8BDA0596FE",
+      "isolated": "CD73B42A311F34787B8B2C81721243B51FD6821FDD50D246922440A2AFEF5464",
+      "path": "ProjectSettings/ProjectSettings.asset"
+    }
+  ],
+  "unexpected_isolated_differences": [],
+  "isolated_settings_reason": "Review-only companyName/productName identification. Source/Scene/Packages/other settings must remain byte-identical.",
+  "source_sha256": "6D1A10060B01F6F9FB97A3852D5A830B401CCFAE1A50F5162C90863C84328F8C",
+  "passed": true
+}
