@@ -1,0 +1,15 @@
+{
+  "Himo_Production_Git_unchanged": true,
+  "Desert_Production_Git_unchanged": true,
+  "all_preexisting_audit_files_unchanged": true,
+  "existing_audit_file_count_verified": 38,
+  "candidate_path_count": 60,
+  "candidate_paths_pairwise_disjoint": true,
+  "candidate_bytes_recalculated": 77029602270,
+  "candidate_gib_recalculated": 71.73940750770271,
+  "candidate_total_matches_existing_report": true,
+  "any_new_2p5d_candidate": false,
+  "writes_outside_new_audit_files": "None performed",
+  "cleanup_performed": false,
+  "notes": "Only NEW addendum files created; existing audit files protected by SHA. Unrelated active processes may write their own files."
+}

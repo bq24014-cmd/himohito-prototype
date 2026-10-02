@@ -1,0 +1,31 @@
+{
+  "original_audit_first_available": {
+    "capacity_bytes": 494599663616,
+    "free_bytes": 23608430592,
+    "free_gib": 21.987064361572266,
+    "measured_jst": null,
+    "timing_limitation": "Exact timestamp / capacity immediately before original scan was not recorded; do not assert exact original start/end timing."
+  },
+  "addendum_start": {
+    "phase": "additional_safety_audit_start",
+    "measured_jst": "2026-10-02T07:21:30+09:00",
+    "total_bytes": 494599663616,
+    "used_bytes": 469564407808,
+    "free_bytes": 25035255808,
+    "free_gib": 23.315898895263672,
+    "method": "shutil.disk_usage (Windows disk free query; read-only)"
+  },
+  "addendum_end": {
+    "phase": "additional_safety_audit_end",
+    "measured_jst": "2026-10-02T07:31:46+09:00",
+    "total_bytes": 494599663616,
+    "used_bytes": 469602611200,
+    "free_bytes": 24997052416,
+    "free_gib": 23.280319213867188,
+    "delta_from_addendum_start_bytes": -38203392,
+    "delta_from_addendum_start_gib": -0.035579681396484375,
+    "method": "shutil.disk_usage (Windows disk free query; read-only)"
+  },
+  "cleanup_performed": false,
+  "cause_of_free_space_difference": "Not determined; report outputs and other active system/application writes can affect free space. No deletion/cleanup performed."
+}

@@ -1,0 +1,59 @@
+{
+  "total_scanned_bytes": 124017600021,
+  "total_scanned_gib": 115.50039054919034,
+  "file_count": 977889,
+  "root_totals": [
+    {
+      "path": "C:\\Users\\田尻大翔\\Documents\\Codex",
+      "bytes": 32655892033,
+      "gib": 30.413169444538653,
+      "file_count": 42474,
+      "last_modified_jst": "2026-10-02T01:26:12+09:00"
+    },
+    {
+      "path": "C:\\Users\\田尻大翔\\.codex",
+      "bytes": 32768493679,
+      "gib": 30.518037899397314,
+      "file_count": 194405,
+      "last_modified_jst": "2026-10-02T01:26:20+09:00"
+    },
+    {
+      "path": "C:\\Users\\田尻大翔\\Documents\\UnityProjects\\DesertLoop",
+      "bytes": 58593214309,
+      "gib": 54.569183205254376,
+      "file_count": 741010,
+      "last_modified_jst": "2026-09-30T18:05:18+09:00"
+    }
+  ],
+  "unreadable_entries": 48,
+  "skipped_reparse_points": 17,
+  "unconditional_immediate_delete_candidates_gib": 0,
+  "unconditional_reason": "Unity processes still running, two project paths unknown; no delete authorization. Confirm all Unity exited before any cache action.",
+  "low_risk_candidate_bytes": 75436970367,
+  "low_risk_candidate_gib": 70.256153463386,
+  "low_risk_directory_count": 57,
+  "low_risk_groups_gib": {
+    "DesertLoop primary/diagnostic copies": 49.71345124859363,
+    "DesertLoop visualizations": 12.544641509652138,
+    "Himo old .codex_tmp": 7.998060705140233
+  },
+  "medium_risk_candidate_bytes": 1592631903,
+  "medium_risk_candidate_gib": 1.483254044316709,
+  "candidate_total_after_confirmation_gib": 71.73940750770271,
+  "raw_dumps_not_recommended_gib": 2.59552001953125,
+  "raw_dumps_count": 84,
+  "raw_sha_all_match": true,
+  "protected_latest_2p5d_groups_gib": {
+    "H/.codex_tmp": 5.088818675838411,
+    "H/Docs/QA": 2.7944694217294455,
+    "H/output": 4.243154397234321
+  },
+  "protected_latest_2p5d_minimum_gib": 12.126442494802177,
+  "candidate_paths_disjoint": true,
+  "latest_2p5d_candidate_count": 0,
+  "desert_frozen_tag_confirmed": "e6dc6acf0227382cc94398e6c1d36f716ff3bbb0",
+  "deletion_count": 0,
+  "moved_count": 0,
+  "compressed_count": 0,
+  "limitations": "Logical GiB lower bound (48 metadata errors; 17 links excluded). Not actual allocated/reclaimable blocks. Active files may change. Audit itself adds only new report/Evidence files. No session or credential contents read."
+}

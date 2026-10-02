@@ -1,0 +1,9 @@
+{
+  "phase": "additional_safety_audit_start",
+  "measured_jst": "2026-10-02T07:21:30+09:00",
+  "total_bytes": 494599663616,
+  "used_bytes": 469564407808,
+  "free_bytes": 25035255808,
+  "free_gib": 23.315898895263672,
+  "method": "shutil.disk_usage (Windows disk free query; read-only)"
+}

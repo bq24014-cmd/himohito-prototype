@@ -1,0 +1,22 @@
+{
+  "branch": "main",
+  "HEAD": "702a4bc044b0eb35bedb552753ca8495599bc1ee",
+  "origin_main": "702a4bc044b0eb35bedb552753ca8495599bc1ee",
+  "status": "M Assets/Scenes/MainStage.unity\n M Assets/Scripts/HimoHitoCraftRoomBackground.cs\n M Docs/LEARNING_LOG.md\n M README.md\n?? Assets/Resources/Art/Tutorial2p5D.meta\n?? Assets/Resources/Art/Tutorial2p5D/\n?? Assets/Resources/TutorialBackgroundEdge.shader\n?? Assets/Resources/TutorialBackgroundEdge.shader.meta\n?? Assets/Resources/TutorialBackgroundFloor.shader\n?? Assets/Resources/TutorialBackgroundFloor.shader.meta\n?? Assets/Scripts/TutorialCraftRoomLayers.cs\n?? Assets/Scripts/TutorialCraftRoomLayers.cs.meta\n?? Docs/Maintenance/\n?? Docs/QA/FullGameRegression_20260930/\n?? Docs/QA/HumanPlaytest_20260930/\n?? Docs/QA/MainStageCleanReproduction_20261001/Evidence/ArchiveExpansion/\n?? Docs/QA/MainStageSceneDiffAudit_20261001/Evidence/__pycache__/\n?? Docs/QA/Tutorial2p5DAllSections_20261001/\n?? Docs/QA/Tutorial2p5DForegroundRefine_20261001/\n?? Docs/QA/Tutorial2p5DIntroFix_20261002/\n?? Docs/QA/Tutorial2p5DProductionIntegration_20261001/\n?? Docs/QA/Tutorial2p5DProof_20261001/\n?? Docs/VisualConcepts/\n?? output/",
+  "staged": "",
+  "sha256": {
+    "Assets/Scenes/MainStage.unity": "57D2464751B5B9C2A78E6C56F34197E9BC2629983FADAA1DFF6E0BA0B4BC2284",
+    "Assets/Scenes/Tutorial.unity": "DC1BED54CC083256CE895041B1C93578101E19B9738E7CF260619E8F7E1E4B92",
+    "Assets/Scripts/TutorialCraftRoomLayers.cs": "E08312BCC8B61F31C9139EA0122AEA57726721263B4FB744A7AF7CDB10B7CE4F",
+    "Assets/Scripts/HimoHitoCraftRoomBackground.cs": "11AF0ED7649B6D82ADBB5874DFA0D85AF59DFF8534FB6F375BD92EBE98D53076",
+    "Assets/Resources/Audio/YasashiiOdori.mp3": "25C52DA234D42C7A5E5CC91D45AEED14829F845EA15932A88AC94AB006781E83",
+    "Assets/Resources/TutorialBackgroundEdge.shader": "F6B2BA1886E770AAD5AB0B5B52D129C39BC3034CF296D65574AA68AB860C99C2",
+    "Assets/Resources/TutorialBackgroundFloor.shader": "DD4FF11BC4BFD514C0D3EB1887C577CE2C2D4C05F1C465F66D35EFEB243973CC",
+    "Assets/Resources/Art/Tutorial2p5D/Tutorial2p5D_Far.png": "6C7E66A3CDCC5E9D6BD68F4C5E4303512ADA2956CDB82E29327C1E5AEF2F74CA",
+    "Assets/Resources/Art/Tutorial2p5D/Tutorial2p5D_Far.png.meta": "91C452CB34AEE6EBA78FFD3D8F204444F7B0B08C7A736E0D437623909F0A5B57",
+    "Assets/Resources/Art/Tutorial2p5D/Tutorial2p5D_Mid.png": "8378E1A3CFB787A27EE5DF301B112D43AD598558167DBBF5A6DC4C11A816BFD4",
+    "Assets/Resources/Art/Tutorial2p5D/Tutorial2p5D_Mid.png.meta": "361DF8D72808E36DAD51004865A969CA945FB66F363DBEDF9FB50EDA9DBFB85F",
+    "Assets/Resources/Art/Tutorial2p5D/Tutorial2p5D_NearRefined.png": "4CDAA97410DE24143A1CF8D9834AA9CFB3AEDC70A541CC9DC9D6418BFBE82495",
+    "Assets/Resources/Art/Tutorial2p5D/Tutorial2p5D_NearRefined.png.meta": "56D21B81CAA98BA8BAA5DD47FE1C88F985CDBAF39447E5BCBCEF695568A49672"
+  }
+}

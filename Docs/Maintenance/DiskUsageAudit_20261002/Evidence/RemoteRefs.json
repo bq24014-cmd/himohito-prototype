@@ -1,0 +1,18 @@
+{
+  "audit_date_jst": "2026-10-02",
+  "method": "git ls-remote, read-only; no fetch/pull/merge",
+  "https://github.com/bq24014-cmd/himohito-prototype.git": {
+    "refs/heads/main": "702a4bc044b0eb35bedb552753ca8495599bc1ee"
+  },
+  "https://github.com/bq24014-cmd/DesertLoop.git": {
+    "refs/heads/main": "e6dc6acf0227382cc94398e6c1d36f716ff3bbb0",
+    "refs/tags/desert-loop-frozen-2026-09-30": "5a128c8ebc88d00ab497ea7e68918c9a76618970",
+    "refs/tags/desert-loop-frozen-2026-09-30^{}": "e6dc6acf0227382cc94398e6c1d36f716ff3bbb0"
+  },
+  "c_drive": { "capacity_bytes": 494599663616, "free_bytes": 23608430592 },
+  "running_unity": [
+    { "pid": 15828, "project": "C:/Users/田尻大翔/Documents/Codex/2026-08-07/new-chat/outputs/HimoHitoPrototype" },
+    { "pid": 14912, "project": "unknown, no -projectPath argument" },
+    { "pid": 25900, "project": "unknown, no -projectPath argument" }
+  ]
+}
