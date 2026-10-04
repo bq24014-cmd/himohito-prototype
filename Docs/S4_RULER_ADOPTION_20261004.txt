@@ -1,0 +1,63 @@
+S4 木製定規 C 採用・本番統合記録（2026-10-04）
+
+対象本体
+C:\Users\田尻大翔\Documents\Codex\2026-08-07\new-chat\outputs\HimoHitoPrototype
+開始時 main / HEAD 4221f98487cc5518b2e5a1a91f1932c29ab41fb3。
+Human が採用した S4 Intermediate Column C のみを統合。pon のレビューまで stage/commit/push は未実施。
+他の床への展開、造形変更、Tutorial や既存未承認差分の統合は行わない。
+
+変更内容
+新規 MainS4RulerVisual が MainStage の「Main Section 4 Intermediate Column」だけを描画する。
+承認済み C のメッシュ計算、0～15 の目盛り画像、木目・木口画像、シェーダーを使用する。
+必要な画像は Art/MainS4Ruler の専用パスに追加し、既存画像を上書きしない。
+画像・シェーダーは採用元とバイト一致。meta は新規 GUID を除いて一致。
+既存 S4 表面だけを forceRenderingOff で隠し、無効化・破棄時には元の値へ戻す。
+既存 Collider/Transform/Rigidbody を読み取り、位置 (69.2,-5.65)、幅 1.8、高さ 10 の契約を満たす場合だけ表示を構築する。
+不一致または素材不足の場合は既存表示を保持して警告する。
+入力、ゲーム状態遷移、足場の歩行面、ヒモ資源、物理、カメラ、Hook/リング等の仕様変更はない。
+Scene/README/LEARNING_LOG は今回の作業で書き換えていない。
+
+検証
+Unity 6000.3.21f1 の既存 Editor でコンパイル・Play 検証。
+変更前 Before03: 37項目成功、エラー0。変更後 After: 40項目成功、エラー0。
+S4 接地・Collider 接触・歩行・ジャンプ・空中・着地、照準、接続解除、ヒモ残量、定規表示、Tutorial 分離を確認。
+静止した bank Hook の接続解除は実際の線速度・角速度 (ともに0) を保存した。動的な振り子からの解放を検証したという意味ではない。
+Main の静的 BoxCollider 情報51行、Tutorial 16行、および双方のカメラ設定の正規化記録は変更前後で一致。
+既存 Assets/Packages/ProjectSettings と README/AGENTS/LEARNING_LOG の498ファイルは変更前後の SHA256 が一致。
+この498ファイル確認は全リポジトリの内容を検証したという意味ではない。
+今回の新規候補12ファイルは個別diff --checkで確認。新規Unity生成フォルダmetaの末尾空白だけを除去した。
+既存差分全体のgit diff --checkはexit2・診断118行。既存Scene等の空白問題は今回修正していない。
+Windows Build は Succeeded、エラー0・警告0。新しい Build を繰り返していない。
+Player の Assembly-CSharp.dll に MainS4RulerVisual の名前が存在し、今回の一時QA/試作比較クラス名は存在しない。
+今回の QA 全体は UNITY_EDITOR 条件付きで、QA4ファイル（cs2本と各meta）は本体外の証跡フォルダへ退避済み。移動前後のSHA256は一致。
+Buildされた Player は今回起動していない。Human 実キー操作、全ルート通し、動的振り子解放は未検証。
+
+画素比較の判定（許容閾値は追加しない）
+採用済み starting floor を含む他20床の分離画像は18床で完全一致。
+S09 Goal Floor は6画素、S10 Goal Floor は4画素が不一致。完全一致判定は不一致のまま。
+差分は床本体の上端より上、左Hook台座のピンクの結び目・毛糸尾が重なる領域だけにある。
+S09は(x=196..199,y=18..19)、S10は(x=89..92,y=18..19)。両方の床上端は撮影条件からy=27.46であり、差分10画素は床本体の外にある。
+QAで使ったFindObjectsByTypeはDontSave指定の装飾を返さない。既存Hook台座の装飾はHideAndDontSaveのため、床画像に残っている。
+この床分離方法は全装飾を完全に除外した方法ではない。画素一致の結果は取得した画像の範囲に限定する。
+根拠: https://docs.unity3d.com/6000.3/Documentation/ScriptReference/Object.FindObjectsByType.html
+既存 HookWoodMountVisual の尾2本と Pink Mounting Knot は同じ sortingOrder=lastOrder+1 を使用する。
+この既存描画コードにTime/Randomによる形状変化はない。差分CSVの色はピンク毛糸の重なり差を示し、床木目や輪郭の移動ではない。
+その透明描画の重なり順の違いと整合するが、個々のGPU描画順は採取しておらず、原因を断定しない。
+各実行では3画角と床21枚を yield を挟まず同じフレームで撮影した。
+実行間の frameCount、時間、Renderer ID は記録していないため、変更前後を同一フレーム条件で同期したとは主張しない。
+本体コードはS4の子階層以外のRendererを変更しない。S09/S10の既存コード・床/Hook配置は一致し、床本体に画素差はない。
+採用C画像と本番C画像の不透明内部 311,520画素は59画素に最大1/255のRGB差。完全一致判定は不一致のまま。
+画像/シェーダー/meta、頂点・UV・ベベル等8式の一致が形状・材質の同等性根拠。
+微小な色差はシェーダーの色演算/ラスタライズ/量子化差と整合するが、正確な発生段階は未確定。
+周辺の試作床が異なるため、採用Cとの同等性比較と、本番そのものの変更前後比較は分けて記録する。
+画素完全一致を採用条件とする場合は、上記の残差が未解決事項となる。
+
+証跡
+C:\Users\田尻大翔\AppData\Local\Temp\HimoHitoS4ProductionIntegration_20261004
+Before03/After に本番画像・チェック・物理・カメラ記録。
+ApprovedAssetFinalEquivalence.json / ApprovedGeometryExpressionEquivalence.json に採用元との一致根拠。
+FloorPixelComparison.json / S09S10DifferentPixels.csv / ApprovedCRulerPixelComparison.json に残る画素差。
+BuildResult.json / PlayerAssemblyNameAudit.json にBuild・製品混入防止の根拠。
+候補ファイルの正確なパス・SHA256・GUIDは IntegrationCandidates.csv に記録。
+Library には本番の変更前後画像6枚を個別保存（v0）。対応は ImageLibraryBindings.json に記録。
+model gpt-6.1-sol / thinking xhigh を明示指定。実行側の設定値は未確認。
