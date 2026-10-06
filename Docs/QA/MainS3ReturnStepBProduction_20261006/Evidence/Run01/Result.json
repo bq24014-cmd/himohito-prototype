@@ -1,0 +1,329 @@
+{
+    "unity": "6000.3.21f1",
+    "method": "Production Runtime in existing isolated Editor Play. QA reference is constructed only by this Editor harness for synchronous approved-vs-Production captures. Diagnostic player placement, private input-field injection and existing switch/rope API calls; NOT human real-key play or a full route difficulty test. Render-only camera for PNG capture; real camera settings/behavior unmodified. UnityEditor.Search exceptions recorded separately, not concealed as Console zero.",
+    "checks": [
+        {
+            "name": "Gameplay resumed through existing preview skip path",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "Production auto-bootstrap prepares inactive Step B",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "One Production presentation owner",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "Candidate prepared while step is inactive",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "Step B hidden before switch",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "Other return steps remain present",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "Existing switch activation reveals step",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "Existing reveal completes with final marker pose",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "All other 20 floor transform/collider contracts unchanged",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "Target Transform unchanged",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "Target collider unchanged",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "Step B standing",
+            "status": "PASS",
+            "detail": "(41.00000, -4.88099)"
+        },
+        {
+            "name": "Step B actual collider contact",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "Gameplay capture preserves measured Game-view aspect",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "01_Gameplay physics invariant across diagnostic render switch",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "01_Gameplay actual camera invariant across captures",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "01_Gameplay other 20 floor visual state invariant",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "02_Near physics invariant across diagnostic render switch",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "02_Near actual camera invariant across captures",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "02_Near other 20 floor visual state invariant",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "03_Surroundings physics invariant across diagnostic render switch",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "03_Surroundings actual camera invariant across captures",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "03_Surroundings other 20 floor visual state invariant",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "04_FullObject physics invariant across diagnostic render switch",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "04_FullObject actual camera invariant across captures",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "04_FullObject other 20 floor visual state invariant",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "04b_BareEnd physics invariant across diagnostic render switch",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "04b_BareEnd actual camera invariant across captures",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "04b_BareEnd other 20 floor visual state invariant",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "Step B walking",
+            "status": "PASS",
+            "detail": "41 -> 41.17104"
+        },
+        {
+            "name": "Step B jump",
+            "status": "PASS",
+            "detail": "(0.00000, 8.33469)"
+        },
+        {
+            "name": "Step B airborne",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "Step B landing",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "S3 lower Hook aiming",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "S3 Hook attachment",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "Rope amount unchanged by attachment",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "Detach preserves measured velocity",
+            "status": "PASS",
+            "detail": "(0.00000, 0.00000)"
+        },
+        {
+            "name": "Rope amount unchanged by detach",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "Hidden state also hides Production marker",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "Second reveal returns same Production pose, not cumulative motion",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "Exactly one child visual; no duplicate",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "Production child contains render components only",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "Target static Physics components unchanged",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "Walking surface remains Y -5.50",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "Adopted Step A pencil remains present",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "Production mesh exactly matches approved mesh",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "Production UVs exactly match approved mesh",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "Production uses identical approved textures",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "Exactly one Production marker child",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "All visual XY vertices remain inside fixed collider",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "Flat full-width walking rim",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "Adopted Start Ground presentation remains present",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "Adopted S4 ruler remains present",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "No A/C/D expansion",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "QA reference hidden; Production presentation remains active",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "No QA reference in Tutorial",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "No Production S3 owner in Tutorial",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "Tutorial approved terrain remains",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "Tutorial approved 2.5D background remains",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "MainStage reload automatically restores Production presentation",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "MainStage reload does not duplicate owner",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "Reload has no QA reference automatically",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "Gameplay console errors",
+            "status": "FAIL",
+            "detail": "Material 'Dusty terracotta cap / warm ivory marker barrel' with Shader 'HimoHito/MainS3Marker' doesn't have a texture property '_EndTex'\nUnityEngine.Material:GetTexture (string)\nS3MarkerProductionQA/<Start>d__30:MoveNext () (at Assets/Scripts/S3MarkerProductionQA.cs:209)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n\nMaterial 'Dusty terracotta cap / warm ivory marker barrel' with Shader 'HimoHito/S3ReturnStepBMarkerProof' doesn't have a texture property '_EndTex'\nUnityEngine.Material:GetTexture (string)\nS3MarkerProductionQA/<Start>d__30:MoveNext () (at Assets/Scripts/S3MarkerProductionQA.cs:209)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n"
+        }
+    ],
+    "errors": [
+        "Material 'Dusty terracotta cap / warm ivory marker barrel' with Shader 'HimoHito/MainS3Marker' doesn't have a texture property '_EndTex'\nUnityEngine.Material:GetTexture (string)\nS3MarkerProductionQA/<Start>d__30:MoveNext () (at Assets/Scripts/S3MarkerProductionQA.cs:209)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+        "Material 'Dusty terracotta cap / warm ivory marker barrel' with Shader 'HimoHito/S3ReturnStepBMarkerProof' doesn't have a texture property '_EndTex'\nUnityEngine.Material:GetTexture (string)\nS3MarkerProductionQA/<Start>d__30:MoveNext () (at Assets/Scripts/S3MarkerProductionQA.cs:209)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n"
+    ],
+    "editorSearchErrors": [
+        "ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.\r\nParameter name: index\nSystem.Collections.Generic.List`1[T].get_Item (System.Int32 index) (at <41d29b352f6a475ab1bf7c6628b82790>:0)\nUnityEditor.Search.SearchDatabase+<EnumerateAll>d__81.MoveNext () (at <63453c9528324daaa566ad51effa49a4>:0)\nSystem.Linq.Enumerable.TryGetFirst[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Boolean& found) (at <80564d689e48448fa2a7101993ee7201>:0)\nSystem.Linq.Enumerable.First[TSource] (System.Collections.Generic.IEnumerable`1[T] source) (at <80564d689e48448fa2a7101993ee7201>:0)\nUnityEditor.Search.SearchDatabase.GetDefaultSearchDatabase () (at <63453c9528324daaa566ad51effa49a4>:0)\nUnityEditor.Search.SearchInit.IndexationOnStartup () (at <63453c9528324daaa566ad51effa49a4>:0)\nUnityEditor.EditorApplication.Internal_CallDelayFunctions () (at <ebc962e8381145e6bdb44b1996e8e9b4>:0)\n"
+    ],
+    "failures": 1
+}

@@ -1,0 +1,53 @@
+diff --git a/Docs/QA/MainS3ReturnStepBVisualProof_20261006/Evidence/Implementation/Assets/Scripts/S3ReturnStepBMarkerProofVisual.cs b/Assets/Scripts/MainS3MarkerVisual.cs
+index db08c6a..fd9b15b 100644
+--- a/Docs/QA/MainS3ReturnStepBVisualProof_20261006/Evidence/Implementation/Assets/Scripts/S3ReturnStepBMarkerProofVisual.cs
++++ b/Assets/Scripts/MainS3MarkerVisual.cs
+@@ -7 +7 @@ namespace HimoHito
+-    /// <summary>Isolated, explicitly instantiated renderer-only capped marker proof.</summary>
++    /// <summary>Approved renderer-only capped felt marker for the existing S3 Return Step B.</summary>
+@@ -9 +9 @@ namespace HimoHito
+-    public sealed class S3ReturnStepBMarkerProofVisual : MonoBehaviour
++    public sealed class MainS3MarkerVisual : MonoBehaviour
+@@ -12,2 +12,2 @@ namespace HimoHito
+-        const string OwnerName = "Isolated S3 Step B Marker Presentation";
+-        public const string SurfaceName = "S3 Step B Capped Felt Marker Proof Visual";
++        const string OwnerName = "Main S3 Marker Presentation";
++        public const string SurfaceName = "Main S3 Return Step B Felt Marker Visual";
+@@ -22,3 +22,22 @@ namespace HimoHito
+-        public bool ShowCandidate { get; private set; } = true;
+-        public void SetCandidate(bool show) { ShowCandidate = show; if (Ready) RefreshVisibility(); }
+-        public void RestoreLegacyForComparison() => SetCandidate(false);
++        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
++        static void ResetStatics() { SceneManager.sceneLoaded -= SceneLoaded; }
++
++        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
++        static void Bootstrap()
++        {
++            SceneManager.sceneLoaded -= SceneLoaded;
++            SceneManager.sceneLoaded += SceneLoaded;
++            EnsureScene(SceneManager.GetActiveScene());
++        }
++
++        static void SceneLoaded(Scene scene, LoadSceneMode mode) => EnsureScene(scene);
++
++        static void EnsureScene(Scene scene)
++        {
++            if (!Application.isPlaying || scene.name != "MainStage") return;
++            foreach (var root in scene.GetRootGameObjects())
++                if (root.GetComponent<MainS3MarkerVisual>() != null) return;
++            var owner = new GameObject(OwnerName);
++            SceneManager.MoveGameObjectToScene(owner, scene);
++            owner.AddComponent<MainS3MarkerVisual>();
++        }
+@@ -57 +76 @@ namespace HimoHito
+-            var shader = Resources.Load<Shader>("S3ReturnStepBMarkerProof");
++            var shader = Resources.Load<Shader>("MainS3Marker");
+@@ -115 +134 @@ namespace HimoHito
+-                renderer.forceRenderingOff = ShowCandidate || originals[renderer];
++                renderer.forceRenderingOff = true;
+@@ -117 +136 @@ namespace HimoHito
+-            Surface.enabled = isActiveAndEnabled && ShowCandidate;
++            Surface.enabled = isActiveAndEnabled;
+@@ -128 +147 @@ namespace HimoHito
+-        void Fail(string message) { failed = true; Debug.LogWarning("S3ReturnStepBMarkerProofVisual: " + message, this); }
++        void Fail(string message) { failed = true; Debug.LogWarning("MainS3MarkerVisual: " + message, this); }

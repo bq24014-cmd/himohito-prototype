@@ -1,0 +1,7 @@
+diff --git a/Docs/QA/MainS3ReturnStepBVisualProof_20261006/Evidence/Implementation/Assets/Resources/S3ReturnStepBMarkerProof.shader b/Assets/Resources/MainS3Marker.shader
+index 6afa8ba..3ceaf06 100644
+--- a/Docs/QA/MainS3ReturnStepBVisualProof_20261006/Evidence/Implementation/Assets/Resources/S3ReturnStepBMarkerProof.shader
++++ b/Assets/Resources/MainS3Marker.shader
+@@ -1 +1 @@
+-Shader "HimoHito/S3ReturnStepBMarkerProof"
++Shader "HimoHito/MainS3Marker"

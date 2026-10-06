@@ -1,0 +1,56 @@
+{
+  "method": "Synchronous same-frame Unity render-only camera pairs; no gameplay/camera change. RGB decoded pixel comparison.",
+  "comparisons": [
+    {
+      "view": "01_Gameplay",
+      "size": [
+        1440,
+        1080
+      ],
+      "differentPixels": 0,
+      "bounds": null,
+      "status": "PASS"
+    },
+    {
+      "view": "02_Near",
+      "size": [
+        1920,
+        1080
+      ],
+      "differentPixels": 0,
+      "bounds": null,
+      "status": "PASS"
+    },
+    {
+      "view": "03_Surroundings",
+      "size": [
+        1920,
+        1080
+      ],
+      "differentPixels": 0,
+      "bounds": null,
+      "status": "PASS"
+    },
+    {
+      "view": "04_FullObject",
+      "size": [
+        600,
+        1800
+      ],
+      "differentPixels": 0,
+      "bounds": null,
+      "status": "PASS"
+    },
+    {
+      "view": "04b_BareEnd",
+      "size": [
+        1920,
+        1080
+      ],
+      "differentPixels": 0,
+      "bounds": null,
+      "status": "PASS"
+    }
+  ],
+  "failures": 0
+}

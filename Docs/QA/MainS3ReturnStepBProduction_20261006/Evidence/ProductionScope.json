@@ -1,0 +1,62 @@
+{
+  "existingInputHashCount": 514,
+  "meta": [
+    {
+      "unique": true,
+      "guid": "ba63bd7a9b6745a78a67def0a258e360",
+      "matches": [
+        "Assets/Scripts/MainS3MarkerVisual.cs.meta"
+      ]
+    },
+    {
+      "unique": true,
+      "guid": "16171d69b6774f74b4d4402b48ce6524",
+      "matches": [
+        "Assets/Resources/MainS3Marker.shader.meta"
+      ]
+    }
+  ],
+  "scale": [
+    1.8,
+    10.55,
+    1
+  ],
+  "status": "PASS",
+  "colliderSize": [
+    1,
+    1
+  ],
+  "proofInputOrToggleInProduction": false,
+  "files": [
+    {
+      "bytes": 8055,
+      "sha256": "7B4E94204908B945A0571ECBE37F7F70A1C4F5C3F9C2ED680AF2C6B9118DFCAD",
+      "path": "Assets/Scripts/MainS3MarkerVisual.cs"
+    },
+    {
+      "bytes": 60,
+      "sha256": "959A04DA1C6CA572AE53546235D7F9ACCC633E260DE54F9D435D9023353B6B10",
+      "path": "Assets/Scripts/MainS3MarkerVisual.cs.meta"
+    },
+    {
+      "bytes": 4742,
+      "sha256": "AC8C7747D1F5E4350746AA82EF674270807910D812F0C6BD93976B93677EEF6F",
+      "path": "Assets/Resources/MainS3Marker.shader"
+    },
+    {
+      "bytes": 201,
+      "sha256": "E38C9292853A176D8447147C6690494C8649D2C838C20C9F817A320072AE1947",
+      "path": "Assets/Resources/MainS3Marker.shader.meta"
+    }
+  ],
+  "shaderOnlyNameChanged": true,
+  "targetIsStepBOnly": true,
+  "position": [
+    41,
+    -10.775,
+    0
+  ],
+  "target": "Main Section 3 Return Step B",
+  "walkingY": -5.5,
+  "mainStageOnly": true
+}

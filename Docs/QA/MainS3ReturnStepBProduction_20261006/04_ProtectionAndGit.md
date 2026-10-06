@@ -1,0 +1,18 @@
+# S3 Return Step B 保護とGit保存範囲
+
+開始時はmain、HEADとfetch後origin/mainがともに `44f81fe2a27da2661d2607c35e1cd84c657f95f6`。stage済み0でした。リモートの予期しない進行はありません。
+
+既存未承認差分はMainStage.unity、README、LEARNING_LOG、過去QAのExeA.log／ExeB.logの5ファイルです。これらと既存未追跡QA、Production診断Capture、outputを保護し、今回の保存に混ぜません。
+
+保護対象514ファイルのSHAはすべて開始時と一致し、既存Docs／output／Buildsの10,383ファイルの存在・サイズ・更新時刻にも変化はありません。既存Git状態の差分0です。
+
+- MainStage SHA256：57D2464751B5B9C2A78E6C56F34197E9BC2629983FADAA1DFF6E0BA0B4BC2284
+- BGM SHA256：25C52DA234D42C7A5E5CC91D45AEED14829F845EA15932A88AC94AB006781E83
+
+最初の保護判定は新規QAのPrepareProtection.ps1を開始前status側だけに残した比較式の誤りでした。旧ファイルの内容やmetadataに変化はありません。今回QAの範囲を両側で同じように除外した再判定はPASSです。元の誤判定をProtectionCheck01.jsonに残しています。
+
+## 保存対象
+
+Production4ファイルと、このQAの必要な採用記録、最終Run04の画像・ログ・JSON、診断Source、保護結果・差分・解析結果だけを明示stageします。途中Run01／02／03の重複PNGとFramingはローカルに保持してstageしません。診断履歴はResult／Progressとログで保存します。Build、BGM実体、.codex_tmp、既存差分、旧QA本体は保存対象外です。
+
+具体的な選択はEvidence/StageManifest.jsonとStageAudit.jsonを正本とします。commit前にcached diff --check、対象Path、meta、既存差分混入なしを確認し、push直前にorigin/mainが開始時から進んでいないことを確認します。永続Git設定・所有者・ACL・認証設定の変更は行いません。
