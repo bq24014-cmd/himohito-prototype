@@ -1,0 +1,51 @@
+{
+  "time": "2026-10-06T20:26:33.1735933+09:00",
+  "manifest": [
+    {
+      "path": "Assets/Scripts/MainS3PencilVisual.cs",
+      "sha256": "7E48A796A1EDC5417C66A1D78AF290472C1B02DAF068547E0AE03C1937451030",
+      "bytes": 7961,
+      "testedByteIdentical": true
+    },
+    {
+      "path": "Assets/Scripts/MainS3PencilVisual.cs.meta",
+      "sha256": "D2FDCAC963942EA4C6C5E83B745A8AC78A397B92535CC185B68710199592F1BB",
+      "bytes": 60,
+      "testedByteIdentical": true
+    },
+    {
+      "path": "Assets/Resources/MainS3Pencil.shader",
+      "sha256": "F433F18C511BBEC261F54641B7F06C5EA3677576B0CE457E6DB84530414BC560",
+      "bytes": 3180,
+      "testedByteIdentical": true
+    },
+    {
+      "path": "Assets/Resources/MainS3Pencil.shader.meta",
+      "sha256": "7C7799A9F8786BF11743B8F49FF8340B222453EFE11C4E26B50301CD127F21D9",
+      "bytes": 201,
+      "testedByteIdentical": true
+    }
+  ],
+  "guidAudit": [
+    {
+      "path": "Assets/Scripts/MainS3PencilVisual.cs.meta",
+      "guid": "8cc13139979b456d95b93ff1958fc813",
+      "matches": 1
+    },
+    {
+      "path": "Assets/Resources/MainS3Pencil.shader.meta",
+      "guid": "812a30dcb61f4fbe906864f3197c37f5",
+      "matches": 1
+    }
+  ],
+  "proofFeatureMatches": [],
+  "approvedShaderMathIdenticalExceptName": true,
+  "productionNewFiles": [
+    "Assets/Scripts/MainS3PencilVisual.cs",
+    "Assets/Scripts/MainS3PencilVisual.cs.meta",
+    "Assets/Resources/MainS3Pencil.shader",
+    "Assets/Resources/MainS3Pencil.shader.meta"
+  ],
+  "windowsBuildPerformed": false,
+  "realKeyIntegratedRetest": "UNCONFIRMED"
+}

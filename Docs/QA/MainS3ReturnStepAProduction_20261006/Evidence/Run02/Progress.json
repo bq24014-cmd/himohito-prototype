@@ -1,0 +1,306 @@
+{
+    "unity": "",
+    "method": "",
+    "checks": [
+        {
+            "name": "Gameplay resumed through existing preview skip path",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "Production auto-bootstrap prepares inactive Step A",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "One Production presentation owner",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "Candidate prepared while step is inactive",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "Step A hidden before switch",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "Other return steps remain present",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "Existing switch activation reveals step",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "Existing reveal completes with final pencil pose",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "All other 20 floor transform/collider contracts unchanged",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "Target Transform unchanged",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "Target collider unchanged",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "Step A standing",
+            "status": "PASS",
+            "detail": "(42.80000, -5.43099)"
+        },
+        {
+            "name": "Step A actual collider contact",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "Gameplay capture preserves measured Game-view aspect",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "01_Gameplay physics invariant across diagnostic render switch",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "01_Gameplay actual camera invariant across captures",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "01_Gameplay other 20 floor visual state invariant",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "02_Near physics invariant across diagnostic render switch",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "02_Near actual camera invariant across captures",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "02_Near other 20 floor visual state invariant",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "03_Surroundings physics invariant across diagnostic render switch",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "03_Surroundings actual camera invariant across captures",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "03_Surroundings other 20 floor visual state invariant",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "04_FullObject physics invariant across diagnostic render switch",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "04_FullObject actual camera invariant across captures",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "04_FullObject other 20 floor visual state invariant",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "04b_BareEnd physics invariant across diagnostic render switch",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "04b_BareEnd actual camera invariant across captures",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "04b_BareEnd other 20 floor visual state invariant",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "Step A walking",
+            "status": "PASS",
+            "detail": "42.8 -> 42.97104"
+        },
+        {
+            "name": "Step A jump",
+            "status": "PASS",
+            "detail": "(0.00000, 8.33469)"
+        },
+        {
+            "name": "Step A airborne",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "Step A landing",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "S3 lower Hook aiming",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "S3 Hook attachment",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "Rope amount unchanged by attachment",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "Detach preserves measured velocity",
+            "status": "PASS",
+            "detail": "(0.00000, 0.00000)"
+        },
+        {
+            "name": "Rope amount unchanged by detach",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "Hidden state also hides Production pencil",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "Second reveal returns same Production pose, not cumulative motion",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "Exactly one child visual; no duplicate",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "Production mesh exactly matches approved mesh",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "Production UVs exactly match approved mesh",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "Production uses identical approved textures",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "Exactly one Production pencil child",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "All visual XY vertices remain inside fixed collider",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "Flat full-width walking rim",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "Adopted Start Ground presentation remains present",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "Adopted S4 ruler remains present",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "No B/C/D expansion",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "QA reference hidden; Production presentation remains active",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "No QA reference in Tutorial",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "No Production S3 owner in Tutorial",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "Tutorial approved terrain remains",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "Tutorial approved 2.5D background remains",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "MainStage reload automatically restores Production presentation",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "MainStage reload does not duplicate owner",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "Reload has no QA reference automatically",
+            "status": "PASS",
+            "detail": ""
+        },
+        {
+            "name": "Gameplay console errors",
+            "status": "PASS",
+            "detail": ""
+        }
+    ],
+    "errors": [],
+    "editorSearchErrors": [
+        "ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.\r\nParameter name: index\nSystem.Collections.Generic.List`1[T].get_Item (System.Int32 index) (at <41d29b352f6a475ab1bf7c6628b82790>:0)\nUnityEditor.Search.SearchDatabase+<EnumerateAll>d__81.MoveNext () (at <63453c9528324daaa566ad51effa49a4>:0)\nSystem.Linq.Enumerable.TryGetFirst[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Boolean& found) (at <80564d689e48448fa2a7101993ee7201>:0)\nSystem.Linq.Enumerable.First[TSource] (System.Collections.Generic.IEnumerable`1[T] source) (at <80564d689e48448fa2a7101993ee7201>:0)\nUnityEditor.Search.SearchDatabase.GetDefaultSearchDatabase () (at <63453c9528324daaa566ad51effa49a4>:0)\nUnityEditor.Search.SearchInit.IndexationOnStartup () (at <63453c9528324daaa566ad51effa49a4>:0)\nUnityEditor.EditorApplication.Internal_CallDelayFunctions () (at <ebc962e8381145e6bdb44b1996e8e9b4>:0)\n"
+    ],
+    "failures": 0
+}

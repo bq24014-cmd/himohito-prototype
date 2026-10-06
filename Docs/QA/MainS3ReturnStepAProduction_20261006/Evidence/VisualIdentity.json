@@ -1,0 +1,58 @@
+{
+  "run": "Run02",
+  "pairs": [
+    {
+      "pair": "01_Gameplay",
+      "size": [
+        1440,
+        1080
+      ],
+      "changedPixels": 0,
+      "maxChannelDifference": 0,
+      "byteIdenticalPng": true
+    },
+    {
+      "pair": "02_Near",
+      "size": [
+        1920,
+        1080
+      ],
+      "changedPixels": 0,
+      "maxChannelDifference": 0,
+      "byteIdenticalPng": true
+    },
+    {
+      "pair": "03_Surroundings",
+      "size": [
+        1920,
+        1080
+      ],
+      "changedPixels": 0,
+      "maxChannelDifference": 0,
+      "byteIdenticalPng": true
+    },
+    {
+      "pair": "04_FullObject",
+      "size": [
+        600,
+        1800
+      ],
+      "changedPixels": 0,
+      "maxChannelDifference": 0,
+      "byteIdenticalPng": true
+    },
+    {
+      "pair": "04b_BareEnd",
+      "size": [
+        1920,
+        1080
+      ],
+      "changedPixels": 0,
+      "maxChannelDifference": 0,
+      "byteIdenticalPng": true
+    }
+  ],
+  "allPixelIdentical": true,
+  "comparisonIsSynchronous": true,
+  "notClaimed": "Pixel equality to archived previous-run image at a different animation tick"
+}

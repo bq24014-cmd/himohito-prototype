@@ -1,0 +1,10 @@
+{
+    "position": {
+        "x": 42.80232620239258,
+        "y": 0.0,
+        "z": -10.0
+    },
+    "ortho": 8.699999809265137,
+    "aspect": 1.3333333730697632,
+    "follow": "Render-only clone; no follow behaviour"
+}
