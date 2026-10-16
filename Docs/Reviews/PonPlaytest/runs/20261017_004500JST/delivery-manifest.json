@@ -1,14 +1,14 @@
 {
   "created_utc": "2026-10-16T16:36:25.109407+00:00",
-  "revision": 5,
-  "status": "REVIEW_U15_LEGEND_COPY_UPDATED; EVIDENCE_UNCHANGED",
+  "revision": 6,
+  "status": "REVIEW_PRIORITY_COMPARISON_CONDITIONS_UPDATED; EVIDENCE_UNCHANGED",
   "main_markdown_documents": 8,
   "image_files": 10,
   "files": [
     {
       "path": "Docs/Reviews/PonPlaytest/LATEST.json",
-      "bytes": 3928,
-      "sha256": "1bf6087423bcd4f4b2a5e3c754dcc1330242fe5bdb5d867b0e89d632baab5564"
+      "bytes": 4542,
+      "sha256": "4a4929dc02303dbc20958eb44cb73d0c1f8f49c539439111b348e9ae67b13336"
     },
     {
       "path": "Docs/Reviews/PonPlaytest/runs/20261017_004500JST/01_Gameplay.md",
@@ -22,8 +22,8 @@
     },
     {
       "path": "Docs/Reviews/PonPlaytest/runs/20261017_004500JST/03_Priorities.md",
-      "bytes": 6299,
-      "sha256": "99a51deba5599eb334b086f303d5dfefe9dc9979096ddfa70a913f9eacb3e7c1"
+      "bytes": 11808,
+      "sha256": "74285ea37f7afe04d2076be52b9738ec298ad9236e7b5d492cbe077aaf3b3596"
     },
     {
       "path": "Docs/Reviews/PonPlaytest/runs/20261017_004500JST/04_Evidence.md",
@@ -212,9 +212,9 @@
     }
   ],
   "total_files_excluding_manifest": 41,
-  "total_bytes_excluding_manifest": 18844965,
-  "updated_utc": "2026-10-16T19:09:41.942173+00:00",
-  "previous_manifest_snapshot_commit": "0414e5c14d0ca419ac626e1735f42b67f0167ec5",
+  "total_bytes_excluding_manifest": 18851088,
+  "updated_utc": "2026-10-16T19:17:58.300590+00:00",
+  "previous_manifest_snapshot_commit": "c2dda5f6670ad0b03022fcab113b2d8d98cc9382",
   "application_record": "runs/20261017_034337JST/16_Consistency_Application_Record.md",
-  "current_update_source": "runs/20261017_040541JST/18_Clear_Map_Data_Contract.md"
+  "current_update_source": "runs/20261017_004500JST/03_Priorities.md"
 }
