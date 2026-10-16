@@ -1,0 +1,39 @@
+{
+  "utc": "2026-10-16T19:05:41.092317+00:00",
+  "run_id": "20261017_040541JST",
+  "status": "PARENT_REVIEW_APPROVED; REMOTE_CONFIRMATION_IN_PUBLICATION_RECEIPT",
+  "A_observations": 0,
+  "files": [
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_040541JST/18_Clear_Map_Data_Contract.md",
+      "bytes": 7085,
+      "sha256": "08fd0d707d20674fc4873ba93cd4431c9fb46db594f1d7f152b828db1b272c0d"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_040541JST/evidence/clear-copy-ledger.json",
+      "bytes": 3022,
+      "sha256": "b0d505559d1180eb3bae5f2d7c465d6105c990566c14a3a87b707246f2f5bd44"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_040541JST/evidence/clear-data-contract.json",
+      "bytes": 5486,
+      "sha256": "e7d974d92642bea5bee6670ae13f550020d09e97cc9425cf3ffa5837f424e2c0"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_040541JST/evidence/clear-source-index.json",
+      "bytes": 10738,
+      "sha256": "f9d3025f1359b27617b6326c868a78c2bd0326d64eb0b5a8d680097cd55a420b"
+    }
+  ],
+  "total_files_with_manifest": 5,
+  "image_files": 0,
+  "latest_published_commit": "0414e5c14d0ca419ac626e1735f42b67f0167ec5",
+  "primary_copy_proposal_applied": true,
+  "primary_copy_applied_scope": {
+    "path": "Docs/Reviews/PonPlaytest/runs/20261017_004500JST/02_UI.md",
+    "before_sha256": "0d7f87feac2f401a3ef625516a77b906e41e9ecc3f9346aacdcf8487b1b584fb",
+    "after_sha256": "fd4141921813457afa2d1cb830c062b8bb6b6e159f0eaa133cd88167956c04a1",
+    "scope": "Only the proposed U15 legend. Game UI unchanged; necessary-information clarification remains a proposal.",
+    "newline": "existing CRLF preserved"
+  }
+}

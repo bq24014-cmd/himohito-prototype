@@ -1,0 +1,83 @@
+{
+  "utc": "2026-10-16T19:05:41.092317+00:00",
+  "A_observations": 0,
+  "classification": "B_SOURCE_DATA_CONTRACT; C_PLAY_AND_LEARNING",
+  "contracts": [
+    {
+      "item": "橋の形/本数",
+      "input": "RopePlatformBuilder.CaptureJourneyCurves:206–217 → ClearJourneySnapshot:26–27 → ClearJourneyView:36/78–90",
+      "meaning": "所有builderリスト内でactiveInHierarchy、enabledなEdgeCollider2Dがあり2点以上の現在曲線。offsetを足してworld座標へ複製。本数は配列長。",
+      "not_meaning": "Q成功の累計、歩いた橋だけ、通行順、消費合計、統合前後の履歴。"
+    },
+    {
+      "item": "床/rail/START/GOAL",
+      "input": "ClearJourneySnapshot:31–76 → ClearJourneyView:63–76/91–98",
+      "meaning": "ownerと同Sceneでactiveな候補からenabled非trigger BoxCollider2Dを選別。床は上面と左右端、rail種別。開始床/箱と終点床から記号位置。訪問履歴を条件にしない。",
+      "not_meaning": "実際に踏んだ床だけ、playerの開始実測位置や最終接近軌跡、hook/危険物の完全な攻略図。"
+    },
+    {
+      "item": "残量/最大",
+      "input": "ClearJourneySnapshot:28–29; HUDの初回ClearJourneyView生成",
+      "meaning": "結果画面のViewを初めて作る時点のCurrentLength/MaximumLengthを固定。再描画ごとに再集計しない。",
+      "not_meaning": "全試行の使用合計、失敗で失った総量、補充総量、開始量−総消費の単純式。"
+    },
+    {
+      "item": "本編の補充n回",
+      "input": "MainStageRespawnOnFall:178–195 → MainStageHud:346 → ClearJourneyView:39",
+      "meaning": "上位sectionのcheckpoint受理時、下限未満でRestoreCurrentLengthを実行した回数。Rの状態巻き戻しはこの加算処理ではない。",
+      "not_meaning": "R回数、失敗回数、補充された量、橋を作った回数。"
+    },
+    {
+      "item": "本編の時間",
+      "input": "MainStageHud:45–46/61–65/340–346",
+      "meaning": "stageStartedAtからTime.timeの差を結果描画時に一度固定、秒未満切捨て表示。Rの区間復帰ではこの開始値を変更しない。",
+      "not_meaning": "最後の成功区間だけの時間、操作をしていた秒数の実測、全人間試遊を計測した値。"
+    },
+    {
+      "item": "見取り図の縮尺",
+      "input": "ClearJourneySnapshot:66–82 → ClearJourneyView:62–85",
+      "meaning": "各snapshotの床上面/橋を含む範囲へ独立した縦横縮尺で投影。start→goalに歩行線を足さない。",
+      "not_meaning": "実寸比、実際の跳躍軌道、次回の必要長を図上で測る物差し。"
+    }
+  ],
+  "cases": [
+    {
+      "case": "R前に未保存橋を作り、Rして後にクリア",
+      "source": "MainStageRespawnOnFall:201–206/222–240; RopePlatformBuilder:235–258/330–347",
+      "result_B": "checkpoint橋を再生成。未保存の試行橋はClear曲線に持ち越さない。checkpoint残量も復元。",
+      "limits_C": "その手順で実際にクリアした証拠なし。操作回数/時間/面倒さは未測定。"
+    },
+    {
+      "case": "統合後を保存してR、後にクリア",
+      "source": "RopePlatformBuilder:169–183/188–202/235–258",
+      "result_B": "保存に統合後の外端/合計長が入れば、その1本を再生成。除去hookも復元対象。元の2本を履歴として重ね描きしない。",
+      "limits_C": "通常操作で到達/統合/復帰を今回実行していない。"
+    },
+    {
+      "case": "2本をFで1本へ統合してクリア",
+      "source": "RopePlatformBuilder:169–183/206–217; ClearJourneyView:36/78–90",
+      "result_B": "橋本数は2→1、曲線は統合後の物理曲線。Fで資源は増減しない（既存07）。本数減だけを節約成功と読めない。",
+      "limits_C": "実画像の読みやすさ/プレイヤーの理解は未確認。"
+    },
+    {
+      "case": "S6下の空中hook列を使う経路",
+      "source": "MainStageSectionSixSetup:7–8/98–115; ClearJourneySnapshot:45–56; existing07",
+      "result_B": "通常接続/解除だけの移動は橋曲線として記録しない。下hook列は地図の床/橋にはならない。上側のactive床が残れば訪問せずとも表示対象。",
+      "limits_C": "橋のない部分から下ルート利用を一意に逆算できない。今回はこの経路で通過していない。"
+    },
+    {
+      "case": "橋を作ったが一度も踏まずに別経路でクリア",
+      "source": "ClearJourneySnapshot:26–27; RopePlatformBuilder:206–217",
+      "result_B": "残った有効な橋なら描画条件に入る。踏んだ事実を問い合わせていない。",
+      "limits_C": "固定ステージにそのような合法通過が存在すると実証した例ではなく、描画条件の反例。"
+    },
+    {
+      "case": "同じ橋/残量へ復帰した後にクリア",
+      "source": "MainStageRespawnOnFall:222–240; MainStageHud:340–346",
+      "result_B": "地図/残量が同じでも、それ以前の失敗/歩行履歴はそこから復元できない。時間は結果画面までの差で、試行橋履歴ではない。",
+      "limits_C": "同一になる実際の2走行を比較していない。"
+    }
+  ],
+  "not_implemented": true,
+  "not_a_runtime_test": true
+}

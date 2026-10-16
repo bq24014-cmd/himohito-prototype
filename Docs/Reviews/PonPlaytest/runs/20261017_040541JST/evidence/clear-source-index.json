@@ -1,0 +1,172 @@
+{
+  "utc": "2026-10-16T19:05:41.092317+00:00",
+  "fixed_source_hashes": [
+    {
+      "path": "Assets/Scripts/ClearJourneySnapshot.cs",
+      "sha256": "8c8f9935831b7632e3878368d74ce437d015a957380d710d48328e2c3bf2ff0d",
+      "BuildInputs_match": true
+    },
+    {
+      "path": "Assets/Scripts/ClearJourneyView.cs",
+      "sha256": "d06a4cb0a7a0b8e8a1f7d1aa8d0e4e6e790321a3d2d94313aeaa4b253f19369e",
+      "BuildInputs_match": true
+    },
+    {
+      "path": "Assets/Scripts/RopePlatformBuilder.cs",
+      "sha256": "11ecb4c1870cb8ef0449343155559211a5e1d9e1321132bce0dcf8e14e279fd2",
+      "BuildInputs_match": true
+    },
+    {
+      "path": "Assets/Scripts/RopeResource.cs",
+      "sha256": "026476f48b89bac7158abebc1744bf41553bae4981c41b7148b41dced63860eb",
+      "BuildInputs_match": true
+    },
+    {
+      "path": "Assets/Scripts/MainStageHud.cs",
+      "sha256": "30d2177386b912c1c8fc86961460208b53fd2f45df0597552055c19e41ecae50",
+      "BuildInputs_match": true
+    },
+    {
+      "path": "Assets/Scripts/PrototypeHud.cs",
+      "sha256": "2e6d442c4933dda55aa3680ed1a835372e53274fe0c7404498684dc23abb6780",
+      "BuildInputs_match": true
+    },
+    {
+      "path": "Assets/Scripts/MainStageRespawnOnFall.cs",
+      "sha256": "314060136dfb7846ae7ebbc43cfaf0028625b839b4b9a05e9171d4f5830c4d8c",
+      "BuildInputs_match": true
+    },
+    {
+      "path": "Assets/Scripts/PrototypeRunController.cs",
+      "sha256": "ec6fd5170e7c00a97593b28e109b7fc3fbc5d6f922b5aa1b68823467e3623977",
+      "BuildInputs_match": true
+    },
+    {
+      "path": "Assets/Scripts/MainStageGoalZone.cs",
+      "sha256": "54bb45cc0dcdf0cfafc08fad10e865059e058b15e635601d81e66305d162e9d9",
+      "BuildInputs_match": true
+    },
+    {
+      "path": "Assets/Scripts/MainStageSectionSixSetup.cs",
+      "sha256": "71b394fdf99a0edcbb4085774aa1f4fc263054a799eec641179fae527a74e482",
+      "BuildInputs_match": true
+    }
+  ],
+  "prior_log": {
+    "path": "Docs/LEARNING_LOG.md",
+    "sha256": "32adeeb9d6882f3609cc932148ecb9a5c70e66316a516503a3016db83ee65f8d",
+    "line_window": [
+      4837,
+      4843
+    ],
+    "excerpt": [
+      "4837: ## 2026-09-09：クリア画面に残したヒモ橋の見取り図",
+      "4838: ",
+      "4839: - ユーザー承認により、本編・チュートリアルのクリア画面へ「あなたが残した道」を追加。ClearJourneySnapshotがプレイヤーと同じシーンの有効な床・レール、実際の開始床と宝箱、所有するRopePlatformBuilderの有効な橋の物理曲線を一度だけ複製する。別シーン、無効な床、Trigger、プレイヤー、棘、フックを除外し、物理データには書き込まない。",
+      "4840: - 移動軌跡や累計生成数は推測せず、その時点で残っているヒモ橋を描く。Fで統合した橋は現在の1本の形を使い、橋がない谷を勝手につながない。残量・最大値も同時に記録して表示を固定し、結果画面を離れると破棄する。本編の補充回数・経過時間は既存の値を維持する。",
+      "4841: - ClearJourneyViewで両HUDの結果レイアウトを共通化。既存の毛糸テクスチャ、結び目、木製部品、透過済み宝箱、M PLUS Rounded 1cを再利用する。長い本編を読みやすくするため縦横を別々に縮尺変換し、簡略図であることを画面に明記。1280×720を基準に画面内へ収まるよう縮小する。通常HUD、Enter／R操作、クリア演出時間、カメラ、音、物理・ヒモ残量計算は変更しない。",
+      "4842: - Unity 6.3参照コンパイル成功。隔離Unityで31項目成功・0失敗（Temp/ClearJourneyCheck.log）。本編／チュートリアル相当の床と橋、別シーン・危険物の除外、開始／宝箱位置、残量の固定、物理配列との分離、空データ、1280×720・800×600・1280×540でのIMGUI描画、GUI状態復元と文字幅を確認。実ステージ通しプレイは未実施。",
+      "4843: - GPU描画の確認で、縮小時にGUIUtility.RotateAroundPivotと親の縮尺が干渉し、毛糸だけが図からずれる問題を発見。単位行列からUnityのGUIクリップ原点を含む局所回転を作り、その外側へ親の縮尺を掛ける方式に修正した。検証画像は非表示のテストウィンドウを画面キャプチャする方法では取得できなかったため、DPI倍率を考慮したRenderTextureから直接読み戻して確認する。"
+    ],
+    "reuse": "Sept9 already explicitly describes active scene floors/bridge copy, no movement/cumulative history, merged current curve, frozen remaining, independent axes and no full-stage play. Do not count these as new discoveries."
+  },
+  "published_review_prose": {
+    "commit": "0414e5c14d0ca419ac626e1735f42b67f0167ec5",
+    "ui_path": "Docs/Reviews/PonPlaytest/runs/20261017_004500JST/02_UI.md",
+    "ui_sha256": "0d7f87feac2f401a3ef625516a77b906e41e9ecc3f9346aacdcf8487b1b584fb",
+    "search_scope": "Published top-level Markdown under Docs/Reviews/PonPlaytest/runs (evidence folders excluded); fixed ClearJourneyView strings; Production Docs Markdown search for ClearJourney/歩いた道/歩行経路/通った道/消費履歴/あなたが残した道.",
+    "boundary": "No such explicit movement-history or spend-history claim found in searched current game labels/review prose. This is bounded text search, not exhaustive proof of every possible phrase."
+  },
+  "existing_links": [
+    "https://github.com/bq24014-cmd/himohito-prototype/blob/0414e5c14d0ca419ac626e1735f42b67f0167ec5/Docs/Reviews/PonPlaytest/runs/20261017_004500JST/02_UI.md",
+    "https://github.com/bq24014-cmd/himohito-prototype/blob/0414e5c14d0ca419ac626e1735f42b67f0167ec5/Docs/Reviews/PonPlaytest/runs/20261017_004500JST/07_Resource_Retry_Addendum.md",
+    "https://github.com/bq24014-cmd/himohito-prototype/blob/0414e5c14d0ca419ac626e1735f42b67f0167ec5/Docs/Reviews/PonPlaytest/runs/20261017_032112JST/14_Merge_Removal_Refutation.md",
+    "https://github.com/bq24014-cmd/himohito-prototype/blob/0414e5c14d0ca419ac626e1735f42b67f0167ec5/Docs/Reviews/PonPlaytest/runs/20261017_004500JST/evidence/images/E08_clear_reference.png"
+  ],
+  "image_note": "No new image. Existing E08 is a controlled UI-reference state (remaining50/bridges0), not a played route or bug. No prior closed clear-footstep issue reopened.",
+  "clear_capture_time": "ClearJourneyView is cached on first result-screen construction; clear flags are set after existing reveal delay. Not an every-frame tracker or screenshot of the precise arrival instant.",
+  "not_claimed": [
+    "Live clear",
+    "Actual learning effect",
+    "Complete path tracker",
+    "Spend ledger",
+    "Strict metric scale",
+    "New UI rendering bug",
+    "Any game modification"
+  ],
+  "short_source_delta": [
+    {
+      "path": "Assets/Scripts/ClearJourneySnapshot.cs",
+      "start": 26,
+      "end": 29,
+      "lines": [
+        "26:             Bridges = builder != null && owner != null && builder.gameObject.scene == owner.gameObject.scene",
+        "27:                 ? builder.CaptureJourneyCurves() : new Vector2[0][];",
+        "28:             Remaining = owner != null ? owner.CurrentLength : 0f;",
+        "29:             Capacity = owner != null ? owner.MaximumLength : 0f;"
+      ]
+    },
+    {
+      "path": "Assets/Scripts/ClearJourneySnapshot.cs",
+      "start": 45,
+      "end": 57,
+      "lines": [
+        "45:                 if (!target.TryGetComponent(out BoxCollider2D box) || !box.enabled || box.isTrigger ||",
+        "46:                     target.GetComponentInParent<RopeResource>() != null ||",
+        "47:                     target.GetComponentInParent<HookPoint>() != null ||",
+        "48:                     target.GetComponentInParent<RopeSpikeHazard>() != null ||",
+        "49:                     target.GetComponentInParent<GeneratedRopePlatform>() != null) continue;",
+        "50:                 bool rail = target.TryGetComponent(out OneWayRailPlatform _) ||",
+        "51:                     target.TryGetComponent(out SwingPassThroughRailPlatform _);",
+        "52:                 bool terrain = target.TryGetComponent(out WoodenPlatformDepthVisual _) ||",
+        "53:                     (target.TryGetComponent(out SolidSprite _) &&",
+        "54:                      (target.name.StartsWith(\"Main \") || target.name.StartsWith(\"Tutorial \"))) ||",
+        "55:                     target.name == startName || target.name == goalFloorName;",
+        "56:                 if (!terrain && !rail) continue;",
+        "57:                 floors.Add(new Floor(box.bounds, rail));"
+      ]
+    },
+    {
+      "path": "Assets/Scripts/RopePlatformBuilder.cs",
+      "start": 206,
+      "end": 217,
+      "lines": [
+        "206:         internal Vector2[][] CaptureJourneyCurves()",
+        "207:         {",
+        "208:             var curves = new List<Vector2[]>();",
+        "209:             foreach (GameObject platform in generatedPlatforms)",
+        "210:             {",
+        "211:                 if (platform == null || !platform.activeInHierarchy ||",
+        "212:                     !platform.TryGetComponent(out EdgeCollider2D edge) || !edge.enabled) continue;",
+        "213:                 Vector2[] points = edge.points;",
+        "214:                 for (int i = 0; i < points.Length; i++) points[i] = edge.transform.TransformPoint(points[i] + edge.offset);",
+        "215:                 if (points.Length >= 2) curves.Add(points);",
+        "216:             }",
+        "217:             return curves.ToArray();"
+      ]
+    },
+    {
+      "path": "Assets/Scripts/MainStageHud.cs",
+      "start": 345,
+      "end": 346,
+      "lines": [
+        "345:             clearJourney ??= new ClearJourneyView(ropeResource, platformBuilder, false);",
+        "346:             ClearJourneyView.Choice choice = clearJourney.Draw(false, FormatElapsed(clearElapsedSeconds), respawn != null ? respawn.RefillCount : 0);"
+      ]
+    },
+    {
+      "path": "Assets/Scripts/MainStageRespawnOnFall.cs",
+      "start": 190,
+      "end": 195,
+      "lines": [
+        "190:             if (ropeResource.CurrentLength < minimumRopeAfterCheckpoint)",
+        "191:             {",
+        "192:                 ropeResource.RestoreCurrentLength(minimumRopeAfterCheckpoint);",
+        "193:                 RefillCount++;",
+        "194:             }",
+        "195:             CaptureCheckpointState();"
+      ]
+    }
+  ],
+  "reuse_note": "R snapshot/restore and F replacement bodies already in published07 and14; not duplicated. ClearView label originals already in published initial source-excerpts."
+}

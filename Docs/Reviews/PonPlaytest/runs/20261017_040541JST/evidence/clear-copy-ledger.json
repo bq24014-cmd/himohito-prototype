@@ -1,0 +1,47 @@
+{
+  "utc": "2026-10-16T19:05:41.092317+00:00",
+  "scope": "Fixed game strings plus published Pon review prose, not proof of player misunderstanding.",
+  "changes_applied": true,
+  "proposal_count": 1,
+  "checks": [
+    {
+      "id": "C01",
+      "location": "ClearJourneyView.cs:59–61",
+      "original": "あなたが残した道 / ピンク：クリア時に残ったヒモ橋　／　床と高さを簡略化した見取り図",
+      "finding": "現行凡例は現在残る橋と簡略図であることを既に限定。歩行軌跡/累計消費と明記する原文はない。",
+      "recommendation": "KEEP。見出しの道は比喩として成立。初見誤認を観測する前に必須改名としない。",
+      "proposal": null
+    },
+    {
+      "id": "C02",
+      "location": "02_UI.md:137/139 U15",
+      "original": "必要情報：クリアした、残した道、本編へ進む方法。 / 凡例「ピンクは、あなたが残した橋」",
+      "finding": "短縮案がクリア時と見取り図の限定を落としている。実寸/歩行の誤認を観測した証拠はないが、データ契約の条件を削る案になっている。",
+      "recommendation": "親レビュー承認により凡例案だけ主UI文書へ適用。必要情報の明確化は提案のまま。ゲームUI変更なし。",
+      "proposal": "必要情報：クリア時に残る橋と残量、次に進む操作。 / 凡例「ピンク：クリア時に残った橋 ／ 見取り図」"
+    },
+    {
+      "id": "C03",
+      "location": "ClearJourneyView.cs:36/39",
+      "original": "残したヒモ橋 {n} 本 / 補充 {refills} 回",
+      "finding": "現在本数とcheckpointの補充回数としてsourceに対応。生成回数/失敗回数と表示していない。",
+      "recommendation": "KEEP。レビュー側で現在本数/補充発生回数と定義し、消費履歴や効率スコアへ読み替えない。",
+      "proposal": null
+    },
+    {
+      "id": "C04",
+      "location": "existing 02_UI.md U15; 03_Priorities.md:45; 14_Merge_Removal_Refutation.md:35",
+      "original": "見取り図・残量・橋本数はKEEP / 残量と地図の最後の橋 / 実際にその橋が無い状態でClearへ進めた場合…最後の橋は地図に含まれない",
+      "finding": "現在状態としての説明で整合する。最終Qの費用0だけから橋の形が変わるとは既に区別済み。",
+      "recommendation": "整合済み。新しい誤り/訂正件数に数えず参照のみ。",
+      "proposal": null
+    }
+  ],
+  "applied_scope": {
+    "path": "Docs/Reviews/PonPlaytest/runs/20261017_004500JST/02_UI.md",
+    "before_sha256": "0d7f87feac2f401a3ef625516a77b906e41e9ecc3f9346aacdcf8487b1b584fb",
+    "after_sha256": "fd4141921813457afa2d1cb830c062b8bb6b6e159f0eaa133cd88167956c04a1",
+    "scope": "Only the proposed U15 legend. Game UI unchanged; necessary-information clarification remains a proposal.",
+    "newline": "existing CRLF preserved"
+  }
+}
