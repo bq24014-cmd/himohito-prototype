@@ -13,11 +13,11 @@
   "published_commit": null,
   "continuation_cutoff_utc": "2026-10-16T23:00:00Z",
   "no_new_themes_after_utc": "2026-10-16T22:30:00Z",
-  "updated_utc": "2026-10-16T19:38:17.589115+00:00",
+  "updated_utc": "2026-10-16T22:36:22.834882+00:00",
   "continuation_configured": false,
   "parent_review": "APPROVED_42_FILES_WITH_MINOR_CORRECTIONS; UI_STATE_ADDENDUM_SEPARATE",
   "continuation_management": "PARENT",
-  "revision": 16,
+  "revision": 17,
   "addendum": "runs/20261017_004500JST/06_T4_S10_Addendum.md",
   "resource_retry_addendum": "runs/20261017_004500JST/07_Resource_Retry_Addendum.md",
   "A_observations": 0,
@@ -72,5 +72,10 @@
   "readme_summary_proposal_status": "PARENT_APPROVED_TWO_ROWS_APPLIED; DESIGN_ASSESSMENT_NOT_LIVE_PLAY",
   "readme_summary_prior_commit": "1ac2e6cb3e2e5c0f7a5501b7c6cb33906f0683c4",
   "readme_summary_scope": "Two summary rows only: T4/S6 design strengths, Q wording/retry preparation weaknesses, no whole-section removal supported. A=0.",
-  "readme_summary_parent_review": "APPROVED_WITH_EXPLICIT_DESIGN_STRENGTH_LABEL"
+  "readme_summary_parent_review": "APPROVED_WITH_EXPLICIT_DESIGN_STRENGTH_LABEL",
+  "current_manifest": "runs/20261017_004500JST/delivery-manifest.json",
+  "historical_manifest_snapshot": {
+    "path": "runs/20261017_034337JST/delivery-manifest.json",
+    "valid_at_commit": "449692c6de3a58661ad57ded4e015707772d2cae"
+  }
 }
