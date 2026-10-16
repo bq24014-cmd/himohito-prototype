@@ -1,0 +1,31 @@
+{
+  "utc": "2026-10-16T18:21:12.155803+00:00",
+  "run_id": "20261017_032112JST",
+  "status": "PARENT_REVIEW_APPROVED; REMOTE_CONFIRMATION_IN_PUBLICATION_RECEIPT",
+  "A_observations": 0,
+  "files": [
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_032112JST/14_Merge_Removal_Refutation.md",
+      "bytes": 7266,
+      "sha256": "689cdd8bb7e275aef4b6a2ca7c0a31807e46296c44a8bf61616941b7d8996bc3"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_032112JST/evidence/removal-condition-matrix.json",
+      "bytes": 6293,
+      "sha256": "0e7c1997f26baab7d2208654c323f133f3b191f5e7c6a186158b25147b7e7634"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_032112JST/evidence/removal-dependencies.json",
+      "bytes": 15951,
+      "sha256": "6f9b38d1b29360afbba8a252a602571475204b264bf63463ad538b5ce682374d"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_032112JST/evidence/removal-source-delta.md",
+      "bytes": 4722,
+      "sha256": "3484e0bd567768c7f1e2a226ff3df8a56374a71cf74daa6815768d60f74a55f0"
+    }
+  ],
+  "total_files_with_manifest": 5,
+  "image_files": 0,
+  "latest_published_commit": "85ca4f328fb739f585c3fc160634bada061bc9d6"
+}

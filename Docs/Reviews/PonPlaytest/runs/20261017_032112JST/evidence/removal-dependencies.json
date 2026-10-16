@@ -1,0 +1,527 @@
+{
+  "utc": "2026-10-16T18:21:12.155803+00:00",
+  "fixed_source_hashes": [
+    {
+      "path": "Assets/Scenes/MainStage.unity",
+      "sha256": "57d2464751b5b9c2a78e6c56f34197e9bc2629983fadaa1dff6e0ba0b4bc2284",
+      "BuildInputs_match": true
+    },
+    {
+      "path": "Assets/Scripts/PrototypeRunController.cs",
+      "sha256": "ec6fd5170e7c00a97593b28e109b7fc3fbc5d6f922b5aa1b68823467e3623977",
+      "BuildInputs_match": true
+    },
+    {
+      "path": "Assets/Scripts/MainStageRespawnOnFall.cs",
+      "sha256": "314060136dfb7846ae7ebbc43cfaf0028625b839b4b9a05e9171d4f5830c4d8c",
+      "BuildInputs_match": true
+    },
+    {
+      "path": "Assets/Scripts/MainStageCheckpoint.cs",
+      "sha256": "66663105dec1f99517efcd12d21b38711df56c8aa5a8e0175135793a04449033",
+      "BuildInputs_match": true
+    },
+    {
+      "path": "Assets/Scripts/RopePlatformBuilder.cs",
+      "sha256": "11ecb4c1870cb8ef0449343155559211a5e1d9e1321132bce0dcf8e14e279fd2",
+      "BuildInputs_match": true
+    },
+    {
+      "path": "Assets/Scripts/MainStageSectionSevenSetup.cs",
+      "sha256": "c5d3845135fa2a83de7b1c10200f5630fffbf25f96d144b977187e80c4d95513",
+      "BuildInputs_match": true
+    },
+    {
+      "path": "Assets/Scripts/MainStageSectionNineSetup.cs",
+      "sha256": "794454c44069d0430c9136af0cade40b72c513e3708c7a594b5e1cd62a5566da",
+      "BuildInputs_match": true
+    },
+    {
+      "path": "Assets/Scripts/MainStageSectionTenSetup.cs",
+      "sha256": "80095b57b5ea63b2768ffaeac76dbe15270efb3b9d0669e84f65b2ccde134e11",
+      "BuildInputs_match": true
+    },
+    {
+      "path": "Assets/Scripts/MainStageGoalZone.cs",
+      "sha256": "54bb45cc0dcdf0cfafc08fad10e865059e058b15e635601d81e66305d162e9d9",
+      "BuildInputs_match": true
+    },
+    {
+      "path": "Assets/Scripts/GoalChestPresentation.cs",
+      "sha256": "d2c59ac777a4d2ad0e9732f14a81cf745c7d2b00ebd188f046838cf3d35db6c4",
+      "BuildInputs_match": true
+    },
+    {
+      "path": "Assets/Scripts/ClearJourneySnapshot.cs",
+      "sha256": "8c8f9935831b7632e3878368d74ce437d015a957380d710d48328e2c3bf2ff0d",
+      "BuildInputs_match": true
+    },
+    {
+      "path": "Assets/Scripts/MainStageCheckpoint.cs.meta",
+      "sha256": "315e576ee7e91c15094f25be535968d47efaaed7f8499b15d83b7847f46c7be9",
+      "BuildInputs_match": true
+    },
+    {
+      "path": "Assets/Scripts/MainStageGoalZone.cs.meta",
+      "sha256": "c71ae1507774ad3258231b19e558330ee0633f86a6cae38014a3afd1d7dfd9d4",
+      "BuildInputs_match": true
+    },
+    {
+      "path": "Assets/Scripts/GoalChestPresentation.cs.meta",
+      "sha256": "f66146a8f9c693357f9da34ff8cb839180a349eb082a2bcb0af489a70b13ae62",
+      "BuildInputs_match": true
+    },
+    {
+      "path": "Assets/Scripts/MainStageRespawnOnFall.cs.meta",
+      "sha256": "9f834fdb1ed94331bae143dbdd5b772e74fd6e1ef8bbfa48cfdba379705311a2",
+      "BuildInputs_match": true
+    },
+    {
+      "path": "Assets/Scripts/RopeResource.cs.meta",
+      "sha256": "bd5a719d4713d860ed1e7b58d469883d495811695278d9085fa2f9a93b730681",
+      "BuildInputs_match": true
+    }
+  ],
+  "checks_overlap_previous_reviews": true,
+  "saved_scene": {
+    "scene": "Assets/Scenes/MainStage.unity",
+    "sha256": "57d2464751b5b9c2a78e6c56f34197e9bc2629983fadaa1dff6e0ba0b4bc2284",
+    "chosen": [
+      {
+        "file_id": 29111725,
+        "name": "Main S10 Goal Floor",
+        "line": 122,
+        "active": "1",
+        "components": [
+          {
+            "type": 114,
+            "id": 29111726,
+            "line": 146,
+            "fields": {
+              "m_Enabled": "1"
+            },
+            "script": "MainStageGoalZone"
+          },
+          {
+            "type": 61,
+            "id": 29111729,
+            "line": 197,
+            "fields": {
+              "m_Enabled": "1",
+              "m_IsTrigger": "0",
+              "m_Offset": "{x: 0, y: 0}",
+              "m_Size": "{x: 1, y: 1}"
+            }
+          },
+          {
+            "type": 4,
+            "id": 29111732,
+            "line": 315,
+            "fields": {
+              "m_LocalRotation": "{x: 0, y: 0, z: 0, w: 1}",
+              "m_LocalPosition": "{x: 215.5, y: -7.15, z: 0}",
+              "m_LocalScale": "{x: 15, y: 10, z: 1}",
+              "m_Father": "{fileID: 0}"
+            }
+          }
+        ]
+      },
+      {
+        "file_id": 1129056240,
+        "name": "Main Start Ground",
+        "line": 7862,
+        "active": "1",
+        "components": [
+          {
+            "type": 61,
+            "id": 1129056241,
+            "line": 7885,
+            "fields": {
+              "m_Enabled": "1",
+              "m_IsTrigger": "0",
+              "m_Offset": "{x: 0, y: 0}",
+              "m_Size": "{x: 1, y: 1}"
+            }
+          },
+          {
+            "type": 4,
+            "id": 1129056244,
+            "line": 8003,
+            "fields": {
+              "m_LocalRotation": "{x: 0, y: 0, z: 0, w: 1}",
+              "m_LocalPosition": "{x: -7.25, y: -9.85, z: 0}",
+              "m_LocalScale": "{x: 8, y: 10, z: 1}",
+              "m_Father": "{fileID: 0}"
+            }
+          }
+        ]
+      },
+      {
+        "file_id": 1380120218,
+        "name": "Main Player",
+        "line": 9682,
+        "active": "1",
+        "components": [
+          {
+            "type": 4,
+            "id": 1380120219,
+            "line": 9709,
+            "fields": {
+              "m_LocalRotation": "{x: 0, y: 0, z: 0, w: 1}",
+              "m_LocalPosition": "{x: -3.85, y: -4.2, z: 0}",
+              "m_LocalScale": "{x: 0.8, y: 1.2, z: 1}",
+              "m_Father": "{fileID: 0}"
+            }
+          },
+          {
+            "type": 114,
+            "id": 1380120220,
+            "line": 9724,
+            "fields": {
+              "m_Enabled": "1",
+              "startNearGoalForEndingPreview": "0",
+              "startWithPartDPreview": "0"
+            },
+            "script": "MainStageRespawnOnFall"
+          },
+          {
+            "type": 114,
+            "id": 1380120224,
+            "line": 9797,
+            "fields": {
+              "m_Enabled": "1",
+              "maximumLength": "50",
+              "currentLength": "50"
+            },
+            "script": "RopeResource"
+          },
+          {
+            "type": 61,
+            "id": 1380120228,
+            "line": 9968,
+            "fields": {
+              "m_Enabled": "1",
+              "m_IsTrigger": "0",
+              "m_Offset": "{x: 0, y: 0}",
+              "m_Size": "{x: 1, y: 1}"
+            }
+          }
+        ]
+      },
+      {
+        "file_id": 1438313552,
+        "name": "Main S07 Landing",
+        "line": 10697,
+        "active": "1",
+        "components": [
+          {
+            "type": 114,
+            "id": 1438313553,
+            "line": 10721,
+            "fields": {
+              "m_Enabled": "1",
+              "sectionNumber": "9",
+              "respawnPosition": "{x: 172.8, y: -1.45}",
+              "minimumRopeAfterCheckpoint": "23"
+            },
+            "script": "MainStageCheckpoint"
+          },
+          {
+            "type": 61,
+            "id": 1438313556,
+            "line": 10775,
+            "fields": {
+              "m_Enabled": "1",
+              "m_IsTrigger": "0",
+              "m_Offset": "{x: 0, y: 0}",
+              "m_Size": "{x: 1, y: 1}"
+            }
+          },
+          {
+            "type": 4,
+            "id": 1438313559,
+            "line": 10893,
+            "fields": {
+              "m_LocalRotation": "{x: 0, y: 0, z: 0, w: 1}",
+              "m_LocalPosition": "{x: 176, y: -7.15, z: 0}",
+              "m_LocalScale": "{x: 8, y: 10, z: 1}",
+              "m_Father": "{fileID: 0}"
+            }
+          }
+        ]
+      },
+      {
+        "file_id": 1717291292,
+        "name": "Main S09 Goal Floor",
+        "line": 13568,
+        "active": "1",
+        "components": [
+          {
+            "type": 114,
+            "id": 1717291293,
+            "line": 13592,
+            "fields": {
+              "m_Enabled": "1",
+              "sectionNumber": "10",
+              "respawnPosition": "{x: 192, y: -1.45}",
+              "minimumRopeAfterCheckpoint": "11"
+            },
+            "script": "MainStageCheckpoint"
+          },
+          {
+            "type": 61,
+            "id": 1717291296,
+            "line": 13646,
+            "fields": {
+              "m_Enabled": "1",
+              "m_IsTrigger": "0",
+              "m_Offset": "{x: 0, y: 0}",
+              "m_Size": "{x: 1, y: 1}"
+            }
+          },
+          {
+            "type": 4,
+            "id": 1717291299,
+            "line": 13764,
+            "fields": {
+              "m_LocalRotation": "{x: 0, y: 0, z: 0, w: 1}",
+              "m_LocalPosition": "{x: 195, y: -7.15, z: 0}",
+              "m_LocalScale": "{x: 8, y: 10, z: 1}",
+              "m_Father": "{fileID: 0}"
+            }
+          }
+        ]
+      },
+      {
+        "file_id": 1844922425,
+        "name": "Main Hook 1",
+        "line": 15160,
+        "active": "1",
+        "components": [
+          {
+            "type": 61,
+            "id": 1844922427,
+            "line": 15196,
+            "fields": {
+              "m_Enabled": "1",
+              "m_IsTrigger": "1",
+              "m_Offset": "{x: 0, y: 0}",
+              "m_Size": "{x: 1, y: 1}"
+            }
+          },
+          {
+            "type": 4,
+            "id": 1844922430,
+            "line": 15314,
+            "fields": {
+              "m_LocalRotation": "{x: 0, y: 0, z: 0, w: 1}",
+              "m_LocalPosition": "{x: 0.25, y: 1, z: 0}",
+              "m_LocalScale": "{x: 1.6, y: 0.45, z: 1}",
+              "m_Father": "{fileID: 0}"
+            }
+          }
+        ]
+      },
+      {
+        "file_id": 2056289247,
+        "name": "Main Landing 1",
+        "line": 16477,
+        "active": "1",
+        "components": [
+          {
+            "type": 61,
+            "id": 2056289248,
+            "line": 16501,
+            "fields": {
+              "m_Enabled": "1",
+              "m_IsTrigger": "0",
+              "m_Offset": "{x: 0, y: 0}",
+              "m_Size": "{x: 1, y: 1}"
+            }
+          },
+          {
+            "type": 4,
+            "id": 2056289251,
+            "line": 16619,
+            "fields": {
+              "m_LocalRotation": "{x: 0, y: 0, z: 0, w: 1}",
+              "m_LocalPosition": "{x: 9.5, y: -9.85, z: 0}",
+              "m_LocalScale": "{x: 8, y: 10, z: 1}",
+              "m_Father": "{fileID: 0}"
+            }
+          },
+          {
+            "type": 114,
+            "id": 2056289255,
+            "line": 16687,
+            "fields": {
+              "m_Enabled": "1",
+              "sectionNumber": "2",
+              "respawnPosition": "{x: 9.5, y: -4.15}",
+              "minimumRopeAfterCheckpoint": "50"
+            },
+            "script": "MainStageCheckpoint"
+          }
+        ]
+      },
+      {
+        "file_id": 2119291537,
+        "name": "Main S10 Toy Box Goal",
+        "line": 17331,
+        "active": "1",
+        "components": [
+          {
+            "type": 4,
+            "id": 2119291540,
+            "line": 17422,
+            "fields": {
+              "m_LocalRotation": "{x: 0, y: 0, z: 0, w: 1}",
+              "m_LocalPosition": "{x: 219, y: -0.95, z: 0}",
+              "m_LocalScale": "{x: 2.6, y: 2.4, z: 1}",
+              "m_Father": "{fileID: 0}"
+            }
+          },
+          {
+            "type": 114,
+            "id": 2119291541,
+            "line": 17438,
+            "fields": {
+              "m_Enabled": "1"
+            },
+            "script": "GoalChestPresentation"
+          }
+        ]
+      }
+    ],
+    "checkpoint9_saved_components": [
+      {
+        "file_id": 1438313552,
+        "name": "Main S07 Landing",
+        "component": {
+          "type": 114,
+          "id": 1438313553,
+          "line": 10721,
+          "fields": {
+            "m_Enabled": "1",
+            "sectionNumber": "9",
+            "respawnPosition": "{x: 172.8, y: -1.45}",
+            "minimumRopeAfterCheckpoint": "23"
+          },
+          "script": "MainStageCheckpoint"
+        }
+      }
+    ],
+    "goalzone_saved_components": [
+      {
+        "file_id": 29111725,
+        "name": "Main S10 Goal Floor",
+        "component": {
+          "type": 114,
+          "id": 29111726,
+          "line": 146,
+          "fields": {
+            "m_Enabled": "1"
+          },
+          "script": "MainStageGoalZone"
+        }
+      }
+    ],
+    "source": "read-only saved YAML; no runtime observation"
+  },
+  "resource_counterfactuals": [
+    {
+      "label": "reference",
+      "traces": [
+        {
+          "S6_merge": 25,
+          "S7_assumed_cost": 4,
+          "after_S7": 21,
+          "CP9": 23,
+          "after_S9_6_plus_6": 11,
+          "CP10": 11,
+          "S10_assumed_cost": 10,
+          "after_S10_arithmetic": 1
+        },
+        {
+          "S6_merge": 39,
+          "S7_assumed_cost": 4,
+          "after_S7": 35,
+          "CP9": 35,
+          "after_S9_6_plus_6": 23,
+          "CP10": 23,
+          "S10_assumed_cost": 10,
+          "after_S10_arithmetic": 13
+        }
+      ],
+      "final_resource_gap": 12
+    },
+    {
+      "label": "S7_cost_only_omitted_keep_CP9",
+      "traces": [
+        {
+          "S6_merge": 25,
+          "S7_assumed_cost": 0,
+          "after_S7": 25,
+          "CP9": 25,
+          "after_S9_6_plus_6": 13,
+          "CP10": 13,
+          "S10_assumed_cost": 10,
+          "after_S10_arithmetic": 3
+        },
+        {
+          "S6_merge": 39,
+          "S7_assumed_cost": 0,
+          "after_S7": 39,
+          "CP9": 39,
+          "after_S9_6_plus_6": 27,
+          "CP10": 27,
+          "S10_assumed_cost": 10,
+          "after_S10_arithmetic": 17
+        }
+      ],
+      "final_resource_gap": 14
+    },
+    {
+      "label": "S10_cost_only_omitted_keep_CP10",
+      "traces": [
+        {
+          "S6_merge": 25,
+          "S7_assumed_cost": 4,
+          "after_S7": 21,
+          "CP9": 23,
+          "after_S9_6_plus_6": 11,
+          "CP10": 11,
+          "S10_assumed_cost": 0,
+          "after_S10_arithmetic": 11
+        },
+        {
+          "S6_merge": 39,
+          "S7_assumed_cost": 4,
+          "after_S7": 35,
+          "CP9": 35,
+          "after_S9_6_plus_6": 23,
+          "CP10": 23,
+          "S10_assumed_cost": 0,
+          "after_S10_arithmetic": 23
+        }
+      ],
+      "final_resource_gap": 12
+    }
+  ],
+  "resource_assumption": "Reuse existing07 reference S6 merge25/39. Hold CP9 lower bound23, S9 cost12, CP10 lower bound11 and other expenses fixed. Omitted costs are algebra only, not actual state edits, routes or approved changes.",
+  "new_dependency_chain": "S07 landing checkpoint9 → detached landing accepted → CurrentSection9 → F unlocked for intended S09 merge; S09 exit checkpoint10 → snapshot protects S09 merge before final crossing.",
+  "existing_references": [
+    "https://github.com/bq24014-cmd/himohito-prototype/blob/85ca4f328fb739f585c3fc160634bada061bc9d6/Docs/Reviews/PonPlaytest/runs/20261017_004500JST/01_Gameplay.md",
+    "https://github.com/bq24014-cmd/himohito-prototype/blob/85ca4f328fb739f585c3fc160634bada061bc9d6/Docs/Reviews/PonPlaytest/runs/20261017_004500JST/06_T4_S10_Addendum.md",
+    "https://github.com/bq24014-cmd/himohito-prototype/blob/85ca4f328fb739f585c3fc160634bada061bc9d6/Docs/Reviews/PonPlaytest/runs/20261017_004500JST/07_Resource_Retry_Addendum.md",
+    "https://github.com/bq24014-cmd/himohito-prototype/blob/85ca4f328fb739f585c3fc160634bada061bc9d6/Docs/Reviews/PonPlaytest/runs/20261017_023417JST/10_Retry_Learning.md",
+    "https://github.com/bq24014-cmd/himohito-prototype/blob/85ca4f328fb739f585c3fc160634bada061bc9d6/Docs/Reviews/PonPlaytest/runs/20261017_021315JST/09_FirstMinutes_InfoOrder.md"
+  ],
+  "not_claimed": [
+    "No live enjoyment/ranking",
+    "No traversal without bridge",
+    "No mandatory length or minimum key count",
+    "No actual deletion or altered build",
+    "No automatic approval"
+  ]
+}

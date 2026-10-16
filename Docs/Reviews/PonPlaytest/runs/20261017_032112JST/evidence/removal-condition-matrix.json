@@ -1,0 +1,56 @@
+{
+  "utc": "2026-10-16T18:21:12.155803+00:00",
+  "classification": "B_SOURCE_DEPENDENCY; C_FUN_AND_TRAVERSAL",
+  "A_observations": 0,
+  "cases": [
+    {
+      "section": "S1",
+      "old_recommendation": "MERGE candidate, never unconditional full removal",
+      "weak_premise": "Everyone has already learned the same lesson in Tutorial and carries that state into Main.",
+      "counterevidence": [
+        "Main selection does not require Tutorial clear (existing09).",
+        "Main Awake initializes section1, maximum resource and selected length7; saved resource maximum50 and preview flags0.",
+        "Tutorial first arrival can accept attached state; Main TryReachSection rejects attached state for every checkpoint."
+      ],
+      "minimum_to_keep": "A usable Main entrance, a chance to connect/step off/detach without the S2 precision hazard being the only practice, and the S2-entry recovery boundary or a verified equivalent.",
+      "operation_reduction_candidate": "Only compare combining the already-understood single-hook connect→step off→release review with the S2 approach for Tutorial-experienced play. Do not delete the common Main introduction on that basis alone.",
+      "reversal_trial_result": "If Main-direct players cannot explain detachment, checkpoint acceptance or S2 length corrections, withdraw the reduction. If direct and Tutorial-experienced groups retain those abilities while the separate first swing adds only repetition, a compact MERGE comparison gains support.",
+      "recommendation": "KEEP Main introduction; narrowly scoped MERGE comparison for established repetition, not full S1 deletion.",
+      "limits": "No cohort trial or success time. The first Main checkpoint is not a strict sequential software gate: later higher-number checkpoints may be accepted if reached and detached."
+    },
+    {
+      "section": "S7",
+      "old_recommendation": "REWORK; possible overlap with S4",
+      "weak_premise": "A bridge followed by a swing can be deleted as the same lesson, without changing S9 entry.",
+      "counterevidence": [
+        "Saved S07 landing holds the only section9 checkpoint component, lower bound23; Setup configures the same.",
+        "F hook removal in Main is unlocked at CurrentSection>=9. Losing CP9 while still below9 leaves the intended S9 F operation locked until another higher checkpoint is reached.",
+        "Removing only the reference4 spend but keeping CP9 changes conditional S6 route resource gaps: the reference final gap12 becomes14.",
+        "S7 middle/upper height transition remains a geometric distinction, not proof of a distinct felt lesson (existing10)."
+      ],
+      "minimum_to_keep": "A traversable S6-to-S9 connection; section9 acceptance/resource/snapshot boundary or a verified equivalent that unlocks F; retain the height-decision opportunity until a trial shows it redundant.",
+      "operation_reduction_candidate": "First compare the already-proposed same-floor retry approach reduction. Repeated bridge reconstruction/approach after a late swing failure is a conditional target, not evidence to remove the first height transition or CP9.",
+      "reversal_trial_result": "Meaningful upper-shelf positioning or a different failure correction supports KEEP. If ordinary-input trials show only S4 repetition and a reduced connection preserves entry state, F unlock and route resource difference, a later MERGE comparison can be considered.",
+      "recommendation": "KEEP connection/CP9; REWORK repeated approach only. Do not upgrade to whole-section REMOVE.",
+      "limits": "No proof every player must use the reference length4/5 or upper shelf. CP9 loss is a conditional dependency failure, not an executed broken build."
+    },
+    {
+      "section": "S10",
+      "old_recommendation": "Initial01 MERGE/REMOVE wording, already limited by06",
+      "weak_premise": "No new button means the whole last section, its checkpoint and toy box can be removed without loss.",
+      "counterevidence": [
+        "CP10 is on the S09 goal floor, minimum11, and captures current bridges/removed hooks. After the reference S9 merge it preserves that success separately from final-bridge failure.",
+        "If that boundary is removed and no replacement accepted, retry returns to the prior snapshot before S9; the reference two builds and F may be repeated.",
+        "The sole saved MainStageGoalZone is on S10 Goal Floor. Its clear path calls the toy-box readiness test.",
+        "If marker lookup is null at the goal check, without setup recreation, the legacy branch can return true after qualifying top contact instead of requiring approach/open completion. Scene deletion alone was not tested and Setup can Ensure floor/marker.",
+        "Clear snapshot reads actual remaining resource and generated curves; omitting final Q changes both if the goal is otherwise reached."
+      ],
+      "minimum_to_keep": "CP10 or equivalent protection of S9 success; a reachable final crossing; the toy-box approach/open→clear relationship and its floor receiver. Retain the final body-to-path action until its loss is actually compared.",
+      "operation_reduction_candidate": "Only the independent-task framing/repeated preparation is a MERGE/shortening hypothesis. No concrete required keypress is currently established as safely removable. Normal S10 long guide text is not being drawn, so do not invent a removable explanation pause.",
+      "reversal_trial_result": "If final Q/resource choice or approaching/opening the box gives a clear self-explained payoff, favor KEEP. If ordinary play shows repeated setup without a new judgment and a shorter ending preserves CP10, toy-box approach and final-resource/path meaning, narrow MERGE gains support.",
+      "recommendation": "Remove unconditional REMOVE from current recommendation; retain only a bounded MERGE/shortening comparison. Do not approve final Q, box or CP10 deletion.",
+      "limits": "No modified layout or traversal test. Arithmetic without Q is not proof that the unchanged gap can be crossed. Marker-null fallback is code behavior, not a performed removal. Omitting final Q and omitting only its resource cost are different hypotheses; no curve change is inferred from arithmetic alone."
+    }
+  ],
+  "implementation": false
+}
