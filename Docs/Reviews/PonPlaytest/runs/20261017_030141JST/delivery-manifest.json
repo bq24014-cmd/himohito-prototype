@@ -1,0 +1,26 @@
+{
+  "utc": "2026-10-16T18:01:41.389866+00:00",
+  "run_id": "20261017_030141JST",
+  "status": "PARENT_REVIEW_APPROVED_WITH_EXAMPLE_STARTING_RESOURCE; REMOTE_CONFIRMATION_IN_PUBLICATION_RECEIPT",
+  "A_observations": 0,
+  "files": [
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_030141JST/12_UI_Copy_Conditions.md",
+      "bytes": 6077,
+      "sha256": "41c0a03018c8753797a1805696a80df78434af465164f3990f50d20f284ac370"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_030141JST/evidence/ui-copy-condition-matrix.json",
+      "bytes": 10438,
+      "sha256": "aa3b9598318cb051c83a04a697070b5914a495c9f4bd205fb98797264f481d6f"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_030141JST/evidence/ui-copy-reference-index.json",
+      "bytes": 5447,
+      "sha256": "2a4341adcd9c0b4ef7ada5f2e0ef020cb46c16423bf1e28ca997aa507767acf6"
+    }
+  ],
+  "total_files_with_manifest": 4,
+  "image_files": 0,
+  "latest_published_commit": "b6ed066046ab419856e395f369161b05186faa7a"
+}

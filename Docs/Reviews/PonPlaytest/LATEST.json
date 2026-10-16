@@ -13,11 +13,11 @@
   "published_commit": null,
   "continuation_cutoff_utc": "2026-10-16T23:00:00Z",
   "no_new_themes_after_utc": "2026-10-16T22:30:00Z",
-  "updated_utc": "2026-10-16T17:55:29.717969+00:00",
+  "updated_utc": "2026-10-16T18:05:48.705128+00:00",
   "continuation_configured": false,
   "parent_review": "APPROVED_42_FILES_WITH_MINOR_CORRECTIONS; UI_STATE_ADDENDUM_SEPARATE",
   "continuation_management": "PARENT",
-  "revision": 7,
+  "revision": 8,
   "addendum": "runs/20261017_004500JST/06_T4_S10_Addendum.md",
   "resource_retry_addendum": "runs/20261017_004500JST/07_Resource_Retry_Addendum.md",
   "A_observations": 0,
@@ -35,5 +35,8 @@
   "retry_learning_parent_review": "APPROVED_WITH_WORLD_SPACE_RETURN_WORDING",
   "showcase": "runs/20261017_025050JST/11_Showcase_Prediction_Result.md",
   "showcase_manifest": "runs/20261017_025050JST/delivery-manifest.json",
-  "showcase_parent_review": "APPROVED_WITH_NON_LEADING_OUTCOME_AND_PREQUESTION_LABELS"
+  "showcase_parent_review": "APPROVED_WITH_NON_LEADING_OUTCOME_AND_PREQUESTION_LABELS",
+  "ui_copy_conditions": "runs/20261017_030141JST/12_UI_Copy_Conditions.md",
+  "ui_copy_conditions_manifest": "runs/20261017_030141JST/delivery-manifest.json",
+  "ui_copy_conditions_parent_review": "APPROVED_WITH_99_STARTING_RESOURCE_EXAMPLE"
 }

@@ -1,0 +1,207 @@
+{
+  "utc": "2026-10-16T18:01:41.389866+00:00",
+  "scope": "10/6 FriendPlay frozen source; not current Production",
+  "checked_hashes": [
+    {
+      "path": "Assets/Scripts/PrototypeHud.cs",
+      "sha256": "2e6d442c4933dda55aa3680ed1a835372e53274fe0c7404498684dc23abb6780",
+      "BuildInputs_match": true,
+      "source_line_spans": [
+        [
+          109,
+          123
+        ],
+        [
+          178,
+          186
+        ],
+        [
+          233,
+          266
+        ]
+      ]
+    },
+    {
+      "path": "Assets/Scripts/MainStageHud.cs",
+      "sha256": "30d2177386b912c1c8fc86961460208b53fd2f45df0597552055c19e41ecae50",
+      "BuildInputs_match": true,
+      "source_line_spans": [
+        [
+          95,
+          111
+        ]
+      ]
+    },
+    {
+      "path": "Assets/Scripts/RopeController.cs",
+      "sha256": "3ef4a50076994279839f398652180256f5ec37c01b954eeefc67c79b831e25d6",
+      "BuildInputs_match": true,
+      "source_line_spans": [
+        [
+          192,
+          195
+        ],
+        [
+          248,
+          250
+        ],
+        [
+          461,
+          505
+        ],
+        [
+          650,
+          667
+        ],
+        [
+          730,
+          740
+        ]
+      ]
+    },
+    {
+      "path": "Assets/Scripts/RopePlatformBuilder.cs",
+      "sha256": "11ecb4c1870cb8ef0449343155559211a5e1d9e1321132bce0dcf8e14e279fd2",
+      "BuildInputs_match": true,
+      "source_line_spans": [
+        [
+          47,
+          68
+        ],
+        [
+          143,
+          185
+        ],
+        [
+          351,
+          405
+        ],
+        [
+          408,
+          417
+        ]
+      ]
+    },
+    {
+      "path": "Assets/Scripts/RopePlatformAnchor.cs",
+      "sha256": "bb3309fe1e78fce3261683e25bd71dfbded4c4bf210a062c9e60e3f1409709c0",
+      "BuildInputs_match": true,
+      "source_line_spans": [
+        [
+          17,
+          18
+        ],
+        [
+          30,
+          53
+        ]
+      ]
+    },
+    {
+      "path": "Assets/Scripts/TutorialSectionGuide.cs",
+      "sha256": "380f0e643fe2e76bc3d561c3157982b268aee650b3648357af8d3a1bf336f385",
+      "BuildInputs_match": true,
+      "source_line_spans": [
+        [
+          45,
+          50
+        ],
+        [
+          496,
+          552
+        ]
+      ]
+    },
+    {
+      "path": "Assets/Scripts/PrototypeRunController.cs",
+      "sha256": "ec6fd5170e7c00a97593b28e109b7fc3fbc5d6f922b5aa1b68823467e3623977",
+      "BuildInputs_match": true,
+      "source_line_spans": [
+        [
+          399,
+          444
+        ]
+      ]
+    },
+    {
+      "path": "Assets/Scripts/MainStageRespawnOnFall.cs",
+      "sha256": "314060136dfb7846ae7ebbc43cfaf0028625b839b4b9a05e9171d4f5830c4d8c",
+      "BuildInputs_match": true,
+      "source_line_spans": [
+        [
+          201,
+          206
+        ],
+        [
+          222,
+          240
+        ]
+      ]
+    },
+    {
+      "path": "Assets/Scripts/MainStageSectionThreeRecoverySwitch.cs",
+      "sha256": "740694ff88f82362da4c42170d5c415206d4d1808a83b07eb2d5ca75f32f0f1a",
+      "BuildInputs_match": true,
+      "source_line_spans": [
+        [
+          86,
+          117
+        ],
+        [
+          121,
+          145
+        ]
+      ]
+    },
+    {
+      "path": "Assets/Scripts/StageOverlayControls.cs",
+      "sha256": "7d63dcbaa1dbce7fb04a8e387b0013050d343084f3fc6d267f4064a69a28755a",
+      "BuildInputs_match": true,
+      "source_line_spans": [
+        [
+          266,
+          276
+        ]
+      ]
+    },
+    {
+      "path": "Assets/Scripts/RopeResource.cs",
+      "sha256": "026476f48b89bac7158abebc1744bf41553bae4981c41b7148b41dced63860eb",
+      "BuildInputs_match": true,
+      "source_line_spans": [
+        [
+          14,
+          16
+        ],
+        [
+          35,
+          43
+        ]
+      ]
+    }
+  ],
+  "hashes_overlap_previous_reviews": true,
+  "reused_review_sources": [
+    {
+      "url": "https://github.com/bq24014-cmd/himohito-prototype/blob/b6ed066046ab419856e395f369161b05186faa7a/Docs/Reviews/PonPlaytest/runs/20261017_004500JST/02_UI.md",
+      "purpose": "Original U01–U16 and earlier proposals"
+    },
+    {
+      "url": "https://github.com/bq24014-cmd/himohito-prototype/blob/b6ed066046ab419856e395f369161b05186faa7a/Docs/Reviews/PonPlaytest/runs/20261017_004500JST/06_T4_S10_Addendum.md",
+      "purpose": "T4 causal diagram and recommended versus required length"
+    },
+    {
+      "url": "https://github.com/bq24014-cmd/himohito-prototype/blob/b6ed066046ab419856e395f369161b05186faa7a/Docs/Reviews/PonPlaytest/runs/20261017_004500JST/07_Resource_Retry_Addendum.md",
+      "purpose": "Q/F spend, R snapshot and minimum reserve"
+    },
+    {
+      "url": "https://github.com/bq24014-cmd/himohito-prototype/blob/b6ed066046ab419856e395f369161b05186faa7a/Docs/Reviews/PonPlaytest/runs/20261017_014618JST/08_UI_State_Addendum.md",
+      "purpose": "Guide detach, modal input limits, latest U12/U14 and R screen differences"
+    },
+    {
+      "url": "https://github.com/bq24014-cmd/himohito-prototype/blob/b6ed066046ab419856e395f369161b05186faa7a/Docs/Reviews/PonPlaytest/runs/20261017_021315JST/09_FirstMinutes_InfoOrder.md",
+      "purpose": "Normal HUD drawing paths and T4 exact bridge wording"
+    }
+  ],
+  "evidence_policy": "Reuse source excerpts already published; no duplicate full-source dump, no GUI rendering or pass claim. Matrix source_line_spans refer to original frozen files, not GitHub Markdown line numbers."
+}

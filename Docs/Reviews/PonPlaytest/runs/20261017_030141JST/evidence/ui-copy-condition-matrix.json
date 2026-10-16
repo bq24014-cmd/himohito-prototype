@@ -1,0 +1,193 @@
+{
+  "utc": "2026-10-16T18:01:41.389866+00:00",
+  "classification": "B_CONDITIONAL_SOURCE_TRACE; C_RUNTIME_AND_READABILITY",
+  "A_observations": 0,
+  "existing_issue_ids_only": true,
+  "cases": [
+    {
+      "ids": [
+        "U01",
+        "U02"
+      ],
+      "topic": "Q panel target and rejection reasons",
+      "original": [
+        "この照準方向へヒモ足場を作る",
+        "永久に使う長さ {n}",
+        "Q：この方向へヒモ足場を作る",
+        "足場にできません／ヒモを{最低残量}以上残してください"
+      ],
+      "previous_proposal": "2つのフックの間に橋を作る／使うヒモ {n}／Q 橋を作る。表示は橋用フック接続時。",
+      "revision": [
+        "有効な組が特定できる場合：2つのフックの間に橋を作る／作ると使うヒモ {n}／実行可能時だけ Q 橋を作る",
+        "残量不足：橋を作ったあとも、ヒモを{最低残量}以上残してください。",
+        "原因未特定：この状態では橋を作れません。"
+      ],
+      "display": "Current Tutorial popup: attached, unlocked (T3 onward via CurrentPlatformCost), positive active cost, body/camera available and point in front of camera. Not restricted to bridge-pair hooks. Proposed target text requires resolved pair; an invalid-connection reason must not disappear by narrowing the entire panel.",
+      "must_keep": [
+        "Q target is authored paired hooks, not direction/player position",
+        "Cost n is ActiveRopeLength, only spent by successful Q",
+        "Minimum reserve is dynamic and means at least, not an exact required remaining value",
+        "Length advice only when distance/length failure is actually identified; CanBuild=false alone is insufficient",
+        "Main normal HUD has no same pre-Q popup"
+      ],
+      "counterexample": "Restricting the whole popup to valid bridge hooks hides the U02 invalid-target message. Treating every failure as short length or a right-green target can misdirect a different failure.",
+      "references": [
+        "PrototypeHud:178–186,233–266",
+        "RopePlatformBuilder:47–68,351–405",
+        "RopePlatformAnchor:30–53"
+      ]
+    },
+    {
+      "ids": [
+        "U03",
+        "U09"
+      ],
+      "topic": "Resource / selected length terminology",
+      "original": [
+        "ヒモ残量 {current} / {maximum}",
+        "次に使う長さ {selected} / {selectableMaximum} 接続中",
+        "W / S 次に使う長さを変更"
+      ],
+      "previous_proposal": "次に使う長さを選ぶ（未接続時）。残量と次の長さを保持。",
+      "revision": [
+        "HUDの「ヒモ残量」「次に使う長さ」は維持し、「長さ」1項目へ統合しない。",
+        "W / S 次に使う長さを選ぶ（未接続時）",
+        "必要な補足：Wで長く、Sで短く。接続中に変えるには、いったんEで外す。"
+      ],
+      "display": "Two values remain in normal HUD. Length-changing condition belongs in help/length-related guidance; not a claim that keys work inside the open modal.",
+      "must_keep": [
+        "Remaining current/max is spendable resource, not selected rope length/selectable max",
+        "Selected value is used at next attachment; it also contributes to F aim search range",
+        "Current attached cost does not change with W/S; existing UpdateSelectedRopeLength returns while attached",
+        "F aim must be in reach; do not claim every distant blue hook can be removed",
+        "Do not simplify colors to green=Q possible, blue=Q impossible"
+      ],
+      "counterexample": "A single short label 長さ can make resource 39 look like a selected length, or make W/S appear to change an already attached rope. Saying selected length has no other effect conflicts with F aim range.",
+      "references": [
+        "PrototypeHud:109–117",
+        "MainStageHud:95–111",
+        "RopeController:248–250,461–505,650–667,730–740"
+      ]
+    },
+    {
+      "ids": [
+        "U06"
+      ],
+      "topic": "T2 guide and detachment state",
+      "original": [
+        "Eで外し、W / Sで長さ6～7を選ぶ",
+        "もう一度 Eで掛け、トゲの上を渡る"
+      ],
+      "previous_proposal": "詳しいヒント：Eで外し、W/Sで6〜7にして試す。",
+      "revision": [
+        "詳しいヒント：ヒモを外した状態で、W/Sで6〜7を選び、Eで掛ける。"
+      ],
+      "display": "T2 full guide, read via Z. OpenGuide disables RopeController; its OnDisable detaches. Closing restores enabled state, not the old attachment.",
+      "must_keep": [
+        "Adjustment is while detached",
+        "E toggles attachment: do not prescribe an extra detach press after guide reading",
+        "6–7 remains a reference/help value, not the only legal length or guaranteed pass",
+        "Keep the short causal statement before the number; no new hint hierarchy implemented"
+      ],
+      "counterexample": "If a player opens Z while attached, the code detaches. After closing, following Eで外す attaches instead, then W/S returns without changing length. This is a conditional code trace, not observed input.",
+      "references": [
+        "TutorialSectionGuide:45–50,496–552",
+        "RopeController:192–195,650–667"
+      ]
+    },
+    {
+      "ids": [
+        "U07",
+        "U01"
+      ],
+      "topic": "T3 example versus actual Q cost",
+      "original": [
+        "残量を7使ってできた橋を歩いて渡る",
+        "既存図：99 → 92"
+      ],
+      "previous_proposal": "体のヒモを7使い、橋として残します。99 → 92。T3看板とQ実行前。",
+      "revision": [
+        "T3看板：体のヒモを7使い、橋に残します。99 → 92（残量99で長さ7を使った例）。",
+        "Q実行前：作ると使うヒモ {n}。nは今の接続長で表示する。"
+      ],
+      "display": "The authored T3 guide/diagram can use the 7-length example. The pre-Q popup is dynamic and may be used after a different valid selected length.",
+      "must_keep": [
+        "Body becomes path and Q spends rope",
+        "Recommended length is not a required exact match",
+        "Never replace dynamic actual cost with a hard-coded 7 or imply remaining is always 99",
+        "The already-fixed 99→92 diagram is not reopened as a bug"
+      ],
+      "counterexample": "A player using another valid length would be misled if the proposed fixed 7-cost sentence were reused as the live pre-Q amount.",
+      "references": [
+        "TutorialSectionGuide:45–50",
+        "PrototypeHud:233–240",
+        "RopePlatformBuilder:351–405",
+        "RopePlatformAnchor:17–18"
+      ]
+    },
+    {
+      "ids": [
+        "U03",
+        "U08"
+      ],
+      "topic": "F bridge merge versus S3 switch",
+      "original": [
+        "F 中央Hookを外してまとめる",
+        "F：帰り道のスイッチを押す"
+      ],
+      "previous_proposal": "ヒモを外し、2本が集まる中央を狙う。S3のスイッチでは戻り足場を出す。T4補助は左右に長さ6の橋を1本ずつ。",
+      "revision": [
+        "橋統合の主行：F 中央フックを外し、橋を1本にする。",
+        "橋統合の補足：ヒモを外した状態で、届く範囲の中央フックを狙う。橋が2本そろってから。",
+        "T4補助：左岸と中央、中央と右岸に、長さ6の橋を1本ずつ作る。",
+        "S3現場：F：帰り道のスイッチを押す（原文維持）。"
+      ],
+      "display": "Bridge F is unlocked Tutorial T4 onward / Main S9 onward, requires detached, aimed in reach and exactly two touching bridges. S3 switch is a separate nearby trigger interaction when stairs hidden; it does not test rope attachment or aim.",
+      "must_keep": [
+        "Do not make every F interaction require aiming/detaching",
+        "Switch requires proximity, player enabled and timeScale>0; already revealed stairs do not re-trigger",
+        "Tutorial full guide closes with Z; if already detached, no extra E press is required",
+        "F merge has no new spend/refund; it removes support and changes path shape",
+        "Bridge and ordinary supporting terrain/return steps are not all called 橋"
+      ],
+      "counterexample": "A global F note saying to detach and aim could make a player aim at the S3 switch or unnecessarily toggle E. Conversely a global F=press nearby would omit the merge aim requirement.",
+      "references": [
+        "RopePlatformBuilder:143–185,408–417",
+        "RopeController:461–505",
+        "MainStageSectionThreeRecoverySwitch:86–117,121–145"
+      ]
+    },
+    {
+      "ids": [
+        "U03",
+        "U04",
+        "U14"
+      ],
+      "topic": "R destination and restored state",
+      "original": [
+        "R 現在の区間から再挑戦",
+        "R この区間から再挑戦"
+      ],
+      "previous_proposal": "Rで、直前の復帰地点から。橋とヒモ残量も、その地点に保存された状態へ戻ります。（08）",
+      "revision": [
+        "失敗/通常プレイの主行：R 直前の復帰地点から。",
+        "補足：橋・外したフック・ヒモ残量・選んだ長さも、その地点の状態に戻ります。"
+      ],
+      "display": "Applies to checkpoint retry in normal play / after failure reveal. It is not the label for R on clear screens, which restarts Tutorial or Main. U13 stage-selection warning still means stage restart on reentry.",
+      "must_keep": [
+        "Snapshot state, not always maximum resource / no bridges",
+        "Selected length and removed hook restoration must not be contradicted",
+        "No promise to preserve current attachment or velocity",
+        "Keep visible clear-screen R purpose distinct",
+        "Do not describe this as normal bridge refund"
+      ],
+      "counterexample": "After F, R can restore the removed center hook; after changing W/S, R can restore the saved selection. Saying only that rope comes back can sound like all progress remains. Calling every R a checkpoint retry is wrong on clear screens.",
+      "references": [
+        "PrototypeRunController:399–444",
+        "MainStageRespawnOnFall:201–206,222–240",
+        "08_UI_State_Addendum:existing R/clear mapping"
+      ]
+    }
+  ],
+  "no_actual_gui_or_input_test": true
+}
