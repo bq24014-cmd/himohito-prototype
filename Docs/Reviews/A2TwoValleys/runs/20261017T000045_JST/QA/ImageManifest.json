@@ -1,0 +1,857 @@
+[
+  {
+    "path": "Frames/Current_0005.jpg",
+    "role": "通常画角・全画面・再圧縮のみ",
+    "bytes": 231849,
+    "sha256": "01101DFFBD548845415ED99E4404C70FD52F6341795E535FBF250A44D15A257A",
+    "jpeg_quality": 90,
+    "sources": [
+      {
+        "relative_to_local_proof": "Evidence/FinalBaseline/Presentation/Frame_0005.png",
+        "sha256": "3B08074F6955321266136D5C49CFD8891353955B69471095DBFA969EC8E37D1C",
+        "original_retained": true
+      }
+    ],
+    "note": "実Unity画面由来。表示用JPEG。拡大crop/比較配置/外側ラベル以外の描き足し・生成画像なし。"
+  },
+  {
+    "path": "Frames/Current_0022.jpg",
+    "role": "通常画角・全画面・再圧縮のみ",
+    "bytes": 231732,
+    "sha256": "F5687D99F28772AB4F25C50AB6479B9E322D7695DD371FB5E22CD431BE5E6E7C",
+    "jpeg_quality": 90,
+    "sources": [
+      {
+        "relative_to_local_proof": "Evidence/FinalBaseline/Presentation/Frame_0022.png",
+        "sha256": "38A7CDCD33CC39970B33D83EB348EE4EA045161476430946B659417199BFEF47",
+        "original_retained": true
+      }
+    ],
+    "note": "実Unity画面由来。表示用JPEG。拡大crop/比較配置/外側ラベル以外の描き足し・生成画像なし。"
+  },
+  {
+    "path": "Frames/Current_0039.jpg",
+    "role": "通常画角・全画面・再圧縮のみ",
+    "bytes": 227941,
+    "sha256": "E9629D1B66363AAD3D056D1C6ECFC32BFC29EA2D8BD4D4C825524AF17D18E4F2",
+    "jpeg_quality": 90,
+    "sources": [
+      {
+        "relative_to_local_proof": "Evidence/FinalBaseline/Presentation/Frame_0039.png",
+        "sha256": "240EC95C5BD0D89AF851AF40BE12FC9CCDAB864937FB72F8F74C256BF6663BCA",
+        "original_retained": true
+      }
+    ],
+    "note": "実Unity画面由来。表示用JPEG。拡大crop/比較配置/外側ラベル以外の描き足し・生成画像なし。"
+  },
+  {
+    "path": "Frames/Current_0073.jpg",
+    "role": "通常画角・全画面・再圧縮のみ",
+    "bytes": 229215,
+    "sha256": "24DD5566ED367461012CBED8E77469676A1E2EB681A586ABAD8575DE8EE0B051",
+    "jpeg_quality": 90,
+    "sources": [
+      {
+        "relative_to_local_proof": "Evidence/FinalBaseline/Presentation/Frame_0073.png",
+        "sha256": "91424ABF210C229CAEE6FD9D1EE42DDC36224ADAD0A3EA7B48A382889E98ECD4",
+        "original_retained": true
+      }
+    ],
+    "note": "実Unity画面由来。表示用JPEG。拡大crop/比較配置/外側ラベル以外の描き足し・生成画像なし。"
+  },
+  {
+    "path": "Frames/Current_0103.jpg",
+    "role": "通常画角・全画面・再圧縮のみ",
+    "bytes": 233841,
+    "sha256": "8AABC548EF2D1230E1C662B286F27E771D9C03543A0CD8F316B34DC6AF0759B7",
+    "jpeg_quality": 90,
+    "sources": [
+      {
+        "relative_to_local_proof": "Evidence/FinalBaseline/Presentation/Frame_0103.png",
+        "sha256": "BD10A0F32E7C893CF9A038D13E426E2204E40B633DD99ED6D101849AB9C42058",
+        "original_retained": true
+      }
+    ],
+    "note": "実Unity画面由来。表示用JPEG。拡大crop/比較配置/外側ラベル以外の描き足し・生成画像なし。"
+  },
+  {
+    "path": "Frames/Current_0121.jpg",
+    "role": "通常画角・全画面・再圧縮のみ",
+    "bytes": 229313,
+    "sha256": "6DFA9460B1CE5BB9AF0325C1C26DA74DBE75FF1EEE3F35598BBAE29925A79966",
+    "jpeg_quality": 90,
+    "sources": [
+      {
+        "relative_to_local_proof": "Evidence/FinalBaseline/Presentation/Frame_0121.png",
+        "sha256": "1E48A1D8EF6A8B0B4B4F6083923699AEE91CF86EFA22B830F20A10C9303BF246",
+        "original_retained": true
+      }
+    ],
+    "note": "実Unity画面由来。表示用JPEG。拡大crop/比較配置/外側ラベル以外の描き足し・生成画像なし。"
+  },
+  {
+    "path": "Frames/Current_0123.jpg",
+    "role": "通常画角・全画面・再圧縮のみ",
+    "bytes": 229960,
+    "sha256": "87C72EB04D8F7F911F8B99D6BD1A26FE61FC24AEFE334B190227D8D9FB2458EF",
+    "jpeg_quality": 90,
+    "sources": [
+      {
+        "relative_to_local_proof": "Evidence/FinalBaseline/Presentation/Frame_0123.png",
+        "sha256": "483CADC08E67FE3A9369747387AC6F2F5720E7EB476926E23A2AD5092535C47A",
+        "original_retained": true
+      }
+    ],
+    "note": "実Unity画面由来。表示用JPEG。拡大crop/比較配置/外側ラベル以外の描き足し・生成画像なし。"
+  },
+  {
+    "path": "Frames/Current_0126.jpg",
+    "role": "通常画角・全画面・再圧縮のみ",
+    "bytes": 229784,
+    "sha256": "C017B7C81EE14B910B261381D1394C28A7FC53BF2AE3785BC6F4B33F31306BF9",
+    "jpeg_quality": 90,
+    "sources": [
+      {
+        "relative_to_local_proof": "Evidence/FinalBaseline/Presentation/Frame_0126.png",
+        "sha256": "06E90B113E6F10B7590D7C520F5FB91046D5C16CDC46C96B75C1B769C97B87DE",
+        "original_retained": true
+      }
+    ],
+    "note": "実Unity画面由来。表示用JPEG。拡大crop/比較配置/外側ラベル以外の描き足し・生成画像なし。"
+  },
+  {
+    "path": "Frames/Current_0139.jpg",
+    "role": "通常画角・全画面・再圧縮のみ",
+    "bytes": 227699,
+    "sha256": "822C74A6414DFD54AA520E2E5CFF1BD1B758A6D23BCB9BCE88C7CC7C3AD5D7E4",
+    "jpeg_quality": 90,
+    "sources": [
+      {
+        "relative_to_local_proof": "Evidence/FinalBaseline/Presentation/Frame_0139.png",
+        "sha256": "87FD8BC907660EF85BCDE33295150D4CC732B17CB219E0C443CD3A7B761FF9E9",
+        "original_retained": true
+      }
+    ],
+    "note": "実Unity画面由来。表示用JPEG。拡大crop/比較配置/外側ラベル以外の描き足し・生成画像なし。"
+  },
+  {
+    "path": "Frames/Current_0141.jpg",
+    "role": "通常画角・全画面・再圧縮のみ",
+    "bytes": 228297,
+    "sha256": "C4CE6DC5883CE87335B4391F2E698A4DD7814E0FCF91BD7E00568929961C4731",
+    "jpeg_quality": 90,
+    "sources": [
+      {
+        "relative_to_local_proof": "Evidence/FinalBaseline/Presentation/Frame_0141.png",
+        "sha256": "99EC6EEEC244EAFB3CE139BD5D05112F549CEA5C51A31E8AA51C316905936462",
+        "original_retained": true
+      }
+    ],
+    "note": "実Unity画面由来。表示用JPEG。拡大crop/比較配置/外側ラベル以外の描き足し・生成画像なし。"
+  },
+  {
+    "path": "Frames/Current_0144.jpg",
+    "role": "通常画角・全画面・再圧縮のみ",
+    "bytes": 229794,
+    "sha256": "52EDBEC053D0793114B8667B72CF1F0B1FF3A3AD77B40EB6D839A4DD0BB9FF17",
+    "jpeg_quality": 90,
+    "sources": [
+      {
+        "relative_to_local_proof": "Evidence/FinalBaseline/Presentation/Frame_0144.png",
+        "sha256": "60B697C02871E50E5409B1541578329DC2CF84F426AF98933C6A5FBF9D41DBB1",
+        "original_retained": true
+      }
+    ],
+    "note": "実Unity画面由来。表示用JPEG。拡大crop/比較配置/外側ラベル以外の描き足し・生成画像なし。"
+  },
+  {
+    "path": "Frames/Current_0148.jpg",
+    "role": "通常画角・全画面・再圧縮のみ",
+    "bytes": 231059,
+    "sha256": "DBC1076EFA252C316FCD7ECE49E42214389A21D3D1481502339AA93E44CD93CA",
+    "jpeg_quality": 90,
+    "sources": [
+      {
+        "relative_to_local_proof": "Evidence/FinalBaseline/Presentation/Frame_0148.png",
+        "sha256": "835ED57E3F75CC508C936C85289D251A515EA224F25015D60FD9698BA39DF0D5",
+        "original_retained": true
+      }
+    ],
+    "note": "実Unity画面由来。表示用JPEG。拡大crop/比較配置/外側ラベル以外の描き足し・生成画像なし。"
+  },
+  {
+    "path": "Frames/Current_0151.jpg",
+    "role": "通常画角・全画面・再圧縮のみ",
+    "bytes": 231181,
+    "sha256": "BB7C92B2F385792677379B5984C401328DD3DBD44868A9ED1E2E53E05DCB85BC",
+    "jpeg_quality": 90,
+    "sources": [
+      {
+        "relative_to_local_proof": "Evidence/FinalBaseline/Presentation/Frame_0151.png",
+        "sha256": "9ECF6956C0EE6A945F44CF0943EB54E559A57ECDF29531D3125BA98F0E267998",
+        "original_retained": true
+      }
+    ],
+    "note": "実Unity画面由来。表示用JPEG。拡大crop/比較配置/外側ラベル以外の描き足し・生成画像なし。"
+  },
+  {
+    "path": "Frames/Current_0157.jpg",
+    "role": "通常画角・全画面・再圧縮のみ",
+    "bytes": 231339,
+    "sha256": "8FFC09D03C21D00E5A972148567FCE57DC31D6AB5BBFB19C056EE13CCF7612A0",
+    "jpeg_quality": 90,
+    "sources": [
+      {
+        "relative_to_local_proof": "Evidence/FinalBaseline/Presentation/Frame_0157.png",
+        "sha256": "DCCF9D620349BD73F09868C01A8DC3AC1377B315CF6F77F6D56D9D1CAFDE785C",
+        "original_retained": true
+      }
+    ],
+    "note": "実Unity画面由来。表示用JPEG。拡大crop/比較配置/外側ラベル以外の描き足し・生成画像なし。"
+  },
+  {
+    "path": "Frames/Current_0166.jpg",
+    "role": "通常画角・全画面・再圧縮のみ",
+    "bytes": 229723,
+    "sha256": "7D15AFE3B98A7472243C4F6EC7764506C5D0871074BE9BBD31176E6DFA1BBEAC",
+    "jpeg_quality": 90,
+    "sources": [
+      {
+        "relative_to_local_proof": "Evidence/FinalBaseline/Presentation/Frame_0166.png",
+        "sha256": "D1F45CA781C5394125BAA11092E3D53D21D730DDE55586E6E2E67890F4A2BEF9",
+        "original_retained": true
+      }
+    ],
+    "note": "実Unity画面由来。表示用JPEG。拡大crop/比較配置/外側ラベル以外の描き足し・生成画像なし。"
+  },
+  {
+    "path": "Frames/Candidate_0005.jpg",
+    "role": "通常画角・全画面・再圧縮のみ",
+    "bytes": 231766,
+    "sha256": "BEAC0ADB40137ED79C710D37EECF2B945ED525C139C9EDBADEDD237FB3EE69F5",
+    "jpeg_quality": 90,
+    "sources": [
+      {
+        "relative_to_local_proof": "Evidence/FinalCandidate/Presentation/Frame_0005.png",
+        "sha256": "196D842207EDF615D88A9C3E2B2758BB8831E825EF05E9F2DDA76368723FE405",
+        "original_retained": true
+      }
+    ],
+    "note": "実Unity画面由来。表示用JPEG。拡大crop/比較配置/外側ラベル以外の描き足し・生成画像なし。"
+  },
+  {
+    "path": "Frames/Candidate_0022.jpg",
+    "role": "通常画角・全画面・再圧縮のみ",
+    "bytes": 231621,
+    "sha256": "649F9C4AD7B30BA18E654F387E688A03C15169186926B10E1B81367255F5065C",
+    "jpeg_quality": 90,
+    "sources": [
+      {
+        "relative_to_local_proof": "Evidence/FinalCandidate/Presentation/Frame_0022.png",
+        "sha256": "6A5F621733BB44B7CCA62A07B777E117B545C90ECE9E36D3139F3FAA578802E0",
+        "original_retained": true
+      }
+    ],
+    "note": "実Unity画面由来。表示用JPEG。拡大crop/比較配置/外側ラベル以外の描き足し・生成画像なし。"
+  },
+  {
+    "path": "Frames/Candidate_0039.jpg",
+    "role": "通常画角・全画面・再圧縮のみ",
+    "bytes": 228057,
+    "sha256": "DB3597B4BA095B9F58242FC2C26B2536A2B0AF982F4A52358E2B42BDF4C40239",
+    "jpeg_quality": 90,
+    "sources": [
+      {
+        "relative_to_local_proof": "Evidence/FinalCandidate/Presentation/Frame_0039.png",
+        "sha256": "78EACBC5195FC5E6DE056120D475D8DF6707AD11B51BD35286D50CC1786E5AD1",
+        "original_retained": true
+      }
+    ],
+    "note": "実Unity画面由来。表示用JPEG。拡大crop/比較配置/外側ラベル以外の描き足し・生成画像なし。"
+  },
+  {
+    "path": "Frames/Candidate_0073.jpg",
+    "role": "通常画角・全画面・再圧縮のみ",
+    "bytes": 229151,
+    "sha256": "22C742BA11E135A9C82ADDB153E1E6EFB199216890F93AD9A698A569614C2715",
+    "jpeg_quality": 90,
+    "sources": [
+      {
+        "relative_to_local_proof": "Evidence/FinalCandidate/Presentation/Frame_0073.png",
+        "sha256": "4958BB67532529BE47CF65EED59BE132060DB1CFC6F5368C4E7AB55A3B386D63",
+        "original_retained": true
+      }
+    ],
+    "note": "実Unity画面由来。表示用JPEG。拡大crop/比較配置/外側ラベル以外の描き足し・生成画像なし。"
+  },
+  {
+    "path": "Frames/Candidate_0103.jpg",
+    "role": "通常画角・全画面・再圧縮のみ",
+    "bytes": 233782,
+    "sha256": "2A1B8A1EF5ACE73E1BA451BFB2894E0BBDA3101007D3184EF75C93DF42060324",
+    "jpeg_quality": 90,
+    "sources": [
+      {
+        "relative_to_local_proof": "Evidence/FinalCandidate/Presentation/Frame_0103.png",
+        "sha256": "61D8FA02958E878B15B17E8B4B53E0AF23FF4DA2FABDB53951C706B3724E81CE",
+        "original_retained": true
+      }
+    ],
+    "note": "実Unity画面由来。表示用JPEG。拡大crop/比較配置/外側ラベル以外の描き足し・生成画像なし。"
+  },
+  {
+    "path": "Frames/Candidate_0121.jpg",
+    "role": "通常画角・全画面・再圧縮のみ",
+    "bytes": 229198,
+    "sha256": "F050E53B7586D0A25A258CB4764DAF615DDF65BF42B9802A16C7BB5D35C9F93B",
+    "jpeg_quality": 90,
+    "sources": [
+      {
+        "relative_to_local_proof": "Evidence/FinalCandidate/Presentation/Frame_0121.png",
+        "sha256": "467E88395754CCA60BE27C6BD286CA1A726316B80DB6AB405587508C8BFCC6A9",
+        "original_retained": true
+      }
+    ],
+    "note": "実Unity画面由来。表示用JPEG。拡大crop/比較配置/外側ラベル以外の描き足し・生成画像なし。"
+  },
+  {
+    "path": "Frames/Candidate_0123.jpg",
+    "role": "通常画角・全画面・再圧縮のみ",
+    "bytes": 229903,
+    "sha256": "B84EF8B914DA322FC98E756EA1A21F50566BB5B02E44F88E9E14B027BEEB43EA",
+    "jpeg_quality": 90,
+    "sources": [
+      {
+        "relative_to_local_proof": "Evidence/FinalCandidate/Presentation/Frame_0123.png",
+        "sha256": "46F77029B2106605002472EB631F336BF1EDB00CD3B975B029022A7781F6C4F6",
+        "original_retained": true
+      }
+    ],
+    "note": "実Unity画面由来。表示用JPEG。拡大crop/比較配置/外側ラベル以外の描き足し・生成画像なし。"
+  },
+  {
+    "path": "Frames/Candidate_0126.jpg",
+    "role": "通常画角・全画面・再圧縮のみ",
+    "bytes": 229742,
+    "sha256": "1847FBC1020ABA5FD499EE5321B63A89D006581F66AA056BAA03C7975951DB42",
+    "jpeg_quality": 90,
+    "sources": [
+      {
+        "relative_to_local_proof": "Evidence/FinalCandidate/Presentation/Frame_0126.png",
+        "sha256": "5A6F6BD499B5CB774E9A40990836B92B757F5B762710B81B2977AC54117D4965",
+        "original_retained": true
+      }
+    ],
+    "note": "実Unity画面由来。表示用JPEG。拡大crop/比較配置/外側ラベル以外の描き足し・生成画像なし。"
+  },
+  {
+    "path": "Frames/Candidate_0139.jpg",
+    "role": "通常画角・全画面・再圧縮のみ",
+    "bytes": 227587,
+    "sha256": "57D34EC087F5B5525F203834501610BFCA547610DFFF03BF48F00733BB47E047",
+    "jpeg_quality": 90,
+    "sources": [
+      {
+        "relative_to_local_proof": "Evidence/FinalCandidate/Presentation/Frame_0139.png",
+        "sha256": "E03808FBE5E6847C0860BDC97CDF171D2B1D672EFF804F76DFBB7655D68BB7E9",
+        "original_retained": true
+      }
+    ],
+    "note": "実Unity画面由来。表示用JPEG。拡大crop/比較配置/外側ラベル以外の描き足し・生成画像なし。"
+  },
+  {
+    "path": "Frames/Candidate_0141.jpg",
+    "role": "通常画角・全画面・再圧縮のみ",
+    "bytes": 228311,
+    "sha256": "4CCF55F5BB7B9B94802DECFB1BE38F46855E1135701C16810A8D3CCDBACFCCF9",
+    "jpeg_quality": 90,
+    "sources": [
+      {
+        "relative_to_local_proof": "Evidence/FinalCandidate/Presentation/Frame_0141.png",
+        "sha256": "9DF015DEFBC0301FE2B96A1868C50B6DF290BDA5A4A4CEE6F4D02E40F54755BA",
+        "original_retained": true
+      }
+    ],
+    "note": "実Unity画面由来。表示用JPEG。拡大crop/比較配置/外側ラベル以外の描き足し・生成画像なし。"
+  },
+  {
+    "path": "Frames/Candidate_0144.jpg",
+    "role": "通常画角・全画面・再圧縮のみ",
+    "bytes": 229767,
+    "sha256": "B50194DE693B9913A725F06D06BD046939608B97B8E914416BD64964CB1BECB7",
+    "jpeg_quality": 90,
+    "sources": [
+      {
+        "relative_to_local_proof": "Evidence/FinalCandidate/Presentation/Frame_0144.png",
+        "sha256": "97C3B541FC299ED0677950B821F75963D2AA55B6B2264648FA59AD28A4A1C486",
+        "original_retained": true
+      }
+    ],
+    "note": "実Unity画面由来。表示用JPEG。拡大crop/比較配置/外側ラベル以外の描き足し・生成画像なし。"
+  },
+  {
+    "path": "Frames/Candidate_0148.jpg",
+    "role": "通常画角・全画面・再圧縮のみ",
+    "bytes": 231313,
+    "sha256": "77EBBC2905B3F595C34FC76FB87DF3DDD7867FCE8370816D4BA89873640BC1DD",
+    "jpeg_quality": 90,
+    "sources": [
+      {
+        "relative_to_local_proof": "Evidence/FinalCandidate/Presentation/Frame_0148.png",
+        "sha256": "CFEA75442C313331C26B297285BCD3DF347EE7871A01E1C6B12BEDA770E549BE",
+        "original_retained": true
+      }
+    ],
+    "note": "実Unity画面由来。表示用JPEG。拡大crop/比較配置/外側ラベル以外の描き足し・生成画像なし。"
+  },
+  {
+    "path": "Frames/Candidate_0151.jpg",
+    "role": "通常画角・全画面・再圧縮のみ",
+    "bytes": 231125,
+    "sha256": "3C4DDEFF5F30EAEAB099C0E20304D25E9AA0404CA4D1CC7ADE3044C946FCDA56",
+    "jpeg_quality": 90,
+    "sources": [
+      {
+        "relative_to_local_proof": "Evidence/FinalCandidate/Presentation/Frame_0151.png",
+        "sha256": "9807EA7AE97A73BDB7E080719E3118C962EBF46FE3389023CCBCF37B59FB2017",
+        "original_retained": true
+      }
+    ],
+    "note": "実Unity画面由来。表示用JPEG。拡大crop/比較配置/外側ラベル以外の描き足し・生成画像なし。"
+  },
+  {
+    "path": "Frames/Candidate_0157.jpg",
+    "role": "通常画角・全画面・再圧縮のみ",
+    "bytes": 231125,
+    "sha256": "143845F9B6EF197643912C54B28BFD2813EE4911CBF186536EA756519C9F0AEE",
+    "jpeg_quality": 90,
+    "sources": [
+      {
+        "relative_to_local_proof": "Evidence/FinalCandidate/Presentation/Frame_0157.png",
+        "sha256": "39FA6DA2E339D75A78ABE3DDA1E6A2F6A4DD3D0A6FB259A9C1EE5D2ADCE5FBA3",
+        "original_retained": true
+      }
+    ],
+    "note": "実Unity画面由来。表示用JPEG。拡大crop/比較配置/外側ラベル以外の描き足し・生成画像なし。"
+  },
+  {
+    "path": "Frames/Candidate_0166.jpg",
+    "role": "通常画角・全画面・再圧縮のみ",
+    "bytes": 229681,
+    "sha256": "6B3273EB1C80B16569BD960C416F8DD416BB6E31A62AEF72F68179FAB4CBD3C6",
+    "jpeg_quality": 90,
+    "sources": [
+      {
+        "relative_to_local_proof": "Evidence/FinalCandidate/Presentation/Frame_0166.png",
+        "sha256": "CFCDCAA040F02D27FF9DCE16DD1D28A504F04AAA3FC662B17AF35A1FEC5F657B",
+        "original_retained": true
+      }
+    ],
+    "note": "実Unity画面由来。表示用JPEG。拡大crop/比較配置/外側ラベル以外の描き足し・生成画像なし。"
+  },
+  {
+    "path": "Figures/SwingSequence.jpg",
+    "role": "連続コマ比較。crop拡大2倍・画素補間なし。ラベルは画像外。",
+    "bytes": 150689,
+    "sha256": "58A794C00A51B58E0BFD67163D6B4206CF5E37E241AF2F23B275C0BAE772B0E1",
+    "jpeg_quality": 90,
+    "sources": [
+      {
+        "relative_to_local_proof": "Evidence/FinalBaseline/Presentation/Frame_0005.png",
+        "sha256": "3B08074F6955321266136D5C49CFD8891353955B69471095DBFA969EC8E37D1C",
+        "original_retained": true
+      },
+      {
+        "relative_to_local_proof": "Evidence/FinalCandidate/Presentation/Frame_0005.png",
+        "sha256": "196D842207EDF615D88A9C3E2B2758BB8831E825EF05E9F2DDA76368723FE405",
+        "original_retained": true
+      },
+      {
+        "relative_to_local_proof": "Evidence/FinalBaseline/Presentation/Frame_0022.png",
+        "sha256": "38A7CDCD33CC39970B33D83EB348EE4EA045161476430946B659417199BFEF47",
+        "original_retained": true
+      },
+      {
+        "relative_to_local_proof": "Evidence/FinalCandidate/Presentation/Frame_0022.png",
+        "sha256": "6A5F621733BB44B7CCA62A07B777E117B545C90ECE9E36D3139F3FAA578802E0",
+        "original_retained": true
+      },
+      {
+        "relative_to_local_proof": "Evidence/FinalBaseline/Presentation/Frame_0039.png",
+        "sha256": "240EC95C5BD0D89AF851AF40BE12FC9CCDAB864937FB72F8F74C256BF6663BCA",
+        "original_retained": true
+      },
+      {
+        "relative_to_local_proof": "Evidence/FinalCandidate/Presentation/Frame_0039.png",
+        "sha256": "78EACBC5195FC5E6DE056120D475D8DF6707AD11B51BD35286D50CC1786E5AD1",
+        "original_retained": true
+      },
+      {
+        "relative_to_local_proof": "Evidence/FinalBaseline/Presentation/Frame_0073.png",
+        "sha256": "91424ABF210C229CAEE6FD9D1EE42DDC36224ADAD0A3EA7B48A382889E98ECD4",
+        "original_retained": true
+      },
+      {
+        "relative_to_local_proof": "Evidence/FinalCandidate/Presentation/Frame_0073.png",
+        "sha256": "4958BB67532529BE47CF65EED59BE132060DB1CFC6F5368C4E7AB55A3B386D63",
+        "original_retained": true
+      },
+      {
+        "relative_to_local_proof": "Evidence/FinalBaseline/Presentation/Frame_0103.png",
+        "sha256": "BD10A0F32E7C893CF9A038D13E426E2204E40B633DD99ED6D101849AB9C42058",
+        "original_retained": true
+      },
+      {
+        "relative_to_local_proof": "Evidence/FinalCandidate/Presentation/Frame_0103.png",
+        "sha256": "61D8FA02958E878B15B17E8B4B53E0AF23FF4DA2FABDB53951C706B3724E81CE",
+        "original_retained": true
+      }
+    ],
+    "note": "実Unity画面由来。表示用JPEG。拡大crop/比較配置/外側ラベル以外の描き足し・生成画像なし。"
+  },
+  {
+    "path": "Figures/ReleaseSequence.jpg",
+    "role": "連続コマ比較。crop拡大2倍・画素補間なし。ラベルは画像外。",
+    "bytes": 125783,
+    "sha256": "755E76882FCDC2C358B228A109164777171C277CEE8500CCEB346415D017DB0A",
+    "jpeg_quality": 90,
+    "sources": [
+      {
+        "relative_to_local_proof": "Evidence/FinalBaseline/Presentation/Frame_0121.png",
+        "sha256": "1E48A1D8EF6A8B0B4B4F6083923699AEE91CF86EFA22B830F20A10C9303BF246",
+        "original_retained": true
+      },
+      {
+        "relative_to_local_proof": "Evidence/FinalCandidate/Presentation/Frame_0121.png",
+        "sha256": "467E88395754CCA60BE27C6BD286CA1A726316B80DB6AB405587508C8BFCC6A9",
+        "original_retained": true
+      },
+      {
+        "relative_to_local_proof": "Evidence/FinalBaseline/Presentation/Frame_0123.png",
+        "sha256": "483CADC08E67FE3A9369747387AC6F2F5720E7EB476926E23A2AD5092535C47A",
+        "original_retained": true
+      },
+      {
+        "relative_to_local_proof": "Evidence/FinalCandidate/Presentation/Frame_0123.png",
+        "sha256": "46F77029B2106605002472EB631F336BF1EDB00CD3B975B029022A7781F6C4F6",
+        "original_retained": true
+      },
+      {
+        "relative_to_local_proof": "Evidence/FinalBaseline/Presentation/Frame_0126.png",
+        "sha256": "06E90B113E6F10B7590D7C520F5FB91046D5C16CDC46C96B75C1B769C97B87DE",
+        "original_retained": true
+      },
+      {
+        "relative_to_local_proof": "Evidence/FinalCandidate/Presentation/Frame_0126.png",
+        "sha256": "5A6F6BD499B5CB774E9A40990836B92B757F5B762710B81B2977AC54117D4965",
+        "original_retained": true
+      },
+      {
+        "relative_to_local_proof": "Evidence/FinalBaseline/Presentation/Frame_0139.png",
+        "sha256": "87FD8BC907660EF85BCDE33295150D4CC732B17CB219E0C443CD3A7B761FF9E9",
+        "original_retained": true
+      },
+      {
+        "relative_to_local_proof": "Evidence/FinalCandidate/Presentation/Frame_0139.png",
+        "sha256": "E03808FBE5E6847C0860BDC97CDF171D2B1D672EFF804F76DFBB7655D68BB7E9",
+        "original_retained": true
+      }
+    ],
+    "note": "実Unity画面由来。表示用JPEG。拡大crop/比較配置/外側ラベル以外の描き足し・生成画像なし。"
+  },
+  {
+    "path": "Figures/LandingSequence.jpg",
+    "role": "連続コマ比較。crop拡大2倍・画素補間なし。ラベルは画像外。",
+    "bytes": 198292,
+    "sha256": "93CD147639B19920DACB15B4AC8374F3308EAC54D84EF3D2390C1162029EDA07",
+    "jpeg_quality": 90,
+    "sources": [
+      {
+        "relative_to_local_proof": "Evidence/FinalBaseline/Presentation/Frame_0139.png",
+        "sha256": "87FD8BC907660EF85BCDE33295150D4CC732B17CB219E0C443CD3A7B761FF9E9",
+        "original_retained": true
+      },
+      {
+        "relative_to_local_proof": "Evidence/FinalCandidate/Presentation/Frame_0139.png",
+        "sha256": "E03808FBE5E6847C0860BDC97CDF171D2B1D672EFF804F76DFBB7655D68BB7E9",
+        "original_retained": true
+      },
+      {
+        "relative_to_local_proof": "Evidence/FinalBaseline/Presentation/Frame_0141.png",
+        "sha256": "99EC6EEEC244EAFB3CE139BD5D05112F549CEA5C51A31E8AA51C316905936462",
+        "original_retained": true
+      },
+      {
+        "relative_to_local_proof": "Evidence/FinalCandidate/Presentation/Frame_0141.png",
+        "sha256": "9DF015DEFBC0301FE2B96A1868C50B6DF290BDA5A4A4CEE6F4D02E40F54755BA",
+        "original_retained": true
+      },
+      {
+        "relative_to_local_proof": "Evidence/FinalBaseline/Presentation/Frame_0144.png",
+        "sha256": "60B697C02871E50E5409B1541578329DC2CF84F426AF98933C6A5FBF9D41DBB1",
+        "original_retained": true
+      },
+      {
+        "relative_to_local_proof": "Evidence/FinalCandidate/Presentation/Frame_0144.png",
+        "sha256": "97C3B541FC299ED0677950B821F75963D2AA55B6B2264648FA59AD28A4A1C486",
+        "original_retained": true
+      },
+      {
+        "relative_to_local_proof": "Evidence/FinalBaseline/Presentation/Frame_0148.png",
+        "sha256": "835ED57E3F75CC508C936C85289D251A515EA224F25015D60FD9698BA39DF0D5",
+        "original_retained": true
+      },
+      {
+        "relative_to_local_proof": "Evidence/FinalCandidate/Presentation/Frame_0148.png",
+        "sha256": "CFEA75442C313331C26B297285BCD3DF347EE7871A01E1C6B12BEDA770E549BE",
+        "original_retained": true
+      },
+      {
+        "relative_to_local_proof": "Evidence/FinalBaseline/Presentation/Frame_0151.png",
+        "sha256": "9ECF6956C0EE6A945F44CF0943EB54E559A57ECDF29531D3125BA98F0E267998",
+        "original_retained": true
+      },
+      {
+        "relative_to_local_proof": "Evidence/FinalCandidate/Presentation/Frame_0151.png",
+        "sha256": "9807EA7AE97A73BDB7E080719E3118C962EBF46FE3389023CCBCF37B59FB2017",
+        "original_retained": true
+      },
+      {
+        "relative_to_local_proof": "Evidence/FinalBaseline/Presentation/Frame_0157.png",
+        "sha256": "DCCF9D620349BD73F09868C01A8DC3AC1377B315CF6F77F6D56D9D1CAFDE785C",
+        "original_retained": true
+      },
+      {
+        "relative_to_local_proof": "Evidence/FinalCandidate/Presentation/Frame_0157.png",
+        "sha256": "39FA6DA2E339D75A78ABE3DDA1E6A2F6A4DD3D0A6FB259A9C1EE5D2ADCE5FBA3",
+        "original_retained": true
+      },
+      {
+        "relative_to_local_proof": "Evidence/FinalBaseline/Presentation/Frame_0166.png",
+        "sha256": "D1F45CA781C5394125BAA11092E3D53D21D730DDE55586E6E2E67890F4A2BEF9",
+        "original_retained": true
+      },
+      {
+        "relative_to_local_proof": "Evidence/FinalCandidate/Presentation/Frame_0166.png",
+        "sha256": "CFCDCAA040F02D27FF9DCE16DD1D28A504F04AAA3FC662B17AF35A1FEC5F657B",
+        "original_retained": true
+      }
+    ],
+    "note": "実Unity画面由来。表示用JPEG。拡大crop/比較配置/外側ラベル以外の描き足し・生成画像なし。"
+  },
+  {
+    "path": "Figures/TextureCloseup.jpg",
+    "role": "連続コマ比較。crop拡大4倍・画素補間なし。ラベルは画像外。",
+    "bytes": 92677,
+    "sha256": "2E8A154A48ADCD6871AD1206258F14B10F0CE9959C752A1AC6327C15F1AFC719",
+    "jpeg_quality": 90,
+    "sources": [
+      {
+        "relative_to_local_proof": "Evidence/FinalBaseline/Presentation/Frame_0005.png",
+        "sha256": "3B08074F6955321266136D5C49CFD8891353955B69471095DBFA969EC8E37D1C",
+        "original_retained": true
+      },
+      {
+        "relative_to_local_proof": "Evidence/FinalCandidate/Presentation/Frame_0005.png",
+        "sha256": "196D842207EDF615D88A9C3E2B2758BB8831E825EF05E9F2DDA76368723FE405",
+        "original_retained": true
+      }
+    ],
+    "note": "実Unity画面由来。表示用JPEG。拡大crop/比較配置/外側ラベル以外の描き足し・生成画像なし。"
+  },
+  {
+    "path": "Figures/NormalView.jpg",
+    "role": "全画面を同倍率・等解像度で左右比較",
+    "bytes": 473391,
+    "sha256": "A7821008E26627E640459BC4836791F3DFC5E174FA4E0317D1A6E5AB4D7ACBE6",
+    "jpeg_quality": 90,
+    "sources": [
+      {
+        "relative_to_local_proof": "Evidence/FinalBaseline/Presentation/Frame_0005.png",
+        "sha256": "3B08074F6955321266136D5C49CFD8891353955B69471095DBFA969EC8E37D1C",
+        "original_retained": true
+      },
+      {
+        "relative_to_local_proof": "Evidence/FinalCandidate/Presentation/Frame_0005.png",
+        "sha256": "196D842207EDF615D88A9C3E2B2758BB8831E825EF05E9F2DDA76368723FE405",
+        "original_retained": true
+      }
+    ],
+    "note": "実Unity画面由来。表示用JPEG。拡大crop/比較配置/外側ラベル以外の描き足し・生成画像なし。"
+  },
+  {
+    "path": "Figures/NormalLanding.jpg",
+    "role": "全画面を同倍率・等解像度で左右比較",
+    "bytes": 467151,
+    "sha256": "FF9C405CAB6A989C72A8A29D482C6E1C5D4A8306A9A0C76C1A621A509322D58D",
+    "jpeg_quality": 90,
+    "sources": [
+      {
+        "relative_to_local_proof": "Evidence/FinalBaseline/Presentation/Frame_0144.png",
+        "sha256": "60B697C02871E50E5409B1541578329DC2CF84F426AF98933C6A5FBF9D41DBB1",
+        "original_retained": true
+      },
+      {
+        "relative_to_local_proof": "Evidence/FinalCandidate/Presentation/Frame_0144.png",
+        "sha256": "97C3B541FC299ED0677950B821F75963D2AA55B6B2264648FA59AD28A4A1C486",
+        "original_retained": true
+      }
+    ],
+    "note": "実Unity画面由来。表示用JPEG。拡大crop/比較配置/外側ラベル以外の描き足し・生成画像なし。"
+  },
+  {
+    "path": "Figures/ShadowFibres.jpg",
+    "role": "連続コマ比較。crop拡大4倍・画素補間なし。ラベルは画像外。",
+    "bytes": 89388,
+    "sha256": "2A9031B9E7ED2469B5BE36FE5A6D102AC6EA6F0465DDAE6B64AE07E67114010A",
+    "jpeg_quality": 90,
+    "sources": [
+      {
+        "relative_to_local_proof": "Evidence/FinalBaseline/Presentation/Frame_0141.png",
+        "sha256": "99EC6EEEC244EAFB3CE139BD5D05112F549CEA5C51A31E8AA51C316905936462",
+        "original_retained": true
+      },
+      {
+        "relative_to_local_proof": "Evidence/FinalCandidate/Presentation/Frame_0141.png",
+        "sha256": "9DF015DEFBC0301FE2B96A1868C50B6DF290BDA5A4A4CEE6F4D02E40F54755BA",
+        "original_retained": true
+      }
+    ],
+    "note": "実Unity画面由来。表示用JPEG。拡大crop/比較配置/外側ラベル以外の描き足し・生成画像なし。"
+  },
+  {
+    "path": "Figures/Current_AfterR.jpg",
+    "role": "実Unity画面・再圧縮のみ",
+    "bytes": 231545,
+    "sha256": "DFA5C1A9D22814B94A79640EDE622616C31B4AE9A04CA60DEDD53DC9EFF58B0A",
+    "jpeg_quality": 90,
+    "sources": [
+      {
+        "relative_to_local_proof": "Evidence/FinalBaseline/Presentation_AfterR.png",
+        "sha256": "B9CAEC68A5669653C86748E89786B97F30E35A3BB19B11C55AE5B3922445CFDC",
+        "original_retained": true
+      }
+    ],
+    "note": "実Unity画面由来。表示用JPEG。拡大crop/比較配置/外側ラベル以外の描き足し・生成画像なし。"
+  },
+  {
+    "path": "Figures/Current_Paused.jpg",
+    "role": "実Unity画面・再圧縮のみ",
+    "bytes": 231608,
+    "sha256": "F812D684FB63B4D9C25595A96F1EBEFAC6C07F6485D4B05B82A208AE3BE9D003",
+    "jpeg_quality": 90,
+    "sources": [
+      {
+        "relative_to_local_proof": "Evidence/FinalBaseline/Presentation_Paused.png",
+        "sha256": "B420522F5876E402C446A26294130D747FAC34A17FA8664B6DD12330FDA525AD",
+        "original_retained": true
+      }
+    ],
+    "note": "実Unity画面由来。表示用JPEG。拡大crop/比較配置/外側ラベル以外の描き足し・生成画像なし。"
+  },
+  {
+    "path": "Figures/Current_BridgeWeave.jpg",
+    "role": "実Unity画面・再圧縮のみ",
+    "bytes": 230398,
+    "sha256": "F4F127CB0FE6DF23D642ADD12A70B8062379C2801D4D46908C88ECB54AB4DDB0",
+    "jpeg_quality": 90,
+    "sources": [
+      {
+        "relative_to_local_proof": "Evidence/FinalBaseline/Presentation_BridgeWeave.png",
+        "sha256": "7E1AF615A980F6D76609547C02BD6C50C6D2D682A914ACCB7FB85FC0FB9242A0",
+        "original_retained": true
+      }
+    ],
+    "note": "実Unity画面由来。表示用JPEG。拡大crop/比較配置/外側ラベル以外の描き足し・生成画像なし。"
+  },
+  {
+    "path": "Figures/Candidate_AfterR.jpg",
+    "role": "実Unity画面・再圧縮のみ",
+    "bytes": 231414,
+    "sha256": "926E32DB74B9145C225F3ABCD4DDD28C27B05E582DD8596FF3430FB4495B28C7",
+    "jpeg_quality": 90,
+    "sources": [
+      {
+        "relative_to_local_proof": "Evidence/FinalCandidate/Presentation_AfterR.png",
+        "sha256": "36CABFAE372720FB2173C1870C56679A508EB1472B38595DE9506D10E8433145",
+        "original_retained": true
+      }
+    ],
+    "note": "実Unity画面由来。表示用JPEG。拡大crop/比較配置/外側ラベル以外の描き足し・生成画像なし。"
+  },
+  {
+    "path": "Figures/Candidate_Paused.jpg",
+    "role": "実Unity画面・再圧縮のみ",
+    "bytes": 231523,
+    "sha256": "DCA3565760181B61FCE37FF7CE8B9DA1E8754786B1F2ECC33BE72BA7AFA96E09",
+    "jpeg_quality": 90,
+    "sources": [
+      {
+        "relative_to_local_proof": "Evidence/FinalCandidate/Presentation_Paused.png",
+        "sha256": "E57AAD15ABEAA84D613311AD1DE6BAB62E929D0B35B2784A6729C5D3F1358FE2",
+        "original_retained": true
+      }
+    ],
+    "note": "実Unity画面由来。表示用JPEG。拡大crop/比較配置/外側ラベル以外の描き足し・生成画像なし。"
+  },
+  {
+    "path": "Figures/Candidate_BridgeWeave.jpg",
+    "role": "実Unity画面・再圧縮のみ",
+    "bytes": 230368,
+    "sha256": "39B8888E4D7C50D1AAEC6DBF988236181C2ADB5793A41BBE6162E44B14513C78",
+    "jpeg_quality": 90,
+    "sources": [
+      {
+        "relative_to_local_proof": "Evidence/FinalCandidate/Presentation_BridgeWeave.png",
+        "sha256": "3E7492D504235D504FE681D88804B600E31137EDCF73D5C8923A1204B5392DDF",
+        "original_retained": true
+      }
+    ],
+    "note": "実Unity画面由来。表示用JPEG。拡大crop/比較配置/外側ラベル以外の描き足し・生成画像なし。"
+  },
+  {
+    "path": "Figures/Merge_FirstBridge.jpg",
+    "role": "既存S9へ診断配置した回帰確認。Human攻略ではない。",
+    "bytes": 249178,
+    "sha256": "484B86D9606A142F23A20578796CB9D9120A46BAD57250B29EEF62312A577D43",
+    "jpeg_quality": 90,
+    "sources": [
+      {
+        "relative_to_local_proof": "Evidence/MergeRegression/Presentation_Merge_FirstBridge.png",
+        "sha256": "80C2B9509FA3DDC2BD195D2AA921B418AA9EBC71DA6707B9B34280F255F081D4",
+        "original_retained": true
+      }
+    ],
+    "note": "実Unity画面由来。表示用JPEG。拡大crop/比較配置/外側ラベル以外の描き足し・生成画像なし。"
+  },
+  {
+    "path": "Figures/Merge_Animation.jpg",
+    "role": "既存S9へ診断配置した回帰確認。Human攻略ではない。",
+    "bytes": 262608,
+    "sha256": "66E9D5CC940DB3019F8AB7D410A742D530D282FA4C69FF46EB22B65F2B54518D",
+    "jpeg_quality": 90,
+    "sources": [
+      {
+        "relative_to_local_proof": "Evidence/MergeRegression/Presentation_Merge_Animation.png",
+        "sha256": "0294F6FF2DDD873395BF2BAE650681367596391B097E9B14D711DC4CB0A278EE",
+        "original_retained": true
+      }
+    ],
+    "note": "実Unity画面由来。表示用JPEG。拡大crop/比較配置/外側ラベル以外の描き足し・生成画像なし。"
+  },
+  {
+    "path": "Figures/Merge_Complete.jpg",
+    "role": "既存S9へ診断配置した回帰確認。Human攻略ではない。",
+    "bytes": 254100,
+    "sha256": "394701BE4FD080CA5833ECBD44E6B0DC990E62BBE4CE6D45B84700D1D40BDF23",
+    "jpeg_quality": 90,
+    "sources": [
+      {
+        "relative_to_local_proof": "Evidence/MergeRegression/Presentation_Merge_Complete.png",
+        "sha256": "5D4084E78179FD16ED78A2CB1D912A0B90C3FE008FD6383EDFE3EFA3E3266A93",
+        "original_retained": true
+      }
+    ],
+    "note": "実Unity画面由来。表示用JPEG。拡大crop/比較配置/外側ラベル以外の描き足し・生成画像なし。"
+  }
+]

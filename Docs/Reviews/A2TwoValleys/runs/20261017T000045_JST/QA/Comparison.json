@@ -1,0 +1,58 @@
+{
+  "frames_each": 173,
+  "offline_capture_fps": 30,
+  "resolution_each": [
+    1280,
+    720
+  ],
+  "max_deltas": {
+    "position": 0.0,
+    "velocity": 0.0,
+    "camera": 0.0
+  },
+  "resource_input_selected_bridges_fixedTime_equal": true,
+  "collider_joint_physics_config_equal": true,
+  "layout_equal": true,
+  "camera_ortho_equal": true,
+  "crown_line_error_max_current": 0.0,
+  "crown_line_error_max_candidate": 0.0,
+  "candidate_opaque_sole_marker_error_max_grounded_not_attached": 1.1920928955078125e-07,
+  "current_opaque_sole_marker_error_max_grounded_not_attached": 0.11138772964477539,
+  "shadow_visible_frames": {
+    "current": 0,
+    "candidate": 66
+  },
+  "fibre_renderer_visible_frames": {
+    "current": 18,
+    "candidate": 18
+  },
+  "max_fibre_particles": {
+    "current": 3,
+    "candidate": 4
+  },
+  "left_right_flip_observed": [
+    false,
+    true
+  ],
+  "audio_event_recording": "PlayOneShot invocation markers, NOT recorded sound or listener confirmation",
+  "human_real_keys_this_proof": false,
+  "fun_pass": false,
+  "selected_frames": [
+    5,
+    22,
+    39,
+    73,
+    103,
+    121,
+    123,
+    126,
+    139,
+    141,
+    144,
+    148,
+    151,
+    157,
+    166
+  ],
+  "shadow_fibres_display_frame": 141
+}

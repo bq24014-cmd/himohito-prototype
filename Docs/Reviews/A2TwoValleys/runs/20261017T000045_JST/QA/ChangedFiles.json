@@ -1,0 +1,58 @@
+[
+  {
+    "path": "Assets/Scripts/PlayerContactShadow.cs",
+    "sha256": "0D932562CE843AFFBC7BDAECFEF7C008900BFDE252DD563E01049EDB3AA5B44C"
+  },
+  {
+    "path": "Assets/Scripts/PrototypeAudioFeedback.cs",
+    "sha256": "85121D5FF7242AEAD642899071C8FCD1B5C4644A919AFC07C5480D93F3474986"
+  },
+  {
+    "path": "Assets/Scripts/RopeBodyVisual.cs",
+    "sha256": "9E96296DEB70BED483ECAF05EC822EED2D525A4DB1EC6460B091F89EFE1BF3D6"
+  },
+  {
+    "path": "Assets/Scripts/RopeLandingFluff.cs",
+    "sha256": "209762B74999D20CEB035C245CE662A73C6FE939DA3D3B5CF91901E6D8C5FDA4"
+  },
+  {
+    "path": "Assets/Scripts/RopeSwingPoseState.cs",
+    "sha256": "65EC2F7E70161C7A874DE257BB6F079D8531FE2BC2F0F9510185FAFBE0B15E1C"
+  },
+  {
+    "path": "Assets/PlayerPresentation/PlayerMotionPresentation.cs",
+    "sha256": "C02392C3B36F29750CE8521A224B487D9C7320A1AA30D063CA19A15AE857DA51"
+  },
+  {
+    "path": "Assets/PlayerPresentation/PlayerMotionPresentation.cs.meta",
+    "sha256": "76E6B919C214CDCD21FE896CC54E85E919EA0ADD1F749B4171BBEA4025C1488A"
+  },
+  {
+    "path": "Assets/PlayerPresentation/PlayerSoleRegistration.cs",
+    "sha256": "ECE5BD0466B40AEF777C49263CB310F0F40C9B7820DB32E5261EA91C2BC540C6"
+  },
+  {
+    "path": "Assets/PlayerPresentation/PlayerSoleRegistration.cs.meta",
+    "sha256": "37BEE6785F82D71E810634ED9DBFA2B50F6DED82C86EF9DAD9E5A7566E3CE2B5"
+  },
+  {
+    "path": "Assets/PlayerPresentation/PresentationCapture.cs",
+    "sha256": "340E9AD5622EBBA29386CC0118DC64A43F6C0A7802A22C5FC91CF2A242C73F38"
+  },
+  {
+    "path": "Assets/PlayerPresentation/PresentationCapture.cs.meta",
+    "sha256": "A4674D0C718825F5231F249E9072749863D5EC916A460FB59A0341684E8BD8ED"
+  },
+  {
+    "path": "Assets/Resources/PlayerPresentationYarn.shader",
+    "sha256": "D70E4C3DDD4A75BFBAB053933DC0A8021D1F4458C024236AAC931B167586EBDE"
+  },
+  {
+    "path": "Assets/Resources/PlayerPresentationYarn.shader.meta",
+    "sha256": "C4A615E5148BD097A1F76FA877F83DB9B2C591634D33CB86519CA7D4A7B00B66"
+  },
+  {
+    "path": "Assets/PlayerPresentation.meta",
+    "sha256": "8895C1D1D9BE229FBCE12AB9512063F70C1EC091FA3A52ADDE7A3152BDB7F946"
+  }
+]

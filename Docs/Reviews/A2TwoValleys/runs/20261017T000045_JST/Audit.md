@@ -1,0 +1,11 @@
+# 既存処理・素材の確認
+
+- RopeBodyVisual：CraftPlayerArtが各legacy resourceをHimoHitoCraftPlayer/Walk/Swing/Jump/Landing等へ置換。白背景除去・頭幅・冠点・足位置の登録が既にある。素材欠落時はlegacyへfallback。今回PNGは変更・再生成していない。
+- RopeSwingPoseState：6枚の既存Swing絵を接線速度から選ぶ。既存は速度7で最大端ポーズへ達するため、中間ポーズを使う範囲が狭い。候補は12へ広げ、加減速に追従する下肢・糸端の小さな遅れを表示メッシュへ足した。
+- RopeBodyVisual：既存着地は6枚中0/1/5を約0.20秒で選び、既存のsoftLandingStrengthで全体に小さな弾性を付ける。候補では既存の深い膝曲げと回復絵を使い、頭幅を揃え、入力再開時に着地絵を優先し続けない。
+- RopeLandingFluff：元から実粒子があり、着地速度で通常3/強5本。歩行の繊維は木床のみだが、着地そのものの粒子は木床限定ではない。候補は着地だけ4/6本へ少量調整。別エミッタを重複追加していない。
+- PlayerContactShadow：元の最初の有効支持面がWoodenPlatformDepthVisualでなければ非表示。A2の3検証床にはその表示コンポーネントがない。候補では既存影の支持面判定に、この3床の名前だけを明示的に許可。床・Collider・Gameplayコンポーネントは追加していない。
+- CraftPlayerArt：既存毛糸素材をそのまま使用。リソース表・キャラ設定・服・小物は変更なし。
+- PrototypeAudioFeedback：既存の接続・解除・着地原音と音量を維持。今回の追加はPlayOneShot発火を記録する診断マーカーだけ。新しい風切り音や着地音を重ねていない。
+
+接続演出のRopeController、SwingAttachPoseState、HookYarnKnotVisualは変更なし。通常画角では主人公が数十pxなので、精細な原画の情報量ではなく、姿勢差・輪郭・足元を実画面で比較する。

@@ -1,0 +1,60 @@
+{
+  "frame": 173,
+  "time": 6.700000286102295,
+  "fixedTime": 7.299997329711914,
+  "resource": 24.0,
+  "selected": 6.0,
+  "trail": 0.0,
+  "brace": 0.0,
+  "impact": 0.0,
+  "ropeOriginError": 0.0,
+  "phase": "after_R",
+  "sprite": "HimoHitoCraftAim-v1 Aim 4 Head",
+  "position": {
+    "x": 117.4000015258789,
+    "y": 0.6149998903274536
+  },
+  "velocity": {
+    "x": 0.0,
+    "y": 0.0
+  },
+  "visualFoot": {
+    "x": 117.3907241821289,
+    "y": 0.014999926090240479
+  },
+  "ropeOrigin": {
+    "x": 117.46088409423828,
+    "y": 0.9450430274009705
+  },
+  "camera": {
+    "x": 117.4000015258789,
+    "y": 0.0,
+    "z": -10.0
+  },
+  "visualPosition": {
+    "x": 117.3818588256836,
+    "y": 0.4341873526573181,
+    "z": 0.0
+  },
+  "visualScale": {
+    "x": 0.18816044926643372,
+    "y": 0.1881604641675949,
+    "z": 1.0
+  },
+  "ortho": 8.699999809265137,
+  "grounded": true,
+  "attached": false,
+  "flip": false,
+  "shadowVisible": true,
+  "shadowEnabled": true,
+  "shadowPosition": {
+    "x": 117.4000015258789,
+    "y": -0.02499988116323948,
+    "z": 0.0
+  },
+  "particles": 0,
+  "visibleParticleRenderers": 0,
+  "bridges": 0,
+  "lowestVisibleFootDelta": 5.960464477539063e-08,
+  "material": "Proof wool fibres and room light"
+}

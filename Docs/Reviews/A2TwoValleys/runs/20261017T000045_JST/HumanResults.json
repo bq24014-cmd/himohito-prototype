@@ -1,0 +1,10 @@
+{
+  "kind": "主人公の質感・振り子・着地の演出Proof",
+  "candidate1_human_review": "未実施",
+  "candidate1_real_keyboard_participants": 0,
+  "prior_A2_human_context": "現行A2 r1は不採用推奨を維持。以前の本人実キー評価は今回候補の評価ではない。",
+  "human_adoption": "未承認",
+  "production_integrated": false,
+  "request_same_r1_replay": false,
+  "next_human_action": "画像・連続コマ・通常速度動画のVisual Reviewのみ。操作の手応えは別途未確認。"
+}

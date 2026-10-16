@@ -1,0 +1,20 @@
+{
+  "proof": "PlayerPresentationProof_20261016",
+  "revision": "candidate1-final-build-r2",
+  "unity": "6000.3.21f1",
+  "production_head": "7a4f011b7ffc0343acd4727a75255495a3881fb3",
+  "exe": "PlayerProof.exe",
+  "exe_sha256": "A3D4FA240C51333301EFCC16714FF60722F00E803AFE1FB6750EC963CC0F1707",
+  "assembly_sha256": "0D410ECE46B41005809D4F53BF704657F32359DDA78D3113A5D26CFFF4344FFA",
+  "canonical_build_manifest_sha256": "DED31BAA81DD5F4B543D503CF54E5C67A3777149E0F705243F607A9F09C4078D",
+  "file_count": 231,
+  "build_summary": {
+    "result": "Succeeded",
+    "errors": 0,
+    "warnings": 0,
+    "bytes": 535555865
+  },
+  "reference_a2_revision": "r1",
+  "reference_a2_exe_sha256": "A3D4FA240C51333301EFCC16714FF60722F00E803AFE1FB6750EC963CC0F1707",
+  "new_human_playtest": false
+}

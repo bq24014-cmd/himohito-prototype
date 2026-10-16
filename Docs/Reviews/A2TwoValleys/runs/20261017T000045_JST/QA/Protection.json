@@ -1,0 +1,12 @@
+{
+  "production_and_frozen_a2_unchanged": true,
+  "locked_5_sources_unchanged": true,
+  "original_art_unchanged": true,
+  "isolated_changed_files": [
+    "Assets/Scripts/PlayerContactShadow.cs",
+    "Assets/Scripts/PrototypeAudioFeedback.cs",
+    "Assets/Scripts/RopeBodyVisual.cs",
+    "Assets/Scripts/RopeLandingFluff.cs",
+    "Assets/Scripts/RopeSwingPoseState.cs"
+  ]
+}

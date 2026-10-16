@@ -1,20 +1,15 @@
-# ヒモヒト A2 Two Valleys：固定レビュー入口
+# ヒモヒト：A2関連の固定レビュー入口
 
-固定ブランチ：`review/a2-two-valleys`。Production/mainの正式採用資料ではありません。
+固定branch：`review/a2-two-valleys`。毎回 [LATEST.json](LATEST.json) をこのbranchから読み、`report_path` の報告と画像・QAを同じcommitから参照してください。ZIPの再添付は不要です。
 
-1. 毎回このブランチの [LATEST.json](LATEST.json) を読む。
-2. `report_path` の最新報告書と `human_results_path` を同じcommitから読む。
-3. 報告書内の相対リンクから通常のGitHub画像・QA JSONへ進む。ZIP添付は不要。
-4. 過去の `runs/<JST日時>/` は上書きしない。次回は新runを追加し、LATESTと最新報告を同一commitで更新する。
+## 最新：主人公の質感・振り子・着地の演出Proof
 
-最新：[20261016T184703_JST](runs/20261016T184703_JST/Report.md)。状態：試遊結果あり、経験者1名。現行A2 r1は不採用推奨。Human正式採用：未承認。Production統合：false。
+[20261017T000045_JST の比較資料](runs/20261017T000045_JST/Report.md)。候補1、Human Visual Review待ち。新しい候補の実キー試遊人数は0。Production統合・正式採用はしていません。
 
-本人の追加回答：着地に納得できず、別経路でもう一度遊びたいとは思わなかった。自動QAの技術PASSはこの評価を覆さない。過去runと元Proofは保持し、A2の基本アイデアや既存システム全体の不採用とは区別する。
+通常画角、振り子/解除/着地の連続JPEG、拡大比較、通常速度の無音動画、必要なQA、隔離コードの差分を収録。Build/Unity Project/Library/BGM/巨大な全ログは非収録です。PNG原本はローカル保持しています。
 
-## 共有範囲
+## 前のA2 r1評価を保持
 
-レビュー報告、表示用実Unityプレビュー、必要なJSON、重要ログ抜粋、地形履歴、本人結果のみ。Build/Unity Project/Library/BGM/巨大な全ログ/ローカル絶対パスは含めない。元PNGと全ログは作成元で保持。
+[本人の否定評価](runs/20261016T184703_JST/Report.md)と[元の攻略・QA記録](runs/20261016T181643_JST/Report.md)は不変です。A2 r1は不採用推奨を維持。今回A2の地形を演出撮影へ借用したことは、A2・新ワールドの採用やProduction統合を意味しません。
 
-**注意：R復帰後の画像は既存資料に未収録。** 復帰QAと本人telemetryはあるが、入口画像を復帰後の画像とは主張しない。技術PASS、面白さ、Visual完成度、実キー確認範囲を分けて扱う。
-
-mainへはmerge/pushしない。これはレビュー専用の共有許可であり、A2や新Worldの正式採用ではない。
+過去runは上書きせず、新runを追加します。LATESTと最新報告は同一commitで更新します。共有許可と正式採用許可は別で、mainへmerge/pushしません。

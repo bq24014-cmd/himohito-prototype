@@ -1,0 +1,32 @@
+## WindowsBuild2.log
+Build Finished, Result: Success.
+
+## FinalBaseline/Player.log
+PRESENTATION_QA Attach original API PASS
+PRESENTATION_QA Attached apex reached PASS
+PRESENTATION_QA Detach momentum preserved PASS
+PRESENTATION_QA Same terrain landing PASS API trajectory; not fun/forgiveness claim
+PRESENTATION_QA Resource unchanged by swing PASS
+PRESENTATION_QA Input/physics fixture invariant PASS
+PRESENTATION_QA R entry/budget/bridge state PASS
+PRESENTATION_QA Pause freezes displayed body PASS
+PRESENTATION_QA Bridge build / weave visual retained PASS
+PRESENTATION_QA No Gameplay error PASS
+
+## FinalCandidate/Player.log
+PRESENTATION_QA Attach original API PASS
+PRESENTATION_QA Attached apex reached PASS
+PRESENTATION_QA Detach momentum preserved PASS
+PRESENTATION_QA Same terrain landing PASS API trajectory; not fun/forgiveness claim
+PRESENTATION_QA Resource unchanged by swing PASS
+PRESENTATION_QA Input/physics fixture invariant PASS
+PRESENTATION_QA R entry/budget/bridge state PASS
+PRESENTATION_QA Pause freezes displayed body PASS
+PRESENTATION_QA Bridge build / weave visual retained PASS
+PRESENTATION_QA No Gameplay error PASS
+
+## MergeRegression/Player.log
+PRESENTATION_QA S9 regression uses original MainStage PASS
+PRESENTATION_QA Original S9 two bridges PASS
+PRESENTATION_QA Original F merge / resource / center state PASS
+PRESENTATION_QA No Gameplay error PASS
