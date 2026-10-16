@@ -1,0 +1,137 @@
+{
+  "utc": "2026-10-16T18:10:26.759642+00:00",
+  "status": "PENDING_PARENT_REVIEW; NOT_PLAY_OR_CLICK_TEST",
+  "A_observations": 0,
+  "scope": "Only fixed source and five previously retained images",
+  "cases": [
+    {
+      "screen": "Title / selection",
+      "existing_ids": [
+        "U04",
+        "U11"
+      ],
+      "explicit_keys": "Left/Right or A/D selects stage, Enter/KeypadEnter starts selected available stage, Tab help, Esc quit.",
+      "click_receivers": "Stage icon and name ClothButton select; bottom ClothButtons quit/help/start. Selecting island alone does not call StartSelectedStage.",
+      "looks_non_button": "Selection text and stage subtitles are labels. Island/name are actual receivers, not decorative-only claims.",
+      "selection": "SelectedStageIndex controls yarn loop + いま選んでいる場所; stage-name cloth also becomes bright when selected OR hovered. Brightness is not keyboard focus. Start is passed selected=chosen.available for rendering.",
+      "close": "Esc or quit cloth invokes QuitFromTitle; help opens separately.",
+      "limits": "Unavailable stage remains selectable, start is disabled by chosen.available and StartSelectedStage rejects it. Actual disabled contrast, hit areas after GUI.matrix scaling, OS focus and click behavior untested.",
+      "sources": [
+        "StageSelectionView:59–126,149–164,339–343",
+        "PrototypeRunController:237–250,265–280"
+      ]
+    },
+    {
+      "screen": "Pause / return confirmation",
+      "existing_ids": [
+        "U04",
+        "U12",
+        "U13"
+      ],
+      "explicit_keys": "Esc resumes; T opens return confirmation; Tab opens help. In confirmation Esc cancels back to pause, Enter/KeypadEnter returns to selection.",
+      "click_receivers": "WoodButton resume/title and confirmation cancel/accept. Volume +/- buttons, HorizontalSlider, preview/reset buttons and scroll view use IMGUI controls.",
+      "looks_non_button": "Volume labels and help-entry sentence are labels, not separate click targets.",
+      "selection": "No custom menu-selected variable or keyboard-focus renderer found in this path. WoodButton tints by pointer containment; implicit IMGUI focus remains unverified.",
+      "close": "Resume click corresponds to Esc. Cancel does not resume gameplay. Help closed from pause returns to pause.",
+      "limits": "No explicit volume hotkeys in this receiver; IMGUI default keyboard editing was not tested. Sound callback is not audible evidence. Overlay mouse/game input concern stays in existing08.",
+      "sources": [
+        "StageOverlayControls:71–113,295–404",
+        "HimoHitoUiParts:234–242"
+      ]
+    },
+    {
+      "screen": "Help",
+      "existing_ids": [
+        "U04",
+        "U12"
+      ],
+      "explicit_keys": "Tab or Esc closes; the destination depends on whether help was opened from title, play or pause.",
+      "click_receivers": "Bottom GUILayout.Button Tab / Esc 閉じる calls CloseHelp. Help key/description rows are GUILayout.Label.",
+      "looks_non_button": "Close control uses helpKeyStyle derived from GUI.skin.label, the same style passed to key labels. Text-like appearance does not mean it is non-clickable.",
+      "selection": "No custom focus/hover distinction confirmed for close text in the scoped renderer. Label-style inheritance is not proof that IMGUI focus is absent.",
+      "close": "Key and bottom-button paths call CloseHelp; paused state survives. Existing08 covers close-frame guards, not rerun here.",
+      "limits": "Old screenshot is a Sep30 static draw fixture. Actual clickable bounds, focus and mouse overlap have not been tested.",
+      "sources": [
+        "StageOverlayControls:71–81,132–137,281–290,475–481"
+      ]
+    },
+    {
+      "screen": "Failure",
+      "existing_ids": [
+        "U04",
+        "U14"
+      ],
+      "explicit_keys": "After fall presentation ends: R checkpoint retry, Esc selection. Tutorial/Main R+Esc precedence differs as documented in08.",
+      "click_receivers": "No button/click receiver in HimoHitoFailureScreen.Draw. R wood is DrawWoodButtonLabel; Esc is GUILayout.Label.",
+      "looks_non_button": "R wood plate resembles real WoodButton controls used on pause/clear, but the draw helper supplies no GUI.Button.",
+      "selection": "The failure wood helper adds no hover/action/focus event receiver. This says nothing about OS focus.",
+      "close": "Esc is selection, not resume/dismiss failure. R retries from snapshot; no alternative click behavior claimed.",
+      "limits": "A conditional code finding, not a reproduced click failure. New UI or click implementation is outside scope.",
+      "sources": [
+        "HimoHitoFailureScreen:61–76",
+        "HimoHitoUiParts:219–242",
+        "PrototypeRunController:137–191",
+        "MainStageRespawnOnFall:108–151"
+      ]
+    },
+    {
+      "screen": "Tutorial clear",
+      "existing_ids": [
+        "U04",
+        "U15"
+      ],
+      "explicit_keys": "Enter/KeypadEnter goes to Main; Esc selection; R restarts Tutorial through a separate Update branch.",
+      "click_receivers": "Primary WoodButton goes to Main; secondary WoodButton returns to selection. No displayed R-restart button in the clear view.",
+      "looks_non_button": "Both displayed wood commands are actual GUI.Button wrappers. The restart R shortcut is not represented by these two visible button choices.",
+      "selection": "WoodButton custom rendering reads pointer hover, not keyboard focus. The displayed primary has no custom keyboard-selected variable.",
+      "close": "Esc/selection click are the same destination. R restart differs from Enter/primary click; do not label all R checkpoint retry.",
+      "limits": "Hidden R is a source/display coverage difference, not automatically a blocker needing new UI. Clear UI appearance is not a focus trace.",
+      "sources": [
+        "ClearJourneyView:41–45",
+        "PrototypeHud:291–298",
+        "PrototypeRunController:150–190"
+      ]
+    },
+    {
+      "screen": "Main clear",
+      "existing_ids": [
+        "U04",
+        "U15"
+      ],
+      "explicit_keys": "R restarts Main; Esc selection. No explicit Enter/KeypadEnter handling in MainStageGoalZone.Update.",
+      "click_receivers": "Primary WoodButton restarts Main; secondary returns to selection.",
+      "looks_non_button": "Main old image uses same family of wood command plates as failure, but here they have GUI.Button receivers.",
+      "selection": "Same hover-only custom rendering caveat. No conclusion about built-in IMGUI Enter activation or tab order.",
+      "close": "R/primary and Esc/secondary pair to their own same destinations.",
+      "limits": "Do not claim Enter is impossible: this audit covers explicit Update handling and does not execute IMGUI default focus activation.",
+      "sources": [
+        "ClearJourneyView:41–45",
+        "MainStageHud:345–352",
+        "MainStageGoalZone:20–47"
+      ]
+    }
+  ],
+  "focus_search": {
+    "files": [
+      "StageSelectionView.cs",
+      "HimoHitoUiParts.cs",
+      "HimoHitoFailureScreen.cs",
+      "StageOverlayControls.cs",
+      "ClearJourneyView.cs",
+      "PrototypeHud.cs",
+      "MainStageHud.cs",
+      "PrototypeRunController.cs",
+      "MainStageGoalZone.cs",
+      "MainStageRespawnOnFall.cs"
+    ],
+    "literal_counts": {
+      "FocusControl": 0,
+      "SetNextControlName": 0,
+      "GetNameOfFocusedControl": 0,
+      "keyboardControl": 0,
+      "hotControl": 0,
+      "Cursor.SetCursor": 0
+    },
+    "boundary": "Zero references in these ten source files is not proof that Unity IMGUI has no focus or keyboard behavior."
+  }
+}

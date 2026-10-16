@@ -1,0 +1,117 @@
+{
+  "utc": "2026-10-16T18:10:26.759642+00:00",
+  "fixed_source_hashes": [
+    {
+      "path": "Assets/Scripts/StageSelectionView.cs",
+      "sha256": "de0e76b56065337bb46cf256ad5778a9c9bb9cb1fa74aee6e8c8c724ffab3cb5",
+      "BuildInputs_match": true
+    },
+    {
+      "path": "Assets/Scripts/HimoHitoUiParts.cs",
+      "sha256": "0696cd16c13616c677f40c05349018f42108822c5578a8852f5f7671cfd9c764",
+      "BuildInputs_match": true
+    },
+    {
+      "path": "Assets/Scripts/HimoHitoFailureScreen.cs",
+      "sha256": "60b4e7bf917b46ab16c9f234eeacdb1d846d502b110ca85e36550c06739fb363",
+      "BuildInputs_match": true
+    },
+    {
+      "path": "Assets/Scripts/StageOverlayControls.cs",
+      "sha256": "7d63dcbaa1dbce7fb04a8e387b0013050d343084f3fc6d267f4064a69a28755a",
+      "BuildInputs_match": true
+    },
+    {
+      "path": "Assets/Scripts/ClearJourneyView.cs",
+      "sha256": "d06a4cb0a7a0b8e8a1f7d1aa8d0e4e6e790321a3d2d94313aeaa4b253f19369e",
+      "BuildInputs_match": true
+    },
+    {
+      "path": "Assets/Scripts/PrototypeHud.cs",
+      "sha256": "2e6d442c4933dda55aa3680ed1a835372e53274fe0c7404498684dc23abb6780",
+      "BuildInputs_match": true
+    },
+    {
+      "path": "Assets/Scripts/MainStageHud.cs",
+      "sha256": "30d2177386b912c1c8fc86961460208b53fd2f45df0597552055c19e41ecae50",
+      "BuildInputs_match": true
+    },
+    {
+      "path": "Assets/Scripts/PrototypeRunController.cs",
+      "sha256": "ec6fd5170e7c00a97593b28e109b7fc3fbc5d6f922b5aa1b68823467e3623977",
+      "BuildInputs_match": true
+    },
+    {
+      "path": "Assets/Scripts/MainStageGoalZone.cs",
+      "sha256": "54bb45cc0dcdf0cfafc08fad10e865059e058b15e635601d81e66305d162e9d9",
+      "BuildInputs_match": true
+    },
+    {
+      "path": "Assets/Scripts/MainStageRespawnOnFall.cs",
+      "sha256": "314060136dfb7846ae7ebbc43cfaf0028625b839b4b9a05e9171d4f5830c4d8c",
+      "BuildInputs_match": true
+    }
+  ],
+  "hashes_overlap_previous_reviews": true,
+  "reused_images": [
+    {
+      "id": "E01",
+      "url": "https://github.com/bq24014-cmd/himohito-prototype/blob/bdd9f8abd53a8f482bbf7079c03b81c5fec859c0/Docs/Reviews/PonPlaytest/runs/20261017_004500JST/evidence/images/E01_menu.png",
+      "sha256": "56e17c6eaf3b226c5f6762f303f005c25352128007e9db437f5b19f43e3687a6",
+      "source_relative_to_production": "Docs/Images/StageSelection-Diorama-Main-v1.png",
+      "version_boundary": "既存UI確認画像。撮影日時・実行Buildは画像単体では未確定。文言は固定ソースと照合。",
+      "observation": "Selected Main stage has a pink loop and いま選んでいる場所. Lower command labels and stage names have cloth-button appearance; this does not show OS focus or a hovered state.",
+      "pixel_viewed_this_checkpoint": true,
+      "not_duplicated": true
+    },
+    {
+      "id": "E03",
+      "url": "https://github.com/bq24014-cmd/himohito-prototype/blob/bdd9f8abd53a8f482bbf7079c03b81c5fec859c0/Docs/Reviews/PonPlaytest/runs/20261017_004500JST/evidence/images/E03_help_fixture.png",
+      "sha256": "4343bc4377c910731585b79c518e72edf51fdbb81ba62e914464b425804a5d2d",
+      "source_relative_to_production": "Docs/QA/FullGameRegression_20260930/Evidence/StaticScreens/Help_1280x720.png",
+      "version_boundary": "2026-09-30の隔離静的Draw fixture。OS入力・実Windowの証明ではない。",
+      "observation": "Bottom Tab/Esc 閉じる looks like colored text; operation keys above use the same pink family. The source distinguishes a button from key labels.",
+      "pixel_viewed_this_checkpoint": true,
+      "not_duplicated": true
+    },
+    {
+      "id": "E04",
+      "url": "https://github.com/bq24014-cmd/himohito-prototype/blob/bdd9f8abd53a8f482bbf7079c03b81c5fec859c0/Docs/Reviews/PonPlaytest/runs/20261017_004500JST/evidence/images/E04_pause_fixture.png",
+      "sha256": "d78d47c0c068a27e57658893407051dd351f0c80a3af35896b7134e81a4c3357",
+      "source_relative_to_production": "Docs/QA/FullGameRegression_20260930/Evidence/StaticScreens/Pause_1280x720.png",
+      "version_boundary": "2026-09-30の隔離静的Draw fixture。スクロール・クリック挙動は未実操作。",
+      "observation": "Resume/title wood controls, volume buttons/slider/scrollbar are visible in a Sep30 static fixture; no actual interaction demonstrated.",
+      "pixel_viewed_this_checkpoint": true,
+      "not_duplicated": true
+    },
+    {
+      "id": "E05",
+      "url": "https://github.com/bq24014-cmd/himohito-prototype/blob/bdd9f8abd53a8f482bbf7079c03b81c5fec859c0/Docs/Reviews/PonPlaytest/runs/20261017_004500JST/evidence/images/E05_failure_fixture.png",
+      "sha256": "e0be68e6e8fca3f6204630a11dd487a34f13bcfc58dc5f7d23ef9a86b68803d0",
+      "source_relative_to_production": "Docs/QA/FullGameRegression_20260930/Evidence/StaticScreens/Failure_1280x720.png",
+      "version_boundary": "2026-09-30の隔離静的Draw fixture。失敗回数や復帰時間の証拠ではない。",
+      "observation": "Retry R appears on a wood plate, Esc is a plain text label. The fixed Draw function has no click receiver for either.",
+      "pixel_viewed_this_checkpoint": true,
+      "not_duplicated": true
+    },
+    {
+      "id": "E08",
+      "url": "https://github.com/bq24014-cmd/himohito-prototype/blob/bdd9f8abd53a8f482bbf7079c03b81c5fec859c0/Docs/Reviews/PonPlaytest/runs/20261017_004500JST/evidence/images/E08_clear_reference.png",
+      "sha256": "b34fec227f236fdcb8ef54390a4ab34e71126a14304ca384e6e6a86452984f60",
+      "source_relative_to_production": "Docs/Images/Clear-Return-Main-v1.png",
+      "version_boundary": "既存Clear UI確認画像。残量50・橋0等は今回のクリア成績ではない。",
+      "observation": "Two wood controls are visible. This old Main clear reference is not a result from this session; resource50/bridge0/time are test values.",
+      "pixel_viewed_this_checkpoint": true,
+      "not_duplicated": true
+    }
+  ],
+  "new_images": 0,
+  "reused_state_reference": "https://github.com/bq24014-cmd/himohito-prototype/blob/bdd9f8abd53a8f482bbf7079c03b81c5fec859c0/Docs/Reviews/PonPlaytest/runs/20261017_014618JST/08_UI_State_Addendum.md",
+  "reused_UI_reference": "https://github.com/bq24014-cmd/himohito-prototype/blob/bdd9f8abd53a8f482bbf7079c03b81c5fec859c0/Docs/Reviews/PonPlaytest/runs/20261017_004500JST/02_UI.md",
+  "no_audio_input_screen_capture_or_rendering": true,
+  "unpictured_screens_in_this_checkpoint": [
+    "Pause return confirmation",
+    "Tutorial clear"
+  ],
+  "title_reference_limit": "E01 shows Main selected, not proof of initial selection on startup"
+}

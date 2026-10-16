@@ -1,0 +1,31 @@
+{
+  "utc": "2026-10-16T18:10:26.759642+00:00",
+  "run_id": "20261017_031026JST",
+  "status": "PARENT_REVIEW_APPROVED; REMOTE_CONFIRMATION_IN_PUBLICATION_RECEIPT",
+  "A_observations": 0,
+  "files": [
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_031026JST/13_Menu_Input_Affordance.md",
+      "bytes": 5961,
+      "sha256": "a52f20d66ed5106931340a1f50cebab123c287dc5ef7ad7d4be3c369a4c78db7"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_031026JST/evidence/menu-evidence-index.json",
+      "bytes": 6559,
+      "sha256": "a5f8177297dd486d586d6d49a13f501ec3059e2c4f3ad681b25b4f8eea316862"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_031026JST/evidence/menu-input-display-matrix.json",
+      "bytes": 7648,
+      "sha256": "505ef77d07f98f7d165ce801b593d2cb06bd3fee280b4b2c6d41f29783b15167"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_031026JST/evidence/menu-source-delta.md",
+      "bytes": 4473,
+      "sha256": "de35646a50a26faf5ddf5621e4c1a016c8e557670b156f567c6f0faeb90133ec"
+    }
+  ],
+  "total_files_with_manifest": 5,
+  "image_files": 0,
+  "latest_published_commit": "bdd9f8abd53a8f482bbf7079c03b81c5fec859c0"
+}
