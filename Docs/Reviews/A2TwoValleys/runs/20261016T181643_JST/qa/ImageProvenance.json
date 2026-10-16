@@ -1,0 +1,128 @@
+[
+  {
+    "path": "images/01_A_entry.jpg",
+    "caption": "A：現行S6比較fixtureの入口。自動QA実Unity画面。",
+    "presentation": "表示用プレビュー。PNGからJPEGへ再圧縮のみ。描き足し・画像生成・切抜き・縮小なし。",
+    "dimensions": [
+      1280,
+      720
+    ],
+    "bytes": 241929,
+    "sha256": "09788057A037AEBC5270C4A97EB5F984BB5A062A70F77BFC1758BCCDDFF711C4",
+    "original_relative_to_local_dossier": "Evidence/Windows_A/01_Entry_ActualCamera.png",
+    "original_sha256": "0752DEA8D6FB254586975D34EA86C6593E66A194747AB99C7F6D872023383D8D",
+    "original_retained_locally": true
+  },
+  {
+    "path": "images/02_B_entry.jpg",
+    "caption": "B：入口初期状態。復帰後の画像ではない。自動QA実Unity画面。",
+    "presentation": "表示用プレビュー。PNGからJPEGへ再圧縮のみ。描き足し・画像生成・切抜き・縮小なし。",
+    "dimensions": [
+      1280,
+      720
+    ],
+    "bytes": 231899,
+    "sha256": "B12C3A9A92C41A420AACB32CC12F7D3E82761C8287ECBA6001D916F1043160F3",
+    "original_relative_to_local_dossier": "Evidence/Windows_B/01_Entry_ActualCamera.png",
+    "original_sha256": "FDD7899FA707AB4F33F084D0F176A4B552EF9C52A1B04559FC821A3FD49A690F",
+    "original_retained_locally": true
+  },
+  {
+    "path": "images/03_bridge1_landing.jpg",
+    "caption": "B：橋①通過後の中床。自動QA実Unity画面。",
+    "presentation": "表示用プレビュー。PNGからJPEGへ再圧縮のみ。描き足し・画像生成・切抜き・縮小なし。",
+    "dimensions": [
+      1280,
+      720
+    ],
+    "bytes": 232430,
+    "sha256": "167ADB31C51B9790949701C18DCDE9E0A2CA213E3D6F25DB9C07E60183F3F7C1",
+    "original_relative_to_local_dossier": "Evidence/Windows_B/Bridge1_Swing2_Bridge1_Landing.png",
+    "original_sha256": "A66E216760627BA0DD8B37A895178E000BDC045C19DBE32216E889A8D946569A",
+    "original_retained_locally": true
+  },
+  {
+    "path": "images/04_swing1_landing.jpg",
+    "caption": "B：振り子①の代表着地。自動QA実Unity画面。",
+    "presentation": "表示用プレビュー。PNGからJPEGへ再圧縮のみ。描き足し・画像生成・切抜き・縮小なし。",
+    "dimensions": [
+      1280,
+      720
+    ],
+    "bytes": 231495,
+    "sha256": "BA29A30EF3768E67B9D21E50DC535FF6CBE79C8A345EBBA7CE1945D22E514477",
+    "original_relative_to_local_dossier": "Evidence/Windows_B/Swing1_Swing2_Swing1_End.png",
+    "original_sha256": "61B03C2A6D455C467F3921751EC3444C0E43EEA904296A9F4F2E57D6FF38A711",
+    "original_retained_locally": true
+  },
+  {
+    "path": "images/05_swing2_landing.jpg",
+    "caption": "B：振り子②の代表着地。自動QA実Unity画面。",
+    "presentation": "表示用プレビュー。PNGからJPEGへ再圧縮のみ。描き足し・画像生成・切抜き・縮小なし。",
+    "dimensions": [
+      1280,
+      720
+    ],
+    "bytes": 231141,
+    "sha256": "E1344E9BC93198E4C0BF1C19F6217B11154C1E8427932BB937D9F6B0965D04DA",
+    "original_relative_to_local_dossier": "Evidence/Windows_B/Swing1_Swing2_Swing2_End.png",
+    "original_sha256": "E1BDB23D17F938E92368530E3E725E6C42EB71F6D9173866533B4AB7DD380E55",
+    "original_retained_locally": true
+  },
+  {
+    "path": "images/06_bridge2_landing.jpg",
+    "caption": "B：橋②通過後。自動QA実Unity画面。",
+    "presentation": "表示用プレビュー。PNGからJPEGへ再圧縮のみ。描き足し・画像生成・切抜き・縮小なし。",
+    "dimensions": [
+      1280,
+      720
+    ],
+    "bytes": 231081,
+    "sha256": "503BFBAAB9BF4FA35365A15E82141864938B5F8F9E6ECDA8816A89C7F7162121",
+    "original_relative_to_local_dossier": "Evidence/Windows_B/Swing1_Bridge2_Bridge2_Landing.png",
+    "original_sha256": "497A7288A55D80B50DFB30846C4FD1D204967690A1A7B040240A3058D4ADB41E",
+    "original_retained_locally": true
+  },
+  {
+    "path": "images/07_both_bridges_rejected.jpg",
+    "caption": "B：両橋の2本目拒否。自動QA実Unity画面。",
+    "presentation": "表示用プレビュー。PNGからJPEGへ再圧縮のみ。描き足し・画像生成・切抜き・縮小なし。",
+    "dimensions": [
+      1280,
+      720
+    ],
+    "bytes": 231082,
+    "sha256": "D2050FC208A4CE9B74CC8406A99C4070897C6D851A8F4DC5A02E5E0DFAE79A60",
+    "original_relative_to_local_dossier": "Evidence/Windows_B/BothBridges_SecondQRejected.png",
+    "original_sha256": "AF1993FE43B7005290F4989B2DC16C695416E0B04FD759F564A540E2C6FEAC65",
+    "original_retained_locally": true
+  },
+  {
+    "path": "images/08_before_retry.jpg",
+    "caption": "B：R復帰テストの直前。復帰後の画像ではない。",
+    "presentation": "表示用プレビュー。PNGからJPEGへ再圧縮のみ。描き足し・画像生成・切抜き・縮小なし。",
+    "dimensions": [
+      1280,
+      720
+    ],
+    "bytes": 231132,
+    "sha256": "D0977DCC430A8D4DC4C5A690ECF77F1FE5E87E4DCFEF778788A15F6E54E9CF83",
+    "original_relative_to_local_dossier": "Evidence/Windows_B/BridgeThenRetryState_Bridge1_Landing.png",
+    "original_sha256": "8EAA2478F3B8E7011E3B23A775550D893EA11912C472B67DDFA40A8485858140",
+    "original_retained_locally": true
+  },
+  {
+    "path": "images/09_human_exit.jpg",
+    "caption": "B：本人実キーセッションの出口到達。残量24・橋0本。",
+    "presentation": "表示用プレビュー。PNGからJPEGへ再圧縮のみ。描き足し・画像生成・切抜き・縮小なし。",
+    "dimensions": [
+      1280,
+      720
+    ],
+    "bytes": 229318,
+    "sha256": "46301B0EFEBFEAC0DD0E5A2A3BA31EEA6E9D11009369F60660F73E6403951E51",
+    "original_relative_to_local_dossier": "Evidence/HumanSessions/B_17495_4738/Exit_ActualCamera_20417.png",
+    "original_sha256": "1FCC734028AC866271050B0B5F2C8980DE20AAEF5D6FECDC76FB38104C7CB863",
+    "original_retained_locally": true
+  }
+]

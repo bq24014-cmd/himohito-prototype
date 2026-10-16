@@ -1,0 +1,38 @@
+{
+  "note": "Attempt bridge must not become saved checkpoint",
+  "hook": "",
+  "position": {
+    "x": 128.38201904296875,
+    "y": -0.47302988171577454
+  },
+  "velocity": {
+    "x": 0.0,
+    "y": 0.0
+  },
+  "fixedTime": 43.459983825683594,
+  "remaining": 13.0,
+  "movementInput": 0.0,
+  "selected": 11,
+  "bridges": 1,
+  "section": 6,
+  "errors": 0,
+  "inputDriverCount": 1,
+  "qaDriverCount": 1,
+  "grounded": true,
+  "attached": false,
+  "arrived": false,
+  "camera": {
+    "position": {
+      "x": 128.22776794433594,
+      "y": 0.0,
+      "z": -10.0
+    },
+    "ortho": 8.699999809265137,
+    "aspect": 1.7777777910232544,
+    "captureAspect": 1.7777777910232544,
+    "renderOnlyNoHUD": false,
+    "sourcePixelWidth": 1280,
+    "sourcePixelHeight": 720,
+    "follow": "{\"target\":{\"instanceID\":1250},\"smoothTime\":0.18000000715255738,\"horizontalOffset\":0.0,\"verticalSmoothTime\":0.2800000011920929,\"followVerticalInSectionTen\":true}"
+  }
+}

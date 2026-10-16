@@ -1,0 +1,621 @@
+{
+  "originalCoreScripts": 119,
+  "coreChanged": [],
+  "inputPhysicsTimeSettingsUnchanged": {
+    "ProjectSettings/InputManager.asset": true,
+    "ProjectSettings/Physics2DSettings.asset": true,
+    "ProjectSettings/TimeManager.asset": true
+  },
+  "configBeforeAfter": {
+    "A_Current_All": {
+      "identicalBeforeAfter": true,
+      "changedFields": []
+    },
+    "B_r1_FinalEditor": {
+      "identicalBeforeAfter": true,
+      "changedFields": []
+    },
+    "Windows_A": {
+      "identicalBeforeAfter": true,
+      "changedFields": []
+    },
+    "Windows_B": {
+      "identicalBeforeAfter": true,
+      "changedFields": []
+    }
+  },
+  "baselineS6Geometry": {
+    "Main S06 Green Upper Bridge Start Hook": true,
+    "Main S06 Green Upper Bridge End Hook": true,
+    "Main S06 Upper Left": true,
+    "Main S06 Upper Right": true,
+    "Main S06 Upper Final Step": true,
+    "Main S06 Lower Hook A": true,
+    "Main S06 Lower Hook B": true,
+    "Main S06 Lower Hook C": true,
+    "Main S06 Merge": true
+  },
+  "releaseWindows": {
+    "B_r0_Leg1": {
+      "samples": [
+        {
+          "leg": 1,
+          "threshold": 24.0,
+          "actualAngle": 24.880645751953125,
+          "sinceAttach": 0.9399998188018799,
+          "time": 3.7999987602233887,
+          "position": {
+            "x": 123.42437744140625,
+            "y": -0.9431162476539612
+          },
+          "velocity": {
+            "x": 9.282783508300781,
+            "y": 3.931905508041382
+          },
+          "stableLanding": false,
+          "reason": "swing1: fall at (128.01, -9.12)",
+          "policy": "D held until landing, then neutral; no velocity assignment"
+        },
+        {
+          "leg": 1,
+          "threshold": 30.0,
+          "actualAngle": 30.754552841186523,
+          "sinceAttach": 0.9999995231628418,
+          "time": 7.799997329711914,
+          "position": {
+            "x": 123.96817016601562,
+            "y": -0.6561956405639648
+          },
+          "velocity": {
+            "x": 9.050409317016602,
+            "y": 4.97204065322876
+          },
+          "stableLanding": false,
+          "reason": "swing1: fall at (128.01, -9.29)",
+          "policy": "D held until landing, then neutral; no velocity assignment"
+        },
+        {
+          "leg": 1,
+          "threshold": 36.0,
+          "actualAngle": 36.71132278442383,
+          "sinceAttach": 1.0599994659423828,
+          "time": 11.939995765686035,
+          "position": {
+            "x": 124.48670196533203,
+            "y": -0.309943825006485
+          },
+          "velocity": {
+            "x": 8.566034317016602,
+            "y": 5.936212539672852
+          },
+          "stableLanding": true,
+          "reason": "",
+          "policy": "D held until landing, then neutral; no velocity assignment"
+        },
+        {
+          "leg": 1,
+          "threshold": 42.0,
+          "actualAngle": 42.66913604736328,
+          "sinceAttach": 1.119999885559082,
+          "time": 15.519994735717773,
+          "position": {
+            "x": 124.96658325195312,
+            "y": 0.08832115679979324
+          },
+          "velocity": {
+            "x": 7.869434833526611,
+            "y": 6.76588249206543
+          },
+          "stableLanding": true,
+          "reason": "",
+          "policy": "D held until landing, then neutral; no velocity assignment"
+        },
+        {
+          "leg": 1,
+          "threshold": 48.0,
+          "actualAngle": 48.55315399169922,
+          "sinceAttach": 1.1800003051757812,
+          "time": 19.279993057250977,
+          "position": {
+            "x": 125.39742279052734,
+            "y": 0.5284498929977417
+          },
+          "velocity": {
+            "x": 7.013399600982666,
+            "y": 7.417572021484375
+          },
+          "stableLanding": true,
+          "reason": "",
+          "policy": "D held until landing, then neutral; no velocity assignment"
+        },
+        {
+          "leg": 1,
+          "threshold": 54.0,
+          "actualAngle": 54.29408264160156,
+          "sinceAttach": 1.239999771118164,
+          "time": 23.17999267578125,
+          "position": {
+            "x": 125.77214050292969,
+            "y": 0.998249888420105
+          },
+          "velocity": {
+            "x": 6.047350883483887,
+            "y": 7.853145599365234
+          },
+          "stableLanding": false,
+          "reason": "swing1: fall at (139.63, -9.04)",
+          "policy": "D held until landing, then neutral; no velocity assignment"
+        },
+        {
+          "leg": 1,
+          "threshold": 60.0,
+          "actualAngle": 61.48952865600586,
+          "sinceAttach": 1.3199996948242188,
+          "time": 28.05998992919922,
+          "position": {
+            "x": 126.17237854003906,
+            "y": 1.6360851526260376
+          },
+          "velocity": {
+            "x": 4.564489364624023,
+            "y": 7.829501628875732
+          },
+          "stableLanding": false,
+          "reason": "swing1: fall at (139.55, -9.04)",
+          "policy": "D held until landing, then neutral; no velocity assignment"
+        }
+      ],
+      "successfulSamples": 3,
+      "attemptedSamples": 7,
+      "thresholds": [
+        36.0,
+        42.0,
+        48.0
+      ],
+      "actualAngles": [
+        36.71132278442383,
+        42.66913604736328,
+        48.55315399169922
+      ],
+      "sampledTimeSpan": 0.12000083923339844,
+      "fullBodyPositiveClearanceThresholds": [],
+      "note": "Discrete scripted samples, NOT continuous interval or Human success rate. D held until landing then neutral."
+    },
+    "B_r1_Leg1_ColliderInit": {
+      "samples": [
+        {
+          "leg": 1,
+          "threshold": 24.0,
+          "actualAngle": 24.880645751953125,
+          "sinceAttach": 0.9399998188018799,
+          "time": 3.779998779296875,
+          "landingClearance": -0.7934150695800781,
+          "position": {
+            "x": 123.42437744140625,
+            "y": -0.9431162476539612
+          },
+          "velocity": {
+            "x": 9.282783508300781,
+            "y": 3.931905508041382
+          },
+          "landingPosition": {
+            "x": 127.70658874511719,
+            "y": -9.045724868774414
+          },
+          "stableLanding": false,
+          "reason": "swing1: fall at (127.71, -9.05)",
+          "policy": "D held until landing, then neutral; no velocity assignment"
+        },
+        {
+          "leg": 1,
+          "threshold": 30.0,
+          "actualAngle": 30.754552841186523,
+          "sinceAttach": 0.9999995231628418,
+          "time": 7.7799973487854,
+          "landingClearance": -0.7934150695800781,
+          "position": {
+            "x": 123.96817016601562,
+            "y": -0.6561956405639648
+          },
+          "velocity": {
+            "x": 9.050409317016602,
+            "y": 4.97204065322876
+          },
+          "landingPosition": {
+            "x": 127.70658874511719,
+            "y": -9.182369232177734
+          },
+          "stableLanding": false,
+          "reason": "swing1: fall at (127.71, -9.18)",
+          "policy": "D held until landing, then neutral; no velocity assignment"
+        },
+        {
+          "leg": 1,
+          "threshold": 36.0,
+          "actualAngle": 36.71132278442383,
+          "sinceAttach": 1.0599994659423828,
+          "time": 11.919995307922363,
+          "landingClearance": 0.6512603759765625,
+          "position": {
+            "x": 124.48670196533203,
+            "y": -0.309943825006485
+          },
+          "velocity": {
+            "x": 8.566034317016602,
+            "y": 5.936212539672852
+          },
+          "landingPosition": {
+            "x": 129.15126037597656,
+            "y": -0.5849999785423279
+          },
+          "stableLanding": true,
+          "reason": "",
+          "policy": "D held until landing, then neutral; no velocity assignment"
+        },
+        {
+          "leg": 1,
+          "threshold": 42.0,
+          "actualAngle": 42.66913604736328,
+          "sinceAttach": 1.1199989318847656,
+          "time": 15.499994277954102,
+          "landingClearance": 1.461273193359375,
+          "position": {
+            "x": 124.96658325195312,
+            "y": 0.08832115679979324
+          },
+          "velocity": {
+            "x": 7.869434833526611,
+            "y": 6.76588249206543
+          },
+          "landingPosition": {
+            "x": 130.63873291015625,
+            "y": -0.5850067734718323
+          },
+          "stableLanding": true,
+          "reason": "",
+          "policy": "D held until landing, then neutral; no velocity assignment"
+        },
+        {
+          "leg": 1,
+          "threshold": 48.0,
+          "actualAngle": 48.55315399169922,
+          "sinceAttach": 1.1799983978271484,
+          "time": 19.259992599487305,
+          "landingClearance": 0.4822540283203125,
+          "position": {
+            "x": 125.39742279052734,
+            "y": 0.5284498929977417
+          },
+          "velocity": {
+            "x": 7.013399600982666,
+            "y": 7.417572021484375
+          },
+          "landingPosition": {
+            "x": 131.6177520751953,
+            "y": -0.5849999785423279
+          },
+          "stableLanding": true,
+          "reason": "",
+          "policy": "D held until landing, then neutral; no velocity assignment"
+        },
+        {
+          "leg": 1,
+          "threshold": 54.0,
+          "actualAngle": 54.29408264160156,
+          "sinceAttach": 1.239999771118164,
+          "time": 23.159992218017578,
+          "landingClearance": -0.2645416259765625,
+          "position": {
+            "x": 125.77214050292969,
+            "y": 0.998249888420105
+          },
+          "velocity": {
+            "x": 6.047350883483887,
+            "y": 7.853145599365234
+          },
+          "landingPosition": {
+            "x": 132.3645477294922,
+            "y": -0.5849999785423279
+          },
+          "stableLanding": true,
+          "reason": "",
+          "policy": "D held until landing, then neutral; no velocity assignment"
+        },
+        {
+          "leg": 1,
+          "threshold": 60.0,
+          "actualAngle": 61.48952865600586,
+          "sinceAttach": 1.3199996948242188,
+          "time": 27.219989776611328,
+          "landingClearance": -0.2733612060546875,
+          "position": {
+            "x": 126.17237854003906,
+            "y": 1.6360851526260376
+          },
+          "velocity": {
+            "x": 4.564489364624023,
+            "y": 7.829501628875732
+          },
+          "landingPosition": {
+            "x": 132.3733673095703,
+            "y": -0.5849999785423279
+          },
+          "stableLanding": true,
+          "reason": "",
+          "policy": "D held until landing, then neutral; no velocity assignment"
+        }
+      ],
+      "successfulSamples": 5,
+      "attemptedSamples": 7,
+      "thresholds": [
+        36.0,
+        42.0,
+        48.0,
+        54.0,
+        60.0
+      ],
+      "actualAngles": [
+        36.71132278442383,
+        42.66913604736328,
+        48.55315399169922,
+        54.29408264160156,
+        61.48952865600586
+      ],
+      "sampledTimeSpan": 0.26000022888183594,
+      "fullBodyPositiveClearanceThresholds": [
+        36.0,
+        42.0,
+        48.0
+      ],
+      "note": "Discrete scripted samples, NOT continuous interval or Human success rate. D held until landing then neutral."
+    },
+    "B_r1_Leg2": {
+      "samples": [
+        {
+          "leg": 2,
+          "threshold": 30.0,
+          "actualAngle": 31.057735443115234,
+          "sinceAttach": 1.0999999046325684,
+          "time": 4.459998607635498,
+          "landingClearance": -0.79339599609375,
+          "position": {
+            "x": 139.91131591796875,
+            "y": -1.4965386390686035
+          },
+          "velocity": {
+            "x": 11.102428436279297,
+            "y": 6.149273872375488
+          },
+          "landingPosition": {
+            "x": 144.60659790039062,
+            "y": -9.282072067260742
+          },
+          "stableLanding": false,
+          "reason": "swing2: fall at (144.61, -9.28)",
+          "policy": "D held until landing, then neutral; no velocity assignment"
+        },
+        {
+          "leg": 2,
+          "threshold": 36.0,
+          "actualAngle": 37.31392288208008,
+          "sinceAttach": 1.1599998474121094,
+          "time": 9.239996910095215,
+          "landingClearance": -0.058868408203125,
+          "position": {
+            "x": 140.54327392578125,
+            "y": -1.0672824382781982
+          },
+          "velocity": {
+            "x": 10.418437004089355,
+            "y": 7.356743812561035
+          },
+          "landingPosition": {
+            "x": 145.34112548828125,
+            "y": -0.5849999785423279
+          },
+          "stableLanding": true,
+          "reason": "",
+          "policy": "D held until landing, then neutral; no velocity assignment"
+        },
+        {
+          "leg": 2,
+          "threshold": 42.0,
+          "actualAngle": 43.5528564453125,
+          "sinceAttach": 1.2199993133544922,
+          "time": 13.45999526977539,
+          "landingClearance": 1.8826904296875,
+          "position": {
+            "x": 141.1231689453125,
+            "y": -0.5731756687164307
+          },
+          "velocity": {
+            "x": 9.493717193603516,
+            "y": 8.392904281616211
+          },
+          "landingPosition": {
+            "x": 147.28268432617188,
+            "y": -0.5849999785423279
+          },
+          "stableLanding": true,
+          "reason": "",
+          "policy": "D held until landing, then neutral; no velocity assignment"
+        },
+        {
+          "leg": 2,
+          "threshold": 48.0,
+          "actualAngle": 49.675777435302734,
+          "sinceAttach": 1.279998779296875,
+          "time": 17.85999298095703,
+          "landingClearance": 0.7989044189453125,
+          "position": {
+            "x": 141.6367645263672,
+            "y": -0.029782654717564583
+          },
+          "velocity": {
+            "x": 8.304909706115723,
+            "y": 9.11317253112793
+          },
+          "landingPosition": {
+            "x": 148.8011016845703,
+            "y": -0.5849999785423279
+          },
+          "stableLanding": true,
+          "reason": "",
+          "policy": "D held until landing, then neutral; no velocity assignment"
+        },
+        {
+          "leg": 2,
+          "threshold": 54.0,
+          "actualAngle": 55.5153923034668,
+          "sinceAttach": 1.3400001525878906,
+          "time": 22.439992904663086,
+          "landingClearance": 0.1416168212890625,
+          "position": {
+            "x": 142.0699462890625,
+            "y": 0.5367096662521362
+          },
+          "velocity": {
+            "x": 6.90969705581665,
+            "y": 9.374855995178223
+          },
+          "landingPosition": {
+            "x": 149.45838928222656,
+            "y": -0.5849999785423279
+          },
+          "stableLanding": true,
+          "reason": "",
+          "policy": "D held until landing, then neutral; no velocity assignment"
+        },
+        {
+          "leg": 2,
+          "threshold": 60.0,
+          "actualAngle": 60.9360466003418,
+          "sinceAttach": 1.3999996185302734,
+          "time": 27.139989852905273,
+          "landingClearance": 0.051483154296875,
+          "position": {
+            "x": 142.41854858398438,
+            "y": 1.0995008945465088
+          },
+          "velocity": {
+            "x": 5.490054607391357,
+            "y": 9.20274543762207
+          },
+          "landingPosition": {
+            "x": 149.54852294921875,
+            "y": -0.5849999785423279
+          },
+          "stableLanding": true,
+          "reason": "",
+          "policy": "D held until landing, then neutral; no velocity assignment"
+        },
+        {
+          "leg": 2,
+          "threshold": 66.0,
+          "actualAngle": 67.34883117675781,
+          "sinceAttach": 1.4799995422363281,
+          "time": 31.959989547729492,
+          "landingClearance": 0.7382965087890625,
+          "position": {
+            "x": 142.76007080078125,
+            "y": 1.804161787033081
+          },
+          "velocity": {
+            "x": 3.770838499069214,
+            "y": 8.406532287597656
+          },
+          "landingPosition": {
+            "x": 148.86170959472656,
+            "y": -0.5849999785423279
+          },
+          "stableLanding": true,
+          "reason": "",
+          "policy": "D held until landing, then neutral; no velocity assignment"
+        }
+      ],
+      "successfulSamples": 6,
+      "attemptedSamples": 7,
+      "thresholds": [
+        36.0,
+        42.0,
+        48.0,
+        54.0,
+        60.0,
+        66.0
+      ],
+      "actualAngles": [
+        37.31392288208008,
+        43.5528564453125,
+        49.675777435302734,
+        55.5153923034668,
+        60.9360466003418,
+        67.34883117675781
+      ],
+      "sampledTimeSpan": 0.31999969482421875,
+      "fullBodyPositiveClearanceThresholds": [
+        42.0,
+        48.0,
+        54.0,
+        60.0,
+        66.0
+      ],
+      "note": "Discrete scripted samples, NOT continuous interval or Human success rate. D held until landing then neutral."
+    }
+  },
+  "bridgeMinima": {
+    "distance1": 10.270345661174213,
+    "distance2": 12.5,
+    "minimumInteger1": 11,
+    "minimumInteger2": 13,
+    "reserve": 1,
+    "budget": 24
+  },
+  "geometryAdjustmentsUsed": 1,
+  "geometryAdjustmentsAllowed": 2,
+  "originalAllCSharp": 128,
+  "originalAllCSharpChanged": [],
+  "windowsSuspiciousLogLines": {
+    "Windows_A": [],
+    "Windows_B": [],
+    "Windows_Smoke_A": [],
+    "Windows_Smoke_B": []
+  },
+  "editorStartupIssues": [
+    {
+      "log": "A_Current_All.log",
+      "type": "Existing Editor Search startup exception; not a gameplay error-zero Console"
+    },
+    {
+      "log": "B_r0_Leg1.log",
+      "type": "Existing Editor Search startup exception; not a gameplay error-zero Console"
+    },
+    {
+      "log": "B_r0_Leg2.log",
+      "type": "Existing Editor Search startup exception; not a gameplay error-zero Console"
+    },
+    {
+      "log": "B_r1_AllRoutes.log",
+      "type": "Existing Editor Search startup exception; not a gameplay error-zero Console"
+    },
+    {
+      "log": "B_r1_FinalEditor.log",
+      "type": "Existing Editor Search startup exception; not a gameplay error-zero Console"
+    },
+    {
+      "log": "B_r1_Leg1.log",
+      "type": "Existing Editor Search startup exception; not a gameplay error-zero Console"
+    },
+    {
+      "log": "B_r1_Leg1_ColliderInit.log",
+      "type": "Existing Editor Search startup exception; not a gameplay error-zero Console"
+    },
+    {
+      "log": "B_r1_Leg2.log",
+      "type": "Existing Editor Search startup exception; not a gameplay error-zero Console"
+    },
+    {
+      "log": "B_r1_Reaction015.log",
+      "type": "Existing Editor Search startup exception; not a gameplay error-zero Console"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "note": "Standing on exit; no checkpoint saved",
+  "hook": "",
+  "position": {
+    "x": 148.90919494628906,
+    "y": -0.5850387811660767
+  },
+  "velocity": {
+    "x": 3.386563301086426,
+    "y": 0.0
+  },
+  "fixedTime": 64.81997680664062,
+  "remaining": 24.0,
+  "movementInput": 0.0,
+  "selected": 8,
+  "bridges": 0,
+  "section": 6,
+  "errors": 0,
+  "inputDriverCount": 0,
+  "qaDriverCount": 0,
+  "grounded": true,
+  "attached": false,
+  "arrived": true,
+  "camera": {
+    "position": {
+      "x": 147.342041015625,
+      "y": 0.0,
+      "z": -10.0
+    },
+    "ortho": 8.699999809265137,
+    "aspect": 1.7777777910232544,
+    "captureAspect": 1.7777777910232544,
+    "renderOnlyNoHUD": false,
+    "sourcePixelWidth": 1280,
+    "sourcePixelHeight": 720,
+    "follow": "{\"target\":{\"instanceID\":1250},\"smoothTime\":0.18000000715255738,\"horizontalOffset\":0.0,\"verticalSmoothTime\":0.2800000011920929,\"followVerticalInSectionTen\":true}"
+  }
+}

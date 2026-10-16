@@ -1,0 +1,22 @@
+{
+  "proof": "A2TwoValleysProof_20261016",
+  "revision": "r1",
+  "production_head": "7a4f011b7ffc0343acd4727a75255495a3881fb3",
+  "unity": "6000.3.21f1",
+  "exe_filename": "A2Proof.exe",
+  "exe_sha256": "A3D4FA240C51333301EFCC16714FF60722F00E803AFE1FB6750EC963CC0F1707",
+  "assembly_sha256": "64165E3DD098255540FC5BDFD2F32D407F1BF5B9E916BE569D71579640B4A8E3",
+  "frozen_manifest_sha256": "0BC668C4E536825A1AB63D7A45D7575B3B6607480BE24599E7E7C5877973A8C8",
+  "expected_files": 231,
+  "verified_files": 231,
+  "all_expected_sha256_and_sizes_match": true,
+  "recorded_build_result": {
+    "result": "Succeeded",
+    "errors": 0,
+    "warnings": 0,
+    "bytes": 535521127
+  },
+  "verification_updated_at": "2026-10-16T18:16:43.029927+09:00",
+  "new_build_performed": false,
+  "note": "Build本体・全Build manifest・BGMは非収録。exe SHAは実行ファイル、DLL SHAはProofコード、manifest SHAは元の凍結一覧の識別子。"
+}

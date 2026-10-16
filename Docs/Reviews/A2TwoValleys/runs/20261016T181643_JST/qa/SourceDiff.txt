@@ -1,0 +1,497 @@
+A2 independent Proof source audit
+Production source changes: NONE (see ProductionAfter.json).
+Copied original runtime C# count: 119; changed: []
+Input/Physics/Time unchanged: {'ProjectSettings/InputManager.asset': True, 'ProjectSettings/Physics2DSettings.asset': True, 'ProjectSettings/TimeManager.asset': True}
+New proof files ONLY in isolated UnityProof:
+
+--- /dev/null
++++ Assets/A2Proof/A2Fixture.cs
+@@ -0,0 +1,235 @@
++// ISOLATED PROOF ONLY. Production sources remain byte-identical.
++using System;
++using System.Collections;
++using System.Collections.Generic;
++using System.Globalization;
++using System.IO;
++using System.Reflection;
++using HimoHito;
++using UnityEngine;
++using UnityEngine.SceneManagement;
++
++namespace HimoHitoA2Proof
++{
++    [DefaultExecutionOrder(10000)]
++    public sealed class A2Fixture : MonoBehaviour
++    {
++        public const float Offset = 117.9f;
++        public const int LayoutRevision=1;
++        public const float SecondLaunchX=13.9f;
++        public const string EntryName="A2 Proof Entry Box", MiddleName="A2 Proof Middle Box", ExitName="A2 Proof Exit Box";
++        public static readonly string[] SwingNames={"A2 Proof Blue Swing Hook 1","A2 Proof Blue Swing Hook 2"};
++        public static readonly string[] EndNames={"A2 Proof Green End 1","A2 Proof Green End 2"};
++        public static A2Fixture Instance;
++        public static readonly BindingFlags Private=BindingFlags.Instance|BindingFlags.NonPublic;
++        public static string Arg(string key,string fallback="")
++        {var a=Environment.GetCommandLineArgs();for(int i=0;i<a.Length-1;i++)if(a[i]==key)return a[i+1];return fallback;}
++        public static float Number(string key,float fallback)=>float.Parse(Arg(key,fallback.ToString(CultureInfo.InvariantCulture)),CultureInfo.InvariantCulture);
++        public static Vector2 Global(float x,float y)=>new Vector2(x+Offset,y);
++        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
++        static void Register(){Application.runInBackground=true;SceneManager.sceneLoaded-=Loaded;SceneManager.sceneLoaded+=Loaded;}
++        static void Loaded(Scene scene,LoadSceneMode mode)
++        {if(scene.name=="MainStage"&&!FindFirstObjectByType<A2Fixture>())new GameObject("ISOLATED A2 Fixture").AddComponent<A2Fixture>();}
++
++        public string Variant,Output;public bool Ready,Arrived;public int Errors;
++        public Rigidbody2D Body;public PlayerMover Mover;public RopeController Rope;public RopeResource Resource;
++        public RopePlatformBuilder Builder;public MainStageRespawnOnFall Respawn;
++        public Vector2 Spawn;public float Budget;public int InitialLength;
++        public BoxCollider2D Middle,Exit;
++        public GameObject[] BHooks;
++        public List<string> DisabledRoots=new List<string>();
++        readonly List<GameObject> maskedOldRoots=new List<GameObject>();
++        public string ExpectedLayout;
++        public bool IsolationValid=>maskedOldRoots.TrueForAll(g=>g&&!g.activeInHierarchy);
++        StreamWriter telemetry;float nextSample;GUIStyle chip,notice,worldLabel;
++        IEnumerator Start()
++        {
++            Instance=this;Variant=Arg("-a2Variant","B").ToUpperInvariant();
++            if(Variant!="A"&&Variant!="B")throw new ArgumentException("Only A/B");
++            Output=Arg("-a2Output",Path.Combine(Application.persistentDataPath,"Review",Variant+"_"+DateTime.Now.ToString("yyyyMMdd_HHmmss")));
++            Directory.CreateDirectory(Output);Application.logMessageReceived+=Log;
++            yield return null;yield return null;
++            Body=FindFirstObjectByType<RopeResource>().GetComponent<Rigidbody2D>();
++            Mover=Body.GetComponent<PlayerMover>();Rope=Body.GetComponent<RopeController>();Resource=Body.GetComponent<RopeResource>();Builder=Body.GetComponent<RopePlatformBuilder>();Respawn=Body.GetComponent<MainStageRespawnOnFall>();
++            var preview=FindFirstObjectByType<MainStagePreview>();
++            if(preview){typeof(MainStagePreview).GetMethod("RestoreState",Private).Invoke(preview,null);preview.enabled=false;}
++            // Skip the original full-world introduction for this mid-stage fixture only.
++            // HorizontalCameraFollow is not changed, disabled or zoomed by the Proof.
++            Write("CoreBeforeLayout.json",new Config(this));
++            if(Variant=="B")CreateB();
++            Spawn=Variant=="A"?new Vector2(117.4f,-1.45f):Global(-.5f,.6f);
++            Budget=Variant=="A"?39:24;InitialLength=Variant=="A"?8:6;
++            Resource.RestoreCapacityAndCurrent(50,Budget); // Same capacity50; only current entry budget is24.
++            Body.position=Spawn;Body.transform.position=Spawn;Body.linearVelocity=Vector2.zero;Body.angularVelocity=0;
++            Body.simulated=true;Mover.enabled=true;Rope.enabled=true;Rope.RestoreSelectedRopeLength(InitialLength);
++            Physics2D.SyncTransforms();Respawn.TryReachSection(6,Spawn,0);
++            Camera.main.GetComponent<HorizontalCameraFollow>()?.ResetFraming();
++            Write("CoreAfterLayout.json",new Config(this));Write("Layout.json",new Layout(this));ExpectedLayout=JsonUtility.ToJson(new Layout(this));
++            telemetry=new StreamWriter(Path.Combine(Output,"Telemetry.csv"));
++            telemetry.WriteLine("time,x,y,vx,vy,grounded,attached,hook,selected,remaining,bridges,section,failure");
++            Ready=true;yield return new WaitForSeconds(.8f);Capture("01_Entry_ActualCamera");
++            if(Arg("-a2qa")!="")gameObject.AddComponent<A2ScriptedQA>();
++            else if(Arg("-a2Smoke")!="")
++            {
++                yield return new WaitForSeconds(3);Capture("ManualBoot_ActualCamera");
++                Write("ManualBoot.json",new Observation(this,"No input driver; real keys still Human unverified"));
++                yield return new WaitForSeconds(.4f);Quit(Errors==0?0:2);
++            }
++        }
++        void CreateB()
++        {
++            // Retain the original player's components/camera/background. Deactivate original authored
++            // gameplay roots in this runtime instance ONLY; no Scene assets are saved by this code.
++            foreach(var root in gameObject.scene.GetRootGameObjects())
++            {
++                if(root==Body.gameObject||root==gameObject||root.GetComponent<Camera>())continue;
++                if(root.GetComponentInChildren<Collider2D>(true)!=null || root.GetComponentInChildren<MainStageGoalZone>(true)!=null)
++                {DisabledRoots.Add(root.name);maskedOldRoots.Add(root);root.SetActive(false);}
++            }
++            foreach(var stairs in FindObjectsByType<MainStageSectionThreeRecoveryStairs>(FindObjectsSortMode.None))stairs.enabled=false;
++            CreateFloor(EntryName,-2,-3,4,6,new Color(.51f,.40f,.30f));
++            Middle=CreateFloor(MiddleName,12.4f,-4.2f,4.4f,6,new Color(.39f,.46f,.42f));
++            Exit=CreateFloor(ExitName,29.6f,-4.2f,5,6,new Color(.46f,.42f,.53f));
++            // There is NO exit checkpoint in this bounded proof. R always restores the safe entry.
++            // Arrival is an observation, not a new progression/clear mechanic.
++            var list=new List<GameObject>();
++            list.Add(CreateHook("A2 Proof Green Start 1",0,0,11,EndNames[0],false));
++            list.Add(CreateHook(EndNames[0],10.2f,-1.2f,11,"A2 Proof Green Start 1",true));
++            list.Add(CreateHook("A2 Proof Green Start 2",14.6f,-1.2f,13,EndNames[1],false));
++            list.Add(CreateHook(EndNames[1],27.1f,-1.2f,13,"A2 Proof Green Start 2",true));
++            list.Add(CreateHook(SwingNames[0],3,4.5f,0,"",true));
++            list.Add(CreateHook(SwingNames[1],18.4f,4.5f,0,"",true));
++            BHooks=list.ToArray();Physics2D.SyncTransforms();
++        }
++        BoxCollider2D CreateFloor(string name,float x,float y,float w,float h,Color color)
++        {
++            var o=new GameObject(name);o.transform.position=Global(x,y);o.transform.localScale=new Vector3(w,h,1);
++            o.AddComponent<SpriteRenderer>();o.AddComponent<SolidSprite>().Color=color;
++            var c=o.AddComponent<BoxCollider2D>();var r=o.AddComponent<Rigidbody2D>();r.bodyType=RigidbodyType2D.Static;
++            o.AddComponent<SolidSwingSurface>();
++            // Renderer-only upper rim, fully inside the real top surface; no fake ledges.
++            var top=new GameObject("Proof walking rim (not final art)");top.transform.SetParent(o.transform,false);
++            top.transform.localPosition=new Vector3(0,.495f,-.03f);top.transform.localScale=new Vector3(1,.01f,1);
++            top.AddComponent<SpriteRenderer>().sortingOrder=4;top.AddComponent<SolidSprite>().Color=new Color(.83f,.74f,.55f);
++            return c;
++        }
++        GameObject CreateHook(string name,float x,float y,int cost,string pair,bool attach)
++        {
++            var o=new GameObject(name);o.transform.position=Global(x,y);
++            o.transform.localScale=cost>0?new Vector3(.62f,.62f,1):new Vector3(1.6f,.45f,1);
++            o.AddComponent<SpriteRenderer>().sortingOrder=3; // Existing ring presentation requires a source renderer.
++            var col=o.AddComponent<BoxCollider2D>();col.size=Vector2.one;col.offset=Vector2.zero;col.enabled=attach;col.isTrigger=true;
++            var hook=o.AddComponent<HookPoint>();hook.ConfigureFixedAttachmentPoint(Vector2.zero);hook.ConfigureAirChainStep("",0);
++            if(cost>0)o.AddComponent<RopePlatformAnchor>().Configure(cost,pair);
++            MainStageVisuals.EnsureHookVisual(o);col.size=Vector2.one;return o;
++        }
++        public void ResetTrial()
++        {
++            // Diagnostic trial reset only, not active in Human mode. Real R calls the unchanged core.
++            Rope.DetachAndRefund();Builder.RestorePlatformStates(Array.Empty<RopePlatformBuilder.PlatformState>(),Array.Empty<GameObject>());
++            Resource.RestoreCapacityAndCurrent(50,Budget);Rope.RestoreSelectedRopeLength(InitialLength);
++            typeof(MainStageRespawnOnFall).GetField("<CurrentSection>k__BackingField",Private).SetValue(Respawn,6);
++            typeof(MainStageRespawnOnFall).GetField("checkpointPosition",Private).SetValue(Respawn,Spawn);
++            foreach(var cp in FindObjectsByType<MainStageCheckpoint>(FindObjectsSortMode.None))
++            {
++                typeof(MainStageCheckpoint).GetField("reached",Private).SetValue(cp,false);
++                object gate=typeof(MainStageCheckpoint).GetField("landingGate",Private).GetValue(cp);gate.GetType().GetMethod("Reset").Invoke(gate,null);
++            }
++            typeof(MainStageRespawnOnFall).GetMethod("CaptureCheckpointState",Private).Invoke(Respawn,null);
++            Retry();Arrived=false;
++        }
++        public void Retry()=>typeof(MainStageRespawnOnFall).GetMethod("RestartFromCheckpoint",Private).Invoke(Respawn,null);
++        public bool OnBank(BoxCollider2D bank)=>bank&&Mover.IsGrounded&&Body.position.x>=bank.bounds.min.x+.1f&&Body.position.x<=bank.bounds.max.x-.1f&&Mathf.Abs(Body.position.y-bank.bounds.max.y-.6f)<.2f;
++        void Update()
++        {
++            if(!Ready)return;
++            if(Variant=="B")
++            {
++                if(Arrived&&Vector2.Distance(Body.position,Spawn)<.2f&&Resource.CurrentLength==Budget&&Builder.GeneratedPlatformCount==0)Arrived=false;
++                if(!Arrived&&OnBank(Exit)){Arrived=true;Write("Arrival_"+Time.frameCount+".json",new Observation(this,"Standing on exit; no checkpoint saved"));Capture("Exit_ActualCamera_"+Time.frameCount);}
++            }
++            if(Time.unscaledTime>=nextSample)
++            {
++                nextSample=Time.unscaledTime+.05f;
++                telemetry?.WriteLine(string.Format(CultureInfo.InvariantCulture,"{0:F3},{1:F4},{2:F4},{3:F4},{4:F4},{5},{6},{7},{8},{9:F1},{10},{11},{12}",Time.fixedTime,Body.position.x,Body.position.y,Body.linearVelocity.x,Body.linearVelocity.y,Mover.IsGrounded,Rope.IsAttached,Rope.ActiveHookPoint?Rope.ActiveHookPoint.name:"",Rope.SelectedRopeLength,Resource.CurrentLength,Builder.GeneratedPlatformCount,Respawn.CurrentSection,Respawn.IsFailureVisible));telemetry?.Flush();
++            }
++        }
++        void LateUpdate()
++        {
++            // The original R restores distant S5 rail objects unconditionally. Keep the authored
++            // isolated-layout exclusions off; do not change that original restart implementation.
++            if(Ready&&Variant=="B")foreach(var root in maskedOldRoots)if(root&&root.activeSelf)root.SetActive(false);
++        }
++        void OnGUI()
++        {
++            if(!Ready)return;
++            if(chip==null)
++            {
++                chip=new GUIStyle(GUI.skin.box){fontSize=17,alignment=TextAnchor.MiddleLeft,wordWrap=true,padding=new RectOffset(12,12,8,8)};
++                notice=new GUIStyle(chip){fontSize=18};worldLabel=new GUIStyle(GUI.skin.label){fontSize=17,alignment=TextAnchor.MiddleCenter,normal={textColor=new Color(.96f,.91f,.77f)}};
++            }
++            GUI.Box(new Rect(Screen.width-355,56,340,70),Variant=="A"?"A｜現行S6（比較用）\n操作・物理は本体と同じ":"B｜裁縫箱の二つの谷\n検証Visual・完成Artではありません",chip);
++            if(Variant=="B")
++            {
++                bool atEntry=Body.position.x<Offset+1&&Builder.GeneratedPlatformCount==0;
++                if(atEntry)
++                    GUI.Box(new Rect(24,Screen.height-174,Mathf.Min(620,Screen.width*.54f),140),"この先には二つの谷があります。\n橋に使う身体は11と13。今は24。\n身体は最低1を残すので、両方を橋にはできません。\nどちらに道を残しますか？",notice);
++                else GUI.Box(new Rect(24,Screen.height-95,470,66),Arrived?"出口へ到達しました。Rで入口から再比較できます。":"二つの谷で身体を共有・途中の補充なし\nRで入口の24と、橋を作る前へ戻ります。",chip);
++                Label(5.1f,-3.4f,"谷①：橋11 / 振り子");Label(20.85f,-3.7f,"谷②：橋13 / 振り子");
++            }
++        }
++        void Label(float x,float y,string t)
++        {
++            var p=Camera.main.WorldToScreenPoint(Global(x,y));if(p.x<0||p.x>Screen.width)return;
++            GUI.Label(new Rect(p.x-100,Screen.height-p.y-20,200,32),t,worldLabel);
++        }
++        public void Capture(string name)
++        {
++            Write(name+"_Camera.json",new CameraRecord(Camera.main));
++            if(!Application.isBatchMode){ScreenCapture.CaptureScreenshot(Path.Combine(Output,name+".png"));return;}
++            var go=new GameObject("QA render-only camera");var cam=go.AddComponent<Camera>();cam.CopyFrom(Camera.main);cam.enabled=false;
++            cam.transform.SetPositionAndRotation(Camera.main.transform.position,Camera.main.transform.rotation);cam.aspect=16f/9f;
++            var rt=new RenderTexture(1280,720,24);var tex=new Texture2D(1280,720,TextureFormat.RGB24,false);var prev=RenderTexture.active;
++            try{cam.targetTexture=rt;cam.Render();RenderTexture.active=rt;tex.ReadPixels(new Rect(0,0,1280,720),0,0);tex.Apply();File.WriteAllBytes(Path.Combine(Output,name+"_WorldOnly.png"),tex.EncodeToPNG());}
++            finally{RenderTexture.active=prev;cam.targetTexture=null;Destroy(tex);Destroy(rt);Destroy(go);}
++        }
++        void Log(string m,string stack,LogType t){if(t!=LogType.Error&&t!=LogType.Exception&&t!=LogType.Assert)return;Errors++;File.AppendAllText(Path.Combine(Output,"GameplayErrors.txt"),t+": "+m+"\n"+stack+"\n");}
++        void OnDestroy(){telemetry?.Dispose();Application.logMessageReceived-=Log;}
++        public void Write(string name,object data)=>File.WriteAllText(Path.Combine(Output,name),JsonUtility.ToJson(data,true));
++        public static void Quit(int code){
++            #if UNITY_EDITOR
++            UnityEditor.EditorApplication.Exit(code);
++            #else
++            Application.Quit(code);
++            #endif
++        }
++        [Serializable]public class CameraRecord{public Vector3 position;public float ortho,aspect,captureAspect;public bool renderOnlyNoHUD;public int sourcePixelWidth,sourcePixelHeight;public string follow;public CameraRecord(Camera c){position=c.transform.position;ortho=c.orthographicSize;aspect=c.aspect;captureAspect=Application.isBatchMode?16f/9f:c.aspect;renderOnlyNoHUD=Application.isBatchMode;sourcePixelWidth=c.pixelWidth;sourcePixelHeight=c.pixelHeight;follow=JsonUtility.ToJson(c.GetComponent<HorizontalCameraFollow>());}}
++        [Serializable]public class Config
++        {
++            public string mover,rope,builder,follow;public Vector2 gravity,colliderSize,colliderOffset;public float mass,gravityScale,fixedDelta;public int bodyType,constraints;public Vector3 playerScale;
++            public Config(A2Fixture f){mover=JsonUtility.ToJson(f.Mover);rope=JsonUtility.ToJson(f.Rope);builder=JsonUtility.ToJson(f.Builder);follow=JsonUtility.ToJson(Camera.main.GetComponent<HorizontalCameraFollow>());gravity=Physics2D.gravity;mass=f.Body.mass;gravityScale=f.Body.gravityScale;fixedDelta=Time.fixedDeltaTime;var c=f.Body.GetComponent<BoxCollider2D>();colliderSize=c.size;colliderOffset=c.offset;bodyType=(int)f.Body.bodyType;constraints=(int)f.Body.constraints;playerScale=f.Body.transform.lossyScale;}
++        }
++        [Serializable]public class Shape
++        {
++            public string name;public Vector3 position,scale;public Vector2 boundsMin,boundsMax,size,offset;public bool trigger,enabled,active;public string airGroup;public int airOrder;
++            public Shape(GameObject g){name=g.name;position=g.transform.position;scale=g.transform.lossyScale;active=g.activeInHierarchy;var c=g.GetComponent<BoxCollider2D>();if(c){boundsMin=c.bounds.min;boundsMax=c.bounds.max;size=c.size;offset=c.offset;trigger=c.isTrigger;enabled=c.enabled;}var h=g.GetComponent<HookPoint>();if(h){airGroup=h.AirChainGroup;airOrder=h.AirChainOrder;}}
++        }
++        [Serializable]public class Layout
++        {
++            public string variant;public int revision=LayoutRevision;public float globalOffset=Offset;public List<Shape> shapes=new List<Shape>();public List<string> disabledOriginalRoots;
++            public Layout(A2Fixture f){variant=f.Variant;revision=f.Variant=="A"?0:LayoutRevision;disabledOriginalRoots=f.DisabledRoots;foreach(var g in f.gameObject.scene.GetRootGameObjects())if(g.name.StartsWith("A2 Proof")||g.name.StartsWith("Main S06")||g.name==MainStageSectionFiveSetup.LandingName)shapes.Add(new Shape(g));}
++        }
++        [Serializable]public class Observation
++        {
++            public string note,hook;public Vector2 position,velocity;public float fixedTime,remaining,movementInput;public int selected,bridges,section,errors,inputDriverCount,qaDriverCount;public bool grounded,attached,arrived;public CameraRecord camera;
++            public Observation(A2Fixture f,string n){note=n;hook=f.Rope.ActiveHookPoint?f.Rope.ActiveHookPoint.name:"";position=f.Body.position;velocity=f.Body.linearVelocity;fixedTime=Time.fixedTime;remaining=f.Resource.CurrentLength;selected=f.Rope.SelectedRopeLength;bridges=f.Builder.GeneratedPlatformCount;section=f.Respawn.CurrentSection;errors=f.Errors;grounded=f.Mover.IsGrounded;attached=f.Rope.IsAttached;arrived=f.Arrived;camera=new CameraRecord(Camera.main);movementInput=f.Mover.MovementInput;inputDriverCount=UnityEngine.Object.FindObjectsByType<A2InputDriver>(FindObjectsSortMode.None).Length;qaDriverCount=UnityEngine.Object.FindObjectsByType<A2ScriptedQA>(FindObjectsSortMode.None).Length;}
++        }
++    }
++    [DefaultExecutionOrder(-10000)]
++    public sealed class A2InputDriver:MonoBehaviour
++    {
++        public float Move;public bool Jump;
++        static readonly FieldInfo M=typeof(PlayerMover).GetField("moveInput",A2Fixture.Private),J=typeof(PlayerMover).GetField("jumpBufferTimer",A2Fixture.Private);
++        void FixedUpdate(){var f=A2Fixture.Instance;if(f==null||!f.Ready)return;M.SetValue(f.Mover,Move);if(Jump){J.SetValue(f.Mover,.15f);Jump=false;}}
++    }
++}
+--- /dev/null
++++ Assets/A2Proof/A2ScriptedQA.cs
+@@ -0,0 +1,212 @@
++// Diagnostic-only existing input-field/API driver. NEVER describes physical keyboard or Human fun.
++using System;
++using System.Collections;
++using System.Collections.Generic;
++using System.Globalization;
++using HimoHito;
++using UnityEngine;
++
++namespace HimoHitoA2Proof
++{
++    public sealed class A2ScriptedQA:MonoBehaviour
++    {
++        A2Fixture f;A2InputDriver input;Results results=new Results();bool legOK;string failure;float routeStart;
++        [Serializable]public class Check{public string name,status,detail;public Check(string n,bool p,string d){name=n;status=p?"PASS":"FAIL";detail=d;}}
++        [Serializable]public class Route{public string name,status,failure;public float startTime,endTime,seconds,consumed,remaining;public int bridges;public Vector2 position;public List<Release> releases=new List<Release>();}
++        [Serializable]public class Release{public int leg;public float threshold,actualAngle,sinceAttach,time,landingClearance,landingReactionDelay;public Vector2 position,velocity,landingPosition;public bool stableLanding;public string reason,policy="D held until landing plus recorded reaction delay, then neutral; no velocity assignment";}
++        [Serializable]public class Results{public string variant,method="Scripted API + original movement input fields, actual Unity Physics2D. NOT Human keyboard.";public List<Check> checks=new List<Check>();public List<Route> routes=new List<Route>();public List<Release> samples=new List<Release>();public int errors;public bool finished;}
++        Route active;
++        void CheckResult(string n,bool p,string detail){results.checks.Add(new Check(n,p,detail));Debug.Log("A2_QA "+n+" "+(p?"PASS":"FAIL")+" "+detail);}
++        IEnumerator Wait(float s){yield return new WaitForSeconds(s);}
++        IEnumerator Start()
++        {
++            f=GetComponent<A2Fixture>();input=gameObject.AddComponent<A2InputDriver>();results.variant=f.Variant;
++            yield return Wait(.3f);
++            CheckResult("Initial grounded/budget/section",f.Mover.IsGrounded&&f.Resource.CurrentLength==f.Budget&&f.Respawn.CurrentSection==6,"actual="+f.Body.position+", budget="+f.Resource.CurrentLength);
++            if(f.Variant=="B")CheckResult("Authored Hook Collider and visible presentation",Array.TrueForAll(f.BHooks,g=>g.GetComponent<BoxCollider2D>().size==Vector2.one&&g.GetComponentsInChildren<Renderer>().Length>1),"All6 Hook Collider sizes1x1, existing ring artwork, original intended geometry; two start Colliders disabled intentionally");
++            if(f.Variant=="A")
++            {
++                yield return BaselineUpper();yield return BaselineLower();yield return BasicRetry();
++            }
++            else
++            {
++                string mode=A2Fixture.Arg("-a2qa","all");
++                if(mode=="probe1"||mode=="probe2")
++                {
++                    int leg=mode=="probe1"?1:2;
++                    foreach(var s in A2Fixture.Arg("-a2Angles","24,30,36,42,48,54,60").Split(','))
++                    {
++                        yield return Reset();
++                        if(leg==2){f.Body.position=A2Fixture.Global(A2Fixture.SecondLaunchX,-.6f);f.Body.transform.position=f.Body.position;Physics2D.SyncTransforms();yield return Wait(.35f);}
++                        float threshold=float.Parse(s,CultureInfo.InvariantCulture);Begin("LocalLeg"+leg+"_"+s+"_positioningNotFullRoute");
++                        yield return Swing(leg,threshold);Finish(legOK);
++                    }
++                }
++                else
++                {
++                    yield return RouteB("Bridge1_Swing2",true,false);
++                    yield return RouteB("Swing1_Bridge2",false,true);
++                    yield return RouteB("Swing1_Swing2",false,false);
++                    yield return BothBridgesRejected();yield return BasicRetry();
++                    yield return RetryBridgeAndHooks();
++                    if(mode=="allrepeat")for(int i=0;i<2;i++)yield return RouteB("Repeat"+(i+2)+"_BothSwing",false,false);
++                }
++            }
++            input.Move=0;results.errors=f.Errors;results.finished=true;f.Write("ScriptedQA.json",results);
++            yield return Wait(.3f);A2Fixture.Quit(f.Errors==0?0:2);
++        }
++        void Begin(string name){active=new Route{name=name,startTime=Time.fixedTime};failure="";routeStart=Time.fixedTime;}
++        void Finish(bool success)
++        {
++            active.status=success?"PASS":"FAIL";active.failure=success?"":failure;active.endTime=Time.fixedTime;active.seconds=Time.fixedTime-routeStart;active.remaining=f.Resource.CurrentLength;active.consumed=f.Budget-f.Resource.CurrentLength;active.bridges=f.Builder.GeneratedPlatformCount;active.position=f.Body.position;results.routes.Add(active);
++            f.Write("Progress.json",results);Debug.Log("A2_ROUTE "+active.name+" "+active.status+" "+active.seconds+"s "+failure);
++        }
++        IEnumerator Reset(){input.Move=0;input.Jump=false;f.ResetTrial();yield return Wait(1.7f);}
++        IEnumerator WalkTo(float globalX)
++        {
++            float end=Time.time+5;
++            while(Time.time<end&&!f.Respawn.IsFailureVisible)
++            {
++                if(Mathf.Abs(globalX-f.Body.position.x)<.3f)break;
++                input.Move=Mathf.Sign(globalX-f.Body.position.x);yield return new WaitForFixedUpdate();
++            }
++            input.Move=0;yield return Wait(.18f);
++        }
++        IEnumerator Bridge(int leg)
++        {
++            legOK=false;int cost=leg==1?11:13;
++            if(leg==2)yield return WalkTo(A2Fixture.Offset+A2Fixture.SecondLaunchX);
++            f.Rope.RestoreSelectedRopeLength(cost);
++            bool attached=f.Rope.TryAttach(GameObject.Find(A2Fixture.EndNames[leg-1]).transform.position);
++            if(!attached){failure="bridge"+leg+": attachment rejected at "+f.Body.position;yield break;}
++            float before=f.Resource.CurrentLength;
++            bool built=f.Builder.TryBuildCurrentPlatform();
++            CheckResult(active.name+" bridge"+leg+" exact spend",built&&Mathf.Approximately(f.Resource.CurrentLength,before-cost),before+" - "+cost+" = "+f.Resource.CurrentLength);
++            if(!built){failure="bridge"+leg+": Q rejected";yield break;}
++            f.Capture(active.name+"_Bridge"+leg+"_Built");yield return Wait(.3f);
++            var bank=leg==1?f.Middle:f.Exit;float end=Time.time+14;input.Move=1;
++            while(Time.time<end&&!f.Respawn.IsFailureVisible){if(f.OnBank(bank))break;yield return new WaitForFixedUpdate();}
++            input.Move=0;yield return Wait(.3f);legOK=f.OnBank(bank);
++            if(!legOK)failure="bridge"+leg+": "+(f.Respawn.IsFailureVisible?"fall":"did not stand on target bank")+", "+f.Body.position;
++            f.Capture(active.name+"_Bridge"+leg+"_Landing");
++        }
++        IEnumerator Swing(int leg,float threshold)
++        {
++            legOK=false;int length=leg==1?6:7;
++            if(leg==2)yield return WalkTo(A2Fixture.Offset+A2Fixture.SecondLaunchX);
++            f.Rope.RestoreSelectedRopeLength(length);float t=Time.fixedTime;
++            bool attached=f.Rope.TryAttach(GameObject.Find(A2Fixture.SwingNames[leg-1]).transform.position);
++            if(!attached){failure="swing"+leg+": ground/range attachment rejected, at "+f.Body.position;yield break;}
++            var release=new Release{leg=leg,threshold=threshold};float end=Time.time+14;input.Move=1;bool released=false;
++            while(Time.time<end&&!f.Respawn.IsFailureVisible)
++            {
++                var delta=f.Body.position-f.Rope.AnchorPoint;float angle=Mathf.Atan2(delta.x,-delta.y)*Mathf.Rad2Deg;
++                if(angle>=threshold&&f.Body.linearVelocity.x>0&&f.Body.linearVelocity.y>0)
++                {
++                    release.actualAngle=angle;release.position=f.Body.position;release.velocity=f.Body.linearVelocity;release.time=Time.fixedTime;release.sinceAttach=Time.fixedTime-t;
++                    f.Rope.DetachAndRefund(true);released=true;break;
++                }
++                yield return new WaitForFixedUpdate();
++            }
++            var bank=leg==1?f.Middle:f.Exit;
++            if(!released){failure="swing"+leg+": release threshold not reached";release.reason=failure;active.releases.Add(release);results.samples.Add(release);yield break;}
++            f.Capture(active.name+"_Swing"+leg+"_Release");end=Time.time+5;
++            while(Time.time<end&&!f.Respawn.IsFailureVisible)
++            {
++                if(f.OnBank(bank))break;
++                yield return new WaitForFixedUpdate();
++            }
++            release.landingReactionDelay=A2Fixture.Number("-a2React",0);
++            if(f.OnBank(bank)&&release.landingReactionDelay>0)yield return Wait(release.landingReactionDelay);
++            input.Move=0;yield return Wait(.3f);
++            legOK=f.OnBank(bank);release.stableLanding=legOK;release.landingPosition=f.Body.position;
++            release.landingClearance=Mathf.Min(f.Body.position.x-bank.bounds.min.x,bank.bounds.max.x-f.Body.position.x)-f.Body.GetComponent<BoxCollider2D>().bounds.extents.x;
++            failure=legOK?"":"swing"+leg+": "+(f.Respawn.IsFailureVisible?"fall":"missed/wall/overshot or unstable landing")+" at "+f.Body.position;
++            release.reason=failure;active.releases.Add(release);results.samples.Add(release);
++            f.Write(active.name+"_Leg"+leg+"_Release.json",release);f.Capture(active.name+"_Swing"+leg+"_End");
++        }
++        IEnumerator RouteB(string name,bool firstBridge,bool secondBridge)
++        {
++            yield return Reset();Begin(name);
++            if(firstBridge)yield return Bridge(1);else yield return Swing(1,A2Fixture.Number("-a2Angle1",42));
++            if(!legOK){Finish(false);yield break;}
++            CheckResult(name+" middle has no refill/checkpoint",f.Resource.CurrentLength==(firstBridge?13:24)&&f.Respawn.CurrentSection==6&&Mathf.Approximately((float)typeof(MainStageRespawnOnFall).GetField("checkpointRopeLength",A2Fixture.Private).GetValue(f.Respawn),24),"middle resource="+f.Resource.CurrentLength+"; entry snapshot remains24");
++            if(secondBridge)yield return Bridge(2);else yield return Swing(2,A2Fixture.Number("-a2Angle2",48));
++            bool pass=legOK&&f.OnBank(f.Exit)&&Mathf.Approximately(f.Resource.CurrentLength,24-(firstBridge?11:0)-(secondBridge?13:0));Finish(pass);
++            CheckResult(name+" reaches exit with expected resource",pass,"position="+f.Body.position+",remaining="+f.Resource.CurrentLength);
++            f.Retry();yield return Wait(.9f);CheckEntry(name+" R restores entry");
++        }
++        void CheckEntry(string name)
++        {
++            bool hooks=f.Variant=="A"||Array.TrueForAll(f.BHooks,g=>g&&g.activeInHierarchy);
++            CheckResult(name,!f.Respawn.IsFailureVisible&&f.Body.simulated&&f.Mover.IsGrounded&&Vector2.Distance(f.Body.position,f.Spawn)<.18f&&f.Resource.CurrentLength==f.Budget&&f.Rope.SelectedRopeLength==f.InitialLength&&f.Body.constraints==RigidbodyConstraints2D.FreezeRotation&&f.Builder.GeneratedPlatformCount==0&&hooks&&!f.Rope.IsAttached,"position="+f.Body.position+", resource="+f.Resource.CurrentLength+", selected="+f.Rope.SelectedRopeLength+", constraints="+f.Body.constraints+", bridges="+f.Builder.GeneratedPlatformCount+", hooksActive="+hooks);
++            if(f.Variant=="B")
++            {
++                CheckResult(name+" layout/Hook/Collider invariant",f.IsolationValid&&JsonUtility.ToJson(new A2Fixture.Layout(f))==f.ExpectedLayout,"same transforms/Collider/Hook/group/mask after existing R");
++                f.Write("AfterR_Layout.json",new A2Fixture.Layout(f));
++            }
++        }
++        IEnumerator BothBridgesRejected()
++        {
++            yield return Reset();Begin("Bridge1_Bridge2_ExpectedRejection");yield return Bridge(1);
++            if(!legOK){Finish(false);yield break;}
++            yield return WalkTo(A2Fixture.Offset+A2Fixture.SecondLaunchX);f.Rope.RestoreSelectedRopeLength(13);
++            bool attach=f.Rope.TryAttach(GameObject.Find(A2Fixture.EndNames[1]).transform.position);
++            float before=f.Resource.CurrentLength;bool can=f.Builder.CanBuildCurrentPlatform;bool built=attach&&f.Builder.TryBuildCurrentPlatform();
++            bool expected=attach&&!can&&!built&&before==13&&f.Resource.CurrentLength==13&&f.Builder.GeneratedPlatformCount==1;
++            failure=expected?"":"unexpected second bridge result attach="+attach+" can="+can+" built="+built;
++            CheckResult("Both bridges denied by reserve not insufficient aim",expected,"13 -13 =0 <1, attach="+attach+" actualRemaining="+f.Resource.CurrentLength);
++            f.Capture("BothBridges_SecondQRejected");Finish(expected);
++            f.Retry();yield return Wait(.9f);CheckEntry("R after rejected secondQ restores entry/hooks");
++        }
++        IEnumerator BasicRetry()
++        {
++            yield return Reset();
++            for(int i=0;i<3;i++)
++            {
++                input.Move=0;f.Body.position=new Vector2(f.Spawn.x+5,-9.3f);f.Body.transform.position=f.Body.position;Physics2D.SyncTransforms();yield return Wait(1.7f);
++                CheckResult("Fall"+(i+1)+" failure",f.Respawn.IsFailureVisible,"Diagnostic fall positioning; not a route success claim");
++                f.Retry();yield return Wait(.9f);CheckEntry("Fall"+(i+1)+" R entry restore");
++            }
++        }
++        IEnumerator RetryBridgeAndHooks()
++        {
++            yield return Reset();Begin("BridgeThenRetryState");yield return Bridge(1);
++            f.Write("BeforeR_Observation.json",new A2Fixture.Observation(f,"Attempt bridge must not become saved checkpoint"));
++            f.Retry();yield return Wait(.9f);CheckEntry("Bridge created then R clears bridge and restores hooks/budget");
++            var snap=(RopePlatformBuilder.PlatformState[])typeof(MainStageRespawnOnFall).GetField("checkpointPlatformStates",A2Fixture.Private).GetValue(f.Respawn);
++            CheckResult("No spent/blocked checkpoint saved",snap.Length==0&&(float)typeof(MainStageRespawnOnFall).GetField("checkpointRopeLength",A2Fixture.Private).GetValue(f.Respawn)==24,"entry snapshot=24 and0bridges; B has no intermediate or exit CP");
++        }
++        IEnumerator BaselineUpper()
++        {
++            yield return Reset();Begin("A_Current_Upper");yield return WalkTo(118.45f);f.Rope.RestoreSelectedRopeLength(14);
++            bool attach=f.Rope.TryAttach(GameObject.Find(MainStageSectionSixSetup.UpperBridgeEndHookName).transform.position);bool built=attach&&f.Builder.TryBuildCurrentPlatform();
++            CheckResult("A upper bridge14",built&&f.Resource.CurrentLength==25,"39 -14=25");
++            float end=Time.time+25;input.Move=1;
++            while(Time.time<end&&!f.Respawn.IsFailureVisible&&f.Respawn.CurrentSection<7)
++            {float x=f.Body.position.x;if(f.Mover.IsGrounded&&((x>133.1f&&x<134.8f)||(x>136.2f&&x<138.2f)))input.Jump=true;yield return new WaitForFixedUpdate();}
++            input.Move=0;legOK=f.Respawn.CurrentSection==7;failure=legOK?"":"upper timeout/fall at "+f.Body.position;Finish(legOK);f.Capture("A_Upper_Exit");
++        }
++        IEnumerator BaselineLower()
++        {
++            yield return Reset();Begin("A_Current_Lower");yield return WalkTo(118.45f);f.Rope.RestoreSelectedRopeLength(8);
++            bool ok=f.Rope.TryAttach(GameObject.Find(MainStageSectionSixSetup.LowerHookAName).transform.position);
++            CheckResult("A first ground attach",ok,"normal API, no Human aim claim");if(!ok){failure="first attachment rejected";Finish(false);yield break;}
++            foreach(string next in new[]{MainStageSectionSixSetup.LowerHookBName,MainStageSectionSixSetup.LowerHookCName})
++            {
++                input.Move=1;float deadline=Time.time+15;
++                while(Time.time<deadline&&!f.Respawn.IsFailureVisible)
++                {if(Vector2.Distance(f.Body.position,GameObject.Find(next).transform.position)<=7.9f&&f.Body.linearVelocity.y>0&&f.Body.linearVelocity.x>0)break;yield return new WaitForFixedUpdate();}
++                if(f.Respawn.IsFailureVisible){failure="chain approach fall";Finish(false);yield break;}
++                f.Rope.DetachAndRefund(true);yield return Wait(.18f);ok=f.Rope.TryAttach(GameObject.Find(next).transform.position);
++                CheckResult("A 180ms chain "+next,ok,"existing1.5s window");if(!ok){failure="chain rejected";Finish(false);yield break;}
++            }
++            float end=Time.time+15;
++            while(Time.time<end&&!f.Respawn.IsFailureVisible)
++            {var delta=f.Body.position-f.Rope.AnchorPoint;if(Mathf.Atan2(delta.x,-delta.y)*Mathf.Rad2Deg>=65&&f.Body.linearVelocity.x>0){f.Rope.DetachAndRefund(true);break;}yield return new WaitForFixedUpdate();}
++            input.Move=1;end=Time.time+6;
++            while(Time.time<end&&!f.Respawn.IsFailureVisible&&f.Respawn.CurrentSection<7)yield return new WaitForFixedUpdate();
++            input.Move=0;legOK=f.Respawn.CurrentSection==7&&f.Resource.CurrentLength==39;failure=legOK?"":"lower timeout/fall "+f.Body.position;Finish(legOK);f.Capture("A_Lower_Exit");
++        }
++    }
++}
+--- /dev/null
++++ Assets/Editor/A2ProofEditor.cs
+@@ -0,0 +1,35 @@
++#if UNITY_EDITOR
++using System;
++using System.IO;
++using UnityEditor;
++using UnityEditor.Build.Reporting;
++using UnityEditor.SceneManagement;
++using UnityEngine;
++using UnityEngine.SceneManagement;
++namespace HimoHitoA2Proof
++{
++    [InitializeOnLoad]public static class A2ProofEditor
++    {
++        static A2ProofEditor(){EditorApplication.playModeStateChanged+=Changed;}
++        public static void Play()
++        {
++            PlayerSettings.companyName="HimoHitoIsolatedProofs";PlayerSettings.productName="HimoHito A2 Two Valleys Proof";
++            SessionState.SetBool("A2OnlyPlay",true);EditorSceneManager.playModeStartScene=null;
++            EditorSceneManager.NewScene(NewSceneSetup.EmptyScene,NewSceneMode.Single);EditorApplication.EnterPlaymode();
++        }
++        static void Changed(PlayModeStateChange s)
++        {if(s==PlayModeStateChange.EnteredPlayMode&&SessionState.GetBool("A2OnlyPlay",false)){SessionState.EraseBool("A2OnlyPlay");EditorSceneManager.LoadSceneInPlayMode("Assets/Scenes/MainStage.unity",new LoadSceneParameters(LoadSceneMode.Single));}}
++        public static void Build()
++        {
++            try{
++                string exe=A2Fixture.Arg("-a2Build");if(string.IsNullOrEmpty(exe)||File.Exists(exe))throw new Exception("New output required");
++                Directory.CreateDirectory(Path.GetDirectoryName(exe));PlayerSettings.companyName="HimoHitoIsolatedProofs";PlayerSettings.productName="HimoHito A2 Two Valleys Proof";
++                EditorSceneManager.OpenScene("Assets/Scenes/MainStage.unity");
++                var r=BuildPipeline.BuildPlayer(new BuildPlayerOptions{scenes=new[]{"Assets/Scenes/MainStage.unity","Assets/Scenes/Tutorial.unity"},locationPathName=exe,target=BuildTarget.StandaloneWindows64,options=BuildOptions.Development});
++                File.WriteAllText(Path.Combine(Path.GetDirectoryName(exe),"BuildSummary.json"),"{\"result\":\""+r.summary.result+"\",\"errors\":"+r.summary.totalErrors+",\"warnings\":"+r.summary.totalWarnings+",\"bytes\":"+r.summary.totalSize+"}");
++                if(r.summary.result!=BuildResult.Succeeded)throw new Exception("Build failed");EditorApplication.Exit(0);
++            }catch(Exception e){Debug.LogException(e);EditorApplication.Exit(1);}
++        }
++    }
++}
++#endif

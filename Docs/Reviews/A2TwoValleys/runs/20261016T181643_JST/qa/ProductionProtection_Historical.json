@@ -1,0 +1,13 @@
+{
+  "productionUnchanged": true,
+  "protectedFiles": 518,
+  "gitStateUnchanged": true,
+  "isolatedOriginalDifferences": [
+    "Packages/manifest.json",
+    "Packages/packages-lock.json",
+    "ProjectSettings/ProjectSettings.asset"
+  ],
+  "coreScriptsUnchanged": true,
+  "checkedJST": "2026-10-16T15:27:51.438997+09:00",
+  "freeGiB": 19.169723510742188
+}

@@ -1,0 +1,14 @@
+{
+  "verified_at": "2026-10-16T18:16:43.029927+09:00",
+  "production_branch": "main",
+  "production_head": "7a4f011b7ffc0343acd4727a75255495a3881fb3",
+  "production_index_unchanged": true,
+  "production_existing_differences_unchanged": true,
+  "new_unity_run": false,
+  "new_build": false,
+  "automated_gameplay_input_this_task": false,
+  "protected_live_sessions": true,
+  "review_only": true,
+  "remote_verification": "push後に別途GitHubから確認。ローカル作成時点では共有済みとしない。",
+  "r_after_image": "MISSING_IN_EXISTING_MATERIALS"
+}

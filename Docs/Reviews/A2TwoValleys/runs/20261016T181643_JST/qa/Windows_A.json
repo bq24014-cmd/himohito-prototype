@@ -1,0 +1,98 @@
+{
+  "variant": "A",
+  "method": "Scripted API + original movement input fields, actual Unity Physics2D. NOT Human keyboard.",
+  "checks": [
+    {
+      "name": "Initial grounded/budget/section",
+      "status": "PASS",
+      "detail": "actual=(117.40, -1.54), budget=39"
+    },
+    {
+      "name": "A upper bridge14",
+      "status": "PASS",
+      "detail": "39 -14=25"
+    },
+    {
+      "name": "A first ground attach",
+      "status": "PASS",
+      "detail": "normal API, no Human aim claim"
+    },
+    {
+      "name": "A 180ms chain Main S06 Lower Hook B",
+      "status": "PASS",
+      "detail": "existing1.5s window"
+    },
+    {
+      "name": "A 180ms chain Main S06 Lower Hook C",
+      "status": "PASS",
+      "detail": "existing1.5s window"
+    },
+    {
+      "name": "Fall1 failure",
+      "status": "PASS",
+      "detail": "Diagnostic fall positioning; not a route success claim"
+    },
+    {
+      "name": "Fall1 R entry restore",
+      "status": "PASS",
+      "detail": "position=(117.40, -1.54), resource=39, selected=8, constraints=FreezeRotation, bridges=0, hooksActive=True"
+    },
+    {
+      "name": "Fall2 failure",
+      "status": "PASS",
+      "detail": "Diagnostic fall positioning; not a route success claim"
+    },
+    {
+      "name": "Fall2 R entry restore",
+      "status": "PASS",
+      "detail": "position=(117.40, -1.54), resource=39, selected=8, constraints=FreezeRotation, bridges=0, hooksActive=True"
+    },
+    {
+      "name": "Fall3 failure",
+      "status": "PASS",
+      "detail": "Diagnostic fall positioning; not a route success claim"
+    },
+    {
+      "name": "Fall3 R entry restore",
+      "status": "PASS",
+      "detail": "position=(117.40, -1.54), resource=39, selected=8, constraints=FreezeRotation, bridges=0, hooksActive=True"
+    }
+  ],
+  "routes": [
+    {
+      "name": "A_Current_Upper",
+      "status": "PASS",
+      "failure": "",
+      "startTime": 2.899998903274536,
+      "endTime": 8.039997100830078,
+      "seconds": 5.139998435974121,
+      "consumed": 14.0,
+      "remaining": 25.0,
+      "bridges": 1,
+      "position": {
+        "x": 149.8733673095703,
+        "y": -1.5350018739700317
+      },
+      "releases": []
+    },
+    {
+      "name": "A_Current_Lower",
+      "status": "PASS",
+      "failure": "",
+      "startTime": 9.739996910095215,
+      "endTime": 14.079995155334473,
+      "seconds": 4.339998245239258,
+      "consumed": 0.0,
+      "remaining": 39.0,
+      "bridges": 0,
+      "position": {
+        "x": 151.1456756591797,
+        "y": -1.5350018739700317
+      },
+      "releases": []
+    }
+  ],
+  "samples": [],
+  "errors": 0,
+  "finished": true
+}

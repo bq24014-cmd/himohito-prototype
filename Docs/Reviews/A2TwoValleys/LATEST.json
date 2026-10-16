@@ -1,0 +1,33 @@
+{
+  "review_id": "A2-20261016T181643_JST",
+  "updated_at": "2026-10-16T18:16:43.029927+09:00",
+  "timezone": "Asia/Tokyo",
+  "proof": "A2TwoValleysProof_20261016",
+  "revision": "r1",
+  "production_head": "7a4f011b7ffc0343acd4727a75255495a3881fb3",
+  "build_sha256": "A3D4FA240C51333301EFCC16714FF60722F00E803AFE1FB6750EC963CC0F1707",
+  "build_assembly_sha256": "64165E3DD098255540FC5BDFD2F32D407F1BF5B9E916BE569D71579640B4A8E3",
+  "status": "試遊結果あり",
+  "report_path": "Docs/Reviews/A2TwoValleys/runs/20261016T181643_JST/Report.md",
+  "images_path": "Docs/Reviews/A2TwoValleys/runs/20261016T181643_JST/images",
+  "qa_path": "Docs/Reviews/A2TwoValleys/runs/20261016T181643_JST/qa",
+  "human_results_path": "Docs/Reviews/A2TwoValleys/runs/20261016T181643_JST/human/HumanResults.json",
+  "image_manifest_path": "Docs/Reviews/A2TwoValleys/runs/20261016T181643_JST/qa/ImageProvenance.json",
+  "recommendation": "HOLD",
+  "unconfirmed": [
+    "谷①着地の納得感",
+    "失敗理由の理解",
+    "再挑戦で意図的に変えたこと",
+    "橋を選ぶ理由",
+    "別経路での再プレイ意欲",
+    "背景棚と床の誤認",
+    "Aの本人通し比較",
+    "正確な事前攻略閲覧範囲",
+    "R復帰後の実画面は未収録",
+    "全3攻略の実キー通し",
+    "別経路補助試遊",
+    "新World全体の正式採用"
+  ],
+  "production_integrated": false,
+  "human_adoption": "未承認"
+}

@@ -1,0 +1,40 @@
+A2 Two Valleys: geometry revision log
+Maximum TWO terrain/Hook adjustments authorised after initial r0.
+
+r0 / initial proposed geometry
+Middle [10.5,14], width3.5, top-1.2.
+Exit [26.5,31.5], width5, top-1.2.
+Blue1(3,4.5), L6; Blue2(17.8,4.5), L7.
+Bridge1(0,0)->(10.5,-1.2), min11. Bridge2(14,-1.2)->(26.5,-1.2), min13.
+Local-leg tests: first thresholds36/42/48PASS; early24/30wall, late54/60overshoot.
+Sampled first successful release times1.06..1.18s (span0.12s), NOT a continuous proven interval.
+At48 the final stable body center~13.718 leaves part of the0.8-wide body over the edge.
+Second local test36/42/48/54/60/66PASS;30wall. Positioning on middle is a local test, not a full route.
+
+r1 / geometry adjustment1 of2
+Middle widened to[10.2,14.6], width4.4, center12.4, unchanged top-1.2.
+Exit/second-leg Hook/second bridge translated +0.6 together, preserving second valley width12.5.
+Exit[27.1,32.1], Blue2(18.4,4.5), second launch13.9.
+Bridge1 distance sqrt(10.2^2+1.2^2)=10.270..., min integer11 (existing tolerance0.05).
+Bridge2 distance12.5, min integer13.
+Reason: improve first landing clearance and release-time margin, not change physics or resource rules.
+All Player/Core/Camera/Physics remain unchanged. No new enemy, art or controls.
+Separately fixed harness visual omission: add source SpriteRenderer so existing Hook ring visual renders.
+This is not an additional geometry revision; Hook coordinates/Collider/physics unaffected by that renderer.
+
+r2 / NOT USED unless further evidence requires it.
+
+Diagnostic construction correction (not a new level geometry revision):
+B_r1_Leg1 was invalidated before traversal: adding an empty source SpriteRenderer
+caused newly added BoxCollider2D to auto-fit to0.0001, unlike the intended unit shape.
+All attempts rejected the first attach. Layout.json proves the bad initial Hook size.
+CreateHook now explicitly assigns Vector2.one before/after existing ring presentation.
+This restores the declared/r0 Hook shape, not a Player/rope targeting change.
+The failed record is retained; no route success or release-window conclusion is drawn from it.
+
+Fixture exclusion contract:
+The unchanged core R calls MainStageSectionFiveSetup.RestoreRailShelvesAfterRestart(),
+which can re-enable original distant S5 rails. B's runtime-only layout mask re-disables
+excluded old gameplay roots in LateUpdate, so the standalone layout remains standalone.
+No original restart implementation or authored A2 position/size is changed by this mask.
+Added after-R exact Layout/Hook/Collider/mask invariant assertions. A remains unchanged.

@@ -1,0 +1,142 @@
+{
+  "confirmed_participants": 1,
+  "confirmed_by": "このチャットでの本人回答",
+  "session": "B_17495_4738",
+  "variant": "B",
+  "revision": "r1",
+  "session_classification": "通常起動・入力/QAドライバーなし。本人が実キー操作と回答。経験者の自由試遊。初見実験とは扱わない。",
+  "operator_confirmation_raw": "はい",
+  "prior_walkthrough_exposure": "未確定。操作者と攻略既読の複合質問への「はい」だったため既読有無を断定しない。本人は何度もプレイしていると発言。",
+  "participant_quote": "下の文字を読んで何となくでやってた。両端不可というのは二本目生成しようとしたときに気が付いた。振り子の楽しさは正直なんどもプレイしているのであまり感じなかった",
+  "clarification": "原文の「両端不可」は今回の質問文脈では両橋不可への回答として整理。発言原文は上記のまま保持。",
+  "first_Q_resource_constraint_understood": false,
+  "two_valleys_understood_before_first_Q": "未確認",
+  "resource_constraint_discovery": "本人申告：2本目生成を試そうとして気付いた。拒否理由の内部コードはHuman telemetryにないので資源拒否と断定しない。",
+  "enjoyment_report": "繰返しプレイのため振り子の楽しさはあまり感じなかった。全プレイヤーへの一般化は禁止。",
+  "observed_first_exit": {
+    "fixed_time": 64.81997680664062,
+    "remaining": 24.0,
+    "bridges": 0,
+    "arrived": true,
+    "grounded": true,
+    "input_driver_count": 0,
+    "qa_driver_count": 0
+  },
+  "human_route_status": {
+    "both_swing": "出口到達を記録。本人実キー確認あり。",
+    "bridge1_then_swing2": "橋①生成・中床までを記録。通し未確認。",
+    "swing1_then_bridge2": "実キー未確認。",
+    "both_bridges": "2本目を試した本人申告あり。正確な拒否要因は未確認。"
+  },
+  "telemetry_summary": {
+    "samples": 1905,
+    "first": {
+      "time": "0.240",
+      "x": "117.4000",
+      "y": "0.6148",
+      "vx": "0.0000",
+      "vy": "0.0000",
+      "grounded": "True",
+      "attached": "False",
+      "hook": "",
+      "selected": "6",
+      "remaining": "24.0",
+      "bridges": "0",
+      "section": "6",
+      "failure": "False"
+    },
+    "last": {
+      "time": "99.320",
+      "x": "132.6733",
+      "y": "-0.5829",
+      "vx": "0.0000",
+      "vy": "0.0000",
+      "grounded": "True",
+      "attached": "False",
+      "hook": "",
+      "selected": "12",
+      "remaining": "13.0",
+      "bridges": "1",
+      "section": "6",
+      "failure": "False"
+    },
+    "hooks_seen": [
+      "",
+      "A2 Proof Blue Swing Hook 1",
+      "A2 Proof Blue Swing Hook 2",
+      "A2 Proof Green End 1"
+    ],
+    "selected_lengths_seen": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "remaining_seen": [
+      13.0,
+      24.0
+    ],
+    "entry_reset_events": [
+      {
+        "previous_sample": {
+          "time": "67.940",
+          "x": "146.3408",
+          "y": "-0.5850",
+          "vx": "0.0000",
+          "vy": "0.0000",
+          "grounded": "True",
+          "attached": "False",
+          "hook": "",
+          "selected": "8",
+          "remaining": "24.0",
+          "bridges": "0",
+          "section": "6",
+          "failure": "False"
+        },
+        "next_sample": {
+          "time": "68.040",
+          "x": "117.4000",
+          "y": "0.6125",
+          "vx": "0.0000",
+          "vy": "0.0000",
+          "grounded": "True",
+          "attached": "False",
+          "hook": "",
+          "selected": "6",
+          "remaining": "24.0",
+          "bridges": "0",
+          "section": "6",
+          "failure": "False"
+        },
+        "interpretation": "入口への位置・残量・選択長リセットを観測。キー自体の生ログではない。"
+      }
+    ]
+  },
+  "retry_assessment": "出口到達後に入口24・選択長6・橋0への復帰をtelemetryで観測。Rキー押下そのものは別途未確認。",
+  "keys": {
+    "arrows": "独立したキーイベント記録なし。未確認。",
+    "W_S": "選択長変更は観測。ただし物理キーの特定ログなし。",
+    "E": "接続/解除を観測。ただしキーイベントの特定ログなし。",
+    "Q": "橋①生成を観測・2本目試行を本人申告。",
+    "R": "復帰状態を観測。キーそのものは未確認。"
+  },
+  "assisted_alternate_route_test": "未実施。自由試遊中のR後の橋①試行とは区別。",
+  "unconfirmed": [
+    "谷①着地の納得感",
+    "失敗理由の理解",
+    "再挑戦で意図的に変えたこと",
+    "橋を選ぶ理由",
+    "別経路での再プレイ意欲",
+    "背景棚と床の誤認",
+    "Aの本人通し比較",
+    "正確な事前攻略閲覧範囲"
+  ],
+  "human_adoption": "未承認",
+  "recommendation": "HOLD",
+  "updated_at": "2026-10-16T18:16:43.029927+09:00"
+}
