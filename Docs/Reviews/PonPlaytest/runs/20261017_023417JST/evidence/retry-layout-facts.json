@@ -1,0 +1,726 @@
+{
+  "utc": "2026-10-16T17:34:17.385934+00:00",
+  "A_observations": 0,
+  "build": "2026-10-06 FriendPlay fixed inputs",
+  "source_hashes": [
+    {
+      "path": "Assets/Scenes/MainStage.unity",
+      "sha256": "57d2464751b5b9c2a78e6c56f34197e9bc2629983fadaa1dff6e0ba0b4bc2284",
+      "build_input_sha256": "57d2464751b5b9c2a78e6c56f34197e9bc2629983fadaa1dff6e0ba0b4bc2284",
+      "match": true
+    },
+    {
+      "path": "Assets/Scripts/MainStageFloorCollisionSetup.cs",
+      "sha256": "e5c1af6e2339d7ebfef9485e4b2c79e1c39b1d355b33ceae2d5d0045d480af3f",
+      "build_input_sha256": "e5c1af6e2339d7ebfef9485e4b2c79e1c39b1d355b33ceae2d5d0045d480af3f",
+      "match": true
+    },
+    {
+      "path": "Assets/Scripts/MainStageSectionTwoSetup.cs",
+      "sha256": "4169465af91057f291d7a077ba26d17e6dfb9cd3f6716c904379fa39cd75dcfc",
+      "build_input_sha256": "4169465af91057f291d7a077ba26d17e6dfb9cd3f6716c904379fa39cd75dcfc",
+      "match": true
+    },
+    {
+      "path": "Assets/Scripts/MainStageSectionThreeSetup.cs",
+      "sha256": "b5f3f8cdf4644d93bc0faacd3462d06bcebb83366f0cc7af64a9d22e7afeff08",
+      "build_input_sha256": "b5f3f8cdf4644d93bc0faacd3462d06bcebb83366f0cc7af64a9d22e7afeff08",
+      "match": true
+    },
+    {
+      "path": "Assets/Scripts/MainStageSectionThreeRecoveryStairs.cs",
+      "sha256": "299fd4ef8b12c0c741ecc2c55b24a5110f6db45c46f53ea31810330ac2ee8714",
+      "build_input_sha256": "299fd4ef8b12c0c741ecc2c55b24a5110f6db45c46f53ea31810330ac2ee8714",
+      "match": true
+    },
+    {
+      "path": "Assets/Scripts/MainStageSectionThreeRecoverySwitch.cs",
+      "sha256": "740694ff88f82362da4c42170d5c415206d4d1808a83b07eb2d5ca75f32f0f1a",
+      "build_input_sha256": "740694ff88f82362da4c42170d5c415206d4d1808a83b07eb2d5ca75f32f0f1a",
+      "match": true
+    },
+    {
+      "path": "Assets/Scripts/MainStageSectionFourSetup.cs",
+      "sha256": "c1173ea1c61b95a6ddd3994456ed34b0d5e1167c04a4edddd43fd6e13012a6dc",
+      "build_input_sha256": "c1173ea1c61b95a6ddd3994456ed34b0d5e1167c04a4edddd43fd6e13012a6dc",
+      "match": true
+    },
+    {
+      "path": "Assets/Scripts/MainStageSectionFiveSetup.cs",
+      "sha256": "b7419423f4814c47a3b031c1c5221fbbd26b9272695050e76ffa299879d6def7",
+      "build_input_sha256": "b7419423f4814c47a3b031c1c5221fbbd26b9272695050e76ffa299879d6def7",
+      "match": true
+    },
+    {
+      "path": "Assets/Scripts/MainStageSectionSixSetup.cs",
+      "sha256": "71b394fdf99a0edcbb4085774aa1f4fc263054a799eec641179fae527a74e482",
+      "build_input_sha256": "71b394fdf99a0edcbb4085774aa1f4fc263054a799eec641179fae527a74e482",
+      "match": true
+    },
+    {
+      "path": "Assets/Scripts/MainStageSectionSevenSetup.cs",
+      "sha256": "c5d3845135fa2a83de7b1c10200f5630fffbf25f96d144b977187e80c4d95513",
+      "build_input_sha256": "c5d3845135fa2a83de7b1c10200f5630fffbf25f96d144b977187e80c4d95513",
+      "match": true
+    },
+    {
+      "path": "Assets/Scripts/RopeController.cs",
+      "sha256": "3ef4a50076994279839f398652180256f5ec37c01b954eeefc67c79b831e25d6",
+      "build_input_sha256": "3ef4a50076994279839f398652180256f5ec37c01b954eeefc67c79b831e25d6",
+      "match": true
+    },
+    {
+      "path": "Assets/Scripts/RopePlatformBuilder.cs",
+      "sha256": "11ecb4c1870cb8ef0449343155559211a5e1d9e1321132bce0dcf8e14e279fd2",
+      "build_input_sha256": "11ecb4c1870cb8ef0449343155559211a5e1d9e1321132bce0dcf8e14e279fd2",
+      "match": true
+    },
+    {
+      "path": "Assets/Scripts/MainStageRespawnOnFall.cs",
+      "sha256": "314060136dfb7846ae7ebbc43cfaf0028625b839b4b9a05e9171d4f5830c4d8c",
+      "build_input_sha256": "314060136dfb7846ae7ebbc43cfaf0028625b839b4b9a05e9171d4f5830c4d8c",
+      "match": true
+    },
+    {
+      "path": "Assets/Scripts/MainStageCheckpoint.cs",
+      "sha256": "66663105dec1f99517efcd12d21b38711df56c8aa5a8e0175135793a04449033",
+      "build_input_sha256": "66663105dec1f99517efcd12d21b38711df56c8aa5a8e0175135793a04449033",
+      "match": true
+    },
+    {
+      "path": "Assets/Scripts/MainStageCheckpoint.cs.meta",
+      "sha256": "315e576ee7e91c15094f25be535968d47efaaed7f8499b15d83b7847f46c7be9",
+      "build_input_sha256": "315e576ee7e91c15094f25be535968d47efaaed7f8499b15d83b7847f46c7be9",
+      "match": true
+    }
+  ],
+  "old_intro_geometry_input_matches": [
+    {
+      "path": "Assets/Scenes/MainStage.unity",
+      "old_audit_input_sha256": "57d2464751b5b9c2a78e6c56f34197e9bc2629983fadaa1dff6e0ba0b4bc2284",
+      "frozen_build_input_sha256": "57d2464751b5b9c2a78e6c56f34197e9bc2629983fadaa1dff6e0ba0b4bc2284",
+      "match": true
+    },
+    {
+      "path": "Assets/Scripts/MainStageSectionThreeSetup.cs",
+      "old_audit_input_sha256": "b5f3f8cdf4644d93bc0faacd3462d06bcebb83366f0cc7af64a9d22e7afeff08",
+      "frozen_build_input_sha256": "b5f3f8cdf4644d93bc0faacd3462d06bcebb83366f0cc7af64a9d22e7afeff08",
+      "match": true
+    },
+    {
+      "path": "Assets/Scripts/MainStageSectionThreeRecoveryStairs.cs",
+      "old_audit_input_sha256": "299fd4ef8b12c0c741ecc2c55b24a5110f6db45c46f53ea31810330ac2ee8714",
+      "frozen_build_input_sha256": "299fd4ef8b12c0c741ecc2c55b24a5110f6db45c46f53ea31810330ac2ee8714",
+      "match": true
+    },
+    {
+      "path": "Assets/Scripts/MainStageSectionThreeRecoverySwitch.cs",
+      "old_audit_input_sha256": "740694ff88f82362da4c42170d5c415206d4d1808a83b07eb2d5ca75f32f0f1a",
+      "frozen_build_input_sha256": "740694ff88f82362da4c42170d5c415206d4d1808a83b07eb2d5ca75f32f0f1a",
+      "match": true
+    },
+    {
+      "path": "Assets/Scripts/MainStageSectionFourSetup.cs",
+      "old_audit_input_sha256": "c1173ea1c61b95a6ddd3994456ed34b0d5e1167c04a4edddd43fd6e13012a6dc",
+      "frozen_build_input_sha256": "c1173ea1c61b95a6ddd3994456ed34b0d5e1167c04a4edddd43fd6e13012a6dc",
+      "match": true
+    },
+    {
+      "path": "Assets/Scripts/MainStageSectionSevenSetup.cs",
+      "old_audit_input_sha256": "c5d3845135fa2a83de7b1c10200f5630fffbf25f96d144b977187e80c4d95513",
+      "frozen_build_input_sha256": "c5d3845135fa2a83de7b1c10200f5630fffbf25f96d144b977187e80c4d95513",
+      "match": true
+    },
+    {
+      "path": "Assets/Scripts/MainStageSectionSixSetup.cs",
+      "old_audit_input_sha256": "71b394fdf99a0edcbb4085774aa1f4fc263054a799eec641179fae527a74e482",
+      "frozen_build_input_sha256": "71b394fdf99a0edcbb4085774aa1f4fc263054a799eec641179fae527a74e482",
+      "match": true
+    },
+    {
+      "path": "Assets/Scripts/MainStageFloorCollisionSetup.cs",
+      "old_audit_input_sha256": "e5c1af6e2339d7ebfef9485e4b2c79e1c39b1d355b33ceae2d5d0045d480af3f",
+      "frozen_build_input_sha256": "e5c1af6e2339d7ebfef9485e4b2c79e1c39b1d355b33ceae2d5d0045d480af3f",
+      "match": true
+    },
+    {
+      "path": "Assets/Scripts/MainStageRespawnOnFall.cs",
+      "old_audit_input_sha256": "314060136dfb7846ae7ebbc43cfaf0028625b839b4b9a05e9171d4f5830c4d8c",
+      "frozen_build_input_sha256": "314060136dfb7846ae7ebbc43cfaf0028625b839b4b9a05e9171d4f5830c4d8c",
+      "match": true
+    }
+  ],
+  "layout": {
+    "Main Landing 2": {
+      "transform": {
+        "position": [
+          29.75,
+          -9.35
+        ],
+        "scale": [
+          9.5,
+          10.0
+        ],
+        "parent": "0"
+      },
+      "checkpoint": [
+        {
+          "floor": "Main Landing 2",
+          "section": 3,
+          "position": [
+            29.0,
+            -3.65
+          ]
+        }
+      ],
+      "box": {
+        "size": [
+          1.0,
+          1.0
+        ],
+        "offset": [
+          0.0,
+          0.0
+        ],
+        "trigger": false
+      },
+      "bounds": {
+        "left": 25.0,
+        "right": 34.5,
+        "top": -4.35
+      }
+    },
+    "Main Landing 3": {
+      "transform": {
+        "position": [
+          57.1,
+          -7.15
+        ],
+        "scale": [
+          15.0,
+          10.0
+        ],
+        "parent": "0"
+      },
+      "checkpoint": [
+        {
+          "floor": "Main Landing 3",
+          "section": 4,
+          "position": [
+            53.6,
+            -1.45
+          ]
+        }
+      ],
+      "box": {
+        "size": [
+          1.0,
+          1.0
+        ],
+        "offset": [
+          0.0,
+          0.0
+        ],
+        "trigger": false
+      },
+      "bounds": {
+        "left": 49.6,
+        "right": 64.6,
+        "top": -2.15
+      }
+    },
+    "Main Section 3 Low Dead End": {
+      "transform": {
+        "position": [
+          46.65,
+          -11.05
+        ],
+        "scale": [
+          5.9,
+          10.0
+        ],
+        "parent": "0"
+      },
+      "checkpoint": [],
+      "box": {
+        "size": [
+          1.0,
+          1.0
+        ],
+        "offset": [
+          0.0,
+          0.0
+        ],
+        "trigger": false
+      },
+      "bounds": {
+        "left": 43.7,
+        "right": 49.6,
+        "top": -6.05
+      }
+    },
+    "Main Section 3 Return Step A": {
+      "transform": {
+        "position": [
+          42.8,
+          -11.05
+        ],
+        "scale": [
+          1.8,
+          10.0
+        ],
+        "parent": "0"
+      },
+      "checkpoint": [],
+      "box": {
+        "size": [
+          1.0,
+          1.0
+        ],
+        "offset": [
+          0.0,
+          0.0
+        ],
+        "trigger": false
+      },
+      "bounds": {
+        "left": 41.9,
+        "right": 43.7,
+        "top": -6.05
+      }
+    },
+    "Main Section 3 Return Step B": {
+      "transform": {
+        "position": [
+          41.0,
+          -10.775
+        ],
+        "scale": [
+          1.8,
+          10.55
+        ],
+        "parent": "0"
+      },
+      "checkpoint": [],
+      "box": {
+        "size": [
+          1.0,
+          1.0
+        ],
+        "offset": [
+          0.0,
+          0.0
+        ],
+        "trigger": false
+      },
+      "bounds": {
+        "left": 40.1,
+        "right": 41.9,
+        "top": -5.5
+      }
+    },
+    "Main Section 3 Return Step C": {
+      "transform": {
+        "position": [
+          39.2,
+          -10.5
+        ],
+        "scale": [
+          1.8,
+          11.1
+        ],
+        "parent": "0"
+      },
+      "checkpoint": [],
+      "box": {
+        "size": [
+          1.0,
+          1.0
+        ],
+        "offset": [
+          0.0,
+          0.0
+        ],
+        "trigger": false
+      },
+      "bounds": {
+        "left": 38.3,
+        "right": 40.1,
+        "top": -4.95
+      }
+    },
+    "Main Section 3 Return Step D": {
+      "transform": {
+        "position": [
+          37.4,
+          -10.225
+        ],
+        "scale": [
+          1.8,
+          11.65
+        ],
+        "parent": "0"
+      },
+      "checkpoint": [],
+      "box": {
+        "size": [
+          1.0,
+          1.0
+        ],
+        "offset": [
+          0.0,
+          0.0
+        ],
+        "trigger": false
+      },
+      "bounds": {
+        "left": 36.5,
+        "right": 38.3,
+        "top": -4.4
+      }
+    },
+    "Main Section 4 Intermediate Column": {
+      "transform": {
+        "position": [
+          69.2,
+          -5.65
+        ],
+        "scale": [
+          1.8,
+          10.0
+        ],
+        "parent": "0"
+      },
+      "checkpoint": [],
+      "box": {
+        "size": [
+          1.0,
+          1.0
+        ],
+        "offset": [
+          0.0,
+          0.0
+        ],
+        "trigger": false
+      },
+      "bounds": {
+        "left": 68.3,
+        "right": 70.1,
+        "top": -0.65
+      }
+    },
+    "Main Section 4 Green Bridge Start Hook": {
+      "transform": {
+        "position": [
+          64.6,
+          -2.15
+        ],
+        "scale": [
+          0.62,
+          0.62
+        ],
+        "parent": "0"
+      },
+      "checkpoint": [],
+      "box": {
+        "size": [
+          1.0,
+          1.0
+        ],
+        "offset": [
+          0.0,
+          0.0
+        ],
+        "trigger": true
+      },
+      "bounds": {
+        "left": 64.29,
+        "right": 64.91,
+        "top": -1.84
+      }
+    },
+    "Main Section 4 Green Bridge End Hook": {
+      "transform": {
+        "position": [
+          68.3,
+          -0.65
+        ],
+        "scale": [
+          0.62,
+          0.62
+        ],
+        "parent": "0"
+      },
+      "checkpoint": [],
+      "box": {
+        "size": [
+          1.0,
+          1.0
+        ],
+        "offset": [
+          0.0,
+          0.0
+        ],
+        "trigger": true
+      },
+      "bounds": {
+        "left": 67.99,
+        "right": 68.61,
+        "top": -0.34
+      }
+    },
+    "Main S06 Merge": {
+      "transform": {
+        "position": [
+          151.1,
+          -7.15
+        ],
+        "scale": [
+          8.0,
+          10.0
+        ],
+        "parent": "0"
+      },
+      "checkpoint": [
+        {
+          "floor": "Main S06 Merge",
+          "section": 7,
+          "position": [
+            147.9,
+            -1.45
+          ]
+        }
+      ],
+      "box": {
+        "size": [
+          1.0,
+          1.0
+        ],
+        "offset": [
+          0.0,
+          0.0
+        ],
+        "trigger": false
+      },
+      "bounds": {
+        "left": 147.1,
+        "right": 155.1,
+        "top": -2.15
+      }
+    },
+    "Main S07 Middle Shelf": {
+      "transform": {
+        "position": [
+          159.4,
+          -0.7
+        ],
+        "scale": [
+          3.0,
+          0.7
+        ],
+        "parent": "0"
+      },
+      "checkpoint": [],
+      "box": {
+        "size": [
+          1.0,
+          1.0
+        ],
+        "offset": [
+          0.0,
+          0.0
+        ],
+        "trigger": false
+      },
+      "bounds": {
+        "left": 157.9,
+        "right": 160.9,
+        "top": -0.35
+      }
+    },
+    "Main S07 Upper Step": {
+      "transform": {
+        "position": [
+          163.5,
+          0.5
+        ],
+        "scale": [
+          3.0,
+          0.7
+        ],
+        "parent": "0"
+      },
+      "checkpoint": [],
+      "box": {
+        "size": [
+          1.0,
+          1.0
+        ],
+        "offset": [
+          0.0,
+          0.0
+        ],
+        "trigger": false
+      },
+      "bounds": {
+        "left": 162.0,
+        "right": 165.0,
+        "top": 0.85
+      }
+    },
+    "Main S07 Green Lower Bridge Start Hook": {
+      "transform": {
+        "position": [
+          155.1,
+          -2.15
+        ],
+        "scale": [
+          0.62,
+          0.62
+        ],
+        "parent": "0"
+      },
+      "checkpoint": [],
+      "box": {
+        "size": [
+          1.0,
+          1.0
+        ],
+        "offset": [
+          0.0,
+          0.0
+        ],
+        "trigger": true
+      },
+      "bounds": {
+        "left": 154.79,
+        "right": 155.41,
+        "top": -1.84
+      }
+    },
+    "Main S07 Green Middle Bridge End Hook": {
+      "transform": {
+        "position": [
+          157.9,
+          -0.35
+        ],
+        "scale": [
+          0.62,
+          0.62
+        ],
+        "parent": "0"
+      },
+      "checkpoint": [],
+      "box": {
+        "size": [
+          1.0,
+          1.0
+        ],
+        "offset": [
+          0.0,
+          0.0
+        ],
+        "trigger": true
+      },
+      "bounds": {
+        "left": 157.59,
+        "right": 158.21,
+        "top": -0.04
+      }
+    }
+  },
+  "metrics": {
+    "S3_low_floor_top": -6.05,
+    "main_fall_threshold": -9,
+    "S3_return_step_tops": [
+      -6.05,
+      -5.5,
+      -4.95,
+      -4.4
+    ],
+    "S4_respawn_to_bridge_start_X_delta": 11.0,
+    "S7_respawn_to_bridge_start_X_delta": 7.2,
+    "S7_middle_to_upper_horizontal_gap": 1.1,
+    "S7_middle_to_upper_top_difference": 1.2,
+    "meaning": "Static coordinate differences, not measured walking distance, time, difficulty, or minimum action counts."
+  },
+  "images": [
+    {
+      "id": "E11",
+      "file": "evidence/images/E11_S4_intro_legacy.png",
+      "original": "Docs/QA/MainStageVisualAudit_20261003/Evidence/Runtime05/Section04.png",
+      "sha256": "af8d2081189f745ba54d64938cc28a7b2c5eb9e17672623f0636b167ec092c2b",
+      "bytes": 2589589,
+      "width": 1920,
+      "height": 1080,
+      "section": "S4",
+      "method": "OLD_NATURAL_INTRO_NON_PLAY; player remained in S1; no generated bridge/retry capture",
+      "old_record_camera": {
+        "x": 76.99972534179688,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "old_record_ortho_size": 8.699999809265137,
+      "scope": "Geometry reference with nine matched input hashes; not exact whole visual parity or new frozen Build screenshot.",
+      "library_file_id": "libfile_879d704dc58081919d7525d16d643b65"
+    },
+    {
+      "id": "E12",
+      "file": "evidence/images/E12_S7_intro_legacy.png",
+      "original": "Docs/QA/MainStageVisualAudit_20261003/Evidence/Runtime05/Section07.png",
+      "sha256": "a2f79affb103f6badca1bdaa0e4d0917b810937203fcd20f334e87de6ed0b315",
+      "bytes": 2642801,
+      "width": 1920,
+      "height": 1080,
+      "section": "S7",
+      "method": "OLD_NATURAL_INTRO_NON_PLAY; player remained in S1; no generated bridge/retry capture",
+      "old_record_camera": {
+        "x": 163.9990997314453,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "old_record_ortho_size": 8.699999809265137,
+      "scope": "Geometry reference with nine matched input hashes; not exact whole visual parity or new frozen Build screenshot.",
+      "library_file_id": "libfile_d8af65014fa08191afc29c9d78205c59"
+    },
+    {
+      "id": "E13",
+      "file": "evidence/images/E13_S3_intro_legacy.png",
+      "original": "Docs/QA/MainStageVisualAudit_20261003/Evidence/Runtime05/Section03.png",
+      "sha256": "89d162b3ea400a2e8d4e2cf754f97db152cbdbdd2c864c47d6e8271a5b91f3f4",
+      "bytes": 2616789,
+      "width": 1920,
+      "height": 1080,
+      "section": "S3",
+      "method": "OLD_NATURAL_INTRO_NON_PLAY; player remained in S1; no generated bridge/retry capture",
+      "old_record_camera": {
+        "x": 42.98882293701172,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "old_record_ortho_size": 8.699999809265137,
+      "scope": "Geometry reference with nine matched input hashes; not exact whole visual parity or new frozen Build screenshot.",
+      "library_file_id": "libfile_8609d76d9ea48191ae113335754570c5"
+    }
+  ],
+  "excluded_later_StepB_image_reason": "Later diagnostic Production image uses integration inputs absent in fixed copy; not evidence of this Build appearance. No re-review of Human adoption.",
+  "later_StepB_input_presence": [
+    {
+      "path": "Assets/Scripts/MainS3MarkerVisual.cs",
+      "present_in_frozen_copy": false
+    },
+    {
+      "path": "Assets/Scripts/MainS3MarkerVisual.cs.meta",
+      "present_in_frozen_copy": false
+    },
+    {
+      "path": "Assets/Resources/MainS3Marker.shader",
+      "present_in_frozen_copy": false
+    },
+    {
+      "path": "Assets/Resources/MainS3Marker.shader.meta",
+      "present_in_frozen_copy": false
+    }
+  ],
+  "no_new_gameplay_or_rendering": true
+}

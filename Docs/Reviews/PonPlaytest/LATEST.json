@@ -13,11 +13,11 @@
   "published_commit": null,
   "continuation_cutoff_utc": "2026-10-16T23:00:00Z",
   "no_new_themes_after_utc": "2026-10-16T22:30:00Z",
-  "updated_utc": "2026-10-16T17:22:45.271339+00:00",
+  "updated_utc": "2026-10-16T17:44:25.190576+00:00",
   "continuation_configured": false,
   "parent_review": "APPROVED_42_FILES_WITH_MINOR_CORRECTIONS; UI_STATE_ADDENDUM_SEPARATE",
   "continuation_management": "PARENT",
-  "revision": 5,
+  "revision": 6,
   "addendum": "runs/20261017_004500JST/06_T4_S10_Addendum.md",
   "resource_retry_addendum": "runs/20261017_004500JST/07_Resource_Retry_Addendum.md",
   "A_observations": 0,
@@ -29,5 +29,8 @@
   "ui_state_parent_review": "APPROVED_R1_FOR_INTERMEDIATE_SAVE",
   "information_order": "runs/20261017_021315JST/09_FirstMinutes_InfoOrder.md",
   "information_order_manifest": "runs/20261017_021315JST/delivery-manifest.json",
-  "information_order_parent_review": "APPROVED_WITH_T4_ONE_BRIDGE_EACH_WORDING"
+  "information_order_parent_review": "APPROVED_WITH_T4_ONE_BRIDGE_EACH_WORDING",
+  "retry_learning": "runs/20261017_023417JST/10_Retry_Learning.md",
+  "retry_learning_manifest": "runs/20261017_023417JST/delivery-manifest.json",
+  "retry_learning_parent_review": "APPROVED_WITH_WORLD_SPACE_RETURN_WORDING"
 }

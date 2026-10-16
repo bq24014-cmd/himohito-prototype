@@ -1,0 +1,57 @@
+{
+  "utc": "2026-10-16T17:34:17.385934+00:00",
+  "classification": "B_LAYOUT_APPLIED_TO_EXISTING_STATE_CONTRACT; C_PLAY_EXPERIENCE",
+  "cases": [
+    {
+      "section": "S3",
+      "new_facts": [
+        "low floor top -6.05 is above fall threshold -9",
+        "F activates four step GameObjects before beginning visual reveal",
+        "no checkpoint on low floor",
+        "R return is an alternative in normal Main play"
+      ],
+      "recommendation": "KEEP/REWORK; no unconditional return-route deletion",
+      "unconfirmed": [
+        "actual traversal/return time",
+        "whether players choose R or stairs",
+        "whether lower-route choice teaches useful target selection"
+      ]
+    },
+    {
+      "section": "S4",
+      "conditional_repeat": "If the reference bridge+swing route fails before checkpoint5 acceptance, reuse of that route requires its bridge to be built again and the far-hook approach repeated.",
+      "new_facts": [
+        "no checkpoint on intermediate column",
+        "CP4 x53.6 vs authored bridge start x64.6, X delta11"
+      ],
+      "small_comparison": "Retry spawn within same start floor, e.g. x61.5, versus current x53.6; proposal only",
+      "loss": [
+        "space to inspect route after retry",
+        "R can skip initial approach after checkpoint acceptance",
+        "camera framing may change"
+      ],
+      "recommendation": "REWORK candidate; retain bridge+swing mechanic"
+    },
+    {
+      "section": "S7",
+      "conditional_repeat": "If the reference bridge→middle→upper→swing route fails before checkpoint9 acceptance, preceding bridge and height-transition tasks are repeated on that route.",
+      "new_facts": [
+        "middle and upper shelf have no checkpoint",
+        "middle/upper gap1.1, height difference1.2",
+        "CP7 x147.9 vs bridge start155.1, X delta7.2"
+      ],
+      "small_comparison": "Keep vertical task; compare same-floor retry spawn nearer bridge before considering a new middle checkpoint",
+      "loss": [
+        "arrival space from S6 merge",
+        "new midpoint would change section/snapshot/resource boundary"
+      ],
+      "recommendation": "KEEP/REWORK; not equivalent to S4 by geometry alone"
+    }
+  ],
+  "global_counterexamples": [
+    "Reference sequence is not proof of a mandatory route or minimum key count.",
+    "Longer/other rope lengths are allowed; alternative routes were not tested.",
+    "A coordinate difference is not actual walking distance or time.",
+    "No automatic QA PASS is treated as fun or retry ease."
+  ]
+}

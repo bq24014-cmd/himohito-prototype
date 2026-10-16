@@ -1,0 +1,48 @@
+{
+  "utc": "2026-10-16T17:34:17.385934+00:00",
+  "run_id": "20261017_023417JST",
+  "status": "PARENT_REVIEW_APPROVED_FOR_INTERMEDIATE_SAVE; REMOTE_CONFIRMATION_IN_PUBLICATION_RECEIPT",
+  "A_observations": 0,
+  "files": [
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_023417JST/10_Retry_Learning.md",
+      "bytes": 9908,
+      "sha256": "288194ab0ba1dd75e84557c1eab55797d4209cee8f70ef454eede089066214da"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_023417JST/evidence/images/E11_S4_intro_legacy.png",
+      "bytes": 2589589,
+      "sha256": "af8d2081189f745ba54d64938cc28a7b2c5eb9e17672623f0636b167ec092c2b"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_023417JST/evidence/images/E12_S7_intro_legacy.png",
+      "bytes": 2642801,
+      "sha256": "a2f79affb103f6badca1bdaa0e4d0917b810937203fcd20f334e87de6ed0b315"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_023417JST/evidence/images/E13_S3_intro_legacy.png",
+      "bytes": 2616789,
+      "sha256": "89d162b3ea400a2e8d4e2cf754f97db152cbdbdd2c864c47d6e8271a5b91f3f4"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_023417JST/evidence/retry-layout-facts.json",
+      "bytes": 18686,
+      "sha256": "a38ce79461797d5998e323a0f61653cb100160a0f717085906b098aa88d34b1e"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_023417JST/evidence/retry-learning-cases.json",
+      "bytes": 2548,
+      "sha256": "600ce12bcfcf0baaac0ad177c510744f5faf082b25c8969f12c60e6c3fb09be4"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_023417JST/evidence/retry-source-delta.md",
+      "bytes": 12821,
+      "sha256": "f0627727509afc9f994262b55d0f88c2cbed169cd2525f4a3d909f646a3585d0"
+    }
+  ],
+  "total_files_with_manifest": 8,
+  "image_files": 3,
+  "new_screenshots": 0,
+  "latest_published_commit": "02ac5a02f7169914b27a1f776f92d1b374d94fe3",
+  "parent_review_condition": "S3 means world-space return route; no proof of jump-free traversal"
+}
