@@ -1,31 +1,26 @@
-# pon｜ヒモヒト 夜間レビュー・第1チェックポイント
+# pon｜ヒモヒト 夜間レビュー・現時点の読解案
 
-更新：2026-10-17 01:31 JST。**実プレイはできていない。これは既存証拠と固定Buildソースのレビューである。** 08:00 JSTの最終報告ではなく、親レビュー済み42ファイルの中間保存資料。非操作の調査は親管理で継続中。
+**実プレイ不可、A=0。08:00 JSTの最終報告ではない。** 以下は既存証拠と10/6固定Buildソースの確認、未実施比較の提案を分けた訂正案。資料保存の承認は、ゲーム/UI変更や削除の承認ではない。
 
 | 朝に必要な項目 | 現在の結論 |
 |---|---|
-| 実プレイ | 不可。画面ランタイムが初回・再確認とも起動失敗。ゲームの起動・キー入力なし |
-| 対象候補 | FriendPlay_20261006_214500 / HimoHito_20261006。exeとAssembly-CSharp.dllは既存manifestのハッシュに一致 |
-| 到達範囲 | 今回はTutorial・MainStageとも未到達。旧Human確認はメニュー・Tutorial開始・ポーズから戻る・MainStage開始のみ |
-| 率直な総評 | 「身体を道に残し、支点を外して道の形を変える」構造に残す理由がある。一方、既定の長さとキー順を再現させる説明、終盤の単純な橋作成には判断が薄くなる可能性がある。操作感・楽しさの実測評価は保留 |
-| 最も面白かった場面 | 今回の体感としては選べない。設計と既存画像からの筆頭候補はT4の統合→梁下通過 |
-| 最も面白くなかった場面 | 今回の体感としては選べない。設計上の弱点候補は本編S10の最後の単純な橋作成 |
-| 削除・統合候補 | S10の独立した課題部分をS9後のゴールへの短い流れへ統合。次点はTutorial後のM1/M2再練習の圧縮。いずれもC・未承認 |
-| 最優先UI | Q案内の「この照準方向」を、実際の橋生成単位である「2つのフックの間」へ合わせる。資源消費と不可理由を保持する |
-| 朝最初の1件 | Q案内の現行文と修正文を、T3/T4の3条件で比較する小さい検証の採否判断。まだ実装しない |
-| GitHub | 親レビュー済みの42ファイルを専用branchへ中間保存する対象。確定commitとremote照合結果は保存後の親報告を参照 |
-| 未確認 | 全ルートの通常キー通過、最初の3分、失敗/復帰時間、音、10/6固定Buildの実Window/フォーカス/クリック、候補2 |
+| 対象と到達 | FriendPlay_20261006_214500 / HimoHito_20261006。exe/Assemblyはmanifest一致。今回Tutorial/Mainとも未到達、画面/通常入力/音0。最新版・全経路承認済みとは呼ばない |
+| 率直な総評 | 身体を道に残し、支点を外して形を変える構造には残す根拠がある。T3/T4には既に因果説明があり、自分の予測と判断へつながるかは未確認。終盤の反復と締めの価値も未試遊 |
+| 良い/弱い場面 | 体感の最良/最悪は選べない。筆頭候補はT4の中央除去→道の低下。S10の新判断と箱への到達の価値は未確認で、単純橋だから全体削除とはしない |
+| 区間の推奨 | S1共通導入KEEP。S7はS6→S9接続/CP9/F解放を保つREWORK。S10全体REMOVEは撤回し、CP10・箱への接近/開き・終点判定を残す限定MERGE比較へ |
+| 最優先UI | Q生成先が対のフック間なのはコード確認済み。「この照準方向」による誤予測と訂正文の効果は未実証。消費と不可理由を保つ文案比較が先 |
+| 朝最初の1件 | Q案内の生成先/消費予測比較を実施するかHumanが判断する。比較未実施であり、実証済み不具合の修正依頼ではない。Tutorial T3/T4と、事前パネルが無いMain直入の観察を分ける |
+| GitHubと版 | 公開状態はLATEST.jsonとremote照合済みcommitの親報告を参照。初期42資料/当時の承認待ち表記は履歴。追補の文案を実装済みUIとは読まない |
+| 未確認 | 通常キー全経路、最初の3分、Q/Fの予測理解、失敗/復帰時間、実Window/focus/クリック、音、候補2。静的な入力経路は実再現ではない |
 
-**Production・既存差分・凍結Build・過去証拠には書き込みを行っていない。** Unity起動、再Build、ゲーム入力、コード/Assets変更、reset/clean/stash/削除は行っていない。Productionの作業ツリーでgitコマンドも実行していない。
+Production・既存差分・凍結Build・過去証拠は保持。Unity起動、再Build、ゲーム入力、コード/Assets変更、reset/clean/stash/削除は行っていない。
 
 ## 読む順番
 
-- [ゲーム性・全区間の候補](01_Gameplay.md)
-- [UI原文→修正文→表示タイミング](02_UI.md)
-- [上位5案・朝の1件](03_Priorities.md)
-- [対象Build、証拠と限界](04_Evidence.md)
-- [仮説・反例・結論更新の記録](05_Cycles.md)
-- [継続状態](ContinuationState.json)
+- [ゲーム性・区間候補](01_Gameplay.md)、[UI案](02_UI.md)、[上位5案・朝の1件](03_Priorities.md)は訂正後の主資料として読む。
+- 推奨範囲は[14](https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_032112JST/14_Merge_Removal_Refutation.md)、UIの条件付き案文は[12](https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_030141JST/12_UI_Copy_Conditions.md)、メニュー実体は[13](https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_031026JST/13_Menu_Input_Affordance.md)を優先する。
+- 根拠は[06](https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_004500JST/06_T4_S10_Addendum.md)/[07](https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_004500JST/07_Resource_Retry_Addendum.md)/[09](https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_021315JST/09_FirstMinutes_InfoOrder.md)/[10](https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_023417JST/10_Retry_Learning.md)、未再現の入力候補は[08](https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_014618JST/08_UI_State_Addendum.md)、見せ場の比較計画は[11](https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_025050JST/11_Showcase_Prediction_Result.md)。
+- [04](04_Evidence.md)/[05](05_Cycles.md)と以下の日時付き節は当時の方法/判断履歴。『未公開』『承認待ち』『次は未精査』を現在の公開状態や未着手一覧へ読み替えない。
 
 ## 評価区分
 

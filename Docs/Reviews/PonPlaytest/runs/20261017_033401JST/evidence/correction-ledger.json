@@ -1,0 +1,297 @@
+{
+  "utc": "2026-10-16T18:38:31.579266+00:00",
+  "status": "PENDING_PARENT_REVIEW; PATCH_NOT_APPLIED",
+  "A_observations": 0,
+  "edit_count_is_not_bug_or_contradiction_count": true,
+  "proposed_edits": [
+    {
+      "target": "runs/20261017_004500JST/README.md",
+      "topic": "Reader summary supersedes stale first-checkpoint conclusions",
+      "line_in_sequential_draft": 1,
+      "old_excerpt": "# pon｜ヒモヒト 夜間レビュー・第1チェックポイント\n\n更新：2026-10-17 01:31 JST。**実プレイはできていない。これは既存証拠と固定Buildソースのレビューである。** 08:00 JSTの最終報告ではなく、親レビュー済み42ファイルの中間保存資料。非操作の調査は親管理で継続中。\n\n| 朝に必要な項目 | 現在の結論 |\n|---|---|\n| 実プレイ | 不可。画面ランタイムが初回・再確認とも起動失敗。ゲー",
+      "new_excerpt": "# pon｜ヒモヒト 夜間レビュー・現時点の読解案\n\n**実プレイ不可、A=0。08:00 JSTの最終報告ではない。** 以下は既存証拠と10/6固定Buildソースの確認、未実施比較の提案を分けた訂正案。資料保存の承認は、ゲーム/UI変更や削除の承認ではない。\n\n| 朝に必要な項目 | 現在の結論 |\n|---|---|\n| 対象と到達 | FriendPlay_20261006_214500 / HimoHito_20261006。exe/Assemblyはmanifest一致。今回Tutorial/Mainとも未到達、画面/通常入力/音0。最新版・全経路承認済みとは呼ばない |\n| 率直な総評 | 身体を道に残し、支点を外し",
+      "support": [
+        "https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_021315JST/09_FirstMinutes_InfoOrder.md",
+        "https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_025050JST/11_Showcase_Prediction_Result.md",
+        "https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_030141JST/12_UI_Copy_Conditions.md",
+        "https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_031026JST/13_Menu_Input_Affordance.md",
+        "https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_032112JST/14_Merge_Removal_Refutation.md"
+      ],
+      "status": "PROPOSED_NOT_APPLIED"
+    },
+    {
+      "target": "runs/20261017_004500JST/README.md",
+      "topic": "Explicit topic precedence while retaining dated evidence",
+      "line_in_sequential_draft": 18,
+      "old_excerpt": "## 読む順番\n\n- [ゲーム性・全区間の候補](01_Gameplay.md)\n- [UI原文→修正文→表示タイミング](02_UI.md)\n- [上位5案・朝の1件](03_Priorities.md)\n- [対象Build、証拠と限界](04_Evidence.md)\n- [仮説・反例・結論更新の記録](05_Cycles.md)\n- [継続状態](ContinuationState.json)\n\n",
+      "new_excerpt": "## 読む順番\n\n- [ゲーム性・区間候補](01_Gameplay.md)、[UI案](02_UI.md)、[上位5案・朝の1件](03_Priorities.md)は訂正後の主資料として読む。\n- 推奨範囲は[14](https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_032112JST/14_Merge_Removal_Refutation.md)、UIの条件付き案文は[12](https://github.co",
+      "support": [
+        "https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_014618JST/08_UI_State_Addendum.md",
+        "https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_030141JST/12_UI_Copy_Conditions.md",
+        "https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_031026JST/13_Menu_Input_Affordance.md",
+        "https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_032112JST/14_Merge_Removal_Refutation.md"
+      ],
+      "status": "PROPOSED_NOT_APPLIED"
+    },
+    {
+      "target": "runs/20261017_004500JST/01_Gameplay.md",
+      "topic": "S1 common introduction is retained",
+      "line_in_sequential_draft": 55,
+      "old_excerpt": "| S1 MERGE候補 | Tutorial1後に単フック振り子の再確認。新しい判断が増えなければ反復 | Tutorial済みの人の助走・接続練習を短い入口として圧縮する比較。初回Main直入の人への安全な開始は残す | 基本の再確認と本編の見た目への慣れを失う。Tutorial未経験でMainを選べるので完全削除は危険 |",
+      "new_excerpt": "| S1 KEEP／限定MERGE比較 | Tutorial未経験でMainを選べる。Mainは選択長7/残量50へ独立初期化し、CP受理は未接続が必要。Tutorial最初のCPとは条件が違う | 共通導入と解除の機会を保持。既習の単フック再確認だけをS2助走と兼ねられるか比較 | S1全体削除は勧めない。直入群で接続/解除/長さ修正が失われたら短縮を撤回。実試遊なし |",
+      "support": [
+        "https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_032112JST/14_Merge_Removal_Refutation.md"
+      ],
+      "status": "PROPOSED_NOT_APPLIED"
+    },
+    {
+      "target": "runs/20261017_004500JST/01_Gameplay.md",
+      "topic": "S7 checkpoint and F-unlock dependency",
+      "line_in_sequential_draft": 61,
+      "old_excerpt": "| S7 REWORK | 橋4→棚→ジャンプ→振り子5。S4と同じ「橋の後に振る」反復になる恐れ | S6の選択で何が変わったかを検証。道順を増やさず、連続操作を考える場として必要か比較 | 削ると上下移動・ジャンプを組み合わせる応用を失う。S6合流からS9入口23の資源条件に影響 |",
+      "new_excerpt": "| S7 REWORK／接続・CP9保持 | 橋後の振り子に加え中段→上段の高さ判断がある。着地床CP9は区間9/下限23を受理し、S9のFを解放する | 後半失敗後の既習準備/接近の圧縮を先に比較。初回高さ接続とCP9は残す | S6→S9接続/保存/解放を一括で削らない。参考支出4を省くだけでも資源差が変わる。重複感は未測定 |",
+      "support": [
+        "https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_023417JST/10_Retry_Learning.md",
+        "https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_032112JST/14_Merge_Removal_Refutation.md"
+      ],
+      "status": "PROPOSED_NOT_APPLIED"
+    },
+    {
+      "target": "runs/20261017_004500JST/01_Gameplay.md",
+      "topic": "S10 withdrawal of broad REMOVE recommendation",
+      "line_in_sequential_draft": 64,
+      "old_excerpt": "| S10 MERGE/REMOVE候補 | 端点間9、推奨橋10、入口最低11。追加の単純橋を作って歩く。CPの補充により過去の節約が必須条件になりにくい | S9の達成後にゴールへ流れる短い締めへ統合した場合と比較。橋を作る最後の意味が伝わるなら短いままKEEPもあり | 最後に身体を減らして箱へ届く余韻、残量差、Clear地図の最後の橋を失う。箱/地形/ゴール判定/CP/残量/地図への影響は中。今夜は変更しない |",
+      "new_excerpt": "| S10 限定MERGE/短縮比較（全体REMOVE撤回） | 新しいキーは無いが、CP10は参考S9成功を保護し、箱接近/開きが終点判定に関わる | 独立課題としての再準備を締めへまとめる比較まで。最後のQを含め、安全に削れる必須操作は未特定 | CP10/箱/終点判定/到達可能性を保持。箱marker不在の旧判定やS9再実行を招かない。実通過なし |",
+      "support": [
+        "https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_004500JST/06_T4_S10_Addendum.md",
+        "https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_032112JST/14_Merge_Removal_Refutation.md"
+      ],
+      "status": "PROPOSED_NOT_APPLIED"
+    },
+    {
+      "target": "runs/20261017_004500JST/01_Gameplay.md",
+      "topic": "T3 existing explanation and example versus dynamic cost",
+      "line_in_sequential_draft": 48,
+      "old_excerpt": "| T3 REWORK | E→Qで橋を作り99→92という説明。生成は指定フック間。Qポップアップは「この照準方向へ」と表現 | 「2つのフックの間に橋を作る」「橋に使うヒモ7」を並べる。身体→道の対応が初めて分かる価値 | 削除で通常接続の無消費と橋の消費の区別を失う。T4の2本作成が作業化する |",
+      "new_excerpt": "| T3 REWORK | 既に無料接続/身体消費/消費7/99→92を説明する。Q原文は「この照準方向」 | 説明を新設せず生成単位と表現を合わせる。99→92は残量99で長さ7を使う例、実費用は動的値 | 削除で無消費接続と橋消費の区別を失う。理解の成立は未試遊 |",
+      "support": [
+        "https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_021315JST/09_FirstMinutes_InfoOrder.md",
+        "https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_030141JST/12_UI_Copy_Conditions.md"
+      ],
+      "status": "PROPOSED_NOT_APPLIED"
+    },
+    {
+      "target": "runs/20261017_004500JST/01_Gameplay.md",
+      "topic": "T4 explanation already exists and success is not presupposed",
+      "line_in_sequential_draft": 24,
+      "old_excerpt": "強める最小案：F前後を同じ画角で見比べられる案内。",
+      "new_excerpt": "強める最小案：既存の概要/字幕に理由があることを前提に、F前後の見比べと情報順を比較する。F直後は「何が変わった？ 次はどう進めそう？」を聞き、通過の理由は実通過後に確認する。",
+      "support": [
+        "https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_004500JST/06_T4_S10_Addendum.md",
+        "https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_025050JST/11_Showcase_Prediction_Result.md"
+      ],
+      "status": "PROPOSED_NOT_APPLIED"
+    },
+    {
+      "target": "runs/20261017_004500JST/02_UI.md",
+      "topic": "Q actual target/cost copy",
+      "line_in_sequential_draft": 11,
+      "old_excerpt": "- **修正文**：タイトル「2つのフックの間に橋を作る」／資源「使うヒモ {n}」／実行可能時「Q　橋を作る」。詳細ヘルプに「作った橋からヒモを取り戻すことはできません。Rで直前の復帰地点からやり直すと、復帰地点に保存された状態に戻ります」。通常回収と区間の巻き戻しを分ける。",
+      "new_excerpt": "- **修正文**：有効な組が分かる時「2つのフックの間に橋を作る」／費用「作ると使うヒモ {n}」／実行可能時だけ「Q　橋を作る」。nは今の接続長。通常回収不可とRの保存状態への復帰は詳細ヘルプで分ける。",
+      "support": [
+        "https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_030141JST/12_UI_Copy_Conditions.md"
+      ],
+      "status": "PROPOSED_NOT_APPLIED"
+    },
+    {
+      "target": "runs/20261017_004500JST/02_UI.md",
+      "topic": "Q panel gating preserves invalid-target message",
+      "line_in_sequential_draft": 12,
+      "old_excerpt": "- **表示タイミング**：橋用フックに接続した時。作れない状態では実行可能の見出しを出さず、下記不可理由を表示。語の変更だけで生成仕様は変えない。",
+      "new_excerpt": "- **表示タイミング**：既存TutorialパネルはQ解放後の接続/正の費用等が条件で、橋用フック限定ではない。組が分からない場合は不可理由を保持し、パネル全体を有効フックだけへ狭めない。Mainに同じ事前パネルが既にあるとはしない。",
+      "support": [
+        "https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_021315JST/09_FirstMinutes_InfoOrder.md",
+        "https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_030141JST/12_UI_Copy_Conditions.md"
+      ],
+      "status": "PROPOSED_NOT_APPLIED"
+    },
+    {
+      "target": "runs/20261017_004500JST/02_UI.md",
+      "topic": "Q rejection wording retains at-least reserve and cause limits",
+      "line_in_sequential_draft": 20,
+      "old_excerpt": "- **修正文**：残量不足「橋を作ったあとに、ヒモを{最低残量}残す必要があります」／長さ不足「橋にする長さが足りません。Eで外し、Wで長くする」／対象外「このフックからは橋を作れません」。方向指定は本当にその段階だけに限定。",
+      "new_excerpt": "- **修正文**：残量不足「橋を作ったあとも、ヒモを{最低残量}以上残してください。」／長さ不足を特定できる時「橋にする長さが足りません。Eで外し、Wで長くする」／対象外「この接続先では橋を作れません」／原因未特定「この状態では橋を作れません」。CanBuild=falseだけで長さや方向を決めない。",
+      "support": [
+        "https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_030141JST/12_UI_Copy_Conditions.md"
+      ],
+      "status": "PROPOSED_NOT_APPLIED"
+    },
+    {
+      "target": "runs/20261017_004500JST/02_UI.md",
+      "topic": "Selected length is distinct from remaining resource",
+      "line_in_sequential_draft": 35,
+      "old_excerpt": "| W / S | 次に使う長さを選ぶ（未接続時） | 接続中はEで外す。選択値は次の接続で使う |",
+      "new_excerpt": "| W / S | 次に使う長さを選ぶ（未接続時） | Wで長く、Sで短く。接続中に変えるにはEで外す。選択長は次の接続とFの照準範囲にも関わる |",
+      "support": [
+        "https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_030141JST/12_UI_Copy_Conditions.md"
+      ],
+      "status": "PROPOSED_NOT_APPLIED"
+    },
+    {
+      "target": "runs/20261017_004500JST/02_UI.md",
+      "topic": "F merge versus S3 switch",
+      "line_in_sequential_draft": 39,
+      "old_excerpt": "| F | 中央フックを外し、橋を1本にする | ヒモを外し、2本が集まる中央を狙う。S3のスイッチでは戻り足場を出す |",
+      "new_excerpt": "| F | 中央フックを外し、橋を1本にする | 統合は解放済み・未接続で届く範囲の中央を狙い、橋2本が必要。S3スイッチは近くでFを押す別操作で、照準/未接続を一律要求しない |",
+      "support": [
+        "https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_030141JST/12_UI_Copy_Conditions.md"
+      ],
+      "status": "PROPOSED_NOT_APPLIED"
+    },
+    {
+      "target": "runs/20261017_004500JST/02_UI.md",
+      "topic": "R checkpoint versus clear restart and snapshot contents",
+      "line_in_sequential_draft": 40,
+      "old_excerpt": "| R | この区間からやり直す | 橋・ヒモ残量も直前の復帰地点に保存した状態へ戻る |",
+      "new_excerpt": "| R | 直前の復帰地点からやり直す | 橋・外したフック・ヒモ残量・選んだ長さもその地点の状態へ。Clearの再開始Rとは区別 |",
+      "support": [
+        "https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_014618JST/08_UI_State_Addendum.md",
+        "https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_030141JST/12_UI_Copy_Conditions.md",
+        "https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_031026JST/13_Menu_Input_Affordance.md"
+      ],
+      "status": "PROPOSED_NOT_APPLIED"
+    },
+    {
+      "target": "runs/20261017_004500JST/02_UI.md",
+      "topic": "Menu visual/event distinction remains a comparison",
+      "line_in_sequential_draft": 51,
+      "old_excerpt": "- **修正文**：「R　この区間からやり直す」「Z　看板を読む」「Z　閉じる」。クリック可能にするなら文字へ「クリック」まで足す必要はない。",
+      "new_excerpt": "- **修正文**：「R　直前の復帰地点から」「Z　看板を読む」「Z　閉じる」。採用済みクリック対応とは読まない。ヘルプの文字風「閉じる」はButton、操作キー一覧はLabelという逆の見た目差もある。実focus/クリックは未確認。",
+      "support": [
+        "https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_031026JST/13_Menu_Input_Affordance.md"
+      ],
+      "status": "PROPOSED_NOT_APPLIED"
+    },
+    {
+      "target": "runs/20261017_004500JST/02_UI.md",
+      "topic": "U06 detached-state instruction",
+      "line_in_sequential_draft": 67,
+      "old_excerpt": "- **扱い/修正文**：最初「ヒモが長いほど、低く振れます。トゲに当たらない長さを選ぼう。」／詳しいヒント「Eで外し、W/Sで6〜7にして試す」。",
+      "new_excerpt": "- **扱い/修正文**：最初「ヒモが長いほど、低く振れます。トゲに当たらない長さを選ぼう。」／詳しいヒント「ヒモを外した状態で、W/Sで6〜7を選び、Eで掛ける。」。看板開閉で既に解除されるため、閉じた後の余分なEを命令しない。",
+      "support": [
+        "https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_014618JST/08_UI_State_Addendum.md",
+        "https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_030141JST/12_UI_Copy_Conditions.md"
+      ],
+      "status": "PROPOSED_NOT_APPLIED"
+    },
+    {
+      "target": "runs/20261017_004500JST/02_UI.md",
+      "topic": "T3 resource example and existing causal explanation",
+      "line_in_sequential_draft": 75,
+      "old_excerpt": "- **扱い/修正文**：タイトル「ヒモを橋にする」／概要「対岸へヒモを掛け、Qで橋にしよう。」／消費「体のヒモを7使い、橋として残します。99 → 92」。文章と図の両方で身体と道の関係を残す。",
+      "new_excerpt": "- **扱い/修正文**：タイトル「ヒモを橋にする」／概要「対岸へヒモを掛け、Qで橋にしよう。」／例「体のヒモを7使い、橋に残します。99 → 92（残量99で長さ7を使った例）。」。無料接続と身体消費の既存説明を再新設せず、Q前の実費用は{n}で分ける。",
+      "support": [
+        "https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_021315JST/09_FirstMinutes_InfoOrder.md",
+        "https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_030141JST/12_UI_Copy_Conditions.md"
+      ],
+      "status": "PROPOSED_NOT_APPLIED"
+    },
+    {
+      "target": "runs/20261017_004500JST/02_UI.md",
+      "topic": "T3 guide versus live popup timing",
+      "line_in_sequential_draft": 76,
+      "old_excerpt": "- **表示タイミング**：T3看板とQ実行前。旧99→93の不具合を再発扱いしない。",
+      "new_excerpt": "- **表示タイミング**：7/99→92はT3看板の例。Q前パネルは今の接続長による実費用を使う。旧99→93を再発扱いせず、例の値を現在残量と混同しない。",
+      "support": [
+        "https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_030141JST/12_UI_Copy_Conditions.md"
+      ],
+      "status": "PROPOSED_NOT_APPLIED"
+    },
+    {
+      "target": "runs/20261017_004500JST/02_UI.md",
+      "topic": "T4 exact bridge instruction and existing explanation",
+      "line_in_sequential_draft": 83,
+      "old_excerpt": "- **扱い/修正文**：概要「2本の橋では、梁に当たります。中央のフックを外すと、橋が下がります。」／操作「ヒモを外し、中央の青いフックを狙ってF。」／補助「左右に長さ6の橋を1本ずつ作る」。",
+      "new_excerpt": "- **扱い/修正文**：概要「2本の橋では、梁に当たります。中央のフックを外すと、橋が下がります。」／操作「ヒモを外した状態で、届く範囲の中央の青いフックを狙ってF。」／補助「左岸と中央、中央と右岸に、長さ6の橋を1本ずつ作る。」。因果説明は既にあるため表示順の比較に限定する。",
+      "support": [
+        "https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_004500JST/06_T4_S10_Addendum.md",
+        "https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_021315JST/09_FirstMinutes_InfoOrder.md",
+        "https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_030141JST/12_UI_Copy_Conditions.md"
+      ],
+      "status": "PROPOSED_NOT_APPLIED"
+    },
+    {
+      "target": "runs/20261017_004500JST/02_UI.md",
+      "topic": "Pause help entry is retained",
+      "line_in_sequential_draft": 115,
+      "old_excerpt": "- **扱い/修正文**：「0％で無音。音量は自動で保存されます。」。「初期音量に戻す」は機能が分かるためKEEP。",
+      "new_excerpt": "- **扱い/修正文**：「0％で無音。音量は自動で保存されます。」。ポーズ内の近い位置に「Tab　操作説明」を残す。「初期音量に戻す」はKEEP。通常画面のTab重複を減らすことと、ポーズ内の入口削除を混ぜない。",
+      "support": [
+        "https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_014618JST/08_UI_State_Addendum.md",
+        "https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_031026JST/13_Menu_Input_Affordance.md"
+      ],
+      "status": "PROPOSED_NOT_APPLIED"
+    },
+    {
+      "target": "runs/20261017_004500JST/02_UI.md",
+      "topic": "R saved state replaces obsolete section-start copy",
+      "line_in_sequential_draft": 131,
+      "old_excerpt": "- **扱い/修正文**：見出し「落下しました」。補足「Rで、この区間の始めから。橋とヒモ残量も戻ります。」。原因が実際に記録できている場合だけ「トゲに触れて、ヒモが外れました」等を候補にする。ログにない原因は捏造しない。",
+      "new_excerpt": "- **扱い/修正文**：見出し「落下しました」。主行「R　直前の復帰地点から」。補足「橋・外したフック・ヒモ残量・選んだ長さも、その地点の状態に戻ります。」。記録できないトゲ/解除原因を付け足さず、全回復や現在接続の保持も約束しない。",
+      "support": [
+        "https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_014618JST/08_UI_State_Addendum.md",
+        "https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_030141JST/12_UI_Copy_Conditions.md"
+      ],
+      "status": "PROPOSED_NOT_APPLIED"
+    },
+    {
+      "target": "runs/20261017_004500JST/02_UI.md",
+      "topic": "Old screenshot text versus frozen original and proposal",
+      "line_in_sequential_draft": 3,
+      "old_excerpt": "分類B＝既存画像と固定ソースの照合、C＝実Window/通常入力で確認が必要。",
+      "new_excerpt": "分類B＝既存画像と固定ソースの照合、C＝実Window/通常入力で確認が必要。原文欄は10/6固定ソース、修正文は未実装の案。E06の9/30概要「深い谷の下」は10/6の「梁の下」と異なり、旧画像の文言を固定版へ代入しない。",
+      "support": [
+        "https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_021315JST/09_FirstMinutes_InfoOrder.md"
+      ],
+      "status": "PROPOSED_NOT_APPLIED"
+    },
+    {
+      "target": "runs/20261017_004500JST/03_Priorities.md",
+      "topic": "Top-five scope/status and morning one task",
+      "line_in_sequential_draft": 1,
+      "old_excerpt": "# 優先改善5件と朝の最初の作業\n\n順位は「面白さへつながる理解」「既存仕組みを生かす」「範囲の小ささ」「比較のしやすさ」で付けた暫定案。所要日数・改善率は約束しない。今回の作業は資料のみで、ゲーム実装は行わない。\n\n## 1. Q案内を「照準方向」から「フック間の橋」へ合わせる（B、効果はC）\n\n- **期待する体験**：プレイヤーがQ前に、どこが道になり、身体をいくら使うか予測できる。操作成功だけでなく身体→道の理解につなげる。\n-",
+      "new_excerpt": "# 優先改善5件と朝の最初の作業｜訂正案\n\n**A=0、全て未実装。順位は維持するが、効果は未実証。** コードで確かめた仕様と文案比較を分ける。08のポーズ/ヘルプ中R/Q/F/マウス受付は未再現の別候補で、通常操作で実証された場合にHumanが順位を見直す。\n\n## 1. Q生成先・費用を予測できるか比較する\n\n- **確認済みB**：橋は対のフック間、消費は今の接続長。原文には「この照準方向」がある。Humanの誤予測や訂正文の改善効果は未実証Cで、再現済み不具合の修正とは呼ばない。\n- **期待する体験**：Q前に道になる場所と身体消費を予測できる。\n- **変更範囲の候補**：Tutorialパネルの文言/必要条件。案は「",
+      "support": [
+        "https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_014618JST/08_UI_State_Addendum.md",
+        "https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_021315JST/09_FirstMinutes_InfoOrder.md",
+        "https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_025050JST/11_Showcase_Prediction_Result.md",
+        "https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_030141JST/12_UI_Copy_Conditions.md",
+        "https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_031026JST/13_Menu_Input_Affordance.md",
+        "https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_032112JST/14_Merge_Removal_Refutation.md"
+      ],
+      "status": "PROPOSED_NOT_APPLIED"
+    }
+  ],
+  "target_original_sha256": {
+    "runs/20261017_004500JST/README.md": "30af907e98ce17c56a292bd67ffca223af0caa6da95fdb0d7309451bdacda3a8",
+    "runs/20261017_004500JST/01_Gameplay.md": "56672c28768f5e1ca47ee39a901bda774795702014a3bd2664b6f2b85a38de89",
+    "runs/20261017_004500JST/02_UI.md": "6d1606a353d9a0b91c9040dd44f7ad82ec6338c046dd3cd07d3dd5ed8ee7e5f4",
+    "runs/20261017_004500JST/03_Priorities.md": "8097ef72b90150bca691fdad366b958aed26fd199fcaf55c01a829f5a0aeb7f3"
+  },
+  "patch_git_apply_check_only": true,
+  "patch_check_arguments": [
+    "git",
+    "apply",
+    "--check",
+    "--ignore-space-change"
+  ],
+  "line_ending_boundary": "Existing primary files and their HEAD blobs contain CRLF; plain LF-hunk --check failed, whitespace-tolerant read-only check passes. Original byte hashes must match before any future approved application. No files were normalized or patched.",
+  "original_files_unchanged": true,
+  "non_conflicts": [
+    "T3/T4 existing explanations and the wood-label/Button distinction were already described in the initial reports; this audit reinforces them rather than inventing a contradiction.",
+    "07 reference cost path versus14 omitted-cost arithmetic use different assumptions; do not replace reference values.",
+    "06/08/09 earlier proposal copy remains history;12 supplies scoped updated copy.",
+    "08 old 未公開 heading and04/05 old future-work notes are historical snapshot labels, not current publication status.",
+    "All A remains0; source hash counts overlap and are not additive independent tests."
+  ]
+}

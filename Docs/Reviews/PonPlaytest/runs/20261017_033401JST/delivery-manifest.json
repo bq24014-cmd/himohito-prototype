@@ -1,0 +1,33 @@
+{
+  "utc": "2026-10-16T18:38:31.579266+00:00",
+  "run_id": "20261017_033401JST",
+  "status": "PENDING_PARENT_REVIEW; PATCH_NOT_APPLIED; NOT_COMMITTED_OR_PUSHED",
+  "A_observations": 0,
+  "files": [
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_033401JST/15_Consistency_Correction_Proposal.md",
+      "bytes": 5498,
+      "sha256": "b6a9a484293c9bd0894e5e5e2851de37fffab972c7b31c0e5b9df53b520f5173"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_033401JST/evidence/correction-ledger.json",
+      "bytes": 30579,
+      "sha256": "127cd5b30c2a6f7c585ebec29469d1fd6744654926e1020e0d39297e9f524820"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_033401JST/evidence/proposed-primary-docs.patch",
+      "bytes": 44037,
+      "sha256": "fe8884d1886dbc8857ff5cb2aee9ca3a0beeefa2b21b72536e1965eb3b495956"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_033401JST/evidence/reconciliation-source-index.json",
+      "bytes": 8652,
+      "sha256": "054e8ac846473340cb7780321842eaad49ca7f3feb3a04075aa874e735313e5e"
+    }
+  ],
+  "total_files_with_manifest": 5,
+  "image_files": 0,
+  "proposed_primary_edits": 4,
+  "current_primary_files_changed": 0,
+  "latest_published_commit": "a31545d974ed4f5a1578b7c9a61698e4236f794e"
+}

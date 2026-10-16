@@ -13,11 +13,11 @@
   "published_commit": null,
   "continuation_cutoff_utc": "2026-10-16T23:00:00Z",
   "no_new_themes_after_utc": "2026-10-16T22:30:00Z",
-  "updated_utc": "2026-10-16T18:27:30.737316+00:00",
+  "updated_utc": "2026-10-16T18:43:37.182599+00:00",
   "continuation_configured": false,
   "parent_review": "APPROVED_42_FILES_WITH_MINOR_CORRECTIONS; UI_STATE_ADDENDUM_SEPARATE",
   "continuation_management": "PARENT",
-  "revision": 10,
+  "revision": 11,
   "addendum": "runs/20261017_004500JST/06_T4_S10_Addendum.md",
   "resource_retry_addendum": "runs/20261017_004500JST/07_Resource_Retry_Addendum.md",
   "A_observations": 0,
@@ -44,5 +44,11 @@
   "menu_input_parent_review": "APPROVED_NO_REQUIRED_CORRECTIONS",
   "removal_refutation": "runs/20261017_032112JST/14_Merge_Removal_Refutation.md",
   "removal_refutation_manifest": "runs/20261017_032112JST/delivery-manifest.json",
-  "removal_refutation_parent_review": "APPROVED_NO_REQUIRED_CORRECTIONS"
+  "removal_refutation_parent_review": "APPROVED_NO_REQUIRED_CORRECTIONS",
+  "consistency_proposal": "runs/20261017_033401JST/15_Consistency_Correction_Proposal.md",
+  "consistency_proposal_status": "PRE_APPLICATION_HISTORY_PRESERVED",
+  "consistency_applied": "runs/20261017_034337JST/16_Consistency_Application_Record.md",
+  "consistency_applied_manifest": "runs/20261017_034337JST/delivery-manifest.json",
+  "primary_documents_status": "CORRECTIONS_APPLIED_REVIEW_DOCS_ONLY",
+  "primary_documents_parent_review": "APPROVED_4_DOCS_AND_PROPOSAL_5_WITH_SEPARATE_APPLICATION_RECORD"
 }

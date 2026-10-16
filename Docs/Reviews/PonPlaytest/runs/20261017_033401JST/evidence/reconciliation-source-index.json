@@ -1,0 +1,152 @@
+{
+  "utc": "2026-10-16T18:38:31.579266+00:00",
+  "audited_reports": [
+    {
+      "name": "01_Gameplay.md",
+      "path": "runs/20261017_004500JST/01_Gameplay.md",
+      "sha256": "56672c28768f5e1ca47ee39a901bda774795702014a3bd2664b6f2b85a38de89",
+      "lines": 78,
+      "url": "https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_004500JST/01_Gameplay.md"
+    },
+    {
+      "name": "02_UI.md",
+      "path": "runs/20261017_004500JST/02_UI.md",
+      "sha256": "6d1606a353d9a0b91c9040dd44f7ad82ec6338c046dd3cd07d3dd5ed8ee7e5f4",
+      "lines": 158,
+      "url": "https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_004500JST/02_UI.md"
+    },
+    {
+      "name": "03_Priorities.md",
+      "path": "runs/20261017_004500JST/03_Priorities.md",
+      "sha256": "8097ef72b90150bca691fdad366b958aed26fd199fcaf55c01a829f5a0aeb7f3",
+      "lines": 55,
+      "url": "https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_004500JST/03_Priorities.md"
+    },
+    {
+      "name": "04_Evidence.md",
+      "path": "runs/20261017_004500JST/04_Evidence.md",
+      "sha256": "bd70639a82cba1982a9cbff9ae7a006bbf30bafeb7eae47d814467424104d224",
+      "lines": 91,
+      "url": "https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_004500JST/04_Evidence.md"
+    },
+    {
+      "name": "05_Cycles.md",
+      "path": "runs/20261017_004500JST/05_Cycles.md",
+      "sha256": "4d0235e2047fd317b64c8367e6bb6d4a364ed688f478f7f70fb8c59bfc93b509",
+      "lines": 65,
+      "url": "https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_004500JST/05_Cycles.md"
+    },
+    {
+      "name": "06_T4_S10_Addendum.md",
+      "path": "runs/20261017_004500JST/06_T4_S10_Addendum.md",
+      "sha256": "1c74cf54a0fa0c6784a5c0cc77dbbc011297266717baaa1d6f42836fa0dc6526",
+      "lines": 107,
+      "url": "https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_004500JST/06_T4_S10_Addendum.md"
+    },
+    {
+      "name": "07_Resource_Retry_Addendum.md",
+      "path": "runs/20261017_004500JST/07_Resource_Retry_Addendum.md",
+      "sha256": "e7193d20b3139c43a0fac8ce3d5b23c20abb2067add830bade19aad9d3da2a47",
+      "lines": 96,
+      "url": "https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_004500JST/07_Resource_Retry_Addendum.md"
+    },
+    {
+      "name": "README.md",
+      "path": "runs/20261017_004500JST/README.md",
+      "sha256": "30af907e98ce17c56a292bd67ffca223af0caa6da95fdb0d7309451bdacda3a8",
+      "lines": 61,
+      "url": "https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_004500JST/README.md"
+    },
+    {
+      "name": "08_UI_State_Addendum.md",
+      "path": "runs/20261017_014618JST/08_UI_State_Addendum.md",
+      "sha256": "f97ca9e1476d6a50c165abd7d21c3b3c580e0fe82f9978907be4b78c42d5d754",
+      "lines": 198,
+      "url": "https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_014618JST/08_UI_State_Addendum.md"
+    },
+    {
+      "name": "09_FirstMinutes_InfoOrder.md",
+      "path": "runs/20261017_021315JST/09_FirstMinutes_InfoOrder.md",
+      "sha256": "a4a9fe82663acf52455f52212ed55878507a848f9873954cefbf18e79dbf6658",
+      "lines": 70,
+      "url": "https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_021315JST/09_FirstMinutes_InfoOrder.md"
+    },
+    {
+      "name": "10_Retry_Learning.md",
+      "path": "runs/20261017_023417JST/10_Retry_Learning.md",
+      "sha256": "288194ab0ba1dd75e84557c1eab55797d4209cee8f70ef454eede089066214da",
+      "lines": 77,
+      "url": "https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_023417JST/10_Retry_Learning.md"
+    },
+    {
+      "name": "11_Showcase_Prediction_Result.md",
+      "path": "runs/20261017_025050JST/11_Showcase_Prediction_Result.md",
+      "sha256": "d22c92b3678792fd5b487593951686396d1f1599c001af0bb1bc4545a3b2aa41",
+      "lines": 55,
+      "url": "https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_025050JST/11_Showcase_Prediction_Result.md"
+    },
+    {
+      "name": "12_UI_Copy_Conditions.md",
+      "path": "runs/20261017_030141JST/12_UI_Copy_Conditions.md",
+      "sha256": "41c0a03018c8753797a1805696a80df78434af465164f3990f50d20f284ac370",
+      "lines": 22,
+      "url": "https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_030141JST/12_UI_Copy_Conditions.md"
+    },
+    {
+      "name": "13_Menu_Input_Affordance.md",
+      "path": "runs/20261017_031026JST/13_Menu_Input_Affordance.md",
+      "sha256": "a52f20d66ed5106931340a1f50cebab123c287dc5ef7ad7d4be3c369a4c78db7",
+      "lines": 24,
+      "url": "https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_031026JST/13_Menu_Input_Affordance.md"
+    },
+    {
+      "name": "14_Merge_Removal_Refutation.md",
+      "path": "runs/20261017_032112JST/14_Merge_Removal_Refutation.md",
+      "sha256": "689cdd8bb7e275aef4b6a2ca7c0a31807e46296c44a8bf61616941b7d8996bc3",
+      "lines": 39,
+      "url": "https://github.com/bq24014-cmd/himohito-prototype/blob/a31545d974ed4f5a1578b7c9a61698e4236f794e/Docs/Reviews/PonPlaytest/runs/20261017_032112JST/14_Merge_Removal_Refutation.md"
+    }
+  ],
+  "report_count": 15,
+  "appendices_06_through_14_covered": true,
+  "proposed_result_text_sha256_LF": {
+    "runs/20261017_004500JST/README.md": "f9f32426b3662f76607de326b3ea446597d71b03bc3a35e45776ad7cea7d01ec",
+    "runs/20261017_004500JST/01_Gameplay.md": "2d6aaff68fbe50b0a92a04835157ddf97b96008b90863ecda6f69fa4b998aec3",
+    "runs/20261017_004500JST/02_UI.md": "32ba0295784d5f99eb95dc8a4d2a9cde481455b9fd6a787e41afd92c49168f20",
+    "runs/20261017_004500JST/03_Priorities.md": "a170b198e9132220000d018073cef1c5f0d5340459d1cead74bfb572ba84a3a0"
+  },
+  "original_byte_equality_checked": true,
+  "topic_precedence": {
+    "section_recommendations": "14",
+    "UI_copy": "12 with08 state facts",
+    "menu_receivers": "13",
+    "showcase_plan": "11",
+    "causal_and_resource_evidence": "06/07/09/10",
+    "historical_methods": "04/05"
+  },
+  "next_unknowns": [
+    {
+      "priority": 1,
+      "topic": "S5 bridge shading and checkpoint restoration",
+      "available_now": "Partial B: frozen beam/occlusion/rail restoration code and old world-camera images can identify triggers, state and restore conditions.",
+      "not_available": "Normal-view cause readability, timing and fun still require actual play/video.",
+      "next_output": "A small trigger→bridge遮光→rail/support→retry state map, only if a new dependency is found; no new assets or implementation."
+    },
+    {
+      "priority": 2,
+      "topic": "Clear map versus actual saved terrain and generated bridge state",
+      "available_now": "Partial B: ClearJourneySnapshot/View and saved Scene can check selected floor names, projected start/goal and captured curves/remaining values.",
+      "not_available": "A real completed route and whether the map communicates achievement; old E08 bridge0 is not a route result.",
+      "next_output": "Data contract differences only; do not manufacture a clear screenshot or treat the old test state as a defect."
+    },
+    {
+      "priority": 3,
+      "topic": "Actual modal input/focus and Q/F prediction",
+      "available_now": "No new operational proof from current source/static images. Existing08/11/12 already provide the conditional paths and comparisons.",
+      "not_available": "Needs a working, handed-off input/screen environment or Human ordinary-input recording/answers.",
+      "next_output": "Keep pending; do not reread the same source to mark a bug reproduced or understanding established."
+    }
+  ],
+  "next_recommended_topic": "S5 non-operational dependency check; do not start new investigation in this correction task.",
+  "game_change_or_input": false
+}

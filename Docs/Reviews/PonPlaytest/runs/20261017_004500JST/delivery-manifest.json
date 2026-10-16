@@ -1,29 +1,29 @@
 {
   "created_utc": "2026-10-16T16:36:25.109407+00:00",
-  "revision": 3,
-  "status": "PARENT_REVIEWED_INTERMEDIATE_SNAPSHOT",
+  "revision": 4,
+  "status": "REVIEW_PRIMARY_DOCS_CORRECTED; EVIDENCE_UNCHANGED",
   "main_markdown_documents": 8,
   "image_files": 10,
   "files": [
     {
       "path": "Docs/Reviews/PonPlaytest/LATEST.json",
-      "bytes": 1315,
-      "sha256": "e9b1ead1f689554d74a94b28ecc7be59b268bdd9fb8b6d38c73923b8ea773db1"
+      "bytes": 3396,
+      "sha256": "093f57ef43eee85bf42e296d0d7812de5b300b14ed25b67ba8cd68fda93eeeef"
     },
     {
       "path": "Docs/Reviews/PonPlaytest/runs/20261017_004500JST/01_Gameplay.md",
-      "bytes": 11091,
-      "sha256": "56672c28768f5e1ca47ee39a901bda774795702014a3bd2664b6f2b85a38de89"
+      "bytes": 11216,
+      "sha256": "200b32e0d541bd1247e5b6231938171cd13ef9a0f94489fbf2f75306a5d28841"
     },
     {
       "path": "Docs/Reviews/PonPlaytest/runs/20261017_004500JST/02_UI.md",
-      "bytes": 18901,
-      "sha256": "6d1606a353d9a0b91c9040dd44f7ad82ec6338c046dd3cd07d3dd5ed8ee7e5f4"
+      "bytes": 20062,
+      "sha256": "0d7f87feac2f401a3ef625516a77b906e41e9ecc3f9346aacdcf8487b1b584fb"
     },
     {
       "path": "Docs/Reviews/PonPlaytest/runs/20261017_004500JST/03_Priorities.md",
-      "bytes": 7029,
-      "sha256": "8097ef72b90150bca691fdad366b958aed26fd199fcaf55c01a829f5a0aeb7f3"
+      "bytes": 6299,
+      "sha256": "99a51deba5599eb334b086f303d5dfefe9dc9979096ddfa70a913f9eacb3e7c1"
     },
     {
       "path": "Docs/Reviews/PonPlaytest/runs/20261017_004500JST/04_Evidence.md",
@@ -207,10 +207,13 @@
     },
     {
       "path": "Docs/Reviews/PonPlaytest/runs/20261017_004500JST/README.md",
-      "bytes": 5896,
-      "sha256": "30af907e98ce17c56a292bd67ffca223af0caa6da95fdb0d7309451bdacda3a8"
+      "bytes": 7464,
+      "sha256": "b78150fc8265f136e87985612feb966a0e71f3ef87569aa3fa9126bb8a3b678d"
     }
   ],
   "total_files_excluding_manifest": 41,
-  "total_bytes_excluding_manifest": 18840211
+  "total_bytes_excluding_manifest": 18840211,
+  "updated_utc": "2026-10-16T18:43:37.182599+00:00",
+  "previous_manifest_snapshot_commit": "a31545d974ed4f5a1578b7c9a61698e4236f794e",
+  "application_record": "runs/20261017_034337JST/16_Consistency_Application_Record.md"
 }
