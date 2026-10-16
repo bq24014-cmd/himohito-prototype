@@ -1,0 +1,32 @@
+{
+  "utc": "2026-10-16T17:13:15.413459+00:00",
+  "run_id": "20261017_021315JST",
+  "status": "PENDING_PARENT_REVIEW; NOT_COMMITTED_OR_PUSHED",
+  "A_observations": 0,
+  "elapsed_time_measured": false,
+  "files": [
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_021315JST/09_FirstMinutes_InfoOrder.md",
+      "bytes": 11989,
+      "sha256": "a4a9fe82663acf52455f52212ed55878507a848f9873954cefbf18e79dbf6658"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_021315JST/evidence/info-order-evidence.json",
+      "bytes": 8525,
+      "sha256": "6fd51f4c17147d0913c23d4ae1c3d22fcda8f9a4ef7d8362263b637d1bfaef31"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_021315JST/evidence/info-order-route-matrix.json",
+      "bytes": 4290,
+      "sha256": "e0b80f1f8eb542aa78d7793dc3677781ed753f607a88090dee726ec28e6125d7"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_021315JST/evidence/info-order-source-delta.md",
+      "bytes": 13368,
+      "sha256": "37c0b92d081e5062e73f77183fad622730c2ede77414c0d74c77069ed296e9ea"
+    }
+  ],
+  "total_files_with_manifest": 5,
+  "latest_published_commit": "6c767d1f843d86eabfad5342bd805917d40f9ad0",
+  "new_images": 0
+}

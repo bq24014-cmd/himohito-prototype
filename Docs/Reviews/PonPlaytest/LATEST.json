@@ -13,11 +13,11 @@
   "published_commit": null,
   "continuation_cutoff_utc": "2026-10-16T23:00:00Z",
   "no_new_themes_after_utc": "2026-10-16T22:30:00Z",
-  "updated_utc": "2026-10-16T17:00:32.711834+00:00",
+  "updated_utc": "2026-10-16T17:22:45.271339+00:00",
   "continuation_configured": false,
   "parent_review": "APPROVED_42_FILES_WITH_MINOR_CORRECTIONS; UI_STATE_ADDENDUM_SEPARATE",
   "continuation_management": "PARENT",
-  "revision": 4,
+  "revision": 5,
   "addendum": "runs/20261017_004500JST/06_T4_S10_Addendum.md",
   "resource_retry_addendum": "runs/20261017_004500JST/07_Resource_Retry_Addendum.md",
   "A_observations": 0,
@@ -26,5 +26,8 @@
   "commit_reference_note": "For confirmed remote commit see parent publication report; this snapshot cannot contain its own commit hash.",
   "ui_state": "runs/20261017_014618JST/08_UI_State_Addendum.md",
   "ui_state_manifest": "runs/20261017_014618JST/delivery-manifest.json",
-  "ui_state_parent_review": "APPROVED_R1_FOR_INTERMEDIATE_SAVE"
+  "ui_state_parent_review": "APPROVED_R1_FOR_INTERMEDIATE_SAVE",
+  "information_order": "runs/20261017_021315JST/09_FirstMinutes_InfoOrder.md",
+  "information_order_manifest": "runs/20261017_021315JST/delivery-manifest.json",
+  "information_order_parent_review": "APPROVED_WITH_T4_ONE_BRIDGE_EACH_WORDING"
 }

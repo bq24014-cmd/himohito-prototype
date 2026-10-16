@@ -1,0 +1,168 @@
+{
+  "utc": "2026-10-16T17:13:15.413459+00:00",
+  "scope": "10/6 FriendPlay frozen input copy; not current Production",
+  "A_observations": 0,
+  "clocked_first_three_minutes": false,
+  "source_hashes": [
+    {
+      "path": "Assets/Resources/StageCatalog.json",
+      "sha256": "a103566bc870e259c2c83bcab40a3587bbef543ef8a4184018ed0068f77d8dd3",
+      "build_input_sha256": "a103566bc870e259c2c83bcab40a3587bbef543ef8a4184018ed0068f77d8dd3",
+      "match": true
+    },
+    {
+      "path": "Assets/Scripts/StageCatalog.cs",
+      "sha256": "230747d74843df78dabdd4488540f404d51f03d8520f63c8e1727268e5da320f",
+      "build_input_sha256": "230747d74843df78dabdd4488540f404d51f03d8520f63c8e1727268e5da320f",
+      "match": true
+    },
+    {
+      "path": "Assets/Scripts/PrototypeRunController.cs",
+      "sha256": "ec6fd5170e7c00a97593b28e109b7fc3fbc5d6f922b5aa1b68823467e3623977",
+      "build_input_sha256": "ec6fd5170e7c00a97593b28e109b7fc3fbc5d6f922b5aa1b68823467e3623977",
+      "match": true
+    },
+    {
+      "path": "Assets/Scripts/StageSelectionView.cs",
+      "sha256": "de0e76b56065337bb46cf256ad5778a9c9bb9cb1fa74aee6e8c8c724ffab3cb5",
+      "build_input_sha256": "de0e76b56065337bb46cf256ad5778a9c9bb9cb1fa74aee6e8c8c724ffab3cb5",
+      "match": true
+    },
+    {
+      "path": "Assets/Scripts/MainStagePreview.cs",
+      "sha256": "54f936699cbd72d62542b839619d0a7f01f2addcd0fae9eef6fe1a55b66a7dcd",
+      "build_input_sha256": "54f936699cbd72d62542b839619d0a7f01f2addcd0fae9eef6fe1a55b66a7dcd",
+      "match": true
+    },
+    {
+      "path": "Assets/Scripts/TutorialSectionGuide.cs",
+      "sha256": "380f0e643fe2e76bc3d561c3157982b268aee650b3648357af8d3a1bf336f385",
+      "build_input_sha256": "380f0e643fe2e76bc3d561c3157982b268aee650b3648357af8d3a1bf336f385",
+      "match": true
+    },
+    {
+      "path": "Assets/Scripts/TutorialSignInscription.cs",
+      "sha256": "5b0194605ac744e2aecf3106c1911dad2cfe6c34bb61f9acb859e9cd22c1ab1e",
+      "build_input_sha256": "5b0194605ac744e2aecf3106c1911dad2cfe6c34bb61f9acb859e9cd22c1ab1e",
+      "match": true
+    },
+    {
+      "path": "Assets/Scripts/TutorialGuideAnimation.cs",
+      "sha256": "bb2cbbc6c7afa6ea22478d500932befb5cddab983c6dff75ea9f2c374e59a8e5",
+      "build_input_sha256": "bb2cbbc6c7afa6ea22478d500932befb5cddab983c6dff75ea9f2c374e59a8e5",
+      "match": true
+    },
+    {
+      "path": "Assets/Scripts/PrototypeHud.cs",
+      "sha256": "2e6d442c4933dda55aa3680ed1a835372e53274fe0c7404498684dc23abb6780",
+      "build_input_sha256": "2e6d442c4933dda55aa3680ed1a835372e53274fe0c7404498684dc23abb6780",
+      "match": true
+    },
+    {
+      "path": "Assets/Scripts/MainStageHud.cs",
+      "sha256": "30d2177386b912c1c8fc86961460208b53fd2f45df0597552055c19e41ecae50",
+      "build_input_sha256": "30d2177386b912c1c8fc86961460208b53fd2f45df0597552055c19e41ecae50",
+      "match": true
+    },
+    {
+      "path": "Assets/Scripts/StageOverlayControls.cs",
+      "sha256": "7d63dcbaa1dbce7fb04a8e387b0013050d343084f3fc6d267f4064a69a28755a",
+      "build_input_sha256": "7d63dcbaa1dbce7fb04a8e387b0013050d343084f3fc6d267f4064a69a28755a",
+      "match": true
+    },
+    {
+      "path": "Assets/Scripts/RopeResourceGauge.cs",
+      "sha256": "7456e77b6b3d4e7b48882a34697cf186a55d6fac18312e7e863d4c72fd0ca97a",
+      "build_input_sha256": "7456e77b6b3d4e7b48882a34697cf186a55d6fac18312e7e863d4c72fd0ca97a",
+      "match": true
+    },
+    {
+      "path": "Assets/Scripts/RopePlatformBuilder.cs",
+      "sha256": "11ecb4c1870cb8ef0449343155559211a5e1d9e1321132bce0dcf8e14e279fd2",
+      "build_input_sha256": "11ecb4c1870cb8ef0449343155559211a5e1d9e1321132bce0dcf8e14e279fd2",
+      "match": true
+    },
+    {
+      "path": "Assets/Scripts/MainStageSectionThreeRecoverySwitch.cs",
+      "sha256": "740694ff88f82362da4c42170d5c415206d4d1808a83b07eb2d5ca75f32f0f1a",
+      "build_input_sha256": "740694ff88f82362da4c42170d5c415206d4d1808a83b07eb2d5ca75f32f0f1a",
+      "match": true
+    },
+    {
+      "path": "Assets/Scenes/Tutorial.unity",
+      "sha256": "dc1bed54cc083256ce895041b1c93578101e19b9738e7cf260619e8f7e1e4b92",
+      "build_input_sha256": "dc1bed54cc083256ce895041b1c93578101e19b9738e7cf260619e8f7e1e4b92",
+      "match": true
+    },
+    {
+      "path": "Assets/Scenes/MainStage.unity",
+      "sha256": "57d2464751b5b9c2a78e6c56f34197e9bc2629983fadaa1dff6e0ba0b4bc2284",
+      "build_input_sha256": "57d2464751b5b9c2a78e6c56f34197e9bc2629983fadaa1dff6e0ba0b4bc2284",
+      "match": true
+    }
+  ],
+  "image_facts": [
+    {
+      "name": "E01_menu.png",
+      "sha256": "56e17c6eaf3b226c5f6762f303f005c25352128007e9db437f5b19f43e3687a6",
+      "width": 1920,
+      "height": 1080,
+      "classification": "B_EXISTING_IMAGE_VISUAL_REVIEW; NOT_LIVE",
+      "pixel_viewed_this_checkpoint": true,
+      "observation": "旧メニュー。Main選択時の説明は2行、主要ボタンは1行で画像内に収まる。画像の選択状態を起動時の初期選択としない。",
+      "url": "https://github.com/bq24014-cmd/himohito-prototype/blob/6822eaa610476aac7a2adc5838d37fcd9f5c1f8b/Docs/Reviews/PonPlaytest/runs/20261017_004500JST/evidence/images/E01_menu.png",
+      "library_file_id": "libfile_e70dec51332081919cdfe8f2f4420bd2"
+    },
+    {
+      "name": "E02_tutorial_hud.png",
+      "sha256": "f87f2d93bcb30111147d6a37d15050684e0fe2e8072a1f7ebd4fc469373433f3",
+      "width": 2156,
+      "height": 1282,
+      "classification": "B_EXISTING_IMAGE_VISUAL_REVIEW; NOT_LIVE",
+      "pixel_viewed_this_checkpoint": true,
+      "observation": "旧通常画角。残量/次の長さ/Tabが左上にまとまり、ワールド看板のE/W/Sと絵が小さく描かれている。旧選択値やZ非表示を10/6の初期状態の根拠にしない。",
+      "url": "https://github.com/bq24014-cmd/himohito-prototype/blob/6822eaa610476aac7a2adc5838d37fcd9f5c1f8b/Docs/Reviews/PonPlaytest/runs/20261017_004500JST/evidence/images/E02_tutorial_hud.png",
+      "library_file_id": "libfile_6967ca981f108191a156c6c86b9e4c3e"
+    },
+    {
+      "name": "E03_help_fixture.png",
+      "sha256": "4343bc4377c910731585b79c518e72edf51fdbb81ba62e914464b425804a5d2d",
+      "width": 1280,
+      "height": 720,
+      "classification": "B_EXISTING_IMAGE_VISUAL_REVIEW; NOT_LIVE",
+      "pixel_viewed_this_checkpoint": true,
+      "observation": "9/30静的fixture1280x720。8操作の主行が各1行、概要と閉じる表示も読める配置。長い条件追記版の収まりを実証する画像ではない。",
+      "url": "https://github.com/bq24014-cmd/himohito-prototype/blob/6822eaa610476aac7a2adc5838d37fcd9f5c1f8b/Docs/Reviews/PonPlaytest/runs/20261017_004500JST/evidence/images/E03_help_fixture.png",
+      "library_file_id": "libfile_68f5a80ba6e08191927777047edaa1fd"
+    },
+    {
+      "name": "E06_sign4_fixture.png",
+      "sha256": "c71615cc8a5aa7f91c9da1e344906f6518c050c8d7209d87df913f0bdb5a6acc",
+      "width": 1280,
+      "height": 720,
+      "classification": "B_EXISTING_IMAGE_VISUAL_REVIEW; NOT_LIVE",
+      "pixel_viewed_this_checkpoint": true,
+      "observation": "9/30静的fixture1280x720。右の手順1は末尾の「る」が次行、手順3も折返し。切れや読めなさの再現ではない。概要は旧文「深い谷の下」で、10/6固定ソースは「梁の下」。",
+      "url": "https://github.com/bq24014-cmd/himohito-prototype/blob/6822eaa610476aac7a2adc5838d37fcd9f5c1f8b/Docs/Reviews/PonPlaytest/runs/20261017_004500JST/evidence/images/E06_sign4_fixture.png",
+      "library_file_id": "libfile_9a48eaa49ed88191a2e64fd04aa0975e"
+    }
+  ],
+  "MainStageHud_guide_symbol_occurrences": {
+    "DrawSectionFourGuide": 1,
+    "DrawSectionFiveGuide": 1,
+    "DrawSectionSixGuide": 1,
+    "DrawSectionSevenGuide": 1,
+    "DrawSectionNineGuide": 1,
+    "DrawSectionTenGuide": 1
+  },
+  "guide_occurrence_interpretation": "one definition each; no caller in MainStageHud normal OnGUI. Whole-project behavior is bounded by the inspected fixed source paths.",
+  "common_source_reference": "https://github.com/bq24014-cmd/himohito-prototype/blob/6c767d1f843d86eabfad5342bd805917d40f9ad0/Docs/Reviews/PonPlaytest/runs/20261017_014618JST/evidence/ui-state-source-excerpts.md",
+  "no_new_images_or_mockups": true,
+  "normal_scene_counterchecks": {
+    "Tutorial_startFromSectionFourForDevelopment": 0,
+    "Tutorial_PrototypeHud_count": 1,
+    "MainStage_PrototypeHud_count": 0,
+    "PrototypeHud_runtime_add_calls_in_fixed_Scripts": 0,
+    "NotifyPlatformBuilt_runtime_callsite": "RopePlatformBuilder.cs:113"
+  }
+}

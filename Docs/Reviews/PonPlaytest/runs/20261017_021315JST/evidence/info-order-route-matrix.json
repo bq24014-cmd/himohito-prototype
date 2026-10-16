@@ -1,0 +1,115 @@
+{
+  "utc": "2026-10-16T17:13:15.413459+00:00",
+  "A_observations": 0,
+  "timing": "STATE_ORDER_ONLY; NO_ELAPSED_TIME_MEASURED",
+  "routes": [
+    {
+      "id": "R1",
+      "route": "Tutorial: no Tab/no Z",
+      "state_sequence": [
+        "Tutorial selected/start",
+        "goal-to-start preview",
+        "normal T1 HUD/world mini sign",
+        "T2 mini sign if reached",
+        "T3 attach popup if reached and attached",
+        "T4 mini sign/world beam if reached"
+      ],
+      "available": [
+        "menu training goal and initial resource99",
+        "world E/arrow/W/S/Q/F pictograms by section",
+        "HUD resource and next selected length",
+        "T3 attached Q cost/reason popup"
+      ],
+      "not_explicit_here": [
+        "E ground condition",
+        "W/S unattached-only condition",
+        "full T2 failure→release→length cause",
+        "T4 beam/shape cause as prose"
+      ],
+      "counterevidence": [
+        "world diagrams and beam are visual clues; missing prose is not proof of failed understanding",
+        "no compulsory full help/sign page before play"
+      ],
+      "understanding": "C_NOT_OBSERVED"
+    },
+    {
+      "id": "R2",
+      "route": "Tutorial: Tab only, no Z",
+      "state_sequence": [
+        "menu or play Tab",
+        "eight-row help",
+        "close help",
+        "normal play/popup"
+      ],
+      "available": [
+        "movement/aim/connect/release/next length/Q/F/R key map",
+        "general swing/leave-platform overview",
+        "Q cost popup after T3 attachment"
+      ],
+      "not_explicit_here": [
+        "ground/unattached state conditions",
+        "Q consumes selected active length as global help rule",
+        "F specifically changes shape to pass under beam"
+      ],
+      "counterevidence": [
+        "Q/F role and next-length wording already exist; do not claim no instructions",
+        "all eight main rows fit in the old fixture"
+      ],
+      "understanding": "C_NOT_OBSERVED"
+    },
+    {
+      "id": "R3",
+      "route": "Tutorial: optional full guides read",
+      "state_sequence": [
+        "near current sign",
+        "Z opens guide and restarts illustration time",
+        "title/summary/steps visible immediately",
+        "animated captions by internal model phase"
+      ],
+      "available": [
+        "T1 immediate crossing goal and E/D sequence",
+        "T2 causal length and release before reselection",
+        "T3 immediate free-attach label/consumption example and body-use title",
+        "T4 immediate beam-pass purpose plus later explicit high→lower animation captions"
+      ],
+      "not_explicit_here": [
+        "T1 E ground state as prose"
+      ],
+      "counterevidence": [
+        "T3 consumption and T4 purpose already explicit; do not add duplicated explanations",
+        "animation model seconds are not measured waiting/reading seconds"
+      ],
+      "understanding": "C_NOT_OBSERVED"
+    },
+    {
+      "id": "R4",
+      "route": "Main direct entry, with optional Tab",
+      "state_sequence": [
+        "Main available in stage menu without tutorial clear gate",
+        "preview shows goal view",
+        "normal Main HUD",
+        "Tab if opened",
+        "first Q if section4 reached"
+      ],
+      "available": [
+        "Toybox title and initial resource50",
+        "goal-from-start preview label",
+        "selected length/resource/Tab before Q",
+        "global Q/F/R key map if Tab opened",
+        "post-Q cost label and resource change",
+        "S3 local F switch prompt when near it"
+      ],
+      "not_explicit_here": [
+        "pre-Q current cost popup through regular MainStageHud OnGUI",
+        "tutorial body-spend/bridge-pair and F-shape explanation if not previously learned"
+      ],
+      "counterevidence": [
+        "the selected length number is visible before Q; informed players can use it",
+        "post-spend feedback exists; no claim that all consumption feedback is absent",
+        "Main direct-entry route is allowed but actual first-three-minute reach is unknown"
+      ],
+      "understanding": "C_NOT_OBSERVED"
+    }
+  ],
+  "priority_update": "No demonstrated play result to reorder top five. Extend Q prediction comparison to Main first bridge; preserve help entry and state conditions before T4 wording polish."
+}
