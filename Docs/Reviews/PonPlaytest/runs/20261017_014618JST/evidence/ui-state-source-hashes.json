@@ -1,0 +1,182 @@
+[
+  {
+    "path": "Assets/Scripts/StageOverlayControls.cs",
+    "sha256": "7d63dcbaa1dbce7fb04a8e387b0013050d343084f3fc6d267f4064a69a28755a",
+    "build_input_sha256": "7d63dcbaa1dbce7fb04a8e387b0013050d343084f3fc6d267f4064a69a28755a",
+    "match": true
+  },
+  {
+    "path": "Assets/Scripts/TutorialSectionGuide.cs",
+    "sha256": "380f0e643fe2e76bc3d561c3157982b268aee650b3648357af8d3a1bf336f385",
+    "build_input_sha256": "380f0e643fe2e76bc3d561c3157982b268aee650b3648357af8d3a1bf336f385",
+    "match": true
+  },
+  {
+    "path": "Assets/Scripts/PrototypeRunController.cs",
+    "sha256": "ec6fd5170e7c00a97593b28e109b7fc3fbc5d6f922b5aa1b68823467e3623977",
+    "build_input_sha256": "ec6fd5170e7c00a97593b28e109b7fc3fbc5d6f922b5aa1b68823467e3623977",
+    "match": true
+  },
+  {
+    "path": "Assets/Scripts/MainStageRespawnOnFall.cs",
+    "sha256": "314060136dfb7846ae7ebbc43cfaf0028625b839b4b9a05e9171d4f5830c4d8c",
+    "build_input_sha256": "314060136dfb7846ae7ebbc43cfaf0028625b839b4b9a05e9171d4f5830c4d8c",
+    "match": true
+  },
+  {
+    "path": "Assets/Scripts/MainStageGoalZone.cs",
+    "sha256": "54bb45cc0dcdf0cfafc08fad10e865059e058b15e635601d81e66305d162e9d9",
+    "build_input_sha256": "54bb45cc0dcdf0cfafc08fad10e865059e058b15e635601d81e66305d162e9d9",
+    "match": true
+  },
+  {
+    "path": "Assets/Scripts/PlayerMover.cs",
+    "sha256": "02f6bab1132599184cc6450c5053990b612998ff657372f56cd9877cb5201f8d",
+    "build_input_sha256": "02f6bab1132599184cc6450c5053990b612998ff657372f56cd9877cb5201f8d",
+    "match": true
+  },
+  {
+    "path": "Assets/Scripts/RopeController.cs",
+    "sha256": "3ef4a50076994279839f398652180256f5ec37c01b954eeefc67c79b831e25d6",
+    "build_input_sha256": "3ef4a50076994279839f398652180256f5ec37c01b954eeefc67c79b831e25d6",
+    "match": true
+  },
+  {
+    "path": "Assets/Scripts/RopePlatformBuilder.cs",
+    "sha256": "11ecb4c1870cb8ef0449343155559211a5e1d9e1321132bce0dcf8e14e279fd2",
+    "build_input_sha256": "11ecb4c1870cb8ef0449343155559211a5e1d9e1321132bce0dcf8e14e279fd2",
+    "match": true
+  },
+  {
+    "path": "Assets/Scripts/MainStageSectionThreeRecoverySwitch.cs",
+    "sha256": "740694ff88f82362da4c42170d5c415206d4d1808a83b07eb2d5ca75f32f0f1a",
+    "build_input_sha256": "740694ff88f82362da4c42170d5c415206d4d1808a83b07eb2d5ca75f32f0f1a",
+    "match": true
+  },
+  {
+    "path": "Assets/Scripts/StageSelectionView.cs",
+    "sha256": "de0e76b56065337bb46cf256ad5778a9c9bb9cb1fa74aee6e8c8c724ffab3cb5",
+    "build_input_sha256": "de0e76b56065337bb46cf256ad5778a9c9bb9cb1fa74aee6e8c8c724ffab3cb5",
+    "match": true
+  },
+  {
+    "path": "Assets/Scripts/HimoHitoUiParts.cs",
+    "sha256": "0696cd16c13616c677f40c05349018f42108822c5578a8852f5f7671cfd9c764",
+    "build_input_sha256": "0696cd16c13616c677f40c05349018f42108822c5578a8852f5f7671cfd9c764",
+    "match": true
+  },
+  {
+    "path": "Assets/Scripts/PrototypeHud.cs",
+    "sha256": "2e6d442c4933dda55aa3680ed1a835372e53274fe0c7404498684dc23abb6780",
+    "build_input_sha256": "2e6d442c4933dda55aa3680ed1a835372e53274fe0c7404498684dc23abb6780",
+    "match": true
+  },
+  {
+    "path": "Assets/Scripts/MainStageHud.cs",
+    "sha256": "30d2177386b912c1c8fc86961460208b53fd2f45df0597552055c19e41ecae50",
+    "build_input_sha256": "30d2177386b912c1c8fc86961460208b53fd2f45df0597552055c19e41ecae50",
+    "match": true
+  },
+  {
+    "path": "Assets/Scripts/MainStagePreview.cs",
+    "sha256": "54f936699cbd72d62542b839619d0a7f01f2addcd0fae9eef6fe1a55b66a7dcd",
+    "build_input_sha256": "54f936699cbd72d62542b839619d0a7f01f2addcd0fae9eef6fe1a55b66a7dcd",
+    "match": true
+  },
+  {
+    "path": "Assets/Scripts/StageStartTransition.cs",
+    "sha256": "294e890fac62f18212ab7628e65b799d1e299ccb362f7ee579602ae8fbdebf3f",
+    "build_input_sha256": "294e890fac62f18212ab7628e65b799d1e299ccb362f7ee579602ae8fbdebf3f",
+    "match": true
+  },
+  {
+    "path": "Assets/Scripts/RespawnWeaveVisual.cs",
+    "sha256": "df4c69c06eea02c41cdc709d7770e6e682c2931a03ed429319562630f26c2f0d",
+    "build_input_sha256": "df4c69c06eea02c41cdc709d7770e6e682c2931a03ed429319562630f26c2f0d",
+    "match": true
+  },
+  {
+    "path": "Assets/Scripts/StageOverlayControls.cs.meta",
+    "sha256": "7d4f32291eea86c1e542b3fe1bd69b7fd8ed7a22010511e4112f24e220f48cab",
+    "build_input_sha256": "7d4f32291eea86c1e542b3fe1bd69b7fd8ed7a22010511e4112f24e220f48cab",
+    "match": true
+  },
+  {
+    "path": "Assets/Scripts/TutorialSectionGuide.cs.meta",
+    "sha256": "393d6f2d3d6fc8ed9b3d627a5e3a6f417b906978c4cca0debcad6297818140c5",
+    "build_input_sha256": "393d6f2d3d6fc8ed9b3d627a5e3a6f417b906978c4cca0debcad6297818140c5",
+    "match": true
+  },
+  {
+    "path": "Assets/Scripts/PrototypeRunController.cs.meta",
+    "sha256": "d6f2fef8e64a4fb2f6e6ae9ad8aaec16028dd2a512b4f0c0b16c55a46e0ba1c8",
+    "build_input_sha256": "d6f2fef8e64a4fb2f6e6ae9ad8aaec16028dd2a512b4f0c0b16c55a46e0ba1c8",
+    "match": true
+  },
+  {
+    "path": "Assets/Scripts/RopePlatformBuilder.cs.meta",
+    "sha256": "8e92b8db909cc3b43ab8812160baf0507cd7c66220e759712443ec7c50bb824f",
+    "build_input_sha256": "8e92b8db909cc3b43ab8812160baf0507cd7c66220e759712443ec7c50bb824f",
+    "match": true
+  },
+  {
+    "path": "Assets/Scripts/MainStageRespawnOnFall.cs.meta",
+    "sha256": "9f834fdb1ed94331bae143dbdd5b772e74fd6e1ef8bbfa48cfdba379705311a2",
+    "build_input_sha256": "9f834fdb1ed94331bae143dbdd5b772e74fd6e1ef8bbfa48cfdba379705311a2",
+    "match": true
+  },
+  {
+    "path": "Assets/Scripts/MainStageGoalZone.cs.meta",
+    "sha256": "c71ae1507774ad3258231b19e558330ee0633f86a6cae38014a3afd1d7dfd9d4",
+    "build_input_sha256": "c71ae1507774ad3258231b19e558330ee0633f86a6cae38014a3afd1d7dfd9d4",
+    "match": true
+  },
+  {
+    "path": "Assets/Scripts/RopeResource.cs",
+    "sha256": "026476f48b89bac7158abebc1744bf41553bae4981c41b7148b41dced63860eb",
+    "build_input_sha256": "026476f48b89bac7158abebc1744bf41553bae4981c41b7148b41dced63860eb",
+    "match": true
+  },
+  {
+    "path": "Assets/Scripts/RopePlatformAnchor.cs",
+    "sha256": "bb3309fe1e78fce3261683e25bd71dfbded4c4bf210a062c9e60e3f1409709c0",
+    "build_input_sha256": "bb3309fe1e78fce3261683e25bd71dfbded4c4bf210a062c9e60e3f1409709c0",
+    "match": true
+  },
+  {
+    "path": "Assets/Scripts/HookPoint.cs",
+    "sha256": "1aa04be9a155c303221f387742f7242c92cbb026a3677b0049556c638f3cf3a8",
+    "build_input_sha256": "1aa04be9a155c303221f387742f7242c92cbb026a3677b0049556c638f3cf3a8",
+    "match": true
+  },
+  {
+    "path": "Assets/Scripts/RopeBridgeReveal.cs",
+    "sha256": "1826dd30b1295b0ba48ce45ecbee3dce78a38a7830cea3388f4e1a60a53bc1ed",
+    "build_input_sha256": "1826dd30b1295b0ba48ce45ecbee3dce78a38a7830cea3388f4e1a60a53bc1ed",
+    "match": true
+  },
+  {
+    "path": "Assets/Scenes/Tutorial.unity",
+    "sha256": "dc1bed54cc083256ce895041b1c93578101e19b9738e7cf260619e8f7e1e4b92",
+    "build_input_sha256": "dc1bed54cc083256ce895041b1c93578101e19b9738e7cf260619e8f7e1e4b92",
+    "match": true
+  },
+  {
+    "path": "Assets/Scenes/MainStage.unity",
+    "sha256": "57d2464751b5b9c2a78e6c56f34197e9bc2629983fadaa1dff6e0ba0b4bc2284",
+    "build_input_sha256": "57d2464751b5b9c2a78e6c56f34197e9bc2629983fadaa1dff6e0ba0b4bc2284",
+    "match": true
+  },
+  {
+    "path": "ProjectSettings/ProjectSettings.asset",
+    "sha256": "df9afff7a8d16aa525c8c951d9002a42fa9905355d21493796f0fd8bda0596fe",
+    "build_input_sha256": "df9afff7a8d16aa525c8c951d9002a42fa9905355d21493796f0fd8bda0596fe",
+    "match": true
+  },
+  {
+    "path": "ProjectSettings/Physics2DSettings.asset",
+    "sha256": "2856152070913f89167241c250b20dad2d36bb1b7e774f2a83ab1d0fbc54d223",
+    "build_input_sha256": "2856152070913f89167241c250b20dad2d36bb1b7e774f2a83ab1d0fbc54d223",
+    "match": true
+  }
+]

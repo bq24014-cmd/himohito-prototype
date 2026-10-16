@@ -1,0 +1,33 @@
+{
+  "utc": "2026-10-16T16:56:18.447626+00:00",
+  "revision": 1,
+  "status": "PENDING_PARENT_REVIEW_OF_DEPENDENCY_DELTA; NOT_PUSHED",
+  "run_id": "20261017_014618JST",
+  "actual_play": false,
+  "A_observations": 0,
+  "files": [
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_014618JST/08_UI_State_Addendum.md",
+      "bytes": 29299,
+      "sha256": "f97ca9e1476d6a50c165abd7d21c3b3c580e0fe82f9978907be4b78c42d5d754"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_014618JST/evidence/ui-state-conditional-traces.json",
+      "bytes": 13485,
+      "sha256": "12092a4ca128ba7d0a42fd9e1d2d797f528e624fef3c07a1dc047bdb02820779"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_014618JST/evidence/ui-state-source-excerpts.md",
+      "bytes": 103391,
+      "sha256": "a81a6849200b55ea2c735dfbfe0f51698b61a152b921285ec977c65387ecebc3"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_014618JST/evidence/ui-state-source-hashes.json",
+      "bytes": 7670,
+      "sha256": "fa0e3236c182ff1feb698c7446dbb3baa972e179a97a47ac2268edd4f8a2f000"
+    }
+  ],
+  "total_files_with_manifest": 5,
+  "existing_42_files_unchanged": true,
+  "previous_commit": "6822eaa610476aac7a2adc5838d37fcd9f5c1f8b"
+}

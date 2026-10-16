@@ -1,0 +1,375 @@
+{
+  "utc": "2026-10-16T16:46:18.134717+00:00",
+  "build": "FriendPlay_20261006_214500 frozen inputs",
+  "actual_play": false,
+  "A_observations": 0,
+  "traces": [
+    {
+      "id": "T01",
+      "before": "TITLE_HELP",
+      "keys": [
+        "Escape"
+      ],
+      "classification": "B_SOURCE_PROTECTED",
+      "sequence": [
+        "CloseHelp sets lastHelpInputFrame=current and returns",
+        "CanUseTitleMenu blocks overlay-visible or help-input-consumed frame"
+      ],
+      "conclusion": "same Escape is not accepted by title Quit on this path; order-independent protection"
+    },
+    {
+      "id": "T02",
+      "before": "TITLE",
+      "keys": [
+        "Tab",
+        "Escape"
+      ],
+      "classification": "B_SOURCE_PROTECTED",
+      "sequence": [
+        "CanUseTitleMenu rejects Tab frame",
+        "Overlay Tab branch runs first and returns"
+      ],
+      "conclusion": "does not process title Quit on the same Tab frame"
+    },
+    {
+      "id": "T03",
+      "before": "PLAY_HELP",
+      "keys": [
+        "Escape"
+      ],
+      "classification": "B_SOURCE_PROTECTED",
+      "sequence": [
+        "showHelp+Esc calls CloseHelp and returns before pause toggle"
+      ],
+      "conclusion": "one Escape cannot both close help and toggle pause within this Update"
+    },
+    {
+      "id": "T04",
+      "before": "PAUSE_HELP",
+      "keys": [
+        "Escape"
+      ],
+      "classification": "B_SOURCE_DEFINED",
+      "sequence": [
+        "CloseHelp clears showHelp, preserves isPaused",
+        "ApplyPauseState keeps timeScale=0"
+      ],
+      "conclusion": "returns to pause, needs another Escape to resume"
+    },
+    {
+      "id": "T05",
+      "before": "GUIDE_VISIBLE",
+      "keys": [
+        "Z"
+      ],
+      "classification": "B_SOURCE_PROTECTED",
+      "sequence": [
+        "CloseGuide then return",
+        "no other Z gameplay receiver found in fixed Scripts search"
+      ],
+      "conclusion": "same Z does not reopen guide in this Update"
+    },
+    {
+      "id": "T06",
+      "before": "GUIDE_VISIBLE",
+      "keys": [
+        "Escape"
+      ],
+      "classification": "B_SOURCE_DEFINED",
+      "sequence": [
+        "Guide visible branch handles only Z",
+        "Overlay sees guide and returns",
+        "Tutorial run sees guide and returns"
+      ],
+      "conclusion": "Escape alone does not close guide"
+    },
+    {
+      "id": "T07",
+      "before": "GUIDE_VISIBLE",
+      "keys": [
+        "Z",
+        "Escape"
+      ],
+      "classification": "C_ORDER_DEPENDENT_NOT_REPRODUCED",
+      "branches": {
+        "guide_first": "close guide then Overlay sees Esc and may open pause",
+        "overlay_first": "Overlay returns because guide visible; guide closes later"
+      },
+      "conclusion": "no guide-close frame consumption flag equivalent to help; actual order not observed"
+    },
+    {
+      "id": "T08",
+      "before": "PLAY_NEAR_SIGN",
+      "keys": [
+        "Z",
+        "Tab"
+      ],
+      "classification": "C_ORDER_DEPENDENT_WITH_SOURCE_EXCLUSION",
+      "branches": {
+        "guide_first": "guide opens; overlay sees guide and returns",
+        "overlay_first": "help opens; guide sees overlay and returns"
+      },
+      "conclusion": "which view wins is unobserved; these guards are counterevidence to claiming both always open"
+    },
+    {
+      "id": "T09",
+      "before": "PAUSE_OR_HELP_FROM_PLAY",
+      "keys": [
+        "R"
+      ],
+      "classification": "B_CONDITIONAL_PATH_C_REPRODUCTION_PENDING",
+      "conditions": [
+        "Application receives key",
+        "no intro/start transition",
+        "Tutorial guide not visible",
+        "checkpoint position differs from current position if visible change is expected"
+      ],
+      "sequence": [
+        "Run/Main respawn does not test overlay state or timeScale before R",
+        "checkpoint restart path changes position/resources/platforms",
+        "overlay booleans remain unchanged"
+      ],
+      "conclusion": "no modal R guard in the inspected path; do not describe as live observed restart"
+    },
+    {
+      "id": "T10",
+      "before": "PAUSE_OR_HELP_FROM_PLAY",
+      "keys": [
+        "Q"
+      ],
+      "classification": "B_CONDITIONAL_PATH_C_REPRODUCTION_PENDING",
+      "conditions": [
+        "body.simulated remains true",
+        "Builder enabled",
+        "Q unlocked",
+        "attached authored bridge pair",
+        "CanBuild distance/resource conditions satisfied",
+        "Application receives key"
+      ],
+      "sequence": [
+        "Builder Update rejects preview/body.simulated=false, but not overlay/timeScale=0",
+        "TryBuild commits rope cost and bridge creation"
+      ],
+      "conclusion": "source path lacks modal block; not a reproduced Build bug",
+      "dependency_refinement": "BeginPlatformBuildHold424–453 changes constraints and velocities, not body.simulated nor Builder.enabled. CanBuild→Commit→TrySpend checked. Saved Scene is active/enabled, runtime state remains conditional."
+    },
+    {
+      "id": "T11",
+      "before": "PAUSE_OR_HELP_FROM_PLAY",
+      "keys": [
+        "F"
+      ],
+      "classification": "B_CONDITIONAL_PATH_C_REPRODUCTION_PENDING",
+      "conditions": [
+        "body.simulated=true",
+        "Builder enabled and F unlocked",
+        "not attached",
+        "current aim resolves center with exactly two bridges",
+        "Application receives key"
+      ],
+      "sequence": [
+        "Builder F path has no overlay/timeScale guard",
+        "TryRemoveAimedHook merges and removes center"
+      ],
+      "counterexample": "S3 switch F rejects Time.timeScale<=0 and Builder F is not unlocked at section3",
+      "conclusion": "do not generalize all F actions as active or blocked",
+      "dependency_refinement": "TryResolveCurrentAimHook461–507 raycasts directly; no Time/overlay/ground gate. Helpers626–648 and HookPoint45–50 checked. This is not the attachment resolver nor LateUpdate aim-highlight gate."
+    },
+    {
+      "id": "T12",
+      "before": "PAUSE_OR_HELP_WHILE_ATTACHED",
+      "keys": [
+        "LeftMouseDown"
+      ],
+      "classification": "B_CONDITIONAL_PATH_C_REPRODUCTION_PENDING",
+      "conditions": [
+        "RopeController enabled",
+        "attached",
+        "Application receives mouse down"
+      ],
+      "sequence": [
+        "RopeController Update reads any left mouse down",
+        "attached branch detaches; no UI hit or overlay test",
+        "GUI button normally has its own processing; this source provides no shared consumption guard"
+      ],
+      "conclusion": "possible gameplay change while clicking UI, including before close; actual OS/IMGUI event behavior not observed",
+      "mouse_separation": "MouseDown received by Legacy Input is not itself proof GUI.Button activated. Compare close by Tab with close by mouse; actual GUI event ordering/focus unobserved."
+    },
+    {
+      "id": "T13",
+      "before": "TUTORIAL_FAILED_AFTER_FALL_EFFECT",
+      "keys": [
+        "R",
+        "Escape"
+      ],
+      "classification": "B_SOURCE_PRIORITY",
+      "conclusion": "Tutorial Failed Escape branch precedes R; Main failure R precedes else-if Escape; do not claim one uniform priority"
+    },
+    {
+      "id": "T14",
+      "before": "CLEAR",
+      "keys": [
+        "R",
+        "Escape"
+      ],
+      "classification": "B_SOURCE_PRIORITY",
+      "conclusion": "Esc wins in both Tutorial/Main clear navigation; one-shot navigation flag prevents reentry into same path"
+    },
+    {
+      "id": "T15",
+      "before": "PREVIEW",
+      "keys": [
+        "Space"
+      ],
+      "classification": "B_SOURCE_PROTECTED",
+      "sequence": [
+        "skip allowed only after beganFrame+1",
+        "RestoreState is in LateUpdate after input Update"
+      ],
+      "conclusion": "explicit counterevidence to claiming skip Space also jumps"
+    },
+    {
+      "id": "T16",
+      "before": "S6_AIR_CHAIN_WINDOW_THEN_PAUSE",
+      "keys": [
+        "Escape"
+      ],
+      "classification": "B_CLOCK_BASIS_C_GAMEPLAY_IMPACT_PENDING",
+      "sequence": [
+        "expiry = Time.unscaledTime + 1.5",
+        "pause only sets Time.timeScale=0"
+      ],
+      "conclusion": "no code basis for assuming timer pauses; timing margin and subsequent reachability untested"
+    }
+  ],
+  "search_scope": "fixed .build/Project/Assets/Scripts/*.cs; not live Production",
+  "no_other_Z_gameplay_receiver_found": true,
+  "HelpInputConsumedThisFrame_consumers": [
+    "PrototypeRunController.CanUseTitleMenu"
+  ],
+  "explicit_GUI_Focus_calls_found": 0,
+  "warning": "absence of explicit focus drawing is not proof that native IMGUI focus never exists; conditional branches are not actual execution results",
+  "revision": 1,
+  "updated_utc": "2026-10-16T16:56:18.447626+00:00",
+  "serialized_scene_facts": [
+    {
+      "scene": "Tutorial",
+      "player_game_object_fileID": "631669796",
+      "components": [
+        {
+          "class": "PrototypeRunController",
+          "fileID": "631669797",
+          "gameObject_fileID": "631669796",
+          "enabled_saved": true
+        },
+        {
+          "class": "PlayerMover",
+          "fileID": "631669799",
+          "gameObject_fileID": "631669796",
+          "enabled_saved": true
+        },
+        {
+          "class": "RopePlatformBuilder",
+          "fileID": "631669800",
+          "gameObject_fileID": "631669796",
+          "enabled_saved": true
+        },
+        {
+          "class": "RopeController",
+          "fileID": "631669801",
+          "gameObject_fileID": "631669796",
+          "enabled_saved": true
+        }
+      ],
+      "player_active_saved": true,
+      "body_simulated_saved": true,
+      "serialized_overlay_count": 0
+    },
+    {
+      "scene": "MainStage",
+      "player_game_object_fileID": "1380120218",
+      "components": [
+        {
+          "class": "MainStageHud",
+          "fileID": "1119008754",
+          "gameObject_fileID": "1119008753",
+          "enabled_saved": true
+        },
+        {
+          "class": "MainStageRespawnOnFall",
+          "fileID": "1380120220",
+          "gameObject_fileID": "1380120218",
+          "enabled_saved": true
+        },
+        {
+          "class": "RopeController",
+          "fileID": "1380120221",
+          "gameObject_fileID": "1380120218",
+          "enabled_saved": true
+        },
+        {
+          "class": "PlayerMover",
+          "fileID": "1380120222",
+          "gameObject_fileID": "1380120218",
+          "enabled_saved": true
+        },
+        {
+          "class": "RopePlatformBuilder",
+          "fileID": "1380120231",
+          "gameObject_fileID": "1380120218",
+          "enabled_saved": true
+        }
+      ],
+      "player_active_saved": true,
+      "body_simulated_saved": true,
+      "serialized_overlay_count": 0
+    }
+  ],
+  "official_unity_docs_checked": [
+    {
+      "title": "time-scale",
+      "url": "https://docs.unity3d.com/6000.3/Documentation/Manual/time-scale.html",
+      "paraphrase": "timeScaleは実行そのものの停止ではなく時間刻みを変える。ポーズ中の通常GUI操作も可能。",
+      "checked_utc": "2026-10-16T16:56:18.447626+00:00"
+    },
+    {
+      "title": "Update",
+      "url": "https://docs.unity3d.com/6000.3/Documentation/ScriptReference/MonoBehaviour.Update.html",
+      "paraphrase": "enabledなMonoBehaviourに毎フレームUpdate。",
+      "checked_utc": "2026-10-16T16:56:18.447626+00:00"
+    },
+    {
+      "title": "timeScale API",
+      "url": "https://docs.unity3d.com/6000.3/Documentation/ScriptReference/Time-timeScale.html",
+      "paraphrase": "timeScale=0ではFixedUpdate/WaitForSecondsは停止。変更は後続フレームへ作用。",
+      "checked_utc": "2026-10-16T16:56:18.447626+00:00"
+    },
+    {
+      "title": "DefaultExecutionOrder",
+      "url": "https://docs.unity3d.com/6000.3/Documentation/ScriptReference/DefaultExecutionOrder.html",
+      "paraphrase": "Editor指定が属性と異なる場合はEditor値を使う。同じ順序値の相互順序は保証されない。",
+      "checked_utc": "2026-10-16T16:56:18.447626+00:00"
+    },
+    {
+      "title": "GetKeyDown",
+      "url": "https://docs.unity3d.com/6000.3/Documentation/ScriptReference/Input.GetKeyDown.html",
+      "paraphrase": "押し始めのフレームの状態。Updateで読む。",
+      "checked_utc": "2026-10-16T16:56:18.447626+00:00"
+    },
+    {
+      "title": "GetMouseButtonDown",
+      "url": "https://docs.unity3d.com/6000.3/Documentation/ScriptReference/Input.GetMouseButtonDown.html",
+      "paraphrase": "MouseDownフレームの状態。GUI.Buttonの成立そのものとは区別。",
+      "checked_utc": "2026-10-16T16:56:18.447626+00:00"
+    },
+    {
+      "title": "OnGUI",
+      "url": "https://docs.unity3d.com/6000.3/Documentation/ScriptReference/MonoBehaviour.OnGUI.html",
+      "paraphrase": "描画/GUIイベント用。1フレームにイベントごと複数回呼ばれ得る。",
+      "checked_utc": "2026-10-16T16:56:18.447626+00:00"
+    }
+  ],
+  "execution_order_status": "Source attributes: Respawn -200, Builder -100; Builder meta executionOrder=0; actual compiled/effective whole order not observed. Do not assert -200 then -100.",
+  "minimal_test_strategy": "Pause first and let a rendered frame complete, then press exactly one test key. This excludes simultaneous opening/closing order as the explanation.",
+  "ui14_refined_proposal": "Rで、直前の復帰地点から。橋とヒモ残量も、その地点に保存された状態へ戻ります。"
+}
