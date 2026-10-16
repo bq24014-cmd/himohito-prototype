@@ -1,0 +1,28 @@
+{
+  "mover": "{\"moveSpeed\":6.5,\"acceleration\":45.0,\"deceleration\":120.0,\"airControlForce\":9.0,\"maximumAirSpeed\":10.0,\"airLinearDamping\":0.05000000074505806,\"swingPumpForce\":18.0,\"maximumSwingSpeed\":15.0,\"maximumPumpedSwingAngle\":85.0,\"swingLinearDamping\":0.11999999731779099,\"attachedRopeSlackThreshold\":0.10000000149011612,\"jumpImpulse\":10.0,\"jumpHorizontalSpeedRetention\":0.692307710647583,\"coyoteTime\":0.10000000149011612,\"jumpBufferTime\":0.15000000596046449,\"groundProbeDistance\":0.07999999821186066,\"ropePlatformContactGraceTime\":0.15000000596046449,\"minimumLandingSoundSpeed\":1.25,\"minimumFootstepSpeed\":0.75,\"slowFootstepInterval\":0.3799999952316284,\"fastFootstepInterval\":0.2199999988079071,\"solidSurfaceSkin\":0.009999999776482582,\"maximumCollisionSweepDistance\":2.0}",
+  "rope": "{\"maximumShotDistance\":14.0,\"ropeWidth\":0.1599999964237213,\"minimumRopeWidth\":0.05999999865889549,\"ropeVisualSegments\":14,\"ropeColor\":{\"r\":0.949999988079071,\"g\":0.8199999928474426,\"b\":0.3499999940395355,\"a\":1.0},\"aimRotationSpeed\":120.0,\"minimumSelectableRopeLength\":1,\"lengthSelectionRepeatDelay\":0.3499999940395355,\"lengthSelectionRepeatInterval\":0.10000000149011612,\"airChainReconnectWindow\":1.5}",
+  "builder": "{\"platformWidth\":0.2199999988079071,\"curveSegments\":20,\"minimumPlatformLength\":1.0,\"minimumRopeReserve\":1.0}",
+  "follow": "{\"target\":{\"instanceID\":1260},\"smoothTime\":0.18000000715255738,\"horizontalOffset\":0.0,\"verticalSmoothTime\":0.2800000011920929,\"followVerticalInSectionTen\":true}",
+  "gravity": {
+    "x": 0.0,
+    "y": -9.8100004196167
+  },
+  "colliderSize": {
+    "x": 1.0,
+    "y": 1.0
+  },
+  "colliderOffset": {
+    "x": 0.0,
+    "y": 0.0
+  },
+  "mass": 1.0,
+  "gravityScale": 2.799999952316284,
+  "fixedDelta": 0.019999992102384567,
+  "bodyType": 0,
+  "constraints": 4,
+  "playerScale": {
+    "x": 0.800000011920929,
+    "y": 1.2000000476837158,
+    "z": 1.0
+  }
+}

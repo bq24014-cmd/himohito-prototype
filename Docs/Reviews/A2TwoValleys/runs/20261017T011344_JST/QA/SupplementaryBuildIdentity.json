@@ -1,0 +1,12 @@
+{
+  "exe_sha256": "9FDC9E52999B5BC1FF599F0B3F03EE4F001525DC7F66B8D6BA1A3A3E3FF015BE",
+  "assembly_sha256": "207D7E6DDA60805A1EB2D143852E325253B6E613B828B7AD02B33A0D6B2459B3",
+  "summary": {
+    "result": "Succeeded",
+    "errors": 0,
+    "warnings": 0,
+    "bytes": 535570738
+  },
+  "role": "Supplementary braked length6 cycle capture only; visual source unchanged from r1",
+  "unity": "6000.3.21f1"
+}

@@ -1,0 +1,70 @@
+{
+  "frame": 173,
+  "time": 7.4666666984558105,
+  "fixedTime": 8.05999755859375,
+  "resource": 24.0,
+  "selected": 6.0,
+  "trail": -0.06850826740264893,
+  "brace": 0.0,
+  "impact": 0.0,
+  "ropeOriginError": 0.0,
+  "phase": "after_R",
+  "sprite": "HimoHitoCraftSwing-v1 Swing 2",
+  "position": {
+    "x": 120.87850189208984,
+    "y": -1.331531047821045
+  },
+  "velocity": {
+    "x": 7.090226650238037,
+    "y": -10.035857200622559
+  },
+  "visualFoot": {
+    "x": 120.68035125732422,
+    "y": -1.713136076927185
+  },
+  "ropeOrigin": {
+    "x": 120.87970733642578,
+    "y": -0.6782998442649841
+  },
+  "camera": {
+    "x": 119.64801788330078,
+    "y": 0.0,
+    "z": -10.0
+  },
+  "visualPosition": {
+    "x": 120.87970733642578,
+    "y": -0.6782998442649841,
+    "z": 0.0
+  },
+  "visualScale": {
+    "x": 0.19336307048797607,
+    "y": 0.19336307048797607,
+    "z": 1.0
+  },
+  "ortho": 8.699999809265137,
+  "grounded": false,
+  "attached": true,
+  "flip": false,
+  "shadowVisible": false,
+  "shadowEnabled": false,
+  "shadowPosition": {
+    "x": 117.71519470214844,
+    "y": -0.02499988116323948,
+    "z": 0.0
+  },
+  "particles": 0,
+  "visibleParticleRenderers": 0,
+  "bridges": 0,
+  "lowestVisibleFootDelta": 0.21839499473571777,
+  "material": "Proof wool fibres and room light",
+  "swingAngles": {
+    "x": -0.27930182218551636,
+    "y": -0.11246325820684433,
+    "z": -0.09061174094676971
+  },
+  "swingWeight": 0.37037038803100586,
+  "drive": 1.0,
+  "stream": 1.0,
+  "gather": 0.0,
+  "swingPhase": "fast_bottom_trail"
+}

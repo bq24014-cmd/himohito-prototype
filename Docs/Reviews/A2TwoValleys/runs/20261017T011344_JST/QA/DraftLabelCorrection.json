@@ -1,0 +1,7 @@
+{
+  "before_publish": true,
+  "raw_captures_unchanged": true,
+  "right_apex_frame": 72,
+  "reason": "Right apex selection must not be clamped after the later acceleration sample. Main left turn is a side-contact event, not a free apex.",
+  "extra_frame78_retained": true
+}

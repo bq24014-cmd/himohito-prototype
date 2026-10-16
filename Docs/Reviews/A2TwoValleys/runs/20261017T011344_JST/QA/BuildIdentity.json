@@ -1,0 +1,14 @@
+{
+  "exe_sha256": "9FDC9E52999B5BC1FF599F0B3F03EE4F001525DC7F66B8D6BA1A3A3E3FF015BE",
+  "assembly_sha256": "290FDADE7D1DA5E36994A07B79F8100D31385701ED9B4B56BB77E32B4A4AB08A",
+  "canonical_build_manifest_sha256": "3A98E20AE2B5B4A8856B20668865C1A924E87FF9E9ED8810028AC3449E7FDD36",
+  "summary": {
+    "result": "Succeeded",
+    "errors": 0,
+    "warnings": 0,
+    "bytes": 535566323
+  },
+  "new_human_test": false,
+  "unity": "6000.3.21f1",
+  "production_head": "7a4f011b7ffc0343acd4727a75255495a3881fb3"
+}

@@ -1,0 +1,77 @@
+{
+  "frames_each": 173,
+  "automatic_input": true,
+  "human_real_keys": false,
+  "resolution_each": [
+    1280,
+    720
+  ],
+  "offline_capture_fps": 30,
+  "max_deltas": {
+    "position": 0.0,
+    "velocity": 0.0,
+    "camera": 0.0
+  },
+  "identical_state_fields": [
+    "time",
+    "fixedTime",
+    "grounded",
+    "attached",
+    "resource",
+    "selected",
+    "bridges",
+    "sprite",
+    "flip",
+    "ortho",
+    "visualScale",
+    "visualPosition",
+    "trail",
+    "brace",
+    "impact"
+  ],
+  "collider_joint_physics_config_equal": true,
+  "layout_equal": true,
+  "crown_line_error_max": 0.0,
+  "selection": {
+    "acceleration": 77,
+    "bottom": 96,
+    "right_apex": 72,
+    "left_approach_before_wall_turn": 102,
+    "release": 123,
+    "landing": 141
+  },
+  "left_turn_limitation": "Original movement meets the entry floor side, not a clean airborne left apex. The separate original-length6/A-D-braked supplement documents free left/right apexes.",
+  "selected_frames": [
+    5,
+    22,
+    72,
+    77,
+    78,
+    96,
+    102,
+    122,
+    123,
+    124,
+    127,
+    131,
+    140,
+    141,
+    145,
+    158,
+    166
+  ],
+  "phases_observed": [
+    "active_pump",
+    "apex_gather",
+    "fast_bottom_trail"
+  ],
+  "phase_counts": {
+    "active_pump": 33,
+    "apex_gather": 10,
+    "fast_bottom_trail": 42,
+    "original_attach": 18,
+    "release_handoff": 8,
+    "unchanged": 62
+  },
+  "candidate2_human_adoption": "未承認"
+}

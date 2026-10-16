@@ -1,0 +1,68 @@
+{
+  "acceleration": {
+    "frame": 77,
+    "changed_pixels_rgb_threshold_12": 122,
+    "difference_bbox": [
+      622,
+      208,
+      662,
+      231
+    ],
+    "quality_pass": false
+  },
+  "bottom": {
+    "frame": 96,
+    "changed_pixels_rgb_threshold_12": 234,
+    "difference_bbox": [
+      540,
+      400,
+      573,
+      436
+    ],
+    "quality_pass": false
+  },
+  "right_apex": {
+    "frame": 72,
+    "changed_pixels_rgb_threshold_12": 68,
+    "difference_bbox": [
+      629,
+      199,
+      666,
+      228
+    ],
+    "quality_pass": false
+  },
+  "left_approach_before_wall_turn": {
+    "frame": 102,
+    "changed_pixels_rgb_threshold_12": 233,
+    "difference_bbox": [
+      530,
+      382,
+      558,
+      425
+    ],
+    "quality_pass": false
+  },
+  "release": {
+    "frame": 123,
+    "changed_pixels_rgb_threshold_12": 217,
+    "difference_bbox": [
+      703,
+      361,
+      728,
+      402
+    ],
+    "quality_pass": false
+  },
+  "landing": {
+    "frame": 141,
+    "changed_pixels_rgb_threshold_12": 43,
+    "difference_bbox": [
+      691,
+      366,
+      724,
+      409
+    ],
+    "quality_pass": false
+  }
+}

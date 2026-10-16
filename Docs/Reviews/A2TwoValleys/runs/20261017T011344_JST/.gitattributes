@@ -1,0 +1,2 @@
+# Small review videos, ordinary Git blobs in this run only.
+Videos/*.mp4 -filter -diff -merge -text

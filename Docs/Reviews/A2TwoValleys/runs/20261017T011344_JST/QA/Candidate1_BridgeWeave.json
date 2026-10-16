@@ -1,0 +1,70 @@
+{
+  "frame": 173,
+  "time": 8.833333015441895,
+  "fixedTime": 9.41999626159668,
+  "resource": 13.0,
+  "selected": 11.0,
+  "trail": 0.0,
+  "brace": 0.0,
+  "impact": 0.0,
+  "ropeOriginError": 0.0,
+  "phase": "bridge_build",
+  "sprite": "HimoHitoCraftAim-v1 Aim 4",
+  "position": {
+    "x": 118.20227813720703,
+    "y": 0.7295120358467102
+  },
+  "velocity": {
+    "x": 0.0,
+    "y": 0.0
+  },
+  "visualFoot": {
+    "x": 118.06924438476562,
+    "y": 0.19943541288375854
+  },
+  "ropeOrigin": {
+    "x": 118.27527618408203,
+    "y": 1.1308295726776123
+  },
+  "camera": {
+    "x": 117.74961853027344,
+    "y": 0.0,
+    "z": -10.0
+  },
+  "visualPosition": {
+    "x": 118.19718933105469,
+    "y": 0.20131701231002808,
+    "z": 0.0
+  },
+  "visualScale": {
+    "x": 0.18816044926643372,
+    "y": 0.1881604641675949,
+    "z": 1.0
+  },
+  "ortho": 8.699999809265137,
+  "grounded": true,
+  "attached": false,
+  "flip": false,
+  "shadowVisible": false,
+  "shadowEnabled": false,
+  "shadowPosition": {
+    "x": 117.4000015258789,
+    "y": -0.02499988116323948,
+    "z": 0.0
+  },
+  "particles": 0,
+  "visibleParticleRenderers": 0,
+  "bridges": 1,
+  "lowestVisibleFootDelta": 0.06992334127426147,
+  "material": "Proof wool fibres and room light",
+  "swingAngles": {
+    "x": 0.0,
+    "y": 0.0,
+    "z": 0.0
+  },
+  "swingWeight": 0.0,
+  "drive": 0.0,
+  "stream": 0.0,
+  "gather": 0.0,
+  "swingPhase": "unchanged"
+}

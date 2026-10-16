@@ -1,0 +1,25 @@
+{
+  "diagnostic_start_position": false,
+  "not_a_route_completion": true,
+  "selected_length": 6,
+  "same_existing_hook_and_terrain": true,
+  "warmup": "Original ground attach and A/D opposing velocity to reduce amplitude, then zero input coasting. No velocity/root/joint edit.",
+  "frames_each": 74,
+  "automatic_input": true,
+  "human_real_keys": false,
+  "max_deltas": {
+    "position": 0.0,
+    "velocity": 0.0,
+    "camera": 0.0
+  },
+  "all_samples_airborne_and_attached": true,
+  "crown_error_max": 0.0,
+  "selected_apex_frames": {
+    "right": 21,
+    "left": 65
+  },
+  "apex_detection": "Tangential/angular velocity sign reversal, lowest speed sample within three frames. Not vx alone.",
+  "source_build": "r3",
+  "main_sequence_source_build": "r1",
+  "visual_sources_between_r1_and_r3": "unchanged; only diagnostic capture case added"
+}

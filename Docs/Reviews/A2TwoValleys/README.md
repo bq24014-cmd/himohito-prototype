@@ -1,15 +1,15 @@
 # ヒモヒト：A2関連の固定レビュー入口
 
-固定branch：`review/a2-two-valleys`。毎回 [LATEST.json](LATEST.json) をこのbranchから読み、`report_path` の報告と画像・QAを同じcommitから参照してください。ZIPの再添付は不要です。
+固定branch：`review/a2-two-valleys`。[LATEST.json](LATEST.json)の最新報告・画像・QAを同じcommitから読んでください。ZIPの再添付は不要です。
 
-## 最新：主人公の質感・振り子・着地の演出Proof
+## 最新：振り子演出候補2
 
-[20261017T000045_JST の比較資料](runs/20261017T000045_JST/Report.md)。候補1、Human Visual Review待ち。新しい候補の実キー試遊人数は0。Production統合・正式採用はしていません。
+[20261017T011344_JST の比較資料](runs/20261017T011344_JST/Report.md)。候補1／候補2の通常画角動画、連続JPEG、拡大補助、実測・隔離差分。Human実キー人数0、Visual採否未承認。Production統合なし。
 
-通常画角、振り子/解除/着地の連続JPEG、拡大比較、通常速度の無音動画、必要なQA、隔離コードの差分を収録。Build/Unity Project/Library/BGM/巨大な全ログは非収録です。PNG原本はローカル保持しています。
+## 以前の資料を保持
 
-## 前のA2 r1評価を保持
+- [候補1・質感／振り子／着地](runs/20261017T000045_JST/Report.md)。これも正式採用済みではありません。
+- [A2 r1本人の否定評価](runs/20261016T184703_JST/Report.md)。不採用推奨を維持。
+- [A2 r1元の攻略／QA](runs/20261016T181643_JST/Report.md)。今回の演出比較を地形やワールドの採用へ読み替えません。
 
-[本人の否定評価](runs/20261016T184703_JST/Report.md)と[元の攻略・QA記録](runs/20261016T181643_JST/Report.md)は不変です。A2 r1は不採用推奨を維持。今回A2の地形を演出撮影へ借用したことは、A2・新ワールドの採用やProduction統合を意味しません。
-
-過去runは上書きせず、新runを追加します。LATESTと最新報告は同一commitで更新します。共有許可と正式採用許可は別で、mainへmerge/pushしません。
+過去runは不変。レビュー資料とLATESTを同じcommitで更新。Unity Project・Build・Library・BGM・巨大な全ログは共有しません。mainへの反映・Production統合・ponのreview branch変更なし。

@@ -1,0 +1,12 @@
+{
+  "production_unchanged": true,
+  "candidate1_unchanged": true,
+  "five_locked_sources_unchanged": true,
+  "art_scenes_packages_unchanged": true,
+  "isolated_changes": [
+    "Assets/PlayerPresentation/PlayerMotionPresentation.cs",
+    "Assets/PlayerPresentation/PresentationCapture.cs",
+    "Assets/Resources/PlayerPresentationYarn.shader",
+    "Assets/Scripts/RopeBodyVisual.cs"
+  ]
+}

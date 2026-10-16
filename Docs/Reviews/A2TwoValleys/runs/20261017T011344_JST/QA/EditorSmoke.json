@@ -1,0 +1,51 @@
+{
+  "kind": "Player texture/swing/landing presentation Proof",
+  "variant": "candidate2",
+  "method": "Scripted original input fields/API and actual Unity Physics2D. No Human keys. Offline 30fps capture clock.",
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "Original attach receives no extra pose",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "Three physical states select different render poses",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "Paused state cannot advance",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "First release holds articulated pose",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "Original air pose restored after release settle",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "Shader supported",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "Initial grounded",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "No Gameplay error",
+      "status": "PASS",
+      "detail": ""
+    }
+  ],
+  "events": [],
+  "samples": [],
+  "finished": true
+}

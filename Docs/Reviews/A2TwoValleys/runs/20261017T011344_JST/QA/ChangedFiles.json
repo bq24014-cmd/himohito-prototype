@@ -1,0 +1,26 @@
+[
+  {
+    "path": "Assets/PlayerPresentation/PlayerMotionPresentation.cs",
+    "sha256": "0E51DCE32F7D35ED8796E93F6E19AA6AD780E835355907A410EDF786537D062B"
+  },
+  {
+    "path": "Assets/PlayerPresentation/PresentationCapture.cs",
+    "sha256": "60C724901B8774A939FB1E9AFAF7562EC389BB3E5BE17B99B83513D324AD331C"
+  },
+  {
+    "path": "Assets/Resources/PlayerPresentationYarn.shader",
+    "sha256": "F33A13747D4CE89110FC6A475CB89F63DFC31AD126B8DC049D5F52BBE75971D9"
+  },
+  {
+    "path": "Assets/Scripts/RopeBodyVisual.cs",
+    "sha256": "3941F890EA6C7727BFE7DB65EBA5B643C5BC7960EEE836D31E762CF24C92129C"
+  },
+  {
+    "path": "Assets/PlayerPresentation/SwingPresentationState.cs",
+    "sha256": "FE6D0CAD64A3D3A56AFD426BDBDE63C8BF00ABB172D892A2DFA3A574196330A7"
+  },
+  {
+    "path": "Assets/PlayerPresentation/SwingPresentationState.cs.meta",
+    "sha256": "CBD82DAD09681745869486157167736817420AEDD0EC85E75396C6CCCC069FDA"
+  }
+]

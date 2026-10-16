@@ -1,0 +1,134 @@
+{
+  "run": "20261017T011344_JST",
+  "review_id": "PlayerSwingCandidate2-20261017T011344_JST",
+  "updated_at": "2026-10-17T01:13:44.729520+09:00",
+  "previous_candidate_commit": "b9d86c420e3a55c044e2527d7c787a4cdb6ae954",
+  "build": {
+    "exe_sha256": "9FDC9E52999B5BC1FF599F0B3F03EE4F001525DC7F66B8D6BA1A3A3E3FF015BE",
+    "assembly_sha256": "290FDADE7D1DA5E36994A07B79F8100D31385701ED9B4B56BB77E32B4A4AB08A",
+    "canonical_build_manifest_sha256": "3A98E20AE2B5B4A8856B20668865C1A924E87FF9E9ED8810028AC3449E7FDD36",
+    "summary": {
+      "result": "Succeeded",
+      "errors": 0,
+      "warnings": 0,
+      "bytes": 535566323
+    },
+    "new_human_test": false,
+    "unity": "6000.3.21f1",
+    "production_head": "7a4f011b7ffc0343acd4727a75255495a3881fb3"
+  },
+  "supplementary_build": {
+    "exe_sha256": "9FDC9E52999B5BC1FF599F0B3F03EE4F001525DC7F66B8D6BA1A3A3E3FF015BE",
+    "assembly_sha256": "207D7E6DDA60805A1EB2D143852E325253B6E613B828B7AD02B33A0D6B2459B3",
+    "summary": {
+      "result": "Succeeded",
+      "errors": 0,
+      "warnings": 0,
+      "bytes": 535570738
+    },
+    "role": "Supplementary braked length6 cycle capture only; visual source unchanged from r1",
+    "unity": "6000.3.21f1"
+  },
+  "comparison": {
+    "frames_each": 173,
+    "automatic_input": true,
+    "human_real_keys": false,
+    "resolution_each": [
+      1280,
+      720
+    ],
+    "offline_capture_fps": 30,
+    "max_deltas": {
+      "position": 0.0,
+      "velocity": 0.0,
+      "camera": 0.0
+    },
+    "identical_state_fields": [
+      "time",
+      "fixedTime",
+      "grounded",
+      "attached",
+      "resource",
+      "selected",
+      "bridges",
+      "sprite",
+      "flip",
+      "ortho",
+      "visualScale",
+      "visualPosition",
+      "trail",
+      "brace",
+      "impact"
+    ],
+    "collider_joint_physics_config_equal": true,
+    "layout_equal": true,
+    "crown_line_error_max": 0.0,
+    "selection": {
+      "acceleration": 77,
+      "bottom": 96,
+      "right_apex": 72,
+      "left_approach_before_wall_turn": 102,
+      "release": 123,
+      "landing": 141
+    },
+    "left_turn_limitation": "Original movement meets the entry floor side, not a clean airborne left apex. The separate original-length6/A-D-braked supplement documents free left/right apexes.",
+    "selected_frames": [
+      5,
+      22,
+      72,
+      77,
+      78,
+      96,
+      102,
+      122,
+      123,
+      124,
+      127,
+      131,
+      140,
+      141,
+      145,
+      158,
+      166
+    ],
+    "phases_observed": [
+      "active_pump",
+      "apex_gather",
+      "fast_bottom_trail"
+    ],
+    "phase_counts": {
+      "active_pump": 33,
+      "apex_gather": 10,
+      "fast_bottom_trail": 42,
+      "original_attach": 18,
+      "release_handoff": 8,
+      "unchanged": 62
+    },
+    "candidate2_human_adoption": "未承認"
+  },
+  "free_cycle_comparison": {
+    "diagnostic_start_position": false,
+    "not_a_route_completion": true,
+    "selected_length": 6,
+    "same_existing_hook_and_terrain": true,
+    "warmup": "Original ground attach and A/D opposing velocity to reduce amplitude, then zero input coasting. No velocity/root/joint edit.",
+    "frames_each": 74,
+    "automatic_input": true,
+    "human_real_keys": false,
+    "max_deltas": {
+      "position": 0.0,
+      "velocity": 0.0,
+      "camera": 0.0
+    },
+    "all_samples_airborne_and_attached": true,
+    "crown_error_max": 0.0,
+    "selected_apex_frames": {
+      "right": 21,
+      "left": 65
+    },
+    "apex_detection": "Tangential/angular velocity sign reversal, lowest speed sample within three frames. Not vx alone.",
+    "source_build": "r3",
+    "main_sequence_source_build": "r1",
+    "visual_sources_between_r1_and_r3": "unchanged; only diagnostic capture case added"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "first_build": "Build_r0",
+  "first_capture": "Candidate1",
+  "status": "FAIL in added pause assertion, not a candidate2 visual result",
+  "evidence": "The saved pre-pause sample is grounded=true with speed>6. The saved resumed sample is attached=true, grounded=false and resource=24. The test stopped too early and incorrectly required resource<24.",
+  "correction": "Wait for airborne + existing swing attachment handoff completion + speed>=6. Preserve the actual existing resource value24. Observe resumed state at end-of-frame.",
+  "gameplay_code_changed": false,
+  "old_evidence_retained": true,
+  "retake_outputs": [
+    "Build_r1",
+    "Candidate1Final",
+    "Candidate2Final"
+  ]
+}

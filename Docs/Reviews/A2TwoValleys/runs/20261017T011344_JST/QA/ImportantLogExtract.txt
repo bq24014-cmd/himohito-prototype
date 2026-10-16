@@ -1,0 +1,63 @@
+## EditorSmoke.log
+PRESENTATION_QA Original attach receives no extra pose PASS
+PRESENTATION_QA Three physical states select different render poses PASS
+PRESENTATION_QA Paused state cannot advance PASS
+PRESENTATION_QA First release holds articulated pose PASS
+PRESENTATION_QA Original air pose restored after release settle PASS
+PRESENTATION_QA Shader supported PASS
+PRESENTATION_QA Initial grounded PASS
+PRESENTATION_QA No Gameplay error PASS
+
+## Build_r1.log
+Build Finished, Result: Success.
+
+## Build_r3.log
+Build Finished, Result: Success.
+
+## Candidate1Final/Player.log
+PRESENTATION_QA Attach original API PASS
+PRESENTATION_QA Attached apex reached PASS
+PRESENTATION_QA Detach momentum preserved PASS
+PRESENTATION_QA Same terrain landing PASS API trajectory; not fun/forgiveness claim
+PRESENTATION_QA Resource unchanged by swing PASS
+PRESENTATION_QA Input/physics fixture invariant PASS
+PRESENTATION_QA R entry/budget/bridge state PASS
+PRESENTATION_QA Pause freezes displayed body PASS
+PRESENTATION_QA Swing pause freezes pose / root / momentum PASS Scaled-time API pause, not Esc key/menu evidence
+PRESENTATION_QA Swing resume advances with same attachment PASS
+PRESENTATION_QA Bridge build / weave visual retained PASS
+PRESENTATION_QA No Gameplay error PASS
+
+## Candidate2Final/Player.log
+PRESENTATION_QA Attach original API PASS
+PRESENTATION_QA Attached apex reached PASS
+PRESENTATION_QA Detach momentum preserved PASS
+PRESENTATION_QA Same terrain landing PASS API trajectory; not fun/forgiveness claim
+PRESENTATION_QA Resource unchanged by swing PASS
+PRESENTATION_QA Input/physics fixture invariant PASS
+PRESENTATION_QA R entry/budget/bridge state PASS
+PRESENTATION_QA Pause freezes displayed body PASS
+PRESENTATION_QA Swing pause freezes pose / root / momentum PASS Scaled-time API pause, not Esc key/menu evidence
+PRESENTATION_QA Swing resume advances with same attachment PASS
+PRESENTATION_QA Bridge build / weave visual retained PASS
+PRESENTATION_QA No Gameplay error PASS
+
+## MergeRegression/Player.log
+PRESENTATION_QA S9 regression uses original MainStage PASS
+PRESENTATION_QA Original S9 two bridges PASS
+PRESENTATION_QA Original F merge / resource / center state PASS
+PRESENTATION_QA No Gameplay error PASS
+
+## Cycle3Candidate1/Player.log
+PRESENTATION_QA Supplement original ground attach length6 PASS
+PRESENTATION_QA Supplement small free arc via original A/D PASS Warmup automatic braking only; no state teleport or physics edit
+PRESENTATION_QA Supplement two airborne angular turnarounds PASS Angular tangent sign, not horizontal velocity sign; diagnostic setup only
+PRESENTATION_QA Supplement resource / original layout PASS
+PRESENTATION_QA No Gameplay error PASS
+
+## Cycle3Candidate2/Player.log
+PRESENTATION_QA Supplement original ground attach length6 PASS
+PRESENTATION_QA Supplement small free arc via original A/D PASS Warmup automatic braking only; no state teleport or physics edit
+PRESENTATION_QA Supplement two airborne angular turnarounds PASS Angular tangent sign, not horizontal velocity sign; diagnostic setup only
+PRESENTATION_QA Supplement resource / original layout PASS
+PRESENTATION_QA No Gameplay error PASS

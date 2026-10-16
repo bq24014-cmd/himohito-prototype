@@ -1,0 +1,31 @@
+{
+  "kind": "Player texture/swing/landing presentation Proof",
+  "variant": "candidate2",
+  "method": "Scripted original input fields/API and actual Unity Physics2D. No Human keys. Offline 30fps capture clock.",
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "S9 regression uses original MainStage",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "Original S9 two bridges",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "Original F merge / resource / center state",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "No Gameplay error",
+      "status": "PASS",
+      "detail": ""
+    }
+  ],
+  "events": [],
+  "samples": [],
+  "finished": true
+}
