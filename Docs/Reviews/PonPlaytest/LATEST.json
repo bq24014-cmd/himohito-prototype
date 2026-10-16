@@ -13,11 +13,11 @@
   "published_commit": null,
   "continuation_cutoff_utc": "2026-10-16T23:00:00Z",
   "no_new_themes_after_utc": "2026-10-16T22:30:00Z",
-  "updated_utc": "2026-10-16T19:17:58.264373+00:00",
+  "updated_utc": "2026-10-16T19:33:19.027165+00:00",
   "continuation_configured": false,
   "parent_review": "APPROVED_42_FILES_WITH_MINOR_CORRECTIONS; UI_STATE_ADDENDUM_SEPARATE",
   "continuation_management": "PARENT",
-  "revision": 14,
+  "revision": 15,
   "addendum": "runs/20261017_004500JST/06_T4_S10_Addendum.md",
   "resource_retry_addendum": "runs/20261017_004500JST/07_Resource_Retry_Addendum.md",
   "A_observations": 0,
@@ -61,5 +61,13 @@
   "priority_comparison_status": "PARENT_APPROVED_REVIEW_DOCUMENT_UPDATE; GAME_EFFECT_UNVERIFIED",
   "priority_reorganization": "Q / operation conditions (including button affordance) / retry approach / T4 causal information / bounded section shortening. Existing button proposal grouped into #2; existing10 retry approach placed at #3.",
   "priority_history_note": "Earlier statements that ranking was unchanged describe their publication time. This revision reorganizes the proposed comparisons; it is not an observed-effect ranking.",
-  "priority_source_base_commit": "c2dda5f6670ad0b03022fcab113b2d8d98cc9382"
+  "priority_source_base_commit": "c2dda5f6670ad0b03022fcab113b2d8d98cc9382",
+  "visual_review_status": "PARENT_APPROVED_STATIC_EVIDENCE_SCOPE_UPDATE; NOT_LIVE_PLAY",
+  "visual_review_documents": [
+    "runs/20261017_004500JST/01_Gameplay.md",
+    "runs/20261017_004500JST/04_Evidence.md"
+  ],
+  "visual_review_basis": "Existing E02/E14/E09/E10; fixed source excerpts, saved Scene values and old capture records reviewed. No new image or document.",
+  "visual_review_parent_review": "APPROVED_WITH_ADDITIONAL_SOURCE_SUPPORT_AND_FOUR_IMAGE_REVIEW",
+  "readme_summary_proposal_status": "NOT_INCLUDED_UNREVIEWED"
 }
