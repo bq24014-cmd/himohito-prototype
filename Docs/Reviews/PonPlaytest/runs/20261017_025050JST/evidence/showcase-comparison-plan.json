@@ -1,0 +1,67 @@
+{
+  "utc": "2026-10-16T17:50:50.446312+00:00",
+  "status": "UNEXECUTED_ORDINARY_INPUT_COMPARISONS; NOT_IMPLEMENTATION",
+  "candidates": [
+    {
+      "candidate": "T4",
+      "priority": "FIRST_SHOWCASE_CANDIDATE_NOT_LIVE_FUN_RANK",
+      "prediction_prompt": "中央を外すと、橋と通れる場所はどう変わると思う？",
+      "observe_before": [
+        "Actual beam and two bridge shapes in normal view",
+        "What information supports the stated prediction: terrain, small sign, Z guide, prior memory"
+      ],
+      "observe_after": [
+        "Center support disappears and two curves become one lower path",
+        "Whether player can identify the changed clearance and proceed under the beam using normal input"
+      ],
+      "counterexample": "Can execute F from the guide without predicting why lowering helps; pressing F alone is not causal understanding.",
+      "minimum": "One uninterrupted ordinary-input attempt from two completed bridges through F and, if successful, the beam. Before F ask for a prediction; immediately after ask what changed and how to proceed. Ask the reason for passage only after actual passage. Existing diagnostics are not this trial.",
+      "value_condition": "Candidate value increases if the player predicts/then explains the same cause and can continue; decreases if only a memorized F sequence is reproduced."
+    },
+    {
+      "candidate": "S6",
+      "priority": "SECOND_CONDITIONAL_ROUTE_CHOICE",
+      "prediction_prompt": "上と下は、何を使い、何が難しそう？どこを見て選ぶ？",
+      "observe_before": [
+        "Whether both route entries are visible when deciding",
+        "Recognition of green bridge endpoints versus blue swing hooks",
+        "Resource and selected-length HUD reading before commitment"
+      ],
+      "observe_after": [
+        "Upper Q cost feedback versus lower E attachment without spend",
+        "Whether the player can explain the remaining resource difference at the merge",
+        "Target halo/rope appearance and whether a missed next connection can be explained"
+      ],
+      "counterexample": "A player could choose the upper path because it appears nearer or familiar, learning the cost only afterward. An actual tradeoff was then not predicted.",
+      "minimum": "Observe an initial attempt with a pre-action question; do not label it an unguided natural choice. If both routes are compared, reproduce the same entry state by ordinary play, record entry/merge resource and failures, and stop if state cannot be matched. No teleport/reset of internal variables.",
+      "value_condition": "Keep as a showcase if a reasoned predicted tradeoff remains legible after the result; if not, compare outcome/cost prediction wording before adding route content."
+    },
+    {
+      "candidate": "T2",
+      "priority": "THIRD_SHORT_CAUSAL_LEARNING_BACKUP",
+      "prediction_prompt": "長さを変えると、トゲの上の通り方はどう変わりそう？",
+      "observe_before": [
+        "Hook above three spikes and landing banks",
+        "World-sign safe/danger paths and optional Z diagram",
+        "Selected next length and attached state in HUD"
+      ],
+      "observe_after": [
+        "A changed swing clearance and actual landing",
+        "If contact occurs: spike contact, detachment and subsequent motion in a continuous ordinary-input recording",
+        "Whether failure is attributed to length, aim, acceleration or manual release"
+      ],
+      "counterexample": "Guide gives 6–7. Following that number without predicting the path can pass the lesson while showing little choice or understanding.",
+      "minimum": "Observe an initial attempt with a pre-action question; do not label it an unguided natural choice. Then compare selected 8 and 6 if normal retries permit, keeping start/aim/acceleration/release as similar as practical; record differences and do not claim deterministic identical inputs. Do not require a death.",
+      "value_condition": "Keep a brief showcase if changing length visibly supports a corrected prediction; otherwise retain as learning but do not use it to promise the central appeal."
+    }
+  ],
+  "common": [
+    "No audio evaluation",
+    "No timing/ease/feel claim",
+    "No first-time-human claim",
+    "Do not use QA PASS as fun",
+    "No stage/asset/spec changes",
+    "No ranking change to current top-five or morning one task",
+    "Pre-action questions guide attention; label these attempts explicitly, separate from unguided natural play."
+  ]
+}

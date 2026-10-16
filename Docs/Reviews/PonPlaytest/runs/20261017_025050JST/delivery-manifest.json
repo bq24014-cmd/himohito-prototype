@@ -1,0 +1,41 @@
+{
+  "run_id": "20261017_025050JST",
+  "status": "PARENT_REVIEW_APPROVED_WITH_COMPARISON_QUESTION_CORRECTIONS; REMOTE_CONFIRMATION_IN_PUBLICATION_RECEIPT",
+  "A_observations": 0,
+  "files": [
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_025050JST/11_Showcase_Prediction_Result.md",
+      "bytes": 8183,
+      "sha256": "d22c92b3678792fd5b487593951686396d1f1599c001af0bb1bc4545a3b2aa41"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_025050JST/evidence/images/E14_T2_aim_legacy.png",
+      "bytes": 2964210,
+      "sha256": "ef6cbf68f96ad7da650ccba6912c37535b210d5d4bd5e3b5e4fe740d02f6565f"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_025050JST/evidence/images/E15_S6_intro_legacy.png",
+      "bytes": 2537472,
+      "sha256": "0da82fa48ef1a5f721c63c090c7b9b6ba568b2be9c50ddb2705e9befea598f9c"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_025050JST/evidence/showcase-comparison-plan.json",
+      "bytes": 4544,
+      "sha256": "b00ff0d545f45cc132c41b9d5459a8d90458ec7b75e8ec7b9479f59298a3058d"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_025050JST/evidence/showcase-facts.json",
+      "bytes": 11442,
+      "sha256": "1f948bb86e8c5da5bdb36bbc205a7166b2f356169b65c924494a7e40b74a0be2"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_025050JST/evidence/showcase-source-delta.md",
+      "bytes": 8004,
+      "sha256": "f059213a9120c16b7903b7f6fb503678fce0d6e5887b92cb448ccf047d42d618"
+    }
+  ],
+  "total_files_with_manifest": 7,
+  "image_files": 2,
+  "new_screenshots": 0,
+  "latest_published_commit": "9ffbc91829319bccd325d864f77a3a9b37ade1a9"
+}

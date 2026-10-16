@@ -1,0 +1,225 @@
+{
+  "utc": "2026-10-16T17:50:50.446312+00:00",
+  "scope": "10/6 FriendPlay frozen Build inputs; not current Production",
+  "A_observations": 0,
+  "no_game_input_or_new_rendering": true,
+  "source_hashes": [
+    {
+      "path": "Assets/Scenes/Tutorial.unity",
+      "sha256": "dc1bed54cc083256ce895041b1c93578101e19b9738e7cf260619e8f7e1e4b92",
+      "BuildInputs_match": true,
+      "tutorial_Oct3_hash": "DC1BED54CC083256CE895041B1C93578101E19B9738E7CF260619E8F7E1E4B92",
+      "tutorial_Oct3_match": true,
+      "main_intro_Oct3_hash": "DC1BED54CC083256CE895041B1C93578101E19B9738E7CF260619E8F7E1E4B92",
+      "main_intro_Oct3_match": true
+    },
+    {
+      "path": "Assets/Scenes/MainStage.unity",
+      "sha256": "57d2464751b5b9c2a78e6c56f34197e9bc2629983fadaa1dff6e0ba0b4bc2284",
+      "BuildInputs_match": true,
+      "tutorial_Oct3_hash": "57D2464751B5B9C2A78E6C56F34197E9BC2629983FADAA1DFF6E0BA0B4BC2284",
+      "tutorial_Oct3_match": true,
+      "main_intro_Oct3_hash": "57D2464751B5B9C2A78E6C56F34197E9BC2629983FADAA1DFF6E0BA0B4BC2284",
+      "main_intro_Oct3_match": true
+    },
+    {
+      "path": "Assets/Scripts/TutorialSectionTwoSetup.cs",
+      "sha256": "ccd88a949811ada96d1751ebdcb8273d94e6094d8a06975c8522a4ed30ae99e1",
+      "BuildInputs_match": true,
+      "tutorial_Oct3_hash": "CCD88A949811ADA96D1751EBDCB8273D94E6094D8A06975C8522A4ED30AE99E1",
+      "tutorial_Oct3_match": true,
+      "main_intro_Oct3_hash": "CCD88A949811ADA96D1751EBDCB8273D94E6094D8A06975C8522A4ED30AE99E1",
+      "main_intro_Oct3_match": true
+    },
+    {
+      "path": "Assets/Scripts/TutorialSectionFourSetup.cs",
+      "sha256": "ca097254c033e04e2c486bdd900d800cb3226b2aa9a4cc62838be7aeee89b37c",
+      "BuildInputs_match": true,
+      "tutorial_Oct3_hash": "CA097254C033E04E2C486BDD900D800CB3226B2AA9A4CC62838BE7AEEE89B37C",
+      "tutorial_Oct3_match": true,
+      "main_intro_Oct3_hash": "CA097254C033E04E2C486BDD900D800CB3226B2AA9A4CC62838BE7AEEE89B37C",
+      "main_intro_Oct3_match": true
+    },
+    {
+      "path": "Assets/Scripts/TutorialSectionGuide.cs",
+      "sha256": "380f0e643fe2e76bc3d561c3157982b268aee650b3648357af8d3a1bf336f385",
+      "BuildInputs_match": true,
+      "tutorial_Oct3_hash": "380F0E643FE2E76BC3D561C3157982B268AEE650B3648357AF8D3A1BF336F385",
+      "tutorial_Oct3_match": true,
+      "main_intro_Oct3_hash": "380F0E643FE2E76BC3D561C3157982B268AEE650B3648357AF8D3A1BF336F385",
+      "main_intro_Oct3_match": true
+    },
+    {
+      "path": "Assets/Scripts/TutorialSignInscription.cs",
+      "sha256": "5b0194605ac744e2aecf3106c1911dad2cfe6c34bb61f9acb859e9cd22c1ab1e",
+      "BuildInputs_match": true,
+      "tutorial_Oct3_hash": "5B0194605AC744E2AECF3106C1911DAD2CFE6C34BB61F9ACB859E9CD22C1AB1E",
+      "tutorial_Oct3_match": true,
+      "main_intro_Oct3_hash": "5B0194605AC744E2AECF3106C1911DAD2CFE6C34BB61F9ACB859E9CD22C1AB1E",
+      "main_intro_Oct3_match": true
+    },
+    {
+      "path": "Assets/Scripts/TutorialGuideAnimation.cs",
+      "sha256": "bb2cbbc6c7afa6ea22478d500932befb5cddab983c6dff75ea9f2c374e59a8e5",
+      "BuildInputs_match": true,
+      "tutorial_Oct3_hash": "BB2CBBC6C7AFA6EA22478D500932BEFB5CDDAB983C6DFF75EA9F2C374E59A8E5",
+      "tutorial_Oct3_match": true,
+      "main_intro_Oct3_hash": "BB2CBBC6C7AFA6EA22478D500932BEFB5CDDAB983C6DFF75EA9F2C374E59A8E5",
+      "main_intro_Oct3_match": true
+    },
+    {
+      "path": "Assets/Scripts/RopeController.cs",
+      "sha256": "3ef4a50076994279839f398652180256f5ec37c01b954eeefc67c79b831e25d6",
+      "BuildInputs_match": true,
+      "tutorial_Oct3_hash": "3EF4A50076994279839F398652180256F5EC37C01B954EEEFC67C79B831E25D6",
+      "tutorial_Oct3_match": true,
+      "main_intro_Oct3_hash": "3EF4A50076994279839F398652180256F5EC37C01B954EEEFC67C79B831E25D6",
+      "main_intro_Oct3_match": true
+    },
+    {
+      "path": "Assets/Scripts/RopeSpikeHazard.cs",
+      "sha256": "f8a1234c574e1e6daa4b66027f1e00ae2d52e0af1def791099ee4a1206169edc",
+      "BuildInputs_match": true,
+      "tutorial_Oct3_hash": "F8A1234C574E1E6DAA4B66027F1E00AE2D52E0AF1DEF791099EE4A1206169EDC",
+      "tutorial_Oct3_match": true,
+      "main_intro_Oct3_hash": "F8A1234C574E1E6DAA4B66027F1E00AE2D52E0AF1DEF791099EE4A1206169EDC",
+      "main_intro_Oct3_match": true
+    },
+    {
+      "path": "Assets/Scripts/ToySpikeVisual.cs",
+      "sha256": "e363b753a12b0fbc77a721a54573c2e062af0fbfd35ef49e06fb2e757ce5ef13",
+      "BuildInputs_match": true,
+      "tutorial_Oct3_hash": "E363B753A12B0FBC77A721A54573C2E062AF0FBFD35EF49E06FB2E757CE5EF13",
+      "tutorial_Oct3_match": true,
+      "main_intro_Oct3_hash": "E363B753A12B0FBC77A721A54573C2E062AF0FBFD35EF49E06FB2E757CE5EF13",
+      "main_intro_Oct3_match": true
+    },
+    {
+      "path": "Assets/Scripts/RopeLandingFluff.cs",
+      "sha256": "94298c179fc93e795cba53086c63f6981da92c252663fd8a61fb5abf70a0fdc0",
+      "BuildInputs_match": true,
+      "tutorial_Oct3_hash": "94298C179FC93E795CBA53086C63F6981DA92C252663FD8A61FB5ABF70A0FDC0",
+      "tutorial_Oct3_match": true,
+      "main_intro_Oct3_hash": "94298C179FC93E795CBA53086C63F6981DA92C252663FD8A61FB5ABF70A0FDC0",
+      "main_intro_Oct3_match": true
+    },
+    {
+      "path": "Assets/Scripts/MainStageSectionSixSetup.cs",
+      "sha256": "71b394fdf99a0edcbb4085774aa1f4fc263054a799eec641179fae527a74e482",
+      "BuildInputs_match": true,
+      "tutorial_Oct3_hash": "71B394FDF99A0EDCBB4085774AA1F4FC263054A799EEC641179FAE527A74E482",
+      "tutorial_Oct3_match": true,
+      "main_intro_Oct3_hash": "71B394FDF99A0EDCBB4085774AA1F4FC263054A799EEC641179FAE527A74E482",
+      "main_intro_Oct3_match": true
+    },
+    {
+      "path": "Assets/Scripts/RopePlatformBuilder.cs",
+      "sha256": "11ecb4c1870cb8ef0449343155559211a5e1d9e1321132bce0dcf8e14e279fd2",
+      "BuildInputs_match": true,
+      "tutorial_Oct3_hash": "11ECB4C1870CB8EF0449343155559211A5E1D9E1321132BCE0DCF8E14E279FD2",
+      "tutorial_Oct3_match": true,
+      "main_intro_Oct3_hash": "11ECB4C1870CB8EF0449343155559211A5E1D9E1321132BCE0DCF8E14E279FD2",
+      "main_intro_Oct3_match": true
+    },
+    {
+      "path": "Assets/Scripts/RopeResourceGauge.cs",
+      "sha256": "7456e77b6b3d4e7b48882a34697cf186a55d6fac18312e7e863d4c72fd0ca97a",
+      "BuildInputs_match": true,
+      "tutorial_Oct3_hash": "7456E77B6B3D4E7B48882A34697CF186A55D6FAC18312E7E863D4C72FD0CA97A",
+      "tutorial_Oct3_match": true,
+      "main_intro_Oct3_hash": "7456E77B6B3D4E7B48882A34697CF186A55D6FAC18312E7E863D4C72FD0CA97A",
+      "main_intro_Oct3_match": true
+    },
+    {
+      "path": "Assets/Scripts/MainStageHud.cs",
+      "sha256": "30d2177386b912c1c8fc86961460208b53fd2f45df0597552055c19e41ecae50",
+      "BuildInputs_match": true,
+      "tutorial_Oct3_hash": "30D2177386B912C1C8FC86961460208B53FD2F45DF0597552055C19E41ECAE50",
+      "tutorial_Oct3_match": true,
+      "main_intro_Oct3_hash": "30D2177386B912C1C8FC86961460208B53FD2F45DF0597552055C19E41ECAE50",
+      "main_intro_Oct3_match": true
+    },
+    {
+      "path": "Assets/Scripts/PrototypeHud.cs",
+      "sha256": "2e6d442c4933dda55aa3680ed1a835372e53274fe0c7404498684dc23abb6780",
+      "BuildInputs_match": true,
+      "tutorial_Oct3_hash": "2E6D442C4933DDA55AA3680ED1A835372E53274FE0C7404498684DC23ABB6780",
+      "tutorial_Oct3_match": true,
+      "main_intro_Oct3_hash": "2E6D442C4933DDA55AA3680ED1A835372E53274FE0C7404498684DC23ABB6780",
+      "main_intro_Oct3_match": true
+    },
+    {
+      "path": "Assets/Scripts/RopeBodyVisual.cs",
+      "sha256": "456589434ad42597efd0133e8615d2d616f61696022ea5de506eae102e3c2d01",
+      "BuildInputs_match": true,
+      "tutorial_Oct3_hash": "456589434AD42597EFD0133E8615D2D616F61696022EA5DE506EAE102E3C2D01",
+      "tutorial_Oct3_match": true,
+      "main_intro_Oct3_hash": "456589434AD42597EFD0133E8615D2D616F61696022EA5DE506EAE102E3C2D01",
+      "main_intro_Oct3_match": true
+    },
+    {
+      "path": "Assets/Scripts/RopeResource.cs",
+      "sha256": "026476f48b89bac7158abebc1744bf41553bae4981c41b7148b41dced63860eb",
+      "BuildInputs_match": true,
+      "tutorial_Oct3_hash": "026476F48B89BAC7158ABEBC1744BF41553BAE4981C41B7148B41DCED63860EB",
+      "tutorial_Oct3_match": true,
+      "main_intro_Oct3_hash": "026476F48B89BAC7158ABEBC1744BF41553BAE4981C41B7148B41DCED63860EB",
+      "main_intro_Oct3_match": true
+    },
+    {
+      "path": "Assets/Scripts/HookPoint.cs",
+      "sha256": "1aa04be9a155c303221f387742f7242c92cbb026a3677b0049556c638f3cf3a8",
+      "BuildInputs_match": true,
+      "tutorial_Oct3_hash": "1AA04BE9A155C303221F387742F7242C92CBB026A3677B0049556C638F3CF3A8",
+      "tutorial_Oct3_match": true,
+      "main_intro_Oct3_hash": "1AA04BE9A155C303221F387742F7242C92CBB026A3677B0049556C638F3CF3A8",
+      "main_intro_Oct3_match": true
+    }
+  ],
+  "overlapping_prior_checks_not_additive": true,
+  "images": [
+    {
+      "id": "E14",
+      "file": "evidence/images/E14_T2_aim_legacy.png",
+      "source_relative_to_production": "Docs/QA/TutorialTerrainHybridProduction_20261003/Screenshots/Final/S2_Aim_After.png",
+      "sha256": "ef6cbf68f96ad7da650ccba6912c37535b210d5d4bd5e3b5e4fe740d02f6565f",
+      "bytes": 2964210,
+      "recorded_sha256": "EF6CBF68F96AD7DA650CCBA6912C37535B210D5D4BD5E3B5E4FE740D02F6565F",
+      "recorded_match": true,
+      "classification": "B_EXISTING_IMAGE; NOT_LIVE",
+      "boundary": "T2 aim world-camera diagnostic; not a length-6 vs length-8 trajectory comparison",
+      "library_file_id": "libfile_3b3715d8af488191a215eec7fbbb8ccc"
+    },
+    {
+      "id": "E15",
+      "file": "evidence/images/E15_S6_intro_legacy.png",
+      "source_relative_to_production": "Docs/QA/MainStageVisualAudit_20261003/Evidence/Runtime05/Section06.png",
+      "sha256": "0da82fa48ef1a5f721c63c090c7b9b6ba568b2be9c50ddb2705e9befea598f9c",
+      "bytes": 2537472,
+      "recorded_sha256": "0DA82FA48EF1A5F721C63C090C7B9B6BA568B2BE9C50DDB2705E9BEFEA598F9C",
+      "recorded_match": true,
+      "classification": "B_EXISTING_IMAGE; NOT_LIVE",
+      "boundary": "S6 natural Intro; player at S1, no generated bridge or route traversal",
+      "library_file_id": "libfile_ba1c8f80b1708191a5eade58dc3a199d"
+    },
+    {
+      "id": "E09",
+      "file_reused_url": "https://github.com/bq24014-cmd/himohito-prototype/blob/9ffbc91829319bccd325d864f77a3a9b37ade1a9/Docs/Reviews/PonPlaytest/runs/20261017_004500JST/evidence/images/E09_t4_two_bridges_legacy.png",
+      "sha256": "69b67e235c553bf9d6febfad6df3165f5e3e96e6f557147e8dd914f03b6ba362",
+      "classification": "B_OCT3_DIAGNOSTIC; NOT_LIVE",
+      "not_duplicated_in_new_run": true
+    },
+    {
+      "id": "E10",
+      "file_reused_url": "https://github.com/bq24014-cmd/himohito-prototype/blob/9ffbc91829319bccd325d864f77a3a9b37ade1a9/Docs/Reviews/PonPlaytest/runs/20261017_004500JST/evidence/images/E10_t4_merged_legacy.png",
+      "sha256": "fd225bb465d81451f924405c0813bc30391b3159b7b031bcff0a5f0011e8c8b1",
+      "classification": "B_OCT3_DIAGNOSTIC; NOT_LIVE",
+      "not_duplicated_in_new_run": true
+    }
+  ],
+  "version_boundary": "19 selected Scene/logic inputs match both Oct3 identity records and Oct6 frozen inputs. This is not a complete Art/background identity proof or proof of standalone input/readability.",
+  "unretained_viewed_image": {
+    "path": "Docs/QA/TutorialTerrainHybridProduction_20261003/Screenshots/Final/S2_Released_After.png",
+    "reason": "Filename is not proof of detachment state or a length comparison. Visible rope remains; not used as successful release evidence."
+  }
+}
