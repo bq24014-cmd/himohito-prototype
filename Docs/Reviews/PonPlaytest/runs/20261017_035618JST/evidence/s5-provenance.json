@@ -1,0 +1,334 @@
+{
+  "utc": "2026-10-16T18:56:18.194560+00:00",
+  "A_observations": 0,
+  "fixed_source_hashes": [
+    {
+      "path": "Assets/Scenes/MainStage.unity",
+      "sha256": "57d2464751b5b9c2a78e6c56f34197e9bc2629983fadaa1dff6e0ba0b4bc2284",
+      "BuildInputs_match": true,
+      "Oct3_audit_source_match": true
+    },
+    {
+      "path": "Assets/Scripts/MainStageSectionFiveSetup.cs",
+      "sha256": "b7419423f4814c47a3b031c1c5221fbbd26b9272695050e76ffa299879d6def7",
+      "BuildInputs_match": true,
+      "Oct3_audit_source_match": true
+    },
+    {
+      "path": "Assets/Scripts/PlatformOccludedLightHazard.cs",
+      "sha256": "41417e56b6c7ee947ac420760a946932cdaf7c38a41358b1e592e47144aecc8e",
+      "BuildInputs_match": true,
+      "Oct3_audit_source_match": true
+    },
+    {
+      "path": "Assets/Scripts/FlashlightSpotVisual.cs",
+      "sha256": "adb847d08f01f3631aba56611494a2dbd2501e6273566e7e6573a5f1f50db877",
+      "BuildInputs_match": true,
+      "Oct3_audit_source_match": true
+    },
+    {
+      "path": "Assets/Scripts/RopePlatformBuilder.cs",
+      "sha256": "11ecb4c1870cb8ef0449343155559211a5e1d9e1321132bce0dcf8e14e279fd2",
+      "BuildInputs_match": true,
+      "Oct3_audit_source_match": true
+    },
+    {
+      "path": "Assets/Scripts/MainStageRespawnOnFall.cs",
+      "sha256": "314060136dfb7846ae7ebbc43cfaf0028625b839b4b9a05e9171d4f5830c4d8c",
+      "BuildInputs_match": true,
+      "Oct3_audit_source_match": true
+    },
+    {
+      "path": "Assets/Scripts/MainStageCheckpoint.cs",
+      "sha256": "66663105dec1f99517efcd12d21b38711df56c8aa5a8e0175135793a04449033",
+      "BuildInputs_match": true,
+      "Oct3_audit_source_match": true
+    },
+    {
+      "path": "Assets/Scripts/MainStageVisuals.cs",
+      "sha256": "60a0ef8fe8fcd9f7e127ab043a982a7753c97ea918fd2f01cbe3e5b5c68ebaa6",
+      "BuildInputs_match": true,
+      "Oct3_audit_source_match": true
+    },
+    {
+      "path": "Assets/Scripts/OneWayRailPlatform.cs",
+      "sha256": "cf0df28caa39a81e58a9a4410195635f000bc4d0bce2975cd032cefb7070a6bc",
+      "BuildInputs_match": true,
+      "Oct3_audit_source_match": true
+    },
+    {
+      "path": "Assets/Scripts/SwingPassThroughRailPlatform.cs",
+      "sha256": "376683c77bd3a719a78a1807460d3673efd7d64fde865efad67e000f80c2017a",
+      "BuildInputs_match": true,
+      "Oct3_audit_source_match": true
+    },
+    {
+      "path": "Assets/Scripts/MainStageHud.cs",
+      "sha256": "30d2177386b912c1c8fc86961460208b53fd2f45df0597552055c19e41ecae50",
+      "BuildInputs_match": true,
+      "Oct3_audit_source_match": true
+    },
+    {
+      "path": "Assets/Scripts/MainStageSectionFourSetup.cs",
+      "sha256": "c1173ea1c61b95a6ddd3994456ed34b0d5e1167c04a4edddd43fd6e13012a6dc",
+      "BuildInputs_match": true,
+      "Oct3_audit_source_match": true
+    },
+    {
+      "path": "Assets/Scripts/MainStageSectionSevenSetup.cs",
+      "sha256": "c5d3845135fa2a83de7b1c10200f5630fffbf25f96d144b977187e80c4d95513",
+      "BuildInputs_match": true,
+      "Oct3_audit_source_match": true
+    }
+  ],
+  "old_source_matches": 13,
+  "old_source_comparisons": 13,
+  "old_audit": {
+    "path": "Docs/QA/MainStageVisualAudit_20261003/06_Section5.md",
+    "sha256": "b2ef86798a6bd59b4ed49aeebe4a394ed2a11c461fd8c55e37c6e42508a0af83",
+    "reuse": "Origin/mount mismatch, Generated filter, attached-only detach, fade parameters, rail rules, and old visual ambiguity were already recorded. Not new discoveries or new gameplay."
+  },
+  "image": {
+    "local": "E16_S5_intro_legacy.png",
+    "source": "Docs/QA/MainStageVisualAudit_20261003/Evidence/Runtime05/Section05.png",
+    "sha256": "4ad69c26bff5b6f0c631a905ea132fad6b799af72bbe44522137767ec6b4db4e",
+    "capture_record": {
+      "label": "Section05",
+      "requestedX": 103.0,
+      "captured": true,
+      "frame": 6501,
+      "cameraPosition": {
+        "x": 102.99950408935547,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "orthoSize": 8.699999809265137,
+      "aspect": 1.7777777910232544,
+      "naturalIntro": true,
+      "file": "Section05.png",
+      "sha256": "4AD69C26BFF5B6F0C631A905EA132FAD6B799AF72BBE44522137767EC6B4DB4E",
+      "invariant": true
+    },
+    "identity_path": "Docs/QA/MainStageVisualAudit_20261003/Evidence/IsolatedCopyIdentity.json",
+    "identity_sha256": "a0f7f403e51802d5d7e4324e096becfa936a6b65d6e2606cd170d04495850b3b",
+    "capture_sha256": "65310bb7da7eb6771ddb805a02482c2009b0d484a8af3bbb4a4fc96997cb41ed",
+    "scope": "Oct3 natural-Intro camera capture: player waiting in S1, no generated S5 bridge. Not live play, before/after pair or full-render identity proof for Oct6 binary."
+  },
+  "legacy_controlled_report": {
+    "readme": "Docs/QA/FullGameRegression_20260930/00_README.md",
+    "readme_sha256": "485cbfac359e43f1376648c77b8f24ed78a61ba5934a19855c518b40955c1123",
+    "checks": "Docs/QA/FullGameRegression_20260930/Evidence/MainSystemsFinal/checks.txt",
+    "checks_sha256": "316ac4f7cca9fe9ae741893a3f0c93fb58ad5d9bc14403c9cef18e005cfcff8f",
+    "classification": "Historical diagnostic/API-controlled report, not normal keyboard gameplay or evidence of fun; no full Sep30-source identity assertion."
+  },
+  "saved_scene_objects": [
+    {
+      "name": "Main S05 Flashlight Spot",
+      "file_id": 350812393,
+      "line": 2384,
+      "components": [
+        {
+          "type": 58,
+          "id": 350812395,
+          "line": 2404,
+          "fields": {
+            "m_Enabled": "1",
+            "m_IsTrigger": "1",
+            "m_Offset": "{x: 0, y: 0}",
+            "m_Radius": "0.5"
+          }
+        },
+        {
+          "type": 4,
+          "id": 350812398,
+          "line": 2512,
+          "fields": {
+            "m_LocalRotation": "{x: 0, y: 0, z: 0, w: 1}",
+            "m_LocalPosition": "{x: 97.3, y: -3.15, z: 0}",
+            "m_LocalScale": "{x: 4, y: 4, z: 1}",
+            "m_Father": "{fileID: 0}"
+          }
+        },
+        {
+          "type": 114,
+          "id": 350812407,
+          "line": 2527,
+          "fields": {
+            "m_Enabled": "1",
+            "lightSource": "{fileID: 669427073}",
+            "blockedAlpha": "0.08",
+            "activeAlpha": "0.62",
+            "fadeDuration": "0.4"
+          },
+          "script": "PlatformOccludedLightHazard"
+        }
+      ]
+    },
+    {
+      "name": "Main S05 Flashlight Source",
+      "file_id": 519685048,
+      "line": 3205,
+      "components": [
+        {
+          "type": 4,
+          "id": 519685054,
+          "line": 3385,
+          "fields": {
+            "m_LocalRotation": "{x: 0, y: 0, z: 0, w: 1}",
+            "m_LocalPosition": "{x: 102, y: 3.35, z: 0}",
+            "m_LocalScale": "{x: 1.2, y: 0.8, z: 1}",
+            "m_Father": "{fileID: 0}"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Main S05 Light Occlusion Origin",
+      "file_id": 669427072,
+      "line": 4543,
+      "components": [
+        {
+          "type": 4,
+          "id": 669427073,
+          "line": 4559,
+          "fields": {
+            "m_LocalRotation": "{x: 0, y: 0, z: 0, w: 1}",
+            "m_LocalPosition": "{x: 97.3, y: 2.85, z: 0}",
+            "m_LocalScale": "{x: 1, y: 1, z: 1}",
+            "m_Father": "{fileID: 0}"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Main S05 Landing",
+      "file_id": 839588645,
+      "line": 5822,
+      "components": [
+        {
+          "type": 114,
+          "id": 839588646,
+          "line": 5846,
+          "fields": {
+            "m_Enabled": "1",
+            "sectionNumber": "6",
+            "respawnPosition": "{x: 112.4, y: -1.45}",
+            "minimumRopeAfterCheckpoint": "34"
+          },
+          "script": "MainStageCheckpoint"
+        },
+        {
+          "type": 4,
+          "id": 839588652,
+          "line": 6018,
+          "fields": {
+            "m_LocalRotation": "{x: 0, y: 0, z: 0, w: 1}",
+            "m_LocalPosition": "{x: 115.1, y: -7.15, z: 0}",
+            "m_LocalScale": "{x: 8, y: 10, z: 1}",
+            "m_Father": "{fileID: 0}"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Main S05 Central Hook",
+      "file_id": 1235963837,
+      "line": 8900,
+      "components": [
+        {
+          "type": 4,
+          "id": 1235963838,
+          "line": 8920,
+          "fields": {
+            "m_LocalRotation": "{x: 0, y: 0, z: 0, w: 1}",
+            "m_LocalPosition": "{x: 102, y: 2.95, z: 0}",
+            "m_LocalScale": "{x: 1.6, y: 0.45, z: 1}",
+            "m_Father": "{fileID: 0}"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Main S05 Left Shelf",
+      "file_id": 1417814682,
+      "line": 10363,
+      "components": [
+        {
+          "type": 4,
+          "id": 1417814688,
+          "line": 10532,
+          "fields": {
+            "m_LocalRotation": "{x: 0, y: 0, z: 0, w: 1}",
+            "m_LocalPosition": "{x: 93.6, y: -0.95, z: 0}",
+            "m_LocalScale": "{x: 3, y: 0.6, z: 1}",
+            "m_Father": "{fileID: 0}"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Main Section 5 Green Shadow Start Hook",
+      "file_id": 1468401600,
+      "line": 11298,
+      "components": [
+        {
+          "type": 4,
+          "id": 1468401606,
+          "line": 11467,
+          "fields": {
+            "m_LocalRotation": "{x: 0, y: 0, z: 0, w: 1}",
+            "m_LocalPosition": "{x: 95.1, y: -0.65, z: 0}",
+            "m_LocalScale": "{x: 0.62, y: 0.62, z: 1}",
+            "m_Father": "{fileID: 0}"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Main Section 5 Green Shadow End Hook",
+      "file_id": 1621699052,
+      "line": 12686,
+      "components": [
+        {
+          "type": 4,
+          "id": 1621699058,
+          "line": 12855,
+          "fields": {
+            "m_LocalRotation": "{x: 0, y: 0, z: 0, w: 1}",
+            "m_LocalPosition": "{x: 99.5, y: -0.65, z: 0}",
+            "m_LocalScale": "{x: 0.62, y: 0.62, z: 1}",
+            "m_Father": "{fileID: 0}"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Main S05 Right Shelf",
+      "file_id": 1829554967,
+      "line": 14917,
+      "components": [
+        {
+          "type": 4,
+          "id": 1829554973,
+          "line": 15086,
+          "fields": {
+            "m_LocalRotation": "{x: 0, y: 0, z: 0, w: 1}",
+            "m_LocalPosition": "{x: 101, y: -0.95, z: 0}",
+            "m_LocalScale": "{x: 3, y: 0.6, z: 1}",
+            "m_Father": "{fileID: 0}"
+          }
+        }
+      ]
+    }
+  ],
+  "not_claimed": [
+    "Fresh screen acquisition",
+    "Shading observed",
+    "Stage reached",
+    "Actual failure/clear",
+    "Actual fade duration",
+    "Audio heard",
+    "New runtime bug",
+    "Approval to implement"
+  ]
+}

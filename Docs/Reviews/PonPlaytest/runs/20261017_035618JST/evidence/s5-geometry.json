@@ -1,0 +1,82 @@
+{
+  "utc": "2026-10-16T18:56:18.194560+00:00",
+  "classification": "B_SOURCE_ARITHMETIC; C_ENGINE_AND_PLAY",
+  "method": "Double precision arithmetic over source BuildSaggingCurve. No Unity execution, Physics2D query, state mutation, input automation or route test.",
+  "formula": "points i=0..39, t=i/39; x=95.1+4.4t; y=-0.65-(L-4.4)*4t(1-t). Finite ray (97.3,2.85)->(97.3,-3.15).",
+  "saved_builder": {
+    "type": 114,
+    "id": 1380120231,
+    "line": 10086,
+    "fields": {
+      "m_Enabled": "1",
+      "platformWidth": "0.22",
+      "curveSegments": "20",
+      "minimumPlatformLength": "1",
+      "minimumRopeReserve": "1"
+    },
+    "script": "RopePlatformBuilder"
+  },
+  "source_constant_minimum_point_count": 40,
+  "source_effective_point_count": "max(40, saved20)=40",
+  "cases": [
+    {
+      "selected_length": 5,
+      "span": 4.4,
+      "polyline_point_count": 40,
+      "continuous_center_y": -1.25,
+      "sampled_min_y": -1.249606,
+      "ray_to_polyline_min_distance": 0.0,
+      "configured_edge_radius": 0.11,
+      "geometry_only_relation": "centerline_crosses_finite_ray",
+      "Unity_Linecast_result": "UNTESTED",
+      "ordinary_input_build": "UNTESTED",
+      "ordinary_input_traversal": "UNTESTED"
+    },
+    {
+      "selected_length": 6,
+      "span": 4.4,
+      "polyline_point_count": 40,
+      "continuous_center_y": -2.25,
+      "sampled_min_y": -2.248948,
+      "ray_to_polyline_min_distance": 0.0,
+      "configured_edge_radius": 0.11,
+      "geometry_only_relation": "centerline_crosses_finite_ray",
+      "Unity_Linecast_result": "UNTESTED",
+      "ordinary_input_build": "UNTESTED",
+      "ordinary_input_traversal": "UNTESTED"
+    },
+    {
+      "selected_length": 7,
+      "span": 4.4,
+      "polyline_point_count": 40,
+      "continuous_center_y": -3.25,
+      "sampled_min_y": -3.248291,
+      "ray_to_polyline_min_distance": 0.098291,
+      "configured_edge_radius": 0.11,
+      "geometry_only_relation": "centerline_misses_ray_but_gap_under_edge_radius",
+      "Unity_Linecast_result": "UNTESTED",
+      "ordinary_input_build": "UNTESTED",
+      "ordinary_input_traversal": "UNTESTED"
+    },
+    {
+      "selected_length": 8,
+      "span": 4.4,
+      "polyline_point_count": 40,
+      "continuous_center_y": -4.25,
+      "sampled_min_y": -4.247633,
+      "ray_to_polyline_min_distance": 1.01215,
+      "configured_edge_radius": 0.11,
+      "geometry_only_relation": "centerline_gap_exceeds_configured_edge_radius",
+      "Unity_Linecast_result": "UNTESTED",
+      "ordinary_input_build": "UNTESTED",
+      "ordinary_input_traversal": "UNTESTED"
+    }
+  ],
+  "limitations": [
+    "Does not predict the actual Physics2D.LinecastAll result, broad-phase, contact offset, synchronization, or frame ordering.",
+    "Length7 is close to the ray endpoint and must not be called unblocked from centerline alone.",
+    "Length8 is a comparison candidate, not an executed failed shading case, required failure, or proof of legal traversal.",
+    "Construction also needs an attached paired anchor, unlocked Q, enough actual rope and reserve>=1.",
+    "No assumption that every route must overlap the light circle while attached."
+  ]
+}
