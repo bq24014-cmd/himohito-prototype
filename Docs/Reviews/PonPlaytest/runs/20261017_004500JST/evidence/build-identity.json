@@ -1,0 +1,39 @@
+{
+  "checked_utc": "2026-10-16T15:42:51.614148+00:00",
+  "candidate_only_not_launched": true,
+  "package_path": "C:\\Users\\田尻大翔\\Documents\\Codex\\2026-08-07\\new-chat\\outputs\\HimoHitoPrototype\\output\\FriendPlay_20261006_214500\\HimoHito_20261006",
+  "executable_path": "C:\\Users\\田尻大翔\\Documents\\Codex\\2026-08-07\\new-chat\\outputs\\HimoHitoPrototype\\output\\FriendPlay_20261006_214500\\HimoHito_20261006\\Game\\HimoHitoPrototype.exe",
+  "source_snapshot": "C:\\Users\\田尻大翔\\Documents\\Codex\\2026-08-07\\new-chat\\outputs\\HimoHitoPrototype\\output\\FriendPlay_20261006_214500\\.build\\Project",
+  "baseline_commit": "44f81fe2a27da2661d2607c35e1cd84c657f95f6",
+  "includes_uncommitted_mainstage": true,
+  "current_remote_main_observed": "7a4f011b7ffc0343acd4727a75255495a3881fb3",
+  "latest_or_fully_approved_claim": false,
+  "build_scenes": [
+    "Tutorial",
+    "MainStage"
+  ],
+  "binary_checks": [
+    {
+      "path": "Game/HimoHitoPrototype.exe",
+      "sha256": "837986201d89be25426b8415cb3bc945f077e5b13f4722d6763d04ebd38c5472",
+      "recorded_sha256": "837986201d89be25426b8415cb3bc945f077e5b13f4722d6763d04ebd38c5472",
+      "match": true,
+      "bytes": 667136
+    },
+    {
+      "path": "Game/HimoHitoPrototype_Data/Managed/Assembly-CSharp.dll",
+      "sha256": "9587c9e485b2dcf0bb6538b4d58740b5b0e6d3ba40092a5c7785d48bc5095bc5",
+      "recorded_sha256": "9587c9e485b2dcf0bb6538b4d58740b5b0e6d3ba40092a5c7785d48bc5095bc5",
+      "match": true,
+      "bytes": 388096
+    }
+  ],
+  "play_scope": "NOT_PLAYED; no launch, no key input, no live screenshot",
+  "old_human_smoke_scope": [
+    "Stage Selection display",
+    "Tutorial start",
+    "return from pause",
+    "MainStage start"
+  ],
+  "all_route_human_play_of_this_build": false
+}

@@ -1,0 +1,54 @@
+{
+  "method": "continuous evaluation of source formula; no Unity execution, no collision or traversal test",
+  "source": "RopePlatformBuilder.cs:484-495; TutorialSectionFourSetup.cs:22-31",
+  "T4": {
+    "anchors": [
+      [
+        42,
+        0.35
+      ],
+      [
+        47,
+        1.55
+      ],
+      [
+        52,
+        0.35
+      ]
+    ],
+    "beam_x": [
+      47.5,
+      49.5
+    ],
+    "beam_bottom_y": 0.8,
+    "original_center_hook_y": 1.55,
+    "merged_curve_center_y": -1.65,
+    "at_beam_center_x_48_5": {
+      "right_bridge_6_y": 0.46926660441330004,
+      "merged_bridge_12_y": -1.4699999999999998
+    }
+  },
+  "S10": {
+    "anchors": [
+      [
+        199,
+        -2.15
+      ],
+      [
+        208,
+        -2.15
+      ]
+    ],
+    "span": 9,
+    "goal_marker_x": 219,
+    "continuous_midpoint_y_by_selected_length": {
+      "9": -2.15,
+      "10": -3.15,
+      "11": -4.15,
+      "12": -5.15,
+      "13": -6.15,
+      "14": -7.15
+    },
+    "warning": "These are curve positions only. Attachment, resource, player collider, failure threshold and live walking were not tested."
+  }
+}

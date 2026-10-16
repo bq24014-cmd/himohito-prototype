@@ -1,0 +1,176 @@
+[
+  {
+    "path": "Assets/Scripts/PrototypeHud.cs",
+    "sha256": "2e6d442c4933dda55aa3680ed1a835372e53274fe0c7404498684dc23abb6780",
+    "build_input_sha256": "2e6d442c4933dda55aa3680ed1a835372e53274fe0c7404498684dc23abb6780",
+    "match": true
+  },
+  {
+    "path": "Assets/Scripts/MainStageHud.cs",
+    "sha256": "30d2177386b912c1c8fc86961460208b53fd2f45df0597552055c19e41ecae50",
+    "build_input_sha256": "30d2177386b912c1c8fc86961460208b53fd2f45df0597552055c19e41ecae50",
+    "match": true
+  },
+  {
+    "path": "Assets/Scripts/StageOverlayControls.cs",
+    "sha256": "7d63dcbaa1dbce7fb04a8e387b0013050d343084f3fc6d267f4064a69a28755a",
+    "build_input_sha256": "7d63dcbaa1dbce7fb04a8e387b0013050d343084f3fc6d267f4064a69a28755a",
+    "match": true
+  },
+  {
+    "path": "Assets/Scripts/StageSelectionView.cs",
+    "sha256": "de0e76b56065337bb46cf256ad5778a9c9bb9cb1fa74aee6e8c8c724ffab3cb5",
+    "build_input_sha256": "de0e76b56065337bb46cf256ad5778a9c9bb9cb1fa74aee6e8c8c724ffab3cb5",
+    "match": true
+  },
+  {
+    "path": "Assets/Scripts/TutorialSectionGuide.cs",
+    "sha256": "380f0e643fe2e76bc3d561c3157982b268aee650b3648357af8d3a1bf336f385",
+    "build_input_sha256": "380f0e643fe2e76bc3d561c3157982b268aee650b3648357af8d3a1bf336f385",
+    "match": true
+  },
+  {
+    "path": "Assets/Scripts/RopePlatformBuilder.cs",
+    "sha256": "11ecb4c1870cb8ef0449343155559211a5e1d9e1321132bce0dcf8e14e279fd2",
+    "build_input_sha256": "11ecb4c1870cb8ef0449343155559211a5e1d9e1321132bce0dcf8e14e279fd2",
+    "match": true
+  },
+  {
+    "path": "Assets/Scripts/RopeController.cs",
+    "sha256": "3ef4a50076994279839f398652180256f5ec37c01b954eeefc67c79b831e25d6",
+    "build_input_sha256": "3ef4a50076994279839f398652180256f5ec37c01b954eeefc67c79b831e25d6",
+    "match": true
+  },
+  {
+    "path": "Assets/Scripts/PlayerMover.cs",
+    "sha256": "02f6bab1132599184cc6450c5053990b612998ff657372f56cd9877cb5201f8d",
+    "build_input_sha256": "02f6bab1132599184cc6450c5053990b612998ff657372f56cd9877cb5201f8d",
+    "match": true
+  },
+  {
+    "path": "Assets/Scripts/MainStageSectionThreeRecoverySwitch.cs",
+    "sha256": "740694ff88f82362da4c42170d5c415206d4d1808a83b07eb2d5ca75f32f0f1a",
+    "build_input_sha256": "740694ff88f82362da4c42170d5c415206d4d1808a83b07eb2d5ca75f32f0f1a",
+    "match": true
+  },
+  {
+    "path": "Assets/Scripts/MainStageSectionTwoSetup.cs",
+    "sha256": "4169465af91057f291d7a077ba26d17e6dfb9cd3f6716c904379fa39cd75dcfc",
+    "build_input_sha256": "4169465af91057f291d7a077ba26d17e6dfb9cd3f6716c904379fa39cd75dcfc",
+    "match": true
+  },
+  {
+    "path": "Assets/Scripts/MainStageSectionSixSetup.cs",
+    "sha256": "71b394fdf99a0edcbb4085774aa1f4fc263054a799eec641179fae527a74e482",
+    "build_input_sha256": "71b394fdf99a0edcbb4085774aa1f4fc263054a799eec641179fae527a74e482",
+    "match": true
+  },
+  {
+    "path": "Assets/Scripts/MainStageSectionSevenSetup.cs",
+    "sha256": "c5d3845135fa2a83de7b1c10200f5630fffbf25f96d144b977187e80c4d95513",
+    "build_input_sha256": "c5d3845135fa2a83de7b1c10200f5630fffbf25f96d144b977187e80c4d95513",
+    "match": true
+  },
+  {
+    "path": "Assets/Scripts/MainStageSectionNineSetup.cs",
+    "sha256": "794454c44069d0430c9136af0cade40b72c513e3708c7a594b5e1cd62a5566da",
+    "build_input_sha256": "794454c44069d0430c9136af0cade40b72c513e3708c7a594b5e1cd62a5566da",
+    "match": true
+  },
+  {
+    "path": "Assets/Scripts/MainStageSectionTenSetup.cs",
+    "sha256": "80095b57b5ea63b2768ffaeac76dbe15270efb3b9d0669e84f65b2ccde134e11",
+    "build_input_sha256": "80095b57b5ea63b2768ffaeac76dbe15270efb3b9d0669e84f65b2ccde134e11",
+    "match": true
+  },
+  {
+    "path": "Assets/Scripts/MainStageRespawnOnFall.cs",
+    "sha256": "314060136dfb7846ae7ebbc43cfaf0028625b839b4b9a05e9171d4f5830c4d8c",
+    "build_input_sha256": "314060136dfb7846ae7ebbc43cfaf0028625b839b4b9a05e9171d4f5830c4d8c",
+    "match": true
+  },
+  {
+    "path": "Assets/Scripts/HimoHitoFailureScreen.cs",
+    "sha256": "60b4e7bf917b46ab16c9f234eeacdb1d846d502b110ca85e36550c06739fb363",
+    "build_input_sha256": "60b4e7bf917b46ab16c9f234eeacdb1d846d502b110ca85e36550c06739fb363",
+    "match": true
+  },
+  {
+    "path": "Assets/Scripts/HimoHitoUiParts.cs",
+    "sha256": "0696cd16c13616c677f40c05349018f42108822c5578a8852f5f7671cfd9c764",
+    "build_input_sha256": "0696cd16c13616c677f40c05349018f42108822c5578a8852f5f7671cfd9c764",
+    "match": true
+  },
+  {
+    "path": "Assets/Scripts/ClearJourneyView.cs",
+    "sha256": "d06a4cb0a7a0b8e8a1f7d1aa8d0e4e6e790321a3d2d94313aeaa4b253f19369e",
+    "build_input_sha256": "d06a4cb0a7a0b8e8a1f7d1aa8d0e4e6e790321a3d2d94313aeaa4b253f19369e",
+    "match": true
+  },
+  {
+    "path": "Assets/Scripts/TutorialGuideAnimation.cs",
+    "sha256": "bb2cbbc6c7afa6ea22478d500932befb5cddab983c6dff75ea9f2c374e59a8e5",
+    "build_input_sha256": "bb2cbbc6c7afa6ea22478d500932befb5cddab983c6dff75ea9f2c374e59a8e5",
+    "match": true
+  },
+  {
+    "path": "Assets/Scripts/TutorialSectionOneSetup.cs",
+    "sha256": "64398ae8e596131799dbaae7ec914911a08ccff24217006dbff2fcd97d6178dc",
+    "build_input_sha256": "64398ae8e596131799dbaae7ec914911a08ccff24217006dbff2fcd97d6178dc",
+    "match": true
+  },
+  {
+    "path": "Assets/Scripts/TutorialSectionTwoSetup.cs",
+    "sha256": "ccd88a949811ada96d1751ebdcb8273d94e6094d8a06975c8522a4ed30ae99e1",
+    "build_input_sha256": "ccd88a949811ada96d1751ebdcb8273d94e6094d8a06975c8522a4ed30ae99e1",
+    "match": true
+  },
+  {
+    "path": "Assets/Scripts/TutorialSectionThreeSetup.cs",
+    "sha256": "b5a4788208fd57acee9735eaff24780f2c55fe7d56afe3f14a97099adee0e076",
+    "build_input_sha256": "b5a4788208fd57acee9735eaff24780f2c55fe7d56afe3f14a97099adee0e076",
+    "match": true
+  },
+  {
+    "path": "Assets/Scripts/TutorialSectionFourSetup.cs",
+    "sha256": "ca097254c033e04e2c486bdd900d800cb3226b2aa9a4cc62838be7aeee89b37c",
+    "build_input_sha256": "ca097254c033e04e2c486bdd900d800cb3226b2aa9a4cc62838be7aeee89b37c",
+    "match": true
+  },
+  {
+    "path": "Assets/Scripts/MainStageSectionFourSetup.cs",
+    "sha256": "c1173ea1c61b95a6ddd3994456ed34b0d5e1167c04a4edddd43fd6e13012a6dc",
+    "build_input_sha256": "c1173ea1c61b95a6ddd3994456ed34b0d5e1167c04a4edddd43fd6e13012a6dc",
+    "match": true
+  },
+  {
+    "path": "Assets/Scripts/MainStageSectionFiveSetup.cs",
+    "sha256": "b7419423f4814c47a3b031c1c5221fbbd26b9272695050e76ffa299879d6def7",
+    "build_input_sha256": "b7419423f4814c47a3b031c1c5221fbbd26b9272695050e76ffa299879d6def7",
+    "match": true
+  },
+  {
+    "path": "Assets/Resources/StageCatalog.json",
+    "sha256": "a103566bc870e259c2c83bcab40a3587bbef543ef8a4184018ed0068f77d8dd3",
+    "build_input_sha256": "a103566bc870e259c2c83bcab40a3587bbef543ef8a4184018ed0068f77d8dd3",
+    "match": true
+  },
+  {
+    "path": "Assets/Scenes/Tutorial.unity",
+    "sha256": "dc1bed54cc083256ce895041b1c93578101e19b9738e7cf260619e8f7e1e4b92",
+    "build_input_sha256": "dc1bed54cc083256ce895041b1c93578101e19b9738e7cf260619e8f7e1e4b92",
+    "match": true
+  },
+  {
+    "path": "Assets/Scenes/MainStage.unity",
+    "sha256": "57d2464751b5b9c2a78e6c56f34197e9bc2629983fadaa1dff6e0ba0b4bc2284",
+    "build_input_sha256": "57d2464751b5b9c2a78e6c56f34197e9bc2629983fadaa1dff6e0ba0b4bc2284",
+    "match": true
+  },
+  {
+    "path": "ProjectSettings/EditorBuildSettings.asset",
+    "sha256": "fb2bd05132e21002ec8c35627a220cbd5efafa43f54ae4561923c9b482c97d28",
+    "build_input_sha256": "fb2bd05132e21002ec8c35627a220cbd5efafa43f54ae4561923c9b482c97d28",
+    "match": true
+  }
+]

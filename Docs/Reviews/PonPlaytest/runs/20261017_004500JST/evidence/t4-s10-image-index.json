@@ -1,0 +1,20 @@
+[
+  {
+    "id": "E09",
+    "path": "evidence/images/E09_t4_two_bridges_legacy.png",
+    "source_relative_to_production": "Docs/QA/TutorialTerrainHybridProduction_20261003/Screenshots/Final/S4_Rebuilt_TwoBridges_After.png",
+    "sha256": "69b67e235c553bf9d6febfad6df3165f5e3e96e6f557147e8dd914f03b6ba362",
+    "copied_sha256": "69b67e235c553bf9d6febfad6df3165f5e3e96e6f557147e8dd914f03b6ba362",
+    "classification": "2026-10-03 existing production-integration diagnostic capture; NOT current live play",
+    "boundary": "Can compare visible curve/center hook/beam; cannot prove ordinary key traversal or current Build behavior."
+  },
+  {
+    "id": "E10",
+    "path": "evidence/images/E10_t4_merged_legacy.png",
+    "source_relative_to_production": "Docs/QA/TutorialTerrainHybridProduction_20261003/Screenshots/Final/S4_Rebuilt_Merged_After.png",
+    "sha256": "fd225bb465d81451f924405c0813bc30391b3159b7b031bcff0a5f0011e8c8b1",
+    "copied_sha256": "fd225bb465d81451f924405c0813bc30391b3159b7b031bcff0a5f0011e8c8b1",
+    "classification": "2026-10-03 existing production-integration diagnostic capture; NOT current live play",
+    "boundary": "Can compare visible curve/center hook/beam; cannot prove ordinary key traversal or current Build behavior."
+  }
+]

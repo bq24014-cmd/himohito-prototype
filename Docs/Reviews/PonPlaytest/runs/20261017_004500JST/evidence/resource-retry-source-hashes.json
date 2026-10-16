@@ -1,0 +1,92 @@
+[
+  {
+    "path": "Assets/Scripts/RopeResource.cs",
+    "sha256": "026476f48b89bac7158abebc1744bf41553bae4981c41b7148b41dced63860eb",
+    "build_input_sha256": "026476f48b89bac7158abebc1744bf41553bae4981c41b7148b41dced63860eb",
+    "match": true
+  },
+  {
+    "path": "Assets/Scripts/RopeController.cs",
+    "sha256": "3ef4a50076994279839f398652180256f5ec37c01b954eeefc67c79b831e25d6",
+    "build_input_sha256": "3ef4a50076994279839f398652180256f5ec37c01b954eeefc67c79b831e25d6",
+    "match": true
+  },
+  {
+    "path": "Assets/Scripts/RopePlatformBuilder.cs",
+    "sha256": "11ecb4c1870cb8ef0449343155559211a5e1d9e1321132bce0dcf8e14e279fd2",
+    "build_input_sha256": "11ecb4c1870cb8ef0449343155559211a5e1d9e1321132bce0dcf8e14e279fd2",
+    "match": true
+  },
+  {
+    "path": "Assets/Scripts/MainStageRespawnOnFall.cs",
+    "sha256": "314060136dfb7846ae7ebbc43cfaf0028625b839b4b9a05e9171d4f5830c4d8c",
+    "build_input_sha256": "314060136dfb7846ae7ebbc43cfaf0028625b839b4b9a05e9171d4f5830c4d8c",
+    "match": true
+  },
+  {
+    "path": "Assets/Scripts/MainStageCheckpoint.cs",
+    "sha256": "66663105dec1f99517efcd12d21b38711df56c8aa5a8e0175135793a04449033",
+    "build_input_sha256": "66663105dec1f99517efcd12d21b38711df56c8aa5a8e0175135793a04449033",
+    "match": true
+  },
+  {
+    "path": "Assets/Scripts/CheckpointLandingGate.cs",
+    "sha256": "06cc7eed90c4decad30630ab6c60bdc17645efa01387f5983bd1cb65c7703414",
+    "build_input_sha256": "06cc7eed90c4decad30630ab6c60bdc17645efa01387f5983bd1cb65c7703414",
+    "match": true
+  },
+  {
+    "path": "Assets/Scripts/MainStageSectionFourSetup.cs",
+    "sha256": "c1173ea1c61b95a6ddd3994456ed34b0d5e1167c04a4edddd43fd6e13012a6dc",
+    "build_input_sha256": "c1173ea1c61b95a6ddd3994456ed34b0d5e1167c04a4edddd43fd6e13012a6dc",
+    "match": true
+  },
+  {
+    "path": "Assets/Scripts/MainStageSectionFiveSetup.cs",
+    "sha256": "b7419423f4814c47a3b031c1c5221fbbd26b9272695050e76ffa299879d6def7",
+    "build_input_sha256": "b7419423f4814c47a3b031c1c5221fbbd26b9272695050e76ffa299879d6def7",
+    "match": true
+  },
+  {
+    "path": "Assets/Scripts/MainStageSectionSixSetup.cs",
+    "sha256": "71b394fdf99a0edcbb4085774aa1f4fc263054a799eec641179fae527a74e482",
+    "build_input_sha256": "71b394fdf99a0edcbb4085774aa1f4fc263054a799eec641179fae527a74e482",
+    "match": true
+  },
+  {
+    "path": "Assets/Scripts/MainStageSectionSevenSetup.cs",
+    "sha256": "c5d3845135fa2a83de7b1c10200f5630fffbf25f96d144b977187e80c4d95513",
+    "build_input_sha256": "c5d3845135fa2a83de7b1c10200f5630fffbf25f96d144b977187e80c4d95513",
+    "match": true
+  },
+  {
+    "path": "Assets/Scripts/MainStageSectionNineSetup.cs",
+    "sha256": "794454c44069d0430c9136af0cade40b72c513e3708c7a594b5e1cd62a5566da",
+    "build_input_sha256": "794454c44069d0430c9136af0cade40b72c513e3708c7a594b5e1cd62a5566da",
+    "match": true
+  },
+  {
+    "path": "Assets/Scripts/MainStageSectionTenSetup.cs",
+    "sha256": "80095b57b5ea63b2768ffaeac76dbe15270efb3b9d0669e84f65b2ccde134e11",
+    "build_input_sha256": "80095b57b5ea63b2768ffaeac76dbe15270efb3b9d0669e84f65b2ccde134e11",
+    "match": true
+  },
+  {
+    "path": "Assets/Scripts/SectionArrivalFeedback.cs",
+    "sha256": "62e6e94ab52ea8b1548798240c991a6bdff7da687bae3bb0e63ce89fbaf76424",
+    "build_input_sha256": "62e6e94ab52ea8b1548798240c991a6bdff7da687bae3bb0e63ce89fbaf76424",
+    "match": true
+  },
+  {
+    "path": "Assets/Scripts/PlayerMover.cs",
+    "sha256": "02f6bab1132599184cc6450c5053990b612998ff657372f56cd9877cb5201f8d",
+    "build_input_sha256": "02f6bab1132599184cc6450c5053990b612998ff657372f56cd9877cb5201f8d",
+    "match": true
+  },
+  {
+    "path": "Assets/Scenes/MainStage.unity",
+    "sha256": "57d2464751b5b9c2a78e6c56f34197e9bc2629983fadaa1dff6e0ba0b4bc2284",
+    "build_input_sha256": "57d2464751b5b9c2a78e6c56f34197e9bc2629983fadaa1dff6e0ba0b4bc2284",
+    "match": true
+  }
+]

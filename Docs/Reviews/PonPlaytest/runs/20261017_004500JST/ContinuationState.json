@@ -1,0 +1,146 @@
+{
+  "updated_utc": "2026-10-16T16:36:25.109407+00:00",
+  "updated_jst": "2026-10-17T01:31:10.042128+09:00",
+  "phase": "PARENT_REVIEWED_INTERMEDIATE_SNAPSHOT; UI_STATE_ANALYSIS_CONTINUES",
+  "actual_play": "NOT_POSSIBLE",
+  "A_observations": 0,
+  "live_screenshots": 0,
+  "normal_key_inputs": 0,
+  "audio_heard": false,
+  "handoff_confirmed": false,
+  "computer_use_retries_exhausted": true,
+  "connection_error": "MXC launcher: cannot locate required Windows platform directory: HRESULT 0x80070003",
+  "production_modified_by_this_task": false,
+  "production_git_commands": false,
+  "unity_opened": false,
+  "rebuild": false,
+  "game_implementation": false,
+  "build_exe_and_assembly_hash_match": true,
+  "frozen_source_manifest_matches": 29,
+  "completed_cycles": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "ui_items": 16,
+  "image_copies": 10,
+  "next_themes": [
+    {
+      "id": "N1",
+      "topic": "看板表示中のZ/Esc/Tabとポーズの競合・閉じ方",
+      "status": "NOT_YET_ANALYZED_IN_DEPTH"
+    },
+    {
+      "id": "N2",
+      "topic": "資源HUDと身体4段階・消費/補充/復元の意味の一致",
+      "status": "RESOURCE_CHOICES_AND_CP_TRACE_DONE; HUD_BODY_MATCH_NOT_TESTED"
+    },
+    {
+      "id": "N3",
+      "topic": "本編の通常描画経路と攻略ガイドの非呼出し、必要瞬間の情報不足",
+      "status": "PARTIAL"
+    },
+    {
+      "id": "N4",
+      "topic": "失敗確定/復帰/停止中入力と橋・除去フック・残量の復元境界",
+      "status": "CP_SNAPSHOT_BOUNDARIES_DOCUMENTED; NO_INPUT_OR_TIMING_OBSERVATION"
+    },
+    {
+      "id": "N5",
+      "topic": "S3下経路を選ぶ理由と帰路の意味・S5/S6/S7の差",
+      "status": "PARTIAL"
+    },
+    {
+      "id": "N6",
+      "topic": "最終の条件欠落/用語/証拠の版/リンク/上位5案の反例再点検",
+      "status": "PENDING"
+    }
+  ],
+  "continuation": {
+    "configured": false,
+    "service": "cloud automations",
+    "title": "ヒモヒト夜間レビュー継続",
+    "internal_automation_id": "6ad248376a0c81918a0603cbf83c80f8",
+    "thread_id": "01a14559-2bd0-7352-9817-869d0277c0c7",
+    "scheduled_jst": [
+      "2026-10-17T02:00:00+09:00",
+      "2026-10-17T03:00:00+09:00",
+      "2026-10-17T04:00:00+09:00",
+      "2026-10-17T05:00:00+09:00",
+      "2026-10-17T06:00:00+09:00",
+      "2026-10-17T07:00:00+09:00",
+      "2026-10-17T08:00:00+09:00"
+    ],
+    "returned_next_run_time": null,
+    "continuous_runtime_claim": false,
+    "do_not_duplicate": true,
+    "new_themes_stop_utc": "2026-10-16T22:30:00Z",
+    "new_research_and_game_input_stop_utc": "2026-10-16T23:00:00Z",
+    "enabled_confirmed_by_stop_result": false,
+    "stopped_utc": "2026-10-16T15:54:51.069552+00:00",
+    "stop_success": true,
+    "last_run_time": null,
+    "management": "PARENT_MANAGES_SAME_CHILD_TASK; NO_CHILD_AUTOMATION",
+    "currently_enabled": false,
+    "enabled_confirmed_by_create_result_historical": true
+  },
+  "repository": {
+    "name": "bq24014-cmd/himohito-prototype",
+    "branch": "review/pon-playtest-20261017",
+    "remote_main_observed": "7a4f011b7ffc0343acd4727a75255495a3881fb3",
+    "branch_existed_at_first_check": false,
+    "parent_content_review": "APPROVED_42_FILES_WITH_MINOR_CORRECTIONS",
+    "commit": null,
+    "push": false,
+    "remote_verification": false,
+    "publication_note": "Snapshot ready for separate review branch. Push and remote confirmation are reported after this snapshot commit."
+  },
+  "parent_notification": {
+    "codex_app_send": "FAILED_THREAD_NOT_FOUND",
+    "return_checkpoint_requested": true
+  },
+  "human_approval": "NOT_SUBSTITUTED",
+  "latest_connection_error": "trusted Node process exited unexpectedly; kernel reset, rerun your request",
+  "new_human_approval_recheck": {
+    "utc": "2026-10-16T16:01:51.269904+00:00",
+    "reason": "Human reported play environment approval at 2026-10-17 00:57 JST",
+    "attempts_after_change": 2,
+    "error_verbatim": "trusted Node process exited unexpectedly; kernel reset, rerun your request",
+    "runtime_reset_before_first_attempt": true,
+    "screenshot_obtained": false,
+    "normal_input_sent": false,
+    "handoff_confirmed": false,
+    "approval_propagation_state": "NOT_OBSERVABLE; runtime failed before screen inventory",
+    "result": "UNAVAILABLE_AFTER_APPROVAL_NOTIFICATION; no more retries",
+    "game_launched": false,
+    "play_reached": null
+  },
+  "second_approval_recheck": {
+    "utc": "2026-10-16T16:11:45.274958+00:00",
+    "reason": "Human reported a further environment approval at 2026-10-17 01:09 JST",
+    "attempts": 1,
+    "error_verbatim": "trusted Node process exited unexpectedly; kernel reset, rerun your request",
+    "screenshot_obtained": false,
+    "normal_input_sent": false,
+    "approval_type_or_required_approval": "NOT_OBSERVABLE",
+    "permission_denial_inferred": false,
+    "handoff_confirmed": false,
+    "next_retry": "none unless new verified condition"
+  },
+  "followup_topics_completed": [
+    "T4 causal information channels/timing",
+    "T4 authored geometry vs guide",
+    "S10 learning overlap and ending counterexamples"
+  ],
+  "followup_is_live_play": false,
+  "revision": 3,
+  "ui_parent_corrections": "APPLIED_AS_DOCUMENT_PROPOSALS_ONLY",
+  "packet_source_bodies_included": true,
+  "main_markdown_documents": 8,
+  "resource_retry_static_analysis_complete": true
+}

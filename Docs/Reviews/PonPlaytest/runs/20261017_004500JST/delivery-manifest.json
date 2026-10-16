@@ -1,0 +1,216 @@
+{
+  "created_utc": "2026-10-16T16:36:25.109407+00:00",
+  "revision": 3,
+  "status": "PARENT_REVIEWED_INTERMEDIATE_SNAPSHOT",
+  "main_markdown_documents": 8,
+  "image_files": 10,
+  "files": [
+    {
+      "path": "Docs/Reviews/PonPlaytest/LATEST.json",
+      "bytes": 1315,
+      "sha256": "e9b1ead1f689554d74a94b28ecc7be59b268bdd9fb8b6d38c73923b8ea773db1"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_004500JST/01_Gameplay.md",
+      "bytes": 11091,
+      "sha256": "56672c28768f5e1ca47ee39a901bda774795702014a3bd2664b6f2b85a38de89"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_004500JST/02_UI.md",
+      "bytes": 18901,
+      "sha256": "6d1606a353d9a0b91c9040dd44f7ad82ec6338c046dd3cd07d3dd5ed8ee7e5f4"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_004500JST/03_Priorities.md",
+      "bytes": 7029,
+      "sha256": "8097ef72b90150bca691fdad366b958aed26fd199fcaf55c01a829f5a0aeb7f3"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_004500JST/04_Evidence.md",
+      "bytes": 8481,
+      "sha256": "bd70639a82cba1982a9cbff9ae7a006bbf30bafeb7eae47d814467424104d224"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_004500JST/05_Cycles.md",
+      "bytes": 6904,
+      "sha256": "4d0235e2047fd317b64c8367e6bb6d4a364ed688f478f7f70fb8c59bfc93b509"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_004500JST/06_T4_S10_Addendum.md",
+      "bytes": 11820,
+      "sha256": "1c74cf54a0fa0c6784a5c0cc77dbbc011297266717baaa1d6f42836fa0dc6526"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_004500JST/07_Resource_Retry_Addendum.md",
+      "bytes": 11638,
+      "sha256": "e7193d20b3139c43a0fac8ce3d5b23c20abb2067add830bade19aad9d3da2a47"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_004500JST/ContinuationState.json",
+      "bytes": 5547,
+      "sha256": "9c941aa71379febf2b1292844aabae689b1abf323c510b5462fa969f3effba7e"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_004500JST/evidence/build-identity.json",
+      "bytes": 1820,
+      "sha256": "e01ca08cb7539a539ea0e33c431181ead1149da724613aba664e3ea07d3fd1d4"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_004500JST/evidence/connection-recheck-after-human-approval.json",
+      "bytes": 620,
+      "sha256": "251b2e340ad86a887001a4a8df2c4edd0ad26535e3ae047655d11a2a81cd5967"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_004500JST/evidence/connection-recheck-second-approval.json",
+      "bytes": 503,
+      "sha256": "e01542d809d77e1fe28d4a557897007519a2267832bfe432f063ef9facaf1b0c"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_004500JST/evidence/connection-result.json",
+      "bytes": 819,
+      "sha256": "585ae5e552198cf43812c1620b10e11eb1c607f113e2af0018d85656b9357934"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_004500JST/evidence/image-index.json",
+      "bytes": 4507,
+      "sha256": "54c81cee10434d8e8bc00320f5abb07b6fe6765b4bad9361535c9d33088d5c3d"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_004500JST/evidence/images/E01_menu.png",
+      "bytes": 3891314,
+      "sha256": "56e17c6eaf3b226c5f6762f303f005c25352128007e9db437f5b19f43e3687a6"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_004500JST/evidence/images/E02_tutorial_hud.png",
+      "bytes": 2796362,
+      "sha256": "f87f2d93bcb30111147d6a37d15050684e0fe2e8072a1f7ebd4fc469373433f3"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_004500JST/evidence/images/E03_help_fixture.png",
+      "bytes": 1396618,
+      "sha256": "4343bc4377c910731585b79c518e72edf51fdbb81ba62e914464b425804a5d2d"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_004500JST/evidence/images/E04_pause_fixture.png",
+      "bytes": 208737,
+      "sha256": "d78d47c0c068a27e57658893407051dd351f0c80a3af35896b7134e81a4c3357"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_004500JST/evidence/images/E05_failure_fixture.png",
+      "bytes": 1127392,
+      "sha256": "e0be68e6e8fca3f6204630a11dd487a34f13bcfc58dc5f7d23ef9a86b68803d0"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_004500JST/evidence/images/E06_sign4_fixture.png",
+      "bytes": 395507,
+      "sha256": "c71615cc8a5aa7f91c9da1e344906f6518c050c8d7209d87df913f0bdb5a6acc"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_004500JST/evidence/images/E07_merged_diagnostic.png",
+      "bytes": 1573703,
+      "sha256": "53143c83d4702f7c95b66445e950f49b4634322bc296896a9cb1a0dca86ac1e7"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_004500JST/evidence/images/E08_clear_reference.png",
+      "bytes": 1087951,
+      "sha256": "b34fec227f236fdcb8ef54390a4ab34e71126a14304ca384e6e6a86452984f60"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_004500JST/evidence/images/E09_t4_two_bridges_legacy.png",
+      "bytes": 3000673,
+      "sha256": "69b67e235c553bf9d6febfad6df3165f5e3e96e6f557147e8dd914f03b6ba362"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_004500JST/evidence/images/E10_t4_merged_legacy.png",
+      "bytes": 2996540,
+      "sha256": "fd225bb465d81451f924405c0813bc30391b3159b7b031bcff0a5f0011e8c8b1"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_004500JST/evidence/records/BuildFinalVerification.json",
+      "bytes": 2500,
+      "sha256": "712ef9cfdff547fb35c1f97b6a50815a2903fe8ed51a263126b35eb2efb23283"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_004500JST/evidence/records/HistoricalStaticUiMethod.md",
+      "bytes": 2446,
+      "sha256": "2daf8dc28a02182d139422d0c4e6248ecf100073a1d3988c6b731146fa6be0ee"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_004500JST/evidence/records/HumanFindings_20260930.md",
+      "bytes": 1074,
+      "sha256": "165dc2be3d0eba441c6137d8def402e8a75a0956f03fb73ca74bbcb09bcb32b0"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_004500JST/evidence/records/HumanMenuSmoke_20261006.json",
+      "bytes": 599,
+      "sha256": "00911afcec436556bc13c78a50648028f9fb99e2406d682b9f7e9ad79b68e509"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_004500JST/evidence/records/HumanRetest_20261001.md",
+      "bytes": 2359,
+      "sha256": "ca673e63df763853e8f04135a011e402b79b620888d5add516db62e2b7fd005c"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_004500JST/evidence/records/VERSION_20261006.txt",
+      "bytes": 417,
+      "sha256": "8fec58fe7b893924f466561cbaf634d5da9ae5cdaa10e33b8d33a25c58c45644"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_004500JST/evidence/resource-retry-source-excerpts.md",
+      "bytes": 51542,
+      "sha256": "6ceb2ba981b169db507f30ff22b50a5b2a85d48f0b0330867b737fbaf057e478"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_004500JST/evidence/resource-retry-source-hashes.json",
+      "bytes": 3950,
+      "sha256": "27d28fd1f0525d4db4528be3ea03d2ae46085d46b757e3f6dd7caa9891b663a3"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_004500JST/evidence/resource-retry-state-trace.json",
+      "bytes": 3964,
+      "sha256": "1f87177f989ab6e50554f3516f4cd879c91f8c6261b9738813e631d6c68ced6b"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_004500JST/evidence/source-excerpts.md",
+      "bytes": 92055,
+      "sha256": "92d425c220c6ff78f3230bdd91a10587949fc34fe2e00f18aff34179d94e4aa8"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_004500JST/evidence/source-hashes.json",
+      "bytes": 7637,
+      "sha256": "609de4fddbecdf59161e048d71ae6aa505bc2a9477dafccc7f2705f0c95ac9b4"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_004500JST/evidence/t4-s10-image-index.json",
+      "bytes": 1278,
+      "sha256": "a9a33a3cd67b1a6e71bd2cb1497fc6314dae8300a5c77f3cab7ff6e31dfaf9df"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_004500JST/evidence/t4-s10-scene-facts.json",
+      "bytes": 32252,
+      "sha256": "93e4673067cc927e9587ca58e26b634b0a00db5408cf8a283fd6718b8d01f1a2"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_004500JST/evidence/t4-s10-source-excerpts.md",
+      "bytes": 62364,
+      "sha256": "124f7a515b5fc524648af26dc2a575cba25ccfb7c562d3066ee3044b7b18b158"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_004500JST/evidence/t4-s10-source-hashes.json",
+      "bytes": 2924,
+      "sha256": "c98b4f5cf9be3366ce4688248c3f93c0cc2688be2ada0a890194bc7415b5f169"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_004500JST/evidence/t4-s10-static-geometry.json",
+      "bytes": 1162,
+      "sha256": "c1059566d51a4cbbb00853fe0c07d77ded60a8fd88a5d79a9dc32edbed3472f7"
+    },
+    {
+      "path": "Docs/Reviews/PonPlaytest/runs/20261017_004500JST/README.md",
+      "bytes": 5896,
+      "sha256": "30af907e98ce17c56a292bd67ffca223af0caa6da95fdb0d7309451bdacda3a8"
+    }
+  ],
+  "total_files_excluding_manifest": 41,
+  "total_bytes_excluding_manifest": 18840211
+}

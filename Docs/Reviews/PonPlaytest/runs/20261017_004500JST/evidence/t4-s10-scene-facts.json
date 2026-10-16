@@ -1,0 +1,1103 @@
+{
+  "Tutorial": {
+    "scene_sha256": "dc1bed54cc083256ce895041b1c93578101e19b9738e7cf260619e8f7e1e4b92",
+    "build_inputs_match": true,
+    "objects": [
+      {
+        "file_id": 47488590,
+        "name": "Tutorial T4 Toy Box Goal",
+        "gameobject_line": 122,
+        "components": [
+          {
+            "type": 114,
+            "line": 141,
+            "fields": {
+              "m_Enabled": "1",
+              "m_Script": "{fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}"
+            }
+          },
+          {
+            "type": 212,
+            "line": 154,
+            "fields": {
+              "m_Enabled": "0",
+              "m_Size": "{x: 1, y: 1}"
+            }
+          },
+          {
+            "type": 4,
+            "line": 213,
+            "fields": {
+              "m_LocalRotation": "{x: 0, y: 0, z: 0, w: 1}",
+              "m_LocalPosition": "{x: 63, y: 1.55, z: 0}",
+              "m_LocalScale": "{x: 2.4, y: 2.2, z: 1}",
+              "m_Father": "{fileID: 0}"
+            }
+          },
+          {
+            "type": 114,
+            "line": 229,
+            "fields": {
+              "m_Enabled": "1",
+              "m_Script": "{fileID: 11500000, guid: 0bf6952f38c645869214d740b169e1b9, type: 3}"
+            }
+          }
+        ]
+      },
+      {
+        "file_id": 400809859,
+        "name": "Tutorial T4 Center Hook",
+        "gameobject_line": 1201,
+        "components": [
+          {
+            "type": 114,
+            "line": 1222,
+            "fields": {
+              "m_Enabled": "1",
+              "m_Script": "{fileID: 11500000, guid: d6b4a2f17c8e49a1b3d5e7f901234abc, type: 3}"
+            }
+          },
+          {
+            "type": 114,
+            "line": 1236,
+            "fields": {
+              "m_Enabled": "1",
+              "m_Script": "{fileID: 11500000, guid: 6f8a5758d4ed17c40abb2a64c0410345, type: 3}"
+            }
+          },
+          {
+            "type": 61,
+            "line": 1252,
+            "fields": {
+              "m_Enabled": "1",
+              "m_IsTrigger": "1",
+              "m_Offset": "{x: 0, y: 0}",
+              "m_Size": "{x: 1, y: 1}"
+            }
+          },
+          {
+            "type": 114,
+            "line": 1298,
+            "fields": {
+              "m_Enabled": "1",
+              "m_Script": "{fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}"
+            }
+          },
+          {
+            "type": 212,
+            "line": 1311,
+            "fields": {
+              "m_Enabled": "0",
+              "m_Size": "{x: 1, y: 1}"
+            }
+          },
+          {
+            "type": 4,
+            "line": 1370,
+            "fields": {
+              "m_LocalRotation": "{x: 0, y: 0, z: 0, w: 1}",
+              "m_LocalPosition": "{x: 47, y: 1.55, z: 0}",
+              "m_LocalScale": "{x: 1.6, y: 0.45, z: 1}",
+              "m_Father": "{fileID: 0}"
+            }
+          }
+        ]
+      },
+      {
+        "file_id": 631669796,
+        "name": "Player",
+        "gameobject_line": 1778,
+        "components": [
+          {
+            "type": 114,
+            "line": 1805,
+            "fields": {
+              "m_Enabled": "1",
+              "m_Script": "{fileID: 11500000, guid: 7e21f0a9d34f4bb0a2c58817f851b2d4, type: 3}",
+              "fallThreshold": "-9",
+              "startFromSectionFourForDevelopment": "0"
+            }
+          },
+          {
+            "type": 114,
+            "line": 1820,
+            "fields": {
+              "m_Enabled": "1",
+              "m_Script": "{fileID: 11500000, guid: 2c562371b2852814985dd2cb70b3fba0, type: 3}",
+              "coyoteTime": "0.1",
+              "jumpBufferTime": "0.15"
+            }
+          },
+          {
+            "type": 114,
+            "line": 1855,
+            "fields": {
+              "m_Enabled": "1",
+              "m_Script": "{fileID: 11500000, guid: 74a582b16d6849cda6bd71fa1b4ea16f, type: 3}",
+              "minimumRopeReserve": "1"
+            }
+          },
+          {
+            "type": 114,
+            "line": 1871,
+            "fields": {
+              "m_Enabled": "1",
+              "m_Script": "{fileID: 11500000, guid: f77f1ad228968ff49b9b6b46cdea3736, type: 3}"
+            }
+          },
+          {
+            "type": 114,
+            "line": 1893,
+            "fields": {
+              "m_Enabled": "1",
+              "m_Script": "{fileID: 11500000, guid: 7cfccc1ad82411c47b427f2e4b5bb76c, type: 3}",
+              "maximumLength": "99",
+              "currentLength": "99"
+            }
+          },
+          {
+            "type": 120,
+            "line": 1907,
+            "fields": {
+              "m_Enabled": "1"
+            }
+          },
+          {
+            "type": 232,
+            "line": 2017,
+            "fields": {
+              "m_Enabled": "0"
+            }
+          },
+          {
+            "type": 50,
+            "line": 2037,
+            "fields": {}
+          },
+          {
+            "type": 61,
+            "line": 2064,
+            "fields": {
+              "m_Enabled": "1",
+              "m_IsTrigger": "0",
+              "m_Offset": "{x: 0, y: 0}",
+              "m_Size": "{x: 1, y: 1}"
+            }
+          },
+          {
+            "type": 114,
+            "line": 2110,
+            "fields": {
+              "m_Enabled": "1",
+              "m_Script": "{fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}"
+            }
+          },
+          {
+            "type": 212,
+            "line": 2123,
+            "fields": {
+              "m_Enabled": "1",
+              "m_Size": "{x: 1, y: 1}"
+            }
+          },
+          {
+            "type": 4,
+            "line": 2182,
+            "fields": {
+              "m_LocalRotation": "{x: 0, y: 0, z: 0, w: 1}",
+              "m_LocalPosition": "{x: -4, y: 0.92, z: 0}",
+              "m_LocalScale": "{x: 0.8, y: 1.2, z: 1}",
+              "m_Father": "{fileID: 0}"
+            }
+          }
+        ]
+      },
+      {
+        "file_id": 936714448,
+        "name": "Tutorial T4 Green Right Bank",
+        "gameobject_line": 3243,
+        "components": [
+          {
+            "type": 114,
+            "line": 3264,
+            "fields": {
+              "m_Enabled": "1",
+              "m_Script": "{fileID: 11500000, guid: d6b4a2f17c8e49a1b3d5e7f901234abc, type: 3}"
+            }
+          },
+          {
+            "type": 114,
+            "line": 3278,
+            "fields": {
+              "m_Enabled": "1",
+              "m_Script": "{fileID: 11500000, guid: 6f8a5758d4ed17c40abb2a64c0410345, type: 3}"
+            }
+          },
+          {
+            "type": 61,
+            "line": 3294,
+            "fields": {
+              "m_Enabled": "1",
+              "m_IsTrigger": "1",
+              "m_Offset": "{x: 0, y: 0}",
+              "m_Size": "{x: 1, y: 1}"
+            }
+          },
+          {
+            "type": 114,
+            "line": 3340,
+            "fields": {
+              "m_Enabled": "1",
+              "m_Script": "{fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}"
+            }
+          },
+          {
+            "type": 212,
+            "line": 3353,
+            "fields": {
+              "m_Enabled": "0",
+              "m_Size": "{x: 1, y: 1}"
+            }
+          },
+          {
+            "type": 4,
+            "line": 3412,
+            "fields": {
+              "m_LocalRotation": "{x: 0, y: 0, z: 0, w: 1}",
+              "m_LocalPosition": "{x: 52, y: 0.35, z: 0}",
+              "m_LocalScale": "{x: 0.62, y: 0.62, z: 1}",
+              "m_Father": "{fileID: 0}"
+            }
+          }
+        ]
+      },
+      {
+        "file_id": 1595140237,
+        "name": "Tutorial Guide Sign T4",
+        "gameobject_line": 5860,
+        "components": [
+          {
+            "type": 4,
+            "line": 5876,
+            "fields": {
+              "m_LocalRotation": "{x: 0, y: 0, z: 0, w: 1}",
+              "m_LocalPosition": "{x: 37.1, y: 1.35, z: 0}",
+              "m_LocalScale": "{x: 1, y: 1, z: 1}",
+              "m_Father": "{fileID: 0}"
+            }
+          }
+        ]
+      },
+      {
+        "file_id": 1754056066,
+        "name": "Tutorial T4 Goal Floor",
+        "gameobject_line": 6859,
+        "components": [
+          {
+            "type": 114,
+            "line": 6882,
+            "fields": {
+              "m_Enabled": "1",
+              "m_Script": "{fileID: 11500000, guid: b5c0e14f6a4a4a50a1a1c6c8d3341f97, type: 3}"
+            }
+          },
+          {
+            "type": 114,
+            "line": 6894,
+            "fields": {
+              "m_Enabled": "1",
+              "m_Script": "{fileID: 11500000, guid: caea6ce1b2764598a2e78008b4f433c7, type: 3}"
+            }
+          },
+          {
+            "type": 50,
+            "line": 6906,
+            "fields": {}
+          },
+          {
+            "type": 61,
+            "line": 6933,
+            "fields": {
+              "m_Enabled": "1",
+              "m_IsTrigger": "0",
+              "m_Offset": "{x: 0, y: 0}",
+              "m_Size": "{x: 1, y: 1}"
+            }
+          },
+          {
+            "type": 114,
+            "line": 6979,
+            "fields": {
+              "m_Enabled": "1",
+              "m_Script": "{fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}"
+            }
+          },
+          {
+            "type": 212,
+            "line": 6992,
+            "fields": {
+              "m_Enabled": "0",
+              "m_Size": "{x: 1, y: 1}"
+            }
+          },
+          {
+            "type": 4,
+            "line": 7051,
+            "fields": {
+              "m_LocalRotation": "{x: 0, y: 0, z: 0, w: 1}",
+              "m_LocalPosition": "{x: 59.5, y: -4.65, z: 0}",
+              "m_LocalScale": "{x: 15, y: 10, z: 1}",
+              "m_Father": "{fileID: 0}"
+            }
+          },
+          {
+            "type": 114,
+            "line": 7067,
+            "fields": {
+              "m_Enabled": "1",
+              "m_Script": "{fileID: 11500000, guid: ab1ec05b3d804a30a1ed4cf882f79a01, type: 3}"
+            }
+          }
+        ]
+      },
+      {
+        "file_id": 1780730936,
+        "name": "Tutorial T4 Green Left Bank",
+        "gameobject_line": 7079,
+        "components": [
+          {
+            "type": 114,
+            "line": 7100,
+            "fields": {
+              "m_Enabled": "1",
+              "m_Script": "{fileID: 11500000, guid: d6b4a2f17c8e49a1b3d5e7f901234abc, type: 3}"
+            }
+          },
+          {
+            "type": 114,
+            "line": 7114,
+            "fields": {
+              "m_Enabled": "1",
+              "m_Script": "{fileID: 11500000, guid: 6f8a5758d4ed17c40abb2a64c0410345, type: 3}"
+            }
+          },
+          {
+            "type": 61,
+            "line": 7130,
+            "fields": {
+              "m_Enabled": "0",
+              "m_IsTrigger": "1",
+              "m_Offset": "{x: 0, y: 0}",
+              "m_Size": "{x: 1, y: 1}"
+            }
+          },
+          {
+            "type": 114,
+            "line": 7176,
+            "fields": {
+              "m_Enabled": "1",
+              "m_Script": "{fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}"
+            }
+          },
+          {
+            "type": 212,
+            "line": 7189,
+            "fields": {
+              "m_Enabled": "0",
+              "m_Size": "{x: 1, y: 1}"
+            }
+          },
+          {
+            "type": 4,
+            "line": 7248,
+            "fields": {
+              "m_LocalRotation": "{x: 0, y: 0, z: 0, w: 1}",
+              "m_LocalPosition": "{x: 42, y: 0.35, z: 0}",
+              "m_LocalScale": "{x: 0.62, y: 0.62, z: 1}",
+              "m_Father": "{fileID: 0}"
+            }
+          }
+        ]
+      },
+      {
+        "file_id": 1966200978,
+        "name": "Tutorial T4 Hanging Beam",
+        "gameobject_line": 8202,
+        "components": [
+          {
+            "type": 114,
+            "line": 8224,
+            "fields": {
+              "m_Enabled": "1",
+              "m_Script": "{fileID: 11500000, guid: caea6ce1b2764598a2e78008b4f433c7, type: 3}"
+            }
+          },
+          {
+            "type": 50,
+            "line": 8236,
+            "fields": {}
+          },
+          {
+            "type": 61,
+            "line": 8263,
+            "fields": {
+              "m_Enabled": "1",
+              "m_IsTrigger": "0",
+              "m_Offset": "{x: 0, y: 0}",
+              "m_Size": "{x: 1, y: 1}"
+            }
+          },
+          {
+            "type": 114,
+            "line": 8309,
+            "fields": {
+              "m_Enabled": "1",
+              "m_Script": "{fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}"
+            }
+          },
+          {
+            "type": 212,
+            "line": 8322,
+            "fields": {
+              "m_Enabled": "0",
+              "m_Size": "{x: 1, y: 1}"
+            }
+          },
+          {
+            "type": 4,
+            "line": 8381,
+            "fields": {
+              "m_LocalRotation": "{x: 0, y: 0, z: 0, w: 1}",
+              "m_LocalPosition": "{x: 48.5, y: 3.3, z: 0}",
+              "m_LocalScale": "{x: 2, y: 5, z: 1}",
+              "m_Father": "{fileID: 0}"
+            }
+          },
+          {
+            "type": 114,
+            "line": 8397,
+            "fields": {
+              "m_Enabled": "1",
+              "m_Script": "{fileID: 11500000, guid: ab1ec05b3d804a30a1ed4cf882f79a01, type: 3}"
+            }
+          }
+        ]
+      }
+    ],
+    "preview_settings": [
+      {
+        "line": 1805,
+        "fields": {
+          "m_ObjectHideFlags": "0",
+          "m_CorrespondingSourceObject": "{fileID: 0}",
+          "m_PrefabInstance": "{fileID: 0}",
+          "m_PrefabAsset": "{fileID: 0}",
+          "m_GameObject": "{fileID: 631669796}",
+          "m_Enabled": "1",
+          "m_EditorHideFlags": "0",
+          "m_Script": "{fileID: 11500000, guid: 7e21f0a9d34f4bb0a2c58817f851b2d4, type: 3}",
+          "m_Name": "",
+          "m_EditorClassIdentifier": "Assembly-CSharp::HimoHito.PrototypeRunController",
+          "fallThreshold": "-9",
+          "minimumUsableRopeLength": "1",
+          "startFromSectionFourForDevelopment": "0"
+        }
+      }
+    ]
+  },
+  "MainStage": {
+    "scene_sha256": "57d2464751b5b9c2a78e6c56f34197e9bc2629983fadaa1dff6e0ba0b4bc2284",
+    "build_inputs_match": true,
+    "objects": [
+      {
+        "file_id": 29111725,
+        "name": "Main S10 Goal Floor",
+        "gameobject_line": 122,
+        "components": [
+          {
+            "type": 114,
+            "line": 146,
+            "fields": {
+              "m_Enabled": "1",
+              "m_Script": "{fileID: 11500000, guid: 8f91dd2dfa544d96a0d4754e2ab2961c, type: 3}"
+            }
+          },
+          {
+            "type": 114,
+            "line": 158,
+            "fields": {
+              "m_Enabled": "1",
+              "m_Script": "{fileID: 11500000, guid: caea6ce1b2764598a2e78008b4f433c7, type: 3}"
+            }
+          },
+          {
+            "type": 50,
+            "line": 170,
+            "fields": {}
+          },
+          {
+            "type": 61,
+            "line": 197,
+            "fields": {
+              "m_Enabled": "1",
+              "m_IsTrigger": "0",
+              "m_Offset": "{x: 0, y: 0}",
+              "m_Size": "{x: 1, y: 1}"
+            }
+          },
+          {
+            "type": 114,
+            "line": 243,
+            "fields": {
+              "m_Enabled": "1",
+              "m_Script": "{fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}"
+            }
+          },
+          {
+            "type": 212,
+            "line": 256,
+            "fields": {
+              "m_Enabled": "0",
+              "m_Size": "{x: 1, y: 1}"
+            }
+          },
+          {
+            "type": 4,
+            "line": 315,
+            "fields": {
+              "m_LocalRotation": "{x: 0, y: 0, z: 0, w: 1}",
+              "m_LocalPosition": "{x: 215.5, y: -7.15, z: 0}",
+              "m_LocalScale": "{x: 15, y: 10, z: 1}",
+              "m_Father": "{fileID: 0}"
+            }
+          },
+          {
+            "type": 114,
+            "line": 332,
+            "fields": {
+              "m_Enabled": "1",
+              "m_Script": "{fileID: 11500000, guid: ab1ec05b3d804a30a1ed4cf882f79a01, type: 3}"
+            }
+          },
+          {
+            "type": 114,
+            "line": 344,
+            "fields": {
+              "m_Enabled": "1",
+              "m_Script": "{fileID: 11500000, guid: 92322e3412d147aca7c4d87c6fce590f, type: 3}"
+            }
+          }
+        ]
+      },
+      {
+        "file_id": 584080183,
+        "name": "Main S09 Green Left Bank",
+        "gameobject_line": 3795,
+        "components": [
+          {
+            "type": 114,
+            "line": 3816,
+            "fields": {
+              "m_Enabled": "1",
+              "m_Script": "{fileID: 11500000, guid: d6b4a2f17c8e49a1b3d5e7f901234abc, type: 3}"
+            }
+          },
+          {
+            "type": 114,
+            "line": 3830,
+            "fields": {
+              "m_Enabled": "1",
+              "m_Script": "{fileID: 11500000, guid: 6f8a5758d4ed17c40abb2a64c0410345, type: 3}"
+            }
+          },
+          {
+            "type": 61,
+            "line": 3846,
+            "fields": {
+              "m_Enabled": "0",
+              "m_IsTrigger": "1",
+              "m_Offset": "{x: 0, y: 0}",
+              "m_Size": "{x: 1, y: 1}"
+            }
+          },
+          {
+            "type": 114,
+            "line": 3892,
+            "fields": {
+              "m_Enabled": "1",
+              "m_Script": "{fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}"
+            }
+          },
+          {
+            "type": 212,
+            "line": 3905,
+            "fields": {
+              "m_Enabled": "0",
+              "m_Size": "{x: 1, y: 1}"
+            }
+          },
+          {
+            "type": 4,
+            "line": 3964,
+            "fields": {
+              "m_LocalRotation": "{x: 0, y: 0, z: 0, w: 1}",
+              "m_LocalPosition": "{x: 180, y: -2.15, z: 0}",
+              "m_LocalScale": "{x: 0.62, y: 0.62, z: 1}",
+              "m_Father": "{fileID: 0}"
+            }
+          }
+        ]
+      },
+      {
+        "file_id": 714001059,
+        "name": "Main S09 Green Right Bank",
+        "gameobject_line": 4665,
+        "components": [
+          {
+            "type": 114,
+            "line": 4686,
+            "fields": {
+              "m_Enabled": "1",
+              "m_Script": "{fileID: 11500000, guid: d6b4a2f17c8e49a1b3d5e7f901234abc, type: 3}"
+            }
+          },
+          {
+            "type": 114,
+            "line": 4700,
+            "fields": {
+              "m_Enabled": "1",
+              "m_Script": "{fileID: 11500000, guid: 6f8a5758d4ed17c40abb2a64c0410345, type: 3}"
+            }
+          },
+          {
+            "type": 61,
+            "line": 4716,
+            "fields": {
+              "m_Enabled": "1",
+              "m_IsTrigger": "1",
+              "m_Offset": "{x: 0, y: 0}",
+              "m_Size": "{x: 1, y: 1}"
+            }
+          },
+          {
+            "type": 114,
+            "line": 4762,
+            "fields": {
+              "m_Enabled": "1",
+              "m_Script": "{fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}"
+            }
+          },
+          {
+            "type": 212,
+            "line": 4775,
+            "fields": {
+              "m_Enabled": "0",
+              "m_Size": "{x: 1, y: 1}"
+            }
+          },
+          {
+            "type": 4,
+            "line": 4834,
+            "fields": {
+              "m_LocalRotation": "{x: 0, y: 0, z: 0, w: 1}",
+              "m_LocalPosition": "{x: 191, y: -2.15, z: 0}",
+              "m_LocalScale": "{x: 0.62, y: 0.62, z: 1}",
+              "m_Father": "{fileID: 0}"
+            }
+          }
+        ]
+      },
+      {
+        "file_id": 995937621,
+        "name": "Main S10 Green Right Bank",
+        "gameobject_line": 6941,
+        "components": [
+          {
+            "type": 114,
+            "line": 6962,
+            "fields": {
+              "m_Enabled": "1",
+              "m_Script": "{fileID: 11500000, guid: d6b4a2f17c8e49a1b3d5e7f901234abc, type: 3}"
+            }
+          },
+          {
+            "type": 114,
+            "line": 6976,
+            "fields": {
+              "m_Enabled": "1",
+              "m_Script": "{fileID: 11500000, guid: 6f8a5758d4ed17c40abb2a64c0410345, type: 3}"
+            }
+          },
+          {
+            "type": 61,
+            "line": 6992,
+            "fields": {
+              "m_Enabled": "1",
+              "m_IsTrigger": "1",
+              "m_Offset": "{x: 0, y: 0}",
+              "m_Size": "{x: 1, y: 1}"
+            }
+          },
+          {
+            "type": 114,
+            "line": 7038,
+            "fields": {
+              "m_Enabled": "1",
+              "m_Script": "{fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}"
+            }
+          },
+          {
+            "type": 212,
+            "line": 7051,
+            "fields": {
+              "m_Enabled": "0",
+              "m_Size": "{x: 1, y: 1}"
+            }
+          },
+          {
+            "type": 4,
+            "line": 7110,
+            "fields": {
+              "m_LocalRotation": "{x: 0, y: 0, z: 0, w: 1}",
+              "m_LocalPosition": "{x: 208, y: -2.15, z: 0}",
+              "m_LocalScale": "{x: 0.62, y: 0.62, z: 1}",
+              "m_Father": "{fileID: 0}"
+            }
+          }
+        ]
+      },
+      {
+        "file_id": 1138296023,
+        "name": "Main S09 Center Hook",
+        "gameobject_line": 8322,
+        "components": [
+          {
+            "type": 114,
+            "line": 8343,
+            "fields": {
+              "m_Enabled": "1",
+              "m_Script": "{fileID: 11500000, guid: d6b4a2f17c8e49a1b3d5e7f901234abc, type: 3}"
+            }
+          },
+          {
+            "type": 114,
+            "line": 8357,
+            "fields": {
+              "m_Enabled": "1",
+              "m_Script": "{fileID: 11500000, guid: 6f8a5758d4ed17c40abb2a64c0410345, type: 3}"
+            }
+          },
+          {
+            "type": 61,
+            "line": 8373,
+            "fields": {
+              "m_Enabled": "1",
+              "m_IsTrigger": "1",
+              "m_Offset": "{x: 0, y: 0}",
+              "m_Size": "{x: 1, y: 1}"
+            }
+          },
+          {
+            "type": 114,
+            "line": 8419,
+            "fields": {
+              "m_Enabled": "1",
+              "m_Script": "{fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}"
+            }
+          },
+          {
+            "type": 212,
+            "line": 8432,
+            "fields": {
+              "m_Enabled": "0",
+              "m_Size": "{x: 1, y: 1}"
+            }
+          },
+          {
+            "type": 4,
+            "line": 8491,
+            "fields": {
+              "m_LocalRotation": "{x: 0, y: 0, z: 0, w: 1}",
+              "m_LocalPosition": "{x: 185.5, y: -1.05, z: 0}",
+              "m_LocalScale": "{x: 1.6, y: 0.45, z: 1}",
+              "m_Father": "{fileID: 0}"
+            }
+          }
+        ]
+      },
+      {
+        "file_id": 1301360671,
+        "name": "Main S09 Hanging Beam",
+        "gameobject_line": 9252,
+        "components": [
+          {
+            "type": 114,
+            "line": 9275,
+            "fields": {
+              "m_Enabled": "1",
+              "m_Script": "{fileID: 11500000, guid: caea6ce1b2764598a2e78008b4f433c7, type: 3}"
+            }
+          },
+          {
+            "type": 50,
+            "line": 9287,
+            "fields": {}
+          },
+          {
+            "type": 61,
+            "line": 9314,
+            "fields": {
+              "m_Enabled": "1",
+              "m_IsTrigger": "0",
+              "m_Offset": "{x: 0, y: 0}",
+              "m_Size": "{x: 1, y: 1}"
+            }
+          },
+          {
+            "type": 114,
+            "line": 9360,
+            "fields": {
+              "m_Enabled": "1",
+              "m_Script": "{fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}"
+            }
+          },
+          {
+            "type": 212,
+            "line": 9373,
+            "fields": {
+              "m_Enabled": "0",
+              "m_Size": "{x: 1, y: 1}"
+            }
+          },
+          {
+            "type": 4,
+            "line": 9432,
+            "fields": {
+              "m_LocalRotation": "{x: 0, y: 0, z: 0, w: 1}",
+              "m_LocalPosition": "{x: 187, y: 1.55, z: 0}",
+              "m_LocalScale": "{x: 2, y: 5, z: 1}",
+              "m_Father": "{fileID: 0}"
+            }
+          },
+          {
+            "type": 114,
+            "line": 9448,
+            "fields": {
+              "m_Enabled": "1",
+              "m_Script": "{fileID: 11500000, guid: ab1ec05b3d804a30a1ed4cf882f79a01, type: 3}"
+            }
+          },
+          {
+            "type": 114,
+            "line": 9460,
+            "fields": {
+              "m_Enabled": "1",
+              "m_Script": "{fileID: 11500000, guid: 92322e3412d147aca7c4d87c6fce590f, type: 3}"
+            }
+          }
+        ]
+      },
+      {
+        "file_id": 1717291292,
+        "name": "Main S09 Goal Floor",
+        "gameobject_line": 13568,
+        "components": [
+          {
+            "type": 114,
+            "line": 13592,
+            "fields": {
+              "m_Enabled": "1",
+              "m_Script": "{fileID: 11500000, guid: 9c8a2e2a9f1f4cc2a3a1b0c4d5e6f708, type: 3}"
+            }
+          },
+          {
+            "type": 114,
+            "line": 13607,
+            "fields": {
+              "m_Enabled": "1",
+              "m_Script": "{fileID: 11500000, guid: caea6ce1b2764598a2e78008b4f433c7, type: 3}"
+            }
+          },
+          {
+            "type": 50,
+            "line": 13619,
+            "fields": {}
+          },
+          {
+            "type": 61,
+            "line": 13646,
+            "fields": {
+              "m_Enabled": "1",
+              "m_IsTrigger": "0",
+              "m_Offset": "{x: 0, y: 0}",
+              "m_Size": "{x: 1, y: 1}"
+            }
+          },
+          {
+            "type": 114,
+            "line": 13692,
+            "fields": {
+              "m_Enabled": "1",
+              "m_Script": "{fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}"
+            }
+          },
+          {
+            "type": 212,
+            "line": 13705,
+            "fields": {
+              "m_Enabled": "0",
+              "m_Size": "{x: 1, y: 1}"
+            }
+          },
+          {
+            "type": 4,
+            "line": 13764,
+            "fields": {
+              "m_LocalRotation": "{x: 0, y: 0, z: 0, w: 1}",
+              "m_LocalPosition": "{x: 195, y: -7.15, z: 0}",
+              "m_LocalScale": "{x: 8, y: 10, z: 1}",
+              "m_Father": "{fileID: 0}"
+            }
+          },
+          {
+            "type": 114,
+            "line": 13781,
+            "fields": {
+              "m_Enabled": "1",
+              "m_Script": "{fileID: 11500000, guid: ab1ec05b3d804a30a1ed4cf882f79a01, type: 3}"
+            }
+          },
+          {
+            "type": 114,
+            "line": 13793,
+            "fields": {
+              "m_Enabled": "1",
+              "m_Script": "{fileID: 11500000, guid: 92322e3412d147aca7c4d87c6fce590f, type: 3}"
+            }
+          }
+        ]
+      },
+      {
+        "file_id": 1747064520,
+        "name": "Main S10 Green Left Bank",
+        "gameobject_line": 14116,
+        "components": [
+          {
+            "type": 114,
+            "line": 14137,
+            "fields": {
+              "m_Enabled": "1",
+              "m_Script": "{fileID: 11500000, guid: d6b4a2f17c8e49a1b3d5e7f901234abc, type: 3}"
+            }
+          },
+          {
+            "type": 114,
+            "line": 14151,
+            "fields": {
+              "m_Enabled": "1",
+              "m_Script": "{fileID: 11500000, guid: 6f8a5758d4ed17c40abb2a64c0410345, type: 3}"
+            }
+          },
+          {
+            "type": 61,
+            "line": 14167,
+            "fields": {
+              "m_Enabled": "0",
+              "m_IsTrigger": "1",
+              "m_Offset": "{x: 0, y: 0}",
+              "m_Size": "{x: 1, y: 1}"
+            }
+          },
+          {
+            "type": 114,
+            "line": 14213,
+            "fields": {
+              "m_Enabled": "1",
+              "m_Script": "{fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}"
+            }
+          },
+          {
+            "type": 212,
+            "line": 14226,
+            "fields": {
+              "m_Enabled": "0",
+              "m_Size": "{x: 1, y: 1}"
+            }
+          },
+          {
+            "type": 4,
+            "line": 14285,
+            "fields": {
+              "m_LocalRotation": "{x: 0, y: 0, z: 0, w: 1}",
+              "m_LocalPosition": "{x: 199, y: -2.15, z: 0}",
+              "m_LocalScale": "{x: 0.62, y: 0.62, z: 1}",
+              "m_Father": "{fileID: 0}"
+            }
+          }
+        ]
+      },
+      {
+        "file_id": 2119291537,
+        "name": "Main S10 Toy Box Goal",
+        "gameobject_line": 17331,
+        "components": [
+          {
+            "type": 114,
+            "line": 17350,
+            "fields": {
+              "m_Enabled": "1",
+              "m_Script": "{fileID: 11500000, guid: aaabdbad0f9e20c40b1998e02cc2ba98, type: 3}"
+            }
+          },
+          {
+            "type": 212,
+            "line": 17363,
+            "fields": {
+              "m_Enabled": "0",
+              "m_Size": "{x: 1, y: 1}"
+            }
+          },
+          {
+            "type": 4,
+            "line": 17422,
+            "fields": {
+              "m_LocalRotation": "{x: 0, y: 0, z: 0, w: 1}",
+              "m_LocalPosition": "{x: 219, y: -0.95, z: 0}",
+              "m_LocalScale": "{x: 2.6, y: 2.4, z: 1}",
+              "m_Father": "{fileID: 0}"
+            }
+          },
+          {
+            "type": 114,
+            "line": 17438,
+            "fields": {
+              "m_Enabled": "1",
+              "m_Script": "{fileID: 11500000, guid: 0bf6952f38c645869214d740b169e1b9, type: 3}"
+            }
+          }
+        ]
+      }
+    ],
+    "preview_settings": [
+      {
+        "line": 9724,
+        "fields": {
+          "m_ObjectHideFlags": "0",
+          "m_CorrespondingSourceObject": "{fileID: 0}",
+          "m_PrefabInstance": "{fileID: 0}",
+          "m_PrefabAsset": "{fileID: 0}",
+          "m_GameObject": "{fileID: 1380120218}",
+          "m_Enabled": "1",
+          "m_EditorHideFlags": "0",
+          "m_Script": "{fileID: 11500000, guid: 085691a767a788d4cb3948e3318d8cbb, type: 3}",
+          "m_Name": "",
+          "m_EditorClassIdentifier": "Assembly-CSharp::HimoHito.MainStageRespawnOnFall",
+          "startNearGoalForEndingPreview": "0",
+          "startWithPartDPreview": "0",
+          "fallThreshold": "-9",
+          "minimumUsableRopeLength": "1"
+        }
+      }
+    ]
+  }
+}

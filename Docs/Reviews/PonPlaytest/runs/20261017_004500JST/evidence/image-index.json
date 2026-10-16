@@ -1,0 +1,82 @@
+[
+  {
+    "id": "E01",
+    "file": "evidence/images/E01_menu.png",
+    "source_relative_to_production": "Docs/Images/StageSelection-Diorama-Main-v1.png",
+    "source_sha256": "56e17c6eaf3b226c5f6762f303f005c25352128007e9db437f5b19f43e3687a6",
+    "copied_sha256": "56e17c6eaf3b226c5f6762f303f005c25352128007e9db437f5b19f43e3687a6",
+    "bytes": 3891314,
+    "classification": "existing_reference_not_live_play",
+    "boundary": "既存UI確認画像。撮影日時・実行Buildは画像単体では未確定。文言は固定ソースと照合。"
+  },
+  {
+    "id": "E02",
+    "file": "evidence/images/E02_tutorial_hud.png",
+    "source_relative_to_production": "Docs/Images/CraftUi-Tutorial-v1.png",
+    "source_sha256": "f87f2d93bcb30111147d6a37d15050684e0fe2e8072a1f7ebd4fc469373433f3",
+    "copied_sha256": "f87f2d93bcb30111147d6a37d15050684e0fe2e8072a1f7ebd4fc469373433f3",
+    "bytes": 2796362,
+    "classification": "existing_reference_not_live_play",
+    "boundary": "旧通常画角のUI確認画像。現行対象Buildのプレイ記録ではない。"
+  },
+  {
+    "id": "E03",
+    "file": "evidence/images/E03_help_fixture.png",
+    "source_relative_to_production": "Docs/QA/FullGameRegression_20260930/Evidence/StaticScreens/Help_1280x720.png",
+    "source_sha256": "4343bc4377c910731585b79c518e72edf51fdbb81ba62e914464b425804a5d2d",
+    "copied_sha256": "4343bc4377c910731585b79c518e72edf51fdbb81ba62e914464b425804a5d2d",
+    "bytes": 1396618,
+    "classification": "existing_reference_not_live_play",
+    "boundary": "2026-09-30の隔離静的Draw fixture。OS入力・実Windowの証明ではない。"
+  },
+  {
+    "id": "E04",
+    "file": "evidence/images/E04_pause_fixture.png",
+    "source_relative_to_production": "Docs/QA/FullGameRegression_20260930/Evidence/StaticScreens/Pause_1280x720.png",
+    "source_sha256": "d78d47c0c068a27e57658893407051dd351f0c80a3af35896b7134e81a4c3357",
+    "copied_sha256": "d78d47c0c068a27e57658893407051dd351f0c80a3af35896b7134e81a4c3357",
+    "bytes": 208737,
+    "classification": "existing_reference_not_live_play",
+    "boundary": "2026-09-30の隔離静的Draw fixture。スクロール・クリック挙動は未実操作。"
+  },
+  {
+    "id": "E05",
+    "file": "evidence/images/E05_failure_fixture.png",
+    "source_relative_to_production": "Docs/QA/FullGameRegression_20260930/Evidence/StaticScreens/Failure_1280x720.png",
+    "source_sha256": "e0be68e6e8fca3f6204630a11dd487a34f13bcfc58dc5f7d23ef9a86b68803d0",
+    "copied_sha256": "e0be68e6e8fca3f6204630a11dd487a34f13bcfc58dc5f7d23ef9a86b68803d0",
+    "bytes": 1127392,
+    "classification": "existing_reference_not_live_play",
+    "boundary": "2026-09-30の隔離静的Draw fixture。失敗回数や復帰時間の証拠ではない。"
+  },
+  {
+    "id": "E06",
+    "file": "evidence/images/E06_sign4_fixture.png",
+    "source_relative_to_production": "Docs/QA/FullGameRegression_20260930/Evidence/StaticScreens/Sign4_1280x720.png",
+    "source_sha256": "c71615cc8a5aa7f91c9da1e344906f6518c050c8d7209d87df913f0bdb5a6acc",
+    "copied_sha256": "c71615cc8a5aa7f91c9da1e344906f6518c050c8d7209d87df913f0bdb5a6acc",
+    "bytes": 395507,
+    "classification": "existing_reference_not_live_play",
+    "boundary": "2026-09-30の隔離静的Draw fixture。アニメーションの1コマ。"
+  },
+  {
+    "id": "E07",
+    "file": "evidence/images/E07_merged_diagnostic.png",
+    "source_relative_to_production": "Docs/QA/FullGameRegression_20260930/Evidence/TutorialFinal/01_tutorial_merged.png",
+    "source_sha256": "53143c83d4702f7c95b66445e950f49b4634322bc296896a9cb1a0dca86ac1e7",
+    "copied_sha256": "53143c83d4702f7c95b66445e950f49b4634322bc296896a9cb1a0dca86ac1e7",
+    "bytes": 1573703,
+    "classification": "existing_reference_not_live_play",
+    "boundary": "2026-09-30の診断ハーネス記録。統合後の形の参考。通常キー攻略の証拠ではない。"
+  },
+  {
+    "id": "E08",
+    "file": "evidence/images/E08_clear_reference.png",
+    "source_relative_to_production": "Docs/Images/Clear-Return-Main-v1.png",
+    "source_sha256": "b34fec227f236fdcb8ef54390a4ab34e71126a14304ca384e6e6a86452984f60",
+    "copied_sha256": "b34fec227f236fdcb8ef54390a4ab34e71126a14304ca384e6e6a86452984f60",
+    "bytes": 1087951,
+    "classification": "existing_reference_not_live_play",
+    "boundary": "既存Clear UI確認画像。残量50・橋0等は今回のクリア成績ではない。"
+  }
+]

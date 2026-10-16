@@ -1,0 +1,82 @@
+[
+  {
+    "path": "Assets/Scripts/TutorialGuideAnimation.cs",
+    "sha256": "bb2cbbc6c7afa6ea22478d500932befb5cddab983c6dff75ea9f2c374e59a8e5",
+    "build_inputs_match": true
+  },
+  {
+    "path": "Assets/Scripts/TutorialSectionGuide.cs",
+    "sha256": "380f0e643fe2e76bc3d561c3157982b268aee650b3648357af8d3a1bf336f385",
+    "build_inputs_match": true
+  },
+  {
+    "path": "Assets/Scripts/TutorialSignInscription.cs",
+    "sha256": "5b0194605ac744e2aecf3106c1911dad2cfe6c34bb61f9acb859e9cd22c1ab1e",
+    "build_inputs_match": true
+  },
+  {
+    "path": "Assets/Scripts/TutorialSectionFourSetup.cs",
+    "sha256": "ca097254c033e04e2c486bdd900d800cb3226b2aa9a4cc62838be7aeee89b37c",
+    "build_inputs_match": true
+  },
+  {
+    "path": "Assets/Scripts/RopePlatformBuilder.cs",
+    "sha256": "11ecb4c1870cb8ef0449343155559211a5e1d9e1321132bce0dcf8e14e279fd2",
+    "build_inputs_match": true
+  },
+  {
+    "path": "Assets/Scripts/MainStageSectionTenSetup.cs",
+    "sha256": "80095b57b5ea63b2768ffaeac76dbe15270efb3b9d0669e84f65b2ccde134e11",
+    "build_inputs_match": true
+  },
+  {
+    "path": "Assets/Scripts/MainStageSectionNineSetup.cs",
+    "sha256": "794454c44069d0430c9136af0cade40b72c513e3708c7a594b5e1cd62a5566da",
+    "build_inputs_match": true
+  },
+  {
+    "path": "Assets/Scripts/MainStageGoalZone.cs",
+    "sha256": "54bb45cc0dcdf0cfafc08fad10e865059e058b15e635601d81e66305d162e9d9",
+    "build_inputs_match": true
+  },
+  {
+    "path": "Assets/Scripts/GoalChestPresentation.cs",
+    "sha256": "d2c59ac777a4d2ad0e9732f14a81cf745c7d2b00ebd188f046838cf3d35db6c4",
+    "build_inputs_match": true
+  },
+  {
+    "path": "Assets/Scripts/MainStageFloorCollisionSetup.cs",
+    "sha256": "e5c1af6e2339d7ebfef9485e4b2c79e1c39b1d355b33ceae2d5d0045d480af3f",
+    "build_inputs_match": true
+  },
+  {
+    "path": "Assets/Scripts/RopePlatformAnchor.cs",
+    "sha256": "bb3309fe1e78fce3261683e25bd71dfbded4c4bf210a062c9e60e3f1409709c0",
+    "build_inputs_match": true
+  },
+  {
+    "path": "Assets/Scripts/PrototypeRunController.cs",
+    "sha256": "ec6fd5170e7c00a97593b28e109b7fc3fbc5d6f922b5aa1b68823467e3623977",
+    "build_inputs_match": true
+  },
+  {
+    "path": "Assets/Scripts/MainStageRespawnOnFall.cs",
+    "sha256": "314060136dfb7846ae7ebbc43cfaf0028625b839b4b9a05e9171d4f5830c4d8c",
+    "build_inputs_match": true
+  },
+  {
+    "path": "Assets/Scripts/StageStartTransition.cs",
+    "sha256": "294e890fac62f18212ab7628e65b799d1e299ccb362f7ee579602ae8fbdebf3f",
+    "build_inputs_match": true
+  },
+  {
+    "path": "Assets/Scripts/StageProgress.cs",
+    "sha256": "4119bab062a2c0f0ddea9101fe71ffb9fa53bb508ab73f1a98fe6b65c215cfa6",
+    "build_inputs_match": true
+  },
+  {
+    "path": "Assets/Scripts/TutorialSectionThreeSetup.cs",
+    "sha256": "b5a4788208fd57acee9735eaff24780f2c55fe7d56afe3f14a97099adee0e076",
+    "build_inputs_match": true
+  }
+]

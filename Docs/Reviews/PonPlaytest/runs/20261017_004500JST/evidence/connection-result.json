@@ -1,0 +1,22 @@
+{
+  "checked_utc": "2026-10-16T15:42:51.614148+00:00",
+  "surface": "mcp__cua_repl",
+  "attempts": 2,
+  "reset_between_attempts": true,
+  "result": "UNAVAILABLE",
+  "error": "MXC launcher: cannot locate required Windows platform directory: HRESULT 0x80070003",
+  "screenshot_obtained": false,
+  "normal_key_input_sent": false,
+  "audio_captured_or_heard": false,
+  "direct_codex_handoff_confirmed": false,
+  "input_until_handoff": "PROHIBITED",
+  "fallback": "existing images, existing records, frozen build-source reading only",
+  "parent_message_attempt": {
+    "tool": "mcp__codex_app__send_message_to_thread",
+    "target": "01a1188c-b7bf-75c3-968f-b22950dba0f8",
+    "result": "thread not found"
+  },
+  "custom_helper_started": false,
+  "production_unity_opened": false,
+  "rebuild": false
+}

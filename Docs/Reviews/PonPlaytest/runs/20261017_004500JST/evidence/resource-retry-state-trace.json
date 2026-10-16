@@ -1,0 +1,143 @@
+{
+  "created_utc": "2026-10-16T16:31:10.042128+00:00",
+  "classification": "B_CONDITIONAL_DESK_TRACE_NOT_PLAY",
+  "baseline": "2026-10-06 FriendPlay frozen source / original BuildInputs hash matched",
+  "assumptions": [
+    "各QがCanBuildを満たす",
+    "各CPへ未接続で到達しLandingGateが受理する",
+    "記載外のQ・R・再入場・追加消費なし",
+    "MainStage通常開始50、S4Q5、S5Q6"
+  ],
+  "checkpoint_operator": "R_after = max(R_before, lower_bound), capacity clamp applies",
+  "rows": [
+    {
+      "state": "S6入口",
+      "upper_remaining": 39,
+      "lower_remaining": 39,
+      "difference": 0,
+      "upper_refill": 0,
+      "lower_refill": 0,
+      "note": "Main50、S4Q5、S5Q6。前のCP条件が成立した仮定"
+    },
+    {
+      "state": "S6 Q後／下はQなし",
+      "upper_remaining": 25,
+      "lower_remaining": 39,
+      "difference": 14,
+      "upper_refill": 0,
+      "lower_refill": 0,
+      "note": "上Q14。下のE接続・解除は無消費"
+    },
+    {
+      "state": "CP7受理後",
+      "upper_remaining": 25,
+      "lower_remaining": 39,
+      "difference": 14,
+      "upper_refill": 0,
+      "lower_refill": 0,
+      "note": "下限25。両方とも下限以上"
+    },
+    {
+      "state": "S7 Q4後",
+      "upper_remaining": 21,
+      "lower_remaining": 35,
+      "difference": 14,
+      "upper_refill": 0,
+      "lower_refill": 0,
+      "note": "振り子5は選択長であって消費5ではない"
+    },
+    {
+      "state": "CP9受理後",
+      "upper_remaining": 23,
+      "lower_remaining": 35,
+      "difference": 12,
+      "upper_refill": 2,
+      "lower_refill": 0,
+      "note": "下限23。上だけ2補充"
+    },
+    {
+      "state": "S9 Q6を2回後",
+      "upper_remaining": 11,
+      "lower_remaining": 23,
+      "difference": 12,
+      "upper_refill": 0,
+      "lower_refill": 0,
+      "note": "両方とも計12を消費"
+    },
+    {
+      "state": "S9 F後",
+      "upper_remaining": 11,
+      "lower_remaining": 23,
+      "difference": 12,
+      "upper_refill": 0,
+      "lower_refill": 0,
+      "note": "2本の長さを合計し形を変更。残量変化なし"
+    },
+    {
+      "state": "CP10受理後",
+      "upper_remaining": 11,
+      "lower_remaining": 23,
+      "difference": 12,
+      "upper_refill": 0,
+      "lower_refill": 0,
+      "note": "下限11。変化なし"
+    },
+    {
+      "state": "S10 Q10後",
+      "upper_remaining": 1,
+      "lower_remaining": 13,
+      "difference": 12,
+      "upper_refill": 0,
+      "lower_refill": 0,
+      "note": "最後の橋。これは到達・クリアの実証ではない"
+    }
+  ],
+  "counterexamples": [
+    {
+      "name": "S6入口が34の条件例",
+      "assumption": "先行消費などでCP6下限34にそろったと仮定。実際の到達例ではない",
+      "rows": [
+        {
+          "state": "S6 Q14後／下Qなし",
+          "upper": 20,
+          "lower": 34
+        },
+        {
+          "state": "CP7下限25",
+          "upper": 25,
+          "lower": 34,
+          "gap": 9
+        },
+        {
+          "state": "S7Q4後",
+          "upper": 21,
+          "lower": 30
+        },
+        {
+          "state": "CP9下限23",
+          "upper": 23,
+          "lower": 30,
+          "gap": 7
+        }
+      ]
+    },
+    {
+      "name": "下限で差が全て消える境界例",
+      "classification": "代数的境界例、到達可能ルートの主張ではない",
+      "before": [
+        20,
+        22
+      ],
+      "floor": 23,
+      "after": [
+        23,
+        23
+      ],
+      "gap_after": 0
+    }
+  ],
+  "F_refund": false,
+  "R_semantics": "最新の受理済みCPの残量・選択長・橋・除去フックを復元。通常回収ではない",
+  "audio_heard": false,
+  "actual_play_observations": 0
+}

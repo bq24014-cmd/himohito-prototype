@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-06",
+  "build": "HimoHito_Windows_FriendPlay_20261006",
+  "reviewer": "owner",
+  "result": "PASS",
+  "question": "ステージ選択の表示 → Tutorial開始 → ポーズからステージ選択へ戻る → 本編開始が正常にできるか",
+  "answer_verbatim": "正常にできた",
+  "scope": [
+    "Stage Selection display",
+    "Tutorial start",
+    "Return to Stage Selection from pause",
+    "MainStage start"
+  ],
+  "human_full_route": "NOT_PERFORMED_IN_THIS_TASK",
+  "claim_boundary": "Menu/startup smoke only; not a full-route or all-keys regression pass."
+}

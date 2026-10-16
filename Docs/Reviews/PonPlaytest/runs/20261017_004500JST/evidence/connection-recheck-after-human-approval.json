@@ -1,0 +1,14 @@
+{
+  "utc": "2026-10-16T16:01:51.269904+00:00",
+  "reason": "Human reported play environment approval at 2026-10-17 00:57 JST",
+  "attempts_after_change": 2,
+  "error_verbatim": "trusted Node process exited unexpectedly; kernel reset, rerun your request",
+  "runtime_reset_before_first_attempt": true,
+  "screenshot_obtained": false,
+  "normal_input_sent": false,
+  "handoff_confirmed": false,
+  "approval_propagation_state": "NOT_OBSERVABLE; runtime failed before screen inventory",
+  "result": "UNAVAILABLE_AFTER_APPROVAL_NOTIFICATION; no more retries",
+  "game_launched": false,
+  "play_reached": null
+}
