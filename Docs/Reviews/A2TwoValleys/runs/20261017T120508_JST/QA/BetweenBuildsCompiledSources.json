@@ -1,0 +1,1036 @@
+{
+  "method": "Source document checksums from compiled portable PDBs",
+  "builds": {
+    "Build_r3": {
+      "Assets/Scripts/PrototypeRunController.cs": {
+        "source_hash": "EC6FD5170E7C00A97593B28E109B7FC3FBC5D6F922B5AA1B68823467E3623977",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/MainS3PencilVisual.cs": {
+        "source_hash": "7E48A796A1EDC5417C66A1D78AF290472C1B02DAF068547E0AE03C1937451030",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/MainStageSectionSevenSetup.cs": {
+        "source_hash": "C5D3845135FA2A83DE7B1C10200F5630FFFBF25F96D144B977187E80C4D95513",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/GoalZone.cs": {
+        "source_hash": "51214E54F3C0E636165C5F199481284AD60D80B896E66F93DD28B21EB816FA72",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/PrototypeHud.cs": {
+        "source_hash": "2E6D442C4933DDA55AA3680ED1A835372E53274FE0C7404498684DC23ABB6780",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/HimoHitoBackgroundMusic.cs": {
+        "source_hash": "41846555AB18AC06900C3774BB2E4B22BD5D27E1F063745D83C7F321999260ED",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/PlayerPresentation/PresentationCapture.cs": {
+        "source_hash": "38FB06C79B392F7C6D8DFB66560FBA4BE4691A7513BD29F0E4B07A5DF0D80137",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/CraftRailPlatformVisual.cs": {
+        "source_hash": "0ADAB78B1A325720A0E6BB0C16060132BDFDBB1878DA09A3961A30DF30360744",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/AimPoseState.cs": {
+        "source_hash": "4152C691E84225BD3CC4E80AD8D469EB90D53F0BB805102EE61D46A50EE58B9B",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/PlayerPresentation/PlayerMotionPresentation.cs": {
+        "source_hash": "9054AB733F6E2374EE985851C772D58F69578C169212A35870A81ECEDD643A98",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/PlayerPresentation/SwingPresentationState.cs": {
+        "source_hash": "FE6D0CAD64A3D3A56AFD426BDBDE63C8BF00ABB172D892A2DFA3A574196330A7",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/MainStageCheckpoint.cs": {
+        "source_hash": "66663105DEC1F99517EFCD12D21B38711DF56C8AA5A8E0175135793A04449033",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/HimoHitoGuiTheme.cs": {
+        "source_hash": "83FE49227EE8EDDB4960BAFF1EA421928F569B1E10DCE577E09A24C49C45F456",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/PlatformOccludedLightHazard.cs": {
+        "source_hash": "41417E56B6C7EE947AC420760A946932CDAF7C38A41358B1E592E47144AECC8E",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/SignGlanceState.cs": {
+        "source_hash": "8F2885952D8E40F759EF8CD23CCF483E1D08744275C21945E690D0CB07B2BA1C",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/StageCatalog.cs": {
+        "source_hash": "230747D74843DF78DABDD4488540F404D51F03D8520F63C8E1727268E5DA320F",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/GoalChestPresentation.cs": {
+        "source_hash": "D2C59AC777A4D2AD0E9732F14A81CF745C7D2B00EBD188F046838CF3D35DB6C4",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/RopePlatformBuilder.cs": {
+        "source_hash": "11ECB4C1870CB8EF0449343155559211A5E1D9E1321132BCE0DCF8E14E279FD2",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/MainStageSectionFourSetup.cs": {
+        "source_hash": "C1173EA1C61B95A6DDD3994456ED34B0D5E1167C04A4EDDDD43FD6E13012A6DC",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/WoodenPlatformDepthVisual.cs": {
+        "source_hash": "6610FF28909CCB02BBE0C651B145572BF6827DD85EA649F1ABC702CE9AB20A88",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/MainS4RulerVisual.cs": {
+        "source_hash": "1ADC4E0B030AF04A7CB516E5218EC77F2150518726719B077EB5E34E4C896474",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/RecoverySwitchVisual.cs": {
+        "source_hash": "05BD902295BE5CB3939B76163E898100A7CA876C5406405B73F942823A643F7B",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/TutorialSectionThreeSetup.cs": {
+        "source_hash": "B5A4788208FD57ACEE9735EAFF24780F2C55FE7D56AFE3F14A97099ADEE0E076",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/TutorialSectionTwoSetup.cs": {
+        "source_hash": "CCD88A949811ADA96D1751EBDCB8273D94E6094D8A06975C8522A4ED30AE99E1",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/RopeSpikeHazard.cs": {
+        "source_hash": "F8A1234C574E1E6DAA4B66027F1E00AE2D52E0AF1DEF791099EE4A1206169EDC",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/MainStagePreview.cs": {
+        "source_hash": "54F936699CBD72D62542B839619D0A7F01F2ADDCD0FAE9EEF6FE1A55B66A7DCD",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/TutorialCraftRoomLayers.cs": {
+        "source_hash": "E08312BCC8B61F31C9139EA0122AEA57726721263B4FB744A7AF7CDB10B7CE4F",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/RopeBridgeMergeVisual.cs": {
+        "source_hash": "54820280BC1F2225234305198CC6595A0A79B7E0E6E498EBE4FB7FCC7A48CC71",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/CraftWoodPlatformVisual.cs": {
+        "source_hash": "71ECC00408A83E8E0CE55032C07F41C44C03C3D2E6BB8992FDE6522F0709CA0D",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/OneWayRailPlatform.cs": {
+        "source_hash": "CF0DF28CAA39A81E58A9A4410195635F000BC4D0BCE2975CD032CEFB7070A6BC",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/PlayerPresentation/ConnectionGestureCapture.cs": {
+        "source_hash": "92DFEB6FA09D60F4F6D24B80526D25EEB2AC43753E0A25A688E38648B8518545",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/CheckpointYarnFlag.cs": {
+        "source_hash": "711BED76832024B804E2D494A3E12EC412CE5FA9DE5572F4BE7F5368786FA02E",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/StageStartCurtainView.cs": {
+        "source_hash": "C629C33C89DB55241BC6B71DDAEFA16C8B9DB35DE1D6D181AC559F7E4F87CB31",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/TutorialFirstSectionVisuals.cs": {
+        "source_hash": "E64F5436AB426B5670511A22FE809771A43A5D3CCE69E8DC4F8425A90F818F66",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/StageSelectionDioramaArt.cs": {
+        "source_hash": "88EEF368D70B72B01C9B211310D77EB7250309C2271F2A4D36872DC5333A104D",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/StageStartTransition.cs": {
+        "source_hash": "294E890FAC62F18212AB7628E65B799D1E299CCB362F7EE579602AE8FBDEBF3F",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/HimoHitoAudioSettings.cs": {
+        "source_hash": "71F2755B123103D85FE0CC3BE9D16D60C23B5760D615E75A1D247212F3D28F9A",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/HimoHitoFailureScreen.cs": {
+        "source_hash": "60B4E7BF917B46AB16C9F234EEACDB1D846D502B110CA85E36550C06739FB363",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/SwingAttachPoseState.cs": {
+        "source_hash": "599A1E81F768B83A623B19970BA1904E1B6B171D93A06ABB566D6610CF7404C3",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/RopeResourceExpression.cs": {
+        "source_hash": "5EA7FE809C488CAF41BA016048BDA01CBD3B46825AE10DF1613ECBBB06553A6D",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/ClearJourneySnapshot.cs": {
+        "source_hash": "8C8F9935831B7632E3878368D74CE437D015A957380D710D48328E2C3BF2FF0D",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/MainS3MarkerVisual.cs": {
+        "source_hash": "7B4E94204908B945A0571ECBE37F7F70A1C4F5C3F9C2ED680AF2C6B9118DFCAD",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/EdgeBalanceSupportProbe.cs": {
+        "source_hash": "E980EA98B5C18BD8000734E9E69597329A65A2D764D8DCB77E4E4CDA6BD8C294",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/SceneObjectLookup.cs": {
+        "source_hash": "A47876C57246A83F1EAB7C2104CC512D4CB72D1F515EF1669C5BB5BE591E22BC",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/RopeLandingFluff.cs": {
+        "source_hash": "209762B74999D20CEB035C245CE662A73C6FE939DA3D3B5CF91901E6D8C5FDA4",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/HimoHitoHookRingVisual.cs": {
+        "source_hash": "E25D894B135DC5BF5DF795D84B21217DC70FC23AC85873933D6E0281268C87E5",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/RopeRetractVisual.cs": {
+        "source_hash": "136E4C27E2E6F5CB556E131290BEFE8E8854DC41C8BA767CE5A1D2468DC0C932",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/StageSelectionView.cs": {
+        "source_hash": "DE0E76B56065337BB46CF256AD5778A9C9BB9CB1FA74AEE6E8C8C724FFAB3CB5",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/RopeSwingPoseState.cs": {
+        "source_hash": "65EC2F7E70161C7A874DE257BB6F079D8531FE2BC2F0F9510185FAFBE0B15E1C",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/PlayerContactShadow.cs": {
+        "source_hash": "0D932562CE843AFFBC7BDAECFEF7C008900BFDE252DD563E01049EDB3AA5B44C",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/RopeBridgeBindings.cs": {
+        "source_hash": "04AFBF9636F7DF82EB881FB9E517EF50730EE17E22696115AD0F537F04C07E1C",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/RopeBuildFluff.cs": {
+        "source_hash": "A7B848900A01D16303D5D86E68B968FB6A0F93FAC7D6DF6FFD93695667EB0A47",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/StageSelectionWeave.cs": {
+        "source_hash": "7B430326CB537648A167720F3CD53DEA99411FCC0CC432CC6D4D6072DE5047DE",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/MainStageSectionThreeRecoveryStairs.cs": {
+        "source_hash": "299FD4EF8B12C0C741ECC2C55B24A5110F6DB45C46F53EA31810330AC2EE8714",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/MainStageHud.cs": {
+        "source_hash": "30D2177386B912C1C8FC86961460208B53FD2F45DF0597552055C19E41ECAE50",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/RopeBridgeReveal.cs": {
+        "source_hash": "1826DD30B1295B0BA48CE45ECBEE3DCE78A38A7830CEA3388F4E1A60A53BC1ED",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/IdlePoseState.cs": {
+        "source_hash": "6C6413724CD951944CEEF692F259CF2941761B3052A74B0F17D7285CBE38E5F1",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/CraftPlayerArt.cs": {
+        "source_hash": "8AE014DDD8D74247A9F6DB9A6AE0B939BB82201B14E946162FC37F7C1BFCE967",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/TutorialSectionGuide.cs": {
+        "source_hash": "380F0E643FE2E76BC3D561C3157982B268AEE650B3648357AF8D3A1BF336F385",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/RopeBodyVisual.cs": {
+        "source_hash": "495FB8786B0A252F43D1FB1BEB39527F2D2C7077048619D86E764F7AF14E80EB",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/MainStageSectionTenSetup.cs": {
+        "source_hash": "80095B57B5EA63B2768FFAEAC76DBE15270EFB3B9D0669E84F65B2CCDE134E11",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/RopeFaceLandmarks.cs": {
+        "source_hash": "636719EF91339B0D8D866DA902AEC3F0EBF9C0E153ADBD6D92E3A9B2597B5A43",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/RespawnWeaveVisual.cs": {
+        "source_hash": "DF4C69C06EEA02C41CDC709D7770E6E682C2931A03ED429319562630F26C2F0D",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/RopeAnchorRingVisual.cs": {
+        "source_hash": "75473BAE5602BC705F8ACCAB8D742D965669230C890718C2A1751A72ED5B808E",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/RopeResource.cs": {
+        "source_hash": "026476F48B89BAC7158ABEBC1744BF41553BAE4981C41B7148B41DCED63860EB",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/MainStageSectionThreeRecoverySwitch.cs": {
+        "source_hash": "740694FF88F82362DA4C42170D5C415206D4D1808A83B07EB2D5CA75F32F0F1A",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/PlayerPresentation/ActiveSwingArms.cs": {
+        "source_hash": "24FEE85202F040E4B22614AF7C3622CEC54B7974732BDE07252F7B110336FFDF",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/MainStageFloorCollisionSetup.cs": {
+        "source_hash": "E5C1AF6E2339D7EBFEF9485E4B2C79E1C39B1D355B33CEAE2D5D0045D480AF3F",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/HorizontalCameraFollow.cs": {
+        "source_hash": "BD2EEF76F57DC4B7C4E3AD594EB2868FBF8252C19D6F93DFEFE1A4DE95EA504D",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/PlayerPresentation/PlayerSoleRegistration.cs": {
+        "source_hash": "ECE5BD0466B40AEF777C49263CB310F0F40C9B7820DB32E5261EA91C2BC540C6",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/SectionArrivalFeedback.cs": {
+        "source_hash": "62E6E94AB52EA8B1548798240C991A6BDFF7DA687BAE3BB0E63CE89FBAF76424",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/MainStageSectionTwoSetup.cs": {
+        "source_hash": "4169465AF91057F291D7A077BA26D17E6DFB9CD3F6716C904379FA39CD75DCFC",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/TutorialSectionOneSetup.cs": {
+        "source_hash": "64398AE8E596131799DBAAE7EC914911A08CCFF24217006DBFF2FCD97D6178DC",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/SolidSwingSurface.cs": {
+        "source_hash": "20A480CAB35AE1FCA61B9222C6051F238A98C39F522162499F724876B95B9F74",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/HimoHitoFarBackgroundLayer.cs": {
+        "source_hash": "62C1260152D92212E7DE19342944FC7FEC33C2742C915FFC99EF0C03F5463968",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/HookYarnKnotVisual.cs": {
+        "source_hash": "0348CA1CB961B16240051F2C2D796CB68E3414F0A63B05508BC03AC3D99B462F",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/MainStageSectionNineSetup.cs": {
+        "source_hash": "794454C44069D0430C9136AF0CADE40B72C513E3708C7A594B5E1CD62A5566DA",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/MainStageRespawnOnFall.cs": {
+        "source_hash": "314060136DFB7846AE7EBBC43CFAF0028625B839B4B9A05E9171D4F5830C4D8C",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/WeavePoseState.cs": {
+        "source_hash": "2CCB520FDF01A90949A2426DF48723421AA6DE40559F6064444108F5F1310B0D",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/AmbientDustVisual.cs": {
+        "source_hash": "F0EABB94EA2C577289B260836F957CC27005B02EF5CD430B4D2DC2FC1EF737D2",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/TutorialSignInscription.cs": {
+        "source_hash": "5B0194605AC744E2AECF3106C1911DAD2CFE6C34BB61F9ACB859E9CD22C1AB1E",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/HookArrivalVisualPulse.cs": {
+        "source_hash": "C159AF88F607FFCC880A1D680C4181AF21A11BC808D77CB426C8E710A5922B09",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/ClearJourneyView.cs": {
+        "source_hash": "D06A4CB0A7A0B8E8A1F7D1AA8D0E4E6E790321A3D2D94313AEAA4B253F19369E",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/MainStageSectionSixSetup.cs": {
+        "source_hash": "71B394FDF99A0EDCBB4085774AA1F4FC263054A799EEC641179FAE527A74E482",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/FallUnravelVisual.cs": {
+        "source_hash": "35CA8B8B0B5416BE087ED3B6A631959FD1C3B0C1F27A0EDEE13297C062E2C9CB",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/PlayerPresentation/ManualPresentationSession.cs": {
+        "source_hash": "49166596FF442A90DE4B24392066A531A3DDCF95428E27E0FD2191EEA370A3A0",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/StageOverlayControls.cs": {
+        "source_hash": "7D63DCBAA1DBCE7FB04A8E387B0013050D343084F3FC6D267F4064A69A28755A",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/RopeResourceGauge.cs": {
+        "source_hash": "7456E77B6B3D4E7B48882A34697CF186A55D6FAC18312E7E863D4C72FD0CA97A",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/TutorialCheckpoint.cs": {
+        "source_hash": "57D1506A5409688BD8CB5CF2FB25E79DF9976943F6A2032893D94623AF940ED4",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/EdgeBalancePoseState.cs": {
+        "source_hash": "8E8F6E199234B25BB4E9B118DB1E2537C0BC704AD80C5C7817CA3E63FB0E3BE0",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/GoalPoseState.cs": {
+        "source_hash": "69AE28224897432BF8C05A30AFCCF1A9EEA7A53457E51878DCCDB8C4F606C753",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/MainStageSectionFiveSetup.cs": {
+        "source_hash": "B7419423F4814C47A3B031C1C5221FBBD26B9272695050E76FFA299879D6DEF7",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/TutorialBackgroundParallax.cs": {
+        "source_hash": "3E60492A7707B9C05FD01A5AA3686188C1F90E20A651C2E522C4A805D5A547D0",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/StageSelectionDioramaState.cs": {
+        "source_hash": "2071017134B4DF89D25C4C68F8F2E26C358DC658AEF482146E00F5068C3C3BA5",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/A2Proof/A2Fixture.cs": {
+        "source_hash": "0314F5060078A21690E777BB2CA231962E680FD0BA15D15252A4F637EF702505",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/HookPoint.cs": {
+        "source_hash": "1AA04BE9A155C303221F387742F7242C92CBB026A3677B0049556C638F3CF3A8",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/StageProgress.cs": {
+        "source_hash": "4119BAB062A2C0F0DDEA9101FE71FFB9FA53BB508AB73F1A98FE6B65C215CFA6",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/TutorialSectionFourSetup.cs": {
+        "source_hash": "CA097254C033E04E2C486BDD900D800CB3226B2AA9A4CC62838BE7AEEE89B37C",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/FlashlightSpotVisual.cs": {
+        "source_hash": "ADB847D08F01F3631ABA56611494A2DBD2501E6273566E7E6573A5F1F50DB877",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/HimoHitoCraftRoomBackground.cs": {
+        "source_hash": "11AF0ED7649B6D82ADBB5874DFA0D85AF59DFF8534FB6F375BD92EBE98D53076",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/SwitchPressPoseState.cs": {
+        "source_hash": "6D24E23F1E75A2BCD3A2511F2B409FE518CD2B8DE47E2130D7F21A7E2B63E2F8",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/RopeMissVisual.cs": {
+        "source_hash": "4CDD94DE898A5240E2192F04E3C4AB891CB0222756BA1D9A585D1CBD4100BA64",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/SwingReleasePoseState.cs": {
+        "source_hash": "D1725F4B8A25868A348B0E3813CE0EF75304209A568A804F4E428AA5C8DC9CA4",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/TutorialSignGreeting.cs": {
+        "source_hash": "974F45580BBB8A3E70D468C01BBBC2B2EB0C145F34F9A8783FFAFFC8EF7307DD",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/MainStageVisuals.cs": {
+        "source_hash": "60A0EF8FE8FCD9F7E127AB043A982A7753C97EA918FD2F01CBE3E5B5C68EBAA6",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/HimoHitoUiParts.cs": {
+        "source_hash": "0696CD16C13616C677F40C05349018F42108822C5578A8852F5F7671CFD9C764",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/SwingPassThroughRailPlatform.cs": {
+        "source_hash": "376683C77BD3A719A78A1807460D3673EFD7D64FDE865EFAD67E000F80C2017A",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/MainStageGoalZone.cs": {
+        "source_hash": "54BB45CC0DCDF0CFAFC08FAD10E865059E058B15E635601D81E66305D162E9D9",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/WallPushPoseState.cs": {
+        "source_hash": "BDD0787939BCBE38230171093959219DCA289830535DE321689687F70D5E552B",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/MainStageSectionThreeSetup.cs": {
+        "source_hash": "B5F3F8CDF4644D93BC0FAACD3462D06BCEBB83366F0CC7AF64A9D22E7AFEFF08",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/PrototypeAudioFeedback.cs": {
+        "source_hash": "85121D5FF7242AEAD642899071C8FCD1B5C4644A919AFC07C5480D93F3474986",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/RopePoseParts.cs": {
+        "source_hash": "DC3A769D4BC9424D8427EFF168F25D421C64CEFC11D083A4B6E0F76D0919D632",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/MainStartGroundVisual.cs": {
+        "source_hash": "9E9ECA584D705311C41239ADE28681CEA56A14D3643681E6DF7B1FE935B3D64F",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/GroundMotionPoseState.cs": {
+        "source_hash": "BD60DD029D09F1B1333FF319E72EDF475571F99BC910AFE2F3433D75EE4643B5",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/SolidSprite.cs": {
+        "source_hash": "080914786FB9155C52B1FD8151E3E952882E2D58F581613EA3F53866D85254CB",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/TutorialTerrainHybridVisual.cs": {
+        "source_hash": "6D1A10060B01F6F9FB97A3852D5A830B401CCFAE1A50F5162C90863C84328F8C",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/HangingDecorSway.cs": {
+        "source_hash": "2AFC9BFE699AAF238E764757B3B347CB9D3E96B42E27119C3CA688465FC116C2",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/CheckpointLandingGate.cs": {
+        "source_hash": "06CC7EED90C4DECAD30630AB6C60BDC17645EFA01387F5983BD1CB65C7703414",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/YarnRopeTexture.cs": {
+        "source_hash": "5F306EB66ABB54423B131F3166D6BD0DD72EE7CFA764AC20FB863016966C86B9",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/PlayerMover.cs": {
+        "source_hash": "02F6BAB1132599184CC6450C5053990B612998FF657372F56CD9877CB5201F8D",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/RopeController.cs": {
+        "source_hash": "3EF4A50076994279839F398652180256F5EC37C01B954EEEFC67C79B831E25D6",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/StageDioramaPlayerArt.cs": {
+        "source_hash": "FAFF5F458B000A8F2E94CC28C3C724743E0B2260538388154522AD45279F088B",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/A2Proof/A2ScriptedQA.cs": {
+        "source_hash": "4534EB50E4CD4BB1F723FBDB361CBBE50B6F3427C3CB7910FE48DE5DCA8B4916",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/TutorialGuideAnimation.cs": {
+        "source_hash": "BB2CBBC6C7AFA6EA22478D500932BEFB5CDDAB983C6DFF75EA9F2C374E59A8E5",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/RopeBridgeStepVisual.cs": {
+        "source_hash": "ED5709A5074A0FF9F28FD704AC5FBB679C89BD99A2AA0619DBB74B9A8D5C34D6",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/HookWoodMountVisual.cs": {
+        "source_hash": "AE9628FAF6AD81839A9E129D3EF2B11E55017E215A00EAA724058120C7967094",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/RopePlatformAnchor.cs": {
+        "source_hash": "BB3309FE1E78FCE3261683E25BD71DFBDED4C4BF210A062C9E60E3F1409709C0",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/ToySpikeVisual.cs": {
+        "source_hash": "E363B753A12B0FBC77A721A54573C2E062AF0FBFD35EF49E06FB2E757CE5EF13",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      }
+    },
+    "Build_r2": {
+      "Assets/Scripts/PrototypeRunController.cs": {
+        "source_hash": "EC6FD5170E7C00A97593B28E109B7FC3FBC5D6F922B5AA1B68823467E3623977",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/MainS3PencilVisual.cs": {
+        "source_hash": "7E48A796A1EDC5417C66A1D78AF290472C1B02DAF068547E0AE03C1937451030",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/MainStageSectionSevenSetup.cs": {
+        "source_hash": "C5D3845135FA2A83DE7B1C10200F5630FFFBF25F96D144B977187E80C4D95513",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/GoalZone.cs": {
+        "source_hash": "51214E54F3C0E636165C5F199481284AD60D80B896E66F93DD28B21EB816FA72",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/PrototypeHud.cs": {
+        "source_hash": "2E6D442C4933DDA55AA3680ED1A835372E53274FE0C7404498684DC23ABB6780",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/HimoHitoBackgroundMusic.cs": {
+        "source_hash": "41846555AB18AC06900C3774BB2E4B22BD5D27E1F063745D83C7F321999260ED",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/PlayerPresentation/PresentationCapture.cs": {
+        "source_hash": "38FB06C79B392F7C6D8DFB66560FBA4BE4691A7513BD29F0E4B07A5DF0D80137",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/CraftRailPlatformVisual.cs": {
+        "source_hash": "0ADAB78B1A325720A0E6BB0C16060132BDFDBB1878DA09A3961A30DF30360744",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/AimPoseState.cs": {
+        "source_hash": "4152C691E84225BD3CC4E80AD8D469EB90D53F0BB805102EE61D46A50EE58B9B",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/PlayerPresentation/PlayerMotionPresentation.cs": {
+        "source_hash": "9054AB733F6E2374EE985851C772D58F69578C169212A35870A81ECEDD643A98",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/PlayerPresentation/SwingPresentationState.cs": {
+        "source_hash": "FE6D0CAD64A3D3A56AFD426BDBDE63C8BF00ABB172D892A2DFA3A574196330A7",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/MainStageCheckpoint.cs": {
+        "source_hash": "66663105DEC1F99517EFCD12D21B38711DF56C8AA5A8E0175135793A04449033",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/HimoHitoGuiTheme.cs": {
+        "source_hash": "83FE49227EE8EDDB4960BAFF1EA421928F569B1E10DCE577E09A24C49C45F456",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/PlatformOccludedLightHazard.cs": {
+        "source_hash": "41417E56B6C7EE947AC420760A946932CDAF7C38A41358B1E592E47144AECC8E",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/SignGlanceState.cs": {
+        "source_hash": "8F2885952D8E40F759EF8CD23CCF483E1D08744275C21945E690D0CB07B2BA1C",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/StageCatalog.cs": {
+        "source_hash": "230747D74843DF78DABDD4488540F404D51F03D8520F63C8E1727268E5DA320F",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/GoalChestPresentation.cs": {
+        "source_hash": "D2C59AC777A4D2AD0E9732F14A81CF745C7D2B00EBD188F046838CF3D35DB6C4",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/RopePlatformBuilder.cs": {
+        "source_hash": "11ECB4C1870CB8EF0449343155559211A5E1D9E1321132BCE0DCF8E14E279FD2",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/MainStageSectionFourSetup.cs": {
+        "source_hash": "C1173EA1C61B95A6DDD3994456ED34B0D5E1167C04A4EDDDD43FD6E13012A6DC",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/WoodenPlatformDepthVisual.cs": {
+        "source_hash": "6610FF28909CCB02BBE0C651B145572BF6827DD85EA649F1ABC702CE9AB20A88",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/MainS4RulerVisual.cs": {
+        "source_hash": "1ADC4E0B030AF04A7CB516E5218EC77F2150518726719B077EB5E34E4C896474",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/RecoverySwitchVisual.cs": {
+        "source_hash": "05BD902295BE5CB3939B76163E898100A7CA876C5406405B73F942823A643F7B",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/TutorialSectionThreeSetup.cs": {
+        "source_hash": "B5A4788208FD57ACEE9735EAFF24780F2C55FE7D56AFE3F14A97099ADEE0E076",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/TutorialSectionTwoSetup.cs": {
+        "source_hash": "CCD88A949811ADA96D1751EBDCB8273D94E6094D8A06975C8522A4ED30AE99E1",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/RopeSpikeHazard.cs": {
+        "source_hash": "F8A1234C574E1E6DAA4B66027F1E00AE2D52E0AF1DEF791099EE4A1206169EDC",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/MainStagePreview.cs": {
+        "source_hash": "54F936699CBD72D62542B839619D0A7F01F2ADDCD0FAE9EEF6FE1A55B66A7DCD",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/TutorialCraftRoomLayers.cs": {
+        "source_hash": "E08312BCC8B61F31C9139EA0122AEA57726721263B4FB744A7AF7CDB10B7CE4F",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/RopeBridgeMergeVisual.cs": {
+        "source_hash": "54820280BC1F2225234305198CC6595A0A79B7E0E6E498EBE4FB7FCC7A48CC71",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/CraftWoodPlatformVisual.cs": {
+        "source_hash": "71ECC00408A83E8E0CE55032C07F41C44C03C3D2E6BB8992FDE6522F0709CA0D",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/OneWayRailPlatform.cs": {
+        "source_hash": "CF0DF28CAA39A81E58A9A4410195635F000BC4D0BCE2975CD032CEFB7070A6BC",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/PlayerPresentation/ConnectionGestureCapture.cs": {
+        "source_hash": "348530790F9FF5627F16338FE4DB936E523D9CE80100C66452883952849D6717",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/CheckpointYarnFlag.cs": {
+        "source_hash": "711BED76832024B804E2D494A3E12EC412CE5FA9DE5572F4BE7F5368786FA02E",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/StageStartCurtainView.cs": {
+        "source_hash": "C629C33C89DB55241BC6B71DDAEFA16C8B9DB35DE1D6D181AC559F7E4F87CB31",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/TutorialFirstSectionVisuals.cs": {
+        "source_hash": "E64F5436AB426B5670511A22FE809771A43A5D3CCE69E8DC4F8425A90F818F66",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/StageSelectionDioramaArt.cs": {
+        "source_hash": "88EEF368D70B72B01C9B211310D77EB7250309C2271F2A4D36872DC5333A104D",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/StageStartTransition.cs": {
+        "source_hash": "294E890FAC62F18212AB7628E65B799D1E299CCB362F7EE579602AE8FBDEBF3F",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/HimoHitoAudioSettings.cs": {
+        "source_hash": "71F2755B123103D85FE0CC3BE9D16D60C23B5760D615E75A1D247212F3D28F9A",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/HimoHitoFailureScreen.cs": {
+        "source_hash": "60B4E7BF917B46AB16C9F234EEACDB1D846D502B110CA85E36550C06739FB363",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/SwingAttachPoseState.cs": {
+        "source_hash": "599A1E81F768B83A623B19970BA1904E1B6B171D93A06ABB566D6610CF7404C3",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/RopeResourceExpression.cs": {
+        "source_hash": "5EA7FE809C488CAF41BA016048BDA01CBD3B46825AE10DF1613ECBBB06553A6D",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/ClearJourneySnapshot.cs": {
+        "source_hash": "8C8F9935831B7632E3878368D74CE437D015A957380D710D48328E2C3BF2FF0D",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/MainS3MarkerVisual.cs": {
+        "source_hash": "7B4E94204908B945A0571ECBE37F7F70A1C4F5C3F9C2ED680AF2C6B9118DFCAD",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/EdgeBalanceSupportProbe.cs": {
+        "source_hash": "E980EA98B5C18BD8000734E9E69597329A65A2D764D8DCB77E4E4CDA6BD8C294",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/SceneObjectLookup.cs": {
+        "source_hash": "A47876C57246A83F1EAB7C2104CC512D4CB72D1F515EF1669C5BB5BE591E22BC",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/RopeLandingFluff.cs": {
+        "source_hash": "209762B74999D20CEB035C245CE662A73C6FE939DA3D3B5CF91901E6D8C5FDA4",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/HimoHitoHookRingVisual.cs": {
+        "source_hash": "E25D894B135DC5BF5DF795D84B21217DC70FC23AC85873933D6E0281268C87E5",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/RopeRetractVisual.cs": {
+        "source_hash": "136E4C27E2E6F5CB556E131290BEFE8E8854DC41C8BA767CE5A1D2468DC0C932",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/StageSelectionView.cs": {
+        "source_hash": "DE0E76B56065337BB46CF256AD5778A9C9BB9CB1FA74AEE6E8C8C724FFAB3CB5",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/RopeSwingPoseState.cs": {
+        "source_hash": "65EC2F7E70161C7A874DE257BB6F079D8531FE2BC2F0F9510185FAFBE0B15E1C",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/PlayerContactShadow.cs": {
+        "source_hash": "0D932562CE843AFFBC7BDAECFEF7C008900BFDE252DD563E01049EDB3AA5B44C",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/RopeBridgeBindings.cs": {
+        "source_hash": "04AFBF9636F7DF82EB881FB9E517EF50730EE17E22696115AD0F537F04C07E1C",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/RopeBuildFluff.cs": {
+        "source_hash": "A7B848900A01D16303D5D86E68B968FB6A0F93FAC7D6DF6FFD93695667EB0A47",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/StageSelectionWeave.cs": {
+        "source_hash": "7B430326CB537648A167720F3CD53DEA99411FCC0CC432CC6D4D6072DE5047DE",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/MainStageSectionThreeRecoveryStairs.cs": {
+        "source_hash": "299FD4EF8B12C0C741ECC2C55B24A5110F6DB45C46F53EA31810330AC2EE8714",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/MainStageHud.cs": {
+        "source_hash": "30D2177386B912C1C8FC86961460208B53FD2F45DF0597552055C19E41ECAE50",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/RopeBridgeReveal.cs": {
+        "source_hash": "1826DD30B1295B0BA48CE45ECBEE3DCE78A38A7830CEA3388F4E1A60A53BC1ED",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/IdlePoseState.cs": {
+        "source_hash": "6C6413724CD951944CEEF692F259CF2941761B3052A74B0F17D7285CBE38E5F1",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/CraftPlayerArt.cs": {
+        "source_hash": "8AE014DDD8D74247A9F6DB9A6AE0B939BB82201B14E946162FC37F7C1BFCE967",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/TutorialSectionGuide.cs": {
+        "source_hash": "380F0E643FE2E76BC3D561C3157982B268AEE650B3648357AF8D3A1BF336F385",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/RopeBodyVisual.cs": {
+        "source_hash": "495FB8786B0A252F43D1FB1BEB39527F2D2C7077048619D86E764F7AF14E80EB",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/MainStageSectionTenSetup.cs": {
+        "source_hash": "80095B57B5EA63B2768FFAEAC76DBE15270EFB3B9D0669E84F65B2CCDE134E11",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/RopeFaceLandmarks.cs": {
+        "source_hash": "636719EF91339B0D8D866DA902AEC3F0EBF9C0E153ADBD6D92E3A9B2597B5A43",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/RespawnWeaveVisual.cs": {
+        "source_hash": "DF4C69C06EEA02C41CDC709D7770E6E682C2931A03ED429319562630F26C2F0D",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/RopeAnchorRingVisual.cs": {
+        "source_hash": "75473BAE5602BC705F8ACCAB8D742D965669230C890718C2A1751A72ED5B808E",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/RopeResource.cs": {
+        "source_hash": "026476F48B89BAC7158ABEBC1744BF41553BAE4981C41B7148B41DCED63860EB",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/MainStageSectionThreeRecoverySwitch.cs": {
+        "source_hash": "740694FF88F82362DA4C42170D5C415206D4D1808A83B07EB2D5CA75F32F0F1A",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/PlayerPresentation/ActiveSwingArms.cs": {
+        "source_hash": "24FEE85202F040E4B22614AF7C3622CEC54B7974732BDE07252F7B110336FFDF",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/MainStageFloorCollisionSetup.cs": {
+        "source_hash": "E5C1AF6E2339D7EBFEF9485E4B2C79E1C39B1D355B33CEAE2D5D0045D480AF3F",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/HorizontalCameraFollow.cs": {
+        "source_hash": "BD2EEF76F57DC4B7C4E3AD594EB2868FBF8252C19D6F93DFEFE1A4DE95EA504D",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/PlayerPresentation/PlayerSoleRegistration.cs": {
+        "source_hash": "ECE5BD0466B40AEF777C49263CB310F0F40C9B7820DB32E5261EA91C2BC540C6",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/SectionArrivalFeedback.cs": {
+        "source_hash": "62E6E94AB52EA8B1548798240C991A6BDFF7DA687BAE3BB0E63CE89FBAF76424",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/MainStageSectionTwoSetup.cs": {
+        "source_hash": "4169465AF91057F291D7A077BA26D17E6DFB9CD3F6716C904379FA39CD75DCFC",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/TutorialSectionOneSetup.cs": {
+        "source_hash": "64398AE8E596131799DBAAE7EC914911A08CCFF24217006DBFF2FCD97D6178DC",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/SolidSwingSurface.cs": {
+        "source_hash": "20A480CAB35AE1FCA61B9222C6051F238A98C39F522162499F724876B95B9F74",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/HimoHitoFarBackgroundLayer.cs": {
+        "source_hash": "62C1260152D92212E7DE19342944FC7FEC33C2742C915FFC99EF0C03F5463968",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/HookYarnKnotVisual.cs": {
+        "source_hash": "0348CA1CB961B16240051F2C2D796CB68E3414F0A63B05508BC03AC3D99B462F",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/MainStageSectionNineSetup.cs": {
+        "source_hash": "794454C44069D0430C9136AF0CADE40B72C513E3708C7A594B5E1CD62A5566DA",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/MainStageRespawnOnFall.cs": {
+        "source_hash": "314060136DFB7846AE7EBBC43CFAF0028625B839B4B9A05E9171D4F5830C4D8C",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/WeavePoseState.cs": {
+        "source_hash": "2CCB520FDF01A90949A2426DF48723421AA6DE40559F6064444108F5F1310B0D",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/AmbientDustVisual.cs": {
+        "source_hash": "F0EABB94EA2C577289B260836F957CC27005B02EF5CD430B4D2DC2FC1EF737D2",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/TutorialSignInscription.cs": {
+        "source_hash": "5B0194605AC744E2AECF3106C1911DAD2CFE6C34BB61F9ACB859E9CD22C1AB1E",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/HookArrivalVisualPulse.cs": {
+        "source_hash": "C159AF88F607FFCC880A1D680C4181AF21A11BC808D77CB426C8E710A5922B09",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/ClearJourneyView.cs": {
+        "source_hash": "D06A4CB0A7A0B8E8A1F7D1AA8D0E4E6E790321A3D2D94313AEAA4B253F19369E",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/MainStageSectionSixSetup.cs": {
+        "source_hash": "71B394FDF99A0EDCBB4085774AA1F4FC263054A799EEC641179FAE527A74E482",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/FallUnravelVisual.cs": {
+        "source_hash": "35CA8B8B0B5416BE087ED3B6A631959FD1C3B0C1F27A0EDEE13297C062E2C9CB",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/PlayerPresentation/ManualPresentationSession.cs": {
+        "source_hash": "49166596FF442A90DE4B24392066A531A3DDCF95428E27E0FD2191EEA370A3A0",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/StageOverlayControls.cs": {
+        "source_hash": "7D63DCBAA1DBCE7FB04A8E387B0013050D343084F3FC6D267F4064A69A28755A",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/RopeResourceGauge.cs": {
+        "source_hash": "7456E77B6B3D4E7B48882A34697CF186A55D6FAC18312E7E863D4C72FD0CA97A",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/TutorialCheckpoint.cs": {
+        "source_hash": "57D1506A5409688BD8CB5CF2FB25E79DF9976943F6A2032893D94623AF940ED4",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/EdgeBalancePoseState.cs": {
+        "source_hash": "8E8F6E199234B25BB4E9B118DB1E2537C0BC704AD80C5C7817CA3E63FB0E3BE0",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/GoalPoseState.cs": {
+        "source_hash": "69AE28224897432BF8C05A30AFCCF1A9EEA7A53457E51878DCCDB8C4F606C753",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/MainStageSectionFiveSetup.cs": {
+        "source_hash": "B7419423F4814C47A3B031C1C5221FBBD26B9272695050E76FFA299879D6DEF7",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/TutorialBackgroundParallax.cs": {
+        "source_hash": "3E60492A7707B9C05FD01A5AA3686188C1F90E20A651C2E522C4A805D5A547D0",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/StageSelectionDioramaState.cs": {
+        "source_hash": "2071017134B4DF89D25C4C68F8F2E26C358DC658AEF482146E00F5068C3C3BA5",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/A2Proof/A2Fixture.cs": {
+        "source_hash": "0314F5060078A21690E777BB2CA231962E680FD0BA15D15252A4F637EF702505",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/HookPoint.cs": {
+        "source_hash": "1AA04BE9A155C303221F387742F7242C92CBB026A3677B0049556C638F3CF3A8",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/StageProgress.cs": {
+        "source_hash": "4119BAB062A2C0F0DDEA9101FE71FFB9FA53BB508AB73F1A98FE6B65C215CFA6",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/TutorialSectionFourSetup.cs": {
+        "source_hash": "CA097254C033E04E2C486BDD900D800CB3226B2AA9A4CC62838BE7AEEE89B37C",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/FlashlightSpotVisual.cs": {
+        "source_hash": "ADB847D08F01F3631ABA56611494A2DBD2501E6273566E7E6573A5F1F50DB877",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/HimoHitoCraftRoomBackground.cs": {
+        "source_hash": "11AF0ED7649B6D82ADBB5874DFA0D85AF59DFF8534FB6F375BD92EBE98D53076",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/SwitchPressPoseState.cs": {
+        "source_hash": "6D24E23F1E75A2BCD3A2511F2B409FE518CD2B8DE47E2130D7F21A7E2B63E2F8",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/RopeMissVisual.cs": {
+        "source_hash": "4CDD94DE898A5240E2192F04E3C4AB891CB0222756BA1D9A585D1CBD4100BA64",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/SwingReleasePoseState.cs": {
+        "source_hash": "D1725F4B8A25868A348B0E3813CE0EF75304209A568A804F4E428AA5C8DC9CA4",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/TutorialSignGreeting.cs": {
+        "source_hash": "974F45580BBB8A3E70D468C01BBBC2B2EB0C145F34F9A8783FFAFFC8EF7307DD",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/MainStageVisuals.cs": {
+        "source_hash": "60A0EF8FE8FCD9F7E127AB043A982A7753C97EA918FD2F01CBE3E5B5C68EBAA6",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/HimoHitoUiParts.cs": {
+        "source_hash": "0696CD16C13616C677F40C05349018F42108822C5578A8852F5F7671CFD9C764",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/SwingPassThroughRailPlatform.cs": {
+        "source_hash": "376683C77BD3A719A78A1807460D3673EFD7D64FDE865EFAD67E000F80C2017A",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/MainStageGoalZone.cs": {
+        "source_hash": "54BB45CC0DCDF0CFAFC08FAD10E865059E058B15E635601D81E66305D162E9D9",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/WallPushPoseState.cs": {
+        "source_hash": "BDD0787939BCBE38230171093959219DCA289830535DE321689687F70D5E552B",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/MainStageSectionThreeSetup.cs": {
+        "source_hash": "B5F3F8CDF4644D93BC0FAACD3462D06BCEBB83366F0CC7AF64A9D22E7AFEFF08",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/PrototypeAudioFeedback.cs": {
+        "source_hash": "85121D5FF7242AEAD642899071C8FCD1B5C4644A919AFC07C5480D93F3474986",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/RopePoseParts.cs": {
+        "source_hash": "DC3A769D4BC9424D8427EFF168F25D421C64CEFC11D083A4B6E0F76D0919D632",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/MainStartGroundVisual.cs": {
+        "source_hash": "9E9ECA584D705311C41239ADE28681CEA56A14D3643681E6DF7B1FE935B3D64F",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/GroundMotionPoseState.cs": {
+        "source_hash": "BD60DD029D09F1B1333FF319E72EDF475571F99BC910AFE2F3433D75EE4643B5",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/SolidSprite.cs": {
+        "source_hash": "080914786FB9155C52B1FD8151E3E952882E2D58F581613EA3F53866D85254CB",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/TutorialTerrainHybridVisual.cs": {
+        "source_hash": "6D1A10060B01F6F9FB97A3852D5A830B401CCFAE1A50F5162C90863C84328F8C",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/HangingDecorSway.cs": {
+        "source_hash": "2AFC9BFE699AAF238E764757B3B347CB9D3E96B42E27119C3CA688465FC116C2",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/CheckpointLandingGate.cs": {
+        "source_hash": "06CC7EED90C4DECAD30630AB6C60BDC17645EFA01387F5983BD1CB65C7703414",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/YarnRopeTexture.cs": {
+        "source_hash": "5F306EB66ABB54423B131F3166D6BD0DD72EE7CFA764AC20FB863016966C86B9",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/PlayerMover.cs": {
+        "source_hash": "02F6BAB1132599184CC6450C5053990B612998FF657372F56CD9877CB5201F8D",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/RopeController.cs": {
+        "source_hash": "3EF4A50076994279839F398652180256F5EC37C01B954EEEFC67C79B831E25D6",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/StageDioramaPlayerArt.cs": {
+        "source_hash": "FAFF5F458B000A8F2E94CC28C3C724743E0B2260538388154522AD45279F088B",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/A2Proof/A2ScriptedQA.cs": {
+        "source_hash": "4534EB50E4CD4BB1F723FBDB361CBBE50B6F3427C3CB7910FE48DE5DCA8B4916",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/TutorialGuideAnimation.cs": {
+        "source_hash": "BB2CBBC6C7AFA6EA22478D500932BEFB5CDDAB983C6DFF75EA9F2C374E59A8E5",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/RopeBridgeStepVisual.cs": {
+        "source_hash": "ED5709A5074A0FF9F28FD704AC5FBB679C89BD99A2AA0619DBB74B9A8D5C34D6",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/HookWoodMountVisual.cs": {
+        "source_hash": "AE9628FAF6AD81839A9E129D3EF2B11E55017E215A00EAA724058120C7967094",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/RopePlatformAnchor.cs": {
+        "source_hash": "BB3309FE1E78FCE3261683E25BD71DFBDED4C4BF210A062C9E60E3F1409709C0",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      },
+      "Assets/Scripts/ToySpikeVisual.cs": {
+        "source_hash": "E363B753A12B0FBC77A721A54573C2E062AF0FBFD35EF49E06FB2E757CE5EF13",
+        "algorithm": "8829d00f-11b8-4213-878b-770e8597ac16"
+      }
+    }
+  },
+  "different_compiled_source_paths": [
+    "Assets/PlayerPresentation/ConnectionGestureCapture.cs"
+  ]
+}

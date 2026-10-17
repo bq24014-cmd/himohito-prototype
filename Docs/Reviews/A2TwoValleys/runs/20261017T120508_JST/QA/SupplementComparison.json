@@ -1,0 +1,65 @@
+{
+  "method": "Additional automatic input-response recording, not OS play. No physics setup teleport.",
+  "frames": 53,
+  "maximum_deltas": {
+    "root": 0,
+    "velocity": 0,
+    "input": 0,
+    "camera": 0
+  },
+  "actual_brake_frames": 6,
+  "checks": [
+    [
+      {
+        "name": "Supplement starts with original grounded attachment",
+        "pass": true
+      },
+      {
+        "name": "Supplement small arc via original A_D",
+        "pass": true
+      },
+      {
+        "name": "Supplement stays airborne",
+        "pass": true
+      },
+      {
+        "name": "Supplement contains measurable braking",
+        "pass": true
+      },
+      {
+        "name": "Supplement no resource or layout change",
+        "pass": true
+      },
+      {
+        "name": "Supplement no gameplay errors",
+        "pass": true
+      }
+    ],
+    [
+      {
+        "name": "Supplement starts with original grounded attachment",
+        "pass": true
+      },
+      {
+        "name": "Supplement small arc via original A_D",
+        "pass": true
+      },
+      {
+        "name": "Supplement stays airborne",
+        "pass": true
+      },
+      {
+        "name": "Supplement contains measurable braking",
+        "pass": true
+      },
+      {
+        "name": "Supplement no resource or layout change",
+        "pass": true
+      },
+      {
+        "name": "Supplement no gameplay errors",
+        "pass": true
+      }
+    ]
+  ]
+}

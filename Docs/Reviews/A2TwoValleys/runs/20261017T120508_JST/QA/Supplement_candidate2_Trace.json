@@ -1,0 +1,4114 @@
+{
+  "candidate": "candidate2",
+  "method": "Automatic original API and existing input fields; explicit offline 30fps. No OS/Human input.",
+  "samples": [
+    {
+      "frame": 0,
+      "bridges": 0,
+      "selected": 6,
+      "knotCount": 1,
+      "time": 0.020000696182250977,
+      "fixedTime": 1.699999451637268,
+      "remaining": 24.0,
+      "input": 0.0,
+      "colliderBottom": -2.094421863555908,
+      "floorY": 0.0,
+      "span": 6.000000476837158,
+      "ropeLength": 6.0,
+      "slack": 0.0,
+      "soleY": -2.0188472270965576,
+      "crownError": 0.0,
+      "contactError": -1.0,
+      "speed": 4.795088291168213,
+      "armWeight": 0.0,
+      "ortho": 8.699999809265137,
+      "attached": true,
+      "grounded": false,
+      "floorFound": false,
+      "bodySimulated": true,
+      "failure": false,
+      "paused": false,
+      "secondCandidate": true,
+      "thirdCandidate": false,
+      "phase": "supplement_coast",
+      "sprite": "HimoHitoCraftSwing-v1 Swing 2",
+      "gesture": "candidate2",
+      "root": {
+        "x": 121.1586685180664,
+        "y": -1.4944217205047607
+      },
+      "velocity": {
+        "x": 4.793322563171387,
+        "y": 0.13011020421981812
+      },
+      "anchor": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "crown": {
+        "x": 121.1244125366211,
+        "y": -0.9731959104537964
+      },
+      "ropeFirst": {
+        "x": 121.1244125366211,
+        "y": -0.9731959104537964
+      },
+      "ropeLast": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "camera": {
+        "x": 120.00752258300781,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "leftHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rightHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "armAngles": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      }
+    },
+    {
+      "frame": 1,
+      "bridges": 0,
+      "selected": 6,
+      "knotCount": 1,
+      "time": 0.05333399772644043,
+      "fixedTime": 1.7199994325637817,
+      "remaining": 24.0,
+      "input": 0.0,
+      "colliderBottom": -2.0895636081695557,
+      "floorY": 0.0,
+      "span": 5.999999046325684,
+      "ropeLength": 6.0,
+      "slack": 9.5367431640625e-07,
+      "soleY": -2.01435923576355,
+      "crownError": 0.0,
+      "contactError": -1.0,
+      "speed": 4.759369373321533,
+      "armWeight": 0.0,
+      "ortho": 8.699999809265137,
+      "attached": true,
+      "grounded": false,
+      "floorFound": false,
+      "bodySimulated": true,
+      "failure": false,
+      "paused": false,
+      "secondCandidate": true,
+      "thirdCandidate": false,
+      "phase": "supplement_coast",
+      "sprite": "HimoHitoCraftSwing-v1 Swing 2",
+      "gesture": "candidate2",
+      "root": {
+        "x": 121.25372314453125,
+        "y": -1.4895635843276978
+      },
+      "velocity": {
+        "x": 4.754944324493408,
+        "y": 0.20518192648887634
+      },
+      "anchor": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "crown": {
+        "x": 121.26524353027344,
+        "y": -0.9647576212882996
+      },
+      "ropeFirst": {
+        "x": 121.26524353027344,
+        "y": -0.9647576212882996
+      },
+      "ropeLast": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "camera": {
+        "x": 120.22383117675781,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "leftHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rightHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "armAngles": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      }
+    },
+    {
+      "frame": 2,
+      "bridges": 0,
+      "selected": 6,
+      "knotCount": 1,
+      "time": 0.08666729927062988,
+      "fixedTime": 1.759999394416809,
+      "remaining": 24.0,
+      "input": 0.0,
+      "colliderBottom": -2.0755844116210938,
+      "floorY": 0.0,
+      "span": 5.999999523162842,
+      "ropeLength": 6.0,
+      "slack": 4.76837158203125e-07,
+      "soleY": -2.0051755905151367,
+      "crownError": 0.0,
+      "contactError": -1.0,
+      "speed": 4.662292957305908,
+      "armWeight": 0.0,
+      "ortho": 8.699999809265137,
+      "attached": true,
+      "grounded": false,
+      "floorFound": false,
+      "bodySimulated": true,
+      "failure": false,
+      "paused": false,
+      "secondCandidate": true,
+      "thirdCandidate": false,
+      "phase": "supplement_coast",
+      "sprite": "HimoHitoCraftSwing-v1 Swing 2",
+      "gesture": "candidate2",
+      "root": {
+        "x": 121.44072723388672,
+        "y": -1.4755845069885254
+      },
+      "velocity": {
+        "x": 4.649289608001709,
+        "y": 0.34796810150146484
+      },
+      "anchor": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "crown": {
+        "x": 121.40638732910156,
+        "y": -0.9532318711280823
+      },
+      "ropeFirst": {
+        "x": 121.40638732910156,
+        "y": -0.9532318711280823
+      },
+      "ropeLast": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "camera": {
+        "x": 120.43099212646484,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "leftHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rightHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "armAngles": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      }
+    },
+    {
+      "frame": 3,
+      "bridges": 0,
+      "selected": 6,
+      "knotCount": 1,
+      "time": 0.12000060081481934,
+      "fixedTime": 1.7999993562698364,
+      "remaining": 24.0,
+      "input": 0.0,
+      "colliderBottom": -2.056358575820923,
+      "floorY": 0.0,
+      "span": 5.999999523162842,
+      "ropeLength": 6.0,
+      "slack": 4.76837158203125e-07,
+      "soleY": -1.991811752319336,
+      "crownError": 0.0,
+      "contactError": -1.0,
+      "speed": 4.531866550445557,
+      "armWeight": 0.0,
+      "ortho": 8.699999809265137,
+      "attached": true,
+      "grounded": false,
+      "floorFound": false,
+      "bodySimulated": true,
+      "failure": false,
+      "paused": false,
+      "secondCandidate": true,
+      "thirdCandidate": false,
+      "phase": "supplement_coast",
+      "sprite": "HimoHitoCraftSwing-v1 Swing 2",
+      "gesture": "candidate2",
+      "root": {
+        "x": 121.62235260009766,
+        "y": -1.456358551979065
+      },
+      "velocity": {
+        "x": 4.50663423538208,
+        "y": 0.47756052017211914
+      },
+      "anchor": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "crown": {
+        "x": 121.54632568359375,
+        "y": -0.938580334186554
+      },
+      "ropeFirst": {
+        "x": 121.54632568359375,
+        "y": -0.938580334186554
+      },
+      "ropeLast": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "camera": {
+        "x": 120.62879180908203,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "leftHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rightHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "armAngles": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      }
+    },
+    {
+      "frame": 4,
+      "bridges": 0,
+      "selected": 6,
+      "knotCount": 1,
+      "time": 0.15333402156829834,
+      "fixedTime": 1.81999933719635,
+      "remaining": 24.0,
+      "input": 0.0,
+      "colliderBottom": -2.044978141784668,
+      "floorY": 0.0,
+      "span": 5.999999523162842,
+      "ropeLength": 6.0,
+      "slack": 4.76837158203125e-07,
+      "soleY": -1.974372148513794,
+      "crownError": 0.0,
+      "contactError": -1.0,
+      "speed": 4.454519748687744,
+      "armWeight": 0.0,
+      "ortho": 8.699999809265137,
+      "attached": true,
+      "grounded": false,
+      "floorFound": false,
+      "bodySimulated": true,
+      "failure": false,
+      "paused": false,
+      "secondCandidate": true,
+      "thirdCandidate": false,
+      "phase": "supplement_coast",
+      "sprite": "HimoHitoCraftSwing-v1 Swing 2",
+      "gesture": "candidate2",
+      "root": {
+        "x": 121.71070098876953,
+        "y": -1.4449779987335205
+      },
+      "velocity": {
+        "x": 4.422122478485107,
+        "y": 0.5362642407417297
+      },
+      "anchor": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "crown": {
+        "x": 121.6830825805664,
+        "y": -0.9205792546272278
+      },
+      "ropeFirst": {
+        "x": 121.6830825805664,
+        "y": -0.9205792546272278
+      },
+      "ropeLast": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "camera": {
+        "x": 120.81763458251953,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "leftHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rightHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "armAngles": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      }
+    },
+    {
+      "frame": 5,
+      "bridges": 0,
+      "selected": 6,
+      "knotCount": 1,
+      "time": 0.1866673231124878,
+      "fixedTime": 1.8599992990493774,
+      "remaining": 24.0,
+      "input": 0.0,
+      "colliderBottom": -2.019150733947754,
+      "floorY": 0.0,
+      "span": 6.0,
+      "ropeLength": 6.0,
+      "slack": 0.0,
+      "soleY": -1.953778862953186,
+      "crownError": 0.0,
+      "contactError": -1.0,
+      "speed": 4.276439666748047,
+      "armWeight": 0.0,
+      "ortho": 8.699999809265137,
+      "attached": true,
+      "grounded": false,
+      "floorFound": false,
+      "bodySimulated": true,
+      "failure": false,
+      "paused": false,
+      "secondCandidate": true,
+      "thirdCandidate": false,
+      "phase": "supplement_coast",
+      "sprite": "HimoHitoCraftSwing-v1 Swing 2",
+      "gesture": "candidate2",
+      "root": {
+        "x": 121.88166046142578,
+        "y": -1.419150710105896
+      },
+      "velocity": {
+        "x": 4.228358745574951,
+        "y": 0.639465868473053
+      },
+      "anchor": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "crown": {
+        "x": 121.81585693359375,
+        "y": -0.8999677896499634
+      },
+      "ropeFirst": {
+        "x": 121.81585693359375,
+        "y": -0.8999677896499634
+      },
+      "ropeLast": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "camera": {
+        "x": 120.99813079833984,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "leftHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rightHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "armAngles": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      }
+    },
+    {
+      "frame": 6,
+      "bridges": 0,
+      "selected": 6,
+      "knotCount": 1,
+      "time": 0.22000062465667725,
+      "fixedTime": 1.8999993801116943,
+      "remaining": 24.0,
+      "input": 0.0,
+      "colliderBottom": -1.9899436235427856,
+      "floorY": 0.0,
+      "span": 5.999999046325684,
+      "ropeLength": 6.0,
+      "slack": 9.5367431640625e-07,
+      "soleY": -1.9304847717285156,
+      "crownError": 0.0,
+      "contactError": -1.0,
+      "speed": 4.068517208099365,
+      "armWeight": 0.0,
+      "ortho": 8.699999809265137,
+      "attached": true,
+      "grounded": false,
+      "floorFound": false,
+      "bodySimulated": true,
+      "failure": false,
+      "paused": false,
+      "secondCandidate": true,
+      "thirdCandidate": false,
+      "phase": "supplement_coast",
+      "sprite": "HimoHitoCraftSwing-v1 Swing 2",
+      "gesture": "candidate2",
+      "root": {
+        "x": 122.0439224243164,
+        "y": -1.3899435997009277
+      },
+      "velocity": {
+        "x": 4.004045009613037,
+        "y": 0.7214260697364807
+      },
+      "anchor": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "crown": {
+        "x": 121.9436264038086,
+        "y": -0.8771090507507324
+      },
+      "ropeFirst": {
+        "x": 121.9436264038086,
+        "y": -0.8771090507507324
+      },
+      "ropeLast": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "camera": {
+        "x": 121.17086791992188,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "leftHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rightHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "armAngles": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      }
+    },
+    {
+      "frame": 7,
+      "bridges": 0,
+      "selected": 6,
+      "knotCount": 1,
+      "time": 0.2533339262008667,
+      "fixedTime": 1.919999361038208,
+      "remaining": 24.0,
+      "input": 0.0,
+      "colliderBottom": -1.9743573665618896,
+      "floorY": 0.0,
+      "span": 5.999999523162842,
+      "ropeLength": 6.0,
+      "slack": 4.76837158203125e-07,
+      "soleY": -1.9047930240631104,
+      "crownError": 0.0,
+      "contactError": -1.0,
+      "speed": 3.953915596008301,
+      "armWeight": 0.0,
+      "ortho": 8.699999809265137,
+      "attached": true,
+      "grounded": false,
+      "floorFound": false,
+      "bodySimulated": true,
+      "failure": false,
+      "paused": false,
+      "secondCandidate": true,
+      "thirdCandidate": false,
+      "phase": "supplement_coast",
+      "sprite": "HimoHitoCraftSwing-v1 Swing 2",
+      "gesture": "candidate2",
+      "root": {
+        "x": 122.12144470214844,
+        "y": -1.3743573427200317
+      },
+      "velocity": {
+        "x": 3.881395101547241,
+        "y": 0.7538044452667236
+      },
+      "anchor": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "crown": {
+        "x": 122.06494140625,
+        "y": -0.8522482514381409
+      },
+      "ropeFirst": {
+        "x": 122.06494140625,
+        "y": -0.8522482514381409
+      },
+      "ropeLast": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "camera": {
+        "x": 121.33625793457031,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "leftHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rightHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "armAngles": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      }
+    },
+    {
+      "frame": 8,
+      "bridges": 0,
+      "selected": 6,
+      "knotCount": 1,
+      "time": 0.2866673469543457,
+      "fixedTime": 1.9599993228912354,
+      "remaining": 24.0,
+      "input": 1.0,
+      "colliderBottom": -1.9418220520019531,
+      "floorY": 0.0,
+      "span": 5.999999046325684,
+      "ropeLength": 6.0,
+      "slack": 9.5367431640625e-07,
+      "soleY": -1.8775207996368408,
+      "crownError": 0.0,
+      "contactError": -1.0,
+      "speed": 3.7046377658843994,
+      "armWeight": 0.0,
+      "ortho": 8.699999809265137,
+      "attached": true,
+      "grounded": false,
+      "floorFound": false,
+      "bodySimulated": true,
+      "failure": false,
+      "paused": false,
+      "secondCandidate": true,
+      "thirdCandidate": false,
+      "phase": "supplement_accelerate",
+      "sprite": "HimoHitoCraftSwing-v1 Swing 2",
+      "gesture": "candidate2",
+      "root": {
+        "x": 122.26861572265625,
+        "y": -1.3418220281600952
+      },
+      "velocity": {
+        "x": 3.6171319484710693,
+        "y": 0.8004358410835266
+      },
+      "anchor": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "crown": {
+        "x": 122.17982482910156,
+        "y": -0.8261620998382568
+      },
+      "ropeFirst": {
+        "x": 122.17982482910156,
+        "y": -0.8261620998382568
+      },
+      "ropeLast": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "camera": {
+        "x": 121.49455261230469,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "leftHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rightHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "armAngles": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      }
+    },
+    {
+      "frame": 9,
+      "bridges": 0,
+      "selected": 6,
+      "knotCount": 1,
+      "time": 0.32000064849853516,
+      "fixedTime": 1.9999992847442627,
+      "remaining": 24.0,
+      "input": 1.0,
+      "colliderBottom": -1.9028658866882324,
+      "floorY": 0.0,
+      "span": 6.0,
+      "ropeLength": 6.0,
+      "slack": 0.0,
+      "soleY": -1.8474960327148438,
+      "crownError": 0.0,
+      "contactError": -1.0,
+      "speed": 4.147016525268555,
+      "armWeight": 0.0,
+      "ortho": 8.699999809265137,
+      "attached": true,
+      "grounded": false,
+      "floorFound": false,
+      "bodySimulated": true,
+      "failure": false,
+      "paused": false,
+      "secondCandidate": true,
+      "thirdCandidate": false,
+      "phase": "supplement_accelerate",
+      "sprite": "HimoHitoCraftSwing-v1 Swing 2",
+      "gesture": "candidate2",
+      "root": {
+        "x": 122.42536926269531,
+        "y": -1.3028658628463745
+      },
+      "velocity": {
+        "x": 4.0249528884887695,
+        "y": 0.9987501502037048
+      },
+      "anchor": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "crown": {
+        "x": 122.2953109741211,
+        "y": -0.7975443601608276
+      },
+      "ropeFirst": {
+        "x": 122.2953109741211,
+        "y": -0.7975443601608276
+      },
+      "ropeLast": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "camera": {
+        "x": 121.646240234375,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "leftHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rightHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "armAngles": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      }
+    },
+    {
+      "frame": 10,
+      "bridges": 0,
+      "selected": 6,
+      "knotCount": 1,
+      "time": 0.3533339500427246,
+      "fixedTime": 2.0199992656707764,
+      "remaining": 24.0,
+      "input": 1.0,
+      "colliderBottom": -1.8801058530807495,
+      "floorY": 0.0,
+      "span": 6.000000476837158,
+      "ropeLength": 6.0,
+      "slack": 0.0,
+      "soleY": -1.8110859394073486,
+      "crownError": 0.0,
+      "contactError": -1.0,
+      "speed": 4.356501579284668,
+      "armWeight": 0.0,
+      "ortho": 8.699999809265137,
+      "attached": true,
+      "grounded": false,
+      "floorFound": false,
+      "bodySimulated": true,
+      "failure": false,
+      "paused": false,
+      "secondCandidate": true,
+      "thirdCandidate": false,
+      "phase": "supplement_accelerate",
+      "sprite": "HimoHitoCraftSwing-v1 Swing 2",
+      "gesture": "candidate2",
+      "root": {
+        "x": 122.50946807861328,
+        "y": -1.2801058292388916
+      },
+      "velocity": {
+        "x": 4.21336555480957,
+        "y": 1.1075444221496582
+      },
+      "anchor": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "crown": {
+        "x": 122.42349243164062,
+        "y": -0.7626847624778748
+      },
+      "ropeFirst": {
+        "x": 122.42349243164062,
+        "y": -0.7626847624778748
+      },
+      "ropeLast": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "camera": {
+        "x": 121.7928237915039,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "leftHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rightHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "armAngles": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      }
+    },
+    {
+      "frame": 11,
+      "bridges": 0,
+      "selected": 6,
+      "knotCount": 1,
+      "time": 0.38666725158691406,
+      "fixedTime": 2.0599992275238037,
+      "remaining": 24.0,
+      "input": 1.0,
+      "colliderBottom": -1.8274002075195312,
+      "floorY": 0.0,
+      "span": 6.000000953674316,
+      "ropeLength": 6.0,
+      "slack": 0.0,
+      "soleY": -1.7683961391448975,
+      "crownError": 0.0,
+      "contactError": -1.0,
+      "speed": 4.750427722930908,
+      "armWeight": 0.0,
+      "ortho": 8.699999809265137,
+      "attached": true,
+      "grounded": false,
+      "floorFound": false,
+      "bodySimulated": true,
+      "failure": false,
+      "paused": false,
+      "secondCandidate": true,
+      "thirdCandidate": false,
+      "phase": "supplement_accelerate",
+      "sprite": "HimoHitoCraftSwing-v1 Swing 2",
+      "gesture": "candidate2",
+      "root": {
+        "x": 122.68798828125,
+        "y": -1.2274001836776733
+      },
+      "velocity": {
+        "x": 4.55645751953125,
+        "y": 1.3435989618301392
+      },
+      "anchor": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "crown": {
+        "x": 122.56163787841797,
+        "y": -0.7217047214508057
+      },
+      "ropeFirst": {
+        "x": 122.56163787841797,
+        "y": -0.7217047214508057
+      },
+      "ropeLast": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "camera": {
+        "x": 121.93650817871094,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "leftHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rightHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "armAngles": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      }
+    },
+    {
+      "frame": 12,
+      "bridges": 0,
+      "selected": 6,
+      "knotCount": 1,
+      "time": 0.4200005531311035,
+      "fixedTime": 2.099999189376831,
+      "remaining": 24.0,
+      "input": 1.0,
+      "colliderBottom": -1.7643498182296753,
+      "floorY": 0.0,
+      "span": 5.999998569488525,
+      "ropeLength": 6.0,
+      "slack": 1.430511474609375e-06,
+      "soleY": -1.7189323902130127,
+      "crownError": 0.0,
+      "contactError": -1.0,
+      "speed": 5.109041213989258,
+      "armWeight": 0.0,
+      "ortho": 8.699999809265137,
+      "attached": true,
+      "grounded": false,
+      "floorFound": false,
+      "bodySimulated": true,
+      "failure": false,
+      "paused": false,
+      "secondCandidate": true,
+      "thirdCandidate": false,
+      "phase": "supplement_accelerate",
+      "sprite": "HimoHitoCraftSwing-v1 Swing 2",
+      "gesture": "candidate2",
+      "root": {
+        "x": 122.87866973876953,
+        "y": -1.1643497943878174
+      },
+      "velocity": {
+        "x": 4.851222515106201,
+        "y": 1.6024805307388306
+      },
+      "anchor": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "crown": {
+        "x": 122.70851135253906,
+        "y": -0.6741530895233154
+      },
+      "ropeFirst": {
+        "x": 122.70851135253906,
+        "y": -0.6741530895233154
+      },
+      "ropeLast": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "camera": {
+        "x": 122.0794906616211,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "leftHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rightHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "armAngles": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      }
+    },
+    {
+      "frame": 13,
+      "bridges": 0,
+      "selected": 6,
+      "knotCount": 1,
+      "time": 0.45333409309387207,
+      "fixedTime": 2.1199991703033447,
+      "remaining": 24.0,
+      "input": 1.0,
+      "colliderBottom": -1.7286930084228516,
+      "floorY": 0.0,
+      "span": 5.999999523162842,
+      "ropeLength": 6.0,
+      "slack": 4.76837158203125e-07,
+      "soleY": -1.661232590675354,
+      "crownError": 0.0,
+      "contactError": -1.0,
+      "speed": 5.274474620819092,
+      "armWeight": 0.0,
+      "ortho": 8.699999809265137,
+      "attached": true,
+      "grounded": false,
+      "floorFound": false,
+      "bodySimulated": true,
+      "failure": false,
+      "paused": false,
+      "secondCandidate": true,
+      "thirdCandidate": false,
+      "phase": "supplement_accelerate",
+      "sprite": "HimoHitoCraftSwing-v1 Swing 2",
+      "gesture": "candidate2",
+      "root": {
+        "x": 122.97793579101562,
+        "y": -1.1286929845809937
+      },
+      "velocity": {
+        "x": 4.979435920715332,
+        "y": 1.7393386363983154
+      },
+      "anchor": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "crown": {
+        "x": 122.86337280273438,
+        "y": -0.6187032461166382
+      },
+      "ropeFirst": {
+        "x": 122.86337280273438,
+        "y": -0.6187032461166382
+      },
+      "ropeLast": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "camera": {
+        "x": 122.22369384765625,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "leftHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rightHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "armAngles": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      }
+    },
+    {
+      "frame": 14,
+      "bridges": 0,
+      "selected": 6,
+      "knotCount": 1,
+      "time": 0.4866673946380615,
+      "fixedTime": 2.159999132156372,
+      "remaining": 24.0,
+      "input": 1.0,
+      "colliderBottom": -1.648695468902588,
+      "floorY": 0.0,
+      "span": 5.999999523162842,
+      "ropeLength": 6.0,
+      "slack": 4.76837158203125e-07,
+      "soleY": -1.595733404159546,
+      "crownError": 0.0,
+      "contactError": -1.0,
+      "speed": 5.57654333114624,
+      "armWeight": 0.0,
+      "ortho": 8.699999809265137,
+      "attached": true,
+      "grounded": false,
+      "floorFound": false,
+      "bodySimulated": true,
+      "failure": false,
+      "paused": false,
+      "secondCandidate": true,
+      "thirdCandidate": false,
+      "phase": "supplement_accelerate",
+      "sprite": "HimoHitoCraftSwing-v1 Swing 2",
+      "gesture": "candidate2",
+      "root": {
+        "x": 123.18297576904297,
+        "y": -1.04869544506073
+      },
+      "velocity": {
+        "x": 5.195642948150635,
+        "y": 2.0256187915802
+      },
+      "anchor": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "crown": {
+        "x": 123.02394104003906,
+        "y": -0.5558742880821228
+      },
+      "ropeFirst": {
+        "x": 123.02394104003906,
+        "y": -0.5558742880821228
+      },
+      "ropeLast": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "camera": {
+        "x": 122.37060546875,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "leftHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rightHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "armAngles": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      }
+    },
+    {
+      "frame": 15,
+      "bridges": 0,
+      "selected": 6,
+      "knotCount": 1,
+      "time": 0.520000696182251,
+      "fixedTime": 2.1999993324279785,
+      "remaining": 24.0,
+      "input": 1.0,
+      "colliderBottom": -1.5567097663879395,
+      "floorY": 0.0,
+      "span": 6.0,
+      "ropeLength": 6.0,
+      "slack": 0.0,
+      "soleY": -1.522125482559204,
+      "crownError": 0.0,
+      "contactError": -1.0,
+      "speed": 5.839125633239746,
+      "armWeight": 0.0,
+      "ortho": 8.699999809265137,
+      "attached": true,
+      "grounded": false,
+      "floorFound": false,
+      "bodySimulated": true,
+      "failure": false,
+      "paused": false,
+      "secondCandidate": true,
+      "thirdCandidate": false,
+      "phase": "supplement_accelerate",
+      "sprite": "HimoHitoCraftSwing-v1 Swing 2",
+      "gesture": "candidate2",
+      "root": {
+        "x": 123.39485931396484,
+        "y": -0.9567098021507263
+      },
+      "velocity": {
+        "x": 5.356663703918457,
+        "y": 2.324122190475464
+      },
+      "anchor": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "crown": {
+        "x": 123.18914031982422,
+        "y": -0.48540109395980835
+      },
+      "ropeFirst": {
+        "x": 123.18914031982422,
+        "y": -0.48540109395980835
+      },
+      "ropeLast": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "camera": {
+        "x": 122.52120971679688,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "leftHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rightHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "armAngles": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      }
+    },
+    {
+      "frame": 16,
+      "bridges": 0,
+      "selected": 6,
+      "knotCount": 1,
+      "time": 0.5533339977264404,
+      "fixedTime": 2.219999313354492,
+      "remaining": 24.0,
+      "input": 1.0,
+      "colliderBottom": -1.5061193704605103,
+      "floorY": 0.0,
+      "span": 6.000000953674316,
+      "ropeLength": 6.0,
+      "slack": 0.0,
+      "soleY": -1.4391080141067505,
+      "crownError": 0.0,
+      "contactError": -1.0,
+      "speed": 5.955296993255615,
+      "armWeight": 0.0,
+      "ortho": 8.699999809265137,
+      "attached": true,
+      "grounded": false,
+      "floorFound": false,
+      "bodySimulated": true,
+      "failure": false,
+      "paused": false,
+      "secondCandidate": true,
+      "thirdCandidate": false,
+      "phase": "supplement_accelerate",
+      "sprite": "HimoHitoCraftSwing-v1 Swing 2",
+      "gesture": "candidate2",
+      "root": {
+        "x": 123.50267028808594,
+        "y": -0.9061193466186523
+      },
+      "velocity": {
+        "x": 5.416064739227295,
+        "y": 2.4762485027313232
+      },
+      "anchor": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "crown": {
+        "x": 123.35800170898438,
+        "y": -0.4060983657836914
+      },
+      "ropeFirst": {
+        "x": 123.35800170898438,
+        "y": -0.4060983657836914
+      },
+      "ropeLast": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "camera": {
+        "x": 122.67606353759766,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "leftHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rightHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "armAngles": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      }
+    },
+    {
+      "frame": 17,
+      "bridges": 0,
+      "selected": 6,
+      "knotCount": 1,
+      "time": 0.5866672992706299,
+      "fixedTime": 2.2599992752075195,
+      "remaining": 24.0,
+      "input": 1.0,
+      "colliderBottom": -1.3956809043884277,
+      "floorY": 0.0,
+      "span": 5.999999523162842,
+      "ropeLength": 6.0,
+      "slack": 4.76837158203125e-07,
+      "soleY": -1.3475569486618042,
+      "crownError": 0.0,
+      "contactError": -1.0,
+      "speed": 6.157011032104492,
+      "armWeight": 0.0,
+      "ortho": 8.699999809265137,
+      "attached": true,
+      "grounded": false,
+      "floorFound": false,
+      "bodySimulated": true,
+      "failure": false,
+      "paused": false,
+      "secondCandidate": true,
+      "thirdCandidate": false,
+      "phase": "supplement_accelerate",
+      "sprite": "HimoHitoCraftSwing-v1 Swing 2",
+      "gesture": "candidate2",
+      "root": {
+        "x": 123.72059631347656,
+        "y": -0.7956809401512146
+      },
+      "velocity": {
+        "x": 5.492527961730957,
+        "y": 2.7822515964508057
+      },
+      "anchor": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "crown": {
+        "x": 123.52877807617188,
+        "y": -0.3189001679420471
+      },
+      "ropeFirst": {
+        "x": 123.52877807617188,
+        "y": -0.3189001679420471
+      },
+      "ropeLast": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "camera": {
+        "x": 122.8353500366211,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "leftHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rightHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "armAngles": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      }
+    },
+    {
+      "frame": 18,
+      "bridges": 0,
+      "selected": 6,
+      "knotCount": 1,
+      "time": 0.6200006008148193,
+      "fixedTime": 2.299999237060547,
+      "remaining": 24.0,
+      "input": -1.0,
+      "colliderBottom": -1.273005485534668,
+      "floorY": 0.0,
+      "span": 6.000001430511475,
+      "ropeLength": 6.0,
+      "slack": 0.0,
+      "soleY": -1.24747896194458,
+      "crownError": 0.0,
+      "contactError": -1.0,
+      "speed": 6.317679405212402,
+      "armWeight": 0.0,
+      "ortho": 8.699999809265137,
+      "attached": true,
+      "grounded": false,
+      "floorFound": false,
+      "bodySimulated": true,
+      "failure": false,
+      "paused": false,
+      "secondCandidate": true,
+      "thirdCandidate": false,
+      "phase": "supplement_reverse_input",
+      "sprite": "HimoHitoCraftSwing-v1 Swing 2",
+      "gesture": "candidate2",
+      "root": {
+        "x": 123.93974304199219,
+        "y": -0.6730054020881653
+      },
+      "velocity": {
+        "x": 5.513078212738037,
+        "y": 3.085294485092163
+      },
+      "anchor": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "crown": {
+        "x": 123.70043182373047,
+        "y": -0.22383737564086914
+      },
+      "ropeFirst": {
+        "x": 123.70043182373047,
+        "y": -0.22383737564086914
+      },
+      "ropeLast": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "camera": {
+        "x": 122.9989013671875,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "leftHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rightHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "armAngles": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      }
+    },
+    {
+      "frame": 19,
+      "bridges": 0,
+      "selected": 6,
+      "knotCount": 1,
+      "time": 0.6533339023590088,
+      "fixedTime": 2.3199992179870605,
+      "remaining": 24.0,
+      "input": -1.0,
+      "colliderBottom": -1.2146992683410645,
+      "floorY": 0.0,
+      "span": 6.000001430511475,
+      "ropeLength": 6.0,
+      "slack": 0.0,
+      "soleY": -1.142816424369812,
+      "crownError": 0.0,
+      "contactError": -1.0,
+      "speed": 5.664366245269775,
+      "armWeight": 0.0,
+      "ortho": 8.699999809265137,
+      "attached": true,
+      "grounded": false,
+      "floorFound": false,
+      "bodySimulated": true,
+      "failure": false,
+      "paused": false,
+      "secondCandidate": true,
+      "thirdCandidate": false,
+      "phase": "supplement_reverse_input",
+      "sprite": "HimoHitoCraftSwing-v1 Swing 2",
+      "gesture": "candidate2",
+      "root": {
+        "x": 124.03685760498047,
+        "y": -0.6146993041038513
+      },
+      "velocity": {
+        "x": 4.883632183074951,
+        "y": 2.8697009086608887
+      },
+      "anchor": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "crown": {
+        "x": 123.86292266845703,
+        "y": -0.12526065111160278
+      },
+      "ropeFirst": {
+        "x": 123.86292266845703,
+        "y": -0.12526065111160278
+      },
+      "ropeLast": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "camera": {
+        "x": 123.16586303710938,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "leftHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rightHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "armAngles": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      }
+    },
+    {
+      "frame": 20,
+      "bridges": 0,
+      "selected": 6,
+      "knotCount": 1,
+      "time": 0.6866672039031982,
+      "fixedTime": 2.359999179840088,
+      "remaining": 24.0,
+      "input": -1.0,
+      "colliderBottom": -1.1145601272583008,
+      "floorY": 0.0,
+      "span": 6.000000953674316,
+      "ropeLength": 6.0,
+      "slack": 0.0,
+      "soleY": -1.0509397983551025,
+      "crownError": 0.0,
+      "contactError": -1.0,
+      "speed": 4.338048458099365,
+      "armWeight": 0.0,
+      "ortho": 8.699999809265137,
+      "attached": true,
+      "grounded": false,
+      "floorFound": false,
+      "bodySimulated": true,
+      "failure": false,
+      "paused": false,
+      "secondCandidate": true,
+      "thirdCandidate": false,
+      "phase": "supplement_reverse_input",
+      "sprite": "HimoHitoCraftSwing-v1 Swing 2",
+      "gesture": "candidate2",
+      "root": {
+        "x": 124.19457244873047,
+        "y": -0.5145601630210876
+      },
+      "velocity": {
+        "x": 3.659656047821045,
+        "y": 2.3292882442474365
+      },
+      "anchor": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "crown": {
+        "x": 123.99095916748047,
+        "y": -0.041040778160095215
+      },
+      "ropeFirst": {
+        "x": 123.99095916748047,
+        "y": -0.041040778160095215
+      },
+      "ropeLast": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "camera": {
+        "x": 123.33338928222656,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "leftHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rightHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "armAngles": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      }
+    },
+    {
+      "frame": 21,
+      "bridges": 0,
+      "selected": 6,
+      "knotCount": 1,
+      "time": 0.7200007438659668,
+      "fixedTime": 2.3999991416931152,
+      "remaining": 24.0,
+      "input": -1.0,
+      "colliderBottom": -1.0402002334594727,
+      "floorY": 0.0,
+      "span": 6.000000953674316,
+      "ropeLength": 6.0,
+      "slack": 0.0,
+      "soleY": -0.9744372367858887,
+      "crownError": 0.0,
+      "contactError": -1.0,
+      "speed": 2.9924466609954834,
+      "armWeight": 0.0,
+      "ortho": 8.699999809265137,
+      "attached": true,
+      "grounded": false,
+      "floorFound": false,
+      "bodySimulated": true,
+      "failure": false,
+      "paused": false,
+      "secondCandidate": true,
+      "thirdCandidate": false,
+      "phase": "supplement_reverse_input",
+      "sprite": "HimoHitoCraftSwing-v1 Swing 2",
+      "gesture": "candidate2",
+      "root": {
+        "x": 124.30506134033203,
+        "y": -0.44020015001296997
+      },
+      "velocity": {
+        "x": 2.480710506439209,
+        "y": 1.6735628843307495
+      },
+      "anchor": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "crown": {
+        "x": 124.08599090576172,
+        "y": 0.026299983263015747
+      },
+      "ropeFirst": {
+        "x": 124.08599090576172,
+        "y": 0.026299983263015747
+      },
+      "ropeLast": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "camera": {
+        "x": 123.49698638916016,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "leftHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rightHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "armAngles": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      }
+    },
+    {
+      "frame": 22,
+      "bridges": 0,
+      "selected": 6,
+      "knotCount": 1,
+      "time": 0.7533340454101562,
+      "fixedTime": 2.419999122619629,
+      "remaining": 24.0,
+      "input": -1.0,
+      "colliderBottom": -1.0137767791748047,
+      "floorY": 0.0,
+      "span": 5.999998569488525,
+      "ropeLength": 6.0,
+      "slack": 1.430511474609375e-06,
+      "soleY": -0.9184129238128662,
+      "crownError": 0.0,
+      "contactError": -1.0,
+      "speed": 2.314974546432495,
+      "armWeight": 0.0,
+      "ortho": 8.699999809265137,
+      "attached": true,
+      "grounded": false,
+      "floorFound": false,
+      "bodySimulated": true,
+      "failure": false,
+      "paused": false,
+      "secondCandidate": true,
+      "thirdCandidate": false,
+      "phase": "supplement_reverse_input",
+      "sprite": "HimoHitoCraftSwing-v1 Swing 2",
+      "gesture": "candidate2",
+      "root": {
+        "x": 124.34307861328125,
+        "y": -0.4137767553329468
+      },
+      "velocity": {
+        "x": 1.906072735786438,
+        "y": 1.3137710094451904
+      },
+      "anchor": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "crown": {
+        "x": 124.14685821533203,
+        "y": 0.07269126176834106
+      },
+      "ropeFirst": {
+        "x": 124.14685821533203,
+        "y": 0.07269126176834106
+      },
+      "ropeLast": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "camera": {
+        "x": 123.65166473388672,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "leftHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rightHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "armAngles": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      }
+    },
+    {
+      "frame": 23,
+      "bridges": 0,
+      "selected": 6,
+      "knotCount": 1,
+      "time": 0.7866673469543457,
+      "fixedTime": 2.4599990844726562,
+      "remaining": 24.0,
+      "input": -1.0,
+      "colliderBottom": -0.983853280544281,
+      "floorY": 0.0,
+      "span": 6.000001430511475,
+      "ropeLength": 6.0,
+      "slack": 0.0,
+      "soleY": -0.8797215819358826,
+      "crownError": 0.0,
+      "contactError": -1.0,
+      "speed": 0.9557170271873474,
+      "armWeight": 0.0,
+      "ortho": 8.699999809265137,
+      "attached": true,
+      "grounded": false,
+      "floorFound": false,
+      "bodySimulated": true,
+      "failure": false,
+      "paused": false,
+      "secondCandidate": true,
+      "thirdCandidate": false,
+      "phase": "supplement_reverse_input",
+      "sprite": "HimoHitoCraftSwing-v1 Swing 3",
+      "gesture": "candidate2",
+      "root": {
+        "x": 124.3853988647461,
+        "y": -0.3838532567024231
+      },
+      "velocity": {
+        "x": 0.7797225713729858,
+        "y": 0.5526552200317383
+      },
+      "anchor": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "crown": {
+        "x": 124.17877197265625,
+        "y": 0.09914806485176086
+      },
+      "ropeFirst": {
+        "x": 124.17877197265625,
+        "y": 0.09914806485176086
+      },
+      "ropeLast": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "camera": {
+        "x": 123.7928237915039,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "leftHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rightHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "armAngles": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      }
+    },
+    {
+      "frame": 24,
+      "bridges": 0,
+      "selected": 6,
+      "knotCount": 1,
+      "time": 0.8200006484985352,
+      "fixedTime": 2.4999990463256836,
+      "remaining": 24.0,
+      "input": -1.0,
+      "colliderBottom": -0.9853229522705078,
+      "floorY": 0.0,
+      "span": 6.000001907348633,
+      "ropeLength": 6.0,
+      "slack": 0.0,
+      "soleY": -0.865227460861206,
+      "crownError": 0.0,
+      "contactError": -1.0,
+      "speed": 0.4026407301425934,
+      "armWeight": 0.0,
+      "ortho": 8.699999809265137,
+      "attached": true,
+      "grounded": false,
+      "floorFound": false,
+      "bodySimulated": true,
+      "failure": false,
+      "paused": false,
+      "secondCandidate": true,
+      "thirdCandidate": false,
+      "phase": "supplement_reverse_input",
+      "sprite": "HimoHitoCraftSwing-v1 Swing 3",
+      "gesture": "candidate2",
+      "root": {
+        "x": 124.38333892822266,
+        "y": -0.3853229284286499
+      },
+      "velocity": {
+        "x": -0.32752421498298645,
+        "y": -0.2341953068971634
+      },
+      "anchor": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "crown": {
+        "x": 124.18220520019531,
+        "y": 0.10500580072402954
+      },
+      "ropeFirst": {
+        "x": 124.18220520019531,
+        "y": 0.10500580072402954
+      },
+      "ropeLast": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "camera": {
+        "x": 123.91668701171875,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "leftHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rightHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "armAngles": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      }
+    },
+    {
+      "frame": 25,
+      "bridges": 0,
+      "selected": 6,
+      "knotCount": 1,
+      "time": 0.8533339500427246,
+      "fixedTime": 2.5199990272521973,
+      "remaining": 24.0,
+      "input": -1.0,
+      "colliderBottom": -0.997818112373352,
+      "floorY": 0.0,
+      "span": 6.000000476837158,
+      "ropeLength": 6.0,
+      "slack": 0.0,
+      "soleY": -0.8748518228530884,
+      "crownError": 0.0,
+      "contactError": -1.0,
+      "speed": 1.0789847373962402,
+      "armWeight": 0.0,
+      "ortho": 8.699999809265137,
+      "attached": true,
+      "grounded": false,
+      "floorFound": false,
+      "bodySimulated": true,
+      "failure": false,
+      "paused": false,
+      "secondCandidate": true,
+      "thirdCandidate": false,
+      "phase": "supplement_reverse_input",
+      "sprite": "HimoHitoCraftSwing-v1 Swing 3",
+      "gesture": "candidate2",
+      "root": {
+        "x": 124.3657455444336,
+        "y": -0.39781805872917175
+      },
+      "velocity": {
+        "x": -0.8785312175750732,
+        "y": -0.6264111399650574
+      },
+      "anchor": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "crown": {
+        "x": 124.15465545654297,
+        "y": 0.08792510628700256
+      },
+      "ropeFirst": {
+        "x": 124.15465545654297,
+        "y": 0.08792510628700256
+      },
+      "ropeLast": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "camera": {
+        "x": 124.02008819580078,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "leftHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rightHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "armAngles": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      }
+    },
+    {
+      "frame": 26,
+      "bridges": 0,
+      "selected": 6,
+      "knotCount": 1,
+      "time": 0.8866672515869141,
+      "fixedTime": 2.5599989891052246,
+      "remaining": 24.0,
+      "input": 0.0,
+      "colliderBottom": -1.0455507040023804,
+      "floorY": 0.0,
+      "span": 6.000001430511475,
+      "ropeLength": 6.0,
+      "slack": 0.0,
+      "soleY": -0.9056193828582764,
+      "crownError": 0.0,
+      "contactError": -1.0,
+      "speed": 2.4209542274475098,
+      "armWeight": 0.0,
+      "ortho": 8.699999809265137,
+      "attached": true,
+      "grounded": false,
+      "floorFound": false,
+      "bodySimulated": true,
+      "failure": false,
+      "paused": false,
+      "secondCandidate": true,
+      "thirdCandidate": false,
+      "phase": "supplement_input_released",
+      "sprite": "HimoHitoCraftSwing-v1 Swing 3",
+      "gesture": "candidate2",
+      "root": {
+        "x": 124.29728698730469,
+        "y": -0.4455506503582001
+      },
+      "velocity": {
+        "x": -1.9843380451202393,
+        "y": -1.386875033378601
+      },
+      "anchor": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "crown": {
+        "x": 124.0997314453125,
+        "y": 0.05113384127616882
+      },
+      "ropeFirst": {
+        "x": 124.0997314453125,
+        "y": 0.05113384127616882
+      },
+      "ropeLast": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "camera": {
+        "x": 124.10049438476562,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "leftHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rightHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "armAngles": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      }
+    },
+    {
+      "frame": 27,
+      "bridges": 0,
+      "selected": 6,
+      "knotCount": 1,
+      "time": 0.9200005531311035,
+      "fixedTime": 2.599999189376831,
+      "remaining": 24.0,
+      "input": 0.0,
+      "colliderBottom": -1.109754204750061,
+      "floorY": 0.0,
+      "span": 6.0,
+      "ropeLength": 6.0,
+      "slack": 0.0,
+      "soleY": -0.9527444839477539,
+      "crownError": 0.0,
+      "contactError": -1.0,
+      "speed": 3.0249457359313965,
+      "armWeight": 0.0,
+      "ortho": 8.699999809265137,
+      "attached": true,
+      "grounded": false,
+      "floorFound": false,
+      "bodySimulated": true,
+      "failure": false,
+      "paused": false,
+      "secondCandidate": true,
+      "thirdCandidate": false,
+      "phase": "supplement_input_released",
+      "sprite": "HimoHitoCraftSwing-v1 Swing 3",
+      "gesture": "candidate2",
+      "root": {
+        "x": 124.20187377929688,
+        "y": -0.5097541809082031
+      },
+      "velocity": {
+        "x": -2.5087926387786865,
+        "y": -1.6900461912155151
+      },
+      "anchor": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "crown": {
+        "x": 124.02333068847656,
+        "y": -0.0001837611198425293
+      },
+      "ropeFirst": {
+        "x": 124.02333068847656,
+        "y": -0.0001837611198425293
+      },
+      "ropeLast": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "camera": {
+        "x": 124.1563720703125,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "leftHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rightHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "armAngles": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      }
+    },
+    {
+      "frame": 28,
+      "bridges": 0,
+      "selected": 6,
+      "knotCount": 1,
+      "time": 0.9533340930938721,
+      "fixedTime": 2.6199991703033447,
+      "remaining": 24.0,
+      "input": 0.0,
+      "colliderBottom": -1.14597749710083,
+      "floorY": 0.0,
+      "span": 6.000000476837158,
+      "ropeLength": 6.0,
+      "slack": 0.0,
+      "soleY": -0.9898819923400879,
+      "crownError": 0.0,
+      "contactError": -1.0,
+      "speed": 3.3191449642181396,
+      "armWeight": 0.0,
+      "ortho": 8.699999809265137,
+      "attached": true,
+      "grounded": false,
+      "floorFound": false,
+      "bodySimulated": true,
+      "failure": false,
+      "paused": false,
+      "secondCandidate": true,
+      "thirdCandidate": false,
+      "phase": "supplement_input_released",
+      "sprite": "HimoHitoCraftSwing-v1 Swing 4",
+      "gesture": "candidate2",
+      "root": {
+        "x": 124.14624786376953,
+        "y": -0.5459774732589722
+      },
+      "velocity": {
+        "x": -2.7713370323181152,
+        "y": -1.8265854120254517
+      },
+      "anchor": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "crown": {
+        "x": 123.93412017822266,
+        "y": -0.058733463287353516
+      },
+      "ropeFirst": {
+        "x": 123.93412017822266,
+        "y": -0.058733463287353516
+      },
+      "ropeLast": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "camera": {
+        "x": 124.16477966308594,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "leftHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rightHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "armAngles": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      }
+    },
+    {
+      "frame": 29,
+      "bridges": 0,
+      "selected": 6,
+      "knotCount": 1,
+      "time": 0.9866673946380615,
+      "fixedTime": 2.659999132156372,
+      "remaining": 24.0,
+      "input": 0.0,
+      "colliderBottom": -1.2255127429962158,
+      "floorY": 0.0,
+      "span": 6.000000953674316,
+      "ropeLength": 6.0,
+      "slack": 0.0,
+      "soleY": -1.0545485019683838,
+      "crownError": 0.0,
+      "contactError": -1.0,
+      "speed": 3.8895633220672607,
+      "armWeight": 0.0,
+      "ortho": 8.699999809265137,
+      "attached": true,
+      "grounded": false,
+      "floorFound": false,
+      "bodySimulated": true,
+      "failure": false,
+      "paused": false,
+      "secondCandidate": true,
+      "thirdCandidate": false,
+      "phase": "supplement_input_released",
+      "sprite": "HimoHitoCraftSwing-v1 Swing 4",
+      "gesture": "candidate2",
+      "root": {
+        "x": 124.01915740966797,
+        "y": -0.6255127191543579
+      },
+      "velocity": {
+        "x": -3.2961742877960205,
+        "y": -2.0649304389953613
+      },
+      "anchor": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "crown": {
+        "x": 123.83326721191406,
+        "y": -0.1227850615978241
+      },
+      "ropeFirst": {
+        "x": 123.83326721191406,
+        "y": -0.1227850615978241
+      },
+      "ropeLast": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "camera": {
+        "x": 124.1593246459961,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "leftHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rightHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "armAngles": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      }
+    },
+    {
+      "frame": 30,
+      "bridges": 0,
+      "selected": 6,
+      "knotCount": 1,
+      "time": 1.020000696182251,
+      "fixedTime": 2.6999990940093994,
+      "remaining": 24.0,
+      "input": 0.0,
+      "colliderBottom": -1.3127810955047607,
+      "floorY": 0.0,
+      "span": 5.999998092651367,
+      "ropeLength": 6.0,
+      "slack": 1.9073486328125e-06,
+      "soleY": -1.12544584274292,
+      "crownError": 0.0,
+      "contactError": -1.0,
+      "speed": 4.432837963104248,
+      "armWeight": 0.0,
+      "ortho": 8.699999809265137,
+      "attached": true,
+      "grounded": false,
+      "floorFound": false,
+      "bodySimulated": true,
+      "failure": false,
+      "paused": false,
+      "secondCandidate": true,
+      "thirdCandidate": false,
+      "phase": "supplement_input_released",
+      "sprite": "HimoHitoCraftSwing-v1 Swing 4",
+      "gesture": "candidate2",
+      "root": {
+        "x": 123.87100982666016,
+        "y": -0.7127810120582581
+      },
+      "velocity": {
+        "x": -3.8183844089508057,
+        "y": -2.251664161682129
+      },
+      "anchor": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "crown": {
+        "x": 123.71952056884766,
+        "y": -0.19195660948753357
+      },
+      "ropeFirst": {
+        "x": 123.71952056884766,
+        "y": -0.19195660948753357
+      },
+      "ropeLast": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "camera": {
+        "x": 124.14131927490234,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "leftHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rightHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "armAngles": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      }
+    },
+    {
+      "frame": 31,
+      "bridges": 0,
+      "selected": 6,
+      "knotCount": 1,
+      "time": 1.0533339977264404,
+      "fixedTime": 2.719999074935913,
+      "remaining": 24.0,
+      "input": 0.0,
+      "colliderBottom": -1.3586153984069824,
+      "floorY": 0.0,
+      "span": 6.000001430511475,
+      "ropeLength": 6.0,
+      "slack": 0.0,
+      "soleY": -1.2019908428192139,
+      "crownError": 0.0,
+      "contactError": -1.0,
+      "speed": 4.693115234375,
+      "armWeight": 0.0,
+      "ortho": 8.699999809265137,
+      "attached": true,
+      "grounded": false,
+      "floorFound": false,
+      "bodySimulated": true,
+      "failure": false,
+      "paused": false,
+      "secondCandidate": true,
+      "thirdCandidate": false,
+      "phase": "supplement_input_released",
+      "sprite": "HimoHitoCraftSwing-v1 Swing 4",
+      "gesture": "candidate2",
+      "root": {
+        "x": 123.78911590576172,
+        "y": -0.7586154341697693
+      },
+      "velocity": {
+        "x": -4.077317714691162,
+        "y": -2.3239643573760986
+      },
+      "anchor": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "crown": {
+        "x": 123.59156036376953,
+        "y": -0.2653951942920685
+      },
+      "ropeFirst": {
+        "x": 123.59156036376953,
+        "y": -0.2653951942920685
+      },
+      "ropeLast": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "camera": {
+        "x": 124.10713958740234,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "leftHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rightHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "armAngles": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      }
+    },
+    {
+      "frame": 32,
+      "bridges": 0,
+      "selected": 6,
+      "knotCount": 1,
+      "time": 1.0866672992706299,
+      "fixedTime": 2.7599990367889404,
+      "remaining": 24.0,
+      "input": 0.0,
+      "colliderBottom": -1.4531795978546143,
+      "floorY": 0.0,
+      "span": 6.000000476837158,
+      "ropeLength": 6.0,
+      "slack": 0.0,
+      "soleY": -1.2821553945541382,
+      "crownError": 0.0,
+      "contactError": -1.0,
+      "speed": 5.188629150390625,
+      "armWeight": 0.0,
+      "ortho": 8.699999809265137,
+      "attached": true,
+      "grounded": false,
+      "floorFound": false,
+      "bodySimulated": true,
+      "failure": false,
+      "paused": false,
+      "secondCandidate": true,
+      "thirdCandidate": false,
+      "phase": "supplement_input_released",
+      "sprite": "HimoHitoCraftSwing-v1 Swing 4",
+      "gesture": "candidate2",
+      "root": {
+        "x": 123.6098861694336,
+        "y": -0.8531796336174011
+      },
+      "velocity": {
+        "x": -4.588050365447998,
+        "y": -2.423152446746826
+      },
+      "anchor": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "crown": {
+        "x": 123.4511489868164,
+        "y": -0.3412894308567047
+      },
+      "ropeFirst": {
+        "x": 123.4511489868164,
+        "y": -0.3412894308567047
+      },
+      "ropeLast": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "camera": {
+        "x": 124.05520629882812,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "leftHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rightHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "armAngles": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      }
+    },
+    {
+      "frame": 33,
+      "bridges": 0,
+      "selected": 6,
+      "knotCount": 1,
+      "time": 1.1200006008148193,
+      "fixedTime": 2.7999989986419678,
+      "remaining": 24.0,
+      "input": 0.0,
+      "colliderBottom": -1.549501657485962,
+      "floorY": 0.0,
+      "span": 6.000000953674316,
+      "ropeLength": 6.0,
+      "slack": 0.0,
+      "soleY": -1.3645328283309937,
+      "crownError": 0.0,
+      "contactError": -1.0,
+      "speed": 5.647732257843018,
+      "armWeight": 0.0,
+      "ortho": 8.699999809265137,
+      "attached": true,
+      "grounded": false,
+      "floorFound": false,
+      "bodySimulated": true,
+      "failure": false,
+      "paused": false,
+      "secondCandidate": true,
+      "thirdCandidate": false,
+      "phase": "supplement_input_released",
+      "sprite": "HimoHitoCraftSwing-v1 Swing 4",
+      "gesture": "candidate2",
+      "root": {
+        "x": 123.41056823730469,
+        "y": -0.9495015740394592
+      },
+      "velocity": {
+        "x": -5.084164142608643,
+        "y": -2.459299087524414
+      },
+      "anchor": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "crown": {
+        "x": 123.29826354980469,
+        "y": -0.41857072710990906
+      },
+      "ropeFirst": {
+        "x": 123.29826354980469,
+        "y": -0.41857072710990906
+      },
+      "ropeLast": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "camera": {
+        "x": 123.98516082763672,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "leftHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rightHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "armAngles": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      }
+    },
+    {
+      "frame": 34,
+      "bridges": 0,
+      "selected": 6,
+      "knotCount": 1,
+      "time": 1.1533339023590088,
+      "fixedTime": 2.8199989795684814,
+      "remaining": 24.0,
+      "input": 0.0,
+      "colliderBottom": -1.5975112915039062,
+      "floorY": 0.0,
+      "span": 6.000000953674316,
+      "ropeLength": 6.0,
+      "slack": 0.0,
+      "soleY": -1.4476752281188965,
+      "crownError": 0.0,
+      "contactError": -1.0,
+      "speed": 5.862528324127197,
+      "armWeight": 0.0,
+      "ortho": 8.699999809265137,
+      "attached": true,
+      "grounded": false,
+      "floorFound": false,
+      "bodySimulated": true,
+      "failure": false,
+      "paused": false,
+      "secondCandidate": true,
+      "thirdCandidate": false,
+      "phase": "supplement_input_released",
+      "sprite": "HimoHitoCraftSwing-v1 Swing 4",
+      "gesture": "candidate2",
+      "root": {
+        "x": 123.30361938476562,
+        "y": -0.9975112676620483
+      },
+      "velocity": {
+        "x": -5.324641704559326,
+        "y": -2.4530444145202637
+      },
+      "anchor": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "crown": {
+        "x": 123.13177490234375,
+        "y": -0.4957764744758606
+      },
+      "ropeFirst": {
+        "x": 123.13177490234375,
+        "y": -0.4957764744758606
+      },
+      "ropeLast": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "camera": {
+        "x": 123.8971939086914,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "leftHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rightHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "armAngles": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      }
+    },
+    {
+      "frame": 35,
+      "bridges": 0,
+      "selected": 6,
+      "knotCount": 1,
+      "time": 1.1866672039031982,
+      "fixedTime": 2.859998941421509,
+      "remaining": 24.0,
+      "input": 0.0,
+      "colliderBottom": -1.6915963888168335,
+      "floorY": 0.0,
+      "span": 6.000000953674316,
+      "ropeLength": 6.0,
+      "slack": 0.0,
+      "soleY": -1.5299148559570312,
+      "crownError": 0.0,
+      "contactError": -1.0,
+      "speed": 6.26051139831543,
+      "armWeight": 0.0,
+      "ortho": 8.699999809265137,
+      "attached": true,
+      "grounded": false,
+      "floorFound": false,
+      "bodySimulated": true,
+      "failure": false,
+      "paused": false,
+      "secondCandidate": true,
+      "thirdCandidate": false,
+      "phase": "supplement_input_released",
+      "sprite": "HimoHitoCraftSwing-v1 Swing 4",
+      "gesture": "candidate2",
+      "root": {
+        "x": 123.07579040527344,
+        "y": -1.0915963649749756
+      },
+      "velocity": {
+        "x": -5.785738945007324,
+        "y": -2.3914906978607178
+      },
+      "anchor": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "crown": {
+        "x": 122.9537582397461,
+        "y": -0.5714473724365234
+      },
+      "ropeFirst": {
+        "x": 122.9537582397461,
+        "y": -0.5714473724365234
+      },
+      "ropeLast": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "camera": {
+        "x": 123.79182434082031,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "leftHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rightHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "armAngles": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      }
+    },
+    {
+      "frame": 36,
+      "bridges": 0,
+      "selected": 6,
+      "knotCount": 1,
+      "time": 1.2200007438659668,
+      "fixedTime": 2.899998903274536,
+      "remaining": 24.0,
+      "input": 0.0,
+      "colliderBottom": -1.7809529304504395,
+      "floorY": 0.0,
+      "span": 6.000000953674316,
+      "ropeLength": 6.0,
+      "slack": 0.0,
+      "soleY": -1.6098250150680542,
+      "crownError": 0.0,
+      "contactError": -1.0,
+      "speed": 6.613718509674072,
+      "armWeight": 0.0,
+      "ortho": 8.699999809265137,
+      "attached": true,
+      "grounded": false,
+      "floorFound": false,
+      "bodySimulated": true,
+      "failure": false,
+      "paused": false,
+      "secondCandidate": true,
+      "thirdCandidate": false,
+      "phase": "supplement_input_released",
+      "sprite": "HimoHitoCraftSwing-v1 Swing 4",
+      "gesture": "candidate2",
+      "root": {
+        "x": 122.83049011230469,
+        "y": -1.1809529066085815
+      },
+      "velocity": {
+        "x": -6.213614463806152,
+        "y": -2.265450954437256
+      },
+      "anchor": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "crown": {
+        "x": 122.7646255493164,
+        "y": -0.644416868686676
+      },
+      "ropeFirst": {
+        "x": 122.7646255493164,
+        "y": -0.644416868686676
+      },
+      "ropeLast": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "camera": {
+        "x": 123.66978454589844,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "leftHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rightHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "armAngles": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      }
+    },
+    {
+      "frame": 37,
+      "bridges": 0,
+      "selected": 6,
+      "knotCount": 1,
+      "time": 1.2533340454101562,
+      "fixedTime": 2.91999888420105,
+      "remaining": 24.0,
+      "input": 0.0,
+      "colliderBottom": -1.823075294494629,
+      "floorY": 0.0,
+      "span": 6.000000476837158,
+      "ropeLength": 6.0,
+      "slack": 0.0,
+      "soleY": -1.665858268737793,
+      "crownError": 0.0,
+      "contactError": -1.0,
+      "speed": 6.772612571716309,
+      "armWeight": 0.0,
+      "ortho": 8.699999809265137,
+      "attached": true,
+      "grounded": false,
+      "floorFound": false,
+      "bodySimulated": true,
+      "failure": false,
+      "paused": false,
+      "secondCandidate": true,
+      "thirdCandidate": false,
+      "phase": "supplement_input_released",
+      "sprite": "HimoHitoCraftSwing-v1 Swing 5",
+      "gesture": "candidate2",
+      "root": {
+        "x": 122.7017822265625,
+        "y": -1.223075270652771
+      },
+      "velocity": {
+        "x": -6.412481307983398,
+        "y": -2.179074764251709
+      },
+      "anchor": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "crown": {
+        "x": 122.56398010253906,
+        "y": -0.712714433670044
+      },
+      "ropeFirst": {
+        "x": 122.56398010253906,
+        "y": -0.712714433670044
+      },
+      "ropeLast": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "camera": {
+        "x": 123.53185272216797,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "leftHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rightHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "armAngles": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      }
+    },
+    {
+      "frame": 38,
+      "bridges": 0,
+      "selected": 6,
+      "knotCount": 1,
+      "time": 1.2866673469543457,
+      "fixedTime": 2.959998846054077,
+      "remaining": 24.0,
+      "input": 0.0,
+      "colliderBottom": -1.9007436037063599,
+      "floorY": 0.0,
+      "span": 5.999999523162842,
+      "ropeLength": 6.0,
+      "slack": 4.76837158203125e-07,
+      "soleY": -1.7374298572540283,
+      "crownError": 0.0,
+      "contactError": -1.0,
+      "speed": 7.053328514099121,
+      "armWeight": 0.0,
+      "ortho": 8.699999809265137,
+      "attached": true,
+      "grounded": false,
+      "floorFound": false,
+      "bodySimulated": true,
+      "failure": false,
+      "paused": false,
+      "secondCandidate": true,
+      "thirdCandidate": false,
+      "phase": "supplement_input_released",
+      "sprite": "HimoHitoCraftSwing-v1 Swing 5",
+      "gesture": "candidate2",
+      "root": {
+        "x": 122.43341827392578,
+        "y": -1.300743579864502
+      },
+      "velocity": {
+        "x": -6.774837017059326,
+        "y": -1.9624027013778687
+      },
+      "anchor": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "crown": {
+        "x": 122.3541259765625,
+        "y": -0.7755223512649536
+      },
+      "ropeFirst": {
+        "x": 122.3541259765625,
+        "y": -0.7755223512649536
+      },
+      "ropeLast": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "camera": {
+        "x": 123.37884521484375,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "leftHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rightHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "armAngles": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      }
+    },
+    {
+      "frame": 39,
+      "bridges": 0,
+      "selected": 6,
+      "knotCount": 1,
+      "time": 1.3200006484985352,
+      "fixedTime": 2.9999990463256836,
+      "remaining": 24.0,
+      "input": 0.0,
+      "colliderBottom": -1.9678664207458496,
+      "floorY": 0.0,
+      "span": 6.000000476837158,
+      "ropeLength": 6.0,
+      "slack": 0.0,
+      "soleY": -1.8025680780410767,
+      "crownError": 0.0,
+      "contactError": -1.0,
+      "speed": 7.282691478729248,
+      "armWeight": 0.0,
+      "ortho": 8.699999809265137,
+      "attached": true,
+      "grounded": false,
+      "floorFound": false,
+      "bodySimulated": true,
+      "failure": false,
+      "paused": false,
+      "secondCandidate": true,
+      "thirdCandidate": false,
+      "phase": "supplement_input_released",
+      "sprite": "HimoHitoCraftSwing-v1 Swing 5",
+      "gesture": "candidate2",
+      "root": {
+        "x": 122.15225982666016,
+        "y": -1.3678663969039917
+      },
+      "velocity": {
+        "x": -7.083323955535889,
+        "y": -1.6923696994781494
+      },
+      "anchor": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "crown": {
+        "x": 122.135986328125,
+        "y": -0.8318334221839905
+      },
+      "ropeFirst": {
+        "x": 122.135986328125,
+        "y": -0.8318334221839905
+      },
+      "ropeLast": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "camera": {
+        "x": 123.21167755126953,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "leftHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rightHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "armAngles": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      }
+    },
+    {
+      "frame": 40,
+      "bridges": 0,
+      "selected": 6,
+      "knotCount": 1,
+      "time": 1.3533339500427246,
+      "fixedTime": 3.0199990272521973,
+      "remaining": 24.0,
+      "input": 0.0,
+      "colliderBottom": -1.9968783855438232,
+      "floorY": 0.0,
+      "span": 5.999999523162842,
+      "ropeLength": 6.0,
+      "slack": 4.76837158203125e-07,
+      "soleY": -1.8591160774230957,
+      "crownError": 0.0,
+      "contactError": -1.0,
+      "speed": 7.377496719360352,
+      "armWeight": 0.0,
+      "ortho": 8.699999809265137,
+      "attached": true,
+      "grounded": false,
+      "floorFound": false,
+      "bodySimulated": true,
+      "failure": false,
+      "paused": false,
+      "secondCandidate": true,
+      "thirdCandidate": false,
+      "phase": "supplement_input_released",
+      "sprite": "HimoHitoCraftSwing-v1 Swing 5",
+      "gesture": "candidate2",
+      "root": {
+        "x": 122.00762176513672,
+        "y": -1.3968783617019653
+      },
+      "velocity": {
+        "x": -7.21502685546875,
+        "y": -1.53975510597229
+      },
+      "anchor": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "crown": {
+        "x": 121.90995788574219,
+        "y": -0.8795565962791443
+      },
+      "ropeFirst": {
+        "x": 121.90995788574219,
+        "y": -0.8795565962791443
+      },
+      "ropeLast": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "camera": {
+        "x": 123.03130340576172,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "leftHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rightHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "armAngles": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      }
+    },
+    {
+      "frame": 41,
+      "bridges": 0,
+      "selected": 6,
+      "knotCount": 1,
+      "time": 1.386667251586914,
+      "fixedTime": 3.0599989891052246,
+      "remaining": 24.0,
+      "input": 0.0,
+      "colliderBottom": -2.0448179244995117,
+      "floorY": 0.0,
+      "span": 6.0,
+      "ropeLength": 6.0,
+      "slack": 0.0,
+      "soleY": -1.906957983970642,
+      "crownError": 0.0,
+      "contactError": -1.0,
+      "speed": 7.526373386383057,
+      "armWeight": 0.0,
+      "ortho": 8.699999809265137,
+      "attached": true,
+      "grounded": false,
+      "floorFound": false,
+      "bodySimulated": true,
+      "failure": false,
+      "paused": false,
+      "secondCandidate": true,
+      "thirdCandidate": false,
+      "phase": "supplement_input_released",
+      "sprite": "HimoHitoCraftSwing-v1 Swing 5",
+      "gesture": "candidate2",
+      "root": {
+        "x": 121.71187591552734,
+        "y": -1.4448180198669434
+      },
+      "velocity": {
+        "x": -7.429266929626465,
+        "y": -1.2051085233688354
+      },
+      "anchor": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "crown": {
+        "x": 121.67840576171875,
+        "y": -0.9187399744987488
+      },
+      "ropeFirst": {
+        "x": 121.67840576171875,
+        "y": -0.9187399744987488
+      },
+      "ropeLast": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "camera": {
+        "x": 122.83872985839844,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "leftHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rightHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "armAngles": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      }
+    },
+    {
+      "frame": 42,
+      "bridges": 0,
+      "selected": 6,
+      "knotCount": 1,
+      "time": 1.4200005531311035,
+      "fixedTime": 3.099998950958252,
+      "remaining": 24.0,
+      "input": 0.0,
+      "colliderBottom": -2.0783019065856934,
+      "floorY": 0.0,
+      "span": 6.0,
+      "ropeLength": 6.0,
+      "slack": 0.0,
+      "soleY": -1.9453132152557373,
+      "crownError": 0.0,
+      "contactError": -1.0,
+      "speed": 7.620003700256348,
+      "armWeight": 0.0,
+      "ortho": 8.699999809265137,
+      "attached": true,
+      "grounded": false,
+      "floorFound": false,
+      "bodySimulated": true,
+      "failure": false,
+      "paused": false,
+      "secondCandidate": true,
+      "thirdCandidate": false,
+      "phase": "supplement_input_released",
+      "sprite": "HimoHitoCraftSwing-v1 Swing 5",
+      "gesture": "candidate2",
+      "root": {
+        "x": 121.4098129272461,
+        "y": -1.4783018827438354
+      },
+      "velocity": {
+        "x": -7.5735554695129395,
+        "y": -0.8400697708129883
+      },
+      "anchor": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "crown": {
+        "x": 121.4426040649414,
+        "y": -0.9487770795822144
+      },
+      "ropeFirst": {
+        "x": 121.4426040649414,
+        "y": -0.9487770795822144
+      },
+      "ropeLast": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "camera": {
+        "x": 122.63507843017578,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "leftHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rightHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "armAngles": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      }
+    },
+    {
+      "frame": 43,
+      "bridges": 0,
+      "selected": 6,
+      "knotCount": 1,
+      "time": 1.453334093093872,
+      "fixedTime": 3.1199989318847656,
+      "remaining": 24.0,
+      "input": 0.0,
+      "colliderBottom": -2.089350700378418,
+      "floorY": 0.0,
+      "span": 6.000000476837158,
+      "ropeLength": 6.0,
+      "slack": 0.0,
+      "soleY": -1.9722944498062134,
+      "crownError": 0.0,
+      "contactError": -1.0,
+      "speed": 7.645873546600342,
+      "armWeight": 0.0,
+      "ortho": 8.699999809265137,
+      "attached": true,
+      "grounded": false,
+      "floorFound": false,
+      "bodySimulated": true,
+      "failure": false,
+      "paused": false,
+      "secondCandidate": true,
+      "thirdCandidate": false,
+      "phase": "supplement_input_released",
+      "sprite": "HimoHitoCraftSwing-v1 Swing 5",
+      "gesture": "candidate2",
+      "root": {
+        "x": 121.25733184814453,
+        "y": -1.48935067653656
+      },
+      "velocity": {
+        "x": -7.618223190307617,
+        "y": -0.6496588587760925
+      },
+      "anchor": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "crown": {
+        "x": 121.20376586914062,
+        "y": -0.9678902626037598
+      },
+      "ropeFirst": {
+        "x": 121.20376586914062,
+        "y": -0.9678902626037598
+      },
+      "ropeLast": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "camera": {
+        "x": 122.42154693603516,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "leftHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rightHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "armAngles": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      }
+    },
+    {
+      "frame": 44,
+      "bridges": 0,
+      "selected": 6,
+      "knotCount": 1,
+      "time": 1.4866673946380615,
+      "fixedTime": 3.159998893737793,
+      "remaining": 24.0,
+      "input": 0.0,
+      "colliderBottom": -2.099780559539795,
+      "floorY": 0.0,
+      "span": 6.000000476837158,
+      "ropeLength": 6.0,
+      "slack": 0.0,
+      "soleY": -1.9887243509292603,
+      "crownError": 0.0,
+      "contactError": -1.0,
+      "speed": 7.655574798583984,
+      "armWeight": 0.0,
+      "ortho": 8.699999809265137,
+      "attached": true,
+      "grounded": false,
+      "floorFound": false,
+      "bodySimulated": true,
+      "failure": false,
+      "paused": false,
+      "secondCandidate": true,
+      "thirdCandidate": false,
+      "phase": "supplement_input_released",
+      "sprite": "HimoHitoCraftSwing-v1 Swing 5",
+      "gesture": "candidate2",
+      "root": {
+        "x": 120.95133972167969,
+        "y": -1.4997804164886475
+      },
+      "velocity": {
+        "x": -7.651132106781006,
+        "y": -0.2607695758342743
+      },
+      "anchor": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "crown": {
+        "x": 120.96398162841797,
+        "y": -0.9770282506942749
+      },
+      "ropeFirst": {
+        "x": 120.96398162841797,
+        "y": -0.9770282506942749
+      },
+      "ropeLast": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "camera": {
+        "x": 122.19940948486328,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "leftHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rightHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "armAngles": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      }
+    },
+    {
+      "frame": 45,
+      "bridges": 0,
+      "selected": 6,
+      "knotCount": 1,
+      "time": 1.520000696182251,
+      "fixedTime": 3.1999988555908203,
+      "remaining": 24.0,
+      "input": 0.0,
+      "colliderBottom": -2.0946426391601562,
+      "floorY": 0.0,
+      "span": 6.0,
+      "ropeLength": 6.0,
+      "slack": 0.0,
+      "soleY": -1.9944424629211426,
+      "crownError": 0.0,
+      "contactError": -1.0,
+      "speed": 7.609423637390137,
+      "armWeight": 0.0,
+      "ortho": 8.699999809265137,
+      "attached": true,
+      "grounded": false,
+      "floorFound": false,
+      "bodySimulated": true,
+      "failure": false,
+      "paused": false,
+      "secondCandidate": true,
+      "thirdCandidate": false,
+      "phase": "supplement_input_released",
+      "sprite": "HimoHitoCraftSwing-v1 Swing 5",
+      "gesture": "candidate2",
+      "root": {
+        "x": 120.64649963378906,
+        "y": -1.4946424961090088
+      },
+      "velocity": {
+        "x": -7.608336448669434,
+        "y": 0.12862151861190796
+      },
+      "anchor": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "crown": {
+        "x": 120.72466278076172,
+        "y": -0.9761447906494141
+      },
+      "ropeFirst": {
+        "x": 120.72466278076172,
+        "y": -0.9761447906494141
+      },
+      "ropeLast": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "camera": {
+        "x": 121.97004699707031,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "leftHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rightHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "armAngles": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      }
+    },
+    {
+      "frame": 46,
+      "bridges": 0,
+      "selected": 6,
+      "knotCount": 1,
+      "time": 1.5533339977264404,
+      "fixedTime": 3.219998836517334,
+      "remaining": 24.0,
+      "input": 0.0,
+      "colliderBottom": -2.08634614944458,
+      "floorY": 0.0,
+      "span": 6.0,
+      "ropeLength": 6.0,
+      "slack": 0.0,
+      "soleY": -1.98822021484375,
+      "crownError": 0.0,
+      "contactError": -1.0,
+      "speed": 7.565608501434326,
+      "armWeight": 0.0,
+      "ortho": 8.699999809265137,
+      "attached": true,
+      "grounded": false,
+      "floorFound": false,
+      "bodySimulated": true,
+      "failure": false,
+      "paused": false,
+      "secondCandidate": true,
+      "thirdCandidate": false,
+      "phase": "supplement_input_released",
+      "sprite": "HimoHitoCraftSwing-v1 Swing 5",
+      "gesture": "candidate2",
+      "root": {
+        "x": 120.49545288085938,
+        "y": -1.4863460063934326
+      },
+      "velocity": {
+        "x": -7.558852672576904,
+        "y": 0.319649338722229
+      },
+      "anchor": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "crown": {
+        "x": 120.48768615722656,
+        "y": -0.9641215801239014
+      },
+      "ropeFirst": {
+        "x": 120.48768615722656,
+        "y": -0.9641215801239014
+      },
+      "ropeLast": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "camera": {
+        "x": 121.73490905761719,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "leftHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rightHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "armAngles": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      }
+    },
+    {
+      "frame": 47,
+      "bridges": 0,
+      "selected": 6,
+      "knotCount": 1,
+      "time": 1.5866672992706299,
+      "fixedTime": 3.2599987983703613,
+      "remaining": 24.0,
+      "input": 0.0,
+      "colliderBottom": -2.058781623840332,
+      "floorY": 0.0,
+      "span": 6.0,
+      "ropeLength": 6.0,
+      "slack": 0.0,
+      "soleY": -1.9716675281524658,
+      "crownError": 0.0,
+      "contactError": -1.0,
+      "speed": 7.437201499938965,
+      "armWeight": 0.0,
+      "ortho": 8.699999809265137,
+      "attached": true,
+      "grounded": false,
+      "floorFound": false,
+      "bodySimulated": true,
+      "failure": false,
+      "paused": false,
+      "secondCandidate": true,
+      "thirdCandidate": false,
+      "phase": "supplement_input_released",
+      "sprite": "HimoHitoCraftSwing-v1 Swing 5",
+      "gesture": "candidate2",
+      "root": {
+        "x": 120.19791412353516,
+        "y": -1.4587814807891846
+      },
+      "velocity": {
+        "x": -7.405411243438721,
+        "y": 0.6869153380393982
+      },
+      "anchor": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "crown": {
+        "x": 120.25448608398438,
+        "y": -0.9426396489143372
+      },
+      "ropeFirst": {
+        "x": 120.25448608398438,
+        "y": -0.9426396489143372
+      },
+      "ropeLast": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "camera": {
+        "x": 121.49551391601562,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "leftHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rightHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "armAngles": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      }
+    },
+    {
+      "frame": 48,
+      "bridges": 0,
+      "selected": 6,
+      "knotCount": 1,
+      "time": 1.6200006008148193,
+      "fixedTime": 3.2999987602233887,
+      "remaining": 24.0,
+      "input": 0.0,
+      "colliderBottom": -2.0175507068634033,
+      "floorY": 0.0,
+      "span": 5.999999523162842,
+      "ropeLength": 6.0,
+      "slack": 4.76837158203125e-07,
+      "soleY": -1.9452550411224365,
+      "crownError": 0.0,
+      "contactError": -1.0,
+      "speed": 7.255731105804443,
+      "armWeight": 0.0,
+      "ortho": 8.699999809265137,
+      "attached": true,
+      "grounded": false,
+      "floorFound": false,
+      "bodySimulated": true,
+      "failure": false,
+      "paused": false,
+      "secondCandidate": true,
+      "thirdCandidate": false,
+      "phase": "supplement_input_released",
+      "sprite": "HimoHitoCraftSwing-v1 Swing 5",
+      "gesture": "candidate2",
+      "root": {
+        "x": 119.90874481201172,
+        "y": -1.4175506830215454
+      },
+      "velocity": {
+        "x": -7.182918548583984,
+        "y": 1.02533757686615
+      },
+      "anchor": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "crown": {
+        "x": 120.02639770507812,
+        "y": -0.9122195243835449
+      },
+      "ropeFirst": {
+        "x": 120.02639770507812,
+        "y": -0.9122195243835449
+      },
+      "ropeLast": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "camera": {
+        "x": 121.25341033935547,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "leftHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rightHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "armAngles": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      }
+    },
+    {
+      "frame": 49,
+      "bridges": 0,
+      "selected": 6,
+      "knotCount": 1,
+      "time": 1.6533339023590088,
+      "fixedTime": 3.3199987411499023,
+      "remaining": 24.0,
+      "input": 0.0,
+      "colliderBottom": -1.992268681526184,
+      "floorY": 0.0,
+      "span": 6.000000476837158,
+      "ropeLength": 6.0,
+      "slack": 0.0,
+      "soleY": -1.908637285232544,
+      "crownError": 0.0,
+      "contactError": -1.0,
+      "speed": 7.145700931549072,
+      "armWeight": 0.0,
+      "ortho": 8.699999809265137,
+      "attached": true,
+      "grounded": false,
+      "floorFound": false,
+      "bodySimulated": true,
+      "failure": false,
+      "paused": false,
+      "secondCandidate": true,
+      "thirdCandidate": false,
+      "phase": "supplement_input_released",
+      "sprite": "HimoHitoCraftSwing-v1 Swing 5",
+      "gesture": "candidate2",
+      "root": {
+        "x": 119.76811218261719,
+        "y": -1.3922686576843262
+      },
+      "velocity": {
+        "x": -7.047512054443359,
+        "y": 1.180513858795166
+      },
+      "anchor": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "crown": {
+        "x": 119.80561065673828,
+        "y": -0.872582733631134
+      },
+      "ropeFirst": {
+        "x": 119.80561065673828,
+        "y": -0.872582733631134
+      },
+      "ropeLast": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "camera": {
+        "x": 121.01018524169922,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "leftHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rightHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "armAngles": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      }
+    },
+    {
+      "frame": 50,
+      "bridges": 0,
+      "selected": 6,
+      "knotCount": 1,
+      "time": 1.6866672039031982,
+      "fixedTime": 3.3599987030029297,
+      "remaining": 24.0,
+      "input": 0.0,
+      "colliderBottom": -1.9334774017333984,
+      "floorY": 0.0,
+      "span": 5.999999046325684,
+      "ropeLength": 6.0,
+      "slack": 9.5367431640625e-07,
+      "soleY": -1.8638614416122437,
+      "crownError": 0.0,
+      "contactError": -1.0,
+      "speed": 6.888492107391357,
+      "armWeight": 0.0,
+      "ortho": 8.699999809265137,
+      "attached": true,
+      "grounded": false,
+      "floorFound": false,
+      "bodySimulated": true,
+      "failure": false,
+      "paused": false,
+      "secondCandidate": true,
+      "thirdCandidate": false,
+      "phase": "supplement_input_released",
+      "sprite": "HimoHitoCraftSwing-v1 Swing 5",
+      "gesture": "candidate2",
+      "root": {
+        "x": 119.49624633789062,
+        "y": -1.3334773778915405
+      },
+      "velocity": {
+        "x": -6.7325520515441895,
+        "y": 1.4574182033538818
+      },
+      "anchor": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "crown": {
+        "x": 119.59268188476562,
+        "y": -0.8257836699485779
+      },
+      "ropeFirst": {
+        "x": 119.59268188476562,
+        "y": -0.8257836699485779
+      },
+      "ropeLast": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "camera": {
+        "x": 120.7674331665039,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "leftHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rightHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "armAngles": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      }
+    },
+    {
+      "frame": 51,
+      "bridges": 0,
+      "selected": 6,
+      "knotCount": 1,
+      "time": 1.7200007438659668,
+      "fixedTime": 3.399998903274536,
+      "remaining": 24.0,
+      "input": 0.0,
+      "colliderBottom": -1.865402340888977,
+      "floorY": 0.0,
+      "span": 6.000000953674316,
+      "ropeLength": 6.0,
+      "slack": 0.0,
+      "soleY": -1.8118908405303955,
+      "crownError": 0.0,
+      "contactError": -1.0,
+      "speed": 6.58396577835083,
+      "armWeight": 0.0,
+      "ortho": 8.699999809265137,
+      "attached": true,
+      "grounded": false,
+      "floorFound": false,
+      "bodySimulated": true,
+      "failure": false,
+      "paused": false,
+      "secondCandidate": true,
+      "thirdCandidate": false,
+      "phase": "supplement_input_released",
+      "sprite": "HimoHitoCraftSwing-v1 Swing 5",
+      "gesture": "candidate2",
+      "root": {
+        "x": 119.23863220214844,
+        "y": -1.2654023170471191
+      },
+      "velocity": {
+        "x": -6.365019798278809,
+        "y": 1.6837844848632812
+      },
+      "anchor": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "crown": {
+        "x": 119.38872528076172,
+        "y": -0.7727797627449036
+      },
+      "ropeFirst": {
+        "x": 119.38872528076172,
+        "y": -0.7727797627449036
+      },
+      "ropeLast": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "camera": {
+        "x": 120.52667999267578,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "leftHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rightHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "armAngles": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      }
+    },
+    {
+      "frame": 52,
+      "bridges": 0,
+      "selected": 6,
+      "knotCount": 1,
+      "time": 1.7533340454101562,
+      "fixedTime": 3.41999888420105,
+      "remaining": 24.0,
+      "input": 0.0,
+      "colliderBottom": -1.828566312789917,
+      "floorY": 0.0,
+      "span": 5.999998569488525,
+      "ropeLength": 6.0,
+      "slack": 1.430511474609375e-06,
+      "soleY": -1.7532672882080078,
+      "crownError": 0.0,
+      "contactError": -1.0,
+      "speed": 6.414869785308838,
+      "armWeight": 0.0,
+      "ortho": 8.699999809265137,
+      "attached": true,
+      "grounded": false,
+      "floorFound": false,
+      "bodySimulated": true,
+      "failure": false,
+      "paused": false,
+      "secondCandidate": true,
+      "thirdCandidate": false,
+      "phase": "supplement_input_released",
+      "sprite": "HimoHitoCraftSwing-v1 Swing 5",
+      "gesture": "candidate2",
+      "root": {
+        "x": 119.11576080322266,
+        "y": -1.228566288948059
+      },
+      "velocity": {
+        "x": -6.1640496253967285,
+        "y": 1.7762442827224731
+      },
+      "anchor": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "crown": {
+        "x": 119.19589233398438,
+        "y": -0.7141028642654419
+      },
+      "ropeFirst": {
+        "x": 119.19589233398438,
+        "y": -0.7141028642654419
+      },
+      "ropeLast": {
+        "x": 120.9000015258789,
+        "y": 4.5
+      },
+      "camera": {
+        "x": 120.28945922851562,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "leftHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rightHand": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "armAngles": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      }
+    }
+  ],
+  "checks": [
+    {
+      "name": "Supplement starts with original grounded attachment",
+      "pass": true
+    },
+    {
+      "name": "Supplement small arc via original A_D",
+      "pass": true
+    },
+    {
+      "name": "Supplement stays airborne",
+      "pass": true
+    },
+    {
+      "name": "Supplement contains measurable braking",
+      "pass": true
+    },
+    {
+      "name": "Supplement no resource or layout change",
+      "pass": true
+    },
+    {
+      "name": "Supplement no gameplay errors",
+      "pass": true
+    }
+  ],
+  "finished": true
+}

@@ -1,0 +1,29 @@
+{
+  "final_manual_build": "Build_r3",
+  "main_capture_build": "Build_r2",
+  "supplement_capture_build": "Build_r3",
+  "builds": {
+    "Build_r2": {
+      "exe_relative": "Build_r2/ConnectionSwingProof.exe",
+      "exe_sha256": "A3D4FA240C51333301EFCC16714FF60722F00E803AFE1FB6750EC963CC0F1707",
+      "assembly_sha256": "40E1924D70FFB61592A4C4150E2424450044F98CB525D81C1C238EC0E2EC182A",
+      "summary": {
+        "result": "Succeeded",
+        "errors": 0,
+        "warnings": 0,
+        "bytes": 535597896
+      }
+    },
+    "Build_r3": {
+      "exe_relative": "Build_r3/ConnectionSwingProof.exe",
+      "exe_sha256": "A3D4FA240C51333301EFCC16714FF60722F00E803AFE1FB6750EC963CC0F1707",
+      "assembly_sha256": "70558F25D054FCCCEA3CAB4F9A4C6C2A1AA648E8A238AF27191C36DF86A6B176",
+      "summary": {
+        "result": "Succeeded",
+        "errors": 0,
+        "warnings": 0,
+        "bytes": 535602146
+      }
+    }
+  }
+}

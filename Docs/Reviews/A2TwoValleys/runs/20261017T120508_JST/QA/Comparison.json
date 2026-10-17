@@ -1,0 +1,205 @@
+{
+  "method": "Explicit automatic original APIs/input fields; offline30fps; no OS input. Display input mirrored before LateUpdate for both candidates.",
+  "frames": [
+    411,
+    412
+  ],
+  "aligned_prefix_until_api_pause": [
+    318,
+    318
+  ],
+  "maximum_deltas_prefix": {
+    "root": 0,
+    "velocity": 0,
+    "camera": 0,
+    "input": 0,
+    "remaining": 0,
+    "ropeLength": 0,
+    "selected": 0,
+    "bridges": 0,
+    "fixedTime": 0
+  },
+  "foot": [
+    {
+      "candidate": "candidate2",
+      "phase": "standing",
+      "frame": 10,
+      "root": {
+        "x": 117.4000015258789,
+        "y": 0.6149998903274536
+      },
+      "collider_bottom": 0.014999866485595703,
+      "floor_y": 7.450580596923828e-08,
+      "sole_y": 0.014999926090240479,
+      "sole_minus_floor": 0.01499985158443451,
+      "sole_minus_collider": 5.960464477539063e-08,
+      "grounded": true,
+      "slack": 0.0
+    },
+    {
+      "candidate": "candidate2",
+      "phase": "ground_attach_slack",
+      "frame": 41,
+      "root": {
+        "x": 117.4000015258789,
+        "y": 0.6149998903274536
+      },
+      "collider_bottom": 0.014999866485595703,
+      "floor_y": 7.450580596923828e-08,
+      "sole_y": 0.08875101804733276,
+      "sole_minus_floor": 0.0887509435415268,
+      "sole_minus_collider": 0.07375115156173706,
+      "grounded": true,
+      "slack": 0.7709250450134277
+    },
+    {
+      "candidate": "candidate3",
+      "phase": "standing",
+      "frame": 10,
+      "root": {
+        "x": 117.4000015258789,
+        "y": 0.6149998903274536
+      },
+      "collider_bottom": 0.014999866485595703,
+      "floor_y": 7.450580596923828e-08,
+      "sole_y": 0.014999926090240479,
+      "sole_minus_floor": 0.01499985158443451,
+      "sole_minus_collider": 5.960464477539063e-08,
+      "grounded": true,
+      "slack": 0.0
+    },
+    {
+      "candidate": "candidate3",
+      "phase": "ground_attach_slack",
+      "frame": 41,
+      "root": {
+        "x": 117.4000015258789,
+        "y": 0.6149998903274536
+      },
+      "collider_bottom": 0.014999866485595703,
+      "floor_y": 7.450580596923828e-08,
+      "sole_y": 0.014999866485595703,
+      "sole_minus_floor": 0.014999791979789734,
+      "sole_minus_collider": 0.0,
+      "grounded": true,
+      "slack": 0.7709250450134277
+    }
+  ],
+  "crown_landmark_error_max": 0.0,
+  "ring_contact_error_max": 0.0,
+  "gesture_counts": {
+    "apex_prepare": 62,
+    "attachment_handoff": 18,
+    "coast": 35,
+    "fast_bottom": 43,
+    "ground_brace": 47,
+    "hidden": 165,
+    "input_brake": 2,
+    "input_pump": 32,
+    "release_handoff": 8
+  },
+  "checks": [
+    [
+      {
+        "name": "Ground attach existing length6",
+        "pass": true
+      },
+      {
+        "name": "Release momentum unchanged",
+        "pass": true
+      },
+      {
+        "name": "Representative middle-bank landing",
+        "pass": true
+      },
+      {
+        "name": "First R entry24_6_0",
+        "pass": true
+      },
+      {
+        "name": "Reattach length6",
+        "pass": true
+      },
+      {
+        "name": "Free arc through normal A_D braking",
+        "pass": true
+      },
+      {
+        "name": "Two free angular turnarounds",
+        "pass": true
+      },
+      {
+        "name": "Pause keeps root",
+        "pass": true
+      },
+      {
+        "name": "Second R entry24_6_0",
+        "pass": true
+      },
+      {
+        "name": "Original bridge and resource",
+        "pass": true
+      },
+      {
+        "name": "Bridge R entry24_6_0",
+        "pass": true
+      },
+      {
+        "name": "No gameplay errors",
+        "pass": true
+      }
+    ],
+    [
+      {
+        "name": "Ground attach existing length6",
+        "pass": true
+      },
+      {
+        "name": "Release momentum unchanged",
+        "pass": true
+      },
+      {
+        "name": "Representative middle-bank landing",
+        "pass": true
+      },
+      {
+        "name": "First R entry24_6_0",
+        "pass": true
+      },
+      {
+        "name": "Reattach length6",
+        "pass": true
+      },
+      {
+        "name": "Free arc through normal A_D braking",
+        "pass": true
+      },
+      {
+        "name": "Two free angular turnarounds",
+        "pass": true
+      },
+      {
+        "name": "Pause keeps root",
+        "pass": true
+      },
+      {
+        "name": "Second R entry24_6_0",
+        "pass": true
+      },
+      {
+        "name": "Original bridge and resource",
+        "pass": true
+      },
+      {
+        "name": "Bridge R entry24_6_0",
+        "pass": true
+      },
+      {
+        "name": "No gameplay errors",
+        "pass": true
+      }
+    ]
+  ],
+  "pause_note": "Realtime API pause can have different frame counts. Compare the aligned prefix and each pause internally; not an Esc test.",
+  "physics_files_unchanged": "See SourceProtection.json; no root/joint/velocity/force modifications in new display code."
+}

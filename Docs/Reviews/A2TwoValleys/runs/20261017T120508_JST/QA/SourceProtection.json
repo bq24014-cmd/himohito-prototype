@@ -1,0 +1,47 @@
+{
+  "production_head": true,
+  "production_branch": true,
+  "tracked_status": true,
+  "normal_status": true,
+  "staged": true,
+  "selected_production_files": {
+    "Assets/Scripts/RopeResource.cs": true,
+    "Assets/Scripts/RopeController.cs": true,
+    "Assets/Scripts/PlayerMover.cs": true,
+    "Assets/Scripts/RopePlatformBuilder.cs": true,
+    "Assets/Scripts/MainStageRespawnOnFall.cs": true,
+    "Assets/Scenes/MainStage.unity": true,
+    "Assets/Scenes/Tutorial.unity": true,
+    "README.md": true,
+    "Docs/LEARNING_LOG.md": true,
+    "ProjectSettings/InputManager.asset": true,
+    "ProjectSettings/Physics2DSettings.asset": true
+  },
+  "baseline_manual_source": true,
+  "locked_five": {
+    "Assets/Scripts/MainStageRespawnOnFall.cs": true,
+    "Assets/Scripts/PlayerMover.cs": true,
+    "Assets/Scripts/RopeController.cs": true,
+    "Assets/Scripts/RopePlatformBuilder.cs": true,
+    "Assets/Scripts/RopeResource.cs": true
+  },
+  "scene_packages_settings_art_shader_unchanged": true,
+  "frozen_builds": {
+    "PlayerSwingCandidate2_20261017/Build_r1": true,
+    "PlayerSwingCandidate2_20261017/Build_r3": true,
+    "PlayerSwingManualBuild_20261017/Build": true
+  },
+  "changed": [
+    "Assets/A2Proof/A2Fixture.cs",
+    "Assets/PlayerPresentation/ManualPresentationSession.cs",
+    "Assets/PlayerPresentation/PlayerMotionPresentation.cs",
+    "Assets/Scripts/HookYarnKnotVisual.cs",
+    "Assets/Scripts/RopeBodyVisual.cs"
+  ],
+  "added": [
+    "Assets/PlayerPresentation/ActiveSwingArms.cs",
+    "Assets/PlayerPresentation/ActiveSwingArms.cs.meta",
+    "Assets/PlayerPresentation/ConnectionGestureCapture.cs",
+    "Assets/PlayerPresentation/ConnectionGestureCapture.cs.meta"
+  ]
+}

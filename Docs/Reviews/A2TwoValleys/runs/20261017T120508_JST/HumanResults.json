@@ -1,0 +1,18 @@
+{
+  "new_candidate_human_playtest_participants": 0,
+  "new_candidate_os_keys": 0,
+  "formal_adoption": "未承認",
+  "production_integrated": false,
+  "candidate2_status": "未正式採用、比較基準として保持",
+  "human_reported_baseline_issues": [
+    "接続時に足が浮いて見える",
+    "フック中央の8字の結びが不自然",
+    "振り子中にただ引っ張られている印象"
+  ],
+  "reference_images": [
+    "スクリーンショット 2026-10-17 112419.png",
+    "スクリーンショット 2026-10-17 112437.png"
+  ],
+  "new_candidate_assessment": "Human Review待ち",
+  "a2_r1_recommendation": "不採用推奨を維持"
+}

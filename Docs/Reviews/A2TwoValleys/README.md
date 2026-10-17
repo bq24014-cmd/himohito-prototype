@@ -2,7 +2,11 @@
 
 固定branch：`review/a2-two-valleys`。[LATEST.json](LATEST.json)の最新報告・画像・QAを同じcommitから読んでください。ZIPの再添付は不要です。
 
-## 最新：候補2／候補1 手動操作専用Build
+## 最新：接続→身体を使う振り子の新候補1案
+
+[20261017T120508_JST の報告](runs/20261017T120508_JST/Report.md)／[通常速度比較動画](runs/20261017T120508_JST/Videos/Main_SideBySide_30fps_silent.mp4)／[画像](runs/20261017T120508_JST/Figures/)／[手動起動方法](runs/20261017T120508_JST/Launch.md)。接続接地時の足裏補正、リングの縁への巻き付き、入力／速度に対応する肩・肘・胴を1案にまとめた。自動比較の軌道差0、最終手動版の35秒待機を確認。腕の質感等はまだ弱く、Human採用・OS操作・音は未確認。候補2・旧資料・Productionは保持。
+
+## 前回：候補2／候補1 手動操作専用Build
 
 [20261017T110609_JST の報告](runs/20261017T110609_JST/Report.md)／[起動方法](runs/20261017T110609_JST/Launch.md)。新しい隔離Buildで表示初期化と自動QAを分離し、候補2を既定にした。両候補のCompile／Build／起動・35秒以上待機・自動driver不在を確認。画面取得・OSキー反応・実操作感は未確認。Build本体はWindows側のみ保持、Human確認待ち。過去の自動動画・凍結Build・Productionは保持。
 

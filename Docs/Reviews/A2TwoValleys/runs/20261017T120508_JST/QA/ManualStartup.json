@@ -1,0 +1,148 @@
+{
+  "default_new": {
+    "process": {
+      "os_keys": 0,
+      "screen": false,
+      "input_driving": false,
+      "final_record_exists": true,
+      "case": "default_new",
+      "alive_after_35s_observation": true,
+      "muted_for_diagnostic_only": true,
+      "stop_method": "External shell stops only its own validated new Build process after observation; no in-game auto-exit."
+    },
+    "state": {
+      "method": "Read-only observation. No OS keys, internal input/API driving, screenshot, or audio assessment.",
+      "candidate": "candidate3",
+      "manual": true,
+      "secondCandidate": true,
+      "thirdCandidate": true,
+      "moverEnabled": true,
+      "ropeEnabled": true,
+      "bodySimulated": true,
+      "layoutUnchanged": true,
+      "shaderSupported": true,
+      "realtimeElapsed": 35.20211410522461,
+      "scaledElapsed": 35.28084945678711,
+      "captureDeltaTime": 0.0,
+      "timeScale": 1.0,
+      "fixedDeltaTime": 0.019999992102384567,
+      "captureFramerate": 0,
+      "presentationComponents": 1,
+      "captureDrivers": 0,
+      "inputDrivers": 0,
+      "qaDrivers": 0,
+      "gestureCaptureDrivers": 0,
+      "state": {
+        "note": "Manual session, observation only",
+        "hook": "",
+        "position": {
+          "x": 117.4000015258789,
+          "y": 0.6149998903274536
+        },
+        "velocity": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "fixedTime": 35.29998779296875,
+        "remaining": 24.0,
+        "movementInput": 0.0,
+        "selected": 6,
+        "bridges": 0,
+        "section": 6,
+        "errors": 0,
+        "inputDriverCount": 0,
+        "qaDriverCount": 0,
+        "grounded": true,
+        "attached": false,
+        "arrived": false,
+        "camera": {
+          "position": {
+            "x": 117.4000015258789,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "aspect": 1.7777777910232544,
+          "captureAspect": 1.7777777910232544,
+          "renderOnlyNoHUD": false,
+          "sourcePixelWidth": 1280,
+          "sourcePixelHeight": 720,
+          "follow": "{\"target\":{\"instanceID\":1266},\"smoothTime\":0.18000000715255738,\"horizontalOffset\":0.0,\"verticalSmoothTime\":0.2800000011920929,\"followVerticalInSectionTen\":true}"
+        }
+      }
+    }
+  },
+  "candidate2": {
+    "process": {
+      "stop_method": "External shell stops only its own validated new Build process after observation; no in-game auto-exit.",
+      "case": "candidate2",
+      "alive_after_35s_observation": true,
+      "input_driving": false,
+      "final_record_exists": true,
+      "screen": false,
+      "os_keys": 0,
+      "muted_for_diagnostic_only": true
+    },
+    "state": {
+      "method": "Read-only observation. No OS keys, internal input/API driving, screenshot, or audio assessment.",
+      "candidate": "candidate2",
+      "manual": true,
+      "secondCandidate": true,
+      "thirdCandidate": false,
+      "moverEnabled": true,
+      "ropeEnabled": true,
+      "bodySimulated": true,
+      "layoutUnchanged": true,
+      "shaderSupported": true,
+      "realtimeElapsed": 35.12237548828125,
+      "scaledElapsed": 35.186546325683594,
+      "captureDeltaTime": 0.0,
+      "timeScale": 1.0,
+      "fixedDeltaTime": 0.019999992102384567,
+      "captureFramerate": 0,
+      "presentationComponents": 1,
+      "captureDrivers": 0,
+      "inputDrivers": 0,
+      "qaDrivers": 0,
+      "gestureCaptureDrivers": 0,
+      "state": {
+        "note": "Manual session, observation only",
+        "hook": "",
+        "position": {
+          "x": 117.4000015258789,
+          "y": 0.6149998903274536
+        },
+        "velocity": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "fixedTime": 35.199989318847656,
+        "remaining": 24.0,
+        "movementInput": 0.0,
+        "selected": 6,
+        "bridges": 0,
+        "section": 6,
+        "errors": 0,
+        "inputDriverCount": 0,
+        "qaDriverCount": 0,
+        "grounded": true,
+        "attached": false,
+        "arrived": false,
+        "camera": {
+          "position": {
+            "x": 117.4000015258789,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "aspect": 1.7777777910232544,
+          "captureAspect": 1.7777777910232544,
+          "renderOnlyNoHUD": false,
+          "sourcePixelWidth": 1280,
+          "sourcePixelHeight": 720,
+          "follow": "{\"target\":{\"instanceID\":1266},\"smoothTime\":0.18000000715255738,\"horizontalOffset\":0.0,\"verticalSmoothTime\":0.2800000011920929,\"followVerticalInSectionTen\":true}"
+        }
+      }
+    }
+  }
+}
