@@ -1,0 +1,11 @@
+{
+  "authorization": "Human continuing permission remains valid",
+  "attempts_this_task": 1,
+  "result": "computer-use request timed out: list_apps",
+  "new_os_screenshot": "未確認",
+  "os_key_reaction": "未確認",
+  "human_understanding": "未確認",
+  "unity_started": false,
+  "build_performed": false,
+  "game_or_ui_implementation_changed": false
+}

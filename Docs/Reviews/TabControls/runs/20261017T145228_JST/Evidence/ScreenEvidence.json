@@ -1,0 +1,16 @@
+{
+  "original_repo_relative_path": "Docs/QA/FullGameRegression_20260930/Evidence/StaticScreens/Help_1600x900.png",
+  "original_sha256": "5E9540C6DAD0E581DF271500A5875654D9C1BB8A0688CD41755F9E5290024620",
+  "original_bytes": 1418267,
+  "preview": "Images/ExistingTab_1600x900.jpg",
+  "preview_sha256": "FF8FE3B4B9E9E243055EFE864387DC44AA390FDB118F07B5963EFDAE1114C942",
+  "preview_bytes": 237430,
+  "dimensions": [
+    1600,
+    900
+  ],
+  "provenance": "Existing saved QA image in FullGameRegression_20260930, not a new capture. Displayed text matches current StageOverlayControls.DrawHelpScreen by inspection.",
+  "processing": "PNG -> JPEG display preview only; no resizing, text edits, drawing or image generation; original unchanged",
+  "current_os_view_verified": false,
+  "human_understanding_verified": false
+}

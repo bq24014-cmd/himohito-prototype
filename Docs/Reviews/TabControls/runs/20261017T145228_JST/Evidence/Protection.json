@@ -1,0 +1,21 @@
+{
+  "time": "2026-10-17T14:54:33.2918894+09:00",
+  "branch": "main",
+  "head": "7a4f011b7ffc0343acd4727a75255495a3881fb3",
+  "originMain": "7a4f011b7ffc0343acd4727a75255495a3881fb3",
+  "productionFiles": {
+    "checked": 19,
+    "changedOrMissing": [],
+    "unchanged": true
+  },
+  "otherReviews": {
+    "checked": 9,
+    "changedOrMissing": [],
+    "unchanged": true
+  },
+  "statusSame": true,
+  "stageSame": true,
+  "unityStarted": false,
+  "buildPerformed": false,
+  "implementationChanges": false
+}

@@ -1,0 +1,31 @@
+{
+  "review_id": "TabControlsAudit_20261017T145228_JST",
+  "updated_at": "2026-10-17T14:54:33+09:00",
+  "timezone": "Asia/Tokyo",
+  "branch": "review/tab-controls-audit",
+  "kind": "既存Tab操作説明の調査・修正文案のみ",
+  "production_head": "7a4f011b7ffc0343acd4727a75255495a3881fb3",
+  "status": "Human文案判断待ち",
+  "report_path": "Docs/Reviews/TabControls/runs/20261017T145228_JST/Report.md",
+  "image_path": "Docs/Reviews/TabControls/runs/20261017T145228_JST/Images/ExistingTab_1600x900.jpg",
+  "evidence_path": "Docs/Reviews/TabControls/runs/20261017T145228_JST/Evidence/",
+  "proposals_count": 3,
+  "proposals": [
+    "Qの生成先・消費・接続条件を短く明示",
+    "Fの未接続条件・照準対象・2本を1本にする操作を明示",
+    "Space／W・Sの未接続条件を明示"
+  ],
+  "screen_provenance": "FullGameRegression_20260930の既存QA保存画面。今回の撮影ではない。現行の説明文字列と照合済み",
+  "os_operation": "list_appsタイムアウト。今回の実画面取得・キー反応は未確認",
+  "human_understanding": "未確認",
+  "unconfirmed": [
+    "今回起動した画面での表示・OSキー操作",
+    "修正文案の枠内への収まり・改行",
+    "橋用フック・共有フックという表現のHuman理解度"
+  ],
+  "implementation_changed": false,
+  "unity_started": false,
+  "build_performed": false,
+  "production_integrated": false,
+  "human_adoption": "未承認"
+}
