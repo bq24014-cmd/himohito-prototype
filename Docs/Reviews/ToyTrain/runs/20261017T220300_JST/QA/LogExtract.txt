@@ -1,0 +1,177 @@
+SESSION Editor_First
+Assets\ToyTrainProof\ToyTrainQA.cs(19,14): error CS0102: The type 'ToyTrainQA' already contains a definition for 'Check'
+
+SESSION Editor_CompileFixed
+Assets\ToyTrainProof\ToyTrainQA.cs(103,107): error CS0103: The name 'ScreenCapture' does not exist in the current context
+
+SESSION Editor_Runtime1
+ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Cannot use 'linearVelocity' on a static body.
+TRAIN_CHECK Production player, no presentation-proof component True RopeBodyVisual remains Production, physical root unparented
+TRAIN_EVENT Neutral ride through stop and reversals boarded
+TRAIN_CHECK Neutral carry + stop/reverse False drift=0 relativeSpeed=0 turns=0
+TRAIN_EVENT Neutral ride through stop and reversals idle_end
+TRAIN_CHECK R from train True initial={"player":{"x":114.5999984741211,"y":1.0},"velocity":{"x":0.0,"y":0.0},"train":{"x":117.9000015258789,"y":-0.30000001192092898},"trainVelocity":{"x":0.0,"y":0.0},"grounded":true,"onTrain":false,"attached":false,"failure":false,"input":0.0,"remaining":24.0,"selected":7.0,"wait":4.0,"bridges":0,"turns":0}
+TRAIN_EVENT Walk both ways on train and back to dock boarded
+TRAIN_CHECK Walk relative to deck False left=-0.6389923 right=-0.5855179
+TRAIN_CHECK Disembark to dock without carry True worldV=(0.00, 0.00) grounded=True
+TRAIN_EVENT Walk both ways on train and back to dock back_on_dock
+TRAIN_EVENT Initial connection requires grounded boarded
+TRAIN_CHECK In-range initial airborne E rejected False distance=10.90749 grounded=False attached=False
+TRAIN_EVENT Initial connection requires grounded air_attempt
+TRAIN_CHECK R from airborne True initial={"player":{"x":114.5999984741211,"y":1.0},"velocity":{"x":0.0,"y":0.0},"train":{"x":117.9000015258789,"y":-0.30000001192092898},"trainVelocity":{"x":0.0,"y":0.0},"grounded":true,"onTrain":false,"attached":false,"failure":false,"input":0.0,"remaining":24.0,"selected":7.0,"wait":4.0,"bridges":0,"turns":0}
+TRAIN_EVENT Board_Attach_Swing_Detach_Land_40 boarded
+TRAIN_CHECK Board_Attach_Swing_Detach_Land_40 natural board True No diagnostic positioning on route
+TRAIN_EVENT Board_Attach_Swing_Detach_Land_40 before_E_on_car
+TRAIN_EVENT Board_Attach_Swing_Detach_Land_40 E_attached
+TRAIN_CHECK Board_Attach_Swing_Detach_Land_40 grounded initial E False selected=7 distance=11.17684
+TRAIN_CHECK Board_Attach_Swing_Detach_Land_40 attached no double carry True relative drift=0
+TRAIN_EVENT Board_Attach_Swing_Detach_Land_40 left_car_attached
+TRAIN_EVENT Board_Attach_Swing_Detach_Land_40 route_end
+TRAIN_CHECK Board_Attach_Swing_Detach_Land_40 complete False position=(128.77, -9.22) resource=24 noTrainSupport=True
+TRAIN_CHECK R after landing route40 True initial={"player":{"x":114.5999984741211,"y":1.0},"velocity":{"x":0.0,"y":0.0},"train":{"x":117.9000015258789,"y":-0.30000001192092898},"trainVelocity":{"x":0.0,"y":0.0},"grounded":true,"onTrain":false,"attached":false,"failure":false,"input":0.0,"remaining":24.0,"selected":7.0,"wait":4.0,"bridges":0,"turns":0}
+TRAIN_EVENT Board_Attach_Swing_Detach_Land_45 boarded
+TRAIN_CHECK Board_Attach_Swing_Detach_Land_45 natural board True No diagnostic positioning on route
+TRAIN_EVENT Board_Attach_Swing_Detach_Land_45 before_E_on_car
+TRAIN_EVENT Board_Attach_Swing_Detach_Land_45 E_attached
+TRAIN_CHECK Board_Attach_Swing_Detach_Land_45 grounded initial E False selected=7 distance=11.17684
+TRAIN_CHECK Board_Attach_Swing_Detach_Land_45 attached no double carry True relative drift=0
+TRAIN_EVENT Board_Attach_Swing_Detach_Land_45 left_car_attached
+TRAIN_EVENT Board_Attach_Swing_Detach_Land_45 route_end
+TRAIN_CHECK Board_Attach_Swing_Detach_Land_45 complete False position=(128.77, -9.22) resource=24 noTrainSupport=True
+TRAIN_CHECK R after landing route45 True initial={"player":{"x":114.5999984741211,"y":1.0},"velocity":{"x":0.0,"y":0.0},"train":{"x":117.9000015258789,"y":-0.30000001192092898},"trainVelocity":{"x":0.0,"y":0.0},"grounded":true,"onTrain":false,"attached":false,"failure":false,"input":0.0,"remaining":24.0,"selected":7.0,"wait":4.0,"bridges":0,"turns":0}
+TRAIN_EVENT Board_Attach_Swing_Detach_Land_50 boarded
+TRAIN_CHECK Board_Attach_Swing_Detach_Land_50 natural board True No diagnostic positioning on route
+TRAIN_EVENT Board_Attach_Swing_Detach_Land_50 before_E_on_car
+TRAIN_EVENT Board_Attach_Swing_Detach_Land_50 E_attached
+TRAIN_CHECK Board_Attach_Swing_Detach_Land_50 grounded initial E False selected=7 distance=11.17684
+TRAIN_CHECK Board_Attach_Swing_Detach_Land_50 attached no double carry True relative drift=0
+TRAIN_EVENT Board_Attach_Swing_Detach_Land_50 left_car_attached
+TRAIN_EVENT Board_Attach_Swing_Detach_Land_50 route_end
+TRAIN_CHECK Board_Attach_Swing_Detach_Land_50 complete False position=(128.77, -9.22) resource=24 noTrainSupport=True
+TRAIN_CHECK R after landing route50 True initial={"player":{"x":114.5999984741211,"y":1.0},"velocity":{"x":0.0,"y":0.0},"train":{"x":117.9000015258789,"y":-0.30000001192092898},"trainVelocity":{"x":0.0,"y":0.0},"grounded":true,"onTrain":false,"attached":false,"failure":false,"input":0.0,"remaining":24.0,"selected":7.0,"wait":4.0,"bridges":0,"turns":0}
+
+SESSION Editor_Runtime2
+ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+TRAIN_CHECK Production player, no presentation-proof component True RopeBodyVisual remains Production, physical root unparented
+TRAIN_CHECK Train Kinematic body True SolidSwingSurface initializes before the train-specific Kinematic setup
+TRAIN_EVENT Neutral ride through stop and reversals boarded
+TRAIN_CHECK Neutral carry + stop/reverse True drift=0.005004883 relativeSpeed=0 turns=3
+TRAIN_EVENT Neutral ride through stop and reversals idle_end
+TRAIN_CHECK R from train True initial={"player":{"x":114.5999984741211,"y":1.0},"velocity":{"x":0.0,"y":0.0},"train":{"x":117.9000015258789,"y":-0.30000001192092898},"trainVelocity":{"x":0.0,"y":0.0},"grounded":true,"onTrain":false,"attached":false,"failure":false,"input":0.0,"remaining":24.0,"selected":7.0,"wait":4.0,"bridges":0,"turns":0}
+TRAIN_EVENT Walk both ways on train and back to dock boarded
+TRAIN_CHECK Walk relative to deck True left=-0.6389923 right=0.5566864
+TRAIN_CHECK Disembark to dock without carry True worldV=(0.00, 0.00) grounded=True
+TRAIN_EVENT Walk both ways on train and back to dock back_on_dock
+TRAIN_EVENT Initial connection requires grounded boarded
+TRAIN_CHECK In-range initial airborne E rejected True distance=6.176831 grounded=False attached=False
+TRAIN_EVENT Initial connection requires grounded air_attempt
+TRAIN_CHECK R from airborne True initial={"player":{"x":114.5999984741211,"y":1.0},"velocity":{"x":0.0,"y":0.0},"train":{"x":117.9000015258789,"y":-0.30000001192092898},"trainVelocity":{"x":0.0,"y":0.0},"grounded":true,"onTrain":false,"attached":false,"failure":false,"input":0.0,"remaining":24.0,"selected":7.0,"wait":4.0,"bridges":0,"turns":0}
+TRAIN_EVENT Board_Attach_Swing_Detach_Land_40 boarded
+TRAIN_CHECK Board_Attach_Swing_Detach_Land_40 natural board True No diagnostic positioning on route
+TRAIN_EVENT Board_Attach_Swing_Detach_Land_40 before_E_on_car
+TRAIN_EVENT Board_Attach_Swing_Detach_Land_40 E_attached
+TRAIN_CHECK Board_Attach_Swing_Detach_Land_40 grounded initial E True selected=7 distance=6.698447
+TRAIN_CHECK Board_Attach_Swing_Detach_Land_40 attached no double carry True relative drift=0
+TRAIN_EVENT Board_Attach_Swing_Detach_Land_40 left_car_attached
+TRAIN_EVENT Board_Attach_Swing_Detach_Land_40 before_E_release
+TRAIN_EVENT Board_Attach_Swing_Detach_Land_40 E_released
+TRAIN_EVENT Board_Attach_Swing_Detach_Land_40 route_end
+TRAIN_CHECK Board_Attach_Swing_Detach_Land_40 complete True position=(133.85, 0.02) resource=24 noTrainSupport=True
+TRAIN_CHECK R after landing route40 True initial={"player":{"x":114.5999984741211,"y":1.0},"velocity":{"x":0.0,"y":0.0},"train":{"x":117.9000015258789,"y":-0.30000001192092898},"trainVelocity":{"x":0.0,"y":0.0},"grounded":true,"onTrain":false,"attached":false,"failure":false,"input":0.0,"remaining":24.0,"selected":7.0,"wait":4.0,"bridges":0,"turns":0}
+TRAIN_EVENT Board_Attach_Swing_Detach_Land_45 boarded
+TRAIN_CHECK Board_Attach_Swing_Detach_Land_45 natural board True No diagnostic positioning on route
+TRAIN_EVENT Board_Attach_Swing_Detach_Land_45 before_E_on_car
+TRAIN_EVENT Board_Attach_Swing_Detach_Land_45 E_attached
+TRAIN_CHECK Board_Attach_Swing_Detach_Land_45 grounded initial E True selected=7 distance=6.698447
+TRAIN_CHECK Board_Attach_Swing_Detach_Land_45 attached no double carry True relative drift=0
+TRAIN_EVENT Board_Attach_Swing_Detach_Land_45 left_car_attached
+TRAIN_EVENT Board_Attach_Swing_Detach_Land_45 before_E_release
+TRAIN_EVENT Board_Attach_Swing_Detach_Land_45 E_released
+TRAIN_EVENT Board_Attach_Swing_Detach_Land_45 route_end
+TRAIN_CHECK Board_Attach_Swing_Detach_Land_45 complete True position=(134.54, 0.02) resource=24 noTrainSupport=True
+TRAIN_CHECK R after landing route45 True initial={"player":{"x":114.5999984741211,"y":1.0},"velocity":{"x":0.0,"y":0.0},"train":{"x":117.9000015258789,"y":-0.30000001192092898},"trainVelocity":{"x":0.0,"y":0.0},"grounded":true,"onTrain":false,"attached":false,"failure":false,"input":0.0,"remaining":24.0,"selected":7.0,"wait":4.0,"bridges":0,"turns":0}
+TRAIN_EVENT Board_Attach_Swing_Detach_Land_50 boarded
+TRAIN_CHECK Board_Attach_Swing_Detach_Land_50 natural board True No diagnostic positioning on route
+TRAIN_EVENT Board_Attach_Swing_Detach_Land_50 before_E_on_car
+TRAIN_EVENT Board_Attach_Swing_Detach_Land_50 E_attached
+TRAIN_CHECK Board_Attach_Swing_Detach_Land_50 grounded initial E True selected=7 distance=6.698447
+TRAIN_CHECK Board_Attach_Swing_Detach_Land_50 attached no double carry True relative drift=0
+TRAIN_EVENT Board_Attach_Swing_Detach_Land_50 left_car_attached
+TRAIN_EVENT Board_Attach_Swing_Detach_Land_50 before_E_release
+TRAIN_EVENT Board_Attach_Swing_Detach_Land_50 E_released
+TRAIN_EVENT Board_Attach_Swing_Detach_Land_50 route_end
+TRAIN_CHECK Board_Attach_Swing_Detach_Land_50 complete True position=(136.72, 0.02) resource=24 noTrainSupport=True
+TRAIN_CHECK R after landing route50 True initial={"player":{"x":114.5999984741211,"y":1.0},"velocity":{"x":0.0,"y":0.0},"train":{"x":117.9000015258789,"y":-0.30000001192092898},"trainVelocity":{"x":0.0,"y":0.0},"grounded":true,"onTrain":false,"attached":false,"failure":false,"input":0.0,"remaining":24.0,"selected":7.0,"wait":4.0,"bridges":0,"turns":0}
+
+SESSION Windows_Matrix
+TRAIN_CHECK Production player, no presentation-proof component True RopeBodyVisual remains Production, physical root unparented
+TRAIN_CHECK Train Kinematic body True SolidSwingSurface initializes before the train-specific Kinematic setup
+TRAIN_EVENT Neutral ride through stop and reversals boarded
+TRAIN_CHECK Neutral carry + stop/reverse True drift=0.005004883 relativeSpeed=0 turns=3
+TRAIN_EVENT Neutral ride through stop and reversals idle_end
+TRAIN_CHECK R from train True initial={"player":{"x":114.5999984741211,"y":1.0},"velocity":{"x":0.0,"y":0.0},"train":{"x":117.9000015258789,"y":-0.30000001192092898},"trainVelocity":{"x":0.0,"y":0.0},"grounded":true,"onTrain":false,"attached":false,"failure":false,"input":0.0,"remaining":24.0,"selected":7.0,"wait":4.0,"bridges":0,"turns":0}
+TRAIN_EVENT Walk both ways on train and back to dock boarded
+TRAIN_CHECK Walk relative to deck True left=-0.6389923 right=0.5566864
+TRAIN_CHECK Disembark to dock without carry True worldV=(0.00, 0.00) grounded=True
+TRAIN_EVENT Walk both ways on train and back to dock back_on_dock
+TRAIN_EVENT Initial connection requires grounded boarded
+TRAIN_CHECK In-range initial airborne E rejected True distance=6.176831 grounded=False attached=False
+TRAIN_EVENT Initial connection requires grounded air_attempt
+TRAIN_CHECK R from airborne True initial={"player":{"x":114.5999984741211,"y":1.0},"velocity":{"x":0.0,"y":0.0},"train":{"x":117.9000015258789,"y":-0.30000001192092898},"trainVelocity":{"x":0.0,"y":0.0},"grounded":true,"onTrain":false,"attached":false,"failure":false,"input":0.0,"remaining":24.0,"selected":7.0,"wait":4.0,"bridges":0,"turns":0}
+TRAIN_EVENT Board_Attach_Swing_Detach_Land_40 boarded
+TRAIN_CHECK Board_Attach_Swing_Detach_Land_40 natural board True No diagnostic positioning on route
+TRAIN_EVENT Board_Attach_Swing_Detach_Land_40 before_E_on_car
+TRAIN_EVENT Board_Attach_Swing_Detach_Land_40 E_attached
+TRAIN_CHECK Board_Attach_Swing_Detach_Land_40 grounded initial E True selected=7 distance=6.698447
+TRAIN_CHECK Board_Attach_Swing_Detach_Land_40 attached no double carry True relative drift=0
+TRAIN_EVENT Board_Attach_Swing_Detach_Land_40 left_car_attached
+TRAIN_EVENT Board_Attach_Swing_Detach_Land_40 before_E_release
+TRAIN_EVENT Board_Attach_Swing_Detach_Land_40 E_released
+TRAIN_EVENT Board_Attach_Swing_Detach_Land_40 route_end
+TRAIN_CHECK Board_Attach_Swing_Detach_Land_40 complete True position=(133.85, 0.02) resource=24 noTrainSupport=True
+TRAIN_CHECK R after landing route40 True initial={"player":{"x":114.5999984741211,"y":1.0},"velocity":{"x":0.0,"y":0.0},"train":{"x":117.9000015258789,"y":-0.30000001192092898},"trainVelocity":{"x":0.0,"y":0.0},"grounded":true,"onTrain":false,"attached":false,"failure":false,"input":0.0,"remaining":24.0,"selected":7.0,"wait":4.0,"bridges":0,"turns":0}
+TRAIN_EVENT Board_Attach_Swing_Detach_Land_45 boarded
+TRAIN_CHECK Board_Attach_Swing_Detach_Land_45 natural board True No diagnostic positioning on route
+TRAIN_EVENT Board_Attach_Swing_Detach_Land_45 before_E_on_car
+TRAIN_EVENT Board_Attach_Swing_Detach_Land_45 E_attached
+TRAIN_CHECK Board_Attach_Swing_Detach_Land_45 grounded initial E True selected=7 distance=6.698447
+TRAIN_CHECK Board_Attach_Swing_Detach_Land_45 attached no double carry True relative drift=0
+TRAIN_EVENT Board_Attach_Swing_Detach_Land_45 left_car_attached
+TRAIN_EVENT Board_Attach_Swing_Detach_Land_45 before_E_release
+TRAIN_EVENT Board_Attach_Swing_Detach_Land_45 E_released
+TRAIN_EVENT Board_Attach_Swing_Detach_Land_45 route_end
+TRAIN_CHECK Board_Attach_Swing_Detach_Land_45 complete True position=(134.54, 0.02) resource=24 noTrainSupport=True
+TRAIN_CHECK R after landing route45 True initial={"player":{"x":114.5999984741211,"y":1.0},"velocity":{"x":0.0,"y":0.0},"train":{"x":117.9000015258789,"y":-0.30000001192092898},"trainVelocity":{"x":0.0,"y":0.0},"grounded":true,"onTrain":false,"attached":false,"failure":false,"input":0.0,"remaining":24.0,"selected":7.0,"wait":4.0,"bridges":0,"turns":0}
+TRAIN_EVENT Board_Attach_Swing_Detach_Land_50 boarded
+TRAIN_CHECK Board_Attach_Swing_Detach_Land_50 natural board True No diagnostic positioning on route
+TRAIN_EVENT Board_Attach_Swing_Detach_Land_50 before_E_on_car
+TRAIN_EVENT Board_Attach_Swing_Detach_Land_50 E_attached
+TRAIN_CHECK Board_Attach_Swing_Detach_Land_50 grounded initial E True selected=7 distance=6.698447
+TRAIN_CHECK Board_Attach_Swing_Detach_Land_50 attached no double carry True relative drift=0
+TRAIN_EVENT Board_Attach_Swing_Detach_Land_50 left_car_attached
+TRAIN_EVENT Board_Attach_Swing_Detach_Land_50 before_E_release
+TRAIN_EVENT Board_Attach_Swing_Detach_Land_50 E_released
+TRAIN_EVENT Board_Attach_Swing_Detach_Land_50 route_end
+TRAIN_CHECK Board_Attach_Swing_Detach_Land_50 complete True position=(136.72, 0.02) resource=24 noTrainSupport=True
+TRAIN_CHECK R after landing route50 True initial={"player":{"x":114.5999984741211,"y":1.0},"velocity":{"x":0.0,"y":0.0},"train":{"x":117.9000015258789,"y":-0.30000001192092898},"trainVelocity":{"x":0.0,"y":0.0},"grounded":true,"onTrain":false,"attached":false,"failure":false,"input":0.0,"remaining":24.0,"selected":7.0,"wait":4.0,"bridges":0,"turns":0}
+
+SESSION Windows_Film
+TRAIN_CHECK Production player, no presentation-proof component True RopeBodyVisual remains Production, physical root unparented
+TRAIN_CHECK Train Kinematic body True SolidSwingSurface initializes before the train-specific Kinematic setup
+TRAIN_EVENT Board_Attach_Swing_Detach_Land_45 boarded
+TRAIN_CHECK Board_Attach_Swing_Detach_Land_45 natural board True No diagnostic positioning on route
+TRAIN_EVENT Board_Attach_Swing_Detach_Land_45 before_E_on_car
+TRAIN_EVENT Board_Attach_Swing_Detach_Land_45 E_attached
+TRAIN_CHECK Board_Attach_Swing_Detach_Land_45 grounded initial E True selected=7 distance=6.698447
+TRAIN_CHECK Board_Attach_Swing_Detach_Land_45 attached no double carry True relative drift=0
+TRAIN_EVENT Board_Attach_Swing_Detach_Land_45 left_car_attached
+TRAIN_EVENT Board_Attach_Swing_Detach_Land_45 before_E_release
+TRAIN_EVENT Board_Attach_Swing_Detach_Land_45 E_released
+TRAIN_EVENT Board_Attach_Swing_Detach_Land_45 route_end
+TRAIN_CHECK Board_Attach_Swing_Detach_Land_45 complete True position=(134.54, 0.02) resource=24 noTrainSupport=True
+TRAIN_CHECK R after landing route45 True initial={"player":{"x":114.5999984741211,"y":1.0},"velocity":{"x":0.0,"y":0.0},"train":{"x":117.9000015258789,"y":-0.30000001192092898},"trainVelocity":{"x":0.0,"y":0.0},"grounded":true,"onTrain":false,"attached":false,"failure":false,"input":0.0,"remaining":24.0,"selected":7.0,"wait":4.0,"bridges":0,"turns":0}
+
+SESSION Editor_AttachedR
+ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+TRAIN_FOCUSED_ATTACHED_R True

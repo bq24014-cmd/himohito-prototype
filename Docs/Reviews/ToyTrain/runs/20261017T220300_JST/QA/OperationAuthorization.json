@@ -1,0 +1,11 @@
+{
+  "continuing_permission": "Human authorizes target game capture, keys/mouse, start/stop, recording.",
+  "skill": "computer-use",
+  "tool_attempts": 1,
+  "tool_result": "computer-use request timed out: list_apps",
+  "retries": 0,
+  "OS_key_calls": 0,
+  "Human_play_this_proof": 0,
+  "automatic_input_API": true,
+  "audio_heard": false
+}

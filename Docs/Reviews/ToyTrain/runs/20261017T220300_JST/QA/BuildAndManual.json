@@ -1,0 +1,48 @@
+{
+  "summary": {
+    "result": "Succeeded",
+    "errors": 0,
+    "warnings": 0,
+    "bytes": 479097131
+  },
+  "exe_relative": "Build/ToyTrainProof.exe",
+  "exe_sha256": "837986201D89BE25426B8415CB3BC945F077E5B13F4722D6763D04EBD38C5472",
+  "assembly_sha256": "210A31EEB375627411BF7206A86E320C1144B418A45DD572F6252042DAD9D79B",
+  "development": false,
+  "script_debugging": false,
+  "autoconnect_profiler": false,
+  "new_build_count": 1,
+  "manual_lifetime_observed_seconds": 40,
+  "Ready_idle_observation_seconds": 15,
+  "manual_observation": {
+    "player": {
+      "x": 114.5999984741211,
+      "y": 1.0149997472763062
+    },
+    "velocity": {
+      "x": 0.0,
+      "y": 0.0
+    },
+    "train": {
+      "x": 117.9000015258789,
+      "y": -0.30000001192092896
+    },
+    "trainVelocity": {
+      "x": 0.0,
+      "y": 0.0
+    },
+    "grounded": true,
+    "onTrain": false,
+    "attached": false,
+    "failure": false,
+    "input": 0.0,
+    "remaining": 24.0,
+    "selected": 7.0,
+    "wait": 1.760000228881836,
+    "bridges": 0,
+    "turns": 2
+  },
+  "manual_QA_result_absent": true,
+  "source_manual_path": "Arg -trainQA absent: no ToyTrainQA or TrainInputDriver added; Time.captureFramerate=0; no auto quit. Readonly manual observation only.",
+  "process_stop": "Own PID+exe validated, externally stopped. Not OS-key success."
+}

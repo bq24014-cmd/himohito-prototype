@@ -1,0 +1,89 @@
+{
+    "method": "Editor-only automatic existing input-field/API. Not OS R. Same frozen Runtime source as Windows.",
+    "attachedBeforeR": true,
+    "passed": true,
+    "before": {
+        "player": {
+            "x": 123.01585388183594,
+            "y": 1.0149997472763062
+        },
+        "velocity": {
+            "x": 1.0624148845672608,
+            "y": 0.0
+        },
+        "train": {
+            "x": 122.9581527709961,
+            "y": -0.30000001192092898
+        },
+        "trainVelocity": {
+            "x": 1.0624148845672608,
+            "y": 0.0
+        },
+        "grounded": true,
+        "onTrain": true,
+        "attached": true,
+        "failure": false,
+        "input": 0.0,
+        "remaining": 24.0,
+        "selected": 7.0,
+        "wait": 0.0,
+        "bridges": 0,
+        "turns": 0
+    },
+    "immediate": {
+        "player": {
+            "x": 114.5999984741211,
+            "y": 1.0
+        },
+        "velocity": {
+            "x": 0.0,
+            "y": 0.0
+        },
+        "train": {
+            "x": 117.9000015258789,
+            "y": -0.30000001192092898
+        },
+        "trainVelocity": {
+            "x": 0.0,
+            "y": 0.0
+        },
+        "grounded": true,
+        "onTrain": false,
+        "attached": false,
+        "failure": false,
+        "input": 0.0,
+        "remaining": 24.0,
+        "selected": 7.0,
+        "wait": 4.0,
+        "bridges": 0,
+        "turns": 0
+    },
+    "settled": {
+        "player": {
+            "x": 114.5999984741211,
+            "y": 1.0149997472763062
+        },
+        "velocity": {
+            "x": 0.0,
+            "y": 0.0
+        },
+        "train": {
+            "x": 117.9000015258789,
+            "y": -0.30000001192092898
+        },
+        "trainVelocity": {
+            "x": 0.0,
+            "y": 0.0
+        },
+        "grounded": true,
+        "onTrain": false,
+        "attached": false,
+        "failure": false,
+        "input": 0.0,
+        "remaining": 24.0,
+        "selected": 7.0,
+        "wait": 3.380000591278076,
+        "bridges": 0,
+        "turns": 0
+    }
+}

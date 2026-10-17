@@ -1,0 +1,917 @@
+{
+  "method": "Automatic input-field/API; not OS keys or Human.",
+  "Windows_checks": 23,
+  "Windows_passes": 23,
+  "checks": [
+    {
+      "name": "Production player, no presentation-proof component",
+      "pass": true,
+      "detail": "RopeBodyVisual remains Production, physical root unparented"
+    },
+    {
+      "name": "Train Kinematic body",
+      "pass": true,
+      "detail": "SolidSwingSurface initializes before the train-specific Kinematic setup"
+    },
+    {
+      "name": "Neutral carry + stop/reverse",
+      "pass": true,
+      "detail": "drift=0.005004883 relativeSpeed=0 turns=3"
+    },
+    {
+      "name": "R from train",
+      "pass": true,
+      "detail": "initial={\"player\":{\"x\":114.5999984741211,\"y\":1.0},\"velocity\":{\"x\":0.0,\"y\":0.0},\"train\":{\"x\":117.9000015258789,\"y\":-0.30000001192092898},\"trainVelocity\":{\"x\":0.0,\"y\":0.0},\"grounded\":true,\"onTrain\":false,\"attached\":false,\"failure\":false,\"input\":0.0,\"remaining\":24.0,\"selected\":7.0,\"wait\":4.0,\"bridges\":0,\"turns\":0}"
+    },
+    {
+      "name": "Walk relative to deck",
+      "pass": true,
+      "detail": "left=-0.6389923 right=0.5566864"
+    },
+    {
+      "name": "Disembark to dock without carry",
+      "pass": true,
+      "detail": "worldV=(0.00, 0.00) grounded=True"
+    },
+    {
+      "name": "In-range initial airborne E rejected",
+      "pass": true,
+      "detail": "distance=6.176831 grounded=False attached=False"
+    },
+    {
+      "name": "R from airborne",
+      "pass": true,
+      "detail": "initial={\"player\":{\"x\":114.5999984741211,\"y\":1.0},\"velocity\":{\"x\":0.0,\"y\":0.0},\"train\":{\"x\":117.9000015258789,\"y\":-0.30000001192092898},\"trainVelocity\":{\"x\":0.0,\"y\":0.0},\"grounded\":true,\"onTrain\":false,\"attached\":false,\"failure\":false,\"input\":0.0,\"remaining\":24.0,\"selected\":7.0,\"wait\":4.0,\"bridges\":0,\"turns\":0}"
+    },
+    {
+      "name": "Board_Attach_Swing_Detach_Land_40 natural board",
+      "pass": true,
+      "detail": "No diagnostic positioning on route"
+    },
+    {
+      "name": "Board_Attach_Swing_Detach_Land_40 grounded initial E",
+      "pass": true,
+      "detail": "selected=7 distance=6.698447"
+    },
+    {
+      "name": "Board_Attach_Swing_Detach_Land_40 attached no double carry",
+      "pass": true,
+      "detail": "relative drift=0"
+    },
+    {
+      "name": "Board_Attach_Swing_Detach_Land_40 complete",
+      "pass": true,
+      "detail": "position=(133.85, 0.02) resource=24 noTrainSupport=True"
+    },
+    {
+      "name": "R after landing route40",
+      "pass": true,
+      "detail": "initial={\"player\":{\"x\":114.5999984741211,\"y\":1.0},\"velocity\":{\"x\":0.0,\"y\":0.0},\"train\":{\"x\":117.9000015258789,\"y\":-0.30000001192092898},\"trainVelocity\":{\"x\":0.0,\"y\":0.0},\"grounded\":true,\"onTrain\":false,\"attached\":false,\"failure\":false,\"input\":0.0,\"remaining\":24.0,\"selected\":7.0,\"wait\":4.0,\"bridges\":0,\"turns\":0}"
+    },
+    {
+      "name": "Board_Attach_Swing_Detach_Land_45 natural board",
+      "pass": true,
+      "detail": "No diagnostic positioning on route"
+    },
+    {
+      "name": "Board_Attach_Swing_Detach_Land_45 grounded initial E",
+      "pass": true,
+      "detail": "selected=7 distance=6.698447"
+    },
+    {
+      "name": "Board_Attach_Swing_Detach_Land_45 attached no double carry",
+      "pass": true,
+      "detail": "relative drift=0"
+    },
+    {
+      "name": "Board_Attach_Swing_Detach_Land_45 complete",
+      "pass": true,
+      "detail": "position=(134.54, 0.02) resource=24 noTrainSupport=True"
+    },
+    {
+      "name": "R after landing route45",
+      "pass": true,
+      "detail": "initial={\"player\":{\"x\":114.5999984741211,\"y\":1.0},\"velocity\":{\"x\":0.0,\"y\":0.0},\"train\":{\"x\":117.9000015258789,\"y\":-0.30000001192092898},\"trainVelocity\":{\"x\":0.0,\"y\":0.0},\"grounded\":true,\"onTrain\":false,\"attached\":false,\"failure\":false,\"input\":0.0,\"remaining\":24.0,\"selected\":7.0,\"wait\":4.0,\"bridges\":0,\"turns\":0}"
+    },
+    {
+      "name": "Board_Attach_Swing_Detach_Land_50 natural board",
+      "pass": true,
+      "detail": "No diagnostic positioning on route"
+    },
+    {
+      "name": "Board_Attach_Swing_Detach_Land_50 grounded initial E",
+      "pass": true,
+      "detail": "selected=7 distance=6.698447"
+    },
+    {
+      "name": "Board_Attach_Swing_Detach_Land_50 attached no double carry",
+      "pass": true,
+      "detail": "relative drift=0"
+    },
+    {
+      "name": "Board_Attach_Swing_Detach_Land_50 complete",
+      "pass": true,
+      "detail": "position=(136.72, 0.02) resource=24 noTrainSupport=True"
+    },
+    {
+      "name": "R after landing route50",
+      "pass": true,
+      "detail": "initial={\"player\":{\"x\":114.5999984741211,\"y\":1.0},\"velocity\":{\"x\":0.0,\"y\":0.0},\"train\":{\"x\":117.9000015258789,\"y\":-0.30000001192092898},\"trainVelocity\":{\"x\":0.0,\"y\":0.0},\"grounded\":true,\"onTrain\":false,\"attached\":false,\"failure\":false,\"input\":0.0,\"remaining\":24.0,\"selected\":7.0,\"wait\":4.0,\"bridges\":0,\"turns\":0}"
+    }
+  ],
+  "routes": [
+    {
+      "name": "Board_Attach_Swing_Detach_Land_40",
+      "passed": true,
+      "events": [
+        {
+          "time": 40.83998489379883,
+          "phase": "boarded",
+          "state": {
+            "player": {
+              "x": 117.95770263671875,
+              "y": 1.0149997472763062
+            },
+            "velocity": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "train": {
+              "x": 117.9000015258789,
+              "y": -0.30000001192092896
+            },
+            "trainVelocity": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "grounded": true,
+            "onTrain": true,
+            "attached": false,
+            "failure": false,
+            "input": 0.0,
+            "remaining": 24.0,
+            "selected": 7.0,
+            "wait": 2.480001449584961,
+            "bridges": 0,
+            "turns": 0
+          }
+        },
+        {
+          "time": 47.01998519897461,
+          "phase": "before_E_on_car",
+          "state": {
+            "player": {
+              "x": 123.01585388183594,
+              "y": 1.0149997472763062
+            },
+            "velocity": {
+              "x": 1.0624148845672607,
+              "y": 0.0
+            },
+            "train": {
+              "x": 122.9581527709961,
+              "y": -0.30000001192092896
+            },
+            "trainVelocity": {
+              "x": 1.0624148845672607,
+              "y": 0.0
+            },
+            "grounded": true,
+            "onTrain": true,
+            "attached": false,
+            "failure": false,
+            "input": 0.0,
+            "remaining": 24.0,
+            "selected": 7.0,
+            "wait": 0.0,
+            "bridges": 0,
+            "turns": 0
+          }
+        },
+        {
+          "time": 47.01998519897461,
+          "phase": "E_attached",
+          "state": {
+            "player": {
+              "x": 123.01585388183594,
+              "y": 1.0149997472763062
+            },
+            "velocity": {
+              "x": 1.0624148845672607,
+              "y": 0.0
+            },
+            "train": {
+              "x": 122.9581527709961,
+              "y": -0.30000001192092896
+            },
+            "trainVelocity": {
+              "x": 1.0624148845672607,
+              "y": 0.0
+            },
+            "grounded": true,
+            "onTrain": true,
+            "attached": true,
+            "failure": false,
+            "input": 0.0,
+            "remaining": 24.0,
+            "selected": 7.0,
+            "wait": 0.0,
+            "bridges": 0,
+            "turns": 0
+          }
+        },
+        {
+          "time": 47.99998474121094,
+          "phase": "left_car_attached",
+          "state": {
+            "player": {
+              "x": 126.39440155029297,
+              "y": 1.0040388107299805
+            },
+            "velocity": {
+              "x": 6.658793926239014,
+              "y": -0.5480444431304932
+            },
+            "train": {
+              "x": 123.4000015258789,
+              "y": -0.30000001192092896
+            },
+            "trainVelocity": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "grounded": false,
+            "onTrain": false,
+            "attached": true,
+            "failure": false,
+            "input": 1.0,
+            "remaining": 24.0,
+            "selected": 7.0,
+            "wait": 1.7200002670288086,
+            "bridges": 0,
+            "turns": 1
+          }
+        },
+        {
+          "time": 49.09998321533203,
+          "phase": "before_E_release",
+          "state": {
+            "player": {
+              "x": 132.89352416992188,
+              "y": 0.11002633720636368
+            },
+            "velocity": {
+              "x": 0.6654364466667175,
+              "y": 2.8058245182037354
+            },
+            "train": {
+              "x": 123.4000015258789,
+              "y": -0.30000001192092896
+            },
+            "trainVelocity": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "grounded": false,
+            "onTrain": false,
+            "attached": true,
+            "failure": false,
+            "input": 1.0,
+            "remaining": 24.0,
+            "selected": 7.0,
+            "wait": 0.6200013160705566,
+            "bridges": 0,
+            "turns": 1
+          }
+        },
+        {
+          "time": 49.09998321533203,
+          "phase": "E_released",
+          "state": {
+            "player": {
+              "x": 132.89352416992188,
+              "y": 0.11002633720636368
+            },
+            "velocity": {
+              "x": 0.6654364466667175,
+              "y": 2.8058245182037354
+            },
+            "train": {
+              "x": 123.4000015258789,
+              "y": -0.30000001192092896
+            },
+            "trainVelocity": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "grounded": false,
+            "onTrain": false,
+            "attached": false,
+            "failure": false,
+            "input": 1.0,
+            "remaining": 24.0,
+            "selected": 7.0,
+            "wait": 0.6200013160705566,
+            "bridges": 0,
+            "turns": 1
+          }
+        },
+        {
+          "time": 49.81998062133789,
+          "phase": "route_end",
+          "state": {
+            "player": {
+              "x": 133.851318359375,
+              "y": 0.015000135637819767
+            },
+            "velocity": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "train": {
+              "x": 123.39519500732422,
+              "y": -0.30000001192092896
+            },
+            "trainVelocity": {
+              "x": -0.09599996358156204,
+              "y": 0.0
+            },
+            "grounded": true,
+            "onTrain": false,
+            "attached": false,
+            "failure": false,
+            "input": 0.0,
+            "remaining": 24.0,
+            "selected": 7.0,
+            "wait": 0.0,
+            "bridges": 0,
+            "turns": 1
+          }
+        }
+      ],
+      "duration_board_to_landing": 8.979995727539062,
+      "release_velocity_difference": 0.0,
+      "noTrainSupport_after_departure": true,
+      "remaining_final": 24.0
+    },
+    {
+      "name": "Board_Attach_Swing_Detach_Land_45",
+      "passed": true,
+      "events": [
+        {
+          "time": 51.859981536865234,
+          "phase": "boarded",
+          "state": {
+            "player": {
+              "x": 117.95770263671875,
+              "y": 1.0149997472763062
+            },
+            "velocity": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "train": {
+              "x": 117.9000015258789,
+              "y": -0.30000001192092896
+            },
+            "trainVelocity": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "grounded": true,
+            "onTrain": true,
+            "attached": false,
+            "failure": false,
+            "input": 0.0,
+            "remaining": 24.0,
+            "selected": 7.0,
+            "wait": 2.480001449584961,
+            "bridges": 0,
+            "turns": 0
+          }
+        },
+        {
+          "time": 58.03997802734375,
+          "phase": "before_E_on_car",
+          "state": {
+            "player": {
+              "x": 123.01585388183594,
+              "y": 1.0149997472763062
+            },
+            "velocity": {
+              "x": 1.0624148845672607,
+              "y": 0.0
+            },
+            "train": {
+              "x": 122.9581527709961,
+              "y": -0.30000001192092896
+            },
+            "trainVelocity": {
+              "x": 1.0624148845672607,
+              "y": 0.0
+            },
+            "grounded": true,
+            "onTrain": true,
+            "attached": false,
+            "failure": false,
+            "input": 0.0,
+            "remaining": 24.0,
+            "selected": 7.0,
+            "wait": 0.0,
+            "bridges": 0,
+            "turns": 0
+          }
+        },
+        {
+          "time": 58.03997802734375,
+          "phase": "E_attached",
+          "state": {
+            "player": {
+              "x": 123.01585388183594,
+              "y": 1.0149997472763062
+            },
+            "velocity": {
+              "x": 1.0624148845672607,
+              "y": 0.0
+            },
+            "train": {
+              "x": 122.9581527709961,
+              "y": -0.30000001192092896
+            },
+            "trainVelocity": {
+              "x": 1.0624148845672607,
+              "y": 0.0
+            },
+            "grounded": true,
+            "onTrain": true,
+            "attached": true,
+            "failure": false,
+            "input": 0.0,
+            "remaining": 24.0,
+            "selected": 7.0,
+            "wait": 0.0,
+            "bridges": 0,
+            "turns": 0
+          }
+        },
+        {
+          "time": 59.01997756958008,
+          "phase": "left_car_attached",
+          "state": {
+            "player": {
+              "x": 126.39440155029297,
+              "y": 1.0040388107299805
+            },
+            "velocity": {
+              "x": 6.658793926239014,
+              "y": -0.5480444431304932
+            },
+            "train": {
+              "x": 123.4000015258789,
+              "y": -0.30000001192092896
+            },
+            "trainVelocity": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "grounded": false,
+            "onTrain": false,
+            "attached": true,
+            "failure": false,
+            "input": 1.0,
+            "remaining": 24.0,
+            "selected": 7.0,
+            "wait": 1.7200002670288086,
+            "bridges": 0,
+            "turns": 1
+          }
+        },
+        {
+          "time": 60.19997787475586,
+          "phase": "before_E_release",
+          "state": {
+            "player": {
+              "x": 133.07717895507812,
+              "y": 0.3462720215320587
+            },
+            "velocity": {
+              "x": 3.2576448917388916,
+              "y": 3.0546960830688477
+            },
+            "train": {
+              "x": 123.4000015258789,
+              "y": -0.30000001192092896
+            },
+            "trainVelocity": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "grounded": false,
+            "onTrain": false,
+            "attached": true,
+            "failure": false,
+            "input": 1.0,
+            "remaining": 24.0,
+            "selected": 7.0,
+            "wait": 0.540001392364502,
+            "bridges": 0,
+            "turns": 1
+          }
+        },
+        {
+          "time": 60.19997787475586,
+          "phase": "E_released",
+          "state": {
+            "player": {
+              "x": 133.07717895507812,
+              "y": 0.3462720215320587
+            },
+            "velocity": {
+              "x": 3.2576448917388916,
+              "y": 3.0546960830688477
+            },
+            "train": {
+              "x": 123.4000015258789,
+              "y": -0.30000001192092896
+            },
+            "trainVelocity": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "grounded": false,
+            "onTrain": false,
+            "attached": false,
+            "failure": false,
+            "input": 1.0,
+            "remaining": 24.0,
+            "selected": 7.0,
+            "wait": 0.540001392364502,
+            "bridges": 0,
+            "turns": 1
+          }
+        },
+        {
+          "time": 60.919979095458984,
+          "phase": "route_end",
+          "state": {
+            "player": {
+              "x": 134.5443878173828,
+              "y": 0.0150001160800457
+            },
+            "velocity": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "train": {
+              "x": 123.38272094726562,
+              "y": -0.30000001192092896
+            },
+            "trainVelocity": {
+              "x": -0.19199992716312408,
+              "y": 0.0
+            },
+            "grounded": true,
+            "onTrain": false,
+            "attached": false,
+            "failure": false,
+            "input": 0.0,
+            "remaining": 24.0,
+            "selected": 7.0,
+            "wait": 0.0,
+            "bridges": 0,
+            "turns": 1
+          }
+        }
+      ],
+      "duration_board_to_landing": 9.05999755859375,
+      "release_velocity_difference": 0.0,
+      "noTrainSupport_after_departure": true,
+      "remaining_final": 24.0
+    },
+    {
+      "name": "Board_Attach_Swing_Detach_Land_50",
+      "passed": true,
+      "events": [
+        {
+          "time": 62.95997619628906,
+          "phase": "boarded",
+          "state": {
+            "player": {
+              "x": 117.95770263671875,
+              "y": 1.0149997472763062
+            },
+            "velocity": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "train": {
+              "x": 117.9000015258789,
+              "y": -0.30000001192092896
+            },
+            "trainVelocity": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "grounded": true,
+            "onTrain": true,
+            "attached": false,
+            "failure": false,
+            "input": 0.0,
+            "remaining": 24.0,
+            "selected": 7.0,
+            "wait": 2.480001449584961,
+            "bridges": 0,
+            "turns": 0
+          }
+        },
+        {
+          "time": 69.13997650146484,
+          "phase": "before_E_on_car",
+          "state": {
+            "player": {
+              "x": 123.01585388183594,
+              "y": 1.0149997472763062
+            },
+            "velocity": {
+              "x": 1.0624148845672607,
+              "y": 0.0
+            },
+            "train": {
+              "x": 122.9581527709961,
+              "y": -0.30000001192092896
+            },
+            "trainVelocity": {
+              "x": 1.0624148845672607,
+              "y": 0.0
+            },
+            "grounded": true,
+            "onTrain": true,
+            "attached": false,
+            "failure": false,
+            "input": 0.0,
+            "remaining": 24.0,
+            "selected": 7.0,
+            "wait": 0.0,
+            "bridges": 0,
+            "turns": 0
+          }
+        },
+        {
+          "time": 69.13997650146484,
+          "phase": "E_attached",
+          "state": {
+            "player": {
+              "x": 123.01585388183594,
+              "y": 1.0149997472763062
+            },
+            "velocity": {
+              "x": 1.0624148845672607,
+              "y": 0.0
+            },
+            "train": {
+              "x": 122.9581527709961,
+              "y": -0.30000001192092896
+            },
+            "trainVelocity": {
+              "x": 1.0624148845672607,
+              "y": 0.0
+            },
+            "grounded": true,
+            "onTrain": true,
+            "attached": true,
+            "failure": false,
+            "input": 0.0,
+            "remaining": 24.0,
+            "selected": 7.0,
+            "wait": 0.0,
+            "bridges": 0,
+            "turns": 0
+          }
+        },
+        {
+          "time": 70.1199722290039,
+          "phase": "left_car_attached",
+          "state": {
+            "player": {
+              "x": 126.39440155029297,
+              "y": 1.0040388107299805
+            },
+            "velocity": {
+              "x": 6.658793926239014,
+              "y": -0.5480444431304932
+            },
+            "train": {
+              "x": 123.4000015258789,
+              "y": -0.30000001192092896
+            },
+            "trainVelocity": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "grounded": false,
+            "onTrain": false,
+            "attached": true,
+            "failure": false,
+            "input": 1.0,
+            "remaining": 24.0,
+            "selected": 7.0,
+            "wait": 1.7200002670288086,
+            "bridges": 0,
+            "turns": 1
+          }
+        },
+        {
+          "time": 71.39997100830078,
+          "phase": "before_E_release",
+          "state": {
+            "player": {
+              "x": 133.58583068847656,
+              "y": 0.6799678802490234
+            },
+            "velocity": {
+              "x": 6.263472557067871,
+              "y": 3.5591301918029785
+            },
+            "train": {
+              "x": 123.4000015258789,
+              "y": -0.30000001192092896
+            },
+            "trainVelocity": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "grounded": false,
+            "onTrain": false,
+            "attached": true,
+            "failure": false,
+            "input": 1.0,
+            "remaining": 24.0,
+            "selected": 7.0,
+            "wait": 0.4400014877319336,
+            "bridges": 0,
+            "turns": 1
+          }
+        },
+        {
+          "time": 71.39997100830078,
+          "phase": "E_released",
+          "state": {
+            "player": {
+              "x": 133.58583068847656,
+              "y": 0.6799678802490234
+            },
+            "velocity": {
+              "x": 6.263472557067871,
+              "y": 3.5591301918029785
+            },
+            "train": {
+              "x": 123.4000015258789,
+              "y": -0.30000001192092896
+            },
+            "trainVelocity": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "grounded": false,
+            "onTrain": false,
+            "attached": false,
+            "failure": false,
+            "input": 1.0,
+            "remaining": 24.0,
+            "selected": 7.0,
+            "wait": 0.4400014877319336,
+            "bridges": 0,
+            "turns": 1
+          }
+        },
+        {
+          "time": 72.1999740600586,
+          "phase": "route_end",
+          "state": {
+            "player": {
+              "x": 136.72132873535156,
+              "y": 0.015000111423432827
+            },
+            "velocity": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "train": {
+              "x": 123.32655334472656,
+              "y": -0.30000001192092896
+            },
+            "trainVelocity": {
+              "x": -0.40799984335899353,
+              "y": 0.0
+            },
+            "grounded": true,
+            "onTrain": false,
+            "attached": false,
+            "failure": false,
+            "input": 0.0,
+            "remaining": 24.0,
+            "selected": 7.0,
+            "wait": 0.0,
+            "bridges": 0,
+            "turns": 1
+          }
+        }
+      ],
+      "duration_board_to_landing": 9.239997863769531,
+      "release_velocity_difference": 0.0,
+      "noTrainSupport_after_departure": true,
+      "remaining_final": 24.0
+    }
+  ],
+  "Editor_focused_attached_R": {
+    "method": "Editor-only automatic existing input-field/API. Not OS R. Same frozen Runtime source as Windows.",
+    "attachedBeforeR": true,
+    "passed": true,
+    "before": {
+      "player": {
+        "x": 123.01585388183594,
+        "y": 1.0149997472763062
+      },
+      "velocity": {
+        "x": 1.0624148845672607,
+        "y": 0.0
+      },
+      "train": {
+        "x": 122.9581527709961,
+        "y": -0.30000001192092896
+      },
+      "trainVelocity": {
+        "x": 1.0624148845672607,
+        "y": 0.0
+      },
+      "grounded": true,
+      "onTrain": true,
+      "attached": true,
+      "failure": false,
+      "input": 0.0,
+      "remaining": 24.0,
+      "selected": 7.0,
+      "wait": 0.0,
+      "bridges": 0,
+      "turns": 0
+    },
+    "immediate": {
+      "player": {
+        "x": 114.5999984741211,
+        "y": 1.0
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "train": {
+        "x": 117.9000015258789,
+        "y": -0.30000001192092896
+      },
+      "trainVelocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "grounded": true,
+      "onTrain": false,
+      "attached": false,
+      "failure": false,
+      "input": 0.0,
+      "remaining": 24.0,
+      "selected": 7.0,
+      "wait": 4.0,
+      "bridges": 0,
+      "turns": 0
+    },
+    "settled": {
+      "player": {
+        "x": 114.5999984741211,
+        "y": 1.0149997472763062
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "train": {
+        "x": 117.9000015258789,
+        "y": -0.30000001192092896
+      },
+      "trainVelocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "grounded": true,
+      "onTrain": false,
+      "attached": false,
+      "failure": false,
+      "input": 0.0,
+      "remaining": 24.0,
+      "selected": 7.0,
+      "wait": 3.380000591278076,
+      "bridges": 0,
+      "turns": 0
+    }
+  },
+  "human_fun_comfort": "未確認",
+  "audio": "未確認"
+}

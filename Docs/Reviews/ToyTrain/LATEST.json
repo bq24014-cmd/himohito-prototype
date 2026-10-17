@@ -1,0 +1,82 @@
+{
+  "review_id": "ToyTrain-20261017T220300_JST",
+  "updated_at": "2026-10-17T22:03:00+09:00",
+  "timezone": "Asia/Tokyo",
+  "kind": "木製おもちゃ汽車から固定Hook・振り子・解除着地の独立Proof",
+  "proof": "ToyTrainProof_20261017",
+  "revision": "r1, one isolated proof, one nonDevelopment Windows Build",
+  "production_head": "7a4f011b7ffc0343acd4727a75255495a3881fb3",
+  "source": "Read-only Production working-tree source/visual copy; dirty Production preserved. No BodyPump/arm proof components.",
+  "local_R_sync_reference": "c3d5912e5f4b44e7830ce9bda93d7989cbaece88",
+  "build_sha256": "837986201D89BE25426B8415CB3BC945F077E5B13F4722D6763D04EBD38C5472",
+  "build_assembly_sha256": "210A31EEB375627411BF7206A86E320C1144B418A45DD572F6252042DAD9D79B",
+  "status": "Technical PASS（確認範囲）・Human Review待ち",
+  "report_path": "Docs/Reviews/ToyTrain/runs/20261017T220300_JST/Report.md",
+  "launch_path": "Docs/Reviews/ToyTrain/runs/20261017T220300_JST/Launch.md",
+  "images_path": "Docs/Reviews/ToyTrain/runs/20261017T220300_JST/Figures",
+  "frames_path": "Docs/Reviews/ToyTrain/runs/20261017T220300_JST/Frames",
+  "video_path": "Docs/Reviews/ToyTrain/runs/20261017T220300_JST/Videos/Train_RideToLanding_Normal_50fps_silent.mp4",
+  "qa_path": "Docs/Reviews/ToyTrain/runs/20261017T220300_JST/QA",
+  "summary_path": "Docs/Reviews/ToyTrain/runs/20261017T220300_JST/QA/Summary.json",
+  "code_diff_path": "Docs/Reviews/ToyTrain/runs/20261017T220300_JST/CodeDiff.json",
+  "human_results_path": "Docs/Reviews/ToyTrain/runs/20261017T220300_JST/HumanResults.json",
+  "layout": {
+    "train_count": 1,
+    "fixed_hook_count": 1,
+    "train_center_x_local": [
+      0,
+      5.5
+    ],
+    "train_width": 4.8,
+    "deck_y": 0.4,
+    "hook_local": [
+      10.5,
+      5
+    ],
+    "landing_x_local": [
+      15.4,
+      24.4
+    ],
+    "landing_top": -0.6,
+    "initial_rope": 24,
+    "initial_selected": 7
+  },
+  "implementation": "Detached supported ground target = relative walking speed + train velocity. No parenting, no per-frame player displacement addition; attached/air force paths unchanged. R restores train and synchronizes Player history.",
+  "Windows_checks_passed": 23,
+  "Editor_checks_passed": 23,
+  "Editor_focused_attached_R_pass": true,
+  "idle_ride_seconds": 25,
+  "idle_reversals": 3,
+  "idle_relative_drift_max": 0.005004883,
+  "release_angle_samples_degrees": [
+    40,
+    45,
+    50
+  ],
+  "all_three_landed": true,
+  "release_velocity_difference": 0,
+  "video_seconds": 9.96,
+  "manual_ready_observed_seconds": 15,
+  "manual_process_alive_seconds": 40,
+  "non_development": true,
+  "new_build_count": 1,
+  "os_tool_error": "computer-use request timed out: list_apps",
+  "os_tool_attempts": 1,
+  "os_key_calls": 0,
+  "human_participants_this_proof": 0,
+  "human_adoption": "未承認",
+  "production_integrated": false,
+  "build_uploaded_to_git": false,
+  "bevel": "HOLD維持",
+  "arms_BodyPump": "未変更・持込なし",
+  "unconfirmed": [
+    "Human実キー・手応え・楽しさ・Visual採否",
+    "音の実聴・実Esc",
+    "接続したまま折返し後の長時間乗車",
+    "長さ7以外と不適切な解除等の全条件",
+    "全区間の通し回帰"
+  ],
+  "local_launcher_relative": "ToyTrainProof_20261017/START_ToyTrain.cmd",
+  "local_build_relative": "ToyTrainProof_20261017/Build/ToyTrainProof.exe",
+  "next_human_action": "START_ToyTrain.cmdで乗車・照準E・踏み出し・E解除着地・Rを試遊。追加実装とProduction統合は停止。"
+}
