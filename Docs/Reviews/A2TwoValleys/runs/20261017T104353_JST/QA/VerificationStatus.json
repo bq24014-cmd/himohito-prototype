@@ -1,0 +1,47 @@
+{
+  "technical": "BLOCKED",
+  "gameplay": "未確認",
+  "visual": "今回のOS実操作による評価は未確認",
+  "human_adoption": "未承認",
+  "ai_os_key_play": false,
+  "human_participants": 0,
+  "audio": "未確認",
+  "items": [
+    {
+      "name": "接続後の無入力・A/D加速・逆方向制動",
+      "status": "未実施／未確認"
+    },
+    {
+      "name": "通常画角の加速・最下点・左右空中頂点",
+      "status": "未実施／未確認"
+    },
+    {
+      "name": "解除タイミングを変えたE→空中→着地→移動",
+      "status": "未実施／未確認"
+    },
+    {
+      "name": "実Escのメニュー・停止・保持・再開",
+      "status": "未実施／未確認"
+    },
+    {
+      "name": "実R復帰",
+      "status": "未実施／未確認"
+    },
+    {
+      "name": "実Q生成と橋上歩行",
+      "status": "未実施／未確認"
+    },
+    {
+      "name": "候補1/2の似たOS操作比較",
+      "status": "未実施／未確認"
+    }
+  ],
+  "critique": {
+    "keep": "今回の実操作からは判断不能",
+    "weakness": "今回の実操作からは判断不能",
+    "regression": "今回の実操作からは判断不能",
+    "pleasant_feel": "根拠となる新しい操作・画面がないため判断しない",
+    "pose_fix_priority": "判断待ち。作成しない。"
+  },
+  "one_prerequisite_proposal": "隔離Proofに自動ドライバーを登録しない実キー専用起動経路を設けること。今回は未実装・別途判断が必要。"
+}

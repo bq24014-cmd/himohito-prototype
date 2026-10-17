@@ -1,0 +1,15 @@
+{
+  "reference_commit": "1244605ce7e5161a04b311bb4511113aaa04b4c3",
+  "r1": {
+    "exe_sha256": "9FDC9E52999B5BC1FF599F0B3F03EE4F001525DC7F66B8D6BA1A3A3E3FF015BE",
+    "assembly_sha256": "290FDADE7D1DA5E36994A07B79F8100D31385701ED9B4B56BB77E32B4A4AB08A",
+    "matches_previous_report": true
+  },
+  "r3": {
+    "assembly_sha256": "207D7E6DDA60805A1EB2D143852E325253B6E613B828B7AD02B33A0D6B2459B3",
+    "matches_previous_report": true
+  },
+  "candidate_switch": "-presentation candidate1 / -presentation candidate2",
+  "manual_mode_available_in_checked_sources": false,
+  "exe_launched_this_review": false
+}

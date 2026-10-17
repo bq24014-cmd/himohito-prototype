@@ -1,0 +1,49 @@
+{
+  "limited_read_only_protection_check": true,
+  "production_head": "7a4f011b7ffc0343acd4727a75255495a3881fb3",
+  "production_branch": "main",
+  "production_tracked_status_and_staged_unchanged": true,
+  "production_hashed_files_unchanged": 11,
+  "candidate2_source_and_build_hashed_files_unchanged": 7,
+  "game_files_edited": false,
+  "game_builds_launched": false,
+  "unity_launched": false,
+  "no_rebuild": true,
+  "no_cleanup_or_deletion": true,
+  "pon_artifacts_untouched": true,
+  "scope_note": "Only listed selected files and Git state were compared; not a full untracked/asset audit.",
+  "after": {
+    "production_head": "7a4f011b7ffc0343acd4727a75255495a3881fb3",
+    "production_branch": "main",
+    "tracked_status": [
+      " M Assets/Scenes/MainStage.unity",
+      " M Docs/LEARNING_LOG.md",
+      " M Docs/QA/MainStageCleanReproduction_20261001/Evidence/DeterministicSceneSync/ExeA.log",
+      " M Docs/QA/MainStageCleanReproduction_20261001/Evidence/DeterministicSceneSync/ExeB.log",
+      " M README.md"
+    ],
+    "staged": [],
+    "production_files": {
+      "ProjectSettings/InputManager.asset": "D0F454DDB880912ABCAE92E3E12957A7446786BA89E24937E019FF3BBC0D4300",
+      "Assets/Scripts/RopeController.cs": "3EF4A50076994279839F398652180256F5EC37C01B954EEEFC67C79B831E25D6",
+      "Assets/Scripts/PlayerMover.cs": "02F6BAB1132599184CC6450C5053990B612998FF657372F56CD9877CB5201F8D",
+      "Assets/Scenes/MainStage.unity": "57D2464751B5B9C2A78E6C56F34197E9BC2629983FADAA1DFF6E0BA0B4BC2284",
+      "Assets/Scripts/RopePlatformBuilder.cs": "11ECB4C1870CB8EF0449343155559211A5E1D9E1321132BCE0DCF8E14E279FD2",
+      "Assets/Scenes/Tutorial.unity": "DC1BED54CC083256CE895041B1C93578101E19B9738E7CF260619E8F7E1E4B92",
+      "README.md": "60331B91A2A9F6D147F5D00F614C9622F8EBCB00342EED7F5316EFBFEB054E7F",
+      "Assets/Scripts/MainStageRespawnOnFall.cs": "314060136DFB7846AE7EBBC43CFAF0028625B839B4B9A05E9171D4F5830C4D8C",
+      "Assets/Scripts/RopeResource.cs": "026476F48B89BAC7158ABEBC1744BF41553BAE4981C41B7148B41DCED63860EB",
+      "Docs/LEARNING_LOG.md": "32ADEEB9D6882F3609CC932148ECB9A5C70E66316A516503A3016DB83EE65F8D",
+      "ProjectSettings/Physics2DSettings.asset": "2856152070913F89167241C250B20DAD2D36BB1B7E774F2A83AB1D0FBC54D223"
+    },
+    "proof_files": {
+      "Build_r3/PlayerSwingProof_Data/Managed/Assembly-CSharp.dll": "207D7E6DDA60805A1EB2D143852E325253B6E613B828B7AD02B33A0D6B2459B3",
+      "Build_r1/PlayerSwingProof.exe": "9FDC9E52999B5BC1FF599F0B3F03EE4F001525DC7F66B8D6BA1A3A3E3FF015BE",
+      "UnityProof/Assets/Resources/PlayerPresentationYarn.shader": "F33A13747D4CE89110FC6A475CB89F63DFC31AD126B8DC049D5F52BBE75971D9",
+      "UnityProof/Assets/PlayerPresentation/PresentationCapture.cs": "60C724901B8774A939FB1E9AFAF7562EC389BB3E5BE17B99B83513D324AD331C",
+      "UnityProof/Assets/PlayerPresentation/SwingPresentationState.cs": "FE6D0CAD64A3D3A56AFD426BDBDE63C8BF00ABB172D892A2DFA3A574196330A7",
+      "Build_r1/PlayerSwingProof_Data/Managed/Assembly-CSharp.dll": "290FDADE7D1DA5E36994A07B79F8100D31385701ED9B4B56BB77E32B4A4AB08A",
+      "UnityProof/Assets/PlayerPresentation/PlayerMotionPresentation.cs": "0E51DCE32F7D35ED8796E93F6E19AA6AD780E835355907A410EDF786537D062B"
+    }
+  }
+}

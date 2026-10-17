@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-17",
+  "timezone": "Asia/Tokyo",
+  "kind": "AIによるOS実操作検証の接続確認",
+  "skill": "computer-use",
+  "api": "node_repl + @oai/sky",
+  "initialization": "Import completed without an error; not proof of screen/input availability.",
+  "attempts": [
+    {
+      "attempt": 1,
+      "call": "sky.list_apps()",
+      "result": "TIMEOUT",
+      "exact_error": "computer-use request timed out: list_apps"
+    },
+    {
+      "attempt": 2,
+      "recovery": "wait 2000 milliseconds, retry the same lightweight call once",
+      "call": "sky.list_apps()",
+      "result": "TIMEOUT",
+      "exact_error": "computer-use request timed out: list_apps"
+    }
+  ],
+  "retry_limit_reached": true,
+  "screen_obtained": false,
+  "game_window_selected": false,
+  "os_key_calls": 0,
+  "visible_response_verified": false,
+  "game_exe_launched": false,
+  "new_recording": false,
+  "new_game_screenshots": false,
+  "internal_game_api_calls": 0,
+  "automatic_gameplay_runs": 0,
+  "root_cause": "Unconfirmed. Failure boundary is app enumeration before screen capture. No evidence for pon's exact underlying failure cause.",
+  "further_retry": false
+}
