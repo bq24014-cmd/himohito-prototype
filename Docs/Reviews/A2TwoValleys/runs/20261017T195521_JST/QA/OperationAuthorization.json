@@ -1,0 +1,12 @@
+{
+  "permission": "Human continuing permission: target game capture, existing keys/mouse, start/stop and recording. Permission is distinct from tool success.",
+  "skill": "computer-use",
+  "actual_attempts": 1,
+  "tool": "sky.list_apps",
+  "error": "computer-use request timed out: list_apps",
+  "retry": false,
+  "os_key_calls": 0,
+  "Human_participants_for_this_fix": 0,
+  "automatic_input_and_internal_API_used": true,
+  "audio_heard": false
+}

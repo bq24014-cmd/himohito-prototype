@@ -1,0 +1,436 @@
+{
+    "variant": "B",
+    "method": "Scripted API + original movement input fields, actual Unity Physics2D. NOT Human keyboard.",
+    "checks": [
+        {
+            "name": "Initial grounded/budget/section",
+            "status": "PASS",
+            "detail": "actual=(117.40, 0.61), budget=24"
+        },
+        {
+            "name": "Authored Hook Collider and visible presentation",
+            "status": "PASS",
+            "detail": "All6 Hook Collider sizes1x1, existing ring artwork, original intended geometry; two start Colliders disabled intentionally"
+        },
+        {
+            "name": "Bridge1_Swing2 bridge1 exact spend",
+            "status": "PASS",
+            "detail": "24 - 11 = 13"
+        },
+        {
+            "name": "Bridge1_Swing2 middle has no refill/checkpoint",
+            "status": "PASS",
+            "detail": "middle resource=13; entry snapshot remains24"
+        },
+        {
+            "name": "Bridge1_Swing2 reaches exit with expected resource",
+            "status": "PASS",
+            "detail": "position=(149.03, -0.59),remaining=13"
+        },
+        {
+            "name": "Bridge1_Swing2 R restores entry",
+            "status": "PASS",
+            "detail": "position=(117.40, 0.61), resource=24, selected=6, constraints=FreezeRotation, bridges=0, hooksActive=True"
+        },
+        {
+            "name": "Bridge1_Swing2 R restores entry layout/Hook/Collider invariant",
+            "status": "PASS",
+            "detail": "same transforms/Collider/Hook/group/mask after existing R"
+        },
+        {
+            "name": "Swing1_Bridge2 middle has no refill/checkpoint",
+            "status": "PASS",
+            "detail": "middle resource=24; entry snapshot remains24"
+        },
+        {
+            "name": "Swing1_Bridge2 bridge2 exact spend",
+            "status": "PASS",
+            "detail": "24 - 13 = 11"
+        },
+        {
+            "name": "Swing1_Bridge2 reaches exit with expected resource",
+            "status": "PASS",
+            "detail": "position=(145.23, -0.48),remaining=11"
+        },
+        {
+            "name": "Swing1_Bridge2 R restores entry",
+            "status": "PASS",
+            "detail": "position=(117.40, 0.61), resource=24, selected=6, constraints=FreezeRotation, bridges=0, hooksActive=True"
+        },
+        {
+            "name": "Swing1_Bridge2 R restores entry layout/Hook/Collider invariant",
+            "status": "PASS",
+            "detail": "same transforms/Collider/Hook/group/mask after existing R"
+        },
+        {
+            "name": "Swing1_Swing2 middle has no refill/checkpoint",
+            "status": "PASS",
+            "detail": "middle resource=24; entry snapshot remains24"
+        },
+        {
+            "name": "Swing1_Swing2 reaches exit with expected resource",
+            "status": "PASS",
+            "detail": "position=(149.04, -0.59),remaining=24"
+        },
+        {
+            "name": "Swing1_Swing2 R restores entry",
+            "status": "PASS",
+            "detail": "position=(117.40, 0.61), resource=24, selected=6, constraints=FreezeRotation, bridges=0, hooksActive=True"
+        },
+        {
+            "name": "Swing1_Swing2 R restores entry layout/Hook/Collider invariant",
+            "status": "PASS",
+            "detail": "same transforms/Collider/Hook/group/mask after existing R"
+        },
+        {
+            "name": "Bridge1_Bridge2_ExpectedRejection bridge1 exact spend",
+            "status": "PASS",
+            "detail": "24 - 11 = 13"
+        },
+        {
+            "name": "Both bridges denied by reserve not insufficient aim",
+            "status": "PASS",
+            "detail": "13 -13 =0 <1, attach=True actualRemaining=13"
+        },
+        {
+            "name": "R after rejected secondQ restores entry/hooks",
+            "status": "PASS",
+            "detail": "position=(117.40, 0.61), resource=24, selected=6, constraints=FreezeRotation, bridges=0, hooksActive=True"
+        },
+        {
+            "name": "R after rejected secondQ restores entry/hooks layout/Hook/Collider invariant",
+            "status": "PASS",
+            "detail": "same transforms/Collider/Hook/group/mask after existing R"
+        },
+        {
+            "name": "Fall1 failure",
+            "status": "PASS",
+            "detail": "Diagnostic fall positioning; not a route success claim"
+        },
+        {
+            "name": "Fall1 R entry restore",
+            "status": "PASS",
+            "detail": "position=(117.40, 0.61), resource=24, selected=6, constraints=FreezeRotation, bridges=0, hooksActive=True"
+        },
+        {
+            "name": "Fall1 R entry restore layout/Hook/Collider invariant",
+            "status": "PASS",
+            "detail": "same transforms/Collider/Hook/group/mask after existing R"
+        },
+        {
+            "name": "Fall2 failure",
+            "status": "PASS",
+            "detail": "Diagnostic fall positioning; not a route success claim"
+        },
+        {
+            "name": "Fall2 R entry restore",
+            "status": "PASS",
+            "detail": "position=(117.40, 0.61), resource=24, selected=6, constraints=FreezeRotation, bridges=0, hooksActive=True"
+        },
+        {
+            "name": "Fall2 R entry restore layout/Hook/Collider invariant",
+            "status": "PASS",
+            "detail": "same transforms/Collider/Hook/group/mask after existing R"
+        },
+        {
+            "name": "Fall3 failure",
+            "status": "PASS",
+            "detail": "Diagnostic fall positioning; not a route success claim"
+        },
+        {
+            "name": "Fall3 R entry restore",
+            "status": "PASS",
+            "detail": "position=(117.40, 0.61), resource=24, selected=6, constraints=FreezeRotation, bridges=0, hooksActive=True"
+        },
+        {
+            "name": "Fall3 R entry restore layout/Hook/Collider invariant",
+            "status": "PASS",
+            "detail": "same transforms/Collider/Hook/group/mask after existing R"
+        },
+        {
+            "name": "BridgeThenRetryState bridge1 exact spend",
+            "status": "PASS",
+            "detail": "24 - 11 = 13"
+        },
+        {
+            "name": "Bridge created then R clears bridge and restores hooks/budget",
+            "status": "PASS",
+            "detail": "position=(117.40, 0.61), resource=24, selected=6, constraints=FreezeRotation, bridges=0, hooksActive=True"
+        },
+        {
+            "name": "Bridge created then R clears bridge and restores hooks/budget layout/Hook/Collider invariant",
+            "status": "PASS",
+            "detail": "same transforms/Collider/Hook/group/mask after existing R"
+        },
+        {
+            "name": "No spent/blocked checkpoint saved",
+            "status": "PASS",
+            "detail": "entry snapshot=24 and0bridges; B has no intermediate or exit CP"
+        }
+    ],
+    "routes": [
+        {
+            "name": "Bridge1_Swing2",
+            "status": "PASS",
+            "failure": "",
+            "startTime": 2.91999888420105,
+            "endTime": 8.339997291564942,
+            "seconds": 5.4199981689453129,
+            "consumed": 11.0,
+            "remaining": 13.0,
+            "bridges": 1,
+            "position": {
+                "x": 149.033935546875,
+                "y": -0.5849999785423279
+            },
+            "releases": [
+                {
+                    "leg": 2,
+                    "threshold": 48.0,
+                    "actualAngle": 49.793243408203128,
+                    "sinceAttach": 1.2799992561340333,
+                    "time": 7.2799973487854,
+                    "landingClearance": 0.566070556640625,
+                    "landingReactionDelay": 0.0,
+                    "position": {
+                        "x": 141.6460418701172,
+                        "y": -0.01883378066122532
+                    },
+                    "velocity": {
+                        "x": 8.488893508911133,
+                        "y": 9.338051795959473
+                    },
+                    "landingPosition": {
+                        "x": 149.033935546875,
+                        "y": -0.5849999785423279
+                    },
+                    "stableLanding": true,
+                    "reason": "",
+                    "policy": "D held until landing plus recorded reaction delay, then neutral; no velocity assignment"
+                }
+            ]
+        },
+        {
+            "name": "Swing1_Bridge2",
+            "status": "PASS",
+            "failure": "",
+            "startTime": 10.979995727539063,
+            "endTime": 16.099994659423829,
+            "seconds": 5.119998931884766,
+            "consumed": 13.0,
+            "remaining": 11.0,
+            "bridges": 1,
+            "position": {
+                "x": 145.2320556640625,
+                "y": -0.47500377893447878
+            },
+            "releases": [
+                {
+                    "leg": 1,
+                    "threshold": 42.0,
+                    "actualAngle": 42.66913604736328,
+                    "sinceAttach": 1.119999885559082,
+                    "time": 12.099995613098145,
+                    "landingClearance": 1.461273193359375,
+                    "landingReactionDelay": 0.0,
+                    "position": {
+                        "x": 124.96658325195313,
+                        "y": 0.08832115679979325
+                    },
+                    "velocity": {
+                        "x": 7.869434833526611,
+                        "y": 6.76588249206543
+                    },
+                    "landingPosition": {
+                        "x": 130.63873291015626,
+                        "y": -0.5850042104721069
+                    },
+                    "stableLanding": true,
+                    "reason": "",
+                    "policy": "D held until landing plus recorded reaction delay, then neutral; no velocity assignment"
+                }
+            ]
+        },
+        {
+            "name": "Swing1_Swing2",
+            "status": "PASS",
+            "failure": "",
+            "startTime": 18.739994049072267,
+            "endTime": 23.519990921020509,
+            "seconds": 4.779996871948242,
+            "consumed": 0.0,
+            "remaining": 24.0,
+            "bridges": 0,
+            "position": {
+                "x": 149.03501892089845,
+                "y": -0.5849999785423279
+            },
+            "releases": [
+                {
+                    "leg": 1,
+                    "threshold": 42.0,
+                    "actualAngle": 42.66913604736328,
+                    "sinceAttach": 1.1199989318847657,
+                    "time": 19.85999298095703,
+                    "landingClearance": 1.461273193359375,
+                    "landingReactionDelay": 0.0,
+                    "position": {
+                        "x": 124.96658325195313,
+                        "y": 0.08832115679979325
+                    },
+                    "velocity": {
+                        "x": 7.869434833526611,
+                        "y": 6.76588249206543
+                    },
+                    "landingPosition": {
+                        "x": 130.63873291015626,
+                        "y": -0.5850042104721069
+                    },
+                    "stableLanding": true,
+                    "reason": "",
+                    "policy": "D held until landing plus recorded reaction delay, then neutral; no velocity assignment"
+                },
+                {
+                    "leg": 2,
+                    "threshold": 48.0,
+                    "actualAngle": 49.977596282958987,
+                    "sinceAttach": 1.279998779296875,
+                    "time": 22.459991455078126,
+                    "landingClearance": 0.5649871826171875,
+                    "landingReactionDelay": 0.0,
+                    "position": {
+                        "x": 141.66055297851563,
+                        "y": -0.0016087698750197888
+                    },
+                    "velocity": {
+                        "x": 8.422560691833496,
+                        "y": 9.328316688537598
+                    },
+                    "landingPosition": {
+                        "x": 149.03501892089845,
+                        "y": -0.5849999785423279
+                    },
+                    "stableLanding": true,
+                    "reason": "",
+                    "policy": "D held until landing plus recorded reaction delay, then neutral; no velocity assignment"
+                }
+            ]
+        },
+        {
+            "name": "Bridge1_Bridge2_ExpectedRejection",
+            "status": "PASS",
+            "failure": "",
+            "startTime": 26.159990310668947,
+            "endTime": 29.239990234375,
+            "seconds": 3.0799999237060549,
+            "consumed": 11.0,
+            "remaining": 13.0,
+            "bridges": 1,
+            "position": {
+                "x": 131.62005615234376,
+                "y": -0.5829017758369446
+            },
+            "releases": []
+        }
+    ],
+    "samples": [
+        {
+            "leg": 2,
+            "threshold": 48.0,
+            "actualAngle": 49.793243408203128,
+            "sinceAttach": 1.2799992561340333,
+            "time": 7.2799973487854,
+            "landingClearance": 0.566070556640625,
+            "landingReactionDelay": 0.0,
+            "position": {
+                "x": 141.6460418701172,
+                "y": -0.01883378066122532
+            },
+            "velocity": {
+                "x": 8.488893508911133,
+                "y": 9.338051795959473
+            },
+            "landingPosition": {
+                "x": 149.033935546875,
+                "y": -0.5849999785423279
+            },
+            "stableLanding": true,
+            "reason": "",
+            "policy": "D held until landing plus recorded reaction delay, then neutral; no velocity assignment"
+        },
+        {
+            "leg": 1,
+            "threshold": 42.0,
+            "actualAngle": 42.66913604736328,
+            "sinceAttach": 1.119999885559082,
+            "time": 12.099995613098145,
+            "landingClearance": 1.461273193359375,
+            "landingReactionDelay": 0.0,
+            "position": {
+                "x": 124.96658325195313,
+                "y": 0.08832115679979325
+            },
+            "velocity": {
+                "x": 7.869434833526611,
+                "y": 6.76588249206543
+            },
+            "landingPosition": {
+                "x": 130.63873291015626,
+                "y": -0.5850042104721069
+            },
+            "stableLanding": true,
+            "reason": "",
+            "policy": "D held until landing plus recorded reaction delay, then neutral; no velocity assignment"
+        },
+        {
+            "leg": 1,
+            "threshold": 42.0,
+            "actualAngle": 42.66913604736328,
+            "sinceAttach": 1.1199989318847657,
+            "time": 19.85999298095703,
+            "landingClearance": 1.461273193359375,
+            "landingReactionDelay": 0.0,
+            "position": {
+                "x": 124.96658325195313,
+                "y": 0.08832115679979325
+            },
+            "velocity": {
+                "x": 7.869434833526611,
+                "y": 6.76588249206543
+            },
+            "landingPosition": {
+                "x": 130.63873291015626,
+                "y": -0.5850042104721069
+            },
+            "stableLanding": true,
+            "reason": "",
+            "policy": "D held until landing plus recorded reaction delay, then neutral; no velocity assignment"
+        },
+        {
+            "leg": 2,
+            "threshold": 48.0,
+            "actualAngle": 49.977596282958987,
+            "sinceAttach": 1.279998779296875,
+            "time": 22.459991455078126,
+            "landingClearance": 0.5649871826171875,
+            "landingReactionDelay": 0.0,
+            "position": {
+                "x": 141.66055297851563,
+                "y": -0.0016087698750197888
+            },
+            "velocity": {
+                "x": 8.422560691833496,
+                "y": 9.328316688537598
+            },
+            "landingPosition": {
+                "x": 149.03501892089845,
+                "y": -0.5849999785423279
+            },
+            "stableLanding": true,
+            "reason": "",
+            "policy": "D held until landing plus recorded reaction delay, then neutral; no velocity assignment"
+        }
+    ],
+    "errors": 0,
+    "finished": true
+}

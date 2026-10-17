@@ -1,0 +1,90 @@
+SESSION Editor_Diagnosis_Elevated
+ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+  at UnityEditor.Search.SearchDatabase+<EnumerateAll>d__81.MoveNext () [0x00106] in <63453c9528324daaa566ad51effa49a4>:0
+  at UnityEditor.Search.SearchDatabase.GetDefaultSearchDatabase () [0x00006] in <63453c9528324daaa566ad51effa49a4>:0
+RETRY_CASE L6_ground_follow_release-1 pass=False
+
+SESSION Editor_NoDriver_Baseline
+ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+  at UnityEditor.Search.SearchDatabase+<EnumerateAll>d__81.MoveNext () [0x00106] in <63453c9528324daaa566ad51effa49a4>:0
+  at UnityEditor.Search.SearchDatabase.GetDefaultSearchDatabase () [0x00006] in <63453c9528324daaa566ad51effa49a4>:0
+RETRY_CASE L6_ground_follow_release-1 pass=False
+RETRY_CASE L6_follow_driverDisabled_UpdateCoreR pass=False
+RETRY_CASE NearWallAir pass=True
+RETRY_CASE HighAir pass=True
+RETRY_CASE FarExit pass=True
+RETRY_CASE HeldRightAfterR pass=True
+RETRY_CASE AfterBridge pass=True
+
+SESSION Editor_Fixed_Matrix
+ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+  at UnityEditor.Search.SearchDatabase+<EnumerateAll>d__81.MoveNext () [0x00106] in <63453c9528324daaa566ad51effa49a4>:0
+  at UnityEditor.Search.SearchDatabase.GetDefaultSearchDatabase () [0x00006] in <63453c9528324daaa566ad51effa49a4>:0
+RETRY_CASE L6_ground_follow_release-1 pass=True
+RETRY_CASE L6_follow_driverDisabled_UpdateCoreR pass=True
+RETRY_CASE NearWallAir pass=True
+RETRY_CASE HighAir pass=True
+RETRY_CASE FarExit pass=True
+RETRY_CASE HeldRightAfterR pass=True
+RETRY_CASE AfterBridge pass=True
+
+SESSION Windows_Baseline_Matrix
+RETRY_CASE L6_ground_follow_release-1 pass=False
+RETRY_CASE L6_follow_driverDisabled_UpdateCoreR pass=False
+RETRY_CASE NearWallAir pass=True
+RETRY_CASE HighAir pass=True
+RETRY_CASE FarExit pass=True
+RETRY_CASE HeldRightAfterR pass=True
+RETRY_CASE AfterBridge pass=True
+RETRY_CASE NoRetry_SwingReleaseLanding_L6 pass=True
+RETRY_CASE NoRetry_SwingReleaseLanding_L7 pass=True
+
+SESSION Windows_Fixed_Matrix
+RETRY_CASE L6_ground_follow_release-1 pass=True
+RETRY_CASE L6_follow_driverDisabled_UpdateCoreR pass=True
+RETRY_CASE NearWallAir pass=True
+RETRY_CASE HighAir pass=True
+RETRY_CASE FarExit pass=True
+RETRY_CASE HeldRightAfterR pass=True
+RETRY_CASE AfterBridge pass=True
+RETRY_CASE NoRetry_SwingReleaseLanding_L6 pass=True
+RETRY_CASE NoRetry_SwingReleaseLanding_L7 pass=True
+
+SESSION Windows_Fixed_Routes
+A2_QA Initial grounded/budget/section PASS actual=(117.40, 0.61), budget=24
+A2_QA Authored Hook Collider and visible presentation PASS All6 Hook Collider sizes1x1, existing ring artwork, original intended geometry; two start Colliders disabled intentionally
+A2_QA Bridge1_Swing2 bridge1 exact spend PASS 24 - 11 = 13
+A2_QA Bridge1_Swing2 middle has no refill/checkpoint PASS middle resource=13; entry snapshot remains24
+A2_ROUTE Bridge1_Swing2 PASS 5.419998s
+A2_QA Bridge1_Swing2 reaches exit with expected resource PASS position=(149.03, -0.59),remaining=13
+A2_QA Bridge1_Swing2 R restores entry PASS position=(117.40, 0.61), resource=24, selected=6, constraints=FreezeRotation, bridges=0, hooksActive=True
+A2_QA Bridge1_Swing2 R restores entry layout/Hook/Collider invariant PASS same transforms/Collider/Hook/group/mask after existing R
+A2_QA Swing1_Bridge2 middle has no refill/checkpoint PASS middle resource=24; entry snapshot remains24
+A2_QA Swing1_Bridge2 bridge2 exact spend PASS 24 - 13 = 11
+A2_ROUTE Swing1_Bridge2 PASS 5.119999s
+A2_QA Swing1_Bridge2 reaches exit with expected resource PASS position=(145.23, -0.48),remaining=11
+A2_QA Swing1_Bridge2 R restores entry PASS position=(117.40, 0.61), resource=24, selected=6, constraints=FreezeRotation, bridges=0, hooksActive=True
+A2_QA Swing1_Bridge2 R restores entry layout/Hook/Collider invariant PASS same transforms/Collider/Hook/group/mask after existing R
+A2_QA Swing1_Swing2 middle has no refill/checkpoint PASS middle resource=24; entry snapshot remains24
+A2_ROUTE Swing1_Swing2 PASS 4.779997s
+A2_QA Swing1_Swing2 reaches exit with expected resource PASS position=(149.04, -0.59),remaining=24
+A2_QA Swing1_Swing2 R restores entry PASS position=(117.40, 0.61), resource=24, selected=6, constraints=FreezeRotation, bridges=0, hooksActive=True
+A2_QA Swing1_Swing2 R restores entry layout/Hook/Collider invariant PASS same transforms/Collider/Hook/group/mask after existing R
+A2_QA Bridge1_Bridge2_ExpectedRejection bridge1 exact spend PASS 24 - 11 = 13
+A2_QA Both bridges denied by reserve not insufficient aim PASS 13 -13 =0 <1, attach=True actualRemaining=13
+A2_ROUTE Bridge1_Bridge2_ExpectedRejection PASS 3.08s
+A2_QA R after rejected secondQ restores entry/hooks PASS position=(117.40, 0.61), resource=24, selected=6, constraints=FreezeRotation, bridges=0, hooksActive=True
+A2_QA R after rejected secondQ restores entry/hooks layout/Hook/Collider invariant PASS same transforms/Collider/Hook/group/mask after existing R
+A2_QA Fall1 failure PASS Diagnostic fall positioning; not a route success claim
+A2_QA Fall1 R entry restore PASS position=(117.40, 0.61), resource=24, selected=6, constraints=FreezeRotation, bridges=0, hooksActive=True
+A2_QA Fall1 R entry restore layout/Hook/Collider invariant PASS same transforms/Collider/Hook/group/mask after existing R
+A2_QA Fall2 failure PASS Diagnostic fall positioning; not a route success claim
+A2_QA Fall2 R entry restore PASS position=(117.40, 0.61), resource=24, selected=6, constraints=FreezeRotation, bridges=0, hooksActive=True
+A2_QA Fall2 R entry restore layout/Hook/Collider invariant PASS same transforms/Collider/Hook/group/mask after existing R
+A2_QA Fall3 failure PASS Diagnostic fall positioning; not a route success claim
+A2_QA Fall3 R entry restore PASS position=(117.40, 0.61), resource=24, selected=6, constraints=FreezeRotation, bridges=0, hooksActive=True
+A2_QA Fall3 R entry restore layout/Hook/Collider invariant PASS same transforms/Collider/Hook/group/mask after existing R
+A2_QA BridgeThenRetryState bridge1 exact spend PASS 24 - 11 = 13
+A2_QA Bridge created then R clears bridge and restores hooks/budget PASS position=(117.40, 0.61), resource=24, selected=6, constraints=FreezeRotation, bridges=0, hooksActive=True
+A2_QA Bridge created then R clears bridge and restores hooks/budget layout/Hook/Collider invariant PASS same transforms/Collider/Hook/group/mask after existing R
+A2_QA No spent/blocked checkpoint saved PASS entry snapshot=24 and0bridges; B has no intermediate or exit CP

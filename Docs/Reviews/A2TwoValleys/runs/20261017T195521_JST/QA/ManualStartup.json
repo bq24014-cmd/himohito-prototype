@@ -1,0 +1,190 @@
+{
+  "method": "Hidden process start without any QA/capture/sync/layout flags; source defaults fixed sync and original geometry. No OS keys. Read-only snapshots. Own process alive at42s including startup, stopped externally after path/PID validation.",
+  "ready_observation_seconds": 15.09017276763916,
+  "no_RetryResult_generated": true,
+  "observations": [
+    {
+      "method": "Read-only observation. No OS keys, internal input/API driving, screenshot, or audio assessment.",
+      "candidate": "candidate5",
+      "manual": true,
+      "secondCandidate": true,
+      "thirdCandidate": true,
+      "moverEnabled": true,
+      "ropeEnabled": true,
+      "bodySimulated": true,
+      "layoutUnchanged": true,
+      "shaderSupported": true,
+      "realtimeElapsed": 0.07569408416748047,
+      "scaledElapsed": 0.12170049548149109,
+      "captureDeltaTime": 0.0,
+      "timeScale": 1.0,
+      "fixedDeltaTime": 0.019999992102384567,
+      "captureFramerate": 0,
+      "presentationComponents": 1,
+      "captureDrivers": 0,
+      "inputDrivers": 0,
+      "qaDrivers": 0,
+      "gestureCaptureDrivers": 0,
+      "state": {
+        "note": "Manual session, observation only",
+        "hook": "",
+        "position": {
+          "x": 117.4000015258789,
+          "y": 0.6143403053283691
+        },
+        "velocity": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "fixedTime": 0.13999995589256287,
+        "remaining": 24.0,
+        "movementInput": 0.0,
+        "selected": 6,
+        "bridges": 0,
+        "section": 6,
+        "errors": 0,
+        "inputDriverCount": 0,
+        "qaDriverCount": 0,
+        "grounded": true,
+        "attached": false,
+        "arrived": false,
+        "camera": {
+          "position": {
+            "x": 117.4000015258789,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "aspect": 1.7777777910232544,
+          "captureAspect": 1.7777777910232544,
+          "renderOnlyNoHUD": false,
+          "sourcePixelWidth": 1280,
+          "sourcePixelHeight": 720,
+          "follow": "{\"target\":{\"instanceID\":1270},\"smoothTime\":0.18000000715255738,\"horizontalOffset\":0.0,\"verticalSmoothTime\":0.2800000011920929,\"followVerticalInSectionTen\":true}"
+        }
+      }
+    },
+    {
+      "method": "Read-only observation. No OS keys, internal input/API driving, screenshot, or audio assessment.",
+      "candidate": "candidate5",
+      "manual": true,
+      "secondCandidate": true,
+      "thirdCandidate": true,
+      "moverEnabled": true,
+      "ropeEnabled": true,
+      "bodySimulated": true,
+      "layoutUnchanged": true,
+      "shaderSupported": true,
+      "realtimeElapsed": 2.0853023529052734,
+      "scaledElapsed": 2.1416375637054443,
+      "captureDeltaTime": 0.0,
+      "timeScale": 1.0,
+      "fixedDeltaTime": 0.019999992102384567,
+      "captureFramerate": 0,
+      "presentationComponents": 1,
+      "captureDrivers": 0,
+      "inputDrivers": 0,
+      "qaDrivers": 0,
+      "gestureCaptureDrivers": 0,
+      "state": {
+        "note": "Manual session, observation only",
+        "hook": "",
+        "position": {
+          "x": 117.4000015258789,
+          "y": 0.6149998903274536
+        },
+        "velocity": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "fixedTime": 2.159999132156372,
+        "remaining": 24.0,
+        "movementInput": 0.0,
+        "selected": 6,
+        "bridges": 0,
+        "section": 6,
+        "errors": 0,
+        "inputDriverCount": 0,
+        "qaDriverCount": 0,
+        "grounded": true,
+        "attached": false,
+        "arrived": false,
+        "camera": {
+          "position": {
+            "x": 117.4000015258789,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "aspect": 1.7777777910232544,
+          "captureAspect": 1.7777777910232544,
+          "renderOnlyNoHUD": false,
+          "sourcePixelWidth": 1280,
+          "sourcePixelHeight": 720,
+          "follow": "{\"target\":{\"instanceID\":1270},\"smoothTime\":0.18000000715255738,\"horizontalOffset\":0.0,\"verticalSmoothTime\":0.2800000011920929,\"followVerticalInSectionTen\":true}"
+        }
+      }
+    },
+    {
+      "method": "Read-only observation. No OS keys, internal input/API driving, screenshot, or audio assessment.",
+      "candidate": "candidate5",
+      "manual": true,
+      "secondCandidate": true,
+      "thirdCandidate": true,
+      "moverEnabled": true,
+      "ropeEnabled": true,
+      "bodySimulated": true,
+      "layoutUnchanged": true,
+      "shaderSupported": true,
+      "realtimeElapsed": 15.09017276763916,
+      "scaledElapsed": 15.14673137664795,
+      "captureDeltaTime": 0.0,
+      "timeScale": 1.0,
+      "fixedDeltaTime": 0.019999992102384567,
+      "captureFramerate": 0,
+      "presentationComponents": 1,
+      "captureDrivers": 0,
+      "inputDrivers": 0,
+      "qaDrivers": 0,
+      "gestureCaptureDrivers": 0,
+      "state": {
+        "note": "Manual session, observation only",
+        "hook": "",
+        "position": {
+          "x": 117.4000015258789,
+          "y": 0.6149998903274536
+        },
+        "velocity": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "fixedTime": 15.159995079040527,
+        "remaining": 24.0,
+        "movementInput": 0.0,
+        "selected": 6,
+        "bridges": 0,
+        "section": 6,
+        "errors": 0,
+        "inputDriverCount": 0,
+        "qaDriverCount": 0,
+        "grounded": true,
+        "attached": false,
+        "arrived": false,
+        "camera": {
+          "position": {
+            "x": 117.4000015258789,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "aspect": 1.7777777910232544,
+          "captureAspect": 1.7777777910232544,
+          "renderOnlyNoHUD": false,
+          "sourcePixelWidth": 1280,
+          "sourcePixelHeight": 720,
+          "follow": "{\"target\":{\"instanceID\":1270},\"smoothTime\":0.18000000715255738,\"horizontalOffset\":0.0,\"verticalSmoothTime\":0.2800000011920929,\"followVerticalInSectionTen\":true}"
+        }
+      }
+    }
+  ]
+}

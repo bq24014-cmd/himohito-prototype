@@ -2,7 +2,11 @@
 
 固定branch：`review/a2-two-valleys`。[LATEST.json](LATEST.json)の最新報告・画像・QAを同じcommitから読んでください。ZIPの再添付は不要です。
 
-## 最新：谷1の壁衝突原因と出発床斜面1案 — HOLD
+## 最新：元配置のR復帰後落下 — 状態同期1件
+
+[20261017T195521_JST の報告](runs/20261017T195521_JST/Report.md)／[短い通常速度比較](runs/20261017T195521_JST/Videos/Retry_BeforeAfter_50fps_silent.mp4)／[原因の実測抜粋](runs/20261017T195521_JST/QA/CauseEvidence.json)／[手動起動](runs/20261017T195521_JST/Launch.md)。復帰後も古い物理位置履歴が残り、通常のすり抜け防止が入口への移動を壁横断と判定して押し戻す原因を確認。入力driver停止・Updateから共通Rでも再現。元地形のままR時の履歴／一時状態だけを同期し、失敗2条件がPASS、修正後9条件と既存33項目PASS。Rなしの長さ6／7軌道・入力・残量・Camera差0。OS実キー・Human手応え・音は未確認。斜面HOLD、腕要修正、A2不採用推奨を維持し、本番統合なし。
+
+## 前回：谷1の壁衝突原因と出発床斜面1案 — HOLD
 
 [20261017T191401_JST の報告](runs/20261017T191401_JST/Report.md)／[長さ7の同入力比較](runs/20261017T191401_JST/Videos/L7_Timed_BeforeAfter_50fps_silent.mp4)／[残る解除後の対岸衝突](runs/20261017T191401_JST/Videos/L7_EarlyRelease_BeforeAfter_50fps_silent.mp4)／[連続コマ](runs/20261017T191401_JST/Frames/)／[手動起動](runs/20261017T191401_JST/Launch.md)。接続中の出発側面と早い解除後の対岸側面を別々に特定。元壁を残す斜面で停止を減らす1案だが、継ぎ目接触・大きい衝撃・早期解除失敗が残るためHOLD。3攻略13/11/24・既存33項目PASSは品質採用の証明にしない。HumanはBodyPumpの腕輪郭を要修正・採用保留と評価。今回は腕・姿勢を変更せず、新案のHuman実操作は未確認。Production統合なし。
 

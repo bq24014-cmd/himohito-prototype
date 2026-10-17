@@ -1,0 +1,23 @@
+{
+  "summary": {
+    "result": "Succeeded",
+    "errors": 0,
+    "warnings": 0,
+    "bytes": 479199289
+  },
+  "exe_relative": "Build/A2Retry.exe",
+  "exe_sha256": "837986201D89BE25426B8415CB3BC945F077E5B13F4722D6763D04EBD38C5472",
+  "assembly_relative": "Build/A2Retry_Data/Managed/Assembly-CSharp.dll",
+  "assembly_sha256": "B69C73628F67F919ED6766FD48B2799468E2294F807549535B7F29CDB8493C30",
+  "new_build_count": 1,
+  "development": false,
+  "autoconnect_profiler": false,
+  "script_debugging": false,
+  "deep_profiling": false,
+  "source_meta": "RetryStateReview.cs + .meta; original asset metas unchanged",
+  "manual_launchers": [
+    "START_RetrySync.cmd",
+    "COMPARE_OriginalRetry.cmd"
+  ],
+  "manual_automatic_input_capture_exit": false
+}

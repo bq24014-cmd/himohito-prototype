@@ -1,0 +1,393 @@
+{
+  "method": "Actual Unity 1280x720 frames. Explicit automatic input/API, offline50fps played at game-time normal speed. Not OS keys, Human play, audio or real-time FPS benchmark. Outside-frame comparison labels only, JPEG previews; no generated art.",
+  "frames_each": [
+    101,
+    101
+  ],
+  "seconds": 2.02,
+  "same_approach_different_samples": {
+    "position": 0,
+    "velocity": 0,
+    "input": 0,
+    "remaining": 0,
+    "selected": 0,
+    "camera": 0,
+    "ortho": 0
+  },
+  "selected_frame_indices": {
+    "BeforeR": 8,
+    "NearRetry": 22,
+    "NextFrames": 25,
+    "AfterR_0p4": 44,
+    "Settled": 100
+  },
+  "frame_labels_note": "NearRetry is a visual neighborhood, not an exact instrument event timestamp. Exact pre/post physics timing is in RetryResult states.",
+  "beforeR": [
+    {
+      "label": "beforeRetry",
+      "frame": 388,
+      "t": 5.019998550415039,
+      "fixedTime": 7.759997367858887,
+      "input": -1.0,
+      "driverInput": 0.0,
+      "remaining": 24.0,
+      "coyote": -4.63999605178833,
+      "jumpBuffer": -7.739993095397949,
+      "airTime": 4.739995956420898,
+      "previousVertical": 0.0,
+      "position": {
+        "x": 118.31498718261719,
+        "y": -0.5940107703208923
+      },
+      "transformPosition": {
+        "x": 118.31498718261719,
+        "y": -0.5940107703208923
+      },
+      "previousPhysics": {
+        "x": 118.31498718261719,
+        "y": -0.5940107703208923
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "colliderMin": {
+        "x": 117.91498565673828,
+        "y": -1.1940107345581055
+      },
+      "colliderMax": {
+        "x": 118.7149887084961,
+        "y": 0.0059893131256103516
+      },
+      "camera": {
+        "x": 118.31500244140625,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "hasPrevious": true,
+      "hasPreviousVertical": true,
+      "attached": true,
+      "grounded": false,
+      "simulated": true,
+      "failure": false,
+      "moverEnabled": true,
+      "selected": 6,
+      "bridges": 0,
+      "hook": "A2 Proof Blue Swing Hook 1",
+      "hooksRestored": true
+    },
+    {
+      "label": "beforeRetry",
+      "frame": 388,
+      "t": 5.019998550415039,
+      "fixedTime": 7.759997367858887,
+      "input": -1.0,
+      "driverInput": 0.0,
+      "remaining": 24.0,
+      "coyote": -4.63999605178833,
+      "jumpBuffer": -6.739994049072266,
+      "airTime": 4.739995956420898,
+      "previousVertical": 0.0,
+      "position": {
+        "x": 118.31498718261719,
+        "y": -0.5940107703208923
+      },
+      "transformPosition": {
+        "x": 118.31498718261719,
+        "y": -0.5940107703208923
+      },
+      "previousPhysics": {
+        "x": 118.31498718261719,
+        "y": -0.5940107703208923
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "colliderMin": {
+        "x": 117.91498565673828,
+        "y": -1.1940107345581055
+      },
+      "colliderMax": {
+        "x": 118.7149887084961,
+        "y": 0.0059893131256103516
+      },
+      "camera": {
+        "x": 118.31500244140625,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "hasPrevious": true,
+      "hasPreviousVertical": true,
+      "attached": true,
+      "grounded": false,
+      "simulated": true,
+      "failure": false,
+      "moverEnabled": true,
+      "selected": 6,
+      "bridges": 0,
+      "hook": "A2 Proof Blue Swing Hook 1",
+      "hooksRestored": true
+    }
+  ],
+  "immediateR": [
+    {
+      "label": "immediateRetry",
+      "frame": 388,
+      "t": 5.019998550415039,
+      "fixedTime": 7.759997367858887,
+      "input": -1.0,
+      "driverInput": 0.0,
+      "remaining": 24.0,
+      "coyote": -4.63999605178833,
+      "jumpBuffer": -7.739993095397949,
+      "airTime": 4.739995956420898,
+      "previousVertical": 0.0,
+      "position": {
+        "x": 117.4000015258789,
+        "y": 0.6000000238418579
+      },
+      "transformPosition": {
+        "x": 117.4000015258789,
+        "y": 0.6000000238418579
+      },
+      "previousPhysics": {
+        "x": 118.31498718261719,
+        "y": -0.5940107703208923
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "colliderMin": {
+        "x": 117.0,
+        "y": 0.0
+      },
+      "colliderMax": {
+        "x": 117.80000305175781,
+        "y": 1.2000000476837158
+      },
+      "camera": {
+        "x": 117.4000015258789,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "hasPrevious": true,
+      "hasPreviousVertical": true,
+      "attached": false,
+      "grounded": false,
+      "simulated": true,
+      "failure": false,
+      "moverEnabled": true,
+      "selected": 6,
+      "bridges": 0,
+      "hook": "",
+      "hooksRestored": true
+    },
+    {
+      "label": "immediateRetry",
+      "frame": 388,
+      "t": 5.019998550415039,
+      "fixedTime": 7.759997367858887,
+      "input": 0.0,
+      "driverInput": 0.0,
+      "remaining": 24.0,
+      "coyote": 0.0,
+      "jumpBuffer": 0.0,
+      "airTime": 0.0,
+      "previousVertical": 0.0,
+      "position": {
+        "x": 117.4000015258789,
+        "y": 0.6000000238418579
+      },
+      "transformPosition": {
+        "x": 117.4000015258789,
+        "y": 0.6000000238418579
+      },
+      "previousPhysics": {
+        "x": 117.4000015258789,
+        "y": 0.6000000238418579
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "colliderMin": {
+        "x": 117.0,
+        "y": 0.0
+      },
+      "colliderMax": {
+        "x": 117.80000305175781,
+        "y": 1.2000000476837158
+      },
+      "camera": {
+        "x": 117.4000015258789,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "hasPrevious": true,
+      "hasPreviousVertical": false,
+      "attached": false,
+      "grounded": true,
+      "simulated": true,
+      "failure": false,
+      "moverEnabled": true,
+      "selected": 6,
+      "bridges": 0,
+      "hook": "",
+      "hooksRestored": true
+    }
+  ],
+  "settled": [
+    {
+      "label": "settled1.6s",
+      "frame": 469,
+      "t": 6.639997482299805,
+      "fixedTime": 9.379996299743652,
+      "input": 0.0,
+      "driverInput": 0.0,
+      "remaining": 24.0,
+      "coyote": -5.439995288848877,
+      "jumpBuffer": -8.520004272460938,
+      "airTime": 5.539995193481445,
+      "previousVertical": -20.473960876464844,
+      "position": {
+        "x": 118.31498718261719,
+        "y": -9.042986869812012
+      },
+      "transformPosition": {
+        "x": 118.31498718261719,
+        "y": -8.622941017150879
+      },
+      "previousPhysics": {
+        "x": 118.31498718261719,
+        "y": -8.622941017150879
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "colliderMin": {
+        "x": 117.91498565673828,
+        "y": -9.642987251281738
+      },
+      "colliderMax": {
+        "x": 118.7149887084961,
+        "y": -8.442986488342285
+      },
+      "camera": {
+        "x": 118.31309509277344,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "hasPrevious": true,
+      "hasPreviousVertical": true,
+      "attached": false,
+      "grounded": false,
+      "simulated": false,
+      "failure": true,
+      "moverEnabled": false,
+      "selected": 6,
+      "bridges": 0,
+      "hook": "",
+      "hooksRestored": true
+    },
+    {
+      "label": "settled1.6s",
+      "frame": 469,
+      "t": 6.639997482299805,
+      "fixedTime": 9.379996299743652,
+      "input": 0.0,
+      "driverInput": 0.0,
+      "remaining": 24.0,
+      "coyote": 0.10000000149011612,
+      "jumpBuffer": -1.6199986934661865,
+      "airTime": 0.0,
+      "previousVertical": 0.0,
+      "position": {
+        "x": 117.4000015258789,
+        "y": 0.6149998903274536
+      },
+      "transformPosition": {
+        "x": 117.4000015258789,
+        "y": 0.6149997711181641
+      },
+      "previousPhysics": {
+        "x": 117.4000015258789,
+        "y": 0.6149998903274536
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "colliderMin": {
+        "x": 117.0,
+        "y": 0.014999866485595703
+      },
+      "colliderMax": {
+        "x": 117.80000305175781,
+        "y": 1.2149999141693115
+      },
+      "camera": {
+        "x": 117.4000015258789,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "hasPrevious": true,
+      "hasPreviousVertical": true,
+      "attached": false,
+      "grounded": true,
+      "simulated": true,
+      "failure": false,
+      "moverEnabled": true,
+      "selected": 6,
+      "bridges": 0,
+      "hook": "",
+      "hooksRestored": true
+    }
+  ],
+  "videos": [
+    {
+      "name": "Retry_BeforeAfter_50fps_silent.mp4",
+      "bytes": 501461,
+      "video": [
+        {
+          "rate": "50/1",
+          "width": 2560,
+          "height": 764
+        }
+      ],
+      "audio_streams": 0
+    },
+    {
+      "name": "Retry_Original_Normal_50fps_silent.mp4",
+      "bytes": 314793,
+      "video": [
+        {
+          "rate": "50/1",
+          "width": 1280,
+          "height": 720
+        }
+      ],
+      "audio_streams": 0
+    },
+    {
+      "name": "Retry_Synchronized_Normal_50fps_silent.mp4",
+      "bytes": 172196,
+      "video": [
+        {
+          "rate": "50/1",
+          "width": 1280,
+          "height": 720
+        }
+      ],
+      "audio_streams": 0
+    }
+  ]
+}

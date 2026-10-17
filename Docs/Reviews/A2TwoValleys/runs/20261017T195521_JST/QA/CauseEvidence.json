@@ -1,0 +1,6475 @@
+{
+  "note": "Compact actual pre/post R and next physics events. No post-R body writes by QA. Direct Update method call is not an OS-key test.",
+  "records": [
+    {
+      "layout": "original_without_bevel",
+      "sync": "baseline",
+      "case": "L6_ground_follow_release-1",
+      "method": "Original WallCollisionReview Run sequence: same 1.7s reset wait, attached6, velocity-follow input5s, then input.Move=0 and f.Retry.",
+      "before": {
+        "label": "beforeRetry",
+        "frame": 388,
+        "t": 5.019998550415039,
+        "fixedTime": 7.759997367858887,
+        "input": -1.0,
+        "driverInput": 0.0,
+        "remaining": 24.0,
+        "coyote": -4.63999605178833,
+        "jumpBuffer": -7.739993095397949,
+        "airTime": 4.739995956420898,
+        "previousVertical": 0.0,
+        "position": {
+          "x": 118.31498718261719,
+          "y": -0.5940107703208923
+        },
+        "transformPosition": {
+          "x": 118.31498718261719,
+          "y": -0.5940107703208923
+        },
+        "previousPhysics": {
+          "x": 118.31498718261719,
+          "y": -0.5940107703208923
+        },
+        "velocity": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "colliderMin": {
+          "x": 117.91498565673828,
+          "y": -1.1940107345581055
+        },
+        "colliderMax": {
+          "x": 118.7149887084961,
+          "y": 0.0059893131256103516
+        },
+        "camera": {
+          "x": 118.31500244140625,
+          "y": 0.0,
+          "z": -10.0
+        },
+        "ortho": 8.699999809265137,
+        "hasPrevious": true,
+        "hasPreviousVertical": true,
+        "attached": true,
+        "grounded": false,
+        "simulated": true,
+        "failure": false,
+        "moverEnabled": true,
+        "selected": 6,
+        "bridges": 0,
+        "hook": "A2 Proof Blue Swing Hook 1",
+        "hooksRestored": true
+      },
+      "immediate": {
+        "label": "immediateRetry",
+        "frame": 388,
+        "t": 5.019998550415039,
+        "fixedTime": 7.759997367858887,
+        "input": -1.0,
+        "driverInput": 0.0,
+        "remaining": 24.0,
+        "coyote": -4.63999605178833,
+        "jumpBuffer": -7.739993095397949,
+        "airTime": 4.739995956420898,
+        "previousVertical": 0.0,
+        "position": {
+          "x": 117.4000015258789,
+          "y": 0.6000000238418579
+        },
+        "transformPosition": {
+          "x": 117.4000015258789,
+          "y": 0.6000000238418579
+        },
+        "previousPhysics": {
+          "x": 118.31498718261719,
+          "y": -0.5940107703208923
+        },
+        "velocity": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "colliderMin": {
+          "x": 117.0,
+          "y": 0.0
+        },
+        "colliderMax": {
+          "x": 117.80000305175781,
+          "y": 1.2000000476837158
+        },
+        "camera": {
+          "x": 117.4000015258789,
+          "y": 0.0,
+          "z": -10.0
+        },
+        "ortho": 8.699999809265137,
+        "hasPrevious": true,
+        "hasPreviousVertical": true,
+        "attached": false,
+        "grounded": false,
+        "simulated": true,
+        "failure": false,
+        "moverEnabled": true,
+        "selected": 6,
+        "bridges": 0,
+        "hook": "",
+        "hooksRestored": true
+      },
+      "first_physics_events": [
+        {
+          "label": "mover.beforeFixed",
+          "frame": 388,
+          "t": 5.019998550415039,
+          "fixedTime": 7.759997367858887,
+          "input": -1.0,
+          "driverInput": -1.0,
+          "remaining": 24.0,
+          "coyote": -4.619996070861816,
+          "jumpBuffer": -7.7199931144714355,
+          "airTime": 4.719995975494385,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "transformPosition": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "previousPhysics": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.91498565673828,
+            "y": -1.1940107345581055
+          },
+          "colliderMax": {
+            "x": 118.7149887084961,
+            "y": 0.0059893131256103516
+          },
+          "camera": {
+            "x": 118.31500244140625,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": true,
+          "grounded": false,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "A2 Proof Blue Swing Hook 1",
+          "hooksRestored": true
+        },
+        {
+          "label": "mover.afterSweep",
+          "frame": 388,
+          "t": 5.019998550415039,
+          "fixedTime": 7.759997367858887,
+          "input": -1.0,
+          "driverInput": -1.0,
+          "remaining": 24.0,
+          "coyote": -4.619996070861816,
+          "jumpBuffer": -7.7199931144714355,
+          "airTime": 4.719995975494385,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "transformPosition": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "previousPhysics": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.91498565673828,
+            "y": -1.1940107345581055
+          },
+          "colliderMax": {
+            "x": 118.7149887084961,
+            "y": 0.0059893131256103516
+          },
+          "camera": {
+            "x": 118.31500244140625,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": true,
+          "grounded": false,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "A2 Proof Blue Swing Hook 1",
+          "hooksRestored": true
+        },
+        {
+          "label": "mover.afterFixed",
+          "frame": 388,
+          "t": 5.019998550415039,
+          "fixedTime": 7.759997367858887,
+          "input": -1.0,
+          "driverInput": -1.0,
+          "remaining": 24.0,
+          "coyote": -4.63999605178833,
+          "jumpBuffer": -7.7199931144714355,
+          "airTime": 4.739995956420898,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "transformPosition": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "previousPhysics": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.91498565673828,
+            "y": -1.1940107345581055
+          },
+          "colliderMax": {
+            "x": 118.7149887084961,
+            "y": 0.0059893131256103516
+          },
+          "camera": {
+            "x": 118.31500244140625,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": true,
+          "grounded": false,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "A2 Proof Blue Swing Hook 1",
+          "hooksRestored": true
+        },
+        {
+          "label": "late.afterPhysics",
+          "frame": 388,
+          "t": 5.019998550415039,
+          "fixedTime": 7.759997367858887,
+          "input": -1.0,
+          "driverInput": -1.0,
+          "remaining": 24.0,
+          "coyote": -4.63999605178833,
+          "jumpBuffer": -7.739993095397949,
+          "airTime": 4.739995956420898,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "transformPosition": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "previousPhysics": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.91498565673828,
+            "y": -1.1940107345581055
+          },
+          "colliderMax": {
+            "x": 118.7149887084961,
+            "y": 0.0059893131256103516
+          },
+          "camera": {
+            "x": 118.31500244140625,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": true,
+          "grounded": false,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "A2 Proof Blue Swing Hook 1",
+          "hooksRestored": true
+        },
+        {
+          "label": "respawn.before",
+          "frame": 388,
+          "t": 5.019998550415039,
+          "fixedTime": 7.759997367858887,
+          "input": -1.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": -4.63999605178833,
+          "jumpBuffer": -7.739993095397949,
+          "airTime": 4.739995956420898,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "transformPosition": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "previousPhysics": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.91498565673828,
+            "y": -1.1940107345581055
+          },
+          "colliderMax": {
+            "x": 118.7149887084961,
+            "y": 0.0059893131256103516
+          },
+          "camera": {
+            "x": 118.31500244140625,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": true,
+          "grounded": false,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "A2 Proof Blue Swing Hook 1",
+          "hooksRestored": true
+        },
+        {
+          "label": "respawn.positionVelocityRestored",
+          "frame": 388,
+          "t": 5.019998550415039,
+          "fixedTime": 7.759997367858887,
+          "input": -1.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": -4.63999605178833,
+          "jumpBuffer": -7.739993095397949,
+          "airTime": 4.739995956420898,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "transformPosition": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "previousPhysics": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.0,
+            "y": 0.0
+          },
+          "colliderMax": {
+            "x": 117.80000305175781,
+            "y": 1.2000000476837158
+          },
+          "camera": {
+            "x": 118.31500244140625,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": false,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "respawn.afterStateSynchronization",
+          "frame": 388,
+          "t": 5.019998550415039,
+          "fixedTime": 7.759997367858887,
+          "input": -1.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": -4.63999605178833,
+          "jumpBuffer": -7.739993095397949,
+          "airTime": 4.739995956420898,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "transformPosition": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "previousPhysics": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.0,
+            "y": 0.0
+          },
+          "colliderMax": {
+            "x": 117.80000305175781,
+            "y": 1.2000000476837158
+          },
+          "camera": {
+            "x": 118.31500244140625,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": false,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "respawn.after",
+          "frame": 388,
+          "t": 5.019998550415039,
+          "fixedTime": 7.759997367858887,
+          "input": -1.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": -4.63999605178833,
+          "jumpBuffer": -7.739993095397949,
+          "airTime": 4.739995956420898,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "transformPosition": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "previousPhysics": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.0,
+            "y": 0.0
+          },
+          "colliderMax": {
+            "x": 117.80000305175781,
+            "y": 1.2000000476837158
+          },
+          "camera": {
+            "x": 117.4000015258789,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": false,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "mover.beforeFixed",
+          "frame": 389,
+          "t": 5.0399980545043945,
+          "fixedTime": 7.7799973487854,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": -4.63999605178833,
+          "jumpBuffer": -7.739993095397949,
+          "airTime": 4.739995956420898,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "transformPosition": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "previousPhysics": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.0,
+            "y": 0.0
+          },
+          "colliderMax": {
+            "x": 117.80000305175781,
+            "y": 1.2000000476837158
+          },
+          "camera": {
+            "x": 117.4000015258789,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": false,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "sweep.afterPositionWrite",
+          "frame": 389,
+          "t": 5.0399980545043945,
+          "fixedTime": 7.7799973487854,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": -4.63999605178833,
+          "jumpBuffer": -7.739993095397949,
+          "airTime": 4.739995956420898,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 118.31108093261719,
+            "y": -0.5889179706573486
+          },
+          "transformPosition": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "previousPhysics": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.91107940673828,
+            "y": -1.1889179944992065
+          },
+          "colliderMax": {
+            "x": 118.7110824584961,
+            "y": 0.011082053184509277
+          },
+          "camera": {
+            "x": 117.4000015258789,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": false,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "mover.afterSweep",
+          "frame": 389,
+          "t": 5.0399980545043945,
+          "fixedTime": 7.7799973487854,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": -4.63999605178833,
+          "jumpBuffer": -7.739993095397949,
+          "airTime": 4.739995956420898,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 118.31108093261719,
+            "y": -0.5889179706573486
+          },
+          "transformPosition": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "previousPhysics": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.91107940673828,
+            "y": -1.1889179944992065
+          },
+          "colliderMax": {
+            "x": 118.7110824584961,
+            "y": 0.011082053184509277
+          },
+          "camera": {
+            "x": 117.4000015258789,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": false,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "mover.afterFixed",
+          "frame": 389,
+          "t": 5.0399980545043945,
+          "fixedTime": 7.7799973487854,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": -4.659996032714844,
+          "jumpBuffer": -7.739993095397949,
+          "airTime": 4.759995937347412,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 118.31108093261719,
+            "y": -0.5889179706573486
+          },
+          "transformPosition": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "previousPhysics": {
+            "x": 118.31108093261719,
+            "y": -0.5889179706573486
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.91107940673828,
+            "y": -1.1889179944992065
+          },
+          "colliderMax": {
+            "x": 118.7110824584961,
+            "y": 0.011082053184509277
+          },
+          "camera": {
+            "x": 117.4000015258789,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": false,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "late.afterPhysics",
+          "frame": 389,
+          "t": 5.0399980545043945,
+          "fixedTime": 7.7799973487854,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": -4.659996032714844,
+          "jumpBuffer": -7.759993076324463,
+          "airTime": 4.759995937347412,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 117.4000015258789,
+            "y": 0.6088560223579407
+          },
+          "transformPosition": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "previousPhysics": {
+            "x": 118.31108093261719,
+            "y": -0.5889179706573486
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.0,
+            "y": 0.008856058120727539
+          },
+          "colliderMax": {
+            "x": 117.80000305175781,
+            "y": 1.2088561058044434
+          },
+          "camera": {
+            "x": 117.4000015258789,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": false,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "mover.beforeFixed",
+          "frame": 390,
+          "t": 5.059998512268066,
+          "fixedTime": 7.799997329711914,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": -4.659996032714844,
+          "jumpBuffer": -7.759993076324463,
+          "airTime": 4.759995937347412,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 117.4000015258789,
+            "y": 0.6088560223579407
+          },
+          "transformPosition": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "previousPhysics": {
+            "x": 118.31108093261719,
+            "y": -0.5889179706573486
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.0,
+            "y": 0.008856058120727539
+          },
+          "colliderMax": {
+            "x": 117.80000305175781,
+            "y": 1.2088561058044434
+          },
+          "camera": {
+            "x": 117.4000015258789,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": false,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "sweep.afterPositionWrite",
+          "frame": 390,
+          "t": 5.059998512268066,
+          "fixedTime": 7.799997329711914,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": -4.659996032714844,
+          "jumpBuffer": -7.759993076324463,
+          "airTime": 4.759995937347412,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 118.3110580444336,
+            "y": -0.5888853073120117
+          },
+          "transformPosition": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "previousPhysics": {
+            "x": 118.31108093261719,
+            "y": -0.5889179706573486
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.91105651855469,
+            "y": -1.1888853311538696
+          },
+          "colliderMax": {
+            "x": 118.7110595703125,
+            "y": 0.011114716529846191
+          },
+          "camera": {
+            "x": 117.4000015258789,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": false,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "mover.afterSweep",
+          "frame": 390,
+          "t": 5.059998512268066,
+          "fixedTime": 7.799997329711914,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": -4.659996032714844,
+          "jumpBuffer": -7.759993076324463,
+          "airTime": 4.759995937347412,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 118.3110580444336,
+            "y": -0.5888853073120117
+          },
+          "transformPosition": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "previousPhysics": {
+            "x": 118.31108093261719,
+            "y": -0.5889179706573486
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.91105651855469,
+            "y": -1.1888853311538696
+          },
+          "colliderMax": {
+            "x": 118.7110595703125,
+            "y": 0.011114716529846191
+          },
+          "camera": {
+            "x": 117.4000015258789,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": false,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "mover.afterFixed",
+          "frame": 390,
+          "t": 5.059998512268066,
+          "fixedTime": 7.799997329711914,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": -4.679996013641357,
+          "jumpBuffer": -7.759993076324463,
+          "airTime": 4.779995918273926,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 118.3110580444336,
+            "y": -0.5888853073120117
+          },
+          "transformPosition": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "previousPhysics": {
+            "x": 118.3110580444336,
+            "y": -0.5888853073120117
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.91105651855469,
+            "y": -1.1888853311538696
+          },
+          "colliderMax": {
+            "x": 118.7110595703125,
+            "y": 0.011114716529846191
+          },
+          "camera": {
+            "x": 117.4000015258789,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": false,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "late.afterPhysics",
+          "frame": 390,
+          "t": 5.059998512268066,
+          "fixedTime": 7.799997329711914,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": -4.679996013641357,
+          "jumpBuffer": -7.779993057250977,
+          "airTime": 4.779995918273926,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 118.3124771118164,
+            "y": -0.5998615026473999
+          },
+          "transformPosition": {
+            "x": 118.3110580444336,
+            "y": -0.5888853073120117
+          },
+          "previousPhysics": {
+            "x": 118.3110580444336,
+            "y": -0.5888853073120117
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": -0.5488109588623047
+          },
+          "colliderMin": {
+            "x": 117.9124755859375,
+            "y": -1.1998615264892578
+          },
+          "colliderMax": {
+            "x": 118.71247863769531,
+            "y": 0.0001385211944580078
+          },
+          "camera": {
+            "x": 117.41918182373047,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": false,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "mover.beforeFixed",
+          "frame": 391,
+          "t": 5.079998016357422,
+          "fixedTime": 7.819997310638428,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": -4.679996013641357,
+          "jumpBuffer": -7.779993057250977,
+          "airTime": 4.779995918273926,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 118.3124771118164,
+            "y": -0.5998615026473999
+          },
+          "transformPosition": {
+            "x": 118.3110580444336,
+            "y": -0.5888853073120117
+          },
+          "previousPhysics": {
+            "x": 118.3110580444336,
+            "y": -0.5888853073120117
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": -0.5488109588623047
+          },
+          "colliderMin": {
+            "x": 117.9124755859375,
+            "y": -1.1998615264892578
+          },
+          "colliderMax": {
+            "x": 118.71247863769531,
+            "y": 0.0001385211944580078
+          },
+          "camera": {
+            "x": 117.41918182373047,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": false,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "mover.afterSweep",
+          "frame": 391,
+          "t": 5.079998016357422,
+          "fixedTime": 7.819997310638428,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": -4.679996013641357,
+          "jumpBuffer": -7.779993057250977,
+          "airTime": 4.779995918273926,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 118.3124771118164,
+            "y": -0.5998615026473999
+          },
+          "transformPosition": {
+            "x": 118.3110580444336,
+            "y": -0.5888853073120117
+          },
+          "previousPhysics": {
+            "x": 118.3110580444336,
+            "y": -0.5888853073120117
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": -0.5488109588623047
+          },
+          "colliderMin": {
+            "x": 117.9124755859375,
+            "y": -1.1998615264892578
+          },
+          "colliderMax": {
+            "x": 118.71247863769531,
+            "y": 0.0001385211944580078
+          },
+          "camera": {
+            "x": 117.41918182373047,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": false,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "mover.afterFixed",
+          "frame": 391,
+          "t": 5.079998016357422,
+          "fixedTime": 7.819997310638428,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": -4.699995994567871,
+          "jumpBuffer": -7.779993057250977,
+          "airTime": 4.7999958992004395,
+          "previousVertical": -0.5488109588623047,
+          "position": {
+            "x": 118.3124771118164,
+            "y": -0.5998615026473999
+          },
+          "transformPosition": {
+            "x": 118.3110580444336,
+            "y": -0.5888853073120117
+          },
+          "previousPhysics": {
+            "x": 118.3124771118164,
+            "y": -0.5998615026473999
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": -0.5488109588623047
+          },
+          "colliderMin": {
+            "x": 117.9124755859375,
+            "y": -1.1998615264892578
+          },
+          "colliderMax": {
+            "x": 118.71247863769531,
+            "y": 0.0001385211944580078
+          },
+          "camera": {
+            "x": 117.41918182373047,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": false,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "late.afterPhysics",
+          "frame": 391,
+          "t": 5.079998016357422,
+          "fixedTime": 7.819997310638428,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": -4.699995994567871,
+          "jumpBuffer": -7.79999303817749,
+          "airTime": 4.7999958992004395,
+          "previousVertical": -0.5488109588623047,
+          "position": {
+            "x": 118.31338500976562,
+            "y": -0.6218029856681824
+          },
+          "transformPosition": {
+            "x": 118.3124771118164,
+            "y": -0.5998615026473999
+          },
+          "previousPhysics": {
+            "x": 118.3124771118164,
+            "y": -0.5998615026473999
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": -1.0970736742019653
+          },
+          "colliderMin": {
+            "x": 117.91338348388672,
+            "y": -1.2218029499053955
+          },
+          "colliderMax": {
+            "x": 118.71338653564453,
+            "y": -0.021802902221679688
+          },
+          "camera": {
+            "x": 117.46685028076172,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": false,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "mover.beforeFixed",
+          "frame": 392,
+          "t": 5.099998474121094,
+          "fixedTime": 7.839997291564941,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": -4.699995994567871,
+          "jumpBuffer": -7.79999303817749,
+          "airTime": 4.7999958992004395,
+          "previousVertical": -0.5488109588623047,
+          "position": {
+            "x": 118.31338500976562,
+            "y": -0.6218029856681824
+          },
+          "transformPosition": {
+            "x": 118.3124771118164,
+            "y": -0.5998615026473999
+          },
+          "previousPhysics": {
+            "x": 118.3124771118164,
+            "y": -0.5998615026473999
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": -1.0970736742019653
+          },
+          "colliderMin": {
+            "x": 117.91338348388672,
+            "y": -1.2218029499053955
+          },
+          "colliderMax": {
+            "x": 118.71338653564453,
+            "y": -0.021802902221679688
+          },
+          "camera": {
+            "x": 117.46685028076172,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": false,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "mover.afterSweep",
+          "frame": 392,
+          "t": 5.099998474121094,
+          "fixedTime": 7.839997291564941,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": -4.699995994567871,
+          "jumpBuffer": -7.79999303817749,
+          "airTime": 4.7999958992004395,
+          "previousVertical": -0.5488109588623047,
+          "position": {
+            "x": 118.31338500976562,
+            "y": -0.6218029856681824
+          },
+          "transformPosition": {
+            "x": 118.3124771118164,
+            "y": -0.5998615026473999
+          },
+          "previousPhysics": {
+            "x": 118.3124771118164,
+            "y": -0.5998615026473999
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": -1.0970736742019653
+          },
+          "colliderMin": {
+            "x": 117.91338348388672,
+            "y": -1.2218029499053955
+          },
+          "colliderMax": {
+            "x": 118.71338653564453,
+            "y": -0.021802902221679688
+          },
+          "camera": {
+            "x": 117.46685028076172,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": false,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "mover.afterFixed",
+          "frame": 392,
+          "t": 5.099998474121094,
+          "fixedTime": 7.839997291564941,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": -4.719995975494385,
+          "jumpBuffer": -7.79999303817749,
+          "airTime": 4.819995880126953,
+          "previousVertical": -1.0970736742019653,
+          "position": {
+            "x": 118.31338500976562,
+            "y": -0.6218029856681824
+          },
+          "transformPosition": {
+            "x": 118.3124771118164,
+            "y": -0.5998615026473999
+          },
+          "previousPhysics": {
+            "x": 118.31338500976562,
+            "y": -0.6218029856681824
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": -1.0970736742019653
+          },
+          "colliderMin": {
+            "x": 117.91338348388672,
+            "y": -1.2218029499053955
+          },
+          "colliderMax": {
+            "x": 118.71338653564453,
+            "y": -0.021802902221679688
+          },
+          "camera": {
+            "x": 117.46685028076172,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": false,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "late.afterPhysics",
+          "frame": 392,
+          "t": 5.099998474121094,
+          "fixedTime": 7.839997291564941,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": -4.719995975494385,
+          "jumpBuffer": -7.819993019104004,
+          "airTime": 4.819995880126953,
+          "previousVertical": -1.0970736742019653,
+          "position": {
+            "x": 118.31396484375,
+            "y": -0.6546987295150757
+          },
+          "transformPosition": {
+            "x": 118.31338500976562,
+            "y": -0.6218029856681824
+          },
+          "previousPhysics": {
+            "x": 118.31338500976562,
+            "y": -0.6218029856681824
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": -1.6447886228561401
+          },
+          "colliderMin": {
+            "x": 117.9139633178711,
+            "y": -1.2546987533569336
+          },
+          "colliderMax": {
+            "x": 118.7139663696289,
+            "y": -0.05469870567321777
+          },
+          "camera": {
+            "x": 117.53095245361328,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": false,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        }
+      ],
+      "sweeps": [
+        {
+          "before": {
+            "label": "sweep.beforePositionWrite",
+            "frame": 389,
+            "t": 5.0399980545043945,
+            "fixedTime": 7.7799973487854,
+            "input": 0.0,
+            "driverInput": 0.0,
+            "remaining": 24.0,
+            "coyote": -4.63999605178833,
+            "jumpBuffer": -7.739993095397949,
+            "airTime": 4.739995956420898,
+            "previousVertical": 0.0,
+            "position": {
+              "x": 117.4000015258789,
+              "y": 0.6000000238418579
+            },
+            "transformPosition": {
+              "x": 117.4000015258789,
+              "y": 0.6000000238418579
+            },
+            "previousPhysics": {
+              "x": 118.31498718261719,
+              "y": -0.5940107703208923
+            },
+            "velocity": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "colliderMin": {
+              "x": 117.0,
+              "y": 0.0
+            },
+            "colliderMax": {
+              "x": 117.80000305175781,
+              "y": 1.2000000476837158
+            },
+            "camera": {
+              "x": 117.4000015258789,
+              "y": 0.0,
+              "z": -10.0
+            },
+            "ortho": 8.699999809265137,
+            "hasPrevious": true,
+            "hasPreviousVertical": true,
+            "attached": false,
+            "grounded": false,
+            "simulated": true,
+            "failure": false,
+            "moverEnabled": true,
+            "selected": 6,
+            "bridges": 0,
+            "hook": "",
+            "hooksRestored": true
+          },
+          "from": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "to": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "distance": 1.504280686378479,
+          "safeDistance": 0.006416164338588715,
+          "chosenCollider": "A2 Proof Entry Box",
+          "hits": [
+            {
+              "collider": "A2 Proof Entry Box",
+              "distance": 0.016416164115071297,
+              "point": {
+                "x": 117.90249633789062,
+                "y": -0.6004910469055176
+              },
+              "normal": {
+                "x": 1.0,
+                "y": 0.0
+              },
+              "solid": true
+            },
+            {
+              "collider": "Main Player",
+              "distance": 0.1808146834373474,
+              "point": {
+                "x": 117.80250549316406,
+                "y": 0.08475613594055176
+              },
+              "normal": {
+                "x": 1.0,
+                "y": 0.0
+              },
+              "solid": false
+            }
+          ]
+        },
+        {
+          "before": {
+            "label": "sweep.beforePositionWrite",
+            "frame": 390,
+            "t": 5.059998512268066,
+            "fixedTime": 7.799997329711914,
+            "input": 0.0,
+            "driverInput": 0.0,
+            "remaining": 24.0,
+            "coyote": -4.659996032714844,
+            "jumpBuffer": -7.759993076324463,
+            "airTime": 4.759995937347412,
+            "previousVertical": 0.0,
+            "position": {
+              "x": 117.4000015258789,
+              "y": 0.6088560223579407
+            },
+            "transformPosition": {
+              "x": 117.4000015258789,
+              "y": 0.6000000238418579
+            },
+            "previousPhysics": {
+              "x": 118.31108093261719,
+              "y": -0.5889179706573486
+            },
+            "velocity": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "colliderMin": {
+              "x": 117.0,
+              "y": 0.008856058120727539
+            },
+            "colliderMax": {
+              "x": 117.80000305175781,
+              "y": 1.2088561058044434
+            },
+            "camera": {
+              "x": 117.4000015258789,
+              "y": 0.0,
+              "z": -10.0
+            },
+            "ortho": 8.699999809265137,
+            "hasPrevious": true,
+            "hasPreviousVertical": true,
+            "attached": false,
+            "grounded": false,
+            "simulated": true,
+            "failure": false,
+            "moverEnabled": true,
+            "selected": 6,
+            "bridges": 0,
+            "hook": "",
+            "hooksRestored": true
+          },
+          "from": {
+            "x": 118.31108093261719,
+            "y": -0.5889179706573486
+          },
+          "to": {
+            "x": 117.4000015258789,
+            "y": 0.6088560223579407
+          },
+          "distance": 1.50490140914917,
+          "safeDistance": 4.100613296031952e-05,
+          "chosenCollider": "A2 Proof Entry Box",
+          "hits": [
+            {
+              "collider": "A2 Proof Entry Box",
+              "distance": 0.010041005909442902,
+              "point": {
+                "x": 117.90249633789062,
+                "y": -0.6004638671875
+              },
+              "normal": {
+                "x": 1.0,
+                "y": 0.0
+              },
+              "solid": true
+            },
+            {
+              "collider": "Main Player",
+              "distance": 0.17521722614765167,
+              "point": {
+                "x": 117.80250549316406,
+                "y": 0.08969762921333313
+              },
+              "normal": {
+                "x": 1.0,
+                "y": 0.0
+              },
+              "solid": false
+            }
+          ]
+        }
+      ],
+      "settled": {
+        "label": "settled1.6s",
+        "frame": 469,
+        "t": 6.639997482299805,
+        "fixedTime": 9.379996299743652,
+        "input": 0.0,
+        "driverInput": 0.0,
+        "remaining": 24.0,
+        "coyote": -5.439995288848877,
+        "jumpBuffer": -8.520004272460938,
+        "airTime": 5.539995193481445,
+        "previousVertical": -20.473960876464844,
+        "position": {
+          "x": 118.31498718261719,
+          "y": -9.042986869812012
+        },
+        "transformPosition": {
+          "x": 118.31498718261719,
+          "y": -8.622941017150879
+        },
+        "previousPhysics": {
+          "x": 118.31498718261719,
+          "y": -8.622941017150879
+        },
+        "velocity": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "colliderMin": {
+          "x": 117.91498565673828,
+          "y": -9.642987251281738
+        },
+        "colliderMax": {
+          "x": 118.7149887084961,
+          "y": -8.442986488342285
+        },
+        "camera": {
+          "x": 118.31309509277344,
+          "y": 0.0,
+          "z": -10.0
+        },
+        "ortho": 8.699999809265137,
+        "hasPrevious": true,
+        "hasPreviousVertical": true,
+        "attached": false,
+        "grounded": false,
+        "simulated": false,
+        "failure": true,
+        "moverEnabled": false,
+        "selected": 6,
+        "bridges": 0,
+        "hook": "",
+        "hooksRestored": true
+      },
+      "passed": false
+    },
+    {
+      "layout": "original_without_bevel",
+      "sync": "baseline",
+      "case": "L6_follow_driverDisabled_UpdateCoreR",
+      "method": "Same natural approach; A2InputDriver disabled before R; invoke the unchanged normal R core method from Update, not fixture Retry wrapper. NOT OS R.",
+      "before": {
+        "label": "beforeRetry",
+        "frame": 807,
+        "t": 5.0399980545043945,
+        "fixedTime": 16.13999366760254,
+        "input": -1.0,
+        "driverInput": 0.0,
+        "remaining": 24.0,
+        "coyote": -4.659996032714844,
+        "jumpBuffer": -15.26015853881836,
+        "airTime": 4.759995937347412,
+        "previousVertical": 0.0,
+        "position": {
+          "x": 118.31498718261719,
+          "y": -0.5940107703208923
+        },
+        "transformPosition": {
+          "x": 118.31498718261719,
+          "y": -0.5940107703208923
+        },
+        "previousPhysics": {
+          "x": 118.31498718261719,
+          "y": -0.5940107703208923
+        },
+        "velocity": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "colliderMin": {
+          "x": 117.91498565673828,
+          "y": -1.1940107345581055
+        },
+        "colliderMax": {
+          "x": 118.7149887084961,
+          "y": 0.0059893131256103516
+        },
+        "camera": {
+          "x": 118.31500244140625,
+          "y": 0.0,
+          "z": -10.0
+        },
+        "ortho": 8.699999809265137,
+        "hasPrevious": true,
+        "hasPreviousVertical": true,
+        "attached": true,
+        "grounded": false,
+        "simulated": true,
+        "failure": false,
+        "moverEnabled": true,
+        "selected": 6,
+        "bridges": 0,
+        "hook": "A2 Proof Blue Swing Hook 1",
+        "hooksRestored": true
+      },
+      "immediate": {
+        "label": "immediateRetry",
+        "frame": 807,
+        "t": 5.0399980545043945,
+        "fixedTime": 16.13999366760254,
+        "input": -1.0,
+        "driverInput": 0.0,
+        "remaining": 24.0,
+        "coyote": -4.659996032714844,
+        "jumpBuffer": -15.26015853881836,
+        "airTime": 4.759995937347412,
+        "previousVertical": 0.0,
+        "position": {
+          "x": 117.4000015258789,
+          "y": 0.6000000238418579
+        },
+        "transformPosition": {
+          "x": 117.4000015258789,
+          "y": 0.6000000238418579
+        },
+        "previousPhysics": {
+          "x": 118.31498718261719,
+          "y": -0.5940107703208923
+        },
+        "velocity": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "colliderMin": {
+          "x": 117.0,
+          "y": 0.0
+        },
+        "colliderMax": {
+          "x": 117.80000305175781,
+          "y": 1.2000000476837158
+        },
+        "camera": {
+          "x": 117.4000015258789,
+          "y": 0.0,
+          "z": -10.0
+        },
+        "ortho": 8.699999809265137,
+        "hasPrevious": true,
+        "hasPreviousVertical": true,
+        "attached": false,
+        "grounded": false,
+        "simulated": true,
+        "failure": false,
+        "moverEnabled": true,
+        "selected": 6,
+        "bridges": 0,
+        "hook": "",
+        "hooksRestored": true
+      },
+      "first_physics_events": [
+        {
+          "label": "mover.beforeFixed",
+          "frame": 807,
+          "t": 5.0399980545043945,
+          "fixedTime": 16.13999366760254,
+          "input": -1.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": -4.63999605178833,
+          "jumpBuffer": -15.26015853881836,
+          "airTime": 4.739995956420898,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "transformPosition": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "previousPhysics": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.91498565673828,
+            "y": -1.1940107345581055
+          },
+          "colliderMax": {
+            "x": 118.7149887084961,
+            "y": 0.0059893131256103516
+          },
+          "camera": {
+            "x": 118.31500244140625,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": true,
+          "grounded": false,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "A2 Proof Blue Swing Hook 1",
+          "hooksRestored": true
+        },
+        {
+          "label": "mover.afterSweep",
+          "frame": 807,
+          "t": 5.0399980545043945,
+          "fixedTime": 16.13999366760254,
+          "input": -1.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": -4.63999605178833,
+          "jumpBuffer": -15.26015853881836,
+          "airTime": 4.739995956420898,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "transformPosition": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "previousPhysics": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.91498565673828,
+            "y": -1.1940107345581055
+          },
+          "colliderMax": {
+            "x": 118.7149887084961,
+            "y": 0.0059893131256103516
+          },
+          "camera": {
+            "x": 118.31500244140625,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": true,
+          "grounded": false,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "A2 Proof Blue Swing Hook 1",
+          "hooksRestored": true
+        },
+        {
+          "label": "mover.afterFixed",
+          "frame": 807,
+          "t": 5.0399980545043945,
+          "fixedTime": 16.13999366760254,
+          "input": -1.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": -4.659996032714844,
+          "jumpBuffer": -15.26015853881836,
+          "airTime": 4.759995937347412,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "transformPosition": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "previousPhysics": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.91498565673828,
+            "y": -1.1940107345581055
+          },
+          "colliderMax": {
+            "x": 118.7149887084961,
+            "y": 0.0059893131256103516
+          },
+          "camera": {
+            "x": 118.31500244140625,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": true,
+          "grounded": false,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "A2 Proof Blue Swing Hook 1",
+          "hooksRestored": true
+        },
+        {
+          "label": "respawn.before",
+          "frame": 807,
+          "t": 5.0399980545043945,
+          "fixedTime": 16.13999366760254,
+          "input": -1.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": -4.659996032714844,
+          "jumpBuffer": -15.26015853881836,
+          "airTime": 4.759995937347412,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "transformPosition": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "previousPhysics": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.91498565673828,
+            "y": -1.1940107345581055
+          },
+          "colliderMax": {
+            "x": 118.7149887084961,
+            "y": 0.0059893131256103516
+          },
+          "camera": {
+            "x": 118.31500244140625,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": true,
+          "grounded": false,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "A2 Proof Blue Swing Hook 1",
+          "hooksRestored": true
+        },
+        {
+          "label": "respawn.positionVelocityRestored",
+          "frame": 807,
+          "t": 5.0399980545043945,
+          "fixedTime": 16.13999366760254,
+          "input": -1.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": -4.659996032714844,
+          "jumpBuffer": -15.26015853881836,
+          "airTime": 4.759995937347412,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "transformPosition": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "previousPhysics": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.0,
+            "y": 0.0
+          },
+          "colliderMax": {
+            "x": 117.80000305175781,
+            "y": 1.2000000476837158
+          },
+          "camera": {
+            "x": 118.31500244140625,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": false,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "respawn.afterStateSynchronization",
+          "frame": 807,
+          "t": 5.0399980545043945,
+          "fixedTime": 16.13999366760254,
+          "input": -1.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": -4.659996032714844,
+          "jumpBuffer": -15.26015853881836,
+          "airTime": 4.759995937347412,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "transformPosition": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "previousPhysics": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.0,
+            "y": 0.0
+          },
+          "colliderMax": {
+            "x": 117.80000305175781,
+            "y": 1.2000000476837158
+          },
+          "camera": {
+            "x": 118.31500244140625,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": false,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "respawn.after",
+          "frame": 807,
+          "t": 5.0399980545043945,
+          "fixedTime": 16.13999366760254,
+          "input": -1.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": -4.659996032714844,
+          "jumpBuffer": -15.26015853881836,
+          "airTime": 4.759995937347412,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "transformPosition": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "previousPhysics": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.0,
+            "y": 0.0
+          },
+          "colliderMax": {
+            "x": 117.80000305175781,
+            "y": 1.2000000476837158
+          },
+          "camera": {
+            "x": 117.4000015258789,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": false,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "late.afterPhysics",
+          "frame": 807,
+          "t": 5.0399980545043945,
+          "fixedTime": 16.13999366760254,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": -4.659996032714844,
+          "jumpBuffer": -15.280158996582031,
+          "airTime": 4.759995937347412,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "transformPosition": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "previousPhysics": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.0,
+            "y": 0.0
+          },
+          "colliderMax": {
+            "x": 117.80000305175781,
+            "y": 1.2000000476837158
+          },
+          "camera": {
+            "x": 117.4000015258789,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": false,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "mover.beforeFixed",
+          "frame": 808,
+          "t": 5.059998512268066,
+          "fixedTime": 16.15999412536621,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": -4.659996032714844,
+          "jumpBuffer": -15.280158996582031,
+          "airTime": 4.759995937347412,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "transformPosition": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "previousPhysics": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.0,
+            "y": 0.0
+          },
+          "colliderMax": {
+            "x": 117.80000305175781,
+            "y": 1.2000000476837158
+          },
+          "camera": {
+            "x": 117.4000015258789,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": false,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "sweep.afterPositionWrite",
+          "frame": 808,
+          "t": 5.059998512268066,
+          "fixedTime": 16.15999412536621,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": -4.659996032714844,
+          "jumpBuffer": -15.280158996582031,
+          "airTime": 4.759995937347412,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 118.31108093261719,
+            "y": -0.5889179706573486
+          },
+          "transformPosition": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "previousPhysics": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.91107940673828,
+            "y": -1.1889179944992065
+          },
+          "colliderMax": {
+            "x": 118.7110824584961,
+            "y": 0.011082053184509277
+          },
+          "camera": {
+            "x": 117.4000015258789,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": false,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "mover.afterSweep",
+          "frame": 808,
+          "t": 5.059998512268066,
+          "fixedTime": 16.15999412536621,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": -4.659996032714844,
+          "jumpBuffer": -15.280158996582031,
+          "airTime": 4.759995937347412,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 118.31108093261719,
+            "y": -0.5889179706573486
+          },
+          "transformPosition": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "previousPhysics": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.91107940673828,
+            "y": -1.1889179944992065
+          },
+          "colliderMax": {
+            "x": 118.7110824584961,
+            "y": 0.011082053184509277
+          },
+          "camera": {
+            "x": 117.4000015258789,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": false,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "mover.afterFixed",
+          "frame": 808,
+          "t": 5.059998512268066,
+          "fixedTime": 16.15999412536621,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": -4.679996013641357,
+          "jumpBuffer": -15.280158996582031,
+          "airTime": 4.779995918273926,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 118.31108093261719,
+            "y": -0.5889179706573486
+          },
+          "transformPosition": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "previousPhysics": {
+            "x": 118.31108093261719,
+            "y": -0.5889179706573486
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.91107940673828,
+            "y": -1.1889179944992065
+          },
+          "colliderMax": {
+            "x": 118.7110824584961,
+            "y": 0.011082053184509277
+          },
+          "camera": {
+            "x": 117.4000015258789,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": false,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "late.afterPhysics",
+          "frame": 808,
+          "t": 5.059998512268066,
+          "fixedTime": 16.15999412536621,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": -4.679996013641357,
+          "jumpBuffer": -15.300159454345703,
+          "airTime": 4.779995918273926,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 117.4000015258789,
+            "y": 0.6088560223579407
+          },
+          "transformPosition": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "previousPhysics": {
+            "x": 118.31108093261719,
+            "y": -0.5889179706573486
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.0,
+            "y": 0.008856058120727539
+          },
+          "colliderMax": {
+            "x": 117.80000305175781,
+            "y": 1.2088561058044434
+          },
+          "camera": {
+            "x": 117.4000015258789,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": false,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "mover.beforeFixed",
+          "frame": 809,
+          "t": 5.079998970031738,
+          "fixedTime": 16.179994583129883,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": -4.679996013641357,
+          "jumpBuffer": -15.300159454345703,
+          "airTime": 4.779995918273926,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 117.4000015258789,
+            "y": 0.6088560223579407
+          },
+          "transformPosition": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "previousPhysics": {
+            "x": 118.31108093261719,
+            "y": -0.5889179706573486
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.0,
+            "y": 0.008856058120727539
+          },
+          "colliderMax": {
+            "x": 117.80000305175781,
+            "y": 1.2088561058044434
+          },
+          "camera": {
+            "x": 117.4000015258789,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": false,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "sweep.afterPositionWrite",
+          "frame": 809,
+          "t": 5.079998970031738,
+          "fixedTime": 16.179994583129883,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": -4.679996013641357,
+          "jumpBuffer": -15.300159454345703,
+          "airTime": 4.779995918273926,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 118.3110580444336,
+            "y": -0.5888853073120117
+          },
+          "transformPosition": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "previousPhysics": {
+            "x": 118.31108093261719,
+            "y": -0.5889179706573486
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.91105651855469,
+            "y": -1.1888853311538696
+          },
+          "colliderMax": {
+            "x": 118.7110595703125,
+            "y": 0.011114716529846191
+          },
+          "camera": {
+            "x": 117.4000015258789,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": false,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "mover.afterSweep",
+          "frame": 809,
+          "t": 5.079998970031738,
+          "fixedTime": 16.179994583129883,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": -4.679996013641357,
+          "jumpBuffer": -15.300159454345703,
+          "airTime": 4.779995918273926,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 118.3110580444336,
+            "y": -0.5888853073120117
+          },
+          "transformPosition": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "previousPhysics": {
+            "x": 118.31108093261719,
+            "y": -0.5889179706573486
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.91105651855469,
+            "y": -1.1888853311538696
+          },
+          "colliderMax": {
+            "x": 118.7110595703125,
+            "y": 0.011114716529846191
+          },
+          "camera": {
+            "x": 117.4000015258789,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": false,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "mover.afterFixed",
+          "frame": 809,
+          "t": 5.079998970031738,
+          "fixedTime": 16.179994583129883,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": -4.699995994567871,
+          "jumpBuffer": -15.300159454345703,
+          "airTime": 4.7999958992004395,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 118.3110580444336,
+            "y": -0.5888853073120117
+          },
+          "transformPosition": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "previousPhysics": {
+            "x": 118.3110580444336,
+            "y": -0.5888853073120117
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.91105651855469,
+            "y": -1.1888853311538696
+          },
+          "colliderMax": {
+            "x": 118.7110595703125,
+            "y": 0.011114716529846191
+          },
+          "camera": {
+            "x": 117.4000015258789,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": false,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "late.afterPhysics",
+          "frame": 809,
+          "t": 5.079998970031738,
+          "fixedTime": 16.179994583129883,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": -4.699995994567871,
+          "jumpBuffer": -15.320159912109375,
+          "airTime": 4.7999958992004395,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 118.3124771118164,
+            "y": -0.5998615026473999
+          },
+          "transformPosition": {
+            "x": 118.3110580444336,
+            "y": -0.5888853073120117
+          },
+          "previousPhysics": {
+            "x": 118.3110580444336,
+            "y": -0.5888853073120117
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": -0.5488109588623047
+          },
+          "colliderMin": {
+            "x": 117.9124755859375,
+            "y": -1.1998615264892578
+          },
+          "colliderMax": {
+            "x": 118.71247863769531,
+            "y": 0.0001385211944580078
+          },
+          "camera": {
+            "x": 117.41918182373047,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": false,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "mover.beforeFixed",
+          "frame": 810,
+          "t": 5.09999942779541,
+          "fixedTime": 16.199995040893555,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": -4.699995994567871,
+          "jumpBuffer": -15.320159912109375,
+          "airTime": 4.7999958992004395,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 118.3124771118164,
+            "y": -0.5998615026473999
+          },
+          "transformPosition": {
+            "x": 118.3110580444336,
+            "y": -0.5888853073120117
+          },
+          "previousPhysics": {
+            "x": 118.3110580444336,
+            "y": -0.5888853073120117
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": -0.5488109588623047
+          },
+          "colliderMin": {
+            "x": 117.9124755859375,
+            "y": -1.1998615264892578
+          },
+          "colliderMax": {
+            "x": 118.71247863769531,
+            "y": 0.0001385211944580078
+          },
+          "camera": {
+            "x": 117.41918182373047,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": false,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "mover.afterSweep",
+          "frame": 810,
+          "t": 5.09999942779541,
+          "fixedTime": 16.199995040893555,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": -4.699995994567871,
+          "jumpBuffer": -15.320159912109375,
+          "airTime": 4.7999958992004395,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 118.3124771118164,
+            "y": -0.5998615026473999
+          },
+          "transformPosition": {
+            "x": 118.3110580444336,
+            "y": -0.5888853073120117
+          },
+          "previousPhysics": {
+            "x": 118.3110580444336,
+            "y": -0.5888853073120117
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": -0.5488109588623047
+          },
+          "colliderMin": {
+            "x": 117.9124755859375,
+            "y": -1.1998615264892578
+          },
+          "colliderMax": {
+            "x": 118.71247863769531,
+            "y": 0.0001385211944580078
+          },
+          "camera": {
+            "x": 117.41918182373047,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": false,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "mover.afterFixed",
+          "frame": 810,
+          "t": 5.09999942779541,
+          "fixedTime": 16.199995040893555,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": -4.719995975494385,
+          "jumpBuffer": -15.320159912109375,
+          "airTime": 4.819995880126953,
+          "previousVertical": -0.5488109588623047,
+          "position": {
+            "x": 118.3124771118164,
+            "y": -0.5998615026473999
+          },
+          "transformPosition": {
+            "x": 118.3110580444336,
+            "y": -0.5888853073120117
+          },
+          "previousPhysics": {
+            "x": 118.3124771118164,
+            "y": -0.5998615026473999
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": -0.5488109588623047
+          },
+          "colliderMin": {
+            "x": 117.9124755859375,
+            "y": -1.1998615264892578
+          },
+          "colliderMax": {
+            "x": 118.71247863769531,
+            "y": 0.0001385211944580078
+          },
+          "camera": {
+            "x": 117.41918182373047,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": false,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "late.afterPhysics",
+          "frame": 810,
+          "t": 5.09999942779541,
+          "fixedTime": 16.199995040893555,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": -4.719995975494385,
+          "jumpBuffer": -15.340160369873047,
+          "airTime": 4.819995880126953,
+          "previousVertical": -0.5488109588623047,
+          "position": {
+            "x": 118.31338500976562,
+            "y": -0.6218029856681824
+          },
+          "transformPosition": {
+            "x": 118.3124771118164,
+            "y": -0.5998615026473999
+          },
+          "previousPhysics": {
+            "x": 118.3124771118164,
+            "y": -0.5998615026473999
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": -1.0970736742019653
+          },
+          "colliderMin": {
+            "x": 117.91338348388672,
+            "y": -1.2218029499053955
+          },
+          "colliderMax": {
+            "x": 118.71338653564453,
+            "y": -0.021802902221679688
+          },
+          "camera": {
+            "x": 117.46685028076172,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": false,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "mover.beforeFixed",
+          "frame": 811,
+          "t": 5.119997978210449,
+          "fixedTime": 16.219993591308594,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": -4.719995975494385,
+          "jumpBuffer": -15.340160369873047,
+          "airTime": 4.819995880126953,
+          "previousVertical": -0.5488109588623047,
+          "position": {
+            "x": 118.31338500976562,
+            "y": -0.6218029856681824
+          },
+          "transformPosition": {
+            "x": 118.3124771118164,
+            "y": -0.5998615026473999
+          },
+          "previousPhysics": {
+            "x": 118.3124771118164,
+            "y": -0.5998615026473999
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": -1.0970736742019653
+          },
+          "colliderMin": {
+            "x": 117.91338348388672,
+            "y": -1.2218029499053955
+          },
+          "colliderMax": {
+            "x": 118.71338653564453,
+            "y": -0.021802902221679688
+          },
+          "camera": {
+            "x": 117.46685028076172,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": false,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "mover.afterSweep",
+          "frame": 811,
+          "t": 5.119997978210449,
+          "fixedTime": 16.219993591308594,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": -4.719995975494385,
+          "jumpBuffer": -15.340160369873047,
+          "airTime": 4.819995880126953,
+          "previousVertical": -0.5488109588623047,
+          "position": {
+            "x": 118.31338500976562,
+            "y": -0.6218029856681824
+          },
+          "transformPosition": {
+            "x": 118.3124771118164,
+            "y": -0.5998615026473999
+          },
+          "previousPhysics": {
+            "x": 118.3124771118164,
+            "y": -0.5998615026473999
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": -1.0970736742019653
+          },
+          "colliderMin": {
+            "x": 117.91338348388672,
+            "y": -1.2218029499053955
+          },
+          "colliderMax": {
+            "x": 118.71338653564453,
+            "y": -0.021802902221679688
+          },
+          "camera": {
+            "x": 117.46685028076172,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": false,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "mover.afterFixed",
+          "frame": 811,
+          "t": 5.119997978210449,
+          "fixedTime": 16.219993591308594,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": -4.739995956420898,
+          "jumpBuffer": -15.340160369873047,
+          "airTime": 4.839995861053467,
+          "previousVertical": -1.0970736742019653,
+          "position": {
+            "x": 118.31338500976562,
+            "y": -0.6218029856681824
+          },
+          "transformPosition": {
+            "x": 118.3124771118164,
+            "y": -0.5998615026473999
+          },
+          "previousPhysics": {
+            "x": 118.31338500976562,
+            "y": -0.6218029856681824
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": -1.0970736742019653
+          },
+          "colliderMin": {
+            "x": 117.91338348388672,
+            "y": -1.2218029499053955
+          },
+          "colliderMax": {
+            "x": 118.71338653564453,
+            "y": -0.021802902221679688
+          },
+          "camera": {
+            "x": 117.46685028076172,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": false,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "late.afterPhysics",
+          "frame": 811,
+          "t": 5.119997978210449,
+          "fixedTime": 16.219993591308594,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": -4.739995956420898,
+          "jumpBuffer": -15.360160827636719,
+          "airTime": 4.839995861053467,
+          "previousVertical": -1.0970736742019653,
+          "position": {
+            "x": 118.31396484375,
+            "y": -0.6546987295150757
+          },
+          "transformPosition": {
+            "x": 118.31338500976562,
+            "y": -0.6218029856681824
+          },
+          "previousPhysics": {
+            "x": 118.31338500976562,
+            "y": -0.6218029856681824
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": -1.6447886228561401
+          },
+          "colliderMin": {
+            "x": 117.9139633178711,
+            "y": -1.2546987533569336
+          },
+          "colliderMax": {
+            "x": 118.7139663696289,
+            "y": -0.05469870567321777
+          },
+          "camera": {
+            "x": 117.53095245361328,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": false,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        }
+      ],
+      "sweeps": [
+        {
+          "before": {
+            "label": "sweep.beforePositionWrite",
+            "frame": 808,
+            "t": 5.059998512268066,
+            "fixedTime": 16.15999412536621,
+            "input": 0.0,
+            "driverInput": 0.0,
+            "remaining": 24.0,
+            "coyote": -4.659996032714844,
+            "jumpBuffer": -15.280158996582031,
+            "airTime": 4.759995937347412,
+            "previousVertical": 0.0,
+            "position": {
+              "x": 117.4000015258789,
+              "y": 0.6000000238418579
+            },
+            "transformPosition": {
+              "x": 117.4000015258789,
+              "y": 0.6000000238418579
+            },
+            "previousPhysics": {
+              "x": 118.31498718261719,
+              "y": -0.5940107703208923
+            },
+            "velocity": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "colliderMin": {
+              "x": 117.0,
+              "y": 0.0
+            },
+            "colliderMax": {
+              "x": 117.80000305175781,
+              "y": 1.2000000476837158
+            },
+            "camera": {
+              "x": 117.4000015258789,
+              "y": 0.0,
+              "z": -10.0
+            },
+            "ortho": 8.699999809265137,
+            "hasPrevious": true,
+            "hasPreviousVertical": true,
+            "attached": false,
+            "grounded": false,
+            "simulated": true,
+            "failure": false,
+            "moverEnabled": true,
+            "selected": 6,
+            "bridges": 0,
+            "hook": "",
+            "hooksRestored": true
+          },
+          "from": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "to": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "distance": 1.504280686378479,
+          "safeDistance": 0.006416164338588715,
+          "chosenCollider": "A2 Proof Entry Box",
+          "hits": [
+            {
+              "collider": "A2 Proof Entry Box",
+              "distance": 0.016416164115071297,
+              "point": {
+                "x": 117.90249633789062,
+                "y": -0.6004910469055176
+              },
+              "normal": {
+                "x": 1.0,
+                "y": 0.0
+              },
+              "solid": true
+            },
+            {
+              "collider": "Main Player",
+              "distance": 0.1808146834373474,
+              "point": {
+                "x": 117.80250549316406,
+                "y": 0.08475613594055176
+              },
+              "normal": {
+                "x": 1.0,
+                "y": 0.0
+              },
+              "solid": false
+            }
+          ]
+        },
+        {
+          "before": {
+            "label": "sweep.beforePositionWrite",
+            "frame": 809,
+            "t": 5.079998970031738,
+            "fixedTime": 16.179994583129883,
+            "input": 0.0,
+            "driverInput": 0.0,
+            "remaining": 24.0,
+            "coyote": -4.679996013641357,
+            "jumpBuffer": -15.300159454345703,
+            "airTime": 4.779995918273926,
+            "previousVertical": 0.0,
+            "position": {
+              "x": 117.4000015258789,
+              "y": 0.6088560223579407
+            },
+            "transformPosition": {
+              "x": 117.4000015258789,
+              "y": 0.6000000238418579
+            },
+            "previousPhysics": {
+              "x": 118.31108093261719,
+              "y": -0.5889179706573486
+            },
+            "velocity": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "colliderMin": {
+              "x": 117.0,
+              "y": 0.008856058120727539
+            },
+            "colliderMax": {
+              "x": 117.80000305175781,
+              "y": 1.2088561058044434
+            },
+            "camera": {
+              "x": 117.4000015258789,
+              "y": 0.0,
+              "z": -10.0
+            },
+            "ortho": 8.699999809265137,
+            "hasPrevious": true,
+            "hasPreviousVertical": true,
+            "attached": false,
+            "grounded": false,
+            "simulated": true,
+            "failure": false,
+            "moverEnabled": true,
+            "selected": 6,
+            "bridges": 0,
+            "hook": "",
+            "hooksRestored": true
+          },
+          "from": {
+            "x": 118.31108093261719,
+            "y": -0.5889179706573486
+          },
+          "to": {
+            "x": 117.4000015258789,
+            "y": 0.6088560223579407
+          },
+          "distance": 1.50490140914917,
+          "safeDistance": 4.100613296031952e-05,
+          "chosenCollider": "A2 Proof Entry Box",
+          "hits": [
+            {
+              "collider": "A2 Proof Entry Box",
+              "distance": 0.010041005909442902,
+              "point": {
+                "x": 117.90249633789062,
+                "y": -0.6004638671875
+              },
+              "normal": {
+                "x": 1.0,
+                "y": 0.0
+              },
+              "solid": true
+            },
+            {
+              "collider": "Main Player",
+              "distance": 0.17521722614765167,
+              "point": {
+                "x": 117.80250549316406,
+                "y": 0.08969762921333313
+              },
+              "normal": {
+                "x": 1.0,
+                "y": 0.0
+              },
+              "solid": false
+            }
+          ]
+        }
+      ],
+      "settled": {
+        "label": "settled1.6s",
+        "frame": 888,
+        "t": 6.659998893737793,
+        "fixedTime": 17.759994506835938,
+        "input": 0.0,
+        "driverInput": 0.0,
+        "remaining": 24.0,
+        "coyote": -5.459995269775391,
+        "jumpBuffer": -16.060176849365234,
+        "airTime": 5.559995174407959,
+        "previousVertical": -20.473960876464844,
+        "position": {
+          "x": 118.31498718261719,
+          "y": -9.042986869812012
+        },
+        "transformPosition": {
+          "x": 118.31498718261719,
+          "y": -8.622941017150879
+        },
+        "previousPhysics": {
+          "x": 118.31498718261719,
+          "y": -8.622941017150879
+        },
+        "velocity": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "colliderMin": {
+          "x": 117.91498565673828,
+          "y": -9.642987251281738
+        },
+        "colliderMax": {
+          "x": 118.7149887084961,
+          "y": -8.442986488342285
+        },
+        "camera": {
+          "x": 118.31309509277344,
+          "y": 0.0,
+          "z": -10.0
+        },
+        "ortho": 8.699999809265137,
+        "hasPrevious": true,
+        "hasPreviousVertical": true,
+        "attached": false,
+        "grounded": false,
+        "simulated": false,
+        "failure": true,
+        "moverEnabled": false,
+        "selected": 6,
+        "bridges": 0,
+        "hook": "",
+        "hooksRestored": true
+      },
+      "passed": false
+    },
+    {
+      "layout": "original_without_bevel",
+      "sync": "fixed",
+      "case": "L6_ground_follow_release-1",
+      "method": "Original WallCollisionReview Run sequence: same 1.7s reset wait, attached6, velocity-follow input5s, then input.Move=0 and f.Retry.",
+      "before": {
+        "label": "beforeRetry",
+        "frame": 388,
+        "t": 5.019998550415039,
+        "fixedTime": 7.759997367858887,
+        "input": -1.0,
+        "driverInput": 0.0,
+        "remaining": 24.0,
+        "coyote": -4.63999605178833,
+        "jumpBuffer": -6.739994049072266,
+        "airTime": 4.739995956420898,
+        "previousVertical": 0.0,
+        "position": {
+          "x": 118.31498718261719,
+          "y": -0.5940107703208923
+        },
+        "transformPosition": {
+          "x": 118.31498718261719,
+          "y": -0.5940107703208923
+        },
+        "previousPhysics": {
+          "x": 118.31498718261719,
+          "y": -0.5940107703208923
+        },
+        "velocity": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "colliderMin": {
+          "x": 117.91498565673828,
+          "y": -1.1940107345581055
+        },
+        "colliderMax": {
+          "x": 118.7149887084961,
+          "y": 0.0059893131256103516
+        },
+        "camera": {
+          "x": 118.31500244140625,
+          "y": 0.0,
+          "z": -10.0
+        },
+        "ortho": 8.699999809265137,
+        "hasPrevious": true,
+        "hasPreviousVertical": true,
+        "attached": true,
+        "grounded": false,
+        "simulated": true,
+        "failure": false,
+        "moverEnabled": true,
+        "selected": 6,
+        "bridges": 0,
+        "hook": "A2 Proof Blue Swing Hook 1",
+        "hooksRestored": true
+      },
+      "immediate": {
+        "label": "immediateRetry",
+        "frame": 388,
+        "t": 5.019998550415039,
+        "fixedTime": 7.759997367858887,
+        "input": 0.0,
+        "driverInput": 0.0,
+        "remaining": 24.0,
+        "coyote": 0.0,
+        "jumpBuffer": 0.0,
+        "airTime": 0.0,
+        "previousVertical": 0.0,
+        "position": {
+          "x": 117.4000015258789,
+          "y": 0.6000000238418579
+        },
+        "transformPosition": {
+          "x": 117.4000015258789,
+          "y": 0.6000000238418579
+        },
+        "previousPhysics": {
+          "x": 117.4000015258789,
+          "y": 0.6000000238418579
+        },
+        "velocity": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "colliderMin": {
+          "x": 117.0,
+          "y": 0.0
+        },
+        "colliderMax": {
+          "x": 117.80000305175781,
+          "y": 1.2000000476837158
+        },
+        "camera": {
+          "x": 117.4000015258789,
+          "y": 0.0,
+          "z": -10.0
+        },
+        "ortho": 8.699999809265137,
+        "hasPrevious": true,
+        "hasPreviousVertical": false,
+        "attached": false,
+        "grounded": true,
+        "simulated": true,
+        "failure": false,
+        "moverEnabled": true,
+        "selected": 6,
+        "bridges": 0,
+        "hook": "",
+        "hooksRestored": true
+      },
+      "first_physics_events": [
+        {
+          "label": "mover.beforeFixed",
+          "frame": 388,
+          "t": 5.019998550415039,
+          "fixedTime": 7.759997367858887,
+          "input": -1.0,
+          "driverInput": -1.0,
+          "remaining": 24.0,
+          "coyote": -4.619996070861816,
+          "jumpBuffer": -6.719994068145752,
+          "airTime": 4.719995975494385,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "transformPosition": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "previousPhysics": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.91498565673828,
+            "y": -1.1940107345581055
+          },
+          "colliderMax": {
+            "x": 118.7149887084961,
+            "y": 0.0059893131256103516
+          },
+          "camera": {
+            "x": 118.31500244140625,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": true,
+          "grounded": false,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "A2 Proof Blue Swing Hook 1",
+          "hooksRestored": true
+        },
+        {
+          "label": "mover.afterSweep",
+          "frame": 388,
+          "t": 5.019998550415039,
+          "fixedTime": 7.759997367858887,
+          "input": -1.0,
+          "driverInput": -1.0,
+          "remaining": 24.0,
+          "coyote": -4.619996070861816,
+          "jumpBuffer": -6.719994068145752,
+          "airTime": 4.719995975494385,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "transformPosition": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "previousPhysics": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.91498565673828,
+            "y": -1.1940107345581055
+          },
+          "colliderMax": {
+            "x": 118.7149887084961,
+            "y": 0.0059893131256103516
+          },
+          "camera": {
+            "x": 118.31500244140625,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": true,
+          "grounded": false,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "A2 Proof Blue Swing Hook 1",
+          "hooksRestored": true
+        },
+        {
+          "label": "mover.afterFixed",
+          "frame": 388,
+          "t": 5.019998550415039,
+          "fixedTime": 7.759997367858887,
+          "input": -1.0,
+          "driverInput": -1.0,
+          "remaining": 24.0,
+          "coyote": -4.63999605178833,
+          "jumpBuffer": -6.719994068145752,
+          "airTime": 4.739995956420898,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "transformPosition": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "previousPhysics": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.91498565673828,
+            "y": -1.1940107345581055
+          },
+          "colliderMax": {
+            "x": 118.7149887084961,
+            "y": 0.0059893131256103516
+          },
+          "camera": {
+            "x": 118.31500244140625,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": true,
+          "grounded": false,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "A2 Proof Blue Swing Hook 1",
+          "hooksRestored": true
+        },
+        {
+          "label": "late.afterPhysics",
+          "frame": 388,
+          "t": 5.019998550415039,
+          "fixedTime": 7.759997367858887,
+          "input": -1.0,
+          "driverInput": -1.0,
+          "remaining": 24.0,
+          "coyote": -4.63999605178833,
+          "jumpBuffer": -6.739994049072266,
+          "airTime": 4.739995956420898,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "transformPosition": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "previousPhysics": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.91498565673828,
+            "y": -1.1940107345581055
+          },
+          "colliderMax": {
+            "x": 118.7149887084961,
+            "y": 0.0059893131256103516
+          },
+          "camera": {
+            "x": 118.31500244140625,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": true,
+          "grounded": false,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "A2 Proof Blue Swing Hook 1",
+          "hooksRestored": true
+        },
+        {
+          "label": "respawn.before",
+          "frame": 388,
+          "t": 5.019998550415039,
+          "fixedTime": 7.759997367858887,
+          "input": -1.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": -4.63999605178833,
+          "jumpBuffer": -6.739994049072266,
+          "airTime": 4.739995956420898,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "transformPosition": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "previousPhysics": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.91498565673828,
+            "y": -1.1940107345581055
+          },
+          "colliderMax": {
+            "x": 118.7149887084961,
+            "y": 0.0059893131256103516
+          },
+          "camera": {
+            "x": 118.31500244140625,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": true,
+          "grounded": false,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "A2 Proof Blue Swing Hook 1",
+          "hooksRestored": true
+        },
+        {
+          "label": "respawn.positionVelocityRestored",
+          "frame": 388,
+          "t": 5.019998550415039,
+          "fixedTime": 7.759997367858887,
+          "input": -1.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": -4.63999605178833,
+          "jumpBuffer": -6.739994049072266,
+          "airTime": 4.739995956420898,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "transformPosition": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "previousPhysics": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.0,
+            "y": 0.0
+          },
+          "colliderMax": {
+            "x": 117.80000305175781,
+            "y": 1.2000000476837158
+          },
+          "camera": {
+            "x": 118.31500244140625,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": false,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "respawn.afterStateSynchronization",
+          "frame": 388,
+          "t": 5.019998550415039,
+          "fixedTime": 7.759997367858887,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": 0.0,
+          "jumpBuffer": 0.0,
+          "airTime": 0.0,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "transformPosition": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "previousPhysics": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.0,
+            "y": 0.0
+          },
+          "colliderMax": {
+            "x": 117.80000305175781,
+            "y": 1.2000000476837158
+          },
+          "camera": {
+            "x": 118.31500244140625,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": false,
+          "attached": false,
+          "grounded": true,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "respawn.after",
+          "frame": 388,
+          "t": 5.019998550415039,
+          "fixedTime": 7.759997367858887,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": 0.0,
+          "jumpBuffer": 0.0,
+          "airTime": 0.0,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "transformPosition": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "previousPhysics": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.0,
+            "y": 0.0
+          },
+          "colliderMax": {
+            "x": 117.80000305175781,
+            "y": 1.2000000476837158
+          },
+          "camera": {
+            "x": 117.4000015258789,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": false,
+          "attached": false,
+          "grounded": true,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "mover.beforeFixed",
+          "frame": 389,
+          "t": 5.0399980545043945,
+          "fixedTime": 7.7799973487854,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": 0.0,
+          "jumpBuffer": 0.0,
+          "airTime": 0.0,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "transformPosition": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "previousPhysics": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.0,
+            "y": 0.0
+          },
+          "colliderMax": {
+            "x": 117.80000305175781,
+            "y": 1.2000000476837158
+          },
+          "camera": {
+            "x": 117.4000015258789,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": false,
+          "attached": false,
+          "grounded": true,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "mover.afterSweep",
+          "frame": 389,
+          "t": 5.0399980545043945,
+          "fixedTime": 7.7799973487854,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": 0.0,
+          "jumpBuffer": 0.0,
+          "airTime": 0.0,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "transformPosition": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "previousPhysics": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.0,
+            "y": 0.0
+          },
+          "colliderMax": {
+            "x": 117.80000305175781,
+            "y": 1.2000000476837158
+          },
+          "camera": {
+            "x": 117.4000015258789,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": false,
+          "attached": false,
+          "grounded": true,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "mover.afterFixed",
+          "frame": 389,
+          "t": 5.0399980545043945,
+          "fixedTime": 7.7799973487854,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": 0.10000000149011612,
+          "jumpBuffer": 0.0,
+          "airTime": 0.0,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "transformPosition": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "previousPhysics": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.0,
+            "y": 0.0
+          },
+          "colliderMax": {
+            "x": 117.80000305175781,
+            "y": 1.2000000476837158
+          },
+          "camera": {
+            "x": 117.4000015258789,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": true,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "late.afterPhysics",
+          "frame": 389,
+          "t": 5.0399980545043945,
+          "fixedTime": 7.7799973487854,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": 0.10000000149011612,
+          "jumpBuffer": -0.019999992102384567,
+          "airTime": 0.0,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 117.4000015258789,
+            "y": 0.6088560223579407
+          },
+          "transformPosition": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "previousPhysics": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.0,
+            "y": 0.008856058120727539
+          },
+          "colliderMax": {
+            "x": 117.80000305175781,
+            "y": 1.2088561058044434
+          },
+          "camera": {
+            "x": 117.4000015258789,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": true,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "mover.beforeFixed",
+          "frame": 390,
+          "t": 5.059998512268066,
+          "fixedTime": 7.799997329711914,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": 0.10000000149011612,
+          "jumpBuffer": -0.019999992102384567,
+          "airTime": 0.0,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 117.4000015258789,
+            "y": 0.6088560223579407
+          },
+          "transformPosition": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "previousPhysics": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.0,
+            "y": 0.008856058120727539
+          },
+          "colliderMax": {
+            "x": 117.80000305175781,
+            "y": 1.2088561058044434
+          },
+          "camera": {
+            "x": 117.4000015258789,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": true,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "mover.afterSweep",
+          "frame": 390,
+          "t": 5.059998512268066,
+          "fixedTime": 7.799997329711914,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": 0.10000000149011612,
+          "jumpBuffer": -0.019999992102384567,
+          "airTime": 0.0,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 117.4000015258789,
+            "y": 0.6088560223579407
+          },
+          "transformPosition": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "previousPhysics": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.0,
+            "y": 0.008856058120727539
+          },
+          "colliderMax": {
+            "x": 117.80000305175781,
+            "y": 1.2088561058044434
+          },
+          "camera": {
+            "x": 117.4000015258789,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": true,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "mover.afterFixed",
+          "frame": 390,
+          "t": 5.059998512268066,
+          "fixedTime": 7.799997329711914,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": 0.10000000149011612,
+          "jumpBuffer": -0.019999992102384567,
+          "airTime": 0.0,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 117.4000015258789,
+            "y": 0.6088560223579407
+          },
+          "transformPosition": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "previousPhysics": {
+            "x": 117.4000015258789,
+            "y": 0.6088560223579407
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.0,
+            "y": 0.008856058120727539
+          },
+          "colliderMax": {
+            "x": 117.80000305175781,
+            "y": 1.2088561058044434
+          },
+          "camera": {
+            "x": 117.4000015258789,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": true,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "late.afterPhysics",
+          "frame": 390,
+          "t": 5.059998512268066,
+          "fixedTime": 7.799997329711914,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": 0.10000000149011612,
+          "jumpBuffer": -0.039999984204769135,
+          "airTime": 0.0,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 117.4000015258789,
+            "y": 0.6110678911209106
+          },
+          "transformPosition": {
+            "x": 117.4000015258789,
+            "y": 0.6088560223579407
+          },
+          "previousPhysics": {
+            "x": 117.4000015258789,
+            "y": 0.6088560223579407
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.0,
+            "y": 0.011067867279052734
+          },
+          "colliderMax": {
+            "x": 117.80000305175781,
+            "y": 1.2110679149627686
+          },
+          "camera": {
+            "x": 117.4000015258789,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": true,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "mover.beforeFixed",
+          "frame": 391,
+          "t": 5.079998016357422,
+          "fixedTime": 7.819997310638428,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": 0.10000000149011612,
+          "jumpBuffer": -0.039999984204769135,
+          "airTime": 0.0,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 117.4000015258789,
+            "y": 0.6110678911209106
+          },
+          "transformPosition": {
+            "x": 117.4000015258789,
+            "y": 0.6088560223579407
+          },
+          "previousPhysics": {
+            "x": 117.4000015258789,
+            "y": 0.6088560223579407
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.0,
+            "y": 0.011067867279052734
+          },
+          "colliderMax": {
+            "x": 117.80000305175781,
+            "y": 1.2110679149627686
+          },
+          "camera": {
+            "x": 117.4000015258789,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": true,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "mover.afterSweep",
+          "frame": 391,
+          "t": 5.079998016357422,
+          "fixedTime": 7.819997310638428,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": 0.10000000149011612,
+          "jumpBuffer": -0.039999984204769135,
+          "airTime": 0.0,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 117.4000015258789,
+            "y": 0.6110678911209106
+          },
+          "transformPosition": {
+            "x": 117.4000015258789,
+            "y": 0.6088560223579407
+          },
+          "previousPhysics": {
+            "x": 117.4000015258789,
+            "y": 0.6088560223579407
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.0,
+            "y": 0.011067867279052734
+          },
+          "colliderMax": {
+            "x": 117.80000305175781,
+            "y": 1.2110679149627686
+          },
+          "camera": {
+            "x": 117.4000015258789,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": true,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "mover.afterFixed",
+          "frame": 391,
+          "t": 5.079998016357422,
+          "fixedTime": 7.819997310638428,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": 0.10000000149011612,
+          "jumpBuffer": -0.039999984204769135,
+          "airTime": 0.0,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 117.4000015258789,
+            "y": 0.6110678911209106
+          },
+          "transformPosition": {
+            "x": 117.4000015258789,
+            "y": 0.6088560223579407
+          },
+          "previousPhysics": {
+            "x": 117.4000015258789,
+            "y": 0.6110678911209106
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.0,
+            "y": 0.011067867279052734
+          },
+          "colliderMax": {
+            "x": 117.80000305175781,
+            "y": 1.2110679149627686
+          },
+          "camera": {
+            "x": 117.4000015258789,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": true,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "late.afterPhysics",
+          "frame": 391,
+          "t": 5.079998016357422,
+          "fixedTime": 7.819997310638428,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": 0.10000000149011612,
+          "jumpBuffer": -0.0599999763071537,
+          "airTime": 0.0,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 117.4000015258789,
+            "y": 0.6124834418296814
+          },
+          "transformPosition": {
+            "x": 117.4000015258789,
+            "y": 0.6110678911209106
+          },
+          "previousPhysics": {
+            "x": 117.4000015258789,
+            "y": 0.6110678911209106
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.0,
+            "y": 0.012483358383178711
+          },
+          "colliderMax": {
+            "x": 117.80000305175781,
+            "y": 1.2124834060668945
+          },
+          "camera": {
+            "x": 117.4000015258789,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": true,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "mover.beforeFixed",
+          "frame": 392,
+          "t": 5.099998474121094,
+          "fixedTime": 7.839997291564941,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": 0.10000000149011612,
+          "jumpBuffer": -0.0599999763071537,
+          "airTime": 0.0,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 117.4000015258789,
+            "y": 0.6124834418296814
+          },
+          "transformPosition": {
+            "x": 117.4000015258789,
+            "y": 0.6110678911209106
+          },
+          "previousPhysics": {
+            "x": 117.4000015258789,
+            "y": 0.6110678911209106
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.0,
+            "y": 0.012483358383178711
+          },
+          "colliderMax": {
+            "x": 117.80000305175781,
+            "y": 1.2124834060668945
+          },
+          "camera": {
+            "x": 117.4000015258789,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": true,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "mover.afterSweep",
+          "frame": 392,
+          "t": 5.099998474121094,
+          "fixedTime": 7.839997291564941,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": 0.10000000149011612,
+          "jumpBuffer": -0.0599999763071537,
+          "airTime": 0.0,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 117.4000015258789,
+            "y": 0.6124834418296814
+          },
+          "transformPosition": {
+            "x": 117.4000015258789,
+            "y": 0.6110678911209106
+          },
+          "previousPhysics": {
+            "x": 117.4000015258789,
+            "y": 0.6110678911209106
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.0,
+            "y": 0.012483358383178711
+          },
+          "colliderMax": {
+            "x": 117.80000305175781,
+            "y": 1.2124834060668945
+          },
+          "camera": {
+            "x": 117.4000015258789,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": true,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "mover.afterFixed",
+          "frame": 392,
+          "t": 5.099998474121094,
+          "fixedTime": 7.839997291564941,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": 0.10000000149011612,
+          "jumpBuffer": -0.0599999763071537,
+          "airTime": 0.0,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 117.4000015258789,
+            "y": 0.6124834418296814
+          },
+          "transformPosition": {
+            "x": 117.4000015258789,
+            "y": 0.6110678911209106
+          },
+          "previousPhysics": {
+            "x": 117.4000015258789,
+            "y": 0.6124834418296814
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.0,
+            "y": 0.012483358383178711
+          },
+          "colliderMax": {
+            "x": 117.80000305175781,
+            "y": 1.2124834060668945
+          },
+          "camera": {
+            "x": 117.4000015258789,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": true,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "late.afterPhysics",
+          "frame": 392,
+          "t": 5.099998474121094,
+          "fixedTime": 7.839997291564941,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": 0.10000000149011612,
+          "jumpBuffer": -0.07999996840953827,
+          "airTime": 0.0,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 117.4000015258789,
+            "y": 0.6133893728256226
+          },
+          "transformPosition": {
+            "x": 117.4000015258789,
+            "y": 0.6124834418296814
+          },
+          "previousPhysics": {
+            "x": 117.4000015258789,
+            "y": 0.6124834418296814
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.0,
+            "y": 0.013389348983764648
+          },
+          "colliderMax": {
+            "x": 117.80000305175781,
+            "y": 1.2133893966674805
+          },
+          "camera": {
+            "x": 117.4000015258789,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": true,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        }
+      ],
+      "sweeps": [],
+      "settled": {
+        "label": "settled1.6s",
+        "frame": 469,
+        "t": 6.639997482299805,
+        "fixedTime": 9.379996299743652,
+        "input": 0.0,
+        "driverInput": 0.0,
+        "remaining": 24.0,
+        "coyote": 0.10000000149011612,
+        "jumpBuffer": -1.6199986934661865,
+        "airTime": 0.0,
+        "previousVertical": 0.0,
+        "position": {
+          "x": 117.4000015258789,
+          "y": 0.6149998903274536
+        },
+        "transformPosition": {
+          "x": 117.4000015258789,
+          "y": 0.6149997711181641
+        },
+        "previousPhysics": {
+          "x": 117.4000015258789,
+          "y": 0.6149998903274536
+        },
+        "velocity": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "colliderMin": {
+          "x": 117.0,
+          "y": 0.014999866485595703
+        },
+        "colliderMax": {
+          "x": 117.80000305175781,
+          "y": 1.2149999141693115
+        },
+        "camera": {
+          "x": 117.4000015258789,
+          "y": 0.0,
+          "z": -10.0
+        },
+        "ortho": 8.699999809265137,
+        "hasPrevious": true,
+        "hasPreviousVertical": true,
+        "attached": false,
+        "grounded": true,
+        "simulated": true,
+        "failure": false,
+        "moverEnabled": true,
+        "selected": 6,
+        "bridges": 0,
+        "hook": "",
+        "hooksRestored": true
+      },
+      "passed": true
+    },
+    {
+      "layout": "original_without_bevel",
+      "sync": "fixed",
+      "case": "L6_follow_driverDisabled_UpdateCoreR",
+      "method": "Same natural approach; A2InputDriver disabled before R; invoke the unchanged normal R core method from Update, not fixture Retry wrapper. NOT OS R.",
+      "before": {
+        "label": "beforeRetry",
+        "frame": 807,
+        "t": 5.0399980545043945,
+        "fixedTime": 16.13999366760254,
+        "input": -1.0,
+        "driverInput": 0.0,
+        "remaining": 24.0,
+        "coyote": -4.659996032714844,
+        "jumpBuffer": -6.739994049072266,
+        "airTime": 4.759995937347412,
+        "previousVertical": 0.0,
+        "position": {
+          "x": 118.31498718261719,
+          "y": -0.5940107703208923
+        },
+        "transformPosition": {
+          "x": 118.31498718261719,
+          "y": -0.5940107703208923
+        },
+        "previousPhysics": {
+          "x": 118.31498718261719,
+          "y": -0.5940107703208923
+        },
+        "velocity": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "colliderMin": {
+          "x": 117.91498565673828,
+          "y": -1.1940107345581055
+        },
+        "colliderMax": {
+          "x": 118.7149887084961,
+          "y": 0.0059893131256103516
+        },
+        "camera": {
+          "x": 118.31500244140625,
+          "y": 0.0,
+          "z": -10.0
+        },
+        "ortho": 8.699999809265137,
+        "hasPrevious": true,
+        "hasPreviousVertical": true,
+        "attached": true,
+        "grounded": false,
+        "simulated": true,
+        "failure": false,
+        "moverEnabled": true,
+        "selected": 6,
+        "bridges": 0,
+        "hook": "A2 Proof Blue Swing Hook 1",
+        "hooksRestored": true
+      },
+      "immediate": {
+        "label": "immediateRetry",
+        "frame": 807,
+        "t": 5.0399980545043945,
+        "fixedTime": 16.13999366760254,
+        "input": 0.0,
+        "driverInput": 0.0,
+        "remaining": 24.0,
+        "coyote": 0.0,
+        "jumpBuffer": 0.0,
+        "airTime": 0.0,
+        "previousVertical": 0.0,
+        "position": {
+          "x": 117.4000015258789,
+          "y": 0.6000000238418579
+        },
+        "transformPosition": {
+          "x": 117.4000015258789,
+          "y": 0.6000000238418579
+        },
+        "previousPhysics": {
+          "x": 117.4000015258789,
+          "y": 0.6000000238418579
+        },
+        "velocity": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "colliderMin": {
+          "x": 117.0,
+          "y": 0.0
+        },
+        "colliderMax": {
+          "x": 117.80000305175781,
+          "y": 1.2000000476837158
+        },
+        "camera": {
+          "x": 117.4000015258789,
+          "y": 0.0,
+          "z": -10.0
+        },
+        "ortho": 8.699999809265137,
+        "hasPrevious": true,
+        "hasPreviousVertical": false,
+        "attached": false,
+        "grounded": true,
+        "simulated": true,
+        "failure": false,
+        "moverEnabled": true,
+        "selected": 6,
+        "bridges": 0,
+        "hook": "",
+        "hooksRestored": true
+      },
+      "first_physics_events": [
+        {
+          "label": "mover.beforeFixed",
+          "frame": 807,
+          "t": 5.0399980545043945,
+          "fixedTime": 16.13999366760254,
+          "input": -1.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": -4.63999605178833,
+          "jumpBuffer": -6.739994049072266,
+          "airTime": 4.739995956420898,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "transformPosition": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "previousPhysics": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.91498565673828,
+            "y": -1.1940107345581055
+          },
+          "colliderMax": {
+            "x": 118.7149887084961,
+            "y": 0.0059893131256103516
+          },
+          "camera": {
+            "x": 118.31500244140625,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": true,
+          "grounded": false,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "A2 Proof Blue Swing Hook 1",
+          "hooksRestored": true
+        },
+        {
+          "label": "mover.afterSweep",
+          "frame": 807,
+          "t": 5.0399980545043945,
+          "fixedTime": 16.13999366760254,
+          "input": -1.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": -4.63999605178833,
+          "jumpBuffer": -6.739994049072266,
+          "airTime": 4.739995956420898,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "transformPosition": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "previousPhysics": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.91498565673828,
+            "y": -1.1940107345581055
+          },
+          "colliderMax": {
+            "x": 118.7149887084961,
+            "y": 0.0059893131256103516
+          },
+          "camera": {
+            "x": 118.31500244140625,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": true,
+          "grounded": false,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "A2 Proof Blue Swing Hook 1",
+          "hooksRestored": true
+        },
+        {
+          "label": "mover.afterFixed",
+          "frame": 807,
+          "t": 5.0399980545043945,
+          "fixedTime": 16.13999366760254,
+          "input": -1.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": -4.659996032714844,
+          "jumpBuffer": -6.739994049072266,
+          "airTime": 4.759995937347412,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "transformPosition": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "previousPhysics": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.91498565673828,
+            "y": -1.1940107345581055
+          },
+          "colliderMax": {
+            "x": 118.7149887084961,
+            "y": 0.0059893131256103516
+          },
+          "camera": {
+            "x": 118.31500244140625,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": true,
+          "grounded": false,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "A2 Proof Blue Swing Hook 1",
+          "hooksRestored": true
+        },
+        {
+          "label": "respawn.before",
+          "frame": 807,
+          "t": 5.0399980545043945,
+          "fixedTime": 16.13999366760254,
+          "input": -1.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": -4.659996032714844,
+          "jumpBuffer": -6.739994049072266,
+          "airTime": 4.759995937347412,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "transformPosition": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "previousPhysics": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.91498565673828,
+            "y": -1.1940107345581055
+          },
+          "colliderMax": {
+            "x": 118.7149887084961,
+            "y": 0.0059893131256103516
+          },
+          "camera": {
+            "x": 118.31500244140625,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": true,
+          "grounded": false,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "A2 Proof Blue Swing Hook 1",
+          "hooksRestored": true
+        },
+        {
+          "label": "respawn.positionVelocityRestored",
+          "frame": 807,
+          "t": 5.0399980545043945,
+          "fixedTime": 16.13999366760254,
+          "input": -1.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": -4.659996032714844,
+          "jumpBuffer": -6.739994049072266,
+          "airTime": 4.759995937347412,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "transformPosition": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "previousPhysics": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.0,
+            "y": 0.0
+          },
+          "colliderMax": {
+            "x": 117.80000305175781,
+            "y": 1.2000000476837158
+          },
+          "camera": {
+            "x": 118.31500244140625,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": false,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "respawn.afterStateSynchronization",
+          "frame": 807,
+          "t": 5.0399980545043945,
+          "fixedTime": 16.13999366760254,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": 0.0,
+          "jumpBuffer": 0.0,
+          "airTime": 0.0,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "transformPosition": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "previousPhysics": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.0,
+            "y": 0.0
+          },
+          "colliderMax": {
+            "x": 117.80000305175781,
+            "y": 1.2000000476837158
+          },
+          "camera": {
+            "x": 118.31500244140625,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": false,
+          "attached": false,
+          "grounded": true,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "respawn.after",
+          "frame": 807,
+          "t": 5.0399980545043945,
+          "fixedTime": 16.13999366760254,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": 0.0,
+          "jumpBuffer": 0.0,
+          "airTime": 0.0,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "transformPosition": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "previousPhysics": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.0,
+            "y": 0.0
+          },
+          "colliderMax": {
+            "x": 117.80000305175781,
+            "y": 1.2000000476837158
+          },
+          "camera": {
+            "x": 117.4000015258789,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": false,
+          "attached": false,
+          "grounded": true,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "late.afterPhysics",
+          "frame": 807,
+          "t": 5.0399980545043945,
+          "fixedTime": 16.13999366760254,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": 0.0,
+          "jumpBuffer": -0.019999992102384567,
+          "airTime": 0.0,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "transformPosition": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "previousPhysics": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.0,
+            "y": 0.0
+          },
+          "colliderMax": {
+            "x": 117.80000305175781,
+            "y": 1.2000000476837158
+          },
+          "camera": {
+            "x": 117.4000015258789,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": false,
+          "attached": false,
+          "grounded": true,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "mover.beforeFixed",
+          "frame": 808,
+          "t": 5.059998512268066,
+          "fixedTime": 16.15999412536621,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": 0.0,
+          "jumpBuffer": -0.019999992102384567,
+          "airTime": 0.0,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "transformPosition": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "previousPhysics": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.0,
+            "y": 0.0
+          },
+          "colliderMax": {
+            "x": 117.80000305175781,
+            "y": 1.2000000476837158
+          },
+          "camera": {
+            "x": 117.4000015258789,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": false,
+          "attached": false,
+          "grounded": true,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "mover.afterSweep",
+          "frame": 808,
+          "t": 5.059998512268066,
+          "fixedTime": 16.15999412536621,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": 0.0,
+          "jumpBuffer": -0.019999992102384567,
+          "airTime": 0.0,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "transformPosition": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "previousPhysics": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.0,
+            "y": 0.0
+          },
+          "colliderMax": {
+            "x": 117.80000305175781,
+            "y": 1.2000000476837158
+          },
+          "camera": {
+            "x": 117.4000015258789,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": false,
+          "attached": false,
+          "grounded": true,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "mover.afterFixed",
+          "frame": 808,
+          "t": 5.059998512268066,
+          "fixedTime": 16.15999412536621,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": 0.10000000149011612,
+          "jumpBuffer": -0.019999992102384567,
+          "airTime": 0.0,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "transformPosition": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "previousPhysics": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.0,
+            "y": 0.0
+          },
+          "colliderMax": {
+            "x": 117.80000305175781,
+            "y": 1.2000000476837158
+          },
+          "camera": {
+            "x": 117.4000015258789,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": true,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "late.afterPhysics",
+          "frame": 808,
+          "t": 5.059998512268066,
+          "fixedTime": 16.15999412536621,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": 0.10000000149011612,
+          "jumpBuffer": -0.039999984204769135,
+          "airTime": 0.0,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 117.4000015258789,
+            "y": 0.6088560223579407
+          },
+          "transformPosition": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "previousPhysics": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.0,
+            "y": 0.008856058120727539
+          },
+          "colliderMax": {
+            "x": 117.80000305175781,
+            "y": 1.2088561058044434
+          },
+          "camera": {
+            "x": 117.4000015258789,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": true,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "mover.beforeFixed",
+          "frame": 809,
+          "t": 5.079998970031738,
+          "fixedTime": 16.179994583129883,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": 0.10000000149011612,
+          "jumpBuffer": -0.039999984204769135,
+          "airTime": 0.0,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 117.4000015258789,
+            "y": 0.6088560223579407
+          },
+          "transformPosition": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "previousPhysics": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.0,
+            "y": 0.008856058120727539
+          },
+          "colliderMax": {
+            "x": 117.80000305175781,
+            "y": 1.2088561058044434
+          },
+          "camera": {
+            "x": 117.4000015258789,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": true,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "mover.afterSweep",
+          "frame": 809,
+          "t": 5.079998970031738,
+          "fixedTime": 16.179994583129883,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": 0.10000000149011612,
+          "jumpBuffer": -0.039999984204769135,
+          "airTime": 0.0,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 117.4000015258789,
+            "y": 0.6088560223579407
+          },
+          "transformPosition": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "previousPhysics": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.0,
+            "y": 0.008856058120727539
+          },
+          "colliderMax": {
+            "x": 117.80000305175781,
+            "y": 1.2088561058044434
+          },
+          "camera": {
+            "x": 117.4000015258789,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": true,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "mover.afterFixed",
+          "frame": 809,
+          "t": 5.079998970031738,
+          "fixedTime": 16.179994583129883,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": 0.10000000149011612,
+          "jumpBuffer": -0.039999984204769135,
+          "airTime": 0.0,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 117.4000015258789,
+            "y": 0.6088560223579407
+          },
+          "transformPosition": {
+            "x": 117.4000015258789,
+            "y": 0.6000000238418579
+          },
+          "previousPhysics": {
+            "x": 117.4000015258789,
+            "y": 0.6088560223579407
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.0,
+            "y": 0.008856058120727539
+          },
+          "colliderMax": {
+            "x": 117.80000305175781,
+            "y": 1.2088561058044434
+          },
+          "camera": {
+            "x": 117.4000015258789,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": true,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "late.afterPhysics",
+          "frame": 809,
+          "t": 5.079998970031738,
+          "fixedTime": 16.179994583129883,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": 0.10000000149011612,
+          "jumpBuffer": -0.0599999763071537,
+          "airTime": 0.0,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 117.4000015258789,
+            "y": 0.6110678911209106
+          },
+          "transformPosition": {
+            "x": 117.4000015258789,
+            "y": 0.6088560223579407
+          },
+          "previousPhysics": {
+            "x": 117.4000015258789,
+            "y": 0.6088560223579407
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.0,
+            "y": 0.011067867279052734
+          },
+          "colliderMax": {
+            "x": 117.80000305175781,
+            "y": 1.2110679149627686
+          },
+          "camera": {
+            "x": 117.4000015258789,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": true,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "mover.beforeFixed",
+          "frame": 810,
+          "t": 5.09999942779541,
+          "fixedTime": 16.199995040893555,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": 0.10000000149011612,
+          "jumpBuffer": -0.0599999763071537,
+          "airTime": 0.0,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 117.4000015258789,
+            "y": 0.6110678911209106
+          },
+          "transformPosition": {
+            "x": 117.4000015258789,
+            "y": 0.6088560223579407
+          },
+          "previousPhysics": {
+            "x": 117.4000015258789,
+            "y": 0.6088560223579407
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.0,
+            "y": 0.011067867279052734
+          },
+          "colliderMax": {
+            "x": 117.80000305175781,
+            "y": 1.2110679149627686
+          },
+          "camera": {
+            "x": 117.4000015258789,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": true,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "mover.afterSweep",
+          "frame": 810,
+          "t": 5.09999942779541,
+          "fixedTime": 16.199995040893555,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": 0.10000000149011612,
+          "jumpBuffer": -0.0599999763071537,
+          "airTime": 0.0,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 117.4000015258789,
+            "y": 0.6110678911209106
+          },
+          "transformPosition": {
+            "x": 117.4000015258789,
+            "y": 0.6088560223579407
+          },
+          "previousPhysics": {
+            "x": 117.4000015258789,
+            "y": 0.6088560223579407
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.0,
+            "y": 0.011067867279052734
+          },
+          "colliderMax": {
+            "x": 117.80000305175781,
+            "y": 1.2110679149627686
+          },
+          "camera": {
+            "x": 117.4000015258789,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": true,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "mover.afterFixed",
+          "frame": 810,
+          "t": 5.09999942779541,
+          "fixedTime": 16.199995040893555,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": 0.10000000149011612,
+          "jumpBuffer": -0.0599999763071537,
+          "airTime": 0.0,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 117.4000015258789,
+            "y": 0.6110678911209106
+          },
+          "transformPosition": {
+            "x": 117.4000015258789,
+            "y": 0.6088560223579407
+          },
+          "previousPhysics": {
+            "x": 117.4000015258789,
+            "y": 0.6110678911209106
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.0,
+            "y": 0.011067867279052734
+          },
+          "colliderMax": {
+            "x": 117.80000305175781,
+            "y": 1.2110679149627686
+          },
+          "camera": {
+            "x": 117.4000015258789,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": true,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "late.afterPhysics",
+          "frame": 810,
+          "t": 5.09999942779541,
+          "fixedTime": 16.199995040893555,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": 0.10000000149011612,
+          "jumpBuffer": -0.07999996840953827,
+          "airTime": 0.0,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 117.4000015258789,
+            "y": 0.6124834418296814
+          },
+          "transformPosition": {
+            "x": 117.4000015258789,
+            "y": 0.6110678911209106
+          },
+          "previousPhysics": {
+            "x": 117.4000015258789,
+            "y": 0.6110678911209106
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.0,
+            "y": 0.012483358383178711
+          },
+          "colliderMax": {
+            "x": 117.80000305175781,
+            "y": 1.2124834060668945
+          },
+          "camera": {
+            "x": 117.4000015258789,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": true,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "mover.beforeFixed",
+          "frame": 811,
+          "t": 5.119997978210449,
+          "fixedTime": 16.219993591308594,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": 0.10000000149011612,
+          "jumpBuffer": -0.07999996840953827,
+          "airTime": 0.0,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 117.4000015258789,
+            "y": 0.6124834418296814
+          },
+          "transformPosition": {
+            "x": 117.4000015258789,
+            "y": 0.6110678911209106
+          },
+          "previousPhysics": {
+            "x": 117.4000015258789,
+            "y": 0.6110678911209106
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.0,
+            "y": 0.012483358383178711
+          },
+          "colliderMax": {
+            "x": 117.80000305175781,
+            "y": 1.2124834060668945
+          },
+          "camera": {
+            "x": 117.4000015258789,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": true,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "mover.afterSweep",
+          "frame": 811,
+          "t": 5.119997978210449,
+          "fixedTime": 16.219993591308594,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": 0.10000000149011612,
+          "jumpBuffer": -0.07999996840953827,
+          "airTime": 0.0,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 117.4000015258789,
+            "y": 0.6124834418296814
+          },
+          "transformPosition": {
+            "x": 117.4000015258789,
+            "y": 0.6110678911209106
+          },
+          "previousPhysics": {
+            "x": 117.4000015258789,
+            "y": 0.6110678911209106
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.0,
+            "y": 0.012483358383178711
+          },
+          "colliderMax": {
+            "x": 117.80000305175781,
+            "y": 1.2124834060668945
+          },
+          "camera": {
+            "x": 117.4000015258789,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": true,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "mover.afterFixed",
+          "frame": 811,
+          "t": 5.119997978210449,
+          "fixedTime": 16.219993591308594,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": 0.10000000149011612,
+          "jumpBuffer": -0.07999996840953827,
+          "airTime": 0.0,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 117.4000015258789,
+            "y": 0.6124834418296814
+          },
+          "transformPosition": {
+            "x": 117.4000015258789,
+            "y": 0.6110678911209106
+          },
+          "previousPhysics": {
+            "x": 117.4000015258789,
+            "y": 0.6124834418296814
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.0,
+            "y": 0.012483358383178711
+          },
+          "colliderMax": {
+            "x": 117.80000305175781,
+            "y": 1.2124834060668945
+          },
+          "camera": {
+            "x": 117.4000015258789,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": true,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        },
+        {
+          "label": "late.afterPhysics",
+          "frame": 811,
+          "t": 5.119997978210449,
+          "fixedTime": 16.219993591308594,
+          "input": 0.0,
+          "driverInput": 0.0,
+          "remaining": 24.0,
+          "coyote": 0.10000000149011612,
+          "jumpBuffer": -0.09999996423721313,
+          "airTime": 0.0,
+          "previousVertical": 0.0,
+          "position": {
+            "x": 117.4000015258789,
+            "y": 0.6133893728256226
+          },
+          "transformPosition": {
+            "x": 117.4000015258789,
+            "y": 0.6124834418296814
+          },
+          "previousPhysics": {
+            "x": 117.4000015258789,
+            "y": 0.6124834418296814
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.0,
+            "y": 0.013389348983764648
+          },
+          "colliderMax": {
+            "x": 117.80000305175781,
+            "y": 1.2133893966674805
+          },
+          "camera": {
+            "x": 117.4000015258789,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137,
+          "hasPrevious": true,
+          "hasPreviousVertical": true,
+          "attached": false,
+          "grounded": true,
+          "simulated": true,
+          "failure": false,
+          "moverEnabled": true,
+          "selected": 6,
+          "bridges": 0,
+          "hook": "",
+          "hooksRestored": true
+        }
+      ],
+      "sweeps": [],
+      "settled": {
+        "label": "settled1.6s",
+        "frame": 888,
+        "t": 6.659998893737793,
+        "fixedTime": 17.759994506835938,
+        "input": 0.0,
+        "driverInput": 0.0,
+        "remaining": 24.0,
+        "coyote": 0.10000000149011612,
+        "jumpBuffer": -1.6399986743927002,
+        "airTime": 0.0,
+        "previousVertical": 0.0,
+        "position": {
+          "x": 117.4000015258789,
+          "y": 0.6149998903274536
+        },
+        "transformPosition": {
+          "x": 117.4000015258789,
+          "y": 0.6149997711181641
+        },
+        "previousPhysics": {
+          "x": 117.4000015258789,
+          "y": 0.6149998903274536
+        },
+        "velocity": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "colliderMin": {
+          "x": 117.0,
+          "y": 0.014999866485595703
+        },
+        "colliderMax": {
+          "x": 117.80000305175781,
+          "y": 1.2149999141693115
+        },
+        "camera": {
+          "x": 117.4000015258789,
+          "y": 0.0,
+          "z": -10.0
+        },
+        "ortho": 8.699999809265137,
+        "hasPrevious": true,
+        "hasPreviousVertical": true,
+        "attached": false,
+        "grounded": true,
+        "simulated": true,
+        "failure": false,
+        "moverEnabled": true,
+        "selected": 6,
+        "bridges": 0,
+        "hook": "",
+        "hooksRestored": true
+      },
+      "passed": true
+    }
+  ]
+}
