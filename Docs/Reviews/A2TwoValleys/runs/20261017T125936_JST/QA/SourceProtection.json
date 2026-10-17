@@ -1,0 +1,48 @@
+{
+  "production_head": true,
+  "production_branch": true,
+  "production_tracked": true,
+  "production_normal_status": true,
+  "production_staged": true,
+  "selected_production_files": {
+    "Assets/Scripts/RopeResource.cs": true,
+    "Assets/Scripts/RopeController.cs": true,
+    "Assets/Scripts/PlayerMover.cs": true,
+    "Assets/Scripts/RopePlatformBuilder.cs": true,
+    "Assets/Scripts/MainStageRespawnOnFall.cs": true,
+    "Assets/Scenes/MainStage.unity": true,
+    "Assets/Scenes/Tutorial.unity": true,
+    "README.md": true,
+    "Docs/LEARNING_LOG.md": true,
+    "ProjectSettings/InputManager.asset": true,
+    "ProjectSettings/Physics2DSettings.asset": true
+  },
+  "previous_proof_source_536": true,
+  "locked_five": {
+    "Assets/Scripts/RopeResource.cs": true,
+    "Assets/Scripts/RopeController.cs": true,
+    "Assets/Scripts/PlayerMover.cs": true,
+    "Assets/Scripts/RopePlatformBuilder.cs": true,
+    "Assets/Scripts/MainStageRespawnOnFall.cs": true
+  },
+  "hook_wrap_unchanged": true,
+  "body_sole_code_unchanged": true,
+  "scenes_packages_settings_png_meta_unchanged": true,
+  "frozen_builds": {
+    "PlayerSwingCandidate2_20261017/Build_r1": true,
+    "PlayerSwingCandidate2_20261017/Build_r3": true,
+    "PlayerSwingManualBuild_20261017/Build": true,
+    "PlayerConnectionSwingProof_20261017/Build_r3": true
+  },
+  "changed": [
+    "Assets/PlayerPresentation/ActiveSwingArms.cs",
+    "Assets/PlayerPresentation/ConnectionGestureCapture.cs",
+    "Assets/PlayerPresentation/ManualPresentationSession.cs",
+    "Assets/PlayerPresentation/PlayerMotionPresentation.cs",
+    "Assets/Resources/PlayerPresentationYarn.shader"
+  ],
+  "added": [
+    "Assets/PlayerPresentation/IntegratedWoolArms.cs",
+    "Assets/PlayerPresentation/IntegratedWoolArms.cs.meta"
+  ]
+}

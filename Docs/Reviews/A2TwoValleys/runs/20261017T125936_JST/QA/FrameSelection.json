@@ -1,0 +1,17 @@
+{
+  "main_end_exclusive": 194,
+  "free_arc_start": 224,
+  "free_arc_end_exclusive": 318,
+  "chosen": {
+    "GroundAttach": 41,
+    "ActivePump": 97,
+    "FastBottom": 125,
+    "BrakeInitial": 244,
+    "RightApex": 266,
+    "LeftApex": 311,
+    "Release": 156,
+    "Landing": 176,
+    "ResumeWalk": 188
+  },
+  "preview_method": "Real Unity images; JPEG display previews and external labels/crops only. No generated content or in-scene paint."
+}

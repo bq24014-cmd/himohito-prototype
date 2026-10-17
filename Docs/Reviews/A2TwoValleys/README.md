@@ -2,7 +2,13 @@
 
 固定branch：`review/a2-two-valleys`。[LATEST.json](LATEST.json)の最新報告・画像・QAを同じcommitから読んでください。ZIPの再添付は不要です。
 
-## 最新：接続→身体を使う振り子の新候補1案
+## 最新：腕だけの改訂・編み目を胴へつなぐ1案
+
+[20261017T125936_JST の報告](runs/20261017T125936_JST/Report.md)／[通常速度比較](runs/20261017T125936_JST/Videos/Main_SideBySide_30fps_silent.mp4)／[修正版単体動画](runs/20261017T125936_JST/Videos/IntegratedArms_Main_30fps_silent.mp4)／[通常画角と連続コマ](runs/20261017T125936_JST/Frames/)／[手動起動](runs/20261017T125936_JST/Launch.md)。Humanが評価したフック巻き付き・足裏補正を保持し、却下された線状の腕だけを胴と同じ編み目の表示メッシュへ見直した。自動比較318フレームの軌道・Camera・入力・残量等の差0、手動起動35秒・自動driver0。OS操作はツール一覧取得タイムアウトで未確認。Human採用は未承認。
+
+対象ゲームの画面取得・既存入力・起動終了・比較録画・ログ確認の[継続許可メモ](runs/20261017T125936_JST/OperationPermission.md)を保存。許可とツール可用性は区別する。
+
+## 前回：接続→身体を使う振り子の新候補1案
 
 [20261017T120508_JST の報告](runs/20261017T120508_JST/Report.md)／[通常速度比較動画](runs/20261017T120508_JST/Videos/Main_SideBySide_30fps_silent.mp4)／[画像](runs/20261017T120508_JST/Figures/)／[手動起動方法](runs/20261017T120508_JST/Launch.md)。接続接地時の足裏補正、リングの縁への巻き付き、入力／速度に対応する肩・肘・胴を1案にまとめた。自動比較の軌道差0、最終手動版の35秒待機を確認。腕の質感等はまだ弱く、Human採用・OS操作・音は未確認。候補2・旧資料・Productionは保持。
 

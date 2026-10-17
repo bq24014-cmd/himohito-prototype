@@ -1,0 +1,24 @@
+{
+  "source": "Human direct instruction, 2026-10-17",
+  "continuing_authorization": [
+    "対象ゲーム画面取得",
+    "既存キー・マウス操作",
+    "対象Proof起動・終了",
+    "比較プレイ・録画",
+    "対象ログ確認"
+  ],
+  "do_not_reask_same_permission": true,
+  "authorization_is_not_tool_availability": true,
+  "tool": "computer-use via @oai/sky",
+  "attempts": [
+    "list_apps timed out",
+    "list_apps retry after more than 2 seconds timed out",
+    "reset session, initialize and list_apps timed out"
+  ],
+  "exact_error": "computer-use request timed out: list_apps",
+  "root_cause": "不明。権限不足とは断定しない。",
+  "os_screenshot_acquired": false,
+  "os_key_calls": 0,
+  "repeated_approval_requested": false,
+  "work_continued": "隔離表示制作・明示的自動Unity比較・Build。OS操作成功へ読み替えない。"
+}

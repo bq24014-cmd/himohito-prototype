@@ -1,0 +1,13 @@
+{
+  "previous_proof_human_review": {
+    "hook": "改善されいい感じ",
+    "swing_arms": "糸が手みたいになっていておかしい",
+    "judgment": "腕表示は不採用・修正。フック巻き付きと接地補正を保持。Proof全体の正式採用ではない。"
+  },
+  "this_revision_human_playtest_participants": 0,
+  "this_revision_os_key_calls": 0,
+  "human_adoption": "未承認",
+  "production_integrated": false,
+  "a2_r1_recommendation": "不採用推奨を維持",
+  "continuing_os_operation_authorization": "OperationPermission.mdおよびQA/OperationAuthorization.jsonに記録"
+}

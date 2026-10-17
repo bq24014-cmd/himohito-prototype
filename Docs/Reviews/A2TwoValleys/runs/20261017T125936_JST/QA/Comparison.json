@@ -1,0 +1,150 @@
+{
+  "method": "Automatic existing APIs/input fields. Explicit offline30fps; NOT OS/Human play.",
+  "build": "Build_r3",
+  "frames": [
+    413,
+    413
+  ],
+  "aligned_prefix": 318,
+  "maximum_deltas": {
+    "root": 0,
+    "velocity": 0,
+    "camera": 0,
+    "input": 0,
+    "remaining": 0,
+    "ropeLength": 0,
+    "selected": 0,
+    "bridges": 0,
+    "fixedTime": 0,
+    "colliderBottom": 0,
+    "soleY": 0,
+    "crown": 0,
+    "ropeFirst": 0,
+    "ropeLast": 0
+  },
+  "checks": [
+    [
+      {
+        "name": "Ground attach existing length6",
+        "pass": true
+      },
+      {
+        "name": "Release momentum unchanged",
+        "pass": true
+      },
+      {
+        "name": "Representative middle-bank landing",
+        "pass": true
+      },
+      {
+        "name": "First R entry24_6_0",
+        "pass": true
+      },
+      {
+        "name": "Reattach length6",
+        "pass": true
+      },
+      {
+        "name": "Free arc through normal A_D braking",
+        "pass": true
+      },
+      {
+        "name": "Two free angular turnarounds",
+        "pass": true
+      },
+      {
+        "name": "Pause keeps root",
+        "pass": true
+      },
+      {
+        "name": "Second R entry24_6_0",
+        "pass": true
+      },
+      {
+        "name": "Original bridge and resource",
+        "pass": true
+      },
+      {
+        "name": "Bridge R entry24_6_0",
+        "pass": true
+      },
+      {
+        "name": "No gameplay errors",
+        "pass": true
+      }
+    ],
+    [
+      {
+        "name": "Ground attach existing length6",
+        "pass": true
+      },
+      {
+        "name": "Release momentum unchanged",
+        "pass": true
+      },
+      {
+        "name": "Representative middle-bank landing",
+        "pass": true
+      },
+      {
+        "name": "First R entry24_6_0",
+        "pass": true
+      },
+      {
+        "name": "Reattach length6",
+        "pass": true
+      },
+      {
+        "name": "Free arc through normal A_D braking",
+        "pass": true
+      },
+      {
+        "name": "Two free angular turnarounds",
+        "pass": true
+      },
+      {
+        "name": "Pause keeps root",
+        "pass": true
+      },
+      {
+        "name": "Second R entry24_6_0",
+        "pass": true
+      },
+      {
+        "name": "Original bridge and resource",
+        "pass": true
+      },
+      {
+        "name": "Bridge R entry24_6_0",
+        "pass": true
+      },
+      {
+        "name": "No gameplay errors",
+        "pass": true
+      }
+    ]
+  ],
+  "ground_attached_sole_minus_collider_max": 0.0,
+  "crown_registration_error_max": 0.0,
+  "ring_contact_error_max": 0.0,
+  "bone_length_normalized_error_max": 1.2322708187184617e-07,
+  "knit_sleeve_count_while_attached": [
+    2
+  ],
+  "knit_sleeves_after_landing": 0,
+  "pause_api_frames": 7,
+  "pause_pose_held": true,
+  "free_arc_grounded_frames": 0,
+  "knit_sleeves_while_hidden": 0,
+  "gesture_counts": {
+    "apex_prepare": 63,
+    "attachment_handoff": 18,
+    "coast": 35,
+    "fast_bottom": 43,
+    "ground_brace": 47,
+    "hidden": 165,
+    "input_brake": 2,
+    "input_pump": 32,
+    "release_handoff": 8
+  }
+}

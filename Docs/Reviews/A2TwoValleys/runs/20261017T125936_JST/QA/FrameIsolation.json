@@ -1,0 +1,50 @@
+{
+  "method": "Original JPGs compared, 128x128 character ROI excluded only for measurement; shared images are not painted.",
+  "observations": [
+    {
+      "name": "GroundAttach",
+      "frame": 41,
+      "max_channel_delta_outside_character_roi": 0
+    },
+    {
+      "name": "ActivePump",
+      "frame": 97,
+      "max_channel_delta_outside_character_roi": 0
+    },
+    {
+      "name": "FastBottom",
+      "frame": 125,
+      "max_channel_delta_outside_character_roi": 0
+    },
+    {
+      "name": "BrakeInitial",
+      "frame": 244,
+      "max_channel_delta_outside_character_roi": 0
+    },
+    {
+      "name": "RightApex",
+      "frame": 266,
+      "max_channel_delta_outside_character_roi": 0
+    },
+    {
+      "name": "LeftApex",
+      "frame": 311,
+      "max_channel_delta_outside_character_roi": 0
+    },
+    {
+      "name": "Release",
+      "frame": 156,
+      "max_channel_delta_outside_character_roi": 0
+    },
+    {
+      "name": "Landing",
+      "frame": 176,
+      "max_channel_delta_outside_character_roi": 0
+    },
+    {
+      "name": "ResumeWalk",
+      "frame": 188,
+      "max_channel_delta_outside_character_roi": 0
+    }
+  ]
+}

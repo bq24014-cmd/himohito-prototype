@@ -1,0 +1,6 @@
+{
+  "r1": "Compile succeeded, but runtime failed because MaterialPropertyBlock was created in a MonoBehaviour field initializer. Moved to Awake. Failed evidence retained locally; not the submitted build.",
+  "r2": "Main automated gameplay checks passed; extra visibility inspection found sleeves persisting through 24 R-reveal frames without a registered sprite. Explicitly hide at zero arm weight. Increased sleeve silhouette width slightly after normal-frame self-review. Not submitted as final.",
+  "r3": "Final candidate. Both submitted comparisons, supplemental inputs and manual startup use this exact build. See other QA records; no physics adjustment.",
+  "supplement_baseline_initial_launch": "Exited immediately after input initialization with exit0, no result/frames. Exact cause unknown. Not counted as PASS. Original log retained locally. One fresh-session repeat without code/build change provides the submitted baseline supplement."
+}

@@ -1,0 +1,42 @@
+Build_r3.log
+Initialize engine version: 6000.3.21f1 (c02631ffc030)
+Build Finished, Result: Success.
+
+Build_r3_candidate3/Player.log
+Initialize engine version: 6000.3.21f1 (c02631ffc030)
+CONNECTION_REVIEW Ground attach existing length6 True
+CONNECTION_REVIEW Release momentum unchanged True
+CONNECTION_REVIEW Representative middle-bank landing True
+CONNECTION_REVIEW First R entry24_6_0 True
+CONNECTION_REVIEW Reattach length6 True
+CONNECTION_REVIEW Free arc through normal A_D braking True
+CONNECTION_REVIEW Two free angular turnarounds True
+CONNECTION_REVIEW Pause keeps root True
+CONNECTION_REVIEW Second R entry24_6_0 True
+CONNECTION_REVIEW Original bridge and resource True
+CONNECTION_REVIEW Bridge R entry24_6_0 True
+CONNECTION_REVIEW No gameplay errors True
+
+Build_r3_candidate4/Player.log
+Initialize engine version: 6000.3.21f1 (c02631ffc030)
+CONNECTION_REVIEW Ground attach existing length6 True
+CONNECTION_REVIEW Release momentum unchanged True
+CONNECTION_REVIEW Representative middle-bank landing True
+CONNECTION_REVIEW First R entry24_6_0 True
+CONNECTION_REVIEW Reattach length6 True
+CONNECTION_REVIEW Free arc through normal A_D braking True
+CONNECTION_REVIEW Two free angular turnarounds True
+CONNECTION_REVIEW Pause keeps root True
+CONNECTION_REVIEW Second R entry24_6_0 True
+CONNECTION_REVIEW Original bridge and resource True
+CONNECTION_REVIEW Bridge R entry24_6_0 True
+CONNECTION_REVIEW No gameplay errors True
+
+Supplement_candidate4/Player.log
+Initialize engine version: 6000.3.21f1 (c02631ffc030)
+CONNECTION_REVIEW Supplement starts with original grounded attachment True
+CONNECTION_REVIEW Supplement small arc via original A_D True
+CONNECTION_REVIEW Supplement stays airborne True
+CONNECTION_REVIEW Supplement contains measurable braking True
+CONNECTION_REVIEW Supplement no resource or layout change True
+CONNECTION_REVIEW Supplement no gameplay errors True
