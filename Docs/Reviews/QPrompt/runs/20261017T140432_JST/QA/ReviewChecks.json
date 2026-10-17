@@ -1,0 +1,18 @@
+{
+  "scope": "existing Tutorial Q panel only",
+  "display_only_patch_files": [
+    "Assets/Scripts/PrototypeHud.cs"
+  ],
+  "visibility_guard_unchanged": true,
+  "same_five_state_results": true,
+  "final_five_layout_budgets_fit": true,
+  "manual_driver": "No QPromptCapture component is created unless explicit -qPromptCapture is provided; normal launcher has no such flag.",
+  "earlier_fixture_failures": [
+    "Capture helper referenced omitted ScreenCapture/ImageConversion modules; fixed by raw RGB framebuffer output without changing Packages.",
+    "Initial API setup x=29.4 exceeded existing 0.5 targeting grace. Fixture only changed to x=29.6; existing rules unchanged. Failed build/log evidence retained locally."
+  ],
+  "layout_revision": "After_r2 preliminary rendering kept text readable but conservative margin budget exceeded 134; final After_r3 expands only panel height 148 -> 176 (content 162).",
+  "unknown_reason_fallback": "source reviewed; not separately forced by altering game rules",
+  "human_adoption": "未承認",
+  "production_integrated": false
+}

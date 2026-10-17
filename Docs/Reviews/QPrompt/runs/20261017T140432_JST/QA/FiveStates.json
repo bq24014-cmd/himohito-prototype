@@ -1,0 +1,560 @@
+{
+  "method": "diagnostic API/reflection setup, actual Unity framebuffer; not OS input or Human play",
+  "resolution": [
+    1600,
+    900
+  ],
+  "layout_measure": "Conservative sum of GUIStyle.CalcHeight and margins, not pixel clipping detection. Final actual screenshots reviewed separately.",
+  "cases": [
+    {
+      "id": "01_T3_Ready",
+      "same_state_and_result": true,
+      "differences": [],
+      "candidate_fits_conservative_budget": true,
+      "before": {
+        "id": "01_T3_Ready",
+        "hook": "Tutorial T3 Green Bridge End Hook",
+        "stage": "Playing",
+        "title": "この照準方向へヒモ足場を作る",
+        "costText": "永久に使う長さ  6.0",
+        "action": "Q：この方向へヒモ足場を作る",
+        "section": 3,
+        "selected": 6,
+        "width": 1600,
+        "height": 900,
+        "platformsAfter": 1,
+        "position": {
+          "x": 29.600000381469727,
+          "y": 0.949999988079071
+        },
+        "velocity": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "anchor": {
+          "x": 36.0,
+          "y": 0.3499999940395355
+        },
+        "pair": {
+          "x": 30.0,
+          "y": 0.3499999940395355
+        },
+        "camera": {
+          "x": 29.600000381469727,
+          "y": 0.0,
+          "z": -10.0
+        },
+        "remaining": 99.0,
+        "cost": 6.0,
+        "reserve": 1.0,
+        "pairDistance": 6.0,
+        "ortho": 8.699999809265137,
+        "remainingAfter": 93.0,
+        "actualSpent": 6.0,
+        "requiredHeight": 122.94000244140625,
+        "availableHeight": 134.0,
+        "paired": true,
+        "canBuild": true,
+        "expectedCanBuild": true,
+        "grounded": true,
+        "simulated": true,
+        "attached": true,
+        "buildResult": true,
+        "resultMatches": true,
+        "fits": true
+      },
+      "after": {
+        "id": "01_T3_Ready",
+        "hook": "Tutorial T3 Green Bridge End Hook",
+        "stage": "Playing",
+        "title": "2つのフックの間に橋を作る",
+        "costText": "使うヒモ  6.0",
+        "action": "Q　橋を作る",
+        "section": 3,
+        "selected": 6,
+        "width": 1600,
+        "height": 900,
+        "platformsAfter": 1,
+        "position": {
+          "x": 29.600000381469727,
+          "y": 0.949999988079071
+        },
+        "velocity": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "anchor": {
+          "x": 36.0,
+          "y": 0.3499999940395355
+        },
+        "pair": {
+          "x": 30.0,
+          "y": 0.3499999940395355
+        },
+        "camera": {
+          "x": 29.600000381469727,
+          "y": 0.0,
+          "z": -10.0
+        },
+        "remaining": 99.0,
+        "cost": 6.0,
+        "reserve": 1.0,
+        "pairDistance": 6.0,
+        "ortho": 8.699999809265137,
+        "remainingAfter": 93.0,
+        "actualSpent": 6.0,
+        "requiredHeight": 122.94000244140625,
+        "availableHeight": 162.0,
+        "paired": true,
+        "canBuild": true,
+        "expectedCanBuild": true,
+        "grounded": true,
+        "simulated": true,
+        "attached": true,
+        "buildResult": true,
+        "resultMatches": true,
+        "fits": true
+      }
+    },
+    {
+      "id": "02_T3_Reserve",
+      "same_state_and_result": true,
+      "differences": [],
+      "candidate_fits_conservative_budget": true,
+      "before": {
+        "id": "02_T3_Reserve",
+        "hook": "Tutorial T3 Green Bridge End Hook",
+        "stage": "Playing",
+        "title": "この照準方向へヒモ足場を作る",
+        "costText": "永久に使う長さ  6.0",
+        "action": "足場にできません\nヒモを1.0以上残してください",
+        "section": 3,
+        "selected": 6,
+        "width": 1600,
+        "height": 900,
+        "platformsAfter": 0,
+        "position": {
+          "x": 29.600000381469727,
+          "y": 0.949999988079071
+        },
+        "velocity": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "anchor": {
+          "x": 36.0,
+          "y": 0.3499999940395355
+        },
+        "pair": {
+          "x": 30.0,
+          "y": 0.3499999940395355
+        },
+        "camera": {
+          "x": 29.600000381469727,
+          "y": 0.0,
+          "z": -10.0
+        },
+        "remaining": 6.5,
+        "cost": 6.0,
+        "reserve": 1.0,
+        "pairDistance": 6.0,
+        "ortho": 8.699999809265137,
+        "remainingAfter": 6.5,
+        "actualSpent": 0.0,
+        "requiredHeight": 149.66000366210938,
+        "availableHeight": 134.0,
+        "paired": true,
+        "canBuild": false,
+        "expectedCanBuild": false,
+        "grounded": true,
+        "simulated": true,
+        "attached": true,
+        "buildResult": false,
+        "resultMatches": true,
+        "fits": false
+      },
+      "after": {
+        "id": "02_T3_Reserve",
+        "hook": "Tutorial T3 Green Bridge End Hook",
+        "stage": "Playing",
+        "title": "2つのフックの間に橋を作る",
+        "costText": "使うヒモ  6.0",
+        "action": "ヒモが足りません\n作った後に 1.0 以上必要",
+        "section": 3,
+        "selected": 6,
+        "width": 1600,
+        "height": 900,
+        "platformsAfter": 0,
+        "position": {
+          "x": 29.600000381469727,
+          "y": 0.949999988079071
+        },
+        "velocity": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "anchor": {
+          "x": 36.0,
+          "y": 0.3499999940395355
+        },
+        "pair": {
+          "x": 30.0,
+          "y": 0.3499999940395355
+        },
+        "camera": {
+          "x": 29.600000381469727,
+          "y": 0.0,
+          "z": -10.0
+        },
+        "remaining": 6.5,
+        "cost": 6.0,
+        "reserve": 1.0,
+        "pairDistance": 6.0,
+        "ortho": 8.699999809265137,
+        "remainingAfter": 6.5,
+        "actualSpent": 0.0,
+        "requiredHeight": 149.66000366210938,
+        "availableHeight": 162.0,
+        "paired": true,
+        "canBuild": false,
+        "expectedCanBuild": false,
+        "grounded": true,
+        "simulated": true,
+        "attached": true,
+        "buildResult": false,
+        "resultMatches": true,
+        "fits": true
+      }
+    },
+    {
+      "id": "03_T3_Short",
+      "same_state_and_result": true,
+      "differences": [],
+      "candidate_fits_conservative_budget": true,
+      "before": {
+        "id": "03_T3_Short",
+        "hook": "Tutorial T3 Green Bridge End Hook",
+        "stage": "Playing",
+        "title": "この照準方向へヒモ足場を作る",
+        "costText": "永久に使う長さ  5.0",
+        "action": "ヒモが対岸フックまで届いていません\nEで外し、Wで長くしてください",
+        "section": 3,
+        "selected": 5,
+        "width": 1600,
+        "height": 900,
+        "platformsAfter": 0,
+        "position": {
+          "x": 31.200000762939453,
+          "y": 0.949999988079071
+        },
+        "velocity": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "anchor": {
+          "x": 36.0,
+          "y": 0.3499999940395355
+        },
+        "pair": {
+          "x": 30.0,
+          "y": 0.3499999940395355
+        },
+        "camera": {
+          "x": 31.200000762939453,
+          "y": 0.0,
+          "z": -10.0
+        },
+        "remaining": 99.0,
+        "cost": 5.0,
+        "reserve": 1.0,
+        "pairDistance": 6.0,
+        "ortho": 8.699999809265137,
+        "remainingAfter": 99.0,
+        "actualSpent": 0.0,
+        "requiredHeight": 149.66000366210938,
+        "availableHeight": 134.0,
+        "paired": true,
+        "canBuild": false,
+        "expectedCanBuild": false,
+        "grounded": false,
+        "simulated": true,
+        "attached": true,
+        "buildResult": false,
+        "resultMatches": true,
+        "fits": false
+      },
+      "after": {
+        "id": "03_T3_Short",
+        "hook": "Tutorial T3 Green Bridge End Hook",
+        "stage": "Playing",
+        "title": "2つのフックの間に橋を作る",
+        "costText": "使うヒモ  5.0",
+        "action": "ヒモの長さが足りません\nEで外し、Wで長くして再接続",
+        "section": 3,
+        "selected": 5,
+        "width": 1600,
+        "height": 900,
+        "platformsAfter": 0,
+        "position": {
+          "x": 31.200000762939453,
+          "y": 0.949999988079071
+        },
+        "velocity": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "anchor": {
+          "x": 36.0,
+          "y": 0.3499999940395355
+        },
+        "pair": {
+          "x": 30.0,
+          "y": 0.3499999940395355
+        },
+        "camera": {
+          "x": 31.200000762939453,
+          "y": 0.0,
+          "z": -10.0
+        },
+        "remaining": 99.0,
+        "cost": 5.0,
+        "reserve": 1.0,
+        "pairDistance": 6.0,
+        "ortho": 8.699999809265137,
+        "remainingAfter": 99.0,
+        "actualSpent": 0.0,
+        "requiredHeight": 149.66000366210938,
+        "availableHeight": 162.0,
+        "paired": true,
+        "canBuild": false,
+        "expectedCanBuild": false,
+        "grounded": false,
+        "simulated": true,
+        "attached": true,
+        "buildResult": false,
+        "resultMatches": true,
+        "fits": true
+      }
+    },
+    {
+      "id": "04_T3_NoPair",
+      "same_state_and_result": true,
+      "differences": [],
+      "candidate_fits_conservative_budget": true,
+      "before": {
+        "id": "04_T3_NoPair",
+        "hook": "Tutorial T2 Hook",
+        "stage": "Playing",
+        "title": "この照準方向へヒモ足場を作る",
+        "costText": "永久に使う長さ  6.0",
+        "action": "この接続先では足場を作れません",
+        "section": 3,
+        "selected": 6,
+        "width": 1600,
+        "height": 900,
+        "platformsAfter": 0,
+        "position": {
+          "x": 16.799999237060547,
+          "y": 0.949999988079071
+        },
+        "velocity": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "anchor": {
+          "x": 18.0,
+          "y": 5.5
+        },
+        "pair": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "camera": {
+          "x": 16.799999237060547,
+          "y": 0.0,
+          "z": -10.0
+        },
+        "remaining": 99.0,
+        "cost": 6.0,
+        "reserve": 1.0,
+        "pairDistance": 0.0,
+        "ortho": 8.699999809265137,
+        "remainingAfter": 99.0,
+        "actualSpent": 0.0,
+        "requiredHeight": 122.94000244140625,
+        "availableHeight": 134.0,
+        "paired": false,
+        "canBuild": false,
+        "expectedCanBuild": false,
+        "grounded": true,
+        "simulated": true,
+        "attached": true,
+        "buildResult": false,
+        "resultMatches": true,
+        "fits": true
+      },
+      "after": {
+        "id": "04_T3_NoPair",
+        "hook": "Tutorial T2 Hook",
+        "stage": "Playing",
+        "title": "2つのフックの間に橋を作る",
+        "costText": "使うヒモ  6.0",
+        "action": "この接続先では橋を作れません",
+        "section": 3,
+        "selected": 6,
+        "width": 1600,
+        "height": 900,
+        "platformsAfter": 0,
+        "position": {
+          "x": 16.799999237060547,
+          "y": 0.949999988079071
+        },
+        "velocity": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "anchor": {
+          "x": 18.0,
+          "y": 5.5
+        },
+        "pair": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "camera": {
+          "x": 16.799999237060547,
+          "y": 0.0,
+          "z": -10.0
+        },
+        "remaining": 99.0,
+        "cost": 6.0,
+        "reserve": 1.0,
+        "pairDistance": 0.0,
+        "ortho": 8.699999809265137,
+        "remainingAfter": 99.0,
+        "actualSpent": 0.0,
+        "requiredHeight": 122.94000244140625,
+        "availableHeight": 162.0,
+        "paired": false,
+        "canBuild": false,
+        "expectedCanBuild": false,
+        "grounded": true,
+        "simulated": true,
+        "attached": true,
+        "buildResult": false,
+        "resultMatches": true,
+        "fits": true
+      }
+    },
+    {
+      "id": "05_T4_BlueReady",
+      "same_state_and_result": true,
+      "differences": [],
+      "candidate_fits_conservative_budget": true,
+      "before": {
+        "id": "05_T4_BlueReady",
+        "hook": "Tutorial T4 Center Hook",
+        "stage": "Playing",
+        "title": "この照準方向へヒモ足場を作る",
+        "costText": "永久に使う長さ  6.0",
+        "action": "Q：この方向へヒモ足場を作る",
+        "section": 4,
+        "selected": 6,
+        "width": 1600,
+        "height": 900,
+        "platformsAfter": 1,
+        "position": {
+          "x": 41.400001525878906,
+          "y": 0.949999988079071
+        },
+        "velocity": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "anchor": {
+          "x": 47.0,
+          "y": 1.5499999523162842
+        },
+        "pair": {
+          "x": 42.0,
+          "y": 0.3499999940395355
+        },
+        "camera": {
+          "x": 41.400001525878906,
+          "y": 0.0,
+          "z": -10.0
+        },
+        "remaining": 99.0,
+        "cost": 6.0,
+        "reserve": 1.0,
+        "pairDistance": 5.141983985900879,
+        "ortho": 8.699999809265137,
+        "remainingAfter": 93.0,
+        "actualSpent": 6.0,
+        "requiredHeight": 122.94000244140625,
+        "availableHeight": 134.0,
+        "paired": true,
+        "canBuild": true,
+        "expectedCanBuild": true,
+        "grounded": true,
+        "simulated": true,
+        "attached": true,
+        "buildResult": true,
+        "resultMatches": true,
+        "fits": true
+      },
+      "after": {
+        "id": "05_T4_BlueReady",
+        "hook": "Tutorial T4 Center Hook",
+        "stage": "Playing",
+        "title": "2つのフックの間に橋を作る",
+        "costText": "使うヒモ  6.0",
+        "action": "Q　橋を作る",
+        "section": 4,
+        "selected": 6,
+        "width": 1600,
+        "height": 900,
+        "platformsAfter": 1,
+        "position": {
+          "x": 41.400001525878906,
+          "y": 0.949999988079071
+        },
+        "velocity": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "anchor": {
+          "x": 47.0,
+          "y": 1.5499999523162842
+        },
+        "pair": {
+          "x": 42.0,
+          "y": 0.3499999940395355
+        },
+        "camera": {
+          "x": 41.400001525878906,
+          "y": 0.0,
+          "z": -10.0
+        },
+        "remaining": 99.0,
+        "cost": 6.0,
+        "reserve": 1.0,
+        "pairDistance": 5.141983985900879,
+        "ortho": 8.699999809265137,
+        "remainingAfter": 93.0,
+        "actualSpent": 6.0,
+        "requiredHeight": 122.94000244140625,
+        "availableHeight": 162.0,
+        "paired": true,
+        "canBuild": true,
+        "expectedCanBuild": true,
+        "grounded": true,
+        "simulated": true,
+        "attached": true,
+        "buildResult": true,
+        "resultMatches": true,
+        "fits": true
+      }
+    }
+  ]
+}

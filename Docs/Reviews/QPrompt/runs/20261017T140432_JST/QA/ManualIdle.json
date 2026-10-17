@@ -1,0 +1,14 @@
+{
+  "pid": 1536,
+  "started": "2026-10-17T14:17:13.6366073+09:00",
+  "checked": "2026-10-17T14:17:53.8139405+09:00",
+  "aliveAfter40Seconds": true,
+  "responding": true,
+  "errors": 0,
+  "inputInitializationLogged": true,
+  "explicitCaptureFlag": false,
+  "osKeyboardResponse": "未確認",
+  "humanPlay": "未確認",
+  "audio": "未確認（この起動チェックのみ-noaudio）",
+  "exitMethod": "Own test process Stop-Process after exact executable path check; not OS close-button verification"
+}

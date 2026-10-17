@@ -1,0 +1,35 @@
+{
+  "timestamp": "2026-10-17T14:18:14.2989287+09:00",
+  "freeBytes": 6583349248,
+  "productionSource": {
+    "count": 514,
+    "changed": [],
+    "missing": [],
+    "unchanged": true
+  },
+  "protectedFiles": {
+    "count": 4,
+    "changed": [],
+    "missing": [],
+    "unchanged": true
+  },
+  "fixedReviewRuntime": {
+    "count": 151,
+    "changed": [],
+    "missing": [],
+    "unchanged": true
+  },
+  "productionBranch": "main",
+  "productionHead": "7a4f011b7ffc0343acd4727a75255495a3881fb3",
+  "productionOriginMain": "7a4f011b7ffc0343acd4727a75255495a3881fb3",
+  "statusEqual": true,
+  "stageEqual": true,
+  "isolatedExistingFiles": {
+    "count": 514,
+    "changed": [
+      "Assets/Scripts/PrototypeHud.cs"
+    ],
+    "missing": [],
+    "unchanged": false
+  }
+}

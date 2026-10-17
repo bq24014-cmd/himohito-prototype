@@ -1,0 +1,37 @@
+{
+  "review_id": "QPrompt_20261017T140432_JST",
+  "updated_at": "2026-10-17T14:18:42+09:00",
+  "timezone": "Asia/Tokyo",
+  "branch": "review/q-prompt",
+  "kind": "Tutorialの既存Q案内パネル修正Proof",
+  "target_proof": "TutorialQPromptProof_20261017",
+  "revision": "Before_r2 / After_r3（最終）",
+  "production_head": "7a4f011b7ffc0343acd4727a75255495a3881fb3",
+  "unity_version": "6000.3.21f1",
+  "build_sha256": "CFDE65CE05D1F836A7CDE02C929AE99D9A5EA967D3824C58E24D11357B3B8717",
+  "build_sha256_kind": "sorted relative-path/content-SHA256 manifest digest; not executable stub alone",
+  "assembly_sha256": "5C76FF0DE574C48C30B5A56EF2D558A46C23B0F3BE0BA96DFC383BC822EDEBC1",
+  "status": "Human Review待ち",
+  "report_path": "Docs/Reviews/QPrompt/runs/20261017T140432_JST/Report.md",
+  "launch_path": "Docs/Reviews/QPrompt/runs/20261017T140432_JST/Launch.md",
+  "images_path": "Docs/Reviews/QPrompt/runs/20261017T140432_JST/Images/",
+  "qa_path": "Docs/Reviews/QPrompt/runs/20261017T140432_JST/QA/",
+  "diff_path": "Docs/Reviews/QPrompt/runs/20261017T140432_JST/Diff/PrototypeHud.patch",
+  "human_result_path": "Docs/Reviews/QPrompt/runs/20261017T140432_JST/HumanReview.md",
+  "verification": {
+    "five_representative_states": "PASS（診断API／Reflection・実Unity描画）",
+    "same_state_and_generation_results": true,
+    "non_development_build": true,
+    "manual_launch_idle_seconds": 40,
+    "os_keyboard_response": "未確認",
+    "human_play": "未実施"
+  },
+  "unconfirmed": [
+    "OS画面取得からキー入力・反応までの確認（list_appsタイムアウト）",
+    "Humanが生成先と費用を正しく理解できるか",
+    "音、全区間通しプレイ、正式採用",
+    "原因不明フォールバックはSource確認のみ"
+  ],
+  "production_integrated": false,
+  "human_adoption": "未承認"
+}

@@ -1,0 +1,113 @@
+using System;
+using System.Collections;
+using System.IO;
+using System.Reflection;
+using HimoHito;
+using UnityEngine;
+
+// Isolated evidence fixture. No component is created in an ordinary manual launch.
+// Explicit -qPromptCapture is required for API positioning, freezing and auto-exit.
+[DefaultExecutionOrder(30000)]
+public sealed class QPromptCapture : MonoBehaviour
+{
+    static string Arg(string name) { var a=Environment.GetCommandLineArgs(); for(int i=0;i<a.Length-1;i++)if(a[i]==name)return a[i+1];return null; }
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
+    static void Init() { string path=Arg("-qPromptCapture"); if(path==null)return; var go=new GameObject("Explicit Q UI evidence fixture"); var c=go.AddComponent<QPromptCapture>(); c.output=path; }
+    string output; RopeController rope; RopePlatformBuilder builder; RopeResource resource;
+    PrototypeRunController run; Rigidbody2D body; PlayerMover mover; PrototypeHud hud;
+    Record current; int errors; float began;
+    static object Read(object o,string n)=>o.GetType().GetField(n,BindingFlags.Instance|BindingFlags.NonPublic).GetValue(o);
+    static void Set(object o,string n,object v)=>o.GetType().GetField(n,BindingFlags.Instance|BindingFlags.NonPublic).SetValue(o,v);
+    static object Call(object o,string n,params object[] args)=>o.GetType().GetMethod(n,BindingFlags.Instance|BindingFlags.NonPublic|BindingFlags.Public).Invoke(o,args);
+    void OnLog(string s,string stack,LogType t) { if(t==LogType.Error||t==LogType.Exception){ errors++;File.AppendAllText(Path.Combine(output,"errors.txt"),s+"\n"+stack+"\n");} }
+    IEnumerator Start()
+    {
+        Directory.CreateDirectory(output); Application.logMessageReceived+=OnLog;
+        Application.runInBackground=true; Application.targetFrameRate=30; began=Time.realtimeSinceStartup;
+        yield return new WaitForSecondsRealtime(2);
+        rope=FindFirstObjectByType<RopeController>(); builder=rope.GetComponent<RopePlatformBuilder>();
+        resource=rope.GetComponent<RopeResource>(); run=rope.GetComponent<PrototypeRunController>();
+        body=rope.GetComponent<Rigidbody2D>(); mover=rope.GetComponent<PlayerMover>(); hud=FindFirstObjectByType<PrototypeHud>();
+        run.BeginGameFromTitle();
+        float timeout=Time.realtimeSinceStartup+20;
+        while(MainStagePreview.IsActive && Time.realtimeSinceStartup<timeout)yield return null;
+        if(MainStagePreview.IsActive)throw new Exception("Intro did not finish");
+        yield return Capture("01_T3_Ready",3,new Vector2(29.6f,.95f),TutorialSectionThreeSetup.BridgeEndHookName,6,99,true);
+        yield return Capture("02_T3_Reserve",3,new Vector2(29.6f,.95f),TutorialSectionThreeSetup.BridgeEndHookName,6,6.5f,false);
+        // Airborne diagnostic position makes an existing length-five attachment
+        // possible while the authored hook-to-hook span still requires six.
+        yield return Capture("03_T3_Short",3,new Vector2(31.2f,.95f),TutorialSectionThreeSetup.BridgeEndHookName,5,99,false);
+        yield return Capture("04_T3_NoPair",3,new Vector2(16.8f,.95f),TutorialSectionTwoSetup.HookName,6,99,false);
+        yield return Capture("05_T4_BlueReady",4,new Vector2(41.4f,.95f),TutorialSectionFourSetup.CenterHookName,6,99,true);
+        rope.DetachAndRefund();
+        bool detachedHidden=builder.CurrentPlatformCost==0;
+        Call(run,"set_CurrentTutorialSection",2);
+        bool lockedHidden=builder.CurrentPlatformCost==0 && !builder.IsPlatformBuildingUnlocked;
+        File.WriteAllText(Path.Combine(output,"Summary.json"),JsonUtility.ToJson(new Summary{errors=errors, cases=5, detachedCostZero=detachedHidden,sectionTwoLocked=lockedHidden, realtime=Time.realtimeSinceStartup-began,method="explicit diagnostic API/reflection; no OS keys; no Human play",development=Debug.isDebugBuild},true));
+        Application.Quit(errors==0?0:1);
+    }
+    IEnumerator Capture(string id,int section,Vector2 pos,string hookName,int length,float remaining,bool expected)
+    {
+        Time.timeScale=0; rope.DetachAndRefund(); builder.ClearPlatforms();
+        yield return null;
+        Call(run,"set_CurrentTutorialSection",section);
+        resource.RestoreCapacityAndCurrent(99,remaining); rope.RestoreSelectedRopeLength(length);
+        body.position=pos; body.transform.position=pos; body.linearVelocity=Vector2.zero; body.angularVelocity=0;
+        Physics2D.SyncTransforms();
+        Camera.main.GetComponent<HorizontalCameraFollow>().ResetFraming();
+        // Fixture only: bypass stale grounded cache after diagnostic positioning.
+        // Restored to airborne for the deliberately short, midair attachment.
+        Set(mover,"<IsGrounded>k__BackingField",true);
+        Time.timeScale=1; bool attached=rope.TryAttach(GameObject.Find(hookName).transform.position); Time.timeScale=0;
+        if(!attached)throw new Exception("Attachment failed: "+id);
+        if(id=="03_T3_Short")Set(mover,"<IsGrounded>k__BackingField",false);
+        // Let all production renderers/OnGUI update at a fixed snapshot.
+        for(int i=0;i<8;i++)yield return null;
+        var hook=rope.ActiveHookPoint;
+        Vector2 pair=Vector2.zero; bool paired=hook.TryGetComponent(out RopePlatformAnchor anchor)&&anchor.TryGetPairedAnchor(out pair);
+        current=new Record{id=id,section=section,hook=hook.name,paired=paired,anchor=rope.AnchorPoint,pair=pair,
+            position=body.position,velocity=body.linearVelocity,remaining=resource.CurrentLength,selected=rope.SelectedRopeLength,
+            cost=builder.CurrentPlatformCost,reserve=builder.MinimumRopeReserve,canBuild=builder.CanBuildCurrentPlatform,expectedCanBuild=expected,
+            camera=Camera.main.transform.position,ortho=Camera.main.orthographicSize,width=Screen.width,height=Screen.height,
+            pairDistance=paired?Vector2.Distance(rope.AnchorPoint,pair):0,
+            grounded=mover.IsGrounded,simulated=body.simulated,attached=rope.IsAttached,stage=run.Outcome.ToString()};
+        yield return new WaitForEndOfFrame();
+        var pixels=new Texture2D(Screen.width,Screen.height,TextureFormat.RGB24,false);
+        pixels.ReadPixels(new Rect(0,0,Screen.width,Screen.height),0,0);pixels.Apply();
+        // Raw framebuffer: this project intentionally omits ImageConversionModule.
+        // The offline evidence packer losslessly converts RGB -> PNG (vertical flip only).
+        File.WriteAllBytes(Path.Combine(output,id+".rgb"),pixels.GetRawTextureData());Destroy(pixels);
+        for(int i=0;i<4;i++)yield return null;
+        float before=resource.CurrentLength;
+        current.buildResult=builder.TryBuildCurrentPlatform(); current.remainingAfter=resource.CurrentLength;
+        current.actualSpent=before-resource.CurrentLength; current.platformsAfter=builder.GeneratedPlatformCount;
+        current.resultMatches=current.canBuild==expected&&current.buildResult==expected&&Mathf.Abs(current.actualSpent-(expected?current.cost:0))<.0001f;
+        if(!current.resultMatches)errors++;
+        File.WriteAllText(Path.Combine(output,id+".json"),JsonUtility.ToJson(current,true));current=null;
+    }
+    void OnGUI()
+    {
+        if(current==null||Event.current.type!=EventType.Repaint)return;
+        var title=(GUIStyle)Read(hud,"weavePromptTitleStyle");var cost=(GUIStyle)Read(hud,"weavePromptBodyStyle");var action=(GUIStyle)Read(hud,"weavePromptActionStyle");
+        bool candidate=hud.GetType().GetMethod("GetWeaveActionMessage",BindingFlags.Instance|BindingFlags.NonPublic)!=null;
+        current.title=candidate?"2つのフックの間に橋を作る":"この照準方向へヒモ足場を作る";
+        current.costText=candidate?$"使うヒモ  {current.cost:0.0}":$"永久に使う長さ  {current.cost:0.0}";
+        if(candidate) current.action=(string)Call(hud,"GetWeaveActionMessage");
+        else if(current.canBuild)current.action="Q：この方向へヒモ足場を作る";
+        else if(current.remaining-current.cost<current.reserve-.001f)current.action=$"足場にできません\nヒモを{current.reserve:0.0}以上残してください";
+        else if(current.section==4)current.action="この接続先では足場を作れません\nEで外し、右の緑フックを狙ってください";
+        else if(current.paired)current.action="ヒモが対岸フックまで届いていません\nEで外し、Wで長くしてください";
+        else current.action="この接続先では足場を作れません";
+        float w=Mathf.Min(360,Screen.width-24)-20;
+        current.requiredHeight=title.CalcHeight(new GUIContent(current.title),w)+cost.CalcHeight(new GUIContent(current.costText),w)+action.CalcHeight(new GUIContent(current.action),w)+title.margin.top+title.margin.bottom+cost.margin.top+cost.margin.bottom+action.margin.top+action.margin.bottom;
+        current.availableHeight=candidate?162:134;current.fits=current.requiredHeight<=current.availableHeight;
+    }
+    [Serializable] class Summary{public int errors,cases;public bool detachedCostZero,sectionTwoLocked,development;public float realtime;public string method;}
+    [Serializable] class Record
+    {
+        public string id,hook,stage,title,costText,action;public int section,selected,width,height,platformsAfter;
+        public Vector2 position,velocity,anchor,pair;public Vector3 camera;
+        public float remaining,cost,reserve,pairDistance,ortho,remainingAfter,actualSpent,requiredHeight,availableHeight;
+        public bool paired,canBuild,expectedCanBuild,grounded,simulated,attached,buildResult,resultMatches,fits;
+    }
+}

@@ -1,0 +1,38 @@
+#if UNITY_EDITOR
+using System;
+using System.IO;
+using UnityEditor;
+using UnityEditor.Build.Reporting;
+using UnityEditor.SceneManagement;
+using UnityEngine;
+public static class QPromptBuild
+{
+    static string Arg(string key) { var a = Environment.GetCommandLineArgs(); for (int i=0;i<a.Length-1;i++) if(a[i]==key)return a[i+1]; throw new Exception(key); }
+    public static void Build()
+    {
+        try
+        {
+            string output = Arg("-qBuildOutput");
+            if (File.Exists(output)) throw new Exception("Never overwrite a build");
+            EditorUserBuildSettings.development = false;
+            EditorUserBuildSettings.allowDebugging = false;
+            EditorUserBuildSettings.connectProfiler = false;
+            EditorUserBuildSettings.buildWithDeepProfilingSupport = false;
+            EditorSceneManager.OpenScene("Assets/Scenes/Tutorial.unity");
+            var report = BuildPipeline.BuildPlayer(new BuildPlayerOptions {
+                scenes = new[]{"Assets/Scenes/Tutorial.unity"}, locationPathName = output,
+                target = BuildTarget.StandaloneWindows64, options = BuildOptions.None });
+            File.WriteAllText(Path.Combine(Path.GetDirectoryName(output),"BuildSummary.json"), JsonUtility.ToJson(new Summary {
+                result = report.summary.result.ToString(), unity = Application.unityVersion,
+                errors = (int)report.summary.totalErrors, warnings = (int)report.summary.totalWarnings,
+                bytes = (long)report.summary.totalSize, options = report.summary.options.ToString(),
+                development = EditorUserBuildSettings.development, debugging = EditorUserBuildSettings.allowDebugging,
+                profiler = EditorUserBuildSettings.connectProfiler, deepProfiling = EditorUserBuildSettings.buildWithDeepProfilingSupport }, true));
+            if(report.summary.result != BuildResult.Succeeded) throw new Exception("Build failed");
+            EditorApplication.Exit(0);
+        }
+        catch(Exception e) { Debug.LogException(e); EditorApplication.Exit(1); }
+    }
+    [Serializable] class Summary { public string result, unity, options; public int errors,warnings; public long bytes; public bool development,debugging,profiler,deepProfiling; }
+}
+#endif

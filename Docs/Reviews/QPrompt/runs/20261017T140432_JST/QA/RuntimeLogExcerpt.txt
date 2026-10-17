@@ -1,0 +1,8 @@
+[Before final runtime log excerpt]
+Initialize engine version: 6000.3.21f1 (c02631ffc030)
+    Renderer: Intel(R) Iris(R) Xe Graphics (ID=0xa7a0)
+<RI> Input initialized.
+[After final runtime log excerpt]
+Initialize engine version: 6000.3.21f1 (c02631ffc030)
+    Renderer: Intel(R) Iris(R) Xe Graphics (ID=0xa7a0)
+<RI> Input initialized.

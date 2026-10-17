@@ -1,0 +1,9 @@
+{
+  "authorization": "Human continuing authorization for game capture/input/start/stop/recording remains valid",
+  "tool_result": "computer-use request timed out: list_apps",
+  "attempts_this_task": 1,
+  "os_screenshot": "未確認",
+  "os_key_response": "未確認",
+  "human_play": "未実施",
+  "repeated_permission_request": false
+}

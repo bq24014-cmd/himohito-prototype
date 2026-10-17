@@ -1,0 +1,42 @@
+{
+  "Before": {
+    "local_relative_path": "Build_Before_r2",
+    "summary": {
+      "result": "Succeeded",
+      "unity": "6000.3.21f1",
+      "options": "None",
+      "errors": 0,
+      "warnings": 0,
+      "bytes": 478983590,
+      "development": false,
+      "debugging": false,
+      "profiler": false,
+      "deepProfiling": false
+    },
+    "file_count": 143,
+    "total_bytes": 478983831,
+    "exe_sha256": "837986201D89BE25426B8415CB3BC945F077E5B13F4722D6763D04EBD38C5472",
+    "assembly_sha256": "8ACDB1D2EACE2F9CDAC5C0A35EC273114A7F03E26E19ADC3DC28D796ECECDD74",
+    "manifest_sha256": "C6F4606043325E815F32801326481CC2B4660728A30210BB6C2D1C0C33FD94BC"
+  },
+  "After": {
+    "local_relative_path": "Build_After_r3",
+    "summary": {
+      "result": "Succeeded",
+      "unity": "6000.3.21f1",
+      "options": "None",
+      "errors": 0,
+      "warnings": 0,
+      "bytes": 478984102,
+      "development": false,
+      "debugging": false,
+      "profiler": false,
+      "deepProfiling": false
+    },
+    "file_count": 143,
+    "total_bytes": 478984343,
+    "exe_sha256": "837986201D89BE25426B8415CB3BC945F077E5B13F4722D6763D04EBD38C5472",
+    "assembly_sha256": "5C76FF0DE574C48C30B5A56EF2D558A46C23B0F3BE0BA96DFC383BC822EDEBC1",
+    "manifest_sha256": "CFDE65CE05D1F836A7CDE02C929AE99D9A5EA967D3824C58E24D11357B3B8717"
+  }
+}
