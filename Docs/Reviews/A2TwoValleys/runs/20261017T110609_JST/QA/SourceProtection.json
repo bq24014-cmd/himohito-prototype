@@ -1,0 +1,52 @@
+{
+  "changed": [
+    "Assets/A2Proof/A2Fixture.cs",
+    "Assets/A2Proof/A2ScriptedQA.cs",
+    "Assets/PlayerPresentation/PlayerMotionPresentation.cs",
+    "Assets/PlayerPresentation/PresentationCapture.cs"
+  ],
+  "added": [
+    "Assets/PlayerPresentation/ManualPresentationSession.cs",
+    "Assets/PlayerPresentation/ManualPresentationSession.cs.meta"
+  ],
+  "locked_sources": {
+    "Assets/Scripts/MainStageRespawnOnFall.cs": true,
+    "Assets/Scripts/PlayerMover.cs": true,
+    "Assets/Scripts/RopeController.cs": true,
+    "Assets/Scripts/RopePlatformBuilder.cs": true,
+    "Assets/Scripts/RopeResource.cs": true
+  },
+  "scene_unchanged": true,
+  "packages_settings_unchanged": true,
+  "motion_calculations_unchanged": true,
+  "protection": {
+    "head": true,
+    "branch": true,
+    "origin_cached": true,
+    "tracked_status": true,
+    "normal_status": true,
+    "staged": true,
+    "selected_files": {
+      "Assets/Scripts/RopeResource.cs": true,
+      "Assets/Scripts/RopeController.cs": true,
+      "Assets/Scripts/PlayerMover.cs": true,
+      "Assets/Scripts/RopePlatformBuilder.cs": true,
+      "Assets/Scripts/MainStageRespawnOnFall.cs": true,
+      "Assets/Scenes/MainStage.unity": true,
+      "Assets/Scenes/Tutorial.unity": true,
+      "README.md": true,
+      "Docs/LEARNING_LOG.md": true,
+      "ProjectSettings/InputManager.asset": true,
+      "ProjectSettings/Physics2DSettings.asset": true
+    },
+    "frozen_sources_and_builds": {
+      "PlayerSwingCandidate2_20261017": true,
+      "PlayerPresentationProof_20261016": true,
+      "A2TwoValleysProof_20261016": true,
+      "candidate2/Build_r1/PlayerSwingProof.exe": true,
+      "candidate2/Build_r1/PlayerSwingProof_Data/Managed/Assembly-CSharp.dll": true,
+      "candidate2/Build_r3/PlayerSwingProof.exe": true,
+      "candidate2/Build_r3/PlayerSwingProof_Data/Managed/Assembly-CSharp.dll": true
+    }
+  }
+}

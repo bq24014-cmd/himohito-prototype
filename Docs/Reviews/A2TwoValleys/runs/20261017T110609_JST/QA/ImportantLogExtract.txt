@@ -1,0 +1,23 @@
+Build.log
+Initialize engine version: 6000.3.21f1 (c02631ffc030)
+Build Report
+Build Finished, Result: Success.
+
+BuildRetry.log
+Exiting without the bug reporter. Application will terminate with return code 1
+
+DefaultCandidate2/Player.log
+Initialize engine version: 6000.3.21f1 (c02631ffc030)
+<RI> Input initialized.
+MANUAL_PRESENTATION 00_Ready candidate2
+MANUAL_PRESENTATION 01_Idle2s candidate2
+MANUAL_PRESENTATION 02_Idle15s candidate2
+MANUAL_PRESENTATION 03_Idle35s candidate2
+
+Candidate1/Player.log
+Initialize engine version: 6000.3.21f1 (c02631ffc030)
+<RI> Input initialized.
+MANUAL_PRESENTATION 00_Ready candidate1
+MANUAL_PRESENTATION 01_Idle2s candidate1
+MANUAL_PRESENTATION 02_Idle15s candidate1
+MANUAL_PRESENTATION 03_Idle35s candidate1

@@ -1,0 +1,14 @@
+{
+  "kind": "manual Build preparation, not a Human playtest",
+  "participants_this_run": 0,
+  "human_os_play": "未実施",
+  "codex_os_play": "未実施",
+  "screen_acquired": false,
+  "os_keys_sent": 0,
+  "automatic_route_play": false,
+  "observation_method": "Standalone processes launched; read-only idle snapshots only. Existing A2 entry setup retained.",
+  "visual_adoption": "未承認",
+  "production_integrated": false,
+  "a2_r1_recommendation": "不採用推奨を維持",
+  "prior_human_evaluation_path": "../20261016T184703_JST/Report.md"
+}

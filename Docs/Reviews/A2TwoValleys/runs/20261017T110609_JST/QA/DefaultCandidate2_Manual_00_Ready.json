@@ -1,0 +1,59 @@
+{
+  "method": "Read-only observation. No OS keys, internal input/API driving, screenshot, or audio assessment.",
+  "candidate": "candidate2",
+  "manual": true,
+  "secondCandidate": true,
+  "moverEnabled": true,
+  "ropeEnabled": true,
+  "bodySimulated": true,
+  "layoutUnchanged": true,
+  "shaderSupported": true,
+  "realtimeElapsed": 0.06769084930419922,
+  "scaledElapsed": 0.11646590381860733,
+  "captureDeltaTime": 0.0,
+  "timeScale": 1.0,
+  "fixedDeltaTime": 0.019999992102384567,
+  "captureFramerate": 0,
+  "presentationComponents": 1,
+  "captureDrivers": 0,
+  "inputDrivers": 0,
+  "qaDrivers": 0,
+  "state": {
+    "note": "Manual session, observation only",
+    "hook": "",
+    "position": {
+      "x": 117.4000015258789,
+      "y": 0.6143403053283691
+    },
+    "velocity": {
+      "x": 0.0,
+      "y": 0.0
+    },
+    "fixedTime": 0.13999995589256287,
+    "remaining": 24.0,
+    "movementInput": 0.0,
+    "selected": 6,
+    "bridges": 0,
+    "section": 6,
+    "errors": 0,
+    "inputDriverCount": 0,
+    "qaDriverCount": 0,
+    "grounded": true,
+    "attached": false,
+    "arrived": false,
+    "camera": {
+      "position": {
+        "x": 117.4000015258789,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "aspect": 1.7777777910232544,
+      "captureAspect": 1.7777777910232544,
+      "renderOnlyNoHUD": false,
+      "sourcePixelWidth": 1280,
+      "sourcePixelHeight": 720,
+      "follow": "{\"target\":{\"instanceID\":1262},\"smoothTime\":0.18000000715255738,\"horizontalOffset\":0.0,\"verticalSmoothTime\":0.2800000011920929,\"followVerticalInSectionTen\":true}"
+    }
+  }
+}

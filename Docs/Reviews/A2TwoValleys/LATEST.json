@@ -1,56 +1,58 @@
 {
-  "review_id": "Candidate2OSPlay-20261017T104353_JST",
-  "updated_at": "2026-10-17T10:46:21+09:00",
+  "review_id": "PlayerSwingManualBuild-20261017T110609_JST",
+  "updated_at": "2026-10-17T11:10:16+09:00",
   "timezone": "Asia/Tokyo",
-  "kind": "振り子演出候補2 OS実操作検証（阻害要因報告）",
-  "proof": "PlayerSwingCandidate2_20261017",
-  "revision": "existing candidate2; main Build r1 / supplementary r3; no new Build",
-  "reference_review_commit": "1244605ce7e5161a04b311bb4511113aaa04b4c3",
+  "kind": "振り子演出候補2／候補1 手動操作専用隔離Build",
+  "proof": "PlayerSwingManualBuild_20261017",
+  "revision": "manual r1",
   "production_head": "7a4f011b7ffc0343acd4727a75255495a3881fb3",
-  "build_sha256": "9FDC9E52999B5BC1FF599F0B3F03EE4F001525DC7F66B8D6BA1A3A3E3FF015BE",
-  "build_assembly_sha256": "290FDADE7D1DA5E36994A07B79F8100D31385701ED9B4B56BB77E32B4A4AB08A",
-  "supplementary_assembly_sha256": "207D7E6DDA60805A1EB2D143852E325253B6E613B828B7AD02B33A0D6B2459B3",
-  "status": "実操作検証不能／判断待ち",
-  "report_path": "Docs/Reviews/A2TwoValleys/runs/20261017T104353_JST/Report.md",
-  "launch_audit_path": "Docs/Reviews/A2TwoValleys/runs/20261017T104353_JST/LaunchAudit.md",
-  "source_audit_path": "Docs/Reviews/A2TwoValleys/runs/20261017T104353_JST/SourceAudit.md",
+  "reference_candidate2_commit": "1244605ce7e5161a04b311bb4511113aaa04b4c3",
+  "previous_launch_audit_commit": "13032ed940962c2d9d6d7f5fd7ab0b296638aea4",
+  "build_sha256": "A3D4FA240C51333301EFCC16714FF60722F00E803AFE1FB6750EC963CC0F1707",
+  "build_assembly_sha256": "F05286A67899A4AA5DCA1546F1152C17B4A92B95447BBDA796F29A012DF34C7B",
+  "build_manifest_sha256": "307049F910EC849443A60403A866749CE63E5208C74678DE2F1070956AC2DF9A",
+  "status": "手動専用Build準備完了／Human実キー確認待ち",
+  "report_path": "Docs/Reviews/A2TwoValleys/runs/20261017T110609_JST/Report.md",
+  "launch_path": "Docs/Reviews/A2TwoValleys/runs/20261017T110609_JST/Launch.md",
+  "source_audit_path": "Docs/Reviews/A2TwoValleys/runs/20261017T110609_JST/StartupAudit.md",
+  "code_diff_path": "Docs/Reviews/A2TwoValleys/runs/20261017T110609_JST/CodeDiff.json",
+  "qa_path": "Docs/Reviews/A2TwoValleys/runs/20261017T110609_JST/QA",
+  "human_results_path": "Docs/Reviews/A2TwoValleys/runs/20261017T110609_JST/HumanResults.json",
   "images_path": null,
   "frames_path": null,
   "video_path": null,
-  "qa_path": "Docs/Reviews/A2TwoValleys/runs/20261017T104353_JST/QA",
-  "human_results_path": "Docs/Reviews/A2TwoValleys/runs/20261017T104353_JST/HumanResults.json",
-  "qa_files": [
-    "Docs/Reviews/A2TwoValleys/runs/20261017T104353_JST/QA/EnvironmentAttempts.json",
-    "Docs/Reviews/A2TwoValleys/runs/20261017T104353_JST/QA/VerificationStatus.json",
-    "Docs/Reviews/A2TwoValleys/runs/20261017T104353_JST/QA/BuildIdentity.json",
-    "Docs/Reviews/A2TwoValleys/runs/20261017T104353_JST/QA/ProtectionAfter.json"
+  "local_build_relative": "PlayerSwingManualBuild_20261017/Build/PlayerSwingManual.exe",
+  "local_launchers": [
+    "PlayerSwingManualBuild_20261017/START_Candidate2.cmd",
+    "PlayerSwingManualBuild_20261017/COMPARE_Candidate1.cmd"
+  ],
+  "build_uploaded_to_git": false,
+  "verified": [
+    "Unity 6000.3.21f1 Compile/Windows Build errors=0 warnings=0",
+    "Default candidate2 and explicit candidate1 launched separately",
+    "Both idle beyond35seconds, process alive; entry24/6/0",
+    "Capture/Input/QA instances=0; presentation=1; capture clock=0",
+    "Frozen sources/builds and selected Production/Git state unchanged"
   ],
   "os_key_calls": 0,
   "screen_obtained": false,
-  "game_exe_launched": false,
-  "automatic_gameplay_runs_this_review": 0,
-  "internal_game_api_calls_this_review": 0,
-  "previous_review_id": "PlayerSwingCandidate2-20261017T011344_JST",
+  "sky_retries_this_run": 0,
+  "human_playtest_participants_this_run": 0,
   "previous_automatic_media": {
     "report_path": "Docs/Reviews/A2TwoValleys/runs/20261017T011344_JST/Report.md",
-    "kind": "過去の自動入力／内部API比較。今回のOS操作証拠ではない。"
+    "video_path": "Docs/Reviews/A2TwoValleys/runs/20261017T011344_JST/Videos/SideBySide_30fps_silent.mp4",
+    "kind": "過去の自動入力／内部API比較。今回の手動版OS操作証拠ではない。"
   },
-  "blocking_factors": [
-    "sky.list_apps timed out on initial attempt and one retry; no screenshot or target window.",
-    "Existing Build auto-registers PresentationCapture and A2InputDriver; no checked manual-only launch path."
-  ],
   "production_integrated": false,
   "human_adoption": "未承認",
   "prior_a2_r1_recommendation": "不採用推奨を維持",
-  "recommendation": "実装変更せず判断待ち。演出の実操作批評は未実施。",
   "unconfirmed": [
-    "OSキー→画面反応の成立",
-    "無入力・加速・制動の見た目と反応",
-    "左右空中頂点",
-    "解除・着地・移動の実操作感",
-    "実Esc・R・Qと橋上歩行",
-    "候補1/2実操作比較",
-    "音",
-    "面白さ・Visual採否"
-  ]
+    "画面取得",
+    "OSキー反応／ダブルクリックそのもの",
+    "E/Q/F/R/Escの実操作",
+    "動く演出の実画面品質",
+    "音の実聴",
+    "Human手応え・面白さ・正式採否"
+  ],
+  "next_human_action": "START_Candidate2.cmdをダブルクリック。比較は終了後COMPARE_Candidate1.cmd。"
 }

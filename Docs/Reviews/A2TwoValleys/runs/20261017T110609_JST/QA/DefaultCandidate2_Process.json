@@ -1,0 +1,14 @@
+{
+  "case": "DefaultCandidate2",
+  "pid": 33216,
+  "started_at": "2026-10-17T11:05:44.3919225+09:00",
+  "observed_at": "2026-10-17T11:06:52.2858361+09:00",
+  "alive_after_observation": true,
+  "final_35s_record_exists": true,
+  "os_keys_sent": 0,
+  "screen_acquired": false,
+  "internal_api_driving": false,
+  "automatic_capture": false,
+  "stop_method": "External verification shell stops only its own exact new Build PID after read-only idle observations, not an in-game auto-exit.",
+  "arguments": "-a2Variant B -a2Output \"<ManualProofRoot>\\Evidence\\DefaultCandidate2\" -logFile \"<ManualProofRoot>\\Evidence\\DefaultCandidate2/Player.log\" -screen-fullscreen 0 -screen-width 1280 -screen-height 720"
+}

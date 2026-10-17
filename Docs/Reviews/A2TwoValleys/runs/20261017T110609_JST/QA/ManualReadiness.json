@@ -1,0 +1,33 @@
+{
+  "method": "Normal standalone launch, no input; read-only snapshots. No sky attempt.",
+  "cases": {
+    "DefaultCandidate2": {
+      "status": "PASS (startup and idle observation, not OS input)",
+      "idle_seconds": 35.09429168701172,
+      "scaled_seconds": 35.15272903442383,
+      "remaining": 24,
+      "selected": 6,
+      "bridges": 0,
+      "capture_drivers": 0,
+      "input_drivers": 0,
+      "qa_drivers": 0
+    },
+    "Candidate1": {
+      "status": "PASS (startup and idle observation, not OS input)",
+      "idle_seconds": 35.10868835449219,
+      "scaled_seconds": 35.22118377685547,
+      "remaining": 24,
+      "selected": 6,
+      "bridges": 0,
+      "capture_drivers": 0,
+      "input_drivers": 0,
+      "qa_drivers": 0
+    }
+  },
+  "layout_equal_between_candidates": true,
+  "physics_camera_config_equal_ignoring_instance_ids": true,
+  "os_key_response": "UNCONFIRMED",
+  "screen": "UNCONFIRMED",
+  "audio_listening": "UNCONFIRMED",
+  "human_adoption": "未承認"
+}
