@@ -1,0 +1,80 @@
+{
+  "production_head_unchanged": true,
+  "production_branch_unchanged": true,
+  "production_origin_main_unchanged": true,
+  "production_status_unchanged": true,
+  "production_staging_unchanged": true,
+  "selected_production_files": {
+    "Assets/Scripts/StageOverlayControls.cs": true,
+    "Assets/Scripts/PlayerMover.cs": true,
+    "Assets/Scripts/RopeController.cs": true,
+    "Assets/Scripts/RopePlatformBuilder.cs": true,
+    "Assets/Scripts/RopePlatformAnchor.cs": true,
+    "Assets/Scripts/RopeResource.cs": true,
+    "Assets/Scripts/PrototypeRunController.cs": true,
+    "Assets/Scripts/MainStageRespawnOnFall.cs": true,
+    "Assets/Scripts/TutorialSectionGuide.cs": true,
+    "Assets/Scripts/PrototypeHud.cs": true,
+    "Assets/Scenes/MainStage.unity": true,
+    "Assets/Scenes/Tutorial.unity": true,
+    "ProjectSettings/InputManager.asset": true,
+    "ProjectSettings/ProjectVersion.txt": true,
+    "README.md": true,
+    "Docs/LEARNING_LOG.md": true,
+    "Docs/QA/MainStageCleanReproduction_20261001/Evidence/DeterministicSceneSync/ExeA.log": true,
+    "Docs/QA/MainStageCleanReproduction_20261001/Evidence/DeterministicSceneSync/ExeB.log": true,
+    "Docs/QA/FullGameRegression_20260930/Evidence/StaticScreens/Help_1600x900.png": true
+  },
+  "previous_bodypump_source_540_files_unchanged": true,
+  "prior_review_files_unchanged": {
+    "TutorialQPromptProof_20261017/UnityProof/Assets/Scripts/PrototypeHud.cs": true,
+    "TutorialQPromptProof_20261017/Build_After_r3/TutorialQPrompt.exe": true,
+    "TutorialQPromptProof_20261017/Build_After_r3/TutorialQPrompt_Data/Managed/Assembly-CSharp.dll": true,
+    "TutorialQPromptProof_20261017/START_QPrompt.cmd": true,
+    "PlayerIntegratedArmsProof_20261017/Build_r3/IntegratedArmsProof_Data/Managed/Assembly-CSharp.dll": true,
+    "HimoHitoReviewRuntime/CURRENT.json": true,
+    "HimoHitoReviewRuntime/START_Review.cmd": true,
+    "HimoHitoReviewRuntime/Windows/HimoHitoReview.exe": true,
+    "HimoHitoReviewRuntime/Windows/HimoHitoReview_Data/Managed/Assembly-CSharp.dll": true,
+    "TabControlsProof_20261017/UnityProof/Assets/Scripts/StageOverlayControls.cs": true,
+    "TabControlsProof_20261017/Build_r2/TabControlsProof_Data/Managed/Assembly-CSharp.dll": true,
+    "TabControlsProof_20261017/START_TabProof.cmd": true,
+    "PlayerBodyPumpProof_20261017/START_BodyPump.cmd": true,
+    "PlayerBodyPumpProof_20261017/Build_r2/BodyPumpProof_Data/Managed/Assembly-CSharp.dll": true
+  },
+  "frozen_a2_original_exe_matches_record": true,
+  "frozen_a2_original_assembly_matches_record": true,
+  "locked_core_five": {
+    "Assets/Scripts/PlayerMover.cs": true,
+    "Assets/Scripts/RopeController.cs": true,
+    "Assets/Scripts/RopeResource.cs": true,
+    "Assets/Scripts/RopePlatformBuilder.cs": true,
+    "Assets/Scripts/MainStageRespawnOnFall.cs": true
+  },
+  "arm_pose_hook_sole_color_sound_files_unchanged": {
+    "Assets/PlayerPresentation/BodyPumpPresentation.cs": true,
+    "Assets/PlayerPresentation/ActiveSwingArms.cs": true,
+    "Assets/PlayerPresentation/IntegratedWoolArms.cs": true,
+    "Assets/PlayerPresentation/SwingPresentationState.cs": true,
+    "Assets/PlayerPresentation/PlayerSoleRegistration.cs": true,
+    "Assets/Scripts/RopeBodyVisual.cs": true,
+    "Assets/Scripts/HookYarnKnotVisual.cs": true,
+    "Assets/Scripts/RopeSwingPoseState.cs": true,
+    "Assets/Scripts/CraftPlayerArt.cs": true,
+    "Assets/Scripts/PrototypeAudioFeedback.cs": true,
+    "Assets/Scripts/RopeLandingFluff.cs": true,
+    "Assets/Scripts/PlayerContactShadow.cs": true,
+    "Assets/Resources/PlayerPresentationYarn.shader": true
+  },
+  "player_motion_presentation_class_unchanged_only_bootstrap_differs": true,
+  "scenes_packages_physics_input_camera_png_meta_unchanged": true,
+  "production_bgm_known_sha_matches": true,
+  "changed_only_in_isolation": [
+    "Assets/A2Proof/A2Fixture.cs",
+    "Assets/PlayerPresentation/PlayerMotionPresentation.cs"
+  ],
+  "added_only_in_isolation": [
+    "Assets/PlayerPresentation/WallCollisionReview.cs",
+    "Assets/PlayerPresentation/WallCollisionReview.cs.meta"
+  ]
+}

@@ -1,0 +1,4752 @@
+{
+  "method": "Automatic existing input-field/API trials, not OS keys or Human. Follow policy is velocity-responsive, not identical raw input across layouts. Fixed-time films are separately compared.",
+  "technical_errors": [
+    0,
+    0
+  ],
+  "core_config_equal_with_bodypump": {
+    "mover": true,
+    "rope": true,
+    "builder": true,
+    "follow": true,
+    "gravity": true,
+    "colliderSize": true,
+    "colliderOffset": true,
+    "mass": true,
+    "gravityScale": true,
+    "fixedDelta": true,
+    "bodyType": true,
+    "constraints": true,
+    "playerScale": true
+  },
+  "camera_target_instance_ids": [
+    {
+      "instanceID": 1268
+    },
+    {
+      "instanceID": 1268
+    },
+    {
+      "instanceID": 1266
+    }
+  ],
+  "literal_follow_json_equal": false,
+  "camera_note": "Only process-specific Unity target instance IDs differ from older BodyPump build. Camera Scene reference and source are byte-preserved; numeric follow configuration is equal.",
+  "original_floor_hooks_colliders_same": {
+    "Main S06 Merge": true,
+    "Main S06 Upper Left": true,
+    "Main S06 Upper Right": true,
+    "Main S05 Landing": true,
+    "Main S06 Lower Hook B": true,
+    "Main S06 Lower Hook C": true,
+    "Main S06 Upper Final Step": true,
+    "Main S06 Green Upper Bridge End Hook": true,
+    "Main S06 Green Upper Bridge Start Hook": true,
+    "Main S06 Lower Hook A": true,
+    "A2 Proof Entry Box": true,
+    "A2 Proof Middle Box": true,
+    "A2 Proof Exit Box": true,
+    "A2 Proof Green Start 1": true,
+    "A2 Proof Green End 1": true,
+    "A2 Proof Green Start 2": true,
+    "A2 Proof Green End 2": true,
+    "A2 Proof Blue Swing Hook 1": true,
+    "A2 Proof Blue Swing Hook 2": true
+  },
+  "only_added_shape": [
+    "A2 Proof Entry Bevel"
+  ],
+  "added_shape": [
+    {
+      "name": "A2 Proof Entry Bevel",
+      "position": {
+        "x": 117.9000015258789,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "scale": {
+        "x": 1.0,
+        "y": 1.0,
+        "z": 1.0
+      },
+      "boundsMin": {
+        "x": 117.9000015258789,
+        "y": -6.0
+      },
+      "boundsMax": {
+        "x": 121.0999984741211,
+        "y": 0.0
+      },
+      "size": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "offset": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "polygonPoints": [
+        {
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "x": 3.200000047683716,
+          "y": -4.0
+        },
+        {
+          "x": 0.0,
+          "y": -6.0
+        }
+      ],
+      "trigger": false,
+      "enabled": true,
+      "active": true,
+      "airGroup": "",
+      "airOrder": 0
+    }
+  ],
+  "R_passes": {
+    "baseline": 13,
+    "bevel": 14,
+    "trials_each": 14
+  },
+  "trials": [
+    {
+      "name": "L6_ground_follow_release-1",
+      "length": 6,
+      "baseline": {
+        "name": "L6_ground_follow_release-1",
+        "attach": true,
+        "landed": false,
+        "attached_wall_episodes": 4,
+        "released_wall_episodes": 0,
+        "hit_colliders": [
+          "A2 Proof Entry Box"
+        ],
+        "overhead_contacts": 0,
+        "max_wall_relative_speed": 14.9466672003926,
+        "returning_slope_contacts": 0,
+        "first_returning_slope": null,
+        "first_attached_wall": {
+          "collider": "A2 Proof Entry Box",
+          "face": "side",
+          "callback": "enter",
+          "step": 138,
+          "point": {
+            "x": 117.90231323242188,
+            "y": -0.28756046295166016
+          },
+          "normal": {
+            "x": 1.0,
+            "y": 0.0
+          },
+          "relativeVelocity": {
+            "x": 13.631793975830078,
+            "y": -6.130012512207031
+          },
+          "normalImpulse": 13.631793975830078,
+          "tangentImpulse": 2.7263588905334473,
+          "before": {
+            "t": 2.779999017715454,
+            "fixedTime": 5.519998073577881,
+            "remaining": 24.0,
+            "ropeLength": 6.0,
+            "span": 6.000000476837158,
+            "input": -1.0,
+            "angle": -24.212730407714844,
+            "soleY": -1.587739109992981,
+            "selected": 6,
+            "bridges": 0,
+            "attached": true,
+            "grounded": false,
+            "failure": false,
+            "position": {
+              "x": 118.43924713134766,
+              "y": -0.9721744060516357
+            },
+            "velocity": {
+              "x": -14.186590194702148,
+              "y": 5.5330939292907715
+            },
+            "colliderMin": {
+              "x": 118.03924560546875,
+              "y": -1.5721744298934937
+            },
+            "colliderMax": {
+              "x": 118.83924865722656,
+              "y": -0.37217438220977783
+            },
+            "crown": {
+              "x": 118.71599578857422,
+              "y": -0.5616993308067322
+            },
+            "camera": {
+              "x": 121.32274627685547,
+              "y": 0.0,
+              "z": -10.0
+            },
+            "ortho": 8.699999809265137
+          },
+          "afterMover": {
+            "t": 2.779999017715454,
+            "fixedTime": 5.519998073577881,
+            "remaining": 24.0,
+            "ropeLength": 6.0,
+            "span": 6.000000476837158,
+            "input": -1.0,
+            "angle": -24.212730407714844,
+            "soleY": -1.587739109992981,
+            "selected": 6,
+            "bridges": 0,
+            "attached": true,
+            "grounded": false,
+            "failure": false,
+            "position": {
+              "x": 118.43924713134766,
+              "y": -0.9721744060516357
+            },
+            "velocity": {
+              "x": -14.186590194702148,
+              "y": 5.5330939292907715
+            },
+            "colliderMin": {
+              "x": 118.03924560546875,
+              "y": -1.5721744298934937
+            },
+            "colliderMax": {
+              "x": 118.83924865722656,
+              "y": -0.37217438220977783
+            },
+            "crown": {
+              "x": 118.71599578857422,
+              "y": -0.5616993308067322
+            },
+            "camera": {
+              "x": 121.32274627685547,
+              "y": 0.0,
+              "z": -10.0
+            },
+            "ortho": 8.699999809265137
+          },
+          "after": {
+            "t": 2.779999017715454,
+            "fixedTime": 5.519998073577881,
+            "remaining": 24.0,
+            "ropeLength": 6.0,
+            "span": 5.962984085083008,
+            "input": -1.0,
+            "angle": -25.690776824951172,
+            "soleY": -1.3713825941085815,
+            "selected": 6,
+            "bridges": 0,
+            "attached": true,
+            "grounded": false,
+            "failure": false,
+            "position": {
+              "x": 118.3149642944336,
+              "y": -0.8735240697860718
+            },
+            "velocity": {
+              "x": 0.0,
+              "y": 3.403653621673584
+            },
+            "colliderMin": {
+              "x": 117.91496276855469,
+              "y": -1.4735240936279297
+            },
+            "colliderMax": {
+              "x": 118.7149658203125,
+              "y": -0.27352404594421387
+            },
+            "crown": {
+              "x": 118.31114959716797,
+              "y": -0.34534281492233276
+            },
+            "camera": {
+              "x": 121.32274627685547,
+              "y": 0.0,
+              "z": -10.0
+            },
+            "ortho": 8.699999809265137
+          }
+        },
+        "first_released_wall": null,
+        "end": {
+          "t": 5.019998550415039,
+          "fixedTime": 7.759997367858887,
+          "remaining": 24.0,
+          "ropeLength": 6.0,
+          "span": 5.712376594543457,
+          "input": 0.0,
+          "angle": -26.90604019165039,
+          "soleY": -1.0729329586029053,
+          "selected": 6,
+          "bridges": 0,
+          "attached": true,
+          "grounded": false,
+          "failure": false,
+          "position": {
+            "x": 118.31498718261719,
+            "y": -0.5940107703208923
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 117.91498565673828,
+            "y": -1.1940107345581055
+          },
+          "colliderMax": {
+            "x": 118.7149887084961,
+            "y": 0.0059893131256103516
+          },
+          "crown": {
+            "x": 118.49019622802734,
+            "y": -0.09572061896324158
+          },
+          "camera": {
+            "x": 118.31500244140625,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137
+        }
+      },
+      "bevel": {
+        "name": "L6_ground_follow_release-1",
+        "attach": true,
+        "landed": false,
+        "attached_wall_episodes": 0,
+        "released_wall_episodes": 0,
+        "hit_colliders": [],
+        "overhead_contacts": 0,
+        "max_wall_relative_speed": 0,
+        "returning_slope_contacts": 14,
+        "first_returning_slope": {
+          "collider": "A2 Proof Entry Bevel",
+          "face": "slope",
+          "callback": "enter",
+          "step": 133,
+          "point": {
+            "x": 119.53053283691406,
+            "y": -2.0266003608703613
+          },
+          "normal": {
+            "x": 0.7808687686920166,
+            "y": 0.6246950030326843
+          },
+          "relativeVelocity": {
+            "x": 16.157270431518555,
+            "y": -1.7390118837356567
+          },
+          "normalImpulse": 11.873539924621582,
+          "tangentImpulse": 2.3747079372406006,
+          "before": {
+            "t": 2.6799991130828857,
+            "fixedTime": 5.4199981689453125,
+            "remaining": 24.0,
+            "ropeLength": 6.0,
+            "span": 6.000000476837158,
+            "input": -1.0,
+            "angle": -9.243791580200195,
+            "soleY": -1.934679627418518,
+            "selected": 6,
+            "bridges": 0,
+            "attached": true,
+            "grounded": false,
+            "failure": false,
+            "position": {
+              "x": 119.93618774414062,
+              "y": -1.4220831394195557
+            },
+            "velocity": {
+              "x": -16.157270431518555,
+              "y": 1.7390118837356567
+            },
+            "colliderMin": {
+              "x": 119.53618621826172,
+              "y": -2.022083282470703
+            },
+            "colliderMax": {
+              "x": 120.33618927001953,
+              "y": -0.822083055973053
+            },
+            "crown": {
+              "x": 120.1517105102539,
+              "y": -0.9481375813484192
+            },
+            "camera": {
+              "x": 122.8111343383789,
+              "y": 0.0,
+              "z": -10.0
+            },
+            "ortho": 8.699999809265137
+          },
+          "afterMover": {
+            "t": 2.6799991130828857,
+            "fixedTime": 5.4199981689453125,
+            "remaining": 24.0,
+            "ropeLength": 6.0,
+            "span": 6.000000476837158,
+            "input": -1.0,
+            "angle": -9.243791580200195,
+            "soleY": -1.934679627418518,
+            "selected": 6,
+            "bridges": 0,
+            "attached": true,
+            "grounded": true,
+            "failure": false,
+            "position": {
+              "x": 119.93618774414062,
+              "y": -1.4220831394195557
+            },
+            "velocity": {
+              "x": -16.157270431518555,
+              "y": 1.7390118837356567
+            },
+            "colliderMin": {
+              "x": 119.53618621826172,
+              "y": -2.022083282470703
+            },
+            "colliderMax": {
+              "x": 120.33618927001953,
+              "y": -0.822083055973053
+            },
+            "crown": {
+              "x": 120.1517105102539,
+              "y": -0.9481375813484192
+            },
+            "camera": {
+              "x": 122.8111343383789,
+              "y": 0.0,
+              "z": -10.0
+            },
+            "ortho": 8.699999809265137
+          },
+          "after": {
+            "t": 2.6799991130828857,
+            "fixedTime": 5.4199981689453125,
+            "remaining": 24.0,
+            "ropeLength": 6.0,
+            "span": 5.885374546051025,
+            "input": -1.0,
+            "angle": -10.492528915405273,
+            "soleY": -1.756097674369812,
+            "selected": 6,
+            "bridges": 0,
+            "attached": true,
+            "grounded": true,
+            "failure": false,
+            "position": {
+              "x": 119.82823181152344,
+              "y": -1.2869629859924316
+            },
+            "velocity": {
+              "x": -5.402125835418701,
+              "y": 6.752657413482666
+            },
+            "colliderMin": {
+              "x": 119.42823028564453,
+              "y": -1.8869630098342896
+            },
+            "colliderMax": {
+              "x": 120.22823333740234,
+              "y": -0.6869629621505737
+            },
+            "crown": {
+              "x": 119.7220230102539,
+              "y": -0.7695556282997131
+            },
+            "camera": {
+              "x": 122.8111343383789,
+              "y": 0.0,
+              "z": -10.0
+            },
+            "ortho": 8.699999809265137
+          }
+        },
+        "first_attached_wall": null,
+        "first_released_wall": null,
+        "end": {
+          "t": 5.019998550415039,
+          "fixedTime": 7.759997367858887,
+          "remaining": 24.0,
+          "ropeLength": 6.0,
+          "span": 5.999999046325684,
+          "input": 0.0,
+          "angle": 46.77008819580078,
+          "soleY": -0.249338760972023,
+          "selected": 6,
+          "bridges": 0,
+          "attached": true,
+          "grounded": false,
+          "failure": false,
+          "position": {
+            "x": 125.27166748046875,
+            "y": 0.39043518900871277
+          },
+          "velocity": {
+            "x": 7.0970025062561035,
+            "y": 7.06191349029541
+          },
+          "colliderMin": {
+            "x": 124.87166595458984,
+            "y": -0.20956480503082275
+          },
+          "colliderMax": {
+            "x": 125.67166900634766,
+            "y": 0.9904352426528931
+          },
+          "crown": {
+            "x": 124.94979858398438,
+            "y": 0.7426261901855469
+          },
+          "camera": {
+            "x": 123.74315643310547,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137
+        }
+      },
+      "baseline_R_pass": false,
+      "bevel_R_pass": true
+    },
+    {
+      "name": "L6_ground_timed_release-1",
+      "length": 6,
+      "baseline": {
+        "name": "L6_ground_timed_release-1",
+        "attach": true,
+        "landed": false,
+        "attached_wall_episodes": 2,
+        "released_wall_episodes": 0,
+        "hit_colliders": [
+          "A2 Proof Entry Box"
+        ],
+        "overhead_contacts": 0,
+        "max_wall_relative_speed": 14.993573873657764,
+        "returning_slope_contacts": 0,
+        "first_returning_slope": null,
+        "first_attached_wall": {
+          "collider": "A2 Proof Entry Box",
+          "face": "side",
+          "callback": "enter",
+          "step": 134,
+          "point": {
+            "x": 117.90249633789062,
+            "y": -0.28799867630004883
+          },
+          "normal": {
+            "x": 1.0,
+            "y": 0.0
+          },
+          "relativeVelocity": {
+            "x": 13.730474472045898,
+            "y": -6.023398399353027
+          },
+          "normalImpulse": 13.730474472045898,
+          "tangentImpulse": 2.7460949420928955,
+          "before": {
+            "t": 2.6999988555908203,
+            "fixedTime": 13.299995422363281,
+            "remaining": 24.0,
+            "ropeLength": 6.0,
+            "span": 5.999999523162842,
+            "input": -1.0,
+            "angle": -23.686588287353516,
+            "soleY": -1.6071228981018066,
+            "selected": 6,
+            "bridges": 0,
+            "attached": true,
+            "grounded": false,
+            "failure": false,
+            "position": {
+              "x": 118.4896011352539,
+              "y": -0.9945399165153503
+            },
+            "velocity": {
+              "x": -14.277361869812012,
+              "y": 5.41569709777832
+            },
+            "colliderMin": {
+              "x": 118.089599609375,
+              "y": -1.5945398807525635
+            },
+            "colliderMax": {
+              "x": 118.88960266113281,
+              "y": -0.39453983306884766
+            },
+            "crown": {
+              "x": 118.76454162597656,
+              "y": -0.5818242430686951
+            },
+            "camera": {
+              "x": 121.37718963623047,
+              "y": 0.0,
+              "z": -10.0
+            },
+            "ortho": 8.699999809265137
+          },
+          "afterMover": {
+            "t": 2.6999988555908203,
+            "fixedTime": 13.299995422363281,
+            "remaining": 24.0,
+            "ropeLength": 6.0,
+            "span": 5.999999523162842,
+            "input": -1.0,
+            "angle": -23.686588287353516,
+            "soleY": -1.6071228981018066,
+            "selected": 6,
+            "bridges": 0,
+            "attached": true,
+            "grounded": false,
+            "failure": false,
+            "position": {
+              "x": 118.4896011352539,
+              "y": -0.9945399165153503
+            },
+            "velocity": {
+              "x": -14.277361869812012,
+              "y": 5.41569709777832
+            },
+            "colliderMin": {
+              "x": 118.089599609375,
+              "y": -1.5945398807525635
+            },
+            "colliderMax": {
+              "x": 118.88960266113281,
+              "y": -0.39453983306884766
+            },
+            "crown": {
+              "x": 118.76454162597656,
+              "y": -0.5818242430686951
+            },
+            "camera": {
+              "x": 121.37718963623047,
+              "y": 0.0,
+              "z": -10.0
+            },
+            "ortho": 8.699999809265137
+          },
+          "after": {
+            "t": 2.6999988555908203,
+            "fixedTime": 13.299995422363281,
+            "remaining": 24.0,
+            "ropeLength": 6.0,
+            "span": 5.97518253326416,
+            "input": -1.0,
+            "angle": -25.634517669677734,
+            "soleY": -1.3842146396636963,
+            "selected": 6,
+            "bridges": 0,
+            "attached": true,
+            "grounded": false,
+            "failure": false,
+            "position": {
+              "x": 118.3149642944336,
+              "y": -0.8870579600334167
+            },
+            "velocity": {
+              "x": 0.0,
+              "y": 3.277303457260132
+            },
+            "colliderMin": {
+              "x": 117.91496276855469,
+              "y": -1.4870579242706299
+            },
+            "colliderMax": {
+              "x": 118.7149658203125,
+              "y": -0.28705787658691406
+            },
+            "crown": {
+              "x": 118.30747985839844,
+              "y": -0.35891592502593994
+            },
+            "camera": {
+              "x": 121.37718963623047,
+              "y": 0.0,
+              "z": -10.0
+            },
+            "ortho": 8.699999809265137
+          }
+        },
+        "first_released_wall": null,
+        "end": {
+          "t": 5.019997596740723,
+          "fixedTime": 15.619994163513184,
+          "remaining": 24.0,
+          "ropeLength": 6.0,
+          "span": 6.0,
+          "input": 0.0,
+          "angle": 78.1987075805664,
+          "soleY": 3.071751594543457,
+          "selected": 6,
+          "bridges": 0,
+          "attached": true,
+          "grounded": false,
+          "failure": false,
+          "position": {
+            "x": 126.77317810058594,
+            "y": 3.2728912830352783
+          },
+          "velocity": {
+            "x": -0.5642720460891724,
+            "y": -2.837083339691162
+          },
+          "colliderMin": {
+            "x": 126.37317657470703,
+            "y": 2.672891139984131
+          },
+          "colliderMax": {
+            "x": 127.17317962646484,
+            "y": 3.872891426086426
+          },
+          "crown": {
+            "x": 126.3303451538086,
+            "y": 3.5988669395446777
+          },
+          "camera": {
+            "x": 126.82315826416016,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137
+        }
+      },
+      "bevel": {
+        "name": "L6_ground_timed_release-1",
+        "attach": true,
+        "landed": false,
+        "attached_wall_episodes": 1,
+        "released_wall_episodes": 0,
+        "hit_colliders": [
+          "A2 Proof Entry Box"
+        ],
+        "overhead_contacts": 0,
+        "max_wall_relative_speed": 10.288277953476905,
+        "returning_slope_contacts": 14,
+        "first_returning_slope": {
+          "collider": "A2 Proof Entry Bevel",
+          "face": "slope",
+          "callback": "enter",
+          "step": 129,
+          "point": {
+            "x": 119.51885223388672,
+            "y": -2.019564628601074
+          },
+          "normal": {
+            "x": 0.7808687686920166,
+            "y": 0.6246950030326843
+          },
+          "relativeVelocity": {
+            "x": 15.938440322875977,
+            "y": -2.434906482696533
+          },
+          "normalImpulse": 10.92475700378418,
+          "tangentImpulse": 2.1849515438079834,
+          "before": {
+            "t": 2.5999984741210938,
+            "fixedTime": 13.199995040893555,
+            "remaining": 24.0,
+            "ropeLength": 6.0,
+            "span": 5.999999523162842,
+            "input": -1.0,
+            "angle": -8.685972213745117,
+            "soleY": -1.9393069744110107,
+            "selected": 6,
+            "bridges": 0,
+            "attached": true,
+            "grounded": false,
+            "failure": false,
+            "position": {
+              "x": 119.99388885498047,
+              "y": -1.4311845302581787
+            },
+            "velocity": {
+              "x": -16.191743850708008,
+              "y": 1.5824490785598755
+            },
+            "colliderMin": {
+              "x": 119.59388732910156,
+              "y": -2.031184673309326
+            },
+            "colliderMax": {
+              "x": 120.39389038085938,
+              "y": -0.831184446811676
+            },
+            "crown": {
+              "x": 120.20655059814453,
+              "y": -0.9549019932746887
+            },
+            "camera": {
+              "x": 122.86201477050781,
+              "y": 0.0,
+              "z": -10.0
+            },
+            "ortho": 8.699999809265137
+          },
+          "afterMover": {
+            "t": 2.5999984741210938,
+            "fixedTime": 13.199995040893555,
+            "remaining": 24.0,
+            "ropeLength": 6.0,
+            "span": 5.999999523162842,
+            "input": -1.0,
+            "angle": -8.685972213745117,
+            "soleY": -1.9393069744110107,
+            "selected": 6,
+            "bridges": 0,
+            "attached": true,
+            "grounded": false,
+            "failure": false,
+            "position": {
+              "x": 119.99388885498047,
+              "y": -1.4311845302581787
+            },
+            "velocity": {
+              "x": -16.191743850708008,
+              "y": 1.5824490785598755
+            },
+            "colliderMin": {
+              "x": 119.59388732910156,
+              "y": -2.031184673309326
+            },
+            "colliderMax": {
+              "x": 120.39389038085938,
+              "y": -0.831184446811676
+            },
+            "crown": {
+              "x": 120.20655059814453,
+              "y": -0.9549019932746887
+            },
+            "camera": {
+              "x": 122.86201477050781,
+              "y": 0.0,
+              "z": -10.0
+            },
+            "ortho": 8.699999809265137
+          },
+          "after": {
+            "t": 2.5999984741210938,
+            "fixedTime": 13.199995040893555,
+            "remaining": 24.0,
+            "ropeLength": 6.0,
+            "span": 5.892917633056641,
+            "input": -1.0,
+            "angle": -10.410682678222656,
+            "soleY": -1.7636648416519165,
+            "selected": 6,
+            "bridges": 0,
+            "attached": true,
+            "grounded": false,
+            "failure": false,
+            "position": {
+              "x": 119.83513641357422,
+              "y": -1.2959070205688477
+            },
+            "velocity": {
+              "x": -6.042710304260254,
+              "y": 7.553387641906738
+            },
+            "colliderMin": {
+              "x": 119.43513488769531,
+              "y": -1.8959070444107056
+            },
+            "colliderMax": {
+              "x": 120.23513793945312,
+              "y": -0.6959069967269897
+            },
+            "crown": {
+              "x": 119.72529602050781,
+              "y": -0.7792598605155945
+            },
+            "camera": {
+              "x": 122.86201477050781,
+              "y": 0.0,
+              "z": -10.0
+            },
+            "ortho": 8.699999809265137
+          }
+        },
+        "first_attached_wall": {
+          "collider": "A2 Proof Entry Box",
+          "face": "side",
+          "callback": "enter",
+          "step": 142,
+          "point": {
+            "x": 117.90780639648438,
+            "y": 0.0
+          },
+          "normal": {
+            "x": 1.0,
+            "y": 0.0
+          },
+          "relativeVelocity": {
+            "x": 6.427036285400391,
+            "y": -8.033795356750488
+          },
+          "normalImpulse": 7.177002906799316,
+          "tangentImpulse": 1.4354006052017212,
+          "before": {
+            "t": 2.8599987030029297,
+            "fixedTime": 13.45999526977539,
+            "remaining": 24.0,
+            "ropeLength": 6.0,
+            "span": 4.674880027770996,
+            "input": -1.0,
+            "angle": -33.561126708984375,
+            "soleY": 0.004438608884811401,
+            "selected": 6,
+            "bridges": 0,
+            "attached": true,
+            "grounded": true,
+            "failure": false,
+            "position": {
+              "x": 118.31560516357422,
+              "y": 0.6044386625289917
+            },
+            "velocity": {
+              "x": -6.427036285400391,
+              "y": 8.033795356750488
+            },
+            "colliderMin": {
+              "x": 117.91560363769531,
+              "y": 0.004438638687133789
+            },
+            "colliderMax": {
+              "x": 118.71560668945312,
+              "y": 1.2044386863708496
+            },
+            "crown": {
+              "x": 118.44278717041016,
+              "y": 1.059131145477295
+            },
+            "camera": {
+              "x": 119.78057861328125,
+              "y": 0.0,
+              "z": -10.0
+            },
+            "ortho": 8.699999809265137
+          },
+          "afterMover": {
+            "t": 2.8599987030029297,
+            "fixedTime": 13.45999526977539,
+            "remaining": 24.0,
+            "ropeLength": 6.0,
+            "span": 4.674880027770996,
+            "input": -1.0,
+            "angle": -33.561126708984375,
+            "soleY": 0.004438608884811401,
+            "selected": 6,
+            "bridges": 0,
+            "attached": true,
+            "grounded": true,
+            "failure": false,
+            "position": {
+              "x": 118.31560516357422,
+              "y": 0.6044386625289917
+            },
+            "velocity": {
+              "x": -6.427036285400391,
+              "y": 8.033795356750488
+            },
+            "colliderMin": {
+              "x": 117.91560363769531,
+              "y": 0.004438638687133789
+            },
+            "colliderMax": {
+              "x": 118.71560668945312,
+              "y": 1.2044386863708496
+            },
+            "crown": {
+              "x": 118.44278717041016,
+              "y": 1.059131145477295
+            },
+            "camera": {
+              "x": 119.78057861328125,
+              "y": 0.0,
+              "z": -10.0
+            },
+            "ortho": 8.699999809265137
+          },
+          "after": {
+            "t": 2.8599987030029297,
+            "fixedTime": 13.45999526977539,
+            "remaining": 24.0,
+            "ropeLength": 6.0,
+            "span": 4.566349029541016,
+            "input": -1.0,
+            "angle": -34.46936798095703,
+            "soleY": 0.2960525453090668,
+            "selected": 6,
+            "bridges": 0,
+            "attached": true,
+            "grounded": true,
+            "failure": false,
+            "position": {
+              "x": 118.31560516357422,
+              "y": 0.7353701591491699
+            },
+            "velocity": {
+              "x": -8.940696716308594e-08,
+              "y": 6.546577453613281
+            },
+            "colliderMin": {
+              "x": 117.91560363769531,
+              "y": 0.135370135307312
+            },
+            "colliderMax": {
+              "x": 118.71560668945312,
+              "y": 1.3353701829910278
+            },
+            "crown": {
+              "x": 118.31425476074219,
+              "y": 1.3507450819015503
+            },
+            "camera": {
+              "x": 119.78057861328125,
+              "y": 0.0,
+              "z": -10.0
+            },
+            "ortho": 8.699999809265137
+          }
+        },
+        "first_released_wall": null,
+        "end": {
+          "t": 5.019997596740723,
+          "fixedTime": 15.619994163513184,
+          "remaining": 24.0,
+          "ropeLength": 6.0,
+          "span": 5.999997615814209,
+          "input": 0.0,
+          "angle": 49.902103424072266,
+          "soleY": -0.0016086995601654053,
+          "selected": 6,
+          "bridges": 0,
+          "attached": true,
+          "grounded": false,
+          "failure": false,
+          "position": {
+            "x": 125.48966979980469,
+            "y": 0.6354281902313232
+          },
+          "velocity": {
+            "x": 6.582645893096924,
+            "y": 7.3165283203125
+          },
+          "colliderMin": {
+            "x": 125.08966827392578,
+            "y": 0.03542816638946533
+          },
+          "colliderMax": {
+            "x": 125.8896713256836,
+            "y": 1.2354282140731812
+          },
+          "crown": {
+            "x": 125.15772247314453,
+            "y": 0.9747453927993774
+          },
+          "camera": {
+            "x": 124.02338409423828,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137
+        }
+      },
+      "baseline_R_pass": true,
+      "bevel_R_pass": true
+    },
+    {
+      "name": "L6_ground_coast_release-1",
+      "length": 6,
+      "baseline": {
+        "name": "L6_ground_coast_release-1",
+        "attach": true,
+        "landed": false,
+        "attached_wall_episodes": 1,
+        "released_wall_episodes": 0,
+        "hit_colliders": [
+          "A2 Proof Entry Box"
+        ],
+        "overhead_contacts": 0,
+        "max_wall_relative_speed": 9.64383880316946,
+        "returning_slope_contacts": 0,
+        "first_returning_slope": null,
+        "first_attached_wall": {
+          "collider": "A2 Proof Entry Box",
+          "face": "side",
+          "callback": "enter",
+          "step": 127,
+          "point": {
+            "x": 117.90249633789062,
+            "y": -0.2890005111694336
+          },
+          "normal": {
+            "x": 1.0,
+            "y": 0.0
+          },
+          "relativeVelocity": {
+            "x": 8.74435806274414,
+            "y": -4.066918849945068
+          },
+          "normalImpulse": 8.74435806274414,
+          "tangentImpulse": 1.7488716840744019,
+          "before": {
+            "t": 2.559999465942383,
+            "fixedTime": 21.01999282836914,
+            "remaining": 24.0,
+            "ropeLength": 6.0,
+            "span": 5.999999046325684,
+            "input": 0.0,
+            "angle": -24.94297981262207,
+            "soleY": -1.5248126983642578,
+            "selected": 6,
+            "bridges": 0,
+            "attached": true,
+            "grounded": false,
+            "failure": false,
+            "position": {
+              "x": 118.36970520019531,
+              "y": -0.9403668642044067
+            },
+            "velocity": {
+              "x": -9.113202095031738,
+              "y": 3.8781142234802246
+            },
+            "colliderMin": {
+              "x": 117.9697036743164,
+              "y": -1.5403668880462646
+            },
+            "colliderMax": {
+              "x": 118.76970672607422,
+              "y": -0.34036684036254883
+            },
+            "crown": {
+              "x": 118.58651733398438,
+              "y": -0.49392247200012207
+            },
+            "camera": {
+              "x": 120.34608459472656,
+              "y": 0.0,
+              "z": -10.0
+            },
+            "ortho": 8.699999809265137
+          },
+          "afterMover": {
+            "t": 2.559999465942383,
+            "fixedTime": 21.01999282836914,
+            "remaining": 24.0,
+            "ropeLength": 6.0,
+            "span": 5.999999046325684,
+            "input": 0.0,
+            "angle": -24.94297981262207,
+            "soleY": -1.5248126983642578,
+            "selected": 6,
+            "bridges": 0,
+            "attached": true,
+            "grounded": false,
+            "failure": false,
+            "position": {
+              "x": 118.36970520019531,
+              "y": -0.9403668642044067
+            },
+            "velocity": {
+              "x": -9.113202095031738,
+              "y": 3.8781142234802246
+            },
+            "colliderMin": {
+              "x": 117.9697036743164,
+              "y": -1.5403668880462646
+            },
+            "colliderMax": {
+              "x": 118.76970672607422,
+              "y": -0.34036684036254883
+            },
+            "crown": {
+              "x": 118.58651733398438,
+              "y": -0.49392247200012207
+            },
+            "camera": {
+              "x": 120.34608459472656,
+              "y": 0.0,
+              "z": -10.0
+            },
+            "ortho": 8.699999809265137
+          },
+          "after": {
+            "t": 2.559999465942383,
+            "fixedTime": 21.01999282836914,
+            "remaining": 24.0,
+            "ropeLength": 6.0,
+            "span": 5.968757152557373,
+            "input": 0.0,
+            "angle": -25.664121627807617,
+            "soleY": -1.3838478326797485,
+            "selected": 6,
+            "bridges": 0,
+            "attached": true,
+            "grounded": false,
+            "failure": false,
+            "position": {
+              "x": 118.3149642944336,
+              "y": -0.8799294829368591
+            },
+            "velocity": {
+              "x": 0.0,
+              "y": 2.318047046661377
+            },
+            "colliderMin": {
+              "x": 117.91496276855469,
+              "y": -1.4799294471740723
+            },
+            "colliderMax": {
+              "x": 118.7149658203125,
+              "y": -0.27992939949035645
+            },
+            "crown": {
+              "x": 118.35089111328125,
+              "y": -0.35295766592025757
+            },
+            "camera": {
+              "x": 120.34608459472656,
+              "y": 0.0,
+              "z": -10.0
+            },
+            "ortho": 8.699999809265137
+          }
+        },
+        "first_released_wall": null,
+        "end": {
+          "t": 5.019998550415039,
+          "fixedTime": 23.479991912841797,
+          "remaining": 24.0,
+          "ropeLength": 6.0,
+          "span": 6.0,
+          "input": 0.0,
+          "angle": -6.597560882568359,
+          "soleY": -1.977453351020813,
+          "selected": 6,
+          "bridges": 0,
+          "attached": true,
+          "grounded": false,
+          "failure": false,
+          "position": {
+            "x": 120.21063232421875,
+            "y": -1.460266351699829
+          },
+          "velocity": {
+            "x": -4.711153984069824,
+            "y": 0.4696870446205139
+          },
+          "colliderMin": {
+            "x": 119.81063079833984,
+            "y": -2.0602664947509766
+          },
+          "colliderMax": {
+            "x": 120.61063385009766,
+            "y": -0.8602662682533264
+          },
+          "crown": {
+            "x": 120.28834533691406,
+            "y": -0.9424625635147095
+          },
+          "camera": {
+            "x": 121.12957000732422,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137
+        }
+      },
+      "bevel": {
+        "name": "L6_ground_coast_release-1",
+        "attach": true,
+        "landed": false,
+        "attached_wall_episodes": 0,
+        "released_wall_episodes": 0,
+        "hit_colliders": [],
+        "overhead_contacts": 0,
+        "max_wall_relative_speed": 0,
+        "returning_slope_contacts": 16,
+        "first_returning_slope": {
+          "collider": "A2 Proof Entry Bevel",
+          "face": "slope",
+          "callback": "enter",
+          "step": 119,
+          "point": {
+            "x": 119.51942443847656,
+            "y": -2.0202784538269043
+          },
+          "normal": {
+            "x": 0.7808687686920166,
+            "y": 0.6246950030326843
+          },
+          "relativeVelocity": {
+            "x": 11.124457359313965,
+            "y": -1.7005624771118164
+          },
+          "normalImpulse": 7.624409198760986,
+          "tangentImpulse": 1.5248818397521973,
+          "before": {
+            "t": 2.3999996185302734,
+            "fixedTime": 20.85999298095703,
+            "remaining": 24.0,
+            "ropeLength": 6.0,
+            "span": 6.000000476837158,
+            "input": 0.0,
+            "angle": -8.691349983215332,
+            "soleY": -1.9397019147872925,
+            "selected": 6,
+            "bridges": 0,
+            "attached": true,
+            "grounded": false,
+            "failure": false,
+            "position": {
+              "x": 119.99333190917969,
+              "y": -1.431100606918335
+            },
+            "velocity": {
+              "x": -11.298312187194824,
+              "y": 1.2913721799850464
+            },
+            "colliderMin": {
+              "x": 119.59333038330078,
+              "y": -2.0311007499694824
+            },
+            "colliderMax": {
+              "x": 120.3933334350586,
+              "y": -0.8311005234718323
+            },
+            "crown": {
+              "x": 120.13926696777344,
+              "y": -0.9389930963516235
+            },
+            "camera": {
+              "x": 122.08674621582031,
+              "y": 0.0,
+              "z": -10.0
+            },
+            "ortho": 8.699999809265137
+          },
+          "afterMover": {
+            "t": 2.3999996185302734,
+            "fixedTime": 20.85999298095703,
+            "remaining": 24.0,
+            "ropeLength": 6.0,
+            "span": 6.000000476837158,
+            "input": 0.0,
+            "angle": -8.691349983215332,
+            "soleY": -1.9397019147872925,
+            "selected": 6,
+            "bridges": 0,
+            "attached": true,
+            "grounded": false,
+            "failure": false,
+            "position": {
+              "x": 119.99333190917969,
+              "y": -1.431100606918335
+            },
+            "velocity": {
+              "x": -11.298312187194824,
+              "y": 1.2913721799850464
+            },
+            "colliderMin": {
+              "x": 119.59333038330078,
+              "y": -2.0311007499694824
+            },
+            "colliderMax": {
+              "x": 120.3933334350586,
+              "y": -0.8311005234718323
+            },
+            "crown": {
+              "x": 120.13926696777344,
+              "y": -0.9389930963516235
+            },
+            "camera": {
+              "x": 122.08674621582031,
+              "y": 0.0,
+              "z": -10.0
+            },
+            "ortho": 8.699999809265137
+          },
+          "after": {
+            "t": 2.3999996185302734,
+            "fixedTime": 20.85999298095703,
+            "remaining": 24.0,
+            "ropeLength": 6.0,
+            "span": 5.931445598602295,
+            "input": 0.0,
+            "angle": -9.98330020904541,
+            "soleY": -1.8201472759246826,
+            "selected": 6,
+            "bridges": 0,
+            "attached": true,
+            "grounded": false,
+            "failure": false,
+            "position": {
+              "x": 119.87171936035156,
+              "y": -1.3416335582733154
+            },
+            "velocity": {
+              "x": -4.218208312988281,
+              "y": 5.272760391235352
+            },
+            "colliderMin": {
+              "x": 119.47171783447266,
+              "y": -1.9416335821151733
+            },
+            "colliderMax": {
+              "x": 120.27172088623047,
+              "y": -0.7416335344314575
+            },
+            "crown": {
+              "x": 119.7923355102539,
+              "y": -0.8194384574890137
+            },
+            "camera": {
+              "x": 122.08674621582031,
+              "y": 0.0,
+              "z": -10.0
+            },
+            "ortho": 8.699999809265137
+          }
+        },
+        "first_attached_wall": null,
+        "first_released_wall": null,
+        "end": {
+          "t": 5.019998550415039,
+          "fixedTime": 23.479991912841797,
+          "remaining": 24.0,
+          "ropeLength": 6.0,
+          "span": 5.953864574432373,
+          "input": 0.0,
+          "angle": -9.741745948791504,
+          "soleY": -1.9680125713348389,
+          "selected": 6,
+          "bridges": 0,
+          "attached": true,
+          "grounded": true,
+          "failure": false,
+          "position": {
+            "x": 119.89256286621094,
+            "y": -1.368012547492981
+          },
+          "velocity": {
+            "x": -0.06339810788631439,
+            "y": 0.0792476162314415
+          },
+          "colliderMin": {
+            "x": 119.49256134033203,
+            "y": -1.9680125713348389
+          },
+          "colliderMax": {
+            "x": 120.29256439208984,
+            "y": -0.768012523651123
+          },
+          "crown": {
+            "x": 119.90431213378906,
+            "y": -0.9157679080963135
+          },
+          "camera": {
+            "x": 120.36550903320312,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137
+        }
+      },
+      "baseline_R_pass": true,
+      "bevel_R_pass": true
+    },
+    {
+      "name": "L6_ground_angle_release24",
+      "length": 6,
+      "baseline": {
+        "name": "L6_ground_angle_release24",
+        "attach": true,
+        "landed": false,
+        "attached_wall_episodes": 0,
+        "released_wall_episodes": 1,
+        "hit_colliders": [
+          "A2 Proof Middle Box"
+        ],
+        "overhead_contacts": 0,
+        "max_wall_relative_speed": 17.60186195373535,
+        "returning_slope_contacts": 0,
+        "first_returning_slope": null,
+        "first_attached_wall": null,
+        "first_released_wall": {
+          "collider": "A2 Proof Middle Box",
+          "face": "side",
+          "callback": "enter",
+          "step": 68,
+          "point": {
+            "x": 128.09750366210938,
+            "y": -2.503282070159912
+          },
+          "normal": {
+            "x": -1.0,
+            "y": 0.0
+          },
+          "relativeVelocity": {
+            "x": -10.142536163330078,
+            "y": 8.101640701293945
+          },
+          "normalImpulse": 10.142536163330078,
+          "tangentImpulse": 2.0285072326660156,
+          "before": {
+            "t": 1.3799991607666016,
+            "fixedTime": 27.699989318847656,
+            "remaining": 24.0,
+            "ropeLength": 0.0,
+            "span": 9.235424041748047,
+            "input": 1.0,
+            "angle": 46.745853424072266,
+            "soleY": -2.1256706714630127,
+            "selected": 6,
+            "bridges": 0,
+            "attached": false,
+            "grounded": false,
+            "failure": false,
+            "position": {
+              "x": 127.62635803222656,
+              "y": -1.8284425735473633
+            },
+            "velocity": {
+              "x": 10.152679443359375,
+              "y": -7.56038236618042
+            },
+            "colliderMin": {
+              "x": 127.22636413574219,
+              "y": -2.4284424781799316
+            },
+            "colliderMax": {
+              "x": 128.02635192871094,
+              "y": -1.228442668914795
+            },
+            "crown": {
+              "x": 127.4464340209961,
+              "y": -1.2288634777069092
+            },
+            "camera": {
+              "x": 125.7203140258789,
+              "y": 0.0,
+              "z": -10.0
+            },
+            "ortho": 8.699999809265137
+          },
+          "afterMover": {
+            "t": 1.3799991607666016,
+            "fixedTime": 27.699989318847656,
+            "remaining": 24.0,
+            "ropeLength": 0.0,
+            "span": 9.235424041748047,
+            "input": 1.0,
+            "angle": 46.745853424072266,
+            "soleY": -2.1256706714630127,
+            "selected": 6,
+            "bridges": 0,
+            "attached": false,
+            "grounded": false,
+            "failure": false,
+            "position": {
+              "x": 127.62635803222656,
+              "y": -1.8284425735473633
+            },
+            "velocity": {
+              "x": 10.152679443359375,
+              "y": -7.56038236618042
+            },
+            "colliderMin": {
+              "x": 127.22636413574219,
+              "y": -2.4284424781799316
+            },
+            "colliderMax": {
+              "x": 128.02635192871094,
+              "y": -1.228442668914795
+            },
+            "crown": {
+              "x": 127.4464340209961,
+              "y": -1.2288634777069092
+            },
+            "camera": {
+              "x": 125.7203140258789,
+              "y": 0.0,
+              "z": -10.0
+            },
+            "ortho": 8.699999809265137
+          },
+          "after": {
+            "t": 1.3799991607666016,
+            "fixedTime": 27.699989318847656,
+            "remaining": 24.0,
+            "ropeLength": 0.0,
+            "span": 9.370985984802246,
+            "input": 1.0,
+            "angle": 46.38969421386719,
+            "soleY": -2.412071704864502,
+            "selected": 6,
+            "bridges": 0,
+            "attached": false,
+            "grounded": false,
+            "failure": false,
+            "position": {
+              "x": 127.68504333496094,
+              "y": -1.963636040687561
+            },
+            "velocity": {
+              "x": 0.0,
+              "y": -6.07313346862793
+            },
+            "colliderMin": {
+              "x": 127.28504943847656,
+              "y": -2.563636064529419
+            },
+            "colliderMax": {
+              "x": 128.0850372314453,
+              "y": -1.3636360168457031
+            },
+            "crown": {
+              "x": 127.70817565917969,
+              "y": -1.5152645111083984
+            },
+            "camera": {
+              "x": 125.7203140258789,
+              "y": 0.0,
+              "z": -10.0
+            },
+            "ortho": 8.699999809265137
+          }
+        },
+        "end": {
+          "t": 5.019998550415039,
+          "fixedTime": 31.339988708496094,
+          "remaining": 24.0,
+          "ropeLength": 0.0,
+          "span": 15.159692764282227,
+          "input": 0.0,
+          "angle": 26.679058074951172,
+          "soleY": -9.107108116149902,
+          "selected": 6,
+          "bridges": 0,
+          "attached": false,
+          "grounded": false,
+          "failure": true,
+          "position": {
+            "x": 127.70658874511719,
+            "y": -9.045724868774414
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 127.30659484863281,
+            "y": -9.64572525024414
+          },
+          "colliderMax": {
+            "x": 128.10658264160156,
+            "y": -8.445724487304688
+          },
+          "crown": {
+            "x": 127.7302017211914,
+            "y": -8.196833610534668
+          },
+          "camera": {
+            "x": 127.66395568847656,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137
+        }
+      },
+      "bevel": {
+        "name": "L6_ground_angle_release24",
+        "attach": true,
+        "landed": false,
+        "attached_wall_episodes": 0,
+        "released_wall_episodes": 1,
+        "hit_colliders": [
+          "A2 Proof Middle Box"
+        ],
+        "overhead_contacts": 0,
+        "max_wall_relative_speed": 17.60186195373535,
+        "returning_slope_contacts": 0,
+        "first_returning_slope": null,
+        "first_attached_wall": null,
+        "first_released_wall": {
+          "collider": "A2 Proof Middle Box",
+          "face": "side",
+          "callback": "enter",
+          "step": 68,
+          "point": {
+            "x": 128.09750366210938,
+            "y": -2.503282070159912
+          },
+          "normal": {
+            "x": -1.0,
+            "y": 0.0
+          },
+          "relativeVelocity": {
+            "x": -10.142536163330078,
+            "y": 8.101640701293945
+          },
+          "normalImpulse": 10.142536163330078,
+          "tangentImpulse": 2.0285072326660156,
+          "before": {
+            "t": 1.3799991607666016,
+            "fixedTime": 27.699989318847656,
+            "remaining": 24.0,
+            "ropeLength": 0.0,
+            "span": 9.235424041748047,
+            "input": 1.0,
+            "angle": 46.745853424072266,
+            "soleY": -2.1256706714630127,
+            "selected": 6,
+            "bridges": 0,
+            "attached": false,
+            "grounded": false,
+            "failure": false,
+            "position": {
+              "x": 127.62635803222656,
+              "y": -1.8284425735473633
+            },
+            "velocity": {
+              "x": 10.152679443359375,
+              "y": -7.56038236618042
+            },
+            "colliderMin": {
+              "x": 127.22636413574219,
+              "y": -2.4284424781799316
+            },
+            "colliderMax": {
+              "x": 128.02635192871094,
+              "y": -1.228442668914795
+            },
+            "crown": {
+              "x": 127.4464340209961,
+              "y": -1.2288634777069092
+            },
+            "camera": {
+              "x": 125.7203140258789,
+              "y": 0.0,
+              "z": -10.0
+            },
+            "ortho": 8.699999809265137
+          },
+          "afterMover": {
+            "t": 1.3799991607666016,
+            "fixedTime": 27.699989318847656,
+            "remaining": 24.0,
+            "ropeLength": 0.0,
+            "span": 9.235424041748047,
+            "input": 1.0,
+            "angle": 46.745853424072266,
+            "soleY": -2.1256706714630127,
+            "selected": 6,
+            "bridges": 0,
+            "attached": false,
+            "grounded": false,
+            "failure": false,
+            "position": {
+              "x": 127.62635803222656,
+              "y": -1.8284425735473633
+            },
+            "velocity": {
+              "x": 10.152679443359375,
+              "y": -7.56038236618042
+            },
+            "colliderMin": {
+              "x": 127.22636413574219,
+              "y": -2.4284424781799316
+            },
+            "colliderMax": {
+              "x": 128.02635192871094,
+              "y": -1.228442668914795
+            },
+            "crown": {
+              "x": 127.4464340209961,
+              "y": -1.2288634777069092
+            },
+            "camera": {
+              "x": 125.7203140258789,
+              "y": 0.0,
+              "z": -10.0
+            },
+            "ortho": 8.699999809265137
+          },
+          "after": {
+            "t": 1.3799991607666016,
+            "fixedTime": 27.699989318847656,
+            "remaining": 24.0,
+            "ropeLength": 0.0,
+            "span": 9.370985984802246,
+            "input": 1.0,
+            "angle": 46.38969421386719,
+            "soleY": -2.412071704864502,
+            "selected": 6,
+            "bridges": 0,
+            "attached": false,
+            "grounded": false,
+            "failure": false,
+            "position": {
+              "x": 127.68504333496094,
+              "y": -1.963636040687561
+            },
+            "velocity": {
+              "x": 0.0,
+              "y": -6.07313346862793
+            },
+            "colliderMin": {
+              "x": 127.28504943847656,
+              "y": -2.563636064529419
+            },
+            "colliderMax": {
+              "x": 128.0850372314453,
+              "y": -1.3636360168457031
+            },
+            "crown": {
+              "x": 127.70817565917969,
+              "y": -1.5152645111083984
+            },
+            "camera": {
+              "x": 125.7203140258789,
+              "y": 0.0,
+              "z": -10.0
+            },
+            "ortho": 8.699999809265137
+          }
+        },
+        "end": {
+          "t": 5.019998550415039,
+          "fixedTime": 31.339988708496094,
+          "remaining": 24.0,
+          "ropeLength": 0.0,
+          "span": 15.159692764282227,
+          "input": 0.0,
+          "angle": 26.679058074951172,
+          "soleY": -9.107108116149902,
+          "selected": 6,
+          "bridges": 0,
+          "attached": false,
+          "grounded": false,
+          "failure": true,
+          "position": {
+            "x": 127.70658874511719,
+            "y": -9.045724868774414
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 127.30659484863281,
+            "y": -9.64572525024414
+          },
+          "colliderMax": {
+            "x": 128.10658264160156,
+            "y": -8.445724487304688
+          },
+          "crown": {
+            "x": 127.7302017211914,
+            "y": -8.196833610534668
+          },
+          "camera": {
+            "x": 127.66395568847656,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137
+        }
+      },
+      "baseline_R_pass": true,
+      "bevel_R_pass": true
+    },
+    {
+      "name": "L6_ground_angle_release30",
+      "length": 6,
+      "baseline": {
+        "name": "L6_ground_angle_release30",
+        "attach": true,
+        "landed": false,
+        "attached_wall_episodes": 0,
+        "released_wall_episodes": 1,
+        "hit_colliders": [
+          "A2 Proof Middle Box"
+        ],
+        "overhead_contacts": 0,
+        "max_wall_relative_speed": 18.494586944580078,
+        "returning_slope_contacts": 0,
+        "first_returning_slope": null,
+        "first_attached_wall": null,
+        "first_released_wall": {
+          "collider": "A2 Proof Middle Box",
+          "face": "side",
+          "callback": "enter",
+          "step": 68,
+          "point": {
+            "x": 128.09750366210938,
+            "y": -1.1999998092651367
+          },
+          "normal": {
+            "x": -1.0,
+            "y": 0.0
+          },
+          "relativeVelocity": {
+            "x": -10.121594429016113,
+            "y": 5.455674171447754
+          },
+          "normalImpulse": 10.121594429016113,
+          "tangentImpulse": 2.0243189334869385,
+          "before": {
+            "t": 1.3799972534179688,
+            "fixedTime": 35.55998611450195,
+            "remaining": 24.0,
+            "ropeLength": 0.0,
+            "span": 8.465980529785156,
+            "input": 1.0,
+            "angle": 51.67872619628906,
+            "soleY": -1.0984317064285278,
+            "selected": 6,
+            "bridges": 0,
+            "attached": false,
+            "grounded": false,
+            "failure": false,
+            "position": {
+              "x": 127.54195404052734,
+              "y": -0.7495034337043762
+            },
+            "velocity": {
+              "x": 10.13171672821045,
+              "y": -4.911770343780518
+            },
+            "colliderMin": {
+              "x": 127.14195251464844,
+              "y": -1.349503517150879
+            },
+            "colliderMax": {
+              "x": 127.94195556640625,
+              "y": -0.14950346946716309
+            },
+            "crown": {
+              "x": 127.35588836669922,
+              "y": -0.19320157170295715
+            },
+            "camera": {
+              "x": 125.64323425292969,
+              "y": 0.0,
+              "z": -10.0
+            },
+            "ortho": 8.699999809265137
+          },
+          "afterMover": {
+            "t": 1.3799972534179688,
+            "fixedTime": 35.55998611450195,
+            "remaining": 24.0,
+            "ropeLength": 0.0,
+            "span": 8.465980529785156,
+            "input": 1.0,
+            "angle": 51.67872619628906,
+            "soleY": -1.0984317064285278,
+            "selected": 6,
+            "bridges": 0,
+            "attached": false,
+            "grounded": false,
+            "failure": false,
+            "position": {
+              "x": 127.54195404052734,
+              "y": -0.7495034337043762
+            },
+            "velocity": {
+              "x": 10.13171672821045,
+              "y": -4.911770343780518
+            },
+            "colliderMin": {
+              "x": 127.14195251464844,
+              "y": -1.349503517150879
+            },
+            "colliderMax": {
+              "x": 127.94195556640625,
+              "y": -0.14950346946716309
+            },
+            "crown": {
+              "x": 127.35588836669922,
+              "y": -0.19320157170295715
+            },
+            "camera": {
+              "x": 125.64323425292969,
+              "y": 0.0,
+              "z": -10.0
+            },
+            "ortho": 8.699999809265137
+          },
+          "after": {
+            "t": 1.3799972534179688,
+            "fixedTime": 35.55998611450195,
+            "remaining": 24.0,
+            "ropeLength": 0.0,
+            "span": 8.639781951904297,
+            "input": 1.0,
+            "angle": 51.75080108642578,
+            "soleY": -1.295905590057373,
+            "selected": 6,
+            "bridges": 0,
+            "attached": false,
+            "grounded": false,
+            "failure": false,
+            "position": {
+              "x": 127.68504333496094,
+              "y": -0.8487419486045837
+            },
+            "velocity": {
+              "x": 0.0,
+              "y": -3.4313552379608154
+            },
+            "colliderMin": {
+              "x": 127.28504943847656,
+              "y": -1.4487419128417969
+            },
+            "colliderMax": {
+              "x": 128.0850372314453,
+              "y": -0.24874186515808105
+            },
+            "crown": {
+              "x": 127.70161437988281,
+              "y": -0.39067545533180237
+            },
+            "camera": {
+              "x": 125.64323425292969,
+              "y": 0.0,
+              "z": -10.0
+            },
+            "ortho": 8.699999809265137
+          }
+        },
+        "end": {
+          "t": 5.019996643066406,
+          "fixedTime": 39.19998550415039,
+          "remaining": 24.0,
+          "ropeLength": 0.0,
+          "span": 15.281912803649902,
+          "input": 0.0,
+          "angle": 26.449031829833984,
+          "soleY": -9.225968360900879,
+          "selected": 6,
+          "bridges": 0,
+          "attached": false,
+          "grounded": false,
+          "failure": true,
+          "position": {
+            "x": 127.70658874511719,
+            "y": -9.182369232177734
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 127.30659484863281,
+            "y": -9.782369613647461
+          },
+          "colliderMax": {
+            "x": 128.10658264160156,
+            "y": -8.582368850708008
+          },
+          "crown": {
+            "x": 127.7302017211914,
+            "y": -8.315693855285645
+          },
+          "camera": {
+            "x": 127.67929077148438,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137
+        }
+      },
+      "bevel": {
+        "name": "L6_ground_angle_release30",
+        "attach": true,
+        "landed": false,
+        "attached_wall_episodes": 0,
+        "released_wall_episodes": 1,
+        "hit_colliders": [
+          "A2 Proof Middle Box"
+        ],
+        "overhead_contacts": 0,
+        "max_wall_relative_speed": 18.494586944580078,
+        "returning_slope_contacts": 0,
+        "first_returning_slope": null,
+        "first_attached_wall": null,
+        "first_released_wall": {
+          "collider": "A2 Proof Middle Box",
+          "face": "side",
+          "callback": "enter",
+          "step": 68,
+          "point": {
+            "x": 128.09750366210938,
+            "y": -1.1999998092651367
+          },
+          "normal": {
+            "x": -1.0,
+            "y": 0.0
+          },
+          "relativeVelocity": {
+            "x": -10.121594429016113,
+            "y": 5.455674171447754
+          },
+          "normalImpulse": 10.121594429016113,
+          "tangentImpulse": 2.0243189334869385,
+          "before": {
+            "t": 1.3799972534179688,
+            "fixedTime": 35.55998611450195,
+            "remaining": 24.0,
+            "ropeLength": 0.0,
+            "span": 8.465980529785156,
+            "input": 1.0,
+            "angle": 51.67872619628906,
+            "soleY": -1.0984317064285278,
+            "selected": 6,
+            "bridges": 0,
+            "attached": false,
+            "grounded": false,
+            "failure": false,
+            "position": {
+              "x": 127.54195404052734,
+              "y": -0.7495034337043762
+            },
+            "velocity": {
+              "x": 10.13171672821045,
+              "y": -4.911770343780518
+            },
+            "colliderMin": {
+              "x": 127.14195251464844,
+              "y": -1.349503517150879
+            },
+            "colliderMax": {
+              "x": 127.94195556640625,
+              "y": -0.14950346946716309
+            },
+            "crown": {
+              "x": 127.35588836669922,
+              "y": -0.19320157170295715
+            },
+            "camera": {
+              "x": 125.64323425292969,
+              "y": 0.0,
+              "z": -10.0
+            },
+            "ortho": 8.699999809265137
+          },
+          "afterMover": {
+            "t": 1.3799972534179688,
+            "fixedTime": 35.55998611450195,
+            "remaining": 24.0,
+            "ropeLength": 0.0,
+            "span": 8.465980529785156,
+            "input": 1.0,
+            "angle": 51.67872619628906,
+            "soleY": -1.0984317064285278,
+            "selected": 6,
+            "bridges": 0,
+            "attached": false,
+            "grounded": false,
+            "failure": false,
+            "position": {
+              "x": 127.54195404052734,
+              "y": -0.7495034337043762
+            },
+            "velocity": {
+              "x": 10.13171672821045,
+              "y": -4.911770343780518
+            },
+            "colliderMin": {
+              "x": 127.14195251464844,
+              "y": -1.349503517150879
+            },
+            "colliderMax": {
+              "x": 127.94195556640625,
+              "y": -0.14950346946716309
+            },
+            "crown": {
+              "x": 127.35588836669922,
+              "y": -0.19320157170295715
+            },
+            "camera": {
+              "x": 125.64323425292969,
+              "y": 0.0,
+              "z": -10.0
+            },
+            "ortho": 8.699999809265137
+          },
+          "after": {
+            "t": 1.3799972534179688,
+            "fixedTime": 35.55998611450195,
+            "remaining": 24.0,
+            "ropeLength": 0.0,
+            "span": 8.639781951904297,
+            "input": 1.0,
+            "angle": 51.75080108642578,
+            "soleY": -1.295905590057373,
+            "selected": 6,
+            "bridges": 0,
+            "attached": false,
+            "grounded": false,
+            "failure": false,
+            "position": {
+              "x": 127.68504333496094,
+              "y": -0.8487419486045837
+            },
+            "velocity": {
+              "x": 0.0,
+              "y": -3.4313552379608154
+            },
+            "colliderMin": {
+              "x": 127.28504943847656,
+              "y": -1.4487419128417969
+            },
+            "colliderMax": {
+              "x": 128.0850372314453,
+              "y": -0.24874186515808105
+            },
+            "crown": {
+              "x": 127.70161437988281,
+              "y": -0.39067545533180237
+            },
+            "camera": {
+              "x": 125.64323425292969,
+              "y": 0.0,
+              "z": -10.0
+            },
+            "ortho": 8.699999809265137
+          }
+        },
+        "end": {
+          "t": 5.019996643066406,
+          "fixedTime": 39.19998550415039,
+          "remaining": 24.0,
+          "ropeLength": 0.0,
+          "span": 15.281912803649902,
+          "input": 0.0,
+          "angle": 26.449031829833984,
+          "soleY": -9.225968360900879,
+          "selected": 6,
+          "bridges": 0,
+          "attached": false,
+          "grounded": false,
+          "failure": true,
+          "position": {
+            "x": 127.70658874511719,
+            "y": -9.182369232177734
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 127.30659484863281,
+            "y": -9.782369613647461
+          },
+          "colliderMax": {
+            "x": 128.10658264160156,
+            "y": -8.582368850708008
+          },
+          "crown": {
+            "x": 127.7302017211914,
+            "y": -8.315693855285645
+          },
+          "camera": {
+            "x": 127.67929077148438,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137
+        }
+      },
+      "baseline_R_pass": true,
+      "bevel_R_pass": true
+    },
+    {
+      "name": "L6_ground_angle_release42",
+      "length": 6,
+      "baseline": {
+        "name": "L6_ground_angle_release42",
+        "attach": true,
+        "landed": true,
+        "attached_wall_episodes": 0,
+        "released_wall_episodes": 0,
+        "hit_colliders": [],
+        "overhead_contacts": 0,
+        "max_wall_relative_speed": 0,
+        "returning_slope_contacts": 0,
+        "first_returning_slope": null,
+        "first_attached_wall": null,
+        "first_released_wall": null,
+        "end": {
+          "t": 5.019996643066406,
+          "fixedTime": 47.05998229980469,
+          "remaining": 24.0,
+          "ropeLength": 0.0,
+          "span": 23.436832427978516,
+          "input": 0.0,
+          "angle": 54.71213150024414,
+          "soleY": -9.074193954467773,
+          "selected": 6,
+          "bridges": 0,
+          "attached": false,
+          "grounded": false,
+          "failure": true,
+          "position": {
+            "x": 140.03054809570312,
+            "y": -9.039102554321289
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 139.63055419921875,
+            "y": -9.639102935791016
+          },
+          "colliderMax": {
+            "x": 140.4305419921875,
+            "y": -8.439102172851562
+          },
+          "crown": {
+            "x": 139.86505126953125,
+            "y": -8.163919448852539
+          },
+          "camera": {
+            "x": 137.92774963378906,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137
+        }
+      },
+      "bevel": {
+        "name": "L6_ground_angle_release42",
+        "attach": true,
+        "landed": true,
+        "attached_wall_episodes": 0,
+        "released_wall_episodes": 0,
+        "hit_colliders": [],
+        "overhead_contacts": 0,
+        "max_wall_relative_speed": 0,
+        "returning_slope_contacts": 0,
+        "first_returning_slope": null,
+        "first_attached_wall": null,
+        "first_released_wall": null,
+        "end": {
+          "t": 5.019996643066406,
+          "fixedTime": 47.05998229980469,
+          "remaining": 24.0,
+          "ropeLength": 0.0,
+          "span": 23.436832427978516,
+          "input": 0.0,
+          "angle": 54.71213150024414,
+          "soleY": -9.074193954467773,
+          "selected": 6,
+          "bridges": 0,
+          "attached": false,
+          "grounded": false,
+          "failure": true,
+          "position": {
+            "x": 140.03054809570312,
+            "y": -9.039102554321289
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 139.63055419921875,
+            "y": -9.639102935791016
+          },
+          "colliderMax": {
+            "x": 140.4305419921875,
+            "y": -8.439102172851562
+          },
+          "crown": {
+            "x": 139.86505126953125,
+            "y": -8.163919448852539
+          },
+          "camera": {
+            "x": 137.92774963378906,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137
+        }
+      },
+      "baseline_R_pass": true,
+      "bevel_R_pass": true
+    },
+    {
+      "name": "L6_ground_angle_release54",
+      "length": 6,
+      "baseline": {
+        "name": "L6_ground_angle_release54",
+        "attach": true,
+        "landed": true,
+        "attached_wall_episodes": 0,
+        "released_wall_episodes": 0,
+        "hit_colliders": [],
+        "overhead_contacts": 0,
+        "max_wall_relative_speed": 0,
+        "returning_slope_contacts": 0,
+        "first_returning_slope": null,
+        "first_attached_wall": null,
+        "first_released_wall": null,
+        "end": {
+          "t": 5.0,
+          "fixedTime": 54.89998245239258,
+          "remaining": 24.0,
+          "ropeLength": 0.0,
+          "span": 23.53643035888672,
+          "input": 0.0,
+          "angle": 54.88353729248047,
+          "soleY": -9.07419490814209,
+          "selected": 6,
+          "bridges": 0,
+          "attached": false,
+          "grounded": false,
+          "failure": true,
+          "position": {
+            "x": 140.15243530273438,
+            "y": -9.039103507995605
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 139.75244140625,
+            "y": -9.639103889465332
+          },
+          "colliderMax": {
+            "x": 140.55242919921875,
+            "y": -8.439103126525879
+          },
+          "crown": {
+            "x": 139.98568725585938,
+            "y": -8.163920402526855
+          },
+          "camera": {
+            "x": 138.040771484375,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137
+        }
+      },
+      "bevel": {
+        "name": "L6_ground_angle_release54",
+        "attach": true,
+        "landed": true,
+        "attached_wall_episodes": 0,
+        "released_wall_episodes": 0,
+        "hit_colliders": [],
+        "overhead_contacts": 0,
+        "max_wall_relative_speed": 0,
+        "returning_slope_contacts": 0,
+        "first_returning_slope": null,
+        "first_attached_wall": null,
+        "first_released_wall": null,
+        "end": {
+          "t": 5.0,
+          "fixedTime": 54.89998245239258,
+          "remaining": 24.0,
+          "ropeLength": 0.0,
+          "span": 23.53643035888672,
+          "input": 0.0,
+          "angle": 54.88353729248047,
+          "soleY": -9.07419490814209,
+          "selected": 6,
+          "bridges": 0,
+          "attached": false,
+          "grounded": false,
+          "failure": true,
+          "position": {
+            "x": 140.15243530273438,
+            "y": -9.039103507995605
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 139.75244140625,
+            "y": -9.639103889465332
+          },
+          "colliderMax": {
+            "x": 140.55242919921875,
+            "y": -8.439103126525879
+          },
+          "crown": {
+            "x": 139.98568725585938,
+            "y": -8.163920402526855
+          },
+          "camera": {
+            "x": 138.040771484375,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137
+        }
+      },
+      "baseline_R_pass": true,
+      "bevel_R_pass": true
+    },
+    {
+      "name": "L7_ground_follow_release-1",
+      "length": 7,
+      "baseline": {
+        "name": "L7_ground_follow_release-1",
+        "attach": true,
+        "landed": false,
+        "attached_wall_episodes": 1,
+        "released_wall_episodes": 0,
+        "hit_colliders": [
+          "A2 Proof Entry Box"
+        ],
+        "overhead_contacts": 0,
+        "max_wall_relative_speed": 16.236766135105604,
+        "returning_slope_contacts": 0,
+        "first_returning_slope": null,
+        "first_attached_wall": {
+          "collider": "A2 Proof Entry Box",
+          "face": "side",
+          "callback": "enter",
+          "step": 153,
+          "point": {
+            "x": 117.90249633789062,
+            "y": -1.3794894218444824
+          },
+          "normal": {
+            "x": 1.0,
+            "y": 0.0
+          },
+          "relativeVelocity": {
+            "x": 15.16480541229248,
+            "y": -5.8018317222595215
+          },
+          "normalImpulse": 15.16480541229248,
+          "tangentImpulse": 3.032961130142212,
+          "before": {
+            "t": 3.079998016357422,
+            "fixedTime": 60.819976806640625,
+            "remaining": 24.0,
+            "ropeLength": 7.0,
+            "span": 6.999999523162842,
+            "input": -1.0,
+            "angle": -20.936199188232422,
+            "soleY": -2.643383502960205,
+            "selected": 7,
+            "bridges": 0,
+            "attached": true,
+            "grounded": false,
+            "failure": false,
+            "position": {
+              "x": 118.3987045288086,
+              "y": -2.0378518104553223
+            },
+            "velocity": {
+              "x": -15.661877632141113,
+              "y": 5.161009788513184
+            },
+            "colliderMin": {
+              "x": 117.99870300292969,
+              "y": -2.6378517150878906
+            },
+            "colliderMax": {
+              "x": 118.7987060546875,
+              "y": -1.437851905822754
+            },
+            "crown": {
+              "x": 118.6913833618164,
+              "y": -1.620429515838623
+            },
+            "camera": {
+              "x": 121.5196304321289,
+              "y": 0.0,
+              "z": -10.0
+            },
+            "ortho": 8.699999809265137
+          },
+          "afterMover": {
+            "t": 3.079998016357422,
+            "fixedTime": 60.819976806640625,
+            "remaining": 24.0,
+            "ropeLength": 7.0,
+            "span": 6.999999523162842,
+            "input": -1.0,
+            "angle": -20.936199188232422,
+            "soleY": -2.643383502960205,
+            "selected": 7,
+            "bridges": 0,
+            "attached": true,
+            "grounded": false,
+            "failure": false,
+            "position": {
+              "x": 118.3987045288086,
+              "y": -2.0378518104553223
+            },
+            "velocity": {
+              "x": -15.661877632141113,
+              "y": 5.161009788513184
+            },
+            "colliderMin": {
+              "x": 117.99870300292969,
+              "y": -2.6378517150878906
+            },
+            "colliderMax": {
+              "x": 118.7987060546875,
+              "y": -1.437851905822754
+            },
+            "crown": {
+              "x": 118.6913833618164,
+              "y": -1.620429515838623
+            },
+            "camera": {
+              "x": 121.5196304321289,
+              "y": 0.0,
+              "z": -10.0
+            },
+            "ortho": 8.699999809265137
+          },
+          "after": {
+            "t": 3.079998016357422,
+            "fixedTime": 60.819976806640625,
+            "remaining": 24.0,
+            "ropeLength": 7.0,
+            "span": 6.959311008453369,
+            "input": -1.0,
+            "angle": -21.80508041381836,
+            "soleY": -2.456450939178467,
+            "selected": 7,
+            "bridges": 0,
+            "attached": true,
+            "grounded": false,
+            "failure": false,
+            "position": {
+              "x": 118.3149642944336,
+              "y": -1.9613926410675049
+            },
+            "velocity": {
+              "x": 0.0,
+              "y": 2.7688705921173096
+            },
+            "colliderMin": {
+              "x": 117.91496276855469,
+              "y": -2.5613927841186523
+            },
+            "colliderMax": {
+              "x": 118.7149658203125,
+              "y": -1.3613924980163574
+            },
+            "crown": {
+              "x": 118.29718017578125,
+              "y": -1.4334969520568848
+            },
+            "camera": {
+              "x": 121.5196304321289,
+              "y": 0.0,
+              "z": -10.0
+            },
+            "ortho": 8.699999809265137
+          }
+        },
+        "first_released_wall": null,
+        "end": {
+          "t": 5.0,
+          "fixedTime": 62.7399787902832,
+          "remaining": 24.0,
+          "ropeLength": 7.0,
+          "span": 7.000001907348633,
+          "input": 0.0,
+          "angle": 81.72421264648438,
+          "soleY": 3.1283106803894043,
+          "selected": 7,
+          "bridges": 0,
+          "attached": true,
+          "grounded": false,
+          "failure": false,
+          "position": {
+            "x": 127.82711029052734,
+            "y": 3.4924333095550537
+          },
+          "velocity": {
+            "x": 0.3569630980491638,
+            "y": 2.3426849842071533
+          },
+          "colliderMin": {
+            "x": 127.42710876464844,
+            "y": 2.8924331665039062
+          },
+          "colliderMax": {
+            "x": 128.22711181640625,
+            "y": 4.092433452606201
+          },
+          "crown": {
+            "x": 127.39385223388672,
+            "y": 3.7574472427368164
+          },
+          "camera": {
+            "x": 127.53219604492188,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137
+        }
+      },
+      "bevel": {
+        "name": "L7_ground_follow_release-1",
+        "attach": true,
+        "landed": false,
+        "attached_wall_episodes": 0,
+        "released_wall_episodes": 0,
+        "hit_colliders": [],
+        "overhead_contacts": 0,
+        "max_wall_relative_speed": 0,
+        "returning_slope_contacts": 25,
+        "first_returning_slope": {
+          "collider": "A2 Proof Entry Bevel",
+          "face": "slope",
+          "callback": "enter",
+          "step": 145,
+          "point": {
+            "x": 120.38274383544922,
+            "y": -3.099428415298462
+          },
+          "normal": {
+            "x": 0.7808687686920166,
+            "y": 0.6246950030326843
+          },
+          "relativeVelocity": {
+            "x": 17.573747634887695,
+            "y": 0.45164865255355835
+          },
+          "normalImpulse": 14.004935264587402,
+          "tangentImpulse": 2.8009870052337646,
+          "before": {
+            "t": 2.9199981689453125,
+            "fixedTime": 60.659976959228516,
+            "remaining": 24.0,
+            "ropeLength": 7.0,
+            "span": 6.999999523162842,
+            "input": -1.0,
+            "angle": 1.4721107482910156,
+            "soleY": -2.9228343963623047,
+            "selected": 7,
+            "bridges": 0,
+            "attached": true,
+            "grounded": false,
+            "failure": false,
+            "position": {
+              "x": 121.079833984375,
+              "y": -2.4976892471313477
+            },
+            "velocity": {
+              "x": -17.579030990600586,
+              "y": -1.3389911651611328
+            },
+            "colliderMin": {
+              "x": 120.6798324584961,
+              "y": -3.097689151763916
+            },
+            "colliderMax": {
+              "x": 121.4798355102539,
+              "y": -1.8976893424987793
+            },
+            "crown": {
+              "x": 121.26530456542969,
+              "y": -1.9784622192382812
+            },
+            "camera": {
+              "x": 124.01459503173828,
+              "y": 0.0,
+              "z": -10.0
+            },
+            "ortho": 8.699999809265137
+          },
+          "afterMover": {
+            "t": 2.9199981689453125,
+            "fixedTime": 60.659976959228516,
+            "remaining": 24.0,
+            "ropeLength": 7.0,
+            "span": 6.999999523162842,
+            "input": -1.0,
+            "angle": 1.4721107482910156,
+            "soleY": -2.9228343963623047,
+            "selected": 7,
+            "bridges": 0,
+            "attached": true,
+            "grounded": false,
+            "failure": false,
+            "position": {
+              "x": 121.079833984375,
+              "y": -2.4976892471313477
+            },
+            "velocity": {
+              "x": -17.579030990600586,
+              "y": -1.3389911651611328
+            },
+            "colliderMin": {
+              "x": 120.6798324584961,
+              "y": -3.097689151763916
+            },
+            "colliderMax": {
+              "x": 121.4798355102539,
+              "y": -1.8976893424987793
+            },
+            "crown": {
+              "x": 121.26530456542969,
+              "y": -1.9784622192382812
+            },
+            "camera": {
+              "x": 124.01459503173828,
+              "y": 0.0,
+              "z": -10.0
+            },
+            "ortho": 8.699999809265137
+          },
+          "after": {
+            "t": 2.9199981689453125,
+            "fixedTime": 60.659976959228516,
+            "remaining": 24.0,
+            "ropeLength": 7.0,
+            "span": 6.973580837249756,
+            "input": -1.0,
+            "angle": -1.0155342817306519,
+            "soleY": -2.9155380725860596,
+            "selected": 7,
+            "bridges": 0,
+            "attached": true,
+            "grounded": false,
+            "failure": false,
+            "position": {
+              "x": 120.77640533447266,
+              "y": -2.4724855422973633
+            },
+            "velocity": {
+              "x": -4.88796854019165,
+              "y": 6.109960556030273
+            },
+            "colliderMin": {
+              "x": 120.37640380859375,
+              "y": -3.0724854469299316
+            },
+            "colliderMax": {
+              "x": 121.17640686035156,
+              "y": -1.872485637664795
+            },
+            "crown": {
+              "x": 120.61006927490234,
+              "y": -1.9711658954620361
+            },
+            "camera": {
+              "x": 124.01459503173828,
+              "y": 0.0,
+              "z": -10.0
+            },
+            "ortho": 8.699999809265137
+          }
+        },
+        "first_attached_wall": null,
+        "first_released_wall": null,
+        "end": {
+          "t": 5.0,
+          "fixedTime": 62.7399787902832,
+          "remaining": 24.0,
+          "ropeLength": 7.0,
+          "span": 6.123235702514648,
+          "input": 0.0,
+          "angle": 1.071826696395874,
+          "soleY": -1.9253027439117432,
+          "selected": 7,
+          "bridges": 0,
+          "attached": true,
+          "grounded": false,
+          "failure": false,
+          "position": {
+            "x": 121.01454162597656,
+            "y": -1.6221643686294556
+          },
+          "velocity": {
+            "x": 6.911900043487549,
+            "y": -10.665857315063477
+          },
+          "colliderMin": {
+            "x": 120.61454010009766,
+            "y": -2.2221643924713135
+          },
+          "colliderMax": {
+            "x": 121.41454315185547,
+            "y": -1.0221643447875977
+          },
+          "crown": {
+            "x": 120.9665298461914,
+            "y": -0.8884149193763733
+          },
+          "camera": {
+            "x": 119.68524932861328,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137
+        }
+      },
+      "baseline_R_pass": true,
+      "bevel_R_pass": true
+    },
+    {
+      "name": "L7_ground_timed_release-1",
+      "length": 7,
+      "baseline": {
+        "name": "L7_ground_timed_release-1",
+        "attach": true,
+        "landed": false,
+        "attached_wall_episodes": 2,
+        "released_wall_episodes": 0,
+        "hit_colliders": [
+          "A2 Proof Entry Box"
+        ],
+        "overhead_contacts": 0,
+        "max_wall_relative_speed": 16.171105354048365,
+        "returning_slope_contacts": 0,
+        "first_returning_slope": null,
+        "first_attached_wall": {
+          "collider": "A2 Proof Entry Box",
+          "face": "side",
+          "callback": "enter",
+          "step": 138,
+          "point": {
+            "x": 117.90249633789062,
+            "y": -1.3792552947998047
+          },
+          "normal": {
+            "x": 1.0,
+            "y": 0.0
+          },
+          "relativeVelocity": {
+            "x": 15.169764518737793,
+            "y": -5.602043628692627
+          },
+          "normalImpulse": 15.169764518737793,
+          "tangentImpulse": 3.0339529514312744,
+          "before": {
+            "t": 2.779998779296875,
+            "fixedTime": 68.35997772216797,
+            "remaining": 24.0,
+            "ropeLength": 7.0,
+            "span": 6.999999046325684,
+            "input": -1.0,
+            "angle": -20.268856048583984,
+            "soleY": -2.6671645641326904,
+            "selected": 7,
+            "bridges": 0,
+            "attached": true,
+            "grounded": false,
+            "failure": false,
+            "position": {
+              "x": 118.47502136230469,
+              "y": -2.066540479660034
+            },
+            "velocity": {
+              "x": -15.651196479797363,
+              "y": 4.959778785705566
+            },
+            "colliderMin": {
+              "x": 118.07501983642578,
+              "y": -2.6665406227111816
+            },
+            "colliderMax": {
+              "x": 118.8750228881836,
+              "y": -1.4665403366088867
+            },
+            "crown": {
+              "x": 118.76366424560547,
+              "y": -1.645209550857544
+            },
+            "camera": {
+              "x": 121.57829284667969,
+              "y": 0.0,
+              "z": -10.0
+            },
+            "ortho": 8.699999809265137
+          },
+          "afterMover": {
+            "t": 2.779998779296875,
+            "fixedTime": 68.35997772216797,
+            "remaining": 24.0,
+            "ropeLength": 7.0,
+            "span": 6.999999046325684,
+            "input": -1.0,
+            "angle": -20.268856048583984,
+            "soleY": -2.6671645641326904,
+            "selected": 7,
+            "bridges": 0,
+            "attached": true,
+            "grounded": false,
+            "failure": false,
+            "position": {
+              "x": 118.47502136230469,
+              "y": -2.066540479660034
+            },
+            "velocity": {
+              "x": -15.651196479797363,
+              "y": 4.959778785705566
+            },
+            "colliderMin": {
+              "x": 118.07501983642578,
+              "y": -2.6665406227111816
+            },
+            "colliderMax": {
+              "x": 118.8750228881836,
+              "y": -1.4665403366088867
+            },
+            "crown": {
+              "x": 118.76366424560547,
+              "y": -1.645209550857544
+            },
+            "camera": {
+              "x": 121.57829284667969,
+              "y": 0.0,
+              "z": -10.0
+            },
+            "ortho": 8.699999809265137
+          },
+          "after": {
+            "t": 2.779998779296875,
+            "fixedTime": 68.35997772216797,
+            "remaining": 24.0,
+            "ropeLength": 7.0,
+            "span": 6.973761558532715,
+            "input": -1.0,
+            "angle": -21.75758934020996,
+            "soleY": -2.471160411834717,
+            "selected": 7,
+            "bridges": 0,
+            "attached": true,
+            "grounded": false,
+            "failure": false,
+            "position": {
+              "x": 118.3149642944336,
+              "y": -1.9769538640975952
+            },
+            "velocity": {
+              "x": 0.0,
+              "y": 2.5680906772613525
+            },
+            "colliderMin": {
+              "x": 117.91496276855469,
+              "y": -2.576953887939453
+            },
+            "colliderMax": {
+              "x": 118.7149658203125,
+              "y": -1.3769538402557373
+            },
+            "crown": {
+              "x": 118.29325103759766,
+              "y": -1.4492053985595703
+            },
+            "camera": {
+              "x": 121.57829284667969,
+              "y": 0.0,
+              "z": -10.0
+            },
+            "ortho": 8.699999809265137
+          }
+        },
+        "first_released_wall": null,
+        "end": {
+          "t": 5.019996643066406,
+          "fixedTime": 70.5999755859375,
+          "remaining": 24.0,
+          "ropeLength": 7.0,
+          "span": 7.000001430511475,
+          "input": 0.0,
+          "angle": 82.04000091552734,
+          "soleY": 3.257143974304199,
+          "selected": 7,
+          "bridges": 0,
+          "attached": true,
+          "grounded": false,
+          "failure": false,
+          "position": {
+            "x": 127.83255767822266,
+            "y": 3.5306272506713867
+          },
+          "velocity": {
+            "x": -0.12551774084568024,
+            "y": -0.9157963395118713
+          },
+          "colliderMin": {
+            "x": 127.43255615234375,
+            "y": 2.9306273460388184
+          },
+          "colliderMax": {
+            "x": 128.23255920410156,
+            "y": 4.130627155303955
+          },
+          "crown": {
+            "x": 127.38214874267578,
+            "y": 3.8206608295440674
+          },
+          "camera": {
+            "x": 127.7698974609375,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137
+        }
+      },
+      "bevel": {
+        "name": "L7_ground_timed_release-1",
+        "attach": true,
+        "landed": false,
+        "attached_wall_episodes": 0,
+        "released_wall_episodes": 0,
+        "hit_colliders": [],
+        "overhead_contacts": 0,
+        "max_wall_relative_speed": 0,
+        "returning_slope_contacts": 26,
+        "first_returning_slope": {
+          "collider": "A2 Proof Entry Bevel",
+          "face": "slope",
+          "callback": "enter",
+          "step": 131,
+          "point": {
+            "x": 120.39187622070312,
+            "y": -3.1036267280578613
+          },
+          "normal": {
+            "x": 0.7808687686920166,
+            "y": 0.6246950030326843
+          },
+          "relativeVelocity": {
+            "x": 17.452402114868164,
+            "y": 0.6143788695335388
+          },
+          "normalImpulse": 14.355019569396973,
+          "tangentImpulse": 2.8710038661956787,
+          "before": {
+            "t": 2.6399993896484375,
+            "fixedTime": 68.21997833251953,
+            "remaining": 24.0,
+            "ropeLength": 7.0,
+            "span": 6.999999523162842,
+            "input": -1.0,
+            "angle": -0.8401980400085449,
+            "soleY": -2.945978879928589,
+            "selected": 7,
+            "bridges": 0,
+            "attached": true,
+            "grounded": false,
+            "failure": false,
+            "position": {
+              "x": 120.79735565185547,
+              "y": -2.4992470741271973
+            },
+            "velocity": {
+              "x": -17.452402114868164,
+              "y": -0.6143788695335388
+            },
+            "colliderMin": {
+              "x": 120.39735412597656,
+              "y": -3.0992469787597656
+            },
+            "colliderMax": {
+              "x": 121.19735717773438,
+              "y": -1.899247169494629
+            },
+            "crown": {
+              "x": 120.9950942993164,
+              "y": -1.9895671606063843
+            },
+            "camera": {
+              "x": 123.76130676269531,
+              "y": 0.0,
+              "z": -10.0
+            },
+            "ortho": 8.699999809265137
+          },
+          "afterMover": {
+            "t": 2.6399993896484375,
+            "fixedTime": 68.21997833251953,
+            "remaining": 24.0,
+            "ropeLength": 7.0,
+            "span": 6.999999523162842,
+            "input": -1.0,
+            "angle": -0.8401980400085449,
+            "soleY": -2.945978879928589,
+            "selected": 7,
+            "bridges": 0,
+            "attached": true,
+            "grounded": true,
+            "failure": false,
+            "position": {
+              "x": 120.79735565185547,
+              "y": -2.4992470741271973
+            },
+            "velocity": {
+              "x": -17.452402114868164,
+              "y": -0.6143788695335388
+            },
+            "colliderMin": {
+              "x": 120.39735412597656,
+              "y": -3.0992469787597656
+            },
+            "colliderMax": {
+              "x": 121.19735717773438,
+              "y": -1.899247169494629
+            },
+            "crown": {
+              "x": 120.9950942993164,
+              "y": -1.9895671606063843
+            },
+            "camera": {
+              "x": 123.76130676269531,
+              "y": 0.0,
+              "z": -10.0
+            },
+            "ortho": 8.699999809265137
+          },
+          "after": {
+            "t": 2.6399993896484375,
+            "fixedTime": 68.21997833251953,
+            "remaining": 24.0,
+            "ropeLength": 7.0,
+            "span": 6.890548229217529,
+            "input": -1.0,
+            "angle": -1.5924066305160522,
+            "soleY": -2.8381996154785156,
+            "selected": 7,
+            "bridges": 0,
+            "attached": true,
+            "grounded": true,
+            "failure": false,
+            "position": {
+              "x": 120.7085189819336,
+              "y": -2.3878872394561768
+            },
+            "velocity": {
+              "x": -4.449514865875244,
+              "y": 5.561893463134766
+            },
+            "colliderMin": {
+              "x": 120.30851745605469,
+              "y": -2.987887382507324
+            },
+            "colliderMax": {
+              "x": 121.1085205078125,
+              "y": -1.7878870964050293
+            },
+            "crown": {
+              "x": 120.55734252929688,
+              "y": -1.881787896156311
+            },
+            "camera": {
+              "x": 123.76130676269531,
+              "y": 0.0,
+              "z": -10.0
+            },
+            "ortho": 8.699999809265137
+          }
+        },
+        "first_attached_wall": null,
+        "first_released_wall": null,
+        "end": {
+          "t": 5.019996643066406,
+          "fixedTime": 70.5999755859375,
+          "remaining": 24.0,
+          "ropeLength": 7.0,
+          "span": 6.999999523162842,
+          "input": 0.0,
+          "angle": 27.000905990600586,
+          "soleY": -2.3377296924591064,
+          "selected": 7,
+          "bridges": 0,
+          "attached": true,
+          "grounded": false,
+          "failure": false,
+          "position": {
+            "x": 124.07803344726562,
+            "y": -1.7369952201843262
+          },
+          "velocity": {
+            "x": 8.160449028015137,
+            "y": 3.8959925174713135
+          },
+          "colliderMin": {
+            "x": 123.67803192138672,
+            "y": -2.3369951248168945
+          },
+          "colliderMax": {
+            "x": 124.47803497314453,
+            "y": -1.1369953155517578
+          },
+          "crown": {
+            "x": 123.83497619628906,
+            "y": -1.2950351238250732
+          },
+          "camera": {
+            "x": 122.61011505126953,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137
+        }
+      },
+      "baseline_R_pass": true,
+      "bevel_R_pass": true
+    },
+    {
+      "name": "L7_ground_coast_release-1",
+      "length": 7,
+      "baseline": {
+        "name": "L7_ground_coast_release-1",
+        "attach": true,
+        "landed": false,
+        "attached_wall_episodes": 1,
+        "released_wall_episodes": 0,
+        "hit_colliders": [
+          "A2 Proof Entry Box"
+        ],
+        "overhead_contacts": 0,
+        "max_wall_relative_speed": 7.500950203195909,
+        "returning_slope_contacts": 0,
+        "first_returning_slope": null,
+        "first_attached_wall": {
+          "collider": "A2 Proof Entry Box",
+          "face": "side",
+          "callback": "enter",
+          "step": 134,
+          "point": {
+            "x": 117.90249633789062,
+            "y": -1.3809924125671387
+          },
+          "normal": {
+            "x": 1.0,
+            "y": 0.0
+          },
+          "relativeVelocity": {
+            "x": 6.976123809814453,
+            "y": -2.7564380168914795
+          },
+          "normalImpulse": 6.976123809814453,
+          "tangentImpulse": 1.3952248096466064,
+          "before": {
+            "t": 2.7000045776367188,
+            "fixedTime": 76.13997650146484,
+            "remaining": 24.0,
+            "ropeLength": 7.0,
+            "span": 7.0,
+            "input": 0.0,
+            "angle": -21.56019401550293,
+            "soleY": -2.5781469345092773,
+            "selected": 7,
+            "bridges": 0,
+            "attached": true,
+            "grounded": false,
+            "failure": false,
+            "position": {
+              "x": 118.32765197753906,
+              "y": -2.0102243423461914
+            },
+            "velocity": {
+              "x": -7.243241786956787,
+              "y": 2.6787526607513428
+            },
+            "colliderMin": {
+              "x": 117.92765045166016,
+              "y": -2.6102242469787598
+            },
+            "colliderMax": {
+              "x": 118.72765350341797,
+              "y": -1.410224437713623
+            },
+            "crown": {
+              "x": 118.51950073242188,
+              "y": -1.539339542388916
+            },
+            "camera": {
+              "x": 119.917236328125,
+              "y": 0.0,
+              "z": -10.0
+            },
+            "ortho": 8.699999809265137
+          },
+          "afterMover": {
+            "t": 2.7000045776367188,
+            "fixedTime": 76.13997650146484,
+            "remaining": 24.0,
+            "ropeLength": 7.0,
+            "span": 7.0,
+            "input": 0.0,
+            "angle": -21.56019401550293,
+            "soleY": -2.5781469345092773,
+            "selected": 7,
+            "bridges": 0,
+            "attached": true,
+            "grounded": false,
+            "failure": false,
+            "position": {
+              "x": 118.32765197753906,
+              "y": -2.0102243423461914
+            },
+            "velocity": {
+              "x": -7.243241786956787,
+              "y": 2.6787526607513428
+            },
+            "colliderMin": {
+              "x": 117.92765045166016,
+              "y": -2.6102242469787598
+            },
+            "colliderMax": {
+              "x": 118.72765350341797,
+              "y": -1.410224437713623
+            },
+            "crown": {
+              "x": 118.51950073242188,
+              "y": -1.539339542388916
+            },
+            "camera": {
+              "x": 119.917236328125,
+              "y": 0.0,
+              "z": -10.0
+            },
+            "ortho": 8.699999809265137
+          },
+          "after": {
+            "t": 2.7000045776367188,
+            "fixedTime": 76.13997650146484,
+            "remaining": 24.0,
+            "ropeLength": 7.0,
+            "span": 6.974926471710205,
+            "input": 0.0,
+            "angle": -21.753772735595703,
+            "soleY": -2.4909701347351074,
+            "selected": 7,
+            "bridges": 0,
+            "attached": true,
+            "grounded": false,
+            "failure": false,
+            "position": {
+              "x": 118.3149642944336,
+              "y": -1.9782079458236694
+            },
+            "velocity": {
+              "x": 0.0,
+              "y": 1.361213207244873
+            },
+            "colliderMin": {
+              "x": 117.91496276855469,
+              "y": -2.5782079696655273
+            },
+            "colliderMax": {
+              "x": 118.7149658203125,
+              "y": -1.3782079219818115
+            },
+            "crown": {
+              "x": 118.3625717163086,
+              "y": -1.4521626234054565
+            },
+            "camera": {
+              "x": 119.917236328125,
+              "y": 0.0,
+              "z": -10.0
+            },
+            "ortho": 8.699999809265137
+          }
+        },
+        "first_released_wall": null,
+        "end": {
+          "t": 5.0,
+          "fixedTime": 78.43997192382812,
+          "remaining": 24.0,
+          "ropeLength": 7.0,
+          "span": 7.0,
+          "input": 0.0,
+          "angle": 5.737262725830078,
+          "soleY": -2.956237316131592,
+          "selected": 7,
+          "bridges": 0,
+          "attached": true,
+          "grounded": false,
+          "failure": false,
+          "position": {
+            "x": 121.59976959228516,
+            "y": -2.464935302734375
+          },
+          "velocity": {
+            "x": -4.342288970947266,
+            "y": -0.49112576246261597
+          },
+          "colliderMin": {
+            "x": 121.19976806640625,
+            "y": -3.0649352073669434
+          },
+          "colliderMax": {
+            "x": 121.99977111816406,
+            "y": -1.8649353981018066
+          },
+          "crown": {
+            "x": 121.601806640625,
+            "y": -1.9343223571777344
+          },
+          "camera": {
+            "x": 122.3167724609375,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137
+        }
+      },
+      "bevel": {
+        "name": "L7_ground_coast_release-1",
+        "attach": true,
+        "landed": false,
+        "attached_wall_episodes": 0,
+        "released_wall_episodes": 0,
+        "hit_colliders": [],
+        "overhead_contacts": 0,
+        "max_wall_relative_speed": 0,
+        "returning_slope_contacts": 11,
+        "first_returning_slope": {
+          "collider": "A2 Proof Entry Bevel",
+          "face": "slope",
+          "callback": "enter",
+          "step": 119,
+          "point": {
+            "x": 120.38323974609375,
+            "y": -3.1000523567199707
+          },
+          "normal": {
+            "x": 0.7808687686920166,
+            "y": 0.6246950030326843
+          },
+          "relativeVelocity": {
+            "x": 9.537768363952637,
+            "y": 0.01976156234741211
+          },
+          "normalImpulse": 7.460091590881348,
+          "tangentImpulse": 1.492018222808838,
+          "before": {
+            "t": 2.4000015258789062,
+            "fixedTime": 75.83997344970703,
+            "remaining": 24.0,
+            "ropeLength": 7.0,
+            "span": 7.000000476837158,
+            "input": 0.0,
+            "angle": 0.11871267855167389,
+            "soleY": -2.982436418533325,
+            "selected": 7,
+            "bridges": 0,
+            "attached": true,
+            "grounded": false,
+            "failure": false,
+            "position": {
+              "x": 120.91450500488281,
+              "y": -2.4999852180480957
+            },
+            "velocity": {
+              "x": -9.558979988098145,
+              "y": -0.28100302815437317
+            },
+            "colliderMin": {
+              "x": 120.5145034790039,
+              "y": -3.099985122680664
+            },
+            "colliderMax": {
+              "x": 121.31450653076172,
+              "y": -1.8999853134155273
+            },
+            "crown": {
+              "x": 120.99762725830078,
+              "y": -1.9799541234970093
+            },
+            "camera": {
+              "x": 122.60989379882812,
+              "y": 0.0,
+              "z": -10.0
+            },
+            "ortho": 8.699999809265137
+          },
+          "afterMover": {
+            "t": 2.4000015258789062,
+            "fixedTime": 75.83997344970703,
+            "remaining": 24.0,
+            "ropeLength": 7.0,
+            "span": 7.000000476837158,
+            "input": 0.0,
+            "angle": 0.11871267855167389,
+            "soleY": -2.982436418533325,
+            "selected": 7,
+            "bridges": 0,
+            "attached": true,
+            "grounded": false,
+            "failure": false,
+            "position": {
+              "x": 120.91450500488281,
+              "y": -2.4999852180480957
+            },
+            "velocity": {
+              "x": -9.558979988098145,
+              "y": -0.28100302815437317
+            },
+            "colliderMin": {
+              "x": 120.5145034790039,
+              "y": -3.099985122680664
+            },
+            "colliderMax": {
+              "x": 121.31450653076172,
+              "y": -1.8999853134155273
+            },
+            "crown": {
+              "x": 120.99762725830078,
+              "y": -1.9799541234970093
+            },
+            "camera": {
+              "x": 122.60989379882812,
+              "y": 0.0,
+              "z": -10.0
+            },
+            "ortho": 8.699999809265137
+          },
+          "after": {
+            "t": 2.4000015258789062,
+            "fixedTime": 75.83997344970703,
+            "remaining": 24.0,
+            "ropeLength": 7.0,
+            "span": 6.971386909484863,
+            "input": 0.0,
+            "angle": -1.0305290222167969,
+            "soleY": -2.9557182788848877,
+            "selected": 7,
+            "bridges": 0,
+            "attached": true,
+            "grounded": false,
+            "failure": false,
+            "position": {
+              "x": 120.77462005615234,
+              "y": -2.470259189605713
+            },
+            "velocity": {
+              "x": -2.7803595066070557,
+              "y": 3.475450038909912
+            },
+            "colliderMin": {
+              "x": 120.37461853027344,
+              "y": -3.0702590942382812
+            },
+            "colliderMax": {
+              "x": 121.17462158203125,
+              "y": -1.8702592849731445
+            },
+            "crown": {
+              "x": 120.66655731201172,
+              "y": -1.9532359838485718
+            },
+            "camera": {
+              "x": 122.60989379882812,
+              "y": 0.0,
+              "z": -10.0
+            },
+            "ortho": 8.699999809265137
+          }
+        },
+        "first_attached_wall": null,
+        "first_released_wall": null,
+        "end": {
+          "t": 5.0,
+          "fixedTime": 78.43997192382812,
+          "remaining": 24.0,
+          "ropeLength": 7.0,
+          "span": 6.999999523162842,
+          "input": 0.0,
+          "angle": 0.7800551652908325,
+          "soleY": -3.012643337249756,
+          "selected": 7,
+          "bridges": 0,
+          "attached": true,
+          "grounded": false,
+          "failure": false,
+          "position": {
+            "x": 120.99530029296875,
+            "y": -2.4993510246276855
+          },
+          "velocity": {
+            "x": 0.4138215482234955,
+            "y": 0.005144840106368065
+          },
+          "colliderMin": {
+            "x": 120.59529876708984,
+            "y": -3.099350929260254
+          },
+          "colliderMax": {
+            "x": 121.39530181884766,
+            "y": -1.8993511199951172
+          },
+          "crown": {
+            "x": 120.98680114746094,
+            "y": -1.9712642431259155
+          },
+          "camera": {
+            "x": 120.91744995117188,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137
+        }
+      },
+      "baseline_R_pass": true,
+      "bevel_R_pass": true
+    },
+    {
+      "name": "L7_ground_angle_release24",
+      "length": 7,
+      "baseline": {
+        "name": "L7_ground_angle_release24",
+        "attach": true,
+        "landed": false,
+        "attached_wall_episodes": 0,
+        "released_wall_episodes": 1,
+        "hit_colliders": [
+          "A2 Proof Middle Box"
+        ],
+        "overhead_contacts": 0,
+        "max_wall_relative_speed": 16.51241683959961,
+        "returning_slope_contacts": 0,
+        "first_returning_slope": null,
+        "first_attached_wall": null,
+        "first_released_wall": {
+          "collider": "A2 Proof Middle Box",
+          "face": "side",
+          "callback": "enter",
+          "step": 72,
+          "point": {
+            "x": 128.09750366210938,
+            "y": -3.4590420722961426
+          },
+          "normal": {
+            "x": -1.0,
+            "y": 0.0
+          },
+          "relativeVelocity": {
+            "x": -10.165419578552246,
+            "y": 8.006710052490234
+          },
+          "normalImpulse": 10.165419578552246,
+          "tangentImpulse": 2.033083915710449,
+          "before": {
+            "t": 1.4599990844726562,
+            "fixedTime": 82.7399673461914,
+            "remaining": 24.0,
+            "ropeLength": 0.0,
+            "span": 9.92126178741455,
+            "input": 1.0,
+            "angle": 42.72233200073242,
+            "soleY": -3.0877161026000977,
+            "selected": 7,
+            "bridges": 0,
+            "attached": false,
+            "grounded": false,
+            "failure": false,
+            "position": {
+              "x": 127.63104248046875,
+              "y": -2.7886569499969482
+            },
+            "velocity": {
+              "x": 9.995585441589355,
+              "y": -7.465357780456543
+            },
+            "colliderMin": {
+              "x": 127.23104858398438,
+              "y": -3.3886570930480957
+            },
+            "colliderMax": {
+              "x": 128.03103637695312,
+              "y": -2.188656806945801
+            },
+            "crown": {
+              "x": 127.45216369628906,
+              "y": -2.189631462097168
+            },
+            "camera": {
+              "x": 125.76311492919922,
+              "y": 0.0,
+              "z": -10.0
+            },
+            "ortho": 8.699999809265137
+          },
+          "afterMover": {
+            "t": 1.4599990844726562,
+            "fixedTime": 82.7399673461914,
+            "remaining": 24.0,
+            "ropeLength": 0.0,
+            "span": 9.92126178741455,
+            "input": 1.0,
+            "angle": 42.72233200073242,
+            "soleY": -3.0877161026000977,
+            "selected": 7,
+            "bridges": 0,
+            "attached": false,
+            "grounded": false,
+            "failure": false,
+            "position": {
+              "x": 127.63104248046875,
+              "y": -2.7886569499969482
+            },
+            "velocity": {
+              "x": 9.995585441589355,
+              "y": -7.465357780456543
+            },
+            "colliderMin": {
+              "x": 127.23104858398438,
+              "y": -3.3886570930480957
+            },
+            "colliderMax": {
+              "x": 128.03103637695312,
+              "y": -2.188656806945801
+            },
+            "crown": {
+              "x": 127.45216369628906,
+              "y": -2.189631462097168
+            },
+            "camera": {
+              "x": 125.76311492919922,
+              "y": 0.0,
+              "z": -10.0
+            },
+            "ortho": 8.699999809265137
+          },
+          "after": {
+            "t": 1.4599990844726562,
+            "fixedTime": 82.7399673461914,
+            "remaining": 24.0,
+            "ropeLength": 0.0,
+            "span": 10.055191993713379,
+            "input": 1.0,
+            "angle": 42.43706130981445,
+            "soleY": -3.3692893981933594,
+            "selected": 7,
+            "bridges": 0,
+            "attached": false,
+            "grounded": false,
+            "failure": false,
+            "position": {
+              "x": 127.68504333496094,
+              "y": -2.9209232330322266
+            },
+            "velocity": {
+              "x": 0.0,
+              "y": -5.973626136779785
+            },
+            "colliderMin": {
+              "x": 127.28504943847656,
+              "y": -3.520923137664795
+            },
+            "colliderMax": {
+              "x": 128.0850372314453,
+              "y": -2.320923328399658
+            },
+            "crown": {
+              "x": 127.7060775756836,
+              "y": -2.4712047576904297
+            },
+            "camera": {
+              "x": 125.76311492919922,
+              "y": 0.0,
+              "z": -10.0
+            },
+            "ortho": 8.699999809265137
+          }
+        },
+        "end": {
+          "t": 5.0,
+          "fixedTime": 86.27996826171875,
+          "remaining": 24.0,
+          "ropeLength": 0.0,
+          "span": 15.280311584472656,
+          "input": 0.0,
+          "angle": 26.45201873779297,
+          "soleY": -9.263666152954102,
+          "selected": 7,
+          "bridges": 0,
+          "attached": false,
+          "grounded": false,
+          "failure": true,
+          "position": {
+            "x": 127.70658874511719,
+            "y": -9.180581092834473
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 127.30659484863281,
+            "y": -9.7805814743042
+          },
+          "colliderMax": {
+            "x": 128.10658264160156,
+            "y": -8.580580711364746
+          },
+          "crown": {
+            "x": 127.7302017211914,
+            "y": -8.353391647338867
+          },
+          "camera": {
+            "x": 127.65457153320312,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137
+        }
+      },
+      "bevel": {
+        "name": "L7_ground_angle_release24",
+        "attach": true,
+        "landed": false,
+        "attached_wall_episodes": 0,
+        "released_wall_episodes": 1,
+        "hit_colliders": [
+          "A2 Proof Middle Box"
+        ],
+        "overhead_contacts": 0,
+        "max_wall_relative_speed": 16.51241683959961,
+        "returning_slope_contacts": 0,
+        "first_returning_slope": null,
+        "first_attached_wall": null,
+        "first_released_wall": {
+          "collider": "A2 Proof Middle Box",
+          "face": "side",
+          "callback": "enter",
+          "step": 72,
+          "point": {
+            "x": 128.09750366210938,
+            "y": -3.4590420722961426
+          },
+          "normal": {
+            "x": -1.0,
+            "y": 0.0
+          },
+          "relativeVelocity": {
+            "x": -10.165419578552246,
+            "y": 8.006710052490234
+          },
+          "normalImpulse": 10.165419578552246,
+          "tangentImpulse": 2.033083915710449,
+          "before": {
+            "t": 1.4599990844726562,
+            "fixedTime": 82.7399673461914,
+            "remaining": 24.0,
+            "ropeLength": 0.0,
+            "span": 9.92126178741455,
+            "input": 1.0,
+            "angle": 42.72233200073242,
+            "soleY": -3.0877161026000977,
+            "selected": 7,
+            "bridges": 0,
+            "attached": false,
+            "grounded": false,
+            "failure": false,
+            "position": {
+              "x": 127.63104248046875,
+              "y": -2.7886569499969482
+            },
+            "velocity": {
+              "x": 9.995585441589355,
+              "y": -7.465357780456543
+            },
+            "colliderMin": {
+              "x": 127.23104858398438,
+              "y": -3.3886570930480957
+            },
+            "colliderMax": {
+              "x": 128.03103637695312,
+              "y": -2.188656806945801
+            },
+            "crown": {
+              "x": 127.45216369628906,
+              "y": -2.189631462097168
+            },
+            "camera": {
+              "x": 125.76311492919922,
+              "y": 0.0,
+              "z": -10.0
+            },
+            "ortho": 8.699999809265137
+          },
+          "afterMover": {
+            "t": 1.4599990844726562,
+            "fixedTime": 82.7399673461914,
+            "remaining": 24.0,
+            "ropeLength": 0.0,
+            "span": 9.92126178741455,
+            "input": 1.0,
+            "angle": 42.72233200073242,
+            "soleY": -3.0877161026000977,
+            "selected": 7,
+            "bridges": 0,
+            "attached": false,
+            "grounded": false,
+            "failure": false,
+            "position": {
+              "x": 127.63104248046875,
+              "y": -2.7886569499969482
+            },
+            "velocity": {
+              "x": 9.995585441589355,
+              "y": -7.465357780456543
+            },
+            "colliderMin": {
+              "x": 127.23104858398438,
+              "y": -3.3886570930480957
+            },
+            "colliderMax": {
+              "x": 128.03103637695312,
+              "y": -2.188656806945801
+            },
+            "crown": {
+              "x": 127.45216369628906,
+              "y": -2.189631462097168
+            },
+            "camera": {
+              "x": 125.76311492919922,
+              "y": 0.0,
+              "z": -10.0
+            },
+            "ortho": 8.699999809265137
+          },
+          "after": {
+            "t": 1.4599990844726562,
+            "fixedTime": 82.7399673461914,
+            "remaining": 24.0,
+            "ropeLength": 0.0,
+            "span": 10.055191993713379,
+            "input": 1.0,
+            "angle": 42.43706130981445,
+            "soleY": -3.3692893981933594,
+            "selected": 7,
+            "bridges": 0,
+            "attached": false,
+            "grounded": false,
+            "failure": false,
+            "position": {
+              "x": 127.68504333496094,
+              "y": -2.9209232330322266
+            },
+            "velocity": {
+              "x": 0.0,
+              "y": -5.973626136779785
+            },
+            "colliderMin": {
+              "x": 127.28504943847656,
+              "y": -3.520923137664795
+            },
+            "colliderMax": {
+              "x": 128.0850372314453,
+              "y": -2.320923328399658
+            },
+            "crown": {
+              "x": 127.7060775756836,
+              "y": -2.4712047576904297
+            },
+            "camera": {
+              "x": 125.76311492919922,
+              "y": 0.0,
+              "z": -10.0
+            },
+            "ortho": 8.699999809265137
+          }
+        },
+        "end": {
+          "t": 5.0,
+          "fixedTime": 86.27996826171875,
+          "remaining": 24.0,
+          "ropeLength": 0.0,
+          "span": 15.280311584472656,
+          "input": 0.0,
+          "angle": 26.45201873779297,
+          "soleY": -9.263666152954102,
+          "selected": 7,
+          "bridges": 0,
+          "attached": false,
+          "grounded": false,
+          "failure": true,
+          "position": {
+            "x": 127.70658874511719,
+            "y": -9.180581092834473
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 127.30659484863281,
+            "y": -9.7805814743042
+          },
+          "colliderMax": {
+            "x": 128.10658264160156,
+            "y": -8.580580711364746
+          },
+          "crown": {
+            "x": 127.7302017211914,
+            "y": -8.353391647338867
+          },
+          "camera": {
+            "x": 127.65457153320312,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137
+        }
+      },
+      "baseline_R_pass": true,
+      "bevel_R_pass": true
+    },
+    {
+      "name": "L7_ground_angle_release30",
+      "length": 7,
+      "baseline": {
+        "name": "L7_ground_angle_release30",
+        "attach": true,
+        "landed": false,
+        "attached_wall_episodes": 0,
+        "released_wall_episodes": 1,
+        "hit_colliders": [
+          "A2 Proof Middle Box"
+        ],
+        "overhead_contacts": 0,
+        "max_wall_relative_speed": 17.451393127441406,
+        "returning_slope_contacts": 0,
+        "first_returning_slope": null,
+        "first_attached_wall": null,
+        "first_released_wall": {
+          "collider": "A2 Proof Middle Box",
+          "face": "side",
+          "callback": "enter",
+          "step": 73,
+          "point": {
+            "x": 128.09750366210938,
+            "y": -1.1999998092651367
+          },
+          "normal": {
+            "x": -1.0,
+            "y": 0.0
+          },
+          "relativeVelocity": {
+            "x": -10.10351848602295,
+            "y": 5.397587299346924
+          },
+          "normalImpulse": 10.10351848602295,
+          "tangentImpulse": 2.0207037925720215,
+          "before": {
+            "t": 1.4799957275390625,
+            "fixedTime": 90.59996795654297,
+            "remaining": 24.0,
+            "ropeLength": 0.0,
+            "span": 9.179821968078613,
+            "input": 1.0,
+            "angle": 47.523048400878906,
+            "soleY": -2.0484542846679688,
+            "selected": 7,
+            "bridges": 0,
+            "attached": false,
+            "grounded": false,
+            "failure": false,
+            "position": {
+              "x": 127.67057037353516,
+              "y": -1.6990749835968018
+            },
+            "velocity": {
+              "x": 10.113622665405273,
+              "y": -4.853625297546387
+            },
+            "colliderMin": {
+              "x": 127.27056884765625,
+              "y": -2.299075126647949
+            },
+            "colliderMax": {
+              "x": 128.07057189941406,
+              "y": -1.0990748405456543
+            },
+            "crown": {
+              "x": 127.4800033569336,
+              "y": -1.1380584239959717
+            },
+            "camera": {
+              "x": 125.8238525390625,
+              "y": 0.0,
+              "z": -10.0
+            },
+            "ortho": 8.699999809265137
+          },
+          "afterMover": {
+            "t": 1.4799957275390625,
+            "fixedTime": 90.59996795654297,
+            "remaining": 24.0,
+            "ropeLength": 0.0,
+            "span": 9.179821968078613,
+            "input": 1.0,
+            "angle": 47.523048400878906,
+            "soleY": -2.0484542846679688,
+            "selected": 7,
+            "bridges": 0,
+            "attached": false,
+            "grounded": false,
+            "failure": false,
+            "position": {
+              "x": 127.67057037353516,
+              "y": -1.6990749835968018
+            },
+            "velocity": {
+              "x": 10.113622665405273,
+              "y": -4.853625297546387
+            },
+            "colliderMin": {
+              "x": 127.27056884765625,
+              "y": -2.299075126647949
+            },
+            "colliderMax": {
+              "x": 128.07057189941406,
+              "y": -1.0990748405456543
+            },
+            "crown": {
+              "x": 127.4800033569336,
+              "y": -1.1380584239959717
+            },
+            "camera": {
+              "x": 125.8238525390625,
+              "y": 0.0,
+              "z": -10.0
+            },
+            "ortho": 8.699999809265137
+          },
+          "after": {
+            "t": 1.4799957275390625,
+            "fixedTime": 90.59996795654297,
+            "remaining": 24.0,
+            "ropeLength": 0.0,
+            "span": 9.239507675170898,
+            "input": 1.0,
+            "angle": 47.25240707397461,
+            "soleY": -2.217951536178589,
+            "selected": 7,
+            "bridges": 0,
+            "attached": false,
+            "grounded": false,
+            "failure": false,
+            "position": {
+              "x": 127.68504333496094,
+              "y": -1.771499752998352
+            },
+            "velocity": {
+              "x": 0.0,
+              "y": -3.3768835067749023
+            },
+            "colliderMin": {
+              "x": 127.28504943847656,
+              "y": -2.37149977684021
+            },
+            "colliderMax": {
+              "x": 128.0850372314453,
+              "y": -1.1714997291564941
+            },
+            "crown": {
+              "x": 127.69674682617188,
+              "y": -1.3075556755065918
+            },
+            "camera": {
+              "x": 125.8238525390625,
+              "y": 0.0,
+              "z": -10.0
+            },
+            "ortho": 8.699999809265137
+          }
+        },
+        "end": {
+          "t": 5.019996643066406,
+          "fixedTime": 94.13996887207031,
+          "remaining": 24.0,
+          "ropeLength": 0.0,
+          "span": 15.353182792663574,
+          "input": 0.0,
+          "angle": 26.31679344177246,
+          "soleY": -9.326306343078613,
+          "selected": 7,
+          "bridges": 0,
+          "attached": false,
+          "grounded": false,
+          "failure": true,
+          "position": {
+            "x": 127.70658874511719,
+            "y": -9.26192569732666
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 127.30659484863281,
+            "y": -9.861926078796387
+          },
+          "colliderMax": {
+            "x": 128.10658264160156,
+            "y": -8.661925315856934
+          },
+          "crown": {
+            "x": 127.7302017211914,
+            "y": -8.416031837463379
+          },
+          "camera": {
+            "x": 127.67762756347656,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137
+        }
+      },
+      "bevel": {
+        "name": "L7_ground_angle_release30",
+        "attach": true,
+        "landed": false,
+        "attached_wall_episodes": 0,
+        "released_wall_episodes": 1,
+        "hit_colliders": [
+          "A2 Proof Middle Box"
+        ],
+        "overhead_contacts": 0,
+        "max_wall_relative_speed": 17.451393127441406,
+        "returning_slope_contacts": 0,
+        "first_returning_slope": null,
+        "first_attached_wall": null,
+        "first_released_wall": {
+          "collider": "A2 Proof Middle Box",
+          "face": "side",
+          "callback": "enter",
+          "step": 73,
+          "point": {
+            "x": 128.09750366210938,
+            "y": -1.1999998092651367
+          },
+          "normal": {
+            "x": -1.0,
+            "y": 0.0
+          },
+          "relativeVelocity": {
+            "x": -10.10351848602295,
+            "y": 5.397587299346924
+          },
+          "normalImpulse": 10.10351848602295,
+          "tangentImpulse": 2.0207037925720215,
+          "before": {
+            "t": 1.4799957275390625,
+            "fixedTime": 90.59996795654297,
+            "remaining": 24.0,
+            "ropeLength": 0.0,
+            "span": 9.179821968078613,
+            "input": 1.0,
+            "angle": 47.523048400878906,
+            "soleY": -2.0484542846679688,
+            "selected": 7,
+            "bridges": 0,
+            "attached": false,
+            "grounded": false,
+            "failure": false,
+            "position": {
+              "x": 127.67057037353516,
+              "y": -1.6990749835968018
+            },
+            "velocity": {
+              "x": 10.113622665405273,
+              "y": -4.853625297546387
+            },
+            "colliderMin": {
+              "x": 127.27056884765625,
+              "y": -2.299075126647949
+            },
+            "colliderMax": {
+              "x": 128.07057189941406,
+              "y": -1.0990748405456543
+            },
+            "crown": {
+              "x": 127.4800033569336,
+              "y": -1.1380584239959717
+            },
+            "camera": {
+              "x": 125.8238525390625,
+              "y": 0.0,
+              "z": -10.0
+            },
+            "ortho": 8.699999809265137
+          },
+          "afterMover": {
+            "t": 1.4799957275390625,
+            "fixedTime": 90.59996795654297,
+            "remaining": 24.0,
+            "ropeLength": 0.0,
+            "span": 9.179821968078613,
+            "input": 1.0,
+            "angle": 47.523048400878906,
+            "soleY": -2.0484542846679688,
+            "selected": 7,
+            "bridges": 0,
+            "attached": false,
+            "grounded": false,
+            "failure": false,
+            "position": {
+              "x": 127.67057037353516,
+              "y": -1.6990749835968018
+            },
+            "velocity": {
+              "x": 10.113622665405273,
+              "y": -4.853625297546387
+            },
+            "colliderMin": {
+              "x": 127.27056884765625,
+              "y": -2.299075126647949
+            },
+            "colliderMax": {
+              "x": 128.07057189941406,
+              "y": -1.0990748405456543
+            },
+            "crown": {
+              "x": 127.4800033569336,
+              "y": -1.1380584239959717
+            },
+            "camera": {
+              "x": 125.8238525390625,
+              "y": 0.0,
+              "z": -10.0
+            },
+            "ortho": 8.699999809265137
+          },
+          "after": {
+            "t": 1.4799957275390625,
+            "fixedTime": 90.59996795654297,
+            "remaining": 24.0,
+            "ropeLength": 0.0,
+            "span": 9.239507675170898,
+            "input": 1.0,
+            "angle": 47.25240707397461,
+            "soleY": -2.217951536178589,
+            "selected": 7,
+            "bridges": 0,
+            "attached": false,
+            "grounded": false,
+            "failure": false,
+            "position": {
+              "x": 127.68504333496094,
+              "y": -1.771499752998352
+            },
+            "velocity": {
+              "x": 0.0,
+              "y": -3.3768835067749023
+            },
+            "colliderMin": {
+              "x": 127.28504943847656,
+              "y": -2.37149977684021
+            },
+            "colliderMax": {
+              "x": 128.0850372314453,
+              "y": -1.1714997291564941
+            },
+            "crown": {
+              "x": 127.69674682617188,
+              "y": -1.3075556755065918
+            },
+            "camera": {
+              "x": 125.8238525390625,
+              "y": 0.0,
+              "z": -10.0
+            },
+            "ortho": 8.699999809265137
+          }
+        },
+        "end": {
+          "t": 5.019996643066406,
+          "fixedTime": 94.13996887207031,
+          "remaining": 24.0,
+          "ropeLength": 0.0,
+          "span": 15.353182792663574,
+          "input": 0.0,
+          "angle": 26.31679344177246,
+          "soleY": -9.326306343078613,
+          "selected": 7,
+          "bridges": 0,
+          "attached": false,
+          "grounded": false,
+          "failure": true,
+          "position": {
+            "x": 127.70658874511719,
+            "y": -9.26192569732666
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 127.30659484863281,
+            "y": -9.861926078796387
+          },
+          "colliderMax": {
+            "x": 128.10658264160156,
+            "y": -8.661925315856934
+          },
+          "crown": {
+            "x": 127.7302017211914,
+            "y": -8.416031837463379
+          },
+          "camera": {
+            "x": 127.67762756347656,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137
+        }
+      },
+      "baseline_R_pass": true,
+      "bevel_R_pass": true
+    },
+    {
+      "name": "L7_ground_angle_release42",
+      "length": 7,
+      "baseline": {
+        "name": "L7_ground_angle_release42",
+        "attach": true,
+        "landed": true,
+        "attached_wall_episodes": 0,
+        "released_wall_episodes": 0,
+        "hit_colliders": [],
+        "overhead_contacts": 0,
+        "max_wall_relative_speed": 0,
+        "returning_slope_contacts": 0,
+        "first_returning_slope": null,
+        "first_attached_wall": null,
+        "first_released_wall": null,
+        "end": {
+          "t": 5.0,
+          "fixedTime": 101.97996520996094,
+          "remaining": 24.0,
+          "ropeLength": 0.0,
+          "span": 23.466360092163086,
+          "input": 0.0,
+          "angle": 54.76313781738281,
+          "soleY": -9.074193000793457,
+          "selected": 7,
+          "bridges": 0,
+          "attached": false,
+          "grounded": false,
+          "failure": true,
+          "position": {
+            "x": 140.06671142578125,
+            "y": -9.039101600646973
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 139.66671752929688,
+            "y": -9.6391019821167
+          },
+          "colliderMax": {
+            "x": 140.46670532226562,
+            "y": -8.439101219177246
+          },
+          "crown": {
+            "x": 139.90121459960938,
+            "y": -8.163918495178223
+          },
+          "camera": {
+            "x": 137.9639129638672,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137
+        }
+      },
+      "bevel": {
+        "name": "L7_ground_angle_release42",
+        "attach": true,
+        "landed": true,
+        "attached_wall_episodes": 0,
+        "released_wall_episodes": 0,
+        "hit_colliders": [],
+        "overhead_contacts": 0,
+        "max_wall_relative_speed": 0,
+        "returning_slope_contacts": 0,
+        "first_returning_slope": null,
+        "first_attached_wall": null,
+        "first_released_wall": null,
+        "end": {
+          "t": 5.0,
+          "fixedTime": 101.97996520996094,
+          "remaining": 24.0,
+          "ropeLength": 0.0,
+          "span": 23.466360092163086,
+          "input": 0.0,
+          "angle": 54.76313781738281,
+          "soleY": -9.074193000793457,
+          "selected": 7,
+          "bridges": 0,
+          "attached": false,
+          "grounded": false,
+          "failure": true,
+          "position": {
+            "x": 140.06671142578125,
+            "y": -9.039101600646973
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 139.66671752929688,
+            "y": -9.6391019821167
+          },
+          "colliderMax": {
+            "x": 140.46670532226562,
+            "y": -8.439101219177246
+          },
+          "crown": {
+            "x": 139.90121459960938,
+            "y": -8.163918495178223
+          },
+          "camera": {
+            "x": 137.9639129638672,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137
+        }
+      },
+      "baseline_R_pass": true,
+      "bevel_R_pass": true
+    },
+    {
+      "name": "L7_ground_angle_release54",
+      "length": 7,
+      "baseline": {
+        "name": "L7_ground_angle_release54",
+        "attach": true,
+        "landed": true,
+        "attached_wall_episodes": 0,
+        "released_wall_episodes": 0,
+        "hit_colliders": [],
+        "overhead_contacts": 0,
+        "max_wall_relative_speed": 0,
+        "returning_slope_contacts": 0,
+        "first_returning_slope": null,
+        "first_attached_wall": null,
+        "first_released_wall": null,
+        "end": {
+          "t": 5.0,
+          "fixedTime": 109.81996154785156,
+          "remaining": 24.0,
+          "ropeLength": 0.0,
+          "span": 23.506120681762695,
+          "input": 0.0,
+          "angle": 54.83156967163086,
+          "soleY": -9.074193000793457,
+          "selected": 7,
+          "bridges": 0,
+          "attached": false,
+          "grounded": false,
+          "failure": true,
+          "position": {
+            "x": 140.11537170410156,
+            "y": -9.039101600646973
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 139.7153778076172,
+            "y": -9.6391019821167
+          },
+          "colliderMax": {
+            "x": 140.51536560058594,
+            "y": -8.439101219177246
+          },
+          "crown": {
+            "x": 139.94862365722656,
+            "y": -8.163918495178223
+          },
+          "camera": {
+            "x": 138.00381469726562,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137
+        }
+      },
+      "bevel": {
+        "name": "L7_ground_angle_release54",
+        "attach": true,
+        "landed": true,
+        "attached_wall_episodes": 0,
+        "released_wall_episodes": 0,
+        "hit_colliders": [],
+        "overhead_contacts": 0,
+        "max_wall_relative_speed": 0,
+        "returning_slope_contacts": 0,
+        "first_returning_slope": null,
+        "first_attached_wall": null,
+        "first_released_wall": null,
+        "end": {
+          "t": 5.0,
+          "fixedTime": 109.81996154785156,
+          "remaining": 24.0,
+          "ropeLength": 0.0,
+          "span": 23.506120681762695,
+          "input": 0.0,
+          "angle": 54.83156967163086,
+          "soleY": -9.074193000793457,
+          "selected": 7,
+          "bridges": 0,
+          "attached": false,
+          "grounded": false,
+          "failure": true,
+          "position": {
+            "x": 140.11537170410156,
+            "y": -9.039101600646973
+          },
+          "velocity": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "colliderMin": {
+            "x": 139.7153778076172,
+            "y": -9.6391019821167
+          },
+          "colliderMax": {
+            "x": 140.51536560058594,
+            "y": -8.439101219177246
+          },
+          "crown": {
+            "x": 139.94862365722656,
+            "y": -8.163918495178223
+          },
+          "camera": {
+            "x": 138.00381469726562,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "ortho": 8.699999809265137
+        }
+      },
+      "baseline_R_pass": true,
+      "bevel_R_pass": true
+    }
+  ]
+}

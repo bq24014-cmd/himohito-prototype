@@ -1,0 +1,192 @@
+{
+  "colliders": [
+    {
+      "name": "A2 Proof Entry Box",
+      "position": {
+        "x": 115.9000015258789,
+        "y": -3.0,
+        "z": 0.0
+      },
+      "scale": {
+        "x": 4.0,
+        "y": 6.0,
+        "z": 1.0
+      },
+      "boundsMin": {
+        "x": 113.9000015258789,
+        "y": -6.0
+      },
+      "boundsMax": {
+        "x": 117.9000015258789,
+        "y": 0.0
+      },
+      "size": {
+        "x": 1.0,
+        "y": 1.0
+      },
+      "offset": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "polygonPoints": [],
+      "trigger": false,
+      "enabled": true,
+      "active": true,
+      "airGroup": "",
+      "airOrder": 0
+    },
+    {
+      "name": "A2 Proof Exit Box",
+      "position": {
+        "x": 147.5,
+        "y": -4.199999809265137,
+        "z": 0.0
+      },
+      "scale": {
+        "x": 5.0,
+        "y": 6.0,
+        "z": 1.0
+      },
+      "boundsMin": {
+        "x": 145.0,
+        "y": -7.199999809265137
+      },
+      "boundsMax": {
+        "x": 150.0,
+        "y": -1.1999998092651367
+      },
+      "size": {
+        "x": 1.0,
+        "y": 1.0
+      },
+      "offset": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "polygonPoints": [],
+      "trigger": false,
+      "enabled": true,
+      "active": true,
+      "airGroup": "",
+      "airOrder": 0
+    },
+    {
+      "name": "A2 Proof Middle Box",
+      "position": {
+        "x": 130.3000030517578,
+        "y": -4.199999809265137,
+        "z": 0.0
+      },
+      "scale": {
+        "x": 4.400000095367432,
+        "y": 6.0,
+        "z": 1.0
+      },
+      "boundsMin": {
+        "x": 128.10000610351562,
+        "y": -7.199999809265137
+      },
+      "boundsMax": {
+        "x": 132.5,
+        "y": -1.1999998092651367
+      },
+      "size": {
+        "x": 1.0,
+        "y": 1.0
+      },
+      "offset": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "polygonPoints": [],
+      "trigger": false,
+      "enabled": true,
+      "active": true,
+      "airGroup": "",
+      "airOrder": 0
+    },
+    {
+      "name": "Main Player",
+      "position": {
+        "x": 117.4000015258789,
+        "y": 0.6149997711181641,
+        "z": 0.0
+      },
+      "scale": {
+        "x": 0.800000011920929,
+        "y": 1.2000000476837158,
+        "z": 1.0
+      },
+      "boundsMin": {
+        "x": 117.0,
+        "y": 0.014999866485595703
+      },
+      "boundsMax": {
+        "x": 117.80000305175781,
+        "y": 1.2149999141693115
+      },
+      "size": {
+        "x": 1.0,
+        "y": 1.0
+      },
+      "offset": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "polygonPoints": [],
+      "trigger": false,
+      "enabled": true,
+      "active": true,
+      "airGroup": "",
+      "airOrder": 0
+    },
+    {
+      "name": "A2 Proof Entry Bevel",
+      "position": {
+        "x": 117.9000015258789,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "scale": {
+        "x": 1.0,
+        "y": 1.0,
+        "z": 1.0
+      },
+      "boundsMin": {
+        "x": 117.9000015258789,
+        "y": -6.0
+      },
+      "boundsMax": {
+        "x": 121.0999984741211,
+        "y": 0.0
+      },
+      "size": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "offset": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "polygonPoints": [
+        {
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "x": 3.200000047683716,
+          "y": -4.0
+        },
+        {
+          "x": 0.0,
+          "y": -6.0
+        }
+      ],
+      "trigger": false,
+      "enabled": true,
+      "active": true,
+      "airGroup": "",
+      "airOrder": 0
+    }
+  ]
+}

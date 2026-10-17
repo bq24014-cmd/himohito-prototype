@@ -1,0 +1,97 @@
+{
+  "videos": {
+    "L6_Timed_BeforeAfter_50fps_silent.mp4": {
+      "bytes": 2541667,
+      "sha256": "FB1F483CC1FA96839DA027BF22CAD052F9EAE3C26B5055BC03EACD06541870B7",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_type": "video",
+            "width": 2560,
+            "height": 764,
+            "r_frame_rate": "50/1",
+            "duration": "5.040000",
+            "nb_frames": "252"
+          }
+        ]
+      }
+    },
+    "L7_Bevel_Normal_50fps_silent.mp4": {
+      "bytes": 1465513,
+      "sha256": "7E927B108DCFE82CD3157BB5B9C5C9CC095199C1DF7B0B0BF6218B74BABAB975",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_type": "video",
+            "width": 1280,
+            "height": 720,
+            "r_frame_rate": "50/1",
+            "duration": "5.040000",
+            "nb_frames": "252"
+          }
+        ]
+      }
+    },
+    "L7_EarlyRelease_BeforeAfter_50fps_silent.mp4": {
+      "bytes": 1354645,
+      "sha256": "41F65F76FF3D75E779C78F63AA4C4D9AB66D2D3BB59BB1654AC79CEB348A3075",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_type": "video",
+            "width": 2560,
+            "height": 764,
+            "r_frame_rate": "50/1",
+            "duration": "3.040000",
+            "nb_frames": "152"
+          }
+        ]
+      }
+    },
+    "L7_Original_Normal_50fps_silent.mp4": {
+      "bytes": 1476004,
+      "sha256": "779561699CBB0E18E2C1B682AE5DA7096C6806FBC79CCDB35064AB130291ADF2",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_type": "video",
+            "width": 1280,
+            "height": 720,
+            "r_frame_rate": "50/1",
+            "duration": "5.040000",
+            "nb_frames": "252"
+          }
+        ]
+      }
+    },
+    "L7_Timed_BeforeAfter_50fps_silent.mp4": {
+      "bytes": 2582388,
+      "sha256": "BB781CD6BF33BE75A3C34B70AE07B75603BCF65F5A750D7A561CB514BF91DC37",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_type": "video",
+            "width": 2560,
+            "height": 764,
+            "r_frame_rate": "50/1",
+            "duration": "5.040000",
+            "nb_frames": "252"
+          }
+        ]
+      }
+    }
+  },
+  "images": 75,
+  "largest_image_bytes": 378059,
+  "method": "Actual Unity game-camera captures. Display JPEG compression; external labels. Collider overlay is supplementary and clearly marked. Measured geometry/path figure is analytical, not game art."
+}

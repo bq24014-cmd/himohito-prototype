@@ -1,0 +1,87 @@
+{
+  "status": "Rejected during Editor feasibility; NOT the final candidate or an extra distributed Build.",
+  "proposed_blue1_local": [
+    5.1,
+    6.1
+  ],
+  "standing_distance_approx": 7.839,
+  "trials": [
+    {
+      "name": "L6_ground_follow_release-1",
+      "attachAccepted": false,
+      "entryValid": true
+    },
+    {
+      "name": "L6_jump_follow_release-1",
+      "attachAccepted": false,
+      "entryValid": true
+    },
+    {
+      "name": "L6_jump_angle_release18",
+      "attachAccepted": false,
+      "entryValid": true
+    },
+    {
+      "name": "L6_jump_angle_release24",
+      "attachAccepted": false,
+      "entryValid": true
+    },
+    {
+      "name": "L6_jump_angle_release30",
+      "attachAccepted": false,
+      "entryValid": true
+    },
+    {
+      "name": "L6_jump_angle_release42",
+      "attachAccepted": false,
+      "entryValid": true
+    },
+    {
+      "name": "L6_ground_angle_release24",
+      "attachAccepted": false,
+      "entryValid": true
+    },
+    {
+      "name": "L7_ground_follow_release-1",
+      "attachAccepted": false,
+      "entryValid": true
+    },
+    {
+      "name": "L7_jump_follow_release-1",
+      "attachAccepted": false,
+      "entryValid": true
+    },
+    {
+      "name": "L7_jump_angle_release18",
+      "attachAccepted": false,
+      "entryValid": true
+    },
+    {
+      "name": "L7_jump_angle_release24",
+      "attachAccepted": false,
+      "entryValid": true
+    },
+    {
+      "name": "L7_jump_angle_release30",
+      "attachAccepted": false,
+      "entryValid": true
+    },
+    {
+      "name": "L7_jump_angle_release42",
+      "attachAccepted": false,
+      "entryValid": true
+    },
+    {
+      "name": "L7_ground_angle_release24",
+      "attachAccepted": false,
+      "entryValid": true
+    }
+  ],
+  "reason": "Ground length6 is out of range. Existing RopeController.TryResolveAvailableAttachment also forbids initial airborne attachment except the existing special air-chain reconnect. Therefore a jump is NOT a workaround. Core was not modified.",
+  "source_excerpt": "return found && (playerMover == null || playerMover.IsGrounded || CanReconnectAirChainTo(hookPoint));",
+  "final_hook_local_unchanged": [
+    3,
+    4.5
+  ],
+  "final_candidate": "One visible terrain bevel, original Hooks retained."
+}

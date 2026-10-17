@@ -1,0 +1,17 @@
+{
+  "human_feedback_received": {
+    "proof": "BodyPump",
+    "actual_operation_reported_by_human": true,
+    "arms": "腕・胴・脚が重なり、手のような不自然な輪郭",
+    "wall": "振り子中に壁へ思い切り衝突することが以前から気になる",
+    "adoption": "要修正・正式採用保留"
+  },
+  "photo_context_reported": "A2谷1、選択長7、最初の青Hookへ接続中、出発床上面より低い側面付近。静止画が衝突瞬間かは不明。",
+  "photo_file_access_claimed": false,
+  "new_bevel_human_participants": 0,
+  "human_adoption": "未承認",
+  "production_integrated": false,
+  "technical": "Build/recorded33 route checks PASS; matrix exposes remaining failures. Not overall wall PASS.",
+  "recommendation": "HOLD・部分改善。壁接触と斜面の継ぎ目が残り、ゲーム性・Visualとも正式採用しない。",
+  "a2_r1_recommendation": "不採用推奨を維持"
+}

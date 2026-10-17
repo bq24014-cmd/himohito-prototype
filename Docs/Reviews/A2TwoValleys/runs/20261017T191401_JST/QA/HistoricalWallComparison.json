@@ -1,0 +1,28 @@
+{
+  "old_reference": "A2TwoValleysProof_20261016 / B_r1_Leg1_ColliderInit / LocalLeg1_24 / saved pre-existing QA",
+  "old_release": {
+    "leg": 1,
+    "threshold": 24.0,
+    "actualAngle": 24.880645751953125,
+    "sinceAttach": 0.9399998188018799,
+    "time": 3.779998779296875,
+    "landingClearance": -0.7934150695800781,
+    "position": {
+      "x": 123.42437744140625,
+      "y": -0.9431162476539612
+    },
+    "velocity": {
+      "x": 9.282783508300781,
+      "y": 3.931905508041382
+    },
+    "landingPosition": {
+      "x": 127.70658874511719,
+      "y": -9.045724868774414
+    },
+    "stableLanding": false,
+    "reason": "swing1: fall at (127.71, -9.05)",
+    "policy": "D held until landing, then neutral; no velocity assignment"
+  },
+  "old_record_scope": "Release24/30 was described as wall/fall in prior work state; old release JSON did not identify a contact Collider. Do not treat every old wall as the same phenomenon.",
+  "new_discrimination": "Connected return collides with Entry Box side; detached early release collides with Middle Box side. Both reproduced using unchanged r1 geometry. No overhead solid terrain at blue Hook; background shelf is not an active Collider."
+}

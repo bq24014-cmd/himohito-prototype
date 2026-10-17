@@ -1,0 +1,12 @@
+{
+  "continuing_permission": true,
+  "permission_reasked": false,
+  "tool": "computer-use @oai/sky",
+  "attempts_this_task": 1,
+  "error": "computer-use request timed out: list_apps",
+  "retries": 0,
+  "os_screenshot_acquired": false,
+  "os_key_calls": 0,
+  "automatic_api_capture_is_not_os_or_human": true,
+  "audio": "実聴未確認"
+}

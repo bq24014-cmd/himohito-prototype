@@ -1,0 +1,108 @@
+Build.log
+Initialize engine version: 6000.3.21f1 (c02631ffc030)
+Build Finished, Result: Success.
+
+Diagnosis_Baseline/Editor.log
+Initialize engine version: 6000.3.21f1 (c02631ffc030)
+ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+  at UnityEditor.Search.SearchDatabase+<EnumerateAll>d__81.MoveNext () [0x00106] in <63453c9528324daaa566ad51effa49a4>:0
+  at UnityEditor.Search.SearchDatabase.GetDefaultSearchDatabase () [0x00006] in <63453c9528324daaa566ad51effa49a4>:0
+MANUAL_PRESENTATION 00_Ready candidate5
+WALL_TRIAL L6_ground_follow_release-1 attach=True landed=False contacts=248
+MANUAL_PRESENTATION 01_Idle2s candidate5
+WALL_TRIAL L6_ground_right_release-1 attach=False landed=False contacts=0
+WALL_TRIAL L6_ground_right_release0.65 attach=True landed=False contacts=28
+WALL_TRIAL L6_ground_right_release1.05 attach=True landed=True contacts=64
+WALL_TRIAL L7_ground_follow_release-1 attach=True landed=False contacts=82
+WALL_TRIAL L7_ground_right_release-1 attach=True landed=False contacts=28
+WALL_TRIAL L7_ground_right_release0.65 attach=True landed=False contacts=28
+WALL_TRIAL L7_ground_right_release1.05 attach=True landed=False contacts=78
+
+Windows_Baseline_Matrix/Player.log
+Initialize engine version: 6000.3.21f1 (c02631ffc030)
+MANUAL_PRESENTATION 00_Ready candidate5
+MANUAL_PRESENTATION 01_Idle2s candidate5
+WALL_TRIAL L6_ground_follow_release-1 attach=True landed=False contacts=248
+WALL_TRIAL L6_ground_timed_release-1 attach=True landed=False contacts=102
+WALL_TRIAL L6_ground_coast_release-1 attach=True landed=False contacts=48
+WALL_TRIAL L6_ground_angle_release24 attach=True landed=False contacts=78
+WALL_TRIAL L6_ground_angle_release30 attach=True landed=False contacts=92
+WALL_TRIAL L6_ground_angle_release42 attach=True landed=True contacts=68
+WALL_TRIAL L6_ground_angle_release54 attach=True landed=True contacts=44
+WALL_TRIAL L7_ground_follow_release-1 attach=True landed=False contacts=82
+WALL_TRIAL L7_ground_timed_release-1 attach=True landed=False contacts=84
+MANUAL_PRESENTATION 02_Idle15s candidate5
+WALL_TRIAL L7_ground_coast_release-1 attach=True landed=False contacts=42
+WALL_TRIAL L7_ground_angle_release24 attach=True landed=False contacts=74
+WALL_TRIAL L7_ground_angle_release30 attach=True landed=False contacts=88
+WALL_TRIAL L7_ground_angle_release42 attach=True landed=True contacts=86
+WALL_TRIAL L7_ground_angle_release54 attach=True landed=True contacts=52
+
+Windows_Bevel_Matrix/Player.log
+Initialize engine version: 6000.3.21f1 (c02631ffc030)
+MANUAL_PRESENTATION 00_Ready candidate5
+MANUAL_PRESENTATION 01_Idle2s candidate5
+WALL_TRIAL L6_ground_follow_release-1 attach=True landed=False contacts=90
+WALL_TRIAL L6_ground_timed_release-1 attach=True landed=False contacts=93
+WALL_TRIAL L6_ground_coast_release-1 attach=True landed=False contacts=73
+WALL_TRIAL L6_ground_angle_release24 attach=True landed=False contacts=88
+WALL_TRIAL L6_ground_angle_release30 attach=True landed=False contacts=102
+WALL_TRIAL L6_ground_angle_release42 attach=True landed=True contacts=78
+WALL_TRIAL L6_ground_angle_release54 attach=True landed=True contacts=54
+WALL_TRIAL L7_ground_follow_release-1 attach=True landed=False contacts=125
+WALL_TRIAL L7_ground_timed_release-1 attach=True landed=False contacts=135
+MANUAL_PRESENTATION 02_Idle15s candidate5
+WALL_TRIAL L7_ground_coast_release-1 attach=True landed=False contacts=65
+WALL_TRIAL L7_ground_angle_release24 attach=True landed=False contacts=84
+WALL_TRIAL L7_ground_angle_release30 attach=True landed=False contacts=98
+WALL_TRIAL L7_ground_angle_release42 attach=True landed=True contacts=96
+WALL_TRIAL L7_ground_angle_release54 attach=True landed=True contacts=62
+
+Windows_Bevel_Routes/Player.log
+Initialize engine version: 6000.3.21f1 (c02631ffc030)
+MANUAL_PRESENTATION 00_Ready candidate5
+A2_QA Initial grounded/budget/section PASS actual=(117.40, 0.61), budget=24
+A2_QA Authored Hook Collider and visible presentation PASS All6 Hook Collider sizes1x1, existing ring artwork, original intended geometry; two start Colliders disabled intentionally
+A2_QA Bridge1_Swing2 bridge1 exact spend PASS 24 - 11 = 13
+A2_QA Bridge1_Swing2 middle has no refill/checkpoint PASS middle resource=13; entry snapshot remains24
+A2_ROUTE Bridge1_Swing2 PASS 5.419998s
+A2_QA Bridge1_Swing2 reaches exit with expected resource PASS position=(149.03, -0.59),remaining=13
+MANUAL_PRESENTATION 01_Idle2s candidate5
+A2_QA Bridge1_Swing2 R restores entry PASS position=(117.40, 0.61), resource=24, selected=6, constraints=FreezeRotation, bridges=0, hooksActive=True
+A2_QA Bridge1_Swing2 R restores entry layout/Hook/Collider invariant PASS same transforms/Collider/Hook/group/mask after existing R
+A2_QA Swing1_Bridge2 middle has no refill/checkpoint PASS middle resource=24; entry snapshot remains24
+A2_QA Swing1_Bridge2 bridge2 exact spend PASS 24 - 13 = 11
+A2_ROUTE Swing1_Bridge2 PASS 5.119999s
+A2_QA Swing1_Bridge2 reaches exit with expected resource PASS position=(145.23, -0.48),remaining=11
+A2_QA Swing1_Bridge2 R restores entry PASS position=(117.40, 0.61), resource=24, selected=6, constraints=FreezeRotation, bridges=0, hooksActive=True
+A2_QA Swing1_Bridge2 R restores entry layout/Hook/Collider invariant PASS same transforms/Collider/Hook/group/mask after existing R
+A2_QA Swing1_Swing2 middle has no refill/checkpoint PASS middle resource=24; entry snapshot remains24
+A2_ROUTE Swing1_Swing2 PASS 4.779997s
+A2_QA Swing1_Swing2 reaches exit with expected resource PASS position=(149.04, -0.59),remaining=24
+A2_QA Swing1_Swing2 R restores entry PASS position=(117.40, 0.61), resource=24, selected=6, constraints=FreezeRotation, bridges=0, hooksActive=True
+A2_QA Swing1_Swing2 R restores entry layout/Hook/Collider invariant PASS same transforms/Collider/Hook/group/mask after existing R
+A2_QA Bridge1_Bridge2_ExpectedRejection bridge1 exact spend PASS 24 - 11 = 13
+A2_QA Both bridges denied by reserve not insufficient aim PASS 13 -13 =0 <1, attach=True actualRemaining=13
+A2_ROUTE Bridge1_Bridge2_ExpectedRejection PASS 3.08s
+A2_QA R after rejected secondQ restores entry/hooks PASS position=(117.40, 0.61), resource=24, selected=6, constraints=FreezeRotation, bridges=0, hooksActive=True
+A2_QA R after rejected secondQ restores entry/hooks layout/Hook/Collider invariant PASS same transforms/Collider/Hook/group/mask after existing R
+A2_QA Fall1 failure PASS Diagnostic fall positioning; not a route success claim
+A2_QA Fall1 R entry restore PASS position=(117.40, 0.61), resource=24, selected=6, constraints=FreezeRotation, bridges=0, hooksActive=True
+A2_QA Fall1 R entry restore layout/Hook/Collider invariant PASS same transforms/Collider/Hook/group/mask after existing R
+A2_QA Fall2 failure PASS Diagnostic fall positioning; not a route success claim
+A2_QA Fall2 R entry restore PASS position=(117.40, 0.61), resource=24, selected=6, constraints=FreezeRotation, bridges=0, hooksActive=True
+A2_QA Fall2 R entry restore layout/Hook/Collider invariant PASS same transforms/Collider/Hook/group/mask after existing R
+A2_QA Fall3 failure PASS Diagnostic fall positioning; not a route success claim
+A2_QA Fall3 R entry restore PASS position=(117.40, 0.61), resource=24, selected=6, constraints=FreezeRotation, bridges=0, hooksActive=True
+A2_QA Fall3 R entry restore layout/Hook/Collider invariant PASS same transforms/Collider/Hook/group/mask after existing R
+A2_QA BridgeThenRetryState bridge1 exact spend PASS 24 - 11 = 13
+A2_QA Bridge created then R clears bridge and restores hooks/budget PASS position=(117.40, 0.61), resource=24, selected=6, constraints=FreezeRotation, bridges=0, hooksActive=True
+A2_QA Bridge created then R clears bridge and restores hooks/budget layout/Hook/Collider invariant PASS same transforms/Collider/Hook/group/mask after existing R
+A2_QA No spent/blocked checkpoint saved PASS entry snapshot=24 and0bridges; B has no intermediate or exit CP
+
+Manual_bevel/Player.log
+Initialize engine version: 6000.3.21f1 (c02631ffc030)
+MANUAL_PRESENTATION 00_Ready candidate5
+MANUAL_PRESENTATION 01_Idle2s candidate5
+MANUAL_PRESENTATION 02_Idle15s candidate5
+MANUAL_PRESENTATION 03_Idle35s candidate5
