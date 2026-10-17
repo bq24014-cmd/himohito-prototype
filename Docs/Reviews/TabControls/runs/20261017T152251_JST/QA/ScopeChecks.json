@@ -1,0 +1,53 @@
+{
+  "handlers_and_style_unchanged": {
+    "private void Update()": {
+      "equal": true,
+      "before_sha256": "F5DE4989B02B67D22CFEFBEC4F3E6161F21CCC5210D152FE240399AD547ABCEC",
+      "after_sha256": "F5DE4989B02B67D22CFEFBEC4F3E6161F21CCC5210D152FE240399AD547ABCEC"
+    },
+    "public void OpenMenuHelp()": {
+      "equal": true,
+      "before_sha256": "99FD4220DB111F5935E6F2F7C418E8070C7465047ED2DFA53C8920B055B44843",
+      "after_sha256": "99FD4220DB111F5935E6F2F7C418E8070C7465047ED2DFA53C8920B055B44843"
+    },
+    "private void OnGUI()": {
+      "equal": true,
+      "before_sha256": "483C36D00A423189EC6CB58D53220CD729F6C45E376ABF2CF060CA8124105DB9",
+      "after_sha256": "483C36D00A423189EC6CB58D53220CD729F6C45E376ABF2CF060CA8124105DB9"
+    },
+    "private void DrawPauseScreen()": {
+      "equal": true,
+      "before_sha256": "27EAD7A8CE64F2217484A0C74D97E17806E9651987A33F9EFAC9F21D53530B7C",
+      "after_sha256": "27EAD7A8CE64F2217484A0C74D97E17806E9651987A33F9EFAC9F21D53530B7C"
+    },
+    "private void ApplyPauseState()": {
+      "equal": true,
+      "before_sha256": "4A15C5F56554107017A7CC7373D0828BC86CA027B9F14CE5D49B7774BF9FBE52",
+      "after_sha256": "4A15C5F56554107017A7CC7373D0828BC86CA027B9F14CE5D49B7774BF9FBE52"
+    },
+    "private void EnsureStyles()": {
+      "equal": true,
+      "before_sha256": "C32EE7BE7CA0CBF0596FDD98FAE3F85B274A9D855F9B1EF6AABADF951693CD08",
+      "after_sha256": "C32EE7BE7CA0CBF0596FDD98FAE3F85B274A9D855F9B1EF6AABADF951693CD08"
+    }
+  },
+  "specified_text_checks": [
+    {
+      "width": 1600,
+      "specified_four_exact": true,
+      "other_four_unchanged": true,
+      "extra_wrap": false,
+      "max_key_text_width": 80.01000213623047
+    },
+    {
+      "width": 1280,
+      "specified_four_exact": true,
+      "other_four_unchanged": true,
+      "extra_wrap": false,
+      "max_key_text_width": 80.01000213623047
+    }
+  ],
+  "initial_r1": "FAIL: 64px key field below 80.01px required by 矢印キー; retained locally, corrected to 84px and rebalanced columns. No submitted success claim for r1.",
+  "baseline_bounds_note": "Before renderer retains original allocation. Right label rect extends about 4px beyond area; this is a conservative rect-bound failure, NOT a verified missing glyph. Both baseline processes exit 2 for this check, with runtime errors 0 and lifecycle PASS. Baseline was not modified.",
+  "final_r2": "After: both resolutions all label rects/footer contained, no extra wrap or overlap. Fonts remain 18px descriptions, 20px keys, 34px title."
+}

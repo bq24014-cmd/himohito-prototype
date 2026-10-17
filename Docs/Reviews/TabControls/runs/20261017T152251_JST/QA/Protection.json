@@ -1,0 +1,31 @@
+{
+  "time": "2026-10-17T15:38:47.3872175+09:00",
+  "branch": "main",
+  "head": "7a4f011b7ffc0343acd4727a75255495a3881fb3",
+  "originMain": "7a4f011b7ffc0343acd4727a75255495a3881fb3",
+  "productionSource": {
+    "count": 514,
+    "changedOrMissing": [],
+    "unchanged": true
+  },
+  "dirtyAndReferenceFiles": {
+    "count": 19,
+    "changedOrMissing": [],
+    "unchanged": true
+  },
+  "otherReviewFiles": {
+    "count": 9,
+    "changedOrMissing": [],
+    "unchanged": true
+  },
+  "isolatedExistingFiles": {
+    "count": 514,
+    "changedOrMissing": [
+      "Assets/Scripts/StageOverlayControls.cs"
+    ],
+    "unchanged": false
+  },
+  "statusSame": true,
+  "stageSame": true,
+  "freeBytes": 4599799808
+}

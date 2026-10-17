@@ -1,0 +1,48 @@
+{
+  "method": "diagnostic API/reflection; actual Unity rendering; NOT OS-key input or Human play",
+  "records": [
+    {
+      "mode": "Before",
+      "width": 1600,
+      "height": 900,
+      "labels": 16,
+      "layoutFit": false,
+      "overlap": false,
+      "lifecycle": true,
+      "errors": 0
+    },
+    {
+      "mode": "After",
+      "width": 1600,
+      "height": 900,
+      "labels": 16,
+      "layoutFit": true,
+      "overlap": false,
+      "lifecycle": true,
+      "errors": 0
+    },
+    {
+      "mode": "Before",
+      "width": 1280,
+      "height": 720,
+      "labels": 16,
+      "layoutFit": false,
+      "overlap": false,
+      "lifecycle": true,
+      "errors": 0
+    },
+    {
+      "mode": "After",
+      "width": 1280,
+      "height": 720,
+      "labels": 16,
+      "layoutFit": true,
+      "overlap": false,
+      "lifecycle": true,
+      "errors": 0
+    }
+  ],
+  "human_understanding": "未確認",
+  "os_keys": "未確認",
+  "preview": "RGB -> PNG/JPEG; no text edits or resizing; comparison labels outside framebuffer"
+}

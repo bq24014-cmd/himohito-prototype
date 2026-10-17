@@ -1,0 +1,312 @@
+{
+  "mode": "Before",
+  "width": 1600,
+  "height": 900,
+  "labels": [
+    {
+      "key": "A / D",
+      "text": "A / D",
+      "rect": {
+        "serializedVersion": "2",
+        "x": 0.0,
+        "y": 139.0,
+        "width": 112.0,
+        "height": 33.900001525878906
+      },
+      "font": 20,
+      "requiredHeight": 33.900001525878906,
+      "unwrappedHeight": 33.900001525878906,
+      "requiredWidth": 48.13999938964844,
+      "noExtraWrap": true,
+      "verticalFits": true,
+      "isKey": true
+    },
+    {
+      "key": "A / D",
+      "text": "移動・振り子を加速",
+      "rect": {
+        "serializedVersion": "2",
+        "x": 116.0,
+        "y": 139.0,
+        "width": 314.0,
+        "height": 31.1200008392334
+      },
+      "font": 18,
+      "requiredHeight": 31.1200008392334,
+      "unwrappedHeight": 31.1200008392334,
+      "requiredWidth": 162.00999450683594,
+      "noExtraWrap": true,
+      "verticalFits": true,
+      "isKey": false
+    },
+    {
+      "key": "Space",
+      "text": "Space",
+      "rect": {
+        "serializedVersion": "2",
+        "x": 0.0,
+        "y": 189.0,
+        "width": 112.0,
+        "height": 33.900001525878906
+      },
+      "font": 20,
+      "requiredHeight": 33.900001525878906,
+      "unwrappedHeight": 33.900001525878906,
+      "requiredWidth": 55.7599983215332,
+      "noExtraWrap": true,
+      "verticalFits": true,
+      "isKey": true
+    },
+    {
+      "key": "Space",
+      "text": "ジャンプ",
+      "rect": {
+        "serializedVersion": "2",
+        "x": 116.0,
+        "y": 189.0,
+        "width": 314.0,
+        "height": 31.1200008392334
+      },
+      "font": 18,
+      "requiredHeight": 31.1200008392334,
+      "unwrappedHeight": 31.1200008392334,
+      "requiredWidth": 72.01000213623047,
+      "noExtraWrap": true,
+      "verticalFits": true,
+      "isKey": false
+    },
+    {
+      "key": "W / S",
+      "text": "W / S",
+      "rect": {
+        "serializedVersion": "2",
+        "x": 0.0,
+        "y": 239.0,
+        "width": 112.0,
+        "height": 33.900001525878906
+      },
+      "font": 20,
+      "requiredHeight": 33.900001525878906,
+      "unwrappedHeight": 33.900001525878906,
+      "requiredWidth": 50.68000030517578,
+      "noExtraWrap": true,
+      "verticalFits": true,
+      "isKey": true
+    },
+    {
+      "key": "W / S",
+      "text": "次に使う長さを変更",
+      "rect": {
+        "serializedVersion": "2",
+        "x": 116.0,
+        "y": 239.0,
+        "width": 314.0,
+        "height": 31.1200008392334
+      },
+      "font": 18,
+      "requiredHeight": 31.1200008392334,
+      "unwrappedHeight": 31.1200008392334,
+      "requiredWidth": 162.00999450683594,
+      "noExtraWrap": true,
+      "verticalFits": true,
+      "isKey": false
+    },
+    {
+      "key": "矢印キー",
+      "text": "矢印キー",
+      "rect": {
+        "serializedVersion": "2",
+        "x": 0.0,
+        "y": 289.0,
+        "width": 112.0,
+        "height": 33.900001525878906
+      },
+      "font": 20,
+      "requiredHeight": 33.900001525878906,
+      "unwrappedHeight": 33.900001525878906,
+      "requiredWidth": 80.01000213623047,
+      "noExtraWrap": true,
+      "verticalFits": true,
+      "isKey": true
+    },
+    {
+      "key": "矢印キー",
+      "text": "照準方向を変更",
+      "rect": {
+        "serializedVersion": "2",
+        "x": 116.0,
+        "y": 289.0,
+        "width": 314.0,
+        "height": 31.1200008392334
+      },
+      "font": 18,
+      "requiredHeight": 31.1200008392334,
+      "unwrappedHeight": 31.1200008392334,
+      "requiredWidth": 126.01000213623047,
+      "noExtraWrap": true,
+      "verticalFits": true,
+      "isKey": false
+    },
+    {
+      "key": "E",
+      "text": "E",
+      "rect": {
+        "serializedVersion": "2",
+        "x": 470.0,
+        "y": 139.0,
+        "width": 112.0,
+        "height": 33.900001525878906
+      },
+      "font": 20,
+      "requiredHeight": 33.900001525878906,
+      "unwrappedHeight": 33.900001525878906,
+      "requiredWidth": 12.050000190734863,
+      "noExtraWrap": true,
+      "verticalFits": true,
+      "isKey": true
+    },
+    {
+      "key": "E",
+      "text": "ヒモを接続・解除",
+      "rect": {
+        "serializedVersion": "2",
+        "x": 586.0,
+        "y": 139.0,
+        "width": 314.0,
+        "height": 31.1200008392334
+      },
+      "font": 18,
+      "requiredHeight": 31.1200008392334,
+      "unwrappedHeight": 31.1200008392334,
+      "requiredWidth": 144.00999450683594,
+      "noExtraWrap": true,
+      "verticalFits": true,
+      "isKey": false
+    },
+    {
+      "key": "Q",
+      "text": "Q",
+      "rect": {
+        "serializedVersion": "2",
+        "x": 470.0,
+        "y": 189.0,
+        "width": 112.0,
+        "height": 33.900001525878906
+      },
+      "font": 20,
+      "requiredHeight": 33.900001525878906,
+      "unwrappedHeight": 33.900001525878906,
+      "requiredWidth": 14.819999694824219,
+      "noExtraWrap": true,
+      "verticalFits": true,
+      "isKey": true
+    },
+    {
+      "key": "Q",
+      "text": "接続中のヒモを足場化",
+      "rect": {
+        "serializedVersion": "2",
+        "x": 586.0,
+        "y": 189.0,
+        "width": 314.0,
+        "height": 31.1200008392334
+      },
+      "font": 18,
+      "requiredHeight": 31.1200008392334,
+      "unwrappedHeight": 31.1200008392334,
+      "requiredWidth": 180.00999450683594,
+      "noExtraWrap": true,
+      "verticalFits": true,
+      "isKey": false
+    },
+    {
+      "key": "F",
+      "text": "F",
+      "rect": {
+        "serializedVersion": "2",
+        "x": 470.0,
+        "y": 239.0,
+        "width": 112.0,
+        "height": 33.900001525878906
+      },
+      "font": 20,
+      "requiredHeight": 33.900001525878906,
+      "unwrappedHeight": 33.900001525878906,
+      "requiredWidth": 11.720000267028809,
+      "noExtraWrap": true,
+      "verticalFits": true,
+      "isKey": true
+    },
+    {
+      "key": "F",
+      "text": "中央Hookを外してまとめる",
+      "rect": {
+        "serializedVersion": "2",
+        "x": 586.0,
+        "y": 239.0,
+        "width": 314.0,
+        "height": 31.1200008392334
+      },
+      "font": 18,
+      "requiredHeight": 31.1200008392334,
+      "unwrappedHeight": 31.1200008392334,
+      "requiredWidth": 221.77999877929688,
+      "noExtraWrap": true,
+      "verticalFits": true,
+      "isKey": false
+    },
+    {
+      "key": "R",
+      "text": "R",
+      "rect": {
+        "serializedVersion": "2",
+        "x": 470.0,
+        "y": 289.0,
+        "width": 112.0,
+        "height": 33.900001525878906
+      },
+      "font": 20,
+      "requiredHeight": 33.900001525878906,
+      "unwrappedHeight": 33.900001525878906,
+      "requiredWidth": 12.6899995803833,
+      "noExtraWrap": true,
+      "verticalFits": true,
+      "isKey": true
+    },
+    {
+      "key": "R",
+      "text": "現在の区間から再挑戦",
+      "rect": {
+        "serializedVersion": "2",
+        "x": 586.0,
+        "y": 289.0,
+        "width": 314.0,
+        "height": 31.1200008392334
+      },
+      "font": 18,
+      "requiredHeight": 31.1200008392334,
+      "unwrappedHeight": 31.1200008392334,
+      "requiredWidth": 180.00999450683594,
+      "noExtraWrap": true,
+      "verticalFits": true,
+      "isKey": false
+    }
+  ],
+  "footer": {
+    "serializedVersion": "2",
+    "x": 0.0,
+    "y": 551.0,
+    "width": 896.0,
+    "height": 34.0
+  },
+  "area": {
+    "serializedVersion": "2",
+    "x": 352.0,
+    "y": 130.5,
+    "width": 896.0,
+    "height": 585.0
+  },
+  "footerSeen": true,
+  "allFit": false,
+  "overlap": false
+}

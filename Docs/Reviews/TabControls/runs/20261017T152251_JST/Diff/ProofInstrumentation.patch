@@ -1,0 +1,11 @@
+--- a/Assets/Scripts/StageOverlayControls.cs
++++ b/Assets/Scripts/StageOverlayControls.cs
+@@ -232,0 +233,2 @@
++            // Isolated comparison only; excluded from the display-only patch.
++            if (TabProofSupport.DrawOriginal(this, helpBackground, helpTitleStyle, helpBodyStyle, helpKeyStyle)) return;
+@@ -281,0 +284 @@
++            TabProofCapture.ObserveFooter();
+@@ -289,0 +293 @@
++            TabProofCapture.Observe(key, key, helpKeyStyle, true);
+@@ -290,0 +295 @@
++            TabProofCapture.Observe(key, description, helpBodyStyle, false);

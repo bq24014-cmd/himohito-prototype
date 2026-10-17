@@ -1,0 +1,11 @@
+{
+  "continuing_permission": true,
+  "tool": "computer-use / sky.list_apps",
+  "attempts_this_task": 1,
+  "result": "computer-use request timed out: list_apps",
+  "os_capture_and_key_reaction": "未確認",
+  "API_and_reflection": "実施",
+  "human_understanding": "未確認",
+  "new_build": "non-Development",
+  "manual_launch_has_capture_driver": false
+}

@@ -1,31 +1,38 @@
 {
-  "review_id": "TabControlsAudit_20261017T145228_JST",
-  "updated_at": "2026-10-17T14:54:33+09:00",
+  "review_id": "TabControlsProof_20261017T152251_JST",
+  "updated_at": "2026-10-17T15:38:52+09:00",
   "timezone": "Asia/Tokyo",
   "branch": "review/tab-controls-audit",
-  "kind": "既存Tab操作説明の調査・修正文案のみ",
+  "kind": "Human指定4文案のTab操作説明・隔離表示Proof",
+  "target_proof": "TabControlsProof_20261017",
+  "revision": "r2",
   "production_head": "7a4f011b7ffc0343acd4727a75255495a3881fb3",
-  "status": "Human文案判断待ち",
-  "report_path": "Docs/Reviews/TabControls/runs/20261017T145228_JST/Report.md",
-  "image_path": "Docs/Reviews/TabControls/runs/20261017T145228_JST/Images/ExistingTab_1600x900.jpg",
-  "evidence_path": "Docs/Reviews/TabControls/runs/20261017T145228_JST/Evidence/",
-  "proposals_count": 3,
-  "proposals": [
-    "Qの生成先・消費・接続条件を短く明示",
-    "Fの未接続条件・照準対象・2本を1本にする操作を明示",
-    "Space／W・Sの未接続条件を明示"
-  ],
-  "screen_provenance": "FullGameRegression_20260930の既存QA保存画面。今回の撮影ではない。現行の説明文字列と照合済み",
-  "os_operation": "list_appsタイムアウト。今回の実画面取得・キー反応は未確認",
-  "human_understanding": "未確認",
+  "unity": "6000.3.21f1",
+  "build_assembly_sha256": "06113D68FE78356384C8AD964227D5D5AAD708F6A17A437A8BE11647445BB4F7",
+  "status": "Human画面レビュー待ち",
+  "report_path": "Docs/Reviews/TabControls/runs/20261017T152251_JST/Report.md",
+  "launch_path": "Docs/Reviews/TabControls/runs/20261017T152251_JST/Launch.md",
+  "images_path": "Docs/Reviews/TabControls/runs/20261017T152251_JST/Images/",
+  "qa_path": "Docs/Reviews/TabControls/runs/20261017T152251_JST/QA/",
+  "diff_path": "Docs/Reviews/TabControls/runs/20261017T152251_JST/Diff/DisplayOnly.patch",
+  "prior_report_path": "Docs/Reviews/TabControls/runs/20261017T145228_JST/Report.md",
+  "verification": {
+    "resolutions": [
+      "1600x900",
+      "1280x720"
+    ],
+    "specified_four_exact": true,
+    "font_sizes_preserved": true,
+    "after_layout": "PASS（実Unity描画・GUI計測・画像確認）",
+    "help_pause_lifecycle": "PASS（API／Reflection、4ケース）",
+    "os_keys": "未確認（list_appsタイムアウト・1回で停止）",
+    "non_development_build": true
+  },
   "unconfirmed": [
-    "今回起動した画面での表示・OSキー操作",
-    "修正文案の枠内への収まり・改行",
-    "橋用フック・共有フックという表現のHuman理解度"
+    "Tab／EscのOS実キー反応・マウスの閉じるボタン反応",
+    "Humanの理解度・使いやすさ・正式採用",
+    "音、MainStage実起動、全区間通しプレイ"
   ],
-  "implementation_changed": false,
-  "unity_started": false,
-  "build_performed": false,
   "production_integrated": false,
-  "human_adoption": "未承認"
+  "human_adoption": "Production正式採用は未承認"
 }

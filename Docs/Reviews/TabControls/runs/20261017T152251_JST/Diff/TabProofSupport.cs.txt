@@ -1,0 +1,80 @@
+using System;
+using HimoHito;
+using UnityEngine;
+// Proof-only exact baseline renderer; original text/layout/style/close action.
+public static class TabProofSupport
+{
+ public static readonly bool Original=Array.IndexOf(Environment.GetCommandLineArgs(),"-tabOriginal")>=0;
+ static Texture2D helpBackground;static GUIStyle helpTitleStyle,helpBodyStyle,helpKeyStyle;
+        public static bool DrawOriginal(StageOverlayControls owner,Texture2D background,GUIStyle title,GUIStyle body,GUIStyle key)
+        {
+            if(!Original)return false;
+            helpBackground=background;helpTitleStyle=title;helpBodyStyle=body;helpKeyStyle=key;
+            Rect screenRect = new Rect(0f, 0f, Screen.width, Screen.height);
+            Color previous = GUI.color;
+            if (helpBackground != null)
+            {
+                GUI.DrawTexture(
+                    screenRect,
+                    helpBackground,
+                    ScaleMode.ScaleAndCrop,
+                    true);
+            }
+            else
+            {
+                GUI.color = new Color(0.94f, 0.85f, 0.70f, 1f);
+                GUI.Box(screenRect, GUIContent.none);
+            }
+            GUI.color = previous;
+
+            float width = Mathf.Min(Screen.width * 0.56f, 980f);
+            float height = Mathf.Min(Screen.height * 0.65f, 700f);
+            GUILayout.BeginArea(new Rect(
+                (Screen.width - width) * 0.5f,
+                Screen.height * 0.145f,
+                width,
+                height));
+            GUILayout.Label("操作方法", helpTitleStyle);
+            GUILayout.Space(18f);
+            GUILayout.Label(
+                "ヒモを掛けて振り、必要な場所では足場として残します",
+                helpBodyStyle);
+            GUILayout.Space(28f);
+
+            GUILayout.BeginHorizontal();
+            GUILayout.BeginVertical(GUILayout.Width(width * 0.48f));
+            DrawHelpRow("A / D", "移動・振り子を加速");
+            DrawHelpRow("Space", "ジャンプ");
+            DrawHelpRow("W / S", "次に使う長さを変更");
+            DrawHelpRow("矢印キー", "照準方向を変更");
+            GUILayout.EndVertical();
+            GUILayout.Space(width * 0.04f);
+            GUILayout.BeginVertical(GUILayout.Width(width * 0.48f));
+            DrawHelpRow("E", "ヒモを接続・解除");
+            DrawHelpRow("Q", "接続中のヒモを足場化");
+            DrawHelpRow("F", "中央Hookを外してまとめる");
+            DrawHelpRow("R", "現在の区間から再挑戦");
+            GUILayout.EndVertical();
+            GUILayout.EndHorizontal();
+
+            GUILayout.FlexibleSpace();
+            bool close = GUILayout.Button("Tab / Esc　閉じる", helpKeyStyle);
+            TabProofCapture.ObserveFooter();
+            GUILayout.EndArea();
+            if (close) { owner.CloseHelp(); GUIUtility.ExitGUI(); }
+            return true;
+        }
+
+        private static void DrawHelpRow(string key, string description)
+        {
+            GUILayout.BeginHorizontal();
+            GUILayout.Label(key, helpKeyStyle, GUILayout.Width(112f));
+            TabProofCapture.Observe(key,key,helpKeyStyle,true);
+            GUILayout.Label(description, helpBodyStyle);
+            TabProofCapture.Observe(key,description,helpBodyStyle,false);
+            GUILayout.EndHorizontal();
+            GUILayout.Space(12f);
+        }
+
+
+}

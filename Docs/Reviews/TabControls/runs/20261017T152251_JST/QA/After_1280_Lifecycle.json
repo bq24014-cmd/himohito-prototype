@@ -1,0 +1,93 @@
+{
+  "states": [
+    {
+      "label": "Playing",
+      "outcome": "Playing",
+      "help": false,
+      "overlay": false,
+      "bodySimulated": true,
+      "timeScale": 1.0,
+      "position": {
+        "x": -4.0,
+        "y": 0.964997410774231
+      }
+    },
+    {
+      "label": "HelpOpened_API",
+      "outcome": "Playing",
+      "help": true,
+      "overlay": true,
+      "bodySimulated": true,
+      "timeScale": 0.0,
+      "position": {
+        "x": -4.0,
+        "y": 0.964997410774231
+      }
+    },
+    {
+      "label": "HelpClosed_API",
+      "outcome": "Playing",
+      "help": false,
+      "overlay": false,
+      "bodySimulated": true,
+      "timeScale": 1.0,
+      "position": {
+        "x": -4.0,
+        "y": 0.9649988412857056
+      }
+    },
+    {
+      "label": "Paused_API",
+      "outcome": "Playing",
+      "help": false,
+      "overlay": true,
+      "bodySimulated": true,
+      "timeScale": 0.0,
+      "position": {
+        "x": -4.0,
+        "y": 0.964999794960022
+      }
+    },
+    {
+      "label": "HelpFromPause_API",
+      "outcome": "Playing",
+      "help": true,
+      "overlay": true,
+      "bodySimulated": true,
+      "timeScale": 0.0,
+      "position": {
+        "x": -4.0,
+        "y": 0.964999794960022
+      }
+    },
+    {
+      "label": "HelpClosed_StillPaused_API",
+      "outcome": "Playing",
+      "help": false,
+      "overlay": true,
+      "bodySimulated": true,
+      "timeScale": 0.0,
+      "position": {
+        "x": -4.0,
+        "y": 0.964999794960022
+      }
+    },
+    {
+      "label": "PauseResumed_API",
+      "outcome": "Playing",
+      "help": false,
+      "overlay": false,
+      "bodySimulated": true,
+      "timeScale": 1.0,
+      "position": {
+        "x": -4.0,
+        "y": 0.964999794960022
+      }
+    }
+  ],
+  "pass": true,
+  "timeAdvancedAfterClose": true,
+  "development": false,
+  "errors": 0,
+  "method": "API/Reflection only. Tab/Esc physical keys, mouse clicks and Human understanding not verified."
+}

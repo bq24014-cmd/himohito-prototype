@@ -1,0 +1,16 @@
+#if UNITY_EDITOR
+using System;using System.IO;using UnityEditor;using UnityEditor.Build.Reporting;using UnityEditor.SceneManagement;using UnityEngine;
+public static class TabProofBuild
+{
+ static string Arg(string n){var a=Environment.GetCommandLineArgs();for(int i=0;i<a.Length-1;i++)if(a[i]==n)return a[i+1];throw new Exception(n);}
+ public static void Build(){try{
+  string output=Arg("-tabBuildOutput");if(File.Exists(output))throw new Exception("Never overwrite build");
+  EditorUserBuildSettings.development=false;EditorUserBuildSettings.allowDebugging=false;EditorUserBuildSettings.connectProfiler=false;EditorUserBuildSettings.buildWithDeepProfilingSupport=false;
+  EditorSceneManager.OpenScene("Assets/Scenes/Tutorial.unity");
+  var r=BuildPipeline.BuildPlayer(new BuildPlayerOptions{scenes=new[]{"Assets/Scenes/Tutorial.unity"},locationPathName=output,target=BuildTarget.StandaloneWindows64,options=BuildOptions.None});
+  File.WriteAllText(Path.Combine(Path.GetDirectoryName(output),"BuildSummary.json"),JsonUtility.ToJson(new Summary{result=r.summary.result.ToString(),unity=Application.unityVersion,options=r.summary.options.ToString(),errors=(int)r.summary.totalErrors,warnings=(int)r.summary.totalWarnings,bytes=(long)r.summary.totalSize,development=EditorUserBuildSettings.development,debugging=EditorUserBuildSettings.allowDebugging,profiler=EditorUserBuildSettings.connectProfiler,deepProfiling=EditorUserBuildSettings.buildWithDeepProfilingSupport},true));
+  EditorApplication.Exit(r.summary.result==BuildResult.Succeeded?0:1);
+ }catch(Exception e){Debug.LogException(e);EditorApplication.Exit(1);}}
+ [Serializable]class Summary{public string result,unity,options;public int errors,warnings;public long bytes;public bool development,debugging,profiler,deepProfiling;}
+}
+#endif

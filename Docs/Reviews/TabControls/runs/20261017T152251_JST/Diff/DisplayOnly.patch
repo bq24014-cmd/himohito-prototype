@@ -1,0 +1,23 @@
+--- a/Assets/Scripts/StageOverlayControls.cs
++++ b/Assets/Scripts/StageOverlayControls.cs
+@@ -265 +265 @@
+-            GUILayout.BeginVertical(GUILayout.Width(width * 0.48f));
++            GUILayout.BeginVertical(GUILayout.Width(width * 0.45f - 2f));
+@@ -267,2 +267,2 @@
+-            DrawHelpRow("Space", "ジャンプ");
+-            DrawHelpRow("W / S", "次に使う長さを変更");
++            DrawHelpRow("Space", "ジャンプ（未接続時）");
++            DrawHelpRow("W / S", "次に使うヒモの長さを変更\n（未接続時）");
+@@ -271,2 +271,2 @@
+-            GUILayout.Space(width * 0.04f);
+-            GUILayout.BeginVertical(GUILayout.Width(width * 0.48f));
++            GUILayout.Space(width * 0.02f);
++            GUILayout.BeginVertical(GUILayout.Width(width * 0.53f - 2f));
+@@ -274,2 +274,2 @@
+-            DrawHelpRow("Q", "接続中のヒモを足場化");
+-            DrawHelpRow("F", "中央Hookを外してまとめる");
++            DrawHelpRow("Q", "2つのフックの間に橋を作る\n（接続中・ヒモを消費）");
++            DrawHelpRow("F", "2本の橋がつながるフックを狙い\n外して1本の橋にする（未接続時）");
+@@ -289 +289 @@
+-            GUILayout.Label(key, helpKeyStyle, GUILayout.Width(112f));
++            GUILayout.Label(key, helpKeyStyle, GUILayout.Width(84f));

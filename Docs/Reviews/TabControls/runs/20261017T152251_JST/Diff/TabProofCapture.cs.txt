@@ -1,0 +1,56 @@
+using System;using System.IO;using System.Collections;using System.Collections.Generic;using System.Reflection;using HimoHito;using UnityEngine;
+
+// Created only for an explicit diagnostic capture flag. Normal manual launch has no driver.
+[DefaultExecutionOrder(30000)]
+public sealed class TabProofCapture:MonoBehaviour
+{
+ public static string Arg(string name){var a=Environment.GetCommandLineArgs();for(int i=0;i<a.Length-1;i++)if(a[i]==name)return a[i+1];return null;}
+ [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]static void Init(){if(Arg("-tabCapture")==null)return;new GameObject("Explicit Tab evidence fixture").AddComponent<TabProofCapture>();}
+ public static readonly Dictionary<string,Label> Labels=new Dictionary<string,Label>();
+ public static Rect Footer;public static bool FooterSeen;public static string FooterText;
+ public static void Observe(string key,string text,GUIStyle style,bool isKey)
+ {
+  if(Arg("-tabCapture")==null||Event.current.type!=EventType.Repaint)return;
+  var rect=GUILayoutUtility.GetLastRect();float required=style.CalcHeight(new GUIContent(text),rect.width);float wide=style.CalcHeight(new GUIContent(text),10000);
+  Labels[key+(isKey?"_key":"_text")]=new Label{key=key,text=text,rect=rect,font=style.fontSize,requiredHeight=required,unwrappedHeight=wide,requiredWidth=style.CalcSize(new GUIContent(text)).x,
+   noExtraWrap=required<=wide+.5f,verticalFits=required<=rect.height+.5f,isKey=isKey};
+ }
+ public static void ObserveFooter(){if(Arg("-tabCapture")==null||Event.current.type!=EventType.Repaint)return;Footer=GUILayoutUtility.GetLastRect();FooterSeen=true;FooterText="Tab / Esc　閉じる";}
+ static void Call(object o,string n){o.GetType().GetMethod(n,BindingFlags.Instance|BindingFlags.Public|BindingFlags.NonPublic).Invoke(o,null);}
+ static void Set(object o,string n,object v){o.GetType().GetField(n,BindingFlags.Instance|BindingFlags.NonPublic).SetValue(o,v);}
+ int errors;string output;readonly List<State> states=new List<State>();StageOverlayControls overlay;Rigidbody2D body;PrototypeRunController run;
+ void OnLog(string s,string stack,LogType type){if(type==LogType.Error||type==LogType.Exception){errors++;File.AppendAllText(Path.Combine(output,"errors.txt"),s+"\n"+stack+"\n");}}
+ IEnumerator Start()
+ {
+  output=Arg("-tabCapture");Directory.CreateDirectory(output);Application.runInBackground=true;Application.targetFrameRate=30;Application.logMessageReceived+=OnLog;
+  yield return new WaitForSecondsRealtime(2);
+  overlay=FindFirstObjectByType<StageOverlayControls>();run=FindFirstObjectByType<PrototypeRunController>();body=run.GetComponent<Rigidbody2D>();
+  run.BeginGameFromTitle();float deadline=Time.realtimeSinceStartup+20;
+  while(MainStagePreview.IsActive&&Time.realtimeSinceStartup<deadline)yield return null;
+  if(MainStagePreview.IsActive)throw new Exception("Intro timeout");
+  yield return null;Snapshot("Playing");
+  Call(overlay,"OpenHelp");for(int i=0;i<6;i++)yield return null;Snapshot("HelpOpened_API");
+  yield return new WaitForEndOfFrame();
+  var tex=new Texture2D(Screen.width,Screen.height,TextureFormat.RGB24,false);tex.ReadPixels(new Rect(0,0,Screen.width,Screen.height),0,0);tex.Apply();File.WriteAllBytes(Path.Combine(output,"Tab.rgb"),tex.GetRawTextureData());Destroy(tex);
+  var labels=new List<Label>(Labels.Values);float width=Mathf.Min(Screen.width*.56f,980),height=Mathf.Min(Screen.height*.65f,700);
+  bool fits=FooterSeen&&Footer.xMin>=0&&Footer.yMin>=0&&Footer.xMax<=width+.5f&&Footer.yMax<=height+.5f;
+  bool overlaps=false;for(int i=0;i<labels.Count;i++){var a=labels[i];fits&=a.verticalFits&&a.noExtraWrap&&a.rect.xMin>=0&&a.rect.xMax<=width+.5f&&a.rect.yMax<=height+.5f;
+   if(a.isKey)fits&=a.requiredWidth<=a.rect.width+.5f;
+   for(int j=0;j<i;j++){var b=labels[j];if(Mathf.Min(a.rect.xMax,b.rect.xMax)-Mathf.Max(a.rect.xMin,b.rect.xMin)>.5f&&Mathf.Min(a.rect.yMax,b.rect.yMax)-Mathf.Max(a.rect.yMin,b.rect.yMin)>.5f)overlaps=true;}
+  }
+  File.WriteAllText(Path.Combine(output,"Layout.json"),JsonUtility.ToJson(new Layout{mode=TabProofSupport.Original?"Before":"After",width=Screen.width,height=Screen.height,labels=labels.ToArray(),footer=Footer,footerSeen=FooterSeen,area=new Rect((Screen.width-width)*.5f,Screen.height*.145f,width,height),allFit=fits,overlap=overlaps},true));
+  overlay.CloseHelp();yield return null;Snapshot("HelpClosed_API");float t=Time.time;yield return new WaitForSecondsRealtime(.15f);bool advanced=Time.time>t;
+  Set(overlay,"isPaused",true);Call(overlay,"ApplyPauseState");Snapshot("Paused_API");
+  Call(overlay,"OpenHelp");yield return null;Snapshot("HelpFromPause_API");
+  overlay.CloseHelp();yield return null;Snapshot("HelpClosed_StillPaused_API");
+  Set(overlay,"isPaused",false);Call(overlay,"ApplyPauseState");yield return null;Snapshot("PauseResumed_API");
+  bool lifecycle=states[0].timeScale==1&&!states[0].help&&states[1].help&&states[1].timeScale==0&&!states[2].help&&states[2].timeScale==1&&states[3].overlay&&states[3].timeScale==0&&states[4].help&&states[4].timeScale==0&&!states[5].help&&states[5].overlay&&states[5].timeScale==0&&!states[6].overlay&&states[6].timeScale==1&&advanced;
+  File.WriteAllText(Path.Combine(output,"Lifecycle.json"),JsonUtility.ToJson(new Lifecycle{states=states.ToArray(),pass=lifecycle,timeAdvancedAfterClose=advanced,errors=errors,method="API/Reflection only. Tab/Esc physical keys, mouse clicks and Human understanding not verified.",development=Debug.isDebugBuild},true));
+  Application.Quit(errors==0&&fits&&!overlaps&&lifecycle?0:2);
+ }
+ void Snapshot(string label){states.Add(new State{label=label,help=overlay.IsHelpVisible,overlay=overlay.IsOverlayVisible,timeScale=Time.timeScale,bodySimulated=body.simulated,position=body.position,outcome=run.Outcome.ToString()});}
+ [Serializable]public class Label{public string key,text;public Rect rect;public int font;public float requiredHeight,unwrappedHeight,requiredWidth;public bool noExtraWrap,verticalFits,isKey;}
+ [Serializable]class Layout{public string mode;public int width,height;public Label[]labels;public Rect footer,area;public bool footerSeen,allFit,overlap;}
+ [Serializable]class State{public string label,outcome;public bool help,overlay,bodySimulated;public float timeScale;public Vector2 position;}
+ [Serializable]class Lifecycle{public State[]states;public bool pass,timeAdvancedAfterClose,development;public int errors;public string method;}
+}
