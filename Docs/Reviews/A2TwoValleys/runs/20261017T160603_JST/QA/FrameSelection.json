@@ -1,0 +1,278 @@
+{
+  "chosen": {
+    "GroundAttached": 41,
+    "PumpRight": 149,
+    "PumpLeft": 121,
+    "Ascent": 90,
+    "ActiveApex": 103,
+    "RightApex": 266,
+    "LeftApex": 310,
+    "Coast": 252,
+    "Brake": 243,
+    "Release": 155,
+    "Landing": 176,
+    "Walk": 188,
+    "Retry": 399,
+    "Pause": 322
+  },
+  "main_duration_seconds": 6.466666666666667,
+  "phase_timeline": [
+    {
+      "video_frame": 0,
+      "video_seconds": 0.0,
+      "body_phase": "idle",
+      "input": 0.0,
+      "speed": 0.0,
+      "game_phase": "standing"
+    },
+    {
+      "video_frame": 20,
+      "video_seconds": 0.6666666666666666,
+      "body_phase": "ground_brace",
+      "input": 0.0,
+      "speed": 0.0,
+      "game_phase": "ground_attach_slack"
+    },
+    {
+      "video_frame": 49,
+      "video_seconds": 1.6333333333333333,
+      "body_phase": "ground_brace",
+      "input": 1.0,
+      "speed": 0.0,
+      "game_phase": "input_acceleration"
+    },
+    {
+      "video_frame": 58,
+      "video_seconds": 1.9333333333333333,
+      "body_phase": "original_attach",
+      "input": 1.0,
+      "speed": 6.584738254547119,
+      "game_phase": "input_acceleration"
+    },
+    {
+      "video_frame": 67,
+      "video_seconds": 2.2333333333333334,
+      "body_phase": "active_bottom_drive",
+      "input": 1.0,
+      "speed": 11.465986251831055,
+      "game_phase": "input_acceleration"
+    },
+    {
+      "video_frame": 77,
+      "video_seconds": 2.566666666666667,
+      "body_phase": "active_ascent_fold",
+      "input": 1.0,
+      "speed": 10.081168174743652,
+      "game_phase": "input_acceleration"
+    },
+    {
+      "video_frame": 100,
+      "video_seconds": 3.3333333333333335,
+      "body_phase": "active_apex_prepare",
+      "input": 1.0,
+      "speed": 1.5262761116027832,
+      "game_phase": "input_acceleration"
+    },
+    {
+      "video_frame": 103,
+      "video_seconds": 3.433333333333333,
+      "body_phase": "active_apex_prepare",
+      "input": -1.0,
+      "speed": 0.4234927296638489,
+      "game_phase": "right_turn"
+    },
+    {
+      "video_frame": 105,
+      "video_seconds": 3.5,
+      "body_phase": "active_downstroke",
+      "input": -1.0,
+      "speed": 2.996509552001953,
+      "game_phase": "right_turn"
+    },
+    {
+      "video_frame": 122,
+      "video_seconds": 4.066666666666666,
+      "body_phase": "active_bottom_drive",
+      "input": -1.0,
+      "speed": 16.155183792114258,
+      "game_phase": "right_turn"
+    },
+    {
+      "video_frame": 131,
+      "video_seconds": 4.366666666666666,
+      "body_phase": "active_ascent_fold",
+      "input": -1.0,
+      "speed": 15.121041297912598,
+      "game_phase": "right_turn"
+    },
+    {
+      "video_frame": 132,
+      "video_seconds": 4.4,
+      "body_phase": "brake_gather",
+      "input": 1.0,
+      "speed": 2.8954410552978516,
+      "game_phase": "left_turn"
+    },
+    {
+      "video_frame": 133,
+      "video_seconds": 4.433333333333334,
+      "body_phase": "active_apex_prepare",
+      "input": 1.0,
+      "speed": 2.2357168197631836,
+      "game_phase": "left_turn"
+    },
+    {
+      "video_frame": 134,
+      "video_seconds": 4.466666666666667,
+      "body_phase": "active_downstroke",
+      "input": 1.0,
+      "speed": 2.7394332885742188,
+      "game_phase": "left_turn"
+    },
+    {
+      "video_frame": 137,
+      "video_seconds": 4.566666666666666,
+      "body_phase": "active_bottom_drive",
+      "input": 1.0,
+      "speed": 8.133938789367676,
+      "game_phase": "left_turn"
+    },
+    {
+      "video_frame": 150,
+      "video_seconds": 5.0,
+      "body_phase": "active_ascent_fold",
+      "input": 1.0,
+      "speed": 13.831494331359863,
+      "game_phase": "left_turn"
+    },
+    {
+      "video_frame": 152,
+      "video_seconds": 5.066666666666666,
+      "body_phase": "release_handoff",
+      "input": 1.0,
+      "speed": 13.71322250366211,
+      "game_phase": "release"
+    },
+    {
+      "video_frame": 160,
+      "video_seconds": 5.333333333333333,
+      "body_phase": "idle",
+      "input": 1.0,
+      "speed": 11.226691246032715,
+      "game_phase": "release"
+    },
+    {
+      "video_frame": 170,
+      "video_seconds": 5.666666666666667,
+      "body_phase": "idle",
+      "input": 0.0,
+      "speed": 5.990309238433838,
+      "game_phase": "landing"
+    },
+    {
+      "video_frame": 183,
+      "video_seconds": 6.1,
+      "body_phase": "idle",
+      "input": -1.0,
+      "speed": 0.0,
+      "game_phase": "resume_walk"
+    },
+    {
+      "video_frame": 190,
+      "video_seconds": 6.333333333333333,
+      "body_phase": "idle",
+      "input": 1.0,
+      "speed": 6.390128135681152,
+      "game_phase": "resume_walk"
+    },
+    {
+      "video_frame": 194,
+      "video_seconds": 6.466666666666667,
+      "body_phase": "idle",
+      "input": 0.0,
+      "speed": 0.0,
+      "game_phase": "R_restore"
+    },
+    {
+      "video_frame": 224,
+      "video_seconds": 7.466666666666667,
+      "body_phase": "ground_brace",
+      "input": 1.0,
+      "speed": 0.0,
+      "game_phase": "free_arc_attach"
+    },
+    {
+      "video_frame": 233,
+      "video_seconds": 7.766666666666667,
+      "body_phase": "original_attach",
+      "input": 1.0,
+      "speed": 6.584738254547119,
+      "game_phase": "free_arc_attach"
+    },
+    {
+      "video_frame": 242,
+      "video_seconds": 8.066666666666666,
+      "body_phase": "active_bottom_drive",
+      "input": 1.0,
+      "speed": 11.465986251831055,
+      "game_phase": "free_arc_attach"
+    },
+    {
+      "video_frame": 243,
+      "video_seconds": 8.1,
+      "body_phase": "brake_gather",
+      "input": -1.0,
+      "speed": 11.770596504211426,
+      "game_phase": "input_braking"
+    },
+    {
+      "video_frame": 245,
+      "video_seconds": 8.166666666666666,
+      "body_phase": "coast",
+      "input": 0.0,
+      "speed": 4.795088291168213,
+      "game_phase": "free_coast"
+    },
+    {
+      "video_frame": 260,
+      "video_seconds": 8.666666666666666,
+      "body_phase": "coast_apex",
+      "input": 0.0,
+      "speed": 1.764182686805725,
+      "game_phase": "free_coast"
+    },
+    {
+      "video_frame": 272,
+      "video_seconds": 9.066666666666666,
+      "body_phase": "coast",
+      "input": 0.0,
+      "speed": 2.010880470275879,
+      "game_phase": "free_right_apex"
+    },
+    {
+      "video_frame": 304,
+      "video_seconds": 10.133333333333333,
+      "body_phase": "coast_apex",
+      "input": 0.0,
+      "speed": 1.7893582582473755,
+      "game_phase": "free_right_apex"
+    },
+    {
+      "video_frame": 317,
+      "video_seconds": 10.566666666666666,
+      "body_phase": "coast",
+      "input": 0.0,
+      "speed": 1.9872002601623535,
+      "game_phase": "free_left_apex"
+    },
+    {
+      "video_frame": 334,
+      "video_seconds": 11.133333333333333,
+      "body_phase": "idle",
+      "input": 0.0,
+      "speed": 0.0,
+      "game_phase": "R_restore_2"
+    }
+  ],
+  "method": "Actual Unity frames; JPEG display previews, outside-image labels and explicitly marked supplemental crops. No generated/painted game pixels."
+}

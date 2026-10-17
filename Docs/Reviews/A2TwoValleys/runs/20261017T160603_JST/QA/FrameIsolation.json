@@ -1,0 +1,75 @@
+{
+  "method": "Measurement only on original JPGs, generous character ROI excluded to allow JPEG block boundaries. Published images not painted.",
+  "samples": [
+    {
+      "phase": "GroundAttached",
+      "frame": 41,
+      "max_channel_difference_outside_character_128px_roi": 0
+    },
+    {
+      "phase": "PumpRight",
+      "frame": 149,
+      "max_channel_difference_outside_character_128px_roi": 0
+    },
+    {
+      "phase": "PumpLeft",
+      "frame": 121,
+      "max_channel_difference_outside_character_128px_roi": 0
+    },
+    {
+      "phase": "Ascent",
+      "frame": 90,
+      "max_channel_difference_outside_character_128px_roi": 0
+    },
+    {
+      "phase": "ActiveApex",
+      "frame": 103,
+      "max_channel_difference_outside_character_128px_roi": 0
+    },
+    {
+      "phase": "RightApex",
+      "frame": 266,
+      "max_channel_difference_outside_character_128px_roi": 0
+    },
+    {
+      "phase": "LeftApex",
+      "frame": 310,
+      "max_channel_difference_outside_character_128px_roi": 0
+    },
+    {
+      "phase": "Coast",
+      "frame": 252,
+      "max_channel_difference_outside_character_128px_roi": 0
+    },
+    {
+      "phase": "Brake",
+      "frame": 243,
+      "max_channel_difference_outside_character_128px_roi": 0
+    },
+    {
+      "phase": "Release",
+      "frame": 155,
+      "max_channel_difference_outside_character_128px_roi": 0
+    },
+    {
+      "phase": "Landing",
+      "frame": 176,
+      "max_channel_difference_outside_character_128px_roi": 0
+    },
+    {
+      "phase": "Walk",
+      "frame": 188,
+      "max_channel_difference_outside_character_128px_roi": 0
+    },
+    {
+      "phase": "Retry",
+      "frame": 399,
+      "max_channel_difference_outside_character_128px_roi": 0
+    },
+    {
+      "phase": "Pause",
+      "frame": 322,
+      "max_channel_difference_outside_character_128px_roi": 0
+    }
+  ]
+}

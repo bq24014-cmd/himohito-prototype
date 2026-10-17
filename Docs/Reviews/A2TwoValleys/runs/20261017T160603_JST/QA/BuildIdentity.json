@@ -1,0 +1,43 @@
+{
+  "reference_review_commit": "3383ca9c6607ba81243d8947b01379c8724d9d31",
+  "reference_build_identity": {
+    "final_manual_and_all_shared_media_build": "Build_r3",
+    "exe_relative": "Build_r3/IntegratedArmsProof.exe",
+    "exe_sha256": "A3D4FA240C51333301EFCC16714FF60722F00E803AFE1FB6750EC963CC0F1707",
+    "assembly_sha256": "C0657C3690078FDBA8E8F0FD5190BE2E84AB1BE0234BE546C264FC64CAB5888A",
+    "summary": {
+      "result": "Succeeded",
+      "errors": 0,
+      "warnings": 0,
+      "bytes": 535610206
+    },
+    "identity_note": "The Unity executable is a generic stub; Assembly-CSharp SHA identifies this implementation more specifically."
+  },
+  "reference_recorded_diff_files_match_local_source": [
+    "Assets/PlayerPresentation/ActiveSwingArms.cs",
+    "Assets/PlayerPresentation/ConnectionGestureCapture.cs",
+    "Assets/PlayerPresentation/ManualPresentationSession.cs",
+    "Assets/PlayerPresentation/PlayerMotionPresentation.cs",
+    "Assets/Resources/PlayerPresentationYarn.shader",
+    "Assets/PlayerPresentation/IntegratedWoolArms.cs",
+    "Assets/PlayerPresentation/IntegratedWoolArms.cs.meta"
+  ],
+  "reference_source_copy_count": 538,
+  "final_build": "Build_r2/BodyPumpProof.exe",
+  "final_exe_sha256": "837986201D89BE25426B8415CB3BC945F077E5B13F4722D6763D04EBD38C5472",
+  "final_assembly_sha256": "4B0AD096D603F4021ED99BB5B12EA6F643CE995E2428A3D6EF2697E895E3F60B",
+  "summary": {
+    "result": "Succeeded",
+    "errors": 0,
+    "warnings": 0,
+    "bytes": 479174889
+  },
+  "unity_version": "6000.3.21f1",
+  "build_options": "BuildOptions.None",
+  "development": false,
+  "script_debugging": false,
+  "autoconnect_profiler": false,
+  "deep_profiling": false,
+  "boot_config": "gfx-enable-gfx-jobs=1\ngfx-threading-mode=6\nwait-for-native-debugger=0\nhdr-display-enabled=0\ngc-max-time-slice=3\nbuild-guid=88463784991f44b2b9da9d04f5948a3c\n",
+  "note": "Same final build for baseline candidate4 and new candidate5 videos, traces and manual launches. Exe is a generic stub; assembly SHA is a more specific implementation identity."
+}

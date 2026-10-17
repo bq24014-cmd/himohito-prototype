@@ -1,0 +1,97 @@
+{
+  "videos": {
+    "Baseline_Normal_30fps_silent.mp4": {
+      "bytes": 892188,
+      "sha256": "C631B01413FC9CB0B633F91C6EC925D559716E8127E55347A7C9DECBCE90656B",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_type": "video",
+            "width": 1280,
+            "height": 720,
+            "r_frame_rate": "30/1",
+            "duration": "6.466667",
+            "nb_frames": "194"
+          }
+        ]
+      }
+    },
+    "BodyPump_Normal_30fps_silent.mp4": {
+      "bytes": 894015,
+      "sha256": "892A8C8564E111592B5FFD643235FF7BDB7AEB25647CD368A6FD90D2F9A4FD37",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_type": "video",
+            "width": 1280,
+            "height": 720,
+            "r_frame_rate": "30/1",
+            "duration": "6.466667",
+            "nb_frames": "194"
+          }
+        ]
+      }
+    },
+    "CoastApex_Pause_Retry_30fps_silent.mp4": {
+      "bytes": 1436113,
+      "sha256": "DABFB5701EDCB4E8ABE7CA7EDE863CE0C51CA56F7BB0A3560FC68112AEEBF122",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_type": "video",
+            "width": 2560,
+            "height": 764,
+            "r_frame_rate": "30/1",
+            "duration": "6.366667",
+            "nb_frames": "191"
+          }
+        ]
+      }
+    },
+    "Input_CoastDriveBrake_30fps_silent.mp4": {
+      "bytes": 827265,
+      "sha256": "220575FFAEAC4E94C50D8BA3E494E81B26B85D690A0DCD1E83E11D2E18933D2E",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_type": "video",
+            "width": 2560,
+            "height": 764,
+            "r_frame_rate": "30/1",
+            "duration": "2.366667",
+            "nb_frames": "71"
+          }
+        ]
+      }
+    },
+    "Main_BeforeAfter_30fps_silent.mp4": {
+      "bytes": 1771612,
+      "sha256": "7B82EC997F51ED0129DFD2382F846C0FF9623D2D4CADDE644FC6B8BB5AFF832C",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_type": "video",
+            "width": 2560,
+            "height": 764,
+            "r_frame_rate": "30/1",
+            "duration": "6.466667",
+            "nb_frames": "194"
+          }
+        ]
+      }
+    }
+  },
+  "images": 75,
+  "largest_image_bytes": 422373,
+  "method": "Actual Unity frames, display JPEGs, labels outside game, marked supplementary crops. No generative art."
+}

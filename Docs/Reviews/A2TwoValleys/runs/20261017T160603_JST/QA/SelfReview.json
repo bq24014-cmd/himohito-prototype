@@ -1,0 +1,5 @@
+{
+  "r1": "Root/physics comparison0 and gameplay checks passed. Normal-camera review found hip/knee rotations cancelling into a dangling silhouette. Internal materials retained, not final.",
+  "r2": "Same candidate, downstroke extension vs ascent folding redistributed. Reference and candidate videos/QA/manual launch all use r2. No art/physics changes.",
+  "remaining_weakness": "Small on-screen shoulder/elbow changes; far arm often overlaps torso. Human input feel and adoption unconfirmed."
+}

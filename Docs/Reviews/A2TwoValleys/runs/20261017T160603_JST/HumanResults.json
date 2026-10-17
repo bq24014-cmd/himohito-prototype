@@ -1,0 +1,15 @@
+{
+  "baseline_human_feedback": {
+    "hook_wrap": "改善され、良い印象",
+    "swing": "ただヒモに引っ張られている",
+    "old_line_arms": "不自然・不採用",
+    "knitted_arm_revision": "提出済み・正式採用判断は未承認"
+  },
+  "this_candidate_human_participants": 0,
+  "human_adoption": "未承認",
+  "production_integrated": false,
+  "a2_r1_recommendation": "不採用推奨を維持",
+  "technical": "PASS in recorded scope",
+  "visual_self_review": "入力中の伸び／上昇の畳み／惰性への収まりが出た。通常画角の肩・肘はまだ小さく、Human判断待ち。",
+  "fun_and_feel": "未確認"
+}

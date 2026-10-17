@@ -1,0 +1,13 @@
+{
+  "continuing_authorization": true,
+  "source": "Human direct instructions; target-game capture, existing keys/mouse, launching/stopping/recording/logs permitted.",
+  "permission_reasked": false,
+  "tool": "computer-use @oai/sky",
+  "availability_attempts": 1,
+  "error": "computer-use request timed out: list_apps",
+  "retries": 0,
+  "os_screenshot_acquired": false,
+  "os_key_calls": 0,
+  "cause": "不明。許可不足やFirewallとは断定しない。",
+  "automatic_api_capture_is_not_os_or_human": true
+}

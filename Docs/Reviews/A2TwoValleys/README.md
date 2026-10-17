@@ -2,7 +2,11 @@
 
 固定branch：`review/a2-two-valleys`。[LATEST.json](LATEST.json)の最新報告・画像・QAを同じcommitから読んでください。ZIPの再添付は不要です。
 
-## 最新：固定レビュー起動環境・追加の腕改修なし
+## 最新：編み腕を維持した身体加速・惰性の振り子演出1案
+
+[20261017T160603_JST の報告](runs/20261017T160603_JST/Report.md)／[通常速度比較](runs/20261017T160603_JST/Videos/Main_BeforeAfter_30fps_silent.mp4)／[入力・惰性・制動比較](runs/20261017T160603_JST/Videos/Input_CoastDriveBrake_30fps_silent.mp4)／[連続コマ](runs/20261017T160603_JST/Frames/)／[新しい手動起動](runs/20261017T160603_JST/Launch.md)。基準は編み腕版3383ca9。入力・接線速度・振りの位相を共通の表示状態へまとめ、胴・腰・膝・肩を連動。415＋71フレームの物理・Camera・残量差0、非Development手動版35秒×2で自動driver0。OS操作は今回1回の一覧取得タイムアウトで未確認。通常画角の肩・肘はまだ弱いと自己評価し、Human採否・楽しさは未確認。Production統合なし。
+
+## 前回：固定レビュー起動環境・追加の腕改修なし
 
 [20261017T134411_JST の報告](runs/20261017T134411_JST/Report.md)／[固定ランチャー・復元方法](runs/20261017T134411_JST/LaunchAndUndo.md)／[起動・待受の観測](runs/20261017T134411_JST/QA/LaunchSummary.json)。同じ候補4を固定名HimoHitoReview.exeへ非Development包装し、候補3も同じEXEの別ランチャーで比較。3回の35秒待機で観測したTCP／UDP端点0、開発接続ログなし、既存Firewall規則は不変。許可追加・セキュリティ設定変更なし。Windows通知の非再表示はOS画面取得が使えず本人確認待ち。腕は一体感改善とのHuman評価、現候補を保持し正式採用・Production統合は保留。
 

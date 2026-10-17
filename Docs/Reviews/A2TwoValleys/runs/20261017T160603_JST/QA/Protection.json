@@ -1,0 +1,74 @@
+{
+  "production_head_unchanged": true,
+  "production_branch_unchanged": true,
+  "production_origin_main_unchanged": true,
+  "production_status_unchanged": true,
+  "production_staging_unchanged": true,
+  "production_protected_files": {
+    "Assets/Scripts/StageOverlayControls.cs": true,
+    "Assets/Scripts/PlayerMover.cs": true,
+    "Assets/Scripts/RopeController.cs": true,
+    "Assets/Scripts/RopePlatformBuilder.cs": true,
+    "Assets/Scripts/RopePlatformAnchor.cs": true,
+    "Assets/Scripts/RopeResource.cs": true,
+    "Assets/Scripts/PrototypeRunController.cs": true,
+    "Assets/Scripts/MainStageRespawnOnFall.cs": true,
+    "Assets/Scripts/TutorialSectionGuide.cs": true,
+    "Assets/Scripts/PrototypeHud.cs": true,
+    "Assets/Scenes/MainStage.unity": true,
+    "Assets/Scenes/Tutorial.unity": true,
+    "ProjectSettings/InputManager.asset": true,
+    "ProjectSettings/ProjectVersion.txt": true,
+    "README.md": true,
+    "Docs/LEARNING_LOG.md": true,
+    "Docs/QA/MainStageCleanReproduction_20261001/Evidence/DeterministicSceneSync/ExeA.log": true,
+    "Docs/QA/MainStageCleanReproduction_20261001/Evidence/DeterministicSceneSync/ExeB.log": true,
+    "Docs/QA/FullGameRegression_20260930/Evidence/StaticScreens/Help_1600x900.png": true
+  },
+  "baseline_source_files_unchanged": true,
+  "baseline_source_count": 538,
+  "existing_reviews_unchanged": {
+    "TutorialQPromptProof_20261017/UnityProof/Assets/Scripts/PrototypeHud.cs": true,
+    "TutorialQPromptProof_20261017/Build_After_r3/TutorialQPrompt.exe": true,
+    "TutorialQPromptProof_20261017/Build_After_r3/TutorialQPrompt_Data/Managed/Assembly-CSharp.dll": true,
+    "TutorialQPromptProof_20261017/START_QPrompt.cmd": true,
+    "PlayerIntegratedArmsProof_20261017/Build_r3/IntegratedArmsProof_Data/Managed/Assembly-CSharp.dll": true,
+    "HimoHitoReviewRuntime/CURRENT.json": true,
+    "HimoHitoReviewRuntime/START_Review.cmd": true,
+    "HimoHitoReviewRuntime/Windows/HimoHitoReview.exe": true,
+    "HimoHitoReviewRuntime/Windows/HimoHitoReview_Data/Managed/Assembly-CSharp.dll": true,
+    "TabControlsProof_20261017/UnityProof/Assets/Scripts/StageOverlayControls.cs": true,
+    "TabControlsProof_20261017/Build_r2/TabControlsProof_Data/Managed/Assembly-CSharp.dll": true,
+    "TabControlsProof_20261017/START_TabProof.cmd": true
+  },
+  "baseline_build_unchanged": {
+    "Build_r3/IntegratedArmsProof.exe": true,
+    "Build_r3/IntegratedArmsProof_Data/Managed/Assembly-CSharp.dll": true
+  },
+  "locked_five": {
+    "Assets/Scripts/RopeResource.cs": true,
+    "Assets/Scripts/RopeController.cs": true,
+    "Assets/Scripts/PlayerMover.cs": true,
+    "Assets/Scripts/RopePlatformBuilder.cs": true,
+    "Assets/Scripts/MainStageRespawnOnFall.cs": true
+  },
+  "hook_sole_arm_mesh_shader_unchanged": {
+    "Assets/Scripts/HookYarnKnotVisual.cs": true,
+    "Assets/Scripts/RopeBodyVisual.cs": true,
+    "Assets/PlayerPresentation/PlayerSoleRegistration.cs": true,
+    "Assets/PlayerPresentation/IntegratedWoolArms.cs": true,
+    "Assets/Resources/PlayerPresentationYarn.shader": true
+  },
+  "scene_input_physics_camera_png_unchanged": true,
+  "changed_in_isolation": [
+    "Assets/Editor/A2ProofEditor.cs",
+    "Assets/PlayerPresentation/ActiveSwingArms.cs",
+    "Assets/PlayerPresentation/ConnectionGestureCapture.cs",
+    "Assets/PlayerPresentation/ManualPresentationSession.cs",
+    "Assets/PlayerPresentation/PlayerMotionPresentation.cs"
+  ],
+  "added_in_isolation": [
+    "Assets/PlayerPresentation/BodyPumpPresentation.cs",
+    "Assets/PlayerPresentation/BodyPumpPresentation.cs.meta"
+  ]
+}

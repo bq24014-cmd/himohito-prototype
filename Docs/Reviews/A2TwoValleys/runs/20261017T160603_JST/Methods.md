@@ -1,0 +1,15 @@
+# 比較条件・変更境界
+
+基準はreview commit `3383ca9c6607ba81243d8947b01379c8724d9d31`のローカル`PlayerIntegratedArmsProof_20261017/UnityProof`と最終`Build_r3`。GitHubのBuildIdentityとローカルAssembly-CSharp SHAが一致することを確認し、Assets／Packages／ProjectSettings538ファイルだけを新規コピーした。Libraryや旧Buildは複製しなかった。
+
+今回の最終Build r2には基準candidate4と新candidate5の両方の表示経路がある。基準側は元のSwingPresentationState／ActiveSwingArmsの判断を通り、新候補だけBodyPumpPresentationの共通姿勢状態を通る。編み腕は両方とも同じIntegratedWoolArms。旧糸腕candidate3は比較に使用していない。
+
+自動撮影は`-gestureCapture 1`でのみ起動する。既存のA2InputDriverが元の入力フィールドへ値を渡し、接続／解除／橋／Rは元APIを呼ぶ。地形・Hook・残量・物理は既存A2 r1。準備の小振幅も既存A/Dの加速・制動で作り、撮影のために速度や座標を直接設定していない（既存fixtureの入口セットアップは起動時に存在する）。ポーズ試験はTime.timeScaleによるAPI停止であり実Escではない。
+
+Time.captureFramerate=30は自動撮影時だけ。手動起動は0で、入力・撮影driverを作らない。各手動版の35秒待機記録を別保存。自動入力の映像をOS操作／Human試遊として扱わない。比較動画はゲーム内時間に等速で無音。音の品質や実機FPSは評価していない。
+
+主比較は立ち→接続→加速→解除→着地→歩行→R、小振幅の左右頂点→ポーズ再開→R→橋→R。補助比較は短い惰性→加速入力→逆入力→惰性。全区間通しや大量の新規QAはしない。個々の状態、入力、速度、位相、姿勢、Cameraは共有TraceとFrameSelectionを参照。
+
+表示の差分は新しい純粋状態クラス、既存表示クラスへの分岐、比較用観測項目。Editor builderを非Developmentへ、手動観測の表示名を新候補へ変更した。Scene、既存素材、色調shader、巻き付き、足裏補正、既存SwingPresentationStateは不変。ゲーム本体ファイルをGitへ追加せず、レビュー用CodeDiff.jsonだけを共有する。
+
+全身cropは3倍補助と明記。通常画角の元フレームも共有し、画像にゲームオブジェクトの描き足しはない。JPEG差分の範囲測定は主人公周辺128pxだけを除外した計測で、公開画像自体を塗りつぶしてはいない。全画素を対象とする形式証明ではない。

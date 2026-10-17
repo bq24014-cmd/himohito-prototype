@@ -1,0 +1,64 @@
+Build_r2.log
+Initialize engine version: 6000.3.21f1 (c02631ffc030)
+Build Finished, Result: Success.
+
+Build_r2_candidate4/Player.log
+Initialize engine version: 6000.3.21f1 (c02631ffc030)
+MANUAL_PRESENTATION 00_Ready candidate4
+CONNECTION_REVIEW Ground attach existing length6 True
+MANUAL_PRESENTATION 01_Idle2s candidate4
+CONNECTION_REVIEW Release momentum unchanged True
+CONNECTION_REVIEW Representative middle-bank landing True
+CONNECTION_REVIEW First R entry24_6_0 True
+CONNECTION_REVIEW Reattach length6 True
+CONNECTION_REVIEW Free arc through normal A_D braking True
+CONNECTION_REVIEW Two free angular turnarounds True
+MANUAL_PRESENTATION 02_Idle15s candidate4
+CONNECTION_REVIEW Pause keeps root True
+CONNECTION_REVIEW Second R entry24_6_0 True
+CONNECTION_REVIEW Original bridge and resource True
+CONNECTION_REVIEW Bridge R entry24_6_0 True
+CONNECTION_REVIEW No gameplay errors True
+
+Build_r2_candidate5/Player.log
+Initialize engine version: 6000.3.21f1 (c02631ffc030)
+MANUAL_PRESENTATION 00_Ready candidate5
+CONNECTION_REVIEW Ground attach existing length6 True
+MANUAL_PRESENTATION 01_Idle2s candidate5
+CONNECTION_REVIEW Release momentum unchanged True
+CONNECTION_REVIEW Representative middle-bank landing True
+CONNECTION_REVIEW First R entry24_6_0 True
+CONNECTION_REVIEW Reattach length6 True
+CONNECTION_REVIEW Free arc through normal A_D braking True
+CONNECTION_REVIEW Two free angular turnarounds True
+MANUAL_PRESENTATION 02_Idle15s candidate5
+CONNECTION_REVIEW Pause keeps root True
+CONNECTION_REVIEW Second R entry24_6_0 True
+CONNECTION_REVIEW Original bridge and resource True
+CONNECTION_REVIEW Bridge R entry24_6_0 True
+CONNECTION_REVIEW No gameplay errors True
+
+Supplement_candidate5/Player.log
+Initialize engine version: 6000.3.21f1 (c02631ffc030)
+MANUAL_PRESENTATION 00_Ready candidate5
+CONNECTION_REVIEW Supplement starts with original grounded attachment True
+CONNECTION_REVIEW Supplement small arc via original A_D True
+MANUAL_PRESENTATION 01_Idle2s candidate5
+CONNECTION_REVIEW Supplement stays airborne True
+CONNECTION_REVIEW Supplement contains measurable braking True
+CONNECTION_REVIEW Supplement no resource or layout change True
+CONNECTION_REVIEW Supplement no gameplay errors True
+
+Manual_default_new/Player.log
+Initialize engine version: 6000.3.21f1 (c02631ffc030)
+MANUAL_PRESENTATION 00_Ready candidate5
+MANUAL_PRESENTATION 01_Idle2s candidate5
+MANUAL_PRESENTATION 02_Idle15s candidate5
+MANUAL_PRESENTATION 03_Idle35s candidate5
+
+Manual_candidate4/Player.log
+Initialize engine version: 6000.3.21f1 (c02631ffc030)
+MANUAL_PRESENTATION 00_Ready candidate4
+MANUAL_PRESENTATION 01_Idle2s candidate4
+MANUAL_PRESENTATION 02_Idle15s candidate4
+MANUAL_PRESENTATION 03_Idle35s candidate4
