@@ -1,0 +1,15 @@
+{
+  "exe": "Windows/HimoHitoReview.exe",
+  "exe_sha256": "837986201D89BE25426B8415CB3BC945F077E5B13F4722D6763D04EBD38C5472",
+  "assembly_sha256": "BE3A552DAE75D00F66D8D6A2E7C6FEA7434556A6D0287D2BCE2637D43E8F102C",
+  "unity": "6000.3.21f1",
+  "summary": {
+    "result": "Succeeded",
+    "buildOptions": "None",
+    "unity": "6000.3.21f1",
+    "errors": 0,
+    "warnings": 0,
+    "bytes": 479170105
+  },
+  "unity_siblings_present": true
+}

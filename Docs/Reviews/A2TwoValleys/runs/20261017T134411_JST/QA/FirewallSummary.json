@@ -1,0 +1,17 @@
+{
+  "original_public_allow_rules": 2,
+  "original_block_rules": 0,
+  "fixed_before_rules": 0,
+  "fixed_after_rules": 0,
+  "tracked_rules_unchanged": true,
+  "firewall_profiles_unchanged": true,
+  "active_network_categories_before": [
+    "Public"
+  ],
+  "active_network_categories_after": [
+    "Public"
+  ],
+  "settings_changed_by_codex": false,
+  "persistent_permission_created": false,
+  "decision": "No new firewall exception requested: manual-only non-Development build had no observed TCP/UDP endpoint. Actual Windows prompt non-recurrence remains visually unconfirmed."
+}

@@ -1,0 +1,20 @@
+{
+  "human_continuing_permission": [
+    "対象ゲームの画面取得",
+    "既存キー・マウス",
+    "起動終了",
+    "録画",
+    "対象EXE限定の必要通信許可"
+  ],
+  "permission_is_not_tool_availability": true,
+  "computer_use_helper_error": "computer-use request timed out: list_apps",
+  "attempts": 3,
+  "recovery": "waited more than 2 seconds for retry; reset and initialized session before final attempt",
+  "os_screenshot_acquired": false,
+  "os_key_calls": 0,
+  "windows_permission_dialog_operated": false,
+  "security_settings_proxy_change": "computer-use skill prohibits changing Windows security settings or operating security dialogs; no alternate tool was used to bypass this boundary",
+  "firewall_changed": false,
+  "same_permission_requested_again": false,
+  "prompt_non_recurrence_visually_verified": false
+}

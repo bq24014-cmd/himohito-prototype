@@ -1,0 +1,14 @@
+{
+  "shared": "review documents, sanitized QA and editor-packaging diff only",
+  "not_shared": [
+    "Build binaries",
+    "Library",
+    "BGM",
+    "raw firewall rule names",
+    "personal absolute paths",
+    "local IP addresses",
+    "Windows permission photograph"
+  ],
+  "old_review_runs_unchanged": true,
+  "production_integrated": false
+}

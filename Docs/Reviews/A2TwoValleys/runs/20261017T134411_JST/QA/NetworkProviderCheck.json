@@ -1,0 +1,7 @@
+{
+  "TcpProviderSucceeded": true,
+  "UdpProviderSucceeded": true,
+  "SystemTcpRows": 219,
+  "SystemUdpRows": 31,
+  "Note": "Global provider access succeeds; per-process empty endpoint observations were not inferred from an unavailable networking provider."
+}

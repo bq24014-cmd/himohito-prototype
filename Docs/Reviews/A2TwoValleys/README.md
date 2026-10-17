@@ -2,7 +2,11 @@
 
 固定branch：`review/a2-two-valleys`。[LATEST.json](LATEST.json)の最新報告・画像・QAを同じcommitから読んでください。ZIPの再添付は不要です。
 
-## 最新：腕だけの改訂・編み目を胴へつなぐ1案
+## 最新：固定レビュー起動環境・追加の腕改修なし
+
+[20261017T134411_JST の報告](runs/20261017T134411_JST/Report.md)／[固定ランチャー・復元方法](runs/20261017T134411_JST/LaunchAndUndo.md)／[起動・待受の観測](runs/20261017T134411_JST/QA/LaunchSummary.json)。同じ候補4を固定名HimoHitoReview.exeへ非Development包装し、候補3も同じEXEの別ランチャーで比較。3回の35秒待機で観測したTCP／UDP端点0、開発接続ログなし、既存Firewall規則は不変。許可追加・セキュリティ設定変更なし。Windows通知の非再表示はOS画面取得が使えず本人確認待ち。腕は一体感改善とのHuman評価、現候補を保持し正式採用・Production統合は保留。
+
+## 前回：腕だけの改訂・編み目を胴へつなぐ1案
 
 [20261017T125936_JST の報告](runs/20261017T125936_JST/Report.md)／[通常速度比較](runs/20261017T125936_JST/Videos/Main_SideBySide_30fps_silent.mp4)／[修正版単体動画](runs/20261017T125936_JST/Videos/IntegratedArms_Main_30fps_silent.mp4)／[通常画角と連続コマ](runs/20261017T125936_JST/Frames/)／[手動起動](runs/20261017T125936_JST/Launch.md)。Humanが評価したフック巻き付き・足裏補正を保持し、却下された線状の腕だけを胴と同じ編み目の表示メッシュへ見直した。自動比較318フレームの軌道・Camera・入力・残量等の差0、手動起動35秒・自動driver0。OS操作はツール一覧取得タイムアウトで未確認。Human採用は未承認。
 

@@ -1,0 +1,27 @@
+Launch1
+Initialize engine version: 6000.3.21f1 (c02631ffc030)
+MANUAL_PRESENTATION 00_Ready candidate4
+MANUAL_PRESENTATION 01_Idle2s candidate4
+MANUAL_PRESENTATION 02_Idle15s candidate4
+MANUAL_PRESENTATION 03_Idle35s candidate4
+PlayerConnection marker count: 0
+
+Restart
+Initialize engine version: 6000.3.21f1 (c02631ffc030)
+MANUAL_PRESENTATION 00_Ready candidate4
+MANUAL_PRESENTATION 01_Idle2s candidate4
+MANUAL_PRESENTATION 02_Idle15s candidate4
+MANUAL_PRESENTATION 03_Idle35s candidate4
+PlayerConnection marker count: 0
+
+Compare
+Initialize engine version: 6000.3.21f1 (c02631ffc030)
+MANUAL_PRESENTATION 00_Ready candidate3
+MANUAL_PRESENTATION 01_Idle2s candidate3
+MANUAL_PRESENTATION 02_Idle15s candidate3
+MANUAL_PRESENTATION 03_Idle35s candidate3
+PlayerConnection marker count: 0
+
+Build
+Build Finished, Result: Success.
+FIXED_REVIEW_BUILD SUCCEEDED; Development=false; Profiler autoconnect=false; Script debugging=false

@@ -1,0 +1,16 @@
+{
+  "changed_existing_source_files": [],
+  "added_editor_only": [
+    {
+      "path": "Assets/Editor/ReviewRuntimeBuilder.cs",
+      "content": "#if UNITY_EDITOR\nusing System;\nusing System.IO;\nusing UnityEditor;\nusing UnityEditor.Build.Reporting;\nusing UnityEditor.SceneManagement;\nusing UnityEngine;\nnamespace HimoHitoReviewTools\n{\n    // Editor-only packaging. No gameplay, presentation, scene or firewall edits.\n    public static class ReviewRuntimeBuilder\n    {\n        static string Arg(string key){var a=Environment.GetCommandLineArgs();for(int i=0;i<a.Length-1;i++)if(a[i]==key)return a[i+1];throw new Exception(\"Missing \"+key);}\n        public static void Build()\n        {\n            try\n            {\n                string path=Arg(\"-reviewOutput\");if(File.Exists(path))throw new Exception(\"Never overwrite an existing review runtime\");\n                EditorUserBuildSettings.development=false;\n                EditorUserBuildSettings.allowDebugging=false;\n                EditorUserBuildSettings.connectProfiler=false;\n                EditorUserBuildSettings.buildWithDeepProfilingSupport=false;\n                EditorSceneManager.OpenScene(\"Assets/Scenes/MainStage.unity\");\n                var options=new BuildPlayerOptions{scenes=new[]{\"Assets/Scenes/MainStage.unity\",\"Assets/Scenes/Tutorial.unity\"},locationPathName=path,target=BuildTarget.StandaloneWindows64,options=BuildOptions.None};\n                var report=BuildPipeline.BuildPlayer(options);\n                File.WriteAllText(Path.Combine(Path.GetDirectoryName(path),\"ReviewBuildSummary.json\"),JsonUtility.ToJson(new Summary{result=report.summary.result.ToString(),errors=(int)report.summary.totalErrors,warnings=(int)report.summary.totalWarnings,bytes=(long)report.summary.totalSize,buildOptions=report.summary.options.ToString(),unity=Application.unityVersion},true));\n                if(report.summary.result!=BuildResult.Succeeded||(report.summary.options&BuildOptions.Development)!=0)throw new Exception(\"Expected successful non-Development build\");\n                Debug.Log(\"FIXED_REVIEW_BUILD SUCCEEDED; Development=false; Profiler autoconnect=false; Script debugging=false\");\n                EditorApplication.Exit(0);\n            }\n            catch(Exception e){Debug.LogException(e);EditorApplication.Exit(1);}\n        }\n        [Serializable]class Summary{public string result,buildOptions,unity;public int errors,warnings;public long bytes;}\n    }\n}\n#endif\n"
+    },
+    {
+      "path": "Assets/Editor/ReviewRuntimeBuilder.cs.meta",
+      "content": "fileFormatVersion: 2\nguid: 721cbb18393c45f29c18be6b40cd6706\n"
+    }
+  ],
+  "runtime_source_or_art_changes": false,
+  "old_editor_builder_modified": false,
+  "old_builds_modified": false
+}

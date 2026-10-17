@@ -1,0 +1,29 @@
+{
+  "source_files_checked": 538,
+  "existing_source_difference_files": [],
+  "old_proof_difference_files": [],
+  "added": [
+    "Assets/Editor/ReviewRuntimeBuilder.cs",
+    "Assets/Editor/ReviewRuntimeBuilder.cs.meta"
+  ],
+  "runtime_scripts_scenes_shader_png_settings_unchanged": true,
+  "original_build_unchanged": true,
+  "production_head": true,
+  "production_branch": true,
+  "production_tracked": true,
+  "production_normal": true,
+  "production_staged": true,
+  "selected_production_files": {
+    "Assets/Scripts/RopeResource.cs": true,
+    "Assets/Scripts/RopeController.cs": true,
+    "Assets/Scripts/PlayerMover.cs": true,
+    "Assets/Scripts/RopePlatformBuilder.cs": true,
+    "Assets/Scripts/MainStageRespawnOnFall.cs": true,
+    "Assets/Scenes/MainStage.unity": true,
+    "Assets/Scenes/Tutorial.unity": true,
+    "README.md": true,
+    "Docs/LEARNING_LOG.md": true,
+    "ProjectSettings/InputManager.asset": true,
+    "ProjectSettings/Physics2DSettings.asset": true
+  }
+}

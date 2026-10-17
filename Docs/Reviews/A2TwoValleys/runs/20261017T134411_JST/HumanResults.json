@@ -1,0 +1,9 @@
+{
+  "arms_revision_commit": "3383ca9c6607ba81243d8947b01379c8724d9d31",
+  "human_review": "前回より身体への一体感が改善。現候補を保持。正式採用・Production統合は保留。",
+  "hook_wrap_and_ground_sole_correction": "保持",
+  "additional_arm_revision": false,
+  "new_fixed_launcher_human_prompt_check": "未確認",
+  "human_adoption": "保留・正式採用未承認",
+  "production_integrated": false
+}

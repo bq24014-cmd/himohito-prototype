@@ -1,0 +1,98 @@
+{
+  "Launch1": {
+    "candidate": "candidate4",
+    "realtime_elapsed": 35.16925048828125,
+    "normal_time": true,
+    "alive_35s": true,
+    "exit_confirmed": true,
+    "maximum_tcp_count": 0.0,
+    "maximum_udp_count": 0.0,
+    "network_samples": 24,
+    "player_connection_log": false,
+    "udp_broadcast_log": false,
+    "remaining": 24.0,
+    "selected": 6,
+    "bridges": 0,
+    "errors": 0,
+    "auto_drivers": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "camera_ortho": 8.699999809265137,
+    "screen_size": [
+      1280,
+      720
+    ],
+    "os_screenshot": false,
+    "os_keys": false,
+    "prompt_visual_check": false,
+    "close_method": "External scoped Stop-Process after exact path validation; not OS close-button or Alt+F4 confirmation.",
+    "diagnostic_muted_only": true
+  },
+  "Restart": {
+    "candidate": "candidate4",
+    "realtime_elapsed": 35.166038513183594,
+    "normal_time": true,
+    "alive_35s": true,
+    "exit_confirmed": true,
+    "maximum_tcp_count": 0.0,
+    "maximum_udp_count": 0.0,
+    "network_samples": 16,
+    "player_connection_log": false,
+    "udp_broadcast_log": false,
+    "remaining": 24.0,
+    "selected": 6,
+    "bridges": 0,
+    "errors": 0,
+    "auto_drivers": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "camera_ortho": 8.699999809265137,
+    "screen_size": [
+      1280,
+      720
+    ],
+    "os_screenshot": false,
+    "os_keys": false,
+    "prompt_visual_check": false,
+    "close_method": "External scoped Stop-Process after exact path validation; not OS close-button or Alt+F4 confirmation.",
+    "diagnostic_muted_only": true
+  },
+  "Compare": {
+    "candidate": "candidate3",
+    "realtime_elapsed": 35.17276382446289,
+    "normal_time": true,
+    "alive_35s": true,
+    "exit_confirmed": true,
+    "maximum_tcp_count": 0.0,
+    "maximum_udp_count": 0.0,
+    "network_samples": 17,
+    "player_connection_log": false,
+    "udp_broadcast_log": false,
+    "remaining": 24.0,
+    "selected": 6,
+    "bridges": 0,
+    "errors": 0,
+    "auto_drivers": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "camera_ortho": 8.699999809265137,
+    "screen_size": [
+      1280,
+      720
+    ],
+    "os_screenshot": false,
+    "os_keys": false,
+    "prompt_visual_check": false,
+    "close_method": "External scoped Stop-Process after exact path validation; not OS close-button or Alt+F4 confirmation.",
+    "diagnostic_muted_only": true
+  }
+}
