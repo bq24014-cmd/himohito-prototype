@@ -1,0 +1,117 @@
+{
+  "before": {
+    "4": {
+      "seconds": 1.179999589920044,
+      "max_x": 159.31150817871094,
+      "last_x": 159.31150817871094,
+      "climbed": true,
+      "frames": 60,
+      "grounded_frames": 60,
+      "max_segment_angle": 57.62686793343062
+    },
+    "5": {
+      "seconds": 5.979998588562012,
+      "max_x": 157.0769805908203,
+      "last_x": 156.63551330566406,
+      "climbed": false,
+      "frames": 300,
+      "grounded_frames": 300,
+      "max_segment_angle": 71.38791613491445
+    }
+  },
+  "candidate": {
+    "4": {
+      "seconds": 1.179999589920044,
+      "max_x": 159.31150817871094,
+      "last_x": 159.31150817871094,
+      "climbed": true,
+      "frames": 60,
+      "grounded_frames": 60,
+      "max_segment_angle": 57.62686793343062
+    },
+    "5": {
+      "seconds": 0.9799995422363281,
+      "max_x": 159.26144409179688,
+      "last_x": 159.26144409179688,
+      "climbed": true,
+      "frames": 50,
+      "grounded_frames": 50,
+      "max_segment_angle": 57.60130039025624
+    }
+  },
+  "length4_max_position_velocity_camera_delta": 0.0,
+  "C08_max_visible_bend": 0.08587786555290222,
+  "pause_unchanged": true,
+  "operations_before": [
+    "S7_length4 E=True Q=True cost=4 remaining=20 minimum=1",
+    "S7_length4 right_finish=(159.31, 0.27) climbed=True",
+    "S7_length4 left_finish=(154.20, -1.54)",
+    "S7_length4 R position=(154.30, -1.54) remaining=24 selected=4 bridges=0 attached=False",
+    "S7_length5 E=True Q=True cost=5 remaining=19 minimum=1",
+    "S7_length5 right_finish=(156.64, -1.48) climbed=False",
+    "S7_length5 left_finish=(153.58, -1.54)",
+    "S7_length5 R position=(154.30, -1.54) remaining=24 selected=5 bridges=0 attached=False"
+  ],
+  "operations_candidate": [
+    "S7_length4 E=True Q=True cost=4 remaining=20 minimum=1",
+    "S7_length4 right_finish=(159.31, 0.27) climbed=True",
+    "S7_length4 left_finish=(154.20, -1.54)",
+    "S7_length4 R position=(154.30, -1.54) remaining=24 selected=4 bridges=0 attached=False",
+    "S7_length5 E=True Q=True cost=5 remaining=19 minimum=1",
+    "S7_length5 right_finish=(159.26, 0.26) climbed=True",
+    "S7_length5 left_finish=(154.27, -1.54)",
+    "S7_length5 R position=(154.30, -1.54) remaining=24 selected=5 bridges=0 attached=False"
+  ],
+  "T4_nativeQF": [
+    "Native_50 E1=True Q1=True remaining=44",
+    "Native_50 E2=True Q2=True remaining=38",
+    "Native_50 F=True bridges=1 remaining=38",
+    "Native_50 E_supported=False",
+    "Native_50 R remaining=50 selected=6 bridges=0 attached=False root=(41.10, 0.96) slope=0"
+  ],
+  "source_changes": [
+    "RopePlatformBuilder.cs"
+  ],
+  "manual": {
+    "Before": {
+      "version": "Before",
+      "pid": 25748,
+      "ready": true,
+      "alive": true,
+      "responding": true,
+      "elapsed": 24.7641459,
+      "result_json_created": false,
+      "frame_directory_created": false,
+      "method": "process/log smoke only. No OS screenshot or key response confirmed."
+    },
+    "Candidate": {
+      "version": "Candidate",
+      "pid": 21236,
+      "ready": true,
+      "alive": true,
+      "responding": true,
+      "elapsed": 44.9908153,
+      "result_json_created": false,
+      "frame_directory_created": false,
+      "method": "process/log smoke only. No OS screenshot or key response confirmed."
+    }
+  },
+  "manual_identity": {
+    "Before": {
+      "assembly": "01D38D1ADFA3828A8F5482BF4C05A341BAC8B28F4CC98CAB2DE9210353033215",
+      "fixture": "598F68EFCA0D81A3FB80B1AF32658B7EEA23A174663D4E5A91A167118592C594",
+      "grounding_source": "0DC26D297309B199F5C0D71F722158374A60A4F6F39102DF5075E362D9442896",
+      "suffix": "C20BeforeManual",
+      "at": "2026-10-20T02:14:39.2043944+09:00",
+      "kind": "Managed-code overlay on frozen nonDevelopment Unity Player; not a new Unity BuildPipeline build"
+    },
+    "Candidate": {
+      "assembly": "26F79A4F7925D387D6156E06AFE9E4EC4E6E2C62561CC2A6C11504D9EDB0E8F4",
+      "fixture": "598F68EFCA0D81A3FB80B1AF32658B7EEA23A174663D4E5A91A167118592C594",
+      "grounding_source": "0DC26D297309B199F5C0D71F722158374A60A4F6F39102DF5075E362D9442896",
+      "suffix": "C20Final58Manual",
+      "at": "2026-10-20T02:12:03.8202868+09:00",
+      "kind": "Managed-code overlay on frozen nonDevelopment Unity Player; not a new Unity BuildPipeline build"
+    }
+  }
+}

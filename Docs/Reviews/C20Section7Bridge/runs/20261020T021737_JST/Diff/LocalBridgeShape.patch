@@ -1,0 +1,19 @@
+--- a/Assets/Scripts/RopePlatformBuilder.cs
++++ b/Assets/Scripts/RopePlatformBuilder.cs
+@@ -488,0 +489,16 @@
++            // Isolated C20 candidate: only S7's authored bridge at length 5.
++            // Keep both ends, width, cost and ordinary length-4 shape unchanged.
++            Vector2 lower = MainStageSectionSevenSetup.BridgeStartHookPosition;
++            Vector2 upper = MainStageSectionSevenSetup.BridgeEndHookPosition;
++            bool sectionSevenPair = (Vector2.Distance(start, lower) < .01f && Vector2.Distance(end, upper) < .01f) ||
++                (Vector2.Distance(start, upper) < .01f && Vector2.Distance(end, lower) < .01f);
++            if (sectionSevenPair && Mathf.Abs(ropeLength - 5f) < .001f)
++            {
++                // For y = linear - 4*s*t*(1-t), the greatest endpoint slope
++                // is (abs(dy) + 4*s)/abs(dx). Limit this local profile to 58 deg;
++                // the existing mover and its ground-contact test are untouched.
++                float horizontal = Mathf.Abs(end.x - start.x);
++                float vertical = Mathf.Abs(end.y - start.y);
++                float maximumSag = Mathf.Max(0f, (horizontal * Mathf.Tan(58f * Mathf.Deg2Rad) - vertical) * .25f);
++                slack = Mathf.Min(slack, maximumSag);
++            }

@@ -1,0 +1,25 @@
+{
+  "review_id": "C20Section7Bridge_20261020T021737_JST",
+  "updated_at": "2026-10-20T02:20:35.225038+09:00",
+  "timezone": "Asia/Tokyo",
+  "branch": "codex/review-c20-s7-bridge",
+  "kind": "C20 MainStage第7区間 長さ5の登坂 隔離候補1",
+  "production_head": "e9eabc93eef26fb04d0ccb86eaef0cf7b85d04bd",
+  "production_integrated": false,
+  "human_adoption": "未承認",
+  "status": "隔離候補完成 Human Review待ち",
+  "technical": "確認範囲PASS",
+  "method": "nonDevelopment frozen Unity Player with managed overlay; not a new Unity Build",
+  "report_path": "Docs/Reviews/C20Section7Bridge/runs/20261020T021737_JST/Report.md",
+  "qa_path": "Docs/Reviews/C20Section7Bridge/runs/20261020T021737_JST/QA/Summary.json",
+  "images_path": "Docs/Reviews/C20Section7Bridge/runs/20261020T021737_JST/Images/",
+  "figures_path": "Docs/Reviews/C20Section7Bridge/runs/20261020T021737_JST/Figures/",
+  "video_path": "Docs/Reviews/C20Section7Bridge/runs/20261020T021737_JST/Video/Candidate_Length5_1x.mp4",
+  "launch_path": "Docs/Reviews/C20Section7Bridge/runs/20261020T021737_JST/Launch.md",
+  "unconfirmed": [
+    "OS実キー",
+    "Human手応え・採用",
+    "音",
+    "新規Unity Build/Editor Play"
+  ]
+}
