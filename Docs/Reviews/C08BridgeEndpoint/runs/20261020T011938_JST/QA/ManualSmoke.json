@@ -1,0 +1,24 @@
+[
+  {
+    "launcher": "01_BEFORE.cmd",
+    "elapsed_seconds": 21.71,
+    "alive": true,
+    "responding": true,
+    "manual_ready": true,
+    "generated_result": false,
+    "generated_frames": false,
+    "os_keys_verified": false,
+    "method": "Exact direct-cmd launcher; process/log inspection, no injected input"
+  },
+  {
+    "launcher": "02_CANDIDATE.cmd",
+    "elapsed_seconds": 20.76,
+    "alive": true,
+    "responding": true,
+    "manual_ready": true,
+    "generated_result": false,
+    "generated_frames": false,
+    "os_keys_verified": false,
+    "method": "Exact direct-cmd launcher; process/log inspection, no injected input"
+  }
+]

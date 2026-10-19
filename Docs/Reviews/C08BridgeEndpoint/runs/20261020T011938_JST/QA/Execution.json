@@ -1,0 +1,30 @@
+{
+  "unity": "6000.3.21f1",
+  "new_build_pipeline_build": false,
+  "editor_play": false,
+  "method": "managed-code overlay on existing nonDevelopment Unity Player, immutable host data hardlinked, new independent Assembly-CSharp.dll",
+  "manual_identity": {
+    "assembly": "FA727DED5AE07BD8ACBE63330E7DD1E6F35E8A21911C7E6CA10C239468777F1F",
+    "fixture": "D76B6D400E7834DC6122F8728092F03383E5042E464CF4106B09307D1B147EF1",
+    "grounding_source": "71A5917A42E4A1B04A1980542081EAC3C85AC1066552387699AA287B0E3623F2",
+    "suffix": "manualAndConnectionFinal",
+    "at": "2026-10-20T01:21:13.3443106+09:00",
+    "kind": "Managed-code overlay on frozen nonDevelopment Unity Player; not a new Unity BuildPipeline build"
+  },
+  "main_game_source_revisions": {
+    "static_matrix": "CFAF4C8A42CEE535C312DF1AFAB773A52C874BF814EF5007E9B31DE10F5E5CE5",
+    "final_movement_native_jump_air": "8812D00604632C43DAB74A7149BE0926CD5F65B0D21A1ECB692E43D0C5F9D3BF",
+    "manual_and_connection": "FA727DED5AE07BD8ACBE63330E7DD1E6F35E8A21911C7E6CA10C239468777F1F"
+  },
+  "reuse_note": "Static matrices retain the same curve/foot calculation. Later changes affect no-contact E build-hold, unsupported handoff and empty-space guide presentation only. Final movement/native/jump/attachment checks cover those changes. Final helper only adds the connection test mode; rendering source is identical to the final movement run.",
+  "os_tool": "sky.list_apps timed out once; no repeat, no OS key success asserted",
+  "startup_log_scan": {
+    "logs": 14,
+    "exception_missing_script_or_load_error_matches": 0
+  },
+  "diff_format": "Unified diff with zero context, avoiding whitespace-only context lines in review documents. Reference only; not an adoption patch.",
+  "human_review": "not performed",
+  "compiler_errors": 0,
+  "existing_CS0649_warnings": 4,
+  "manual_launcher_note": "Initial PowerShell launcher was blocked by local execution policy. No policy was changed. Submitted cmd launchers start the game exe directly; 9-second smoke check recorded."
+}

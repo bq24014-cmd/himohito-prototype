@@ -1,0 +1,143 @@
+{
+  "files": {
+    "Launch.md": {
+      "bytes": 2513,
+      "sha256": "6A27DAD91B752E7FD2CD316A6C55CE61CDDD518C2EFD988788403C21E324814B"
+    },
+    "Report.md": {
+      "bytes": 9098,
+      "sha256": "F23733F8D941DFA48B091FC524D7B94689CF5580730A718E37673980529736B0"
+    },
+    "Diff/01_BEFORE.cmd.txt": {
+      "bytes": 466,
+      "sha256": "5968BD771D35BC0C44EDA268F9D1392B92EF3BB9B38A3F4240E3B4267E222915"
+    },
+    "Diff/02_CANDIDATE.cmd.txt": {
+      "bytes": 468,
+      "sha256": "662909F3733DB63185F60AFEF7AD564DEBC4A8C442C66910636495E6FC46102C"
+    },
+    "Diff/DiagnosticFixture.cs.txt": {
+      "bytes": 26950,
+      "sha256": "D76B6D400E7834DC6122F8728092F03383E5042E464CF4106B09307D1B147EF1"
+    },
+    "Diff/IsolatedRendering.patch": {
+      "bytes": 10739,
+      "sha256": "7100A867ACA56745C4271D18417AC190EBE37FDF11FD157377117403F6E194E4"
+    },
+    "Figures/01_NormalViewBeforeAfter.jpg": {
+      "bytes": 468172,
+      "sha256": "02C17FBA97EA194585470ED08F0A75AA0F9931040442DC50A8BB409F16F8D7C8"
+    },
+    "Figures/02_FeetLeftCenterRight.jpg": {
+      "bytes": 153239,
+      "sha256": "09D7FC3223DB0B4C9949179BEF898FA55E37213349ADD9B5389A4C368FCC9DB8"
+    },
+    "Figures/03_Sizes.jpg": {
+      "bytes": 90712,
+      "sha256": "642E2795E6E3420015389607266B7BFEC1836905569D101DC586D4D5BD357482"
+    },
+    "Figures/04_WalkStopIdle.jpg": {
+      "bytes": 134851,
+      "sha256": "41CA65A2B50AB00EC4D4DF431C814EB426AC28F8097EEF577A7DBA609DD6A1A7"
+    },
+    "Figures/05_ConnectedSupport.jpg": {
+      "bytes": 200291,
+      "sha256": "8CB15B69D5986439814B0AB82F95D5B5F92A0A7E9E515E442D0792646C2E5369"
+    },
+    "Images/Before_Air.jpg": {
+      "bytes": 214035,
+      "sha256": "5CEE94C9676B659CE3AC3B2A1E075CEC4A354491692134913E5A49BEB6BECE70"
+    },
+    "Images/Before_EHeld_Small.jpg": {
+      "bytes": 232365,
+      "sha256": "E9E438F19D7B29463E3AEFFF78C4C2A5DF9A3A9F4E13F37E30C70A1A8A68EA3E"
+    },
+    "Images/Before_NativeQF_Small.jpg": {
+      "bytes": 214886,
+      "sha256": "4FD300DC4E7635C99D003447D71A4DA512D804F4155C7D470159073135CD48AD"
+    },
+    "Images/Before_T4_Left_Full.jpg": {
+      "bytes": 215602,
+      "sha256": "EB5BDBA1D348E0966F2D1BE11A2C7DDCC8A2E512ECEF8AFD0B5129D25F6049CE"
+    },
+    "Images/Before_T4_Walk_Small.jpg": {
+      "bytes": 214200,
+      "sha256": "4C7550C2D949759EBAA706642FC5618C2C632F524D4274AC4BB10E6FBB8E5A4B"
+    },
+    "Images/Candidate_Air.jpg": {
+      "bytes": 213980,
+      "sha256": "5349DE2C8F2DE6F5B7EBF84C5C7C0F02F9B922DA69142EDD12DBB079A99A8DF0"
+    },
+    "Images/Candidate_BankReturned.jpg": {
+      "bytes": 214059,
+      "sha256": "6112E201B0A0A2A3BEBFDD6423643D44B4EE937DB3817A7BE7BB8089DF3FDE16"
+    },
+    "Images/Candidate_EHeld_Small.jpg": {
+      "bytes": 232299,
+      "sha256": "CC048923052109E71D03619257DF1D9734FFFE04BDEEC77E7893D6518EB382D0"
+    },
+    "Images/Candidate_Landing.jpg": {
+      "bytes": 214640,
+      "sha256": "73F7670A47F80AF940BAB58D2C3F695CDE0FD3ED689B9B97592190635FB43213"
+    },
+    "Images/Candidate_NativeQF_Small.jpg": {
+      "bytes": 214752,
+      "sha256": "08AF7286ED57BC2B7F8E799DA6521DE45D3AE1F2762AF7FB610025F66B8F2596"
+    },
+    "Images/Candidate_R.jpg": {
+      "bytes": 212168,
+      "sha256": "2F65E1109777352802A38FC4C7579679DE4F8DCC62B092111E19B4DDDDB3AF3F"
+    },
+    "Images/Candidate_T4_Left_Full.jpg": {
+      "bytes": 215405,
+      "sha256": "223C7A9F21BFAE1FEABB2195CD7946B3FEF4E4985B8FAEDE2F7CA1F2514FF4DA"
+    },
+    "Images/Candidate_T4_Walk_Small.jpg": {
+      "bytes": 214086,
+      "sha256": "40E477CE98D6BCF7CF879A82B73C30BBEC5830B51D4D6EE7B9F4B43392D9918F"
+    },
+    "QA/BridgeGeometry.json": {
+      "bytes": 50468,
+      "sha256": "A9D14B3A6306C4CCE546B95D7B9EF3656FC9656FAF2AC94252F9910390F79C8D"
+    },
+    "QA/Comparison.json": {
+      "bytes": 9272,
+      "sha256": "0513AEC09D0042FC6463F092BD72FA615EC340F45F0913895937A4C6839DB405"
+    },
+    "QA/Execution.json": {
+      "bytes": 2036,
+      "sha256": "F6478347B907EF818175CD7D12E6885B9CD95C234F0A6AE84DF2DFDB376CCBF4"
+    },
+    "QA/ManualSmoke.json": {
+      "bytes": 644,
+      "sha256": "2A841B04B3E471994BE55F47A350DA3D6F13F0ACF95D0CE9E060A6EF6D005A92"
+    },
+    "QA/Measurements.json": {
+      "bytes": 750895,
+      "sha256": "1879F498B70EDA6CEE7014DC84CA170CEE6DA0D1A317CCF7D5A64045189507DA"
+    },
+    "QA/Protection.json": {
+      "bytes": 1007,
+      "sha256": "58532A425FA7247F578D85FFD6B37520145EDAAA31C7C3A90E9FB741C6D4A0DD"
+    },
+    "QA/Trajectory.json": {
+      "bytes": 839857,
+      "sha256": "8E3F556873412D25A2AE7CF7FF39A01485E17AF78B904FB4872CC6217968524C"
+    },
+    "Video/WalkStopIdleReturn_AB_1x.mp4": {
+      "bytes": 3483056,
+      "sha256": "1173E73BF907AD29E2D308EB8AA73C90F1B9AA81938EC5D810C42D0A1C22FA97"
+    }
+  },
+  "video": {
+    "fps": 25,
+    "duration_seconds": 3.96,
+    "playback_speed": 1.0,
+    "frame_dimensions": [
+      2560,
+      720
+    ],
+    "input": "automatic, not OS keys"
+  },
+  "link_and_privacy_errors": []
+}

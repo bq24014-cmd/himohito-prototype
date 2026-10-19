@@ -1,0 +1,346 @@
+{
+  "StaticTutorial": {
+    "baseline_run": "BaselinePoints_Final",
+    "candidate_run": "CandidatePoints_Final",
+    "errors": [
+      0,
+      0
+    ],
+    "development": [
+      false,
+      false
+    ],
+    "states": 36,
+    "trajectory_samples": 0,
+    "execution": "automatic input fields / internal API, not OS keys or Human play",
+    "states_max_absolute_delta": {
+      "position": 0.0,
+      "velocity": 0.0,
+      "remaining": 0.0,
+      "camera": 0.0,
+      "bodyWidth": 0.0,
+      "bodyHeight": 0.0,
+      "edgeRadius": 0.0,
+      "bridgeLineAtCenter": 0.0,
+      "bridgeWidth": 0.0
+    },
+    "trajectory_max_absolute_delta": {
+      "position": 0,
+      "velocity": 0,
+      "remaining": 0,
+      "camera": 0,
+      "bodyWidth": 0,
+      "bodyHeight": 0,
+      "edgeRadius": 0,
+      "bridgeLineAtCenter": 0,
+      "bridgeWidth": 0
+    },
+    "grounded_attached_equal": true,
+    "geometries_identical": true,
+    "candidate_operations": [],
+    "physics_comparison": "PASS"
+  },
+  "StaticMainS4": {
+    "baseline_run": "BaselineS4_Final",
+    "candidate_run": "CandidateS4_Final",
+    "errors": [
+      0,
+      0
+    ],
+    "development": [
+      false,
+      false
+    ],
+    "states": 18,
+    "trajectory_samples": 0,
+    "execution": "automatic input fields / internal API, not OS keys or Human play",
+    "states_max_absolute_delta": {
+      "position": 0.0,
+      "velocity": 0.0,
+      "remaining": 0.0,
+      "camera": 0.0,
+      "bodyWidth": 0.0,
+      "bodyHeight": 0.0,
+      "edgeRadius": 0.0,
+      "bridgeLineAtCenter": 0.0,
+      "bridgeWidth": 0.0
+    },
+    "trajectory_max_absolute_delta": {
+      "position": 0,
+      "velocity": 0,
+      "remaining": 0,
+      "camera": 0,
+      "bodyWidth": 0,
+      "bodyHeight": 0,
+      "edgeRadius": 0,
+      "bridgeLineAtCenter": 0,
+      "bridgeWidth": 0
+    },
+    "grounded_attached_equal": true,
+    "geometries_identical": true,
+    "candidate_operations": [],
+    "physics_comparison": "PASS"
+  },
+  "Walk": {
+    "baseline_run": "BaselineWalk_Review",
+    "candidate_run": "CandidateWalk_Review",
+    "errors": [
+      0,
+      0
+    ],
+    "development": [
+      false,
+      false
+    ],
+    "states": 15,
+    "trajectory_samples": 198,
+    "execution": "automatic input fields / internal API, not OS keys or Human play",
+    "states_max_absolute_delta": {
+      "position": 0.0,
+      "velocity": 0.0,
+      "remaining": 0.0,
+      "camera": 0.0,
+      "bodyWidth": 0.0,
+      "bodyHeight": 0.0,
+      "edgeRadius": 0.0,
+      "bridgeLineAtCenter": 0.0,
+      "bridgeWidth": 0.0,
+      "jointDistance": 0.0,
+      "anchor": 0.0
+    },
+    "trajectory_max_absolute_delta": {
+      "position": 0.0,
+      "velocity": 0.0,
+      "remaining": 0.0,
+      "camera": 0.0,
+      "bodyWidth": 0.0,
+      "bodyHeight": 0.0,
+      "edgeRadius": 0.0,
+      "bridgeLineAtCenter": 0.0,
+      "bridgeWidth": 0.0,
+      "jointDistance": 0.0,
+      "anchor": 0.0
+    },
+    "grounded_attached_equal": true,
+    "geometries_identical": true,
+    "candidate_operations": [],
+    "physics_comparison": "PASS",
+    "max_adjacent_presentation_offset_change_world": 0.06875795871019363,
+    "actual_air_samples": 10,
+    "attached_air_samples": 0
+  },
+  "Native": {
+    "baseline_run": "BaselineNative_Review",
+    "candidate_run": "CandidateNative_Review",
+    "errors": [
+      0,
+      0
+    ],
+    "development": [
+      false,
+      false
+    ],
+    "states": 27,
+    "trajectory_samples": 291,
+    "execution": "automatic input fields / internal API, not OS keys or Human play",
+    "states_max_absolute_delta": {
+      "position": 0.0,
+      "velocity": 0.0,
+      "remaining": 0.0,
+      "camera": 0.0,
+      "bodyWidth": 0.0,
+      "bodyHeight": 0.0,
+      "edgeRadius": 0.0,
+      "bridgeLineAtCenter": 0.0,
+      "bridgeWidth": 0.0,
+      "jointDistance": 0.0,
+      "anchor": 0.0
+    },
+    "trajectory_max_absolute_delta": {
+      "position": 0.0,
+      "velocity": 0.0,
+      "remaining": 0.0,
+      "camera": 0.0,
+      "bodyWidth": 0.0,
+      "bodyHeight": 0.0,
+      "edgeRadius": 0.0,
+      "bridgeLineAtCenter": 0.0,
+      "bridgeWidth": 0.0,
+      "jointDistance": 0.0,
+      "anchor": 0.0
+    },
+    "grounded_attached_equal": true,
+    "geometries_identical": true,
+    "candidate_operations": [
+      "Native_50 E1=True Q1=True remaining=44",
+      "Native_50 E2=True Q2=True remaining=38",
+      "Native_50 F=True bridges=1 remaining=38",
+      "Native_50 E_supported=False",
+      "Native_50 R remaining=50 selected=6 bridges=0 attached=False root=(41.10, 0.96) slope=0",
+      "Native_42 E1=True Q1=True remaining=36",
+      "Native_42 E2=True Q2=True remaining=30",
+      "Native_42 F=True bridges=1 remaining=30",
+      "Native_42 E_supported=False",
+      "Native_42 R remaining=42 selected=6 bridges=0 attached=False root=(41.10, 0.96) slope=0",
+      "Native_19 E1=True Q1=True remaining=13",
+      "Native_19 E2=True Q2=True remaining=7",
+      "Native_19 F=True bridges=1 remaining=7",
+      "Native_19 E_supported=False",
+      "Native_19 R remaining=19 selected=6 bridges=0 attached=False root=(41.10, 0.96) slope=0"
+    ],
+    "physics_comparison": "PASS",
+    "max_adjacent_presentation_offset_change_world": 0.038858406245708466,
+    "actual_air_samples": 0,
+    "attached_air_samples": 0
+  },
+  "Attach": {
+    "baseline_run": "BaselineAttach_Review",
+    "candidate_run": "CandidateAttach_Review",
+    "errors": [
+      0,
+      0
+    ],
+    "development": [
+      false,
+      false
+    ],
+    "states": 5,
+    "trajectory_samples": 111,
+    "execution": "automatic input fields / internal API, not OS keys or Human play",
+    "states_max_absolute_delta": {
+      "position": 0.0,
+      "velocity": 0.0,
+      "remaining": 0.0,
+      "camera": 0.0,
+      "bodyWidth": 0.0,
+      "bodyHeight": 0.0,
+      "edgeRadius": 0.0,
+      "bridgeLineAtCenter": 0.0,
+      "bridgeWidth": 0.0,
+      "jointDistance": 0.0,
+      "anchor": 0.0
+    },
+    "trajectory_max_absolute_delta": {
+      "position": 0.0,
+      "velocity": 0.0,
+      "remaining": 0.0,
+      "camera": 0.0,
+      "bodyWidth": 0.0,
+      "bodyHeight": 0.0,
+      "edgeRadius": 0.0,
+      "bridgeLineAtCenter": 0.0,
+      "bridgeWidth": 0.0,
+      "jointDistance": 0.0,
+      "anchor": 0.0
+    },
+    "grounded_attached_equal": true,
+    "geometries_identical": true,
+    "candidate_operations": [
+      "Main S4 E=True hook=Main Section 4 Far Hook"
+    ],
+    "physics_comparison": "PASS",
+    "max_adjacent_presentation_offset_change_world": 0.08042716979980469,
+    "actual_air_samples": 91,
+    "attached_air_samples": 60
+  },
+  "Jump": {
+    "baseline_run": "BaselineJump_Review",
+    "candidate_run": "CandidateJump_Review",
+    "errors": [
+      0,
+      0
+    ],
+    "development": [
+      false,
+      false
+    ],
+    "states": 8,
+    "trajectory_samples": 188,
+    "execution": "automatic input fields / internal API, not OS keys or Human play",
+    "states_max_absolute_delta": {
+      "position": 0.0,
+      "velocity": 0.0,
+      "remaining": 0.0,
+      "camera": 0.0,
+      "bodyWidth": 0.0,
+      "bodyHeight": 0.0,
+      "edgeRadius": 0.0,
+      "bridgeLineAtCenter": 0.0,
+      "bridgeWidth": 0.0,
+      "jointDistance": 0.0,
+      "anchor": 0.0
+    },
+    "trajectory_max_absolute_delta": {
+      "position": 0.0,
+      "velocity": 0.0,
+      "remaining": 0.0,
+      "camera": 0.0,
+      "bodyWidth": 0.0,
+      "bodyHeight": 0.0,
+      "edgeRadius": 0.0,
+      "bridgeLineAtCenter": 0.0,
+      "bridgeWidth": 0.0,
+      "jointDistance": 0.0,
+      "anchor": 0.0
+    },
+    "grounded_attached_equal": true,
+    "geometries_identical": true,
+    "candidate_operations": [],
+    "physics_comparison": "PASS",
+    "max_adjacent_presentation_offset_change_world": 0.098122239112854,
+    "actual_air_samples": 68,
+    "attached_air_samples": 0
+  },
+  "Connection": {
+    "baseline_run": "BaselineConnection_Review",
+    "candidate_run": "CandidateConnection_Review",
+    "errors": [
+      0,
+      0
+    ],
+    "development": [
+      false,
+      false
+    ],
+    "states": 9,
+    "trajectory_samples": 156,
+    "execution": "automatic input fields / internal API, not OS keys or Human play",
+    "states_max_absolute_delta": {
+      "position": 0.0,
+      "velocity": 0.0,
+      "remaining": 0.0,
+      "camera": 0.0,
+      "bodyWidth": 0.0,
+      "bodyHeight": 0.0,
+      "edgeRadius": 0.0,
+      "bridgeLineAtCenter": 0.0,
+      "bridgeWidth": 0.0,
+      "jointDistance": 0.0,
+      "anchor": 0.0
+    },
+    "trajectory_max_absolute_delta": {
+      "position": 0.0,
+      "velocity": 0.0,
+      "remaining": 0.0,
+      "camera": 0.0,
+      "bodyWidth": 0.0,
+      "bodyHeight": 0.0,
+      "edgeRadius": 0.0,
+      "bridgeLineAtCenter": 0.0,
+      "bridgeWidth": 0.0,
+      "jointDistance": 0.0,
+      "anchor": 0.0
+    },
+    "grounded_attached_equal": true,
+    "geometries_identical": true,
+    "candidate_operations": [
+      "T4_right_E_50 E=True hook=Tutorial T4 Green Right Bank",
+      "T4_right_E_30 E=True hook=Tutorial T4 Green Right Bank",
+      "T4_right_E_7 E=True hook=Tutorial T4 Green Right Bank"
+    ],
+    "physics_comparison": "PASS",
+    "max_adjacent_presentation_offset_change_world": 0.11453105509281158,
+    "actual_air_samples": 0,
+    "attached_air_samples": 0
+  }
+}

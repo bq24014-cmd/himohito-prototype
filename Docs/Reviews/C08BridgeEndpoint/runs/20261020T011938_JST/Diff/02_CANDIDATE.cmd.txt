@@ -1,0 +1,9 @@
+@echo off
+setlocal
+set "C08_REMAIN=7"
+if "%~1"=="30" set "C08_REMAIN=30"
+if "%~1"=="50" set "C08_REMAIN=50"
+set "C08_SESSION=%~dp0ManualSessions\CANDIDATE_%RANDOM%_%RANDOM%"
+if exist "%C08_SESSION%" exit /b 2
+mkdir "%C08_SESSION%"
+start "" "%~dp0Runtime\PlayerGroundingReview.exe" -screen-fullscreen 0 -screen-width 1280 -screen-height 720 -c08Alignment on -c08Bridge T4_merged -c08Remaining %C08_REMAIN% -c08Output "%C08_SESSION%" -logFile "%C08_SESSION%\Player.log"
