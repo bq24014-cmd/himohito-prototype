@@ -1,6 +1,6 @@
 {
   "review_id": "20261019T163611_JST",
-  "updated_at": "2026-10-19T16:48:29+09:00",
+  "updated_at": "2026-10-19T23:43:47+09:00",
   "timezone": "Asia/Tokyo",
   "kind": "C22 C23 主人公の接地表示修正Proof",
   "proof": "PlayerGroundingProof_20261019",
@@ -9,19 +9,24 @@
   "production_working_tree": "既存dirty差分を含む読み取り基準。保護確認済み。",
   "build_sha256": "4F74D997A3D6DE70246EF42A66B1B0132189011846FD1A173BEB1054F6594C0E",
   "build_hash_target": "PlayerGroundingReview_Data/Managed/Assembly-CSharp.dll",
-  "status": "Human試遊待ち",
+  "status": "Human正式採用済み・Production限定統合済み",
   "report_path": "Docs/Reviews/PlayerGrounding/runs/20261019T163611_JST/Report.md",
   "images_path": "Docs/Reviews/PlayerGrounding/runs/20261019T163611_JST/Figures",
   "frames_path": "Docs/Reviews/PlayerGrounding/runs/20261019T163611_JST/Frames",
   "videos_path": "Docs/Reviews/PlayerGrounding/runs/20261019T163611_JST/Videos",
   "qa_path": "Docs/Reviews/PlayerGrounding/runs/20261019T163611_JST/QA",
-  "human_results_path": "Docs/Reviews/PlayerGrounding/runs/20261019T163611_JST/QA/HumanReview.json",
+  "human_results_path": "Docs/Reviews/PlayerGrounding/Integrations/20261019.json",
+  "original_human_results_path": "Docs/Reviews/PlayerGrounding/runs/20261019T163611_JST/QA/HumanReview.json",
+  "approved_review_commit": "54fbc8b2b7b809292cb50a2272fd3e5087cdb849",
+  "production_integration_commit": "2a0a2b5f5d5478f5ee2c6be5553121683757ebf7",
+  "production_integration_branch": "main",
+  "production_integration_report_url": "https://github.com/bq24014-cmd/himohito-prototype/blob/2a0a2b5f5d5478f5ee2c6be5553121683757ebf7/Docs/QA/PlayerGroundingProductionIntegration_20261019/Report.md",
   "unverified": [
-    "OS実キー操作",
-    "Humanの接地感とVisual採否",
+    "Production移植後のOS実キー操作・本人の追加試遊（採用済みのため再要求しない）",
     "実音声",
-    "C08の緑フック端専用再現"
+    "C08の緑フック端専用再現",
+    "新しいProduction Windows Build（容量節約のため未作成）"
   ],
-  "production_integrated": false,
-  "human_adoption": "未承認"
+  "production_integrated": true,
+  "human_adoption": "C22/C23の採用用表示修正のみ正式承認済み"
 }

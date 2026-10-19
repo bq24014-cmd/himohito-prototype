@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-19",
+  "timezone": "Asia/Tokyo",
+  "approval_source": "この固定CodexチャットでのHuman直接指示",
+  "human_statement": "C22・C23の接地表示修正を正式採用します。Productionへの限定統合、回帰確認、この変更だけのcommit・pushを承認します。",
+  "approved_proof": "PlayerGroundingProof_20261019",
+  "approved_review_commit": "54fbc8b2b7b809292cb50a2272fd3e5087cdb849",
+  "approved_patch": "Docs/Reviews/PlayerGrounding/runs/20261019T163611_JST/Diff/ProposedRopeBodyVisual.patch",
+  "scope": "RopeBodyVisual.csの接地表示だけ。身体縮小、足運び、橋の変形、物理・操作・残量を維持。C08と他のProofは対象外。",
+  "production_integrated": true,
+  "production_commit": "2a0a2b5f5d5478f5ee2c6be5553121683757ebf7",
+  "production_branch": "main",
+  "push": "成功・local HEADとorigin/mainの一致を確認済み",
+  "production_report_url": "https://github.com/bq24014-cmd/himohito-prototype/blob/2a0a2b5f5d5478f5ee2c6be5553121683757ebf7/Docs/QA/PlayerGroundingProductionIntegration_20261019/Report.md",
+  "production_checks_url": "https://github.com/bq24014-cmd/himohito-prototype/blob/2a0a2b5f5d5478f5ee2c6be5553121683757ebf7/Docs/QA/PlayerGroundingProductionIntegration_20261019/Evidence/Checks.json",
+  "new_verification": "Production CompileとPlay、通常開始、4段階サイズと接地基準、左右照準・待機、ポーズ／再開、RをUnity APIで確認。OSキーではない。",
+  "reused_verification": "採用済みProofの45/45×比較2版、125比較群の物理差0、橋・E/Q/F・着地・首・頭頂の記録を再利用。",
+  "post_integration_os_keys": "未確認。list_appsタイムアウトを反復していない。",
+  "post_integration_human_trial": "追加実施なし。本人の採用判断は完了しており再試遊待ちへ戻さない。",
+  "new_windows_build": "未作成。容量節約。既存比較Buildを保持。",
+  "human_action_required": false,
+  "preserved": "既存dirty差分5件、未承認Proof、Source/meta、Scene、Packages、ProjectSettings、Build/outputを保持。"
+}
