@@ -1,0 +1,129 @@
+{
+  "approved_review_commit": "54fbc8b2b7b809292cb50a2272fd3e5087cdb849",
+  "integration_base": "7a4f011b7ffc0343acd4727a75255495a3881fb3",
+  "human_adoption": "C22/C23の表示修正を正式承認。Production限定統合とcommit/pushを明示許可。",
+  "approved_patch_match": true,
+  "proof_candidate_without_diagnostics_match": true,
+  "diagnostic_switch_in_production": false,
+  "source_sha256_before": "456589434AD42597EFD0133E8615D2D616F61696022EA5DE506EAE102E3C2D01",
+  "source_sha256_after": "1CCA878FD7B4538AC35E3062A613D77C87FF5849FEEF4F55243A5EA0CF88A635",
+  "meta_changed": false,
+  "unity": "6000.3.21f1",
+  "production_compile": "PASS",
+  "production_play": "PASS: actual Editor Play, Tutorial loaded in Play only",
+  "production_normal_start": "PASS: stage selection waiting state and existing BeginGameFromTitle API",
+  "method": "Local Unity managed-debugger/API observations; not OS keys or Human trial",
+  "production_ground_states": [
+    {
+      "remaining": 50,
+      "maximum": 50,
+      "scale": 1.0,
+      "grounded": true,
+      "datum_local_y": -0.575
+    },
+    {
+      "remaining": 31,
+      "maximum": 50,
+      "scale": 0.881,
+      "grounded": true,
+      "datum_local_y": -0.575
+    },
+    {
+      "remaining": 18,
+      "maximum": 50,
+      "scale": 0.7655,
+      "grounded": true,
+      "datum_local_y": -0.575
+    },
+    {
+      "remaining": 7,
+      "maximum": 50,
+      "scale": 0.65,
+      "grounded": true,
+      "datum_local_y": -0.575
+    }
+  ],
+  "production_actions": [
+    "left/right aim and minimum-size idle observed",
+    "pause timeScale0 and resume1",
+    "checkpoint R API returns to grounded; original99 limited by diagnostic maximum50"
+  ],
+  "runtime_errors_after_tutorial_load": 0,
+  "reused_proof": {
+    "before_checks": 45,
+    "before_failed": 0,
+    "after_checks": 45,
+    "after_failed": 0,
+    "errors_before": 0,
+    "errors_after": 0,
+    "physics_comparison_groups": 125,
+    "all_physics_comparisons_within_1e_4": true,
+    "crown_error": 0.0,
+    "neck_error": 0.0,
+    "bridge_bend_range": [
+      -0.14185181260108948,
+      0.0
+    ]
+  },
+  "unchanged_non_target_runtime_sources": 118,
+  "runtime_source_differences": [],
+  "protected_hashes_unchanged": true,
+  "protected_hashes_before": {
+    "Assets/Scenes/MainStage.unity": "57D2464751B5B9C2A78E6C56F34197E9BC2629983FADAA1DFF6E0BA0B4BC2284",
+    "Assets/Scenes/Tutorial.unity": "DC1BED54CC083256CE895041B1C93578101E19B9738E7CF260619E8F7E1E4B92",
+    "Assets/Scripts/HorizontalCameraFollow.cs": "BD2EEF76F57DC4B7C4E3AD594EB2868FBF8252C19D6F93DFEFE1A4DE95EA504D",
+    "Assets/Scripts/MainStageRespawnOnFall.cs": "314060136DFB7846AE7EBBC43CFAF0028625B839B4B9A05E9171D4F5830C4D8C",
+    "Assets/Scripts/PlayerMover.cs": "02F6BAB1132599184CC6450C5053990B612998FF657372F56CD9877CB5201F8D",
+    "Assets/Scripts/PrototypeHud.cs": "2E6D442C4933DDA55AA3680ED1A835372E53274FE0C7404498684DC23ABB6780",
+    "Assets/Scripts/RopeBodyVisual.cs.meta": "3D6A30F18948954A2AA3D83DF0BB98D5B849A97FBC7A5571DF23B4C426CDECD9",
+    "Assets/Scripts/RopeController.cs": "3EF4A50076994279839F398652180256F5EC37C01B954EEEFC67C79B831E25D6",
+    "Assets/Scripts/RopePlatformBuilder.cs": "11ECB4C1870CB8EF0449343155559211A5E1D9E1321132BCE0DCF8E14E279FD2",
+    "Assets/Scripts/RopeResource.cs": "026476F48B89BAC7158ABEBC1744BF41553BAE4981C41B7148B41DCED63860EB",
+    "Assets/Scripts/StageOverlayControls.cs": "7D63DCBAA1DBCE7FB04A8E387B0013050D343084F3FC6D267F4064A69A28755A",
+    "Docs/LEARNING_LOG.md": "32ADEEB9D6882F3609CC932148ECB9A5C70E66316A516503A3016DB83EE65F8D",
+    "Docs/QA/MainStageCleanReproduction_20261001/Evidence/DeterministicSceneSync/ExeA.log": "18736EF2397759C9AD2DD22728D6F97F2669309CE9336334EFE7970CCE62139B",
+    "Docs/QA/MainStageCleanReproduction_20261001/Evidence/DeterministicSceneSync/ExeB.log": "C13F3FD5CD1010519225AF10D53A4829D21CCD9F1CF898B8B2FDEC8DC275B2A2",
+    "Packages/manifest.json": "3525BCC13BA17777DE452692EF273585380245FE804DD2CA1712E3BC5D274034",
+    "Packages/packages-lock.json": "9A330D81395090EFA172F2BF18AED2592CD0B37818086C09ECDA2D8DA378324F",
+    "ProjectSettings/ProjectSettings.asset": "DF9AFFF7A8D16AA525C8C951D9002A42FA9905355D21493796F0FD8BDA0596FE",
+    "ProjectSettings/ProjectVersion.txt": "C996A482FD926D9F094CFB99105C9319B992208C119A36427312AB8A04D25A42",
+    "README.md": "60331B91A2A9F6D147F5D00F614C9622F8EBCB00342EED7F5316EFBFEB054E7F"
+  },
+  "protected_hashes_after": {
+    "Assets/Scenes/MainStage.unity": "57D2464751B5B9C2A78E6C56F34197E9BC2629983FADAA1DFF6E0BA0B4BC2284",
+    "Assets/Scenes/Tutorial.unity": "DC1BED54CC083256CE895041B1C93578101E19B9738E7CF260619E8F7E1E4B92",
+    "Assets/Scripts/HorizontalCameraFollow.cs": "BD2EEF76F57DC4B7C4E3AD594EB2868FBF8252C19D6F93DFEFE1A4DE95EA504D",
+    "Assets/Scripts/MainStageRespawnOnFall.cs": "314060136DFB7846AE7EBBC43CFAF0028625B839B4B9A05E9171D4F5830C4D8C",
+    "Assets/Scripts/PlayerMover.cs": "02F6BAB1132599184CC6450C5053990B612998FF657372F56CD9877CB5201F8D",
+    "Assets/Scripts/PrototypeHud.cs": "2E6D442C4933DDA55AA3680ED1A835372E53274FE0C7404498684DC23ABB6780",
+    "Assets/Scripts/RopeBodyVisual.cs.meta": "3D6A30F18948954A2AA3D83DF0BB98D5B849A97FBC7A5571DF23B4C426CDECD9",
+    "Assets/Scripts/RopeController.cs": "3EF4A50076994279839F398652180256F5EC37C01B954EEEFC67C79B831E25D6",
+    "Assets/Scripts/RopePlatformBuilder.cs": "11ECB4C1870CB8EF0449343155559211A5E1D9E1321132BCE0DCF8E14E279FD2",
+    "Assets/Scripts/RopeResource.cs": "026476F48B89BAC7158ABEBC1744BF41553BAE4981C41B7148B41DCED63860EB",
+    "Assets/Scripts/StageOverlayControls.cs": "7D63DCBAA1DBCE7FB04A8E387B0013050D343084F3FC6D267F4064A69A28755A",
+    "Docs/LEARNING_LOG.md": "32ADEEB9D6882F3609CC932148ECB9A5C70E66316A516503A3016DB83EE65F8D",
+    "Docs/QA/MainStageCleanReproduction_20261001/Evidence/DeterministicSceneSync/ExeA.log": "18736EF2397759C9AD2DD22728D6F97F2669309CE9336334EFE7970CCE62139B",
+    "Docs/QA/MainStageCleanReproduction_20261001/Evidence/DeterministicSceneSync/ExeB.log": "C13F3FD5CD1010519225AF10D53A4829D21CCD9F1CF898B8B2FDEC8DC275B2A2",
+    "Packages/manifest.json": "3525BCC13BA17777DE452692EF273585380245FE804DD2CA1712E3BC5D274034",
+    "Packages/packages-lock.json": "9A330D81395090EFA172F2BF18AED2592CD0B37818086C09ECDA2D8DA378324F",
+    "ProjectSettings/ProjectSettings.asset": "DF9AFFF7A8D16AA525C8C951D9002A42FA9905355D21493796F0FD8BDA0596FE",
+    "ProjectSettings/ProjectVersion.txt": "C996A482FD926D9F094CFB99105C9319B992208C119A36427312AB8A04D25A42",
+    "README.md": "60331B91A2A9F6D147F5D00F614C9622F8EBCB00342EED7F5316EFBFEB054E7F"
+  },
+  "free_bytes_before": 3477442560,
+  "free_bytes_after": 3180814336,
+  "new_windows_build": false,
+  "new_full_project_or_library_copy": false,
+  "verification_notes": [
+    "External diagnostic DLL loading failed; not counted as passed. Direct existing Unity APIs were used instead.",
+    "Initial licensing handshake warnings recovered; not gameplay errors.",
+    "Exit API waited; only own validation client and Editor were stopped by exact command line. No Scene save."
+  ],
+  "unverified": [
+    "post-integration OS keys: list_apps timed out once",
+    "post-integration Human trial: not requested again because formal adoption already complete",
+    "audio",
+    "C08 dedicated hook-edge repro",
+    "new Production Windows executable"
+  ]
+}

@@ -783,7 +783,7 @@ namespace HimoHito
             float footCorrection = IdleFootOffsets[frame] * weaveVisualBaseScale.x * currentBaseScale;
             if (weavePose.FacingLeft) footCorrection = -footCorrection;
             visualTransform.localPosition = new Vector3(footCorrection,
-                -CharacterVisualHeight * 0.5f * currentBaseScale, 0f);
+                GroundFootHeight(-CharacterVisualHeight * 0.5f * currentBaseScale), 0f);
             visualTransform.localRotation = Quaternion.identity;
             isWeavePoseDisplayed = true;
             isWalking = false;
@@ -861,7 +861,7 @@ namespace HimoHito
             Vector2 lowerScale = edgeBodyBaseScale * GroundFrameScale[lowerFrame] * currentBaseScale;
             float footCorrection = IdleFootOffsets[lowerFrame] * edgeBodyBaseScale.x * currentBaseScale;
             if (edgeOnLeft) footCorrection = -footCorrection;
-            Vector3 feet = new Vector3(footCorrection, -CharacterVisualHeight * .5f * currentBaseScale, 0f);
+            Vector3 feet = new Vector3(footCorrection, GroundFootHeight(-CharacterVisualHeight * .5f * currentBaseScale), 0f);
             Transform lowerTransform = balanceBodyRenderer.transform;
             balanceBodyRenderer.sprite = lower.Body;
             balanceBodyRenderer.flipX = edgeOnLeft;
@@ -925,7 +925,7 @@ namespace HimoHito
             Vector2 scale = visualBaseScale * currentBaseScale;
             float correction = IdleFootOffsets[frame] * aimVisualBaseScale.x * currentBaseScale;
             if (left) correction = -correction;
-            Vector3 feet = new Vector3(correction, -CharacterVisualHeight * .5f * currentBaseScale, 0f);
+            Vector3 feet = new Vector3(correction, GroundFootHeight(-CharacterVisualHeight * .5f * currentBaseScale), 0f);
             Transform lower = balanceBodyRenderer.transform;
             balanceBodyRenderer.sprite = parts.Body;
             balanceBodyRenderer.flipX = left;
@@ -959,7 +959,7 @@ namespace HimoHito
             float footCorrection = IdleFootOffsets[frame] * aimVisualBaseScale.x * currentBaseScale;
             if (aimPose.FacingLeft) footCorrection = -footCorrection;
             visualTransform.localPosition = new Vector3(footCorrection,
-                -CharacterVisualHeight * 0.5f * currentBaseScale, 0f);
+                GroundFootHeight(-CharacterVisualHeight * 0.5f * currentBaseScale), 0f);
             visualTransform.localRotation = Quaternion.identity;
             isAimPoseDisplayed = true;
             isWalking = false;
@@ -1003,7 +1003,7 @@ namespace HimoHito
             float footCorrection = IdleFootOffsets[frame] * idleVisualBaseScale.x * currentBaseScale;
             if (visualRenderer.flipX) footCorrection = -footCorrection;
             visualTransform.localPosition = new Vector3(footCorrection,
-                -CharacterVisualHeight * 0.5f * currentBaseScale, 0f);
+                GroundFootHeight(-CharacterVisualHeight * 0.5f * currentBaseScale), 0f);
             // Pose changes are drawn into the cells. No procedural full-body
             // rocking, pulsing, or rotation is added to a planted character.
             visualTransform.localRotation = Quaternion.identity;
@@ -1039,10 +1039,10 @@ namespace HimoHito
             visualBaseScale = Vector2.Scale(groundTransitionBaseScale * GroundFrameScale[frame], scaleRatio);
             visualRenderer.sprite = frame;
             visualRenderer.flipX = groundMotionPose.FacingLeft;
-            // Feet are the pivot for these six cells. Blend between the existing
-            // idle and walk foot heights (including the current rope body size).
-            float footHeight = Mathf.Lerp(-CharacterVisualHeight * 0.5f * currentBaseScale,
-                -CharacterVisualHeight * 0.5f, walkWeight);
+            // The six drawings still supply the lean and footwork. Body shrink
+            // must not raise their ground reference as walking slows to idle.
+            float footHeight = GroundFootHeight(Mathf.Lerp(-CharacterVisualHeight * 0.5f * currentBaseScale,
+                -CharacterVisualHeight * 0.5f, walkWeight));
             visualTransform.localPosition = new Vector3(0f, footHeight, 0f);
             visualTransform.localRotation = Quaternion.Euler(0f, 0f,
                 currentVisualAngle + groundMotionPose.LeanDegrees);
@@ -1421,6 +1421,17 @@ namespace HimoHito
                     visualBaseScale = standingVisualBaseScale;
                 }
 
+                if (playerMover != null && playerMover.IsGrounded)
+                {
+                    // Standing uses a centred sprite; idle/aim use foot pivots.
+                    // Register its sole to the same walk baseline, not its centre.
+                    float standingSole = standingSprite.bounds.min.y * standingVisualBaseScale.y * currentBaseScale;
+                    visualTransform.localPosition = new Vector3(0f,
+                        GroundFootHeight(standingSole) - standingSole, 0f);
+                }
+                else
+                    visualTransform.localPosition = Vector3.zero;
+
                 isWalking = false;
                 walkFrameProgress = 0f;
                 return;
@@ -1445,6 +1456,16 @@ namespace HimoHito
             walkFrameProgress += Time.deltaTime * framesPerSecond;
             int frameIndex = Mathf.FloorToInt(walkFrameProgress) % walkingFrames.Length;
             visualRenderer.sprite = walkingFrames[frameIndex];
+        }
+
+        private float GroundFootHeight(float originalHeight)
+        {
+            // Reuse the existing walking datum in presentation space. This is
+            // neither a raycast-to-floor snap nor a change to the physical body.
+            // Airborne poses, swing crown, bridge bend and foot animation stay owned
+            // by their existing systems. Split head/body poses share this one datum.
+            return playerMover != null && playerMover.IsGrounded
+                ? -CharacterVisualHeight * 0.5f : originalHeight;
         }
 
         // Read-only artwork access for the menu miniature; never instantiate a real player.
