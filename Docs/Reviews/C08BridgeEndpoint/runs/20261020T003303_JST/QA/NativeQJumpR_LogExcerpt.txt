@@ -1,0 +1,5 @@
+C08_NATIVE_Q attached=True built=True cost=6 remaining=93
+C08_R root=(41.30, 0.96) remaining=99 selected=6 bridges=0 attached=False grounded=True
+C08_NATIVE_Q attached=True built=True cost=6 remaining=7
+C08_R root=(41.30, 0.96) remaining=13 selected=6 bridges=0 attached=False grounded=True
+C08_FINISHED errors=0

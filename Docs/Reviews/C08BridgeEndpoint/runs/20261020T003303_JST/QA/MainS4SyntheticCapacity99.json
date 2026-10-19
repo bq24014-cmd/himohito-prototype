@@ -1,0 +1,475 @@
+{
+  "method": "Automatic input-field/API setup and real Unity player Physics2D; not OS keys or Human play",
+  "mode": "points",
+  "unity": "6000.3.21f1",
+  "finished": true,
+  "development": false,
+  "errors": 0,
+  "states": [
+    {
+      "scenario": "Main_S4_99_x65.15",
+      "phase": "settled",
+      "scene": "MainStage",
+      "bridge": "Main_S4",
+      "support": "Generated Rope Platform 1",
+      "sprite": "HimoHitoCraftAim-v1 Aim 3",
+      "section": 4,
+      "frame": 95,
+      "time": 1.8999993801116943,
+      "remaining": 99.0,
+      "scale": 1.0,
+      "colliderBottom": -2.152528762817383,
+      "bodyWidth": 0.8000030517578125,
+      "bodyHeight": 1.2000000476837158,
+      "bridgeColliderAtCenter": -2.350569486618042,
+      "bridgeLineAtCenter": -2.483232259750366,
+      "bridgeVisualTopAtCenter": -2.373821496963501,
+      "bridgeWidth": 0.2093183398246765,
+      "opaqueSoleY": -2.2576425075531006,
+      "soleGap": 0.11617898941040039,
+      "visualBend": -0.01270957849919796,
+      "closestBridgePointX": 64.83594512939453,
+      "closestBridgePointY": -2.1569180488586426,
+      "physicalDistance": -0.004881017841398716,
+      "ortho": 8.699999809265137,
+      "grounded": true,
+      "bridgeSupport": true,
+      "attached": false,
+      "walking": false,
+      "idle": false,
+      "aiming": true,
+      "development": false,
+      "position": {
+        "x": 65.23857116699219,
+        "y": -1.552528738975525
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "bridgeStart": {
+        "x": 64.5999984741211,
+        "y": -2.1500000953674316
+      },
+      "bridgeEnd": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 65.23855590820312,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "contacts": [
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 64.83468627929688,
+            "y": -2.159010648727417
+          },
+          "normal": {
+            "x": 0.5144989490509033,
+            "y": 0.8574910759925842
+          },
+          "separation": -0.004881017841398716
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 64.83540344238281,
+            "y": -2.160104990005493
+          },
+          "normal": {
+            "x": 0.38621634244918823,
+            "y": 0.9224082827568054
+          },
+          "separation": -0.0035734979901462793
+        }
+      ]
+    },
+    {
+      "scenario": "Main_S4_99_x66.45",
+      "phase": "settled",
+      "scene": "MainStage",
+      "bridge": "Main_S4",
+      "support": "Generated Rope Platform 1",
+      "sprite": "HimoHitoCraftAim-v1 Aim 3",
+      "section": 4,
+      "frame": 186,
+      "time": 3.719998598098755,
+      "remaining": 99.0,
+      "scale": 1.0,
+      "colliderBottom": -2.1103463172912598,
+      "bodyWidth": 0.8000030517578125,
+      "bodyHeight": 1.2000001668930054,
+      "bridgeColliderAtCenter": -2.3277714252471924,
+      "bridgeLineAtCenter": -2.506056547164917,
+      "bridgeVisualTopAtCenter": -2.3998358249664307,
+      "bridgeWidth": 0.20142212510108948,
+      "opaqueSoleY": -2.267070770263672,
+      "soleGap": 0.1327650547027588,
+      "visualBend": -0.06432051956653595,
+      "closestBridgePointX": 66.75411987304688,
+      "closestBridgePointY": -2.116234540939331,
+      "physicalDistance": -0.0030456418171525,
+      "ortho": 8.699999809265137,
+      "grounded": true,
+      "bridgeSupport": true,
+      "attached": false,
+      "walking": false,
+      "idle": false,
+      "aiming": true,
+      "development": false,
+      "position": {
+        "x": 66.35041809082031,
+        "y": -1.5103461742401123
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "bridgeStart": {
+        "x": 64.5999984741211,
+        "y": -2.1500000953674316
+      },
+      "bridgeEnd": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 66.35043334960938,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "contacts": [
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 66.75492858886719,
+            "y": -2.117523670196533
+          },
+          "normal": {
+            "x": -0.5323284268379211,
+            "y": 0.8465380072593689
+          },
+          "separation": -0.0030456418171525
+        }
+      ]
+    },
+    {
+      "scenario": "Main_S4_99_x67.75",
+      "phase": "settled",
+      "scene": "MainStage",
+      "bridge": "Main_S4",
+      "support": "Generated Rope Platform 1",
+      "sprite": "HimoHitoCraftAim-v1 Aim 3",
+      "section": 4,
+      "frame": 277,
+      "time": 5.5399980545043945,
+      "remaining": 99.0,
+      "scale": 1.0,
+      "colliderBottom": -1.2115261554718018,
+      "bodyWidth": 0.8000030517578125,
+      "bodyHeight": 1.2000000476837158,
+      "bridgeColliderAtCenter": -1.670199990272522,
+      "bridgeLineAtCenter": -1.8422824144363403,
+      "bridgeVisualTopAtCenter": -1.6993448734283447,
+      "bridgeWidth": 0.21064986288547516,
+      "opaqueSoleY": -1.3185703754425049,
+      "soleGap": 0.38077449798583984,
+      "visualBend": -0.014640097506344318,
+      "closestBridgePointX": 67.73444366455078,
+      "closestBridgePointY": -1.2146610021591187,
+      "physicalDistance": -0.004996181931346655,
+      "ortho": 8.699999809265137,
+      "grounded": true,
+      "bridgeSupport": true,
+      "attached": false,
+      "walking": false,
+      "idle": false,
+      "aiming": true,
+      "development": false,
+      "position": {
+        "x": 67.3305435180664,
+        "y": -0.6115260720252991
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "bridgeStart": {
+        "x": 64.5999984741211,
+        "y": -2.1500000953674316
+      },
+      "bridgeEnd": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 67.33055877685547,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "contacts": [
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 67.73638916015625,
+            "y": -1.2162266969680786
+          },
+          "normal": {
+            "x": -0.7792150974273682,
+            "y": 0.6267566084861755
+          },
+          "separation": -0.004996181931346655
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 67.73626708984375,
+            "y": -1.2164149284362793
+          },
+          "normal": {
+            "x": -0.7604583501815796,
+            "y": 0.6493865847587585
+          },
+          "separation": -0.0049448804929852486
+        }
+      ]
+    },
+    {
+      "scenario": "Main_S4_7_x65.15",
+      "phase": "settled",
+      "scene": "MainStage",
+      "bridge": "Main_S4",
+      "support": "Generated Rope Platform 1",
+      "sprite": "HimoHitoCraftAim-v1 Aim 3",
+      "section": 4,
+      "frame": 368,
+      "time": 7.359997272491455,
+      "remaining": 7.0,
+      "scale": 0.6499999761581421,
+      "colliderBottom": -2.2181451320648193,
+      "bodyWidth": 0.8000030517578125,
+      "bodyHeight": 1.2000000476837158,
+      "bridgeColliderAtCenter": -2.385704517364502,
+      "bridgeLineAtCenter": -2.5240094661712646,
+      "bridgeVisualTopAtCenter": -2.4177989959716797,
+      "bridgeWidth": 0.20684298872947693,
+      "opaqueSoleY": -2.3306641578674316,
+      "soleGap": 0.08713483810424805,
+      "visualBend": -0.020956512540578842,
+      "closestBridgePointX": 64.95713806152344,
+      "closestBridgePointY": -2.2226388454437256,
+      "physicalDistance": -0.004998365882784128,
+      "ortho": 8.699999809265137,
+      "grounded": true,
+      "bridgeSupport": true,
+      "attached": false,
+      "walking": false,
+      "idle": false,
+      "aiming": true,
+      "development": false,
+      "position": {
+        "x": 65.35932922363281,
+        "y": -1.6181451082229614
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "bridgeStart": {
+        "x": 64.5999984741211,
+        "y": -2.1500000953674316
+      },
+      "bridgeEnd": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 65.35931396484375,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "contacts": [
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 64.954345703125,
+            "y": -2.2249932289123535
+          },
+          "normal": {
+            "x": 0.5885745286941528,
+            "y": 0.8084429502487183
+          },
+          "separation": -0.0030542477034032345
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 64.95603942871094,
+            "y": -2.224884510040283
+          },
+          "normal": {
+            "x": 0.4387769103050232,
+            "y": 0.8985959887504578
+          },
+          "separation": -0.004998365882784128
+        }
+      ]
+    },
+    {
+      "scenario": "Main_S4_7_x66.45",
+      "phase": "settled",
+      "scene": "MainStage",
+      "bridge": "Main_S4",
+      "support": "Generated Rope Platform 1",
+      "sprite": "HimoHitoCraftAim-v1 Aim 3",
+      "section": 4,
+      "frame": 459,
+      "time": 9.179996490478516,
+      "remaining": 7.0,
+      "scale": 0.6499999761581421,
+      "colliderBottom": -2.117358684539795,
+      "bodyWidth": 0.8000030517578125,
+      "bodyHeight": 1.2000000476837158,
+      "bridgeColliderAtCenter": -2.332235813140869,
+      "bridgeLineAtCenter": -2.510688543319702,
+      "bridgeVisualTopAtCenter": -2.4047818183898926,
+      "bridgeWidth": 0.20127518475055695,
+      "opaqueSoleY": -2.2733540534973145,
+      "soleGap": 0.13142776489257812,
+      "visualBend": -0.06443257629871368,
+      "closestBridgePointX": 66.74181365966797,
+      "closestBridgePointY": -2.12397837638855,
+      "physicalDistance": -0.0021798950619995594,
+      "ortho": 8.699999809265137,
+      "grounded": true,
+      "bridgeSupport": true,
+      "attached": false,
+      "walking": false,
+      "idle": false,
+      "aiming": true,
+      "development": false,
+      "position": {
+        "x": 66.337646484375,
+        "y": -1.517358660697937
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "bridgeStart": {
+        "x": 64.5999984741211,
+        "y": -2.1500000953674316
+      },
+      "bridgeEnd": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 66.33766174316406,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "contacts": [
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 66.74239349365234,
+            "y": -2.124901056289673
+          },
+          "normal": {
+            "x": -0.5323284268379211,
+            "y": 0.8465380072593689
+          },
+          "separation": -0.0021798950619995594
+        }
+      ]
+    },
+    {
+      "scenario": "Main_S4_7_x67.75",
+      "phase": "settled",
+      "scene": "MainStage",
+      "bridge": "Main_S4",
+      "support": "Generated Rope Platform 1",
+      "sprite": "HimoHitoCraftAim-v1 Aim 3",
+      "section": 4,
+      "frame": 550,
+      "time": 10.999996185302734,
+      "remaining": 7.0,
+      "scale": 0.6499999761581421,
+      "colliderBottom": -1.2115261554718018,
+      "bodyWidth": 0.8000030517578125,
+      "bodyHeight": 1.2000000476837158,
+      "bridgeColliderAtCenter": -1.670199990272522,
+      "bridgeLineAtCenter": -1.8422824144363403,
+      "bridgeVisualTopAtCenter": -1.6993448734283447,
+      "bridgeWidth": 0.21064986288547516,
+      "opaqueSoleY": -1.317728877067566,
+      "soleGap": 0.3816159963607788,
+      "visualBend": -0.014640097506344318,
+      "closestBridgePointX": 67.73444366455078,
+      "closestBridgePointY": -1.2146610021591187,
+      "physicalDistance": -0.004996181931346655,
+      "ortho": 8.699999809265137,
+      "grounded": true,
+      "bridgeSupport": true,
+      "attached": false,
+      "walking": false,
+      "idle": false,
+      "aiming": true,
+      "development": false,
+      "position": {
+        "x": 67.3305435180664,
+        "y": -0.6115260720252991
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "bridgeStart": {
+        "x": 64.5999984741211,
+        "y": -2.1500000953674316
+      },
+      "bridgeEnd": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 67.33055877685547,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "contacts": [
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 67.73638916015625,
+            "y": -1.2162266969680786
+          },
+          "normal": {
+            "x": -0.7792150974273682,
+            "y": 0.6267566084861755
+          },
+          "separation": -0.004996181931346655
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 67.73626708984375,
+            "y": -1.2164149284362793
+          },
+          "normal": {
+            "x": -0.7604583501815796,
+            "y": 0.6493865847587585
+          },
+          "separation": -0.0049448804929852486
+        }
+      ]
+    }
+  ],
+  "trajectory": [],
+  "capacity_note": "Diagnostic capacity override 99; full ratio 1.0 and minimum ratio 7/99. Not ordinary resource balance evidence.",
+  "appearance_measurement_note": "soleGap is an approximate opaque-pixel sole versus rendered ribbon upper-edge proxy, not physical contact separation. Native box contacts are in contacts and physicalDistance. Screenshots are visual evidence."
+}

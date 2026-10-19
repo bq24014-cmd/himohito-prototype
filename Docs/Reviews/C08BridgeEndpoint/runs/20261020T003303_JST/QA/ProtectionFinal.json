@@ -1,0 +1,29 @@
+{
+  "at": "2026-10-20T00:38:50.0870223+09:00",
+  "production_head": "2a0a2b5f5d5478f5ee2c6be5553121683757ebf7",
+  "production_branch": "main",
+  "origin_main": "2a0a2b5f5d5478f5ee2c6be5553121683757ebf7",
+  "protected_production_files": 130,
+  "identical_runtime_source_files": 119,
+  "immutable_runtime_links_verified_in_both_locations": 144,
+  "mismatches": [],
+  "tracked_status_unchanged": true,
+  "staged_count": 0,
+  "tracked_status": [
+    " M Assets/Scenes/MainStage.unity",
+    " M Docs/LEARNING_LOG.md",
+    " M Docs/QA/MainStageCleanReproduction_20261001/Evidence/DeterministicSceneSync/ExeA.log",
+    " M Docs/QA/MainStageCleanReproduction_20261001/Evidence/DeterministicSceneSync/ExeB.log",
+    " M README.md"
+  ],
+  "c22_source_sha256": "1CCA878FD7B4538AC35E3062A613D77C87FF5849FEEF4F55243A5EA0CF88A635",
+  "frozen_assembly_unchanged": true,
+  "frozen_source_unchanged": true,
+  "production_implementation_edits": 0,
+  "isolated_gameplay_source_edits": 0,
+  "additional_full_project_or_library_copies": 0,
+  "deleted_files": 0,
+  "free_bytes_before": 4473692160,
+  "free_bytes_after": 4492988416,
+  "scope": "Targeted protected files and 144 reused immutable Player files; not a complete filesystem or untracked-file audit."
+}

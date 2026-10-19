@@ -1,0 +1,58 @@
+{
+  "compile": "PASS",
+  "compiler": "Unity 6000.3.21f1 bundled Roslyn, standalone Player references",
+  "errors": 0,
+  "warnings": {
+    "CS0649": 4
+  },
+  "new_build_pipeline_build": false,
+  "editor_play": "not performed",
+  "runtime_development": false,
+  "current_identity": {
+    "assembly": "F5AC2EBDF1EB60123D33978F11BF89357A1B8E740A65B6B4EB830B6E0685B255",
+    "fixture": "5AA3941E92CA35F758F37C69E6BDEF742E37AB14FAE67EBCCE49B0CED775DD88",
+    "grounding_source": "1CCA878FD7B4538AC35E3062A613D77C87FF5849FEEF4F55243A5EA0CF88A635",
+    "suffix": "finalCapacity50",
+    "at": "2026-10-20T00:34:39.7121225+09:00",
+    "kind": "Managed-code overlay on frozen nonDevelopment Unity Player; not a new Unity BuildPipeline build"
+  },
+  "scene_source_comparison": {
+    "Assets/Scenes/Tutorial.unity": {
+      "production_sha256": "DC1BED54CC083256CE895041B1C93578101E19B9738E7CF260619E8F7E1E4B92",
+      "frozen_project_sha256": "DC1BED54CC083256CE895041B1C93578101E19B9738E7CF260619E8F7E1E4B92",
+      "identical": true
+    },
+    "Assets/Scenes/MainStage.unity": {
+      "production_sha256": "57D2464751B5B9C2A78E6C56F34197E9BC2629983FADAA1DFF6E0BA0B4BC2284",
+      "frozen_project_sha256": "57D2464751B5B9C2A78E6C56F34197E9BC2629983FADAA1DFF6E0BA0B4BC2284",
+      "identical": true
+    }
+  },
+  "runtime_source_comparison": "119/119 copied .cs files identical to Production",
+  "render_physics_separation": "No C08 gameplay or rendering correction implemented. Current C22/C23 is retained.",
+  "full_vs_min_event_deltas": {
+    "bank_to_bridge": {
+      "position": 0.0,
+      "velocity": 0.0,
+      "camera": 0.0
+    },
+    "decelerate_stop": {
+      "position": 0.0,
+      "velocity": 0.0,
+      "camera": 0.0
+    },
+    "idle": {
+      "position": 0.0,
+      "velocity": 0.0,
+      "camera": 0.0
+    },
+    "bridge_to_bank": {
+      "position": 0.0,
+      "velocity": 0.0,
+      "camera": 0.0
+    }
+  },
+  "trajectory_before_after_fix": "not applicable; no fix implemented",
+  "meta_changes": "none; no Production Source/Asset/meta additions or edits",
+  "bridge_to_bank_limit": "return walking recorded; complete bank arrival not confirmed"
+}

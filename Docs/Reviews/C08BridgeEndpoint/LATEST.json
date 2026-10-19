@@ -1,0 +1,35 @@
+{
+  "review_id": "C08BridgeEndpoint_20261020T003303_JST",
+  "updated_at": "2026-10-20T00:39:29+09:00",
+  "timezone": "Asia/Tokyo",
+  "kind": "C08 生成橋の緑フック付近で浮く現象の原因調査",
+  "branch": "codex/review-c08-bridge-end",
+  "production_head": "2a0a2b5f5d5478f5ee2c6be5553121683757ebf7",
+  "c22_c23_preserved": true,
+  "status": "原因確認済み・修正HOLD・Human判断待ち",
+  "decision": "HOLD",
+  "fix_implemented": false,
+  "production_integrated": false,
+  "human_adoption": "未承認",
+  "report_path": "Docs/Reviews/C08BridgeEndpoint/runs/20261020T003303_JST/Report.md",
+  "images_path": "Docs/Reviews/C08BridgeEndpoint/runs/20261020T003303_JST/Images/",
+  "figures_path": "Docs/Reviews/C08BridgeEndpoint/runs/20261020T003303_JST/Figures/",
+  "qa_path": "Docs/Reviews/C08BridgeEndpoint/runs/20261020T003303_JST/QA/",
+  "video_path": "Docs/Reviews/C08BridgeEndpoint/runs/20261020T003303_JST/Video/CurrentC08_AutomaticWalk_1x.mp4",
+  "launch_path": "Docs/Reviews/C08BridgeEndpoint/runs/20261020T003303_JST/Environment.md",
+  "runtime": {
+    "unity": "6000.3.21f1",
+    "development": false,
+    "kind": "既存非Development Playerの独立managed-code overlay。新規BuildPipeline Buildではない",
+    "current_managed_assembly_sha256": "F5AC2EBDF1EB60123D33978F11BF89357A1B8E740A65B6B4EB830B6E0685B255",
+    "source_files_identical_to_production": 119
+  },
+  "unconfirmed": [
+    "元のHuman指摘画像の正確なScene・橋・座標",
+    "OS実キー操作とHuman試遊・Visual採否",
+    "未検証の他区間・橋長",
+    "橋端形状を変更する案の効果と影響",
+    "修正後の比較・中間サイズ回帰（修正未実装のため未実施）",
+    "橋から岸へ完全に戻り切る遷移（戻り歩行まで確認）"
+  ]
+}

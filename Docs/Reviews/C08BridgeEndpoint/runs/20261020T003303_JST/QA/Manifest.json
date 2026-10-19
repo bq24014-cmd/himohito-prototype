@@ -1,0 +1,113 @@
+{
+  "files": {
+    "Environment.md": {
+      "sha256": "7000B0D3F669A03CE4CB649409018029FFC0214AD71F7CF9B1D59C33032CCD9C",
+      "bytes": 3812
+    },
+    "Report.md": {
+      "sha256": "D7D49E0511BA8625EF509346CF1BD2DC641741B575CFA2EDA20B0F8D9754402B",
+      "bytes": 10396
+    },
+    "Diff/DiagnosticFixture.cs.txt": {
+      "sha256": "5AA3941E92CA35F758F37C69E6BDEF742E37AB14FAE67EBCCE49B0CED775DD88",
+      "bytes": 18042
+    },
+    "Figures/01_NormalViewControlAndReproduction.jpg": {
+      "sha256": "FF40122AD0464AE0555EAA54A0B18116AD408394D60D9114EC589B5C825057AA",
+      "bytes": 482802
+    },
+    "Figures/02_LeftCenterRight.jpg": {
+      "sha256": "BF9EE692AC6696B2D34425A91B5BD2F966F4842852210E5018CB841C7639A119",
+      "bytes": 160646
+    },
+    "Figures/03_FeetCrops.jpg": {
+      "sha256": "4D373AC2966920CE925C0986FCCF4E860A2AB50F040686AA05BBD0A02E6628F3",
+      "bytes": 119164
+    },
+    "Figures/04_MeasuredSupportGeometry.png": {
+      "sha256": "442F551CCFB49F322699BB38F90272C1BD7672394A3C20801210987D98231EF6",
+      "bytes": 78440
+    },
+    "Figures/05_WalkStopIdle.jpg": {
+      "sha256": "45EC6B545A0686B2F2D383460F8ADDCB0B07347ADB11C530AB28D3CBD3439994",
+      "bytes": 204165
+    },
+    "Images/MainS4_small_left.jpg": {
+      "sha256": "CBF50CA78B6558DBF6FEE31121819E6837FBE11FCB6704EE27DEBDE2C49CF9C1",
+      "bytes": 165533
+    },
+    "Images/T3_full_left.jpg": {
+      "sha256": "42C91D7C1B356566A1E952DFD78A16511827662FF6105EAF1218FE22EB8DC818",
+      "bytes": 205413
+    },
+    "Images/T4_full_center.jpg": {
+      "sha256": "20AF427E9300F859C933C34CA1699689BC201AADA9B10CDA08CC6058D6A99A47",
+      "bytes": 215959
+    },
+    "Images/T4_full_left.jpg": {
+      "sha256": "1808E19D704EF156BC7118DE15E23BA639E9E5C50BCE562B3A4645DC3A6F8D91",
+      "bytes": 216176
+    },
+    "Images/T4_full_right.jpg": {
+      "sha256": "409FB5648E6EDF43C7D4A02FD6BB59F15992B246EC3625BE03164538516CFB2C",
+      "bytes": 222175
+    },
+    "Images/T4_nativeQ_small_settled.jpg": {
+      "sha256": "E4BE8AE9B29CDA7AFD9298E73BE0D6E46950CD5C006ABF98712659F8E1FF56F0",
+      "bytes": 213962
+    },
+    "Images/T4_small_left.jpg": {
+      "sha256": "16E59052482EEE7066F1BF206BD9094188D53B673910B9335696A07C553044CB",
+      "bytes": 215301
+    },
+    "Images/T4_walk50_small_idle.jpg": {
+      "sha256": "1C87625A372189AE44E6294359149517356C52D2606C5F94F2F6C8920FBDB4AE",
+      "bytes": 214261
+    },
+    "QA/CompileAndScope.json": {
+      "sha256": "D8C53E9469648A8270092A489FC09AAA7CE038EB27424998EB5024FCD0193DB2",
+      "bytes": 2152
+    },
+    "QA/EvidenceIndex.json": {
+      "sha256": "030294D151D02337B60B6043A7FFB371ED54891EC062EE630EBC623112F4ACEB",
+      "bytes": 1621
+    },
+    "QA/MainS4SyntheticCapacity99.json": {
+      "sha256": "0D8E7E698D0B5ACF5A739E7F58E459E8B88E485245FE02210E6E840A4B451D75",
+      "bytes": 13654
+    },
+    "QA/NativeQJumpRSyntheticCapacity99.json": {
+      "sha256": "4FD3E3749380F2D30DC1CC7A31D6C973C5574A009602CA58AC282F4C647B0C0F",
+      "bytes": 19181
+    },
+    "QA/NativeQJumpR_LogExcerpt.txt": {
+      "sha256": "303E07C60CB688EFC77DE2D438C2E6DC8FC4E7E7D61A4B52F4410E1E596A0D75",
+      "bytes": 313
+    },
+    "QA/PointsSyntheticCapacity99.json": {
+      "sha256": "773B4AB87D00BDE4DC9FD136A24513F475CE1640BE5182FAB0378D129C7F2270",
+      "bytes": 47455
+    },
+    "QA/ProtectionFinal.json": {
+      "sha256": "0308FAA6E2BD1DF0082087092A482E7F6A6511DF1901EC40AD901F6D0FF46370",
+      "bytes": 1239
+    },
+    "QA/WalkCapacity50.json": {
+      "sha256": "813D1A3CCF8D2D8E807D3D9ACA81A1A143BA055666ECE458E3C394551A9591C7",
+      "bytes": 350777
+    },
+    "Video/CurrentC08_AutomaticWalk_1x.mp4": {
+      "sha256": "37CA39888C1D543C580296965A4C13FA3F22218A60BD015C4055BFB2BF3EF5DF",
+      "bytes": 1660395
+    }
+  },
+  "video": {
+    "duration_seconds": 3.48,
+    "fps": 25,
+    "source_capture_fps": 50,
+    "source_stride": 2,
+    "playback_speed": 1.0,
+    "audio": "not included; audio unverified",
+    "input": "automatic input field/API, not OS keys"
+  }
+}

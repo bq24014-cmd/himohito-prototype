@@ -1,0 +1,1789 @@
+{
+  "method": "Automatic input-field/API setup and real Unity player Physics2D; not OS keys or Human play",
+  "mode": "points",
+  "unity": "6000.3.21f1",
+  "finished": true,
+  "development": false,
+  "errors": 0,
+  "states": [
+    {
+      "scenario": "T3_flat_99_x30.55",
+      "phase": "settled",
+      "scene": "Tutorial",
+      "bridge": "T3_flat",
+      "support": "Generated Rope Platform 1",
+      "sprite": "HimoHitoCraftAim-v1 Aim 3",
+      "section": 3,
+      "frame": 95,
+      "time": 1.8999993801116943,
+      "remaining": 99.0,
+      "scale": 1.0,
+      "colliderBottom": 0.4750000238418579,
+      "bodyWidth": 0.7999992370605469,
+      "bodyHeight": 1.2000000476837158,
+      "bridgeColliderAtCenter": 0.46000027656555176,
+      "bridgeLineAtCenter": 0.3432154953479767,
+      "bridgeVisualTopAtCenter": 0.449565052986145,
+      "bridgeWidth": 0.21269914507865906,
+      "opaqueSoleY": 0.37581145763397217,
+      "soleGap": -0.07375359535217285,
+      "visualBend": -0.006784507073462009,
+      "closestBridgePointX": 30.15192413330078,
+      "closestBridgePointY": 0.4700000286102295,
+      "physicalDistance": -0.00499996542930603,
+      "ortho": 8.699999809265137,
+      "grounded": true,
+      "bridgeSupport": true,
+      "attached": false,
+      "walking": false,
+      "idle": false,
+      "aiming": true,
+      "development": false,
+      "position": {
+        "x": 30.549999237060547,
+        "y": 1.0750000476837158
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "bridgeStart": {
+        "x": 30.0,
+        "y": 0.3499999940395355
+      },
+      "bridgeEnd": {
+        "x": 36.0,
+        "y": 0.3499999940395355
+      },
+      "camera": {
+        "x": 30.549999237060547,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "contacts": [
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 30.149999618530273,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 30.153846740722656,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 30.94999885559082,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 30.923076629638672,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 30.923076629638672,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 30.769229888916016,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 30.769229888916016,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 30.615385055541992,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 30.615385055541992,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 30.461538314819336,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 30.461538314819336,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 30.30769157409668,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 30.30769157409668,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 30.153846740722656,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        }
+      ]
+    },
+    {
+      "scenario": "T3_flat_99_x33.00",
+      "phase": "settled",
+      "scene": "Tutorial",
+      "bridge": "T3_flat",
+      "support": "Generated Rope Platform 1",
+      "sprite": "HimoHitoCraftAim-v1 Aim 3",
+      "section": 3,
+      "frame": 186,
+      "time": 3.719998598098755,
+      "remaining": 99.0,
+      "scale": 1.0,
+      "colliderBottom": 0.4750000238418579,
+      "bodyWidth": 0.8000030517578125,
+      "bodyHeight": 1.2000000476837158,
+      "bridgeColliderAtCenter": 0.46000027656555176,
+      "bridgeLineAtCenter": 0.26763883233070374,
+      "bridgeVisualTopAtCenter": 0.3649449348449707,
+      "bridgeWidth": 0.19461217522621155,
+      "opaqueSoleY": 0.3002347946166992,
+      "soleGap": -0.06471014022827148,
+      "visualBend": -0.08236116170883179,
+      "closestBridgePointX": 32.607688903808594,
+      "closestBridgePointY": 0.4700000286102295,
+      "physicalDistance": -0.00499996542930603,
+      "ortho": 8.699999809265137,
+      "grounded": true,
+      "bridgeSupport": true,
+      "attached": false,
+      "walking": false,
+      "idle": false,
+      "aiming": true,
+      "development": false,
+      "position": {
+        "x": 33.0,
+        "y": 1.0750000476837158
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "bridgeStart": {
+        "x": 30.0,
+        "y": 0.3499999940395355
+      },
+      "bridgeEnd": {
+        "x": 36.0,
+        "y": 0.3499999940395355
+      },
+      "camera": {
+        "x": 33.0,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "contacts": [
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 32.599998474121094,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 32.61538314819336,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 33.400001525878906,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 33.38461685180664,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 33.38461685180664,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 33.230770111083984,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 33.230770111083984,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 33.07692337036133,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 33.07692337036133,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 32.92307662963867,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 32.92307662963867,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 32.769229888916016,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 32.769229888916016,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 32.61538314819336,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        }
+      ]
+    },
+    {
+      "scenario": "T3_flat_99_x35.45",
+      "phase": "settled",
+      "scene": "Tutorial",
+      "bridge": "T3_flat",
+      "support": "Generated Rope Platform 1",
+      "sprite": "HimoHitoCraftAim-v1 Aim 3",
+      "section": 3,
+      "frame": 277,
+      "time": 5.5399980545043945,
+      "remaining": 99.0,
+      "scale": 1.0,
+      "colliderBottom": 0.4750000238418579,
+      "bodyWidth": 0.8000030517578125,
+      "bodyHeight": 1.2000000476837158,
+      "bridgeColliderAtCenter": 0.46000027656555176,
+      "bridgeLineAtCenter": 0.3432154655456543,
+      "bridgeVisualTopAtCenter": 0.449565052986145,
+      "bridgeWidth": 0.21269914507865906,
+      "opaqueSoleY": 0.37581145763397217,
+      "soleGap": -0.07375359535217285,
+      "visualBend": -0.006784514058381319,
+      "closestBridgePointX": 35.06346130371094,
+      "closestBridgePointY": 0.4700000286102295,
+      "physicalDistance": -0.00499996542930603,
+      "ortho": 8.699999809265137,
+      "grounded": true,
+      "bridgeSupport": true,
+      "attached": false,
+      "walking": false,
+      "idle": false,
+      "aiming": true,
+      "development": false,
+      "position": {
+        "x": 35.45000076293945,
+        "y": 1.0750000476837158
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "bridgeStart": {
+        "x": 30.0,
+        "y": 0.3499999940395355
+      },
+      "bridgeEnd": {
+        "x": 36.0,
+        "y": 0.3499999940395355
+      },
+      "camera": {
+        "x": 35.45000076293945,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "contacts": [
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 35.04999923706055,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 35.07692337036133,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 35.85000228881836,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 35.846153259277344,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 35.846153259277344,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 35.69230651855469,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 35.69230651855469,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 35.53845977783203,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 35.53845977783203,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 35.38461685180664,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 35.38461685180664,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 35.230770111083984,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 35.230770111083984,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 35.07692337036133,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        }
+      ]
+    },
+    {
+      "scenario": "T3_flat_7_x30.55",
+      "phase": "settled",
+      "scene": "Tutorial",
+      "bridge": "T3_flat",
+      "support": "Generated Rope Platform 1",
+      "sprite": "HimoHitoCraftAim-v1 Aim 3",
+      "section": 3,
+      "frame": 368,
+      "time": 7.359997272491455,
+      "remaining": 7.0,
+      "scale": 0.6499999761581421,
+      "colliderBottom": 0.4750000238418579,
+      "bodyWidth": 0.7999992370605469,
+      "bodyHeight": 1.2000000476837158,
+      "bridgeColliderAtCenter": 0.46000027656555176,
+      "bridgeLineAtCenter": 0.3432154953479767,
+      "bridgeVisualTopAtCenter": 0.449565052986145,
+      "bridgeWidth": 0.21269914507865906,
+      "opaqueSoleY": 0.3766528367996216,
+      "soleGap": -0.07291221618652344,
+      "visualBend": -0.006784507073462009,
+      "closestBridgePointX": 30.15192413330078,
+      "closestBridgePointY": 0.4700000286102295,
+      "physicalDistance": -0.00499996542930603,
+      "ortho": 8.699999809265137,
+      "grounded": true,
+      "bridgeSupport": true,
+      "attached": false,
+      "walking": false,
+      "idle": false,
+      "aiming": true,
+      "development": false,
+      "position": {
+        "x": 30.549999237060547,
+        "y": 1.0750000476837158
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "bridgeStart": {
+        "x": 30.0,
+        "y": 0.3499999940395355
+      },
+      "bridgeEnd": {
+        "x": 36.0,
+        "y": 0.3499999940395355
+      },
+      "camera": {
+        "x": 30.549999237060547,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "contacts": [
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 30.149999618530273,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 30.153846740722656,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 30.94999885559082,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 30.923076629638672,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 30.923076629638672,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 30.769229888916016,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 30.769229888916016,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 30.615385055541992,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 30.615385055541992,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 30.461538314819336,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 30.461538314819336,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 30.30769157409668,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 30.30769157409668,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 30.153846740722656,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        }
+      ]
+    },
+    {
+      "scenario": "T3_flat_7_x33.00",
+      "phase": "settled",
+      "scene": "Tutorial",
+      "bridge": "T3_flat",
+      "support": "Generated Rope Platform 1",
+      "sprite": "HimoHitoCraftAim-v1 Aim 3",
+      "section": 3,
+      "frame": 459,
+      "time": 9.179996490478516,
+      "remaining": 7.0,
+      "scale": 0.6499999761581421,
+      "colliderBottom": 0.4750000238418579,
+      "bodyWidth": 0.8000030517578125,
+      "bodyHeight": 1.2000000476837158,
+      "bridgeColliderAtCenter": 0.46000027656555176,
+      "bridgeLineAtCenter": 0.26763883233070374,
+      "bridgeVisualTopAtCenter": 0.3649449348449707,
+      "bridgeWidth": 0.19461217522621155,
+      "opaqueSoleY": 0.3010762333869934,
+      "soleGap": -0.0638687014579773,
+      "visualBend": -0.08236116170883179,
+      "closestBridgePointX": 32.607688903808594,
+      "closestBridgePointY": 0.4700000286102295,
+      "physicalDistance": -0.00499996542930603,
+      "ortho": 8.699999809265137,
+      "grounded": true,
+      "bridgeSupport": true,
+      "attached": false,
+      "walking": false,
+      "idle": false,
+      "aiming": true,
+      "development": false,
+      "position": {
+        "x": 33.0,
+        "y": 1.0750000476837158
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "bridgeStart": {
+        "x": 30.0,
+        "y": 0.3499999940395355
+      },
+      "bridgeEnd": {
+        "x": 36.0,
+        "y": 0.3499999940395355
+      },
+      "camera": {
+        "x": 33.0,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "contacts": [
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 32.599998474121094,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 32.61538314819336,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 33.400001525878906,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 33.38461685180664,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 33.38461685180664,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 33.230770111083984,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 33.230770111083984,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 33.07692337036133,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 33.07692337036133,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 32.92307662963867,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 32.92307662963867,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 32.769229888916016,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 32.769229888916016,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 32.61538314819336,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        }
+      ]
+    },
+    {
+      "scenario": "T3_flat_7_x35.45",
+      "phase": "settled",
+      "scene": "Tutorial",
+      "bridge": "T3_flat",
+      "support": "Generated Rope Platform 1",
+      "sprite": "HimoHitoCraftAim-v1 Aim 3",
+      "section": 3,
+      "frame": 550,
+      "time": 10.999996185302734,
+      "remaining": 7.0,
+      "scale": 0.6499999761581421,
+      "colliderBottom": 0.4750000238418579,
+      "bodyWidth": 0.8000030517578125,
+      "bodyHeight": 1.2000000476837158,
+      "bridgeColliderAtCenter": 0.46000027656555176,
+      "bridgeLineAtCenter": 0.3432154655456543,
+      "bridgeVisualTopAtCenter": 0.449565052986145,
+      "bridgeWidth": 0.21269914507865906,
+      "opaqueSoleY": 0.3766528367996216,
+      "soleGap": -0.07291221618652344,
+      "visualBend": -0.006784514058381319,
+      "closestBridgePointX": 35.06346130371094,
+      "closestBridgePointY": 0.4700000286102295,
+      "physicalDistance": -0.00499996542930603,
+      "ortho": 8.699999809265137,
+      "grounded": true,
+      "bridgeSupport": true,
+      "attached": false,
+      "walking": false,
+      "idle": false,
+      "aiming": true,
+      "development": false,
+      "position": {
+        "x": 35.45000076293945,
+        "y": 1.0750000476837158
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "bridgeStart": {
+        "x": 30.0,
+        "y": 0.3499999940395355
+      },
+      "bridgeEnd": {
+        "x": 36.0,
+        "y": 0.3499999940395355
+      },
+      "camera": {
+        "x": 35.45000076293945,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "contacts": [
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 35.04999923706055,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 35.07692337036133,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 35.85000228881836,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 35.846153259277344,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 35.846153259277344,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 35.69230651855469,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 35.69230651855469,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 35.53845977783203,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 35.53845977783203,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 35.38461685180664,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 35.38461685180664,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 35.230770111083984,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 35.230770111083984,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 35.07692337036133,
+            "y": 0.4675000309944153
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "separation": -0.00499996542930603
+        }
+      ]
+    },
+    {
+      "scenario": "T4_merged_99_x42.55",
+      "phase": "settled",
+      "scene": "Tutorial",
+      "bridge": "T4_merged",
+      "support": "Generated Rope Platform 1",
+      "sprite": "HimoHitoCraftAim-v1 Aim 3",
+      "section": 4,
+      "frame": 642,
+      "time": 12.839995384216309,
+      "remaining": 99.0,
+      "scale": 1.0,
+      "colliderBottom": 0.3362833261489868,
+      "bodyWidth": 0.8000030517578125,
+      "bodyHeight": 1.2000000476837158,
+      "bridgeColliderAtCenter": 0.019500255584716797,
+      "bridgeLineAtCenter": -0.11645488440990448,
+      "bridgeVisualTopAtCenter": 0.016109507530927658,
+      "bridgeWidth": 0.21716931462287903,
+      "opaqueSoleY": 0.2428838610649109,
+      "soleGap": 0.22677434980869293,
+      "visualBend": -0.0009953351691365242,
+      "closestBridgePointX": 42.21784591674805,
+      "closestBridgePointY": 0.3323401212692261,
+      "physicalDistance": -0.005000560078769922,
+      "ortho": 8.699999809265137,
+      "grounded": true,
+      "bridgeSupport": true,
+      "attached": false,
+      "walking": false,
+      "idle": false,
+      "aiming": true,
+      "development": false,
+      "position": {
+        "x": 42.62092208862305,
+        "y": 0.9362833499908447
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "bridgeStart": {
+        "x": 42.0,
+        "y": 0.3499999940395355
+      },
+      "bridgeEnd": {
+        "x": 52.0,
+        "y": 0.3499999940395355
+      },
+      "camera": {
+        "x": 42.620914459228516,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "contacts": [
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 42.21630859375,
+            "y": 0.33036816120147705
+          },
+          "normal": {
+            "x": 0.6147826313972473,
+            "y": 0.7886965870857239
+          },
+          "separation": -0.005000560078769922
+        }
+      ]
+    },
+    {
+      "scenario": "T4_merged_99_x47.00",
+      "phase": "settled",
+      "scene": "Tutorial",
+      "bridge": "T4_merged",
+      "support": "Generated Rope Platform 1",
+      "sprite": "HimoHitoCraftAim-v1 Aim 3",
+      "section": 4,
+      "frame": 733,
+      "time": 14.659995079040527,
+      "remaining": 99.0,
+      "scale": 1.0,
+      "colliderBottom": -1.5010321140289307,
+      "bodyWidth": 0.8000030517578125,
+      "bodyHeight": 1.2000000476837158,
+      "bridgeColliderAtCenter": -1.5386264324188232,
+      "bridgeLineAtCenter": -1.7308948040008545,
+      "bridgeVisualTopAtCenter": -1.6335383653640747,
+      "bridgeWidth": 0.19467253983020782,
+      "opaqueSoleY": -1.6753647327423096,
+      "soleGap": -0.04182636737823486,
+      "visualBend": -0.08192848414182663,
+      "closestBridgePointX": 46.47222137451172,
+      "closestBridgePointY": -1.506015419960022,
+      "physicalDistance": -0.004999994300305843,
+      "ortho": 8.699999809265137,
+      "grounded": true,
+      "bridgeSupport": true,
+      "attached": false,
+      "walking": false,
+      "idle": false,
+      "aiming": true,
+      "development": false,
+      "position": {
+        "x": 46.87262725830078,
+        "y": -0.9010321497917175
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "bridgeStart": {
+        "x": 42.0,
+        "y": 0.3499999940395355
+      },
+      "bridgeEnd": {
+        "x": 52.0,
+        "y": 0.3499999940395355
+      },
+      "camera": {
+        "x": 46.87263488769531,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "contacts": [
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 46.472015380859375,
+            "y": -1.5085070133209229
+          },
+          "normal": {
+            "x": 0.08177735656499863,
+            "y": 0.9966506958007812
+          },
+          "separation": -0.004999994300305843
+        }
+      ]
+    },
+    {
+      "scenario": "T4_merged_99_x51.45",
+      "phase": "settled",
+      "scene": "Tutorial",
+      "bridge": "T4_merged",
+      "support": "Generated Rope Platform 1",
+      "sprite": "HimoHitoCraftAim-v1 Aim 3",
+      "section": 4,
+      "frame": 824,
+      "time": 16.47999382019043,
+      "remaining": 99.0,
+      "scale": 1.0,
+      "colliderBottom": 0.32811808586120605,
+      "bodyWidth": 0.8000030517578125,
+      "bodyHeight": 1.2000000476837158,
+      "bridgeColliderAtCenter": 0.012194633483886719,
+      "bridgeLineAtCenter": -0.1238255426287651,
+      "bridgeVisualTopAtCenter": 0.008615403436124325,
+      "bridgeWidth": 0.21713879704475403,
+      "opaqueSoleY": 0.23466652631759644,
+      "soleGap": 0.22605112195014954,
+      "visualBend": -0.0010473900474607944,
+      "closestBridgePointX": 51.77167892456055,
+      "closestBridgePointY": 0.32417482137680054,
+      "physicalDistance": -0.005000560078769922,
+      "ortho": 8.699999809265137,
+      "grounded": true,
+      "bridgeSupport": true,
+      "attached": false,
+      "walking": false,
+      "idle": false,
+      "aiming": true,
+      "development": false,
+      "position": {
+        "x": 51.36860275268555,
+        "y": 0.9281180500984192
+      },
+      "velocity": {
+        "x": -7.057932904785957e-09,
+        "y": 9.054530458740828e-09
+      },
+      "bridgeStart": {
+        "x": 42.0,
+        "y": 0.3499999940395355
+      },
+      "bridgeEnd": {
+        "x": 52.0,
+        "y": 0.3499999940395355
+      },
+      "camera": {
+        "x": 51.36861038208008,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "contacts": [
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 51.773216247558594,
+            "y": 0.3222028613090515
+          },
+          "normal": {
+            "x": -0.6147825717926025,
+            "y": 0.7886965870857239
+          },
+          "separation": -0.005000560078769922
+        }
+      ]
+    },
+    {
+      "scenario": "T4_merged_7_x42.55",
+      "phase": "settled",
+      "scene": "Tutorial",
+      "bridge": "T4_merged",
+      "support": "Generated Rope Platform 1",
+      "sprite": "HimoHitoCraftAim-v1 Aim 3",
+      "section": 4,
+      "frame": 915,
+      "time": 18.29999351501465,
+      "remaining": 7.0,
+      "scale": 0.6499999761581421,
+      "colliderBottom": 0.2534008026123047,
+      "bodyWidth": 0.8000030517578125,
+      "bodyHeight": 1.2000000476837158,
+      "bridgeColliderAtCenter": -0.05897164344787598,
+      "bridgeLineAtCenter": -0.19574286043643951,
+      "bridgeVisualTopAtCenter": -0.06458118557929993,
+      "bridgeWidth": 0.2166842371225357,
+      "opaqueSoleY": 0.16025173664093018,
+      "soleGap": 0.2248329222202301,
+      "visualBend": -0.0015864012530073524,
+      "closestBridgePointX": 42.32801818847656,
+      "closestBridgePointY": 0.24645821750164032,
+      "physicalDistance": -0.0011974398512393236,
+      "ortho": 8.699999809265137,
+      "grounded": true,
+      "bridgeSupport": true,
+      "attached": false,
+      "walking": false,
+      "idle": false,
+      "aiming": true,
+      "development": false,
+      "position": {
+        "x": 42.733436584472656,
+        "y": 0.8534008264541626
+      },
+      "velocity": {
+        "x": 3.631331901843282e-09,
+        "y": 5.1538866507883085e-09
+      },
+      "bridgeStart": {
+        "x": 42.0,
+        "y": 0.3499999940395355
+      },
+      "bridgeEnd": {
+        "x": 52.0,
+        "y": 0.3499999940395355
+      },
+      "camera": {
+        "x": 42.733428955078125,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "contacts": [
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 42.32765197753906,
+            "y": 0.24598601460456848
+          },
+          "normal": {
+            "x": 0.6147826313972473,
+            "y": 0.7886965870857239
+          },
+          "separation": -0.0011974398512393236
+        },
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 42.327842712402344,
+            "y": 0.24582648277282715
+          },
+          "normal": {
+            "x": 0.5940396189689636,
+            "y": 0.8044357299804688
+          },
+          "separation": -0.0011686643119901419
+        }
+      ]
+    },
+    {
+      "scenario": "T4_merged_7_x47.00",
+      "phase": "settled",
+      "scene": "Tutorial",
+      "bridge": "T4_merged",
+      "support": "Generated Rope Platform 1",
+      "sprite": "HimoHitoCraftAim-v1 Aim 3",
+      "section": 4,
+      "frame": 1006,
+      "time": 20.119993209838867,
+      "remaining": 7.0,
+      "scale": 0.6499999761581421,
+      "colliderBottom": -1.5011945962905884,
+      "bodyWidth": 0.8000030517578125,
+      "bodyHeight": 1.2000000476837158,
+      "bridgeColliderAtCenter": -1.5386854410171509,
+      "bridgeLineAtCenter": -1.7307898998260498,
+      "bridgeVisualTopAtCenter": -1.6334412097930908,
+      "bridgeWidth": 0.1946580857038498,
+      "opaqueSoleY": -1.6748254299163818,
+      "soleGap": -0.041384220123291016,
+      "visualBend": -0.08206824958324432,
+      "closestBridgePointX": 46.47419738769531,
+      "closestBridgePointY": -1.5061777830123901,
+      "physicalDistance": -0.004999994300305843,
+      "ortho": 8.699999809265137,
+      "grounded": true,
+      "bridgeSupport": true,
+      "attached": false,
+      "walking": false,
+      "idle": false,
+      "aiming": true,
+      "development": false,
+      "position": {
+        "x": 46.87460708618164,
+        "y": -0.9011945724487305
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "bridgeStart": {
+        "x": 42.0,
+        "y": 0.3499999940395355
+      },
+      "bridgeEnd": {
+        "x": 52.0,
+        "y": 0.3499999940395355
+      },
+      "camera": {
+        "x": 46.87461471557617,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "contacts": [
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 46.47399139404297,
+            "y": -1.508669376373291
+          },
+          "normal": {
+            "x": 0.08177735656499863,
+            "y": 0.9966506958007812
+          },
+          "separation": -0.004999994300305843
+        }
+      ]
+    },
+    {
+      "scenario": "T4_merged_7_x51.45",
+      "phase": "settled",
+      "scene": "Tutorial",
+      "bridge": "T4_merged",
+      "support": "Generated Rope Platform 1",
+      "sprite": "HimoHitoCraftAim-v1 Aim 3",
+      "section": 4,
+      "frame": 1097,
+      "time": 21.939992904663086,
+      "remaining": 7.0,
+      "scale": 0.6499999761581421,
+      "colliderBottom": 0.32811808586120605,
+      "bodyWidth": 0.8000030517578125,
+      "bodyHeight": 1.2000000476837158,
+      "bridgeColliderAtCenter": 0.012194633483886719,
+      "bridgeLineAtCenter": -0.1238255426287651,
+      "bridgeVisualTopAtCenter": 0.008615403436124325,
+      "bridgeWidth": 0.21713879704475403,
+      "opaqueSoleY": 0.23550790548324585,
+      "soleGap": 0.22689250111579895,
+      "visualBend": -0.0010473900474607944,
+      "closestBridgePointX": 51.77167892456055,
+      "closestBridgePointY": 0.32417482137680054,
+      "physicalDistance": -0.005000560078769922,
+      "ortho": 8.699999809265137,
+      "grounded": true,
+      "bridgeSupport": true,
+      "attached": false,
+      "walking": false,
+      "idle": false,
+      "aiming": true,
+      "development": false,
+      "position": {
+        "x": 51.36860275268555,
+        "y": 0.9281180500984192
+      },
+      "velocity": {
+        "x": -7.057932904785957e-09,
+        "y": 9.054530458740828e-09
+      },
+      "bridgeStart": {
+        "x": 42.0,
+        "y": 0.3499999940395355
+      },
+      "bridgeEnd": {
+        "x": 52.0,
+        "y": 0.3499999940395355
+      },
+      "camera": {
+        "x": 51.36861038208008,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "contacts": [
+        {
+          "collider": "Generated Rope Platform 1",
+          "point": {
+            "x": 51.773216247558594,
+            "y": 0.3222028613090515
+          },
+          "normal": {
+            "x": -0.6147825717926025,
+            "y": 0.7886965870857239
+          },
+          "separation": -0.005000560078769922
+        }
+      ]
+    }
+  ],
+  "trajectory": [],
+  "capacity_note": "Diagnostic capacity override 99; full ratio 1.0 and minimum ratio 7/99. Not ordinary resource balance evidence.",
+  "appearance_measurement_note": "soleGap is an approximate opaque-pixel sole versus rendered ribbon upper-edge proxy, not physical contact separation. Native box contacts are in contacts and physicalDistance. Screenshots are visual evidence."
+}

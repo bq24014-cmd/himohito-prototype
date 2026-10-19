@@ -1,0 +1,70 @@
+{
+  "kind": "cause investigation only; no C08 fix",
+  "production_integrated": false,
+  "before_after_fix_available": false,
+  "raw_screenshots": {
+    "T3_full_left.jpg": [
+      "FinalPoints",
+      "T3_flat_99_x30.55.jpg"
+    ],
+    "T4_full_left.jpg": [
+      "FinalPoints",
+      "T4_merged_99_x42.55.jpg"
+    ],
+    "T4_small_left.jpg": [
+      "FinalPoints",
+      "T4_merged_7_x42.55.jpg"
+    ],
+    "T4_full_center.jpg": [
+      "FinalPoints",
+      "T4_merged_99_x47.00.jpg"
+    ],
+    "T4_full_right.jpg": [
+      "FinalPoints",
+      "T4_merged_99_x51.45.jpg"
+    ],
+    "MainS4_small_left.jpg": [
+      "MainS4Points",
+      "Main_S4_7_x65.15.jpg"
+    ],
+    "T4_nativeQ_small_settled.jpg": [
+      "NativeQ_Jump_R",
+      "T4_nativeQ_13_settled.jpg"
+    ],
+    "T4_walk50_small_idle.jpg": [
+      "FinalWalk50_Recorded",
+      "T4_merged_walk_7_idle.jpg"
+    ]
+  },
+  "results": {
+    "FinalPoints": {
+      "errors": 0,
+      "development": false,
+      "states": 12,
+      "trajectory": 0
+    },
+    "MainS4Points": {
+      "errors": 0,
+      "development": false,
+      "states": 6,
+      "trajectory": 0
+    },
+    "NativeQ_Jump_R": {
+      "errors": 0,
+      "development": false,
+      "states": 10,
+      "trajectory": 0
+    },
+    "FinalWalk50_Recorded": {
+      "errors": 0,
+      "development": false,
+      "states": 8,
+      "trajectory": 174
+    }
+  },
+  "original_human_exact_location_identified": false,
+  "os_keys_verified": false,
+  "human_play_verified": false,
+  "probe_only": true,
+  "runtime_kind": "managed-code overlay on nonDevelopment Unity Player; not a new BuildPipeline build"
+}

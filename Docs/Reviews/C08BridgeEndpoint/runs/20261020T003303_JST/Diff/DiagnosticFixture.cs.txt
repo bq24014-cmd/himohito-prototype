@@ -1,0 +1,237 @@
+using System;
+using System.IO;
+using System.Linq;
+using System.Reflection;
+using System.Collections;
+using System.Collections.Generic;
+using HimoHito;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+// Isolated diagnostic only. The name preserves the frozen host's startup entry;
+// none of this code is imported into Production.
+[DefaultExecutionOrder(30000)]
+public sealed class GroundingReview : MonoBehaviour
+{
+    public static GroundingReview Instance;
+    public static string Arg(string name, string fallback = "") {
+        var a = Environment.GetCommandLineArgs(); for (int i=0; i<a.Length-1; i++) if(a[i]==name) return a[i+1]; return fallback;
+    }
+    static bool QA => Arg("-c08QA") == "1";
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
+    static void Boot() {
+        Application.runInBackground=true;
+        if(QA) { Time.captureFramerate=50; UnityEngine.Random.InitState(80020); }
+        SceneManager.sceneLoaded += (scene, mode) => {
+            if(scene.name=="Tutorial" && Arg("-c08Scene")=="MainStage") { SceneManager.LoadScene("MainStage"); return; }
+            if((scene.name=="Tutorial" || scene.name=="MainStage") && !FindFirstObjectByType<GroundingReview>())
+                new GameObject("C08 isolated fixture").AddComponent<GroundingReview>();
+        };
+    }
+    public static readonly BindingFlags Hidden=BindingFlags.Instance|BindingFlags.NonPublic;
+    static object Field(object obj,string name) => obj.GetType().GetField(name,Hidden).GetValue(obj);
+    static void Set(object obj,string name,object value) => obj.GetType().GetField(name,Hidden).SetValue(obj,value);
+    static object Call(object obj,string name,params object[] a) => obj.GetType().GetMethod(name,Hidden|BindingFlags.Public).Invoke(obj,a);
+    Rigidbody2D body; PlayerMover mover; RopeController rope; RopeResource resource; RopePlatformBuilder builder;
+    RopeBodyVisual visual; PrototypeRunController run; MainStageRespawnOnFall mainRun; BoxCollider2D box;
+    SpriteRenderer art, lower; string output, caseName, phase="setup", bridgeKind; float move;
+    bool ready, filming; int frame, errors; GeneratedRopePlatform bridge; GameObject centerHook;
+    readonly List<State> rows=new List<State>(); readonly List<State> trajectory=new List<State>();
+    [Serializable] public class Contact { public string collider; public Vector2 point, normal; public float separation; }
+    [Serializable] public class State {
+        public string scenario, phase, scene, bridge, support, sprite;
+        public int section, frame; public float time, remaining, scale, colliderBottom, bodyWidth, bodyHeight,
+            bridgeColliderAtCenter, bridgeLineAtCenter, bridgeVisualTopAtCenter, bridgeWidth, opaqueSoleY, soleGap,
+            visualBend, closestBridgePointX, closestBridgePointY, physicalDistance, ortho;
+        public bool grounded, bridgeSupport, attached, walking, idle, aiming, development;
+        public Vector2 position, velocity, bridgeStart, bridgeEnd; public Vector3 camera;
+        public List<Contact> contacts=new List<Contact>();
+    }
+    [Serializable] class Result { public string method, mode, unity; public bool finished, development; public int errors; public List<State> states, trajectory; }
+    void Log(string msg,string stack,LogType type) {
+        if(type==LogType.Error || type==LogType.Exception || type==LogType.Assert) { errors++; File.AppendAllText(Path.Combine(output,"Errors.txt"),msg+"\n"+stack+"\n"); }
+    }
+    IEnumerator Start() {
+        Instance=this; output=Arg("-c08Output",Path.Combine(Application.persistentDataPath,"C08Sessions",DateTime.Now.ToString("yyyyMMdd_HHmmss")));
+        Directory.CreateDirectory(output); Application.logMessageReceived+=Log;
+        yield return null; yield return null;
+        run=FindFirstObjectByType<PrototypeRunController>(); mainRun=FindFirstObjectByType<MainStageRespawnOnFall>();
+        body=FindFirstObjectByType<PlayerMover>().GetComponent<Rigidbody2D>();
+        mover=body.GetComponent<PlayerMover>(); rope=body.GetComponent<RopeController>();
+        resource=body.GetComponent<RopeResource>(); builder=body.GetComponent<RopePlatformBuilder>();
+        visual=body.GetComponent<RopeBodyVisual>(); box=body.GetComponent<BoxCollider2D>();
+        centerHook=GameObject.Find(TutorialSectionFourSetup.CenterHookName);
+        art=(SpriteRenderer)Field(visual,"visualRenderer"); lower=(SpriteRenderer)Field(visual,"balanceBodyRenderer");
+        if(run) run.BeginGameFromTitle(); var preview=FindFirstObjectByType<MainStagePreview>();
+        if(preview) { Call(preview,"RestoreState"); preview.enabled=false; }
+        if(QA) { var signs=FindFirstObjectByType<TutorialSectionGuide>(); if(signs) signs.enabled=false; gameObject.AddComponent<GroundingInputDriver>(); }
+        resource.RestoreCapacityAndCurrent(50,50); rope.RestoreSelectedRopeLength(6);
+        if(run) run.TryReachTutorialSection(3,new Vector2(29,.955f),6);
+        ready=true;
+        if(!QA) {
+            MakeBridge(Arg("-c08Bridge","T4_merged"));
+            resource.RestoreCapacityAndCurrent(50, float.Parse(Arg("-c08Remaining","7")));
+            Place(new Vector2(bridge.Start.x-.8f,.955f));
+            Call(run,"CaptureCheckpointState");
+            Debug.Log("C08_MANUAL_READY: native input, real time; no automatic driver/capture/quit");
+            yield break;
+        }
+        string mode=Arg("-c08Mode","sweep");
+        if(mode=="generation") {
+            if(centerHook) centerHook.SetActive(true);
+            foreach(float amount in new[]{50f,13f}) {
+                caseName="T4_nativeQ_"+amount; bridgeKind="T4_left_nativeQ"; phase="before_Q";
+                builder.ClearPlatforms(); resource.RestoreCapacityAndCurrent(50,amount); rope.RestoreSelectedRopeLength(6);
+                run.TryReachTutorialSection(4,new Vector2(41.3f,.955f),6);
+                Place(new Vector2(41.3f,.955f)); yield return new WaitForSeconds(.5f); Call(run,"CaptureCheckpointState");
+                bool attached=rope.TryAttach(TutorialSectionFourSetup.CenterHookPosition);
+                float cost=builder.CurrentPlatformCost; bool built=builder.TryBuildCurrentPlatform();
+                Debug.Log("C08_NATIVE_Q attached="+attached+" built="+built+" cost="+cost+" remaining="+resource.CurrentLength);
+                bridge=FindFirstObjectByType<GeneratedRopePlatform>();
+                phase="Q_immediate"; rows.Add(Sample());
+                yield return new WaitForSeconds(.2f); phase="Q_200ms"; rows.Add(Sample()); yield return Shot(caseName+"_early");
+                yield return new WaitForSeconds(2.1f); phase="Q_settled"; rows.Add(Sample()); yield return Shot(caseName+"_settled");
+                phase="jump"; Set(mover,"jumpBufferTimer",.15f); yield return new WaitForSeconds(.18f); rows.Add(Sample());
+                yield return new WaitForSeconds(1.5f); phase="land"; rows.Add(Sample());
+                phase="R_restore"; Call(run,"RestartFromCheckpoint"); yield return new WaitForSeconds(1f);
+                Debug.Log("C08_R root="+body.position+" remaining="+resource.CurrentLength+" selected="+rope.SelectedRopeLength+" bridges="+builder.GeneratedPlatformCount+" attached="+rope.IsAttached+" grounded="+mover.IsGrounded);
+            }
+        } else if(mode=="sweep" || mode=="points") {
+            string[] kinds=mainRun?new[]{"Main_S4"}:mode=="points"?new[]{"T3_flat","T4_merged"}:new[]{"T3_flat","T4_left","T4_right","T4_merged"};
+            foreach(string kind in kinds) {
+                MakeBridge(kind); yield return null;
+                foreach(float amount in new[]{50f,7f}) {
+                    resource.RestoreCapacityAndCurrent(50,amount);
+                    float left=Mathf.Min(bridge.Start.x,bridge.End.x), right=Mathf.Max(bridge.Start.x,bridge.End.x);
+                    float[] positions=mode=="points"?new[]{left+.55f,(left+right)*.5f,right-.55f}:new[]{left+.2f,left+.55f,left+1.05f,(left+right)*.5f,right-.55f};
+                    foreach(float x in positions) {
+                        caseName=kind+"_"+amount+"_x"+x.ToString("F2"); phase="settled"; move=0;
+                        float y=Mathf.Max(bridge.Start.y,bridge.End.y)+2f;
+                        Place(new Vector2(x,y));
+                        yield return new WaitForSeconds(1.8f);
+                        rows.Add(Sample());
+                        Debug.Log("C08_SAMPLE "+caseName+" gap="+rows[rows.Count-1].soleGap+" support="+rows[rows.Count-1].support);
+                        if(mode=="points" || ((Mathf.Abs(x-left-.55f)<.01f || Mathf.Abs(x-(left+right)*.5f)<.01f) && kind!="T4_right"))
+                            yield return Shot(caseName);
+                    }
+                }
+            }
+        } else {
+            MakeBridge(Arg("-c08Bridge","T4_merged")); yield return null;
+            foreach(float amount in new[]{50f,7f}) {
+                resource.RestoreCapacityAndCurrent(50,amount); caseName=bridgeKind+"_walk_"+amount;
+                Place(new Vector2(bridge.Start.x-.9f,.955f)); yield return new WaitForSeconds(.6f);
+                filming=Arg("-c08Film")=="1" && amount==7; frame=0;
+                if(filming) Directory.CreateDirectory(Path.Combine(output,"Frames"));
+                phase="bank_to_bridge"; move=1; yield return new WaitForSeconds(.42f); rows.Add(Sample()); yield return Shot(caseName+"_walk");
+                phase="decelerate_stop"; move=0; yield return new WaitForSeconds(.12f); rows.Add(Sample()); yield return Shot(caseName+"_stop");
+                phase="idle"; yield return new WaitForSeconds(2.3f); rows.Add(Sample()); yield return Shot(caseName+"_idle");
+                phase="bridge_to_bank"; move=-1; yield return new WaitForSeconds(.35f); rows.Add(Sample());
+                move=0; yield return new WaitForSeconds(.2f); filming=false;
+            }
+        }
+        File.WriteAllText(Path.Combine(output,"Result.json"),JsonUtility.ToJson(new Result {
+            method="Automatic input-field/API setup and real Unity player Physics2D; not OS keys or Human play",
+            mode=mode,unity=Application.unityVersion,finished=true,development=Debug.isDebugBuild,errors=errors,states=rows,trajectory=trajectory},true));
+        Debug.Log("C08_FINISHED errors="+errors); yield return null; Application.Quit(errors==0?0:2);
+    }
+    void MakeBridge(string kind) {
+        builder.ClearPlatforms(); bridgeKind=kind;
+        Vector2 a=TutorialSectionThreeSetup.LeftBridgeEndpoint,b=TutorialSectionThreeSetup.RightBridgeEndpoint; float length=6;
+        if(kind=="Main_S4") {
+            a=MainStageSectionFourSetup.BridgeStartMarkerPosition; b=MainStageSectionFourSetup.BridgeAnchorPosition;
+            length=MainStageSectionFourSetup.BridgeRopeLength;
+            mainRun.TryReachSection(4,new Vector2(a.x-.8f,a.y+.605f),7f);
+        } else if(kind!="T3_flat") {
+            a=TutorialSectionFourSetup.LeftAnchorPosition; b=TutorialSectionFourSetup.CenterHookPosition;
+            if(kind=="T4_right") { a=b; b=TutorialSectionFourSetup.RightAnchorPosition; }
+            if(kind=="T4_merged") { b=TutorialSectionFourSetup.RightAnchorPosition; length=12; }
+            run.TryReachTutorialSection(4,new Vector2(41,.955f),6);
+        }
+        builder.EnsureAuthoredPlatform(a,b,length);
+        if(centerHook) centerHook.SetActive(kind!="T4_merged"); // checkpoint-style post-merge fixture
+        bridge=FindObjectsByType<GeneratedRopePlatform>(FindObjectsSortMode.None).First(p=>p.gameObject.activeInHierarchy && p.Touches(a,.01f) && p.Touches(b,.01f));
+    }
+    void Place(Vector2 p) {
+        if(rope.IsAttached) rope.DetachAndRefund();
+        body.simulated=true; mover.enabled=true; rope.enabled=true;
+        body.position=p; body.transform.position=new Vector3(p.x,p.y,body.transform.position.z);
+        body.linearVelocity=Vector2.zero; body.angularVelocity=0; Physics2D.SyncTransforms();
+        Set(mover,"previousPhysicsPosition",p); Set(mover,"hasPreviousPhysicsPosition",true); Set(mover,"hasPreviousVerticalSpeed",false);
+        Set(mover,"moveInput",0f); Set(mover,"jumpBufferTimer",0f); Set(rope,"keyboardAimDirection",Vector2.right);
+        visual.CancelActionPoses();
+        foreach(string n in new[]{"idlePose","groundMotionPose","aimPose","signGlance","swingPose","swingAttachPose","swingReleasePose"}) Call(Field(visual,n),"Reset");
+        Set(visual,"isWalking",false); Set(visual,"isJumpingVisually",false); Set(visual,"isReturningFromSwing",false);
+        Camera.main.GetComponent<HorizontalCameraFollow>()?.ResetFraming();
+    }
+    public void Drive() { if(ready && QA) Set(mover,"moveInput",move); }
+    float CurveAt(LineRenderer line,float x) {
+        for(int i=0;i<line.positionCount-1;i++) {
+            Vector3 a=line.GetPosition(i),b=line.GetPosition(i+1);
+            if(!line.useWorldSpace) { a=line.transform.TransformPoint(a); b=line.transform.TransformPoint(b); }
+            if(x>=Mathf.Min(a.x,b.x) && x<=Mathf.Max(a.x,b.x)) return Mathf.Lerp(a.y,b.y,(x-a.x)/(b.x-a.x));
+        }
+        return -999;
+    }
+    readonly Dictionary<Sprite,Vector2> soleCache=new Dictionary<Sprite,Vector2>();
+    Vector2 Sole(Sprite sprite) {
+        if(soleCache.TryGetValue(sprite,out var cached)) return cached;
+        Texture2D source=sprite.texture; var rt=RenderTexture.GetTemporary(source.width,source.height,0,RenderTextureFormat.ARGB32);
+        var previous=RenderTexture.active; Graphics.Blit(source,rt); RenderTexture.active=rt;
+        var readable=new Texture2D(source.width,source.height,TextureFormat.RGBA32,false);
+        readable.ReadPixels(new Rect(0,0,source.width,source.height),0,0); readable.Apply();
+        RenderTexture.active=previous; RenderTexture.ReleaseTemporary(rt); var pixels=readable.GetPixels32(); Destroy(readable);
+        Rect r=sprite.rect; int minY=(int)r.height, sumX=0,count=0;
+        for(int y=0;y<(int)r.height;y++) {
+            for(int x=(int)(r.width*.2f);x<(int)(r.width*.8f);x++)
+                if(pixels[((int)r.y+y)*source.width+(int)r.x+x].a>80) { minY=y; sumX+=x; count++; }
+            if(count>0) break;
+        }
+        cached=new Vector2(((count>0?sumX/(float)count+.5f:sprite.pivot.x)-sprite.pivot.x)/sprite.pixelsPerUnit,
+            ((count>0?minY+.5f:sprite.pivot.y)-sprite.pivot.y)/sprite.pixelsPerUnit);
+        soleCache[sprite]=cached; return cached;
+    }
+    State Sample() {
+        var renderer=lower && lower.enabled?lower:art; Vector2 sole=Sole(renderer.sprite); if(renderer.flipX) sole.x=-sole.x;
+        Vector3 foot=renderer.transform.TransformPoint(sole); var edge=bridge.GetComponent<EdgeCollider2D>();
+        var line=bridge.GetComponent<LineRenderer>(); float colliderY=-999;
+        foreach(var hit in Physics2D.RaycastAll(new Vector2(body.position.x,body.position.y+2),Vector2.down,20))
+            if(hit.collider==edge) { colliderY=hit.point.y; break; }
+        var separation=box.Distance(edge); float lineY=CurveAt(line,body.position.x);
+        float normalized=Mathf.InverseLerp(bridge.Start.x,bridge.End.x,body.position.x);
+        float width=line.widthMultiplier*line.widthCurve.Evaluate(normalized);
+        bridge.TryGetSurfaceTangent(new Vector2(body.position.x,lineY),out Vector2 tangent);
+        // Diagnostic approximation of the rendered upper edge. Line width is
+        // widthCurve * widthMultiplier, not widthMultiplier alone.
+        float visibleTop=lineY+width*.5f/Mathf.Max(.2f,Mathf.Abs(tangent.x));
+        var row=new State { scenario=caseName,phase=phase,scene=gameObject.scene.name,section=run?run.CurrentTutorialSection:mainRun.CurrentSection,bridge=bridgeKind,
+            frame=Time.frameCount,time=Time.time,remaining=resource.CurrentLength,scale=(float)Field(visual,"currentBaseScale"),
+            position=body.position,velocity=body.linearVelocity,colliderBottom=box.bounds.min.y,bodyWidth=box.bounds.size.x,bodyHeight=box.bounds.size.y,
+            bridgeStart=bridge.Start,bridgeEnd=bridge.End,bridgeColliderAtCenter=colliderY,bridgeLineAtCenter=lineY,bridgeVisualTopAtCenter=visibleTop,bridgeWidth=width,
+            opaqueSoleY=foot.y,soleGap=foot.y-visibleTop,closestBridgePointX=separation.pointB.x,closestBridgePointY=separation.pointB.y,physicalDistance=separation.distance,
+            grounded=mover.IsGrounded,bridgeSupport=mover.SupportedRopePlatform,attached=rope.IsAttached,support=mover.SupportedRopePlatform?mover.SupportedRopePlatform.name:"bank/none",
+            walking=(bool)Field(visual,"isWalking"),idle=(bool)Field(visual,"isIdlePoseDisplayed"),aiming=(bool)Field(visual,"isAimPoseDisplayed"),sprite=renderer.sprite.name,
+            camera=Camera.main.transform.position,ortho=Camera.main.orthographicSize,development=Debug.isDebugBuild,
+            visualBend=(float)Field(visual,"bridgeOffsetY") };
+        var contacts=new ContactPoint2D[32]; int n=box.GetContacts(contacts);
+        for(int i=0;i<n;i++) { var c=contacts[i]; var other=c.collider==box?c.otherCollider:c.collider; row.contacts.Add(new Contact {collider=other.name,point=c.point,normal=c.normal,separation=c.separation}); }
+        return row;
+    }
+    IEnumerator Shot(string name) {
+        yield return new WaitForEndOfFrame(); var texture=ScreenCapture.CaptureScreenshotAsTexture();
+        File.WriteAllBytes(Path.Combine(output,name+".jpg"),texture.EncodeToJPG(86)); Destroy(texture);
+    }
+    void LateUpdate() {
+        if(!ready || !QA || !filming) return;
+        trajectory.Add(Sample()); if((frame++%2)==0) StartCoroutine(Shot("Frames/Frame_"+(frame/2).ToString("D4")));
+    }
+    void OnGUI() {
+        if(!ready) return;
+        GUI.Box(new Rect(Screen.width-400,18,385,62),"C08 橋端の支持・足元 診断\n"+(QA?caseName+" / "+phase:"既存操作で試遊・診断用初期配置。未採用。"));
+    }
+}
+[DefaultExecutionOrder(-10000)]
+public sealed class GroundingInputDriver:MonoBehaviour {
+    void FixedUpdate() { if(GroundingReview.Instance) GroundingReview.Instance.Drive(); }
+    void LateUpdate() { if(GroundingReview.Instance) GroundingReview.Instance.Drive(); }
+}
