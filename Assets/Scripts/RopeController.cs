@@ -929,6 +929,31 @@ namespace HimoHito
                 displayDirection = hookOffset.normalized;
             lineRenderer.SetPosition(1,
                 body.position + displayDirection * selectedRopeLength);
+            // C08 presentation only: the physical ray, target, reach, and joint
+            // still originate at body.position. Move the guide's visible start
+            // with the bridge-corrected drawing, not with an invented collider.
+            if (ropeBodyVisual == null) ropeBodyVisual = GetComponent<RopeBodyVisual>();
+            Vector2 shift = ropeBodyVisual != null ? ropeBodyVisual.BridgeSurfaceAimOriginShift : Vector2.zero;
+            if (shift.sqrMagnitude > .000001f)
+            {
+                Vector2 start = body.position + shift;
+                lineRenderer.SetPosition(0, start);
+                if (hasAvailableAimAnchor)
+                {
+                    Vector2 direction = (availableAimAnchor - start).normalized;
+                    float projection = Vector2.Dot(shift, direction);
+                    float distance = -projection + Mathf.Sqrt(Mathf.Max(0f,
+                        projection * projection + selectedRopeLength * selectedRopeLength - shift.sqrMagnitude));
+                    lineRenderer.SetPosition(1, start + direction * distance);
+                }
+                else
+                {
+                    // Empty-space aim keeps the existing keyboard direction and
+                    // length. Target availability still comes from the unchanged
+                    // physical ray above, never from this presentation line.
+                    lineRenderer.SetPosition(1, start + displayDirection * selectedRopeLength);
+                }
+            }
         }
 
         private void DrawAttachedRope()

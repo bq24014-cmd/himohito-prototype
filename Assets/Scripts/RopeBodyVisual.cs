@@ -308,6 +308,14 @@ namespace HimoHito
 
         private Vector3 bridgeOffset;
         private float bridgeOffsetY;
+        private readonly ContactPoint2D[] bridgeSupportContacts = new ContactPoint2D[32];
+        private EdgeCollider2D sampledBridgeEdge;
+        private Vector2[] sampledBridgePoints;
+        private float bridgeSlopeOffsetY;
+        private float bridgeExitOffsetY;
+        private float bridgeExitElapsed = 1f;
+        private bool wasVisuallyBridgeSupported;
+        internal Vector2 BridgeSurfaceAimOriginShift => Vector2.up * bridgeSlopeOffsetY;
 
         private void RemoveBridgeOffset()
         {
@@ -318,22 +326,136 @@ namespace HimoHito
 
         private void ApplyBridgeOffset()
         {
-            if (visualTransform == null) return;
-            bool canFollow = playerMover != null && playerMover.enabled && body != null && body.simulated &&
-                (ropeController == null || !ropeController.IsAttached);
-            if (!canFollow) bridgeOffsetY = 0f;
-            else if (Time.timeScale > 0f)
+            if (Time.timeScale > 0f)
             {
-                GeneratedRopePlatform support = playerMover.SupportedRopePlatform;
-                if (support != null && support.TryGetComponent(out RopeBridgeStepVisual bend) && edgePlayerCollider != null)
-                    bridgeOffsetY = bend.GetVerticalOffset(new Vector2(edgePlayerCollider.bounds.center.x,
-                        edgePlayerCollider.bounds.min.y));
+                bool supported = TryGetBridgePresentationOffset(out float slope, out float bend);
+                if (supported)
+                {
+                    // Only correct the common walking datum. Do not inspect the
+                    // animated soles or flatten the original foot-lift cycle.
+                    float blend = 1f - Mathf.Exp(-25f * Time.deltaTime);
+                    bridgeSlopeOffsetY = Mathf.Max(slope, Mathf.Lerp(bridgeSlopeOffsetY, slope, blend));
+                    bridgeOffsetY = bend;
+                    bridgeExitElapsed = 1f;
+                }
+                else if (playerMover != null && playerMover.IsGrounded && playerMover.SupportedRopePlatform == null)
+                {
+                    // A bank is not a bridge. Never carry a downward correction
+                    // into its solid surface, including after an R restore.
+                    bridgeSlopeOffsetY = bridgeOffsetY = 0f;
+                    bridgeExitElapsed = 1f;
+                }
                 else
-                    bridgeOffsetY = Mathf.MoveTowards(bridgeOffsetY, 0f, Time.deltaTime * 1.5f);
+                {
+                    if (wasVisuallyBridgeSupported)
+                    {
+                        bridgeExitOffsetY = bridgeSlopeOffsetY + bridgeOffsetY;
+                        bridgeExitElapsed = 0f;
+                    }
+                    bridgeOffsetY = 0f;
+                    if (ropeController != null && ropeController.IsAttached && swingAttachPose.IsActive)
+                    {
+                        // PrepareSwingAttachment already handed this displacement
+                        // to the existing crown transition. Do not apply it twice.
+                        bridgeSlopeOffsetY = 0f;
+                        bridgeExitElapsed = 1f;
+                    }
+                    else
+                    {
+                        bridgeExitElapsed += Time.deltaTime / .14f;
+                        bridgeSlopeOffsetY = bridgeExitOffsetY *
+                            (1f - Mathf.SmoothStep(0f, 1f, bridgeExitElapsed));
+                    }
+                    // No bridge sampling in air: this is a short player-relative
+                    // pose handoff, not a floor snap or a physical constraint.
+                }
+                wasVisuallyBridgeSupported = supported;
             }
-            bridgeOffset = GetVisualCoordinateSpace().InverseTransformVector(Vector3.up * bridgeOffsetY);
+            bridgeOffset = GetVisualCoordinateSpace().InverseTransformVector(
+                Vector3.up * (bridgeSlopeOffsetY + bridgeOffsetY));
             visualTransform.localPosition += bridgeOffset;
             if (balanceBodyRenderer != null) balanceBodyRenderer.transform.localPosition += bridgeOffset;
+        }
+
+        private bool TryGetBridgePresentationOffset(out float slopeOffset, out float bendOffset)
+        {
+            slopeOffset = bendOffset = 0f;
+            if (playerMover == null || !playerMover.enabled || !playerMover.IsGrounded ||
+                body == null || !body.simulated || edgePlayerCollider == null || !edgePlayerCollider.enabled)
+                return false;
+            GeneratedRopePlatform support = playerMover.SupportedRopePlatform;
+            if (support == null || !support.TryGetComponent(out EdgeCollider2D edge) || !edge.enabled ||
+                Physics2D.GetIgnoreCollision(edgePlayerCollider, edge) ||
+                support.GetComponent<RopeBridgeReveal>() != null || support.GetComponent<RopeBridgeMergeVisual>() != null)
+                return false;
+
+            int count = edgePlayerCollider.GetContacts(bridgeSupportContacts);
+            if (count == bridgeSupportContacts.Length) return false;
+            float highest = float.NegativeInfinity;
+            Vector2 contactPoint = default;
+            for (int i = 0; i < count; i++)
+            {
+                ContactPoint2D contact = bridgeSupportContacts[i];
+                Collider2D other = contact.collider == edgePlayerCollider ? contact.otherCollider : contact.collider;
+                if (other != edge || contact.normal.y < .45f ||
+                    contact.point.y > edgePlayerCollider.bounds.center.y ||
+                    Vector2.Dot(body.linearVelocity, contact.normal) >
+                        Physics2D.gravity.magnitude * body.gravityScale * Time.fixedDeltaTime)
+                    continue;
+                if (contact.point.y <= highest) continue;
+                highest = contact.point.y;
+                contactPoint = contact.point;
+            }
+            // GetContacts describes the last solver step. During fast walking its
+            // contact coordinates trail the current body. Distance supplies the
+            // same bridge's closest point at the current pose, without a cast,
+            // transform write, or a replacement ground test.
+            ColliderDistance2D separation = edgePlayerCollider.Distance(edge);
+            if (!separation.isValid || separation.distance > Physics2D.defaultContactOffset * 2f) return false;
+            if (float.IsNegativeInfinity(highest))
+            {
+                // E->Q preparation freezes X/Y in the existing game. Unity may
+                // then omit contacts for this immobile pair. Require that exact
+                // build-hold state AND actual below-body geometric contact;
+                // the grounding grace window alone must never move the drawing.
+                bool buildHold = ropeController != null && ropeController.IsAttached &&
+                    ropeController.ActiveHookPoint != null &&
+                    ropeController.ActiveHookPoint.GetComponent<RopePlatformAnchor>() != null &&
+                    (body.constraints & RigidbodyConstraints2D.FreezePosition) == RigidbodyConstraints2D.FreezePosition;
+                if (!buildHold || separation.pointB.y > edgePlayerCollider.bounds.center.y ||
+                    -separation.normal.y < .45f) return false;
+            }
+            contactPoint = separation.pointB;
+            if (sampledBridgeEdge != edge)
+            {
+                sampledBridgeEdge = edge;
+                sampledBridgePoints = edge.points; // Read once; never change the EdgeCollider.
+            }
+            float footX = edgePlayerCollider.bounds.center.x;
+            if (!TryBridgeCurveHeight(edge, footX, out float underFoot) ||
+                !TryBridgeCurveHeight(edge, contactPoint.x, out float underContact)) return false;
+            // The box is supported at its uphill corner. Move artwork by the
+            // height difference to the curve beneath the existing walking datum.
+            // Horizontal bridges yield exactly zero; body scale does not enter it.
+            slopeOffset = underFoot - underContact;
+            if (support.TryGetComponent(out RopeBridgeStepVisual bend))
+                bendOffset = bend.GetVerticalOffset(new Vector2(footX, underFoot));
+            return true;
+        }
+
+        private bool TryBridgeCurveHeight(EdgeCollider2D edge, float x, out float height)
+        {
+            height = 0f;
+            if (sampledBridgePoints == null) return false;
+            for (int i = 0; i < sampledBridgePoints.Length - 1; i++)
+            {
+                Vector2 a = edge.transform.TransformPoint(sampledBridgePoints[i] + edge.offset);
+                Vector2 b = edge.transform.TransformPoint(sampledBridgePoints[i + 1] + edge.offset);
+                if (x < Mathf.Min(a.x, b.x) || x > Mathf.Max(a.x, b.x) || Mathf.Abs(b.x - a.x) < .00001f) continue;
+                height = Mathf.Lerp(a.y, b.y, (x - a.x) / (b.x - a.x));
+                return true;
+            }
+            return false;
         }
 
         private void OnDestroy()
@@ -1080,6 +1202,9 @@ namespace HimoHito
             pressedSwitch = null;
             RemoveBridgeOffset();
             bridgeOffsetY = 0f;
+            bridgeSlopeOffsetY = bridgeExitOffsetY = 0f;
+            bridgeExitElapsed = 1f;
+            wasVisuallyBridgeSupported = false;
             wallPushPose.Reset();
             swingReleasePose.Reset();
             weavePose.Reset();
@@ -1212,6 +1337,8 @@ namespace HimoHito
             if (visualRenderer.flipX) crown.x = -crown.x;
             attachInitialCrown = visualTransform.localPosition + visualTransform.localRotation *
                 Vector3.Scale(crown, visualTransform.localScale);
+            attachInitialCrown += GetVisualCoordinateSpace().InverseTransformVector(
+                Vector3.up * (bridgeSlopeOffsetY + bridgeOffsetY));
             float headWidth = FrameHeadWidths.TryGetValue(previousFrame, out float width)
                 ? width : previousFrame.bounds.size.x;
             attachInitialHeadScale = new Vector2(visualTransform.localScale.x, visualTransform.localScale.y) *

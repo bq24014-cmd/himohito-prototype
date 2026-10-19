@@ -1,0 +1,88 @@
+{
+  "adoption_review": "9d7164b09dad656db9c60adbb0d452e38c17876f",
+  "base": "2a0a2b5f5d5478f5ee2c6be5553121683757ebf7",
+  "method": "Unity 6000.3.21f1 nonDevelopment frozen Player with separately compiled managed overlay. Not a new Unity Build or Editor Play; automatic input/API, no OS keys.",
+  "reused": [
+    {
+      "group": "Points_Final",
+      "states": 36,
+      "trajectory": 0,
+      "baseline_sha256": "E7F3B19FFB54E7DC3E8294F9178AB79320E4804F9CF627DCDF3725AE5516FB46",
+      "candidate_sha256": "393E7D835EE07C0A01EF34DACC21D2293AE77E90503AF3ED23830B414D980BC2"
+    },
+    {
+      "group": "S4_Final",
+      "states": 18,
+      "trajectory": 0,
+      "baseline_sha256": "36D11DB6B752CEDF8C5249D70FC7F869457E1FC01B23C07EC8FA7F408D9E0869",
+      "candidate_sha256": "8D30F1B50DA0681CC499698736411E8DF25FE38ACF683F3C523C96055D427D99"
+    },
+    {
+      "group": "Walk_Review",
+      "states": 15,
+      "trajectory": 198,
+      "baseline_sha256": "12B185C41663BBD2D704E7729C01464F56CA7B670C72DE057882BBD394BFE983",
+      "candidate_sha256": "99367375BE1EF70CF5FDA9FF9D0E19DF042AD43232B51789F5BC2D66CAE5D618"
+    },
+    {
+      "group": "Native_Review",
+      "states": 27,
+      "trajectory": 291,
+      "baseline_sha256": "37D6FB1D735C5E8B84878FD380E4AC0F7176061383697CDAA877799860ADD82D",
+      "candidate_sha256": "500FFA239AB1F1BFCDA26E14D1C99EABBC1B8243B2398AEF8A234628BB7DE030"
+    },
+    {
+      "group": "Attach_Review",
+      "states": 5,
+      "trajectory": 111,
+      "baseline_sha256": "3396C91D629D63B2CDCD313BC2E15D3BC01A0C48D9FD4C99404727528EBC4957",
+      "candidate_sha256": "2A679604DD5E028923C4BEE00F6D58FF5FC2F83CB0A9DC05DE850E128AB26A82"
+    },
+    {
+      "group": "Jump_Review",
+      "states": 8,
+      "trajectory": 188,
+      "baseline_sha256": "D25B63ABC7394E9AB7B4336FAE0C18FDC8F4C2131EFCBA84F7FF02677DF8A3D3",
+      "candidate_sha256": "659C4EB5C12553071C313B5C8ED56F87D19D4479D8EB5BE6BD08D9EA7359D61C"
+    },
+    {
+      "group": "Connection_Review",
+      "states": 9,
+      "trajectory": 156,
+      "baseline_sha256": "6E96D3EDA734A464A8884410007B797232A21CBFDAD3BC362D20BE7B94FD4221",
+      "candidate_sha256": "2B75AB6B395C4E4A20A30DF3DCAAA6376694D9DBE287DE791E4C7DC587DF720C"
+    }
+  ],
+  "new_tests": {
+    "T4_states": 15,
+    "S4_states": 15,
+    "T4_trajectory": 291,
+    "T4_position_velocity_camera_delta": 0.0,
+    "available_guide_target_max_world_error": 1.1868709748341644e-07,
+    "native_targets": [
+      "T4_beam_steep_50 E=True actual=Tutorial T4 Green Right Bank",
+      "T4_beam_steep_30 E=True actual=Tutorial T4 Green Right Bank",
+      "T4_beam_steep_7 E=True actual=Tutorial T4 Green Right Bank",
+      "S4_steep_50 E=True actual=Main Section 4 Green Bridge End Hook",
+      "S4_steep_30 E=True actual=Main Section 4 Green Bridge End Hook",
+      "S4_steep_7 E=True actual=Main Section 4 Green Bridge End Hook"
+    ],
+    "existing_min_body_head_gap": {
+      "collider_top": 0.7850390076637268,
+      "rendered_crown_y": 0.582213282585144,
+      "baseline_same": true
+    },
+    "new_serious_inconsistency_reproduced": false
+  },
+  "protected_unchanged": true,
+  "source_sha256": {
+    "Assets/Scripts/RopeBodyVisual.cs": "0DC26D297309B199F5C0D71F722158374A60A4F6F39102DF5075E362D9442896",
+    "Assets/Scripts/RopeController.cs": "4B54C6AC8D70C944507F6B6464AC404458098FA7DBF1FF4F3C5BD38F7E94E32F"
+  },
+  "limitations": [
+    "OS keys / Human additional trial unverified",
+    "Fixed physical box is larger than smallest artwork; same head gap occurs before C08",
+    "Opposite foot may lift on steep curves; animation retained",
+    "Not an exhaustive all-stage/ceiling/aim-angle proof"
+  ]
+}
