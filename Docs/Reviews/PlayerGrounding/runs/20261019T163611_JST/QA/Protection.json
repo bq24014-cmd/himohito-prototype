@@ -1,0 +1,142 @@
+{
+  "production_head": "7a4f011b7ffc0343acd4727a75255495a3881fb3",
+  "production_branch": "main",
+  "production_files_checked": 483,
+  "production_changes_detected": [],
+  "protected": [
+    {
+      "path": "Assets/Scenes/MainStage.unity",
+      "unchanged": true
+    },
+    {
+      "path": "Assets/Scenes/Tutorial.unity",
+      "unchanged": true
+    },
+    {
+      "path": "README.md",
+      "unchanged": true
+    },
+    {
+      "path": "Docs/LEARNING_LOG.md",
+      "unchanged": true
+    },
+    {
+      "path": "Docs/QA/MainStageCleanReproduction_20261001/Evidence/DeterministicSceneSync/ExeA.log",
+      "unchanged": true
+    },
+    {
+      "path": "Docs/QA/MainStageCleanReproduction_20261001/Evidence/DeterministicSceneSync/ExeB.log",
+      "unchanged": true
+    }
+  ],
+  "prior": [
+    {
+      "path": "ToyTrainProof_20261017/Build/ToyTrainProof_Data/Managed/Assembly-CSharp.dll",
+      "unchanged": true
+    },
+    {
+      "path": "A2RetryStateProof_20261017/Build/A2Retry_Data/Managed/Assembly-CSharp.dll",
+      "unchanged": true
+    },
+    {
+      "path": "PlayerBodyPumpProof_20261017/WORK_STATE.txt",
+      "unchanged": true
+    },
+    {
+      "path": "TabControlsProof_20261017/START_TabProof.cmd",
+      "unchanged": true
+    }
+  ],
+  "core": [
+    {
+      "path": "Assets/Scripts/RopeResource.cs",
+      "baseline_sha256": "026476F48B89BAC7158ABEBC1744BF41553BAE4981C41B7148B41DCED63860EB",
+      "isolated_sha256": "026476F48B89BAC7158ABEBC1744BF41553BAE4981C41B7148B41DCED63860EB",
+      "unchanged": true
+    },
+    {
+      "path": "Assets/Scripts/RopeController.cs",
+      "baseline_sha256": "3EF4A50076994279839F398652180256F5EC37C01B954EEEFC67C79B831E25D6",
+      "isolated_sha256": "3EF4A50076994279839F398652180256F5EC37C01B954EEEFC67C79B831E25D6",
+      "unchanged": true
+    },
+    {
+      "path": "Assets/Scripts/PlayerMover.cs",
+      "baseline_sha256": "02F6BAB1132599184CC6450C5053990B612998FF657372F56CD9877CB5201F8D",
+      "isolated_sha256": "02F6BAB1132599184CC6450C5053990B612998FF657372F56CD9877CB5201F8D",
+      "unchanged": true
+    },
+    {
+      "path": "Assets/Scripts/RopePlatformBuilder.cs",
+      "baseline_sha256": "11ECB4C1870CB8EF0449343155559211A5E1D9E1321132BCE0DCF8E14E279FD2",
+      "isolated_sha256": "11ECB4C1870CB8EF0449343155559211A5E1D9E1321132BCE0DCF8E14E279FD2",
+      "unchanged": true
+    },
+    {
+      "path": "Assets/Scripts/MainStageRespawnOnFall.cs",
+      "baseline_sha256": "314060136DFB7846AE7EBBC43CFAF0028625B839B4B9A05E9171D4F5830C4D8C",
+      "isolated_sha256": "314060136DFB7846AE7EBBC43CFAF0028625B839B4B9A05E9171D4F5830C4D8C",
+      "unchanged": true
+    },
+    {
+      "path": "ProjectSettings/InputManager.asset",
+      "baseline_sha256": "D0F454DDB880912ABCAE92E3E12957A7446786BA89E24937E019FF3BBC0D4300",
+      "isolated_sha256": "D0F454DDB880912ABCAE92E3E12957A7446786BA89E24937E019FF3BBC0D4300",
+      "unchanged": true
+    },
+    {
+      "path": "ProjectSettings/Physics2DSettings.asset",
+      "baseline_sha256": "2856152070913F89167241C250B20DAD2D36BB1B7E774F2A83AB1D0FBC54D223",
+      "isolated_sha256": "2856152070913F89167241C250B20DAD2D36BB1B7E774F2A83AB1D0FBC54D223",
+      "unchanged": true
+    },
+    {
+      "path": "Assets/Scenes/Tutorial.unity",
+      "baseline_sha256": "DC1BED54CC083256CE895041B1C93578101E19B9738E7CF260619E8F7E1E4B92",
+      "isolated_sha256": "DC1BED54CC083256CE895041B1C93578101E19B9738E7CF260619E8F7E1E4B92",
+      "unchanged": true
+    },
+    {
+      "path": "Assets/Scenes/MainStage.unity",
+      "baseline_sha256": "57D2464751B5B9C2A78E6C56F34197E9BC2629983FADAA1DFF6E0BA0B4BC2284",
+      "isolated_sha256": "57D2464751B5B9C2A78E6C56F34197E9BC2629983FADAA1DFF6E0BA0B4BC2284",
+      "unchanged": true
+    }
+  ],
+  "isolated_changed": [
+    "Assets/Scripts/RopeBodyVisual.cs",
+    "Packages/manifest.json",
+    "Packages/packages-lock.json",
+    "ProjectSettings/ProjectSettings.asset"
+  ],
+  "proof_meta": [
+    {
+      "path": "Assets/Scripts/GroundingReview.cs",
+      "exists": true,
+      "sha256": "5F2AE36E70D94ECB7D5FB89F9EC241828033AA8F892B83C7FAA4C78746B37746"
+    },
+    {
+      "path": "Assets/Scripts/GroundingReview.cs.meta",
+      "exists": true,
+      "sha256": "8741C4B26993369FEA735248113EC57E101EDEA4BB511BA4D361113A392200AA"
+    },
+    {
+      "path": "Assets/Editor/GroundingProofEditor.cs",
+      "exists": true,
+      "sha256": "CB86B072B4E4A130836F7A1496B689962F43DA1E61C97F41C85D394814EB8326"
+    },
+    {
+      "path": "Assets/Editor/GroundingProofEditor.cs.meta",
+      "exists": true,
+      "sha256": "98A4471396E40902C5986EA14881BAEFF8B7649B796FF8086EF76E3349E24DA6"
+    }
+  ],
+  "existing_tracked_dirty": [
+    " M Assets/Scenes/MainStage.unity",
+    " M Docs/LEARNING_LOG.md",
+    " M Docs/QA/MainStageCleanReproduction_20261001/Evidence/DeterministicSceneSync/ExeA.log",
+    " M Docs/QA/MainStageCleanReproduction_20261001/Evidence/DeterministicSceneSync/ExeB.log",
+    " M README.md"
+  ],
+  "stage_at_start": []
+}

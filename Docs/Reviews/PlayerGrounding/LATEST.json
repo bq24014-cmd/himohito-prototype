@@ -1,0 +1,27 @@
+{
+  "review_id": "20261019T163611_JST",
+  "updated_at": "2026-10-19T16:40:16+09:00",
+  "timezone": "Asia/Tokyo",
+  "kind": "C22 C23 主人公の接地表示修正Proof",
+  "proof": "PlayerGroundingProof_20261019",
+  "revision": "r1",
+  "production_head": "7a4f011b7ffc0343acd4727a75255495a3881fb3",
+  "production_working_tree": "既存dirty差分を含む読み取り基準。保護確認済み。",
+  "build_sha256": "4F74D997A3D6DE70246EF42A66B1B0132189011846FD1A173BEB1054F6594C0E",
+  "build_hash_target": "PlayerGroundingReview_Data/Managed/Assembly-CSharp.dll",
+  "status": "Human試遊待ち",
+  "report_path": "Docs/Reviews/PlayerGrounding/runs/20261019T163611_JST/Report.md",
+  "images_path": "Docs/Reviews/PlayerGrounding/runs/20261019T163611_JST/Figures",
+  "frames_path": "Docs/Reviews/PlayerGrounding/runs/20261019T163611_JST/Frames",
+  "videos_path": "Docs/Reviews/PlayerGrounding/runs/20261019T163611_JST/Videos",
+  "qa_path": "Docs/Reviews/PlayerGrounding/runs/20261019T163611_JST/QA",
+  "human_results_path": "Docs/Reviews/PlayerGrounding/runs/20261019T163611_JST/QA/HumanReview.json",
+  "unverified": [
+    "OS実キー操作",
+    "Humanの接地感とVisual採否",
+    "実音声",
+    "C08の緑フック端専用再現"
+  ],
+  "production_integrated": false,
+  "human_adoption": "未承認"
+}

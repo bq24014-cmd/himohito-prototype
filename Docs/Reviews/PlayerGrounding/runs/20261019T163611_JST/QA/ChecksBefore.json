@@ -1,0 +1,236 @@
+{
+  "method": "Automatic input-field/reflection/API plus actual Unity Physics2D and rendered sprites. NOT OS keys or Human play.",
+  "variant": "before",
+  "unity": "6000.3.21f1",
+  "mode": "matrix",
+  "finished": true,
+  "development": false,
+  "errors": 0,
+  "checks": [
+    {
+      "name": "Only presentation is changed",
+      "detail": "Original PlayerMover/RopeController/Resource/Builder/Scene/Camera sources copied unchanged",
+      "pass": true
+    },
+    {
+      "name": "flat_50_right grounded after walk/stop/idle",
+      "detail": "position=(59.04, 0.96) scale=1 sprite=HimoHitoCraftIdle-v1 Idle 3",
+      "pass": true
+    },
+    {
+      "name": "flat_50_right idle actually shown",
+      "detail": "not just a requested animation",
+      "pass": true
+    },
+    {
+      "name": "flat_50_left grounded after walk/stop/idle",
+      "detail": "position=(57.96, 0.96) scale=1 sprite=HimoHitoCraftIdle-v1 Idle 3",
+      "pass": true
+    },
+    {
+      "name": "flat_50_left idle actually shown",
+      "detail": "not just a requested animation",
+      "pass": true
+    },
+    {
+      "name": "bridge_50_right grounded after walk/stop/idle",
+      "detail": "position=(33.43, 1.08) scale=1 sprite=HimoHitoCraftIdle-v1 Idle 3",
+      "pass": true
+    },
+    {
+      "name": "bridge_50_right idle actually shown",
+      "detail": "not just a requested animation",
+      "pass": true
+    },
+    {
+      "name": "bridge_50_left grounded after walk/stop/idle",
+      "detail": "position=(32.29, 1.08) scale=1 sprite=HimoHitoCraftIdle-v1 Idle 3",
+      "pass": true
+    },
+    {
+      "name": "bridge_50_left idle actually shown",
+      "detail": "not just a requested animation",
+      "pass": true
+    },
+    {
+      "name": "flat_31_right grounded after walk/stop/idle",
+      "detail": "position=(59.04, 0.96) scale=0.881 sprite=HimoHitoCraftIdle-v1 Idle 3",
+      "pass": true
+    },
+    {
+      "name": "flat_31_right idle actually shown",
+      "detail": "not just a requested animation",
+      "pass": true
+    },
+    {
+      "name": "flat_31_left grounded after walk/stop/idle",
+      "detail": "position=(57.96, 0.96) scale=0.881 sprite=HimoHitoCraftIdle-v1 Idle 3",
+      "pass": true
+    },
+    {
+      "name": "flat_31_left idle actually shown",
+      "detail": "not just a requested animation",
+      "pass": true
+    },
+    {
+      "name": "bridge_31_right grounded after walk/stop/idle",
+      "detail": "position=(33.43, 1.08) scale=0.881 sprite=HimoHitoCraftIdle-v1 Idle 3",
+      "pass": true
+    },
+    {
+      "name": "bridge_31_right idle actually shown",
+      "detail": "not just a requested animation",
+      "pass": true
+    },
+    {
+      "name": "bridge_31_left grounded after walk/stop/idle",
+      "detail": "position=(32.29, 1.08) scale=0.881 sprite=HimoHitoCraftIdle-v1 Idle 3",
+      "pass": true
+    },
+    {
+      "name": "bridge_31_left idle actually shown",
+      "detail": "not just a requested animation",
+      "pass": true
+    },
+    {
+      "name": "flat_18_right grounded after walk/stop/idle",
+      "detail": "position=(59.04, 0.96) scale=0.7655 sprite=HimoHitoCraftIdle-v1 Idle 3",
+      "pass": true
+    },
+    {
+      "name": "flat_18_right idle actually shown",
+      "detail": "not just a requested animation",
+      "pass": true
+    },
+    {
+      "name": "flat_18_left grounded after walk/stop/idle",
+      "detail": "position=(57.96, 0.96) scale=0.7655 sprite=HimoHitoCraftIdle-v1 Idle 3",
+      "pass": true
+    },
+    {
+      "name": "flat_18_left idle actually shown",
+      "detail": "not just a requested animation",
+      "pass": true
+    },
+    {
+      "name": "bridge_18_right grounded after walk/stop/idle",
+      "detail": "position=(33.43, 1.08) scale=0.7655 sprite=HimoHitoCraftIdle-v1 Idle 3",
+      "pass": true
+    },
+    {
+      "name": "bridge_18_right idle actually shown",
+      "detail": "not just a requested animation",
+      "pass": true
+    },
+    {
+      "name": "bridge_18_left grounded after walk/stop/idle",
+      "detail": "position=(32.29, 1.08) scale=0.7655 sprite=HimoHitoCraftIdle-v1 Idle 3",
+      "pass": true
+    },
+    {
+      "name": "bridge_18_left idle actually shown",
+      "detail": "not just a requested animation",
+      "pass": true
+    },
+    {
+      "name": "flat_7_right grounded after walk/stop/idle",
+      "detail": "position=(59.04, 0.96) scale=0.65 sprite=HimoHitoCraftIdle-v1 Idle 3",
+      "pass": true
+    },
+    {
+      "name": "flat_7_right idle actually shown",
+      "detail": "not just a requested animation",
+      "pass": true
+    },
+    {
+      "name": "flat_7_left grounded after walk/stop/idle",
+      "detail": "position=(57.96, 0.96) scale=0.65 sprite=HimoHitoCraftIdle-v1 Idle 3",
+      "pass": true
+    },
+    {
+      "name": "flat_7_left idle actually shown",
+      "detail": "not just a requested animation",
+      "pass": true
+    },
+    {
+      "name": "bridge_7_right grounded after walk/stop/idle",
+      "detail": "position=(33.43, 1.08) scale=0.65 sprite=HimoHitoCraftIdle-v1 Idle 3",
+      "pass": true
+    },
+    {
+      "name": "bridge_7_right idle actually shown",
+      "detail": "not just a requested animation",
+      "pass": true
+    },
+    {
+      "name": "bridge_7_left grounded after walk/stop/idle",
+      "detail": "position=(32.29, 1.08) scale=0.65 sprite=HimoHitoCraftIdle-v1 Idle 3",
+      "pass": true
+    },
+    {
+      "name": "bridge_7_left idle actually shown",
+      "detail": "not just a requested animation",
+      "pass": true
+    },
+    {
+      "name": "Jump is airborne",
+      "detail": "original buffered jump; no pose snap-to-floor",
+      "pass": true
+    },
+    {
+      "name": "Landing keeps physical standing contact",
+      "detail": "original jump/landing physics",
+      "pass": true
+    },
+    {
+      "name": "Pause holds pose and root",
+      "detail": "API pause, NOT Esc keys",
+      "pass": true
+    },
+    {
+      "name": "Pause resumes simulation",
+      "detail": "API only",
+      "pass": true
+    },
+    {
+      "name": "Grounded E-equivalent attach",
+      "detail": "real TryAttach; selected6, physical anchor unchanged",
+      "pass": true
+    },
+    {
+      "name": "Airborne attached crown matches line",
+      "detail": "rendered line begins at current crown",
+      "pass": true
+    },
+    {
+      "name": "Detach preserves instantaneous velocity/refund",
+      "detail": "E-equivalent core API",
+      "pass": true
+    },
+    {
+      "name": "Q actual bridge creation/cost",
+      "detail": "18 -> 12; existing CanBuild/Commit used",
+      "pass": true
+    },
+    {
+      "name": "F actual merge and remaining rope",
+      "detail": "two6 bridges; original aimed-hook F API, resource=6",
+      "pass": true
+    },
+    {
+      "name": "R restores saved small-body entry/bridge",
+      "detail": "common checkpoint method; API not OS R",
+      "pass": true
+    },
+    {
+      "name": "Resource recovery restores large visual tier",
+      "detail": "existing Refund, no consumption-rule changes",
+      "pass": true
+    },
+    {
+      "name": "Head/neck finite after small-body aim",
+      "detail": "face/neck offsets inspected in shared screen evidence",
+      "pass": true
+    }
+  ]
+}

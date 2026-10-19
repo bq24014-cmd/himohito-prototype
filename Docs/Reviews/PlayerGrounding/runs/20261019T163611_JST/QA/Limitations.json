@@ -1,0 +1,29 @@
+{
+  "os_tool": {
+    "call": "sky.list_apps",
+    "result": "timeout",
+    "attempts": 1,
+    "os_keys_verified": false
+  },
+  "human": {
+    "participants": 0,
+    "adoption": "not approved",
+    "audio": "unverified"
+  },
+  "C08": "Not targeted; no dedicated green-hook-end reproduction/quality verdict.",
+  "failed_attempts": [
+    {
+      "attempt": "Editor_before_focused",
+      "result": "diagnostic failure",
+      "reason": "GetPixels32 on an intentionally non-readable transparent craft texture; data not counted as pass; original textures/importers not modified"
+    },
+    {
+      "attempt": "Editor_before_focused_r2",
+      "result": "capture wait",
+      "reason": "WaitForEndOfFrame cannot complete in Editor batch mode. Excluded batch capture; actual media recorded in visible Windows run."
+    }
+  ],
+  "editor_environment": "Existing Unity SearchDatabase startup exception observed separately; no environment/core workaround",
+  "fun": "not evaluated",
+  "source_scope": "Production read-only; isolated presentation only; no formal adoption"
+}

@@ -1,0 +1,438 @@
+--- /dev/null
++++ ProofOnly/Assets/Scripts/GroundingReview.cs
+@@ -0,0 +1,314 @@
++using System;
++using System.Collections;
++using System.Collections.Generic;
++using System.IO;
++using System.Reflection;
++using HimoHito;
++using UnityEngine;
++using UnityEngine.SceneManagement;
++
++// Proof-only fixture. No component/driver is installed in normal Production.
++[DefaultExecutionOrder(30000)]
++public sealed class GroundingReview : MonoBehaviour
++{
++    public const BindingFlags Private = BindingFlags.NonPublic | BindingFlags.Instance;
++    public static GroundingReview Instance;
++    public static string Arg(string name, string fallback = "") {
++        var args = Environment.GetCommandLineArgs();
++        for (int i = 0; i < args.Length - 1; i++) if (args[i] == name) return args[i + 1];
++        return fallback;
++    }
++    public static bool IsQA => Arg("-groundQA") == "1";
++    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
++    static void Boot()
++    {
++        RopeBodyVisual.DiagnosticUseOriginalGrounding = Arg("-groundVariant", "after") == "before";
++        if (IsQA) { Time.captureFramerate = 50; UnityEngine.Random.InitState(22023); }
++        Application.runInBackground = true;
++        SceneManager.sceneLoaded += (scene, mode) => {
++            if (scene.name == "Tutorial" && !FindFirstObjectByType<GroundingReview>())
++                new GameObject("ISOLATED C22 C23 Review Fixture").AddComponent<GroundingReview>();
++        };
++    }
++    public Rigidbody2D Body; public PlayerMover Mover; public RopeController Rope;
++    public RopeResource Resource; public RopePlatformBuilder Builder; public RopeBodyVisual Visual;
++    public PrototypeRunController Run; public StageOverlayControls Overlay;
++    SpriteRenderer main, lower; Transform art; Collider2D playerCollider;
++    GroundingInputDriver driver;
++    string output, scenario = "setup", phase = "setup";
++    bool ready, film; int filmFrame, errors; float move;
++    readonly Result result = new Result();
++    [Serializable] public class Check { public string name, detail; public bool pass; }
++    [Serializable] public class State {
++        public int frame; public float time, fixedTime, input, remaining, selected, scale, colliderBottom, datumY, opaqueSoleY, surfaceY, bridgeBend, crownLineError, neckError, timeScale, ortho;
++        public string scenario, phase, sprite;
++        public bool grounded, attached, bridge, walking, idle, aiming, transition, split, left;
++        public Vector2 position, velocity; public Vector3 camera, visualPosition, crown;
++    }
++    [Serializable] public class Result {
++        public string method = "Automatic input-field/reflection/API plus actual Unity Physics2D and rendered sprites. NOT OS keys or Human play.", variant, unity, mode;
++        public bool finished, development; public int errors; public List<Check> checks = new List<Check>();
++        public List<State> samples = new List<State>(); public List<State> events = new List<State>();
++    }
++    public static object Field(object o, string n) => o.GetType().GetField(n, Private).GetValue(o);
++    public static void Set(object o, string n, object value) => o.GetType().GetField(n, Private).SetValue(o, value);
++    public static object Call(object o, string n, params object[] args) => o.GetType().GetMethod(n, Private | BindingFlags.Public).Invoke(o, args);
++    static bool Flag(object o, string n) => (bool)Field(o, n);
++    void CheckIt(string name, bool pass, string detail) {
++        result.checks.Add(new Check { name = name, pass = pass, detail = detail });
++        Debug.Log("GROUND_CHECK " + name + " " + pass + " " + detail);
++    }
++    void OnLog(string message, string stack, LogType type) {
++        if (type != LogType.Exception && type != LogType.Error && type != LogType.Assert) return;
++        errors++; File.AppendAllText(Path.Combine(output, "Errors.txt"), message + "\n" + stack + "\n");
++    }
++    IEnumerator Start()
++    {
++        Instance = this;
++        output = Arg("-groundOutput", Path.Combine(Application.persistentDataPath, "GroundingSessions", DateTime.Now.ToString("yyyyMMdd_HHmmss_fff")));
++        Directory.CreateDirectory(output); Application.logMessageReceived += OnLog;
++        yield return null; yield return null;
++        Run = FindFirstObjectByType<PrototypeRunController>(); Body = Run.GetComponent<Rigidbody2D>();
++        Mover = Body.GetComponent<PlayerMover>(); Rope = Body.GetComponent<RopeController>();
++        Resource = Body.GetComponent<RopeResource>(); Builder = Body.GetComponent<RopePlatformBuilder>();
++        Visual = Body.GetComponent<RopeBodyVisual>(); playerCollider = Body.GetComponent<Collider2D>(); Overlay = FindFirstObjectByType<StageOverlayControls>();
++        art = (Transform)Field(Visual, "visualTransform"); main = (SpriteRenderer)Field(Visual, "visualRenderer");
++        lower = (SpriteRenderer)Field(Visual, "balanceBodyRenderer");
++        Run.BeginGameFromTitle();
++        var preview = FindFirstObjectByType<MainStagePreview>(); if (preview) { Call(preview, "RestoreState"); preview.enabled = false; }
++        // A fixed, original Tutorial floor/bridge setup, not an A2 or train change.
++        Resource.RestoreCapacityAndCurrent(50, 7); Rope.RestoreSelectedRopeLength(6);
++        Builder.EnsureAuthoredPlatform(TutorialSectionThreeSetup.LeftBridgeEndpoint, TutorialSectionThreeSetup.RightBridgeEndpoint, 6);
++        Place(new Vector2(39, .955f), true);
++        Run.TryReachTutorialSection(4, new Vector2(39, .955f), 7);
++        Call(Run, "CaptureCheckpointState");
++        Camera.main.GetComponent<HorizontalCameraFollow>()?.ResetFraming();
++        result.variant = RopeBodyVisual.DiagnosticUseOriginalGrounding ? "before" : "after";
++        result.unity = Application.unityVersion; result.development = Debug.isDebugBuild; result.mode = Arg("-groundMode", "matrix");
++        if (!IsQA) {
++            ready = true;
++            File.WriteAllText(Path.Combine(output, "ManualStartup.json"), JsonUtility.ToJson(Sample(), true));
++            Debug.Log("GROUND_MANUAL_READY variant=" + result.variant + " no automatic input/capture/exit");
++            yield break;
++        }
++        var guide = FindFirstObjectByType<TutorialSectionGuide>(); if (guide) guide.enabled = false;
++        driver = gameObject.AddComponent<GroundingInputDriver>(); ready = true;
++        CheckIt("Only presentation is changed", Body.transform.localScale == new Vector3(.8f, 1.2f, 1f) && playerCollider.enabled,
++            "Original PlayerMover/RopeController/Resource/Builder/Scene/Camera sources copied unchanged");
++        if (result.mode == "focused") {
++            yield return GroundCase(false, 7, 1, true);
++        } else {
++            foreach (float amount in new[] { 50f, 31f, 18f, 7f })
++                foreach (bool bridge in new[] { false, true })
++                    foreach (int direction in new[] { 1, -1 })
++                        yield return GroundCase(bridge, amount, direction, amount == 7 && direction == 1);
++            yield return Actions();
++        }
++        result.finished = true; result.errors = errors;
++        File.WriteAllText(Path.Combine(output, "GroundingResult.json"), JsonUtility.ToJson(result, true));
++        yield return null;
++        Quit(errors == 0 ? 0 : 2);
++    }
++    public void Drive() { if (ready && driver) { Set(Mover, "moveInput", move); } }
++    void Place(Vector2 position, bool resetVisual)
++    {
++        if (Rope.IsAttached) Rope.DetachAndRefund();
++        Body.simulated = true; Mover.enabled = true; Rope.enabled = true;
++        Body.position = position; Body.transform.position = new Vector3(position.x, position.y, Body.transform.position.z);
++        Body.linearVelocity = Vector2.zero; Body.angularVelocity = 0; Physics2D.SyncTransforms();
++        // Diagnostic teleport bookkeeping, not a replacement R implementation.
++        Set(Mover, "previousPhysicsPosition", position); Set(Mover, "hasPreviousPhysicsPosition", true);
++        Set(Mover, "hasPreviousVerticalSpeed", false); Set(Mover, "moveInput", 0f); Set(Mover, "jumpBufferTimer", 0f);
++        if (resetVisual) {
++            Visual.CancelActionPoses();
++            foreach (string n in new[] { "idlePose", "groundMotionPose", "aimPose", "signGlance", "swingPose", "swingAttachPose", "swingReleasePose" }) Call(Field(Visual, n), "Reset");
++            Set(Visual, "isWalking", false); Set(Visual, "isJumpingVisually", false); Set(Visual, "isReturningFromSwing", false);
++            Set(Visual, "currentVisualAngle", 0f); Set(Visual, "visualAngleVelocity", 0f);
++        }
++    }
++    float SurfaceAt(float x, GeneratedRopePlatform bridge)
++    {
++        var edge = bridge.GetComponent<EdgeCollider2D>(); var points = edge.points;
++        for (int i = 0; i < points.Length - 1; i++) {
++            Vector2 a = edge.transform.TransformPoint(points[i]), b = edge.transform.TransformPoint(points[i + 1]);
++            if (x >= Mathf.Min(a.x, b.x) && x <= Mathf.Max(a.x, b.x)) return Mathf.Lerp(a.y, b.y, (x - a.x) / (b.x - a.x));
++        }
++        return .35f;
++    }
++    GeneratedRopePlatform T3Bridge() {
++        foreach (var p in FindObjectsByType<GeneratedRopePlatform>(FindObjectsSortMode.None))
++            if (p.Touches(TutorialSectionThreeSetup.LeftBridgeEndpoint, .1f)) return p;
++        return null;
++    }
++    IEnumerator GroundCase(bool bridge, float amount, int direction, bool captureFilm)
++    {
++        move = 0; scenario = (bridge ? "bridge" : "flat") + "_" + amount + "_" + (direction > 0 ? "right" : "left"); phase = "setup";
++        Resource.RestoreCapacityAndCurrent(50, amount); Rope.RestoreSelectedRopeLength(6);
++        Set(Rope, "keyboardAimDirection", new Vector2(direction, 0)); main.flipX = direction < 0;
++        float x = bridge ? (direction > 0 ? 31.35f : 34.65f) : (direction > 0 ? 56.7f : 60.3f);
++        float top = bridge ? SurfaceAt(x, T3Bridge()) : .35f;
++        Place(new Vector2(x, top + .605f), true);
++        Camera.main.GetComponent<HorizontalCameraFollow>()?.ResetFraming();
++        yield return new WaitForSeconds(.5f);
++        phase = "standing_before_walk"; Event();
++        if (captureFilm && !Application.isBatchMode) { filmFrame = 0; film = true; Directory.CreateDirectory(Path.Combine(output, scenario, "Frames")); }
++        phase = "walk"; move = direction; yield return new WaitForSeconds(.4f); Event(); yield return Shot("Walk");
++        phase = "deceleration"; move = 0; yield return new WaitForSeconds(.04f); Event();
++        phase = "stop_immediate"; yield return new WaitForSeconds(.06f); Event(); yield return Shot("StopImmediate");
++        phase = "transition_end"; yield return new WaitForSeconds(.35f); Event();
++        phase = "wait_for_idle"; yield return new WaitForSeconds(2f); Event(); yield return Shot("Idle");
++        CheckIt(scenario + " grounded after walk/stop/idle", Mover.IsGrounded && (bridge ? Mover.SupportedRopePlatform != null : Mover.SupportedRopePlatform == null), "position=" + Body.position + " scale=" + Field(Visual, "currentBaseScale") + " sprite=" + main.sprite.name);
++        CheckIt(scenario + " idle actually shown", Flag(Visual, "isIdlePoseDisplayed"), "not just a requested animation");
++        phase = "aim_up"; Set(Rope, "keyboardAimDirection", new Vector2(direction * .4f, 1)); yield return new WaitForSeconds(.5f); Event(); yield return Shot("Aim");
++        phase = "restart_walk"; move = direction; yield return new WaitForSeconds(.16f); Event();
++        move = 0; yield return new WaitForSeconds(.14f); film = false;
++    }
++    IEnumerator Actions()
++    {
++        scenario = "actions"; phase = "setup"; move = 0;
++        Resource.RestoreCapacityAndCurrent(50, 7); Place(new Vector2(57, .955f), true); yield return new WaitForSeconds(.5f);
++        phase = "jump"; Set(Mover, "jumpBufferTimer", .15f); yield return new WaitForSeconds(.16f); Event();
++        CheckIt("Jump is airborne", !Mover.IsGrounded && Body.linearVelocity.y > 0, "original buffered jump; no pose snap-to-floor");
++        phase = "fall_and_land"; yield return new WaitForSeconds(1.3f); Event();
++        CheckIt("Landing keeps physical standing contact", Mover.IsGrounded && Mathf.Abs(Body.position.x - 57) < .1f, "original jump/landing physics");
++        phase = "pause"; Set(Overlay, "isPaused", true); Call(Overlay, "ApplyPauseState"); yield return null;
++        Vector3 pausedArt = art.position; Vector2 pausedBody = Body.position; yield return null; yield return null;
++        CheckIt("Pause holds pose and root", Time.timeScale == 0 && Vector3.Distance(pausedArt, art.position) < .0001f && Body.position == pausedBody, "API pause, NOT Esc keys");
++        Set(Overlay, "isPaused", false); Call(Overlay, "ApplyPauseState"); yield return null; phase = "resume"; Event();
++        CheckIt("Pause resumes simulation", Time.timeScale == 1 && Body.simulated && Mover.enabled, "API only");
++        phase = "attached_ground"; Resource.RestoreCapacityAndCurrent(50, 24); Rope.RestoreSelectedRopeLength(6);
++        Place(new Vector2(41.3f, .955f), true); yield return new WaitForSeconds(.4f);
++        bool attach = Rope.TryAttach(TutorialSectionFourSetup.CenterHookPosition);
++        yield return new WaitForSeconds(.18f); Event();
++        CheckIt("Grounded E-equivalent attach", attach && Rope.IsAttached, "real TryAttach; selected6, physical anchor unchanged");
++        phase = "swing_air"; move = 1; yield return new WaitForSeconds(.65f); Event();
++        CheckIt("Airborne attached crown matches line", Rope.IsAttached && Vector2.Distance(Body.GetComponent<LineRenderer>().GetPosition(0), Visual.RopeOrigin) < .002f, "rendered line begins at current crown");
++        yield return Shot("Attached"); phase = "detach"; Vector2 beforeRelease = Body.linearVelocity;
++        Rope.DetachAndRefund(true); Event();
++        CheckIt("Detach preserves instantaneous velocity/refund", Body.linearVelocity == beforeRelease && !Rope.IsAttached && Mathf.Abs(Resource.CurrentLength - 24) < .01f, "E-equivalent core API");
++        move = 0; yield return new WaitForSeconds(.3f); phase = "after_release"; Event();
++        Resource.RestoreCapacityAndCurrent(50, 18); Rope.RestoreSelectedRopeLength(6); Builder.ClearPlatforms();
++        Place(new Vector2(41.3f, .955f), true); yield return new WaitForSeconds(.45f);
++        phase = "Q_first"; bool qAttach = Rope.TryAttach(TutorialSectionFourSetup.CenterHookPosition); float cost = Builder.CurrentPlatformCost;
++        bool first = Builder.TryBuildCurrentPlatform(); yield return new WaitForSeconds(1.1f); Event(); yield return Shot("AfterQ");
++        CheckIt("Q actual bridge creation/cost", qAttach && first && Builder.GeneratedPlatformCount == 1 && cost == 6 && Mathf.Abs(Resource.CurrentLength - 12) < .01f, "18 -> 12; existing CanBuild/Commit used");
++        var platforms = FindObjectsByType<GeneratedRopePlatform>(FindObjectsSortMode.None);
++        if (first && platforms.Length > 0) {
++            float x = 46.7f; Place(new Vector2(x, SurfaceAt(x, platforms[0]) + .605f), true); yield return new WaitForSeconds(.4f);
++            phase = "Q_second"; bool secondAttach = Rope.TryAttach(TutorialSectionFourSetup.RightAnchorPosition); bool second = Builder.TryBuildCurrentPlatform();
++            yield return new WaitForSeconds(1.1f); Event();
++            Set(Rope, "keyboardAimDirection", (TutorialSectionFourSetup.CenterHookPosition - Body.position).normalized);
++            float beforeMerge = Resource.CurrentLength; phase = "F_merge";
++            bool merged = Builder.TryRemoveAimedHook(); yield return new WaitForSeconds(.8f); Event();
++            CheckIt("F actual merge and remaining rope", secondAttach && second && merged && Builder.GeneratedPlatformCount == 1 && Resource.CurrentLength == beforeMerge, "two6 bridges; original aimed-hook F API, resource=" + Resource.CurrentLength);
++        } else CheckIt("F actual merge and remaining rope", false, "first Q failed; not claimed tested");
++        phase = "R_restore"; move = 0; Call(Run, "RestartFromCheckpoint"); yield return new WaitForSeconds(1.1f); Event();
++        CheckIt("R restores saved small-body entry/bridge", Mover.IsGrounded && Vector2.Distance(Body.position, new Vector2(39, .955f)) < .15f && Resource.CurrentLength == 7 && Rope.SelectedRopeLength == 6 && !Rope.IsAttached && Builder.GeneratedPlatformCount == 1, "common checkpoint method; API not OS R");
++        phase = "resource_refund"; Resource.Refund(43); yield return new WaitForSeconds(.2f); Event();
++        CheckIt("Resource recovery restores large visual tier", Resource.CurrentLength == 50 && Mathf.Abs((float)Field(Visual, "currentBaseScale") - 1) < .001f, "existing Refund, no consumption-rule changes");
++        // Only a diagnostic curiosity pose, to verify lower-body/head neck registration.
++        Resource.RestoreCurrentLength(7); Place(new Vector2(39, .955f), true); yield return new WaitForSeconds(.5f);
++        phase = "neck_curiosity"; Visual.BeginReadingSign(new Vector2(40, 2)); yield return new WaitForSeconds(.3f); Event(); yield return Shot("Neck");
++        CheckIt("Head/neck finite after small-body aim", Finite(Visual.RopeOrigin.x) && Finite(Visual.RopeOrigin.y), "face/neck offsets inspected in shared screen evidence");
++    }
++    static bool Finite(float v) => !float.IsNaN(v) && !float.IsInfinity(v);
++    void Event() { var state = Sample(); result.events.Add(state); Debug.Log("GROUND_EVENT " + scenario + " " + phase + " timeScale=" + Time.timeScale + " root=" + state.position + " datum=" + state.datumY); }
++    IEnumerator Shot(string name) {
++        if (Application.isBatchMode) yield break; // No end-of-frame rendering in Editor batch mode.
++        yield return new WaitForEndOfFrame();
++        string folder = Path.Combine(output, scenario); Directory.CreateDirectory(folder);
++        var texture = ScreenCapture.CaptureScreenshotAsTexture();
++        File.WriteAllBytes(Path.Combine(folder, name + ".jpg"), texture.EncodeToJPG(86)); Destroy(texture);
++    }
++    void LateUpdate() {
++        if (!ready || !IsQA) return;
++        result.samples.Add(Sample());
++        if (film) StartCoroutine(FilmFrame(Path.Combine(output, scenario, "Frames", "Frame_" + (filmFrame++).ToString("D4") + ".jpg")));
++    }
++    IEnumerator FilmFrame(string path) {
++        yield return new WaitForEndOfFrame(); var texture = ScreenCapture.CaptureScreenshotAsTexture();
++        File.WriteAllBytes(path, texture.EncodeToJPG(82)); Destroy(texture);
++    }
++    readonly Dictionary<Sprite, Vector2> solePoints = new Dictionary<Sprite, Vector2>();
++    readonly Dictionary<Texture2D, Color32[]> readablePixels = new Dictionary<Texture2D, Color32[]>();
++    Color32[] Pixels(Texture2D source) {
++        if (readablePixels.TryGetValue(source, out Color32[] pixels)) return pixels;
++        if (source.isReadable) pixels = source.GetPixels32();
++        else {
++            // Some Production textures deliberately discard their CPU copy.
++            // Read a temporary GPU copy for diagnostics; do not change importers/art.
++            var rt = RenderTexture.GetTemporary(source.width, source.height, 0, RenderTextureFormat.ARGB32, RenderTextureReadWrite.Linear);
++            var previous = RenderTexture.active;
++            Graphics.Blit(source, rt); RenderTexture.active = rt;
++            var copy = new Texture2D(source.width, source.height, TextureFormat.RGBA32, false, true);
++            copy.ReadPixels(new Rect(0, 0, source.width, source.height), 0, 0); copy.Apply();
++            pixels = copy.GetPixels32(); Destroy(copy); RenderTexture.active = previous; RenderTexture.ReleaseTemporary(rt);
++        }
++        readablePixels[source] = pixels; return pixels;
++    }
++    Vector2 OpaqueSole(Sprite sprite) {
++        if (solePoints.TryGetValue(sprite, out Vector2 cached)) return cached;
++        // A supplementary visible-pixel measurement; not a physics probe or IK target.
++        Rect r = sprite.rect; var pixels = Pixels(sprite.texture); int width = sprite.texture.width;
++        int minY = (int)r.height; float sum = 0; int count = 0;
++        int fromX = (int)(r.width * .25f), toX = (int)(r.width * .75f);
++        for (int y = 0; y < r.height * .42f; y++) {
++            for (int x = fromX; x < toX; x++) if (pixels[((int)r.y + y) * width + (int)r.x + x].a > 80) {
++                minY = y; sum += x + .5f; count++;
++            }
++            if (count > 0) break;
++        }
++        cached = new Vector2(((count > 0 ? sum / count : sprite.pivot.x) - sprite.pivot.x) / sprite.pixelsPerUnit,
++            ((count > 0 ? minY + .5f : sprite.pivot.y) - sprite.pivot.y) / sprite.pixelsPerUnit);
++        solePoints[sprite] = cached; return cached;
++    }
++    State Sample()
++    {
++        bool split = lower && lower.enabled; var renderer = split ? lower : main; Transform visual = renderer.transform;
++        bool walking = Flag(Visual, "isWalking"), idle = Flag(Visual, "isIdlePoseDisplayed"), aiming = Flag(Visual, "isAimPoseDisplayed"), transition = ((GroundMotionPoseState)Field(Visual, "groundMotionPose")).IsActive;
++        float datum = visual.position.y;
++        if (main.sprite == (Sprite)Field(Visual, "standingSprite")) datum = art.TransformPoint(new Vector3(0, main.sprite.bounds.min.y, 0)).y;
++        Vector2 sole = visual.TransformPoint(OpaqueSole(renderer.sprite));
++        float surface = playerCollider.bounds.min.y;
++        foreach (var hit in Physics2D.RaycastAll(new Vector2(Body.position.x, playerCollider.bounds.min.y + .12f), Vector2.down, .5f))
++            if (hit.collider && hit.collider != playerCollider && !hit.collider.isTrigger && hit.normal.y > .6f) { surface = hit.point.y; break; }
++        float bend = Mover.SupportedRopePlatform && Mover.SupportedRopePlatform.TryGetComponent(out RopeBridgeStepVisual step)
++            ? step.GetVerticalOffset(new Vector2(playerCollider.bounds.center.x, playerCollider.bounds.min.y)) : 0;
++        float lineError = Rope.IsAttached ? Vector2.Distance(Body.GetComponent<LineRenderer>().GetPosition(0), Visual.RopeOrigin) : 0;
++        float neckError = -1;
++        if (split) {
++            var dictionary = (Dictionary<Sprite, RopePoseParts>)typeof(RopeBodyVisual).GetField("PoseParts", BindingFlags.Static | BindingFlags.NonPublic).GetValue(null);
++            foreach (var pair in dictionary) if (pair.Value.Body == lower.sprite) {
++                Vector3 neck = pair.Value.Neck; if (lower.flipX) neck.x = -neck.x;
++                neckError = Vector3.Distance(lower.transform.TransformPoint(neck), art.position); break;
++            }
++        }
++        return new State {
++            frame = Time.frameCount, time = Time.time, fixedTime = Time.fixedTime, scenario = scenario, phase = phase,
++            input = Mover.MovementInput, remaining = Resource.CurrentLength, selected = Rope.SelectedRopeLength,
++            scale = (float)Field(Visual, "currentBaseScale"), position = Body.position, velocity = Body.linearVelocity,
++            camera = Camera.main.transform.position, ortho = Camera.main.orthographicSize, grounded = Mover.IsGrounded,
++            attached = Rope.IsAttached, bridge = Mover.SupportedRopePlatform, colliderBottom = playerCollider.bounds.min.y,
++            datumY = datum, opaqueSoleY = sole.y, surfaceY = surface, bridgeBend = bend,
++            crownLineError = lineError, sprite = renderer.sprite.name, walking = walking, idle = idle, aiming = aiming,
++            transition = transition, split = split, left = main.flipX, visualPosition = art.position, crown = Visual.RopeOrigin,
++            timeScale = Time.timeScale, neckError = neckError
++        };
++    }
++    void OnGUI() {
++        if (IsQA || !ready) return;
++        GUI.Box(new Rect(Screen.width - 400, 24, 380, 78), (RopeBodyVisual.DiagnosticUseOriginalGrounding ? "比較元：旧足元" : "C22 / C23：足元修正版") + "\n隔離Proof・未採用。初期7/50、T3橋あり。\n既存操作を使用。自動入力・撮影・終了なし。");
++    }
++    static void Quit(int code) {
++#if UNITY_EDITOR
++        UnityEditor.EditorApplication.Exit(code);
++#else
++        Application.Quit(code);
++#endif
++    }
++}
++[DefaultExecutionOrder(-10000)]
++public sealed class GroundingInputDriver : MonoBehaviour {
++    void FixedUpdate() { if (GroundingReview.Instance) GroundingReview.Instance.Drive(); }
++    void LateUpdate() { if (GroundingReview.Instance) GroundingReview.Instance.Drive(); }
++}
+--- /dev/null
++++ ProofOnly/Assets/Scripts/GroundingReview.cs.meta
+@@ -0,0 +1,2 @@
++fileFormatVersion: 2
++guid: 33e4e579d9d718a43930b782589b1ba1--- /dev/null
++++ ProofOnly/Assets/Editor/GroundingProofEditor.cs
+@@ -0,0 +1,56 @@
++#if UNITY_EDITOR
++using System;
++using System.IO;
++using UnityEditor;
++using UnityEditor.SceneManagement;
++using UnityEditor.Build.Reporting;
++using UnityEngine;
++using UnityEngine.SceneManagement;
++
++[InitializeOnLoad]
++public static class GroundingProofEditor
++{
++    static GroundingProofEditor() { EditorApplication.playModeStateChanged += Changed; }
++    public static void PlayQA()
++    {
++        SessionState.SetBool("GroundingPlay", true);
++        EditorSceneManager.playModeStartScene = null;
++        EditorSceneManager.NewScene(NewSceneSetup.EmptyScene, NewSceneMode.Single);
++        EditorApplication.EnterPlaymode();
++    }
++    static void Changed(PlayModeStateChange state)
++    {
++        if (state == PlayModeStateChange.EnteredPlayMode && SessionState.GetBool("GroundingPlay", false))
++        {
++            SessionState.EraseBool("GroundingPlay");
++            EditorSceneManager.LoadSceneInPlayMode("Assets/Scenes/Tutorial.unity", new LoadSceneParameters(LoadSceneMode.Single));
++        }
++    }
++    public static void Build()
++    {
++        try
++        {
++            string output = GroundingReview.Arg("-groundBuild");
++            if (string.IsNullOrEmpty(output) || File.Exists(output)) throw new Exception("Missing/new output required");
++            Directory.CreateDirectory(Path.GetDirectoryName(output));
++            EditorUserBuildSettings.development = false;
++            EditorUserBuildSettings.allowDebugging = false;
++            EditorUserBuildSettings.connectProfiler = false;
++            EditorUserBuildSettings.buildWithDeepProfilingSupport = false;
++            PlayerSettings.companyName = "HimoHitoIsolatedProofs";
++            PlayerSettings.productName = "HimoHito C22 C23 Grounding Review";
++            var report = BuildPipeline.BuildPlayer(new BuildPlayerOptions {
++                scenes = new[] { "Assets/Scenes/Tutorial.unity", "Assets/Scenes/MainStage.unity" },
++                locationPathName = output, target = BuildTarget.StandaloneWindows64, options = BuildOptions.None });
++            File.WriteAllText(Path.Combine(Path.GetDirectoryName(output), "BuildSummary.json"), JsonUtility.ToJson(new Summary {
++                result = report.summary.result.ToString(), errors = (int)report.summary.totalErrors,
++                warnings = (int)report.summary.totalWarnings, bytes = (long)report.summary.totalSize,
++                options = report.summary.options.ToString(), development = EditorUserBuildSettings.development,
++                profiler = EditorUserBuildSettings.connectProfiler, debugging = EditorUserBuildSettings.allowDebugging }, true));
++            EditorApplication.Exit(report.summary.result == BuildResult.Succeeded ? 0 : 2);
++        }
++        catch (Exception e) { Debug.LogException(e); EditorApplication.Exit(2); }
++    }
++    [Serializable] class Summary { public string result, options; public int errors, warnings; public long bytes; public bool development, profiler, debugging; }
++}
++#endif
+--- /dev/null
++++ ProofOnly/Assets/Editor/GroundingProofEditor.cs.meta
+@@ -0,0 +1,2 @@
++fileFormatVersion: 2
++guid: b44e18cd035dc634aa81886f7417b07b--- Baseline/Packages/manifest.json
++++ ProofOnly/Packages/manifest.json
+@@ -2,6 +2,8 @@
+   "dependencies": {
+     "com.unity.modules.audio": "1.0.0",
+     "com.unity.modules.imgui": "1.0.0",
++    "com.unity.modules.imageconversion": "1.0.0",
++    "com.unity.modules.screencapture": "1.0.0",
+     "com.unity.modules.jsonserialize": "1.0.0",
+     "com.unity.modules.particlesystem": "1.0.0",
+     "com.unity.modules.physics2d": "1.0.0"
+--- Baseline/Packages/packages-lock.json
++++ ProofOnly/Packages/packages-lock.json
+@@ -1,6 +1,12 @@
+ {
+   "dependencies": {
+     "com.unity.modules.audio": {
++      "version": "1.0.0",
++      "depth": 0,
++      "source": "builtin",
++      "dependencies": {}
++    },
++    "com.unity.modules.imageconversion": {
+       "version": "1.0.0",
+       "depth": 0,
+       "source": "builtin",
+@@ -29,6 +35,14 @@
+       "depth": 0,
+       "source": "builtin",
+       "dependencies": {}
++    },
++    "com.unity.modules.screencapture": {
++      "version": "1.0.0",
++      "depth": 0,
++      "source": "builtin",
++      "dependencies": {
++        "com.unity.modules.imageconversion": "1.0.0"
++      }
+     }
+   }
+ }
+--- Baseline/ProjectSettings/ProjectSettings.asset
++++ ProofOnly/ProjectSettings/ProjectSettings.asset
+@@ -12,8 +12,8 @@
+   targetDevice: 2
+   useOnDemandResources: 0
+   accelerometerFrequency: 60
+-  companyName: bq24014-cmd
+-  productName: "\u30D2\u30E2\u30D2\u30C8"
++  companyName: HimoHitoIsolatedProofs
++  productName: HimoHito C22 C23 Grounding Review
+   defaultCursor: {fileID: 0}
+   cursorHotspot: {x: 0, y: 0}
+   m_SplashScreenBackgroundColor: {r: 0.035, g: 0.031, b: 0.094, a: 1}

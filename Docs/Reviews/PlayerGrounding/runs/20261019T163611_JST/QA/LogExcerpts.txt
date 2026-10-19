@@ -1,0 +1,116 @@
+[before] GROUND_CHECK Only presentation is changed True Original PlayerMover/RopeController/Resource/Builder/Scene/Camera sources copied unchanged
+[before] GROUND_CHECK flat_50_right grounded after walk/stop/idle True position=(59.04, 0.96) scale=1 sprite=HimoHitoCraftIdle-v1 Idle 3
+[before] GROUND_CHECK flat_50_right idle actually shown True not just a requested animation
+[before] GROUND_CHECK flat_50_left grounded after walk/stop/idle True position=(57.96, 0.96) scale=1 sprite=HimoHitoCraftIdle-v1 Idle 3
+[before] GROUND_CHECK flat_50_left idle actually shown True not just a requested animation
+[before] GROUND_CHECK bridge_50_right grounded after walk/stop/idle True position=(33.43, 1.08) scale=1 sprite=HimoHitoCraftIdle-v1 Idle 3
+[before] GROUND_CHECK bridge_50_right idle actually shown True not just a requested animation
+[before] GROUND_CHECK bridge_50_left grounded after walk/stop/idle True position=(32.29, 1.08) scale=1 sprite=HimoHitoCraftIdle-v1 Idle 3
+[before] GROUND_CHECK bridge_50_left idle actually shown True not just a requested animation
+[before] GROUND_CHECK flat_31_right grounded after walk/stop/idle True position=(59.04, 0.96) scale=0.881 sprite=HimoHitoCraftIdle-v1 Idle 3
+[before] GROUND_CHECK flat_31_right idle actually shown True not just a requested animation
+[before] GROUND_CHECK flat_31_left grounded after walk/stop/idle True position=(57.96, 0.96) scale=0.881 sprite=HimoHitoCraftIdle-v1 Idle 3
+[before] GROUND_CHECK flat_31_left idle actually shown True not just a requested animation
+[before] GROUND_CHECK bridge_31_right grounded after walk/stop/idle True position=(33.43, 1.08) scale=0.881 sprite=HimoHitoCraftIdle-v1 Idle 3
+[before] GROUND_CHECK bridge_31_right idle actually shown True not just a requested animation
+[before] GROUND_CHECK bridge_31_left grounded after walk/stop/idle True position=(32.29, 1.08) scale=0.881 sprite=HimoHitoCraftIdle-v1 Idle 3
+[before] GROUND_CHECK bridge_31_left idle actually shown True not just a requested animation
+[before] GROUND_CHECK flat_18_right grounded after walk/stop/idle True position=(59.04, 0.96) scale=0.7655 sprite=HimoHitoCraftIdle-v1 Idle 3
+[before] GROUND_CHECK flat_18_right idle actually shown True not just a requested animation
+[before] GROUND_CHECK flat_18_left grounded after walk/stop/idle True position=(57.96, 0.96) scale=0.7655 sprite=HimoHitoCraftIdle-v1 Idle 3
+[before] GROUND_CHECK flat_18_left idle actually shown True not just a requested animation
+[before] GROUND_CHECK bridge_18_right grounded after walk/stop/idle True position=(33.43, 1.08) scale=0.7655 sprite=HimoHitoCraftIdle-v1 Idle 3
+[before] GROUND_CHECK bridge_18_right idle actually shown True not just a requested animation
+[before] GROUND_CHECK bridge_18_left grounded after walk/stop/idle True position=(32.29, 1.08) scale=0.7655 sprite=HimoHitoCraftIdle-v1 Idle 3
+[before] GROUND_CHECK bridge_18_left idle actually shown True not just a requested animation
+[before] GROUND_CHECK flat_7_right grounded after walk/stop/idle True position=(59.04, 0.96) scale=0.65 sprite=HimoHitoCraftIdle-v1 Idle 3
+[before] GROUND_CHECK flat_7_right idle actually shown True not just a requested animation
+[before] GROUND_CHECK flat_7_left grounded after walk/stop/idle True position=(57.96, 0.96) scale=0.65 sprite=HimoHitoCraftIdle-v1 Idle 3
+[before] GROUND_CHECK flat_7_left idle actually shown True not just a requested animation
+[before] GROUND_CHECK bridge_7_right grounded after walk/stop/idle True position=(33.43, 1.08) scale=0.65 sprite=HimoHitoCraftIdle-v1 Idle 3
+[before] GROUND_CHECK bridge_7_right idle actually shown True not just a requested animation
+[before] GROUND_CHECK bridge_7_left grounded after walk/stop/idle True position=(32.29, 1.08) scale=0.65 sprite=HimoHitoCraftIdle-v1 Idle 3
+[before] GROUND_CHECK bridge_7_left idle actually shown True not just a requested animation
+[before] GROUND_EVENT actions jump timeScale=1 root=(57.00, 2.27) datum=2.314576
+[before] GROUND_CHECK Jump is airborne True original buffered jump; no pose snap-to-floor
+[before] GROUND_EVENT actions fall_and_land timeScale=1 root=(57.00, 0.96) datum=0.5164998
+[before] GROUND_CHECK Landing keeps physical standing contact True original jump/landing physics
+[before] GROUND_CHECK Pause holds pose and root True API pause, NOT Esc keys
+[before] GROUND_EVENT actions resume timeScale=1 root=(57.00, 0.96) datum=0.5164998
+[before] GROUND_CHECK Pause resumes simulation True API only
+[before] GROUND_EVENT actions attached_ground timeScale=1 root=(41.30, 0.96) datum=0.4368048
+[before] GROUND_CHECK Grounded E-equivalent attach True real TryAttach; selected6, physical anchor unchanged
+[before] GROUND_EVENT actions swing_air timeScale=1 root=(41.30, 0.96) datum=0.4368048
+[before] GROUND_CHECK Airborne attached crown matches line True rendered line begins at current crown
+[before] GROUND_EVENT actions detach timeScale=1 root=(41.30, 0.96) datum=0.4368048
+[before] GROUND_CHECK Detach preserves instantaneous velocity/refund True E-equivalent core API
+[before] GROUND_EVENT actions after_release timeScale=1 root=(41.30, 0.96) datum=0.4368048
+[before] GROUND_EVENT actions Q_first timeScale=1 root=(42.32, 1.08) datum=0.6248541
+[before] GROUND_CHECK Q actual bridge creation/cost True 18 -> 12; existing CanBuild/Commit used
+[before] GROUND_EVENT actions Q_second timeScale=1 root=(46.33, 2.08) datum=1.625171
+[before] GROUND_EVENT actions F_merge timeScale=1 root=(46.33, -0.83) datum=-1.391144
+[before] GROUND_CHECK F actual merge and remaining rope True two6 bridges; original aimed-hook F API, resource=6
+[before] GROUND_EVENT actions R_restore timeScale=1 root=(39.00, 0.96) datum=0.5164998
+[before] GROUND_CHECK R restores saved small-body entry/bridge True common checkpoint method; API not OS R
+[before] GROUND_EVENT actions resource_refund timeScale=1 root=(39.00, 0.96) datum=0.2749998
+[before] GROUND_CHECK Resource recovery restores large visual tier True existing Refund, no consumption-rule changes
+[before] GROUND_EVENT actions neck_curiosity timeScale=1 root=(39.00, 0.96) datum=0.5164998
+[before] GROUND_CHECK Head/neck finite after small-body aim True face/neck offsets inspected in shared screen evidence
+[after] GROUND_CHECK Only presentation is changed True Original PlayerMover/RopeController/Resource/Builder/Scene/Camera sources copied unchanged
+[after] GROUND_CHECK flat_50_right grounded after walk/stop/idle True position=(59.04, 0.96) scale=1 sprite=HimoHitoCraftIdle-v1 Idle 3
+[after] GROUND_CHECK flat_50_right idle actually shown True not just a requested animation
+[after] GROUND_CHECK flat_50_left grounded after walk/stop/idle True position=(57.96, 0.96) scale=1 sprite=HimoHitoCraftIdle-v1 Idle 3
+[after] GROUND_CHECK flat_50_left idle actually shown True not just a requested animation
+[after] GROUND_CHECK bridge_50_right grounded after walk/stop/idle True position=(33.43, 1.08) scale=1 sprite=HimoHitoCraftIdle-v1 Idle 3
+[after] GROUND_CHECK bridge_50_right idle actually shown True not just a requested animation
+[after] GROUND_CHECK bridge_50_left grounded after walk/stop/idle True position=(32.29, 1.08) scale=1 sprite=HimoHitoCraftIdle-v1 Idle 3
+[after] GROUND_CHECK bridge_50_left idle actually shown True not just a requested animation
+[after] GROUND_CHECK flat_31_right grounded after walk/stop/idle True position=(59.04, 0.96) scale=0.881 sprite=HimoHitoCraftIdle-v1 Idle 3
+[after] GROUND_CHECK flat_31_right idle actually shown True not just a requested animation
+[after] GROUND_CHECK flat_31_left grounded after walk/stop/idle True position=(57.96, 0.96) scale=0.881 sprite=HimoHitoCraftIdle-v1 Idle 3
+[after] GROUND_CHECK flat_31_left idle actually shown True not just a requested animation
+[after] GROUND_CHECK bridge_31_right grounded after walk/stop/idle True position=(33.43, 1.08) scale=0.881 sprite=HimoHitoCraftIdle-v1 Idle 3
+[after] GROUND_CHECK bridge_31_right idle actually shown True not just a requested animation
+[after] GROUND_CHECK bridge_31_left grounded after walk/stop/idle True position=(32.29, 1.08) scale=0.881 sprite=HimoHitoCraftIdle-v1 Idle 3
+[after] GROUND_CHECK bridge_31_left idle actually shown True not just a requested animation
+[after] GROUND_CHECK flat_18_right grounded after walk/stop/idle True position=(59.04, 0.96) scale=0.7655 sprite=HimoHitoCraftIdle-v1 Idle 3
+[after] GROUND_CHECK flat_18_right idle actually shown True not just a requested animation
+[after] GROUND_CHECK flat_18_left grounded after walk/stop/idle True position=(57.96, 0.96) scale=0.7655 sprite=HimoHitoCraftIdle-v1 Idle 3
+[after] GROUND_CHECK flat_18_left idle actually shown True not just a requested animation
+[after] GROUND_CHECK bridge_18_right grounded after walk/stop/idle True position=(33.43, 1.08) scale=0.7655 sprite=HimoHitoCraftIdle-v1 Idle 3
+[after] GROUND_CHECK bridge_18_right idle actually shown True not just a requested animation
+[after] GROUND_CHECK bridge_18_left grounded after walk/stop/idle True position=(32.29, 1.08) scale=0.7655 sprite=HimoHitoCraftIdle-v1 Idle 3
+[after] GROUND_CHECK bridge_18_left idle actually shown True not just a requested animation
+[after] GROUND_CHECK flat_7_right grounded after walk/stop/idle True position=(59.04, 0.96) scale=0.65 sprite=HimoHitoCraftIdle-v1 Idle 3
+[after] GROUND_CHECK flat_7_right idle actually shown True not just a requested animation
+[after] GROUND_CHECK flat_7_left grounded after walk/stop/idle True position=(57.96, 0.96) scale=0.65 sprite=HimoHitoCraftIdle-v1 Idle 3
+[after] GROUND_CHECK flat_7_left idle actually shown True not just a requested animation
+[after] GROUND_CHECK bridge_7_right grounded after walk/stop/idle True position=(33.43, 1.08) scale=0.65 sprite=HimoHitoCraftIdle-v1 Idle 3
+[after] GROUND_CHECK bridge_7_right idle actually shown True not just a requested animation
+[after] GROUND_CHECK bridge_7_left grounded after walk/stop/idle True position=(32.29, 1.08) scale=0.65 sprite=HimoHitoCraftIdle-v1 Idle 3
+[after] GROUND_CHECK bridge_7_left idle actually shown True not just a requested animation
+[after] GROUND_EVENT actions jump timeScale=1 root=(57.00, 2.27) datum=2.314576
+[after] GROUND_CHECK Jump is airborne True original buffered jump; no pose snap-to-floor
+[after] GROUND_EVENT actions fall_and_land timeScale=1 root=(57.00, 0.96) datum=0.2749998
+[after] GROUND_CHECK Landing keeps physical standing contact True original jump/landing physics
+[after] GROUND_CHECK Pause holds pose and root True API pause, NOT Esc keys
+[after] GROUND_EVENT actions resume timeScale=1 root=(57.00, 0.96) datum=0.2749998
+[after] GROUND_CHECK Pause resumes simulation True API only
+[after] GROUND_EVENT actions attached_ground timeScale=1 root=(41.30, 0.96) datum=0.2749998
+[after] GROUND_CHECK Grounded E-equivalent attach True real TryAttach; selected6, physical anchor unchanged
+[after] GROUND_EVENT actions swing_air timeScale=1 root=(41.30, 0.96) datum=0.2749998
+[after] GROUND_CHECK Airborne attached crown matches line True rendered line begins at current crown
+[after] GROUND_EVENT actions detach timeScale=1 root=(41.30, 0.96) datum=0.2749998
+[after] GROUND_CHECK Detach preserves instantaneous velocity/refund True E-equivalent core API
+[after] GROUND_EVENT actions after_release timeScale=1 root=(41.30, 0.96) datum=0.2749998
+[after] GROUND_EVENT actions Q_first timeScale=1 root=(42.32, 1.08) datum=0.3833541
+[after] GROUND_CHECK Q actual bridge creation/cost True 18 -> 12; existing CanBuild/Commit used
+[after] GROUND_EVENT actions Q_second timeScale=1 root=(46.33, 2.08) datum=1.383671
+[after] GROUND_EVENT actions F_merge timeScale=1 root=(46.33, -0.83) datum=-1.632644
+[after] GROUND_CHECK F actual merge and remaining rope True two6 bridges; original aimed-hook F API, resource=6
+[after] GROUND_EVENT actions R_restore timeScale=1 root=(39.00, 0.96) datum=0.2749998
+[after] GROUND_CHECK R restores saved small-body entry/bridge True common checkpoint method; API not OS R
+[after] GROUND_EVENT actions resource_refund timeScale=1 root=(39.00, 0.96) datum=0.2749998
+[after] GROUND_CHECK Resource recovery restores large visual tier True existing Refund, no consumption-rule changes
+[after] GROUND_EVENT actions neck_curiosity timeScale=1 root=(39.00, 0.96) datum=0.2749998
+[after] GROUND_CHECK Head/neck finite after small-body aim True face/neck offsets inspected in shared screen evidence

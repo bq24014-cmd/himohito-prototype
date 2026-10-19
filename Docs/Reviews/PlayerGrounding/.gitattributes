@@ -1,0 +1,7 @@
+# Keep review media directly readable as ordinary Git blobs, not LFS pointers.
+*.jpg -filter -diff -merge -text
+*.jpeg -filter -diff -merge -text
+*.png -filter -diff -merge -text
+*.mp4 -filter -diff -merge -text
+# A unified patch's empty context lines intentionally contain one space.
+*.patch whitespace=-blank-at-eol

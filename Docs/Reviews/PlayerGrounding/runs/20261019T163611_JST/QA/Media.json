@@ -1,0 +1,33 @@
+{
+  "method": "Actual Unity 1280x720 screenshots. Normal game-time50fps, automatic input/API, not OS/Human. Silent. Outside-frame labels and explicitly enlarged/cropped supplementary previews only. No AI generation/painting. Original frames retained locally.",
+  "videos": [
+    {
+      "scenario": "flat_7_right",
+      "frames_each": 190,
+      "seconds": 3.8,
+      "bytes": 1423368,
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 2560,
+          "height": 760,
+          "avg_frame_rate": "50/1"
+        }
+      ]
+    },
+    {
+      "scenario": "bridge_7_right",
+      "frames_each": 190,
+      "seconds": 3.8,
+      "bytes": 1442594,
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 2560,
+          "height": 760,
+          "avg_frame_rate": "50/1"
+        }
+      ]
+    }
+  ]
+}

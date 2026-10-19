@@ -1,0 +1,8 @@
+{
+  "proof": "PlayerGroundingProof_20261019",
+  "revision": "r1",
+  "assembly_sha256": "4F74D997A3D6DE70246EF42A66B1B0132189011846FD1A173BEB1054F6594C0E",
+  "exe_sha256": "837986201D89BE25426B8415CB3BC945F077E5B13F4722D6763D04EBD38C5472",
+  "rope_body_visual_sha256": "704DA2109B0CC0417E64961FCECAAD8B8174166BBA29D4D6B23D0762510F9F25",
+  "note": "Unity launcher EXE is generic; Assembly-CSharp.dll SHA256 identifies this runtime. Build binary not stored in Git."
+}
