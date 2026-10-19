@@ -6,6 +6,8 @@
 
 いずれも実Unity画面、同じ入力・Camera・残量7/50です。左が比較元、右が修正版。動画は190コマを50fpsで再生するゲーム時間の通常速度で、自動入力／APIによる撮影です。音声は含みません。
 
+画像79枚と動画2本は、LFSポインタではなく通常Git blobとして共有します。レビュー資料配下だけの属性で指定し、実体のハッシュを検査しています。
+
 - [平地の短い比較動画](Videos/flat_7_right_BeforeAfter_50fps_silent.mp4)
 - [生成橋の短い比較動画](Videos/bridge_7_right_BeforeAfter_50fps_silent.mp4)
 - [通常画角の歩行](Figures/flat_7_right_Walk.jpg) → [停止直後](Figures/flat_7_right_StopImmediate.jpg) → [待機](Figures/flat_7_right_Idle.jpg) → [照準](Figures/flat_7_right_Aim.jpg)
