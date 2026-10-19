@@ -1,20 +1,20 @@
 {
   "review_id": "C08BridgeSurfaceAlignment_20261020T011938_JST",
-  "updated_at": "2026-10-20T01:29:39+09:00",
+  "updated_at": "2026-10-20T02:18:59.749110+09:00",
   "timezone": "Asia/Tokyo",
   "kind": "C08 支持橋面に合わせる描画候補1",
   "branch": "codex/review-c08-bridge-end",
-  "production_head": "2a0a2b5f5d5478f5ee2c6be5553121683757ebf7",
+  "production_head": "e9eabc93eef26fb04d0ccb86eaef0cf7b85d04bd",
   "c22_c23_preserved": true,
   "previous_review_commit": "60301efac68848b2bb58cb780fa1e74033ca94e4",
-  "status": "隔離候補完成・Human Review待ち",
-  "decision": "Production採用保留",
+  "status": "Human正式採用 Production統合・push完了",
+  "decision": "正式採用 C08限定統合",
   "technical": "実測したA/Bの物理状態差0",
   "visual_self_review": "橋端の浮き改善。急傾斜の表示と物理箱の距離は限界として残る",
   "fix_implemented": true,
-  "candidate_only": true,
-  "production_integrated": false,
-  "human_adoption": "未承認",
+  "candidate_only": false,
+  "production_integrated": true,
+  "human_adoption": "Human正式採用",
   "report_path": "Docs/Reviews/C08BridgeEndpoint/runs/20261020T011938_JST/Report.md",
   "images_path": "Docs/Reviews/C08BridgeEndpoint/runs/20261020T011938_JST/Images/",
   "figures_path": "Docs/Reviews/C08BridgeEndpoint/runs/20261020T011938_JST/Figures/",
@@ -30,11 +30,10 @@
     "manual_launcher": "C08BridgeSurfaceAlignmentProof_20261020/02_CANDIDATE.cmd"
   },
   "unconfirmed": [
-    "元のHuman指摘画像の正確なScene・橋・座標",
-    "OS実キー操作とHuman試遊・Visual採否",
-    "未検証の他区間・橋長",
-    "急傾斜で最大約0.535 world unitsずれる表示と物理箱の関係をHumanが許容できるか",
-    "未検証の20/50サイズ段階",
+    "追加のOS実キー検証",
+    "全ステージ・全頭上障害物・全照準角の網羅",
     "個別の足を斜面へ置くIKは未実装"
-  ]
+  ],
+  "production_commit": "e9eabc93eef26fb04d0ccb86eaef0cf7b85d04bd",
+  "integration_record_url": "https://github.com/bq24014-cmd/himohito-prototype/blob/e9eabc93eef26fb04d0ccb86eaef0cf7b85d04bd/Docs/QA/C08BridgeEndpointProduction_20261020/00_Integration.md"
 }

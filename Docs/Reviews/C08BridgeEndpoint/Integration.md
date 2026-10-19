@@ -1,0 +1,13 @@
+# C08 Production統合完了
+
+Humanは隔離候補 `9d7164b09dad656db9c60adbb0d452e38c17876f` を正式採用した。ProductionへRopeBodyVisual.csとRopeController.csのC08描画だけを統合し、比較・診断要素を除去した。
+
+Production commit：`e9eabc93eef26fb04d0ccb86eaef0cf7b85d04bd`。mainへのpushとremote一致を確認。C22・C23および既存の5件の未commit差分は保持。
+
+[統合・回帰記録](https://github.com/bq24014-cmd/himohito-prototype/blob/e9eabc93eef26fb04d0ccb86eaef0cf7b85d04bd/Docs/QA/C08BridgeEndpointProduction_20261020/00_Integration.md)
+
+採用済みProofの7群を再利用し、比較切替なしの統合用Sourceで急坂の照準→緑フックへの実接続、踏切、既存梁への頭上接触を3サイズで追加確認。T4は修正前後291フレームのRoot/速度/Camera差0に加え、実接触時の描画頭頂も一致。今回の範囲で新たな重大不整合は再現しなかった。
+
+最小サイズと物理箱の高さ差は残る既存仕様で、全ケースの知覚的整合を保証しない。OSキー確認はツールのタイムアウトで未確認。Unity付属コンパイラと既存非Development Playerへのmanaged overlayで確認し、新規Unity Build/Editor Play成功とは扱っていない。過去runのHuman未確認表記は、その提出時点の記録として保持。
+
+C20の形状調整は別の隔離候補であり、このProduction commitには含めない。

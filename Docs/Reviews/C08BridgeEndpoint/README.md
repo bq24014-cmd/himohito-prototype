@@ -7,3 +7,8 @@
 前回の [原因調査](runs/20261020T003303_JST/Report.md) は保持しています。当時HOLDとした橋端の接線変更案は今回も実装していません。
 
 Production、採用済みC22・C23、既存Proofは保持しています。画像はUnity実画面、動画は自動入力の通常速度記録です。Human試遊や正式採用の証拠ではありません。
+
+
+## C08正式採用とProduction統合
+
+[統合完了記録](Integration.md)。Production commit `e9eabc93eef26fb04d0ccb86eaef0cf7b85d04bd`。過去Proofは保持。
