@@ -1,12 +1,12 @@
 {
   "review_id": "C06C07HudHints",
-  "run_id": "20261020T222355_JST",
-  "updated_at": "2026-10-20T22:28:52.574752+09:00",
+  "run_id": "20261020T224116_JST",
+  "updated_at": "2026-10-20T22:53:46.705165+09:00",
   "timezone": "Asia/Tokyo",
   "base_production_head": "d88160da59fd5902222ef68a76a8b74882fafe98",
-  "status": "布タグ修正版 Human Review待ち",
-  "production_integrated": false,
-  "human_adoption": "未承認",
+  "status": "正式採用・統合済み",
+  "production_integrated": true,
+  "human_adoption": "正式採用（Human：採用で）",
   "previous_human_decisions": [
     {
       "commit": "cd879b94db6ba7c7bc1141729e5367696bfd6063",
@@ -15,17 +15,29 @@
         "右上案内が世界観から浮いて見える",
         "左HUDのTab行削除後に不自然な下余白"
       ]
+    },
+    {
+      "commit": "89ad6617837371afbb43c85ff83d84f1fb654a3a",
+      "decision": "正式採用",
+      "human_comment": "採用で",
+      "production_sha": "0130f68488fcbde83c2f83dc72acd7adeaba4dee"
     }
   ],
-  "report": "Docs/Reviews/C06C07HudHints/runs/20261020T222355_JST/Report.md",
-  "images": "Docs/Reviews/C06C07HudHints/runs/20261020T222355_JST/Images",
-  "qa": "Docs/Reviews/C06C07HudHints/runs/20261020T222355_JST/QA",
+  "report": "Docs/Reviews/C06C07HudHints/runs/20261020T224116_JST/Report.md",
+  "images": "Docs/Reviews/C06C07HudHints/runs/20261020T224116_JST/Images",
+  "qa": "Docs/Reviews/C06C07HudHints/runs/20261020T224116_JST/QA",
   "diff": "Docs/Reviews/C06C07HudHints/runs/20261020T222355_JST/Diff",
   "launch": "Docs/Reviews/C06C07HudHints/runs/20261020T222355_JST/Launch.md",
   "unconfirmed": [
-    "今回のOS実キー操作",
-    "Humanによる画風と余白の採否",
-    "全区間の各背景での視認性",
-    "新規Unity Buildは未実施"
-  ]
+    "Post-integration OS-key replay",
+    "Unity Editor Play and new Unity Build",
+    "Full-stage replay"
+  ],
+  "review_type": "Production integration",
+  "approved_review_commit": "89ad6617837371afbb43c85ff83d84f1fb654a3a",
+  "approved_candidate_report": "Docs/Reviews/C06C07HudHints/runs/20261020T222355_JST/Report.md",
+  "production_sha": "0130f68488fcbde83c2f83dc72acd7adeaba4dee",
+  "production_remote_sha": "0130f68488fcbde83c2f83dc72acd7adeaba4dee",
+  "production_remote_matches": true,
+  "production_record": "https://github.com/bq24014-cmd/himohito-prototype/blob/0130f68488fcbde83c2f83dc72acd7adeaba4dee/Docs/QA/C06C07HudHintsProduction_20261020/Integration.md"
 }

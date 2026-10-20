@@ -1,0 +1,275 @@
+{
+  "review_commit": "89ad6617837371afbb43c85ff83d84f1fb654a3a",
+  "base_production_head": "d88160da59fd5902222ef68a76a8b74882fafe98",
+  "runtime": "Unity 6000.3.21f1 frozen non-Development Player + recompiled managed overlay; NOT new Unity Build",
+  "compile": "ProductionOnly and IntegratedQA succeeded; four existing CS0649 warnings each",
+  "production_only_assembly_sha256": "07609f47e10fc3537bff0babb8fa04db60209928136306a74247be0999bba128",
+  "qa_assembly_sha256": "81c0daf2fa97ebc487c2117e9e520355e78c49e618c2d9b738d2bc807b854599",
+  "source_hashes": {
+    "PrototypeHud.cs": "dd50af6a8d6a91967357f4e906df9d264058285bfc6bd33d131105dde279c035",
+    "MainStageHud.cs": "655f6e1cb63ac1e5fb7ed44b875c32f94c7853a03745bd5b8627ef88f69a8909",
+    "StageOverlayControls.cs": "8a0cfd3064961747d1d14c279792ddc3959a6dfb66c759b65ef31f1c9ab1abde",
+    "HimoHitoUiParts.cs": "1bdbfd48a163e17c88c49b72bc1e0acbf719a79a5444e5d427221d0a8d22cc50"
+  },
+  "matrix": [
+    {
+      "scene": "Tutorial",
+      "width": 1600,
+      "height": 900,
+      "checks": [
+        "PASS help opens and pauses",
+        "PASS help closes and resumes hint",
+        "PASS pause state and menu",
+        "PASS help returns to paused state",
+        "PASS pause resumes hint",
+        "PASS native attachment for connected HUD row"
+      ],
+      "errors": 0,
+      "source": "integrated Production scripts directly compiled",
+      "unchanged_state_vs_adopted": {
+        "root": true,
+        "velocity": true,
+        "camera": true,
+        "remaining": true,
+        "selected": true,
+        "attached": true,
+        "timeScale": true,
+        "help": true,
+        "overlay": true
+      },
+      "image_difference_vs_adopted": [
+        {
+          "phase": "01_Play",
+          "max_channel_difference": 0,
+          "different_pixels": 0
+        },
+        {
+          "phase": "02_Help",
+          "max_channel_difference": 0,
+          "different_pixels": 0
+        },
+        {
+          "phase": "04_Pause",
+          "max_channel_difference": 0,
+          "different_pixels": 0
+        },
+        {
+          "phase": "07_Resume",
+          "max_channel_difference": 0,
+          "different_pixels": 0
+        },
+        {
+          "phase": "08_Attached",
+          "max_channel_difference": 0,
+          "different_pixels": 0
+        }
+      ],
+      "hint_rect": {
+        "serializedVersion": "2",
+        "x": 1278.9200439453125,
+        "y": 18.0,
+        "width": 303.0799865722656,
+        "height": 51.90999984741211
+      },
+      "fixed_left_height": 172
+    },
+    {
+      "scene": "Tutorial",
+      "width": 1280,
+      "height": 720,
+      "checks": [
+        "PASS help opens and pauses",
+        "PASS help closes and resumes hint",
+        "PASS pause state and menu",
+        "PASS help returns to paused state",
+        "PASS pause resumes hint",
+        "PASS native attachment for connected HUD row"
+      ],
+      "errors": 0,
+      "source": "integrated Production scripts directly compiled",
+      "unchanged_state_vs_adopted": {
+        "root": true,
+        "velocity": true,
+        "camera": true,
+        "remaining": true,
+        "selected": true,
+        "attached": true,
+        "timeScale": true,
+        "help": true,
+        "overlay": true
+      },
+      "image_difference_vs_adopted": [
+        {
+          "phase": "01_Play",
+          "max_channel_difference": 0,
+          "different_pixels": 0
+        },
+        {
+          "phase": "02_Help",
+          "max_channel_difference": 0,
+          "different_pixels": 0
+        },
+        {
+          "phase": "04_Pause",
+          "max_channel_difference": 0,
+          "different_pixels": 0
+        },
+        {
+          "phase": "07_Resume",
+          "max_channel_difference": 0,
+          "different_pixels": 0
+        },
+        {
+          "phase": "08_Attached",
+          "max_channel_difference": 0,
+          "different_pixels": 0
+        }
+      ],
+      "hint_rect": {
+        "serializedVersion": "2",
+        "x": 958.9200439453125,
+        "y": 18.0,
+        "width": 303.0799865722656,
+        "height": 51.90999984741211
+      },
+      "fixed_left_height": 172
+    },
+    {
+      "scene": "MainStage",
+      "width": 1600,
+      "height": 900,
+      "checks": [
+        "PASS help opens and pauses",
+        "PASS help closes and resumes hint",
+        "PASS pause state and menu",
+        "PASS help returns to paused state",
+        "PASS pause resumes hint",
+        "PASS native attachment for connected HUD row"
+      ],
+      "errors": 0,
+      "source": "integrated Production scripts directly compiled",
+      "unchanged_state_vs_adopted": {
+        "root": true,
+        "velocity": true,
+        "camera": true,
+        "remaining": true,
+        "selected": true,
+        "attached": true,
+        "timeScale": true,
+        "help": true,
+        "overlay": true
+      },
+      "image_difference_vs_adopted": [
+        {
+          "phase": "01_Play",
+          "max_channel_difference": 0,
+          "different_pixels": 0
+        },
+        {
+          "phase": "02_Help",
+          "max_channel_difference": 0,
+          "different_pixels": 0
+        },
+        {
+          "phase": "04_Pause",
+          "max_channel_difference": 0,
+          "different_pixels": 0
+        },
+        {
+          "phase": "07_Resume",
+          "max_channel_difference": 0,
+          "different_pixels": 0
+        },
+        {
+          "phase": "08_Attached",
+          "max_channel_difference": 0,
+          "different_pixels": 0
+        }
+      ],
+      "hint_rect": {
+        "serializedVersion": "2",
+        "x": 1278.9200439453125,
+        "y": 18.0,
+        "width": 303.0799865722656,
+        "height": 51.90999984741211
+      },
+      "fixed_left_height": 172
+    },
+    {
+      "scene": "MainStage",
+      "width": 1280,
+      "height": 720,
+      "checks": [
+        "PASS help opens and pauses",
+        "PASS help closes and resumes hint",
+        "PASS pause state and menu",
+        "PASS help returns to paused state",
+        "PASS pause resumes hint",
+        "PASS native attachment for connected HUD row"
+      ],
+      "errors": 0,
+      "source": "integrated Production scripts directly compiled",
+      "unchanged_state_vs_adopted": {
+        "root": true,
+        "velocity": true,
+        "camera": true,
+        "remaining": true,
+        "selected": true,
+        "attached": true,
+        "timeScale": true,
+        "help": true,
+        "overlay": true
+      },
+      "image_difference_vs_adopted": [
+        {
+          "phase": "01_Play",
+          "max_channel_difference": 0,
+          "different_pixels": 0
+        },
+        {
+          "phase": "02_Help",
+          "max_channel_difference": 0,
+          "different_pixels": 0
+        },
+        {
+          "phase": "04_Pause",
+          "max_channel_difference": 0,
+          "different_pixels": 0
+        },
+        {
+          "phase": "07_Resume",
+          "max_channel_difference": 0,
+          "different_pixels": 0
+        },
+        {
+          "phase": "08_Attached",
+          "max_channel_difference": 0,
+          "different_pixels": 0
+        }
+      ],
+      "hint_rect": {
+        "serializedVersion": "2",
+        "x": 958.9200439453125,
+        "y": 18.0,
+        "width": 303.0799865722656,
+        "height": 51.90999984741211
+      },
+      "fixed_left_height": 172
+    }
+  ],
+  "protected_unrelated_files": 243,
+  "all_unrelated_hashes_unchanged": true,
+  "proofs_unchanged": true,
+  "existing_five_tracked_changes_preserved": true,
+  "production_staged_empty": true,
+  "unconfirmed": [
+    "Post-integration OS-key replay",
+    "Unity Editor Play and new Unity Build",
+    "Full-stage replay"
+  ],
+  "production_sha": "0130f68488fcbde83c2f83dc72acd7adeaba4dee",
+  "production_remote_sha": "0130f68488fcbde83c2f83dc72acd7adeaba4dee",
+  "production_remote_matches": true,
+  "production_integrated": true,
+  "human_adoption": "正式採用（Human：採用で）"
+}
