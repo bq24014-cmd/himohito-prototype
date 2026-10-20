@@ -1,0 +1,27 @@
+{
+  "review_id": "C14S4Hook_20261020T104907_JST",
+  "updated_at": "2026-10-20T10:56:35.969446+09:00",
+  "timezone": "Asia/Tokyo",
+  "kind": "C14 定規の緑フック 描画のみの隔離候補1案",
+  "branch": "codex/review-c14-s4-hook",
+  "production_head": "1ffac00416db372b53c6df04273bf11557ac8a7d",
+  "production_integrated": false,
+  "human_adoption": "未承認",
+  "status": "隔離候補完成 Human Review待ち",
+  "report_path": "Docs/Reviews/C14S4Hook/runs/20261020T104907_JST/Report.md",
+  "qa_path": "Docs/Reviews/C14S4Hook/runs/20261020T104907_JST/QA/Summary.json",
+  "images_path": "Docs/Reviews/C14S4Hook/runs/20261020T104907_JST/Images/",
+  "figures_path": "Docs/Reviews/C14S4Hook/runs/20261020T104907_JST/Figures/",
+  "video_path": "Docs/Reviews/C14S4Hook/runs/20261020T104907_JST/Video/Before_Candidate_Comparison_1x.mp4",
+  "launch_path": "Docs/Reviews/C14S4Hook/runs/20261020T104907_JST/Launch.md",
+  "execution": "既存非Development Playerへのmanaged overlay。新規Unity Build成功ではない",
+  "unconfirmed": [
+    "OS実キー（sky.list_appsタイムアウト）",
+    "Humanの見た目・操作感・採用判断",
+    "音",
+    "新規Unity BuildとEditor Play",
+    "全区間通し"
+  ],
+  "manual_runtime_assembly_sha256": "698EE661459E802D85C3DBCB69DEE586DE02B1826159B1124662115AA3CCA6A0",
+  "manual_exe_sha256": "837986201D89BE25426B8415CB3BC945F077E5B13F4722D6763D04EBD38C5472"
+}

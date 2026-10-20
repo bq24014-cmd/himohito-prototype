@@ -1,0 +1,4552 @@
+{
+  "method": "Automatic moveInput + native E/Q/R APIs; Unity screenshots. Not OS keys or Human play.",
+  "baseline_and_candidate_exact_equal": true,
+  "frames": [
+    {
+      "phase": "aim",
+      "index": 45,
+      "time": 0.8999996781349182,
+      "remaining": 45.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 63.70000076293945,
+        "y": -1.5350003242492676
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "camera": {
+        "x": 63.70000076293945,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 0
+    },
+    {
+      "phase": "aim",
+      "index": 47,
+      "time": 0.9399996399879456,
+      "remaining": 45.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 63.70000076293945,
+        "y": -1.5350003242492676
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "camera": {
+        "x": 63.70000076293945,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 0
+    },
+    {
+      "phase": "aim",
+      "index": 49,
+      "time": 0.9799996614456177,
+      "remaining": 45.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 63.70000076293945,
+        "y": -1.5350003242492676
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "camera": {
+        "x": 63.70000076293945,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 0
+    },
+    {
+      "phase": "aim",
+      "index": 51,
+      "time": 1.019999623298645,
+      "remaining": 45.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 63.70000076293945,
+        "y": -1.5350003242492676
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "camera": {
+        "x": 63.70000076293945,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 0
+    },
+    {
+      "phase": "aim",
+      "index": 53,
+      "time": 1.0599995851516724,
+      "remaining": 45.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 63.70000076293945,
+        "y": -1.5350003242492676
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "camera": {
+        "x": 63.70000076293945,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 0
+    },
+    {
+      "phase": "aim",
+      "index": 55,
+      "time": 1.0999996662139893,
+      "remaining": 45.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 63.70000076293945,
+        "y": -1.5350003242492676
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "camera": {
+        "x": 63.70000076293945,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 0
+    },
+    {
+      "phase": "aim",
+      "index": 57,
+      "time": 1.1399996280670166,
+      "remaining": 45.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 63.70000076293945,
+        "y": -1.5350003242492676
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "camera": {
+        "x": 63.70000076293945,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 0
+    },
+    {
+      "phase": "aim",
+      "index": 59,
+      "time": 1.179999589920044,
+      "remaining": 45.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 63.70000076293945,
+        "y": -1.5350003242492676
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "camera": {
+        "x": 63.70000076293945,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 0
+    },
+    {
+      "phase": "aim",
+      "index": 61,
+      "time": 1.2199995517730713,
+      "remaining": 45.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 63.70000076293945,
+        "y": -1.5350003242492676
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "camera": {
+        "x": 63.70000076293945,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 0
+    },
+    {
+      "phase": "aim",
+      "index": 63,
+      "time": 1.2599995136260986,
+      "remaining": 45.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 63.70000076293945,
+        "y": -1.5350003242492676
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "camera": {
+        "x": 63.70000076293945,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 0
+    },
+    {
+      "phase": "aim",
+      "index": 65,
+      "time": 1.2999995946884155,
+      "remaining": 45.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 63.70000076293945,
+        "y": -1.5350003242492676
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "camera": {
+        "x": 63.70000076293945,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 0
+    },
+    {
+      "phase": "aim",
+      "index": 67,
+      "time": 1.3399995565414429,
+      "remaining": 45.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 63.70000076293945,
+        "y": -1.5350003242492676
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "camera": {
+        "x": 63.70000076293945,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 0
+    },
+    {
+      "phase": "aim",
+      "index": 69,
+      "time": 1.3799995183944702,
+      "remaining": 45.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 63.70000076293945,
+        "y": -1.5350003242492676
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "camera": {
+        "x": 63.70000076293945,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 0
+    },
+    {
+      "phase": "aim",
+      "index": 71,
+      "time": 1.4199994802474976,
+      "remaining": 45.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 63.70000076293945,
+        "y": -1.5350003242492676
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "camera": {
+        "x": 63.70000076293945,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 0
+    },
+    {
+      "phase": "aim",
+      "index": 73,
+      "time": 1.459999442100525,
+      "remaining": 45.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 63.70000076293945,
+        "y": -1.5350003242492676
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "camera": {
+        "x": 63.70000076293945,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 0
+    },
+    {
+      "phase": "aim",
+      "index": 75,
+      "time": 1.4999995231628418,
+      "remaining": 45.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 63.70000076293945,
+        "y": -1.5350003242492676
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "camera": {
+        "x": 63.70000076293945,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 0
+    },
+    {
+      "phase": "attached",
+      "index": 78,
+      "time": 1.5599994659423828,
+      "remaining": 45.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 4.314591884613037,
+      "position": {
+        "x": 63.70000076293945,
+        "y": -1.5350003242492676
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 63.70000076293945,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": true,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 0
+    },
+    {
+      "phase": "attached",
+      "index": 80,
+      "time": 1.5999994277954102,
+      "remaining": 45.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 2.5990545749664307,
+      "position": {
+        "x": 63.70000076293945,
+        "y": -1.5350003242492676
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 63.70000076293945,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": true,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 0
+    },
+    {
+      "phase": "attached",
+      "index": 82,
+      "time": 1.6399993896484375,
+      "remaining": 45.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.6457247734069824,
+      "position": {
+        "x": 63.70000076293945,
+        "y": -1.5350003242492676
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 63.70000076293945,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": true,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 0
+    },
+    {
+      "phase": "attached",
+      "index": 84,
+      "time": 1.6799993515014648,
+      "remaining": 45.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 63.70000076293945,
+        "y": -1.5350003242492676
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 63.70000076293945,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": true,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 0
+    },
+    {
+      "phase": "attached",
+      "index": 86,
+      "time": 1.7199994325637817,
+      "remaining": 45.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 63.70000076293945,
+        "y": -1.5350003242492676
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 63.70000076293945,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": true,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 0
+    },
+    {
+      "phase": "attached",
+      "index": 88,
+      "time": 1.759999394416809,
+      "remaining": 45.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 63.70000076293945,
+        "y": -1.5350003242492676
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 63.70000076293945,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": true,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 0
+    },
+    {
+      "phase": "attached",
+      "index": 90,
+      "time": 1.7999993562698364,
+      "remaining": 45.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 63.70000076293945,
+        "y": -1.5350003242492676
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 63.70000076293945,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": true,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 0
+    },
+    {
+      "phase": "attached",
+      "index": 92,
+      "time": 1.8399993181228638,
+      "remaining": 45.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 63.70000076293945,
+        "y": -1.5350003242492676
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 63.70000076293945,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": true,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 0
+    },
+    {
+      "phase": "attached",
+      "index": 94,
+      "time": 1.8799992799758911,
+      "remaining": 45.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 63.70000076293945,
+        "y": -1.5350003242492676
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 63.70000076293945,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": true,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 0
+    },
+    {
+      "phase": "attached",
+      "index": 96,
+      "time": 1.919999361038208,
+      "remaining": 45.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 63.70000076293945,
+        "y": -1.5350003242492676
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 63.70000076293945,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": true,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 0
+    },
+    {
+      "phase": "attached",
+      "index": 98,
+      "time": 1.9599993228912354,
+      "remaining": 45.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 63.70000076293945,
+        "y": -1.5350003242492676
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 63.70000076293945,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": true,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 0
+    },
+    {
+      "phase": "attached",
+      "index": 100,
+      "time": 1.9999992847442627,
+      "remaining": 45.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 63.70000076293945,
+        "y": -1.5350003242492676
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 63.70000076293945,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": true,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 0
+    },
+    {
+      "phase": "attached",
+      "index": 102,
+      "time": 2.03999924659729,
+      "remaining": 45.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 63.70000076293945,
+        "y": -1.5350003242492676
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 63.70000076293945,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": true,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 0
+    },
+    {
+      "phase": "attached",
+      "index": 104,
+      "time": 2.0799992084503174,
+      "remaining": 45.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 63.70000076293945,
+        "y": -1.5350003242492676
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 63.70000076293945,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": true,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 0
+    },
+    {
+      "phase": "attached",
+      "index": 106,
+      "time": 2.1199991703033447,
+      "remaining": 45.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 63.70000076293945,
+        "y": -1.5350003242492676
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 63.70000076293945,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": true,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 0
+    },
+    {
+      "phase": "generated",
+      "index": 109,
+      "time": 2.1799991130828857,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 65.05853271484375,
+        "y": -1.450864315032959
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 63.70000076293945,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 1
+    },
+    {
+      "phase": "generated",
+      "index": 111,
+      "time": 2.219999313354492,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 65.06568908691406,
+        "y": -1.447582721710205
+      },
+      "velocity": {
+        "x": -1.0796356031406162e-09,
+        "y": -1.646135672217497e-09
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 63.79977798461914,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": true,
+      "bridges": 1
+    },
+    {
+      "phase": "generated",
+      "index": 113,
+      "time": 2.2599992752075195,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 65.0661849975586,
+        "y": -1.4468249082565308
+      },
+      "velocity": {
+        "x": 2.6772652983453327e-09,
+        "y": 4.082065796495726e-09
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 64.00341796875,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": true,
+      "bridges": 1
+    },
+    {
+      "phase": "generated",
+      "index": 115,
+      "time": 2.299999237060547,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 65.0665054321289,
+        "y": -1.4463390111923218
+      },
+      "velocity": {
+        "x": 2.6772652983453327e-09,
+        "y": 4.082065796495726e-09
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 64.2237777709961,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": true,
+      "bridges": 1
+    },
+    {
+      "phase": "generated",
+      "index": 117,
+      "time": 2.339999198913574,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 65.06671142578125,
+        "y": -1.4460285902023315
+      },
+      "velocity": {
+        "x": 2.6772652983453327e-09,
+        "y": 4.082065796495726e-09
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 64.4227523803711,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": true,
+      "bridges": 1
+    },
+    {
+      "phase": "generated",
+      "index": 119,
+      "time": 2.3799991607666016,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 65.06684112548828,
+        "y": -1.4458297491073608
+      },
+      "velocity": {
+        "x": 2.6772652983453327e-09,
+        "y": 4.082065796495726e-09
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 64.58738708496094,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": true,
+      "bridges": 1
+    },
+    {
+      "phase": "generated",
+      "index": 121,
+      "time": 2.419999122619629,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 65.06692504882812,
+        "y": -1.4457026720046997
+      },
+      "velocity": {
+        "x": 2.6772652983453327e-09,
+        "y": 4.082065796495726e-09
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 64.71674346923828,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": true,
+      "bridges": 1
+    },
+    {
+      "phase": "generated",
+      "index": 123,
+      "time": 2.4599990844726562,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 65.06697845458984,
+        "y": -1.4456216096878052
+      },
+      "velocity": {
+        "x": 2.6772652983453327e-09,
+        "y": 4.082065796495726e-09
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 64.81497955322266,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": true,
+      "bridges": 1
+    },
+    {
+      "phase": "generated",
+      "index": 125,
+      "time": 2.4999990463256836,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": -0.0833292230963707,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 65.06700897216797,
+        "y": -1.4455701112747192
+      },
+      "velocity": {
+        "x": 2.6772652983453327e-09,
+        "y": 4.082065796495726e-09
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 64.8877944946289,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": true,
+      "bridges": 1
+    },
+    {
+      "phase": "generated",
+      "index": 127,
+      "time": 2.539999008178711,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": -0.1645335853099823,
+      "bend": -0.0023241702001541853,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 65.06703186035156,
+        "y": -1.445536494255066
+      },
+      "velocity": {
+        "x": 2.6772652983453327e-09,
+        "y": 4.082065796495726e-09
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 64.94078826904297,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": true,
+      "bridges": 1
+    },
+    {
+      "phase": "generated",
+      "index": 129,
+      "time": 2.5799989700317383,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": -0.1944091022014618,
+      "bend": -0.006640712730586529,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 65.06704711914062,
+        "y": -1.4455147981643677
+      },
+      "velocity": {
+        "x": 2.6772652983453327e-09,
+        "y": 4.082065796495726e-09
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 64.97882080078125,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": true,
+      "bridges": 1
+    },
+    {
+      "phase": "generated",
+      "index": 131,
+      "time": 2.6199991703033447,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": -0.20540261268615723,
+      "bend": -0.008964778855443,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 65.06705474853516,
+        "y": -1.4455013275146484
+      },
+      "velocity": {
+        "x": 2.6772652983453327e-09,
+        "y": 4.082065796495726e-09
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 65.00580596923828,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": true,
+      "bridges": 1
+    },
+    {
+      "phase": "generated",
+      "index": 133,
+      "time": 2.659999132156372,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": -0.20944885909557343,
+      "bend": -0.0089645404368639,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 65.06705474853516,
+        "y": -1.4454920291900635
+      },
+      "velocity": {
+        "x": 2.6772652983453327e-09,
+        "y": 4.082065796495726e-09
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 65.0247802734375,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": true,
+      "bridges": 1
+    },
+    {
+      "phase": "generated",
+      "index": 135,
+      "time": 2.6999990940093994,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": -0.21093542873859406,
+      "bend": -0.00896432064473629,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 65.06705474853516,
+        "y": -1.445487141609192
+      },
+      "velocity": {
+        "x": 2.6772652983453327e-09,
+        "y": 4.082065796495726e-09
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 65.03802490234375,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": true,
+      "bridges": 1
+    },
+    {
+      "phase": "generated",
+      "index": 137,
+      "time": 2.7399990558624268,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": -0.21148230135440826,
+      "bend": -0.008964302018284798,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 65.06705474853516,
+        "y": -1.4454840421676636
+      },
+      "velocity": {
+        "x": 2.6772652983453327e-09,
+        "y": 4.082065796495726e-09
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 65.04720306396484,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": true,
+      "bridges": 1
+    },
+    {
+      "phase": "generated",
+      "index": 139,
+      "time": 2.779999017715454,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": -0.2116834819316864,
+      "bend": -0.008964302018284798,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 65.06705474853516,
+        "y": -1.4454818964004517
+      },
+      "velocity": {
+        "x": 2.6772652983453327e-09,
+        "y": 4.082065796495726e-09
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 65.05353546142578,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": true,
+      "bridges": 1
+    },
+    {
+      "phase": "generated",
+      "index": 141,
+      "time": 2.8199989795684814,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": -0.21175749599933624,
+      "bend": -0.008964082226157188,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 65.06705474853516,
+        "y": -1.445480227470398
+      },
+      "velocity": {
+        "x": 2.6772652983453327e-09,
+        "y": 4.082065796495726e-09
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 65.05787658691406,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": true,
+      "bridges": 1
+    },
+    {
+      "phase": "generated",
+      "index": 143,
+      "time": 2.859998941421509,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": -0.2117847353219986,
+      "bend": -0.008964082226157188,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 65.06705474853516,
+        "y": -1.4454790353775024
+      },
+      "velocity": {
+        "x": 2.6772652983453327e-09,
+        "y": 4.082065796495726e-09
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 65.06084442138672,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": true,
+      "bridges": 1
+    },
+    {
+      "phase": "generated",
+      "index": 145,
+      "time": 2.899998903274536,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": -0.21179474890232086,
+      "bend": -0.008964082226157188,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 65.06705474853516,
+        "y": -1.4454782009124756
+      },
+      "velocity": {
+        "x": 2.6772652983453327e-09,
+        "y": 4.082065796495726e-09
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 65.0628662109375,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": true,
+      "bridges": 1
+    },
+    {
+      "phase": "generated",
+      "index": 147,
+      "time": 2.9399988651275635,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": -0.21179842948913574,
+      "bend": -0.008964082226157188,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 65.06705474853516,
+        "y": -1.4454774856567383
+      },
+      "velocity": {
+        "x": 2.6772652983453327e-09,
+        "y": 4.082065796495726e-09
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 65.0642318725586,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": true,
+      "bridges": 1
+    },
+    {
+      "phase": "generated",
+      "index": 149,
+      "time": 2.979998826980591,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": -0.21179978549480438,
+      "bend": -0.008964082226157188,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 65.06705474853516,
+        "y": -1.44547700881958
+      },
+      "velocity": {
+        "x": 2.6772652983453327e-09,
+        "y": 4.082065796495726e-09
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 65.0651626586914,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": true,
+      "bridges": 1
+    },
+    {
+      "phase": "generated",
+      "index": 151,
+      "time": 3.0199990272521973,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": -0.21180029213428497,
+      "bend": -0.008964082226157188,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 65.06705474853516,
+        "y": -1.445476770401001
+      },
+      "velocity": {
+        "x": 2.6772652983453327e-09,
+        "y": 4.082065796495726e-09
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 65.06578826904297,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": true,
+      "bridges": 1
+    },
+    {
+      "phase": "generated",
+      "index": 153,
+      "time": 3.0599989891052246,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": -0.2118004709482193,
+      "bend": -0.008964082226157188,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 65.06705474853516,
+        "y": -1.4454765319824219
+      },
+      "velocity": {
+        "x": 2.6772652983453327e-09,
+        "y": 4.082065796495726e-09
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 65.06620788574219,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": true,
+      "bridges": 1
+    },
+    {
+      "phase": "generated",
+      "index": 155,
+      "time": 3.099998950958252,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": -0.21180054545402527,
+      "bend": -0.008964082226157188,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 65.06705474853516,
+        "y": -1.4454762935638428
+      },
+      "velocity": {
+        "x": 2.6772652983453327e-09,
+        "y": 4.082065796495726e-09
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 65.06649017333984,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": true,
+      "bridges": 1
+    },
+    {
+      "phase": "generated",
+      "index": 157,
+      "time": 3.1399989128112793,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": -0.21180056035518646,
+      "bend": -0.008964082226157188,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 65.06705474853516,
+        "y": -1.4454760551452637
+      },
+      "velocity": {
+        "x": 2.6772652983453327e-09,
+        "y": 4.082065796495726e-09
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 65.06668090820312,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": true,
+      "bridges": 1
+    },
+    {
+      "phase": "generated",
+      "index": 159,
+      "time": 3.1799988746643066,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": -0.21180056035518646,
+      "bend": -0.008964082226157188,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 65.06705474853516,
+        "y": -1.4454760551452637
+      },
+      "velocity": {
+        "x": 2.6772652983453327e-09,
+        "y": 4.082065796495726e-09
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 65.06680297851562,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": true,
+      "bridges": 1
+    },
+    {
+      "phase": "generated",
+      "index": 161,
+      "time": 3.219998836517334,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": -0.21180056035518646,
+      "bend": -0.008964082226157188,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 65.06705474853516,
+        "y": -1.4454760551452637
+      },
+      "velocity": {
+        "x": 2.6772652983453327e-09,
+        "y": 4.082065796495726e-09
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 65.06688690185547,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": true,
+      "bridges": 1
+    },
+    {
+      "phase": "generated",
+      "index": 163,
+      "time": 3.2599987983703613,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": -0.21180056035518646,
+      "bend": -0.008964082226157188,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 65.06705474853516,
+        "y": -1.4454760551452637
+      },
+      "velocity": {
+        "x": 2.6772652983453327e-09,
+        "y": 4.082065796495726e-09
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 65.06694030761719,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": true,
+      "bridges": 1
+    },
+    {
+      "phase": "walk_right",
+      "index": 166,
+      "time": 3.3199987411499023,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": -0.21180056035518646,
+      "bend": -0.008964082226157188,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 65.06705474853516,
+        "y": -1.4454760551452637
+      },
+      "velocity": {
+        "x": -2.677264632211518e-09,
+        "y": -4.082066240584936e-09
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 65.0669937133789,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": true,
+      "bridges": 1
+    },
+    {
+      "phase": "walk_right",
+      "index": 168,
+      "time": 3.3599987030029297,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": -0.19881463050842285,
+      "bend": -0.010675285011529922,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 65.12281036376953,
+        "y": -1.4818450212478638
+      },
+      "velocity": {
+        "x": 1.8553709983825684,
+        "y": -1.2168644666671753
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 65.06739807128906,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": true,
+      "bridges": 1
+    },
+    {
+      "phase": "walk_right",
+      "index": 170,
+      "time": 3.399998903274536,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": -0.1679527759552002,
+      "bend": -0.015302442014217377,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 65.2537841796875,
+        "y": -1.5630714893341064
+      },
+      "velocity": {
+        "x": 3.755295753479004,
+        "y": -2.2531964778900146
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 65.0735855102539,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": true,
+      "bridges": 1
+    },
+    {
+      "phase": "walk_right",
+      "index": 172,
+      "time": 3.4399988651275635,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": -0.11769652366638184,
+      "bend": -0.023542044684290886,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 65.46342468261719,
+        "y": -1.6701656579971313
+      },
+      "velocity": {
+        "x": 5.730388164520264,
+        "y": -2.798100709915161
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 65.09647369384766,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": true,
+      "bridges": 1
+    },
+    {
+      "phase": "walk_right",
+      "index": 174,
+      "time": 3.479998826980591,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": -0.11091366410255432,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 65.69068908691406,
+        "y": -1.7216659784317017
+      },
+      "velocity": {
+        "x": 5.340210914611816,
+        "y": -8.568167686462402e-08
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 65.14812469482422,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": true,
+      "bridges": 1
+    },
+    {
+      "phase": "walk_right",
+      "index": 176,
+      "time": 3.519998788833618,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": -0.08674931526184082,
+      "bend": -0.046202320605516434,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 65.9259262084961,
+        "y": -1.7206099033355713
+      },
+      "velocity": {
+        "x": 4.778350830078125,
+        "y": 1.6702855825424194
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 65.23440551757812,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": true,
+      "bridges": 1
+    },
+    {
+      "phase": "walk_right",
+      "index": 178,
+      "time": 3.5599987506866455,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": -0.13955296576023102,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 66.12999725341797,
+        "y": -1.62345290184021
+      },
+      "velocity": {
+        "x": 4.844996452331543,
+        "y": 2.9831624031066895
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 65.35344696044922,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": true,
+      "bridges": 1
+    },
+    {
+      "phase": "walk_right",
+      "index": 180,
+      "time": 3.599998712539673,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": -0.1634729504585266,
+      "bend": -0.05873364210128784,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 66.35066986083984,
+        "y": -1.5148823261260986
+      },
+      "velocity": {
+        "x": 5.320133209228516,
+        "y": 3.0483005046844482
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 65.49800872802734,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": true,
+      "bridges": 1
+    },
+    {
+      "phase": "walk_right",
+      "index": 182,
+      "time": 3.6399986743927,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": -0.20202596485614777,
+      "bend": -0.058885443955659866,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 66.55230712890625,
+        "y": -1.3811850547790527
+      },
+      "velocity": {
+        "x": 4.986488342285156,
+        "y": 3.414175510406494
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 65.66200256347656,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": true,
+      "bridges": 1
+    },
+    {
+      "phase": "walk_right",
+      "index": 184,
+      "time": 3.6799986362457275,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": -0.26501214504241943,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 66.69465637207031,
+        "y": -1.2240166664123535
+      },
+      "velocity": {
+        "x": 2.3007800579071045,
+        "y": 4.226629257202148
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 65.83922576904297,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": true,
+      "bridges": 1
+    },
+    {
+      "phase": "walk_right",
+      "index": 186,
+      "time": 3.719998598098755,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": -0.17013131082057953,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 66.86503601074219,
+        "y": -1.1241331100463867
+      },
+      "velocity": {
+        "x": 4.34722900390625,
+        "y": 2.221297264099121
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 66.0201644897461,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": true,
+      "bridges": 1
+    },
+    {
+      "phase": "walk_right",
+      "index": 188,
+      "time": 3.7599985599517822,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": -0.27083665132522583,
+      "bend": -0.04633411020040512,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 66.97722625732422,
+        "y": -1.0079439878463745
+      },
+      "velocity": {
+        "x": 3.049455165863037,
+        "y": 2.9393398761749268
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 66.198486328125,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": true,
+      "bridges": 1
+    },
+    {
+      "phase": "walk_right",
+      "index": 190,
+      "time": 3.7999987602233887,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": -0.3258660137653351,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 67.09901428222656,
+        "y": -0.8637607097625732
+      },
+      "velocity": {
+        "x": 2.8673219680786133,
+        "y": 3.8767688274383545
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 66.36934661865234,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": true,
+      "bridges": 1
+    },
+    {
+      "phase": "walk_right",
+      "index": 192,
+      "time": 3.839998722076416,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": -0.32407137751579285,
+      "bend": -0.036227572709321976,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 67.24063110351562,
+        "y": -0.722428560256958
+      },
+      "velocity": {
+        "x": 3.130835771560669,
+        "y": 3.5426552295684814
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 66.53117370605469,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": true,
+      "bridges": 1
+    },
+    {
+      "phase": "walk_right",
+      "index": 194,
+      "time": 3.8799986839294434,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": -0.37100642919540405,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 67.34229278564453,
+        "y": -0.5551022291183472
+      },
+      "velocity": {
+        "x": 1.8122109174728394,
+        "y": 4.442146301269531
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 66.68594360351562,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": true,
+      "bridges": 1
+    },
+    {
+      "phase": "walk_right",
+      "index": 196,
+      "time": 3.9199986457824707,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": -0.23817706108093262,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 67.48664093017578,
+        "y": -0.420919269323349
+      },
+      "velocity": {
+        "x": 3.696749448776245,
+        "y": 3.0783557891845703
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 66.83268737792969,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": true,
+      "bridges": 1
+    },
+    {
+      "phase": "walk_right",
+      "index": 198,
+      "time": 3.959998607635498,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": -0.38729459047317505,
+      "bend": -0.01911369152367115,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 67.58744812011719,
+        "y": -0.28429701924324036
+      },
+      "velocity": {
+        "x": 2.630890130996704,
+        "y": 3.564756393432617
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 66.97322082519531,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": true,
+      "bridges": 1
+    },
+    {
+      "phase": "walk_right",
+      "index": 200,
+      "time": 3.9999985694885254,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": -0.3258376121520996,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 67.66950988769531,
+        "y": -0.13885357975959778
+      },
+      "velocity": {
+        "x": 2.8591043949127197,
+        "y": 3.324618339538574
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 67.10706329345703,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": true,
+      "bridges": 1
+    },
+    {
+      "phase": "walk_right",
+      "index": 202,
+      "time": 4.039998531341553,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": -0.3549000322818756,
+      "bend": -0.01035289652645588,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 67.76754760742188,
+        "y": -0.027411723509430885
+      },
+      "velocity": {
+        "x": 1.8951716423034668,
+        "y": 2.77959942817688
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 67.23224639892578,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": true,
+      "bridges": 1
+    },
+    {
+      "phase": "walk_right",
+      "index": 204,
+      "time": 4.07999849319458,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": -0.40986883640289307,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 67.86168670654297,
+        "y": 0.10067464411258698
+      },
+      "velocity": {
+        "x": 2.618610382080078,
+        "y": 3.2912886142730713
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 67.35065460205078,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": true,
+      "bridges": 1
+    },
+    {
+      "phase": "walk_right",
+      "index": 206,
+      "time": 4.119998455047607,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": -0.26312577724456787,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 68.02991485595703,
+        "y": 0.10959962010383606
+      },
+      "velocity": {
+        "x": 4.2936201095581055,
+        "y": -0.05152973160147667
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 67.4634017944336,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": true,
+      "bridges": 1
+    },
+    {
+      "phase": "walk_right",
+      "index": 208,
+      "time": 4.159998416900635,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": -0.08602200448513031,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 68.21218872070312,
+        "y": 0.07462384551763535
+      },
+      "velocity": {
+        "x": 4.644505500793457,
+        "y": -1.1485003232955933
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 67.57876586914062,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": true,
+      "bridges": 1
+    },
+    {
+      "phase": "walk_right",
+      "index": 210,
+      "time": 4.199998378753662,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 68.40721130371094,
+        "y": 0.07475927472114563
+      },
+      "velocity": {
+        "x": 5.270580291748047,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 67.70333862304688,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": true,
+      "bridges": 1
+    },
+    {
+      "phase": "walk_right",
+      "index": 212,
+      "time": 4.2399983406066895,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 68.6562271118164,
+        "y": 0.07484596222639084
+      },
+      "velocity": {
+        "x": 6.390128135681152,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 67.84072875976562,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": true,
+      "bridges": 1
+    },
+    {
+      "phase": "walk_right",
+      "index": 214,
+      "time": 4.279998302459717,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 68.91402435302734,
+        "y": 0.06388958543539047
+      },
+      "velocity": {
+        "x": 6.5,
+        "y": -0.5493597984313965
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 67.99626159667969,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 1
+    },
+    {
+      "phase": "walk_right",
+      "index": 216,
+      "time": 4.319998264312744,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 69.17401885986328,
+        "y": 0.008953627198934555
+      },
+      "velocity": {
+        "x": 6.5,
+        "y": -1.6480793952941895
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 68.17224884033203,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 1
+    },
+    {
+      "phase": "upper_stop",
+      "index": 218,
+      "time": 4.3599982261657715,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 69.37503051757812,
+        "y": -0.03499513864517212
+      },
+      "velocity": {
+        "x": 3.5506410598754883,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 68.36742401123047,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 1
+    },
+    {
+      "phase": "upper_stop",
+      "index": 220,
+      "time": 4.399998664855957,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 69.39584350585938,
+        "y": -0.03499513864517212
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 68.57219696044922,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 1
+    },
+    {
+      "phase": "upper_stop",
+      "index": 222,
+      "time": 4.439998626708984,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 69.39584350585938,
+        "y": -0.03499513864517212
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 68.7620620727539,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 1
+    },
+    {
+      "phase": "upper_stop",
+      "index": 224,
+      "time": 4.479998588562012,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 69.39584350585938,
+        "y": -0.03499513864517212
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 68.92164611816406,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 1
+    },
+    {
+      "phase": "upper_stop",
+      "index": 226,
+      "time": 4.519998550415039,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 69.39584350585938,
+        "y": -0.03499513864517212
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 69.04825592041016,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 1
+    },
+    {
+      "phase": "upper_stop",
+      "index": 228,
+      "time": 4.559998512268066,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 69.39584350585938,
+        "y": -0.03499513864517212
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 69.14502716064453,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 1
+    },
+    {
+      "phase": "upper_stop",
+      "index": 230,
+      "time": 4.599998474121094,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 69.39584350585938,
+        "y": -0.03499513864517212
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 69.21708679199219,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 1
+    },
+    {
+      "phase": "upper_stop",
+      "index": 232,
+      "time": 4.639998435974121,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 69.39584350585938,
+        "y": -0.03499513864517212
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 69.26971435546875,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 1
+    },
+    {
+      "phase": "upper_stop",
+      "index": 234,
+      "time": 4.679998397827148,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 69.39584350585938,
+        "y": -0.03499513864517212
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 69.30757904052734,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 1
+    },
+    {
+      "phase": "upper_stop",
+      "index": 236,
+      "time": 4.719998359680176,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 69.39584350585938,
+        "y": -0.03499513864517212
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 69.33450317382812,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 1
+    },
+    {
+      "phase": "upper_stop",
+      "index": 238,
+      "time": 4.759998321533203,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 69.39584350585938,
+        "y": -0.03499513864517212
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 69.35346984863281,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 1
+    },
+    {
+      "phase": "upper_stop",
+      "index": 240,
+      "time": 4.7999982833862305,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 69.39584350585938,
+        "y": -0.03499513864517212
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 69.3667221069336,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 1
+    },
+    {
+      "phase": "upper_stop",
+      "index": 242,
+      "time": 4.839998245239258,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 69.39584350585938,
+        "y": -0.03499513864517212
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 69.37591552734375,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 1
+    },
+    {
+      "phase": "walk_left",
+      "index": 245,
+      "time": 4.899998188018799,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 69.38004302978516,
+        "y": -0.03499513864517212
+      },
+      "velocity": {
+        "x": -0.7901276350021362,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 69.3846435546875,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 1
+    },
+    {
+      "phase": "walk_left",
+      "index": 247,
+      "time": 4.939998149871826,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 69.301025390625,
+        "y": -0.03499513864517212
+      },
+      "velocity": {
+        "x": -2.3703830242156982,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 69.38642120361328,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 1
+    },
+    {
+      "phase": "walk_left",
+      "index": 249,
+      "time": 4.9799981117248535,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 69.15880584716797,
+        "y": -0.03499513864517212
+      },
+      "velocity": {
+        "x": -3.950638771057129,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 69.37784576416016,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 1
+    },
+    {
+      "phase": "walk_left",
+      "index": 251,
+      "time": 5.019998073577881,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 68.953369140625,
+        "y": -0.03499513864517212
+      },
+      "velocity": {
+        "x": -5.5308942794799805,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 69.34928131103516,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 1
+    },
+    {
+      "phase": "walk_left",
+      "index": 253,
+      "time": 5.059998035430908,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 68.69475555419922,
+        "y": 0.06703847646713257
+      },
+      "velocity": {
+        "x": -6.5,
+        "y": -1.098719596862793
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 69.29117584228516,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 1
+    },
+    {
+      "phase": "walk_left",
+      "index": 255,
+      "time": 5.0999979972839355,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 68.44007110595703,
+        "y": 0.0699046403169632
+      },
+      "velocity": {
+        "x": -6.390128135681152,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 69.1966552734375,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": true,
+      "bridges": 1
+    },
+    {
+      "phase": "walk_left",
+      "index": 257,
+      "time": 5.139997959136963,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": -0.06621836870908737,
+      "bend": -0.0004008668183814734,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 68.1844711303711,
+        "y": 0.07173898071050644
+      },
+      "velocity": {
+        "x": -6.390128135681152,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 69.06639862060547,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": true,
+      "bridges": 1
+    },
+    {
+      "phase": "walk_left",
+      "index": 259,
+      "time": 5.179998397827148,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": -0.30905628204345703,
+      "bend": -0.0029061175882816315,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 67.92887115478516,
+        "y": 0.07291296124458313
+      },
+      "velocity": {
+        "x": -6.390128135681152,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 68.90534210205078,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": true,
+      "bridges": 1
+    },
+    {
+      "phase": "walk_left",
+      "index": 261,
+      "time": 5.219998359680176,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": -0.25011566281318665,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 67.67107391357422,
+        "y": 0.06234319508075714
+      },
+      "velocity": {
+        "x": -6.5,
+        "y": -0.5493597984313965
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 68.71946716308594,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": true,
+      "bridges": 1
+    },
+    {
+      "phase": "walk_left",
+      "index": 263,
+      "time": 5.259998321533203,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": -0.12278413772583008,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 67.40067291259766,
+        "y": 0.007484056055545807
+      },
+      "velocity": {
+        "x": -6.846479415893555,
+        "y": -1.6453362703323364
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 68.5141372680664,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": true,
+      "bridges": 1
+    },
+    {
+      "phase": "walk_left",
+      "index": 265,
+      "time": 5.2999982833862305,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": -0.017280787229537964,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 67.11643981933594,
+        "y": -0.09114845842123032
+      },
+      "velocity": {
+        "x": -7.192266941070557,
+        "y": -2.739124059677124
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 68.29273986816406,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": true,
+      "bridges": 1
+    },
+    {
+      "phase": "walk_left",
+      "index": 267,
+      "time": 5.339998245239258,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 66.81838989257812,
+        "y": -0.23346690833568573
+      },
+      "velocity": {
+        "x": -7.537363529205322,
+        "y": -3.8307273387908936
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 68.05697631835938,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": true,
+      "bridges": 1
+    },
+    {
+      "phase": "walk_left",
+      "index": 269,
+      "time": 5.379998207092285,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 66.50656127929688,
+        "y": -0.41938406229019165
+      },
+      "velocity": {
+        "x": -7.881771087646484,
+        "y": -4.920150279998779
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 67.80760955810547,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": false,
+      "bridgeSupported": false,
+      "bridges": 1
+    },
+    {
+      "phase": "walk_left",
+      "index": 271,
+      "time": 5.4199981689453125,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 66.18097686767578,
+        "y": -0.6488128900527954
+      },
+      "velocity": {
+        "x": -8.225492477416992,
+        "y": -6.0073981285095215
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 67.5449447631836,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": false,
+      "bridgeSupported": false,
+      "bridges": 1
+    },
+    {
+      "phase": "walk_left",
+      "index": 273,
+      "time": 5.45999813079834,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 65.84166717529297,
+        "y": -0.9216664433479309
+      },
+      "velocity": {
+        "x": -8.568527221679688,
+        "y": -7.092474937438965
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 67.26902770996094,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": false,
+      "bridgeSupported": false,
+      "bridges": 1
+    },
+    {
+      "phase": "walk_left",
+      "index": 275,
+      "time": 5.499998092651367,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 65.48865509033203,
+        "y": -1.2378579378128052
+      },
+      "velocity": {
+        "x": -8.910876274108887,
+        "y": -8.175383567810059
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 66.97982788085938,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": false,
+      "bridgeSupported": false,
+      "bridges": 1
+    },
+    {
+      "phase": "walk_left",
+      "index": 277,
+      "time": 5.5399980545043945,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 65.19051361083984,
+        "y": -1.5242640972137451
+      },
+      "velocity": {
+        "x": -0.08552005887031555,
+        "y": 0.09427154064178467
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 66.67728424072266,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": false,
+      "bridgeSupported": false,
+      "bridges": 1
+    },
+    {
+      "phase": "walk_left",
+      "index": 279,
+      "time": 5.579998016357422,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": -0.11923729628324509,
+      "bend": -0.003515825606882572,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 65.16425323486328,
+        "y": -1.5048866271972656
+      },
+      "velocity": {
+        "x": -0.9418424367904663,
+        "y": 0.5651102066040039
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 66.37014770507812,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": true,
+      "bridges": 1
+    },
+    {
+      "phase": "walk_left",
+      "index": 281,
+      "time": 5.619997978210449,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": -0.1712333709001541,
+      "bend": -0.008112521842122078,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 65.10267639160156,
+        "y": -1.464499831199646
+      },
+      "velocity": {
+        "x": -1.7513655424118042,
+        "y": 1.1486514806747437
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 66.08935546875,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": true,
+      "bridges": 1
+    },
+    {
+      "phase": "walk_left",
+      "index": 283,
+      "time": 5.659997940063477,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": -0.19059082865715027,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 65.0022964477539,
+        "y": -1.4064545631408691
+      },
+      "velocity": {
+        "x": -2.8436944484710693,
+        "y": 1.4756428003311157
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 65.84834289550781,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": true,
+      "bridges": 1
+    },
+    {
+      "phase": "walk_left",
+      "index": 285,
+      "time": 5.699997901916504,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": -0.15112519264221191,
+      "bend": -0.012053608894348145,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 64.8485107421875,
+        "y": -1.4251562356948853
+      },
+      "velocity": {
+        "x": -3.7350244522094727,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 65.64250183105469,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": true,
+      "bridges": 1
+    },
+    {
+      "phase": "walk_left",
+      "index": 287,
+      "time": 5.739997863769531,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": -0.03391098976135254,
+      "bend": -0.002264019101858139,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 64.65170288085938,
+        "y": -1.4250999689102173
+      },
+      "velocity": {
+        "x": -5.315279960632324,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 65.4590835571289,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": true,
+      "bridges": 1
+    },
+    {
+      "phase": "walk_left",
+      "index": 289,
+      "time": 5.779997825622559,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": -0.029003292322158813,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 64.40179443359375,
+        "y": -1.425063967704773
+      },
+      "velocity": {
+        "x": -6.390128135681152,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 65.28421783447266,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": true,
+      "bridges": 1
+    },
+    {
+      "phase": "walk_left",
+      "index": 291,
+      "time": 5.819997787475586,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": -0.01423798967152834,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 64.14619445800781,
+        "y": -1.4250409603118896
+      },
+      "velocity": {
+        "x": -6.390128135681152,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 65.10467529296875,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": true,
+      "bridges": 1
+    },
+    {
+      "phase": "walk_left",
+      "index": 293,
+      "time": 5.859997749328613,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 63.88619613647461,
+        "y": -1.4580024480819702
+      },
+      "velocity": {
+        "x": -6.5,
+        "y": -1.098719596862793
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 64.9134521484375,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 1
+    },
+    {
+      "phase": "left_stop",
+      "index": 295,
+      "time": 5.899997711181641,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 63.6741943359375,
+        "y": -1.5349128246307373
+      },
+      "velocity": {
+        "x": -4.100000858306885,
+        "y": -2.197439193725586
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 64.70873260498047,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 1
+    },
+    {
+      "phase": "left_stop",
+      "index": 297,
+      "time": 5.939997673034668,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 63.651180267333984,
+        "y": -1.5349128246307373
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 64.49712371826172,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 1
+    },
+    {
+      "phase": "left_stop",
+      "index": 299,
+      "time": 5.9799981117248535,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 63.651180267333984,
+        "y": -1.5349128246307373
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 64.3016128540039,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 1
+    },
+    {
+      "phase": "left_stop",
+      "index": 301,
+      "time": 6.019998073577881,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 63.651180267333984,
+        "y": -1.5349128246307373
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 64.13756561279297,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 1
+    },
+    {
+      "phase": "left_stop",
+      "index": 303,
+      "time": 6.059998035430908,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 63.651180267333984,
+        "y": -1.5349128246307373
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 64.00755310058594,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 1
+    },
+    {
+      "phase": "left_stop",
+      "index": 305,
+      "time": 6.0999979972839355,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 63.651180267333984,
+        "y": -1.5349128246307373
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 63.90824890136719,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 1
+    },
+    {
+      "phase": "left_stop",
+      "index": 307,
+      "time": 6.139997959136963,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 63.651180267333984,
+        "y": -1.5349128246307373
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 63.834346771240234,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 1
+    },
+    {
+      "phase": "left_stop",
+      "index": 309,
+      "time": 6.17999792098999,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 63.651180267333984,
+        "y": -1.5349128246307373
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 63.7803955078125,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 1
+    },
+    {
+      "phase": "left_stop",
+      "index": 311,
+      "time": 6.219997882843018,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 63.651180267333984,
+        "y": -1.5349128246307373
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 63.7415885925293,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 1
+    },
+    {
+      "phase": "left_stop",
+      "index": 313,
+      "time": 6.259997844696045,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 63.651180267333984,
+        "y": -1.5349128246307373
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 63.71399688720703,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 1
+    },
+    {
+      "phase": "left_stop",
+      "index": 315,
+      "time": 6.299997806549072,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 63.651180267333984,
+        "y": -1.5349128246307373
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 63.6945686340332,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 1
+    }
+  ],
+  "stills": [
+    {
+      "phase": "detached",
+      "index": 44,
+      "time": 0.8799996972084045,
+      "remaining": 45.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 63.70000076293945,
+        "y": -1.5350003242492676
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "camera": {
+        "x": 63.70000076293945,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 0
+    },
+    {
+      "phase": "aim",
+      "index": 76,
+      "time": 1.5199995040893555,
+      "remaining": 45.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 63.70000076293945,
+        "y": -1.5350003242492676
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "camera": {
+        "x": 63.70000076293945,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 0
+    },
+    {
+      "phase": "attached",
+      "index": 108,
+      "time": 2.159999132156372,
+      "remaining": 45.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 63.70000076293945,
+        "y": -1.5350003242492676
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 63.70000076293945,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": true,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 0
+    },
+    {
+      "phase": "generated",
+      "index": 165,
+      "time": 3.2999987602233887,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": -0.21180056035518646,
+      "bend": -0.008964082226157188,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 65.06705474853516,
+        "y": -1.4454760551452637
+      },
+      "velocity": {
+        "x": 2.6772652983453327e-09,
+        "y": 4.082065796495726e-09
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 65.06697845458984,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": true,
+      "bridges": 1
+    },
+    {
+      "phase": "upper_stop",
+      "index": 243,
+      "time": 4.8599982261657715,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 69.39584350585938,
+        "y": -0.03499513864517212
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 69.37938690185547,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 1
+    },
+    {
+      "phase": "left_stop",
+      "index": 317,
+      "time": 6.3399977684021,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 63.651180267333984,
+        "y": -1.5349128246307373
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 63.680999755859375,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 1
+    },
+    {
+      "phase": "R",
+      "index": 359,
+      "time": 7.179997444152832,
+      "remaining": 45.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 63.70000076293945,
+        "y": -1.5350003242492676
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 63.70000076293945,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 0
+    },
+    {
+      "phase": "scene_reloaded",
+      "index": 404,
+      "time": 8.079997062683105,
+      "remaining": 45.0,
+      "selected": 5.0,
+      "offset": 0.0,
+      "bend": 0.0,
+      "ropeEndError": 0.0,
+      "position": {
+        "x": 63.70000076293945,
+        "y": -1.5350003242492676
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "camera": {
+        "x": 63.70000076293945,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "attached": false,
+      "grounded": true,
+      "bridgeSupported": false,
+      "bridges": 0
+    }
+  ]
+}

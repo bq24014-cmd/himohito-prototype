@@ -1,0 +1,5 @@
+*.jpg -filter -diff -merge
+*.mp4 -filter -diff -merge
+*.json text eol=lf
+*.md text eol=lf
+*.patch text eol=lf

@@ -1,0 +1,110 @@
+{
+  "recorded_at": "2026-10-20T10:50:34.896397+09:00",
+  "production_head": "1ffac00416db372b53c6df04273bf11557ac8a7d",
+  "kind": "C14 S4 ruler corner hook drawing-only isolated candidate",
+  "source_file": "Assets/Scripts/MainS4RulerVisual.cs",
+  "source_sha256": "C7871836A8C0537F75568CF53DB072A8902C6E7C81087CB9222BC5CD3748F8B0",
+  "production_source_sha256": "1ADC4E0B030AF04A7CB516E5218EC77F2150518726719B077EB5E34E4C896474",
+  "method": "Automatic moveInput + native E/Q/R APIs; Unity screenshots. Not OS keys or Human play.",
+  "unity": "6000.3.21f1",
+  "execution": "Managed overlay on frozen nonDevelopment Player; NOT a new Unity BuildPipeline build or Editor Play",
+  "os_keys": "Unconfirmed: sky.list_apps timed out; no permission was requested again",
+  "human_adoption": "Pending",
+  "production_integrated": false,
+  "compile_errors": 0,
+  "existing_CS0649_warnings": 4,
+  "operations": [
+    "E=True hook=Main Section 4 Green Bridge End Hook",
+    "Q=True cost=5 remaining=40",
+    "upper=(69.40, -0.03) reached=True grounded=True",
+    "left=(63.65, -1.53) grounded=True",
+    "R remaining=45 selected=5 bridges=0 attached=False grounded=True root=(63.70, -1.54)"
+  ],
+  "runtime_errors": {
+    "baseline": 0,
+    "candidate": 0
+  },
+  "frame_count": 134,
+  "same_input_frame_states_exact_equal": true,
+  "max_root_difference": 0,
+  "max_velocity_difference": 0,
+  "max_remaining_difference": 0,
+  "max_camera_difference": 0,
+  "hook_ruler_colliders_and_anchors_exact_equal": true,
+  "render_changes": [
+    "Main Section 4 Green Bridge End Hook/Green Rope Anchor Ring Visual"
+  ],
+  "orders": {
+    "ruler": 7,
+    "before_ring": 6,
+    "candidate_ring": 12
+  },
+  "scene_reload_renderer_contract_equal": true,
+  "c08_offset_and_bend_observed": true,
+  "protection": {
+    "production_files": 244,
+    "all_unchanged": true,
+    "prior_proof_unchanged": true,
+    "only_isolated_source_changed": [
+      "MainS4RulerVisual.cs"
+    ],
+    "free_bytes_start": 10654486528,
+    "free_bytes_now": 10569191424
+  },
+  "assemblies": {
+    "Baseline": "C575D6CFD2D005ED9B1A41EE62AA69DFFA7DE6152E87EE85B4A82E3617FD7E41",
+    "Candidate": "698EE661459E802D85C3DBCB69DEE586DE02B1826159B1124662115AA3CCA6A0"
+  },
+  "pixel_difference_bounds": {
+    "01_Detached": [
+      1007,
+      447,
+      1089,
+      529
+    ],
+    "02_Aim": [
+      1007,
+      447,
+      1089,
+      529
+    ],
+    "03_Attached": [
+      1007,
+      447,
+      1089,
+      529
+    ],
+    "04_Generated": [
+      927,
+      447,
+      1016,
+      529
+    ],
+    "05_Upper": [
+      703,
+      447,
+      801,
+      529
+    ],
+    "07_R": [
+      1007,
+      447,
+      1089,
+      529
+    ],
+    "scene_reloaded": [
+      1007,
+      447,
+      1089,
+      529
+    ]
+  },
+  "notes": [
+    "The ring center, physics HookPoint, aiming target and bridge endpoint stay fixed. Only sorting and existing decorative plate/pins/tie change.",
+    "No all-stage playthrough, Human acceptance, OS keys, audio or new Unity build claim."
+  ],
+  "rope_end_during_existing_shot_animation_max": 4.314591884613037,
+  "rope_end_settled_error": 0.0,
+  "manual_launchers_ready_and_idle": true,
+  "manual_launchers_os_key_response_confirmed": false
+}

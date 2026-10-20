@@ -1,0 +1,47 @@
+{
+  "Baseline_E_Q_Walk_1x.mp4": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "width": 1600,
+        "height": 900,
+        "r_frame_rate": "25/1"
+      }
+    ],
+    "format": {
+      "duration": "5.480000"
+    }
+  },
+  "Before_Candidate_Comparison_1x.mp4": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "width": 1920,
+        "height": 540,
+        "r_frame_rate": "25/1"
+      }
+    ],
+    "format": {
+      "duration": "5.480000"
+    }
+  },
+  "Candidate_E_Q_Walk_1x.mp4": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "width": 1600,
+        "height": 900,
+        "r_frame_rate": "25/1"
+      }
+    ],
+    "format": {
+      "duration": "5.480000"
+    }
+  },
+  "method": "Unity EOF capture times at 50Hz, every two frames; VFR durations followed by 25fps encoding; normal time, no audio. Last still held briefly by concat/encoder.",
+  "source_first_time": 0.8999996781349182,
+  "source_last_time": 6.299997806549072
+}

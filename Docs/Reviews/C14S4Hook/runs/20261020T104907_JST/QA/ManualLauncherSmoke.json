@@ -1,0 +1,24 @@
+[
+  {
+    "variant": "Baseline",
+    "launcher": "01_BEFORE_Production.cmd",
+    "ready": true,
+    "alive_8_seconds_after_ready": true,
+    "responding": true,
+    "automatic_test_finished": false,
+    "os_key_tested": false,
+    "log": "Before_10347_4845.log",
+    "note": "First smoke attempt used a 12-second ready deadline and failed to observe the marker; this attempt waits for startup then checks idle stability."
+  },
+  {
+    "variant": "Candidate",
+    "launcher": "02_CANDIDATE_C14.cmd",
+    "ready": true,
+    "alive_8_seconds_after_ready": true,
+    "responding": true,
+    "automatic_test_finished": false,
+    "os_key_tested": false,
+    "log": "Candidate_10863_31925.log",
+    "note": "First smoke attempt used a 12-second ready deadline and failed to observe the marker; this attempt waits for startup then checks idle stability."
+  }
+]
