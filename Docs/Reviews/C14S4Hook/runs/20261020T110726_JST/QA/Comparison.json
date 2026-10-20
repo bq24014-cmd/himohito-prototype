@@ -1,0 +1,701 @@
+{
+  "production_head": "1ffac00416db372b53c6df04273bf11557ac8a7d",
+  "source": "Assets/Scripts/MainS4RulerVisual.cs",
+  "source_sha256": "E2E64E1681445326CB824192A207E7B970C31A80FCB5DC775884D001D0999004",
+  "candidate_assembly_sha256": "7C9898E67813A6337DB2F7067045499A7DE00260EB4CD3F30849A2D703632236",
+  "rejected_candidate": "6190090cd638b1b28c6eecb3608e47b0e05a6af9",
+  "rejected_candidate_preserved": true,
+  "production_integrated": false,
+  "human_adoption": "未承認",
+  "unity": "6000.3.21f1",
+  "execution": "Managed overlay using existing C14 Player. No new Unity Build, long video, full stage QA or OS keys.",
+  "compile_errors": 0,
+  "existing_warnings": 4,
+  "operations": [
+    "E=True target=Main Section 4 Green Bridge End Hook",
+    "Q=True cost=5 remaining=40"
+  ],
+  "errors": {
+    "baseline": 0,
+    "candidate": 0
+  },
+  "states_exact_equal": true,
+  "states": [
+    {
+      "phase": "01_Detached",
+      "root": {
+        "x": 63.70000076293945,
+        "y": -1.5350003242492676
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "ringCenter": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "bridgeStart": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "bridgeEnd": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "camera": {
+        "x": 63.70000076293945,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "remaining": 45.0,
+      "selected": 5.0,
+      "ropeEndError": 0.0,
+      "grounded": true,
+      "attached": false,
+      "bridges": 0
+    },
+    {
+      "phase": "02_Attached",
+      "root": {
+        "x": 63.70000076293945,
+        "y": -1.5350003242492676
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "ringCenter": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "bridgeStart": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "bridgeEnd": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "camera": {
+        "x": 63.70000076293945,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "remaining": 45.0,
+      "selected": 5.0,
+      "ropeEndError": 0.0,
+      "grounded": true,
+      "attached": true,
+      "bridges": 0
+    },
+    {
+      "phase": "03_Generated",
+      "root": {
+        "x": 65.06705474853516,
+        "y": -1.4454760551452637
+      },
+      "velocity": {
+        "x": 2.6772652983453327e-09,
+        "y": 4.082065796495726e-09
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "ringCenter": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "bridgeStart": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "bridgeEnd": {
+        "x": 64.5999984741211,
+        "y": -2.1500000953674316
+      },
+      "camera": {
+        "x": 65.06697845458984,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "ropeEndError": 0.0,
+      "grounded": true,
+      "attached": false,
+      "bridges": 1
+    }
+  ],
+  "render_parts_checked": 208,
+  "only_changed_part": "Main Section 4 Green Bridge End Hook/Green Rope Anchor Ring Visual",
+  "only_changed_property": "sortingOrder:6->8",
+  "fixed_mount_all_seven_parts_exact_equal": true,
+  "hardware_comparison": {
+    "Main Section 4 Green Bridge End Hook/Green Rope Anchor Ring Visual/Wood And Yarn Hook Mount/Left Tie Tail": {
+      "production": {
+        "path": "Main Section 4 Green Bridge End Hook/Green Rope Anchor Ring Visual/Wood And Yarn Hook Mount/Left Tie Tail",
+        "sprite": "mesh/line",
+        "order": 7,
+        "layer": 0,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "position": {
+          "x": 68.30000305175781,
+          "y": -0.6499999761581421,
+          "z": 0.0
+        },
+        "size": {
+          "x": 0.7346999645233154,
+          "y": 0.7253999710083008,
+          "z": 1.0
+        },
+        "visible": true
+      },
+      "candidate": {
+        "path": "Main Section 4 Green Bridge End Hook/Green Rope Anchor Ring Visual/Wood And Yarn Hook Mount/Left Tie Tail",
+        "sprite": "mesh/line",
+        "order": 7,
+        "layer": 0,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "position": {
+          "x": 68.30000305175781,
+          "y": -0.6499999761581421,
+          "z": 0.0
+        },
+        "size": {
+          "x": 0.7346999645233154,
+          "y": 0.7253999710083008,
+          "z": 1.0
+        },
+        "visible": true
+      }
+    },
+    "Main Section 4 Green Bridge End Hook/Green Rope Anchor Ring Visual/Wood And Yarn Hook Mount/Left Wooden Pin": {
+      "production": {
+        "path": "Main Section 4 Green Bridge End Hook/Green Rope Anchor Ring Visual/Wood And Yarn Hook Mount/Left Wooden Pin",
+        "sprite": "Hook Mounting Knot",
+        "order": 4,
+        "layer": 0,
+        "localPosition": {
+          "x": -0.6000000238418579,
+          "y": 0.6000000238418579,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 0.11172986030578613,
+          "y": 0.11500000208616257,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "position": {
+          "x": 67.9280014038086,
+          "y": -0.27799996733665466,
+          "z": 0.0
+        },
+        "size": {
+          "x": 0.07129999995231628,
+          "y": 0.07129999995231628,
+          "z": 0.20000000298023224
+        },
+        "visible": true
+      },
+      "candidate": {
+        "path": "Main Section 4 Green Bridge End Hook/Green Rope Anchor Ring Visual/Wood And Yarn Hook Mount/Left Wooden Pin",
+        "sprite": "Hook Mounting Knot",
+        "order": 4,
+        "layer": 0,
+        "localPosition": {
+          "x": -0.6000000238418579,
+          "y": 0.6000000238418579,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 0.11172986030578613,
+          "y": 0.11500000208616257,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "position": {
+          "x": 67.9280014038086,
+          "y": -0.27799996733665466,
+          "z": 0.0
+        },
+        "size": {
+          "x": 0.07129999995231628,
+          "y": 0.07129999995231628,
+          "z": 0.20000000298023224
+        },
+        "visible": true
+      }
+    },
+    "Main Section 4 Green Bridge End Hook/Green Rope Anchor Ring Visual/Wood And Yarn Hook Mount/Mount Soft Shadow": {
+      "production": {
+        "path": "Main Section 4 Green Bridge End Hook/Green Rope Anchor Ring Visual/Wood And Yarn Hook Mount/Mount Soft Shadow",
+        "sprite": "HimoHitoCraftHookMount-v1 Processed",
+        "order": 2,
+        "layer": 0,
+        "localPosition": {
+          "x": 0.02500000037252903,
+          "y": 0.5550000071525574,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 0.08005821704864502,
+          "y": 0.10169491916894913,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "position": {
+          "x": 68.31550598144531,
+          "y": -0.305899977684021,
+          "z": 0.0
+        },
+        "size": {
+          "x": 1.0230000019073486,
+          "y": 0.3720000386238098,
+          "z": 0.20000000298023224
+        },
+        "visible": true
+      },
+      "candidate": {
+        "path": "Main Section 4 Green Bridge End Hook/Green Rope Anchor Ring Visual/Wood And Yarn Hook Mount/Mount Soft Shadow",
+        "sprite": "HimoHitoCraftHookMount-v1 Processed",
+        "order": 2,
+        "layer": 0,
+        "localPosition": {
+          "x": 0.02500000037252903,
+          "y": 0.5550000071525574,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 0.08005821704864502,
+          "y": 0.10169491916894913,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "position": {
+          "x": 68.31550598144531,
+          "y": -0.305899977684021,
+          "z": 0.0
+        },
+        "size": {
+          "x": 1.0230000019073486,
+          "y": 0.3720000386238098,
+          "z": 0.20000000298023224
+        },
+        "visible": true
+      }
+    },
+    "Main Section 4 Green Bridge End Hook/Green Rope Anchor Ring Visual/Wood And Yarn Hook Mount/Pink Mounting Knot": {
+      "production": {
+        "path": "Main Section 4 Green Bridge End Hook/Green Rope Anchor Ring Visual/Wood And Yarn Hook Mount/Pink Mounting Knot",
+        "sprite": "Hook Mounting Knot",
+        "order": 7,
+        "layer": 0,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.5099999904632568,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 0.2914692163467407,
+          "y": 0.30000001192092896,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "position": {
+          "x": 68.30000305175781,
+          "y": -0.33379998803138733,
+          "z": 0.0
+        },
+        "size": {
+          "x": 0.1860000044107437,
+          "y": 0.1860000044107437,
+          "z": 0.20000000298023224
+        },
+        "visible": true
+      },
+      "candidate": {
+        "path": "Main Section 4 Green Bridge End Hook/Green Rope Anchor Ring Visual/Wood And Yarn Hook Mount/Pink Mounting Knot",
+        "sprite": "Hook Mounting Knot",
+        "order": 7,
+        "layer": 0,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.5099999904632568,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 0.2914692163467407,
+          "y": 0.30000001192092896,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "position": {
+          "x": 68.30000305175781,
+          "y": -0.33379998803138733,
+          "z": 0.0
+        },
+        "size": {
+          "x": 0.1860000044107437,
+          "y": 0.1860000044107437,
+          "z": 0.20000000298023224
+        },
+        "visible": true
+      }
+    },
+    "Main Section 4 Green Bridge End Hook/Green Rope Anchor Ring Visual/Wood And Yarn Hook Mount/Right Tie Tail": {
+      "production": {
+        "path": "Main Section 4 Green Bridge End Hook/Green Rope Anchor Ring Visual/Wood And Yarn Hook Mount/Right Tie Tail",
+        "sprite": "mesh/line",
+        "order": 7,
+        "layer": 0,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "position": {
+          "x": 68.30000305175781,
+          "y": -0.6499999761581421,
+          "z": 0.0
+        },
+        "size": {
+          "x": 0.7595000267028809,
+          "y": 0.7006000280380249,
+          "z": 1.0
+        },
+        "visible": true
+      },
+      "candidate": {
+        "path": "Main Section 4 Green Bridge End Hook/Green Rope Anchor Ring Visual/Wood And Yarn Hook Mount/Right Tie Tail",
+        "sprite": "mesh/line",
+        "order": 7,
+        "layer": 0,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "position": {
+          "x": 68.30000305175781,
+          "y": -0.6499999761581421,
+          "z": 0.0
+        },
+        "size": {
+          "x": 0.7595000267028809,
+          "y": 0.7006000280380249,
+          "z": 1.0
+        },
+        "visible": true
+      }
+    },
+    "Main Section 4 Green Bridge End Hook/Green Rope Anchor Ring Visual/Wood And Yarn Hook Mount/Right Wooden Pin": {
+      "production": {
+        "path": "Main Section 4 Green Bridge End Hook/Green Rope Anchor Ring Visual/Wood And Yarn Hook Mount/Right Wooden Pin",
+        "sprite": "Hook Mounting Knot",
+        "order": 4,
+        "layer": 0,
+        "localPosition": {
+          "x": 0.6000000238418579,
+          "y": 0.6000000238418579,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 0.11172986030578613,
+          "y": 0.11500000208616257,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "position": {
+          "x": 68.67200469970703,
+          "y": -0.27799996733665466,
+          "z": 0.0
+        },
+        "size": {
+          "x": 0.07129999995231628,
+          "y": 0.07129999995231628,
+          "z": 0.20000000298023224
+        },
+        "visible": true
+      },
+      "candidate": {
+        "path": "Main Section 4 Green Bridge End Hook/Green Rope Anchor Ring Visual/Wood And Yarn Hook Mount/Right Wooden Pin",
+        "sprite": "Hook Mounting Knot",
+        "order": 4,
+        "layer": 0,
+        "localPosition": {
+          "x": 0.6000000238418579,
+          "y": 0.6000000238418579,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 0.11172986030578613,
+          "y": 0.11500000208616257,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "position": {
+          "x": 68.67200469970703,
+          "y": -0.27799996733665466,
+          "z": 0.0
+        },
+        "size": {
+          "x": 0.07129999995231628,
+          "y": 0.07129999995231628,
+          "z": 0.20000000298023224
+        },
+        "visible": true
+      }
+    },
+    "Main Section 4 Green Bridge End Hook/Green Rope Anchor Ring Visual/Wood And Yarn Hook Mount/Wooden Mount": {
+      "production": {
+        "path": "Main Section 4 Green Bridge End Hook/Green Rope Anchor Ring Visual/Wood And Yarn Hook Mount/Wooden Mount",
+        "sprite": "HimoHitoCraftHookMount-v1 Processed",
+        "order": 3,
+        "layer": 0,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.6000000238418579,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 0.08005821704864502,
+          "y": 0.10169491916894913,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "position": {
+          "x": 68.30000305175781,
+          "y": -0.27799996733665466,
+          "z": 0.0
+        },
+        "size": {
+          "x": 1.0230000019073486,
+          "y": 0.3720000386238098,
+          "z": 0.20000000298023224
+        },
+        "visible": true
+      },
+      "candidate": {
+        "path": "Main Section 4 Green Bridge End Hook/Green Rope Anchor Ring Visual/Wood And Yarn Hook Mount/Wooden Mount",
+        "sprite": "HimoHitoCraftHookMount-v1 Processed",
+        "order": 3,
+        "layer": 0,
+        "localPosition": {
+          "x": 0.0,
+          "y": 0.6000000238418579,
+          "z": 0.0
+        },
+        "localScale": {
+          "x": 0.08005821704864502,
+          "y": 0.10169491916894913,
+          "z": 1.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "position": {
+          "x": 68.30000305175781,
+          "y": -0.27799996733665466,
+          "z": 0.0
+        },
+        "size": {
+          "x": 1.0230000019073486,
+          "y": 0.3720000386238098,
+          "z": 0.20000000298023224
+        },
+        "visible": true
+      }
+    }
+  },
+  "contracts_exact_equal": true,
+  "target_contracts": [
+    {
+      "name": "Main Section 4 Green Bridge End Hook",
+      "position": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421,
+        "z": 0.0
+      },
+      "scale": {
+        "x": 0.6200000047683716,
+        "y": 0.6200000047683716,
+        "z": 1.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "size": {
+        "x": 1.0,
+        "y": 1.0
+      },
+      "offset": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "enabled": true,
+      "trigger": true
+    },
+    {
+      "name": "Main Section 4 Intermediate Column",
+      "position": {
+        "x": 69.19999694824219,
+        "y": -5.650000095367432,
+        "z": 0.0
+      },
+      "scale": {
+        "x": 1.7999999523162842,
+        "y": 10.0,
+        "z": 1.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "size": {
+        "x": 1.0,
+        "y": 1.0
+      },
+      "offset": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "enabled": true,
+      "trigger": false
+    }
+  ],
+  "production_files_unchanged": 244,
+  "pixel_difference_bounds": {
+    "01_Detached": [
+      1023,
+      463,
+      1057,
+      513
+    ],
+    "03_Generated": [
+      943,
+      463,
+      993,
+      513
+    ]
+  },
+  "visibility_self_review": "通常画角と拡大で、定規によるリング右下の輪郭欠けは解消。",
+  "naturalness_self_review": "斜め板による目盛り隠しはなくProductionの取り付け方を保持。上方に張り出す水平板はそのままなので、自然な固定の最終判断は未確認。",
+  "unconfirmed": [
+    "Human採用・実操作",
+    "OSキー",
+    "音",
+    "新規Unity Build/Editor Play",
+    "全区間QAは今回実施しない"
+  ]
+}
