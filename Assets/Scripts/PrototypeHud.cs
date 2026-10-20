@@ -116,7 +116,6 @@ namespace HimoHito
                     $"{ropeController.MaximumSelectableRopeLength}" +
                     (ropeController.IsAttached ? "　接続中" : ""), bodyStyle);
             }
-            GUILayout.Label("Tab　操作説明", bodyStyle);
             GUILayout.EndArea();
 
             DrawWeavePrompt();

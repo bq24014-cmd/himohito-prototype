@@ -19,8 +19,8 @@ namespace HimoHito
         private GUIStyle titleStyle;
         private GUIStyle bodyStyle;
         private GUIStyle cornerHintStyle;
-        private static readonly GUIContent CornerHint = new GUIContent("Tab：操作確認　Esc：ポーズ");
-        private static readonly GUIContent NarrowCornerHint = new GUIContent("Tab：操作確認\nEsc：ポーズ");
+        private static readonly GUIContent CornerHint = new GUIContent("Tab：操作方法　Esc：ポーズ");
+        private static readonly GUIContent NarrowCornerHint = new GUIContent("Tab：操作方法\nEsc：ポーズ");
         private GUIStyle helpTitleStyle;
         private GUIStyle helpBodyStyle;
         private GUIStyle helpKeyStyle;
@@ -201,14 +201,16 @@ namespace HimoHito
 
         private void DrawCornerHint()
         {
-            // The pause body's wrapping/centering must not be used in a
-            // fixed-height corner label: two lines were clipped top/bottom.
+            // One quiet, high-contrast hint shared by Tutorial and MainStage.
             Rect safe = Screen.safeArea;
             if (safe.width <= 0f || safe.height <= 0f)
                 safe = new Rect(0f, 0f, Screen.width, Screen.height);
             const float margin = 18f;
-            float availableWidth = Mathf.Max(1f, safe.width - margin * 2f);
-            cornerHintStyle.fontSize = 15;
+            const float horizontalPadding = 18f;
+            const float verticalPadding = 12f;
+            float availableWidth = Mathf.Max(1f,
+                safe.width - margin * 2f - horizontalPadding * 2f);
+            cornerHintStyle.fontSize = 20;
             GUIContent content = CornerHint;
             Vector2 size = cornerHintStyle.CalcSize(content);
             if (size.x > availableWidth)
@@ -223,9 +225,14 @@ namespace HimoHito
             }
             size.x = Mathf.Min(size.x, availableWidth);
             // safeArea is bottom-origin; IMGUI coordinates are top-origin.
-            GUI.Label(new Rect(safe.xMax - margin - size.x,
-                Screen.height - safe.yMax + margin, size.x, size.y),
-                content, cornerHintStyle);
+            Rect panel = new Rect(
+                safe.xMax - margin - size.x - horizontalPadding * 2f,
+                Screen.height - safe.yMax + margin,
+                size.x + horizontalPadding * 2f,
+                size.y + verticalPadding * 2f);
+            HimoHitoUiParts.DrawClothTag(panel);
+            GUI.Label(new Rect(panel.x + horizontalPadding,
+                panel.y + verticalPadding, size.x, size.y), content, cornerHintStyle);
         }
 
         private void DrawHelpScreen()
@@ -447,14 +454,15 @@ namespace HimoHito
             };
             cornerHintStyle = new GUIStyle(GUI.skin.label)
             {
-                alignment = TextAnchor.UpperRight,
-                fontSize = 15,
+                alignment = TextAnchor.MiddleCenter,
+                fontSize = 20,
+                fontStyle = FontStyle.Bold,
                 wordWrap = false,
                 fixedWidth = 0f,
                 fixedHeight = 0f,
                 contentOffset = Vector2.zero,
-                padding = new RectOffset(6, 6, 4, 4),
-                normal = { textColor = Color.white }
+                padding = new RectOffset(0, 0, 0, 0),
+                normal = { textColor = new Color(1f, 0.96f, 0.86f) }
             };
 
             Color ink = new Color(0.11f, 0.08f, 0.20f);
