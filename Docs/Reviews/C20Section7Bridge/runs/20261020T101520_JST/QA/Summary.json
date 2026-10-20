@@ -1,0 +1,100 @@
+{
+  "previous_held_review": "22f35cef998ee43c59aca604fe9d421e6db92c12",
+  "production_head": "e9eabc93eef26fb04d0ccb86eaef0cf7b85d04bd",
+  "kind": "C20 deeper sag with full-bridge climbability",
+  "method": "Unity 6000.3.21f1, automatic input-field/API and synchronous EOF capture; not OS keys/Human",
+  "unity": "6000.3.21f1",
+  "development": false,
+  "runtime_kind": "Managed overlay on frozen nonDevelopment Player, not a new Unity BuildPipeline Build",
+  "errors": 0,
+  "geometry": {
+    "4": {
+      "min_y": -2.222654104232788,
+      "max_absolute_angle": 57.62686793343062,
+      "arc_length": 3.5892982703613563
+    },
+    "5": {
+      "min_y": -2.650036334991455,
+      "max_absolute_angle": 56.52444659780351,
+      "arc_length": 4.064565908023807
+    }
+  },
+  "max_vertical_difference": 0.4700932502746582,
+  "deepest_point_difference": 0.427382230758667,
+  "max_difference_pixels_at_720": 19.452134920583593,
+  "camera_match": true,
+  "camera": {
+    "x": 154.3000030517578,
+    "y": 0.0,
+    "z": -10.0
+  },
+  "ortho": 8.699999809265137,
+  "source_changes": [
+    "RopePlatformBuilder.cs"
+  ],
+  "compile_identity": {
+    "assembly": "514EB1C84C661B577389E6E177BE2917F0DAB6C11D3449001AAE15E46CEE2657",
+    "fixture": "7F3D232B6D77CFA71BD352AB8DE172AAFEFDAAC74EF7DBA9B263EEFF7F1E1DAA",
+    "grounding_source": "0DC26D297309B199F5C0D71F722158374A60A4F6F39102DF5075E362D9442896",
+    "suffix": "DeepSagFinal",
+    "at": "2026-10-20T10:10:06.0672879+09:00",
+    "kind": "Managed-code overlay on frozen nonDevelopment Unity Player; not a new Unity BuildPipeline build"
+  },
+  "bridge_source_sha256": "D3B55B569823C7D6AA4C892025E8624C628D56509C9482E96C0092751DFFABFF",
+  "production_protected": true,
+  "old_candidate_protected": true,
+  "manual_launcher_smoke": [
+    {
+      "responding": true,
+      "ready": true,
+      "elapsed": 23.6724726,
+      "launcher_started": true,
+      "alive": true,
+      "method": "Actual cmd launcher, process/log readiness only. No OS key response or Human play.",
+      "kind": "Before"
+    },
+    {
+      "responding": true,
+      "ready": true,
+      "elapsed": 23.7431755,
+      "launcher_started": true,
+      "alive": true,
+      "method": "Actual cmd launcher, process/log readiness only. No OS key response or Human play.",
+      "kind": "After"
+    }
+  ],
+  "operations": [
+    "Deep_S7_L4 nativeE=True Q=True cost=4 remaining=20 minimum=1",
+    "Deep_S7_L4 middle_stop position=(156.64, -0.69) velocity=(0.00, 0.00) grounded=True",
+    "Deep_S7_L4 upper=(159.45, 0.27) grounded=True reached=True",
+    "Deep_S7_L4 left=(154.21, -1.54) grounded=True",
+    "Deep_S7_L4 valley_stop position=(155.85, -1.32) velocity=(0.00, 0.00) grounded=True",
+    "Deep_S7_L4 steep_stop position=(157.19, 0.01) velocity=(0.00, 0.00) grounded=True",
+    "Deep_S7_L4 second_upper=(159.34, 0.27) reached=True",
+    "Deep_S7_L4 R position=(154.30, -1.54) remaining=24 selected=4 bridges=0 attached=False grounded=True",
+    "Deep_S7_L5 nativeE=True Q=True cost=5 remaining=19 minimum=1",
+    "Deep_S7_L5 middle_stop position=(156.56, -0.78) velocity=(0.00, 0.00) grounded=True",
+    "Deep_S7_L5 upper=(159.53, 0.27) grounded=True reached=True",
+    "Deep_S7_L5 left=(154.21, -1.54) grounded=True",
+    "Deep_S7_L5 valley_stop position=(155.88, -1.69) velocity=(0.00, 0.00) grounded=True",
+    "Deep_S7_L5 steep_stop position=(157.11, 0.01) velocity=(0.00, 0.00) grounded=True",
+    "Deep_S7_L5 second_upper=(159.31, 0.27) reached=True",
+    "Deep_S7_L5 R position=(154.30, -1.54) remaining=24 selected=5 bridges=0 attached=False grounded=True"
+  ],
+  "video": {
+    "4": {
+      "captured_frames": 138,
+      "first_time": 2.539999008178711,
+      "last_time": 5.339998245239258,
+      "simulated_seconds": 2.819999237060547,
+      "method": "Unity sample-time durations; missing still-capture intervals hold the preceding frame; 50fps output, no action cuts or speed-up, no audio"
+    },
+    "5": {
+      "captured_frames": 147,
+      "first_time": 15.019994735717773,
+      "last_time": 17.9999942779541,
+      "simulated_seconds": 2.999999542236328,
+      "method": "Unity sample-time durations; missing still-capture intervals hold the preceding frame; 50fps output, no action cuts or speed-up, no audio"
+    }
+  }
+}

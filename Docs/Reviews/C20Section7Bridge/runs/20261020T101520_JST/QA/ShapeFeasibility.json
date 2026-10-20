@@ -1,0 +1,24 @@
+{
+  "length4": {
+    "min_y": -2.222973658950871,
+    "max_angle": 58.023780549064895,
+    "minimum_upward_normal": 0.5295672371881438,
+    "geometric_arc_length": 3.589469326833659
+  },
+  "length5": {
+    "min_y": -2.6514009813744055,
+    "max_angle": 56.552134457592985,
+    "minimum_upward_normal": 0.5511779892601244,
+    "geometric_arc_length": 4.065283276666248
+  },
+  "original5": {
+    "min_y": -3.0424971138651244,
+    "max_angle": 71.73676721878708,
+    "minimum_upward_normal": 0.3133831364624487,
+    "geometric_arc_length": 4.787898992003576
+  },
+  "maximum_vertical_difference": 0.4703737422386851,
+  "deepest_point_difference": 0.42842732242353465,
+  "pixels_at_720_ortho8p7": 19.46374105815249,
+  "feasibility": "Geometric bound only; actual contacts and stopping still require Unity testing"
+}

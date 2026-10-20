@@ -1,0 +1,16 @@
+{
+  "4": {
+    "captured_frames": 138,
+    "first_time": 2.539999008178711,
+    "last_time": 5.339998245239258,
+    "simulated_seconds": 2.819999237060547,
+    "method": "Unity sample-time durations; missing still-capture intervals hold the preceding frame; 50fps output, no action cuts or speed-up, no audio"
+  },
+  "5": {
+    "captured_frames": 147,
+    "first_time": 15.019994735717773,
+    "last_time": 17.9999942779541,
+    "simulated_seconds": 2.999999542236328,
+    "method": "Unity sample-time durations; missing still-capture intervals hold the preceding frame; 50fps output, no action cuts or speed-up, no audio"
+  }
+}
