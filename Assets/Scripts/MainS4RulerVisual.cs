@@ -15,6 +15,8 @@ namespace HimoHito
         Mesh mesh;
         Material material;
         GameObject target;
+        GameObject cornerHook;
+        Transform orderedMount;
         bool unavailable;
 
         public bool Ready { get; private set; }
@@ -148,6 +150,30 @@ namespace HimoHito
                 renderer.forceRenderingOff = true;
             }
             if (Surface != null) Surface.enabled = isActiveAndEnabled;
+            KeepCornerRingInFront();
+        }
+
+        void KeepCornerRingInFront()
+        {
+            if (Surface == null) return;
+            if (cornerHook == null)
+                foreach (var root in gameObject.scene.GetRootGameObjects())
+                    if (root.name == MainStageSectionFourSetup.BridgeAnchorName) cornerHook = root;
+            if (cornerHook == null) return;
+            var ring = cornerHook.GetComponentInChildren<RopeAnchorRingVisual>();
+            if (ring == null) return;
+            var renderer = ring.GetComponent<SpriteRenderer>();
+            int originalOrder = cornerHook.GetComponent<SpriteRenderer>().sortingOrder + 6;
+            int frontOrder = Surface.sortingOrder + 1;
+            if (renderer.sortingLayerID != Surface.sortingLayerID || renderer.sortingOrder != frontOrder)
+                ring.Configure(Surface.sortingLayerID, frontOrder);
+            // Configure rebuilds the common mount relative to the ring order.
+            // Cancel that order shift for the mount, so ONLY the ring changes.
+            var mount = ring.transform.Find("Wood And Yarn Hook Mount");
+            if (mount == null || mount == orderedMount) return;
+            orderedMount = mount;
+            foreach (var hardware in mount.GetComponentsInChildren<Renderer>(true))
+                hardware.sortingOrder -= frontOrder - originalOrder;
         }
 
         bool IsLegacySurface(Renderer renderer)

@@ -1,0 +1,543 @@
+{
+  "recorded_at": "2026-10-20T11:19:45.513696+09:00",
+  "adopted_review_commit": "9c2f2851143ccaae69b864c1580ef2bd5949491a",
+  "rejected_commit": "6190090cd638b1b28c6eecb3608e47b0e05a6af9",
+  "rejected_status": "不採用のまま保持",
+  "production_base": "1ffac00416db372b53c6df04273bf11557ac8a7d",
+  "implementation_file": "Assets/Scripts/MainS4RulerVisual.cs",
+  "implementation_sha256": "E2E64E1681445326CB824192A207E7B970C31A80FCB5DC775884D001D0999004",
+  "approved_source_exact_hash_match": true,
+  "production_only_compile": {
+    "source_count": 119,
+    "fixture_included": false,
+    "errors": 0,
+    "preexisting_CS0649_warnings": 4,
+    "assembly_sha256": "C2C9F17D625FC1530D3607EABD2C3E44EB15A809F1F59783FCC7E978BD66A70A"
+  },
+  "execution": {
+    "kind": "Managed overlay on existing nonDevelopment Unity Player",
+    "unity": "6000.3.21f1",
+    "new_unity_build": false,
+    "editor_play": false,
+    "os_keys": false,
+    "human_replay": false,
+    "fixture_only_in_qa": true,
+    "fixture_sha256": "4CBA8ACDC3E2AC7D6D94F49701BFBDF41A4568EA28AB966CB80FF6C70DFBD44F",
+    "assembly_sha256": "5495EC572B42D86BB99EA051253A0BF209FED571069F8373E7EF63F17B91A888"
+  },
+  "runtime_errors": 0,
+  "method": "Native E/Q/R and Scene reload APIs + Unity screenshots. Not OS keys or Human replay.",
+  "operations": [
+    "E=True target=Main Section 4 Green Bridge End Hook",
+    "Q=True cost=5 remaining=40",
+    "R remaining=45 selected=5 bridges=0 attached=False grounded=True"
+  ],
+  "states": [
+    {
+      "phase": "01_Detached",
+      "root": {
+        "x": 63.70000076293945,
+        "y": -1.5350003242492676
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "ringCenter": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "bridgeStart": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "bridgeEnd": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "aimTarget": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "camera": {
+        "x": 63.70000076293945,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "remaining": 45.0,
+      "selected": 5.0,
+      "ropeEndError": 0.0,
+      "grounded": true,
+      "attached": false,
+      "aimAvailable": false,
+      "bridges": 0
+    },
+    {
+      "phase": "02_Aim",
+      "root": {
+        "x": 63.70000076293945,
+        "y": -1.5350003242492676
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "ringCenter": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "bridgeStart": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "bridgeEnd": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "aimTarget": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 63.70000076293945,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "remaining": 45.0,
+      "selected": 5.0,
+      "ropeEndError": 0.0,
+      "grounded": true,
+      "attached": false,
+      "aimAvailable": true,
+      "bridges": 0
+    },
+    {
+      "phase": "02_Attached",
+      "root": {
+        "x": 63.70000076293945,
+        "y": -1.5350003242492676
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "ringCenter": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "bridgeStart": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "bridgeEnd": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "aimTarget": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 63.70000076293945,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "remaining": 45.0,
+      "selected": 5.0,
+      "ropeEndError": 0.0,
+      "grounded": true,
+      "attached": true,
+      "aimAvailable": false,
+      "bridges": 0
+    },
+    {
+      "phase": "03_Generated",
+      "root": {
+        "x": 65.06705474853516,
+        "y": -1.4454760551452637
+      },
+      "velocity": {
+        "x": 2.6772652983453327e-09,
+        "y": 4.082065796495726e-09
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "ringCenter": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "bridgeStart": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "bridgeEnd": {
+        "x": 64.5999984741211,
+        "y": -2.1500000953674316
+      },
+      "aimTarget": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 65.06697845458984,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "remaining": 40.0,
+      "selected": 5.0,
+      "ropeEndError": 0.0,
+      "grounded": true,
+      "attached": false,
+      "aimAvailable": true,
+      "bridges": 1
+    },
+    {
+      "phase": "05_R",
+      "root": {
+        "x": 63.70000076293945,
+        "y": -1.5350003242492676
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "ringCenter": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "bridgeStart": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "bridgeEnd": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "aimTarget": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 63.70000076293945,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "remaining": 45.0,
+      "selected": 5.0,
+      "ropeEndError": 0.0,
+      "grounded": true,
+      "attached": false,
+      "aimAvailable": true,
+      "bridges": 0
+    },
+    {
+      "phase": "06_Reloaded",
+      "root": {
+        "x": 63.70000076293945,
+        "y": -1.5350003242492676
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "ringCenter": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421
+      },
+      "bridgeStart": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "bridgeEnd": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "aimTarget": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "camera": {
+        "x": 63.70000076293945,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "ortho": 8.699999809265137,
+      "remaining": 45.0,
+      "selected": 5.0,
+      "ropeEndError": 0.0,
+      "grounded": true,
+      "attached": false,
+      "aimAvailable": false,
+      "bridges": 0
+    }
+  ],
+  "renderer_count_checked": 208,
+  "initial_R_and_reload_all_render_parts_exact_equal_to_approved": true,
+  "hook_and_ruler_physics_contracts_exact_equal": true,
+  "ring_order_after_reload": 8,
+  "fixed_hardware_seven_parts_after_reload": [
+    {
+      "path": "Main Section 4 Green Bridge End Hook/Green Rope Anchor Ring Visual/Wood And Yarn Hook Mount/Left Tie Tail",
+      "sprite": "mesh/line",
+      "order": 7,
+      "layer": 0,
+      "localPosition": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "localScale": {
+        "x": 1.0,
+        "y": 1.0,
+        "z": 1.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "position": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421,
+        "z": 0.0
+      },
+      "size": {
+        "x": 0.7346999645233154,
+        "y": 0.7253999710083008,
+        "z": 1.0
+      },
+      "visible": true
+    },
+    {
+      "path": "Main Section 4 Green Bridge End Hook/Green Rope Anchor Ring Visual/Wood And Yarn Hook Mount/Left Wooden Pin",
+      "sprite": "Hook Mounting Knot",
+      "order": 4,
+      "layer": 0,
+      "localPosition": {
+        "x": -0.6000000238418579,
+        "y": 0.6000000238418579,
+        "z": 0.0
+      },
+      "localScale": {
+        "x": 0.11172986030578613,
+        "y": 0.11500000208616257,
+        "z": 1.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "position": {
+        "x": 67.9280014038086,
+        "y": -0.27799996733665466,
+        "z": 0.0
+      },
+      "size": {
+        "x": 0.07129999995231628,
+        "y": 0.07129999995231628,
+        "z": 0.20000000298023224
+      },
+      "visible": true
+    },
+    {
+      "path": "Main Section 4 Green Bridge End Hook/Green Rope Anchor Ring Visual/Wood And Yarn Hook Mount/Mount Soft Shadow",
+      "sprite": "HimoHitoCraftHookMount-v1 Processed",
+      "order": 2,
+      "layer": 0,
+      "localPosition": {
+        "x": 0.02500000037252903,
+        "y": 0.5550000071525574,
+        "z": 0.0
+      },
+      "localScale": {
+        "x": 0.08005821704864502,
+        "y": 0.10169491916894913,
+        "z": 1.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "position": {
+        "x": 68.31550598144531,
+        "y": -0.305899977684021,
+        "z": 0.0
+      },
+      "size": {
+        "x": 1.0230000019073486,
+        "y": 0.3720000386238098,
+        "z": 0.20000000298023224
+      },
+      "visible": true
+    },
+    {
+      "path": "Main Section 4 Green Bridge End Hook/Green Rope Anchor Ring Visual/Wood And Yarn Hook Mount/Pink Mounting Knot",
+      "sprite": "Hook Mounting Knot",
+      "order": 7,
+      "layer": 0,
+      "localPosition": {
+        "x": 0.0,
+        "y": 0.5099999904632568,
+        "z": 0.0
+      },
+      "localScale": {
+        "x": 0.2914692163467407,
+        "y": 0.30000001192092896,
+        "z": 1.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "position": {
+        "x": 68.30000305175781,
+        "y": -0.33379998803138733,
+        "z": 0.0
+      },
+      "size": {
+        "x": 0.1860000044107437,
+        "y": 0.1860000044107437,
+        "z": 0.20000000298023224
+      },
+      "visible": true
+    },
+    {
+      "path": "Main Section 4 Green Bridge End Hook/Green Rope Anchor Ring Visual/Wood And Yarn Hook Mount/Right Tie Tail",
+      "sprite": "mesh/line",
+      "order": 7,
+      "layer": 0,
+      "localPosition": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "localScale": {
+        "x": 1.0,
+        "y": 1.0,
+        "z": 1.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "position": {
+        "x": 68.30000305175781,
+        "y": -0.6499999761581421,
+        "z": 0.0
+      },
+      "size": {
+        "x": 0.7595000267028809,
+        "y": 0.7006000280380249,
+        "z": 1.0
+      },
+      "visible": true
+    },
+    {
+      "path": "Main Section 4 Green Bridge End Hook/Green Rope Anchor Ring Visual/Wood And Yarn Hook Mount/Right Wooden Pin",
+      "sprite": "Hook Mounting Knot",
+      "order": 4,
+      "layer": 0,
+      "localPosition": {
+        "x": 0.6000000238418579,
+        "y": 0.6000000238418579,
+        "z": 0.0
+      },
+      "localScale": {
+        "x": 0.11172986030578613,
+        "y": 0.11500000208616257,
+        "z": 1.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "position": {
+        "x": 68.67200469970703,
+        "y": -0.27799996733665466,
+        "z": 0.0
+      },
+      "size": {
+        "x": 0.07129999995231628,
+        "y": 0.07129999995231628,
+        "z": 0.20000000298023224
+      },
+      "visible": true
+    },
+    {
+      "path": "Main Section 4 Green Bridge End Hook/Green Rope Anchor Ring Visual/Wood And Yarn Hook Mount/Wooden Mount",
+      "sprite": "HimoHitoCraftHookMount-v1 Processed",
+      "order": 3,
+      "layer": 0,
+      "localPosition": {
+        "x": 0.0,
+        "y": 0.6000000238418579,
+        "z": 0.0
+      },
+      "localScale": {
+        "x": 0.08005821704864502,
+        "y": 0.10169491916894913,
+        "z": 1.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "position": {
+        "x": 68.30000305175781,
+        "y": -0.27799996733665466,
+        "z": 0.0
+      },
+      "size": {
+        "x": 1.0230000019073486,
+        "y": 0.3720000386238098,
+        "z": 0.20000000298023224
+      },
+      "visible": true
+    }
+  ],
+  "protection": {
+    "production_files_checked": 244,
+    "only_changed_file": "Assets/Scripts/MainS4RulerVisual.cs",
+    "other_243_files_unchanged": true,
+    "old_approved_and_rejected_proofs_unchanged": true,
+    "prior_dirty_files_unchanged": true
+  },
+  "raw_result_sha256": "DB149D82AF855AC5974D3CBD3BF0DAE388BA9496EE757EDF984D7390C4E92D5C",
+  "limitations": [
+    "OS実キー・統合後Human再試遊・音・Editor Play・新規Unity Buildは未実施。",
+    "確認はS4の未接続・照準・既存E/Q/R API・Scene再読込に限定。全区間QAや長い動画は追加していない。"
+  ]
+}
