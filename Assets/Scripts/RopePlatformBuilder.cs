@@ -486,6 +486,46 @@ namespace HimoHito
             int count = Mathf.Max(MinimumSmoothCurveSegments, curveSegments);
             Vector2[] points = new Vector2[count];
             float slack = Mathf.Max(0f, ropeLength - Vector2.Distance(start, end));
+            // C20 isolated proposal: retain a deeper length-5 valley, but use
+            // the horizontal run before the upper bank rather than a steep end.
+            Vector2 lower = MainStageSectionSevenSetup.BridgeStartHookPosition;
+            Vector2 upper = MainStageSectionSevenSetup.BridgeEndHookPosition;
+            bool s7Pair = (Vector2.Distance(start, lower) < .01f && Vector2.Distance(end, upper) < .01f) ||
+                (Vector2.Distance(start, upper) < .01f && Vector2.Distance(end, lower) < .01f);
+            if (s7Pair && Mathf.Abs(ropeLength - 5f) < .001f)
+            {
+                // Orient the profile from the lower bank. Reversing creation
+                // order must not change the physical or visible bridge.
+                bool reversed = start.x > end.x;
+                float span = upper.x - lower.x;
+                float rise = upper.y - lower.y;
+                float valleyFraction = .27f;
+                float drop = slack * .30f;
+                for (int i = 0; i < count; i++)
+                {
+                    float t = i / (float)(count - 1);
+                    float u = reversed ? 1f - t : t;
+                    float y;
+                    if (u <= valleyFraction)
+                    {
+                        float segmentWidth = span * valleyFraction;
+                        y = BridgeProfileHermite(lower.y, lower.y - drop,
+                            -1.2f * drop / segmentWidth, 0f,
+                            u / valleyFraction, segmentWidth);
+                    }
+                    else
+                    {
+                        float segmentWidth = span * (1f - valleyFraction);
+                        y = BridgeProfileHermite(lower.y - drop, upper.y, 0f,
+                            1.4f * rise / span,
+                            (u - valleyFraction) / (1f - valleyFraction), segmentWidth);
+                    }
+                    points[i] = new Vector2(Mathf.Lerp(lower.x, upper.x, u), y);
+                }
+                points[0] = start;
+                points[count - 1] = end;
+                return points;
+            }
             for (int i = 0; i < count; i++)
             {
                 float t = i / (float)(count - 1);
@@ -493,6 +533,17 @@ namespace HimoHito
                     Vector2.down * (slack * 4f * t * (1f - t));
             }
             return points;
+        }
+
+        private static float BridgeProfileHermite(float a, float b,
+            float startSlope, float endSlope, float t, float width)
+        {
+            float t2 = t * t;
+            float t3 = t2 * t;
+            return (2f * t3 - 3f * t2 + 1f) * a +
+                (t3 - 2f * t2 + t) * startSlope * width +
+                (-2f * t3 + 3f * t2) * b +
+                (t3 - t2) * endSlope * width;
         }
 
         private void PlacePlayerOnPlatform(GeneratedRopePlatform platform)

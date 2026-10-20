@@ -1,0 +1,467 @@
+{
+  "recorded_at": "2026-10-20T10:34:45.368047+09:00",
+  "adopted_review_commit": "b36092f60aab80974272ec1b5d8f7c03c544934b",
+  "production_base": "e9eabc93eef26fb04d0ccb86eaef0cf7b85d04bd",
+  "branch": "main",
+  "implementation_file": "Assets/Scripts/RopePlatformBuilder.cs",
+  "implementation_sha256": "D3B55B569823C7D6AA4C892025E8624C628D56509C9482E96C0092751DFFABFF",
+  "approved_source_exact_sha256_match": true,
+  "production_only_compile": {
+    "source_count": 119,
+    "diagnostic_fixture_included": false,
+    "errors": 0,
+    "warnings": "4 preexisting CS0649",
+    "assembly_sha256": "528B17672D9009E508BA8A663DE8608E2518034D463DB9CB2F20F9A4F41DF73E"
+  },
+  "execution": {
+    "kind": "Managed overlay on existing frozen nonDevelopment Unity Player",
+    "unity": "6000.3.21f1",
+    "new_unity_build": false,
+    "editor_play": false,
+    "os_keys": false,
+    "human_repeat_test": false,
+    "input": "Automatic input-field/API setup and real Unity player Physics2D; not OS keys or Human play",
+    "fixture_sha256": "7F3D232B6D77CFA71BD352AB8DE172AAFEFDAAC74EF7DBA9B263EEFF7F1E1DAA",
+    "assembly_sha256": "4509BFF4BC5C976BE6C935F31E229EA2D23EF0C1820BC2B5DD3045B2FAB2677A"
+  },
+  "s7": {
+    "errors": 0,
+    "finished": true,
+    "geometries": [
+      {
+        "length": 4,
+        "point_count": 40,
+        "checked_segment_count": 39,
+        "minimum_y": -2.222654104232788,
+        "maximum_slope_degrees": 57.62686793343062,
+        "start": {
+          "x": 157.89999389648438,
+          "y": -0.3499999940395355
+        },
+        "end": {
+          "x": 155.10000610351562,
+          "y": -2.1500000953674316
+        },
+        "collider_radius": 0.10999999940395355
+      },
+      {
+        "length": 5,
+        "point_count": 40,
+        "checked_segment_count": 39,
+        "minimum_y": -2.650036334991455,
+        "maximum_slope_degrees": 56.52444659780351,
+        "start": {
+          "x": 157.89999389648438,
+          "y": -0.3499999940395355
+        },
+        "end": {
+          "x": 155.10000610351562,
+          "y": -2.1500000953674316
+        },
+        "collider_radius": 0.10999999940395355
+      }
+    ],
+    "valley_depth_difference": 0.427382230758667,
+    "operations": [
+      "Deep_S7_L4 nativeE=True Q=True cost=4 remaining=20 minimum=1",
+      "Deep_S7_L4 middle_stop position=(156.64, -0.69) velocity=(0.00, 0.00) grounded=True",
+      "Deep_S7_L4 upper=(159.45, 0.27) grounded=True reached=True",
+      "Deep_S7_L4 left=(154.21, -1.54) grounded=True",
+      "Deep_S7_L4 valley_stop position=(155.85, -1.32) velocity=(0.00, 0.00) grounded=True",
+      "Deep_S7_L4 steep_stop position=(157.19, 0.01) velocity=(0.00, 0.00) grounded=True",
+      "Deep_S7_L4 second_upper=(159.34, 0.27) reached=True",
+      "Deep_S7_L4 R position=(154.30, -1.54) remaining=24 selected=4 bridges=0 attached=False grounded=True",
+      "Deep_S7_L5 nativeE=True Q=True cost=5 remaining=19 minimum=1",
+      "Deep_S7_L5 middle_stop position=(156.56, -0.78) velocity=(0.00, 0.00) grounded=True",
+      "Deep_S7_L5 upper=(159.53, 0.27) grounded=True reached=True",
+      "Deep_S7_L5 left=(154.21, -1.54) grounded=True",
+      "Deep_S7_L5 valley_stop position=(155.88, -1.69) velocity=(0.00, 0.00) grounded=True",
+      "Deep_S7_L5 steep_stop position=(157.11, 0.01) velocity=(0.00, 0.00) grounded=True",
+      "Deep_S7_L5 second_upper=(159.31, 0.27) reached=True",
+      "Deep_S7_L5 R position=(154.30, -1.54) remaining=24 selected=5 bridges=0 attached=False grounded=True"
+    ],
+    "representative_states": [
+      {
+        "scenario": "Deep_S7_L4",
+        "phase": "middle_stop",
+        "position": {
+          "x": 156.64231872558594,
+          "y": -0.690739631652832
+        },
+        "velocity": {
+          "x": -1.66413173019464e-07,
+          "y": -1.0606164124737916e-07
+        },
+        "grounded": true,
+        "bridgeSupport": true,
+        "remaining": 20.0,
+        "scale": 0.765500009059906,
+        "slopeOffset": -0.3543930947780609,
+        "visualBend": -0.043281637132167816,
+        "soleGap": -0.04092752933502197,
+        "bodyWidth": 0.79998779296875,
+        "bodyHeight": 1.2000000476837158
+      },
+      {
+        "scenario": "Deep_S7_L4",
+        "phase": "upper_stop",
+        "position": {
+          "x": 159.44985961914062,
+          "y": 0.26499995589256287
+        },
+        "velocity": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "grounded": true,
+        "bridgeSupport": false,
+        "remaining": 20.0,
+        "scale": 0.765500009059906,
+        "slopeOffset": 0.0,
+        "visualBend": 0.0,
+        "soleGap": 998.463134765625,
+        "bodyWidth": 0.79998779296875,
+        "bodyHeight": 1.2000000476837158
+      },
+      {
+        "scenario": "Deep_S7_L4",
+        "phase": "left_stop",
+        "position": {
+          "x": 154.21478271484375,
+          "y": -1.5350003242492676
+        },
+        "velocity": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "grounded": true,
+        "bridgeSupport": false,
+        "remaining": 20.0,
+        "scale": 0.765500009059906,
+        "slopeOffset": 0.0,
+        "visualBend": 0.0,
+        "soleGap": 996.6630859375,
+        "bodyWidth": 0.79998779296875,
+        "bodyHeight": 1.1999999284744263
+      },
+      {
+        "scenario": "Deep_S7_L4",
+        "phase": "valley_stop",
+        "position": {
+          "x": 155.85452270507812,
+          "y": -1.318892478942871
+        },
+        "velocity": {
+          "x": 1.6170244310220738e-10,
+          "y": -2.616968031166067e-10
+        },
+        "grounded": true,
+        "bridgeSupport": true,
+        "remaining": 20.0,
+        "scale": 0.765500009059906,
+        "slopeOffset": -0.13585589826107025,
+        "visualBend": -0.03840002790093422,
+        "soleGap": -0.056423187255859375,
+        "bodyWidth": 0.79998779296875,
+        "bodyHeight": 1.2000000476837158
+      },
+      {
+        "scenario": "Deep_S7_L4",
+        "phase": "steep_middle_stop",
+        "position": {
+          "x": 157.19384765625,
+          "y": 0.010398764163255692
+        },
+        "velocity": {
+          "x": 1.1937246330306905e-11,
+          "y": -1.177503840960048e-11
+        },
+        "grounded": true,
+        "bridgeSupport": true,
+        "remaining": 20.0,
+        "scale": 0.765500009059906,
+        "slopeOffset": -0.5083144307136536,
+        "visualBend": -0.015251786448061466,
+        "soleGap": -0.03857421875,
+        "bodyWidth": 0.79998779296875,
+        "bodyHeight": 1.2000000476837158
+      },
+      {
+        "scenario": "Deep_S7_L4",
+        "phase": "second_upper_stop",
+        "position": {
+          "x": 159.34429931640625,
+          "y": 0.26499995589256287
+        },
+        "velocity": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "grounded": true,
+        "bridgeSupport": false,
+        "remaining": 20.0,
+        "scale": 0.765500009059906,
+        "slopeOffset": 0.0,
+        "visualBend": 0.0,
+        "soleGap": 998.463134765625,
+        "bodyWidth": 0.79998779296875,
+        "bodyHeight": 1.2000000476837158
+      },
+      {
+        "scenario": "Deep_S7_L4",
+        "phase": "jump",
+        "position": {
+          "x": 159.44985961914062,
+          "y": 1.8992077112197876
+        },
+        "velocity": {
+          "x": 0.0,
+          "y": 2.2366995811462402
+        },
+        "grounded": false,
+        "bridgeSupport": false,
+        "remaining": 20.0,
+        "scale": 0.765500009059906,
+        "slopeOffset": 0.0,
+        "visualBend": 0.0,
+        "soleGap": 1000.248046875,
+        "bodyWidth": 0.79998779296875,
+        "bodyHeight": 1.2000000476837158
+      },
+      {
+        "scenario": "Deep_S7_L4",
+        "phase": "land",
+        "position": {
+          "x": 159.44985961914062,
+          "y": 0.26499995589256287
+        },
+        "velocity": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "grounded": true,
+        "bridgeSupport": false,
+        "remaining": 20.0,
+        "scale": 0.765500009059906,
+        "slopeOffset": 0.0,
+        "visualBend": 0.0,
+        "soleGap": 998.463134765625,
+        "bodyWidth": 0.79998779296875,
+        "bodyHeight": 1.2000000476837158
+      },
+      {
+        "scenario": "Deep_S7_L5",
+        "phase": "middle_stop",
+        "position": {
+          "x": 156.56442260742188,
+          "y": -0.7767710089683533
+        },
+        "velocity": {
+          "x": 4.1235397318928335e-09,
+          "y": -2.7267821334220343e-09
+        },
+        "grounded": true,
+        "bridgeSupport": true,
+        "remaining": 19.0,
+        "scale": 0.765500009059906,
+        "slopeOffset": -0.560979425907135,
+        "visualBend": -0.02604898251593113,
+        "soleGap": -0.035447120666503906,
+        "bodyWidth": 0.79998779296875,
+        "bodyHeight": 1.2000000476837158
+      },
+      {
+        "scenario": "Deep_S7_L5",
+        "phase": "upper_stop",
+        "position": {
+          "x": 159.5296630859375,
+          "y": 0.26499995589256287
+        },
+        "velocity": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "grounded": true,
+        "bridgeSupport": false,
+        "remaining": 19.0,
+        "scale": 0.765500009059906,
+        "slopeOffset": 0.0,
+        "visualBend": 0.0,
+        "soleGap": 998.462890625,
+        "bodyWidth": 0.79998779296875,
+        "bodyHeight": 1.2000000476837158
+      },
+      {
+        "scenario": "Deep_S7_L5",
+        "phase": "left_stop",
+        "position": {
+          "x": 154.2097930908203,
+          "y": -1.5350003242492676
+        },
+        "velocity": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "grounded": true,
+        "bridgeSupport": false,
+        "remaining": 19.0,
+        "scale": 0.765500009059906,
+        "slopeOffset": 0.0,
+        "visualBend": 0.0,
+        "soleGap": 996.662841796875,
+        "bodyWidth": 0.79998779296875,
+        "bodyHeight": 1.1999999284744263
+      },
+      {
+        "scenario": "Deep_S7_L5",
+        "phase": "valley_stop",
+        "position": {
+          "x": 155.87574768066406,
+          "y": -1.6902204751968384
+        },
+        "velocity": {
+          "x": -6.303735311519176e-09,
+          "y": 6.50033005200612e-09
+        },
+        "grounded": true,
+        "bridgeSupport": true,
+        "remaining": 19.0,
+        "scale": 0.765500009059906,
+        "slopeOffset": -0.19264696538448334,
+        "visualBend": -0.03506407141685486,
+        "soleGap": -0.026888132095336914,
+        "bodyWidth": 0.79998779296875,
+        "bodyHeight": 1.2000000476837158
+      },
+      {
+        "scenario": "Deep_S7_L5",
+        "phase": "steep_middle_stop",
+        "position": {
+          "x": 157.11395263671875,
+          "y": 0.01202892605215311
+        },
+        "velocity": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "grounded": true,
+        "bridgeSupport": true,
+        "remaining": 19.0,
+        "scale": 0.765500009059906,
+        "slopeOffset": -0.5882569551467896,
+        "visualBend": -0.015277966856956482,
+        "soleGap": -0.0835721492767334,
+        "bodyWidth": 0.79998779296875,
+        "bodyHeight": 1.2000000476837158
+      },
+      {
+        "scenario": "Deep_S7_L5",
+        "phase": "second_upper_stop",
+        "position": {
+          "x": 159.31129455566406,
+          "y": 0.26499995589256287
+        },
+        "velocity": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "grounded": true,
+        "bridgeSupport": false,
+        "remaining": 19.0,
+        "scale": 0.765500009059906,
+        "slopeOffset": 0.0,
+        "visualBend": 0.0,
+        "soleGap": 998.462890625,
+        "bodyWidth": 0.79998779296875,
+        "bodyHeight": 1.2000000476837158
+      },
+      {
+        "scenario": "Deep_S7_L5",
+        "phase": "jump",
+        "position": {
+          "x": 159.5296630859375,
+          "y": 1.8992077112197876
+        },
+        "velocity": {
+          "x": 0.0,
+          "y": 2.2366995811462402
+        },
+        "grounded": false,
+        "bridgeSupport": false,
+        "remaining": 19.0,
+        "scale": 0.765500009059906,
+        "slopeOffset": 0.0,
+        "visualBend": 0.0,
+        "soleGap": 1000.247802734375,
+        "bodyWidth": 0.79998779296875,
+        "bodyHeight": 1.2000000476837158
+      },
+      {
+        "scenario": "Deep_S7_L5",
+        "phase": "land",
+        "position": {
+          "x": 159.5296630859375,
+          "y": 0.26499995589256287
+        },
+        "velocity": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "grounded": true,
+        "bridgeSupport": false,
+        "remaining": 19.0,
+        "scale": 0.765500009059906,
+        "slopeOffset": 0.0,
+        "visualBend": 0.0,
+        "soleGap": 998.462890625,
+        "bodyWidth": 0.79998779296875,
+        "bodyHeight": 1.2000000476837158
+      }
+    ],
+    "approved_geometry_and_operation_results_match": true
+  },
+  "t4": {
+    "errors": 0,
+    "finished": true,
+    "operations": [
+      "Native_50 E1=True Q1=True remaining=44",
+      "Native_50 E2=True Q2=True remaining=38",
+      "Native_50 F=True bridges=1 remaining=38",
+      "Native_50 E_supported=False",
+      "Native_50 R remaining=50 selected=6 bridges=0 attached=False root=(41.10, 0.96) slope=0"
+    ],
+    "native_q_and_f_pass": true,
+    "generic_curve_unchanged": true,
+    "pause_and_resume_api_pass": true,
+    "supplemental_disabled_left_hook_attach": false,
+    "supplemental_attach_note": "E_supported=False targets the disabled left hook and is not an attachment PASS; required E1/E2, Q1/Q2 and F succeeded."
+  },
+  "c08": {
+    "source_unchanged": true,
+    "c22_c23_source_unchanged": true,
+    "support_offsets_and_visual_bend_observed": true,
+    "airborne_bridge_offset_clears": true,
+    "note": "Existing foot animation and fixed physical box are retained. Sole-gap values are single-frame opaque-sprite estimates, not a zero-penetration guarantee."
+  },
+  "protection": {
+    "production_files_checked": 244,
+    "only_changed_protected_file": [
+      "Assets/Scripts/RopePlatformBuilder.cs"
+    ],
+    "approved_proof_files_unchanged": true,
+    "prior_dirty_files_unchanged": true,
+    "staged_initially_empty": true,
+    "free_bytes_start": 10601385984,
+    "free_bytes_after_qa": 10585300992
+  },
+  "raw_results_sha256": {
+    "S7_Production": "6F0D8E58B4BF263A80C8E9B0F8DFD359C09808140A58B3F5307DFA8E89CD22CF",
+    "T4_Production": "B64372B4F0675B3F0BDF3066BAE4956C32EF9F68FBCB69B448812A89D2E926CD"
+  },
+  "limitations": [
+    "OS実キー・統合後Human再試遊は未実施。深いたわみ候補はHuman正式採用済み。",
+    "Unity Editor Play・新規BuildPipelineによるWindows Buildは未実施。Unity用コンパイルと既存Playerのmanaged overlay実行で確認。",
+    "T4追加診断のjump時点は接地中。T4ジャンプ成功とは扱わない。S7では離地と再着地を確認。",
+    "全区間通しプレイ・全長さ全端点の保証はしない。音は未確認。"
+  ]
+}
