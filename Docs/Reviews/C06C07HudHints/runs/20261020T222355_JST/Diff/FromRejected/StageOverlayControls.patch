@@ -1,0 +1,25 @@
+--- a/Assets/Scripts/StageOverlayControls.cs
++++ b/Assets/Scripts/StageOverlayControls.cs
+@@ -206,8 +206,8 @@
+             if (safe.width <= 0f || safe.height <= 0f)
+                 safe = new Rect(0f, 0f, Screen.width, Screen.height);
+             const float margin = 18f;
+-            const float horizontalPadding = 12f;
+-            const float verticalPadding = 8f;
++            const float horizontalPadding = 18f;
++            const float verticalPadding = 12f;
+             float availableWidth = Mathf.Max(1f,
+                 safe.width - margin * 2f - horizontalPadding * 2f);
+             cornerHintStyle.fontSize = 20;
+@@ -230,10 +230,7 @@
+                 Screen.height - safe.yMax + margin,
+                 size.x + horizontalPadding * 2f,
+                 size.y + verticalPadding * 2f);
+-            Color previous = GUI.color;
+-            GUI.color = new Color(0.055f, 0.065f, 0.12f, 0.90f);
+-            GUI.DrawTexture(panel, Texture2D.whiteTexture);
+-            GUI.color = previous;
++            HimoHitoUiParts.DrawClothTag(panel);
+             GUI.Label(new Rect(panel.x + horizontalPadding,
+                 panel.y + verticalPadding, size.x, size.y), content, cornerHintStyle);
+         }

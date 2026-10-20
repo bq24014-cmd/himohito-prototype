@@ -1,0 +1,487 @@
+{
+  "scene": "MainStage",
+  "variant": "ClothTag",
+  "unity": "6000.3.21f1",
+  "method": "UI private/public APIs and actual Unity screen capture. Not OS keys or Human play.",
+  "development": false,
+  "finished": true,
+  "errors": 0,
+  "states": [
+    {
+      "phase": "01_Play",
+      "hint": "Tab：操作方法　Esc：ポーズ",
+      "font": "MPlusRounded1c-Bold",
+      "method": "diagnostic API; no OS key",
+      "width": 1280,
+      "height": 720,
+      "fontSize": 20,
+      "help": false,
+      "overlay": false,
+      "hintVisible": true,
+      "withinScreen": true,
+      "notOverLeftHud": true,
+      "attached": false,
+      "timeScale": 1.0,
+      "remaining": 50.0,
+      "selected": 7.0,
+      "leftPanelHeight": 172.0,
+      "root": {
+        "x": -3.8499999046325684,
+        "y": -4.232961654663086
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "camera": {
+        "x": -3.8499999046325684,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "hintRect": {
+        "serializedVersion": "2",
+        "x": 958.9200439453125,
+        "y": 18.0,
+        "width": 303.0799865722656,
+        "height": 51.90999984741211
+      }
+    },
+    {
+      "phase": "02_Help",
+      "hint": "Tab：操作方法　Esc：ポーズ",
+      "font": "MPlusRounded1c-Bold",
+      "method": "diagnostic API; no OS key",
+      "width": 1280,
+      "height": 720,
+      "fontSize": 20,
+      "help": true,
+      "overlay": true,
+      "hintVisible": false,
+      "withinScreen": true,
+      "notOverLeftHud": true,
+      "attached": false,
+      "timeScale": 0.0,
+      "remaining": 50.0,
+      "selected": 7.0,
+      "leftPanelHeight": 172.0,
+      "root": {
+        "x": -3.8499999046325684,
+        "y": -4.232961654663086
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "camera": {
+        "x": -3.8499999046325684,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "hintRect": {
+        "serializedVersion": "2",
+        "x": 958.9200439453125,
+        "y": 18.0,
+        "width": 303.0799865722656,
+        "height": 51.90999984741211
+      }
+    },
+    {
+      "phase": "03_HelpReturn",
+      "hint": "Tab：操作方法　Esc：ポーズ",
+      "font": "MPlusRounded1c-Bold",
+      "method": "diagnostic API; no OS key",
+      "width": 1280,
+      "height": 720,
+      "fontSize": 20,
+      "help": false,
+      "overlay": false,
+      "hintVisible": true,
+      "withinScreen": true,
+      "notOverLeftHud": true,
+      "attached": false,
+      "timeScale": 1.0,
+      "remaining": 50.0,
+      "selected": 7.0,
+      "leftPanelHeight": 172.0,
+      "root": {
+        "x": -3.8499999046325684,
+        "y": -4.232961654663086
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "camera": {
+        "x": -3.8499999046325684,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "hintRect": {
+        "serializedVersion": "2",
+        "x": 958.9200439453125,
+        "y": 18.0,
+        "width": 303.0799865722656,
+        "height": 51.90999984741211
+      }
+    },
+    {
+      "phase": "04_Pause",
+      "hint": "Tab：操作方法　Esc：ポーズ",
+      "font": "MPlusRounded1c-Bold",
+      "method": "diagnostic API; no OS key",
+      "width": 1280,
+      "height": 720,
+      "fontSize": 20,
+      "help": false,
+      "overlay": true,
+      "hintVisible": false,
+      "withinScreen": true,
+      "notOverLeftHud": true,
+      "attached": false,
+      "timeScale": 0.0,
+      "remaining": 50.0,
+      "selected": 7.0,
+      "leftPanelHeight": 172.0,
+      "root": {
+        "x": -3.8499999046325684,
+        "y": -4.232961654663086
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "camera": {
+        "x": -3.8499999046325684,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "hintRect": {
+        "serializedVersion": "2",
+        "x": 958.9200439453125,
+        "y": 18.0,
+        "width": 303.0799865722656,
+        "height": 51.90999984741211
+      }
+    },
+    {
+      "phase": "05_HelpFromPause",
+      "hint": "Tab：操作方法　Esc：ポーズ",
+      "font": "MPlusRounded1c-Bold",
+      "method": "diagnostic API; no OS key",
+      "width": 1280,
+      "height": 720,
+      "fontSize": 20,
+      "help": true,
+      "overlay": true,
+      "hintVisible": false,
+      "withinScreen": true,
+      "notOverLeftHud": true,
+      "attached": false,
+      "timeScale": 0.0,
+      "remaining": 50.0,
+      "selected": 7.0,
+      "leftPanelHeight": 172.0,
+      "root": {
+        "x": -3.8499999046325684,
+        "y": -4.232961654663086
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "camera": {
+        "x": -3.8499999046325684,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "hintRect": {
+        "serializedVersion": "2",
+        "x": 958.9200439453125,
+        "y": 18.0,
+        "width": 303.0799865722656,
+        "height": 51.90999984741211
+      }
+    },
+    {
+      "phase": "06_BackToPause",
+      "hint": "Tab：操作方法　Esc：ポーズ",
+      "font": "MPlusRounded1c-Bold",
+      "method": "diagnostic API; no OS key",
+      "width": 1280,
+      "height": 720,
+      "fontSize": 20,
+      "help": false,
+      "overlay": true,
+      "hintVisible": false,
+      "withinScreen": true,
+      "notOverLeftHud": true,
+      "attached": false,
+      "timeScale": 0.0,
+      "remaining": 50.0,
+      "selected": 7.0,
+      "leftPanelHeight": 172.0,
+      "root": {
+        "x": -3.8499999046325684,
+        "y": -4.232961654663086
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "camera": {
+        "x": -3.8499999046325684,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "hintRect": {
+        "serializedVersion": "2",
+        "x": 958.9200439453125,
+        "y": 18.0,
+        "width": 303.0799865722656,
+        "height": 51.90999984741211
+      }
+    },
+    {
+      "phase": "07_Resume",
+      "hint": "Tab：操作方法　Esc：ポーズ",
+      "font": "MPlusRounded1c-Bold",
+      "method": "diagnostic API; no OS key",
+      "width": 1280,
+      "height": 720,
+      "fontSize": 20,
+      "help": false,
+      "overlay": false,
+      "hintVisible": true,
+      "withinScreen": true,
+      "notOverLeftHud": true,
+      "attached": false,
+      "timeScale": 1.0,
+      "remaining": 50.0,
+      "selected": 7.0,
+      "leftPanelHeight": 172.0,
+      "root": {
+        "x": -3.8499999046325684,
+        "y": -4.232961654663086
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "camera": {
+        "x": -3.8499999046325684,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "hintRect": {
+        "serializedVersion": "2",
+        "x": 958.9200439453125,
+        "y": 18.0,
+        "width": 303.0799865722656,
+        "height": 51.90999984741211
+      }
+    },
+    {
+      "phase": "08_Attached",
+      "hint": "Tab：操作方法　Esc：ポーズ",
+      "font": "MPlusRounded1c-Bold",
+      "method": "diagnostic API; no OS key",
+      "width": 1280,
+      "height": 720,
+      "fontSize": 20,
+      "help": false,
+      "overlay": false,
+      "hintVisible": true,
+      "withinScreen": true,
+      "notOverLeftHud": true,
+      "attached": true,
+      "timeScale": 1.0,
+      "remaining": 50.0,
+      "selected": 14.0,
+      "leftPanelHeight": 172.0,
+      "root": {
+        "x": -3.8499999046325684,
+        "y": -4.232961654663086
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "camera": {
+        "x": -3.8499999046325684,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "hintRect": {
+        "serializedVersion": "2",
+        "x": 958.9200439453125,
+        "y": 18.0,
+        "width": 303.0799865722656,
+        "height": 51.90999984741211
+      }
+    },
+    {
+      "phase": "09_AttachedHelpReturn",
+      "hint": "Tab：操作方法　Esc：ポーズ",
+      "font": "MPlusRounded1c-Bold",
+      "method": "diagnostic API; no OS key",
+      "width": 1280,
+      "height": 720,
+      "fontSize": 20,
+      "help": false,
+      "overlay": false,
+      "hintVisible": true,
+      "withinScreen": true,
+      "notOverLeftHud": true,
+      "attached": true,
+      "timeScale": 1.0,
+      "remaining": 50.0,
+      "selected": 14.0,
+      "leftPanelHeight": 172.0,
+      "root": {
+        "x": -3.8499999046325684,
+        "y": -4.232961654663086
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "camera": {
+        "x": -3.8499999046325684,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "hintRect": {
+        "serializedVersion": "2",
+        "x": 958.9200439453125,
+        "y": 18.0,
+        "width": 303.0799865722656,
+        "height": 51.90999984741211
+      }
+    },
+    {
+      "phase": "10_Detached",
+      "hint": "Tab：操作方法　Esc：ポーズ",
+      "font": "MPlusRounded1c-Bold",
+      "method": "diagnostic API; no OS key",
+      "width": 1280,
+      "height": 720,
+      "fontSize": 20,
+      "help": false,
+      "overlay": false,
+      "hintVisible": true,
+      "withinScreen": true,
+      "notOverLeftHud": true,
+      "attached": false,
+      "timeScale": 1.0,
+      "remaining": 50.0,
+      "selected": 7.0,
+      "leftPanelHeight": 172.0,
+      "root": {
+        "x": -3.8499999046325684,
+        "y": -4.232961654663086
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "camera": {
+        "x": -3.8499999046325684,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "hintRect": {
+        "serializedVersion": "2",
+        "x": 958.9200439453125,
+        "y": 18.0,
+        "width": 303.0799865722656,
+        "height": 51.90999984741211
+      }
+    },
+    {
+      "phase": "11_BrightContrastStress",
+      "hint": "Tab：操作方法　Esc：ポーズ",
+      "font": "MPlusRounded1c-Bold",
+      "method": "diagnostic API; no OS key",
+      "width": 1280,
+      "height": 720,
+      "fontSize": 20,
+      "help": false,
+      "overlay": false,
+      "hintVisible": true,
+      "withinScreen": true,
+      "notOverLeftHud": true,
+      "attached": false,
+      "timeScale": 1.0,
+      "remaining": 50.0,
+      "selected": 7.0,
+      "leftPanelHeight": 172.0,
+      "root": {
+        "x": -3.8499999046325684,
+        "y": -4.232961654663086
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "camera": {
+        "x": -3.8499999046325684,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "hintRect": {
+        "serializedVersion": "2",
+        "x": 958.9200439453125,
+        "y": 18.0,
+        "width": 303.0799865722656,
+        "height": 51.90999984741211
+      }
+    },
+    {
+      "phase": "12_DarkContrastStress",
+      "hint": "Tab：操作方法　Esc：ポーズ",
+      "font": "MPlusRounded1c-Bold",
+      "method": "diagnostic API; no OS key",
+      "width": 1280,
+      "height": 720,
+      "fontSize": 20,
+      "help": false,
+      "overlay": false,
+      "hintVisible": true,
+      "withinScreen": true,
+      "notOverLeftHud": true,
+      "attached": false,
+      "timeScale": 1.0,
+      "remaining": 50.0,
+      "selected": 7.0,
+      "leftPanelHeight": 172.0,
+      "root": {
+        "x": -3.8499999046325684,
+        "y": -4.232961654663086
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "camera": {
+        "x": -3.8499999046325684,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "hintRect": {
+        "serializedVersion": "2",
+        "x": 958.9200439453125,
+        "y": 18.0,
+        "width": 303.0799865722656,
+        "height": 51.90999984741211
+      }
+    }
+  ],
+  "checks": [
+    "PASS help opens and pauses",
+    "PASS help closes and resumes hint",
+    "PASS pause state and menu",
+    "PASS help returns to paused state",
+    "PASS pause resumes hint",
+    "PASS native attachment for connected HUD row"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "production_head": "d88160da59fd5902222ef68a76a8b74882fafe98",
+  "production_branch": "main",
+  "all_production_hashes_unchanged": true,
+  "protected_count": 247,
+  "existing_tracked_status_unchanged": true,
+  "staged_empty": true,
+  "past_proof_hashes_unchanged": true,
+  "past_proof_hashes": {
+    "Runtime/PlayerGroundingReview_Data/Managed/Assembly-CSharp.dll": "cc06590933736bd9f8ec419349d1b692f6a44f434d5706ba7f5192268e7181f6",
+    "BeforeRuntime/PlayerGroundingReview_Data/Managed/Assembly-CSharp.dll": "4576e7b4280b2b57934e802912720484b29145f71fe01a290d1d7c36ae116e16",
+    "Sources/MainStageHud.cs": "655f6e1cb63ac1e5fb7ed44b875c32f94c7853a03745bd5b8627ef88f69a8909",
+    "Sources/PrototypeHud.cs": "dd50af6a8d6a91967357f4e906df9d264058285bfc6bd33d131105dde279c035",
+    "Sources/StageOverlayControls.cs": "cdb80790e0f579db74810084ed2db970d138666192d1353949b11ea6f0294e3f",
+    "BaselineSources/MainStageHud.cs": "30d2177386b912c1c8fc86961460208b53fd2f45df0597552055c19e41ecae50",
+    "BaselineSources/PrototypeHud.cs": "2e6d442c4933dda55aa3680ed1a835372e53274fe0c7404498684dc23abb6780",
+    "BaselineSources/StageOverlayControls.cs": "7d63dcbaa1dbce7fb04a8e387b0013050d343084f3fc6d267f4064a69a28755a",
+    "GroundingReview.cs": "c9f8a72338d719de50e1a87744f07f853c98729600c2669a41f7aa44934ad6cd"
+  }
+}

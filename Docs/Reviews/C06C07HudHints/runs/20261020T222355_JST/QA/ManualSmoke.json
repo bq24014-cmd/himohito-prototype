@@ -1,0 +1,18 @@
+[
+  {
+    "scene": "Tutorial",
+    "manual_ready": true,
+    "remained_alive_after_ready_seconds": 6,
+    "automatic_QA_capture_exit_not_started": true,
+    "os_input": "未確認",
+    "method": "normal executable launch, no -hudQA argument; exact process/path observed"
+  },
+  {
+    "scene": "MainStage",
+    "manual_ready": true,
+    "remained_alive_after_ready_seconds": 6,
+    "automatic_QA_capture_exit_not_started": true,
+    "os_input": "未確認",
+    "method": "normal executable launch, no -hudQA argument; exact process/path observed"
+  }
+]

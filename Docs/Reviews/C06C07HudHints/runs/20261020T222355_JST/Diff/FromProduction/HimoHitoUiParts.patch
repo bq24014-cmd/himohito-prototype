@@ -1,0 +1,62 @@
+--- a/Assets/Scripts/HimoHitoUiParts.cs
++++ b/Assets/Scripts/HimoHitoUiParts.cs
+@@ -8,8 +8,8 @@
+     /// </summary>
+     public static class HimoHitoUiParts
+     {
+-        // Four text rows plus the 30px gauge, with room inside the felt stitching.
+-        public const float CompactHudHeight = 206f;
++        // Three text rows plus the gauge; keep the content and 12px corners unscaled.
++        public const float CompactHudHeight = 172f;
+ 
+         private const string ResourcePath = "Art/HimoHitoUiParts-v1";
+         private const float AtlasSourceWidth = 1881f;
+@@ -54,6 +54,14 @@
+                 hudAreaStyle.padding = new RectOffset(14, 14, 12, 14);
+             }
+             GUILayout.BeginArea(rect, hudAreaStyle);
++        }
++
++        public static void DrawClothTag(Rect rect)
++        {
++            if (CraftHud == null) { GUI.Box(rect, GUIContent.none); return; }
++            // Reuse the HUD cloth and corner treatment. Crop the middle vertically
++            // for a short tag instead of squeezing all the side stitches into it.
++            DrawSlicedSprite(rect, CraftHud, .10f, 12f, true);
+         }
+ 
+         public static Sprite WoodMountSprite => AtlasSprite(ref woodMountSprite, ButtonRect, "Hook Wooden Mount");
+@@ -269,12 +277,20 @@
+         }
+ 
+         // Nine-slicing keeps the rounded corners intact without stretching them with long labels.
+-        private static void DrawSlicedSprite(Rect target, Sprite sprite, float borderRatio, float borderPixels)
++        private static void DrawSlicedSprite(Rect target, Sprite sprite, float borderRatio, float borderPixels,
++            bool cropClothMiddle = false)
+         {
+             if (target.width <= 0f || target.height <= 0f || sprite == null) return;
+             Rect source = sprite.textureRect;
+             float cut = Mathf.Min(source.width, source.height) * borderRatio;
+             float border = Mathf.Min(borderPixels, Mathf.Min(target.width, target.height) * .5f);
++            float middleHeight = source.height - cut * 2f;
++            if (cropClothMiddle)
++            {
++                float clothScale = (target.width - border * 2f) / (source.width - cut * 2f);
++                middleHeight = Mathf.Min(middleHeight,
++                    (target.height - border * 2f) / Mathf.Max(.001f, clothScale));
++            }
+             for (int row = 0; row < 3; row++)
+             for (int column = 0; column < 3; column++)
+             {
+@@ -282,6 +298,11 @@
+                 float sy = row == 0 ? 0f : row == 1 ? cut : source.height - cut;
+                 float sw = column == 1 ? source.width - cut * 2f : cut;
+                 float sh = row == 1 ? source.height - cut * 2f : cut;
++                if (row == 1 && cropClothMiddle)
++                {
++                    sy = (source.height - middleHeight) * .5f;
++                    sh = middleHeight;
++                }
+                 float dx = column == 0 ? 0f : column == 1 ? border : target.width - border;
+                 float dy = row == 0 ? 0f : row == 1 ? border : target.height - border;
+                 float dw = column == 1 ? target.width - border * 2f : border;

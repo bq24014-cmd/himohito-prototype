@@ -1,0 +1,310 @@
+{
+  "runtime": "Unity 6000.3.21f1 frozen non-Development Player + recompiled managed overlay, NOT a new Unity Build",
+  "candidate_assembly_sha256": "d7190448b6f0cd9d0179fd7ff9673550d6aaf5f7512f36a84563509f0666115f",
+  "comparison_assembly_sha256": "8fa8f7d044151b16e5d1f45ce3b19f1a3a85be9bc6b8cfd8484629485c8a3531",
+  "previous_rejected_original_assembly_sha256": "cc06590933736bd9f8ec419349d1b692f6a44f434d5706ba7f5192268e7181f6",
+  "exe_sha256": "837986201d89be25426b8415cb3bc945f077e5b13f4722d6763d04ebd38c5472",
+  "matrix": [
+    {
+      "scene": "Tutorial",
+      "resolution": [
+        1600,
+        900
+      ],
+      "checks": [
+        "PASS help opens and pauses",
+        "PASS help closes and resumes hint",
+        "PASS pause state and menu",
+        "PASS help returns to paused state",
+        "PASS pause resumes hint",
+        "PASS native attachment for connected HUD row"
+      ],
+      "left_height_before": 206,
+      "left_height_after": 172,
+      "connected_and_detached_height_constant": true,
+      "hint": {
+        "serializedVersion": "2",
+        "x": 1278.9200439453125,
+        "y": 18.0,
+        "width": 303.0799865722656,
+        "height": 51.90999984741211
+      },
+      "font_size": 20,
+      "same_state": {
+        "root": true,
+        "velocity": true,
+        "camera": true,
+        "remaining": true,
+        "selected": true,
+        "timeScale": true,
+        "attached": true,
+        "help": true,
+        "overlay": true
+      },
+      "help_pause_comparison": [
+        {
+          "phase": "02_Help",
+          "full_max_channel_delta": 0,
+          "full_different_pixels": 0,
+          "excluded_changed_left_hud": false,
+          "outside_changed_region_max_channel_delta": 0,
+          "within_1_of_255": true
+        },
+        {
+          "phase": "04_Pause",
+          "full_max_channel_delta": 128,
+          "full_different_pixels": 54585,
+          "excluded_changed_left_hud": true,
+          "outside_changed_region_max_channel_delta": 0,
+          "within_1_of_255": true
+        },
+        {
+          "phase": "05_HelpFromPause",
+          "full_max_channel_delta": 0,
+          "full_different_pixels": 0,
+          "excluded_changed_left_hud": true,
+          "outside_changed_region_max_channel_delta": 0,
+          "within_1_of_255": true
+        },
+        {
+          "phase": "06_BackToPause",
+          "full_max_channel_delta": 128,
+          "full_different_pixels": 54585,
+          "excluded_changed_left_hud": true,
+          "outside_changed_region_max_channel_delta": 0,
+          "within_1_of_255": true
+        }
+      ]
+    },
+    {
+      "scene": "Tutorial",
+      "resolution": [
+        1280,
+        720
+      ],
+      "checks": [
+        "PASS help opens and pauses",
+        "PASS help closes and resumes hint",
+        "PASS pause state and menu",
+        "PASS help returns to paused state",
+        "PASS pause resumes hint",
+        "PASS native attachment for connected HUD row"
+      ],
+      "left_height_before": 206,
+      "left_height_after": 172,
+      "connected_and_detached_height_constant": true,
+      "hint": {
+        "serializedVersion": "2",
+        "x": 958.9200439453125,
+        "y": 18.0,
+        "width": 303.0799865722656,
+        "height": 51.90999984741211
+      },
+      "font_size": 20,
+      "same_state": {
+        "root": true,
+        "velocity": true,
+        "camera": true,
+        "remaining": true,
+        "selected": true,
+        "timeScale": true,
+        "attached": true,
+        "help": true,
+        "overlay": true
+      },
+      "help_pause_comparison": [
+        {
+          "phase": "02_Help",
+          "full_max_channel_delta": 0,
+          "full_different_pixels": 0,
+          "excluded_changed_left_hud": false,
+          "outside_changed_region_max_channel_delta": 0,
+          "within_1_of_255": true
+        },
+        {
+          "phase": "04_Pause",
+          "full_max_channel_delta": 130,
+          "full_different_pixels": 52721,
+          "excluded_changed_left_hud": true,
+          "outside_changed_region_max_channel_delta": 0,
+          "within_1_of_255": true
+        },
+        {
+          "phase": "05_HelpFromPause",
+          "full_max_channel_delta": 0,
+          "full_different_pixels": 0,
+          "excluded_changed_left_hud": true,
+          "outside_changed_region_max_channel_delta": 0,
+          "within_1_of_255": true
+        },
+        {
+          "phase": "06_BackToPause",
+          "full_max_channel_delta": 130,
+          "full_different_pixels": 52721,
+          "excluded_changed_left_hud": true,
+          "outside_changed_region_max_channel_delta": 0,
+          "within_1_of_255": true
+        }
+      ]
+    },
+    {
+      "scene": "MainStage",
+      "resolution": [
+        1600,
+        900
+      ],
+      "checks": [
+        "PASS help opens and pauses",
+        "PASS help closes and resumes hint",
+        "PASS pause state and menu",
+        "PASS help returns to paused state",
+        "PASS pause resumes hint",
+        "PASS native attachment for connected HUD row"
+      ],
+      "left_height_before": 206,
+      "left_height_after": 172,
+      "connected_and_detached_height_constant": true,
+      "hint": {
+        "serializedVersion": "2",
+        "x": 1278.9200439453125,
+        "y": 18.0,
+        "width": 303.0799865722656,
+        "height": 51.90999984741211
+      },
+      "font_size": 20,
+      "same_state": {
+        "root": true,
+        "velocity": true,
+        "camera": true,
+        "remaining": true,
+        "selected": true,
+        "timeScale": true,
+        "attached": true,
+        "help": true,
+        "overlay": true
+      },
+      "help_pause_comparison": [
+        {
+          "phase": "02_Help",
+          "full_max_channel_delta": 0,
+          "full_different_pixels": 0,
+          "excluded_changed_left_hud": false,
+          "outside_changed_region_max_channel_delta": 0,
+          "within_1_of_255": true
+        },
+        {
+          "phase": "04_Pause",
+          "full_max_channel_delta": 98,
+          "full_different_pixels": 55159,
+          "excluded_changed_left_hud": true,
+          "outside_changed_region_max_channel_delta": 0,
+          "within_1_of_255": true
+        },
+        {
+          "phase": "05_HelpFromPause",
+          "full_max_channel_delta": 0,
+          "full_different_pixels": 0,
+          "excluded_changed_left_hud": true,
+          "outside_changed_region_max_channel_delta": 0,
+          "within_1_of_255": true
+        },
+        {
+          "phase": "06_BackToPause",
+          "full_max_channel_delta": 98,
+          "full_different_pixels": 55159,
+          "excluded_changed_left_hud": true,
+          "outside_changed_region_max_channel_delta": 0,
+          "within_1_of_255": true
+        }
+      ]
+    },
+    {
+      "scene": "MainStage",
+      "resolution": [
+        1280,
+        720
+      ],
+      "checks": [
+        "PASS help opens and pauses",
+        "PASS help closes and resumes hint",
+        "PASS pause state and menu",
+        "PASS help returns to paused state",
+        "PASS pause resumes hint",
+        "PASS native attachment for connected HUD row"
+      ],
+      "left_height_before": 206,
+      "left_height_after": 172,
+      "connected_and_detached_height_constant": true,
+      "hint": {
+        "serializedVersion": "2",
+        "x": 958.9200439453125,
+        "y": 18.0,
+        "width": 303.0799865722656,
+        "height": 51.90999984741211
+      },
+      "font_size": 20,
+      "same_state": {
+        "root": true,
+        "velocity": true,
+        "camera": true,
+        "remaining": true,
+        "selected": true,
+        "timeScale": true,
+        "attached": true,
+        "help": true,
+        "overlay": true
+      },
+      "help_pause_comparison": [
+        {
+          "phase": "02_Help",
+          "full_max_channel_delta": 0,
+          "full_different_pixels": 0,
+          "excluded_changed_left_hud": false,
+          "outside_changed_region_max_channel_delta": 0,
+          "within_1_of_255": true
+        },
+        {
+          "phase": "04_Pause",
+          "full_max_channel_delta": 98,
+          "full_different_pixels": 52934,
+          "excluded_changed_left_hud": true,
+          "outside_changed_region_max_channel_delta": 0,
+          "within_1_of_255": true
+        },
+        {
+          "phase": "05_HelpFromPause",
+          "full_max_channel_delta": 0,
+          "full_different_pixels": 0,
+          "excluded_changed_left_hud": true,
+          "outside_changed_region_max_channel_delta": 0,
+          "within_1_of_255": true
+        },
+        {
+          "phase": "06_BackToPause",
+          "full_max_channel_delta": 98,
+          "full_different_pixels": 52934,
+          "excluded_changed_left_hud": true,
+          "outside_changed_region_max_channel_delta": 0,
+          "within_1_of_255": true
+        }
+      ]
+    }
+  ],
+  "source_methods_preserved": [
+    "Update",
+    "OpenHelp",
+    "CloseHelp",
+    "ApplyPauseState",
+    "DrawHelpScreen",
+    "DrawHelpRow",
+    "DrawPauseScreen",
+    "ReturnToTitle",
+    "DrawVolumeRow"
+  ],
+  "begin_hud_area_unchanged": true,
+  "os_keys": "Not performed this revision; previous list_apps timeout retained as an environment limitation. API results are not OS-key results.",
+  "human_readability": "Awaiting Human Review",
+  "cloth_asset": "Art/HimoHitoCraftHudPanel-v1, existing processed Sprite and nine-slice renderer",
+  "geometry": "12px corners preserved; short tag crops the middle UV vertically instead of compressing the whole side seam",
+  "local_padding_iteration": "An initial 164px left frame was judged tight in self-review; final172px only is submitted. Initial captures retained locally."
+}
