@@ -1,0 +1,28 @@
+{
+  "control_frames_identical": {
+    "02_S4_Normal": true,
+    "03_S1_Normal": true
+  },
+  "normal_s5_changed_pixels": 1400,
+  "normal_s5_diff_bounds_xyxy": [
+    1203,
+    256,
+    1265,
+    296
+  ],
+  "equal_scale_crop": {
+    "source_pixel_size": [
+      200,
+      160
+    ],
+    "display_scale": 3,
+    "method": "nearest crop; no repainting; external caption only"
+  },
+  "preview_jpeg": true,
+  "original_png_retained_locally": true,
+  "video_seconds": 6.24,
+  "video_fps": 25,
+  "video_capture_clock": 50,
+  "video_every_n_frames": 2,
+  "video_automatic_input": true
+}

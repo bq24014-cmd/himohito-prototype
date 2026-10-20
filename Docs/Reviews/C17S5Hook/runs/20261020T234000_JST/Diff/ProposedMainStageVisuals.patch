@@ -1,0 +1,25 @@
+--- a/Assets/Scripts/MainStageVisuals.cs
++++ b/Assets/Scripts/MainStageVisuals.cs
+@@ -157,7 +157,21 @@
+                 }
+             }
+ 
+-            return changed;
++            changed |= HideSectionFiveLightBackingOverlap();
++            return changed;
++        }
++
++        private static bool HideSectionFiveLightBackingOverlap()
++        {
++            // The disabled light-source box inherits a floor covering. Its wood
++            // overlaps the common S5 ring/mount; it is not a second hook design.
++            // Omit only that redundant cover, leaving the light and physics intact.
++            GameObject source = FindSceneObject(MainStageSectionFiveSetup.LightMountName);
++            Transform cover = source != null ? source.transform.Find("Craft Wood Body") : null;
++            if (cover == null || !cover.TryGetComponent(out Renderer renderer) ||
++                renderer.forceRenderingOff) return false;
++            renderer.forceRenderingOff = true;
++            return true;
+         }
+ 
+         public static void RestoreSceneVisualsAfterReload()

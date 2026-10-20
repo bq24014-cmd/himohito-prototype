@@ -1,0 +1,19 @@
+{
+  "checked_at": "2026-10-20T23:41:56+09:00",
+  "production_head": "0130f68488fcbde83c2f83dc72acd7adeaba4dee",
+  "branch": "main",
+  "staged": [],
+  "status": [
+    "M Assets/Scenes/MainStage.unity",
+    " M Docs/LEARNING_LOG.md",
+    " M Docs/QA/MainStageCleanReproduction_20261001/Evidence/DeterministicSceneSync/ExeA.log",
+    " M Docs/QA/MainStageCleanReproduction_20261001/Evidence/DeterministicSceneSync/ExeB.log",
+    " M README.md"
+  ],
+  "protected_files": 253,
+  "all_protected_hashes_equal": true,
+  "prior_proof_dlls_equal": true,
+  "production_changes_by_this_task": false,
+  "deleted_files": false,
+  "full_project_or_library_copy": false
+}

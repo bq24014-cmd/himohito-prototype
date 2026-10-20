@@ -1,0 +1,18 @@
+C17 Compile確認要約（生ログではない）
+
+Unity 6000.3.21f1付属のnetcorerunとRoslyn cscを使用。
+既存のUnity生成rspから参照assemblyとdefineを再利用。
+Production Runtime Source 119本 + 隔離撮影／手動開始fixture。
+CandidateのみMainStageVisuals.csを隔離修正版へ置換。
+
+Baseline: Compile成功
+Candidate: Compile成功
+両版に既存CS0649警告4件。実行時Error/Exceptionは両版0。
+
+PrototypeRunController.startFromSectionFourForDevelopment
+MainStageRespawnOnFall.startNearGoalForEndingPreview
+MainStageRespawnOnFall.startWithPartDPreview
+StageCatalog.Data.stages
+
+DLLのSHA256と実行方式はExecutionManifest.jsonを参照。
+これは既存Playerへのmanaged overlayであり、新規Unity Build成功ではない。

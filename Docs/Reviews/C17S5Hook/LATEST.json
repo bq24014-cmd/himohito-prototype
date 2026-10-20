@@ -1,0 +1,25 @@
+{
+  "review_id": "C17S5Hook-20261020T234000_JST",
+  "updated_at": "2026-10-20T23:41:56+09:00",
+  "time_zone": "Asia/Tokyo",
+  "proof": "C17S5HookProof_20261020",
+  "revision": "isolated-candidate-1",
+  "production_head": "0130f68488fcbde83c2f83dc72acd7adeaba4dee",
+  "status": "Humanレビュー待ち",
+  "report": "Docs/Reviews/C17S5Hook/runs/20261020T234000_JST/Report.md",
+  "launch": "Docs/Reviews/C17S5Hook/runs/20261020T234000_JST/Launch.md",
+  "images": "Docs/Reviews/C17S5Hook/runs/20261020T234000_JST/Images",
+  "qa": "Docs/Reviews/C17S5Hook/runs/20261020T234000_JST/QA",
+  "video": "Docs/Reviews/C17S5Hook/runs/20261020T234000_JST/Video/C17_Comparison_NormalSpeed.mp4",
+  "production_integrated": false,
+  "human_adoption": "未承認",
+  "unconfirmed": [
+    "OS実キー",
+    "Human Visual採否・操作感",
+    "音",
+    "全区間通し",
+    "新規Unity Build／Editor Play"
+  ],
+  "execution": "existing non-Development Unity Player + managed overlay; not a new Unity Build",
+  "c18": "HOLD; aim assist not implemented"
+}

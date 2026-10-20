@@ -1,0 +1,92 @@
+using System;
+using System.IO;
+using System.Linq;
+using System.Collections;
+using System.Collections.Generic;
+using System.Reflection;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using HimoHito;
+
+[DefaultExecutionOrder(30000)]
+public sealed class GroundingReview:MonoBehaviour
+{
+    const BindingFlags Hidden=BindingFlags.Instance|BindingFlags.NonPublic;
+    static string Arg(string key,string fallback=""){var a=Environment.GetCommandLineArgs();for(int i=0;i<a.Length-1;i++)if(a[i]==key)return a[i+1];return fallback;}
+    static bool Audit=>Arg("-c17Audit")=="1";
+    static bool QA=>Arg("-c17QA")=="1";
+    static void Set(object o,string n,object v)=>o.GetType().GetField(n,Hidden).SetValue(o,v);
+    static object Call(object o,string n)=>o.GetType().GetMethod(n,Hidden|BindingFlags.Public).Invoke(o,null);
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
+    static void Boot(){Application.runInBackground=true;if(Audit||QA){Time.captureFramerate=50;UnityEngine.Random.InitState(17020);}SceneManager.sceneLoaded+=(s,m)=>{if(s.name=="Tutorial"){SceneManager.LoadScene("MainStage");return;}if(s.name=="MainStage"&&!FindFirstObjectByType<GroundingReview>())new GameObject("C17 isolated audit fixture").AddComponent<GroundingReview>();};}
+    [Serializable]public class Part{public string path,kind,sprite,texture,material,layer;public int spriteId,textureId,order;public bool enabled,active,forceOff;public Vector3 position,scale,localPosition,localScale,rotation,boundsCenter,boundsSize;public Color color;}
+    [Serializable]public class Hook{public string name;public Vector3 position,scale;public Vector2 anchor,colliderSize,colliderOffset;public bool colliderEnabled,trigger;public List<Part> parts;}
+    [Serializable]public class View{public string phase,hook;public Vector2 player,velocity;public Vector3 camera,hookScreen;public float ortho,pixelsPerWorldUnit,remaining,selected;public bool attached;public List<Part> overlaps;}
+    [Serializable]public class State{public string phase;public Vector2 root,velocity,anchor;public Vector3 camera;public float remaining,selected,alpha,input,distance;public bool grounded,attached,blocked;public int bridges;}
+    [Serializable]public class Contract{public string name;public Vector3 position,scale;public Vector2 anchor,size,offset;public bool collider,trigger;}
+    [Serializable]public class Report{public string method="Diagnostic initial placement; native E/Q/R APIs; automatic A/D through moveInput for existing PlayerMover. NOT OS keys or Human play.",unity,variant;public bool development,finished,tautAirborneObserved;public int errors;public List<Hook> hooks=new List<Hook>(),reloadHooks=new List<Hook>();public List<View> views=new List<View>();public List<Part> lightMountParts=new List<Part>(),reloadLightParts=new List<Part>();public List<Contract> contracts=new List<Contract>(),reloadContracts=new List<Contract>();public List<State> states=new List<State>(),trace=new List<State>();public List<string> operations=new List<string>();}
+    Rigidbody2D body;PlayerMover mover;RopeController rope;RopeResource resource;RopePlatformBuilder builder;MainStageRespawnOnFall run;Report report;string output;Vector2 originalStart;
+    static Report previousReport;static bool reloaded;float drive;bool recording;int videoFrame;string phaseName="setup";
+    void Log(string msg,string stack,LogType t){if(t==LogType.Error||t==LogType.Exception||t==LogType.Assert){report.errors++;File.AppendAllText(Path.Combine(output,"Errors.txt"),msg+"\n"+stack+"\n");}}
+    IEnumerator Start()
+    {
+        yield return null;yield return null;
+        mover=FindFirstObjectByType<PlayerMover>();body=mover.GetComponent<Rigidbody2D>();rope=body.GetComponent<RopeController>();resource=body.GetComponent<RopeResource>();builder=body.GetComponent<RopePlatformBuilder>();run=FindFirstObjectByType<MainStageRespawnOnFall>();originalStart=body.position;
+        var preview=FindFirstObjectByType<MainStagePreview>();if(preview){Call(preview,"RestoreState");preview.enabled=false;}
+        builder.ClearPlatforms();resource.RestoreCapacityAndCurrent(50,45);rope.RestoreSelectedRopeLength(6);Place(new Vector2(93.6f,-.045f),5);run.TryReachSection(5,body.position,45);Set(run,"checkpointPosition",body.position);Call(run,"CaptureCheckpointState");
+        if(!Audit&&!QA){Debug.Log("C17_MANUAL_READY: S5 left rail / remaining45 / length6 / no automatic input,capture,clock or exit");yield break;}
+        output=Arg("-c17Output");Directory.CreateDirectory(output);report=previousReport??new Report{unity=Application.unityVersion,development=Debug.isDebugBuild,variant=Arg("-c17Variant","Audit")};Application.logMessageReceived+=Log;
+        yield return new WaitForSeconds(.8f);
+        if(reloaded){report.reloadHooks=Hooks();report.reloadLightParts=LightParts();report.reloadContracts=Contracts();phaseName="reload";yield return Shot("09_S5_Reload",MainStageSectionFiveSetup.CentralHookName);report.states.Add(ReadState("Reload"));Finish();yield break;}
+        report.hooks=Hooks();report.lightMountParts=LightParts();report.contracts=Contracts();
+        yield return Shot("01_S5_Normal",MainStageSectionFiveSetup.CentralHookName);
+        Place(new Vector2(69.2f,-.045f),4);yield return new WaitForSeconds(.5f);yield return Shot("02_S4_Normal",MainStageSectionFourSetup.FarHookName);
+        Place(originalStart,1);yield return new WaitForSeconds(.5f);
+        var s1=FindObjectsByType<HookPoint>(FindObjectsSortMode.None).Where(x=>x.GetComponentInChildren<HimoHitoHookRingVisual>()&&x.transform.position.x<25).OrderBy(x=>Vector2.Distance(x.transform.position,body.position)).First();
+        yield return Shot("03_S1_Normal",s1.name);
+        if(!QA){Finish();yield break;}
+        Place(new Vector2(93.6f,-.045f),5);yield return new WaitForSeconds(.5f);phaseName="before bridge";report.states.Add(ReadState("Unblocked"));
+        Directory.CreateDirectory(Path.Combine(output,"VideoFrames"));recording=true;StartCoroutine(Video());
+        bool green=rope.TryAttach(MainStageSectionFiveSetup.BridgeEndHookPosition);bool built=green&&builder.TryBuildCurrentPlatform();report.operations.Add("Native E green="+green+" Q6="+built);Check(green&&built,"native Q6 generated");
+        phaseName="bridge blocked light";yield return new WaitForSeconds(.8f);yield return Shot("04_S5_Q_Blocked",MainStageSectionFiveSetup.CentralHookName);report.states.Add(ReadState("Blocked"));Check(FindFirstObjectByType<PlatformOccludedLightHazard>().IsBlocked,"generated bridge blocks light");
+        phaseName="automatic D across bridge";drive=1f;float until=Time.time+4f;while(body.position.x<100.2f&&Time.time<until)yield return null;drive=0;yield return new WaitForSeconds(.4f);Check(mover.IsGrounded&&body.position.x>99.5f&&body.position.x<102.5f,"walk reached right shelf");
+        rope.RestoreSelectedRopeLength(7);Set(rope,"keyboardAimDirection",(MainStageSectionFiveSetup.CentralHookPosition-body.position).normalized);bool blue=rope.TryAttach(MainStageSectionFiveSetup.CentralHookPosition);report.operations.Add("Native E blue="+blue+" anchor="+rope.AnchorPoint);Check(blue,"native E S5 blue");
+        phaseName="attached S5 blue";yield return new WaitForSeconds(.4f);yield return Shot("05_S5_E_Blue",MainStageSectionFiveSetup.CentralHookName);report.states.Add(ReadState("Blue attached"));
+        phaseName="automatic D swing";drive=1f;yield return new WaitForSeconds(2f);drive=0;yield return new WaitForSeconds(.3f);yield return Shot("06_S5_Swing",MainStageSectionFiveSetup.CentralHookName);report.states.Add(ReadState("Swing"));Check(report.tautAirborneObserved,"airborne taut swing observed");
+        phaseName="native detach";rope.DetachAndRefund(true);yield return new WaitForSeconds(.2f);yield return Shot("07_S5_Released",MainStageSectionFiveSetup.CentralHookName);report.states.Add(ReadState("Detached"));Check(!rope.IsAttached,"native detach");
+        phaseName="native R";Call(run,"RestartFromCheckpoint");yield return new WaitForSeconds(.8f);yield return Shot("08_S5_R",MainStageSectionFiveSetup.CentralHookName);report.states.Add(ReadState("R"));Check(!rope.IsAttached&&builder.GeneratedPlatformCount==0&&resource.CurrentLength==45&&rope.SelectedRopeLength==6,"native R restores checkpoint");
+        recording=false;yield return null;previousReport=report;reloaded=true;SceneManager.LoadScene("MainStage");
+    }
+    void Update(){if(QA&&mover)Set(mover,"moveInput",drive);}
+    void FixedUpdate(){if(!QA||report==null||!body)return;var s=ReadState(phaseName);report.trace.Add(s);if(s.attached&&!s.grounded&&s.distance>=6.9f)report.tautAirborneObserved=true;}
+    State ReadState(string phase){var light=FindFirstObjectByType<PlatformOccludedLightHazard>();return new State{phase=phase,root=body.position,velocity=body.linearVelocity,anchor=rope.AnchorPoint,camera=Camera.main.transform.position,remaining=resource.CurrentLength,selected=rope.SelectedRopeLength,alpha=light?light.GetComponent<SpriteRenderer>().color.a:0,input=mover.MovementInput,distance=Vector2.Distance(body.position,rope.AnchorPoint),grounded=mover.IsGrounded,attached=rope.IsAttached,blocked=light&&light.IsBlocked,bridges=builder.GeneratedPlatformCount};}
+    void Check(bool ok,string message){report.operations.Add((ok?"PASS ":"FAIL ")+message);if(!ok)report.errors++;}
+    void Finish(){report.finished=true;File.WriteAllText(Path.Combine(output,QA?"Result.json":"Audit.json"),JsonUtility.ToJson(report,true));Debug.Log("C17_FINISHED errors="+report.errors);Application.Quit(report.errors==0?0:2);}
+    IEnumerator Video(){while(recording){yield return new WaitForEndOfFrame();if(!recording)yield break;if(videoFrame%2==0){var im=ScreenCapture.CaptureScreenshotAsTexture();File.WriteAllBytes(Path.Combine(output,"VideoFrames",(videoFrame/2).ToString("D5")+".jpg"),im.EncodeToJPG(82));Destroy(im);}videoFrame++;}}
+    List<Hook> Hooks()=>FindObjectsByType<HookPoint>(FindObjectsSortMode.None).Where(x=>x.GetComponentInChildren<HimoHitoHookRingVisual>()).OrderBy(x=>x.transform.position.x).Select(Snapshot).ToList();
+    List<Part> LightParts()=>GameObject.Find(MainStageSectionFiveSetup.LightMountName).GetComponentsInChildren<Renderer>(true).Select(PartOf).ToList();
+    List<Contract> Contracts(){var names=new[]{MainStageSectionFiveSetup.LeftShelfName,MainStageSectionFiveSetup.RightShelfName,MainStageSectionFiveSetup.CentralHookName,MainStageSectionFiveSetup.BridgeStartHookName,MainStageSectionFiveSetup.BridgeEndHookName,MainStageSectionFiveSetup.LightMountName,MainStageSectionFiveSetup.LightSpotName,MainStageSectionFiveSetup.LightOcclusionOriginName,MainStageSectionFiveSetup.LandingName};return names.Select(GameObject.Find).Select(g=>{var c=g.GetComponent<Collider2D>();var box=c as BoxCollider2D;var h=g.GetComponent<HookPoint>();return new Contract{name=g.name,position=g.transform.position,scale=g.transform.lossyScale,anchor=h?h.GetAttachmentPoint(Vector2.zero):Vector2.zero,size=box?box.size:Vector2.zero,offset=c?c.offset:Vector2.zero,collider=c&&c.enabled,trigger=c&&c.isTrigger};}).ToList();}
+    void Place(Vector2 position,int section)
+    {
+        rope.DetachAndRefund();body.position=position;body.transform.position=new Vector3(position.x,position.y,0);body.linearVelocity=Vector2.zero;body.angularVelocity=0;
+        Set(mover,"previousPhysicsPosition",position);Set(mover,"hasPreviousPhysicsPosition",true);Set(mover,"hasPreviousVerticalSpeed",false);Set(run,"<CurrentSection>k__BackingField",section);
+        Physics2D.SyncTransforms();Camera.main.GetComponent<HorizontalCameraFollow>().ResetFraming();
+    }
+    Hook Snapshot(HookPoint hook)
+    {
+        var c=hook.GetComponent<BoxCollider2D>();return new Hook{name=hook.name,position=hook.transform.position,scale=hook.transform.lossyScale,anchor=hook.GetAttachmentPoint(Vector2.zero),colliderSize=c?c.size:Vector2.zero,colliderOffset=c?c.offset:Vector2.zero,colliderEnabled=c&&c.enabled,trigger=c&&c.isTrigger,parts=hook.GetComponentsInChildren<Renderer>(true).Select(PartOf).ToList()};
+    }
+    Part PartOf(Renderer renderer)
+    {
+        var s=renderer as SpriteRenderer;var sprite=s?s.sprite:null;Texture tex=sprite?sprite.texture:renderer.sharedMaterial?renderer.sharedMaterial.mainTexture:null;return new Part{path=PathOf(renderer.transform),kind=renderer.GetType().Name,sprite=sprite?sprite.name:"",texture=tex?tex.name:"",spriteId=sprite?sprite.GetInstanceID():0,textureId=tex?tex.GetInstanceID():0,material=renderer.sharedMaterial?renderer.sharedMaterial.name:"",layer=renderer.sortingLayerName,order=renderer.sortingOrder,enabled=renderer.enabled,active=renderer.gameObject.activeInHierarchy,forceOff=renderer.forceRenderingOff,position=renderer.transform.position,scale=renderer.transform.lossyScale,localPosition=renderer.transform.localPosition,localScale=renderer.transform.localScale,rotation=renderer.transform.eulerAngles,boundsCenter=renderer.bounds.center,boundsSize=renderer.bounds.size,color=s?s.color:Color.white};
+    }
+    IEnumerator Shot(string phase,string hookName)
+    {
+        yield return new WaitForEndOfFrame();var hook=GameObject.Find(hookName);var ring=hook.GetComponentInChildren<HimoHitoHookRingVisual>().GetComponent<SpriteRenderer>();
+        var around=new Bounds(ring.bounds.center,new Vector3(2.2f,2.2f,100));
+        report.views.Add(new View{phase=phase,hook=hookName,player=body.position,velocity=body.linearVelocity,camera=Camera.main.transform.position,ortho=Camera.main.orthographicSize,pixelsPerWorldUnit=Screen.height/(2*Camera.main.orthographicSize),hookScreen=Camera.main.WorldToScreenPoint(ring.bounds.center),remaining=resource.CurrentLength,selected=rope.SelectedRopeLength,attached=rope.IsAttached,overlaps=Resources.FindObjectsOfTypeAll<Renderer>().Where(x=>x.gameObject.scene.name=="MainStage"&&x.enabled&&x.gameObject.activeInHierarchy&&around.Intersects(x.bounds)).Select(PartOf).ToList()});
+        var image=ScreenCapture.CaptureScreenshotAsTexture();File.WriteAllBytes(Path.Combine(output,phase+".png"),image.EncodeToPNG());Destroy(image);
+    }
+    static string PathOf(Transform t)=>t.parent?PathOf(t.parent)+"/"+t.name:t.name;
+    void OnDestroy(){Application.logMessageReceived-=Log;}
+}

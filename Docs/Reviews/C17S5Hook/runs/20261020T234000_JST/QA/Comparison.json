@@ -1,0 +1,240 @@
+{
+  "method": "Diagnostic initial placement; native E/Q/R APIs; automatic A/D through moveInput for existing PlayerMover. NOT OS keys or Human play.",
+  "execution": "Unity 6000.3.21f1 non-Development existing Player + newly compiled managed overlay; NOT new Unity Build, NOT Editor Play, NOT OS keys",
+  "completed": true,
+  "baseline_errors": 0,
+  "candidate_errors": 0,
+  "trace_samples": 471,
+  "exact_comparisons": {
+    "hooks": [],
+    "reloadHooks": [],
+    "contracts": [],
+    "reloadContracts": [],
+    "states": [],
+    "trace": [],
+    "lightMountParts": [
+      "/3/forceOff"
+    ],
+    "reloadLightParts": [
+      "/3/forceOff"
+    ]
+  },
+  "states": [
+    {
+      "phase": "Unblocked",
+      "root": {
+        "x": 93.5999984741211,
+        "y": -0.03499993309378624
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "camera": {
+        "x": 93.5999984741211,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "remaining": 45.0,
+      "selected": 6.0,
+      "alpha": 0.6200000047683716,
+      "input": 0.0,
+      "distance": 93.60000610351562,
+      "grounded": true,
+      "attached": false,
+      "blocked": false,
+      "bridges": 0
+    },
+    {
+      "phase": "Blocked",
+      "root": {
+        "x": 95.75747680664062,
+        "y": -0.19485855102539062
+      },
+      "velocity": {
+        "x": 2.406100207963391e-09,
+        "y": 1.791972792375418e-09
+      },
+      "anchor": {
+        "x": 99.5,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 95.75503540039062,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "remaining": 39.0,
+      "selected": 6.0,
+      "alpha": 0.07999999821186066,
+      "input": 0.0,
+      "distance": 3.770097255706787,
+      "grounded": true,
+      "attached": false,
+      "blocked": true,
+      "bridges": 1
+    },
+    {
+      "phase": "Blue attached",
+      "root": {
+        "x": 100.55937194824219,
+        "y": -2.5270047187805176
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": -11.237509727478027
+      },
+      "anchor": {
+        "x": 102.0,
+        "y": 2.950000047683716
+      },
+      "camera": {
+        "x": 100.55848693847656,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "remaining": 39.0,
+      "selected": 7.0,
+      "alpha": 0.07999999821186066,
+      "input": 0.0,
+      "distance": 5.663302421569824,
+      "grounded": false,
+      "attached": true,
+      "blocked": true,
+      "bridges": 1
+    },
+    {
+      "phase": "Swing",
+      "root": {
+        "x": 106.72003173828125,
+        "y": -2.2192625999450684
+      },
+      "velocity": {
+        "x": -8.591706275939941,
+        "y": -8.40356159210205
+      },
+      "anchor": {
+        "x": 102.0,
+        "y": 2.950000047683716
+      },
+      "camera": {
+        "x": 107.84033966064453,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "remaining": 39.0,
+      "selected": 7.0,
+      "alpha": 0.07999999821186066,
+      "input": 0.0,
+      "distance": 6.999998569488525,
+      "grounded": false,
+      "attached": true,
+      "blocked": true,
+      "bridges": 1
+    },
+    {
+      "phase": "Detached",
+      "root": {
+        "x": 104.84114837646484,
+        "y": -4.779023170471191
+      },
+      "velocity": {
+        "x": -8.497759819030762,
+        "y": -14.318526268005371
+      },
+      "anchor": {
+        "x": 102.0,
+        "y": 2.950000047683716
+      },
+      "camera": {
+        "x": 106.38481140136719,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "remaining": 39.0,
+      "selected": 7.0,
+      "alpha": 0.07999999821186066,
+      "input": 0.0,
+      "distance": 8.234678268432617,
+      "grounded": false,
+      "attached": false,
+      "blocked": true,
+      "bridges": 1
+    },
+    {
+      "phase": "R",
+      "root": {
+        "x": 93.5999984741211,
+        "y": -0.03499993309378624
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 102.0,
+        "y": 2.950000047683716
+      },
+      "camera": {
+        "x": 93.5999984741211,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "remaining": 45.0,
+      "selected": 6.0,
+      "alpha": 0.6200000047683716,
+      "input": 0.0,
+      "distance": 8.9146089553833,
+      "grounded": true,
+      "attached": false,
+      "blocked": false,
+      "bridges": 0
+    },
+    {
+      "phase": "Reload",
+      "root": {
+        "x": 93.5999984741211,
+        "y": -0.03499993309378624
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "camera": {
+        "x": 93.5999984741211,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "remaining": 45.0,
+      "selected": 6.0,
+      "alpha": 0.6200000047683716,
+      "input": 0.0,
+      "distance": 93.60000610351562,
+      "grounded": true,
+      "attached": false,
+      "blocked": false,
+      "bridges": 0
+    }
+  ],
+  "operations": [
+    "Native E green=True Q6=True",
+    "PASS native Q6 generated",
+    "PASS generated bridge blocks light",
+    "PASS walk reached right shelf",
+    "Native E blue=True anchor=(102.00, 2.95)",
+    "PASS native E S5 blue",
+    "PASS airborne taut swing observed",
+    "PASS native detach",
+    "PASS native R restores checkpoint"
+  ],
+  "baseline_managed_sha256": "8ce0d65aace26f6d75bd4b414d13c4e331426acff67baa86b450cccb65eae4a9",
+  "candidate_managed_sha256": "08407c5ea940d1071dc55c70984223cdc6273a51fa9b1d913272ee8fe51c0390"
+}

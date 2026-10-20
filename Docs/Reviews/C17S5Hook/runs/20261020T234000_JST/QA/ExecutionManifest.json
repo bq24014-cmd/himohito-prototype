@@ -1,0 +1,23 @@
+{
+  "production_head": "0130f68488fcbde83c2f83dc72acd7adeaba4dee",
+  "unity": "6000.3.21f1",
+  "source_count": 119,
+  "execution": "existing non-Development Player + newly compiled managed overlay",
+  "new_unity_build": false,
+  "editor_play": false,
+  "os_keys": false,
+  "human_play": false,
+  "host": "C06C07ProductionIntegrationQA_20261020/Runtime (existing serialized Player data)",
+  "exe_sha256": "837986201d89be25426b8415cb3bc945f077e5b13f4722d6763d04ebd38c5472",
+  "candidate_dll_sha256": "08407c5ea940d1071dc55c70984223cdc6273a51fa9b1d913272ee8fe51c0390",
+  "baseline_dll_sha256": "8ce0d65aace26f6d75bd4b414d13c4e331426acff67baa86b450cccb65eae4a9",
+  "fixture_sha256": "f76fef3eaa07894b766d8454b00552796fac4a5b27c38a4c1df7c5f758f7b28b",
+  "modified_isolated_source": [
+    "MainStageVisuals.cs"
+  ],
+  "automatic_capture_flags": [
+    "-c17QA 1",
+    "-c17Audit 1"
+  ],
+  "manual_capture_flags": []
+}
