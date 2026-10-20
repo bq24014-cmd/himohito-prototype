@@ -1,0 +1,311 @@
+{
+  "runtime": "Unity 6000.3.21f1 non-Development frozen Player with recompiled managed overlay; NOT new Unity Build",
+  "compile": "Baseline/Candidate compile succeeded; four pre-existing CS0649 warnings each",
+  "candidate_assembly_sha256": "cc06590933736bd9f8ec419349d1b692f6a44f434d5706ba7f5192268e7181f6",
+  "baseline_assembly_sha256": "4576e7b4280b2b57934e802912720484b29145f71fe01a290d1d7c36ae116e16",
+  "exe_sha256": "837986201d89be25426b8415cb3bc945f077e5b13f4722d6763d04ebd38c5472",
+  "ui_results": [
+    {
+      "scene": "Tutorial",
+      "width": 1600,
+      "height": 900,
+      "api_checks": [
+        "PASS help opens and pauses",
+        "PASS help closes and resumes hint",
+        "PASS pause state and menu",
+        "PASS help returns to paused state",
+        "PASS pause resumes hint"
+      ],
+      "layout_pass": true,
+      "unchanged_state": {
+        "root": true,
+        "velocity": true,
+        "camera": true,
+        "remaining": true,
+        "selected": true,
+        "timeScale": true,
+        "help": true,
+        "overlay": true
+      },
+      "help_pause_comparison": {
+        "02_Help": {
+          "full_image_max_channel_delta": 1,
+          "full_image_different_pixels": 3,
+          "excluded_only_removed_left_tab_row": false,
+          "remaining_max_channel_delta": 1,
+          "remaining_different_pixels": 3,
+          "same_with_1_of_255_render_tolerance": true
+        },
+        "04_Pause": {
+          "full_image_max_channel_delta": 143,
+          "full_image_different_pixels": 604,
+          "excluded_only_removed_left_tab_row": true,
+          "remaining_max_channel_delta": 1,
+          "remaining_different_pixels": 9,
+          "same_with_1_of_255_render_tolerance": true
+        },
+        "05_HelpFromPause": {
+          "full_image_max_channel_delta": 1,
+          "full_image_different_pixels": 3,
+          "excluded_only_removed_left_tab_row": false,
+          "remaining_max_channel_delta": 1,
+          "remaining_different_pixels": 3,
+          "same_with_1_of_255_render_tolerance": true
+        },
+        "06_BackToPause": {
+          "full_image_max_channel_delta": 143,
+          "full_image_different_pixels": 604,
+          "excluded_only_removed_left_tab_row": true,
+          "remaining_max_channel_delta": 1,
+          "remaining_different_pixels": 9,
+          "same_with_1_of_255_render_tolerance": true
+        }
+      },
+      "left_hud_retained_rows_same_with_1_of_255_render_tolerance": true,
+      "candidate_hint_rect": {
+        "serializedVersion": "2",
+        "x": 1290.9200439453125,
+        "y": 18.0,
+        "width": 291.0799865722656,
+        "height": 43.90999984741211
+      }
+    },
+    {
+      "scene": "Tutorial",
+      "width": 1280,
+      "height": 720,
+      "api_checks": [
+        "PASS help opens and pauses",
+        "PASS help closes and resumes hint",
+        "PASS pause state and menu",
+        "PASS help returns to paused state",
+        "PASS pause resumes hint"
+      ],
+      "layout_pass": true,
+      "unchanged_state": {
+        "root": true,
+        "velocity": true,
+        "camera": true,
+        "remaining": true,
+        "selected": true,
+        "timeScale": true,
+        "help": true,
+        "overlay": true
+      },
+      "help_pause_comparison": {
+        "02_Help": {
+          "full_image_max_channel_delta": 1,
+          "full_image_different_pixels": 2,
+          "excluded_only_removed_left_tab_row": false,
+          "remaining_max_channel_delta": 1,
+          "remaining_different_pixels": 2,
+          "same_with_1_of_255_render_tolerance": true
+        },
+        "04_Pause": {
+          "full_image_max_channel_delta": 144,
+          "full_image_different_pixels": 604,
+          "excluded_only_removed_left_tab_row": true,
+          "remaining_max_channel_delta": 1,
+          "remaining_different_pixels": 9,
+          "same_with_1_of_255_render_tolerance": true
+        },
+        "05_HelpFromPause": {
+          "full_image_max_channel_delta": 1,
+          "full_image_different_pixels": 2,
+          "excluded_only_removed_left_tab_row": false,
+          "remaining_max_channel_delta": 1,
+          "remaining_different_pixels": 2,
+          "same_with_1_of_255_render_tolerance": true
+        },
+        "06_BackToPause": {
+          "full_image_max_channel_delta": 144,
+          "full_image_different_pixels": 604,
+          "excluded_only_removed_left_tab_row": true,
+          "remaining_max_channel_delta": 1,
+          "remaining_different_pixels": 9,
+          "same_with_1_of_255_render_tolerance": true
+        }
+      },
+      "left_hud_retained_rows_same_with_1_of_255_render_tolerance": true,
+      "candidate_hint_rect": {
+        "serializedVersion": "2",
+        "x": 970.9200439453125,
+        "y": 18.0,
+        "width": 291.0799865722656,
+        "height": 43.90999984741211
+      }
+    },
+    {
+      "scene": "MainStage",
+      "width": 1600,
+      "height": 900,
+      "api_checks": [
+        "PASS help opens and pauses",
+        "PASS help closes and resumes hint",
+        "PASS pause state and menu",
+        "PASS help returns to paused state",
+        "PASS pause resumes hint"
+      ],
+      "layout_pass": true,
+      "unchanged_state": {
+        "root": true,
+        "velocity": true,
+        "camera": true,
+        "remaining": true,
+        "selected": true,
+        "timeScale": true,
+        "help": true,
+        "overlay": true
+      },
+      "help_pause_comparison": {
+        "02_Help": {
+          "full_image_max_channel_delta": 1,
+          "full_image_different_pixels": 2,
+          "excluded_only_removed_left_tab_row": false,
+          "remaining_max_channel_delta": 1,
+          "remaining_different_pixels": 2,
+          "same_with_1_of_255_render_tolerance": true
+        },
+        "04_Pause": {
+          "full_image_max_channel_delta": 146,
+          "full_image_different_pixels": 627,
+          "excluded_only_removed_left_tab_row": true,
+          "remaining_max_channel_delta": 1,
+          "remaining_different_pixels": 32,
+          "same_with_1_of_255_render_tolerance": true
+        },
+        "05_HelpFromPause": {
+          "full_image_max_channel_delta": 1,
+          "full_image_different_pixels": 2,
+          "excluded_only_removed_left_tab_row": false,
+          "remaining_max_channel_delta": 1,
+          "remaining_different_pixels": 2,
+          "same_with_1_of_255_render_tolerance": true
+        },
+        "06_BackToPause": {
+          "full_image_max_channel_delta": 146,
+          "full_image_different_pixels": 627,
+          "excluded_only_removed_left_tab_row": true,
+          "remaining_max_channel_delta": 1,
+          "remaining_different_pixels": 32,
+          "same_with_1_of_255_render_tolerance": true
+        }
+      },
+      "left_hud_retained_rows_same_with_1_of_255_render_tolerance": true,
+      "candidate_hint_rect": {
+        "serializedVersion": "2",
+        "x": 1290.9200439453125,
+        "y": 18.0,
+        "width": 291.0799865722656,
+        "height": 43.90999984741211
+      }
+    },
+    {
+      "scene": "MainStage",
+      "width": 1280,
+      "height": 720,
+      "api_checks": [
+        "PASS help opens and pauses",
+        "PASS help closes and resumes hint",
+        "PASS pause state and menu",
+        "PASS help returns to paused state",
+        "PASS pause resumes hint"
+      ],
+      "layout_pass": true,
+      "unchanged_state": {
+        "root": true,
+        "velocity": true,
+        "camera": true,
+        "remaining": true,
+        "selected": true,
+        "timeScale": true,
+        "help": true,
+        "overlay": true
+      },
+      "help_pause_comparison": {
+        "02_Help": {
+          "full_image_max_channel_delta": 1,
+          "full_image_different_pixels": 1,
+          "excluded_only_removed_left_tab_row": false,
+          "remaining_max_channel_delta": 1,
+          "remaining_different_pixels": 1,
+          "same_with_1_of_255_render_tolerance": true
+        },
+        "04_Pause": {
+          "full_image_max_channel_delta": 146,
+          "full_image_different_pixels": 627,
+          "excluded_only_removed_left_tab_row": true,
+          "remaining_max_channel_delta": 1,
+          "remaining_different_pixels": 32,
+          "same_with_1_of_255_render_tolerance": true
+        },
+        "05_HelpFromPause": {
+          "full_image_max_channel_delta": 1,
+          "full_image_different_pixels": 1,
+          "excluded_only_removed_left_tab_row": false,
+          "remaining_max_channel_delta": 1,
+          "remaining_different_pixels": 1,
+          "same_with_1_of_255_render_tolerance": true
+        },
+        "06_BackToPause": {
+          "full_image_max_channel_delta": 146,
+          "full_image_different_pixels": 627,
+          "excluded_only_removed_left_tab_row": true,
+          "remaining_max_channel_delta": 1,
+          "remaining_different_pixels": 32,
+          "same_with_1_of_255_render_tolerance": true
+        }
+      },
+      "left_hud_retained_rows_same_with_1_of_255_render_tolerance": true,
+      "candidate_hint_rect": {
+        "serializedVersion": "2",
+        "x": 970.9200439453125,
+        "y": 18.0,
+        "width": 291.0799865722656,
+        "height": 43.90999984741211
+      }
+    }
+  ],
+  "preserved_methods": [
+    {
+      "method": "void Update()",
+      "unchanged": true
+    },
+    {
+      "method": "void OpenHelp()",
+      "unchanged": true
+    },
+    {
+      "method": "void CloseHelp()",
+      "unchanged": true
+    },
+    {
+      "method": "void ApplyPauseState()",
+      "unchanged": true
+    },
+    {
+      "method": "void DrawHelpScreen()",
+      "unchanged": true
+    },
+    {
+      "method": "void DrawHelpRow(",
+      "unchanged": true
+    },
+    {
+      "method": "void DrawPauseScreen()",
+      "unchanged": true
+    },
+    {
+      "method": "void ReturnToTitle()",
+      "unchanged": true
+    },
+    {
+      "method": "void DrawVolumeRow(",
+      "unchanged": true
+    }
+  ],
+  "os_keys": "UNCONFIRMED: computer-use list_apps timed out once; no repeat and no input sent",
+  "human_readability": "UNCONFIRMED; awaiting Human review",
+  "manual_ready_path": "GroundingReview.Start exits before QA branch when -hudQA is absent",
+  "manual_smoke": "See ManualSmoke.json"
+}

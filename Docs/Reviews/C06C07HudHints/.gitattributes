@@ -1,0 +1,6 @@
+* text=auto eol=lf
+*.jpg -text -filter -diff -merge
+*.json text eol=lf
+*.md text eol=lf
+*.patch text eol=lf -whitespace
+*.txt text eol=lf

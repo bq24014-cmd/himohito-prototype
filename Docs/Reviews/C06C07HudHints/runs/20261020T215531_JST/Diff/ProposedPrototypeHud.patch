@@ -1,0 +1,10 @@
+--- a/Assets/Scripts/PrototypeHud.cs
++++ b/Assets/Scripts/PrototypeHud.cs
+@@ -116,7 +116,6 @@
+                     $"{ropeController.MaximumSelectableRopeLength}" +
+                     (ropeController.IsAttached ? "　接続中" : ""), bodyStyle);
+             }
+-            GUILayout.Label("Tab　操作説明", bodyStyle);
+             GUILayout.EndArea();
+ 
+             DrawWeavePrompt();

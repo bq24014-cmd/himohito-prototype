@@ -1,0 +1,20 @@
+{
+  "review_id": "C06C07HudHints",
+  "run_id": "20261020T215531_JST",
+  "updated_at": "2026-10-20T21:59:29.672950+09:00",
+  "timezone": "Asia/Tokyo",
+  "base_production_head": "d88160da59fd5902222ef68a76a8b74882fafe98",
+  "status": "Human Review待ち",
+  "production_integrated": false,
+  "human_adoption": "未承認",
+  "report": "Docs/Reviews/C06C07HudHints/runs/20261020T215531_JST/Report.md",
+  "images": "Docs/Reviews/C06C07HudHints/runs/20261020T215531_JST/Images",
+  "qa": "Docs/Reviews/C06C07HudHints/runs/20261020T215531_JST/QA",
+  "diff": "Docs/Reviews/C06C07HudHints/runs/20261020T215531_JST/Diff",
+  "launch": "Docs/Reviews/C06C07HudHints/runs/20261020T215531_JST/Launch.md",
+  "unconfirmed": [
+    "OS実キーでのTab/Esc操作",
+    "Humanの読みやすさと画風の採否",
+    "新規Unity Buildは未実施"
+  ]
+}
