@@ -1,0 +1,333 @@
+{
+  "checked_at": "2026-10-21T12:59:28+09:00",
+  "approval_review_commit": "ce25a9cf336305e0654317ee09074a6ec02e3962",
+  "production_base": "0130f68488fcbde83c2f83dc72acd7adeaba4dee",
+  "source_identical_to_approved": true,
+  "source_sha256": "0e95c193e89a6b922231583cbda4715d0988db7b0068cf1ccbfdc9aa168f473f",
+  "source_only_compile_sha256": "9068433b630be458ac21e8180bb969f140162beb37a57603e6c0852c00cfb583",
+  "qa_compile_sha256": "56b33c697c6a6c15ef5331f766e65be835104b2a0f7c4d691bfc8fe906d75997",
+  "execution": "Existing non-Development Unity 6000.3.21f1 Player + newly compiled Production-source managed overlay; not a new Unity Build or Editor Play",
+  "development": false,
+  "errors": 0,
+  "candidate_record_equal": {
+    "hooks": true,
+    "reloadHooks": true,
+    "views": true,
+    "lightMountParts": true,
+    "reloadLightParts": true,
+    "contracts": true,
+    "reloadContracts": true,
+    "states": true,
+    "trace": true,
+    "operations": true
+  },
+  "image_max_channel_delta": {
+    "01_S5_Normal.png": 0,
+    "02_S4_Normal.png": 0,
+    "03_S1_Normal.png": 241,
+    "04_S5_Q_Blocked.png": 10,
+    "05_S5_E_Blue.png": 0,
+    "06_S5_Swing.png": 0,
+    "07_S5_Released.png": 0,
+    "08_S5_R.png": 0,
+    "09_S5_Reload.png": 0
+  },
+  "image_difference_details": {
+    "01_S5_Normal.png": {
+      "changed_pixels": 0,
+      "bbox_xyxy": null
+    },
+    "02_S4_Normal.png": {
+      "changed_pixels": 0,
+      "bbox_xyxy": null
+    },
+    "03_S1_Normal.png": {
+      "changed_pixels": 4359,
+      "bbox_xyxy": [
+        715,
+        167,
+        884,
+        211
+      ]
+    },
+    "04_S5_Q_Blocked.png": {
+      "changed_pixels": 30,
+      "bbox_xyxy": [
+        815,
+        529,
+        894,
+        554
+      ]
+    },
+    "05_S5_E_Blue.png": {
+      "changed_pixels": 0,
+      "bbox_xyxy": null
+    },
+    "06_S5_Swing.png": {
+      "changed_pixels": 0,
+      "bbox_xyxy": null
+    },
+    "07_S5_Released.png": {
+      "changed_pixels": 0,
+      "bbox_xyxy": null
+    },
+    "08_S5_R.png": {
+      "changed_pixels": 0,
+      "bbox_xyxy": null
+    },
+    "09_S5_Reload.png": {
+      "changed_pixels": 0,
+      "bbox_xyxy": null
+    }
+  },
+  "hook_crop_max_channel_delta": {
+    "01_S5_Normal.png": 0,
+    "02_S4_Normal.png": 0,
+    "03_S1_Normal.png": 0,
+    "04_S5_Q_Blocked.png": 0,
+    "05_S5_E_Blue.png": 0,
+    "06_S5_Swing.png": 0,
+    "07_S5_Released.png": 0,
+    "08_S5_R.png": 0,
+    "09_S5_Reload.png": 0
+  },
+  "trace_samples": 471,
+  "states": [
+    {
+      "phase": "Unblocked",
+      "root": {
+        "x": 93.5999984741211,
+        "y": -0.03499993309378624
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "camera": {
+        "x": 93.5999984741211,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "remaining": 45.0,
+      "selected": 6.0,
+      "alpha": 0.6200000047683716,
+      "input": 0.0,
+      "distance": 93.60000610351562,
+      "grounded": true,
+      "attached": false,
+      "blocked": false,
+      "bridges": 0
+    },
+    {
+      "phase": "Blocked",
+      "root": {
+        "x": 95.75747680664062,
+        "y": -0.19485855102539062
+      },
+      "velocity": {
+        "x": 2.406100207963391e-09,
+        "y": 1.791972792375418e-09
+      },
+      "anchor": {
+        "x": 99.5,
+        "y": -0.6499999761581421
+      },
+      "camera": {
+        "x": 95.75503540039062,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "remaining": 39.0,
+      "selected": 6.0,
+      "alpha": 0.07999999821186066,
+      "input": 0.0,
+      "distance": 3.770097255706787,
+      "grounded": true,
+      "attached": false,
+      "blocked": true,
+      "bridges": 1
+    },
+    {
+      "phase": "Blue attached",
+      "root": {
+        "x": 100.55937194824219,
+        "y": -2.5270047187805176
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": -11.237509727478027
+      },
+      "anchor": {
+        "x": 102.0,
+        "y": 2.950000047683716
+      },
+      "camera": {
+        "x": 100.55848693847656,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "remaining": 39.0,
+      "selected": 7.0,
+      "alpha": 0.07999999821186066,
+      "input": 0.0,
+      "distance": 5.663302421569824,
+      "grounded": false,
+      "attached": true,
+      "blocked": true,
+      "bridges": 1
+    },
+    {
+      "phase": "Swing",
+      "root": {
+        "x": 106.72003173828125,
+        "y": -2.2192625999450684
+      },
+      "velocity": {
+        "x": -8.591706275939941,
+        "y": -8.40356159210205
+      },
+      "anchor": {
+        "x": 102.0,
+        "y": 2.950000047683716
+      },
+      "camera": {
+        "x": 107.84033966064453,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "remaining": 39.0,
+      "selected": 7.0,
+      "alpha": 0.07999999821186066,
+      "input": 0.0,
+      "distance": 6.999998569488525,
+      "grounded": false,
+      "attached": true,
+      "blocked": true,
+      "bridges": 1
+    },
+    {
+      "phase": "Detached",
+      "root": {
+        "x": 104.84114837646484,
+        "y": -4.779023170471191
+      },
+      "velocity": {
+        "x": -8.497759819030762,
+        "y": -14.318526268005371
+      },
+      "anchor": {
+        "x": 102.0,
+        "y": 2.950000047683716
+      },
+      "camera": {
+        "x": 106.38481140136719,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "remaining": 39.0,
+      "selected": 7.0,
+      "alpha": 0.07999999821186066,
+      "input": 0.0,
+      "distance": 8.234678268432617,
+      "grounded": false,
+      "attached": false,
+      "blocked": true,
+      "bridges": 1
+    },
+    {
+      "phase": "R",
+      "root": {
+        "x": 93.5999984741211,
+        "y": -0.03499993309378624
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 102.0,
+        "y": 2.950000047683716
+      },
+      "camera": {
+        "x": 93.5999984741211,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "remaining": 45.0,
+      "selected": 6.0,
+      "alpha": 0.6200000047683716,
+      "input": 0.0,
+      "distance": 8.9146089553833,
+      "grounded": true,
+      "attached": false,
+      "blocked": false,
+      "bridges": 0
+    },
+    {
+      "phase": "Reload",
+      "root": {
+        "x": 93.5999984741211,
+        "y": -0.03499993309378624
+      },
+      "velocity": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "anchor": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "camera": {
+        "x": 93.5999984741211,
+        "y": 0.0,
+        "z": -10.0
+      },
+      "remaining": 45.0,
+      "selected": 6.0,
+      "alpha": 0.6200000047683716,
+      "input": 0.0,
+      "distance": 93.60000610351562,
+      "grounded": true,
+      "attached": false,
+      "blocked": false,
+      "bridges": 0
+    }
+  ],
+  "operations": [
+    "Native E green=True Q6=True",
+    "PASS native Q6 generated",
+    "PASS generated bridge blocks light",
+    "PASS walk reached right shelf",
+    "Native E blue=True anchor=(102.00, 2.95)",
+    "PASS native E S5 blue",
+    "PASS airborne taut swing observed",
+    "PASS native detach",
+    "PASS native R restores checkpoint"
+  ],
+  "only_selected_cover_suppressed_after_reload": true,
+  "protected_unrelated_files": 252,
+  "protected_unrelated_equal": true,
+  "prior_proofs_equal": true,
+  "existing_status": [
+    "M Assets/Scenes/MainStage.unity",
+    " M Docs/LEARNING_LOG.md",
+    " M Docs/QA/MainStageCleanReproduction_20261001/Evidence/DeterministicSceneSync/ExeA.log",
+    " M Docs/QA/MainStageCleanReproduction_20261001/Evidence/DeterministicSceneSync/ExeB.log",
+    " M README.md"
+  ],
+  "staged_before_commit": [],
+  "os_keys": false,
+  "human_visual_adoption": "良い感じ・正式採用",
+  "unconfirmed": [
+    "統合後OS実キー",
+    "現在のdirty SceneのEditor Play",
+    "新規Unity Build",
+    "全区間通し",
+    "音"
+  ],
+  "c18": "HOLD"
+}

@@ -1,25 +1,41 @@
 {
-  "review_id": "C17S5Hook-20261020T234000_JST",
-  "updated_at": "2026-10-20T23:41:56+09:00",
+  "review_id": "C17S5Hook",
+  "updated_at": "2026-10-21T13:03:21+09:00",
   "time_zone": "Asia/Tokyo",
   "proof": "C17S5HookProof_20261020",
   "revision": "isolated-candidate-1",
-  "production_head": "0130f68488fcbde83c2f83dc72acd7adeaba4dee",
-  "status": "Humanレビュー待ち",
-  "report": "Docs/Reviews/C17S5Hook/runs/20261020T234000_JST/Report.md",
+  "production_head": "3b6ac0dfe6a1035f8eed33d2efe720be51c481b3",
+  "status": "正式採用・統合済み",
+  "report": "Docs/Reviews/C17S5Hook/runs/20261021T130134_JST/Report.md",
   "launch": "Docs/Reviews/C17S5Hook/runs/20261020T234000_JST/Launch.md",
-  "images": "Docs/Reviews/C17S5Hook/runs/20261020T234000_JST/Images",
-  "qa": "Docs/Reviews/C17S5Hook/runs/20261020T234000_JST/QA",
+  "images": "Docs/Reviews/C17S5Hook/runs/20261021T130134_JST/Images",
+  "qa": "Docs/Reviews/C17S5Hook/runs/20261021T130134_JST/QA",
   "video": "Docs/Reviews/C17S5Hook/runs/20261020T234000_JST/Video/C17_Comparison_NormalSpeed.mp4",
-  "production_integrated": false,
-  "human_adoption": "未承認",
+  "production_integrated": true,
+  "human_adoption": "正式採用（Human：良い感じ）",
   "unconfirmed": [
-    "OS実キー",
-    "Human Visual採否・操作感",
-    "音",
+    "統合後OS実キー",
+    "現在のdirty SceneのEditor Play",
+    "新規Unity Build",
     "全区間通し",
-    "新規Unity Build／Editor Play"
+    "音"
   ],
   "execution": "existing non-Development Unity Player + managed overlay; not a new Unity Build",
-  "c18": "HOLD; aim assist not implemented"
+  "c18": "HOLD; aim assist not implemented",
+  "run_id": "20261021T130134_JST",
+  "base_production_head": "0130f68488fcbde83c2f83dc72acd7adeaba4dee",
+  "approval_review_commit": "ce25a9cf336305e0654317ee09074a6ec02e3962",
+  "production_sha": "3b6ac0dfe6a1035f8eed33d2efe720be51c481b3",
+  "production_remote_sha": "3b6ac0dfe6a1035f8eed33d2efe720be51c481b3",
+  "production_remote_matches": true,
+  "approved_candidate_report": "Docs/Reviews/C17S5Hook/runs/20261020T234000_JST/Report.md",
+  "review_type": "Production integration",
+  "previous_human_decisions": [
+    {
+      "commit": "ce25a9cf336305e0654317ee09074a6ec02e3962",
+      "decision": "正式採用",
+      "human_comment": "良い感じ",
+      "production_sha": "3b6ac0dfe6a1035f8eed33d2efe720be51c481b3"
+    }
+  ]
 }

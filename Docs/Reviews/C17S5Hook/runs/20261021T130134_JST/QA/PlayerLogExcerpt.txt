@@ -1,0 +1,6 @@
+[D3D12 Device Filter] Driver Version: 31.0.101.4255
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: Intel(R) Iris(R) Xe Graphics (ID=0xa7a0)
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+C17_FINISHED errors=0

@@ -1,0 +1,21 @@
+{
+  "checked_at": "2026-10-21T13:03:21+09:00",
+  "branch": "main",
+  "local_head": "3b6ac0dfe6a1035f8eed33d2efe720be51c481b3",
+  "origin_main": "3b6ac0dfe6a1035f8eed33d2efe720be51c481b3",
+  "remote_main": "3b6ac0dfe6a1035f8eed33d2efe720be51c481b3",
+  "matches": true,
+  "commit_message": "Integrate approved C17 S5 hook visual correction",
+  "changed_files": [
+    "Assets/Scripts/MainStageVisuals.cs",
+    "Docs/QA/C17S5HookProduction_20261021/Integration.md"
+  ],
+  "staged": [],
+  "existing_status": [
+    "M Assets/Scenes/MainStage.unity",
+    " M Docs/LEARNING_LOG.md",
+    " M Docs/QA/MainStageCleanReproduction_20261001/Evidence/DeterministicSceneSync/ExeA.log",
+    " M Docs/QA/MainStageCleanReproduction_20261001/Evidence/DeterministicSceneSync/ExeB.log",
+    " M README.md"
+  ]
+}
