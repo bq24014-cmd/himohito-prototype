@@ -1,0 +1,11 @@
+{
+  "seconds": 35,
+  "pid": 33400,
+  "responding": true,
+  "windowHandle": 4853194,
+  "manualReady": true,
+  "autoRouteRan": false,
+  "osKeysVerified": false,
+  "launcher": "01_Candidate.cmd",
+  "previous_launcher_issue": "PowerShell script execution disabled; cmd now directly starts EXE without PowerShell or policy changes"
+}

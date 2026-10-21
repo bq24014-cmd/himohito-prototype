@@ -1,0 +1,18 @@
+--- previous/CraftScissorsMotion.cs
++++ candidate/CraftScissorsMotion.cs
+@@ -12,6 +12,7 @@
+     public const float FloorY=-8.34f,PPU=500f;
+     public const float CloseSeconds=.18f,HoldSeconds=.08f,ReturnSeconds=.48f;
+     public static string AssetHash;
++    public static float ReviewScale=1f;
+     public PolygonCollider2D blades;
+     public BoxCollider2D oldBox;
+     public Transform left,right,screw,root;
+@@ -46,6 +47,7 @@
+         space.localScale=new Vector3(1/transform.lossyScale.x,1/transform.lossyScale.y,1/transform.lossyScale.z);
+         root=new GameObject("Common moving pivot; upright front").transform;root.SetParent(space,false);
+         root.position=new Vector3(transform.position.x,0,transform.position.z);root.localRotation=Quaternion.Euler(0,0,180);
++        root.localScale=Vector3.one*ReviewScale;
+         var sl=Sprite.Create(atlas,new Rect(230,0,390,1024),new Vector2(317f/390,541f/1024),PPU,0,SpriteMeshType.FullRect);
+         var sr=Sprite.Create(atlas,new Rect(830,0,400,1024),new Vector2(74f/400,541f/1024),PPU,0,SpriteMeshType.FullRect);
+         var ss=Sprite.Create(atlas,new Rect(1273,479,111,112),new Vector2(55f/111,56f/112),PPU,0,SpriteMeshType.FullRect);

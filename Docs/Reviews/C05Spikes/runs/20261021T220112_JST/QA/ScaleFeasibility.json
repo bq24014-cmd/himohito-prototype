@@ -1,0 +1,119 @@
+{
+  "method": "offline convex-polygon distance versus measured player box, sampled 4 closures; not continuous collision guarantee or Unity QA",
+  "results": [
+    {
+      "scale": 0.4,
+      "minGap": 0.275729089560657,
+      "tick": 62,
+      "closure": 1
+    },
+    {
+      "scale": 0.41,
+      "minGap": 0.25821424282551336,
+      "tick": 62,
+      "closure": 1
+    },
+    {
+      "scale": 0.42,
+      "minGap": 0.2411105692600776,
+      "tick": 62,
+      "closure": 1
+    },
+    {
+      "scale": 0.43,
+      "minGap": 0.222563488460243,
+      "tick": 61,
+      "closure": 1
+    },
+    {
+      "scale": 0.44,
+      "minGap": 0.2024011276806288,
+      "tick": 61,
+      "closure": 1
+    },
+    {
+      "scale": 0.45,
+      "minGap": 0.18223876690101548,
+      "tick": 61,
+      "closure": 1
+    },
+    {
+      "scale": 0.46,
+      "minGap": 0.1620764061214004,
+      "tick": 61,
+      "closure": 1
+    },
+    {
+      "scale": 0.47,
+      "minGap": 0.1419140453417871,
+      "tick": 61,
+      "closure": 1
+    },
+    {
+      "scale": 0.48,
+      "minGap": 0.12175168456217289,
+      "tick": 61,
+      "closure": 1
+    },
+    {
+      "scale": 0.49,
+      "minGap": 0.1015893237825587,
+      "tick": 61,
+      "closure": 1
+    },
+    {
+      "scale": 0.5,
+      "minGap": 0.0814269630029445,
+      "tick": 61,
+      "closure": 1
+    },
+    {
+      "scale": 0.51,
+      "minGap": 0.06126460222333119,
+      "tick": 61,
+      "closure": 1
+    },
+    {
+      "scale": 0.52,
+      "minGap": 0.04110224144371699,
+      "tick": 61,
+      "closure": 1
+    },
+    {
+      "scale": 0.53,
+      "minGap": 0.020939880664103683,
+      "tick": 61,
+      "closure": 1
+    },
+    {
+      "scale": 0.54,
+      "minGap": 0.0007775198844885978,
+      "tick": 61,
+      "closure": 1
+    },
+    {
+      "scale": 0.55,
+      "minGap": 0,
+      "tick": 61,
+      "closure": 1
+    },
+    {
+      "scale": 0.56,
+      "minGap": 0,
+      "tick": 61,
+      "closure": 1
+    },
+    {
+      "scale": 0.57,
+      "minGap": 0,
+      "tick": 61,
+      "closure": 0.5
+    },
+    {
+      "scale": 0.58,
+      "minGap": 0,
+      "tick": 62,
+      "closure": 0.035
+    }
+  ]
+}

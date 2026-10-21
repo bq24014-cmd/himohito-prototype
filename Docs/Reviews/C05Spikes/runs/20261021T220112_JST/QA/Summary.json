@@ -1,0 +1,259 @@
+{
+  "execution": "Unity native physics; fixed-step diagnostic input + native E APIs; frame export at 25 fps (50 Hz game clock). Not OS or Human play, not new Unity Build.",
+  "runs": [
+    {
+      "length": 5,
+      "variant": "Current",
+      "reached": true,
+      "landing_time": 2.44,
+      "hazards": [],
+      "min_front_gap": 1.1546897888183594,
+      "snips": 0,
+      "final_rope": 50.0,
+      "max_floor_error": 0.0,
+      "max_handle_gap": 0.0,
+      "max_polygon_error": 0.0,
+      "max_pivot_error": 0.0
+    },
+    {
+      "length": 5,
+      "variant": "Previous",
+      "reached": true,
+      "landing_time": 2.44,
+      "hazards": [],
+      "min_front_gap": 0.21146486699581146,
+      "snips": 0,
+      "final_rope": 50.0,
+      "max_floor_error": 9.5367431640625e-07,
+      "max_handle_gap": 0.003025054931640625,
+      "max_polygon_error": 0.0,
+      "max_pivot_error": 0.0
+    },
+    {
+      "length": 5,
+      "variant": "Candidate",
+      "reached": true,
+      "landing_time": 2.44,
+      "hazards": [],
+      "min_front_gap": 1.1157666444778442,
+      "snips": 0,
+      "final_rope": 50.0,
+      "max_floor_error": 9.5367431640625e-07,
+      "max_handle_gap": 0.0015125274658203125,
+      "max_polygon_error": 0.0,
+      "max_pivot_error": 0.0
+    },
+    {
+      "length": 6,
+      "variant": "Current",
+      "reached": true,
+      "landing_time": 2.3,
+      "hazards": [],
+      "min_front_gap": 0.17121361196041107,
+      "snips": 0,
+      "final_rope": 50.0,
+      "max_floor_error": 0.0,
+      "max_handle_gap": 0.0,
+      "max_polygon_error": 0.0,
+      "max_pivot_error": 0.0
+    },
+    {
+      "length": 6,
+      "variant": "Previous",
+      "reached": false,
+      "landing_time": null,
+      "hazards": [
+        {
+          "kind": "hazard_enter",
+          "other": "Main Section 2 Front Spike",
+          "tick": 54,
+          "position": {
+            "x": 14.792287826538086,
+            "y": -6.288238048553467
+          },
+          "velocity": {
+            "x": 2.2465994358062744,
+            "y": -10.205730438232422
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "point": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "attached": false
+        }
+      ],
+      "min_front_gap": -0.26030921936035156,
+      "snips": 1,
+      "final_rope": 50.0,
+      "max_floor_error": 9.5367431640625e-07,
+      "max_handle_gap": 0.003025054931640625,
+      "max_polygon_error": 0.0,
+      "max_pivot_error": 0.0
+    },
+    {
+      "length": 6,
+      "variant": "Candidate",
+      "reached": true,
+      "landing_time": 2.3,
+      "hazards": [],
+      "min_front_gap": 0.12647531926631927,
+      "snips": 0,
+      "final_rope": 50.0,
+      "max_floor_error": 9.5367431640625e-07,
+      "max_handle_gap": 0.0015125274658203125,
+      "max_polygon_error": 0.0,
+      "max_pivot_error": 0.0
+    },
+    {
+      "length": 7,
+      "variant": "Current",
+      "reached": false,
+      "landing_time": null,
+      "hazards": [
+        {
+          "kind": "hazard_enter",
+          "other": "Main Section 2 Front Spike",
+          "tick": 58,
+          "position": {
+            "x": 14.97069263458252,
+            "y": -7.208092212677002
+          },
+          "velocity": {
+            "x": 2.2251603603363037,
+            "y": -12.2957124710083
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "point": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "attached": false
+        }
+      ],
+      "min_front_gap": -0.6268253326416016,
+      "snips": 0,
+      "final_rope": 50.0,
+      "max_floor_error": 0.0,
+      "max_handle_gap": 0.0,
+      "max_polygon_error": 0.0,
+      "max_pivot_error": 0.0
+    },
+    {
+      "length": 7,
+      "variant": "Previous",
+      "reached": false,
+      "landing_time": null,
+      "hazards": [
+        {
+          "kind": "hazard_enter",
+          "other": "Main Section 2 Front Spike",
+          "tick": 54,
+          "position": {
+            "x": 14.792287826538086,
+            "y": -6.288238048553467
+          },
+          "velocity": {
+            "x": 2.2465994358062744,
+            "y": -10.205730438232422
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "point": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "attached": false
+        }
+      ],
+      "min_front_gap": -0.26030921936035156,
+      "snips": 1,
+      "final_rope": 50.0,
+      "max_floor_error": 9.5367431640625e-07,
+      "max_handle_gap": 0.003025054931640625,
+      "max_polygon_error": 0.0,
+      "max_pivot_error": 0.0
+    },
+    {
+      "length": 7,
+      "variant": "Candidate",
+      "reached": false,
+      "landing_time": null,
+      "hazards": [
+        {
+          "kind": "hazard_enter",
+          "other": "Main Section 2 Front Spike",
+          "tick": 58,
+          "position": {
+            "x": 14.97069263458252,
+            "y": -7.208092212677002
+          },
+          "velocity": {
+            "x": 2.2251603603363037,
+            "y": -12.2957124710083
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "point": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "attached": false
+        }
+      ],
+      "min_front_gap": -0.29592466354370117,
+      "snips": 1,
+      "final_rope": 50.0,
+      "max_floor_error": 9.5367431640625e-07,
+      "max_handle_gap": 0.0015125274658203125,
+      "max_polygon_error": 0.0,
+      "max_pivot_error": 0.0
+    }
+  ],
+  "matched_trajectories": [
+    {
+      "length": 5,
+      "deltas": {
+        "position": 0.0,
+        "velocity": 0.0,
+        "camera": 0.0,
+        "remaining": 0.0,
+        "input": 0.0
+      },
+      "identical_to_current": true
+    },
+    {
+      "length": 6,
+      "deltas": {
+        "position": 0.0,
+        "velocity": 0.0,
+        "camera": 0.0,
+        "remaining": 0.0,
+        "input": 0.0
+      },
+      "identical_to_current": true
+    },
+    {
+      "length": 7,
+      "deltas": {
+        "position": 0.0,
+        "velocity": 0.0,
+        "camera": 0.0,
+        "remaining": 0.0,
+        "input": 0.0
+      },
+      "identical_to_current": true
+    }
+  ],
+  "scope": "Front scissors only; same approved atlas, same x=15.35000038, same handle floor=-8.34, uniform world scale 0.50; original root and other hazards unchanged."
+}

@@ -1,14 +1,16 @@
 # C05 危険物のデザインレビュー
 
-[最新状態](LATEST.json)／[開閉と刃判定の結果](runs/20261021T211000_JST/Report.md)／[手動起動](runs/20261021T211000_JST/Launch.md)
+[最新状態](LATEST.json)／[長さ5・6・7の通過比較](runs/20261021T220112_JST/Report.md)／[手動起動](runs/20261021T220112_JST/Launch.md)
 
-暖色本体と「持ち手が下・刃先が上」はHumanの採用方針です。今回はその姿を保持し、本編手前1個の連続開閉と刃の判定をまとめた隔離候補です。Production統合はしていません。
+暖色本体と「持ち手が下・刃先が上」はHumanの採用方針です。前完成候補は「長さ6がハサミに当たる」とのHuman指摘で統合保留です。今回は手前1個を描画・刃判定とも等比0.50倍にした隔離修正版を提出しています。Production統合はしていません。
 
-[通常画角の開閉](runs/20261021T211000_JST/Video/01_Motion_API.mp4)／[実Triggerでの接触](runs/20261021T211000_JST/Video/02_NativeContact.mp4)／[空白通過](runs/20261021T211000_JST/Video/03_EmptyPassage_ThenFall.mp4)／[判定の重ね合わせ](runs/20261021T211000_JST/Images/01_Open_ColliderOverlay.jpg)
+[長さ6の通常速度比較](runs/20261021T220112_JST/Video/L6_Current_Previous_Candidate_Sequence.mp4)／[長さ5の通過](runs/20261021T220112_JST/Video/Candidate_L5.mp4)／[長さ7の接触](runs/20261021T220112_JST/Video/Candidate_L7.mp4)／[同倍率の形状比較](runs/20261021T220112_JST/Images/Scissors_EqualScale_Crop.jpg)
 
-既存の解除・返却・接触繊維を保持し、対象1個の矩形を左右の刃に沿う判定へ変更しました。主試験111チェックPASS。補足では空白通過の最後に通常落下へ移行する1条件をFAILとして残し、刃接触との違いを報告しています。自動QAはHuman採用の代わりにしません。
+同じ入口・同じ入力で9比較を実施。修正版の長さ5・6は対岸到達、長さ7は現行と同様に接触・落下。現行と修正版のRoot・速度・残量・Cameraは各300フレームで一致しました。自動入力/APIの結果であり、Humanの採否は未確認です。縮小による存在感の低下もレビューに残しています。
 
 ## 履歴
+
+- [開閉と刃判定 300027a](runs/20261021T211000_JST/Report.md)：Human採用保留。長さ6接触の指摘。原本・比較資料を保持。
 
 - [上向き静止版 0b4f31a](runs/20261021T203813_JST/Report.md)：本体と配置の採用方針。旧矩形判定の原本を保持。
 

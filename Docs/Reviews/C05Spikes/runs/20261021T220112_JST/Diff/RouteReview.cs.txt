@@ -1,0 +1,81 @@
+using System;
+using System.IO;
+using System.Linq;
+using System.Reflection;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using HimoHito;
+
+// Host Player already registers GroundingReview.Boot. Manual mode has no input driver.
+[DefaultExecutionOrder(-30000)]
+public sealed class GroundingReview:MonoBehaviour
+{
+    const BindingFlags H=BindingFlags.Instance|BindingFlags.NonPublic;
+    public static string Arg(string k,string f=""){var a=Environment.GetCommandLineArgs();for(int i=0;i<a.Length-1;i++)if(a[i]==k)return a[i+1];return f;}
+    static bool QA=>Arg("-routeQA")=="1";
+    static object Get(object o,string n)=>o.GetType().GetField(n,H).GetValue(o);
+    static void Set(object o,string n,object v)=>o.GetType().GetField(n,H).SetValue(o,v);
+    static object Call(object o,string n)=>o.GetType().GetMethod(n,H|BindingFlags.Public).Invoke(o,null);
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]static void Boot(){Application.runInBackground=true;if(QA){Time.captureFramerate=50;UnityEngine.Random.InitState(521);}SceneManager.sceneLoaded+=(s,m)=>{if(s.name!="MainStage"){SceneManager.LoadScene("MainStage");return;}new GameObject("C05 route fixture").AddComponent<GroundingReview>();};}
+    [Serializable]public class Frame{public int tick;public float t,input,remaining,length,frontDistance,farDistance;public Vector2 position,velocity;public Vector3 camera;public bool grounded,attached,failure;public int snips;public float closure,handleGap;}
+    [Serializable]public class Event{public string kind,other;public int tick;public Vector2 position,velocity,normal,point;public bool attached;}
+    [Serializable]public class ColliderRecord{public string name,type;public Vector3 min,max,position,scale;public bool trigger;}
+    [Serializable]public class Result{public string execution="Diagnostic entrance initialization; fixed-step A/D field input, native TryAttach/DetachAndRefund APIs. Native physics throughout route. Not OS keys or Human play. Existing non-Development Player + managed overlay (not new Unity Build).",variant,unity,plan;public float length,scale,releaseSeconds,maxFloorError,maxHandleGap,maxColliderError,maxPivotError;public int attachTick,releaseTick,errors;public bool development,attachSucceeded,reachedBank,finished;public Vector2 initial,hook,playerSize;public List<Frame> frames=new List<Frame>();public List<Event> events=new List<Event>();public List<ColliderRecord> geometry=new List<ColliderRecord>();public CraftScissorsMotion.Pose initialScissors;}
+    PlayerMover mover;Rigidbody2D body;Collider2D pc,front,far;RopeController rope;RopeResource resource;MainStageRespawnOnFall run;CraftScissorsMotion scissors;
+    Result result;string output;int tick=-1;bool active,recording;float input;Vector2 entry=new Vector2(12.7f,-4.28f),hook=new Vector2(17.25f,-.85f);
+    IEnumerator Start()
+    {
+        yield return null;yield return null;yield return null;
+        mover=FindFirstObjectByType<PlayerMover>();body=mover.GetComponent<Rigidbody2D>();pc=body.GetComponent<Collider2D>();rope=body.GetComponent<RopeController>();resource=body.GetComponent<RopeResource>();run=FindFirstObjectByType<MainStageRespawnOnFall>();
+        var preview=FindFirstObjectByType<MainStagePreview>();if(preview&&MainStagePreview.IsActive)Call(preview,"RestoreState");
+        int length=int.Parse(Arg("-length","6"));string variant=Arg("-variant","Candidate");
+        resource.RestoreCapacityAndCurrent(50,50);rope.RestoreSelectedRopeLength(length);Place(entry);run.TryReachSection(2,entry,50);Set(run,"checkpointPosition",entry);Call(run,"CaptureCheckpointState");
+        var target=GameObject.Find(CraftScissorsMotion.TargetName);
+        if(variant!="Current"){CraftScissorsMotion.ReviewScale=variant=="Previous"?1f:.50f;scissors=target.AddComponent<CraftScissorsMotion>();}
+        front=target.GetComponents<Collider2D>().First(c=>c.enabled);far=GameObject.Find("Main Section 2 Far Spike").GetComponent<Collider2D>();
+        if(!QA){Debug.Log("C05_MANUAL_READY "+variant+" length="+length+". Native controls. No auto input/capture/exit.");yield break;}
+        output=Arg("-output");Directory.CreateDirectory(output);Application.logMessageReceived+=Log;
+        result=new Result{variant=variant,scale=scissors?CraftScissorsMotion.ReviewScale:0,length=length,unity=Application.unityVersion,development=Debug.isDebugBuild,attachTick=int.Parse(Arg("-attachTick","11")),releaseTick=int.Parse(Arg("-releaseTick","80")),initial=entry,hook=hook,playerSize=pc.bounds.size};
+        result.releaseSeconds=result.releaseTick*Time.fixedDeltaTime;
+        result.plan=Arg("-plan","run");
+        if(scissors){for(int n=0;n<=100;n++){scissors.DiagnosticPose(n/100f);var q=scissors.Record();result.maxFloorError=Mathf.Max(result.maxFloorError,Mathf.Abs(Mathf.Min(q.leftSupport.y,q.rightSupport.y)-CraftScissorsMotion.FloorY));result.maxHandleGap=Mathf.Max(result.maxHandleGap,q.handleGap);result.maxPivotError=Mathf.Max(result.maxPivotError,q.pivotDistance);for(int side=0;side<2;side++){var w=scissors.WorldBlade(side);var path=scissors.blades.GetPath(side);for(int i=0;i<w.Length;i++)result.maxColliderError=Mathf.Max(result.maxColliderError,Vector3.Distance(w[i],scissors.transform.TransformPoint(path[i])));}}scissors.DiagnosticRelease();scissors.Apply(0);}
+        foreach(var c in FindObjectsByType<Collider2D>(FindObjectsSortMode.None))if(c.bounds.max.x>10&&c.bounds.min.x<33&&c.bounds.min.y<2)result.geometry.Add(new ColliderRecord{name=c.name,type=c.GetType().Name,min=c.bounds.min,max=c.bounds.max,position=c.transform.position,scale=c.transform.lossyScale,trigger=c.isTrigger});
+        var probe=body.gameObject.AddComponent<RouteContactProbe>();probe.owner=this;
+        yield return new WaitForSeconds(.8f);
+        // One diagnostic reset before the route; never move Root or overwrite velocity during passage.
+        Place(entry);if(scissors)scissors.DiagnosticRelease();yield return new WaitForEndOfFrame();
+        result.initial=body.position;if(scissors)result.initialScissors=scissors.Record();
+        active=true;recording=true;
+        for(int i=0;i<300;i++){
+            yield return new WaitForEndOfFrame();Record();
+            if(Arg("-capture")=="1"&&i%2==0)Capture(i/2);
+        }
+        active=false;recording=false;Set(mover,"moveInput",0f);result.finished=true;
+        File.WriteAllText(Path.Combine(output,"Result.json"),JsonUtility.ToJson(result,true));Debug.Log("C05_ROUTE_DONE "+variant+" L"+length+" attach="+result.attachSucceeded+" reached="+result.reachedBank+" errors="+result.errors);Application.Quit(result.errors>0?2:0);
+    }
+    void FixedUpdate()
+    {
+        if(!active||!mover)return;tick++;
+        input=1;
+        if(result.plan=="stand"&&((tick>=11&&tick<30)||(tick>=36&&tick<60)))input=0;
+        if(body.position.x>=25.5f&&mover.IsGrounded){result.reachedBank=true;input=0;}
+        if(result.reachedBank)input=0;
+        Set(mover,"moveInput",input);
+        if(tick==result.attachTick){result.attachSucceeded=rope.TryAttach(hook);AddEvent("E_attach_"+result.attachSucceeded,"blue hook");}
+        if(tick==result.releaseTick){AddEvent("E_release_before","native DetachAndRefund");if(rope.IsAttached)rope.DetachAndRefund(playReleaseSound:true);}
+    }
+    void Record(){result.frames.Add(new Frame{tick=tick,t=tick*Time.fixedDeltaTime,input=input,remaining=resource.CurrentLength,length=rope.SelectedRopeLength,position=body.position,velocity=body.linearVelocity,camera=Camera.main.transform.position,grounded=mover.IsGrounded,attached=rope.IsAttached,failure=run.IsFailureVisible,frontDistance=Physics2D.Distance(front,pc).distance,farDistance=Physics2D.Distance(far,pc).distance,snips=scissors?scissors.snips:0,closure=scissors?scissors.closure:0,handleGap=scissors?scissors.Record().handleGap:0});}
+    public void AddEvent(string kind,string other,Vector2 normal=default,Vector2 point=default){if(!recording)return;result.events.Add(new Event{kind=kind,other=other,tick=tick,position=body.position,velocity=body.linearVelocity,attached=rope.IsAttached,normal=normal,point=point});}
+    void Place(Vector2 p){rope.DetachAndRefund();body.position=p;body.transform.position=new Vector3(p.x,p.y,0);body.linearVelocity=Vector2.zero;body.angularVelocity=0;body.simulated=true;mover.enabled=true;rope.enabled=true;Set(mover,"previousPhysicsPosition",p);Set(mover,"hasPreviousPhysicsPosition",true);Set(mover,"hasPreviousVerticalSpeed",false);Physics2D.SyncTransforms();Camera.main.GetComponent<HorizontalCameraFollow>().ResetFraming();}
+    void Capture(int i){var d=Path.Combine(output,"Frames");Directory.CreateDirectory(d);var im=ScreenCapture.CaptureScreenshotAsTexture();File.WriteAllBytes(Path.Combine(d,i.ToString("D5")+".jpg"),im.EncodeToJPG(86));Destroy(im);}
+    void Log(string t,string s,LogType kind){if(kind==LogType.Exception||kind==LogType.Error||kind==LogType.Assert){result.errors++;File.AppendAllText(Path.Combine(output,"Errors.txt"),t+"\n"+s+"\n");}}
+    void OnDestroy(){Application.logMessageReceived-=Log;}
+}
+public sealed class RouteContactProbe:MonoBehaviour
+{
+    public GroundingReview owner;
+    void OnCollisionEnter2D(Collision2D c){var p=c.contactCount>0?c.GetContact(0):default;owner.AddEvent("collision",c.collider.name,p.normal,p.point);}
+    void OnTriggerEnter2D(Collider2D c){if(c.GetComponent<RopeSpikeHazard>())owner.AddEvent("hazard_enter",c.name);}
+}
