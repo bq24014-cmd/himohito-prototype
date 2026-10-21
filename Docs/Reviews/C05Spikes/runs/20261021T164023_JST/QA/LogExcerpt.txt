@@ -1,0 +1,33 @@
+Final actual Unity Player log excerpts. Diagnostic/API capture, not OS or Human operation.
+
+Current-final1
+C05_SCISSORS_FINISHED errors=0
+PASS MainStage existing two hazards
+PASS only Front spike has new design
+PASS native grounded attach
+PASS pause sampled before fall failure
+PASS pause freezes physics and scissors pose
+PASS native trigger detach/refund preserved
+PASS R restores existing section2 state
+PASS scene reload retains selected visual
+
+Scissors-final1
+C05_FLOOR_SCISSORS_EXTERNAL_PNG sha256=0c100964f3bbdd7c7dae1c0da13497804760837c93831b4d23c8336be5def2ac pixels=1254x1254
+C05_SCISSORS_FINISHED errors=0
+PASS MainStage existing two hazards
+PASS only Front spike has new design
+PASS actual SpriteRenderers use decoded PNG atlas
+PASS native grounded attach
+PASS pause sampled before fall failure
+PASS pause freezes physics and scissors pose
+PASS native trigger detach/refund preserved
+PASS one short close then reopen for one native contact
+PASS both rigid halves share one screw pivot in idle close and reopen
+PASS R restores existing section2 state
+PASS scene reload retains selected visual
+
+Compile: errors 0; four existing CS0649 warnings.
+Manual: READY + process alive 5 seconds, no QA flag. Only launched PID stopped.
+Static1: sprite rect exceeded actual 1254x1254 atlas; metadata normalized to actual dimensions before Static2/final1. Initial error not used as successful visual evidence.
+Static2: lower handle touched frame boundary; common floor projection revised from 0.70 to 0.55 before final1. No camera/root/collider changes.
+User clarified real photograph is not required; written structural brief used.

@@ -1,0 +1,130 @@
+--- a/Isolated/CraftScissorsDesignVisual.cs
++++ b/Isolated/CraftScissorsDesignVisual.cs
+@@ -5,84 +5,86 @@
+ using UnityEngine;
+ using HimoHito;
+ 
+-// Isolated DESIGN prototype. It never changes the existing hazard/collider/root.
+-// Visible handles are deliberately larger than the legacy box. See the review diagram.
++// One isolated design, not a new collision model. Production sources stay unchanged.
+ [DefaultExecutionOrder(31000)]
+ public sealed class CraftScissorsDesignVisual : MonoBehaviour
+ {
+     public const string TargetName="Main Section 2 Front Spike";
+-    public const float PixelsPerUnit=500f;
++    public const float PixelsPerUnit=550f;
+     public static string AssetHash;
+     public static Texture2D Atlas;
+-    public static Sprite LeftSprite,RightSprite,LoopSprite;
+-    public Transform fixedHalf,movingHalf,loop;
++    public static Sprite LeftSprite,RightSprite,ScrewSprite;
++    public Transform fixedHalf,movingHalf,screw,plane;
++    Transform leftShadow,rightShadow;
+     public float snipElapsed=1f,angle,previousContact=.4f;
+     public int snips;
+     public bool assetVerified;
+-    ToySpikeVisual legacy;
+-    SpriteRenderer legacyFace;
++    ToySpikeVisual legacy;SpriteRenderer legacyFace;
+     static readonly FieldInfo ContactField=typeof(ToySpikeVisual).GetField("contactElapsed",BindingFlags.Instance|BindingFlags.NonPublic);
+-    const float Duration=.36f;
+-    const float OpenAngle=16f,ClosedAngle=15f;
++    const float Duration=.42f,OpenAngle=25f,ClosedAngle=6.4f;
+ 
+     static void Load()
+     {
+         if(Atlas)return;
+-        string path=Path.Combine(Path.GetDirectoryName(Application.dataPath),"ReviewAssets","HimoHitoCraftScissorsParts-v1.png");
++        string path=Path.Combine(Path.GetDirectoryName(Application.dataPath),"ReviewAssets","HimoHitoGreenScissorsParts-v2.png");
+         byte[] bytes=File.ReadAllBytes(path);
+         using(var sha=SHA256.Create())AssetHash=BitConverter.ToString(sha.ComputeHash(bytes)).Replace("-","").ToLowerInvariant();
+-        Atlas=new Texture2D(2,2,TextureFormat.RGBA32,true){name="CraftScissors generated atlas external PNG",filterMode=FilterMode.Trilinear,wrapMode=TextureWrapMode.Clamp};
++        Atlas=new Texture2D(2,2,TextureFormat.RGBA32,true){name="Green plastic scissors generated parts external PNG",filterMode=FilterMode.Trilinear,wrapMode=TextureWrapMode.Clamp};
+         if(!Atlas.LoadImage(bytes))throw new Exception("Scissors PNG decode failed");
+-        // Pixels are unchanged. Atlas cells and hinge pivots are selected in Sprite metadata only.
+-        LeftSprite=Part(new Rect(190,0,400,1024),new Vector2(484,1024-474),"Scissors left rigid half",PixelsPerUnit);
+-        RightSprite=Part(new Rect(720,0,440,1024),new Vector2(813,1024-474),"Scissors right rigid half",PixelsPerUnit);
+-        LoopSprite=Part(new Rect(1260,280,230,450),new Vector2(1370,1024-700),"Wooden button and cotton hanging loop",600f);
+-        Debug.Log("C05_SCISSORS_EXTERNAL_PNG sha256="+AssetHash+" pixels="+Atlas.width+"x"+Atlas.height);
++        // Original RGBA retained; sprite metadata alone separates each continuous rigid half.
++        LeftSprite=Part(new Rect(285,20,270,1240),new Vector2(484,1280-571),"Green handle-shank-blade LEFT rigid half");
++        RightSprite=Part(new Rect(700,20,275,1240),new Vector2(772,1280-571),"Green handle-shank-blade RIGHT rigid half");
++        ScrewSprite=Part(new Rect(1057,1280-628,70,85),new Vector2(1091,1280-585),"Common screw head");
++        Debug.Log("C05_FLOOR_SCISSORS_EXTERNAL_PNG sha256="+AssetHash+" pixels="+Atlas.width+"x"+Atlas.height);
+     }
+-    static Sprite Part(Rect rect,Vector2 pivot,string name,float ppu)
++    static Sprite Part(Rect rect,Vector2 pivot,string name)
+     {
+-        var s=Sprite.Create(Atlas,rect,new Vector2((pivot.x-rect.x)/rect.width,(pivot.y-rect.y)/rect.height),ppu,0,SpriteMeshType.FullRect);
+-        s.name=name;return s;
++        Vector2 normalized=new Vector2((pivot.x-rect.x)/rect.width,(pivot.y-rect.y)/rect.height);
++        float k=Atlas.width/1280f;
++        rect=new Rect(rect.x*k,rect.y*k,rect.width*k,rect.height*k);
++        var s=Sprite.Create(Atlas,rect,normalized,PixelsPerUnit*k,0,SpriteMeshType.FullRect);s.name=name;return s;
+     }
+     void Awake()
+     {
+-        Load();legacy=GetComponent<ToySpikeVisual>();
+-        legacyFace=transform.Find("Wooden Toy Spike Face").GetComponent<SpriteRenderer>();
+-        // World-sized child: do not squash the scissors into the old 0.9 x 0.9 square.
+-        var root=new GameObject("C05 scissors design visual only").transform;
+-        root.SetParent(transform,false);root.localScale=new Vector3(1f/transform.lossyScale.x,1f/transform.lossyScale.y,1f);
+-        root.position=new Vector3(transform.position.x,-7.20f,transform.position.z);
+-        fixedHalf=Create(root,LeftSprite,"Fixed half",3);movingHalf=Create(root,RightSprite,"Moving half",4);
+-        fixedHalf.localRotation=Quaternion.Euler(0,0,OpenAngle);
+-        // The loop passes through the fixed upper handle. Its button rests against the cloth wall.
+-        Vector3 hole=Quaternion.Euler(0,0,OpenAngle)*new Vector3((350f-484f)/PixelsPerUnit,(474f-200f)/PixelsPerUnit,0);
+-        loop=Create(root,LoopSprite,"Cotton hanger",5);loop.localPosition=hole;
++        Load();legacy=GetComponent<ToySpikeVisual>();legacyFace=transform.Find("Wooden Toy Spike Face").GetComponent<SpriteRenderer>();
++        var root=new GameObject("Floor scissors VISUAL ONLY").transform;root.SetParent(transform,false);
++        root.localScale=new Vector3(1f/transform.lossyScale.x,1f/transform.lossyScale.y,1f);
++        root.position=new Vector3(15.50f,-8.15f,transform.position.z);
++        // Projection of a flat object on the floor plane, not fitting the old hazard rectangle.
++        // Rotation is performed BEFORE this common floor foreshortening: both pivots stay identical.
++        plane=new GameObject("Common floor projection").transform;plane.SetParent(root,false);plane.localScale=new Vector3(1f,.55f,1f);
++        var heading=new GameObject("Diagonal floor heading").transform;heading.SetParent(plane,false);heading.localRotation=Quaternion.Euler(0,0,-83f);
++        leftShadow=Create(heading,LeftSprite,"Left contact shadow",2,new Color(0,0,0,.22f));
++        rightShadow=Create(heading,RightSprite,"Right contact shadow",2,new Color(0,0,0,.22f));
++        fixedHalf=Create(heading,LeftSprite,"Left rigid half",3,Color.white);
++        movingHalf=Create(heading,RightSprite,"Right rigid half",4,Color.white);
++        screw=Create(heading,ScrewSprite,"Shared screw",5,Color.white);
+         previousContact=(float)ContactField.GetValue(legacy);
+         assetVerified=fixedHalf.GetComponent<SpriteRenderer>().sprite.texture==Atlas&&movingHalf.GetComponent<SpriteRenderer>().sprite.texture==Atlas;
+         Apply();
+     }
+-    Transform Create(Transform parent,Sprite sprite,string name,int order)
++    Transform Create(Transform parent,Sprite sprite,string name,int order,Color color)
+     {
+-        var go=new GameObject(name);go.transform.SetParent(parent,false);
+-        var sr=go.AddComponent<SpriteRenderer>();sr.sprite=sprite;sr.sortingLayerID=legacyFace.sortingLayerID;sr.sortingOrder=order;return go.transform;
++        var go=new GameObject(name);go.transform.SetParent(parent,false);var sr=go.AddComponent<SpriteRenderer>();sr.sprite=sprite;sr.color=color;sr.sortingLayerID=legacyFace.sortingLayerID;sr.sortingOrder=order;return go.transform;
+     }
+     void LateUpdate()
+     {
+         if(legacyFace)legacyFace.enabled=false;
+-        if(Time.timeScale<=0f)return;
+-        // Read the existing presentation event. No input injection or new hazard rule here.
++        if(Time.timeScale<=0)return;
+         float contact=(float)ContactField.GetValue(legacy);
+         if(contact<previousContact-.05f){snipElapsed=0;snips++;}
+-        previousContact=contact;
+-        if(Time.deltaTime>0)snipElapsed=Mathf.Min(1f,snipElapsed+Time.deltaTime);
+-        Apply();
++        previousContact=contact;snipElapsed=Mathf.Min(1f,snipElapsed+Time.deltaTime);Apply();
+     }
+     void Apply()
+     {
+-        float idle=-OpenAngle+1.2f*Mathf.Sin(Time.timeSinceLevelLoad*1.45f);
+         float t=snipElapsed/Duration;
+-        float close=t<.30f?Mathf.SmoothStep(0,1,t/.30f):t<.39f?1:1-Mathf.SmoothStep(0,1,(t-.39f)/.61f);
++        float close=t<.28f?Mathf.SmoothStep(0,1,t/.28f):t<.36f?1:1-Mathf.SmoothStep(0,1,(t-.36f)/.64f);
++        // Idle never closes: a small opening variation, no periodic safe-state cue.
++        float idle=OpenAngle+.8f*Mathf.Sin(Time.timeSinceLevelLoad*1.25f);
+         angle=Mathf.Lerp(idle,ClosedAngle,Mathf.Clamp01(close));
+-        if(movingHalf)movingHalf.localRotation=Quaternion.Euler(0,0,angle);
++        fixedHalf.localRotation=Quaternion.Euler(0,0,-angle);movingHalf.localRotation=Quaternion.Euler(0,0,angle);
++        leftShadow.localRotation=fixedHalf.localRotation;rightShadow.localRotation=movingHalf.localRotation;
++        Vector3 offset=Quaternion.Euler(0,0,83f)*new Vector3(.012f,-.025f,0);
++        leftShadow.localPosition=offset;rightShadow.localPosition=offset;
+     }
+ }

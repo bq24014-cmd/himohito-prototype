@@ -1,0 +1,40 @@
+{
+  "runtime": "Unity 6000.3.21f1 existing non-Development Player + own managed assembly + external generated PNG; NOT a new Unity Build",
+  "production_head": "394b4a74e366678a9e0542d895b9a26f86993c19",
+  "production_source_changed": false,
+  "assembly_sha256": "deba3b40697be1efd205ec65f818e4029c80b55c1613e4c04f3761e40cebda8d",
+  "png_sha256": "0c100964f3bbdd7c7dae1c0da13497804760837c93831b4d23c8336be5def2ac",
+  "png_dimensions": [
+    1254,
+    1254
+  ],
+  "png_loading": "LoadImage -> two rigid half sprites plus common screw sprite; original RGBA unchanged",
+  "resources_bake_verified": false,
+  "source_files": {
+    "CraftScissorsDesignVisual.cs": "302d169133b908b3f56317149363706d79f435e7dd639180820fc90d8eb0eeb6",
+    "GroundingReview.cs": "4955091ccb4bd71354b989c04c4d39e8a4fa0c9ad3b335f02ddf18b318d3b5fc"
+  },
+  "videos": {
+    "Floor-Contact-FullSize.mp4": {
+      "bytes": 432591,
+      "sha256": "a1e51e4df0363ec4a61b2ced1562a4bf4b8c5330936c89c3c28bc142f1a85ac2",
+      "fps": 25,
+      "duration_seconds": 1.32,
+      "audio": false
+    },
+    "Floor-Idle-FullSize.mp4": {
+      "bytes": 247942,
+      "sha256": "967c8721b28d776f2bcbacef75ccd289470c07c5023a07e8eabecee242355004",
+      "fps": 25,
+      "duration_seconds": 4,
+      "audio": false
+    },
+    "Old-New-Idle-Comparison.mp4": {
+      "bytes": 202676,
+      "sha256": "36b4d215af4cb577e559d05bb1bfa78467fc2173c4a1a883c63a35d964cad4db",
+      "fps": 25,
+      "duration_seconds": 2,
+      "audio": false
+    }
+  }
+}

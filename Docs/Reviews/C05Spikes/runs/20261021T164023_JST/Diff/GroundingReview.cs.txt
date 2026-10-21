@@ -1,0 +1,94 @@
+using System;
+using System.IO;
+using System.Linq;
+using System.Reflection;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using HimoHito;
+
+[DefaultExecutionOrder(30000)]
+public sealed class GroundingReview:MonoBehaviour
+{
+    const BindingFlags Hidden=BindingFlags.Instance|BindingFlags.NonPublic;
+    static string Arg(string key,string fallback=""){var a=Environment.GetCommandLineArgs();for(int i=0;i<a.Length-1;i++)if(a[i]==key)return a[i+1];return fallback;}
+    static bool QA=>Arg("-scissorsQA")=="1";
+    static bool Candidate=>Arg("-scissorsVariant","Scissors")=="Scissors";
+    static object Get(object o,string n)=>o.GetType().GetField(n,Hidden).GetValue(o);
+    static void Set(object o,string n,object v)=>o.GetType().GetField(n,Hidden).SetValue(o,v);
+    static object Call(object o,string n)=>o.GetType().GetMethod(n,Hidden|BindingFlags.Public).Invoke(o,null);
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]static void Boot()
+    {
+        Application.runInBackground=true;
+        if(QA){Time.captureFramerate=50;UnityEngine.Random.InitState(521);}
+        SceneManager.sceneLoaded+=(s,m)=>{if(s.name!="MainStage"){SceneManager.LoadScene("MainStage");return;}new GameObject("C05 scissors isolated fixture").AddComponent<GroundingReview>();};
+    }
+    [Serializable]public class Contract{public string name,sprite;public Vector3 root,rotation,scale;public Vector2 size,offset,center,worldSize;public bool trigger,enabled;}
+    [Serializable]public class Frame{public string phase;public Vector2 root,velocity;public Vector3 camera;public float remaining,selected,contact,angle,pivotDistance;public bool attached,grounded;public int snips;}
+    [Serializable]public class Review{public string variant,unity,assetHash,execution="Existing non-Development Player + managed overlay + real external PNG. Diagnostic initial placement; native attached contact, pause and R. Not OS/Human play.";public bool development,finished;public int errors;public float ppu;public List<Contract> hazards=new List<Contract>(),reloadHazards=new List<Contract>();public List<Frame> trace=new List<Frame>();public List<string> checks=new List<string>();public List<Geometry> geometry=new List<Geometry>();}
+    [Serializable]public class Geometry{public string name;public Vector3 center,size;public Vector2 screenMin,screenMax;}
+    static Review previous;static bool reloaded;
+    Review report;Rigidbody2D body;PlayerMover mover;RopeController rope;RopeResource resource;MainStageRespawnOnFall run;StageOverlayControls overlay;ToySpikeVisual legacy;CraftScissorsDesignVisual scissors;
+    string output,phase="setup";
+    readonly Vector2 entry=new Vector2(12.7f,-4.28f);
+    IEnumerator Start()
+    {
+        yield return null;yield return null;yield return null;
+        mover=FindFirstObjectByType<PlayerMover>();body=mover.GetComponent<Rigidbody2D>();rope=body.GetComponent<RopeController>();resource=body.GetComponent<RopeResource>();run=FindFirstObjectByType<MainStageRespawnOnFall>();overlay=FindFirstObjectByType<StageOverlayControls>();
+        var preview=FindFirstObjectByType<MainStagePreview>();if(preview&&MainStagePreview.IsActive)Call(preview,"RestoreState");
+        resource.RestoreCapacityAndCurrent(50,50);rope.RestoreSelectedRopeLength(7);Place(entry);run.TryReachSection(2,entry,50);Set(run,"checkpointPosition",entry);Call(run,"CaptureCheckpointState");
+        legacy=GameObject.Find(CraftScissorsDesignVisual.TargetName).GetComponent<ToySpikeVisual>();
+        if(Candidate)scissors=legacy.gameObject.AddComponent<CraftScissorsDesignVisual>();
+        if(!QA){Debug.Log("C05_SCISSORS_MANUAL_READY native input; initial section2 fixture only; no auto input/capture/clock/exit. DESIGN ONLY: legacy collider mismatch.");yield break;}
+        output=Arg("-scissorsOutput");Directory.CreateDirectory(output);
+        report=previous??new Review{variant=Arg("-scissorsVariant"),unity=Application.unityVersion,development=Debug.isDebugBuild,assetHash=Candidate?CraftScissorsDesignVisual.AssetHash:"unchanged Production Resources"};
+        Application.logMessageReceived+=Log;
+        yield return new WaitForSeconds(.8f);
+        report.ppu=Screen.height/(2*Camera.main.orthographicSize);
+        if(reloaded){report.reloadHazards=Contracts();Check(Candidate?scissors.assetVerified:!FindFirstObjectByType<CraftScissorsDesignVisual>(),"scene reload retains selected visual");yield return Shot("08_Reload");Finish();yield break;}
+        report.hazards=Contracts();Check(report.hazards.Count==2,"MainStage existing two hazards");
+        Check(FindObjectsByType<CraftScissorsDesignVisual>(FindObjectsSortMode.None).Length==(Candidate?1:0),"only Front spike has new design");
+        if(Candidate)Check(scissors.assetVerified,"actual SpriteRenderers use decoded PNG atlas");
+        foreach(var sr in legacy.GetComponentsInChildren<SpriteRenderer>())if(sr.enabled){var b=sr.bounds;report.geometry.Add(new Geometry{name=sr.name,center=b.center,size=b.size,screenMin=Camera.main.WorldToScreenPoint(b.min),screenMax=Camera.main.WorldToScreenPoint(b.max)});}
+        yield return Shot("01_Normal");
+        if(Arg("-scissorsStatic")=="1"){Finish();yield break;}
+        Directory.CreateDirectory(Path.Combine(output,"IdleFrames"));Directory.CreateDirectory(Path.Combine(output,"ContactFrames"));
+        phase="idle";for(int i=0;i<200;i++){yield return new WaitForEndOfFrame();if(i%2==0)SaveFrame("IdleFrames",i/2);}
+        bool attached=rope.TryAttach(new Vector2(17.25f,-.85f));Check(attached,"native grounded attach");
+        // Reproduce the previous representative attached fall using unchanged Physics2D trigger.
+        var hit=(Vector2)legacy.transform.position+Vector2.up*1.20f;
+        body.position=hit;body.transform.position=new Vector3(hit.x,hit.y,0);body.linearVelocity=new Vector2(1.2f,-2);Sync();Physics2D.SyncTransforms();
+        phase="attached approach and real trigger";
+        for(int i=0;i<65;i++)
+        {
+            yield return new WaitForEndOfFrame();if(i%2==0)SaveFrame("ContactFrames",i/2);
+            if(i==4)SaveShot("02_BeforeContact");if(i==11)SaveShot("03_Close");if(i==22)SaveShot("04_ReturnOpen");
+            if(i==12)
+            {
+                // Pause while still in active play, before the native fall-failure screen.
+                Check(!run.IsFailureVisible,"pause sampled before fall failure");
+                Set(overlay,"isPaused",true);Call(overlay,"ApplyPauseState");Vector2 p=body.position;float a=Candidate?scissors.angle:0;
+                yield return new WaitForSecondsRealtime(.2f);
+                Check(Time.timeScale==0&&body.position==p&&(!Candidate||scissors.angle==a),"pause freezes physics and scissors pose");
+                Set(overlay,"isPaused",false);Call(overlay,"ApplyPauseState");
+            }
+        }
+        Check(!rope.IsAttached&&resource.CurrentLength==50,"native trigger detach/refund preserved");
+        if(Candidate){Check(scissors.snips==1,"one short close then reopen for one native contact");Check(report.trace.All(f=>f.pivotDistance<.00001f),"both rigid halves share one screw pivot in idle close and reopen");}
+        phase="native R";Call(run,"RestartFromCheckpoint");yield return new WaitForSeconds(.6f);yield return Shot("05_R");
+        Check(!rope.IsAttached&&resource.CurrentLength==50&&rope.SelectedRopeLength==7&&body.GetComponent<RopePlatformBuilder>().GeneratedPlatformCount==0,"R restores existing section2 state");
+        previous=report;reloaded=true;SceneManager.LoadScene("MainStage");
+    }
+    void FixedUpdate(){if(QA&&report!=null&&body&&legacy)report.trace.Add(new Frame{phase=phase,root=body.position,velocity=body.linearVelocity,camera=Camera.main.transform.position,remaining=resource.CurrentLength,selected=rope.SelectedRopeLength,attached=rope.IsAttached,grounded=mover.IsGrounded,contact=(float)Get(legacy,"contactElapsed"),angle=scissors?scissors.angle:0,snips=scissors?scissors.snips:0,pivotDistance=scissors&&scissors.fixedHalf?Mathf.Max(Vector3.Distance(scissors.fixedHalf.position,scissors.movingHalf.position),Vector3.Distance(scissors.fixedHalf.position,scissors.screw.position)):0});}
+    void Sync(){Set(mover,"previousPhysicsPosition",body.position);Set(mover,"hasPreviousPhysicsPosition",true);Set(mover,"hasPreviousVerticalSpeed",false);}
+    void Place(Vector2 p){rope.DetachAndRefund();body.position=p;body.transform.position=new Vector3(p.x,p.y,0);body.linearVelocity=Vector2.zero;body.angularVelocity=0;body.simulated=true;mover.enabled=true;rope.enabled=true;Sync();Physics2D.SyncTransforms();Camera.main.GetComponent<HorizontalCameraFollow>().ResetFraming();}
+    List<Contract> Contracts()=>FindObjectsByType<RopeSpikeHazard>(FindObjectsSortMode.None).OrderBy(x=>x.name).Select(x=>{var b=x.GetComponent<BoxCollider2D>();return new Contract{name=x.name,root=x.transform.position,rotation=x.transform.eulerAngles,scale=x.transform.lossyScale,size=b.size,offset=b.offset,center=b.bounds.center,worldSize=b.bounds.size,trigger=b.isTrigger,enabled=b.enabled,sprite=x.transform.Find("Wooden Toy Spike Face").GetComponent<SpriteRenderer>().sprite.name};}).ToList();
+    IEnumerator Shot(string name){yield return new WaitForEndOfFrame();SaveShot(name);}
+    void SaveShot(string name){var im=ScreenCapture.CaptureScreenshotAsTexture();File.WriteAllBytes(Path.Combine(output,name+".png"),im.EncodeToPNG());Destroy(im);}
+    void SaveFrame(string folder,int n){var im=ScreenCapture.CaptureScreenshotAsTexture();File.WriteAllBytes(Path.Combine(output,folder,n.ToString("D5")+".jpg"),im.EncodeToJPG(86));Destroy(im);}
+    void Check(bool ok,string text){report.checks.Add((ok?"PASS ":"FAIL ")+text);if(!ok)report.errors++;}
+    void Log(string message,string stack,LogType type){if(type==LogType.Error||type==LogType.Exception||type==LogType.Assert){report.errors++;File.AppendAllText(Path.Combine(output,"Errors.txt"),message+"\n"+stack+"\n");}}
+    void Finish(){report.finished=true;File.WriteAllText(Path.Combine(output,"Result.json"),JsonUtility.ToJson(report,true));Debug.Log("C05_SCISSORS_FINISHED errors="+report.errors);Application.Quit(report.errors==0?0:2);}
+    void OnDestroy(){Application.logMessageReceived-=Log;}
+}
