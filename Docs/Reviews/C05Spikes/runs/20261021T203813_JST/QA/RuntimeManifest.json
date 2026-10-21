@@ -1,0 +1,35 @@
+{
+  "execution": "Existing non-Development Unity 6000.3.21f1 Player + isolated managed overlay + approved external PNG. NOT a new Unity Build. Two independent static poses, not animation.",
+  "production_head": "394b4a74e366678a9e0542d895b9a26f86993c19",
+  "approved_body": "5c64b9ef63d574a56ef4fbb0439ee7d364800dfa",
+  "rejected_rest_pose": "e560ab4c40ac7bc22c706b20e14df211fa5d323c",
+  "assembly_sha256": "7b57344ced45f7bb48a3c5e13f65499550f9aed9eceb8bd99cfe4574339c6242",
+  "asset_sha256": "b5558bcd4b40b7762201184ec0324758803aaaede56cc3102dbd169670c57c1d",
+  "source_sha256": {
+    "CraftScissorsDesignVisual.cs": "74efd1f1034d1c93949ae8c02cc89b28126ec0c2894c4fd1a7dc832a8d9962f5",
+    "GroundingReview.cs": "974c3fe036426ab71c414929620e42516d66847ac04e0fd167ec9a8b3a32e52d"
+  },
+  "world_rotation": [
+    0,
+    0,
+    180
+  ],
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "ppu": 500,
+  "static_open_angles": [
+    16,
+    -16
+  ],
+  "static_closed_angles": [
+    -3.4,
+    3.8
+  ],
+  "floor_y": -8.34,
+  "human_placement_adoption": false,
+  "production_integrated": false,
+  "physics_changed": false
+}

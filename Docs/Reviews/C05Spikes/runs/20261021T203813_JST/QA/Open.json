@@ -1,0 +1,1306 @@
+{
+    "variant": "Scissors",
+    "unity": "6000.3.21f1",
+    "assetHash": "b5558bcd4b40b7762201184ec0324758803aaaede56cc3102dbd169670c57c1d",
+    "execution": "Existing non-Development Player + managed overlay + approved external PNG. Diagnostic initial placement; display-only PlayContact cycle; native attached trigger, API pause and R. Not OS/Human play.",
+    "development": false,
+    "finished": true,
+    "errors": 0,
+    "ppu": 51.72414016723633,
+    "hazards": [
+        {
+            "name": "Main Section 2 Far Spike",
+            "sprite": "HimoHitoCraftSpike-v1 Processed",
+            "root": {
+                "x": 19.549999237060548,
+                "y": -8.199999809265137,
+                "z": 0.0
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "scale": {
+                "x": 0.699999988079071,
+                "y": 0.30000001192092898,
+                "z": 1.0
+            },
+            "size": {
+                "x": 0.8600000143051148,
+                "y": 0.8999999761581421
+            },
+            "offset": {
+                "x": 0.0,
+                "y": -0.029999999329447748
+            },
+            "center": {
+                "x": 19.549999237060548,
+                "y": -8.208999633789063
+            },
+            "worldSize": {
+                "x": 0.6020011901855469,
+                "y": 0.2700004577636719
+            },
+            "trigger": true,
+            "enabled": true
+        },
+        {
+            "name": "Main Section 2 Front Spike",
+            "sprite": "HimoHitoCraftSpike-v1 Processed",
+            "root": {
+                "x": 15.350000381469727,
+                "y": -7.900000095367432,
+                "z": 0.0
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "scale": {
+                "x": 0.8999999761581421,
+                "y": 0.8999999761581421,
+                "z": 1.0
+            },
+            "size": {
+                "x": 0.8600000143051148,
+                "y": 0.8999999761581421
+            },
+            "offset": {
+                "x": 0.0,
+                "y": -0.029999999329447748
+            },
+            "center": {
+                "x": 15.350000381469727,
+                "y": -7.927000045776367
+            },
+            "worldSize": {
+                "x": 0.7740001678466797,
+                "y": 0.8099994659423828
+            },
+            "trigger": true,
+            "enabled": true
+        }
+    ],
+    "reloadHazards": [],
+    "trace": [
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.28000020980835
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": -16.0,
+            "pivotDistance": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.239832401275635
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": -16.0,
+            "pivotDistance": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.23809289932251
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": -16.0,
+            "pivotDistance": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.2369794845581059
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": -16.0,
+            "pivotDistance": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.23626708984375
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": -16.0,
+            "pivotDistance": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235811233520508
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": -16.0,
+            "pivotDistance": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.2355194091796879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": -16.0,
+            "pivotDistance": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235332489013672
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": -16.0,
+            "pivotDistance": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235213279724121
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": -16.0,
+            "pivotDistance": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235136985778809
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": -16.0,
+            "pivotDistance": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235087871551514
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": -16.0,
+            "pivotDistance": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235056400299072
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": -16.0,
+            "pivotDistance": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235036373138428
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": -16.0,
+            "pivotDistance": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235023498535156
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": -16.0,
+            "pivotDistance": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235014915466309
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": -16.0,
+            "pivotDistance": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235009670257568
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": -16.0,
+            "pivotDistance": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235006332397461
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": -16.0,
+            "pivotDistance": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235004425048828
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": -16.0,
+            "pivotDistance": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.2350029945373539
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": -16.0,
+            "pivotDistance": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235002040863037
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": -16.0,
+            "pivotDistance": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": -16.0,
+            "pivotDistance": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": -16.0,
+            "pivotDistance": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": -16.0,
+            "pivotDistance": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": -16.0,
+            "pivotDistance": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": -16.0,
+            "pivotDistance": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": -16.0,
+            "pivotDistance": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": -16.0,
+            "pivotDistance": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": -16.0,
+            "pivotDistance": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": -16.0,
+            "pivotDistance": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": -16.0,
+            "pivotDistance": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": -16.0,
+            "pivotDistance": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": -16.0,
+            "pivotDistance": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": -16.0,
+            "pivotDistance": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": -16.0,
+            "pivotDistance": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": -16.0,
+            "pivotDistance": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": -16.0,
+            "pivotDistance": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": -16.0,
+            "pivotDistance": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": -16.0,
+            "pivotDistance": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": -16.0,
+            "pivotDistance": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": -16.0,
+            "pivotDistance": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": -16.0,
+            "pivotDistance": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        }
+    ],
+    "checks": [
+        "PASS MainStage existing two hazards",
+        "PASS only Front spike has new design",
+        "PASS actual SpriteRenderers use decoded PNG atlas"
+    ],
+    "geometry": [
+        {
+            "name": "Left small contact shadow",
+            "center": {
+                "x": 15.580561637878418,
+                "y": -7.443331241607666,
+                "z": 0.0
+            },
+            "size": {
+                "x": 1.3142898082733155,
+                "y": 2.183661460876465,
+                "z": 0.20000000298023225
+            },
+            "screenMin": {
+                "x": 915.0043334960938,
+                "y": 8.526098251342774
+            },
+            "screenMax": {
+                "x": 982.9848022460938,
+                "y": 121.47410583496094
+            }
+        },
+        {
+            "name": "Right small contact shadow",
+            "center": {
+                "x": 15.135749816894532,
+                "y": -7.441126346588135,
+                "z": 0.0
+            },
+            "size": {
+                "x": 1.33351469039917,
+                "y": 2.189173936843872,
+                "z": 0.20000000298023225
+            },
+            "screenMin": {
+                "x": 891.4996337890625,
+                "y": 8.497587203979493
+            },
+            "screenMax": {
+                "x": 960.474609375,
+                "y": 121.730712890625
+            }
+        },
+        {
+            "name": "Left rigid half",
+            "center": {
+                "x": 15.568561553955079,
+                "y": -7.408331394195557,
+                "z": 0.0
+            },
+            "size": {
+                "x": 1.3142898082733155,
+                "y": 2.183661460876465,
+                "z": 0.20000000298023225
+            },
+            "screenMin": {
+                "x": 914.3836669921875,
+                "y": 10.336455345153809
+            },
+            "screenMax": {
+                "x": 982.3641967773438,
+                "y": 123.28443908691406
+            }
+        },
+        {
+            "name": "Right rigid half",
+            "center": {
+                "x": 15.123749732971192,
+                "y": -7.406126499176025,
+                "z": 0.0
+            },
+            "size": {
+                "x": 1.33351469039917,
+                "y": 2.189173936843872,
+                "z": 0.20000000298023225
+            },
+            "screenMin": {
+                "x": 890.8788452148438,
+                "y": 10.307943344116211
+            },
+            "screenMax": {
+                "x": 959.8538208007813,
+                "y": 123.54104614257813
+            }
+        },
+        {
+            "name": "Shared screw",
+            "center": {
+                "x": 15.348999977111817,
+                "y": -7.5313401222229,
+                "z": 0.0
+            },
+            "size": {
+                "x": 0.22200001776218415,
+                "y": 0.2240000218153,
+                "z": 0.20000000298023225
+            },
+            "screenMin": {
+                "x": 931.2759399414063,
+                "y": 54.65483856201172
+            },
+            "screenMax": {
+                "x": 942.7586669921875,
+                "y": 66.24104309082031
+            }
+        }
+    ],
+    "poses": [
+        {
+            "label": "01_Normal",
+            "frame": -1,
+            "angle": -16.0,
+            "hinge": {
+                "x": 15.350000381469727,
+                "y": -7.5313401222229,
+                "z": 0.0
+            },
+            "visualScale": {
+                "x": 1.0000003576278687,
+                "y": 1.0000003576278687,
+                "z": 1.0
+            },
+            "triggerMin": {
+                "x": 14.963000297546387,
+                "y": -8.331999778747559
+            },
+            "triggerMax": {
+                "x": 15.737000465393067,
+                "y": -7.522000312805176
+            },
+            "triggerScreenMin": {
+                "x": 917.0516967773438,
+                "y": 19.03448486328125
+            },
+            "triggerScreenMax": {
+                "x": 957.0863037109375,
+                "y": 60.9310188293457
+            },
+            "leftBlade": [
+                {
+                    "x": 15.3962984085083,
+                    "y": -7.395308971405029,
+                    "z": 0.0
+                },
+                {
+                    "x": 15.228288650512696,
+                    "y": -7.520467281341553,
+                    "z": 0.0
+                },
+                {
+                    "x": 15.076942443847657,
+                    "y": -6.9708943367004398,
+                    "z": 0.0
+                },
+                {
+                    "x": 15.003188133239746,
+                    "y": -6.546794891357422,
+                    "z": 0.0
+                }
+            ],
+            "rightBlade": [
+                {
+                    "x": 15.470891952514649,
+                    "y": -7.51607084274292,
+                    "z": 0.0
+                },
+                {
+                    "x": 15.311943054199219,
+                    "y": -7.395591735839844,
+                    "z": 0.0
+                },
+                {
+                    "x": 15.544234275817871,
+                    "y": -6.948291778564453,
+                    "z": 0.0
+                },
+                {
+                    "x": 15.704503059387207,
+                    "y": -6.548999786376953,
+                    "z": 0.0
+                }
+            ],
+            "leftScreen": [
+                {
+                    "x": 939.4636840820313,
+                    "y": 67.4840316772461,
+                    "z": 10.0
+                },
+                {
+                    "x": 930.7735595703125,
+                    "y": 61.01030349731445,
+                    "z": 10.0
+                },
+                {
+                    "x": 922.9453125,
+                    "y": 89.43649291992188,
+                    "z": 10.0
+                },
+                {
+                    "x": 919.1304321289063,
+                    "y": 111.37266540527344,
+                    "z": 10.0
+                }
+            ],
+            "rightScreen": [
+                {
+                    "x": 943.322021484375,
+                    "y": 61.237728118896487,
+                    "z": 10.0
+                },
+                {
+                    "x": 935.1005859375,
+                    "y": 67.4693832397461,
+                    "z": 10.0
+                },
+                {
+                    "x": 947.1156005859375,
+                    "y": 90.6056137084961,
+                    "z": 10.0
+                },
+                {
+                    "x": 955.4053344726563,
+                    "y": 111.25862121582031,
+                    "z": 10.0
+                }
+            ]
+        }
+    ]
+}

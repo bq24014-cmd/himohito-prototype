@@ -1,15 +1,16 @@
 # C05 危険物のデザインレビュー
 
-[最新状態](LATEST.json)／[向きと接地の比較](runs/20261021T202109_JST/Report.md)／[比較起動](runs/20261021T202109_JST/Launch.md)
+[最新状態](LATEST.json)／[上向きの開閉静止比較](runs/20261021T203813_JST/Report.md)／[比較起動](runs/20261021T203813_JST/Launch.md)
 
-最新は、本体承認済みの暖色ハサミについて、向きと接地だけを見直した隔離候補です。持ち手を手前、刃先を右奥へ向け、面を床へ寝かせています。本編手前1か所のみ。素材・開閉ロジック・判定は前回のままです。
+最新は、Human指定の「上向き・持ち手は下」を、承認済み単体図の180度回転で確認する隔離候補です。正面向きで、持ち手を床に接地。素材・色・大きさ・共通支点を保持し、本編手前1か所だけへ表示しています。
 
-[同一画角比較](runs/20261021T202109_JST/Images/Normal_Comparison.jpg)／[接地拡大](runs/20261021T202109_JST/Images/Contact_Comparison.jpg)／[修正版の全画面](runs/20261021T202109_JST/Images/After_Normal.jpg)
+[同一画角の開閉比較](runs/20261021T203813_JST/Images/Normal_OpenClosed.jpg)／[接地拡大](runs/20261021T203813_JST/Images/Detail_OpenClosed.jpg)／[開いた全画面](runs/20261021T203813_JST/Images/Open_Normal.jpg)／[閉じた全画面](runs/20261021T203813_JST/Images/Closed_Normal.jpg)
 
-今回の比較は実Unityの静止画です。寝かせたことで通常画角の刃が細く見える点は、自然な置き方と合わせてHuman Reviewに残します。判定の不一致は未解消で、配置・動き・判定・本番統合の承認とは分けて扱います。
+今回は実Unityの独立した開／閉の静止画です。奥行き方向の傾きは0。アニメーションや接触判定の完成版ではありません。判定の不一致は未解消で、配置・動き・判定・本番統合の承認とは分けて扱います。
 
 ## 履歴
 
+- [床寝かせ案 e560ab4](runs/20261021T202109_JST/Report.md)：Human不採用。原本保持。
 - [前回配置 32809c7](runs/20261021T193948_JST/Report.md)：Humanから「向きが不自然」の修正指示。原本・開閉動画を保持。
 - [暖色本体 5c64b9e](runs/20261021T180204_JST/Report.md)：本体の形・色・厚みをHuman承認。今回の基準。
 - [床置き緑案 25ba244](runs/20261021T164023_JST/Report.md)：Human不採用。原本保持。

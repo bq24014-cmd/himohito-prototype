@@ -1,0 +1,39 @@
+{
+    "mode": "Open",
+    "source": "Approved body assembly 5c64b9e, rigid 180-degree screen rotation; static pose review only",
+    "rootZ": 180.0,
+    "tiltX": 0.0,
+    "tiltY": 0.0,
+    "leftAngle": 16.0,
+    "rightAngle": -16.0,
+    "floorY": -8.34000015258789,
+    "ppu": 500.0,
+    "pivotDistance": 0.0,
+    "hinge": {
+        "x": 15.350000381469727,
+        "y": -7.5313401222229,
+        "z": 0.0
+    },
+    "worldScale": {
+        "x": 1.0,
+        "y": 1.0,
+        "z": 1.0
+    },
+    "faceNormal": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 1.0
+    },
+    "leftHandleLowest": {
+        "x": 15.907493591308594,
+        "y": -8.34000015258789,
+        "z": 0.0
+    },
+    "rightHandleLowest": {
+        "x": 14.789213180541993,
+        "y": -8.33697509765625,
+        "z": 0.0
+    },
+    "physicsChanged": false,
+    "animated": false
+}

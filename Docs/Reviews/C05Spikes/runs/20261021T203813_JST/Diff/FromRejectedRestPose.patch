@@ -1,0 +1,170 @@
+--- a/Isolated/CraftScissorsDesignVisual.cs
++++ b/Isolated/CraftScissorsDesignVisual.cs
+@@ -1,106 +1,100 @@
+ using System;
+ using System.IO;
+-using System.Reflection;
+ using System.Security.Cryptography;
+ using UnityEngine;
+ using HimoHito;
+ 
+-// Isolated presentation only. Approved v3 pixels and proportions are unchanged.
++// Isolated STATIC placement review. Approved body poses, front facing, rotated 180 degrees.
++// No collider, hazard, input or physical movement changes; no contact animation evaluation.
+ [DefaultExecutionOrder(31000)]
+ public sealed class CraftScissorsDesignVisual : MonoBehaviour
+ {
+     public const string TargetName="Main Section 2 Front Spike";
+-    public const float PixelsPerUnit=500f;
++    public const float PixelsPerUnit=500f,FloorY=-8.34f;
+     public static string AssetHash;
+     public static Texture2D Atlas;
+     public static Sprite LeftSprite,RightSprite,ScrewSprite;
+     public Transform fixedHalf,movingHalf,screw;
+-    Transform leftShadow,rightShadow;
+-    public float snipElapsed=1f,angle,previousContact=.4f;
+-    public int snips;
++    public float angle;
++    public int snips; // Compatibility with the reused static recorder; never incremented.
+     public bool assetVerified;
+-    ToySpikeVisual legacy;SpriteRenderer legacyFace;
+-    static readonly FieldInfo ContactField=typeof(ToySpikeVisual).GetField("contactElapsed",BindingFlags.Instance|BindingFlags.NonPublic);
+-    const float Duration=.55f,LeftAngle=16f,RightOpen=-16f,RightClosed=23.2f;
+-    public static bool PreviousPlacement=>Array.IndexOf(Environment.GetCommandLineArgs(),"-previousPlacement")>=0;
++    public static bool Closed=>Array.IndexOf(Environment.GetCommandLineArgs(),"-closedPose")>=0;
++    SpriteRenderer legacyFace;
++    Transform root;
++    Vector3 leftSupport,rightSupport;
++    float leftAngle;
+ 
++    [Serializable]public class PoseRecord
++    {
++        public string mode,source="Approved body assembly 5c64b9e, rigid 180-degree screen rotation; static pose review only";
++        public float rootZ=180,tiltX=0,tiltY=0,leftAngle,rightAngle,floorY,ppu=PixelsPerUnit,pivotDistance;
++        public Vector3 hinge,worldScale,faceNormal,leftHandleLowest,rightHandleLowest;
++        public bool physicsChanged=false,animated=false;
++    }
++    public PoseRecord Record()=>new PoseRecord{mode=Closed?"Closed":"Open",leftAngle=leftAngle,rightAngle=angle,floorY=FloorY,hinge=root.position,worldScale=root.lossyScale,faceNormal=root.forward,leftHandleLowest=leftSupport,rightHandleLowest=rightSupport,pivotDistance=Mathf.Max(Vector3.Distance(fixedHalf.position,movingHalf.position),Vector3.Distance(fixedHalf.position,screw.position))};
+     static void Load()
+     {
+         if(Atlas)return;
+-        string path=Path.Combine(Path.GetDirectoryName(Application.dataPath),"ReviewAssets","HimoHitoWarmScissorsParts-v3.png");
+-        byte[] bytes=File.ReadAllBytes(path);
++        var path=Path.Combine(Path.GetDirectoryName(Application.dataPath),"ReviewAssets","HimoHitoWarmScissorsParts-v3.png");
++        var bytes=File.ReadAllBytes(path);
+         using(var sha=SHA256.Create())AssetHash=BitConverter.ToString(sha.ComputeHash(bytes)).Replace("-","").ToLowerInvariant();
+         if(AssetHash!="b5558bcd4b40b7762201184ec0324758803aaaede56cc3102dbd169670c57c1d")throw new Exception("Approved body asset differs");
+         Atlas=new Texture2D(2,2,TextureFormat.RGBA32,true){name="Human approved warm scissors v3 external PNG",filterMode=FilterMode.Trilinear,wrapMode=TextureWrapMode.Clamp};
+-        if(!Atlas.LoadImage(bytes)||Atlas.width!=1536||Atlas.height!=1024)throw new Exception("Approved atlas decode/dimensions failed");
+-        LeftSprite=Part(new Rect(230,0,390,1024),new Vector2(547,1024-483),"Warm left rigid handle-shank-blade");
+-        RightSprite=Part(new Rect(830,0,400,1024),new Vector2(904,1024-483),"Warm right rigid handle-shank-blade");
+-        ScrewSprite=Part(new Rect(1273,1024-545,111,112),new Vector2(1328,1024-489),"Shared pivot screw");
+-        Debug.Log("C05_WARM_PLACEMENT_PNG sha256="+AssetHash+" pixels="+Atlas.width+"x"+Atlas.height);
++        if(!Atlas.LoadImage(bytes)||Atlas.width!=1536||Atlas.height!=1024)throw new Exception("Approved atlas decode failed");
++        LeftSprite=Part(new Rect(230,0,390,1024),new Vector2(547,541),"Warm left rigid handle-shank-blade");
++        RightSprite=Part(new Rect(830,0,400,1024),new Vector2(904,541),"Warm right rigid handle-shank-blade");
++        ScrewSprite=Part(new Rect(1273,479,111,112),new Vector2(1328,535),"Shared pivot screw");
++        Debug.Log("C05_UPRIGHT_PNG sha256="+AssetHash);
+     }
+     static Sprite Part(Rect rect,Vector2 pivot,string name)
+     {
+-        var s=Sprite.Create(Atlas,rect,new Vector2((pivot.x-rect.x)/rect.width,(pivot.y-rect.y)/rect.height),PixelsPerUnit,0,SpriteMeshType.FullRect);
+-        s.name=name;return s;
++        var sprite=Sprite.Create(Atlas,rect,new Vector2((pivot.x-rect.x)/rect.width,(pivot.y-rect.y)/rect.height),PixelsPerUnit,0,SpriteMeshType.FullRect);sprite.name=name;return sprite;
+     }
+     void Awake()
+     {
+-        Load();legacy=GetComponent<ToySpikeVisual>();legacyFace=transform.Find("Wooden Toy Spike Face").GetComponent<SpriteRenderer>();
+-        // Cancel hazard scale before applying a rigid 3D orientation, avoiding shear.
+-        var space=new GameObject("Warm scissors unscaled VISUAL space").transform;space.SetParent(transform,false);
++        Load();legacyFace=transform.Find("Wooden Toy Spike Face").GetComponent<SpriteRenderer>();
++        var space=new GameObject("Upright scissors unscaled VISUAL space").transform;space.SetParent(transform,false);
+         space.localScale=new Vector3(1f/transform.lossyScale.x,1f/transform.lossyScale.y,1f/transform.lossyScale.z);
+-        var root=new GameObject("Warm scissors body VISUAL ONLY").transform;root.SetParent(space,false);
+-        root.position=PreviousPlacement?new Vector3(14.80f,-7.73f,transform.position.z):new Vector3(15.10f,-7.98f,transform.position.z);
+-        // Rigid pose of the approved face: handles near-left, blade tips away-right.
+-        // Sprite geometry, pixels, world dimensions and animation stay unchanged.
+-        // Orthographic foreshortening is from rotation, never nonuniform local scaling.
+-        root.localRotation=PreviousPlacement?Quaternion.Euler(0,0,75f):Quaternion.AngleAxis(55f,Vector3.right)*Quaternion.AngleAxis(110f,Vector3.forward);
+-        leftShadow=Create(root,LeftSprite,"Left small contact shadow",2,new Color(.055f,.025f,.015f,.27f));
+-        rightShadow=Create(root,RightSprite,"Right small contact shadow",2,new Color(.055f,.025f,.015f,.21f));
+-        fixedHalf=Create(root,LeftSprite,"Left rigid half",3,Color.white);
+-        movingHalf=Create(root,RightSprite,"Right rigid half",4,Color.white);
+-        screw=Create(root,ScrewSprite,"Shared screw",5,Color.white);
+-        previousContact=(float)ContactField.GetValue(legacy);
++        root=new GameObject("Upright scissors STATIC body VISUAL ONLY").transform;root.SetParent(space,false);
++        root.position=new Vector3(15.35f,0,transform.position.z);root.localRotation=Quaternion.Euler(0,0,180);
++        var ls=Create(LeftSprite,"Left small contact shadow",2,new Color(.055f,.025f,.015f,.27f));
++        var rs=Create(RightSprite,"Right small contact shadow",2,new Color(.055f,.025f,.015f,.21f));
++        fixedHalf=Create(LeftSprite,"Left rigid half",3,Color.white);movingHalf=Create(RightSprite,"Right rigid half",4,Color.white);screw=Create(ScrewSprite,"Shared screw",5,Color.white);
++        // Exactly the approved standalone OPEN/CLOSED assembly, not the previous one-sided animation.
++        leftAngle=Closed?-3.4f:16f;angle=Closed?3.8f:-16f;
++        fixedHalf.localRotation=Quaternion.Euler(0,0,leftAngle);movingHalf.localRotation=Quaternion.Euler(0,0,angle);
++        ls.localRotation=fixedHalf.localRotation;rs.localRotation=movingHalf.localRotation;
++        ls.localPosition=rs.localPosition=Quaternion.Inverse(root.localRotation)*new Vector3(.012f,-.035f,0);
++        leftSupport=LowestHandle(fixedHalf,true);rightSupport=LowestHandle(movingHalf,false);
++        // Translate the display only so the lowest solid handle pixel touches the same floor line.
++        root.position+=Vector3.up*(FloorY-Mathf.Min(leftSupport.y,rightSupport.y));
++        leftSupport=LowestHandle(fixedHalf,true);rightSupport=LowestHandle(movingHalf,false);
+         assetVerified=fixedHalf.GetComponent<SpriteRenderer>().sprite.texture==Atlas&&movingHalf.GetComponent<SpriteRenderer>().sprite.texture==Atlas;
+-        Apply();
++        Debug.Log("C05_UPRIGHT_POSE "+JsonUtility.ToJson(Record()));
+     }
+-    Transform Create(Transform parent,Sprite sprite,string name,int order,Color color)
++    Transform Create(Sprite sprite,string name,int order,Color color)
+     {
+-        var go=new GameObject(name);go.transform.SetParent(parent,false);
+-        var sr=go.AddComponent<SpriteRenderer>();sr.sprite=sprite;sr.color=color;
+-        sr.sortingLayerID=legacyFace.sortingLayerID;sr.sortingOrder=order;return go.transform;
++        var go=new GameObject(name);go.transform.SetParent(root,false);
++        var sr=go.AddComponent<SpriteRenderer>();sr.sprite=sprite;sr.color=color;sr.sortingLayerID=legacyFace.sortingLayerID;sr.sortingOrder=order;return go.transform;
+     }
+-    void LateUpdate()
++    Vector3 LowestHandle(Transform half,bool left)
+     {
+-        if(legacyFace)legacyFace.enabled=false;
+-        if(Time.timeScale<=0)return;
+-        float contact=(float)ContactField.GetValue(legacy);
+-        if(contact<previousContact-.05f){snipElapsed=0;snips++;}
+-        previousContact=contact;snipElapsed=Mathf.Min(1f,snipElapsed+Time.deltaTime);Apply();
++        var colors=Atlas.GetPixels32();int start=left?230:830,end=left?620:1230;float px=left?547:904;
++        var result=new Vector3(0,float.PositiveInfinity,0);
++        // Handle region is above source top-down row430; alpha threshold ignores soft fringe.
++        // This derives support from the approved pixels; it creates no collision surface.
++        for(int y=594;y<1024;y++)for(int x=start;x<end;x++)if(colors[y*Atlas.width+x].a>=128)
++        {
++            var p=half.TransformPoint(new Vector3((x+.5f-px)/PixelsPerUnit,(y+.5f-541)/PixelsPerUnit,0));
++            if(p.y<result.y)result=p;
++        }
++        if(float.IsInfinity(result.y))throw new Exception("Approved handle support not found");return result;
+     }
+-    void Apply()
+-    {
+-        float t=snipElapsed/Duration;
+-        float close=t<.31f?Mathf.SmoothStep(0,1,t/.31f):t<.42f?1:1-Mathf.SmoothStep(0,1,(t-.42f)/.58f);
+-        // Fixed half rests on the floor. Only the second rigid half moves.
+-        // The relative closed angle 7.2 degrees equals the approved static body pose.
+-        float idle=RightOpen+.65f*Mathf.Sin(Time.timeSinceLevelLoad*1.25f);
+-        angle=Mathf.Lerp(idle,RightClosed,Mathf.Clamp01(close));
+-        fixedHalf.localRotation=Quaternion.Euler(0,0,LeftAngle);movingHalf.localRotation=Quaternion.Euler(0,0,angle);
+-        leftShadow.localRotation=fixedHalf.localRotation;rightShadow.localRotation=movingHalf.localRotation;
+-        Vector3 offset=Quaternion.Inverse(fixedHalf.parent.localRotation)*new Vector3(.012f,-.035f,0);
+-        leftShadow.localPosition=offset;rightShadow.localPosition=offset;
+-    }
++    void LateUpdate(){if(legacyFace)legacyFace.enabled=false;}
+     public Vector3[] BladePoints(bool left)
+     {
+-        // Representative blade outline from original atlas pixels, for design/trigger overlay.
+-        // This is not a new collider and not an exact alpha contour.
+-        Vector2[] p=left?new[]{new Vector2(506,542),new Vector2(604,505),new Vector2(601,790),new Vector2(578,1004)}
+-                       :new[]{new Vector2(848,507),new Vector2(941,543),new Vector2(891,790),new Vector2(869,1004)};
+-        Vector2 pivot=left?new Vector2(547,483):new Vector2(904,483);
+-        var tr=left?fixedHalf:movingHalf;var result=new Vector3[p.Length];
+-        for(int i=0;i<p.Length;i++)result[i]=tr.TransformPoint(new Vector3((p[i].x-pivot.x)/PixelsPerUnit,(pivot.y-p[i].y)/PixelsPerUnit,0));
+-        return result;
++        Vector2[] p=left?new[]{new Vector2(506,542),new Vector2(604,505),new Vector2(601,790),new Vector2(578,1004)}:new[]{new Vector2(848,507),new Vector2(941,543),new Vector2(891,790),new Vector2(869,1004)};
++        Vector2 pivot=left?new Vector2(547,483):new Vector2(904,483);var tr=left?fixedHalf:movingHalf;var result=new Vector3[p.Length];
++        for(int i=0;i<p.Length;i++)result[i]=tr.TransformPoint(new Vector3((p[i].x-pivot.x)/PixelsPerUnit,(pivot.y-p[i].y)/PixelsPerUnit,0));return result;
+     }
+ }
+-
