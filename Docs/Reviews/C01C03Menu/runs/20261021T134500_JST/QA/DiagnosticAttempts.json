@@ -1,0 +1,27 @@
+[
+  {
+    "attempt": "r1",
+    "errors": 9,
+    "failed_checks": [
+      "FAIL IMGUI click island selects main",
+      "FAIL IMGUI click nameplate selects upcoming",
+      "FAIL IMGUI help button opens existing sheet",
+      "FAIL help blocks native select and start",
+      "FAIL close-help same-frame guard blocks quit",
+      "FAIL IMGUI primary button starts cloth transition",
+      "FAIL Tutorial start committed",
+      "FAIL main Scene reference loaded",
+      "FAIL MainStage starting50 unchanged"
+    ],
+    "meaning": "diagnostic driver limitations; not successful OS/GUI input tests; retained locally"
+  },
+  {
+    "attempt": "r2",
+    "errors": 2,
+    "failed_checks": [
+      "FAIL Tutorial introductory tour finished",
+      "FAIL Main introductory tour finished"
+    ],
+    "meaning": "diagnostic driver limitations; not successful OS/GUI input tests; retained locally"
+  }
+]

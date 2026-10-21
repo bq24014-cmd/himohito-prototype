@@ -1,0 +1,86 @@
+--- a/Assets/Scripts/StageSelectionView.cs
++++ b/Assets/Scripts/StageSelectionView.cs
+@@ -10,7 +10,7 @@
+         private const string ArtRoot = "Art/HimoHitoStageMap";
+         private const string UpcomingArtPath = ArtRoot + "Upcoming-v1";
+         private Texture2D background, yarn;
+-        private GUIStyle heading, eyebrow, label, small, description, button, selectedLabel, credits, clearLabel;
++        private GUIStyle heading, eyebrow, label, small, description, button, selectedLabel, clearLabel;
+         private static readonly Color Ink = new Color(.17f, .12f, .20f);
+         private static readonly Color Cream = new Color(1f, .91f, .76f);
+         private static readonly Color Muted = new Color(.76f, .75f, .79f);
+@@ -110,35 +110,34 @@
+                     if (ClothButton(nameRect, stage.title, label, active)) run.SelectStage(index);
+                     if (GUI.Button(iconRect, GUIContent.none, GUIStyle.none)) run.SelectStage(index);
+                     GUI.Label(new Rect(node.x - 162, node.y + 91, 324, 28),
+-                        stage.available ? stage.subtitle : "COMING SOON  /  追加予定",
++                        IslandSubtitle(stage),
+                         stage.available ? small : selectedLabel);
+                 }
+ 
+                 StageCatalog.Entry chosen = stages[run.SelectedStageIndex];
+                 bool hasError = !string.IsNullOrEmpty(run.StageSelectionError);
+-                FitLabel(new Rect(255, 522, 770, 52), hasError ? run.StageSelectionError : chosen.description,
+-                    hasError ? selectedLabel : description, hasError ? 15 : 19, 14);
+                 bool enabled = GUI.enabled;
+-                quit = ClothButton(new Rect(151, 602, 255, 56), "Esc　ゲーム終了", button, false);
+-                help = ClothButton(new Rect(512, 602, 255, 56), "Tab　操作説明", button, false);
++                help = ClothButton(new Rect(176, 550, 238, 48), "Tab　操作方法", button, false);
++                quit = ClothButton(new Rect(866, 550, 238, 48), "Esc　終了", button, false);
+                 GUI.enabled = enabled && chosen.available;
+-                start = ClothButton(new Rect(873, 602, 255, 56),
+-                    chosen.available ? "Enter　ここであそぶ" : "追加をお楽しみに", button, chosen.available);
++                start = ClothButton(new Rect(478, 542, 324, 62),
++                    chosen.available ? "Enter　はじめる" : "追加予定", label, chosen.available);
+                 GUI.enabled = enabled;
+ 
+                 int pages = PageCount(stages.Count);
+                 if (pages > 1)
+                 {
+                     GUI.enabled = enabled && page > 0;
+-                    if (GUI.Button(new Rect(463, 574, 45, 27), "◀", selectedLabel)) run.SelectStage(first - StagesPerPage);
++                    if (GUI.Button(new Rect(260, 622, 45, 27), "◀", selectedLabel)) run.SelectStage(first - StagesPerPage);
+                     GUI.enabled = enabled && page + 1 < pages;
+-                    if (GUI.Button(new Rect(773, 574, 45, 27), "▶", selectedLabel)) run.SelectStage(first + StagesPerPage);
++                    if (GUI.Button(new Rect(975, 622, 45, 27), "▶", selectedLabel)) run.SelectStage(first + StagesPerPage);
+                     GUI.enabled = enabled;
+-                    GUI.Label(new Rect(511, 574, 258, 27), $"{page + 1} / {pages}", small);
++                    GUI.Label(new Rect(1080, 622, 100, 27), $"{page + 1} / {pages}", small);
+                 }
+-                GUI.Label(new Rect(330, 662, 620, 25), "← → / A D：選ぶ　　クリックでも選択", eyebrow);
+-                GUI.Label(new Rect(220, 688, 840, 20),
+-                    "制作：bq24014-cmd　／　Unity 6.3 LTS　／　使用素材はREADME参照", credits);
++                GUI.Label(new Rect(330, 622, 620, 28), "← → / A D　島を選ぶ", small);
++                if (hasError || !chosen.available)
++                    GUI.Label(new Rect(220, 654, 840, 48),
++                        hasError ? run.StageSelectionError : "この島は追加予定です。今はまだあそべません。", description);
+             }
+             finally
+             {
+@@ -149,6 +148,14 @@
+             if (quit) { run.QuitFromTitle(); GUIUtility.ExitGUI(); }
+             if (help) { run.OpenMenuHelp(); GUIUtility.ExitGUI(); }
+             if (start && run.StartSelectedStage()) GUIUtility.ExitGUI();
++        }
++
++        private static string IslandSubtitle(StageCatalog.Entry stage)
++        {
++            if (!stage.available) return "追加予定";
++            string subtitle = stage.subtitle ?? string.Empty;
++            int separator = subtitle.LastIndexOf('/');
++            return separator >= 0 ? subtitle.Substring(separator + 1).Trim() : subtitle;
+         }
+ 
+         private bool ClothButton(Rect rect, string text, GUIStyle style, bool selected)
+@@ -333,10 +340,9 @@
+             label = Style(22, true, Ink); small = Style(16, false, Muted);
+             description = Style(19, false, Cream); button = Style(18, true, Ink);
+             selectedLabel = Style(15, true, Rose);
+-            credits = Style(11, false, Cream);
+             clearLabel = Style(15, true, new Color(.49f, .16f, .27f));
+             clearLabel.wordWrap = false;
+-            foreach (GUIStyle style in new[] { heading, eyebrow, label, small, description, button, selectedLabel, credits, clearLabel })
++            foreach (GUIStyle style in new[] { heading, eyebrow, label, small, description, button, selectedLabel, clearLabel })
+             {
+                 Color color = style.normal.textColor;
+                 style.hover.textColor = style.active.textColor = style.focused.textColor = color;

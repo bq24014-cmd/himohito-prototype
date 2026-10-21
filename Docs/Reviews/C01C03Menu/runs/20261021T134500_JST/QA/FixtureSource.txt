@@ -1,0 +1,96 @@
+using System;
+using System.IO;
+using System.Linq;
+using System.Collections;
+using System.Collections.Generic;
+using System.Reflection;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using HimoHito;
+
+[DefaultExecutionOrder(30000)]
+public sealed class GroundingReview:MonoBehaviour
+{
+    const BindingFlags Hidden=BindingFlags.Instance|BindingFlags.NonPublic;
+    static string Arg(string key,string fallback=""){var a=Environment.GetCommandLineArgs();for(int i=0;i<a.Length-1;i++)if(a[i]==key)return a[i+1];return fallback;}
+    static bool QA=>Arg("-menuQA")=="1";
+    static void Set(object o,string n,object v)=>o.GetType().GetField(n,Hidden).SetValue(o,v);
+    static object Get(object o,string n)=>o.GetType().GetField(n,Hidden).GetValue(o);
+    static object Call(object o,string n)=>o.GetType().GetMethod(n,Hidden|BindingFlags.Public).Invoke(o,null);
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
+    static void Boot(){Application.runInBackground=true;SceneManager.sceneLoaded+=(s,m)=>{if(!FindFirstObjectByType<GroundingReview>()){var g=new GameObject("C01 C03 external menu review fixture");DontDestroyOnLoad(g);g.AddComponent<GroundingReview>();}};}
+    [Serializable]public class State{public string phase,scene,outcome,error;public int selected;public bool help,canUse,transition,simulated;public float remaining,capacity,music,effects,timeScale;public bool[] cleared;}
+    [Serializable]public class Layout{public string label,font;public Rect rectangle;public int preferred;public float requiredHeight,availableHeight;public bool fits,onScreen;}
+    [Serializable]public class Pose{public string phase;public float trace,knot,practicePosition,practiceActivity,chestOpen;}
+    [Serializable]public class Report{public string unity,variant,method="Native menu/overlay APIs + deterministic DrawAtTime stills; real-time movie. NOT OS keys, mouse clicks or Human play.",catalog;public bool development,finished;public int width,height,errors,quitAttempts;public string[] art;public List<string> checks=new List<string>(),tourNotes=new List<string>();public List<double> videoTimes=new List<double>();public List<State> states=new List<State>();public List<Layout> layout=new List<Layout>();public List<Pose> poses=new List<Pose>();}
+    PrototypeRunController run;PrototypeHud hud;StageOverlayControls overlay;StageSelectionView view;Report report;string output;int clockFrame,videoFrame;bool recording,allowQuit,realtimeMenu;double clock,realOrigin;bool[] clearStart;
+    IEnumerator Start()
+    {
+        yield return Frames(3);Bind();
+        if(!QA){Debug.Log("MENU_MANUAL_READY: normal title menu; no input driver/capture/exit/clock");yield break;}
+        Time.captureFramerate=50;UnityEngine.Random.InitState(10321);
+        output=Arg("-menuOutput");Directory.CreateDirectory(output);Application.logMessageReceived+=Log;Application.wantsToQuit+=QuitRequested;
+        report=new Report{unity=Application.unityVersion,variant=Arg("-menuVariant"),width=Screen.width,height=Screen.height,development=Debug.isDebugBuild,catalog=Resources.Load<TextAsset>("StageCatalog").text};
+        report.art=new[]{"Art/HimoHitoStageMapBackground-v1","Art/HimoHitoStageMapPieces-v1","Art/HimoHitoStageMapUpcoming-v1","Art/HimoHitoStageDiorama-v1"}.Select(n=>n+"="+(Resources.Load<Texture2D>(n)!=null)).ToArray();
+        clearStart=Cleared();Check(report.art.All(s=>s.EndsWith("True")),"all existing menu art available in Player Resources");
+        Check(run&&run.IsStageSelectionOpen,"normal Tutorial title entry");
+        for(int i=0;i<3;i++){run.SelectStage(i);ResetView();yield return Frames(45);yield return Shot("0"+i+"_Island"+i);Record("island"+i);PoseRecord("island"+i);}
+        Check(!run.StartSelectedStage()&&!StageStartTransition.IsActive,"upcoming native start rejected");yield return Shot("03_UpcomingRejected");Record("upcoming rejected");
+        run.SelectStage(0);ResetView();yield return Frames(45);run.ReportStageStartError("ステージが見つかりません。Build Settingsを確認してください。");yield return Shot("04_LoadError");Record("error display fixture (no catalog mutation)");
+        run.SelectStage(0);ResetView();yield return Frames(45);
+        Time.captureFramerate=0;Application.targetFrameRate=50;realtimeMenu=true;realOrigin=Time.unscaledTimeAsDouble;view=new StageSelectionView();
+        if(Arg("-menuRecord")=="1"){Directory.CreateDirectory(Path.Combine(output,"VideoFrames"));recording=true;StartCoroutine(Video());}
+        yield return Frames(20);PoseRecord("practice moving");run.SelectStage(1);Check(run.SelectedStageIndex==1,"native select main");yield return Frames(40);PoseRecord("chest opens");
+        run.SelectStage(2);Check(run.SelectedStageIndex==2,"native select upcoming");yield return Frames(25);
+        run.SelectStage(0);Check(run.SelectedStageIndex==0,"native select tutorial");yield return Frames(30);
+        run.OpenMenuHelp();Check(overlay.IsHelpVisible,"native menu help opens existing sheet");yield return Frames(8);yield return Shot("05_Help");Record("help");
+        int selected=run.SelectedStageIndex;
+        run.SelectStage(2);Check(run.SelectedStageIndex==selected&&!run.StartSelectedStage(),"help blocks native select and start");int q=report.quitAttempts;run.QuitFromTitle();Check(report.quitAttempts==q,"help blocks native quit");
+        overlay.CloseHelp();run.QuitFromTitle();Check(report.quitAttempts==q&&!run.CanUseTitleMenu(),"close-help same-frame guard blocks quit");yield return Frames(8);yield return Shot("06_HelpClosed");Check(run.CanUseTitleMenu(),"title restored after help");
+        Check(run.StartSelectedStage()&&StageStartTransition.IsActive,"native start begins cloth transition");yield return Frames(22);yield return Shot("07_StartCloth");
+        for(int i=0;i<1000&&StageStartTransition.IsActive;i++)yield return null;
+        Check(run.Outcome==PrototypeRunController.RunOutcome.Playing,"Tutorial start committed");Record("tutorial started");Check(run.GetComponent<RopeResource>().CurrentLength==99,"Tutorial starting99 unchanged");
+        recording=false;yield return Frames(1);
+        // The tour itself is not this menu test. Use its existing finish API,
+        // explicitly distinguished from OS skip input and a complete tour.
+        EndTour("Tutorial");yield return Frames(2);Check(!MainStagePreview.IsActive,"Tutorial tour finished by existing diagnostic API");
+        Set(overlay,"isPaused",true);Call(overlay,"ApplyPauseState");Set(overlay,"confirmReturnToTitle",true);Call(overlay,"ReturnToTitle");
+        yield return Frames(6);Bind();Check(run&&run.IsStageSelectionOpen,"native pause-confirm return from Tutorial");ResetView();yield return Frames(45);yield return Shot("08_ReturnedTitle");Record("returned title");
+        run.SelectStage(1);yield return Frames(3);Check(run.StartSelectedStage(),"native main stage start accepted");
+        for(int i=0;i<2000&&StageStartTransition.IsActive;i++)yield return null;
+        yield return Frames(3);Check(SceneManager.GetActiveScene().name=="MainStage","main Scene reference loaded");Record("main loaded");
+        var rr=FindFirstObjectByType<RopeResource>();Check(rr&&rr.CurrentLength==50,"MainStage starting50 unchanged");
+        EndTour("MainStage");yield return Frames(2);Check(!MainStagePreview.IsActive,"Main tour finished by existing diagnostic API");overlay=FindFirstObjectByType<StageOverlayControls>();Set(overlay,"isPaused",true);Call(overlay,"ApplyPauseState");Set(overlay,"confirmReturnToTitle",true);Call(overlay,"ReturnToTitle");
+        yield return Frames(6);Bind();ResetView();yield return Frames(45);Check(run&&run.IsStageSelectionOpen,"native pause-confirm return from MainStage");
+        run.QuitFromTitle();yield return Frames(2);Check(report.quitAttempts==q+1,"native title exit reaches quit (QA cancels)");Check(Cleared().SequenceEqual(clearStart),"clear records unchanged");
+        Record("final");report.finished=true;File.WriteAllText(Path.Combine(output,"Result.json"),JsonUtility.ToJson(report,true));Debug.Log("MENU_QA_FINISHED errors="+report.errors);allowQuit=true;Application.Quit(report.errors==0?0:2);
+    }
+    void Bind(){run=FindFirstObjectByType<PrototypeRunController>();hud=FindFirstObjectByType<PrototypeHud>();overlay=FindFirstObjectByType<StageOverlayControls>();if(QA&&hud)hud.enabled=false;}
+    void EndTour(string stage){var tour=FindFirstObjectByType<MainStagePreview>();if(tour){report.tourNotes.Add(stage+": native tour state active="+MainStagePreview.IsActive+", elapsed="+Get(tour,"elapsed")+", duration="+Get(tour,"travelDuration")+"; finish API used, not an OS skip or full tour");if(MainStagePreview.IsActive)Call(tour,"RestoreState");}}
+    void ResetView(){view=new StageSelectionView();clockFrame=0;clock=0;}
+    void Update(){if(QA){clockFrame++;clock=realtimeMenu?Time.unscaledTimeAsDouble-realOrigin:clockFrame*.02;}}
+    IEnumerator Frames(int n){for(int i=0;i<n;i++)yield return null;}
+    void OnGUI()
+    {
+        if(!QA||run==null||!run.IsStageSelectionOpen)return;
+        HimoHitoGuiTheme.ApplyToSkin(GUI.skin);GUI.depth=0;if(view==null)ResetView();
+        Event e=Event.current;var oldPoint=e.mousePosition;e.mousePosition=new Vector2(-100,-100);
+        try{view.DrawAtTime(run,Screen.width,Screen.height,clock);if(e.type==EventType.Repaint)Measure();}
+        finally{e.mousePosition=oldPoint;}
+    }
+    bool QuitRequested(){if(allowQuit)return true;report.quitAttempts++;return false;}
+    bool[] Cleared()=>StageCatalog.Entries.Select(StageProgress.IsCleared).ToArray();
+    void Check(bool ok,string text){report.checks.Add((ok?"PASS ":"FAIL ")+text);if(!ok)report.errors++;}
+    void Record(string phase){var rr=FindFirstObjectByType<RopeResource>();report.states.Add(new State{phase=phase,scene=SceneManager.GetActiveScene().name,outcome=run?run.Outcome.ToString():"MainStage",error=run?run.StageSelectionError:"",selected=run?run.SelectedStageIndex:-1,help=overlay&&overlay.IsHelpVisible,canUse=run&&run.CanUseTitleMenu(),transition=StageStartTransition.IsActive,remaining=rr?rr.CurrentLength:0,capacity=rr?rr.MaximumLength:0,timeScale=Time.timeScale,music=HimoHitoAudioSettings.Music,effects=HimoHitoAudioSettings.Effects,cleared=Cleared(),simulated=rr&&rr.GetComponent<Rigidbody2D>().simulated});}
+    void PoseRecord(string phase){var weave=(StageSelectionWeave)Get(view,"selectionWeave");var d=(StageSelectionDioramaState)Get(view,"dioramaState");var p=d.GetMotion("tutorial");report.poses.Add(new Pose{phase=phase,trace=weave.TraceProgress,knot=weave.KnotProgress,practicePosition=p.WalkPosition,practiceActivity=p.Activity,chestOpen=d.GetMotion("main").Openness});}
+    void Measure()
+    {
+        if(report.layout.Count>0)return;bool baseline=report.variant=="Baseline";
+        var specs=baseline?new[]{("Esc　ゲーム終了","button",new Rect(151,602,255,56)),("Tab　操作説明","button",new Rect(512,602,255,56)),("Enter　ここであそぶ","button",new Rect(873,602,255,56))}:new[]{("Tab　操作方法","button",new Rect(176,550,238,48)),("Esc　終了","button",new Rect(866,550,238,48)),("Enter　はじめる","label",new Rect(478,542,324,62))};
+        foreach(var s in specs){var st=(GUIStyle)Get(view,s.Item2);float h=st.CalcHeight(new GUIContent(s.Item1),s.Item3.width-64);report.layout.Add(new Layout{label=s.Item1,font=st.font?st.font.name:"",rectangle=s.Item3,preferred=st.fontSize,requiredHeight=h,availableHeight=s.Item3.height-16,fits=h<=s.Item3.height-16,onScreen=s.Item3.xMin>=0&&s.Item3.yMin>=0&&s.Item3.xMax<=1280&&s.Item3.yMax<=720});}
+    }
+    IEnumerator Shot(string name){yield return new WaitForEndOfFrame();var im=ScreenCapture.CaptureScreenshotAsTexture();File.WriteAllBytes(Path.Combine(output,name+".png"),im.EncodeToPNG());Destroy(im);}
+    IEnumerator Video(){double next=0;while(recording){yield return new WaitForEndOfFrame();if(!recording)yield break;double t=Time.unscaledTimeAsDouble;if(t>=next){next=t+.04;report.videoTimes.Add(t);var im=ScreenCapture.CaptureScreenshotAsTexture();File.WriteAllBytes(Path.Combine(output,"VideoFrames",(videoFrame++).ToString("D5")+".jpg"),im.EncodeToJPG(80));Destroy(im);}}}
+    void Log(string msg,string stack,LogType t){if(t==LogType.Error||t==LogType.Exception||t==LogType.Assert){if(msg.Contains("ExitGUIException"))return;report.errors++;File.AppendAllText(Path.Combine(output,"Errors.txt"),msg+"\n"+stack+"\n");}}
+    void OnDestroy(){Application.logMessageReceived-=Log;Application.wantsToQuit-=QuitRequested;}
+}

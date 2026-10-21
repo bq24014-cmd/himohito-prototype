@@ -1,0 +1,60 @@
+{
+  "production_head": "3b6ac0dfe6a1035f8eed33d2efe720be51c481b3",
+  "protected_files": 262,
+  "all_protected_equal": true,
+  "prior_proofs_equal": true,
+  "existing_status": [
+    "M Assets/Scenes/MainStage.unity",
+    " M Docs/LEARNING_LOG.md",
+    " M Docs/QA/MainStageCleanReproduction_20261001/Evidence/DeterministicSceneSync/ExeA.log",
+    " M Docs/QA/MainStageCleanReproduction_20261001/Evidence/DeterministicSceneSync/ExeB.log",
+    " M README.md"
+  ],
+  "staged": [],
+  "isolated_source": [
+    "StageSelectionView.cs"
+  ],
+  "catalog_json_changed": false,
+  "runtime_catalog_matches_current_json": true,
+  "preserved_methods": {
+    "SelectedIslandOrigin": true,
+    "ClothButton": true,
+    "FitLabel": true,
+    "DrawPath": true,
+    "DrawSelectionWeave": true,
+    "DrawClearFlag": true,
+    "DrawThread": true,
+    "DrawSprite": true,
+    "GetStageArt": true,
+    "EnsurePieces": true,
+    "LoadKeyedPieces": true
+  },
+  "title_island_region_max_difference": {
+    "1600-00_Island0": 1,
+    "1600-01_Island1": 1,
+    "1600-02_Island2": 1,
+    "1280-00_Island0": 0,
+    "1280-01_Island1": 0,
+    "1280-02_Island2": 0
+  },
+  "baseline_candidate_states_equal": {
+    "1600": true,
+    "1280": true
+  },
+  "execution": "existing Unity 6000.3.21f1 non-Development Player + managed overlay; not new Unity Build or Editor Play",
+  "keyboard_os": false,
+  "mouse_os": false,
+  "human_review": "未確認",
+  "computer_use_error": "computer-use request timed out: list_apps (one attempt)",
+  "api_tests": "native selection/help/start/quit/return APIs; controlled error message fixture; intro finish API used",
+  "click_regions": "same rectangle argument shared by GUI.Button and cloth DrawSprite; ClothButton method unchanged; physical clicks unverified",
+  "video": "real-time menu/movie, original capture timestamps used for output durations; API actions, not OS",
+  "source_sha256": "e64f145cc8402ae6af80d1ab284a793eb931682688078df5fe6c3127be80c76b",
+  "candidate_dll_sha256": "cb2d7ebf35e81b3a96e6aa526dcc2601663f87fd6864d75adb66d8fe7d02b8b0",
+  "baseline_dll_sha256": "c72d9554b1dd9b5236d5392facc2a30e901fa2e3b326200997287b83d4969f6e",
+  "holds": [
+    "C11",
+    "C18"
+  ],
+  "production_integrated": false
+}

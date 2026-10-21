@@ -1,0 +1,3 @@
+Initialize engine version: 6000.3.21f1 (c02631ffc030)
+    Renderer: Intel(R) Iris(R) Xe Graphics (ID=0xa7a0)
+MENU_QA_FINISHED errors=0

@@ -1,0 +1,4 @@
+* text=auto eol=lf
+*.jpg -text -filter -diff -merge
+*.mp4 -text -filter -diff -merge
+*.patch text eol=lf -whitespace

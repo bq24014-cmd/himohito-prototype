@@ -1,0 +1,20 @@
+[
+  {
+    "ready": true,
+    "error": false,
+    "seconds": 18.7854274,
+    "qa_argument_present": false,
+    "os_keys_verified": false,
+    "alive": true,
+    "variant": "Runtime"
+  },
+  {
+    "ready": true,
+    "error": false,
+    "seconds": 18.5806853,
+    "qa_argument_present": false,
+    "os_keys_verified": false,
+    "alive": true,
+    "variant": "BeforeRuntime"
+  }
+]

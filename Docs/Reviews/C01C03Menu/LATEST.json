@@ -1,0 +1,31 @@
+{
+  "review_id": "C01C03Menu",
+  "run_id": "20261021T134500_JST",
+  "updated_at": "2026-10-21T13:48:31+09:00",
+  "time_zone": "Asia/Tokyo",
+  "proof": "C01C03MenuProof_20261021",
+  "revision": "candidate-1",
+  "production_head": "3b6ac0dfe6a1035f8eed33d2efe720be51c481b3",
+  "status": "Human Review待ち",
+  "production_integrated": false,
+  "human_adoption": "未承認",
+  "report": "Docs/Reviews/C01C03Menu/runs/20261021T134500_JST/Report.md",
+  "launch": "Docs/Reviews/C01C03Menu/runs/20261021T134500_JST/Launch.md",
+  "images": "Docs/Reviews/C01C03Menu/runs/20261021T134500_JST/Images",
+  "video": "Docs/Reviews/C01C03Menu/runs/20261021T134500_JST/Video",
+  "qa": "Docs/Reviews/C01C03Menu/runs/20261021T134500_JST/QA",
+  "execution": "existing non-Development Player + managed overlay",
+  "unconfirmed": [
+    "Human読みやすさ・採否",
+    "OS左右/A/D/Enter/Tab/Esc",
+    "物理クリック",
+    "旗が立った状態の追加撮影",
+    "Intro全編",
+    "複数ページ",
+    "新規Unity Build/Editor Play"
+  ],
+  "holds": [
+    "C11",
+    "C18"
+  ]
+}
