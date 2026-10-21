@@ -1,0 +1,48 @@
+{
+  "execution": "Actual Unity Player screenshots, existing non-Development runtime + managed overlay + approved PNG. Diagnostic static fixture, NOT OS/Human input and NOT new Unity Build.",
+  "scope": "Rest placement and contact shadow only; no animation or physics rule changes.",
+  "errors": [
+    0,
+    0
+  ],
+  "trace_frames": [
+    41,
+    41
+  ],
+  "trace_lengths_equal": true,
+  "state_max_delta": {
+    "root": 0.0,
+    "velocity": 0.0,
+    "camera": 0.0,
+    "remaining": 0.0,
+    "selected": 0.0,
+    "attached": 0.0,
+    "grounded": 0.0,
+    "contact": 0.0
+  },
+  "hazard_contracts_equal": true,
+  "asset_sha_equal": true,
+  "asset_sha256": "b5558bcd4b40b7762201184ec0324758803aaaede56cc3102dbd169670c57c1d",
+  "sprite_world_scale": {
+    "x": 1.0000005960464478,
+    "y": 1.0000004768371582,
+    "z": 1.0000001192092896
+  },
+  "hinge": {
+    "x": 15.100000381469727,
+    "y": -7.980000019073486,
+    "z": 0.0
+  },
+  "old_reference_exact_pixels": true,
+  "difference_pixel_bounds": [
+    859,
+    800,
+    980,
+    894
+  ],
+  "body_source_pixel_edits": false,
+  "new_collider": false,
+  "new_build": false,
+  "new_os_attempt": false,
+  "scoped_checks_pass": true
+}

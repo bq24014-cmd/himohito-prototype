@@ -1,0 +1,19 @@
+Static orientation/contact review, no new physical-contact or long gameplay QA.
+Compile errors0 / existing CS0649 warnings4.
+
+Previous-r2
+C05_WARM_PLACEMENT_PNG sha256=b5558bcd4b40b7762201184ec0324758803aaaede56cc3102dbd169670c57c1d pixels=1536x1024
+C05_SCISSORS_FINISHED errors=0
+PASS MainStage existing two hazards
+PASS only Front spike has new design
+PASS actual SpriteRenderers use decoded PNG atlas
+
+Rest-r2
+C05_WARM_PLACEMENT_PNG sha256=b5558bcd4b40b7762201184ec0324758803aaaede56cc3102dbd169670c57c1d pixels=1536x1024
+C05_SCISSORS_FINISHED errors=0
+PASS MainStage existing two hazards
+PASS only Front spike has new design
+PASS actual SpriteRenderers use decoded PNG atlas
+
+Intermediate r1: detected inherited nonuniform scale/shear after rotation; corrected with a separate scale-cancel parent before rigid rotation. Final r2 world scale is approximately1.
+OS input not attempted this turn; static Unity capture is not OS/Human play.

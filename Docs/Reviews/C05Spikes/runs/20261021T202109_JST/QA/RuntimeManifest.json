@@ -1,0 +1,27 @@
+{
+  "execution": "Existing Unity 6000.3.21f1 non-Development Player, managed overlay, actual approved PNG LoadImage. NOT a new Unity Build. Static diagnostic capture only.",
+  "production_head": "394b4a74e366678a9e0542d895b9a26f86993c19",
+  "approved_body_commit": "5c64b9ef63d574a56ef4fbb0439ee7d364800dfa",
+  "previous_placement_commit": "32809c717c29d7f9cee11e350771d412f4d9ccc6",
+  "assembly_sha256": "5d7b8c62b29b28a47acf93aa5f6321c92deac42b13147d875849f078eea1c01d",
+  "asset_sha256": "b5558bcd4b40b7762201184ec0324758803aaaede56cc3102dbd169670c57c1d",
+  "source_sha256": "ac632ca17ad5e180696f6f6255e416eff37e9320ca5b66d690e69a024a674446",
+  "unchanged_fixture_sha256": "ed09e8d6ab732a7da497508336621eec0ff1de6659ff256f12a7680d14e8045d",
+  "review_controls": "-previousPlacement flag only affects display. Absence uses new rest pose. Manual launcher has no -scissorsQA flag.",
+  "world_orientation": "Quaternion.AngleAxis(55, right) * Quaternion.AngleAxis(110, forward)",
+  "rest_pivot": [
+    15.1,
+    -7.98,
+    0
+  ],
+  "ppu": 500,
+  "asset_pixel_change": false,
+  "animation_change": false,
+  "collider_change": false,
+  "unconfirmed": [
+    "Human placement acceptance",
+    "New pose in dynamic opening/closing review",
+    "OS keyboard/mouse input",
+    "New Unity Build"
+  ]
+}

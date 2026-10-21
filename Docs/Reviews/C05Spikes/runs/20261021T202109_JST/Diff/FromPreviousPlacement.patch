@@ -1,0 +1,40 @@
+--- a/Isolated/CraftScissorsDesignVisual.cs
++++ b/Isolated/CraftScissorsDesignVisual.cs
+@@ -22,6 +22,7 @@
+     ToySpikeVisual legacy;SpriteRenderer legacyFace;
+     static readonly FieldInfo ContactField=typeof(ToySpikeVisual).GetField("contactElapsed",BindingFlags.Instance|BindingFlags.NonPublic);
+     const float Duration=.55f,LeftAngle=16f,RightOpen=-16f,RightClosed=23.2f;
++    public static bool PreviousPlacement=>Array.IndexOf(Environment.GetCommandLineArgs(),"-previousPlacement")>=0;
+ 
+     static void Load()
+     {
+@@ -45,11 +46,15 @@
+     void Awake()
+     {
+         Load();legacy=GetComponent<ToySpikeVisual>();legacyFace=transform.Find("Wooden Toy Spike Face").GetComponent<SpriteRenderer>();
+-        var root=new GameObject("Warm scissors body VISUAL ONLY").transform;root.SetParent(transform,false);
+-        root.localScale=new Vector3(1f/transform.lossyScale.x,1f/transform.lossyScale.y,1f);
+-        root.position=new Vector3(14.80f,-7.73f,transform.position.z);
+-        root.localRotation=Quaternion.Euler(0,0,75f);
+-        // No floor foreshortening: preserve the Human-approved shape and thickness.
++        // Cancel hazard scale before applying a rigid 3D orientation, avoiding shear.
++        var space=new GameObject("Warm scissors unscaled VISUAL space").transform;space.SetParent(transform,false);
++        space.localScale=new Vector3(1f/transform.lossyScale.x,1f/transform.lossyScale.y,1f/transform.lossyScale.z);
++        var root=new GameObject("Warm scissors body VISUAL ONLY").transform;root.SetParent(space,false);
++        root.position=PreviousPlacement?new Vector3(14.80f,-7.73f,transform.position.z):new Vector3(15.10f,-7.98f,transform.position.z);
++        // Rigid pose of the approved face: handles near-left, blade tips away-right.
++        // Sprite geometry, pixels, world dimensions and animation stay unchanged.
++        // Orthographic foreshortening is from rotation, never nonuniform local scaling.
++        root.localRotation=PreviousPlacement?Quaternion.Euler(0,0,75f):Quaternion.AngleAxis(55f,Vector3.right)*Quaternion.AngleAxis(110f,Vector3.forward);
+         leftShadow=Create(root,LeftSprite,"Left small contact shadow",2,new Color(.055f,.025f,.015f,.27f));
+         rightShadow=Create(root,RightSprite,"Right small contact shadow",2,new Color(.055f,.025f,.015f,.21f));
+         fixedHalf=Create(root,LeftSprite,"Left rigid half",3,Color.white);
+@@ -83,7 +88,7 @@
+         angle=Mathf.Lerp(idle,RightClosed,Mathf.Clamp01(close));
+         fixedHalf.localRotation=Quaternion.Euler(0,0,LeftAngle);movingHalf.localRotation=Quaternion.Euler(0,0,angle);
+         leftShadow.localRotation=fixedHalf.localRotation;rightShadow.localRotation=movingHalf.localRotation;
+-        Vector3 offset=Quaternion.Euler(0,0,-75f)*new Vector3(.012f,-.035f,0);
++        Vector3 offset=Quaternion.Inverse(fixedHalf.parent.localRotation)*new Vector3(.012f,-.035f,0);
+         leftShadow.localPosition=offset;rightShadow.localPosition=offset;
+     }
+     public Vector3[] BladePoints(bool left)

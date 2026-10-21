@@ -1,0 +1,16 @@
+{
+  "time": "2026-10-21T20:21:25.7498809+09:00",
+  "head": "394b4a74e366678a9e0542d895b9a26f86993c19",
+  "status": [
+    " M Assets/Scenes/MainStage.unity",
+    " M Docs/LEARNING_LOG.md",
+    " M Docs/QA/MainStageCleanReproduction_20261001/Evidence/DeterministicSceneSync/ExeA.log",
+    " M Docs/QA/MainStageCleanReproduction_20261001/Evidence/DeterministicSceneSync/ExeB.log",
+    " M README.md"
+  ],
+  "staged": [],
+  "production_files": 124,
+  "production_changes": [],
+  "past_proof_changes": [],
+  "existing_status_preserved": true
+}
