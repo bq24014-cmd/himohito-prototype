@@ -1,0 +1,468 @@
+{
+  "execution": "Native Unity 6000.3.21f1 non-Development Player with isolated managed overlay, not new Unity Build. Diagnostic entrance setup, fixed-step input/native E APIs. Not OS or Human play. 25 fps frame export at normal game-time speed.",
+  "runs": [
+    {
+      "variant": "Current",
+      "length": 5.0,
+      "drop": 0,
+      "phase": "natural",
+      "reached": true,
+      "landing_time": 2.44,
+      "hazards": [],
+      "errors": 0,
+      "minimum_front_gap": 1.1546897888183594,
+      "snips": 0,
+      "final_rope": 50.0
+    },
+    {
+      "variant": "Previous",
+      "length": 5.0,
+      "drop": 0.0,
+      "phase": "natural",
+      "reached": true,
+      "landing_time": 2.44,
+      "hazards": [],
+      "errors": 0,
+      "minimum_front_gap": 0.21146486699581146,
+      "snips": 0,
+      "final_rope": 50.0
+    },
+    {
+      "variant": "Candidate",
+      "length": 5.0,
+      "drop": 0.949999988079071,
+      "phase": "natural",
+      "reached": true,
+      "landing_time": 2.44,
+      "hazards": [],
+      "errors": 0,
+      "minimum_front_gap": 1.1308104991912842,
+      "snips": 0,
+      "final_rope": 50.0
+    },
+    {
+      "variant": "Current",
+      "length": 6.0,
+      "drop": 0,
+      "phase": "natural",
+      "reached": true,
+      "landing_time": 2.3,
+      "hazards": [],
+      "errors": 0,
+      "minimum_front_gap": 0.17121361196041107,
+      "snips": 0,
+      "final_rope": 50.0
+    },
+    {
+      "variant": "Previous",
+      "length": 6.0,
+      "drop": 0.0,
+      "phase": "natural",
+      "reached": false,
+      "landing_time": null,
+      "hazards": [
+        {
+          "kind": "hazard_enter",
+          "other": "Main Section 2 Front Spike",
+          "tick": 54,
+          "position": {
+            "x": 14.792287826538086,
+            "y": -6.288238048553467
+          },
+          "velocity": {
+            "x": 2.2465994358062744,
+            "y": -10.205730438232422
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "point": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "attached": false
+        }
+      ],
+      "errors": 0,
+      "minimum_front_gap": -0.26030921936035156,
+      "snips": 1,
+      "final_rope": 50.0
+    },
+    {
+      "variant": "Candidate",
+      "length": 6.0,
+      "drop": 0.949999988079071,
+      "phase": "natural",
+      "reached": true,
+      "landing_time": 2.3,
+      "hazards": [],
+      "errors": 0,
+      "minimum_front_gap": 0.1362466663122177,
+      "snips": 0,
+      "final_rope": 50.0
+    },
+    {
+      "variant": "Current",
+      "length": 7.0,
+      "drop": 0,
+      "phase": "natural",
+      "reached": false,
+      "landing_time": null,
+      "hazards": [
+        {
+          "kind": "hazard_enter",
+          "other": "Main Section 2 Front Spike",
+          "tick": 58,
+          "position": {
+            "x": 14.97069263458252,
+            "y": -7.208092212677002
+          },
+          "velocity": {
+            "x": 2.2251603603363037,
+            "y": -12.2957124710083
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "point": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "attached": false
+        }
+      ],
+      "errors": 0,
+      "minimum_front_gap": -0.6268253326416016,
+      "snips": 0,
+      "final_rope": 50.0
+    },
+    {
+      "variant": "Previous",
+      "length": 7.0,
+      "drop": 0.0,
+      "phase": "natural",
+      "reached": false,
+      "landing_time": null,
+      "hazards": [
+        {
+          "kind": "hazard_enter",
+          "other": "Main Section 2 Front Spike",
+          "tick": 54,
+          "position": {
+            "x": 14.792287826538086,
+            "y": -6.288238048553467
+          },
+          "velocity": {
+            "x": 2.2465994358062744,
+            "y": -10.205730438232422
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "point": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "attached": false
+        }
+      ],
+      "errors": 0,
+      "minimum_front_gap": -0.26030921936035156,
+      "snips": 1,
+      "final_rope": 50.0
+    },
+    {
+      "variant": "Candidate",
+      "length": 7.0,
+      "drop": 0.949999988079071,
+      "phase": "natural",
+      "reached": false,
+      "landing_time": null,
+      "hazards": [
+        {
+          "kind": "hazard_enter",
+          "other": "Main Section 2 Front Spike",
+          "tick": 58,
+          "position": {
+            "x": 14.97069263458252,
+            "y": -7.208092212677002
+          },
+          "velocity": {
+            "x": 2.2251603603363037,
+            "y": -12.2957124710083
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "point": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "attached": false
+        }
+      ],
+      "errors": 0,
+      "minimum_front_gap": -0.43952226638793945,
+      "snips": 1,
+      "final_rope": 50.0
+    }
+  ],
+  "comparisons": [
+    {
+      "length": 5,
+      "versions": [
+        "Current",
+        "Candidate"
+      ],
+      "max_delta": {
+        "position": 0.0,
+        "velocity": 0.0,
+        "camera": 0.0,
+        "remaining": 0.0,
+        "input": 0.0
+      },
+      "first_trajectory_difference_tick": null,
+      "identical": true
+    },
+    {
+      "length": 5,
+      "versions": [
+        "Previous",
+        "Candidate"
+      ],
+      "max_delta": {
+        "position": 0.0,
+        "velocity": 0.0,
+        "camera": 0.0,
+        "remaining": 0.0,
+        "input": 0.0
+      },
+      "first_trajectory_difference_tick": null,
+      "identical": true
+    },
+    {
+      "length": 6,
+      "versions": [
+        "Current",
+        "Candidate"
+      ],
+      "max_delta": {
+        "position": 0.0,
+        "velocity": 0.0,
+        "camera": 0.0,
+        "remaining": 0.0,
+        "input": 0.0
+      },
+      "first_trajectory_difference_tick": null,
+      "identical": true
+    },
+    {
+      "length": 6,
+      "versions": [
+        "Previous",
+        "Candidate"
+      ],
+      "max_delta": {
+        "position": 12.97162717137457,
+        "velocity": 15.022066365606847,
+        "camera": 12.286510467529297,
+        "remaining": 0.0,
+        "input": 1.0
+      },
+      "first_trajectory_difference_tick": 54,
+      "identical": false
+    },
+    {
+      "length": 7,
+      "versions": [
+        "Current",
+        "Candidate"
+      ],
+      "max_delta": {
+        "position": 0.0,
+        "velocity": 0.0,
+        "camera": 0.0,
+        "remaining": 0.0,
+        "input": 0.0
+      },
+      "first_trajectory_difference_tick": null,
+      "identical": true
+    },
+    {
+      "length": 7,
+      "versions": [
+        "Previous",
+        "Candidate"
+      ],
+      "max_delta": {
+        "position": 0.013026287897890643,
+        "velocity": 0.06257139618052594,
+        "camera": 0.0006160736083984375,
+        "remaining": 0.0,
+        "input": 0.0
+      },
+      "first_trajectory_difference_tick": 54,
+      "identical": false
+    }
+  ],
+  "boundary": [
+    {
+      "variant": "Candidate",
+      "length": 6.0,
+      "drop": 0.9300000071525574,
+      "phase": "closed",
+      "reached": false,
+      "landing_time": null,
+      "hazards": [
+        {
+          "kind": "hazard_enter",
+          "other": "Main Section 2 Front Spike",
+          "tick": 62,
+          "position": {
+            "x": 15.875099182128906,
+            "y": -6.707265853881836
+          },
+          "velocity": {
+            "x": 7.980505466461182,
+            "y": -2.8405492305755615
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "point": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "attached": false
+        }
+      ],
+      "errors": 0,
+      "minimum_front_gap": -0.015743732452392578,
+      "snips": 1,
+      "final_rope": 50.0
+    },
+    {
+      "variant": "Candidate",
+      "length": 6.0,
+      "drop": 0.949999988079071,
+      "phase": "closed",
+      "reached": true,
+      "landing_time": 2.3,
+      "hazards": [],
+      "errors": 0,
+      "minimum_front_gap": 0.0033173374831676483,
+      "snips": 0,
+      "final_rope": 50.0
+    }
+  ],
+  "phase_checks": [
+    {
+      "variant": "Candidate",
+      "length": 6.0,
+      "drop": 0.9399999976158142,
+      "phase": "closed",
+      "reached": false,
+      "landing_time": null,
+      "hazards": [
+        {
+          "kind": "hazard_enter",
+          "other": "Main Section 2 Front Spike",
+          "tick": 62,
+          "position": {
+            "x": 15.875099182128906,
+            "y": -6.707265853881836
+          },
+          "velocity": {
+            "x": 7.980505466461182,
+            "y": -2.8405492305755615
+          },
+          "normal": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "point": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "attached": false
+        }
+      ],
+      "errors": 0,
+      "minimum_front_gap": -0.005744457244873047,
+      "snips": 1,
+      "final_rope": 50.0
+    },
+    {
+      "variant": "Candidate",
+      "length": 6.0,
+      "drop": 0.9399999976158142,
+      "phase": "cycle",
+      "reached": true,
+      "landing_time": 2.3,
+      "hazards": [],
+      "errors": 0,
+      "minimum_front_gap": 0.03227422758936882,
+      "snips": 0,
+      "final_rope": 50.0
+    },
+    {
+      "variant": "Candidate",
+      "length": 6.0,
+      "drop": 0.949999988079071,
+      "phase": "cycle",
+      "reached": true,
+      "landing_time": 2.3,
+      "hazards": [],
+      "errors": 0,
+      "minimum_front_gap": 0.04227493330836296,
+      "snips": 0,
+      "final_rope": 50.0
+    },
+    {
+      "variant": "Candidate",
+      "length": 6.0,
+      "drop": 0.9399999976158142,
+      "phase": "mid",
+      "reached": true,
+      "landing_time": 2.3,
+      "hazards": [],
+      "errors": 0,
+      "minimum_front_gap": 0.03757188841700554,
+      "snips": 0,
+      "final_rope": 50.0
+    }
+  ],
+  "geometry": {
+    "scale": 1.0,
+    "drop": 0.949999988079071,
+    "supportY": -9.289999961853027,
+    "maxFloorError": 9.5367431640625e-07,
+    "maxHandleGap": 0.003025054931640625,
+    "maxColliderError": 0.0,
+    "maxPivotError": 0.0,
+    "floor_error_meaning": "Error against lowered support reference, NOT contact with original unchanged pictured floor.",
+    "original_support_y": -8.34
+  },
+  "translation_check": {
+    "max_dx": 0.0,
+    "max_dy_error_against_minus095": 1.144409179643091e-06,
+    "max_dz": 0.0,
+    "same_closure": true,
+    "same_root_angles": true
+  },
+  "other_geometry_equal": true,
+  "visibility": {
+    "normal_camera_ortho_size": 8.7,
+    "camera_y": 0,
+    "screen_height": 900,
+    "original_support_screen_y": 881.3793103448277,
+    "candidate_support_screen_y": 930.5172413793105,
+    "clipped_handle_base_pixels": 30.51724137931034,
+    "assessment": "Most of handles are outside the normal view. Existing floor art/terrain remains unchanged. Placement naturalness is HOLD; not claimed solved."
+  }
+}

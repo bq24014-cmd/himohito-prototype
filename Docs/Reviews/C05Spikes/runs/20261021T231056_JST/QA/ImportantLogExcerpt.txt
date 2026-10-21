@@ -1,0 +1,18 @@
+Candidate_L5_natural_D0.95
+C05_MOTION_READY one Front only; original cut/refund; PNG=b5558bcd4b40b7762201184ec0324758803aaaede56cc3102dbd169670c57c1d
+C05_ROUTE_DONE Candidate L5 attach=True reached=True errors=0
+Candidate_L6_natural_D0.95
+C05_MOTION_READY one Front only; original cut/refund; PNG=b5558bcd4b40b7762201184ec0324758803aaaede56cc3102dbd169670c57c1d
+C05_ROUTE_DONE Candidate L6 attach=True reached=True errors=0
+Candidate_L7_natural_D0.95
+C05_MOTION_READY one Front only; original cut/refund; PNG=b5558bcd4b40b7762201184ec0324758803aaaede56cc3102dbd169670c57c1d
+C05_ROUTE_DONE Candidate L7 attach=True reached=False errors=0
+Previous_L5_natural_D0.95
+C05_MOTION_READY one Front only; original cut/refund; PNG=b5558bcd4b40b7762201184ec0324758803aaaede56cc3102dbd169670c57c1d
+C05_ROUTE_DONE Previous L5 attach=True reached=True errors=0
+Previous_L6_natural_D0.95
+C05_MOTION_READY one Front only; original cut/refund; PNG=b5558bcd4b40b7762201184ec0324758803aaaede56cc3102dbd169670c57c1d
+C05_ROUTE_DONE Previous L6 attach=True reached=False errors=0
+Previous_L7_natural_D0.95
+C05_MOTION_READY one Front only; original cut/refund; PNG=b5558bcd4b40b7762201184ec0324758803aaaede56cc3102dbd169670c57c1d
+C05_ROUTE_DONE Previous L7 attach=True reached=False errors=0

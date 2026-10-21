@@ -1,0 +1,11 @@
+{
+  "execution": "Direct .cmd double-click equivalent via cmd.exe; process/log smoke, NOT OS gameplay keys",
+  "wait_seconds": 20,
+  "responding": true,
+  "window_handle_present": true,
+  "ready": true,
+  "auto_route_done": false,
+  "runtime_error": false,
+  "normal_close_requested": true,
+  "closed": true
+}

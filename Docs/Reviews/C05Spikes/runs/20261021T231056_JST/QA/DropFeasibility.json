@@ -1,0 +1,530 @@
+{
+  "method": "Offline upper polygon envelope against measured L6 player box; 101 closures, 0.004s linear interpolated samples. Not continuous physics proof.",
+  "all_phase_max": {
+    "closure": 1.0,
+    "required_drop": 0.9344132493661164,
+    "tick": 61.2
+  },
+  "open": {
+    "closure": 0.0,
+    "required_drop": 0.7943765309387869,
+    "tick": 63.2
+  },
+  "mid": {
+    "closure": 0.5,
+    "required_drop": 0.8901626513622212,
+    "tick": 62.2
+  },
+  "closed": {
+    "closure": 1.0,
+    "required_drop": 0.9344132493661164,
+    "tick": 61.2
+  },
+  "samples": [
+    {
+      "closure": 0.0,
+      "required_drop": 0.7943765309387869,
+      "tick": 63.2
+    },
+    {
+      "closure": 0.01,
+      "required_drop": 0.7975089215739048,
+      "tick": 63.2
+    },
+    {
+      "closure": 0.02,
+      "required_drop": 0.7995895381935698,
+      "tick": 63.2
+    },
+    {
+      "closure": 0.03,
+      "required_drop": 0.7967822864259135,
+      "tick": 63.0
+    },
+    {
+      "closure": 0.04,
+      "required_drop": 0.7998651262490863,
+      "tick": 63.0
+    },
+    {
+      "closure": 0.05,
+      "required_drop": 0.8029267515919285,
+      "tick": 63.0
+    },
+    {
+      "closure": 0.06,
+      "required_drop": 0.8059671267969915,
+      "tick": 63.0
+    },
+    {
+      "closure": 0.07,
+      "required_drop": 0.8089862164561241,
+      "tick": 63.0
+    },
+    {
+      "closure": 0.08,
+      "required_drop": 0.8119839854108761,
+      "tick": 63.0
+    },
+    {
+      "closure": 0.09,
+      "required_drop": 0.8149603987529144,
+      "tick": 63.0
+    },
+    {
+      "closure": 0.1,
+      "required_drop": 0.8179154218244289,
+      "tick": 63.0
+    },
+    {
+      "closure": 0.11,
+      "required_drop": 0.8208735222245593,
+      "tick": 63.0
+    },
+    {
+      "closure": 0.12,
+      "required_drop": 0.8238135826348456,
+      "tick": 63.0
+    },
+    {
+      "closure": 0.13,
+      "required_drop": 0.8253658881164121,
+      "tick": 63.0
+    },
+    {
+      "closure": 0.14,
+      "required_drop": 0.8218946046618303,
+      "tick": 62.8
+    },
+    {
+      "closure": 0.15,
+      "required_drop": 0.824770083395781,
+      "tick": 62.8
+    },
+    {
+      "closure": 0.16,
+      "required_drop": 0.8276239676344517,
+      "tick": 62.8
+    },
+    {
+      "closure": 0.17,
+      "required_drop": 0.830456224164771,
+      "tick": 62.8
+    },
+    {
+      "closure": 0.18,
+      "required_drop": 0.8332668200273607,
+      "tick": 62.8
+    },
+    {
+      "closure": 0.19,
+      "required_drop": 0.8360557225169165,
+      "tick": 62.8
+    },
+    {
+      "closure": 0.2,
+      "required_drop": 0.8388228991825857,
+      "tick": 62.8
+    },
+    {
+      "closure": 0.21,
+      "required_drop": 0.8415683178283535,
+      "tick": 62.8
+    },
+    {
+      "closure": 0.22,
+      "required_drop": 0.8442919465134073,
+      "tick": 62.8
+    },
+    {
+      "closure": 0.23,
+      "required_drop": 0.8462068036575561,
+      "tick": 62.8
+    },
+    {
+      "closure": 0.24,
+      "required_drop": 0.8433695538166992,
+      "tick": 62.8
+    },
+    {
+      "closure": 0.25,
+      "required_drop": 0.8446541249066399,
+      "tick": 62.6
+    },
+    {
+      "closure": 0.26,
+      "required_drop": 0.8473593386014944,
+      "tick": 62.6
+    },
+    {
+      "closure": 0.27,
+      "required_drop": 0.8500426050281602,
+      "tick": 62.6
+    },
+    {
+      "closure": 0.28,
+      "required_drop": 0.852703892993059,
+      "tick": 62.6
+    },
+    {
+      "closure": 0.29,
+      "required_drop": 0.8553431715603841,
+      "tick": 62.6
+    },
+    {
+      "closure": 0.3,
+      "required_drop": 0.8579604100524545,
+      "tick": 62.6
+    },
+    {
+      "closure": 0.31,
+      "required_drop": 0.8605555780500858,
+      "tick": 62.6
+    },
+    {
+      "closure": 0.32,
+      "required_drop": 0.863128645392929,
+      "tick": 62.6
+    },
+    {
+      "closure": 0.33,
+      "required_drop": 0.86516209455454,
+      "tick": 62.6
+    },
+    {
+      "closure": 0.34,
+      "required_drop": 0.8636056845095252,
+      "tick": 62.6
+    },
+    {
+      "closure": 0.35,
+      "required_drop": 0.8629803609709086,
+      "tick": 62.4
+    },
+    {
+      "closure": 0.36,
+      "required_drop": 0.8654647292802027,
+      "tick": 62.4
+    },
+    {
+      "closure": 0.37,
+      "required_drop": 0.8679268500277812,
+      "tick": 62.4
+    },
+    {
+      "closure": 0.38,
+      "required_drop": 0.870366694613609,
+      "tick": 62.4
+    },
+    {
+      "closure": 0.39,
+      "required_drop": 0.8727842346988854,
+      "tick": 62.4
+    },
+    {
+      "closure": 0.4,
+      "required_drop": 0.8751794422063695,
+      "tick": 62.4
+    },
+    {
+      "closure": 0.41,
+      "required_drop": 0.877552289320711,
+      "tick": 62.4
+    },
+    {
+      "closure": 0.42,
+      "required_drop": 0.8799027484887665,
+      "tick": 62.4
+    },
+    {
+      "closure": 0.43,
+      "required_drop": 0.8817573364996338,
+      "tick": 62.4
+    },
+    {
+      "closure": 0.44,
+      "required_drop": 0.8804869001249793,
+      "tick": 62.4
+    },
+    {
+      "closure": 0.45,
+      "required_drop": 0.879084941915349,
+      "tick": 62.2
+    },
+    {
+      "closure": 0.46,
+      "required_drop": 0.8813455790222324,
+      "tick": 62.2
+    },
+    {
+      "closure": 0.47,
+      "required_drop": 0.8835836943613957,
+      "tick": 62.2
+    },
+    {
+      "closure": 0.48,
+      "required_drop": 0.8857992619595816,
+      "tick": 62.2
+    },
+    {
+      "closure": 0.49,
+      "required_drop": 0.8879922561079194,
+      "tick": 62.2
+    },
+    {
+      "closure": 0.5,
+      "required_drop": 0.8901626513622212,
+      "tick": 62.2
+    },
+    {
+      "closure": 0.51,
+      "required_drop": 0.892310422543285,
+      "tick": 62.2
+    },
+    {
+      "closure": 0.52,
+      "required_drop": 0.8944731445447278,
+      "tick": 62.2
+    },
+    {
+      "closure": 0.53,
+      "required_drop": 0.8960665855517425,
+      "tick": 62.2
+    },
+    {
+      "closure": 0.54,
+      "required_drop": 0.8946070423392971,
+      "tick": 62.2
+    },
+    {
+      "closure": 0.55,
+      "required_drop": 0.893201273061142,
+      "tick": 62.0
+    },
+    {
+      "closure": 0.56,
+      "required_drop": 0.8953091831284059,
+      "tick": 62.0
+    },
+    {
+      "closure": 0.57,
+      "required_drop": 0.8973938871560261,
+      "tick": 62.0
+    },
+    {
+      "closure": 0.58,
+      "required_drop": 0.8994553602480311,
+      "tick": 62.0
+    },
+    {
+      "closure": 0.59,
+      "required_drop": 0.9014935777858764,
+      "tick": 62.0
+    },
+    {
+      "closure": 0.6,
+      "required_drop": 0.9035085154287446,
+      "tick": 62.0
+    },
+    {
+      "closure": 0.61,
+      "required_drop": 0.9055001491138253,
+      "tick": 62.0
+    },
+    {
+      "closure": 0.62,
+      "required_drop": 0.9074684550566108,
+      "tick": 62.0
+    },
+    {
+      "closure": 0.63,
+      "required_drop": 0.9086236771904721,
+      "tick": 62.0
+    },
+    {
+      "closure": 0.64,
+      "required_drop": 0.9065825282981441,
+      "tick": 62.0
+    },
+    {
+      "closure": 0.65,
+      "required_drop": 0.9049013017338847,
+      "tick": 61.8
+    },
+    {
+      "closure": 0.66,
+      "required_drop": 0.9067760644383185,
+      "tick": 61.8
+    },
+    {
+      "closure": 0.67,
+      "required_drop": 0.9086273846622621,
+      "tick": 61.8
+    },
+    {
+      "closure": 0.68,
+      "required_drop": 0.9104552402968613,
+      "tick": 61.8
+    },
+    {
+      "closure": 0.69,
+      "required_drop": 0.9122596095134821,
+      "tick": 61.8
+    },
+    {
+      "closure": 0.7,
+      "required_drop": 0.9140404707639682,
+      "tick": 61.8
+    },
+    {
+      "closure": 0.71,
+      "required_drop": 0.9157978027809026,
+      "tick": 61.8
+    },
+    {
+      "closure": 0.72,
+      "required_drop": 0.9173338721015041,
+      "tick": 61.8
+    },
+    {
+      "closure": 0.73,
+      "required_drop": 0.9170649677061808,
+      "tick": 61.8
+    },
+    {
+      "closure": 0.74,
+      "required_drop": 0.9125965439398636,
+      "tick": 61.6
+    },
+    {
+      "closure": 0.75,
+      "required_drop": 0.914259551971969,
+      "tick": 61.6
+    },
+    {
+      "closure": 0.76,
+      "required_drop": 0.9158989286532613,
+      "tick": 61.6
+    },
+    {
+      "closure": 0.77,
+      "required_drop": 0.9175146544059567,
+      "tick": 61.6
+    },
+    {
+      "closure": 0.78,
+      "required_drop": 0.9191067099347245,
+      "tick": 61.6
+    },
+    {
+      "closure": 0.79,
+      "required_drop": 0.9206750762269014,
+      "tick": 61.6
+    },
+    {
+      "closure": 0.8,
+      "required_drop": 0.922219734552729,
+      "tick": 61.6
+    },
+    {
+      "closure": 0.81,
+      "required_drop": 0.9237764806191997,
+      "tick": 61.6
+    },
+    {
+      "closure": 0.82,
+      "required_drop": 0.9239333497640834,
+      "tick": 61.6
+    },
+    {
+      "closure": 0.83,
+      "required_drop": 0.9187884391020225,
+      "tick": 61.4
+    },
+    {
+      "closure": 0.84,
+      "required_drop": 0.9204246863669931,
+      "tick": 61.4
+    },
+    {
+      "closure": 0.85,
+      "required_drop": 0.9220371291548739,
+      "tick": 61.4
+    },
+    {
+      "closure": 0.86,
+      "required_drop": 0.9236257482095356,
+      "tick": 61.4
+    },
+    {
+      "closure": 0.87,
+      "required_drop": 0.9251905245593575,
+      "tick": 61.4
+    },
+    {
+      "closure": 0.88,
+      "required_drop": 0.9267314395174511,
+      "tick": 61.4
+    },
+    {
+      "closure": 0.89,
+      "required_drop": 0.9282484746818884,
+      "tick": 61.4
+    },
+    {
+      "closure": 0.9,
+      "required_drop": 0.929741611935917,
+      "tick": 61.4
+    },
+    {
+      "closure": 0.91,
+      "required_drop": 0.9301810810517388,
+      "tick": 61.4
+    },
+    {
+      "closure": 0.92,
+      "required_drop": 0.9275271773366454,
+      "tick": 61.4
+    },
+    {
+      "closure": 0.93,
+      "required_drop": 0.9257455883175023,
+      "tick": 61.2
+    },
+    {
+      "closure": 0.94,
+      "required_drop": 0.9271429584734303,
+      "tick": 61.2
+    },
+    {
+      "closure": 0.95,
+      "required_drop": 0.9285163444203093,
+      "tick": 61.2
+    },
+    {
+      "closure": 0.96,
+      "required_drop": 0.9298657297568731,
+      "tick": 61.2
+    },
+    {
+      "closure": 0.97,
+      "required_drop": 0.9311910983684815,
+      "tick": 61.2
+    },
+    {
+      "closure": 0.98,
+      "required_drop": 0.9324924344273029,
+      "tick": 61.2
+    },
+    {
+      "closure": 0.99,
+      "required_drop": 0.9337697223925128,
+      "tick": 61.2
+    },
+    {
+      "closure": 1.0,
+      "required_drop": 0.9344132493661164,
+      "tick": 61.2
+    }
+  ]
+}

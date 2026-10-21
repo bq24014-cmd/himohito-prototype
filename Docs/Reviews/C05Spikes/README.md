@@ -1,14 +1,16 @@
 # C05 危険物のデザインレビュー
 
-[最新状態](LATEST.json)／[長さ5・6・7の通過比較](runs/20261021T220112_JST/Report.md)／[手動起動](runs/20261021T220112_JST/Launch.md)
+[最新状態](LATEST.json)／[1.00倍の下降案と通過比較](runs/20261021T231056_JST/Report.md)／[手動起動](runs/20261021T231056_JST/Launch.md)
 
-暖色本体と「持ち手が下・刃先が上」はHumanの採用方針です。前完成候補は「長さ6がハサミに当たる」とのHuman指摘で統合保留です。今回は手前1個を描画・刃判定とも等比0.50倍にした隔離修正版を提出しています。Production統合はしていません。
+暖色本体と「持ち手が下・刃先が上」はHumanの採用方針です。0.50倍案は採用せず保持し、今回は元の1.00倍で手前1個を0.95だけ下げた隔離候補です。本体・支点・影・刃判定は同じ配置基準に追従します。Production統合はしていません。
 
-[長さ6の通常速度比較](runs/20261021T220112_JST/Video/L6_Current_Previous_Candidate_Sequence.mp4)／[長さ5の通過](runs/20261021T220112_JST/Video/Candidate_L5.mp4)／[長さ7の接触](runs/20261021T220112_JST/Video/Candidate_L7.mp4)／[同倍率の形状比較](runs/20261021T220112_JST/Images/Scissors_EqualScale_Crop.jpg)
+[長さ6の通常速度比較](runs/20261021T231056_JST/Video/L6_Before_After_Sequence.mp4)／[長さ5の通過](runs/20261021T231056_JST/Video/Candidate_L5.mp4)／[長さ7の接触](runs/20261021T231056_JST/Video/Candidate_L7.mp4)／[通常画角の見切れ](runs/20261021T231056_JST/Images/Candidate_Entrance.jpg)
 
-同じ入口・同じ入力で9比較を実施。修正版の長さ5・6は対岸到達、長さ7は現行と同様に接触・落下。現行と修正版のRoot・速度・残量・Cameraは各300フレームで一致しました。自動入力/APIの結果であり、Humanの採否は未確認です。縮小による存在感の低下もレビューに残しています。
+同じ入口・入力で長さ5は2.44秒、6は2.30秒で到達。7は比較経路で1.16秒に接触・落下。開閉途中の通過も確認しました。一方、持ち手の大部分が画面下へ隠れ、床への自然な置かれ方は未解決です。技術の通過確認と配置VisualのHOLDを分けて提出しています。自動入力/APIであり、Human実キー確認ではありません。
 
 ## 履歴
+
+- [0.50倍案 866a8de](runs/20261021T220112_JST/Report.md)：Human不採用。大きさを変えず下げる指示。原本保持。
 
 - [開閉と刃判定 300027a](runs/20261021T211000_JST/Report.md)：Human採用保留。長さ6接触の指摘。原本・比較資料を保持。
 

@@ -1,0 +1,30 @@
+--- original_full_size/CraftScissorsMotion.cs
++++ lowered_candidate/CraftScissorsMotion.cs
+@@ -12,6 +12,9 @@
+     public const float FloorY=-8.34f,PPU=500f;
+     public const float CloseSeconds=.18f,HoldSeconds=.08f,ReturnSeconds=.48f;
+     public static string AssetHash;
++    // This candidate changes placement only. Everything uses the same lower support reference.
++    public static float ReviewSupportY=FloorY;
++    public float SupportY { get; private set; }
+     public PolygonCollider2D blades;
+     public BoxCollider2D oldBox;
+     public Transform left,right,screw,root;
+@@ -46,6 +49,8 @@
+         space.localScale=new Vector3(1/transform.lossyScale.x,1/transform.lossyScale.y,1/transform.lossyScale.z);
+         root=new GameObject("Common moving pivot; upright front").transform;root.SetParent(space,false);
+         root.position=new Vector3(transform.position.x,0,transform.position.z);root.localRotation=Quaternion.Euler(0,0,180);
++        root.localScale=Vector3.one;
++        SupportY=ReviewSupportY;
+         var sl=Sprite.Create(atlas,new Rect(230,0,390,1024),new Vector2(317f/390,541f/1024),PPU,0,SpriteMeshType.FullRect);
+         var sr=Sprite.Create(atlas,new Rect(830,0,400,1024),new Vector2(74f/400,541f/1024),PPU,0,SpriteMeshType.FullRect);
+         var ss=Sprite.Create(atlas,new Rect(1273,479,111,112),new Vector2(55f/111,56f/112),PPU,0,SpriteMeshType.FullRect);
+@@ -79,7 +84,7 @@
+         left.localRotation=Quaternion.Euler(0,0,Mathf.Lerp(16,-3.4f,closure));right.localRotation=Quaternion.Euler(0,0,Mathf.Lerp(-16,3.8f,closure));
+         shadowL.localRotation=left.localRotation;shadowR.localRotation=right.localRotation;
+         leftSupport=Lowest(left,geometry.leftHandle);rightSupport=Lowest(right,geometry.rightHandle);
+-        root.position+=Vector3.up*(FloorY-Mathf.Min(leftSupport.y,rightSupport.y));
++        root.position+=Vector3.up*(SupportY-Mathf.Min(leftSupport.y,rightSupport.y));
+         leftSupport=Lowest(left,geometry.leftHandle);rightSupport=Lowest(right,geometry.rightHandle);
+         for(int side=0;side<2;side++){var w=WorldBlade(side);var local=new Vector2[w.Length];for(int i=0;i<w.Length;i++)local[i]=transform.InverseTransformPoint(w[i]);blades.SetPath(side,local);}
+     }
