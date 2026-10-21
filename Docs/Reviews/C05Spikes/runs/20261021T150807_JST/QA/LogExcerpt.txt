@@ -1,0 +1,38 @@
+C05 target-only excerpts. Full originals retained locally.
+External PNG data was decoded in the Player; not baked into Resources.
+
+[Compile_Candidate-r4.log]
+Assets\Scripts\MainStageRespawnOnFall.cs(20,22): warning CS0649: フィールド 'MainStageRespawnOnFall.startNearGoalForEndingPreview' は割り当てられません。常に既定値 false を使用します
+Assets\Scripts\StageCatalog.cs(22,67): warning CS0649: フィールド 'StageCatalog.Data.stages' は割り当てられません。常に既定値 null を使用します
+Assets\Scripts\PrototypeRunController.cs(37,39): warning CS0649: フィールド 'PrototypeRunController.startFromSectionFourForDevelopment' は割り当てられません。常に既定値 false を使用します
+Assets\Scripts\MainStageRespawnOnFall.cs(23,22): warning CS0649: フィールド 'MainStageRespawnOnFall.startWithPartDPreview' は割り当てられません。常に既定値 false を使用します
+
+[Compile_Baseline-r4.log]
+Assets\Scripts\MainStageRespawnOnFall.cs(23,22): warning CS0649: フィールド 'MainStageRespawnOnFall.startWithPartDPreview' は割り当てられません。常に既定値 false を使用します
+Assets\Scripts\StageCatalog.cs(22,67): warning CS0649: フィールド 'StageCatalog.Data.stages' は割り当てられません。常に既定値 null を使用します
+Assets\Scripts\PrototypeRunController.cs(37,39): warning CS0649: フィールド 'PrototypeRunController.startFromSectionFourForDevelopment' は割り当てられません。常に既定値 false を使用します
+Assets\Scripts\MainStageRespawnOnFall.cs(20,22): warning CS0649: フィールド 'MainStageRespawnOnFall.startNearGoalForEndingPreview' は割り当てられません。常に既定値 false を使用します
+
+[Candidate-Tutorial-QA-r3/Player.log]
+Initialize engine version: 6000.3.21f1 (c02631ffc030)
+C05_EXTERNAL_ASSET HimoHitoCraftSpike-v2 sha256=d8de21d62aed861b59ed6f9b74411f1be6c6194e40e95f993a4592ce46bded7c size=1254x1254 processedSprite=-98
+C05_EXTERNAL_ASSET HimoHitoCraftSpikeWide-v2 sha256=3b2b5cb01ae3845fce647a8923fe19fb74d88ae65cdffec71dd73325fa46b1a3 size=1915x821 processedSprite=-106
+C05_FINISHED errors=0
+
+[Candidate-MainStage-QA-r4/Player.log]
+Initialize engine version: 6000.3.21f1 (c02631ffc030)
+C05_EXTERNAL_ASSET HimoHitoCraftSpike-v2 sha256=d8de21d62aed861b59ed6f9b74411f1be6c6194e40e95f993a4592ce46bded7c size=1254x1254 processedSprite=-98
+C05_EXTERNAL_ASSET HimoHitoCraftSpikeWide-v2 sha256=3b2b5cb01ae3845fce647a8923fe19fb74d88ae65cdffec71dd73325fa46b1a3 size=1915x821 processedSprite=-106
+C05_FINISHED errors=0
+
+[ManualSmoke-Tutorial.log]
+Initialize engine version: 6000.3.21f1 (c02631ffc030)
+C05_EXTERNAL_ASSET HimoHitoCraftSpike-v2 sha256=d8de21d62aed861b59ed6f9b74411f1be6c6194e40e95f993a4592ce46bded7c size=1254x1254 processedSprite=-98
+C05_EXTERNAL_ASSET HimoHitoCraftSpikeWide-v2 sha256=3b2b5cb01ae3845fce647a8923fe19fb74d88ae65cdffec71dd73325fa46b1a3 size=1915x821 processedSprite=-106
+C05_MANUAL_READY: Tutorial section2; native input; no auto driving,capture,clock,exit
+
+[ManualSmoke-MainStage.log]
+Initialize engine version: 6000.3.21f1 (c02631ffc030)
+C05_EXTERNAL_ASSET HimoHitoCraftSpike-v2 sha256=d8de21d62aed861b59ed6f9b74411f1be6c6194e40e95f993a4592ce46bded7c size=1254x1254 processedSprite=-98
+C05_EXTERNAL_ASSET HimoHitoCraftSpikeWide-v2 sha256=3b2b5cb01ae3845fce647a8923fe19fb74d88ae65cdffec71dd73325fa46b1a3 size=1915x821 processedSprite=-106
+C05_MANUAL_READY: MainStage section2; native input; no auto driving,capture,clock,exit

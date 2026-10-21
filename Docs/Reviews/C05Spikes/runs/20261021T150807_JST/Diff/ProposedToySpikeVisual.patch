@@ -1,0 +1,76 @@
+--- a/Assets/Scripts/ToySpikeVisual.cs
++++ b/Assets/Scripts/ToySpikeVisual.cs
+@@ -12,9 +12,13 @@
+     {
+         private const string FaceName = "Wooden Toy Spike Face";
+         private const string CraftSpikeResourcePath = "Art/HimoHitoCraftSpike-v1";
++        private const string RevisedSpikeResourcePath = "Art/HimoHitoCraftSpike-v2";
++        private const string WideSpikeResourcePath = "Art/HimoHitoCraftSpikeWide-v2";
+         private const string PaintedSpikeResourcePath = "Art/WoodenToySpike-v1";
+         private const int TextureSize = 64;
+         private static Sprite sharedSprite;
++        private static readonly System.Collections.Generic.Dictionary<string, Sprite> RevisedSprites =
++            new System.Collections.Generic.Dictionary<string, Sprite>();
+         private const float ContactDuration = .40f;
+         private Transform face;
+         private float contactElapsed = ContactDuration;
+@@ -134,8 +138,15 @@
+             Refresh();
+         }
+ 
+-        private static Sprite GetSharedSprite()
+-        {
++        private Sprite GetSharedSprite()
++        {
++            // Use an authored low triangle rather than squeezing its fibre/edge pattern.
++            Vector3 worldSize = transform.lossyScale;
++            bool wide = Mathf.Abs(worldSize.x) > Mathf.Abs(worldSize.y) * 1.6f;
++            Sprite revisedSprite = LoadRevisedSprite(
++                wide ? WideSpikeResourcePath : RevisedSpikeResourcePath);
++            if (revisedSprite != null) return revisedSprite;
++
+             Sprite craftSprite = TutorialFirstSectionVisuals.LoadProcessedToySprite(
+                 CraftSpikeResourcePath, useMipMaps: true);
+             if (craftSprite != null) return craftSprite;
+@@ -221,5 +232,41 @@
+             sharedSprite.hideFlags = HideFlags.HideAndDontSave;
+             return sharedSprite;
+         }
++
++        private static Sprite LoadRevisedSprite(string path)
++        {
++            if (RevisedSprites.TryGetValue(path, out Sprite cached) && cached != null) return cached;
++            Sprite processed = TutorialFirstSectionVisuals.LoadProcessedToySprite(path, useMipMaps: true);
++            if (processed == null) return null;
++            Texture2D source = Resources.Load<Texture2D>(path);
++            if (source == null) return processed;
++            Sprite tight = CreateTightSprite(processed, source);
++            RevisedSprites[path] = tight;
++            return tight;
++        }
++
++        // Ignore almost invisible alpha dust when fitting new art to the unchanged hazard bounds.
++        // Alpha within the cropped rectangle is retained; this does not move a trigger or its tip.
++        private static Sprite CreateTightSprite(Sprite processed, Texture2D source)
++        {
++            Color32[] pixels = source.GetPixels32();
++            int minX = source.width, minY = source.height, maxX = -1, maxY = -1;
++            for (int y = 0; y < source.height; y++)
++                for (int x = 0; x < source.width; x++)
++                    if (pixels[y * source.width + x].a >= 8)
++                    {
++                        minX = Mathf.Min(minX, x); minY = Mathf.Min(minY, y);
++                        maxX = Mathf.Max(maxX, x); maxY = Mathf.Max(maxY, y);
++                    }
++            if (maxX < minX) return processed;
++            minX = Mathf.Max(0, minX - 2); minY = Mathf.Max(0, minY - 2);
++            maxX = Mathf.Min(source.width - 1, maxX + 2); maxY = Mathf.Min(source.height - 1, maxY + 2);
++            Sprite tight = Sprite.Create(processed.texture,
++                new Rect(minX, minY, maxX - minX + 1, maxY - minY + 1),
++                new Vector2(.5f, .5f), 100, 0, SpriteMeshType.FullRect);
++            tight.name = processed.name + " Tight";
++            tight.hideFlags = HideFlags.HideAndDontSave;
++            return tight;
++        }
+     }
+ }

@@ -1,0 +1,34 @@
+{
+  "review_id": "C05Spikes",
+  "run_id": "20261021T150807_JST",
+  "updated_at": "2026-10-21T15:21:54+09:00",
+  "time_zone": "Asia/Tokyo",
+  "proof": "C05SpikeProof_20261021",
+  "revision": "candidate-1-final",
+  "production_head": "394b4a74e366678a9e0542d895b9a26f86993c19",
+  "status": "Human Review待ち",
+  "production_integrated": false,
+  "human_adoption": "未承認",
+  "branch": "codex/review-c05-spikes",
+  "report": "Docs/Reviews/C05Spikes/runs/20261021T150807_JST/Report.md",
+  "launch": "Docs/Reviews/C05Spikes/runs/20261021T150807_JST/Launch.md",
+  "images": "Docs/Reviews/C05Spikes/runs/20261021T150807_JST/Images",
+  "video": "Docs/Reviews/C05Spikes/runs/20261021T150807_JST/Video",
+  "qa": "Docs/Reviews/C05Spikes/runs/20261021T150807_JST/QA",
+  "diff": "Docs/Reviews/C05Spikes/runs/20261021T150807_JST/Diff",
+  "assets": "Docs/Reviews/C05Spikes/runs/20261021T150807_JST/Assets",
+  "execution": "existing non-Development Unity Player + managed overlay + explicit external PNG LoadImage and sprite-cache transport; no new Unity Build",
+  "technical": "PASS within recorded diagnostic conditions",
+  "visual": "self-reviewed; Human pending",
+  "unconfirmed": [
+    "OS実キー・物理クリック",
+    "Tutorial左右2本と本編横長への個別接触",
+    "Humanの見た目・手応え・正式採否",
+    "新規Unity Build・Editor Play・新素材のResources焼込み",
+    "全区間通し・他の解像度・音の実聴"
+  ],
+  "holds": [
+    "C11",
+    "C18"
+  ]
+}

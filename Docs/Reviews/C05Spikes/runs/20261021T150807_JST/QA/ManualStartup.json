@@ -1,0 +1,22 @@
+[
+  {
+    "os_keys_verified": false,
+    "error": false,
+    "human_play": false,
+    "alive": true,
+    "seconds": 20.4982099,
+    "ready": true,
+    "qa_flag_present": false,
+    "scene": "Tutorial"
+  },
+  {
+    "os_keys_verified": false,
+    "error": false,
+    "human_play": false,
+    "alive": true,
+    "seconds": 22.3278107,
+    "ready": true,
+    "qa_flag_present": false,
+    "scene": "MainStage"
+  }
+]

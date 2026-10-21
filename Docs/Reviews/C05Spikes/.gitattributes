@@ -1,0 +1,5 @@
+# Review clips must remain ordinary Git files readable directly from this branch.
+*.mp4 -filter -diff -merge -text
+
+# Unified patch context represents blank source lines with a single leading space.
+*.patch -whitespace

@@ -1,0 +1,204 @@
+{
+  "execution": "existing Unity 6000.3.21f1 non-Development Windows Player + managed overlay + explicit external PNG LoadImage/cache; NOT new Unity Build/Editor Play/OS input",
+  "production_head": "394b4a74e366678a9e0542d895b9a26f86993c19",
+  "scenes": {
+    "Tutorial": {
+      "baseline": "Baseline-Tutorial-QA-r2",
+      "candidate": "Candidate-Tutorial-QA-r3",
+      "baseline_finished": true,
+      "candidate_finished": true,
+      "errors": [
+        0,
+        0
+      ],
+      "contracts_exact": true,
+      "reload_contracts_exact": true,
+      "state_physics_exact": true,
+      "trace_frames": [
+        236,
+        236
+      ],
+      "trace_physics_exact": true,
+      "max_trace_delta": {
+        "root": 0.0,
+        "velocity": 0.0,
+        "anchor": 0.0,
+        "camera": 0.0,
+        "remaining": 0.0,
+        "selected": 0.0,
+        "attached": 0.0,
+        "grounded": 0.0,
+        "input": 0.0
+      },
+      "visual_bounds_max_delta": 0.0,
+      "candidate_sprite_verified": true,
+      "checks": [
+        "PASS expected section2 spike count",
+        "PASS actual renderer sprite matches decoded external candidate PNG",
+        "PASS grounded native E attach before contact",
+        "PASS trigger contact detaches rope",
+        "PASS contact refund/current unchanged",
+        "PASS native contact rocking active",
+        "PASS native contact fibres emitted",
+        "PASS pause stops rocking and physics",
+        "PASS resume advances contact presentation",
+        "PASS native R restores entry resource and bridge state",
+        "PASS detached overlap remains detached",
+        "PASS candidate external PNG sprites remain assigned after reload"
+      ],
+      "camera_orthographic_size": 8.699999809265137,
+      "pixels_per_world_unit": 51.72414016723633,
+      "assets": [
+        {
+          "name": "HimoHitoCraftSpike-v2",
+          "sha256": "d8de21d62aed861b59ed6f9b74411f1be6c6194e40e95f993a4592ce46bded7c",
+          "method": "external PNG -> LoadImage -> existing processed-sprite cache",
+          "bytes": 1561054,
+          "width": 1254,
+          "height": 1254,
+          "spriteId": -98,
+          "textureId": -94,
+          "bakedResource": false
+        },
+        {
+          "name": "HimoHitoCraftSpikeWide-v2",
+          "sha256": "3b2b5cb01ae3845fce647a8923fe19fb74d88ae65cdffec71dd73325fa46b1a3",
+          "method": "external PNG -> LoadImage -> existing processed-sprite cache",
+          "bytes": 1597142,
+          "width": 1915,
+          "height": 821,
+          "spriteId": -106,
+          "textureId": -102,
+          "bakedResource": false
+        }
+      ]
+    },
+    "MainStage": {
+      "baseline": "Baseline-MainStage-QA-r4",
+      "candidate": "Candidate-MainStage-QA-r4",
+      "baseline_finished": true,
+      "candidate_finished": true,
+      "errors": [
+        0,
+        0
+      ],
+      "contracts_exact": true,
+      "reload_contracts_exact": true,
+      "state_physics_exact": true,
+      "trace_frames": [
+        236,
+        236
+      ],
+      "trace_physics_exact": true,
+      "max_trace_delta": {
+        "root": 0.0,
+        "velocity": 0.0,
+        "anchor": 0.0,
+        "camera": 0.0,
+        "remaining": 0.0,
+        "selected": 0.0,
+        "attached": 0.0,
+        "grounded": 0.0,
+        "input": 0.0
+      },
+      "visual_bounds_max_delta": 5.960464477539063e-08,
+      "candidate_sprite_verified": true,
+      "checks": [
+        "PASS expected section2 spike count",
+        "PASS actual renderer sprite matches decoded external candidate PNG",
+        "PASS grounded native E attach before contact",
+        "PASS trigger contact detaches rope",
+        "PASS contact refund/current unchanged",
+        "PASS native contact rocking active",
+        "PASS native contact fibres emitted",
+        "PASS pause stops rocking and physics",
+        "PASS resume advances contact presentation",
+        "PASS native R restores entry resource and bridge state",
+        "PASS detached overlap remains detached",
+        "PASS candidate external PNG sprites remain assigned after reload"
+      ],
+      "camera_orthographic_size": 8.699999809265137,
+      "pixels_per_world_unit": 51.72414016723633,
+      "assets": [
+        {
+          "name": "HimoHitoCraftSpike-v2",
+          "sha256": "d8de21d62aed861b59ed6f9b74411f1be6c6194e40e95f993a4592ce46bded7c",
+          "method": "external PNG -> LoadImage -> existing processed-sprite cache",
+          "bytes": 1561054,
+          "width": 1254,
+          "height": 1254,
+          "spriteId": -98,
+          "textureId": -94,
+          "bakedResource": false
+        },
+        {
+          "name": "HimoHitoCraftSpikeWide-v2",
+          "sha256": "3b2b5cb01ae3845fce647a8923fe19fb74d88ae65cdffec71dd73325fa46b1a3",
+          "method": "external PNG -> LoadImage -> existing processed-sprite cache",
+          "bytes": 1597142,
+          "width": 1915,
+          "height": 821,
+          "spriteId": -106,
+          "textureId": -102,
+          "bakedResource": false
+        }
+      ]
+    }
+  },
+  "os_error": "computer-use request timed out: list_apps; no repeated attempt",
+  "human_review": "pending",
+  "production_integrated": false,
+  "new_assets": [
+    {
+      "name": "HimoHitoCraftSpike-v2",
+      "sha256": "d8de21d62aed861b59ed6f9b74411f1be6c6194e40e95f993a4592ce46bded7c",
+      "size": [
+        1254,
+        1254
+      ],
+      "alpha8_bounds_xyxy": [
+        56,
+        129,
+        1196,
+        1122
+      ],
+      "opaque128_bounds_xyxy": [
+        57,
+        130,
+        1195,
+        1120
+      ],
+      "sprite_padding": 2,
+      "original_unchanged": true
+    },
+    {
+      "name": "HimoHitoCraftSpikeWide-v2",
+      "sha256": "3b2b5cb01ae3845fce647a8923fe19fb74d88ae65cdffec71dd73325fa46b1a3",
+      "size": [
+        1915,
+        821
+      ],
+      "alpha8_bounds_xyxy": [
+        84,
+        84,
+        1789,
+        754
+      ],
+      "opaque128_bounds_xyxy": [
+        85,
+        85,
+        1788,
+        752
+      ],
+      "sprite_padding": 2,
+      "original_unchanged": true
+    }
+  ],
+  "protection": {
+    "production_files": 266,
+    "changed": [],
+    "past_proof_files": 3,
+    "past_proof_changes": []
+  },
+  "physics_pass": true
+}

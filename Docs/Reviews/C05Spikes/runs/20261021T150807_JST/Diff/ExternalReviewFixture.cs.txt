@@ -1,0 +1,140 @@
+using System;
+using System.IO;
+using System.Linq;
+using System.Collections;
+using System.Collections.Generic;
+using System.Reflection;
+using System.Security.Cryptography;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using HimoHito;
+
+[DefaultExecutionOrder(30000)]
+public sealed class GroundingReview:MonoBehaviour
+{
+    const BindingFlags Hidden=BindingFlags.Instance|BindingFlags.NonPublic;
+    static string Arg(string key,string fallback=""){var a=Environment.GetCommandLineArgs();for(int i=0;i<a.Length-1;i++)if(a[i]==key)return a[i+1];return fallback;}
+    static bool QA=>Arg("-c05Mode")=="QA";
+    static bool Audit=>Arg("-c05Mode")=="Audit";
+    static void Set(object o,string n,object v)=>o.GetType().GetField(n,Hidden).SetValue(o,v);
+    static object Get(object o,string n)=>o.GetType().GetField(n,Hidden).GetValue(o);
+    static object Call(object o,string n)=>o.GetType().GetMethod(n,Hidden|BindingFlags.Public).Invoke(o,null);
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
+    static void Boot()
+    {
+        Application.runInBackground=true;
+        if(QA||Audit){Time.captureFramerate=50;UnityEngine.Random.InitState(521);}
+        if(Arg("-c05Variant","Candidate")=="Candidate")LoadReviewAssets();
+        SceneManager.sceneLoaded+=(s,m)=>{
+            if(s.name=="Tutorial"&&Arg("-c05Scene","Tutorial")=="MainStage"){SceneManager.LoadScene("MainStage");return;}
+            if(!FindFirstObjectByType<GroundingReview>())new GameObject("C05 isolated review fixture").AddComponent<GroundingReview>();
+        };
+    }
+    [Serializable] public class Spike
+    {
+        public string name,sprite,texture,layer;public Vector3 root,scale,rotation,facePosition,faceScale,visualCenter,visualSize;public Vector2 colliderSize,colliderOffset,triggerCenter,triggerSize,screenMin,screenMax;
+        public bool trigger,colliderEnabled,sourceEnabled,faceEnabled,forceOff,craftResourceExists,candidateSpriteVerified;public int order,rootOrder,mipCount;public Rect spriteRect;public Color tint;
+    }
+    [Serializable] public class State
+    {
+        public string phase;public Vector2 root,velocity,anchor;public Vector3 camera;public float remaining,selected,contactElapsed,faceAngle,input;public bool attached,grounded;public int fibreEffects;
+    }
+    [Serializable] public class Report
+    {
+        public string unity,scene,variant,mode,method="Diagnostic placement + native attach/retry/pause paths; automatic moveInput. NOT OS keys or Human play.";
+        public bool development,finished;public int errors;public float cameraOrtho,ppu;public List<Asset> assets=new List<Asset>();public List<Spike> spikes=new List<Spike>(),reloadSpikes=new List<Spike>();public List<State> trace=new List<State>(),states=new List<State>();public List<string> checks=new List<string>();
+    }
+    Rigidbody2D body;PlayerMover mover;RopeController rope;RopeResource resource;RopePlatformBuilder builder;MonoBehaviour run;StageOverlayControls overlay;
+    Report report;string output,phase="setup";float drive;bool recording;int frame;static Report previous;static bool reloaded;
+    bool Tutorial=>SceneManager.GetActiveScene().name=="Tutorial";
+    Vector2 Entry=>Tutorial?new Vector2(14f,.92f):new Vector2(12.7f,-4.28f);
+    Vector2 Anchor=>Tutorial?TutorialSectionTwoSetup.HookPosition:new Vector2(17.25f,-.85f);
+    string Target=>Tutorial?TutorialSectionTwoSetup.CenterSpikeName:MainStageSectionTwoSetup.FrontSpikeName;
+    IEnumerator Start()
+    {
+        yield return null;yield return null;yield return null;
+        mover=FindFirstObjectByType<PlayerMover>();body=mover.GetComponent<Rigidbody2D>();rope=body.GetComponent<RopeController>();resource=body.GetComponent<RopeResource>();builder=body.GetComponent<RopePlatformBuilder>();overlay=FindFirstObjectByType<StageOverlayControls>();
+        run=Tutorial?(MonoBehaviour)FindFirstObjectByType<PrototypeRunController>():FindFirstObjectByType<MainStageRespawnOnFall>();
+        if(Tutorial)((PrototypeRunController)run).BeginGameFromTitle();
+        var tour=FindFirstObjectByType<MainStagePreview>();if(tour&&MainStagePreview.IsActive)Call(tour,"RestoreState");
+        resource.RestoreCapacityAndCurrent(Tutorial?99:50,Tutorial?99:50);rope.RestoreSelectedRopeLength(Tutorial?8:7);
+        Place(Entry);
+        if(Tutorial)((PrototypeRunController)run).TryReachTutorialSection(2,Entry,8);else ((MainStageRespawnOnFall)run).TryReachSection(2,Entry,50);
+        Set(run,"checkpointPosition",Entry);Call(run,"CaptureCheckpointState");
+        if(!Audit&&!QA){Debug.Log("C05_MANUAL_READY: "+SceneManager.GetActiveScene().name+" section2; native input; no auto driving,capture,clock,exit");yield break;}
+        output=Arg("-c05Output");Directory.CreateDirectory(output);report=previous??new Report{unity=Application.unityVersion,scene=SceneManager.GetActiveScene().name,variant=Arg("-c05Variant"),mode=Arg("-c05Mode"),development=Debug.isDebugBuild,assets=loadedAssets};Application.logMessageReceived+=Log;
+        yield return new WaitForSeconds(.8f);
+        report.cameraOrtho=Camera.main.orthographicSize;report.ppu=Screen.height/(2*report.cameraOrtho);
+        if(reloaded){report.reloadSpikes=Snapshots();if(report.variant=="Candidate")Check(report.reloadSpikes.All(x=>x.candidateSpriteVerified),"candidate external PNG sprites remain assigned after reload");yield return Shot("08_Reload");Record("reload");Finish();yield break;}
+        report.spikes=Snapshots();Check(report.spikes.Count==(Tutorial?3:2),"expected section2 spike count");
+        if(report.variant=="Candidate")Check(report.spikes.All(x=>x.candidateSpriteVerified),"actual renderer sprite matches decoded external candidate PNG");
+        yield return Shot("01_Normal");Record("normal");
+        if(!QA){Finish();yield break;}
+        Directory.CreateDirectory(Path.Combine(output,"VideoFrames"));recording=true;StartCoroutine(Video());
+        // Attach through the existing grounded first-shot API; do not force joint state.
+        bool attached=rope.TryAttach(Anchor);Check(attached,"grounded native E attach before contact");Record("attached");
+        // Contact driver reproduces an attached approach, keeping native physics, trigger and Cut code.
+        var spike=GameObject.Find(Target);Vector2 hit=(Vector2)spike.transform.position+Vector2.up*(Arg("-c05Approach")=="1"?1.20f:.65f);
+        body.position=hit;body.transform.position=new Vector3(hit.x,hit.y,0);body.linearVelocity=new Vector2(1.2f,-2);SyncHistory();Physics2D.SyncTransforms();
+        phase="attached falling contact";yield return new WaitForSeconds(.20f);yield return Shot("02_Contact");Record("contact");
+        Check(!rope.IsAttached,"trigger contact detaches rope");Check(resource.CurrentLength==(Tutorial?99:50),"contact refund/current unchanged");
+        var visual=spike.GetComponent<ToySpikeVisual>();Check((float)Get(visual,"contactElapsed")<.4f,"native contact rocking active");Check(body.GetComponentsInChildren<RopeLandingFluff>().Any(x=>x.name=="Spike Contact Yarn Fibres"),"native contact fibres emitted");
+        phase="paused contact";Set(overlay,"isPaused",true);Call(overlay,"ApplyPauseState");float elapsed=(float)Get(visual,"contactElapsed");Vector2 pausedPosition=body.position;yield return new WaitForSecondsRealtime(.25f);yield return Shot("03_Pause");
+        Check((float)Get(visual,"contactElapsed")==elapsed&&body.position==pausedPosition,"pause stops rocking and physics");Record("paused");
+        Set(overlay,"isPaused",false);Call(overlay,"ApplyPauseState");phase="resumed";yield return new WaitForSeconds(.25f);Record("resumed");Check((float)Get(visual,"contactElapsed")>=elapsed,"resume advances contact presentation");
+        phase="native R";Call(run,"RestartFromCheckpoint");yield return new WaitForSeconds(.8f);yield return Shot("04_R");Record("R");Check(!rope.IsAttached&&resource.CurrentLength==(Tutorial?99:50)&&builder.GeneratedPlatformCount==0,"native R restores entry resource and bridge state");
+        // Detached overlap must not invent a cut/contact effect.
+        Place(hit);body.linearVelocity=new Vector2(1.2f,-2);phase="detached falling contact";yield return new WaitForSeconds(.2f);yield return Shot("05_Detached");Record("detached contact");Check(!rope.IsAttached,"detached overlap remains detached");
+        phase="R then ordinary D";Call(run,"RestartFromCheckpoint");yield return new WaitForSeconds(.8f);drive=1;yield return new WaitForSeconds(.45f);drive=0;yield return new WaitForSeconds(.25f);yield return Shot("06_Walk");Record("walk");
+        recording=false;yield return null;previous=report;reloaded=true;SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    void Update(){if(QA&&mover)Set(mover,"moveInput",drive);}
+    void FixedUpdate(){if(QA&&report!=null&&body)report.trace.Add(Read(phase));}
+    void Place(Vector2 p){rope.DetachAndRefund();body.position=p;body.transform.position=new Vector3(p.x,p.y,0);body.linearVelocity=Vector2.zero;body.angularVelocity=0;body.simulated=true;mover.enabled=true;rope.enabled=true;SyncHistory();Physics2D.SyncTransforms();Camera.main.GetComponent<HorizontalCameraFollow>().ResetFraming();}
+    void SyncHistory(){Set(mover,"previousPhysicsPosition",body.position);Set(mover,"hasPreviousPhysicsPosition",true);Set(mover,"hasPreviousVerticalSpeed",false);}
+    State Read(string name){var v=GameObject.Find(Target).GetComponent<ToySpikeVisual>();return new State{phase=name,root=body.position,velocity=body.linearVelocity,anchor=rope.AnchorPoint,camera=Camera.main.transform.position,remaining=resource.CurrentLength,selected=rope.SelectedRopeLength,attached=rope.IsAttached,grounded=mover.IsGrounded,contactElapsed=(float)Get(v,"contactElapsed"),faceAngle=v.transform.Find("Wooden Toy Spike Face").localEulerAngles.z,input=mover.MovementInput,fibreEffects=body.GetComponentsInChildren<RopeLandingFluff>().Count(x=>x.name=="Spike Contact Yarn Fibres")};}
+    void Record(string name)=>report.states.Add(Read(name));
+    List<Spike> Snapshots()=>FindObjectsByType<RopeSpikeHazard>(FindObjectsSortMode.None).OrderBy(x=>x.name).Select(x=>{
+        var root=x.transform;var b=x.GetComponent<BoxCollider2D>();var sr=x.GetComponent<SpriteRenderer>();var f=root.Find("Wooden Toy Spike Face").GetComponent<SpriteRenderer>();var s=f.sprite;var tex=s.texture;
+        var lo=Camera.main.WorldToScreenPoint(f.bounds.min);var hi=Camera.main.WorldToScreenPoint(f.bounds.max);
+        return new Spike{name=x.name,root=root.position,scale=root.lossyScale,rotation=root.eulerAngles,facePosition=f.transform.localPosition,faceScale=f.transform.localScale,visualCenter=f.bounds.center,visualSize=f.bounds.size,colliderSize=b.size,colliderOffset=b.offset,trigger=b.isTrigger,colliderEnabled=b.enabled,triggerCenter=b.bounds.center,triggerSize=b.bounds.size,sourceEnabled=sr.enabled,faceEnabled=f.enabled,forceOff=f.forceRenderingOff,sprite=s.name,texture=tex.name,layer=f.sortingLayerName,order=f.sortingOrder,rootOrder=sr.sortingOrder,mipCount=tex.mipmapCount,spriteRect=s.rect,tint=f.color,craftResourceExists=Resources.Load<Texture2D>("Art/HimoHitoCraftSpike-v1")!=null,candidateSpriteVerified=providedSprites.Values.Any(p=>p==s),screenMin=lo,screenMax=hi};}).ToList();
+    void Check(bool ok,string text){report.checks.Add((ok?"PASS ":"FAIL ")+text);if(!ok)report.errors++;}
+    IEnumerator Shot(string name){yield return new WaitForEndOfFrame();var im=ScreenCapture.CaptureScreenshotAsTexture();File.WriteAllBytes(Path.Combine(output,name+".png"),im.EncodeToPNG());Destroy(im);}
+    IEnumerator Video(){int n=0;while(recording){yield return new WaitForEndOfFrame();if(!recording)yield break;if(n++%2==0){var im=ScreenCapture.CaptureScreenshotAsTexture();File.WriteAllBytes(Path.Combine(output,"VideoFrames",(frame++).ToString("D5")+".jpg"),im.EncodeToJPG(84));Destroy(im);}}}
+    void Log(string msg,string stack,LogType type){if(type==LogType.Error||type==LogType.Exception||type==LogType.Assert){report.errors++;File.AppendAllText(Path.Combine(output,"Errors.txt"),msg+"\n"+stack+"\n");}}
+    void Finish(){report.finished=true;File.WriteAllText(Path.Combine(output,"Result.json"),JsonUtility.ToJson(report,true));Debug.Log("C05_FINISHED errors="+report.errors);Application.Quit(report.errors==0?0:2);}
+    void OnDestroy(){Application.logMessageReceived-=Log;}
+
+    // External PNG transport is QA-only: this is explicitly NOT a rebuilt Resources asset.
+    // Match the existing key/trim/mipmap processing and seed its cache before scene Awake.
+    [Serializable]public class Asset{public string name,sha256,method="external PNG -> LoadImage -> existing processed-sprite cache";public int bytes,width,height,spriteId,textureId;public bool bakedResource;}
+    static readonly List<Asset> loadedAssets=new List<Asset>();
+    static readonly Dictionary<string,Sprite> providedSprites=new Dictionary<string,Sprite>();
+    static void LoadReviewAssets()
+    {
+        foreach(string name in new[]{"HimoHitoCraftSpike-v2","HimoHitoCraftSpikeWide-v2"})
+        {
+            string path=Path.Combine(Path.GetDirectoryName(Application.dataPath),"ReviewAssets",name+".png");byte[] bytes=File.ReadAllBytes(path);
+            string hash;using(var sha=SHA256.Create())hash=BitConverter.ToString(sha.ComputeHash(bytes)).Replace("-","").ToLowerInvariant();
+            var source=new Texture2D(2,2,TextureFormat.RGBA32,false);if(!source.LoadImage(bytes))throw new Exception("C05 PNG decode failed");
+            var pixels=source.GetPixels32();int minX=source.width,minY=source.height,maxX=-1,maxY=-1;
+            for(int y=0;y<source.height;y++)for(int x=0;x<source.width;x++){
+                int i=y*source.width+x;var p=pixels[i];if(p.a==0)continue;int high=Math.Max(p.r,Math.Max(p.g,p.b)),low=Math.Min(p.r,Math.Min(p.g,p.b));
+                if(low>=205&&high-low<=28){p.a=0;pixels[i]=p;continue;}
+                minX=Math.Min(minX,x);maxX=Math.Max(maxX,x);minY=Math.Min(minY,y);maxY=Math.Max(maxY,y);
+            }
+            if(maxX<minX)throw new Exception("C05 PNG empty after processing");
+            var texture=new Texture2D(source.width,source.height,TextureFormat.RGBA32,true){name=name+" External Transparent",filterMode=FilterMode.Trilinear,wrapMode=TextureWrapMode.Clamp,hideFlags=HideFlags.HideAndDontSave};
+            typeof(TutorialFirstSectionVisuals).GetMethod("SetAlphaWeightedMipMaps",BindingFlags.Static|BindingFlags.NonPublic).Invoke(null,new object[]{texture,pixels});texture.Apply(false,true);
+            minX=Math.Max(0,minX-2);minY=Math.Max(0,minY-2);maxX=Math.Min(source.width-1,maxX+2);maxY=Math.Min(source.height-1,maxY+2);
+            var sprite=Sprite.Create(texture,new Rect(minX,minY,maxX-minX+1,maxY-minY+1),new Vector2(.5f,.5f),100,0,SpriteMeshType.FullRect);sprite.name=name+" External Processed";sprite.hideFlags=HideFlags.HideAndDontSave;
+            var cache=(Dictionary<(string,bool),Sprite>)typeof(TutorialFirstSectionVisuals).GetField("ProcessedSprites",BindingFlags.Static|BindingFlags.NonPublic).GetValue(null);
+            cache[("Art/"+name,true)]=sprite;
+            sprite=(Sprite)typeof(ToySpikeVisual).GetMethod("CreateTightSprite",BindingFlags.Static|BindingFlags.NonPublic).Invoke(null,new object[]{sprite,source});
+            var revised=(Dictionary<string,Sprite>)typeof(ToySpikeVisual).GetField("RevisedSprites",BindingFlags.Static|BindingFlags.NonPublic).GetValue(null);
+            revised["Art/"+name]=sprite;providedSprites[name]=sprite;
+            loadedAssets.Add(new Asset{name=name,sha256=hash,bytes=bytes.Length,width=source.width,height=source.height,spriteId=sprite.GetInstanceID(),textureId=texture.GetInstanceID(),bakedResource=Resources.Load<Texture2D>("Art/"+name)!=null});
+            Debug.Log("C05_EXTERNAL_ASSET "+name+" sha256="+hash+" size="+source.width+"x"+source.height+" processedSprite="+sprite.GetInstanceID());Destroy(source);
+        }
+    }
+}

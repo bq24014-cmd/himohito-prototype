@@ -1,0 +1,41 @@
+{
+  "kind": "existing non-Development Windows Player + managed overlay + external PNG",
+  "new_unity_build": false,
+  "editor_play_verified": false,
+  "os_keys_verified": false,
+  "production_integrated": false,
+  "runtime_files": {
+    "Runtime/PlayerGroundingReview.exe": {
+      "sha256": "837986201d89be25426b8415cb3bc945f077e5b13f4722d6763d04ebd38c5472",
+      "bytes": 667136
+    },
+    "Runtime/UnityPlayer.dll": {
+      "sha256": "35f489b6a7753d536ce2e7b1bd1f729afb8b4e70b43caaa01af03d1c20f64d6c",
+      "bytes": 36734888
+    },
+    "Runtime/PlayerGroundingReview_Data/Managed/Assembly-CSharp.dll": {
+      "sha256": "bc5602cf4c7177923126cf51bf4351c61f0880c80ab6732a3da7ff6f0242b8d3",
+      "bytes": 400384
+    },
+    "BeforeRuntime/PlayerGroundingReview_Data/Managed/Assembly-CSharp.dll": {
+      "sha256": "103e0777ed357a5b759221771b3dcd11b275a6d015929d9298f096c513eb8c7a",
+      "bytes": 399360
+    },
+    "Runtime/ReviewAssets/HimoHitoCraftSpike-v2.png": {
+      "sha256": "d8de21d62aed861b59ed6f9b74411f1be6c6194e40e95f993a4592ce46bded7c",
+      "bytes": 1561054
+    },
+    "Runtime/ReviewAssets/HimoHitoCraftSpikeWide-v2.png": {
+      "sha256": "3b2b5cb01ae3845fce647a8923fe19fb74d88ae65cdffec71dd73325fa46b1a3",
+      "bytes": 1597142
+    },
+    "Sources/ToySpikeVisual.cs": {
+      "sha256": "d740ccdc91ec172ab6a30090f3025692ca509716eeb4ccaf405b403dbff1a431",
+      "bytes": 11029
+    },
+    "GroundingReview.cs": {
+      "sha256": "184e885da347870e5605efd659afad2c219e0413bb8684a851ad5ce94ca437b0",
+      "bytes": 15893
+    }
+  }
+}
