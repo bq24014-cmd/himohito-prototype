@@ -1,0 +1,43 @@
+<!doctype html><html lang="ja"><meta charset="utf-8"><title>C05 暖色ハサミ・単体デザイン</title>
+<style>body{background:#131d28;color:#eee8dc;font:16px "Yu Gothic",sans-serif;margin:24px}canvas{display:block;max-width:100%;height:auto;margin:12px 0 28px;border:1px solid #596372}button{padding:10px;margin:8px}a{color:#e7b19b}</style>
+<h1>C05 暖色ハサミ｜単体デザイン比較</h1>
+<p>画像生成素材の静止組立図。実Unity画面ではありません。旧2案は不採用。新案も未承認です。</p>
+<p>通常倍率は1600×900・51.72414 px/world unitを換算。画像を100%で表示すると想定サイズになります。拡大図は全案同率4倍。</p>
+<button onclick="save('normal')">通常倍率 PNG</button><button onclick="save('large')">4倍比較 PNG</button><button onclick="save('structure')">新案の構造 PNG</button>
+<canvas id="normal" width="1600" height="900"></canvas>
+<canvas id="large" width="1600" height="1280"></canvas>
+<canvas id="structure" width="1400" height="900"></canvas><p id="state">読込中</p>
+<script>
+const sources=__SOURCES__;
+const models=[
+{name:"旧・赤ハサミ",status:"Human 不採用｜温かさの比較基準",src:"red",ppu:500,project:1,heading:0,
+parts:[{rect:[190,0,400,1024],pivot:[484,474]},{rect:[720,0,440,1024],pivot:[813,474]}],poses:[[16,-16],[16,15]]},
+{name:"床置き・緑ハサミ",status:"Human 不採用｜旧床面投影を保持",src:"green",ppu:550*1254/1280,project:.55,heading:-83,
+parts:[{rect:[285,20,270,1240].map(v=>v*1254/1280),pivot:[484,571].map(v=>v*1254/1280)},{rect:[700,20,275,1240].map(v=>v*1254/1280),pivot:[772,571].map(v=>v*1254/1280)}],
+screw:{rect:[1057,543,70,85].map(v=>v*1254/1280),pivot:[1091,585].map(v=>v*1254/1280)},poses:[[-25,25],[-6.4,6.4]]},
+{name:"新・暖色ハサミ本体",status:"今回の1案｜Human 未承認",src:"warm",ppu:500,project:1,heading:0,
+parts:[{rect:[230,0,390,1024],pivot:[547,483]},{rect:[830,0,400,1024],pivot:[904,483]}],
+screw:{rect:[1273,433,111,112],pivot:[1328,489]},poses:[[16,-16],[-3.4,3.8]]}
+];
+const imgs={};const px=51.724140167;
+function text(c,t,x,y,size=22,col="#ece6d9"){c.fillStyle=col;c.font=size+'px "Yu Gothic","Meiryo",sans-serif';c.fillText(t,x,y);}
+function bg(c,w,h){c.fillStyle="#202936";c.fillRect(0,0,w,h);}
+function part(c,im,p,angle,scale){c.save();c.rotate(-angle*Math.PI/180);c.scale(scale,scale);const [x,y,w,h]=p.rect;c.drawImage(im,x,y,w,h,x-p.pivot[0],y-p.pivot[1],w,h);c.restore();}
+function draw(c,m,pose,x,y,mult=1){c.save();c.translate(x,y);c.scale(1,m.project);c.rotate(-m.heading*Math.PI/180);m.parts.forEach((p,i)=>part(c,imgs[m.src],p,m.poses[pose][i],px*mult/m.ppu));if(m.screw)part(c,imgs[m.src],m.screw,0,px*mult/m.ppu);c.restore();}
+function sheets(){
+for(const id of ["normal","large"]){const el=document.getElementById(id),c=el.getContext("2d"),large=id==="large",mult=large?4:1;bg(c,el.width,el.height);
+text(c,large?"同倍率拡大 ×4｜開・閉とも同じ部品・同じ支点":"通常画角相当 ×1｜1600×900・配置提案ではありません",32,46,30);
+text(c,"静止素材組立図 / 実Unityのスクリーンショットではありません",32,82,19,"#bbc7d0");
+models.forEach((m,i)=>{let x=533*i;c.fillStyle=i===2?"#283a43":"#252e3a";c.fillRect(x+16,112,501,el.height-150);text(c,m.name,x+36,150,25);text(c,m.status,x+36,182,16,i===2?"#eac09a":"#b8c1cb");
+for(let p=0;p<2;p++){const cy=large?(p?942:416):(p?620:335);text(c,p?"閉じた姿勢":"開いた姿勢",x+36,large?(p?695:225):(p?492:225),20);draw(c,m,p,x+265,cy,mult);}
+text(c,i===0?"吊り具を除いた本体のみ":i===1?"過去の向き・Y投影0.55":"新案はY投影1.0・押し潰しなし",x+36,el.height-62,17,"#c4c9cc");});
+text(c,"全案で同じpx/world unit。高さを個別にそろえる拡縮はしていません。",32,el.height-12,17,"#bbc7d0");}
+const e=document.getElementById("structure"),c=e.getContext("2d");bg(c,e.width,e.height);text(c,"新案の構造｜持ち手から刃まで2つの一体部品",30,46,30);text(c,"同じネジ位置で回転 / 変形・引き伸ばしなし / 支持具・配置・判定は未制作",30,83,20,"#bbc7d0");
+draw(c,models[2],0,370,420,6);draw(c,models[2],1,1030,420,6);
+text(c,"開：左 +16° / 右 −16°",190,810,24);text(c,"閉：左 −3.4° / 右 +3.8°",850,810,24);
+text(c,"1案・2姿勢。閉じた姿勢の刃重なりは静止図での確認です。",30,865,18,"#bbc7d0");
+document.getElementById("state").textContent="比較図の描画完了";
+}
+function save(id){let a=document.createElement("a");a.href=document.getElementById(id).toDataURL("image/png");a.download=id+".png";a.click();}
+Promise.all(Object.entries(sources).map(([k,s])=>new Promise((resolve,reject)=>{const im=new Image();imgs[k]=im;im.onload=resolve;im.onerror=reject;im.src=s;}))).then(sheets);
+</script></html>

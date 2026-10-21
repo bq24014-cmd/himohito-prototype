@@ -1,53 +1,66 @@
 {
   "review_id": "C05Spikes",
-  "run_id": "20261021T164023_JST",
-  "updated_at": "2026-10-21T16:43:20+09:00",
+  "run_id": "20261021T180204_JST",
+  "updated_at": "2026-10-21T18:11:00+09:00",
   "time_zone": "Asia/Tokyo",
-  "proof": "C05FloorScissorsProof_20261021",
-  "revision": "floor-scissors-design-1",
+  "proof": "C05WarmScissorsBodyReview_20261021",
+  "revision": "warm-body-design-1",
   "production_head": "394b4a74e366678a9e0542d895b9a26f86993c19",
-  "status": "床置きハサミのデザインHuman Review待ち・旧判定との不一致あり",
+  "status": "ハサミ本体1案のデザインHuman Review待ち",
   "production_integrated": false,
   "human_adoption": "未承認",
   "branch": "codex/review-c05-spikes",
-  "report": "Docs/Reviews/C05Spikes/runs/20261021T164023_JST/Report.md",
-  "launch": "Docs/Reviews/C05Spikes/runs/20261021T164023_JST/Launch.md",
-  "images": "Docs/Reviews/C05Spikes/runs/20261021T164023_JST/Images",
-  "video": "Docs/Reviews/C05Spikes/runs/20261021T164023_JST/Video",
-  "qa": "Docs/Reviews/C05Spikes/runs/20261021T164023_JST/QA",
-  "diff": "Docs/Reviews/C05Spikes/runs/20261021T164023_JST/Diff",
-  "assets": "Docs/Reviews/C05Spikes/runs/20261021T164023_JST/Assets",
-  "execution": "existing non-Development Unity Player + managed overlay + explicit external PNG LoadImage into atlas sprites; no new Unity Build",
-  "technical": "PASS for recorded unchanged physics and common hinge; collision alignment NOT complete",
-  "visual": "one floor-placed green plastic scissors design; previous hanging design rejected; Human pending",
-  "scope": "one front hazard appearance only; root and trigger unchanged; other four spikes unchanged",
-  "previous_candidate": {
-    "commit": "38a83d9d1af88091d37c9503c34b4e4816ac8e07",
-    "status": "Human不採用・原本保持",
-    "report": "Docs/Reviews/C05Spikes/runs/20261021T160305_JST/Report.md",
-    "reasons": [
-      "吊っているボタンと布ループに強い違和感",
-      "ハサミ本体の形にも違和感"
+  "report": "Docs/Reviews/C05Spikes/runs/20261021T180204_JST/Report.md",
+  "images": "Docs/Reviews/C05Spikes/runs/20261021T180204_JST/Images",
+  "qa": "Docs/Reviews/C05Spikes/runs/20261021T180204_JST/QA",
+  "assets": "Docs/Reviews/C05Spikes/runs/20261021T180204_JST/Assets",
+  "renderer": "Docs/Reviews/C05Spikes/runs/20261021T180204_JST/Renderer",
+  "execution": "generated RGBA parts + offline static canvas composition; NOT Unity screenshots; no Unity Build or managed overlay this run",
+  "scope": "scissors body only; one candidate; open/closed stills; no new placement, support, animation, collision or rollout",
+  "normal_scale": {
+    "canvas": [
+      1600,
+      900
     ],
-    "must_not_reuse_as_approved": true
+    "pixels_per_world_unit": 51.724140167,
+    "source": "runs/20261021T164023_JST/QA/FloorScissors.json; ppu",
+    "large_scale_multiplier": 4
   },
-  "render_assembly_sha256": "deba3b40697be1efd205ec65f818e4029c80b55c1613e4c04f3761e40cebda8d",
-  "asset_sha256": "0c100964f3bbdd7c7dae1c0da13497804760837c93831b4d23c8336be5def2ac",
+  "asset_sha256": "b5558bcd4b40b7762201184ec0324758803aaaede56cc3102dbd169670c57c1d",
+  "previous_candidates": [
+    {
+      "commit": "25ba244b08f1763cafb6d5a4223d72b672e1d572",
+      "status": "Human不採用・原本保持",
+      "report": "Docs/Reviews/C05Spikes/runs/20261021T164023_JST/Report.md",
+      "reason": "デザイン性は前回の方がよかった",
+      "must_not_reuse_as_approved": true
+    },
+    {
+      "commit": "38a83d9d1af88091d37c9503c34b4e4816ac8e07",
+      "status": "Human不採用・原本保持",
+      "report": "Docs/Reviews/C05Spikes/runs/20261021T160305_JST/Report.md",
+      "reasons": [
+        "ボタン・布ループに強い違和感",
+        "ハサミ本体の形にも違和感"
+      ],
+      "reference_only": "暖かい色・厚み・立体感・通常倍率の存在感",
+      "must_not_reuse_as_approved": true
+    },
+    {
+      "commit": "80a0048680082e8d5bde14a2aaad196a51edb882",
+      "status": "Human採用保留・保持",
+      "report": "Docs/Reviews/C05Spikes/runs/20261021T150807_JST/Report.md"
+    }
+  ],
   "unconfirmed": [
-    "OS実キー・Human試遊・音の実聴",
-    "見えている刃と既存Triggerの一致（変更未許可、図示のみ）",
-    "静止した危険性・背景小物との区別・Human採否",
-    "新規Unity Build・Editor Play・importer/Resources焼込み",
-    "5本への展開・全区間通し・別解像度"
+    "新案のHuman採否",
+    "実Unityでの背景・配置とのなじみ",
+    "危険性と判定の対応",
+    "実装時の開閉アニメーション・接触反応",
+    "Unity import/Build/OS操作/物理QA（今回対象外）"
   ],
   "holds": [
     "C11",
     "C18"
-  ],
-  "earlier_candidate": {
-    "commit": "80a0048680082e8d5bde14a2aaad196a51edb882",
-    "status": "Human採用保留・保持",
-    "report": "Docs/Reviews/C05Spikes/runs/20261021T150807_JST/Report.md",
-    "reason": "素材調整のみでは三角形の標識に見える。子供部屋の物として再設計する。"
-  }
+  ]
 }

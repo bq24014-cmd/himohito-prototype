@@ -1,0 +1,22 @@
+{
+  "head": "394b4a74e366678a9e0542d895b9a26f86993c19",
+  "branch": "main",
+  "tracked_status": [
+    " M Assets/Scenes/MainStage.unity",
+    " M Docs/LEARNING_LOG.md",
+    " M Docs/QA/MainStageCleanReproduction_20261001/Evidence/DeterministicSceneSync/ExeA.log",
+    " M Docs/QA/MainStageCleanReproduction_20261001/Evidence/DeterministicSceneSync/ExeB.log",
+    " M README.md"
+  ],
+  "staged": [],
+  "protected_hashes": {
+    "Assets/Scripts/RopeSpikeHazard.cs": "f8a1234c574e1e6daa4b66027f1e00ae2d52e0af1def791099ee4a1206169edc",
+    "Docs/QA/MainStageCleanReproduction_20261001/Evidence/DeterministicSceneSync/ExeA.log": "18736ef2397759c9ad2dd22728d6f97f2669309ce9336334efe7970cce62139b",
+    "Assets/Scripts/ToySpikeVisual.cs": "e363b753a12b0fbc77a721a54573c2e062af0fbfd35ef49e06fb2e757ce5ef13",
+    "Docs/QA/MainStageCleanReproduction_20261001/Evidence/DeterministicSceneSync/ExeB.log": "c13f3fd5cd1010519225af10d53a4829d21ccd9f1cf898b8b2fdec8dc275b2a2",
+    "Docs/LEARNING_LOG.md": "32adeeb9d6882f3609cc932148ecb9a5c70e66316a516503a3016db83ee65f8d",
+    "README.md": "60331b91a2a9f6d147f5d00f614c9622f8ebcb00342eed7f5316efbfeb054e7f",
+    "Assets/Scenes/MainStage.unity": "57d2464751b5b9c2a78e6c56f34197e9bc2629983fadaa1dff6e0ba0b4bc2284"
+  },
+  "scope": "targeted checks; no exhaustive untracked inventory"
+}

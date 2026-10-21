@@ -1,0 +1,30 @@
+{
+  "scope": "standalone body design only",
+  "execution": "built-in imagegen; offline canvas static assembly; no Unity run/Build/managed overlay",
+  "generated_original_sha256": "b5558bcd4b40b7762201184ec0324758803aaaede56cc3102dbd169670c57c1d",
+  "checks": {
+    "original_rgba_preserved": true,
+    "same_two_rigid_parts_in_open_and_closed": true,
+    "shared_pivot": true,
+    "independent_part_stretch": false,
+    "button_or_loop_in_new_design": false,
+    "new_placement_or_support": false,
+    "new_animation": false,
+    "comparison_same_camera_ppu": true,
+    "new_design_y_projection": 1,
+    "old_green_reference_y_projection": 0.55,
+    "relative_links_valid": true,
+    "images_each_under_1MiB": true,
+    "production_head_unchanged": true,
+    "production_tracked_status_unchanged": true,
+    "production_staged_empty": true,
+    "seven_targeted_production_hashes_unchanged": true,
+    "reference_red_sha_matches_original": true,
+    "reference_green_sha_matches_original": true
+  },
+  "visual_review": "Codex inspected all three finished images; Human review pending. Closed blade readability and in-scene highlights remain unconfirmed.",
+  "human_testing": "not performed",
+  "unity_testing": "not performed; intentionally out of scope",
+  "ui_capture": "local file protocol blocked by browser policy; no alternative browser/network bypass attempted; static offline rasterization used",
+  "production_adoption": false
+}
