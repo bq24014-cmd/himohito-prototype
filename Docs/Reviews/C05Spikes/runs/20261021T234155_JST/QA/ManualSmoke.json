@@ -1,0 +1,28 @@
+[
+  {
+    "variant": "After",
+    "execution": "cmd launcher process/log smoke; NOT OS gameplay keys",
+    "seconds": 20,
+    "responding": true,
+    "window": true,
+    "ready": true,
+    "camera_mode": true,
+    "auto_route": false,
+    "errors": false,
+    "normal_close": true,
+    "closed": true
+  },
+  {
+    "variant": "Before",
+    "execution": "cmd launcher process/log smoke; NOT OS gameplay keys",
+    "seconds": 20,
+    "responding": true,
+    "window": true,
+    "ready": true,
+    "camera_mode": true,
+    "auto_route": false,
+    "errors": false,
+    "normal_close": true,
+    "closed": true
+  }
+]

@@ -1,0 +1,14 @@
+Before_Route_L6
+Initialize engine version: 6000.3.21f1 (c02631ffc030)
+C05_MOTION_READY one Front only; original cut/refund; PNG=b5558bcd4b40b7762201184ec0324758803aaaede56cc3102dbd169670c57c1d
+C05_ROUTE_DONE Candidate L6 attach=True reached=True errors=0
+
+After_Route_L6
+Initialize engine version: 6000.3.21f1 (c02631ffc030)
+C05_MOTION_READY one Front only; original cut/refund; PNG=b5558bcd4b40b7762201184ec0324758803aaaede56cc3102dbd169670c57c1d
+C05_ROUTE_DONE Candidate L6 attach=True reached=True errors=0
+
+After_Transitions
+Initialize engine version: 6000.3.21f1 (c02631ffc030)
+C05_MOTION_READY one Front only; original cut/refund; PNG=b5558bcd4b40b7762201184ec0324758803aaaede56cc3102dbd169670c57c1d
+C05_CAMERA_TRANSITIONS_DONE errors=0

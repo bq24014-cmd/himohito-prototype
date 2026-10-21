@@ -1,0 +1,281 @@
+{
+  "execution": "Existing Unity 6000.3.21f1 non-Development Player + compiled managed overlay; no new Unity Build. Diagnostic initialization, fixed-step input and native E/R API, not OS keys or Human play.",
+  "scope": "Camera center only within Main Landing 1 left edge x5.5 to Main Landing 2 left edge x25; old smoothTime0.28; R resets instantly. Fixed zoom8.7 and resolution1600x900.",
+  "scissors": "Scale1.00, drop0.95, supportY-9.29, original lowered candidate code and PNG unchanged",
+  "comparison_frames": 300,
+  "gameplay_max_differences": {
+    "position": 0.0,
+    "velocity": 0.0,
+    "remaining": 0.0,
+    "length": 0.0,
+    "input": 0.0,
+    "grounded": 0,
+    "attached": 0,
+    "failure": 0,
+    "frontDistance": 0.0,
+    "farDistance": 0.0,
+    "snips": 0,
+    "closure": 0.0,
+    "handleGap": 0.0
+  },
+  "camera_x_max_difference": 0.0,
+  "scissors_pose_and_blade_vertices_max_difference": 0,
+  "geometry_identical": true,
+  "before": {
+    "reached": true,
+    "attach": true,
+    "first_far_bank_time": 2.2999989986419678,
+    "snips": 0,
+    "errors": 0
+  },
+  "after": {
+    "reached": true,
+    "attach": true,
+    "first_far_bank_time": 2.2999989986419678,
+    "snips": 0,
+    "errors": 0
+  },
+  "before_handle_bottom_pixel": 930.5172622203827,
+  "after_handle_bottom_pixel": 881.3793271780014,
+  "scissors_sprite_bounds_bottom_margin_pixels": 10.307970643043518,
+  "viewport_during_S2": {
+    "playerView": {
+      "x": [
+        0.5005108118057251,
+        0.5728629231452942
+      ],
+      "y": [
+        0.16093817353248596,
+        0.36807167530059814
+      ]
+    },
+    "hookView": {
+      "x": [
+        0.31242573261260986,
+        0.6470905542373657
+      ],
+      "y": [
+        0.5057471394538879,
+        0.5057471394538879
+      ]
+    },
+    "arrivalView": {
+      "x": [
+        0.5629644989967346,
+        0.8976293206214905
+      ],
+      "y": [
+        0.3045977056026459,
+        0.3045977056026459
+      ]
+    },
+    "handleView": {
+      "x": [
+        0.2691913843154907,
+        0.603690505027771
+      ],
+      "y": [
+        0.02068963646888733,
+        0.020689696073532104
+      ]
+    },
+    "scissorsMinView": {
+      "x": [
+        0.22242367267608643,
+        0.5567993521690369
+      ],
+      "y": [
+        0.011453300714492798,
+        0.011750847101211548
+      ]
+    },
+    "scissorsMaxView": {
+      "x": [
+        0.27902764081954956,
+        0.6139774918556213
+      ],
+      "y": [
+        0.13726794719696045,
+        0.13741707801818848
+      ]
+    }
+  },
+  "background_far_max_y_error_rendered": 9.95511254586745e-06,
+  "background_mid_max_y_error_rendered": 9.95511254586745e-06,
+  "background_synchronous_R_before_LateUpdate_difference": 0.949999988079071,
+  "zoom_values": [
+    8.699999809265137
+  ],
+  "route_right_exit": {
+    "last_inside_frame": 105,
+    "first_outside_frame": 106,
+    "camera_y_first_outside": -0.9413668513298035,
+    "camera_y_final": -2.60754941944219e-11,
+    "final_section": 3
+  },
+  "transitions": {
+    "left_entry_forward": {
+      "frames": 45,
+      "start_root": {
+        "x": 5.349999904632568,
+        "y": -4.28000020980835
+      },
+      "end_root": {
+        "x": 10.51978588104248,
+        "y": -4.235001564025879
+      },
+      "start_camera_y": 0.0,
+      "end_camera_y": -0.9312222003936768,
+      "desired_y_values": [
+        -0.949999988079071,
+        0.0
+      ],
+      "end_grounded": true,
+      "any_failure": false
+    },
+    "left_exit_backward": {
+      "frames": 55,
+      "start_root": {
+        "x": 10.62739086151123,
+        "y": -4.235001564025879
+      },
+      "end_root": {
+        "x": 5.106601238250732,
+        "y": -4.235001564025879
+      },
+      "start_camera_y": -0.9333795309066772,
+      "end_camera_y": -0.8436912298202515,
+      "desired_y_values": [
+        -0.949999988079071,
+        0.0
+      ],
+      "end_grounded": true,
+      "any_failure": false
+    },
+    "S2_before_R_air": {
+      "frames": 8,
+      "start_root": {
+        "x": 18.0,
+        "y": -3.0109763145446777
+      },
+      "end_root": {
+        "x": 18.0,
+        "y": -3.394224166870117
+      },
+      "start_camera_y": -0.949999988079071,
+      "end_camera_y": -0.949999988079071,
+      "desired_y_values": [
+        -0.949999988079071
+      ],
+      "end_grounded": false,
+      "any_failure": false
+    },
+    "S2_R_immediate": {
+      "frames": 1,
+      "start_root": {
+        "x": 12.699999809265137,
+        "y": -4.28000020980835
+      },
+      "end_root": {
+        "x": 12.699999809265137,
+        "y": -4.28000020980835
+      },
+      "start_camera_y": -0.949999988079071,
+      "end_camera_y": -0.949999988079071,
+      "desired_y_values": [
+        -0.949999988079071
+      ],
+      "end_grounded": false,
+      "any_failure": false
+    },
+    "S2_after_R_idle": {
+      "frames": 100,
+      "start_root": {
+        "x": 12.699999809265137,
+        "y": -4.239832401275635
+      },
+      "end_root": {
+        "x": 12.699999809265137,
+        "y": -4.235001564025879
+      },
+      "start_camera_y": -0.949999988079071,
+      "end_camera_y": -0.949999988079071,
+      "desired_y_values": [
+        -0.949999988079071
+      ],
+      "end_grounded": true,
+      "any_failure": false
+    },
+    "S3_before_R_air": {
+      "frames": 8,
+      "start_root": {
+        "x": 22.0,
+        "y": -2.0109763145446777
+      },
+      "end_root": {
+        "x": 22.0,
+        "y": -2.394224166870117
+      },
+      "start_camera_y": -0.949999988079071,
+      "end_camera_y": -0.949999988079071,
+      "desired_y_values": [
+        -0.949999988079071
+      ],
+      "end_grounded": false,
+      "any_failure": false
+    },
+    "S3_R_immediate": {
+      "frames": 1,
+      "start_root": {
+        "x": 29.0,
+        "y": -3.6500000953674316
+      },
+      "end_root": {
+        "x": 29.0,
+        "y": -3.6500000953674316
+      },
+      "start_camera_y": 0.0,
+      "end_camera_y": 0.0,
+      "desired_y_values": [
+        0.0
+      ],
+      "end_grounded": false,
+      "any_failure": false
+    },
+    "S3_after_R_idle": {
+      "frames": 100,
+      "start_root": {
+        "x": 29.0,
+        "y": -3.660987377166748
+      },
+      "end_root": {
+        "x": 29.0,
+        "y": -3.7350006103515625
+      },
+      "start_camera_y": 0.0,
+      "end_camera_y": 0.0,
+      "desired_y_values": [
+        0.0
+      ],
+      "end_grounded": true,
+      "any_failure": false
+    }
+  },
+  "retained_scissors_source_sha256": "b2f8195bc7550903e37316e55761b20850555a09bbfb23d20ce1dd8d619df6a4",
+  "source_matches_lowered_candidate": true,
+  "asset_sha256": "b5558bcd4b40b7762201184ec0324758803aaaede56cc3102dbd169670c57c1d",
+  "assembly_sha256": "ebac019bb0e9d782d147e00db3c0d2fb190adbdceafe1756729c8bd3e638ac63",
+  "technical_pass": true,
+  "unconfirmed": [
+    "OS gameplay keys",
+    "Human readability/adoption",
+    "new Unity Build / Editor Play",
+    "all possible release/input routes",
+    "audio listening"
+  ],
+  "remaining_limits": [
+    "Handles have about19px screen-bottom margin at1600x900; full sprite bounding box about10px. Edge margin is small.",
+    "On leaving S2, camera eases back to normal; the hazard behind the player moves below the frame. It is not permanently tracked.",
+    "Background floor is decorative art, not new support Collider. No geometry or hazard edits."
+  ]
+}

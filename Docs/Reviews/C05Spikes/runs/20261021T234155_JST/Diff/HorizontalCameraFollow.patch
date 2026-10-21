@@ -1,0 +1,54 @@
+--- a/Assets/Scripts/HorizontalCameraFollow.cs
++++ b/Assets/Scripts/HorizontalCameraFollow.cs
+@@ -26,6 +26,10 @@
+         private float baseOrthographicSize;
+         private Vector2 previousTargetPosition;
+         private bool skipFollowAfterReset;
++        // Isolated review switch only. No Production setting or gameplay input is changed.
++        public static bool ReviewSectionTwoLowering = true;
++        private Collider2D sectionTwoDeparture;
++        private Collider2D sectionTwoArrival;
+ 
+         private void Awake()
+         {
+@@ -63,7 +67,7 @@
+             previousTargetPosition = position;
+             skipFollowAfterReset = true;
+             transform.position = new Vector3(position.x + horizontalOffset,
+-                ShouldFollowVertically() ? position.y : fixedY, fixedZ);
++                DesiredHeight(position), fixedZ);
+         }
+ 
+         private void LateUpdate()
+@@ -109,7 +113,7 @@
+                     desiredX,
+                     ref horizontalVelocity,
+                     smoothTime, Mathf.Infinity, deltaTime);
+-            float desiredY = ShouldFollowVertically() ? target.position.y : fixedY;
++            float desiredY = ShouldFollowVertically() ? target.position.y : DesiredHeight(position);
+             float nextY = verticalSmoothTime <= 0f
+                 ? desiredY
+                 : Mathf.SmoothDamp(
+@@ -137,6 +141,22 @@
+             respawnController = target.GetComponent<MainStageRespawnOnFall>();
+         }
+ 
++        private float DesiredHeight(Vector2 position)
++        {
++            if (ShouldFollowVertically()) return position.y;
++            if (!ReviewSectionTwoLowering || respawnController == null) return fixedY;
++            // The section number is a monotonic checkpoint counter, so use the existing
++            // shore bounds for reversible entry/exit without changing checkpoint behavior.
++            if (sectionTwoDeparture == null)
++                sectionTwoDeparture = GameObject.Find("Main Landing 1")?.GetComponent<Collider2D>();
++            if (sectionTwoArrival == null)
++                sectionTwoArrival = GameObject.Find("Main Landing 2")?.GetComponent<Collider2D>();
++            if (sectionTwoDeparture == null || sectionTwoArrival == null) return fixedY;
++            bool inside = position.x >= sectionTwoDeparture.bounds.min.x &&
++                          position.x < sectionTwoArrival.bounds.min.x;
++            return fixedY - (inside ? 0.95f : 0f);
++        }
++
+         private bool ShouldFollowVertically()
+         {
+             return followVerticalInSectionTen &&

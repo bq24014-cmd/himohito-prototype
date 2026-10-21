@@ -1,0 +1,70 @@
+using System;
+using System.IO;
+using System.Linq;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using HimoHito;
+
+// Evidence only. No manual update/input/capture path enters these methods.
+public sealed partial class GroundingReview
+{
+    [Serializable]public class CameraSample
+    {
+        public string phase;public int frame,section;public float cameraY,desiredY,ortho,farY,midY,remaining,selected;
+        public Vector2 root,velocity;public Vector3 camera,playerView,hookView,arrivalView,handleView;
+        public Vector3 scissorsMinView,scissorsMaxView;public bool grounded,attached,failure;
+        public CraftScissorsMotion.Pose scissors;
+    }
+    [Serializable]public class CameraEvidence
+    {
+        public string execution="Actual Unity frames. Diagnostic state setup + fixed-step moveInput + native R API; NOT OS keys or Human play.";
+        public bool candidate;public float lower=.95f;public List<CameraSample> samples=new List<CameraSample>();
+    }
+    CameraEvidence cameraEvidence=new CameraEvidence();bool transitionDriving;float transitionInput;
+    Transform farTile,midTile;
+    void RecordCamera(string phase)
+    {
+        if(!farTile)farTile=GameObject.Find("Craft Far Tile 0")?.transform;
+        if(!midTile)midTile=GameObject.Find("Craft Mid Tile 0")?.transform;
+        var cam=Camera.main;var follow=cam.GetComponent<HorizontalCameraFollow>();
+        var size=scissors.left.GetComponent<SpriteRenderer>().bounds;size.Encapsulate(scissors.right.GetComponent<SpriteRenderer>().bounds);
+        cameraEvidence.candidate=HorizontalCameraFollow.ReviewSectionTwoLowering;
+        cameraEvidence.samples.Add(new CameraSample{phase=phase,frame=cameraEvidence.samples.Count,section=run.CurrentSection,
+            cameraY=cam.transform.position.y,desiredY=(float)typeof(HorizontalCameraFollow).GetMethod("DesiredHeight",H).Invoke(follow,new object[]{body.position}),
+            ortho=cam.orthographicSize,farY=farTile?farTile.position.y:999,midY=midTile?midTile.position.y:999,
+            root=body.position,velocity=body.linearVelocity,camera=cam.transform.position,remaining=resource.CurrentLength,selected=rope.SelectedRopeLength,
+            playerView=cam.WorldToViewportPoint(body.position),hookView=cam.WorldToViewportPoint(hook),arrivalView=cam.WorldToViewportPoint(new Vector3(25,-4.35f,0)),
+            handleView=cam.WorldToViewportPoint(scissors.leftSupport),scissorsMinView=cam.WorldToViewportPoint(size.min),scissorsMaxView=cam.WorldToViewportPoint(size.max),
+            grounded=mover.IsGrounded,attached=rope.IsAttached,failure=run.IsFailureVisible,scissors=scissors.Record()});
+    }
+    void SaveCamera()=>File.WriteAllText(Path.Combine(output,"Camera.json"),JsonUtility.ToJson(cameraEvidence,true));
+    IEnumerator Frames(string phase,int count,float move)
+    {
+        transitionDriving=true;transitionInput=move;
+        for(int i=0;i<count;i++){yield return new WaitForEndOfFrame();RecordCamera(phase);if(Arg("-capture")=="1"&&cameraEvidence.samples.Count%2==0)Capture(cameraEvidence.samples.Count/2-1);}
+        transitionInput=0;Set(mover,"moveInput",0f);
+    }
+    IEnumerator CameraTransitions()
+    {
+        // Left boundary is the existing departure platform's left edge, not new geometry.
+        Set(run,"<CurrentSection>k__BackingField",1);
+        Place(new Vector2(5.35f,-4.28f));
+        yield return Frames("left_entry_forward",45,1);
+        yield return Frames("left_exit_backward",55,-1);
+        // Separate diagnostic fixtures; no teleport is represented as a played crossing.
+        Set(run,"<CurrentSection>k__BackingField",2);Set(run,"checkpointPosition",entry);
+        resource.RestoreCapacityAndCurrent(50,50);rope.RestoreSelectedRopeLength(6);Call(run,"CaptureCheckpointState");
+        Place(new Vector2(18,-3));yield return Frames("S2_before_R_air",8,0);
+        Call(run,"RestartFromCheckpoint");RecordCamera("S2_R_immediate");
+        yield return Frames("S2_after_R_idle",100,0);
+        // Arrival-side R must restore normal height; section-three checkpoint state is fixture-set.
+        var bank=new Vector2(29,-3.65f);Set(run,"<CurrentSection>k__BackingField",3);Set(run,"checkpointPosition",bank);Call(run,"CaptureCheckpointState");
+        Place(new Vector2(22,-2));yield return Frames("S3_before_R_air",8,0);
+        Call(run,"RestartFromCheckpoint");RecordCamera("S3_R_immediate");
+        yield return Frames("S3_after_R_idle",100,0);
+        transitionDriving=false;Set(mover,"moveInput",0f);result.finished=true;
+        SaveCamera();File.WriteAllText(Path.Combine(output,"Result.json"),JsonUtility.ToJson(result,true));
+        Debug.Log("C05_CAMERA_TRANSITIONS_DONE errors="+result.errors);Application.Quit(result.errors>0?2:0);
+    }
+}
