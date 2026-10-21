@@ -1,0 +1,39 @@
+from pathlib import Path
+from PIL import Image, ImageDraw
+import json, math
+p=Path(__file__).parent
+im=Image.open(p/'Assets/HimoHitoWarmScissorsParts-v3.png').convert('RGBA')
+def hull(ps):
+ s=sorted(set(ps))
+ def cross(o,a,b): return (a[0]-o[0])*(b[1]-o[1])-(a[1]-o[1])*(b[0]-o[0])
+ lo=[];hi=[]
+ for a in s:
+  while len(lo)>1 and cross(lo[-2],lo[-1],a)<=0:lo.pop()
+  lo.append(a)
+ for a in reversed(s):
+  while len(hi)>1 and cross(hi[-2],hi[-1],a)<=0:hi.pop()
+  hi.append(a)
+ return lo[:-1]+hi[:-1]
+data={}
+canvas=Image.new('RGB', im.size, '#303b46');canvas.paste(im,mask=im.getchannel('A'));dr=ImageDraw.Draw(canvas)
+for side,x0,x1,piv in [('left',230,620,(547,483)),('right',830,1230,(904,483))]:
+ handle=[];blade=[]
+ for y in range(1024):
+  for x in range(x0,x1):
+   if im.getpixel((x,y))[3]<128: continue
+   if y<430:handle.append((x+.5,y+.5))
+   # Metal/paint seam, traced from the unchanged approved sprite.
+   seam=574-(x-508)*71/95 if side=='left' else 505+(x-848)*69/89
+   if y>=max(500,seam):blade.append((x+.5,y+.5))
+ h=hull(handle);b=hull(blade)
+ # Convex visible blade hull; keep all exact boundary vertices, no rectangle or dilation.
+ data[side+'Handle']=[{'x':(x-piv[0])/500,'y':(piv[1]-y)/500} for x,y in h]
+ data[side+'Blade']=[{'x':(x-piv[0])/500,'y':(piv[1]-y)/500} for x,y in b]
+ data[side+'BladeSourcePixels']=b
+ dr.line(b+[b[0]], fill='#00ffff',width=3)
+ dr.line(h+[h[0]], fill='#ffee00',width=3)
+data['method']='alpha >=128 opaque support convex hull; metal-only seam clip; no dilation; source pixels preserved'
+(p/'Runtime/ReviewAssets/BladeGeometry.json').write_text(json.dumps(data),encoding='utf8')
+(p/'Evidence/BladeGeometry.json').write_text(json.dumps(data,indent=2),encoding='utf8')
+canvas.save(p/'Evidence/BladeGeometrySource.png')
+print({k:len(v) for k,v in data.items() if isinstance(v,list)})

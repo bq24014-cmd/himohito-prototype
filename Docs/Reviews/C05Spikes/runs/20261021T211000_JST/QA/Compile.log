@@ -1,0 +1,4 @@
+Assets\Scripts\MainStageRespawnOnFall.cs(20,22): warning CS0649: フィールド 'MainStageRespawnOnFall.startNearGoalForEndingPreview' は割り当てられません。常に既定値 false を使用します
+Assets\Scripts\MainStageRespawnOnFall.cs(23,22): warning CS0649: フィールド 'MainStageRespawnOnFall.startWithPartDPreview' は割り当てられません。常に既定値 false を使用します
+Assets\Scripts\StageCatalog.cs(22,67): warning CS0649: フィールド 'StageCatalog.Data.stages' は割り当てられません。常に既定値 null を使用します
+Assets\Scripts\PrototypeRunController.cs(37,39): warning CS0649: フィールド 'PrototypeRunController.startFromSectionFourForDevelopment' は割り当てられません。常に既定値 false を使用します

@@ -1,0 +1,10 @@
+{
+  "seconds": 35,
+  "still_running": true,
+  "ready_log": true,
+  "no_qa_finish": true,
+  "no_QA_flag": true,
+  "os_keys_tested": false,
+  "runtime_errors": 0,
+  "closed_by": "test harness CloseMainWindow after idle observation, not candidate auto-exit"
+}

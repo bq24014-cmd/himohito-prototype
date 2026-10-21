@@ -1,0 +1,153 @@
+{
+  "production_integrated": false,
+  "runtime_assembly_sha256": "aebfbb4072295365cbeee6ec31bbf55e0e33f7e434fa1720ea871813723a80b9",
+  "approved_png_sha256": "b5558bcd4b40b7762201184ec0324758803aaaede56cc3102dbd169670c57c1d",
+  "candidate_source_sha256": "05053da14bb174364bedfe4221594521733700f4be74d525433c4cffad8c36e0",
+  "method": "managed overlay, not new Unity Build",
+  "files": {
+    "Launch.md": {
+      "bytes": 1435,
+      "sha256": "d9857b69fddae7a1766562b919e4a578236fdf36418d4cb4edc3ffed08e9497f"
+    },
+    "Report.md": {
+      "bytes": 8921,
+      "sha256": "9a3cadf633f6c5a182b9ff0812e99f9d98cf19bcd29facd898a92ce1aaabee4f"
+    },
+    "Diff/BladeGeometry.json": {
+      "bytes": 6732,
+      "sha256": "682dddeadf434346e6765160693ce983b143d50a2c89a24bc1310ec70825fd5f"
+    },
+    "Diff/CraftScissorsMotion.cs.txt": {
+      "bytes": 7350,
+      "sha256": "5b775443570d4f1749260780aa376370f1beb0a487a8ece3dd1e4e1a0f420644"
+    },
+    "Diff/derive_geometry.py.txt": {
+      "bytes": 1867,
+      "sha256": "643c0b4dc8cdbb2a91f8294427e8694f0d178e77fadbf779c96f0c60c63940aa"
+    },
+    "Diff/FromUpright.patch": {
+      "bytes": 14506,
+      "sha256": "f76ffbcf20600cdc77dd32238750cc6c1913c16b6cbeedeecff281515bab5ce4"
+    },
+    "Diff/ScissorsReview.cs.txt": {
+      "bytes": 19400,
+      "sha256": "14075e96968890a6b7d31c1de98c057ff52a8f7c7aafbe13b1afccd04cc3ba28"
+    },
+    "Frames/Contact_00.jpg": {
+      "bytes": 242690,
+      "sha256": "446356fe657295cee1ad748d14404290ece267b88155a884f83ffc2f354e3b5a"
+    },
+    "Frames/Contact_03.jpg": {
+      "bytes": 244078,
+      "sha256": "0baa48f965b78f689ac228da9817a7788e5279d68abaa9dacfe9300e029549f3"
+    },
+    "Frames/Contact_04.jpg": {
+      "bytes": 243047,
+      "sha256": "cdf00e7238dcb86ab3733abfb6e8e7eecc5daaa343b82345ba1c3e85f09b51d3"
+    },
+    "Frames/Contact_06.jpg": {
+      "bytes": 242141,
+      "sha256": "07998f43368f13885edc8dc977646ccf606385b0c862a75b2edf2d2d46b85bad"
+    },
+    "Frames/Contact_09.jpg": {
+      "bytes": 241414,
+      "sha256": "e5885e9354d988525aa5788d35ea05a0326f091164d2ff52977bc4522cb68096"
+    },
+    "Frames/Contact_20.jpg": {
+      "bytes": 229568,
+      "sha256": "dfea5900056b9a882b631be55cd2bd5f47728524cc648bc8bd4ff7999919be0b"
+    },
+    "Images/01_Open_ColliderOverlay.jpg": {
+      "bytes": 285097,
+      "sha256": "1235cdc93faf075d212d8d3c9d28451f56669c7d18adb438a8114d1001ab9558"
+    },
+    "Images/02_Closed_ColliderOverlay.jpg": {
+      "bytes": 284284,
+      "sha256": "12b3ac846e5218a5ce4924fa7d3c13cfa68eef7226d51626a4cccae6f6a4abb0"
+    },
+    "Images/03_EmptyOldRectangle_ColliderOverlay.jpg": {
+      "bytes": 279161,
+      "sha256": "9a6cb987cd6499586a96251253779fdce721ac92f4270baf98c8a506768c6a00"
+    },
+    "Images/BladeGeometrySource.png": {
+      "bytes": 476625,
+      "sha256": "4dec78ec2fc3f94d98872b5d4eda90cf284c9c2e594651d198f3c81c9b6b37d4"
+    },
+    "Images/Closed_Normal.jpg": {
+      "bytes": 266091,
+      "sha256": "363a132c1407d13118d036846ea84ad870fa165b78d55152a1cb0fedfa9f9a5a"
+    },
+    "Images/ContactSequence.jpg": {
+      "bytes": 264289,
+      "sha256": "359837d36ed925a794c3f1291cf769789b13387ddb53463ebd28d83ada4e968e"
+    },
+    "Images/Detail_OpenClosed.jpg": {
+      "bytes": 71045,
+      "sha256": "aaadb97d9c2a5904ba382429e311312c4ac4d8f37ebfcb04822c201f7e7c6fee"
+    },
+    "Images/EmptyOldRectangle_Normal.jpg": {
+      "bytes": 260860,
+      "sha256": "10848de3d4531d26a20724dc8f055e557158006b8c9cfff14bbc11af9e3e893e"
+    },
+    "Images/Motion_Detail.jpg": {
+      "bytes": 72913,
+      "sha256": "44e7fd28e93041295dc9644a9747ddf90dabac70e2b28522a4894e368c04670a"
+    },
+    "Images/Normal_OpenClosed.jpg": {
+      "bytes": 181529,
+      "sha256": "3f508f28936be04c857d8db507d9502d7c108dcadafc0529e45a1de91359ee51"
+    },
+    "Images/Open_Normal.jpg": {
+      "bytes": 266395,
+      "sha256": "5153f4b3cbd1d4b49197684dbc60ddc7b0546581620071e4ab6127afa834bbe7"
+    },
+    "QA/Compile.log": {
+      "bytes": 802,
+      "sha256": "6c05c21dd5da2fd542126ee6f2855bd22ac043810c6cecdf4166ab9d16707601"
+    },
+    "QA/ManualPlayer.log": {
+      "bytes": 253,
+      "sha256": "9a81767cbe012ba3612d641e464f60057d72e1e1103e502666357dad5637355c"
+    },
+    "QA/ManualSmoke.json": {
+      "bytes": 267,
+      "sha256": "451f0316e47f5d26c38f3c25957868928dbeab00983dd5ffe3a46c603757454f"
+    },
+    "QA/Primary.json": {
+      "bytes": 1600987,
+      "sha256": "b060c54c214ca3f18d4258747b85eddfb35f09d474f7892e2cae452871a8ec67"
+    },
+    "QA/PrimaryPlayer.log": {
+      "bytes": 202,
+      "sha256": "f5ba0e73613d7c351a6b1ab043fc94d87752484eb59ccac4fdbe893ca565cdad"
+    },
+    "QA/Protection.json": {
+      "bytes": 555,
+      "sha256": "0dc208682f3100b1c02ae00fe3807bc24f3c80bd1bf5893b18ae6464ebfd1076"
+    },
+    "QA/Summary.json": {
+      "bytes": 885,
+      "sha256": "179369918d537803b0549fd7aee2a6f31eebecb7296ce73f87832faaff156ecf"
+    },
+    "QA/Supplement.json": {
+      "bytes": 193806,
+      "sha256": "feb5e15fccefd838b82121f75f81e3103b6ae60587adc85e2776d2e27bd987bf"
+    },
+    "QA/SupplementPlayer.log": {
+      "bytes": 242,
+      "sha256": "61193c2511750c826baea21ddb00c68836fb814f622f4485241d9c8a3c460022"
+    },
+    "Video/01_Motion_API.mp4": {
+      "bytes": 243169,
+      "sha256": "3ca71c8c6067400b3aaaf4757a2750c74a636a6abc40b054c2eb3431de830d3b"
+    },
+    "Video/02_NativeContact.mp4": {
+      "bytes": 495439,
+      "sha256": "8c6979d7db3435c5e195f6469f74a09c3803f2f99dba9007f6effbb949d421ef"
+    },
+    "Video/03_EmptyPassage_ThenFall.mp4": {
+      "bytes": 294586,
+      "sha256": "db47c98dc1652d813dbd11ba96754207eccbd791da0b59d8f67bb07fd373551c"
+    }
+  }
+}

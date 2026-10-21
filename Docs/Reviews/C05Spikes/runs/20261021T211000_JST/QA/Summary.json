@@ -1,0 +1,21 @@
+{
+  "primary_checks": 111,
+  "primary_failed": [],
+  "native_cases": 23,
+  "supplement_checks": 32,
+  "supplement_failed": [
+    {
+      "name": "Free empty passage frame 24",
+      "pass": false,
+      "detail": ""
+    }
+  ],
+  "interpretation": "Supplement final frame24/0.48s reaches y=-9.209868, below unchanged fall threshold -9. Detached with snips=0. Existing fall failure, not scissors contact. Prior 24 frames remain attached; no further QA repeat.",
+  "max_floor_error_wu": 9.5367431640625e-07,
+  "max_second_handle_gap_wu": 0.003025054931640625,
+  "max_second_handle_gap_pixels_1600x900": 0.1564683585331358,
+  "max_pivot_delta": 0.0,
+  "max_path_to_visible_outline_delta": 0.0,
+  "videos": "25fps JPEG captures from 50fps fixed capture clock, duration matches game-time, silent. Not OS recording.",
+  "scope": "one front hazard; Production unmodified"
+}

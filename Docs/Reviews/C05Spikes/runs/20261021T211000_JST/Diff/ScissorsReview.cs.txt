@@ -1,0 +1,161 @@
+using System;
+using System.IO;
+using System.Linq;
+using System.Reflection;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using HimoHito;
+
+// Initial section fixture and opt-in diagnostics only. Manual mode never drives input or exits.
+[DefaultExecutionOrder(30000)]
+public sealed class GroundingReview:MonoBehaviour
+{
+    const BindingFlags H=BindingFlags.Instance|BindingFlags.NonPublic;
+    static string Arg(string k,string f=""){var a=Environment.GetCommandLineArgs();for(int i=0;i<a.Length-1;i++)if(a[i]==k)return a[i+1];return f;}
+    static bool QA=>Arg("-scissorsQA")=="1";
+    static object Get(object o,string n)=>o.GetType().GetField(n,H).GetValue(o);
+    static void Set(object o,string n,object v)=>o.GetType().GetField(n,H).SetValue(o,v);
+    static object Call(object o,string n)=>o.GetType().GetMethod(n,H|BindingFlags.Public).Invoke(o,null);
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]static void Boot(){Application.runInBackground=true;if(QA){Time.captureFramerate=50;UnityEngine.Random.InitState(521);}SceneManager.sceneLoaded+=(s,m)=>{if(s.name!="MainStage"){SceneManager.LoadScene("MainStage");return;}new GameObject("C05 scoped fixture").AddComponent<GroundingReview>();};}
+    [Serializable]public class CheckRecord{public string name;public bool pass;public string detail;}
+    [Serializable]public class Case{public string name;public float closure,distanceBefore,remainingBefore,remainingAfter;public Vector2 positionBefore,velocityBefore,positionAfter,velocityAfter;public bool expectedContact,attachedBefore,attachedAfter;public int snipsBefore,snipsAfter;public float contactElapsedAfter;}
+    [Serializable]public class Frame{public int index;public string phase;public Vector2 position,velocity;public bool attached;public float remaining;public int snips;public CraftScissorsMotion.Pose pose;}
+    [Serializable]public class Report{public string unity,execution="Existing non-Development Unity Player + managed overlay + approved PNG loaded at runtime. Diagnostic initial placement, native TryAttach and native Physics2D trigger; API pause. Not OS keys or Human play.";public bool development,finished;public int errors;public string assetHash;public List<CheckRecord> checks=new List<CheckRecord>();public List<Case> cases=new List<Case>();public List<Frame> frames=new List<Frame>();public float maxSupportGap,maxFloorError,maxPivotError,maxColliderError;public Vector2 playerColliderSize;public string otherHazardBefore,otherHazardAfter;}
+    Report report;string output;
+    PlayerMover mover;Rigidbody2D body;Collider2D playerCollider;RopeController rope;RopeResource resource;MainStageRespawnOnFall run;StageOverlayControls overlay;CraftScissorsMotion scissors;ToySpikeVisual legacy;
+    Vector2 entry=new Vector2(12.7f,-4.28f);
+    IEnumerator Start()
+    {
+        yield return null;yield return null;yield return null;
+        mover=FindFirstObjectByType<PlayerMover>();body=mover.GetComponent<Rigidbody2D>();playerCollider=body.GetComponent<Collider2D>();rope=body.GetComponent<RopeController>();resource=body.GetComponent<RopeResource>();run=FindFirstObjectByType<MainStageRespawnOnFall>();overlay=FindFirstObjectByType<StageOverlayControls>();
+        var preview=FindFirstObjectByType<MainStagePreview>();if(preview&&MainStagePreview.IsActive)Call(preview,"RestoreState");
+        resource.RestoreCapacityAndCurrent(50,50);rope.RestoreSelectedRopeLength(7);Place(entry);run.TryReachSection(2,entry,50);Set(run,"checkpointPosition",entry);Call(run,"CaptureCheckpointState");
+        var target=GameObject.Find(CraftScissorsMotion.TargetName);legacy=target.GetComponent<ToySpikeVisual>();scissors=target.AddComponent<CraftScissorsMotion>();
+        if(!QA){Debug.Log("C05_MANUAL_READY section2 native input; no auto input/capture/clock/exit");yield break;}
+        output=Arg("-scissorsOutput");Directory.CreateDirectory(output);report=new Report{unity=Application.unityVersion,development=Debug.isDebugBuild,assetHash=CraftScissorsMotion.AssetHash};Application.logMessageReceived+=Log;
+        yield return new WaitForSeconds(.6f);
+        report.playerColliderSize=playerCollider.bounds.size;report.otherHazardBefore=Other();
+        if(Arg("-supplement")=="1"){yield return Supplement();Finish();yield break;}
+        Check(!scissors.oldBox.enabled&&scissors.blades.enabled&&scissors.blades.isTrigger&&scissors.blades.pathCount==2,"Only target rectangle disabled; two moving blade paths enabled");
+        Check(FindObjectsByType<CraftScissorsMotion>(FindObjectsSortMode.None).Length==1,"Only Main Front converted");
+        Check(!Debug.isDebugBuild,"Host Player is non-Development");
+        for(int i=0;i<=200;i++){
+            scissors.DiagnosticPose(i/200f);var r=scissors.Record();
+            report.maxSupportGap=Mathf.Max(report.maxSupportGap,r.handleGap);
+            report.maxFloorError=Mathf.Max(report.maxFloorError,Mathf.Abs(Mathf.Min(r.leftSupport.y,r.rightSupport.y)-CraftScissorsMotion.FloorY));
+            report.maxPivotError=Mathf.Max(report.maxPivotError,r.pivotDistance);
+            for(int s=0;s<2;s++){var w=scissors.WorldBlade(s);var c=scissors.blades.GetPath(s);for(int n=0;n<w.Length;n++)report.maxColliderError=Mathf.Max(report.maxColliderError,Vector3.Distance(w[n],scissors.transform.TransformPoint(c[n])));}
+        }
+        Check(report.maxFloorError<.00001f&&report.maxSupportGap<.006f,"Continuous handle support over 201 poses",report.maxSupportGap.ToString("F6")+" wu max second-handle gap");
+        Check(report.maxPivotError<.00001f&&report.maxColliderError<.00001f,"Common pivot and collider/visible blade geometry agree at every sampled pose");
+        scissors.DiagnosticPose(0);yield return Shot("01_Open");
+        File.WriteAllText(Path.Combine(output,"OpenPose.json"),JsonUtility.ToJson(scissors.Record(),true));
+        scissors.DiagnosticPose(1);yield return Shot("02_Closed");
+        File.WriteAllText(Path.Combine(output,"ClosedPose.json"),JsonUtility.ToJson(scissors.Record(),true));
+        // Native contact at left/right tips and mid-blade, covering open/intermediate/closed states.
+        foreach(float c in new[]{0f,.25f,.5f,.75f,1f})for(int side=0;side<2;side++){
+            scissors.DiagnosticPose(c);
+            var points=scissors.WorldBlade(side);var tip=points.OrderByDescending(v=>v.y).First();
+            yield return ContactCase("tip_"+side+"_c"+c.ToString("F2"),c,tip,true,true);
+        }
+        foreach(float c in new[]{0f,.5f,1f})for(int side=0;side<2;side++){
+            scissors.DiagnosticPose(c);var a=scissors.WorldBlade(side);Vector3 center=Vector3.zero;foreach(var v in a)center+=v;center/=a.Length;
+            yield return ContactCase("blade_"+side+"_c"+c.ToString("F2"),c,center,true,true);
+        }
+        foreach(float c in new[]{0f,.5f,1f}){
+            yield return ContactCase("old_rectangle_empty_c"+c.ToString("F2"),c,new Vector2(15.35f,-8.30f),false,true);
+            scissors.DiagnosticPose(c);Physics2D.SyncTransforms();float x=scissors.blades.bounds.min.x-playerCollider.bounds.extents.x-.16f;
+            yield return ContactCase("outside_left_c"+c.ToString("F2"),c,new Vector2(x,-7.05f),false,true);
+        }
+        scissors.DiagnosticPose(0);var tipR=scissors.WorldBlade(1).OrderByDescending(v=>v.y).First();
+        yield return ContactCase("detached_blade_contact",0,tipR,false,false);
+        // Continuous motion footage: existing presentation API starts the cycle, not a fake gameplay hit.
+        Place(entry);yield return new WaitForSeconds(.5f);scissors.DiagnosticRelease();
+        legacy.PlayContact(scissors.transform.position,Vector2.right);
+        for(int i=0;i<100;i++){yield return new WaitForEndOfFrame();if(i%2==0)Capture("MotionFrames",i/2);}
+        // Native trigger footage: attach normally on bank, diagnostic approach placement, then free simulation.
+        Place(entry);yield return new WaitForSeconds(.3f);bool att=rope.TryAttach(new Vector2(17.25f,-.85f));Check(att,"Native grounded attach for contact video");
+        scissors.DiagnosticPose(0);var top=scissors.WorldBlade(0).OrderByDescending(v=>v.y).First();
+        Move(top+new Vector3(-.28f,1.1f,0),new Vector2(.6f,-2));scissors.DiagnosticRelease();int before=scissors.snips;
+        for(int i=0;i<92;i++){yield return new WaitForEndOfFrame();if(i%2==0)Capture("ContactFrames",i/2);}
+        Check(!rope.IsAttached&&resource.CurrentLength==50,"Continuous native falling approach detaches and retains rope 50");
+        Check(scissors.snips==before+1,"One native contact triggers exactly one closing reaction");
+        // Empty old rectangle: stationary reference followed by normal gravity, no old-box cut.
+        Place(entry);rope.RestoreSelectedRopeLength(9);yield return new WaitForSeconds(.3f);Check(rope.TryAttach(new Vector2(17.25f,-.85f)),"Native attach for empty-space video (length9, no tension relocation)");
+        Move(new Vector2(15.35f,-8.30f),new Vector2(.5f,0));scissors.DiagnosticRelease();before=scissors.snips;
+        for(int i=0;i<24;i++){yield return new WaitForEndOfFrame();if(i%2==0)Capture("EmptyFrames",i/2);}
+        Check(rope.IsAttached&&scissors.snips==before,"Old rectangle empty space no longer cuts in free simulation");
+        Call(run,"RestartFromCheckpoint");yield return new WaitForSeconds(.7f);
+        foreach(float at in new[]{.08f,.22f,.40f})yield return MovingContact(at);
+        Call(run,"RestartFromCheckpoint");yield return new WaitForSeconds(.7f);scissors.DiagnosticRelease();legacy.PlayContact(scissors.transform.position,Vector2.right);yield return new WaitForSeconds(.10f);
+        Check(!run.IsFailureVisible,"Pause test is active gameplay, not failure screen");
+        Set(overlay,"isPaused",true);Call(overlay,"ApplyPauseState");yield return new WaitForEndOfFrame();var pose=scissors.Record();var path=scissors.blades.GetPath(0);yield return new WaitForSecondsRealtime(.25f);
+        Check(Time.timeScale==0&&scissors.closure==pose.closure&&scissors.root.position==pose.hinge&&scissors.blades.GetPath(0).SequenceEqual(path),"Pause freezes both pose and blade paths", "timeScale="+Time.timeScale+" before="+pose.closure+" after="+scissors.closure);
+        Set(overlay,"isPaused",false);Call(overlay,"ApplyPauseState");yield return new WaitForSeconds(.8f);
+        Call(run,"RestartFromCheckpoint");yield return new WaitForSeconds(.7f);Check(!rope.IsAttached&&resource.CurrentLength==50&&rope.SelectedRopeLength==7,"Native checkpoint restoration unchanged");yield return Shot("03_R");
+        report.otherHazardAfter=Other();Check(report.otherHazardBefore==report.otherHazardAfter,"Far spike transform, trigger and hazard unchanged");
+        Finish();
+    }
+    IEnumerator ContactCase(string name,float c,Vector2 center,bool cut,bool attached)
+    {
+        Place(entry);rope.RestoreSelectedRopeLength(name.StartsWith("old_rectangle")?9:7);yield return new WaitForSeconds(.12f);
+        if(attached)Check(rope.TryAttach(new Vector2(17.25f,-.85f)),"Attach "+name);
+        scissors.DiagnosticPose(c);Move(center,Vector2.zero);Physics2D.SyncTransforms();
+        var record=new Case{name=name,closure=c,expectedContact=cut,attachedBefore=rope.IsAttached,remainingBefore=resource.CurrentLength,positionBefore=body.position,velocityBefore=body.linearVelocity,snipsBefore=scissors.snips,distanceBefore=Physics2D.Distance(scissors.blades,playerCollider).distance};
+        yield return new WaitForSeconds(.06f);
+        record.positionAfter=body.position;record.velocityAfter=body.linearVelocity;record.attachedAfter=rope.IsAttached;record.remainingAfter=resource.CurrentLength;record.snipsAfter=scissors.snips;record.contactElapsedAfter=(float)Get(legacy,"contactElapsed");
+        report.cases.Add(record);
+        Check(attached?record.attachedAfter==!cut:!record.attachedAfter,"Native trigger "+name);
+        Check(record.remainingAfter==record.remainingBefore,"No duplicate rope/refund amount "+name);
+        Check(record.snipsAfter-record.snipsBefore==(cut?1:0),"Single/zero reaction "+name);
+    }
+    IEnumerator MovingContact(float at)
+    {
+        Place(entry);rope.RestoreSelectedRopeLength(9);yield return new WaitForSeconds(.4f);Check(rope.TryAttach(new Vector2(17.25f,-.85f)),"Attach for moving blade contact");
+        scissors.DiagnosticRelease();legacy.PlayContact(scissors.transform.position,Vector2.right);yield return new WaitForSeconds(at);
+        string phase=scissors.Phase;float value=scissors.closure;int before=scissors.snips;
+        var tip=scissors.WorldBlade(1).OrderByDescending(v=>v.y).First();Move(tip,Vector2.zero);
+        yield return new WaitForSeconds(.06f);
+        Check(!rope.IsAttached&&resource.CurrentLength==50&&scissors.snips==before+1,"Native moving blade hit: "+phase,"closureBefore="+value+" closureAfter="+scissors.closure);
+        yield return new WaitForSeconds(.8f);
+    }
+    [Serializable]class ScreenGeometry{public Vector3[] left,right;public Vector3 oldMin,oldMax;public Vector3[] playerCorners;public string label;}
+    void ScreenRecord(string label)
+    {
+        var c=playerCollider.bounds;Vector2 oldSize=scissors.oldBox.size*new Vector2(scissors.transform.lossyScale.x,scissors.transform.lossyScale.y);Vector3 center=scissors.transform.TransformPoint(scissors.oldBox.offset);
+        File.WriteAllText(Path.Combine(output,label+"_Geometry.json"),JsonUtility.ToJson(new ScreenGeometry{label=label,left=scissors.WorldBlade(0).Select(x=>Camera.main.WorldToScreenPoint(x)).ToArray(),right=scissors.WorldBlade(1).Select(x=>Camera.main.WorldToScreenPoint(x)).ToArray(),oldMin=Camera.main.WorldToScreenPoint(center-(Vector3)(oldSize/2)),oldMax=Camera.main.WorldToScreenPoint(center+(Vector3)(oldSize/2)),playerCorners=new[]{Camera.main.WorldToScreenPoint(c.min),Camera.main.WorldToScreenPoint(c.max)}},true));
+    }
+    IEnumerator Supplement()
+    {
+        scissors.DiagnosticPose(0);yield return Shot("01_Open");ScreenRecord("01_Open");scissors.DiagnosticPose(1);yield return Shot("02_Closed");ScreenRecord("02_Closed");
+        // Short old-rectangle sample stays in active play. Never carry a failure screen into another test.
+        Call(run,"RestartFromCheckpoint");yield return new WaitForSeconds(.7f);rope.RestoreSelectedRopeLength(9);yield return new WaitForSeconds(.12f);Check(rope.TryAttach(new Vector2(17.25f,-.85f)),"Native attach, old-rectangle empty sample");
+        scissors.DiagnosticPose(0);Move(new Vector2(15.35f,-8.30f),Vector2.zero);int before=scissors.snips;float gap=Physics2D.Distance(scissors.blades,playerCollider).distance;
+        yield return Shot("03_EmptyOldRectangle");ScreenRecord("03_EmptyOldRectangle");
+        Check(!run.IsFailureVisible&&body.simulated&&rope.IsAttached&&scissors.snips==before&&gap>0,"Old rectangle sample is active, separated and attached","separation="+gap);
+        // Free flight beside blades, not through an artificially frozen player or failure overlay.
+        Call(run,"RestartFromCheckpoint");yield return new WaitForSeconds(.7f);rope.RestoreSelectedRopeLength(9);yield return new WaitForSeconds(.12f);Check(rope.TryAttach(new Vector2(17.25f,-.85f)),"Native attach, free empty passage");
+        Move(new Vector2(13.8f,-6.75f),new Vector2(-1.8f,2));scissors.DiagnosticRelease();before=scissors.snips;
+        for(int i=0;i<25;i++){yield return new WaitForEndOfFrame();if(i%2==0)Capture("EmptyFrames",i/2);Check(!run.IsFailureVisible&&body.simulated&&rope.IsAttached&&scissors.snips==before,"Free empty passage frame "+i);}
+        // Exact native cut method preserves velocity and resource when actually overlapping a blade.
+        Call(run,"RestartFromCheckpoint");yield return new WaitForSeconds(.7f);rope.RestoreSelectedRopeLength(9);yield return new WaitForSeconds(.12f);Check(rope.TryAttach(new Vector2(17.25f,-.85f)),"Native attach, cut contract API probe");
+        scissors.DiagnosticPose(.5f);Move(scissors.WorldBlade(0).OrderByDescending(x=>x.y).First(),new Vector2(1.3f,-2.6f));Vector2 velocity=body.linearVelocity;float remaining=resource.CurrentLength;
+        var hazard=scissors.GetComponent<RopeSpikeHazard>();var cut=typeof(RopeSpikeHazard).GetMethod("Cut",H);cut.Invoke(hazard,new object[]{playerCollider});cut.Invoke(hazard,new object[]{playerCollider});
+        Check(!rope.IsAttached&&body.linearVelocity==velocity&&resource.CurrentLength==remaining,"Exact native Cut API: velocity/resource unchanged; second invocation inert");
+        yield return new WaitForSeconds(.06f);Call(run,"RestartFromCheckpoint");yield return new WaitForSeconds(.8f);scissors.DiagnosticRelease();
+        Check(!run.IsFailureVisible&&!rope.IsAttached&&resource.CurrentLength==50&&rope.SelectedRopeLength==7,"R after supplement returns active checkpoint");
+        report.otherHazardAfter=Other();Check(report.otherHazardBefore==report.otherHazardAfter,"Far hazard unchanged in supplement");
+    }
+    string Other(){var x=GameObject.Find("Main Section 2 Far Spike");var c=x.GetComponent<BoxCollider2D>();return JsonUtility.ToJson(new OtherRecord{p=x.transform.position,s=x.transform.localScale,r=x.transform.eulerAngles,size=c.size,offset=c.offset,enabled=c.enabled,trigger=c.isTrigger,hazard=x.GetComponent<RopeSpikeHazard>().enabled});}
+    [Serializable]class OtherRecord{public Vector3 p,s,r;public Vector2 size,offset;public bool enabled,trigger,hazard;}
+    void Move(Vector2 p,Vector2 v){body.position=p;body.transform.position=new Vector3(p.x,p.y,0);body.linearVelocity=v;body.angularVelocity=0;body.simulated=true;Set(mover,"previousPhysicsPosition",p);Set(mover,"hasPreviousPhysicsPosition",true);Set(mover,"hasPreviousVerticalSpeed",false);Physics2D.SyncTransforms();}
+    void Place(Vector2 p){rope.DetachAndRefund();Move(p,Vector2.zero);mover.enabled=true;rope.enabled=true;Camera.main.GetComponent<HorizontalCameraFollow>().ResetFraming();}
+    IEnumerator Shot(string n){yield return new WaitForEndOfFrame();var im=ScreenCapture.CaptureScreenshotAsTexture();File.WriteAllBytes(Path.Combine(output,n+".png"),im.EncodeToPNG());Destroy(im);}
+    void Capture(string folder,int index){Directory.CreateDirectory(Path.Combine(output,folder));var im=ScreenCapture.CaptureScreenshotAsTexture();File.WriteAllBytes(Path.Combine(output,folder,index.ToString("D5")+".jpg"),im.EncodeToJPG(86));Destroy(im);report.frames.Add(new Frame{index=index,phase=folder,position=body.position,velocity=body.linearVelocity,attached=rope.IsAttached,remaining=resource.CurrentLength,snips=scissors.snips,pose=scissors.Record()});}
+    void Check(bool pass,string name,string detail=""){report.checks.Add(new CheckRecord{name=name,pass=pass,detail=detail});if(!pass){report.errors++;Debug.LogWarning("CHECK_FAIL "+name+" "+detail);}}
+    void Log(string text,string stack,LogType type){if(type==LogType.Error||type==LogType.Exception||type==LogType.Assert){report.errors++;File.AppendAllText(Path.Combine(output,"Errors.txt"),text+"\n"+stack+"\n");}}
+    void Finish(){report.finished=true;File.WriteAllText(Path.Combine(output,"Result.json"),JsonUtility.ToJson(report,true));Debug.Log("C05_FINISHED errors="+report.errors);Application.Quit(report.errors==0?0:2);}
+    void OnDestroy(){Application.logMessageReceived-=Log;}
+}
