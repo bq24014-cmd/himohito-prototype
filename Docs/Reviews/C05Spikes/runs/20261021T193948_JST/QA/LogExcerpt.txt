@@ -1,0 +1,35 @@
+Actual Unity Player capture. API/diagnostic fixture; not OS/Human input.
+Compile: errors 0, 4 existing CS0649 warnings.
+
+Current-final2
+C05_SCISSORS_FINISHED errors=0
+PASS MainStage existing two hazards
+PASS only Front spike has new design
+PASS native grounded attach
+PASS pause sampled before fall failure
+PASS pause freezes physics and scissors pose
+PASS native trigger detach/refund preserved
+PASS R restores existing section2 state
+PASS scene reload retains selected visual
+
+Scissors-final2
+C05_WARM_PLACEMENT_PNG sha256=b5558bcd4b40b7762201184ec0324758803aaaede56cc3102dbd169670c57c1d pixels=1536x1024
+C05_SCISSORS_FINISHED errors=0
+PASS MainStage existing two hazards
+PASS only Front spike has new design
+PASS actual SpriteRenderers use decoded PNG atlas
+PASS display-only API cycle once; not a physical contact
+PASS native grounded attach
+PASS pause sampled before fall failure
+PASS pause freezes physics and scissors pose
+PASS native trigger detach/refund preserved
+PASS one additional close then reopen for one native trigger after API cycle
+PASS both rigid halves share one screw pivot in idle close and reopen
+PASS R restores existing section2 state
+PASS scene reload retains selected visual
+
+Static1 hidden-window screenshot black: not accepted as visual evidence. Static2 normal window successful.
+Final1 right blade overhang prompted visual-only translation -0.60 world X. No collider move. Final2 is submitted.
+Manual: READY and alive 5 sec, no QA flag; only exact launched process stopped.
+OS: @oai/sky initialized; list_apps timed out; not retried.
+Legacy collision mismatch remains despite unchanged physical traces.

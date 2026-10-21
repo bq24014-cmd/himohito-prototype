@@ -1,0 +1,40 @@
+{
+  "original_trigger_min": {
+    "x": 14.963000297546387,
+    "y": -8.331999778747559
+  },
+  "original_trigger_max": {
+    "x": 15.737000465393066,
+    "y": -7.522000312805176
+  },
+  "blade_sweep_envelope_approximate": {
+    "x_min": 14.78209114074707,
+    "x_max": 15.844330787658691,
+    "y_min": -8.336356163024902,
+    "y_max": -7.611300468444824
+  },
+  "hinge": {
+    "x": 14.800000190734863,
+    "y": -7.730000019073486,
+    "z": 0.0
+  },
+  "body_heading_degrees": 75,
+  "world_scale": {
+    "x": 1.0000001192092896,
+    "y": 1.0000001192092896,
+    "z": 1.0
+  },
+  "fixed_half_angle": 16,
+  "moving_half_open_angle": -16,
+  "moving_half_closed_angle": 23.2,
+  "relative_closed_angle": 7.2,
+  "duration_seconds": 0.55,
+  "physical_changes": false,
+  "outline_method": "Representative blade atlas vertices transformed by actual Unity Sprite transforms; not exact alpha/collision contour. Includes idle/contact recorded poses.",
+  "issues": [
+    "Existing rectangle contains blade-gap and empty areas.",
+    "Some blade tips/base extend outside existing trigger.",
+    "Rendered background floor is not a newly added physical floor."
+  ],
+  "suggested_scope_if_approved": "Only this hazard: reconsider trigger shape around blade/sweep, trim empty old-box areas and cover protruding metal. Decide whether blade gap stays dangerous. No such change implemented."
+}

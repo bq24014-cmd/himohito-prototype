@@ -1,0 +1,10 @@
+{
+  "ready": true,
+  "alive_after_ready_5_seconds": true,
+  "automatic_input": false,
+  "os_keys": false,
+  "human_play": false,
+  "mode": "Manual; initial section2 fixture only",
+  "asset_sha256": "b5558bcd4b40b7762201184ec0324758803aaaede56cc3102dbd169670c57c1d",
+  "shutdown": "Only this check launched PID; exact executable path verified"
+}

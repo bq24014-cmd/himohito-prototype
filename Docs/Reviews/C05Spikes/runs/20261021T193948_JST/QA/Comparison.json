@@ -1,0 +1,33 @@
+{
+  "trace_count_equal": true,
+  "trace_phases_equal": true,
+  "root_trigger_contracts_equal": true,
+  "reload_contracts_equal": true,
+  "physics_and_state_max_delta": {
+    "root": 0.0,
+    "velocity": 0.0,
+    "camera": 0.0,
+    "remaining": 0.0,
+    "selected": 0.0,
+    "attached": 0.0,
+    "grounded": 0.0,
+    "contact": 0.0
+  },
+  "trace_frames": [
+    477,
+    477
+  ],
+  "errors": [
+    0,
+    0
+  ],
+  "shared_pivot_max_distance": 0.0,
+  "approved_asset_hash_match": true,
+  "new_body_world_scale": {
+    "x": 1.0000001192092896,
+    "y": 1.0000001192092896,
+    "z": 1.0
+  },
+  "execution": "Actual Unity Player, managed overlay, explicit external approved PNG, diagnostic/API capture. Not OS/Human play. Not a new Unity Build.",
+  "technical_pass": true
+}

@@ -1,32 +1,33 @@
 {
   "review_id": "C05Spikes",
-  "run_id": "20261021T180204_JST",
-  "updated_at": "2026-10-21T18:11:00+09:00",
+  "run_id": "20261021T193948_JST",
+  "updated_at": "2026-10-21T19:54:00+09:00",
   "time_zone": "Asia/Tokyo",
-  "proof": "C05WarmScissorsBodyReview_20261021",
-  "revision": "warm-body-design-1",
+  "proof": "C05WarmScissorsPlacementProof_20261021",
+  "revision": "warm-placement-final2",
   "production_head": "394b4a74e366678a9e0542d895b9a26f86993c19",
-  "status": "ハサミ本体1案のデザインHuman Review待ち",
+  "status": "本体Human承認・配置と開閉のレビュー待ち・既存判定との不一致あり",
   "production_integrated": false,
-  "human_adoption": "未承認",
+  "human_adoption": "暖色ハサミ本体の形・色・厚みのみ承認。配置・動き・判定・Production統合は未承認",
   "branch": "codex/review-c05-spikes",
-  "report": "Docs/Reviews/C05Spikes/runs/20261021T180204_JST/Report.md",
-  "images": "Docs/Reviews/C05Spikes/runs/20261021T180204_JST/Images",
-  "qa": "Docs/Reviews/C05Spikes/runs/20261021T180204_JST/QA",
-  "assets": "Docs/Reviews/C05Spikes/runs/20261021T180204_JST/Assets",
-  "renderer": "Docs/Reviews/C05Spikes/runs/20261021T180204_JST/Renderer",
-  "execution": "generated RGBA parts + offline static canvas composition; NOT Unity screenshots; no Unity Build or managed overlay this run",
-  "scope": "scissors body only; one candidate; open/closed stills; no new placement, support, animation, collision or rollout",
-  "normal_scale": {
-    "canvas": [
-      1600,
-      900
-    ],
-    "pixels_per_world_unit": 51.724140167,
-    "source": "runs/20261021T164023_JST/QA/FloorScissors.json; ppu",
-    "large_scale_multiplier": 4
+  "report": "Docs/Reviews/C05Spikes/runs/20261021T193948_JST/Report.md",
+  "launch": "Docs/Reviews/C05Spikes/runs/20261021T193948_JST/Launch.md",
+  "images": "Docs/Reviews/C05Spikes/runs/20261021T193948_JST/Images",
+  "video": "Docs/Reviews/C05Spikes/runs/20261021T193948_JST/Video",
+  "qa": "Docs/Reviews/C05Spikes/runs/20261021T193948_JST/QA",
+  "diff": "Docs/Reviews/C05Spikes/runs/20261021T193948_JST/Diff",
+  "assets": "Docs/Reviews/C05Spikes/runs/20261021T193948_JST/Assets",
+  "execution": "Existing Unity 6000.3.21f1 non-Development Player + isolated managed overlay + LoadImage approved PNG; actual Unity screen captures; NOT a new Unity Build",
+  "technical": "Scoped API/diagnostic comparison PASS. Visible blades and legacy trigger NOT aligned.",
+  "scope": "Main Section 2 Front Spike only. Display placement and hinge animation. No collider/gameplay/scene/Production changes.",
+  "approved_body": {
+    "commit": "5c64b9ef63d574a56ef4fbb0439ee7d364800dfa",
+    "report": "Docs/Reviews/C05Spikes/runs/20261021T180204_JST/Report.md",
+    "human_approval": "暖色ハサミの本体デザインを承認します。この形・色・厚みを維持",
+    "asset_sha256": "b5558bcd4b40b7762201184ec0324758803aaaede56cc3102dbd169670c57c1d",
+    "scope": "body design only"
   },
-  "asset_sha256": "b5558bcd4b40b7762201184ec0324758803aaaede56cc3102dbd169670c57c1d",
+  "render_assembly_sha256": "8f8de875fbf8adc6645c59976d11131bc1c4729fb66b88a66f9ef8aef528b8a2",
   "previous_candidates": [
     {
       "commit": "25ba244b08f1763cafb6d5a4223d72b672e1d572",
@@ -53,11 +54,11 @@
     }
   ],
   "unconfirmed": [
-    "新案のHuman採否",
-    "実Unityでの背景・配置とのなじみ",
-    "危険性と判定の対応",
-    "実装時の開閉アニメーション・接触反応",
-    "Unity import/Build/OS操作/物理QA（今回対象外）"
+    "Humanの配置・開閉・危険性の評価",
+    "OS実キー（list_apps timeout、反復なし）",
+    "新規Unity Build/Editor Play/Resources bake",
+    "刃と判定の一致：現状不一致。今回未変更",
+    "実聴・全区間・5本への展開"
   ],
   "holds": [
     "C11",

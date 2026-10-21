@@ -1,0 +1,40 @@
+{
+  "execution": "Unity 6000.3.21f1 existing non-Development Player + own managed assembly + real external approved PNG. NOT a new Unity Build",
+  "production_head": "394b4a74e366678a9e0542d895b9a26f86993c19",
+  "runtime_sources_unchanged": 119,
+  "assembly_sha256": "8f8de875fbf8adc6645c59976d11131bc1c4729fb66b88a66f9ef8aef528b8a2",
+  "asset_sha256": "b5558bcd4b40b7762201184ec0324758803aaaede56cc3102dbd169670c57c1d",
+  "asset_dimensions": [
+    1536,
+    1024
+  ],
+  "approved_body_review": "5c64b9ef63d574a56ef4fbb0439ee7d364800dfa",
+  "asset_loading": "LoadImage -> approved original RGBA rigid-half sprites. No hue edits, no nonuniform floor projection",
+  "resources_import_or_bake_verified": false,
+  "source_hashes": {
+    "CraftScissorsDesignVisual.cs": "bb5b7cda4f3801ec673f5ceb74947e16283ee1fb4b3e976e13aa7237b57a316c",
+    "GroundingReview.cs": "ed09e8d6ab732a7da497508336621eec0ff1de6659ff256f12a7680d14e8045d"
+  },
+  "videos": {
+    "Warm-NativeTrigger-FullSize.mp4": {
+      "bytes": 422086,
+      "sha256": "caa37bed93fd8fec5e3878a56e8cb292abf6f106fe1086dec2f365805fcc84db",
+      "fps": 25,
+      "duration_seconds": 1.32,
+      "width": 1600,
+      "height": 900,
+      "audio": false,
+      "clock": "50Hz capture simulation / every second frame exported. 1x game time, not OS recording"
+    },
+    "Warm-OpenClose-FullSize.mp4": {
+      "bytes": 245948,
+      "sha256": "dc7d278a57c1750306fbf0c2c38bc82ea3c2bfddedad3ff937531abf830ee44b",
+      "fps": 25,
+      "duration_seconds": 3,
+      "width": 1600,
+      "height": 900,
+      "audio": false,
+      "clock": "50Hz capture simulation / every second frame exported. 1x game time, not OS recording"
+    }
+  }
+}

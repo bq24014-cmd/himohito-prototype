@@ -1,0 +1,100 @@
+using System;
+using System.IO;
+using System.Reflection;
+using System.Security.Cryptography;
+using UnityEngine;
+using HimoHito;
+
+// Isolated presentation only. Approved v3 pixels and proportions are unchanged.
+[DefaultExecutionOrder(31000)]
+public sealed class CraftScissorsDesignVisual : MonoBehaviour
+{
+    public const string TargetName="Main Section 2 Front Spike";
+    public const float PixelsPerUnit=500f;
+    public static string AssetHash;
+    public static Texture2D Atlas;
+    public static Sprite LeftSprite,RightSprite,ScrewSprite;
+    public Transform fixedHalf,movingHalf,screw;
+    Transform leftShadow,rightShadow;
+    public float snipElapsed=1f,angle,previousContact=.4f;
+    public int snips;
+    public bool assetVerified;
+    ToySpikeVisual legacy;SpriteRenderer legacyFace;
+    static readonly FieldInfo ContactField=typeof(ToySpikeVisual).GetField("contactElapsed",BindingFlags.Instance|BindingFlags.NonPublic);
+    const float Duration=.55f,LeftAngle=16f,RightOpen=-16f,RightClosed=23.2f;
+
+    static void Load()
+    {
+        if(Atlas)return;
+        string path=Path.Combine(Path.GetDirectoryName(Application.dataPath),"ReviewAssets","HimoHitoWarmScissorsParts-v3.png");
+        byte[] bytes=File.ReadAllBytes(path);
+        using(var sha=SHA256.Create())AssetHash=BitConverter.ToString(sha.ComputeHash(bytes)).Replace("-","").ToLowerInvariant();
+        if(AssetHash!="b5558bcd4b40b7762201184ec0324758803aaaede56cc3102dbd169670c57c1d")throw new Exception("Approved body asset differs");
+        Atlas=new Texture2D(2,2,TextureFormat.RGBA32,true){name="Human approved warm scissors v3 external PNG",filterMode=FilterMode.Trilinear,wrapMode=TextureWrapMode.Clamp};
+        if(!Atlas.LoadImage(bytes)||Atlas.width!=1536||Atlas.height!=1024)throw new Exception("Approved atlas decode/dimensions failed");
+        LeftSprite=Part(new Rect(230,0,390,1024),new Vector2(547,1024-483),"Warm left rigid handle-shank-blade");
+        RightSprite=Part(new Rect(830,0,400,1024),new Vector2(904,1024-483),"Warm right rigid handle-shank-blade");
+        ScrewSprite=Part(new Rect(1273,1024-545,111,112),new Vector2(1328,1024-489),"Shared pivot screw");
+        Debug.Log("C05_WARM_PLACEMENT_PNG sha256="+AssetHash+" pixels="+Atlas.width+"x"+Atlas.height);
+    }
+    static Sprite Part(Rect rect,Vector2 pivot,string name)
+    {
+        var s=Sprite.Create(Atlas,rect,new Vector2((pivot.x-rect.x)/rect.width,(pivot.y-rect.y)/rect.height),PixelsPerUnit,0,SpriteMeshType.FullRect);
+        s.name=name;return s;
+    }
+    void Awake()
+    {
+        Load();legacy=GetComponent<ToySpikeVisual>();legacyFace=transform.Find("Wooden Toy Spike Face").GetComponent<SpriteRenderer>();
+        var root=new GameObject("Warm scissors body VISUAL ONLY").transform;root.SetParent(transform,false);
+        root.localScale=new Vector3(1f/transform.lossyScale.x,1f/transform.lossyScale.y,1f);
+        root.position=new Vector3(14.80f,-7.73f,transform.position.z);
+        root.localRotation=Quaternion.Euler(0,0,75f);
+        // No floor foreshortening: preserve the Human-approved shape and thickness.
+        leftShadow=Create(root,LeftSprite,"Left small contact shadow",2,new Color(.055f,.025f,.015f,.27f));
+        rightShadow=Create(root,RightSprite,"Right small contact shadow",2,new Color(.055f,.025f,.015f,.21f));
+        fixedHalf=Create(root,LeftSprite,"Left rigid half",3,Color.white);
+        movingHalf=Create(root,RightSprite,"Right rigid half",4,Color.white);
+        screw=Create(root,ScrewSprite,"Shared screw",5,Color.white);
+        previousContact=(float)ContactField.GetValue(legacy);
+        assetVerified=fixedHalf.GetComponent<SpriteRenderer>().sprite.texture==Atlas&&movingHalf.GetComponent<SpriteRenderer>().sprite.texture==Atlas;
+        Apply();
+    }
+    Transform Create(Transform parent,Sprite sprite,string name,int order,Color color)
+    {
+        var go=new GameObject(name);go.transform.SetParent(parent,false);
+        var sr=go.AddComponent<SpriteRenderer>();sr.sprite=sprite;sr.color=color;
+        sr.sortingLayerID=legacyFace.sortingLayerID;sr.sortingOrder=order;return go.transform;
+    }
+    void LateUpdate()
+    {
+        if(legacyFace)legacyFace.enabled=false;
+        if(Time.timeScale<=0)return;
+        float contact=(float)ContactField.GetValue(legacy);
+        if(contact<previousContact-.05f){snipElapsed=0;snips++;}
+        previousContact=contact;snipElapsed=Mathf.Min(1f,snipElapsed+Time.deltaTime);Apply();
+    }
+    void Apply()
+    {
+        float t=snipElapsed/Duration;
+        float close=t<.31f?Mathf.SmoothStep(0,1,t/.31f):t<.42f?1:1-Mathf.SmoothStep(0,1,(t-.42f)/.58f);
+        // Fixed half rests on the floor. Only the second rigid half moves.
+        // The relative closed angle 7.2 degrees equals the approved static body pose.
+        float idle=RightOpen+.65f*Mathf.Sin(Time.timeSinceLevelLoad*1.25f);
+        angle=Mathf.Lerp(idle,RightClosed,Mathf.Clamp01(close));
+        fixedHalf.localRotation=Quaternion.Euler(0,0,LeftAngle);movingHalf.localRotation=Quaternion.Euler(0,0,angle);
+        leftShadow.localRotation=fixedHalf.localRotation;rightShadow.localRotation=movingHalf.localRotation;
+        Vector3 offset=Quaternion.Euler(0,0,-75f)*new Vector3(.012f,-.035f,0);
+        leftShadow.localPosition=offset;rightShadow.localPosition=offset;
+    }
+    public Vector3[] BladePoints(bool left)
+    {
+        // Representative blade outline from original atlas pixels, for design/trigger overlay.
+        // This is not a new collider and not an exact alpha contour.
+        Vector2[] p=left?new[]{new Vector2(506,542),new Vector2(604,505),new Vector2(601,790),new Vector2(578,1004)}
+                       :new[]{new Vector2(848,507),new Vector2(941,543),new Vector2(891,790),new Vector2(869,1004)};
+        Vector2 pivot=left?new Vector2(547,483):new Vector2(904,483);
+        var tr=left?fixedHalf:movingHalf;var result=new Vector3[p.Length];
+        for(int i=0;i<p.Length;i++)result[i]=tr.TransformPoint(new Vector3((p[i].x-pivot.x)/PixelsPerUnit,(pivot.y-p[i].y)/PixelsPerUnit,0));
+        return result;
+    }
+}

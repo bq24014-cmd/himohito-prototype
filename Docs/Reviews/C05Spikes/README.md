@@ -1,17 +1,20 @@
 # C05 危険物のデザインレビュー
 
-[最新状態](LATEST.json)／[暖色ハサミ本体の比較](runs/20261021T180204_JST/Report.md)
+[最新状態](LATEST.json)／[暖色ハサミの配置と開閉](runs/20261021T193948_JST/Report.md)／[手動起動](runs/20261021T193948_JST/Launch.md)
 
-最新はハサミ本体1案の開・閉静止図です。[通常画角相当](runs/20261021T180204_JST/Images/normal.png)と[同倍率拡大](runs/20261021T180204_JST/Images/large.png)で、旧赤・床置き緑・新暖色を比較できます。新しい実Unity画面ではなく、生成素材を共通支点で組み立てたデザイン図です。
+最新は、本体デザインをHumanが承認した暖色ハサミを、本編手前のトゲ1個だけへ配置した隔離候補です。形・色・厚みを保持し、吊り具なし、床付近への斜め置き、共通支点での短い閉じ戻りを実Unity画面で確認できます。
 
-床置き緑案 `25ba244` はHuman不採用。「デザイン性は前回の方がよかった」が理由です。旧赤案 `38a83d9` も不採用のまま。今回参考にしたのは旧赤案の暖かい色・厚み・立体感であり、旧案全体の承認ではありません。
+[通常画角](runs/20261021T193948_JST/Images/Warm_Open.jpg)／[拡大比較](runs/20261021T193948_JST/Images/Detail_Comparison.jpg)／[3秒の開閉動画](runs/20261021T193948_JST/Video/Warm-OpenClose-FullSize.mp4)／[判定重ね図](runs/20261021T193948_JST/Images/BladeTrigger_Overlay.jpg)
 
-今回の新案にはボタン・布ループを使わず、持ち手から刃までを左右各1部品として共通のネジでつなげました。床面投影による平たい見え方は継承していません。配置・支持具・待機動作は未制作。新しいBuildや物理QAは今回の範囲外です。
+既存判定は保持しているため、刃間の空白への反応と刃の一部のはみ出しが残ります。本体承認と、配置・動き・判定・本番統合の承認を分けて扱います。
 
-## 過去資料
+## 履歴
 
-- [床置き緑案](runs/20261021T164023_JST/Report.md)：Human不採用、原本保持。
-- [旧赤吊り案](runs/20261021T160305_JST/Report.md)：Human不採用、原本保持。
-- [三角形の素材調整案](runs/20261021T150807_JST/Report.md)：Human採用保留、保持。
+- [暖色本体 5c64b9e](runs/20261021T180204_JST/Report.md)：本体の形・色・厚みをHuman承認。今回の基準。
+- [床置き緑案 25ba244](runs/20261021T164023_JST/Report.md)：Human不採用。原本保持。
+- [旧赤吊り案 38a83d9](runs/20261021T160305_JST/Report.md)：Human不採用。原本保持。
+- [三角形素材調整案 80a004](runs/20261021T150807_JST/Report.md)：Human採用保留。
 
-Production `394b4a74e366678a9e0542d895b9a26f86993c19` と既存差分を保護。正式採用・Production統合・mainへのcommit/pushはしていません。C11・C18はHOLDです。画像・素材はこのbranchの通常ファイルで確認できます。
+実行は既存非Development Unity Player＋独立managed overlay＋承認PNGの実読込。新規Unity Buildではありません。API/診断撮影とOS実キーを区別し、実キーは未確認です。画像・動画は通常のGitHubファイルとして共有しています。
+
+Production `394b4a74e366678a9e0542d895b9a26f86993c19`、既存差分・過去Proofを保持。mainへのcommit/push・本番統合・他のトゲへの展開は行っていません。C11・C18はHOLD、配置と動きのHuman Review待ちです。
