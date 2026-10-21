@@ -1,0 +1,41 @@
+{
+  "execution": "Existing non-Development Unity Player + separately compiled managed overlay; NOT new Unity Build",
+  "production_head": "394b4a74e366678a9e0542d895b9a26f86993c19",
+  "assembly_sha256": "7d15f950391d26045acf9530cb86fb9fce78c61847786900951b3febef4e82a9",
+  "player_exe_sha256": "837986201d89be25426b8415cb3bc945f077e5b13f4722d6763d04ebd38c5472",
+  "audio_sha256": "19420a96fc903f9be4404f50e2e072bc9e103483f9b1f075b571439f7bf1f5a4",
+  "unity": "6000.3.21f1",
+  "sources": {
+    "AudioReview.cs": "a06c9b604cc7c5af4577062c32ae193b6c35ddb370493eacf85a17c360081364",
+    "CameraChecks.cs": "e754eed440818423d5e95e41d149bb8b780613eed19be5faded173b67055a196",
+    "CraftScissorsMotion.cs": "b2f8195bc7550903e37316e55761b20850555a09bbfb23d20ce1dd8d619df6a4",
+    "HorizontalCameraFollow.cs": "03105e317c866d33d5e50e746749f73bdcf11f195cfd6e15e84ec3aa0ffe396a",
+    "RopeSpikeHazard.cs": "2b389ac27fc969e828f408acf64e238da913f6ef6019c0f1ddf78ad1626b385e",
+    "RouteReview.cs": "4ca3eab3e398d8f9f286c498dc11c59013306e29546c5a4e343a3ac76ba0dc3b",
+    "ScissorsCutAudio.cs": "59df282f1cd0c31ae35addc3ff53d184f92ab294107fed6c3f06af6eca58113b"
+  },
+  "preserved_approved": {
+    "Sources/CraftScissorsMotion.cs": {
+      "previous": "b2f8195bc7550903e37316e55761b20850555a09bbfb23d20ce1dd8d619df6a4",
+      "current": "b2f8195bc7550903e37316e55761b20850555a09bbfb23d20ce1dd8d619df6a4",
+      "unchanged": true
+    },
+    "Sources/HorizontalCameraFollow.cs": {
+      "previous": "03105e317c866d33d5e50e746749f73bdcf11f195cfd6e15e84ec3aa0ffe396a",
+      "current": "03105e317c866d33d5e50e746749f73bdcf11f195cfd6e15e84ec3aa0ffe396a",
+      "unchanged": true
+    },
+    "Runtime/ReviewAssets/BladeGeometry.json": {
+      "previous": "682dddeadf434346e6765160693ce983b143d50a2c89a24bc1310ec70825fd5f",
+      "current": "682dddeadf434346e6765160693ce983b143d50a2c89a24bc1310ec70825fd5f",
+      "unchanged": true
+    },
+    "Assets/HimoHitoWarmScissorsParts-v3.png": {
+      "previous": "b5558bcd4b40b7762201184ec0324758803aaaede56cc3102dbd169670c57c1d",
+      "current": "b5558bcd4b40b7762201184ec0324758803aaaede56cc3102dbd169670c57c1d",
+      "unchanged": true
+    }
+  },
+  "scope": "Only front scissors cut-success sound; physical cut/refund untouched",
+  "compiler": "Unity 6.3 Roslyn assemblies; 0 errors, 4 existing CS0649 warnings"
+}

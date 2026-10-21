@@ -1,0 +1,74 @@
+using System;
+using System.IO;
+using System.Collections.Generic;
+using UnityEngine;
+using HimoHito;
+
+// Isolated presentation addition. Attached only to the approved front scissors.
+public sealed class ScissorsCutAudio : MonoBehaviour
+{
+    public const float AuthoredGain = .42f;
+    [Serializable] public class Cue
+    {
+        public float time, fixedTime, effects, volume;
+        public int frame;
+        public double dspTime;
+        public bool played, attachedAfterCut;
+    }
+    public readonly List<Cue> cues = new List<Cue>();
+    public int playCount {get;private set;}
+    public string AssetSha256 {get;private set;}
+    public AudioSource Source {get;private set;}
+    RopeSpikeHazard hazard;
+    AudioClip clip;
+
+    void Awake()
+    {
+        if(name != CraftScissorsMotion.TargetName){enabled=false;return;}
+        hazard=GetComponent<RopeSpikeHazard>();
+        byte[] bytes=File.ReadAllBytes(Path.Combine(Application.dataPath,"../ReviewAssets/HimoHitoScissorsSnip-v1.wav"));
+        using(var sha=System.Security.Cryptography.SHA256.Create())
+            AssetSha256=BitConverter.ToString(sha.ComputeHash(bytes)).Replace("-","").ToLowerInvariant();
+        clip=ReadPcm16(bytes);
+        Source=gameObject.AddComponent<AudioSource>();
+        Source.clip=clip;Source.playOnAwake=false;Source.loop=false;
+        Source.spatialBlend=0;Source.dopplerLevel=0;Source.priority=80;
+        Source.volume=AuthoredGain*HimoHitoAudioSettings.Effects;
+    }
+    void OnEnable(){if(hazard!=null)hazard.RopeCutSucceeded+=OnCut;}
+    void OnDisable(){if(hazard!=null)hazard.RopeCutSucceeded-=OnCut;if(Source)Source.Stop();}
+    void OnDestroy(){if(clip)Destroy(clip);}
+    void LateUpdate(){if(Source)Source.volume=AuthoredGain*HimoHitoAudioSettings.Effects;}
+    void OnCut(RopeController rope)
+    {
+        float effects=HimoHitoAudioSettings.Effects;
+        Source.volume=AuthoredGain*effects;
+        bool play=effects>0 && Source && clip;
+        // Successful native cut has already detached/refunded. No animation-only trigger.
+        if(play){Source.Play();playCount++;}
+        cues.Add(new Cue{time=Time.time,fixedTime=Time.fixedTime,frame=Time.frameCount,
+            dspTime=AudioSettings.dspTime,effects=effects,volume=Source.volume,
+            played=play,attachedAfterCut=rope.IsAttached});
+    }
+    static AudioClip ReadPcm16(byte[] bytes)
+    {
+        using(var reader=new BinaryReader(new MemoryStream(bytes)))
+        {
+            if(new string(reader.ReadChars(4))!="RIFF")throw new InvalidDataException("Not WAV");
+            reader.ReadInt32();if(new string(reader.ReadChars(4))!="WAVE")throw new InvalidDataException("Not WAVE");
+            int channels=0,rate=0,bits=0;short format=0;byte[] pcm=null;
+            while(reader.BaseStream.Position+8<=bytes.Length)
+            {
+                string id=new string(reader.ReadChars(4));int count=reader.ReadInt32();
+                long next=reader.BaseStream.Position+count+(count&1);
+                if(id=="fmt "){format=reader.ReadInt16();channels=reader.ReadInt16();rate=reader.ReadInt32();reader.ReadInt32();reader.ReadInt16();bits=reader.ReadInt16();}
+                else if(id=="data")pcm=reader.ReadBytes(count);
+                reader.BaseStream.Position=next;
+            }
+            if(format!=1||bits!=16||channels!=1||rate!=48000||pcm==null)throw new InvalidDataException("Expected mono PCM16 48kHz");
+            var samples=new float[pcm.Length/2];for(int i=0;i<samples.Length;i++)samples[i]=BitConverter.ToInt16(pcm,2*i)/32768f;
+            var result=AudioClip.Create("HimoHito original craft-scissors snip v1",samples.Length,channels,rate,false);
+            result.SetData(samples,0);return result;
+        }
+    }
+}

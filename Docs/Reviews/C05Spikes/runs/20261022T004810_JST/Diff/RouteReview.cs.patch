@@ -1,0 +1,30 @@
+--- Previous/RouteReview.cs
++++ Isolated/RouteReview.cs
+@@ -36,6 +36,7 @@
+         float drop=variant=="Candidate"?(QA?float.Parse(Arg("-drop","0.95"),System.Globalization.CultureInfo.InvariantCulture):.95f):0;
+         if(variant!="Current"){CraftScissorsMotion.ReviewSupportY=CraftScissorsMotion.FloorY-drop;scissors=target.AddComponent<CraftScissorsMotion>();}
+         front=target.GetComponents<Collider2D>().First(c=>c.enabled);far=GameObject.Find("Main Section 2 Far Spike").GetComponent<Collider2D>();
++        if(scissors)SetupCutSound(target);
+         if(!QA){Debug.Log("C05_MANUAL_READY "+variant+" length="+length+" drop="+drop+" scale=1 cameraLower="+HorizontalCameraFollow.ReviewSectionTwoLowering+". Native controls. No auto input/capture/exit.");yield break;}
+         output=Arg("-output");Directory.CreateDirectory(output);Application.logMessageReceived+=Log;
+         result=new Result{variant=variant,scale=scissors?1:0,drop=drop,supportY=CraftScissorsMotion.FloorY-drop,phase=Arg("-phase","natural"),length=length,unity=Application.unityVersion,development=Debug.isDebugBuild,attachTick=int.Parse(Arg("-attachTick","30")),releaseTick=int.Parse(Arg("-releaseTick","90")),initial=entry,hook=hook,playerSize=pc.bounds.size};
+@@ -50,12 +51,17 @@
+         Place(entry);if(scissors)scissors.DiagnosticRelease();yield return new WaitForEndOfFrame();
+         result.initial=body.position;if(scissors)result.initialScissors=scissors.Record();
+         active=true;recording=true;
++        BeginAudio();audioResult.startTime=Time.time;
+         for(int i=0;i<300;i++){
+-            yield return new WaitForEndOfFrame();Record();RecordCamera("route");
++            yield return new WaitForEndOfFrame();Record();CaptureAudio();
+             if(Arg("-capture")=="1"&&i%2==0)Capture(i/2);
+         }
+         active=false;recording=false;Set(mover,"moveInput",0f);result.finished=true;
+-        SaveCamera();File.WriteAllText(Path.Combine(output,"Result.json"),JsonUtility.ToJson(result,true));Debug.Log("C05_ROUTE_DONE "+variant+" L"+length+" attach="+result.attachSucceeded+" reached="+result.reachedBank+" errors="+result.errors);Application.Quit(result.errors>0?2:0);
++        EndAudio();
++        if(Arg("-negativeChecks")=="1"&&cutAudio)yield return NegativeAudioChecks();
++        audioResult.finished=true;
++        File.WriteAllText(Path.Combine(output,"AudioResult.json"),JsonUtility.ToJson(audioResult,true));
++        File.WriteAllText(Path.Combine(output,"Result.json"),JsonUtility.ToJson(result,true));Debug.Log("C05_ROUTE_DONE "+variant+" L"+length+" attach="+result.attachSucceeded+" reached="+result.reachedBank+" errors="+result.errors);Application.Quit(result.errors>0?2:0);
+     }
+     void FixedUpdate()
+     {

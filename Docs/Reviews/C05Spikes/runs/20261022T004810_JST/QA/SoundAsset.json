@@ -1,0 +1,13 @@
+{
+  "source": "Original deterministic procedural synthesis for this proof; no external samples, recording, AI audio service, or copied sound.",
+  "duration_seconds": 0.22,
+  "sample_rate": 48000,
+  "channels": 1,
+  "format": "PCM16 WAV",
+  "peak_dbfs": -4.152166210034923,
+  "rms_dbfs": -17.71598442400173,
+  "energy_above_6000_hz_ratio": 0.00010378806824834533,
+  "reverb": false,
+  "sha256": "19420a96fc903f9be4404f50e2e072bc9e103483f9b1f075b571439f7bf1f5a4",
+  "seed": 220510
+}

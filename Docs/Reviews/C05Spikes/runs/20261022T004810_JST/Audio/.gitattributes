@@ -1,0 +1,2 @@
+# This tiny original review sound is a regular Git blob, not an LFS pointer.
+*.wav -filter -diff -merge -text

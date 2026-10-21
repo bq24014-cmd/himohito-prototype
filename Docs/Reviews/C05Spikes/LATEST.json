@@ -1,24 +1,24 @@
 {
   "review_id": "C05Spikes",
-  "run_id": "20261021T234155_JST",
-  "updated_at": "2026-10-21T23:44:23.535170+09:00",
+  "run_id": "20261022T004810_JST",
+  "updated_at": "2026-10-22T00:51:08.183028+09:00",
   "time_zone": "Asia/Tokyo",
-  "proof": "C05SectionTwoCameraProof_20261021",
-  "revision": "camera-r2-s2-minus095",
+  "proof": "C05ScissorsCutAudioProof_20261022",
+  "revision": "cut-audio-r1",
   "production_head": "394b4a74e366678a9e0542d895b9a26f86993c19",
-  "status": "第2区間カメラ下降の隔離候補1案。長さ6通過と区間出入り・R確認済み。Human Review待ち",
+  "status": "切断音の隔離候補1案・Human実聴待ち。Technical checks PASS。Production未統合",
   "production_integrated": false,
-  "human_adoption": "本体と上向きの採用方針を維持。1.00倍下降0.95の配置保持指定。今回の画角候補は未承認",
+  "human_adoption": "本体・1.00倍下降0.95配置・S2画角をHuman承認。今回の音は未承認",
   "branch": "codex/review-c05-spikes",
-  "report": "Docs/Reviews/C05Spikes/runs/20261021T234155_JST/Report.md",
-  "launch": "Docs/Reviews/C05Spikes/runs/20261021T234155_JST/Launch.md",
-  "images": "Docs/Reviews/C05Spikes/runs/20261021T234155_JST/Images",
-  "qa": "Docs/Reviews/C05Spikes/runs/20261021T234155_JST/QA",
-  "diff": "Docs/Reviews/C05Spikes/runs/20261021T234155_JST/Diff",
-  "assets": "Docs/Reviews/C05Spikes/runs/20261021T193948_JST/Assets",
-  "execution": "Existing Unity 6000.3.21f1 non-Development Player + isolated managed overlay + LoadImage approved PNG; actual Unity screen captures; NOT a new Unity Build",
-  "technical": "Before/After length6 both reach2.30s, no contact/errors; 300frame gameplay and CameraX difference0, scissors pose/blade vertices difference0. Reversible geometric S2 entry/exit and native R API framing checked. Manual before/after20s smoke. Not OS or Human play.",
-  "scope": "Only isolated HorizontalCameraFollow cameraY changes: S2 x5.5..25 derived from existing shore bounds. Offset-0.95, existing smoothing and background-follow. Scissors1.00/drop0.95, physics, terrain, zoom8.7, resolution1600x900 unchanged.",
+  "report": "Docs/Reviews/C05Spikes/runs/20261022T004810_JST/Report.md",
+  "launch": "Docs/Reviews/C05Spikes/runs/20261022T004810_JST/Launch.md",
+  "images": "Docs/Reviews/C05Spikes/runs/20261022T004810_JST/Images",
+  "qa": "Docs/Reviews/C05Spikes/runs/20261022T004810_JST/QA",
+  "diff": "Docs/Reviews/C05Spikes/runs/20261022T004810_JST/Diff",
+  "assets": "Docs/Reviews/C05Spikes/runs/20261022T004810_JST/Audio",
+  "execution": "Existing Unity 6000.3.21f1 non-Development Player + isolated managed overlay + PCM16 WAV loaded into AudioClip; actual Player AudioRenderer mixed capture; NOT OS keys/speaker loopback/new Unity Build",
+  "technical": "Native blade cut1 => new sound1; noncontact/E/idle/visual-only/detached0; Effects mute Play0 and cut-window PCM0; volume50% RMS ratio0.4999997; 300-frame physics/camera/scissors deltas0.",
+  "scope": "Only front scissors sound. Approved body, drop0.95, camera offset0.95, shape, blade collider, physical cut/refund unchanged. Prior proofs preserved.",
   "approved_body": {
     "commit": "5c64b9ef63d574a56ef4fbb0439ee7d364800dfa",
     "report": "Docs/Reviews/C05Spikes/runs/20261021T180204_JST/Report.md",
@@ -26,8 +26,13 @@
     "asset_sha256": "b5558bcd4b40b7762201184ec0324758803aaaede56cc3102dbd169670c57c1d",
     "scope": "body design and upright handles-down placement direction"
   },
-  "render_assembly_sha256": "ebac019bb0e9d782d147e00db3c0d2fb190adbdceafe1756729c8bd3e638ac63",
+  "render_assembly_sha256": "7d15f950391d26045acf9530cb86fb9fce78c61847786900951b3febef4e82a9",
   "previous_candidates": [
+    {
+      "commit": "254d53fd7f258465637939693f9b63a40effca32",
+      "report": "Docs/Reviews/C05Spikes/runs/20261021T234155_JST/Report.md",
+      "status": "本体・配置・画角をHuman承認。今回の比較基準として保持。Production未統合"
+    },
     {
       "commit": "fbee47009a8efc5305bad680801d0a4c30ff3d88",
       "report": "Docs/Reviews/C05Spikes/runs/20261021T231056_JST/Report.md",
@@ -89,18 +94,19 @@
     }
   ],
   "unconfirmed": [
-    "OS実キー・Human視認性/操作感/正式採用",
-    "新規Unity Build／Editor Play、音の実聴",
-    "全入力・全解除タイミングでの通過保証",
-    "左へ戻った後の高さ完全収束までの撮影（目標切替と上昇開始は確認）",
-    "下端余白約19pxの快適さ、床との自然さ",
-    "他のトゲへの展開。C11/C18はHOLD"
+    "Human実聴・音色/音量/気持ちよさ",
+    "OS実キー・スピーカー/ヘッドフォンの実出音",
+    "新規Unity Build / Editor Play",
+    "全接触角度/音量の網羅",
+    "他のトゲへの展開は禁止。C11/C18はHOLD"
   ],
   "holds": [
     "C11",
     "C18"
   ],
-  "video": "Docs/Reviews/C05Spikes/runs/20261021T234155_JST/Video",
-  "frames": "Docs/Reviews/C05Spikes/runs/20261021T234155_JST/Images",
-  "previous_static_report": "Docs/Reviews/C05Spikes/runs/20261021T203813_JST/Report.md"
+  "video": "Docs/Reviews/C05Spikes/runs/20261022T004810_JST/Video",
+  "frames": "Docs/Reviews/C05Spikes/runs/20261022T004810_JST/Images",
+  "previous_static_report": "Docs/Reviews/C05Spikes/runs/20261021T203813_JST/Report.md",
+  "audio": "Docs/Reviews/C05Spikes/runs/20261022T004810_JST/Audio/HimoHitoScissorsSnip-v1.wav",
+  "audio_asset_sha256": "19420a96fc903f9be4404f50e2e072bc9e103483f9b1f075b571439f7bf1f5a4"
 }

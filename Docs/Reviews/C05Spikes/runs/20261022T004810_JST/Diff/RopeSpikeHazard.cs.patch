@@ -1,0 +1,19 @@
+--- Previous/RopeSpikeHazard.cs
++++ Isolated/RopeSpikeHazard.cs
+@@ -9,6 +9,8 @@
+         private Collider2D detectionArea;
+         private RopeController playerRope;
+         private Collider2D playerCollider;
++        // Presentation notification only: no changes to contact, detach or refund.
++        public event System.Action<RopeController> RopeCutSucceeded;
+ 
+         private void Awake()
+         {
+@@ -63,6 +65,7 @@
+                 {
+                     GetComponent<ToySpikeVisual>()?.PlayContact(point, velocity);
+                     RopeLandingFluff.PlaySpikeContact(other, point, velocity);
++                    RopeCutSucceeded?.Invoke(rope);
+                 }
+             }
+         }

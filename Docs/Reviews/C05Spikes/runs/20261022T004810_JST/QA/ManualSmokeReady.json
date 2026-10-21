@@ -1,0 +1,24 @@
+[
+  {
+    "mode": "After",
+    "pid": 32124,
+    "nativeManualReady": true,
+    "readySeconds": 20.4615995,
+    "alive10SecondsAfterReady": true,
+    "closeMainWindow": true,
+    "osKeyInput": "Not tested",
+    "automaticQA": "not enabled",
+    "sourceClock": "Time.captureFramerate not set in manual"
+  },
+  {
+    "mode": "Before",
+    "pid": 13252,
+    "nativeManualReady": true,
+    "readySeconds": 20.3031978,
+    "alive10SecondsAfterReady": true,
+    "closeMainWindow": true,
+    "osKeyInput": "Not tested",
+    "automaticQA": "not enabled",
+    "sourceClock": "Time.captureFramerate not set in manual"
+  }
+]

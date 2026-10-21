@@ -1,14 +1,16 @@
 # C05 危険物のデザインレビュー
 
-[最新状態](LATEST.json)／[第2区間のカメラ高さ比較](runs/20261021T234155_JST/Report.md)／[手動起動](runs/20261021T234155_JST/Launch.md)
+[最新状態](LATEST.json)／[ハサミ切断音の報告](runs/20261022T004810_JST/Report.md)／[手動起動](runs/20261022T004810_JST/Launch.md)
 
-暖色本体と「持ち手が下・刃先が上」はHumanの採用方針です。今回は1.00倍・下降0.95のハサミを保持し、第2区間だけカメラ中心を0.95下げた隔離候補です。既存の背景高さ追従を利用し、ハサミ・判定・地形・物理・ズーム・解像度は変更していません。Production未統合です。
+本体・1.00倍下降0.95の配置・第2区間の画角はHuman承認済みです。今回追加したのは、前側ハサミ1個で実際の切断が成立したときだけ鳴る0.22秒の音です。音は未承認、Production未統合です。
 
-[長さ6の通常速度比較](runs/20261021T234155_JST/Video/Compare_L6.mp4)／[候補の全画面動画](runs/20261021T234155_JST/Video/After_L6.mp4)／[通常画角比較](runs/20261021T234155_JST/Images/Overview.jpg)
+[試聴用WAV](runs/20261022T004810_JST/Audio/HimoHitoScissorsSnip-v1.wav)／[実Player音声入り動画](runs/20261022T004810_JST/Video/After_PlayerMix.mp4)／[切断音なしの比較](runs/20261022T004810_JST/Video/Before_PlayerMix.mp4)
 
-同じ入口・入力で長さ6は変更前後とも2.30秒で対岸到達。300フレームの位置・速度・残量・接触結果とハサミの刃頂点は同一です。区間出入りとRの画角切替を確認し、持ち手まで画面内に収まりました。画面下端の余白は約19pxと小さく、自然さ・快適さはHuman判断待ちです。自動入力/APIと手動起動の確認であり、Human実キー試遊ではありません。
+実切断1回→再生1回、非接触・E解除・開閉だけは0回、効果音ミュートは新音0回。音量50%の再生振幅比は約0.5です。300フレームの位置・速度・残量・Camera・ハサミ開閉は音追加前後で差0。自動入力／APIの記録であり、OS実キー・Humanの実聴評価ではありません。
 
 ## 履歴
+
+- [画角下降案 254d53f](runs/20261021T234155_JST/Report.md)：本体・配置・画角をHuman承認。今回の音追加の基準として保持。Production未統合。
 
 - [1.00倍・下降0.95案 fbee470](runs/20261021T231056_JST/Report.md)：今回の配置基準として保持。元画角では持ち手が画面外。長さ5／6の通過と7の接触記録を保持。
 
@@ -26,6 +28,6 @@
 - [三角形素材調整案 80a004](runs/20261021T150807_JST/Report.md)：Human採用保留。
 
 
-実行は既存非Development Unity Player＋独立managed overlay＋承認PNGの実読込。新規Unity Buildではありません。診断API・自動撮影とOS実キーを区別し、OS実キー・Humanの今回の操作感は未確認です。
+実行は既存非Development Unity Player＋独立managed overlay＋承認PNG／新WAVの実読込。新規Unity Buildではありません。録音は実Player内部のAudioRenderer最終ミックスで、音の後付けやOSスピーカー録音ではありません。診断API・自動撮影とOS実キーを区別し、Human実聴と操作感は未確認です。
 
-Production `394b4a74e366678a9e0542d895b9a26f86993c19`、既存差分・過去Proofを保持。レビュー資料だけをこのbranchに共有します。C11/C18はHOLD。今回の画角候補はHuman Review待ちです。
+Production `394b4a74e366678a9e0542d895b9a26f86993c19`、既存差分・過去Proofを保持。レビュー資料だけをこのbranchに共有します。C11/C18はHOLD。今回の音候補はHuman Review待ちです。
