@@ -1,0 +1,352 @@
+{
+    "unity": "6000.3.21f1",
+    "variant": "Candidate",
+    "method": "Native menu/overlay APIs + deterministic DrawAtTime stills; real-time movie. NOT OS keys, mouse clicks or Human play.",
+    "catalog": "{\n  \"stages\": [\n    {\n      \"id\": \"tutorial\",\n      \"mapArt\": \"practice\",\n      \"title\": \"はじめての毛糸\",\n      \"subtitle\": \"TUTORIAL  /  チュートリアル\",\n      \"description\": \"掛ける・振る・編む。看板と一緒に、4つの区間で練習しよう。\\nヒモ残量 99 ／ 第1区間から\",\n      \"scenePath\": \"Assets/Scenes/Tutorial.unity\",\n      \"available\": true\n    },\n    {\n      \"id\": \"main\",\n      \"mapArt\": \"toybox\",\n      \"title\": \"おもちゃ箱への道\",\n      \"subtitle\": \"STAGE 01  /  本編\",\n      \"description\": \"自分のヒモを使って、夜の子供部屋を冒険。\\nヒモ残量 50 ／ 第1区間から\",\n      \"scenePath\": \"Assets/Scenes/MainStage.unity\",\n      \"available\": true\n    },\n    {\n      \"id\": \"upcoming\",\n      \"mapArt\": \"Art/HimoHitoStageMapUpcoming-v1\",\n      \"title\": \"つぎの冒険\",\n      \"subtitle\": \"COMING SOON  /  追加予定\",\n      \"description\": \"新しいステージを追加予定です。\\n今はまだあそべません。お楽しみに。\",\n      \"scenePath\": \"\",\n      \"available\": false\n    }\n  ]\n}\n",
+    "development": false,
+    "finished": true,
+    "width": 1600,
+    "height": 900,
+    "errors": 0,
+    "quitAttempts": 1,
+    "art": [
+        "Art/HimoHitoStageMapBackground-v1=True",
+        "Art/HimoHitoStageMapPieces-v1=True",
+        "Art/HimoHitoStageMapUpcoming-v1=True",
+        "Art/HimoHitoStageDiorama-v1=True"
+    ],
+    "checks": [
+        "PASS all existing menu art available in Player Resources",
+        "PASS normal Tutorial title entry",
+        "PASS upcoming native start rejected",
+        "PASS native select main",
+        "PASS native select upcoming",
+        "PASS native select tutorial",
+        "PASS native menu help opens existing sheet",
+        "PASS help blocks native select and start",
+        "PASS help blocks native quit",
+        "PASS close-help same-frame guard blocks quit",
+        "PASS title restored after help",
+        "PASS native start begins cloth transition",
+        "PASS Tutorial start committed",
+        "PASS Tutorial starting99 unchanged",
+        "PASS Tutorial tour finished by existing diagnostic API",
+        "PASS native pause-confirm return from Tutorial",
+        "PASS native main stage start accepted",
+        "PASS main Scene reference loaded",
+        "PASS MainStage starting50 unchanged",
+        "PASS Main tour finished by existing diagnostic API",
+        "PASS native pause-confirm return from MainStage",
+        "PASS native title exit reaches quit (QA cancels)",
+        "PASS clear records unchanged"
+    ],
+    "tourNotes": [
+        "Tutorial: native tour state active=True, elapsed=0.0199957, duration=6.583333; finish API used, not an OS skip or full tour",
+        "MainStage: native tour state active=True, elapsed=0.0600002, duration=19.57083; finish API used, not an OS skip or full tour"
+    ],
+    "videoTimes": [],
+    "states": [
+        {
+            "phase": "island0",
+            "scene": "Tutorial",
+            "outcome": "WaitingToStart",
+            "error": "",
+            "selected": 0,
+            "help": false,
+            "canUse": true,
+            "transition": false,
+            "simulated": false,
+            "remaining": 99.0,
+            "capacity": 99.0,
+            "music": 1.0,
+            "effects": 1.0,
+            "timeScale": 1.0,
+            "cleared": [
+                false,
+                false,
+                false
+            ]
+        },
+        {
+            "phase": "island1",
+            "scene": "Tutorial",
+            "outcome": "WaitingToStart",
+            "error": "",
+            "selected": 1,
+            "help": false,
+            "canUse": true,
+            "transition": false,
+            "simulated": false,
+            "remaining": 99.0,
+            "capacity": 99.0,
+            "music": 1.0,
+            "effects": 1.0,
+            "timeScale": 1.0,
+            "cleared": [
+                false,
+                false,
+                false
+            ]
+        },
+        {
+            "phase": "island2",
+            "scene": "Tutorial",
+            "outcome": "WaitingToStart",
+            "error": "",
+            "selected": 2,
+            "help": false,
+            "canUse": true,
+            "transition": false,
+            "simulated": false,
+            "remaining": 99.0,
+            "capacity": 99.0,
+            "music": 1.0,
+            "effects": 1.0,
+            "timeScale": 1.0,
+            "cleared": [
+                false,
+                false,
+                false
+            ]
+        },
+        {
+            "phase": "upcoming rejected",
+            "scene": "Tutorial",
+            "outcome": "WaitingToStart",
+            "error": "このステージは追加予定です。今はまだあそべません。",
+            "selected": 2,
+            "help": false,
+            "canUse": true,
+            "transition": false,
+            "simulated": false,
+            "remaining": 99.0,
+            "capacity": 99.0,
+            "music": 1.0,
+            "effects": 1.0,
+            "timeScale": 1.0,
+            "cleared": [
+                false,
+                false,
+                false
+            ]
+        },
+        {
+            "phase": "error display fixture (no catalog mutation)",
+            "scene": "Tutorial",
+            "outcome": "WaitingToStart",
+            "error": "ステージが見つかりません。Build Settingsを確認してください。",
+            "selected": 0,
+            "help": false,
+            "canUse": true,
+            "transition": false,
+            "simulated": false,
+            "remaining": 99.0,
+            "capacity": 99.0,
+            "music": 1.0,
+            "effects": 1.0,
+            "timeScale": 1.0,
+            "cleared": [
+                false,
+                false,
+                false
+            ]
+        },
+        {
+            "phase": "help",
+            "scene": "Tutorial",
+            "outcome": "WaitingToStart",
+            "error": "",
+            "selected": 0,
+            "help": true,
+            "canUse": false,
+            "transition": false,
+            "simulated": false,
+            "remaining": 99.0,
+            "capacity": 99.0,
+            "music": 1.0,
+            "effects": 1.0,
+            "timeScale": 0.0,
+            "cleared": [
+                false,
+                false,
+                false
+            ]
+        },
+        {
+            "phase": "tutorial started",
+            "scene": "Tutorial",
+            "outcome": "Playing",
+            "error": "",
+            "selected": 0,
+            "help": false,
+            "canUse": false,
+            "transition": false,
+            "simulated": false,
+            "remaining": 99.0,
+            "capacity": 99.0,
+            "music": 1.0,
+            "effects": 1.0,
+            "timeScale": 1.0,
+            "cleared": [
+                false,
+                false,
+                false
+            ]
+        },
+        {
+            "phase": "returned title",
+            "scene": "Tutorial",
+            "outcome": "WaitingToStart",
+            "error": "",
+            "selected": 0,
+            "help": false,
+            "canUse": true,
+            "transition": false,
+            "simulated": false,
+            "remaining": 99.0,
+            "capacity": 99.0,
+            "music": 1.0,
+            "effects": 1.0,
+            "timeScale": 1.0,
+            "cleared": [
+                false,
+                false,
+                false
+            ]
+        },
+        {
+            "phase": "main loaded",
+            "scene": "MainStage",
+            "outcome": "MainStage",
+            "error": "",
+            "selected": -1,
+            "help": false,
+            "canUse": false,
+            "transition": false,
+            "simulated": false,
+            "remaining": 50.0,
+            "capacity": 50.0,
+            "music": 1.0,
+            "effects": 1.0,
+            "timeScale": 1.0,
+            "cleared": [
+                false,
+                false,
+                false
+            ]
+        },
+        {
+            "phase": "final",
+            "scene": "Tutorial",
+            "outcome": "WaitingToStart",
+            "error": "",
+            "selected": 0,
+            "help": false,
+            "canUse": true,
+            "transition": false,
+            "simulated": false,
+            "remaining": 99.0,
+            "capacity": 99.0,
+            "music": 1.0,
+            "effects": 1.0,
+            "timeScale": 1.0,
+            "cleared": [
+                false,
+                false,
+                false
+            ]
+        }
+    ],
+    "layout": [
+        {
+            "label": "Tab　操作方法",
+            "font": "MPlusRounded1c-Bold",
+            "rectangle": {
+                "serializedVersion": "2",
+                "x": 176.0,
+                "y": 550.0,
+                "width": 238.0,
+                "height": 48.0
+            },
+            "preferred": 18,
+            "requiredHeight": 31.1200008392334,
+            "availableHeight": 32.0,
+            "fits": true,
+            "onScreen": true
+        },
+        {
+            "label": "Esc　終了",
+            "font": "MPlusRounded1c-Bold",
+            "rectangle": {
+                "serializedVersion": "2",
+                "x": 866.0,
+                "y": 550.0,
+                "width": 238.0,
+                "height": 48.0
+            },
+            "preferred": 18,
+            "requiredHeight": 31.1200008392334,
+            "availableHeight": 32.0,
+            "fits": true,
+            "onScreen": true
+        },
+        {
+            "label": "Enter　はじめる",
+            "font": "MPlusRounded1c-Bold",
+            "rectangle": {
+                "serializedVersion": "2",
+                "x": 478.0,
+                "y": 542.0,
+                "width": 324.0,
+                "height": 62.0
+            },
+            "preferred": 22,
+            "requiredHeight": 36.70000076293945,
+            "availableHeight": 46.0,
+            "fits": true,
+            "onScreen": true
+        }
+    ],
+    "poses": [
+        {
+            "phase": "island0",
+            "trace": 1.0,
+            "knot": 1.0,
+            "practicePosition": 0.5,
+            "practiceActivity": 1.0,
+            "chestOpen": 0.0
+        },
+        {
+            "phase": "island1",
+            "trace": 1.0,
+            "knot": 1.0,
+            "practicePosition": 0.0,
+            "practiceActivity": 0.0,
+            "chestOpen": 1.0
+        },
+        {
+            "phase": "island2",
+            "trace": 1.0,
+            "knot": 1.0,
+            "practicePosition": 0.0,
+            "practiceActivity": 0.0,
+            "chestOpen": 0.0
+        },
+        {
+            "phase": "practice moving",
+            "trace": 0.0,
+            "knot": 0.0,
+            "practicePosition": 0.0,
+            "practiceActivity": 0.0,
+            "chestOpen": 0.0
+        },
+        {
+            "phase": "chest opens",
+            "trace": 1.0,
+            "knot": 1.0,
+            "practicePosition": 0.0,
+            "practiceActivity": 0.0,
+            "chestOpen": 0.25795993208885195
+        }
+    ]
+}

@@ -1,0 +1,309 @@
+{
+  "production_base": "3b6ac0dfe6a1035f8eed33d2efe720be51c481b3",
+  "approved_review_commit": "3c37d9ba60ead7232be93206853e1578cea12d9f",
+  "source_sha256": "e64f145cc8402ae6af80d1ab284a793eb931682688078df5fe6c3127be80c76b",
+  "candidate_source_sha256": "e64f145cc8402ae6af80d1ab284a793eb931682688078df5fe6c3127be80c76b",
+  "source_exact_match": true,
+  "execution": "Unity 6000.3.21f1 existing non-Development Windows Player + Production-source managed overlay; external QA fixture; not a new Unity Build or Editor Play",
+  "compile": {
+    "production_sources": 119,
+    "errors": 0,
+    "existing_CS0649_warnings_per_compile": 4,
+    "production_only_dll_sha256": "4fa9a84abe199f9a947a8e943106afb868f6a497a7bdca0f9ef313cbe26af8b1",
+    "integrated_qa_dll_sha256": "2af4ace4b81fd1f1eb419be3ada28599708e9811e567df68a084c6ca64df3f89"
+  },
+  "protection": {
+    "files_checked": 262,
+    "changed": [
+      "Assets/Scripts/StageSelectionView.cs"
+    ],
+    "unrelated_unchanged": 261,
+    "past_proof_files_checked": 13,
+    "past_proof_changes": [],
+    "stage_catalog_sha256": "a103566bc870e259c2c83bcab40a3587bbef543ef8a4184018ed0068f77d8dd3"
+  },
+  "os_keys": "unconfirmed this integration; previous skill attempt list_apps timed out, not retried",
+  "physical_clicks": "unconfirmed",
+  "resolutions": {
+    "1600": {
+      "finished": true,
+      "errors": 0,
+      "development": false,
+      "checks": [
+        "PASS all existing menu art available in Player Resources",
+        "PASS normal Tutorial title entry",
+        "PASS upcoming native start rejected",
+        "PASS native select main",
+        "PASS native select upcoming",
+        "PASS native select tutorial",
+        "PASS native menu help opens existing sheet",
+        "PASS help blocks native select and start",
+        "PASS help blocks native quit",
+        "PASS close-help same-frame guard blocks quit",
+        "PASS title restored after help",
+        "PASS native start begins cloth transition",
+        "PASS Tutorial start committed",
+        "PASS Tutorial starting99 unchanged",
+        "PASS Tutorial tour finished by existing diagnostic API",
+        "PASS native pause-confirm return from Tutorial",
+        "PASS native main stage start accepted",
+        "PASS main Scene reference loaded",
+        "PASS MainStage starting50 unchanged",
+        "PASS Main tour finished by existing diagnostic API",
+        "PASS native pause-confirm return from MainStage",
+        "PASS native title exit reaches quit (QA cancels)",
+        "PASS clear records unchanged"
+      ],
+      "layout": [
+        {
+          "label": "Tab　操作方法",
+          "font": "MPlusRounded1c-Bold",
+          "rectangle": {
+            "serializedVersion": "2",
+            "x": 176.0,
+            "y": 550.0,
+            "width": 238.0,
+            "height": 48.0
+          },
+          "preferred": 18,
+          "requiredHeight": 31.1200008392334,
+          "availableHeight": 32.0,
+          "fits": true,
+          "onScreen": true
+        },
+        {
+          "label": "Esc　終了",
+          "font": "MPlusRounded1c-Bold",
+          "rectangle": {
+            "serializedVersion": "2",
+            "x": 866.0,
+            "y": 550.0,
+            "width": 238.0,
+            "height": 48.0
+          },
+          "preferred": 18,
+          "requiredHeight": 31.1200008392334,
+          "availableHeight": 32.0,
+          "fits": true,
+          "onScreen": true
+        },
+        {
+          "label": "Enter　はじめる",
+          "font": "MPlusRounded1c-Bold",
+          "rectangle": {
+            "serializedVersion": "2",
+            "x": 478.0,
+            "y": 542.0,
+            "width": 324.0,
+            "height": 62.0
+          },
+          "preferred": 22,
+          "requiredHeight": 36.70000076293945,
+          "availableHeight": 46.0,
+          "fits": true,
+          "onScreen": true
+        }
+      ],
+      "catalog_matches_production": true,
+      "states_match_approved": true,
+      "layout_matches_approved": true,
+      "static_poses_match_approved": true,
+      "screenshots": [
+        {
+          "image": "00_Island0.png",
+          "max_channel_difference": 0,
+          "mean_channel_difference": 0.0,
+          "different_pixel_percent": 0.0
+        },
+        {
+          "image": "01_Island1.png",
+          "max_channel_difference": 0,
+          "mean_channel_difference": 0.0,
+          "different_pixel_percent": 0.0
+        },
+        {
+          "image": "02_Island2.png",
+          "max_channel_difference": 0,
+          "mean_channel_difference": 0.0,
+          "different_pixel_percent": 0.0
+        },
+        {
+          "image": "03_UpcomingRejected.png",
+          "max_channel_difference": 0,
+          "mean_channel_difference": 0.0,
+          "different_pixel_percent": 0.0
+        },
+        {
+          "image": "04_LoadError.png",
+          "max_channel_difference": 0,
+          "mean_channel_difference": 0.0,
+          "different_pixel_percent": 0.0
+        },
+        {
+          "image": "05_Help.png",
+          "max_channel_difference": 0,
+          "mean_channel_difference": 0.0,
+          "different_pixel_percent": 0.0
+        },
+        {
+          "image": "06_HelpClosed.png",
+          "max_channel_difference": 214,
+          "mean_channel_difference": 0.02327962962962963,
+          "different_pixel_percent": 0.040763888888888884
+        },
+        {
+          "image": "07_StartCloth.png",
+          "max_channel_difference": 252,
+          "mean_channel_difference": 43.59532222222222,
+          "different_pixel_percent": 99.99631944444445
+        },
+        {
+          "image": "08_ReturnedTitle.png",
+          "max_channel_difference": 231,
+          "mean_channel_difference": 0.024769907407407407,
+          "different_pixel_percent": 0.042430555555555555
+        }
+      ]
+    },
+    "1280": {
+      "finished": true,
+      "errors": 0,
+      "development": false,
+      "checks": [
+        "PASS all existing menu art available in Player Resources",
+        "PASS normal Tutorial title entry",
+        "PASS upcoming native start rejected",
+        "PASS native select main",
+        "PASS native select upcoming",
+        "PASS native select tutorial",
+        "PASS native menu help opens existing sheet",
+        "PASS help blocks native select and start",
+        "PASS help blocks native quit",
+        "PASS close-help same-frame guard blocks quit",
+        "PASS title restored after help",
+        "PASS native start begins cloth transition",
+        "PASS Tutorial start committed",
+        "PASS Tutorial starting99 unchanged",
+        "PASS Tutorial tour finished by existing diagnostic API",
+        "PASS native pause-confirm return from Tutorial",
+        "PASS native main stage start accepted",
+        "PASS main Scene reference loaded",
+        "PASS MainStage starting50 unchanged",
+        "PASS Main tour finished by existing diagnostic API",
+        "PASS native pause-confirm return from MainStage",
+        "PASS native title exit reaches quit (QA cancels)",
+        "PASS clear records unchanged"
+      ],
+      "layout": [
+        {
+          "label": "Tab　操作方法",
+          "font": "MPlusRounded1c-Bold",
+          "rectangle": {
+            "serializedVersion": "2",
+            "x": 176.0,
+            "y": 550.0,
+            "width": 238.0,
+            "height": 48.0
+          },
+          "preferred": 18,
+          "requiredHeight": 31.1200008392334,
+          "availableHeight": 32.0,
+          "fits": true,
+          "onScreen": true
+        },
+        {
+          "label": "Esc　終了",
+          "font": "MPlusRounded1c-Bold",
+          "rectangle": {
+            "serializedVersion": "2",
+            "x": 866.0,
+            "y": 550.0,
+            "width": 238.0,
+            "height": 48.0
+          },
+          "preferred": 18,
+          "requiredHeight": 31.1200008392334,
+          "availableHeight": 32.0,
+          "fits": true,
+          "onScreen": true
+        },
+        {
+          "label": "Enter　はじめる",
+          "font": "MPlusRounded1c-Bold",
+          "rectangle": {
+            "serializedVersion": "2",
+            "x": 478.0,
+            "y": 542.0,
+            "width": 324.0,
+            "height": 62.0
+          },
+          "preferred": 22,
+          "requiredHeight": 36.70000076293945,
+          "availableHeight": 46.0,
+          "fits": true,
+          "onScreen": true
+        }
+      ],
+      "catalog_matches_production": true,
+      "states_match_approved": true,
+      "layout_matches_approved": true,
+      "static_poses_match_approved": true,
+      "screenshots": [
+        {
+          "image": "00_Island0.png",
+          "max_channel_difference": 0,
+          "mean_channel_difference": 0.0,
+          "different_pixel_percent": 0.0
+        },
+        {
+          "image": "01_Island1.png",
+          "max_channel_difference": 0,
+          "mean_channel_difference": 0.0,
+          "different_pixel_percent": 0.0
+        },
+        {
+          "image": "02_Island2.png",
+          "max_channel_difference": 0,
+          "mean_channel_difference": 0.0,
+          "different_pixel_percent": 0.0
+        },
+        {
+          "image": "03_UpcomingRejected.png",
+          "max_channel_difference": 0,
+          "mean_channel_difference": 0.0,
+          "different_pixel_percent": 0.0
+        },
+        {
+          "image": "04_LoadError.png",
+          "max_channel_difference": 0,
+          "mean_channel_difference": 0.0,
+          "different_pixel_percent": 0.0
+        },
+        {
+          "image": "05_Help.png",
+          "max_channel_difference": 0,
+          "mean_channel_difference": 0.0,
+          "different_pixel_percent": 0.0
+        },
+        {
+          "image": "06_HelpClosed.png",
+          "max_channel_difference": 0,
+          "mean_channel_difference": 0.0,
+          "different_pixel_percent": 0.0
+        },
+        {
+          "image": "07_StartCloth.png",
+          "max_channel_difference": 0,
+          "mean_channel_difference": 0.0,
+          "different_pixel_percent": 0.0
+        },
+        {
+          "image": "08_ReturnedTitle.png",
+          "max_channel_difference": 219,
+          "mean_channel_difference": 0.01205078125,
+          "different_pixel_percent": 0.02745225694444444
+        }
+      ]
+    }
+  }
+}
