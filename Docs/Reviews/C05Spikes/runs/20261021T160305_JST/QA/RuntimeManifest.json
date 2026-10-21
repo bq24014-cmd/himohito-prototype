@@ -1,0 +1,43 @@
+{
+  "runtime": "Unity 6000.3.21f1 existing non-Development Player with managed overlay; NOT a new Unity Build",
+  "production_head": "394b4a74e366678a9e0542d895b9a26f86993c19",
+  "production_source_changed": false,
+  "assembly_sha256": "cb3fe4bf95c32625fb84450e4703f2e8bc97cee374eddfbc9df0936c4a032374",
+  "png_sha256": "8791676e78e3ca32f5de1809be42938f641043fe25564a5158d9a13d8b332b71",
+  "png_loading": "LoadImage -> 3 atlas Sprite rects -> actual SpriteRenderer; alpha kept",
+  "resources_bake_verified": false,
+  "source_files": {
+    "CraftScissorsDesignVisual.cs": "6f0d7d5011e05c3729006ab6013155ea198ce2f0e519cc8dfed257f07a6e332e",
+    "GroundingReview.cs": "811abbe13e716bf55cdd34503ac97ace7b8c3a8e1ddd803982f585f799a25b00"
+  },
+  "videos": {
+    "Contact-Comparison.mp4": {
+      "bytes": 279980,
+      "sha256": "417a11173d14147c0b14d92e7dda68a813dedaa0974d9777f4f3c7416d945623",
+      "fps": 25,
+      "duration_seconds": 1.32,
+      "audio": false
+    },
+    "Idle-Comparison.mp4": {
+      "bytes": 202366,
+      "sha256": "b66088cb305d2844be9cb6d35a283c751e56d1edefd7b3f82cc4690d7b019349",
+      "fps": 25,
+      "duration_seconds": 2.0,
+      "audio": false
+    },
+    "Scissors-Contact-FullSize.mp4": {
+      "bytes": 438922,
+      "sha256": "cd59893e2c992f6eb1c9db7c7417168ccfb9365792dfcb8847ebf0157cae7c84",
+      "fps": 25,
+      "duration_seconds": 1.32,
+      "audio": false
+    },
+    "Scissors-Idle-FullSize.mp4": {
+      "bytes": 236693,
+      "sha256": "9a36ecd7f8b80e5b590f04945d2701182354b5dc813e30cb9b35d4d82f6d85c7",
+      "fps": 25,
+      "duration_seconds": 2.0,
+      "audio": false
+    }
+  }
+}

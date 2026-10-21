@@ -1,9 +1,11 @@
-# C05 トゲの工作素材レビュー
+# C05 危険物のデザインレビュー
 
-[最新状態](LATEST.json)／[候補と確認結果](runs/20261021T150807_JST/Report.md)／[手動比較の起動](runs/20261021T150807_JST/Launch.md)
+[最新状態](LATEST.json)／[ハサミのデザイン試作](runs/20261021T160305_JST/Report.md)／[手動確認の起動](runs/20261021T160305_JST/Launch.md)
 
-Production `394b4a74e366678a9e0542d895b9a26f86993c19`を保護した隔離候補1案。木枠の主張と密な縫い目を抑え、木と赤い布の素材感を調整した。Tutorial第2区間3本と本編第2区間2本を比較できる。
+最新は本編第2区間の手前トゲ1か所だけを、木部の布ループに掛けた工作用ハサミに置き換えた表示試作。通常画角・拡大・待機と接触動画を共有している。判定は元のままなので、刃の根元側の不一致を寸法図で示した。物理・判定の変更は実装していない。
 
-Human Review待ち。正式採用・Production統合・mainへのcommit/pushは行っていない。C11・C18はHOLD、C09等は対象外。新素材は外部PNGの実読込で確認したもので、managed overlayだけでResourcesを更新したものでも、新規Unity Buildでもない。
+旧素材調整候補 `80a0048680082e8d5bde14a2aaad196a51edb882` はHuman採用保留。[旧報告](runs/20261021T150807_JST/Report.md)と原本・素材を保持している。赤い三角形の維持条件は今回解除された。
+
+Production `394b4a74e366678a9e0542d895b9a26f86993c19` を保護。デザインレビュー待ちで、正式採用・Production統合・mainへのcommit/pushは行っていない。C11・C18はHOLD、C09等は対象外。実行は既存Player＋managed overlay＋外部PNGの実読込。新規Unity BuildやResources焼込み成功とは扱わない。
 
 画像・動画はこのbranch内の通常ファイル。動画をLFSポインタにしない指定はこのレビュー配下だけに置き、Productionやリポジトリ全体の設定は変更していない。

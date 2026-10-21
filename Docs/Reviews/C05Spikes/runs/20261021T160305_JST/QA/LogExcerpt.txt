@@ -1,0 +1,31 @@
+Final run log excerpts; original logs retained locally. No OS/Human operation claimed.
+
+Current-r3
+C05_SCISSORS_FINISHED errors=0
+PASS MainStage existing two hazards
+PASS only Front spike has new design
+PASS native grounded attach
+PASS pause sampled before fall failure
+PASS pause freezes physics and scissors pose
+PASS native trigger detach/refund preserved
+PASS R restores existing section2 state
+PASS scene reload retains selected visual
+
+Scissors-r3
+C05_SCISSORS_EXTERNAL_PNG sha256=8791676e78e3ca32f5de1809be42938f641043fe25564a5158d9a13d8b332b71 pixels=1536x1024
+C05_SCISSORS_FINISHED errors=0
+PASS MainStage existing two hazards
+PASS only Front spike has new design
+PASS actual SpriteRenderers use decoded PNG atlas
+PASS native grounded attach
+PASS pause sampled before fall failure
+PASS pause freezes physics and scissors pose
+PASS native trigger detach/refund preserved
+PASS one short close then reopen for one native contact
+PASS R restores existing section2 state
+PASS scene reload retains selected visual
+
+Compile: errors0;4 existing CS0649 warnings.
+Manual: READY + process alive5seconds; stopped only launched PID.
+Earlier r1: hidden window captured black pixels, not used as visual evidence.
+Earlier r1/r2: pause check after fall-failure state; wrong test timing. Native result screen cancels pause. Final r3 checks during active contact.

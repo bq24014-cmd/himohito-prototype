@@ -1,0 +1,6568 @@
+{
+    "variant": "Current",
+    "unity": "6000.3.21f1",
+    "assetHash": "unchanged Production Resources",
+    "execution": "Existing non-Development Player + managed overlay + real external PNG. Diagnostic initial placement; native attached contact, pause and R. Not OS/Human play.",
+    "development": false,
+    "finished": true,
+    "errors": 0,
+    "ppu": 51.72414016723633,
+    "hazards": [
+        {
+            "name": "Main Section 2 Far Spike",
+            "sprite": "HimoHitoCraftSpike-v1 Processed",
+            "root": {
+                "x": 19.549999237060548,
+                "y": -8.199999809265137,
+                "z": 0.0
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "scale": {
+                "x": 0.699999988079071,
+                "y": 0.30000001192092898,
+                "z": 1.0
+            },
+            "size": {
+                "x": 0.8600000143051148,
+                "y": 0.8999999761581421
+            },
+            "offset": {
+                "x": 0.0,
+                "y": -0.029999999329447748
+            },
+            "center": {
+                "x": 19.549999237060548,
+                "y": -8.208999633789063
+            },
+            "worldSize": {
+                "x": 0.6020011901855469,
+                "y": 0.2700004577636719
+            },
+            "trigger": true,
+            "enabled": true
+        },
+        {
+            "name": "Main Section 2 Front Spike",
+            "sprite": "HimoHitoCraftSpike-v1 Processed",
+            "root": {
+                "x": 15.350000381469727,
+                "y": -7.900000095367432,
+                "z": 0.0
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "scale": {
+                "x": 0.8999999761581421,
+                "y": 0.8999999761581421,
+                "z": 1.0
+            },
+            "size": {
+                "x": 0.8600000143051148,
+                "y": 0.8999999761581421
+            },
+            "offset": {
+                "x": 0.0,
+                "y": -0.029999999329447748
+            },
+            "center": {
+                "x": 15.350000381469727,
+                "y": -7.927000045776367
+            },
+            "worldSize": {
+                "x": 0.7740001678466797,
+                "y": 0.8099994659423828
+            },
+            "trigger": true,
+            "enabled": true
+        }
+    ],
+    "reloadHazards": [
+        {
+            "name": "Main Section 2 Far Spike",
+            "sprite": "HimoHitoCraftSpike-v1 Processed",
+            "root": {
+                "x": 19.549999237060548,
+                "y": -8.199999809265137,
+                "z": 0.0
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "scale": {
+                "x": 0.699999988079071,
+                "y": 0.30000001192092898,
+                "z": 1.0
+            },
+            "size": {
+                "x": 0.8600000143051148,
+                "y": 0.8999999761581421
+            },
+            "offset": {
+                "x": 0.0,
+                "y": -0.029999999329447748
+            },
+            "center": {
+                "x": 19.549999237060548,
+                "y": -8.208999633789063
+            },
+            "worldSize": {
+                "x": 0.6020011901855469,
+                "y": 0.2700004577636719
+            },
+            "trigger": true,
+            "enabled": true
+        },
+        {
+            "name": "Main Section 2 Front Spike",
+            "sprite": "HimoHitoCraftSpike-v1 Processed",
+            "root": {
+                "x": 15.350000381469727,
+                "y": -7.900000095367432,
+                "z": 0.0
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "scale": {
+                "x": 0.8999999761581421,
+                "y": 0.8999999761581421,
+                "z": 1.0
+            },
+            "size": {
+                "x": 0.8600000143051148,
+                "y": 0.8999999761581421
+            },
+            "offset": {
+                "x": 0.0,
+                "y": -0.029999999329447748
+            },
+            "center": {
+                "x": 15.350000381469727,
+                "y": -7.927000045776367
+            },
+            "worldSize": {
+                "x": 0.7740001678466797,
+                "y": 0.8099994659423828
+            },
+            "trigger": true,
+            "enabled": true
+        }
+    ],
+    "trace": [
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.28000020980835
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.239832401275635
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.23809289932251
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.2369794845581059
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.23626708984375
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235811233520508
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.2355194091796879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235332489013672
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235213279724121
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235136985778809
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235087871551514
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235056400299072
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235036373138428
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235023498535156
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235014915466309
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235009670257568
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235006332397461
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235004425048828
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.2350029945373539
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235002040863037
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "idle",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "attached approach and real trigger",
+            "root": {
+                "x": 15.350000381469727,
+                "y": -6.699999809265137
+            },
+            "velocity": {
+                "x": 1.2000000476837159,
+                "y": -2.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": true,
+            "grounded": false,
+            "snips": 0
+        },
+        {
+            "phase": "attached approach and real trigger",
+            "root": {
+                "x": 15.373943328857422,
+                "y": -6.7508649826049809
+            },
+            "velocity": {
+                "x": 1.197126865386963,
+                "y": -2.5432558059692385
+            },
+            "camera": {
+                "x": 15.373943328857422,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": true,
+            "grounded": false,
+            "snips": 0
+        },
+        {
+            "phase": "attached approach and real trigger",
+            "root": {
+                "x": 15.397828102111817,
+                "y": -6.8125691413879398
+            },
+            "velocity": {
+                "x": 1.194260597229004,
+                "y": -3.0852108001708986
+            },
+            "camera": {
+                "x": 15.373943328857422,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": true,
+            "grounded": false,
+            "snips": 0
+        },
+        {
+            "phase": "attached approach and real trigger",
+            "root": {
+                "x": 15.421655654907227,
+                "y": -6.885086536407471
+            },
+            "velocity": {
+                "x": 1.1914011240005494,
+                "y": -3.625868320465088
+            },
+            "camera": {
+                "x": 15.374445915222168,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": true,
+            "grounded": false,
+            "snips": 0
+        },
+        {
+            "phase": "attached approach and real trigger",
+            "root": {
+                "x": 15.445426940917969,
+                "y": -6.968390941619873
+            },
+            "velocity": {
+                "x": 1.1885485649108887,
+                "y": -4.165231227874756
+            },
+            "camera": {
+                "x": 15.37619686126709,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.0,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": false,
+            "snips": 0
+        },
+        {
+            "phase": "attached approach and real trigger",
+            "root": {
+                "x": 15.4691743850708,
+                "y": -7.062588691711426
+            },
+            "velocity": {
+                "x": 1.1873611211776734,
+                "y": -4.709880828857422
+            },
+            "camera": {
+                "x": 15.379621505737305,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.019999992102384568,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": false,
+            "snips": 0
+        },
+        {
+            "phase": "attached approach and real trigger",
+            "root": {
+                "x": 15.492897987365723,
+                "y": -7.167668342590332
+            },
+            "velocity": {
+                "x": 1.1861748695373536,
+                "y": -5.253986358642578
+            },
+            "camera": {
+                "x": 15.38492488861084,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.039999984204769137,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": false,
+            "snips": 0
+        },
+        {
+            "phase": "attached approach and real trigger",
+            "root": {
+                "x": 15.516597747802735,
+                "y": -7.283619403839111
+            },
+            "velocity": {
+                "x": 1.1849898099899293,
+                "y": -5.797548294067383
+            },
+            "camera": {
+                "x": 15.39216423034668,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.0599999763071537,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": false,
+            "snips": 0
+        },
+        {
+            "phase": "attached approach and real trigger",
+            "root": {
+                "x": 15.540273666381836,
+                "y": -7.410430908203125
+            },
+            "velocity": {
+                "x": 1.1838059425354005,
+                "y": -6.340567111968994
+            },
+            "camera": {
+                "x": 15.401298522949219,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.07999996840953827,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": false,
+            "snips": 0
+        },
+        {
+            "phase": "attached approach and real trigger",
+            "root": {
+                "x": 15.563925743103028,
+                "y": -7.548091888427734
+            },
+            "velocity": {
+                "x": 1.182623267173767,
+                "y": -6.8830437660217289
+            },
+            "camera": {
+                "x": 15.412224769592286,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.09999996423721314,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": false,
+            "snips": 0
+        },
+        {
+            "phase": "attached approach and real trigger",
+            "root": {
+                "x": 15.587554931640625,
+                "y": -7.696591377258301
+            },
+            "velocity": {
+                "x": 1.1814417839050294,
+                "y": -7.424978256225586
+            },
+            "camera": {
+                "x": 15.424805641174317,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.119999960064888,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": false,
+            "snips": 0
+        },
+        {
+            "phase": "attached approach and real trigger",
+            "root": {
+                "x": 15.611160278320313,
+                "y": -7.855918884277344
+            },
+            "velocity": {
+                "x": 1.180261492729187,
+                "y": -7.966371536254883
+            },
+            "camera": {
+                "x": 15.438885688781739,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.13999995589256288,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": false,
+            "snips": 0
+        },
+        {
+            "phase": "attached approach and real trigger",
+            "root": {
+                "x": 15.63474178314209,
+                "y": -8.026062965393067
+            },
+            "velocity": {
+                "x": 1.1790823936462403,
+                "y": -8.507224082946778
+            },
+            "camera": {
+                "x": 15.454305648803711,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.15999995172023774,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": false,
+            "snips": 0
+        },
+        {
+            "phase": "attached approach and real trigger",
+            "root": {
+                "x": 15.658299446105957,
+                "y": -8.207014083862305
+            },
+            "velocity": {
+                "x": 1.177904486656189,
+                "y": -9.04753589630127
+            },
+            "camera": {
+                "x": 15.470908164978028,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.1799999475479126,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": false,
+            "snips": 0
+        },
+        {
+            "phase": "attached approach and real trigger",
+            "root": {
+                "x": 15.68183422088623,
+                "y": -8.398759841918946
+            },
+            "velocity": {
+                "x": 1.1767277717590333,
+                "y": -9.587307929992676
+            },
+            "camera": {
+                "x": 15.488546371459961,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.19999994337558747,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": false,
+            "snips": 0
+        },
+        {
+            "phase": "attached approach and real trigger",
+            "root": {
+                "x": 15.705345153808594,
+                "y": -8.601290702819825
+            },
+            "velocity": {
+                "x": 1.1755521297454835,
+                "y": -10.126540184020996
+            },
+            "camera": {
+                "x": 15.507081985473633,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.21999993920326234,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": false,
+            "snips": 0
+        },
+        {
+            "phase": "attached approach and real trigger",
+            "root": {
+                "x": 15.728832244873047,
+                "y": -8.814595222473145
+            },
+            "velocity": {
+                "x": 1.174377679824829,
+                "y": -10.665233612060547
+            },
+            "camera": {
+                "x": 15.526391983032227,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.2399999350309372,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": false,
+            "snips": 0
+        },
+        {
+            "phase": "attached approach and real trigger",
+            "root": {
+                "x": 15.752296447753907,
+                "y": -9.038662910461426
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 15.526391983032227,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.25999993085861208,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": false,
+            "snips": 0
+        },
+        {
+            "phase": "attached approach and real trigger",
+            "root": {
+                "x": 15.752296447753907,
+                "y": -9.038662910461426
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 15.526391983032227,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.27999991178512576,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": false,
+            "snips": 0
+        },
+        {
+            "phase": "attached approach and real trigger",
+            "root": {
+                "x": 15.752296447753907,
+                "y": -9.038662910461426
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 15.526391983032227,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.2999998927116394,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": false,
+            "snips": 0
+        },
+        {
+            "phase": "attached approach and real trigger",
+            "root": {
+                "x": 15.752296447753907,
+                "y": -9.038662910461426
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 15.526391983032227,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.3199998736381531,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": false,
+            "snips": 0
+        },
+        {
+            "phase": "attached approach and real trigger",
+            "root": {
+                "x": 15.752296447753907,
+                "y": -9.038662910461426
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 15.526391983032227,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.33999985456466677,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": false,
+            "snips": 0
+        },
+        {
+            "phase": "attached approach and real trigger",
+            "root": {
+                "x": 15.752296447753907,
+                "y": -9.038662910461426
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 15.526391983032227,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.3599998354911804,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": false,
+            "snips": 0
+        },
+        {
+            "phase": "attached approach and real trigger",
+            "root": {
+                "x": 15.752296447753907,
+                "y": -9.038662910461426
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 15.526391983032227,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.3799998164176941,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": false,
+            "snips": 0
+        },
+        {
+            "phase": "attached approach and real trigger",
+            "root": {
+                "x": 15.752296447753907,
+                "y": -9.038662910461426
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 15.526391983032227,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.39999979734420779,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": false,
+            "snips": 0
+        },
+        {
+            "phase": "attached approach and real trigger",
+            "root": {
+                "x": 15.752296447753907,
+                "y": -9.038662910461426
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 15.526391983032227,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": false,
+            "snips": 0
+        },
+        {
+            "phase": "attached approach and real trigger",
+            "root": {
+                "x": 15.752296447753907,
+                "y": -9.038662910461426
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 15.526391983032227,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": false,
+            "snips": 0
+        },
+        {
+            "phase": "attached approach and real trigger",
+            "root": {
+                "x": 15.752296447753907,
+                "y": -9.038662910461426
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 15.526391983032227,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": false,
+            "snips": 0
+        },
+        {
+            "phase": "attached approach and real trigger",
+            "root": {
+                "x": 15.752296447753907,
+                "y": -9.038662910461426
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 15.526391983032227,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": false,
+            "snips": 0
+        },
+        {
+            "phase": "attached approach and real trigger",
+            "root": {
+                "x": 15.752296447753907,
+                "y": -9.038662910461426
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 15.526391983032227,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": false,
+            "snips": 0
+        },
+        {
+            "phase": "attached approach and real trigger",
+            "root": {
+                "x": 15.752296447753907,
+                "y": -9.038662910461426
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 15.526391983032227,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": false,
+            "snips": 0
+        },
+        {
+            "phase": "attached approach and real trigger",
+            "root": {
+                "x": 15.752296447753907,
+                "y": -9.038662910461426
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 15.526391983032227,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": false,
+            "snips": 0
+        },
+        {
+            "phase": "attached approach and real trigger",
+            "root": {
+                "x": 15.752296447753907,
+                "y": -9.038662910461426
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 15.526391983032227,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": false,
+            "snips": 0
+        },
+        {
+            "phase": "attached approach and real trigger",
+            "root": {
+                "x": 15.752296447753907,
+                "y": -9.038662910461426
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 15.526391983032227,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": false,
+            "snips": 0
+        },
+        {
+            "phase": "attached approach and real trigger",
+            "root": {
+                "x": 15.752296447753907,
+                "y": -9.038662910461426
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 15.526391983032227,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": false,
+            "snips": 0
+        },
+        {
+            "phase": "attached approach and real trigger",
+            "root": {
+                "x": 15.752296447753907,
+                "y": -9.038662910461426
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 15.526391983032227,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": false,
+            "snips": 0
+        },
+        {
+            "phase": "attached approach and real trigger",
+            "root": {
+                "x": 15.752296447753907,
+                "y": -9.038662910461426
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 15.526391983032227,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": false,
+            "snips": 0
+        },
+        {
+            "phase": "attached approach and real trigger",
+            "root": {
+                "x": 15.752296447753907,
+                "y": -9.038662910461426
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 15.526391983032227,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": false,
+            "snips": 0
+        },
+        {
+            "phase": "attached approach and real trigger",
+            "root": {
+                "x": 15.752296447753907,
+                "y": -9.038662910461426
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 15.526391983032227,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": false,
+            "snips": 0
+        },
+        {
+            "phase": "attached approach and real trigger",
+            "root": {
+                "x": 15.752296447753907,
+                "y": -9.038662910461426
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 15.526391983032227,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": false,
+            "snips": 0
+        },
+        {
+            "phase": "attached approach and real trigger",
+            "root": {
+                "x": 15.752296447753907,
+                "y": -9.038662910461426
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 15.526391983032227,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": false,
+            "snips": 0
+        },
+        {
+            "phase": "attached approach and real trigger",
+            "root": {
+                "x": 15.752296447753907,
+                "y": -9.038662910461426
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 15.526391983032227,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": false,
+            "snips": 0
+        },
+        {
+            "phase": "attached approach and real trigger",
+            "root": {
+                "x": 15.752296447753907,
+                "y": -9.038662910461426
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 15.526391983032227,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": false,
+            "snips": 0
+        },
+        {
+            "phase": "attached approach and real trigger",
+            "root": {
+                "x": 15.752296447753907,
+                "y": -9.038662910461426
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 15.526391983032227,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": false,
+            "snips": 0
+        },
+        {
+            "phase": "attached approach and real trigger",
+            "root": {
+                "x": 15.752296447753907,
+                "y": -9.038662910461426
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 15.526391983032227,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": false,
+            "snips": 0
+        },
+        {
+            "phase": "attached approach and real trigger",
+            "root": {
+                "x": 15.752296447753907,
+                "y": -9.038662910461426
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 15.526391983032227,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": false,
+            "snips": 0
+        },
+        {
+            "phase": "attached approach and real trigger",
+            "root": {
+                "x": 15.752296447753907,
+                "y": -9.038662910461426
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 15.526391983032227,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": false,
+            "snips": 0
+        },
+        {
+            "phase": "attached approach and real trigger",
+            "root": {
+                "x": 15.752296447753907,
+                "y": -9.038662910461426
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 15.526391983032227,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": false,
+            "snips": 0
+        },
+        {
+            "phase": "attached approach and real trigger",
+            "root": {
+                "x": 15.752296447753907,
+                "y": -9.038662910461426
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 15.526391983032227,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": false,
+            "snips": 0
+        },
+        {
+            "phase": "attached approach and real trigger",
+            "root": {
+                "x": 15.752296447753907,
+                "y": -9.038662910461426
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 15.526391983032227,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": false,
+            "snips": 0
+        },
+        {
+            "phase": "attached approach and real trigger",
+            "root": {
+                "x": 15.752296447753907,
+                "y": -9.038662910461426
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 15.526391983032227,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": false,
+            "snips": 0
+        },
+        {
+            "phase": "attached approach and real trigger",
+            "root": {
+                "x": 15.752296447753907,
+                "y": -9.038662910461426
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 15.526391983032227,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": false,
+            "snips": 0
+        },
+        {
+            "phase": "attached approach and real trigger",
+            "root": {
+                "x": 15.752296447753907,
+                "y": -9.038662910461426
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 15.526391983032227,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": false,
+            "snips": 0
+        },
+        {
+            "phase": "attached approach and real trigger",
+            "root": {
+                "x": 15.752296447753907,
+                "y": -9.038662910461426
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 15.526391983032227,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": false,
+            "snips": 0
+        },
+        {
+            "phase": "attached approach and real trigger",
+            "root": {
+                "x": 15.752296447753907,
+                "y": -9.038662910461426
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 15.526391983032227,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": false,
+            "snips": 0
+        },
+        {
+            "phase": "attached approach and real trigger",
+            "root": {
+                "x": 15.752296447753907,
+                "y": -9.038662910461426
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 15.526391983032227,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": false,
+            "snips": 0
+        },
+        {
+            "phase": "attached approach and real trigger",
+            "root": {
+                "x": 15.752296447753907,
+                "y": -9.038662910461426
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 15.526391983032227,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": false,
+            "snips": 0
+        },
+        {
+            "phase": "attached approach and real trigger",
+            "root": {
+                "x": 15.752296447753907,
+                "y": -9.038662910461426
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 15.526391983032227,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": false,
+            "snips": 0
+        },
+        {
+            "phase": "attached approach and real trigger",
+            "root": {
+                "x": 15.752296447753907,
+                "y": -9.038662910461426
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 15.526391983032227,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": false,
+            "snips": 0
+        },
+        {
+            "phase": "attached approach and real trigger",
+            "root": {
+                "x": 15.752296447753907,
+                "y": -9.038662910461426
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 15.526391983032227,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": false,
+            "snips": 0
+        },
+        {
+            "phase": "attached approach and real trigger",
+            "root": {
+                "x": 15.752296447753907,
+                "y": -9.038662910461426
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 15.526391983032227,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": false,
+            "snips": 0
+        },
+        {
+            "phase": "attached approach and real trigger",
+            "root": {
+                "x": 15.752296447753907,
+                "y": -9.038662910461426
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 15.526391983032227,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": false,
+            "snips": 0
+        },
+        {
+            "phase": "attached approach and real trigger",
+            "root": {
+                "x": 15.752296447753907,
+                "y": -9.038662910461426
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 15.526391983032227,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": false,
+            "snips": 0
+        },
+        {
+            "phase": "attached approach and real trigger",
+            "root": {
+                "x": 15.752296447753907,
+                "y": -9.038662910461426
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 15.526391983032227,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": false,
+            "snips": 0
+        },
+        {
+            "phase": "native R",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.28000020980835
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "native R",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.239832401275635
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "native R",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.23809289932251
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "native R",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.2369794845581059
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "native R",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.23626708984375
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "native R",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235811233520508
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "native R",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.2355194091796879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "native R",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235332489013672
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "native R",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235213279724121
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "native R",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235136985778809
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "native R",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235087871551514
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "native R",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235056400299072
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "native R",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235036373138428
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "native R",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235023498535156
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "native R",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235014915466309
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "native R",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235009670257568
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "native R",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235006332397461
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "native R",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235004425048828
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "native R",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.2350029945373539
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "native R",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235002040863037
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "native R",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "native R",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "native R",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "native R",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "native R",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "native R",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "native R",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "native R",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "native R",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "native R",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "native R",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.28000020980835
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.239832401275635
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.23809289932251
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.2369794845581059
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.23626708984375
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235811233520508
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.2355194091796879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235332489013672
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235213279724121
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235136985778809
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235087871551514
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235056400299072
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235036373138428
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235023498535156
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235014915466309
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235009670257568
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235006332397461
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235004425048828
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.2350029945373539
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235002040863037
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        },
+        {
+            "phase": "setup",
+            "root": {
+                "x": 12.699999809265137,
+                "y": -4.235001564025879
+            },
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "camera": {
+                "x": 12.699999809265137,
+                "y": 0.0,
+                "z": -10.0
+            },
+            "remaining": 50.0,
+            "selected": 7.0,
+            "contact": 0.4000000059604645,
+            "angle": 0.0,
+            "attached": false,
+            "grounded": true,
+            "snips": 0
+        }
+    ],
+    "checks": [
+        "PASS MainStage existing two hazards",
+        "PASS only Front spike has new design",
+        "PASS native grounded attach",
+        "PASS pause sampled before fall failure",
+        "PASS pause freezes physics and scissors pose",
+        "PASS native trigger detach/refund preserved",
+        "PASS R restores existing section2 state",
+        "PASS scene reload retains selected visual"
+    ],
+    "geometry": [
+        {
+            "name": "Wooden Toy Spike Face",
+            "center": {
+                "x": 15.350000381469727,
+                "y": -7.900000095367432,
+                "z": 0.0
+            },
+            "size": {
+                "x": 0.9000000357627869,
+                "y": 0.8999999761581421,
+                "z": 0.20000000298023225
+            },
+            "screenMin": {
+                "x": 913.793212890625,
+                "y": 18.103435516357423
+            },
+            "screenMax": {
+                "x": 960.3449096679688,
+                "y": 64.65515899658203
+            }
+        }
+    ]
+}

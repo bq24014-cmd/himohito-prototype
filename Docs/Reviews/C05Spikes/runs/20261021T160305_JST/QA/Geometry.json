@@ -1,0 +1,20 @@
+{
+  "old_trigger": {
+    "x_min": 14.963,
+    "x_max": 15.737,
+    "y_min": -8.332,
+    "y_max": -7.522
+  },
+  "visible_hinge": [
+    15.35,
+    -7.2
+  ],
+  "blade_envelope_approximate": [
+    14.988512931999232,
+    -8.22626649438648,
+    15.688302282373375,
+    -7.205228141303941
+  ],
+  "not_implemented": true,
+  "note": "Illustrated from representative atlas blade vertices, not exact silhouette or adopted collision design."
+}

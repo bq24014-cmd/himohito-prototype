@@ -1,0 +1,23 @@
+{
+  "trace_count_equal": true,
+  "trace_phases_equal": true,
+  "root_trigger_contracts_equal": true,
+  "reload_contracts_equal": true,
+  "physics_and_state_max_delta": {
+    "root": 0.0,
+    "velocity": 0.0,
+    "camera": 0.0,
+    "remaining": 0.0,
+    "selected": 0.0,
+    "attached": 0.0,
+    "grounded": 0.0,
+    "contact": 0.0
+  },
+  "trace_frames": [
+    277,
+    277
+  ],
+  "current_errors": 0,
+  "scissors_errors": 0,
+  "pass": true
+}

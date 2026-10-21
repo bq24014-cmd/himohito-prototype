@@ -1,0 +1,88 @@
+using System;
+using System.IO;
+using System.Reflection;
+using System.Security.Cryptography;
+using UnityEngine;
+using HimoHito;
+
+// Isolated DESIGN prototype. It never changes the existing hazard/collider/root.
+// Visible handles are deliberately larger than the legacy box. See the review diagram.
+[DefaultExecutionOrder(31000)]
+public sealed class CraftScissorsDesignVisual : MonoBehaviour
+{
+    public const string TargetName="Main Section 2 Front Spike";
+    public const float PixelsPerUnit=500f;
+    public static string AssetHash;
+    public static Texture2D Atlas;
+    public static Sprite LeftSprite,RightSprite,LoopSprite;
+    public Transform fixedHalf,movingHalf,loop;
+    public float snipElapsed=1f,angle,previousContact=.4f;
+    public int snips;
+    public bool assetVerified;
+    ToySpikeVisual legacy;
+    SpriteRenderer legacyFace;
+    static readonly FieldInfo ContactField=typeof(ToySpikeVisual).GetField("contactElapsed",BindingFlags.Instance|BindingFlags.NonPublic);
+    const float Duration=.36f;
+    const float OpenAngle=16f,ClosedAngle=15f;
+
+    static void Load()
+    {
+        if(Atlas)return;
+        string path=Path.Combine(Path.GetDirectoryName(Application.dataPath),"ReviewAssets","HimoHitoCraftScissorsParts-v1.png");
+        byte[] bytes=File.ReadAllBytes(path);
+        using(var sha=SHA256.Create())AssetHash=BitConverter.ToString(sha.ComputeHash(bytes)).Replace("-","").ToLowerInvariant();
+        Atlas=new Texture2D(2,2,TextureFormat.RGBA32,true){name="CraftScissors generated atlas external PNG",filterMode=FilterMode.Trilinear,wrapMode=TextureWrapMode.Clamp};
+        if(!Atlas.LoadImage(bytes))throw new Exception("Scissors PNG decode failed");
+        // Pixels are unchanged. Atlas cells and hinge pivots are selected in Sprite metadata only.
+        LeftSprite=Part(new Rect(190,0,400,1024),new Vector2(484,1024-474),"Scissors left rigid half",PixelsPerUnit);
+        RightSprite=Part(new Rect(720,0,440,1024),new Vector2(813,1024-474),"Scissors right rigid half",PixelsPerUnit);
+        LoopSprite=Part(new Rect(1260,280,230,450),new Vector2(1370,1024-700),"Wooden button and cotton hanging loop",600f);
+        Debug.Log("C05_SCISSORS_EXTERNAL_PNG sha256="+AssetHash+" pixels="+Atlas.width+"x"+Atlas.height);
+    }
+    static Sprite Part(Rect rect,Vector2 pivot,string name,float ppu)
+    {
+        var s=Sprite.Create(Atlas,rect,new Vector2((pivot.x-rect.x)/rect.width,(pivot.y-rect.y)/rect.height),ppu,0,SpriteMeshType.FullRect);
+        s.name=name;return s;
+    }
+    void Awake()
+    {
+        Load();legacy=GetComponent<ToySpikeVisual>();
+        legacyFace=transform.Find("Wooden Toy Spike Face").GetComponent<SpriteRenderer>();
+        // World-sized child: do not squash the scissors into the old 0.9 x 0.9 square.
+        var root=new GameObject("C05 scissors design visual only").transform;
+        root.SetParent(transform,false);root.localScale=new Vector3(1f/transform.lossyScale.x,1f/transform.lossyScale.y,1f);
+        root.position=new Vector3(transform.position.x,-7.20f,transform.position.z);
+        fixedHalf=Create(root,LeftSprite,"Fixed half",3);movingHalf=Create(root,RightSprite,"Moving half",4);
+        fixedHalf.localRotation=Quaternion.Euler(0,0,OpenAngle);
+        // The loop passes through the fixed upper handle. Its button rests against the cloth wall.
+        Vector3 hole=Quaternion.Euler(0,0,OpenAngle)*new Vector3((350f-484f)/PixelsPerUnit,(474f-200f)/PixelsPerUnit,0);
+        loop=Create(root,LoopSprite,"Cotton hanger",5);loop.localPosition=hole;
+        previousContact=(float)ContactField.GetValue(legacy);
+        assetVerified=fixedHalf.GetComponent<SpriteRenderer>().sprite.texture==Atlas&&movingHalf.GetComponent<SpriteRenderer>().sprite.texture==Atlas;
+        Apply();
+    }
+    Transform Create(Transform parent,Sprite sprite,string name,int order)
+    {
+        var go=new GameObject(name);go.transform.SetParent(parent,false);
+        var sr=go.AddComponent<SpriteRenderer>();sr.sprite=sprite;sr.sortingLayerID=legacyFace.sortingLayerID;sr.sortingOrder=order;return go.transform;
+    }
+    void LateUpdate()
+    {
+        if(legacyFace)legacyFace.enabled=false;
+        if(Time.timeScale<=0f)return;
+        // Read the existing presentation event. No input injection or new hazard rule here.
+        float contact=(float)ContactField.GetValue(legacy);
+        if(contact<previousContact-.05f){snipElapsed=0;snips++;}
+        previousContact=contact;
+        if(Time.deltaTime>0)snipElapsed=Mathf.Min(1f,snipElapsed+Time.deltaTime);
+        Apply();
+    }
+    void Apply()
+    {
+        float idle=-OpenAngle+1.2f*Mathf.Sin(Time.timeSinceLevelLoad*1.45f);
+        float t=snipElapsed/Duration;
+        float close=t<.30f?Mathf.SmoothStep(0,1,t/.30f):t<.39f?1:1-Mathf.SmoothStep(0,1,(t-.39f)/.61f);
+        angle=Mathf.Lerp(idle,ClosedAngle,Mathf.Clamp01(close));
+        if(movingHalf)movingHalf.localRotation=Quaternion.Euler(0,0,angle);
+    }
+}

@@ -1,0 +1,9 @@
+{
+  "ready": true,
+  "alive_after_ready_5_seconds": true,
+  "automatic_input": false,
+  "os_keys": false,
+  "human_play": false,
+  "mode": "Manual; isolated fixture entry placement only",
+  "shutdown": "Only the process launched by this check; exact path verified"
+}
