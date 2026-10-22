@@ -1,0 +1,67 @@
+{
+  "AudioReview.cs": {
+    "changed_from3caca": false,
+    "sha256": "170d7d39040005bf5021a8a33df5c18c70eca94f34bb05c1e41a2771646a3e34",
+    "type": "unchanged from3caca"
+  },
+  "CameraChecks.cs": {
+    "changed_from3caca": false,
+    "sha256": "e754eed440818423d5e95e41d149bb8b780613eed19be5faded173b67055a196",
+    "type": "unchanged from3caca"
+  },
+  "CraftScissorsMotion.cs": {
+    "changed_from3caca": false,
+    "sha256": "b2f8195bc7550903e37316e55761b20850555a09bbfb23d20ce1dd8d619df6a4",
+    "type": "unchanged from3caca"
+  },
+  "CutTimeline.cs": {
+    "changed_from3caca": false,
+    "sha256": "f79cc0c914d244b80efc50dccd73955aecf8548b7359908a9f857e969640df0f",
+    "type": "unchanged from3caca"
+  },
+  "HorizontalCameraFollow.cs": {
+    "changed_from3caca": false,
+    "sha256": "03105e317c866d33d5e50e746749f73bdcf11f195cfd6e15e84ec3aa0ffe396a",
+    "type": "unchanged from3caca"
+  },
+  "MainStageRespawnOnFall.cs": {
+    "changed_from3caca": false,
+    "sha256": "a34100524161f460dac5e08c2d3c83ae965854527da520e8570d0811111a1900",
+    "type": "unchanged from3caca"
+  },
+  "PreviousProgressiveUnravelDrawing.cs": {
+    "changed_from3caca": true,
+    "sha256": "3d8ccd1da983cfe4a76e855b36cdaa70b4d8e1cadfb08a9ee1c20a2e6a29602f",
+    "type": "old comparison algorithm, class rename only"
+  },
+  "ProgressiveUnravelDrawing.cs": {
+    "changed_from3caca": true,
+    "sha256": "a1e14453eda666c80430aeaefc37c31d4f9acaff846da04a5c64c3cb4b9c7cbf",
+    "type": "display copy only"
+  },
+  "RopeSpikeHazard.cs": {
+    "changed_from3caca": false,
+    "sha256": "4d167f5dbcc691054a4f88e871a21aee54f4d2395865b4eb50747ce88d7e2ab9",
+    "type": "unchanged from3caca"
+  },
+  "RouteReview.cs": {
+    "changed_from3caca": false,
+    "sha256": "51777c1e714ac957c8094799bcd65a14d6f60f83e50543f00c514951419bb1e9",
+    "type": "unchanged from3caca"
+  },
+  "ScissorsCutAudio.cs": {
+    "changed_from3caca": false,
+    "sha256": "f7971de3ab5e1f5916e29f4d6ef36b9c39d02b8944ed1807b8df4597f1efdd6b",
+    "type": "unchanged from3caca"
+  },
+  "ScissorsCutVfx.cs": {
+    "changed_from3caca": true,
+    "sha256": "6298b23951131b28a10e86fe084b47caeca098d9aa18b51669f1f9cc0616259f",
+    "type": "display copy only"
+  },
+  "VfxReview.cs": {
+    "changed_from3caca": true,
+    "sha256": "542aacd9ea00e7ef8fc1817ceda2c38d691c83b5b937537183f963700fe0d347",
+    "type": "diagnostic only"
+  }
+}

@@ -1,0 +1,204 @@
+using System;
+using System.Collections.Generic;
+using UnityEngine;
+
+// Display-only, fixed material domain. The captured rope bends and frays before fading;
+// no travelling trim front, no change to the real rope, collision or cut event.
+public sealed class ProgressiveUnravelDrawing
+{
+    public const float Lifetime=.64f;
+    [Serializable] public class Metrics {
+        public float savedArc,drawnArc,arcRatio,initialShapeError,endpointDrop,endpointTravel,endpointAngle,fixedEndError;
+        public float strandRootGap,tipSeparationPixels,minimumTipSeparationPixels,maximumAlpha,nearAlpha,middleAlpha,farAlpha;
+        public float[] strandLengthPixels=new float[3],strandWidthPixels=new float[3],strandAlpha=new float[3];
+        public float[] visibleProbeMinCenterGaps=new float[3],visibleProbeMinWidths=new float[3],visibleProbeMinAlpha=new float[3];
+        public Vector3 end,anchor;public int visibleStrands;public bool visible;
+    }
+    sealed class Piece {
+        public Vector3[] path;public float[] distance;public float length,from,to,fray;
+        public float[] samples;public Vector3[] posed;public LineRenderer line;
+        public LineRenderer[] strands=new LineRenderer[3],loose=new LineRenderer[2];
+    }
+    readonly RopeSnapshot saved;readonly Transform root;readonly List<Piece> pieces=new List<Piece>();
+    static readonly float[] StrandStarts={.12f,.14f,.16f};
+    static readonly float[] StrandEnds={0,.08f,.15f};
+    static readonly float[] StrandSides={-.21f,.025f,.21f};
+    public Metrics Actual {get;private set;}=new Metrics();
+    public float Progress=>0; // No material is removed from the path; fading is local in material coordinates.
+    public float RetainedLength=>Actual.drawnArc;
+    public float NearAlpha=>Actual.nearAlpha;public float MiddleAlpha=>Actual.middleAlpha;public float FarAlpha=>Actual.farAlpha;
+    public float MaxSlack=>Actual.endpointDrop;public int VisibleFibres=>Actual.visibleStrands;
+    public Vector3 Front=>Actual.end;public Vector3 FixedEnd=>Actual.anchor;
+
+    public ProgressiveUnravelDrawing(RopeSnapshot snapshot,Transform parent)
+    {
+        saved=snapshot;root=parent;
+        var left=new List<Vector3>{saved.record.cut};
+        for(int i=saved.segment;i>=0;i--)if(Vector3.Distance(left[left.Count-1],saved.points[i])>.00001f)left.Add(saved.points[i]);
+        var right=new List<Vector3>{saved.record.cut};
+        for(int i=saved.segment+1;i<saved.points.Length;i++)if(Vector3.Distance(right[right.Count-1],saved.points[i])>.00001f)right.Add(saved.points[i]);
+        if(left.Count>1)Add(left.ToArray(),saved.record.fraction,0);
+        if(right.Count>1)Add(right.ToArray(),saved.record.fraction,1);
+        saved.record.pieces=pieces.Count;saved.record.endFrays=3*pieces.Count;saved.record.fibres=2*pieces.Count;
+    }
+    void Add(Vector3[] points,float from,float to)
+    {
+        var p=new Piece{path=points,distance=new float[points.Length],from=from,to=to};
+        for(int i=1;i<points.Length;i++)p.distance[i]=p.distance[i-1]+Vector3.Distance(points[i-1],points[i]);
+        p.length=p.distance[p.distance.Length-1];p.fray=Mathf.Min(.85f,p.length*.25f);
+        var samples=new List<float>{0,p.length};
+        for(float d=.055f;d<p.length;d+=.055f)samples.Add(d);
+        foreach(float d in p.distance)if(d>0&&d<p.length)samples.Add(d);
+        samples.Add(p.fray);samples.Sort();p.samples=samples.ToArray();p.posed=new Vector3[p.samples.Length];
+        p.line=Make("saved rope soft loss of tension",1);
+        for(int i=0;i<3;i++)p.strands[i]=Make("connected split yarn strand "+i,.29f);
+        for(int i=0;i<2;i++)p.loose[i]=Make("small secondary yarn wisp "+i,.14f);
+        pieces.Add(p);
+    }
+    LineRenderer Make(string name,float width)
+    {
+        var go=new GameObject(name);go.transform.SetParent(root,false);var l=go.AddComponent<LineRenderer>();
+        l.useWorldSpace=true;l.sharedMaterial=saved.material;l.alignment=saved.alignment;l.sortingLayerID=saved.layer;l.sortingOrder=saved.order+1;
+        l.textureMode=saved.textureMode;l.textureScale=saved.textureScale;l.numCapVertices=saved.caps;l.numCornerVertices=saved.corners;
+        l.widthMultiplier=saved.multiplier*width;return l;
+    }
+    static float Ease(float x)=>Mathf.SmoothStep(0,1,Mathf.Clamp01(x));
+    Vector3 At(Piece p,float d)
+    {
+        d=Mathf.Clamp(d,0,p.length);int i=1;while(i<p.distance.Length-1&&p.distance[i]<d)i++;
+        return Vector3.Lerp(p.path[i-1],p.path[i],Mathf.InverseLerp(p.distance[i-1],p.distance[i],d));
+    }
+    void Pose(Piece p,float time)
+    {
+        int last=p.samples.Length-1;p.posed[last]=p.path[p.path.Length-1];
+        // Integrate from the fixed anchor, preserving each captured material segment's length.
+        // Loss of tension reaches the free end first, then its neighbourhood. This is not centre sag.
+        for(int i=last-1;i>=0;i--){
+            float d=(p.samples[i]+p.samples[i+1])*.5f;
+            Vector3 original=At(p,p.samples[i])-At(p,p.samples[i+1]);float length=original.magnitude;
+            float region=1-Ease((d-.70f)/2.30f);
+            float arrival=.055f+.055f*d;
+            float soften=Ease((time-arrival)/.14f)*region;
+            float lateral=.30f*Mathf.Exp(-d/.40f)-.08f*Ease(d/.9f);
+            Vector3 slackDirection=new Vector3(lateral,-1,0).normalized;
+            Vector3 direction=Vector3.Slerp(original.normalized,slackDirection,soften);
+            p.posed[i]=p.posed[i+1]+direction*length;
+        }
+        // Small early recoil fades away; it never pulls the full rope into the hook.
+        float recoil=.045f*Mathf.Sin(Mathf.PI*Mathf.Clamp01(time/.18f));
+        for(int i=0;i<last;i++){
+            float weight=Mathf.Pow(Mathf.Clamp01(1-p.samples[i]/.5f),2);
+            Vector3 toward=(At(p,Mathf.Min(p.samples[i]+.03f,p.length))-At(p,p.samples[i])).normalized;
+            p.posed[i]+=toward*(recoil*weight);
+        }
+    }
+    Vector3 PosedAt(Piece p,float d)
+    {
+        int i=1;while(i<p.samples.Length-1&&p.samples[i]<d)i++;
+        return Vector3.Lerp(p.posed[i-1],p.posed[i],Mathf.InverseLerp(p.samples[i-1],p.samples[i],d));
+    }
+    Vector3 Tangent(Piece p,float d)=>(PosedAt(p,Mathf.Min(p.length,d+.025f))-PosedAt(p,Mathf.Max(0,d-.025f))).normalized;
+    Color ColorAt(Piece p,float d)=>saved.color.Evaluate(Mathf.Lerp(p.from,p.to,d/p.length));
+    float BodyFade(Piece p,float d,float time)
+    {
+        float u=d/p.length;
+        // Wide overlapping fades on stationary sections, not a fast moving endpoint.
+        return 1-Ease((time-(.35f+.095f*u))/.195f);
+    }
+    float SplitAt(float time)=>Ease((time-.13f)/.10f);
+    float BodyOpacity(Piece p,float d,float time)
+    {
+        float bundled=Mathf.Lerp(1,Ease(d/p.fray),SplitAt(time));
+        return bundled*BodyFade(p,d,time);
+    }
+    void BodyStyle(Piece p,float time)
+    {
+        float f=p.fray/p.length;
+        float[] keys={0,f*.35f,f*.7f,f,Mathf.Lerp(f,1,.25f),Mathf.Lerp(f,1,.50f),Mathf.Lerp(f,1,.75f),1};
+        var color=new GradientColorKey[8];var alpha=new GradientAlphaKey[8];var width=new Keyframe[8];
+        for(int i=0;i<8;i++){
+            float d=keys[i]*p.length;Color c=ColorAt(p,d);float bundle=Mathf.Lerp(1,Ease(d/p.fray),SplitAt(time));
+            color[i]=new GradientColorKey(c,keys[i]);alpha[i]=new GradientAlphaKey(c.a*BodyOpacity(p,d,time),keys[i]);
+            width[i]=new Keyframe(keys[i],saved.width.Evaluate(Mathf.Lerp(p.from,p.to,keys[i]))*Mathf.Lerp(.12f,1,bundle));
+        }
+        var gradient=new Gradient();gradient.SetKeys(color,alpha);p.line.colorGradient=gradient;p.line.widthCurve=new AnimationCurve(width);
+    }
+    void Strand(Piece p,int k,float time)
+    {
+        var l=p.strands[k];float open=Ease((time-StrandStarts[k])/.10f);
+        float alpha=Ease((time-StrandStarts[k])/.065f)*(1-Ease((time-(.38f+.02f*k))/.20f));
+        l.enabled=alpha>.0001f;l.positionCount=17;
+        var widths=new Keyframe[3]{new Keyframe(0,saved.width.Evaluate(saved.record.fraction)),new Keyframe(.75f,saved.width.Evaluate(saved.record.fraction)*.80f),new Keyframe(1,0)};
+        l.widthCurve=new AnimationCurve(widths);
+        var colors=new GradientColorKey[3];var alphas=new GradientAlphaKey[3];
+        for(int j=0;j<3;j++){float u=j/2f;Color c=ColorAt(p,p.fray*(1-u));colors[j]=new GradientColorKey(c,u);alphas[j]=new GradientAlphaKey(c.a*alpha*(j==2?.38f:1),u);}
+        var g=new Gradient();g.SetKeys(colors,alphas);l.colorGradient=g;
+        float shortEnd=Mathf.Min(StrandEnds[k],p.fray*.35f);
+        for(int i=0;i<17;i++){
+            float s=i/16f,d=Mathf.Lerp(p.fray,shortEnd,s);
+            Vector3 center=PosedAt(p,d),tan=Tangent(p,d),normal=new Vector3(-tan.y,tan.x,0);
+            // Same material end split into three strands. Root and initial tangent coincide with the body.
+            float fan=Mathf.Pow(Mathf.Sin(Mathf.PI*.5f*s),2);
+            float curl=.055f*Mathf.Sin(Mathf.PI*s)*s*(k==1?-1:1);
+            l.SetPosition(i,center+normal*((StrandSides[k]*fan+curl)*open)+Vector3.down*(.045f*fan*open));
+        }
+    }
+    void Loose(Piece p,int k,float time)
+    {
+        float birth=.30f+.06f*k,age=time-birth,life=.18f;var l=p.loose[k];l.enabled=age>0&&age<life;
+        float u=Mathf.Clamp01(age/life);
+        // Fixed birth location, derived from the deformed saved end. No tracking the fade boundary.
+        Pose(p,birth);Vector3 origin=PosedAt(p,.12f+.06f*k);Pose(p,time);
+        Vector3 side=Vector3.right*(k==0?-1:1),drift=side*(.07f*u)+Vector3.down*(.09f*u*u);
+        l.positionCount=3;l.SetPosition(0,origin+drift);l.SetPosition(1,origin+drift+side*.035f+Vector3.down*.04f);l.SetPosition(2,origin+drift+side*.055f+Vector3.down*.08f);
+        l.widthCurve=AnimationCurve.Linear(0,saved.width.Evaluate(saved.record.fraction),1,0);
+        Color c=ColorAt(p,0);float a=Ease(u/.2f)*(1-Ease((u-.30f)/.70f))*.65f;
+        l.startColor=new Color(c.r,c.g,c.b,c.a*a);l.endColor=new Color(c.r,c.g,c.b,0);
+    }
+    public void Draw(float time)
+    {
+        var m=new Metrics();Actual=m;
+        foreach(var p in pieces){
+            Pose(p,time);p.line.enabled=true;p.line.positionCount=p.posed.Length;p.line.SetPositions(p.posed);BodyStyle(p,time);
+            for(int k=0;k<3;k++)Strand(p,k,time);
+            for(int k=0;k<2;k++)Loose(p,k,time);
+            m.savedArc+=p.length;
+            for(int i=1;i<p.line.positionCount;i++)m.drawnArc+=Vector3.Distance(p.line.GetPosition(i-1),p.line.GetPosition(i));
+            m.end=p.line.GetPosition(0);m.anchor=p.line.GetPosition(p.line.positionCount-1);
+            m.endpointDrop=p.path[0].y-m.end.y;m.endpointTravel=Vector3.Distance(p.path[0],m.end);
+            var et=p.line.GetPosition(1)-m.end;m.endpointAngle=Mathf.Atan2(et.y,et.x)*Mathf.Rad2Deg;
+            m.fixedEndError=Vector3.Distance(m.anchor,p.path[p.path.Length-1]);
+            if(time<=.000001f)foreach(float d in p.distance)m.initialShapeError=Mathf.Max(m.initialShapeError,Vector3.Distance(At(p,d),PosedAt(p,d)));
+            m.nearAlpha=p.line.colorGradient.Evaluate(.1f).a;m.middleAlpha=p.line.colorGradient.Evaluate(.5f).a;m.farAlpha=p.line.colorGradient.Evaluate(.9f).a;
+            foreach(var line in root.GetComponentsInChildren<LineRenderer>())if(line.enabled)foreach(var a in line.colorGradient.alphaKeys)m.maximumAlpha=Mathf.Max(m.maximumAlpha,a.alpha);
+            var camera=Camera.main;var tips=new Vector3[3];m.minimumTipSeparationPixels=float.PositiveInfinity;
+            for(int k=0;k<3;k++){
+                var line=p.strands[k];m.strandAlpha[k]=line.colorGradient.Evaluate(.35f).a;
+                if(line.enabled&&m.strandAlpha[k]>.10f)m.visibleStrands++;
+                m.strandRootGap=Mathf.Max(m.strandRootGap,Vector3.Distance(line.GetPosition(0),p.line.GetPosition(Array.IndexOf(p.samples,p.fray))));
+                if(camera){
+                    tips[k]=camera.WorldToScreenPoint(line.GetPosition(line.positionCount-1));
+                    for(int j=1;j<line.positionCount;j++)m.strandLengthPixels[k]+=Vector2.Distance(camera.WorldToScreenPoint(line.GetPosition(j-1)),camera.WorldToScreenPoint(line.GetPosition(j)));
+                    int mid=line.positionCount/2;Vector3 v=line.GetPosition(mid),dir=(line.GetPosition(mid+1)-line.GetPosition(mid-1)).normalized,normal=new Vector3(-dir.y,dir.x,0);
+                    float w=line.widthMultiplier*line.widthCurve.Evaluate(.5f);m.strandWidthPixels[k]=Vector2.Distance(camera.WorldToScreenPoint(v-normal*w*.5f),camera.WorldToScreenPoint(v+normal*w*.5f));
+                }
+            }
+            for(int a=0;a<3;a++)for(int b=a+1;b<3;b++){float d=Vector2.Distance(tips[a],tips[b]);m.tipSeparationPixels=Mathf.Max(m.tipSeparationPixels,d);m.minimumTipSeparationPixels=Mathf.Min(m.minimumTipSeparationPixels,d);}
+            // Measure opaque, non-zero-width portions too; the mathematical tips themselves taper to zero.
+            if(camera)for(int probe=0;probe<3;probe++){
+                int j=8+probe*2;float u=j/16f;var projected=new Vector3[3];
+                float gap=float.PositiveInfinity,width=float.PositiveInfinity,alpha=1;
+                for(int k=0;k<3;k++){
+                    var line=p.strands[k];Vector3 v=line.GetPosition(j),dir=(line.GetPosition(j+1)-line.GetPosition(j-1)).normalized;
+                    Vector3 normal=new Vector3(-dir.y,dir.x,0);float w=line.widthMultiplier*line.widthCurve.Evaluate(u);
+                    projected[k]=camera.WorldToScreenPoint(v);
+                    width=Mathf.Min(width,Vector2.Distance(camera.WorldToScreenPoint(v-normal*w*.5f),camera.WorldToScreenPoint(v+normal*w*.5f)));
+                    alpha=Mathf.Min(alpha,line.enabled?line.colorGradient.Evaluate(u).a:0);
+                }
+                for(int a=0;a<3;a++)for(int b=a+1;b<3;b++)gap=Mathf.Min(gap,Vector2.Distance(projected[a],projected[b]));
+                m.visibleProbeMinCenterGaps[probe]=gap;m.visibleProbeMinWidths[probe]=width;m.visibleProbeMinAlpha[probe]=alpha;
+            }
+            m.visible=m.maximumAlpha>.01f;m.arcRatio=m.drawnArc/Mathf.Max(m.savedArc,.00001f);
+        }
+    }
+}

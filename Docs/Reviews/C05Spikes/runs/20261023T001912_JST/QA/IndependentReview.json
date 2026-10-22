@@ -1,0 +1,12 @@
+{
+  "method": "Read-only independent code/hash review and native720p stills; no Unity execution or edits of gameplay sources",
+  "confirmed": [
+    "Fixed material domain; free end deformation before broad local fading",
+    "Three connected strands; no fabricated opposite end in natural route",
+    "Baseline drawing saved with class rename only",
+    "v4 audio/body/geometry/cut/motion/Camera/R/entrance source hashes unchanged"
+  ],
+  "measurement_note": "Zero-width end-tip spacing is not visible spacing. r2 additionally measures width/alpha and center gaps at strand fractions .5/.625/.75.",
+  "visual_observation": "At +.20s bend and +.32s split clearer than baseline. +.56s sufficiently faded, no obvious pop in stills. Thin tips can blend into background.",
+  "limits": "Independent stills are Preview720_r1; finalr2 changes diagnostics only, same rendered design. Continuous normal-speed perception and Human adoption remain unconfirmed."
+}

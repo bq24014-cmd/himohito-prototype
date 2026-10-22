@@ -1,16 +1,20 @@
 # C05 危険物のデザインレビュー
 
-[最新状態](LATEST.json)／[切り口からほつれる候補の報告](runs/20261022T233837_JST/Report.md)／[手動起動](runs/20261022T233837_JST/Launch.md)
+[最新状態](LATEST.json)／[今回の報告](runs/20261023T001912_JST/Report.md)／[手動起動](runs/20261023T001912_JST/Launch.md)
 
-本体・1.00倍下降0.95の配置・第2区間の画角・音v4と、切り口から順にほつれる演出方針はHuman承認済みです。今回は前側ハサミ1個の表示コピーだけを約0.6秒の余韻へ隔離修正しました。完成映像の正式採用は未承認、Human Review待ち、Production未統合です。
+前側ハサミ1個の切断後コピーを、**長さ削除ではなく、端の曲がり→3本の細繊維→柔らかい消去**へ修正した隔離候補です。完成映像の正式採用は未承認、Human Review待ちです。Production統合はしていません。
 
-[採用音v4 WAV（無加工）](runs/20261022T114924_JST/Audio/C05RopeScissors_v4.wav)／[1600×900音入り比較](runs/20261022T233837_JST/Video/BeforeThenAfter_1600x900_NormalSpeed.mp4)／[1280×720音入り比較](runs/20261022T233837_JST/Video/BeforeThenAfter_1280x720_NormalSpeed.mp4)／[同倍率連続コマ](runs/20261022T233837_JST/Images/SequenceSameScale.jpg)
+[720p音入り通常速度比較](runs/20261023T001912_JST/Video/Before3cacaThenAfterSoft_1280x720_NormalSpeed.mp4)／[900p比較](runs/20261023T001912_JST/Video/Before3cacaThenAfterSoft_1600x900_NormalSpeed.mp4)／[720p同倍率連続コマ](runs/20261023T001912_JST/Images/SequenceSameScale_1280x720.jpg)／[採用音v4 WAV・無加工](runs/20261022T114924_JST/Audio/C05RopeScissors_v4.wav)
 
-保存したヒモ端が少し戻り、遅れて細い繊維が開き、切り口からフック側へほつれが進みます。自然落下失敗後も完走し、コピー破棄は実測0.62秒（設定0.60秒）。R・再接続・メニュー・Sceneで消去、進行途中のポーズで停止。長さ5／6の対岸到達と7の接触・切断、音1・VFX1、旧毛羽0を維持。各300フレームの位置・速度・残量・Camera・ハサミ開閉差0。自動入力／API確認であり、OS実キーやHuman評価ではありません。
+動画は旧3cacaを6秒、今回を6秒の順。実Playerの通常画角・音入り記録です。自然落下失敗後も残り、実測で約0.64秒に透明化、約0.66秒に片付きます。長さ5／6到達、7切断、音1・VFX1・旧毛羽0を保持。同一入力300フレームの位置・速度・残量・Camera差0。自動入力／APIであり、OS実キー・Human試遊ではありません。
 
-**切断位置の不一致は未解決です。** 現行条件はPlayerと刃の接触で、表示ヒモとの交点はありません。接触点と実ヒモ端は1.393823 world離れています。架空のヒモや交点は描き足していません。文字通り「刃がヒモを切る」品質はHOLDとし、条件変更が長さ7の切断に与える影響を報告しました。今回、条件変更は実装していません。
+**刃と表示ヒモ端の1.393823 world差は未解決。** 架空の糸や切断片、刃へずらしたほつれは追加していません。細い先端の背景への溶けやすさも残ります。数値上のPASSと見た目の自己評価・Human採用は区別します。
+
+実行は既存非Development Unity6000.3.21f1 Player＋独立managed overlay。新規Unity Buildではありません。録音は実PlayerのAudioRenderer最終ミックスで、音の後付け・OSループバックではありません。本体・1.00倍下降0.95・S2画角・音v4と演出方向の承認を保持し、今回完成映像のHuman実聴・採否・操作感は未確認です。
 
 ## 履歴
+
+- [前3caca・長さ削除型](runs/20261022T233837_JST/Report.md)：巻き取りに見えるという指摘を受けた比較基準。原本・動画・QA保持。VFX正式採用なし。
 
 - [前1ccfbd0・連続性修正](runs/20261022T133717_JST/Report.md)：原本・動画・QAを保持。0.27秒の全体フェードを今回の比較基準に使用。VFX正式採用ではありません。
 
@@ -35,7 +39,4 @@
 - [旧赤吊り案 38a83d9](runs/20261021T160305_JST/Report.md)：Human不採用。原本保持。
 - [三角形素材調整案 80a004](runs/20261021T150807_JST/Report.md)：Human採用保留。
 
-
-実行は既存非Development Unity Player＋独立managed overlay＋承認PNG／音v4の実読込。新規Unity Buildではありません。録音は実Player内部のAudioRenderer最終ミックスで、音の後付けやOSスピーカー録音ではありません。診断API・自動撮影とOS実キーを区別し、今回のミックスのHuman実聴・VFX採否・操作感は未確認です。
-
-Production `394b4a74e366678a9e0542d895b9a26f86993c19`、既存差分・過去Proofを保持。レビュー資料だけをこのbranchに共有します。C11/C18はHOLD。今回の切断VFX候補はHuman Review待ちです。
+Production `394b4a74e366678a9e0542d895b9a26f86993c19`、既存差分・過去Proofを保持。C11／C18はHOLD。レビュー資料だけをこのbranchへ共有します。

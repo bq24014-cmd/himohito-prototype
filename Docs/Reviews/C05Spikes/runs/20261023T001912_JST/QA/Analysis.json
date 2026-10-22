@@ -1,0 +1,4436 @@
+{
+  "execution": "Actual Unity Windows Player, automatic input/native APIs; not OS or Human. Managed overlay, NOT new Unity Build.",
+  "comparisons": {
+    "baseline3caca_vs_After1600": {
+      "frames": [
+        300,
+        300
+      ],
+      "max_deltas": {
+        "position": 0.0,
+        "velocity": 0.0,
+        "camera": 0.0,
+        "remaining": 0.0,
+        "length": 0.0,
+        "closure": 0.0,
+        "handleGap": 0.0
+      },
+      "state_mismatch_frames": [],
+      "pass_exact": true
+    },
+    "baseline3caca_vs_After720": {
+      "frames": [
+        300,
+        300
+      ],
+      "max_deltas": {
+        "position": 0.0,
+        "velocity": 0.0,
+        "camera": 0.0,
+        "remaining": 0.0,
+        "length": 0.0,
+        "closure": 0.0,
+        "handleGap": 0.0
+      },
+      "state_mismatch_frames": [],
+      "pass_exact": true
+    },
+    "baseline3caca_vs_AfterL5": {
+      "frames": [
+        300,
+        300
+      ],
+      "max_deltas": {
+        "position": 0.0,
+        "velocity": 0.0,
+        "camera": 0.0,
+        "remaining": 0.0,
+        "length": 0.0,
+        "closure": 0.0,
+        "handleGap": 0.0
+      },
+      "state_mismatch_frames": [],
+      "pass_exact": true
+    },
+    "baseline3caca_vs_AfterL6": {
+      "frames": [
+        300,
+        300
+      ],
+      "max_deltas": {
+        "position": 0.0,
+        "velocity": 0.0,
+        "camera": 0.0,
+        "remaining": 0.0,
+        "length": 0.0,
+        "closure": 0.0,
+        "handleGap": 0.0
+      },
+      "state_mismatch_frames": [],
+      "pass_exact": true
+    },
+    "same_resolution_independent_baseline": {
+      "frames": [
+        300,
+        300
+      ],
+      "max_deltas": {
+        "position": 0.0,
+        "velocity": 0.0,
+        "camera": 0.0,
+        "remaining": 0.0,
+        "length": 0.0,
+        "closure": 0.0,
+        "handleGap": 0.0
+      },
+      "state_mismatch_frames": [],
+      "pass_exact": true
+    }
+  },
+  "cases": {
+    "After1600": {
+      "errors": 0,
+      "development": false,
+      "attach": true,
+      "reached": false,
+      "route_cuts": 1,
+      "route_plays": 1,
+      "route_vfx": 1,
+      "old_fluff_max": 0,
+      "capture_failures": 0,
+      "audio_sha": "970d754ec4251d4ad2c4c57e22c97524db84ee63dcca50a1aefc4b1f4e2cde0e",
+      "gain": 0.41999998688697815,
+      "effects": 1.0,
+      "audio_render_failures": 0,
+      "cut_window_peak": 0.28643798828125,
+      "mix_clipped_samples": 0,
+      "negative": [
+        {
+          "name": "idle/open-close only",
+          "cutsBefore": 1,
+          "cutsAfter": 1,
+          "playsBefore": 1,
+          "playsAfter": 1,
+          "pass": true
+        },
+        {
+          "name": "visual contact without rope cut",
+          "cutsBefore": 1,
+          "cutsAfter": 1,
+          "playsBefore": 1,
+          "playsAfter": 1,
+          "pass": true
+        },
+        {
+          "name": "detached blade overlap",
+          "cutsBefore": 1,
+          "cutsAfter": 1,
+          "playsBefore": 1,
+          "playsAfter": 1,
+          "pass": true
+        }
+      ],
+      "checks": [
+        {
+          "name": "Q/detached does not cue",
+          "detail": "Native TryBuild request; not successful bridge-generation test",
+          "pass": true
+        },
+        {
+          "name": "native cut after diagnostic blade overlap",
+          "detail": "No synthetic success notification; attached player overlaps existing live blade polygon",
+          "pass": true
+        },
+        {
+          "name": "native pause freezes progressing rope and fibres",
+          "detail": "Diagnostic physical stop prevents a fall overlay during pause. StageOverlayControls pause API; eight frames; timeScale=0 before=0.2399999 after=0.2399999",
+          "pass": true
+        },
+        {
+          "name": "R removes cut copy immediately even without teleport",
+          "detail": "Native RestartFromCheckpoint API with same-position diagnostic checkpoint; presentation-only notification",
+          "pass": true
+        },
+        {
+          "name": "reattach branch removes only old copy",
+          "detail": "Diagnostic entrance relocation + existing mover FixedUpdate for grounding + TryAttach in same frame; not a normal route. Actual cleanup=reattach; live rope untouched",
+          "pass": true
+        },
+        {
+          "name": "manual-style E release does not cue",
+          "detail": "Native DetachAndRefund(playReleaseSound:true); API not OS E",
+          "pass": true
+        },
+        {
+          "name": "physics disabled but visual finishes unravel",
+          "detail": "Diagnostic physical stop >0.7s; native L7 fall failure separately recorded frame by frame",
+          "pass": true
+        },
+        {
+          "name": "no duplicate old contact fluff",
+          "detail": "New cut path replaces only the targeted SpikeContact emit; landing/jump particles unchanged",
+          "pass": true
+        },
+        {
+          "name": "menu scene removes cut copy",
+          "detail": "Native ReturnToTitle API; active Scene=Tutorial",
+          "pass": true
+        },
+        {
+          "name": "Scene reload has no residual copy",
+          "detail": "Native Scene reload; no automatic route restart",
+          "pass": true
+        }
+      ],
+      "cut_details": [
+        {
+          "frame": 104,
+          "pointCount": 14,
+          "pieces": 1,
+          "endFrays": 3,
+          "fibres": 2,
+          "time": 2.0799992084503174,
+          "fraction": 0.0,
+          "distanceFromContact": 1.3938233852386475,
+          "sourceWidth": 0.1599999964237213,
+          "elapsed": 0.6399999856948853,
+          "linePointError": 0.0,
+          "fixedTime": 2.0799992084503174,
+          "endTime": 2.7399990558624268,
+          "scissorsClosure": 0.017888512462377548,
+          "contact": {
+            "x": 15.007654190063477,
+            "y": -7.47961950302124,
+            "z": 0.0
+          },
+          "cut": {
+            "x": 15.155437469482422,
+            "y": -6.093652725219727,
+            "z": 0.0
+          },
+          "first": {
+            "x": 15.155437469482422,
+            "y": -6.093652725219727,
+            "z": 0.0
+          },
+          "last": {
+            "x": 17.25,
+            "y": -0.8500000238418579,
+            "z": 0.0
+          },
+          "mode": "nearest rope endpoint (no invented extension)",
+          "cleanup": "soft collapse and fray completed",
+          "attachedBefore": true,
+          "attachedAfter": false,
+          "replacedOldFluff": true,
+          "renderedRope": [
+            {
+              "x": 15.155437469482422,
+              "y": -6.093652725219727,
+              "z": 0.0
+            },
+            {
+              "x": 15.316557884216309,
+              "y": -5.821223258972168,
+              "z": 0.0
+            },
+            {
+              "x": 15.477678298950195,
+              "y": -5.52697229385376,
+              "z": 0.0
+            },
+            {
+              "x": 15.638797760009766,
+              "y": -5.21090030670166,
+              "z": 0.0
+            },
+            {
+              "x": 15.799918174743652,
+              "y": -4.873006343841553,
+              "z": 0.0
+            },
+            {
+              "x": 15.961038589477539,
+              "y": -4.513291358947754,
+              "z": 0.0
+            },
+            {
+              "x": 16.12215805053711,
+              "y": -4.1317548751831055,
+              "z": 0.0
+            },
+            {
+              "x": 16.283279418945312,
+              "y": -3.7283966541290283,
+              "z": 0.0
+            },
+            {
+              "x": 16.444398880004883,
+              "y": -3.3032174110412598,
+              "z": 0.0
+            },
+            {
+              "x": 16.605518341064453,
+              "y": -2.8562169075012207,
+              "z": 0.0
+            },
+            {
+              "x": 16.766639709472656,
+              "y": -2.387394666671753,
+              "z": 0.0
+            },
+            {
+              "x": 16.927759170532227,
+              "y": -1.8967511653900146,
+              "z": 0.0
+            },
+            {
+              "x": 17.08888053894043,
+              "y": -1.3842862844467163,
+              "z": 0.0
+            },
+            {
+              "x": 17.25,
+              "y": -0.8500000238418579,
+              "z": 0.0
+            }
+          ],
+          "bladeLeft": [
+            {
+              "x": 15.376155853271484,
+              "y": -8.278449058532715,
+              "z": 0.0
+            },
+            {
+              "x": 15.37476921081543,
+              "y": -8.280915260314941,
+              "z": 0.0
+            },
+            {
+              "x": 15.23012924194336,
+              "y": -8.468912124633789,
+              "z": 0.0
+            },
+            {
+              "x": 15.22681713104248,
+              "y": -8.471917152404785,
+              "z": 0.0
+            },
+            {
+              "x": 15.22435188293457,
+              "y": -8.470531463623047,
+              "z": 0.0
+            },
+            {
+              "x": 15.21487045288086,
+              "y": -8.444108963012695,
+              "z": 0.0
+            },
+            {
+              "x": 15.198915481567383,
+              "y": -8.394577026367188,
+              "z": 0.0
+            },
+            {
+              "x": 15.158443450927734,
+              "y": -8.250140190124512,
+              "z": 0.0
+            },
+            {
+              "x": 15.13824462890625,
+              "y": -8.170641899108887,
+              "z": 0.0
+            },
+            {
+              "x": 15.121283531188965,
+              "y": -8.10269832611084,
+              "z": 0.0
+            },
+            {
+              "x": 15.107561111450195,
+              "y": -8.046309471130371,
+              "z": 0.0
+            },
+            {
+              "x": 15.089287757873535,
+              "y": -7.96627140045166,
+              "z": 0.0
+            },
+            {
+              "x": 15.07425308227539,
+              "y": -7.8977885246276855,
+              "z": 0.0
+            },
+            {
+              "x": 15.067005157470703,
+              "y": -7.864509582519531,
+              "z": 0.0
+            },
+            {
+              "x": 15.049578666687012,
+              "y": -7.780080318450928,
+              "z": 0.0
+            },
+            {
+              "x": 15.039401054382324,
+              "y": -7.72892951965332,
+              "z": 0.0
+            },
+            {
+              "x": 15.024672508239746,
+              "y": -7.6541290283203125,
+              "z": 0.0
+            },
+            {
+              "x": 15.013721466064453,
+              "y": -7.592809677124023,
+              "z": 0.0
+            },
+            {
+              "x": 15.008399963378906,
+              "y": -7.558991432189941,
+              "z": 0.0
+            },
+            {
+              "x": 15.004157066345215,
+              "y": -7.529024600982666,
+              "z": 0.0
+            },
+            {
+              "x": 15.00230598449707,
+              "y": -7.5150041580200195,
+              "z": 0.0
+            },
+            {
+              "x": 15.000993728637695,
+              "y": -7.5029096603393555,
+              "z": 0.0
+            },
+            {
+              "x": 15.000761032104492,
+              "y": -7.494667053222656,
+              "z": 0.0
+            },
+            {
+              "x": 15.001607894897461,
+              "y": -7.490275859832764,
+              "z": 0.0
+            },
+            {
+              "x": 15.0029935836792,
+              "y": -7.487810134887695,
+              "z": 0.0
+            },
+            {
+              "x": 15.00492000579834,
+              "y": -7.487270355224609,
+              "z": 0.0
+            },
+            {
+              "x": 15.01231575012207,
+              "y": -7.491429328918457,
+              "z": 0.0
+            },
+            {
+              "x": 15.015321731567383,
+              "y": -7.494741439819336,
+              "z": 0.0
+            },
+            {
+              "x": 15.018865585327148,
+              "y": -7.499979019165039,
+              "z": 0.0
+            },
+            {
+              "x": 15.022950172424316,
+              "y": -7.507143020629883,
+              "z": 0.0
+            },
+            {
+              "x": 15.036282539367676,
+              "y": -7.532485485076904,
+              "z": 0.0
+            },
+            {
+              "x": 15.050153732299805,
+              "y": -7.559753894805908,
+              "z": 0.0
+            },
+            {
+              "x": 15.080056190490723,
+              "y": -7.621994495391846,
+              "z": 0.0
+            },
+            {
+              "x": 15.10071086883545,
+              "y": -7.666055679321289,
+              "z": 0.0
+            },
+            {
+              "x": 15.163752555847168,
+              "y": -7.802091598510742,
+              "z": 0.0
+            },
+            {
+              "x": 15.195813179016113,
+              "y": -7.872035026550293,
+              "z": 0.0
+            },
+            {
+              "x": 15.250685691833496,
+              "y": -7.993743419647217,
+              "z": 0.0
+            },
+            {
+              "x": 15.2843656539917,
+              "y": -8.069464683532715,
+              "z": 0.0
+            },
+            {
+              "x": 15.375616073608398,
+              "y": -8.27652359008789,
+              "z": 0.0
+            }
+          ],
+          "bladeRight": [
+            {
+              "x": 15.495450019836426,
+              "y": -8.4220609664917,
+              "z": 0.0
+            },
+            {
+              "x": 15.479499816894531,
+              "y": -8.471593856811523,
+              "z": 0.0
+            },
+            {
+              "x": 15.477034568786621,
+              "y": -8.472980499267578,
+              "z": 0.0
+            },
+            {
+              "x": 15.475109100341797,
+              "y": -8.472441673278809,
+              "z": 0.0
+            },
+            {
+              "x": 15.469023704528809,
+              "y": -8.464506149291992,
+              "z": 0.0
+            },
+            {
+              "x": 15.33483600616455,
+              "y": -8.283615112304688,
+              "z": 0.0
+            },
+            {
+              "x": 15.330677032470703,
+              "y": -8.276219367980957,
+              "z": 0.0
+            },
+            {
+              "x": 15.334991455078125,
+              "y": -8.260811805725098,
+              "z": 0.0
+            },
+            {
+              "x": 15.341232299804688,
+              "y": -8.245944023132324,
+              "z": 0.0
+            },
+            {
+              "x": 15.410730361938477,
+              "y": -8.086790084838867,
+              "z": 0.0
+            },
+            {
+              "x": 15.427834510803223,
+              "y": -8.047964096069336,
+              "z": 0.0
+            },
+            {
+              "x": 15.455802917480469,
+              "y": -7.985180377960205,
+              "z": 0.0
+            },
+            {
+              "x": 15.494634628295898,
+              "y": -7.898438930511475,
+              "z": 0.0
+            },
+            {
+              "x": 15.527226448059082,
+              "y": -7.826565265655518,
+              "z": 0.0
+            },
+            {
+              "x": 15.586167335510254,
+              "y": -7.697686195373535,
+              "z": 0.0
+            },
+            {
+              "x": 15.602193832397461,
+              "y": -7.662712097167969,
+              "z": 0.0
+            },
+            {
+              "x": 15.626925468444824,
+              "y": -7.611484050750732,
+              "z": 0.0
+            },
+            {
+              "x": 15.646495819091797,
+              "y": -7.571271896362305,
+              "z": 0.0
+            },
+            {
+              "x": 15.67068862915039,
+              "y": -7.521969795227051,
+              "z": 0.0
+            },
+            {
+              "x": 15.678854942321777,
+              "y": -7.507641315460205,
+              "z": 0.0
+            },
+            {
+              "x": 15.68948745727539,
+              "y": -7.491926193237305,
+              "z": 0.0
+            },
+            {
+              "x": 15.696883201599121,
+              "y": -7.487766742706299,
+              "z": 0.0
+            },
+            {
+              "x": 15.7001953125,
+              "y": -7.490771293640137,
+              "z": 0.0
+            },
+            {
+              "x": 15.701042175292969,
+              "y": -7.495162487030029,
+              "z": 0.0
+            },
+            {
+              "x": 15.700810432434082,
+              "y": -7.503405570983887,
+              "z": 0.0
+            },
+            {
+              "x": 15.69950008392334,
+              "y": -7.515500068664551,
+              "z": 0.0
+            },
+            {
+              "x": 15.694722175598145,
+              "y": -7.547393321990967,
+              "z": 0.0
+            },
+            {
+              "x": 15.689404487609863,
+              "y": -7.581212520599365,
+              "z": 0.0
+            },
+            {
+              "x": 15.68246841430664,
+              "y": -7.620809078216553,
+              "z": 0.0
+            },
+            {
+              "x": 15.669907569885254,
+              "y": -7.687907695770264,
+              "z": 0.0
+            },
+            {
+              "x": 15.6511812210083,
+              "y": -7.784433841705322,
+              "z": 0.0
+            },
+            {
+              "x": 15.63939094543457,
+              "y": -7.841363430023193,
+              "z": 0.0
+            },
+            {
+              "x": 15.625443458557129,
+              "y": -7.905996799468994,
+              "z": 0.0
+            },
+            {
+              "x": 15.587300300598145,
+              "y": -8.071855545043945,
+              "z": 0.0
+            },
+            {
+              "x": 15.565261840820312,
+              "y": -8.165376663208008,
+              "z": 0.0
+            },
+            {
+              "x": 15.546151161193848,
+              "y": -8.241025924682617,
+              "z": 0.0
+            }
+          ],
+          "playerMin": {
+            "x": 14.526189804077148,
+            "y": -7.562178134918213,
+            "z": 0.0
+          },
+          "playerMax": {
+            "x": 15.326189041137695,
+            "y": -6.362178325653076,
+            "z": 0.0
+          },
+          "currentHead": {
+            "x": 15.155437469482422,
+            "y": -6.093652725219727,
+            "z": 0.0
+          },
+          "playerPosition": {
+            "x": 14.926189422607422,
+            "y": -6.9621782302856445
+          },
+          "playerVelocity": {
+            "x": 2.2273855209350586,
+            "y": -11.758647918701172
+          },
+          "successSnips": 0,
+          "finishedFrame": 137,
+          "physicalFailureObserved": true,
+          "presentation": "soft free-end collapse, connected fibre separation, stationary regional fade",
+          "configuredLifetime": 0.6399999856948853
+        }
+      ],
+      "cut_to_cleanup_seconds": [
+        0.6599998474121094
+      ],
+      "failure_local_seconds": 1.2999999523162842,
+      "route_final_remaining": 50.0,
+      "timeline_summary": {
+        "attachedFrames": 28,
+        "intersectionFrames": 0,
+        "minAttachedRopeBladeDistance": 1.4018853902816772
+      },
+      "soft_summary": {
+        "note": "Renderer positions, width curves, gradient alpha and camera projection measured. Raw geometry arc includes transparent vertices; not visible length. Alpha>0.01 is a numeric visibility threshold, not Human perception. Zero-width tip separations are not used as visible gaps.",
+        "initial_error": 0.0,
+        "raw_arc_ratio_first32_min": 0.9921779036521912,
+        "raw_arc_ratio_first32_max": 1.0000003576278687,
+        "fixed_end_error_max": 0.0,
+        "strand_body_join_gap_max": 0.0,
+        "last_alpha_above_point01": 0.6199995875358582,
+        "first_all_alpha_zero": 0.6399995684623718,
+        "split_numeric_interval": [
+          0.19999994337558746,
+          0.47999972105026245
+        ],
+        "split_numeric_span": 0.279999777674675,
+        "samples": [
+          {
+            "elapsed": 0.0,
+            "bodySimulated": true,
+            "measurements": {
+              "savedArc": 5.660993576049805,
+              "drawnArc": 5.660994052886963,
+              "arcRatio": 1.0000001192092896,
+              "initialShapeError": 0.0,
+              "endpointDrop": 0.0,
+              "endpointTravel": 0.0,
+              "endpointAngle": 59.3991584777832,
+              "fixedEndError": 0.0,
+              "strandRootGap": 0.0,
+              "tipSeparationPixels": 7.758606433868408,
+              "minimumTipSeparationPixels": 3.620680332183838,
+              "maximumAlpha": 1.0,
+              "nearAlpha": 1.0,
+              "middleAlpha": 1.0,
+              "farAlpha": 1.0,
+              "strandLengthPixels": [
+                43.965206146240234,
+                39.82736587524414,
+                36.20646286010742
+              ],
+              "strandWidthPixels": [
+                2.0445351600646973,
+                2.044374465942383,
+                2.044442653656006
+              ],
+              "strandAlpha": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "visibleProbeMinCenterGaps": [
+                1.810311198234558,
+                2.26291823387146,
+                2.715332508087158
+              ],
+              "visibleProbeMinWidths": [
+                2.044374465942383,
+                1.9554592370986938,
+                1.9199063777923584
+              ],
+              "visibleProbeMinAlpha": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "end": {
+                "x": 15.155437469482422,
+                "y": -6.093652725219727,
+                "z": 0.0
+              },
+              "anchor": {
+                "x": 17.25,
+                "y": -0.8500000238418579,
+                "z": 0.0
+              },
+              "visibleStrands": 0,
+              "visible": true
+            }
+          },
+          {
+            "elapsed": 0.07999996840953827,
+            "bodySimulated": true,
+            "measurements": {
+              "savedArc": 5.660993576049805,
+              "drawnArc": 5.61671257019043,
+              "arcRatio": 0.9921779036521912,
+              "initialShapeError": 0.0,
+              "endpointDrop": -0.03328227996826172,
+              "endpointTravel": 0.04561273008584976,
+              "endpointAngle": 63.56378173828125,
+              "fixedEndError": 0.0,
+              "strandRootGap": 0.0,
+              "tipSeparationPixels": 6.596069812774658,
+              "minimumTipSeparationPixels": 3.125389575958252,
+              "maximumAlpha": 1.0,
+              "nearAlpha": 1.0,
+              "middleAlpha": 1.0,
+              "farAlpha": 1.0,
+              "strandLengthPixels": [
+                41.67476272583008,
+                38.203556060791016,
+                35.07793426513672
+              ],
+              "strandWidthPixels": [
+                2.0443413257598877,
+                2.0444860458374023,
+                2.04445743560791
+              ],
+              "strandAlpha": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "visibleProbeMinCenterGaps": [
+                1.79241943359375,
+                2.1764395236968994,
+                2.520803689956665
+              ],
+              "visibleProbeMinWidths": [
+                2.0443413257598877,
+                1.955525517463684,
+                1.9199702739715576
+              ],
+              "visibleProbeMinAlpha": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "end": {
+                "x": 15.186627388000488,
+                "y": -6.060370445251465,
+                "z": 0.0
+              },
+              "anchor": {
+                "x": 17.25,
+                "y": -0.8500000238418579,
+                "z": 0.0
+              },
+              "visibleStrands": 0,
+              "visible": true
+            }
+          },
+          {
+            "elapsed": 0.15999995172023773,
+            "bodySimulated": false,
+            "measurements": {
+              "savedArc": 5.660993576049805,
+              "drawnArc": 5.648098945617676,
+              "arcRatio": 0.9977222084999084,
+              "initialShapeError": 0.0,
+              "endpointDrop": 0.0995631217956543,
+              "endpointTravel": 0.37589871883392334,
+              "endpointAngle": 100.01048278808594,
+              "fixedEndError": 0.0,
+              "strandRootGap": 0.0,
+              "tipSeparationPixels": 8.86998176574707,
+              "minimumTipSeparationPixels": 3.7269716262817383,
+              "maximumAlpha": 1.0,
+              "nearAlpha": 0.9428073763847351,
+              "middleAlpha": 1.0,
+              "farAlpha": 1.0,
+              "strandLengthPixels": [
+                43.33465576171875,
+                39.57060241699219,
+                35.85940170288086
+              ],
+              "strandWidthPixels": [
+                2.0444421768188477,
+                2.04441237449646,
+                2.0444118976593018
+              ],
+              "strandAlpha": [
+                0.6700035929679871,
+                0.22576145827770233,
+                0.0
+              ],
+              "visibleProbeMinCenterGaps": [
+                1.925950527191162,
+                2.401468515396118,
+                2.86228609085083
+              ],
+              "visibleProbeMinWidths": [
+                2.0444118976593018,
+                1.9554916620254517,
+                1.9199507236480713
+              ],
+              "visibleProbeMinAlpha": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "end": {
+                "x": 15.517910957336426,
+                "y": -6.193215847015381,
+                "z": 0.0
+              },
+              "anchor": {
+                "x": 17.25,
+                "y": -0.8500000238418579,
+                "z": 0.0
+              },
+              "visibleStrands": 2,
+              "visible": true
+            }
+          },
+          {
+            "elapsed": 0.2399999350309372,
+            "bodySimulated": false,
+            "measurements": {
+              "savedArc": 5.660993576049805,
+              "drawnArc": 5.660994052886963,
+              "arcRatio": 1.0000001192092896,
+              "initialShapeError": 0.0,
+              "endpointDrop": 0.18691492080688477,
+              "endpointTravel": 0.7859969139099121,
+              "endpointAngle": 105.63397979736328,
+              "fixedEndError": 0.0,
+              "strandRootGap": 0.0,
+              "tipSeparationPixels": 22.052946090698242,
+              "minimumTipSeparationPixels": 9.323813438415527,
+              "maximumAlpha": 1.0,
+              "nearAlpha": 0.7352187037467957,
+              "middleAlpha": 1.0,
+              "farAlpha": 1.0,
+              "strandLengthPixels": [
+                45.94490432739258,
+                42.272064208984375,
+                41.779884338378906
+              ],
+              "strandWidthPixels": [
+                2.0443809032440186,
+                2.0444533824920654,
+                2.0444107055664062
+              ],
+              "strandAlpha": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "visibleProbeMinCenterGaps": [
+                3.8155343532562256,
+                5.696565628051758,
+                7.93792724609375
+              ],
+              "visibleProbeMinWidths": [
+                2.0443809032440186,
+                1.955504059791565,
+                1.9199331998825073
+              ],
+              "visibleProbeMinAlpha": [
+                1.0,
+                0.845007061958313,
+                0.6900047063827515
+              ],
+              "end": {
+                "x": 15.918886184692383,
+                "y": -6.280567646026611,
+                "z": 0.0
+              },
+              "anchor": {
+                "x": 17.25,
+                "y": -0.8500000238418579,
+                "z": 0.0
+              },
+              "visibleStrands": 3,
+              "visible": true
+            }
+          },
+          {
+            "elapsed": 0.3199998736381531,
+            "bodySimulated": false,
+            "measurements": {
+              "savedArc": 5.660993576049805,
+              "drawnArc": 5.660994529724121,
+              "arcRatio": 1.0000001192092896,
+              "initialShapeError": 0.0,
+              "endpointDrop": 0.20438814163208008,
+              "endpointTravel": 0.8529569506645203,
+              "endpointAngle": 105.63397979736328,
+              "fixedEndError": 0.0,
+              "strandRootGap": 0.0,
+              "tipSeparationPixels": 23.096923828125,
+              "minimumTipSeparationPixels": 10.31772518157959,
+              "maximumAlpha": 1.0,
+              "nearAlpha": 0.7352187037467957,
+              "middleAlpha": 1.0,
+              "farAlpha": 1.0,
+              "strandLengthPixels": [
+                45.94484329223633,
+                42.27202606201172,
+                42.617637634277344
+              ],
+              "strandWidthPixels": [
+                2.0445523262023926,
+                2.0443925857543945,
+                2.0444343090057373
+              ],
+              "strandAlpha": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "visibleProbeMinCenterGaps": [
+                3.8155877590179443,
+                5.696508884429932,
+                7.938108444213867
+              ],
+              "visibleProbeMinWidths": [
+                2.0443925857543945,
+                1.9554901123046875,
+                1.9199942350387573
+              ],
+              "visibleProbeMinAlpha": [
+                1.0,
+                0.845007061958313,
+                0.6900047063827515
+              ],
+              "end": {
+                "x": 15.98354434967041,
+                "y": -6.298040866851807,
+                "z": 0.0
+              },
+              "anchor": {
+                "x": 17.25,
+                "y": -0.8500000238418579,
+                "z": 0.0
+              },
+              "visibleStrands": 3,
+              "visible": true
+            }
+          },
+          {
+            "elapsed": 0.39999979734420776,
+            "bodySimulated": false,
+            "measurements": {
+              "savedArc": 5.660993576049805,
+              "drawnArc": 5.660995006561279,
+              "arcRatio": 1.000000238418579,
+              "initialShapeError": 0.0,
+              "endpointDrop": 0.20453119277954102,
+              "endpointTravel": 0.8533726930618286,
+              "endpointAngle": 105.63397979736328,
+              "fixedEndError": 0.0,
+              "strandRootGap": 0.0,
+              "tipSeparationPixels": 23.096923828125,
+              "minimumTipSeparationPixels": 10.317727088928223,
+              "maximumAlpha": 1.0,
+              "nearAlpha": 0.654330849647522,
+              "middleAlpha": 0.9936156272888184,
+              "farAlpha": 1.0,
+              "strandLengthPixels": [
+                45.94487380981445,
+                42.27206039428711,
+                42.61766052246094
+              ],
+              "strandWidthPixels": [
+                2.0444843769073486,
+                2.044452428817749,
+                2.0444343090057373
+              ],
+              "strandAlpha": [
+                0.9720005393028259,
+                1.0,
+                1.0
+              ],
+              "visibleProbeMinCenterGaps": [
+                3.815641403198242,
+                5.696508884429932,
+                7.938108444213867
+              ],
+              "visibleProbeMinWidths": [
+                2.0444343090057373,
+                1.9554946422576904,
+                1.9200074672698975
+              ],
+              "visibleProbeMinAlpha": [
+                0.9720005393028259,
+                0.8213473558425903,
+                0.6706849336624146
+              ],
+              "end": {
+                "x": 15.98393726348877,
+                "y": -6.298183917999268,
+                "z": 0.0
+              },
+              "anchor": {
+                "x": 17.25,
+                "y": -0.8500000238418579,
+                "z": 0.0
+              },
+              "visibleStrands": 3,
+              "visible": true
+            }
+          },
+          {
+            "elapsed": 0.47999972105026245,
+            "bodySimulated": false,
+            "measurements": {
+              "savedArc": 5.660993576049805,
+              "drawnArc": 5.660995006561279,
+              "arcRatio": 1.000000238418579,
+              "initialShapeError": 0.0,
+              "endpointDrop": 0.20453119277954102,
+              "endpointTravel": 0.8533726930618286,
+              "endpointAngle": 105.63397979736328,
+              "fixedEndError": 0.0,
+              "strandRootGap": 0.0,
+              "tipSeparationPixels": 23.096923828125,
+              "minimumTipSeparationPixels": 10.317727088928223,
+              "maximumAlpha": 0.9149188995361328,
+              "nearAlpha": 0.24155841767787933,
+              "middleAlpha": 0.6134911775588989,
+              "farAlpha": 0.8632180094718933,
+              "strandLengthPixels": [
+                45.94487380981445,
+                42.27206039428711,
+                42.61766052246094
+              ],
+              "strandWidthPixels": [
+                2.0444843769073486,
+                2.044452428817749,
+                2.0444343090057373
+              ],
+              "strandAlpha": [
+                0.5000020265579224,
+                0.6480019688606262,
+                0.7840017080307007
+              ],
+              "visibleProbeMinCenterGaps": [
+                3.815641403198242,
+                5.696508884429932,
+                7.938108444213867
+              ],
+              "visibleProbeMinWidths": [
+                2.0444343090057373,
+                1.9554946422576904,
+                1.9200074672698975
+              ],
+              "visibleProbeMinAlpha": [
+                0.5000020265579224,
+                0.422505259513855,
+                0.34500378370285034
+              ],
+              "end": {
+                "x": 15.98393726348877,
+                "y": -6.298183917999268,
+                "z": 0.0
+              },
+              "anchor": {
+                "x": 17.25,
+                "y": -0.8500000238418579,
+                "z": 0.0
+              },
+              "visibleStrands": 3,
+              "visible": true
+            }
+          },
+          {
+            "elapsed": 0.5599996447563171,
+            "bodySimulated": false,
+            "measurements": {
+              "savedArc": 5.660993576049805,
+              "drawnArc": 5.660995006561279,
+              "arcRatio": 1.000000238418579,
+              "initialShapeError": 0.0,
+              "endpointDrop": 0.20453119277954102,
+              "endpointTravel": 0.8533726930618286,
+              "endpointAngle": 105.63397979736328,
+              "fixedEndError": 0.0,
+              "strandRootGap": 0.0,
+              "tipSeparationPixels": 23.096923828125,
+              "minimumTipSeparationPixels": 10.317727088928223,
+              "maximumAlpha": 0.3668327331542969,
+              "nearAlpha": 0.0,
+              "middleAlpha": 0.07911822199821472,
+              "farAlpha": 0.29987040162086487,
+              "strandLengthPixels": [
+                45.94487380981445,
+                42.27206039428711,
+                42.61766052246094
+              ],
+              "strandWidthPixels": [
+                2.0444843769073486,
+                2.044452428817749,
+                2.0444343090057373
+              ],
+              "strandAlpha": [
+                0.028000950813293457,
+                0.10400170087814331,
+                0.21600216627120972
+              ],
+              "visibleProbeMinCenterGaps": [
+                3.815641403198242,
+                5.696508884429932,
+                7.938108444213867
+              ],
+              "visibleProbeMinWidths": [
+                2.0444343090057373,
+                1.9554946422576904,
+                1.9200074672698975
+              ],
+              "visibleProbeMinAlpha": [
+                0.028000950813293457,
+                0.02366100251674652,
+                0.019320787861943245
+              ],
+              "end": {
+                "x": 15.98393726348877,
+                "y": -6.298183917999268,
+                "z": 0.0
+              },
+              "anchor": {
+                "x": 17.25,
+                "y": -0.8500000238418579,
+                "z": 0.0
+              },
+              "visibleStrands": 2,
+              "visible": true
+            }
+          },
+          {
+            "elapsed": 0.6199995875358582,
+            "bodySimulated": false,
+            "measurements": {
+              "savedArc": 5.660993576049805,
+              "drawnArc": 5.660995006561279,
+              "arcRatio": 1.000000238418579,
+              "initialShapeError": 0.0,
+              "endpointDrop": 0.20453119277954102,
+              "endpointTravel": 0.8533726930618286,
+              "endpointAngle": 105.63397979736328,
+              "fixedEndError": 0.0,
+              "strandRootGap": 0.0,
+              "tipSeparationPixels": 23.096923828125,
+              "minimumTipSeparationPixels": 10.317727088928223,
+              "maximumAlpha": 0.02940148115158081,
+              "nearAlpha": 0.0,
+              "middleAlpha": 0.0,
+              "farAlpha": 0.015563315711915493,
+              "strandLengthPixels": [
+                45.94487380981445,
+                42.27206039428711,
+                42.61766052246094
+              ],
+              "strandWidthPixels": [
+                2.0444843769073486,
+                2.044452428817749,
+                2.0444343090057373
+              ],
+              "strandAlpha": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "visibleProbeMinCenterGaps": [
+                3.815641403198242,
+                5.696508884429932,
+                7.938108444213867
+              ],
+              "visibleProbeMinWidths": [
+                2.0444343090057373,
+                1.9554946422576904,
+                1.9200074672698975
+              ],
+              "visibleProbeMinAlpha": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "end": {
+                "x": 15.98393726348877,
+                "y": -6.298183917999268,
+                "z": 0.0
+              },
+              "anchor": {
+                "x": 17.25,
+                "y": -0.8500000238418579,
+                "z": 0.0
+              },
+              "visibleStrands": 0,
+              "visible": true
+            }
+          },
+          {
+            "elapsed": 0.6399995684623718,
+            "bodySimulated": false,
+            "measurements": {
+              "savedArc": 5.660993576049805,
+              "drawnArc": 5.660995006561279,
+              "arcRatio": 1.000000238418579,
+              "initialShapeError": 0.0,
+              "endpointDrop": 0.20453119277954102,
+              "endpointTravel": 0.8533726930618286,
+              "endpointAngle": 105.63397979736328,
+              "fixedEndError": 0.0,
+              "strandRootGap": 0.0,
+              "tipSeparationPixels": 23.096923828125,
+              "minimumTipSeparationPixels": 10.317727088928223,
+              "maximumAlpha": 0.0,
+              "nearAlpha": 0.0,
+              "middleAlpha": 0.0,
+              "farAlpha": 0.0,
+              "strandLengthPixels": [
+                45.94487380981445,
+                42.27206039428711,
+                42.61766052246094
+              ],
+              "strandWidthPixels": [
+                2.0444843769073486,
+                2.044452428817749,
+                2.0444343090057373
+              ],
+              "strandAlpha": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "visibleProbeMinCenterGaps": [
+                3.815641403198242,
+                5.696508884429932,
+                7.938108444213867
+              ],
+              "visibleProbeMinWidths": [
+                2.0444343090057373,
+                1.9554946422576904,
+                1.9200074672698975
+              ],
+              "visibleProbeMinAlpha": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "end": {
+                "x": 15.98393726348877,
+                "y": -6.298183917999268,
+                "z": 0.0
+              },
+              "anchor": {
+                "x": 17.25,
+                "y": -0.8500000238418579,
+                "z": 0.0
+              },
+              "visibleStrands": 0,
+              "visible": false
+            }
+          }
+        ]
+      }
+    },
+    "After720": {
+      "errors": 0,
+      "development": false,
+      "attach": true,
+      "reached": false,
+      "route_cuts": 1,
+      "route_plays": 1,
+      "route_vfx": 1,
+      "old_fluff_max": 0,
+      "capture_failures": 0,
+      "audio_sha": "970d754ec4251d4ad2c4c57e22c97524db84ee63dcca50a1aefc4b1f4e2cde0e",
+      "gain": 0.41999998688697815,
+      "effects": 1.0,
+      "audio_render_failures": 0,
+      "cut_window_peak": 0.214599609375,
+      "mix_clipped_samples": 0,
+      "negative": [],
+      "checks": [],
+      "cut_details": [
+        {
+          "frame": 104,
+          "pointCount": 14,
+          "pieces": 1,
+          "endFrays": 3,
+          "fibres": 2,
+          "time": 2.0799992084503174,
+          "fraction": 0.0,
+          "distanceFromContact": 1.3938233852386475,
+          "sourceWidth": 0.1599999964237213,
+          "elapsed": 0.6399999856948853,
+          "linePointError": 0.0,
+          "fixedTime": 2.0799992084503174,
+          "endTime": 2.7399990558624268,
+          "scissorsClosure": 0.017888512462377548,
+          "contact": {
+            "x": 15.007654190063477,
+            "y": -7.47961950302124,
+            "z": 0.0
+          },
+          "cut": {
+            "x": 15.155437469482422,
+            "y": -6.093652725219727,
+            "z": 0.0
+          },
+          "first": {
+            "x": 15.155437469482422,
+            "y": -6.093652725219727,
+            "z": 0.0
+          },
+          "last": {
+            "x": 17.25,
+            "y": -0.8500000238418579,
+            "z": 0.0
+          },
+          "mode": "nearest rope endpoint (no invented extension)",
+          "cleanup": "soft collapse and fray completed",
+          "attachedBefore": true,
+          "attachedAfter": false,
+          "replacedOldFluff": true,
+          "renderedRope": [
+            {
+              "x": 15.155437469482422,
+              "y": -6.093652725219727,
+              "z": 0.0
+            },
+            {
+              "x": 15.316557884216309,
+              "y": -5.821223258972168,
+              "z": 0.0
+            },
+            {
+              "x": 15.477678298950195,
+              "y": -5.52697229385376,
+              "z": 0.0
+            },
+            {
+              "x": 15.638797760009766,
+              "y": -5.21090030670166,
+              "z": 0.0
+            },
+            {
+              "x": 15.799918174743652,
+              "y": -4.873006343841553,
+              "z": 0.0
+            },
+            {
+              "x": 15.961038589477539,
+              "y": -4.513291358947754,
+              "z": 0.0
+            },
+            {
+              "x": 16.12215805053711,
+              "y": -4.1317548751831055,
+              "z": 0.0
+            },
+            {
+              "x": 16.283279418945312,
+              "y": -3.7283966541290283,
+              "z": 0.0
+            },
+            {
+              "x": 16.444398880004883,
+              "y": -3.3032174110412598,
+              "z": 0.0
+            },
+            {
+              "x": 16.605518341064453,
+              "y": -2.8562169075012207,
+              "z": 0.0
+            },
+            {
+              "x": 16.766639709472656,
+              "y": -2.387394666671753,
+              "z": 0.0
+            },
+            {
+              "x": 16.927759170532227,
+              "y": -1.8967511653900146,
+              "z": 0.0
+            },
+            {
+              "x": 17.08888053894043,
+              "y": -1.3842862844467163,
+              "z": 0.0
+            },
+            {
+              "x": 17.25,
+              "y": -0.8500000238418579,
+              "z": 0.0
+            }
+          ],
+          "bladeLeft": [
+            {
+              "x": 15.376155853271484,
+              "y": -8.278449058532715,
+              "z": 0.0
+            },
+            {
+              "x": 15.37476921081543,
+              "y": -8.280915260314941,
+              "z": 0.0
+            },
+            {
+              "x": 15.23012924194336,
+              "y": -8.468912124633789,
+              "z": 0.0
+            },
+            {
+              "x": 15.22681713104248,
+              "y": -8.471917152404785,
+              "z": 0.0
+            },
+            {
+              "x": 15.22435188293457,
+              "y": -8.470531463623047,
+              "z": 0.0
+            },
+            {
+              "x": 15.21487045288086,
+              "y": -8.444108963012695,
+              "z": 0.0
+            },
+            {
+              "x": 15.198915481567383,
+              "y": -8.394577026367188,
+              "z": 0.0
+            },
+            {
+              "x": 15.158443450927734,
+              "y": -8.250140190124512,
+              "z": 0.0
+            },
+            {
+              "x": 15.13824462890625,
+              "y": -8.170641899108887,
+              "z": 0.0
+            },
+            {
+              "x": 15.121283531188965,
+              "y": -8.10269832611084,
+              "z": 0.0
+            },
+            {
+              "x": 15.107561111450195,
+              "y": -8.046309471130371,
+              "z": 0.0
+            },
+            {
+              "x": 15.089287757873535,
+              "y": -7.96627140045166,
+              "z": 0.0
+            },
+            {
+              "x": 15.07425308227539,
+              "y": -7.8977885246276855,
+              "z": 0.0
+            },
+            {
+              "x": 15.067005157470703,
+              "y": -7.864509582519531,
+              "z": 0.0
+            },
+            {
+              "x": 15.049578666687012,
+              "y": -7.780080318450928,
+              "z": 0.0
+            },
+            {
+              "x": 15.039401054382324,
+              "y": -7.72892951965332,
+              "z": 0.0
+            },
+            {
+              "x": 15.024672508239746,
+              "y": -7.6541290283203125,
+              "z": 0.0
+            },
+            {
+              "x": 15.013721466064453,
+              "y": -7.592809677124023,
+              "z": 0.0
+            },
+            {
+              "x": 15.008399963378906,
+              "y": -7.558991432189941,
+              "z": 0.0
+            },
+            {
+              "x": 15.004157066345215,
+              "y": -7.529024600982666,
+              "z": 0.0
+            },
+            {
+              "x": 15.00230598449707,
+              "y": -7.5150041580200195,
+              "z": 0.0
+            },
+            {
+              "x": 15.000993728637695,
+              "y": -7.5029096603393555,
+              "z": 0.0
+            },
+            {
+              "x": 15.000761032104492,
+              "y": -7.494667053222656,
+              "z": 0.0
+            },
+            {
+              "x": 15.001607894897461,
+              "y": -7.490275859832764,
+              "z": 0.0
+            },
+            {
+              "x": 15.0029935836792,
+              "y": -7.487810134887695,
+              "z": 0.0
+            },
+            {
+              "x": 15.00492000579834,
+              "y": -7.487270355224609,
+              "z": 0.0
+            },
+            {
+              "x": 15.01231575012207,
+              "y": -7.491429328918457,
+              "z": 0.0
+            },
+            {
+              "x": 15.015321731567383,
+              "y": -7.494741439819336,
+              "z": 0.0
+            },
+            {
+              "x": 15.018865585327148,
+              "y": -7.499979019165039,
+              "z": 0.0
+            },
+            {
+              "x": 15.022950172424316,
+              "y": -7.507143020629883,
+              "z": 0.0
+            },
+            {
+              "x": 15.036282539367676,
+              "y": -7.532485485076904,
+              "z": 0.0
+            },
+            {
+              "x": 15.050153732299805,
+              "y": -7.559753894805908,
+              "z": 0.0
+            },
+            {
+              "x": 15.080056190490723,
+              "y": -7.621994495391846,
+              "z": 0.0
+            },
+            {
+              "x": 15.10071086883545,
+              "y": -7.666055679321289,
+              "z": 0.0
+            },
+            {
+              "x": 15.163752555847168,
+              "y": -7.802091598510742,
+              "z": 0.0
+            },
+            {
+              "x": 15.195813179016113,
+              "y": -7.872035026550293,
+              "z": 0.0
+            },
+            {
+              "x": 15.250685691833496,
+              "y": -7.993743419647217,
+              "z": 0.0
+            },
+            {
+              "x": 15.2843656539917,
+              "y": -8.069464683532715,
+              "z": 0.0
+            },
+            {
+              "x": 15.375616073608398,
+              "y": -8.27652359008789,
+              "z": 0.0
+            }
+          ],
+          "bladeRight": [
+            {
+              "x": 15.495450019836426,
+              "y": -8.4220609664917,
+              "z": 0.0
+            },
+            {
+              "x": 15.479499816894531,
+              "y": -8.471593856811523,
+              "z": 0.0
+            },
+            {
+              "x": 15.477034568786621,
+              "y": -8.472980499267578,
+              "z": 0.0
+            },
+            {
+              "x": 15.475109100341797,
+              "y": -8.472441673278809,
+              "z": 0.0
+            },
+            {
+              "x": 15.469023704528809,
+              "y": -8.464506149291992,
+              "z": 0.0
+            },
+            {
+              "x": 15.33483600616455,
+              "y": -8.283615112304688,
+              "z": 0.0
+            },
+            {
+              "x": 15.330677032470703,
+              "y": -8.276219367980957,
+              "z": 0.0
+            },
+            {
+              "x": 15.334991455078125,
+              "y": -8.260811805725098,
+              "z": 0.0
+            },
+            {
+              "x": 15.341232299804688,
+              "y": -8.245944023132324,
+              "z": 0.0
+            },
+            {
+              "x": 15.410730361938477,
+              "y": -8.086790084838867,
+              "z": 0.0
+            },
+            {
+              "x": 15.427834510803223,
+              "y": -8.047964096069336,
+              "z": 0.0
+            },
+            {
+              "x": 15.455802917480469,
+              "y": -7.985180377960205,
+              "z": 0.0
+            },
+            {
+              "x": 15.494634628295898,
+              "y": -7.898438930511475,
+              "z": 0.0
+            },
+            {
+              "x": 15.527226448059082,
+              "y": -7.826565265655518,
+              "z": 0.0
+            },
+            {
+              "x": 15.586167335510254,
+              "y": -7.697686195373535,
+              "z": 0.0
+            },
+            {
+              "x": 15.602193832397461,
+              "y": -7.662712097167969,
+              "z": 0.0
+            },
+            {
+              "x": 15.626925468444824,
+              "y": -7.611484050750732,
+              "z": 0.0
+            },
+            {
+              "x": 15.646495819091797,
+              "y": -7.571271896362305,
+              "z": 0.0
+            },
+            {
+              "x": 15.67068862915039,
+              "y": -7.521969795227051,
+              "z": 0.0
+            },
+            {
+              "x": 15.678854942321777,
+              "y": -7.507641315460205,
+              "z": 0.0
+            },
+            {
+              "x": 15.68948745727539,
+              "y": -7.491926193237305,
+              "z": 0.0
+            },
+            {
+              "x": 15.696883201599121,
+              "y": -7.487766742706299,
+              "z": 0.0
+            },
+            {
+              "x": 15.7001953125,
+              "y": -7.490771293640137,
+              "z": 0.0
+            },
+            {
+              "x": 15.701042175292969,
+              "y": -7.495162487030029,
+              "z": 0.0
+            },
+            {
+              "x": 15.700810432434082,
+              "y": -7.503405570983887,
+              "z": 0.0
+            },
+            {
+              "x": 15.69950008392334,
+              "y": -7.515500068664551,
+              "z": 0.0
+            },
+            {
+              "x": 15.694722175598145,
+              "y": -7.547393321990967,
+              "z": 0.0
+            },
+            {
+              "x": 15.689404487609863,
+              "y": -7.581212520599365,
+              "z": 0.0
+            },
+            {
+              "x": 15.68246841430664,
+              "y": -7.620809078216553,
+              "z": 0.0
+            },
+            {
+              "x": 15.669907569885254,
+              "y": -7.687907695770264,
+              "z": 0.0
+            },
+            {
+              "x": 15.6511812210083,
+              "y": -7.784433841705322,
+              "z": 0.0
+            },
+            {
+              "x": 15.63939094543457,
+              "y": -7.841363430023193,
+              "z": 0.0
+            },
+            {
+              "x": 15.625443458557129,
+              "y": -7.905996799468994,
+              "z": 0.0
+            },
+            {
+              "x": 15.587300300598145,
+              "y": -8.071855545043945,
+              "z": 0.0
+            },
+            {
+              "x": 15.565261840820312,
+              "y": -8.165376663208008,
+              "z": 0.0
+            },
+            {
+              "x": 15.546151161193848,
+              "y": -8.241025924682617,
+              "z": 0.0
+            }
+          ],
+          "playerMin": {
+            "x": 14.526189804077148,
+            "y": -7.562178134918213,
+            "z": 0.0
+          },
+          "playerMax": {
+            "x": 15.326189041137695,
+            "y": -6.362178325653076,
+            "z": 0.0
+          },
+          "currentHead": {
+            "x": 15.155437469482422,
+            "y": -6.093652725219727,
+            "z": 0.0
+          },
+          "playerPosition": {
+            "x": 14.926189422607422,
+            "y": -6.9621782302856445
+          },
+          "playerVelocity": {
+            "x": 2.2273855209350586,
+            "y": -11.758647918701172
+          },
+          "successSnips": 0,
+          "finishedFrame": 137,
+          "physicalFailureObserved": true,
+          "presentation": "soft free-end collapse, connected fibre separation, stationary regional fade",
+          "configuredLifetime": 0.6399999856948853
+        }
+      ],
+      "cut_to_cleanup_seconds": [
+        0.6599998474121094
+      ],
+      "failure_local_seconds": 1.2999999523162842,
+      "route_final_remaining": 50.0,
+      "timeline_summary": {
+        "attachedFrames": 28,
+        "intersectionFrames": 0,
+        "minAttachedRopeBladeDistance": 1.4018853902816772
+      },
+      "soft_summary": {
+        "note": "Renderer positions, width curves, gradient alpha and camera projection measured. Raw geometry arc includes transparent vertices; not visible length. Alpha>0.01 is a numeric visibility threshold, not Human perception. Zero-width tip separations are not used as visible gaps.",
+        "initial_error": 0.0,
+        "raw_arc_ratio_first32_min": 0.9921779036521912,
+        "raw_arc_ratio_first32_max": 1.0000003576278687,
+        "fixed_end_error_max": 0.0,
+        "strand_body_join_gap_max": 0.0,
+        "last_alpha_above_point01": 0.6199995875358582,
+        "first_all_alpha_zero": 0.6399995684623718,
+        "split_numeric_interval": [
+          0.19999994337558746,
+          0.47999972105026245
+        ],
+        "split_numeric_span": 0.279999777674675,
+        "samples": [
+          {
+            "elapsed": 0.0,
+            "bodySimulated": true,
+            "measurements": {
+              "savedArc": 5.660993576049805,
+              "drawnArc": 5.660994052886963,
+              "arcRatio": 1.0000001192092896,
+              "initialShapeError": 0.0,
+              "endpointDrop": 0.0,
+              "endpointTravel": 0.0,
+              "endpointAngle": 59.3991584777832,
+              "fixedEndError": 0.0,
+              "strandRootGap": 0.0,
+              "tipSeparationPixels": 6.206902027130127,
+              "minimumTipSeparationPixels": 2.8965461254119873,
+              "maximumAlpha": 1.0,
+              "nearAlpha": 1.0,
+              "middleAlpha": 1.0,
+              "farAlpha": 1.0,
+              "strandLengthPixels": [
+                35.17218780517578,
+                31.861892700195312,
+                28.96516990661621
+              ],
+              "strandWidthPixels": [
+                1.6355469226837158,
+                1.6355469226837158,
+                1.6355006694793701
+              ],
+              "strandAlpha": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "visibleProbeMinCenterGaps": [
+                1.4482403993606567,
+                1.8103405237197876,
+                2.1722676753997803
+              ],
+              "visibleProbeMinWidths": [
+                1.6355006694793701,
+                1.5643795728683472,
+                1.5358966588974
+              ],
+              "visibleProbeMinAlpha": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "end": {
+                "x": 15.155437469482422,
+                "y": -6.093652725219727,
+                "z": 0.0
+              },
+              "anchor": {
+                "x": 17.25,
+                "y": -0.8500000238418579,
+                "z": 0.0
+              },
+              "visibleStrands": 0,
+              "visible": true
+            }
+          },
+          {
+            "elapsed": 0.07999996840953827,
+            "bodySimulated": true,
+            "measurements": {
+              "savedArc": 5.660993576049805,
+              "drawnArc": 5.61671257019043,
+              "arcRatio": 0.9921779036521912,
+              "initialShapeError": 0.0,
+              "endpointDrop": -0.03328227996826172,
+              "endpointTravel": 0.04561273008584976,
+              "endpointAngle": 63.56378173828125,
+              "fixedEndError": 0.0,
+              "strandRootGap": 0.0,
+              "tipSeparationPixels": 5.276864528656006,
+              "minimumTipSeparationPixels": 2.5003435611724854,
+              "maximumAlpha": 1.0,
+              "nearAlpha": 1.0,
+              "middleAlpha": 1.0,
+              "farAlpha": 1.0,
+              "strandLengthPixels": [
+                33.339820861816406,
+                30.56287384033203,
+                28.06234359741211
+              ],
+              "strandWidthPixels": [
+                1.635494589805603,
+                1.635573387145996,
+                1.6355079412460327
+              ],
+              "strandAlpha": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "visibleProbeMinCenterGaps": [
+                1.4339264631271362,
+                1.7411425113677979,
+                2.016646385192871
+              ],
+              "visibleProbeMinWidths": [
+                1.635494589805603,
+                1.5644264221191406,
+                1.5359567403793335
+              ],
+              "visibleProbeMinAlpha": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "end": {
+                "x": 15.186627388000488,
+                "y": -6.060370445251465,
+                "z": 0.0
+              },
+              "anchor": {
+                "x": 17.25,
+                "y": -0.8500000238418579,
+                "z": 0.0
+              },
+              "visibleStrands": 0,
+              "visible": true
+            }
+          },
+          {
+            "elapsed": 0.15999995172023773,
+            "bodySimulated": false,
+            "measurements": {
+              "savedArc": 5.660993576049805,
+              "drawnArc": 5.648098945617676,
+              "arcRatio": 0.9977222084999084,
+              "initialShapeError": 0.0,
+              "endpointDrop": 0.0995631217956543,
+              "endpointTravel": 0.37589871883392334,
+              "endpointAngle": 100.01048278808594,
+              "fixedEndError": 0.0,
+              "strandRootGap": 0.0,
+              "tipSeparationPixels": 7.095991611480713,
+              "minimumTipSeparationPixels": 2.981574296951294,
+              "maximumAlpha": 1.0,
+              "nearAlpha": 0.9428073763847351,
+              "middleAlpha": 1.0,
+              "farAlpha": 1.0,
+              "strandLengthPixels": [
+                34.6677360534668,
+                31.656494140625,
+                28.687528610229492
+              ],
+              "strandWidthPixels": [
+                1.6356022357940674,
+                1.6355289220809937,
+                1.635516881942749
+              ],
+              "strandAlpha": [
+                0.6700035929679871,
+                0.22576145827770233,
+                0.0
+              ],
+              "visibleProbeMinCenterGaps": [
+                1.540746808052063,
+                1.9211790561676025,
+                2.289834499359131
+              ],
+              "visibleProbeMinWidths": [
+                1.635516881942749,
+                1.5643932819366455,
+                1.5359718799591064
+              ],
+              "visibleProbeMinAlpha": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "end": {
+                "x": 15.517910957336426,
+                "y": -6.193215847015381,
+                "z": 0.0
+              },
+              "anchor": {
+                "x": 17.25,
+                "y": -0.8500000238418579,
+                "z": 0.0
+              },
+              "visibleStrands": 2,
+              "visible": true
+            }
+          },
+          {
+            "elapsed": 0.2399999350309372,
+            "bodySimulated": false,
+            "measurements": {
+              "savedArc": 5.660993576049805,
+              "drawnArc": 5.660994052886963,
+              "arcRatio": 1.0000001192092896,
+              "initialShapeError": 0.0,
+              "endpointDrop": 0.18691492080688477,
+              "endpointTravel": 0.7859969139099121,
+              "endpointAngle": 105.63397979736328,
+              "fixedEndError": 0.0,
+              "strandRootGap": 0.0,
+              "tipSeparationPixels": 17.64235496520996,
+              "minimumTipSeparationPixels": 7.458954811096191,
+              "maximumAlpha": 1.0,
+              "nearAlpha": 0.7352187037467957,
+              "middleAlpha": 1.0,
+              "farAlpha": 1.0,
+              "strandLengthPixels": [
+                36.755943298339844,
+                33.8176383972168,
+                33.42391586303711
+              ],
+              "strandWidthPixels": [
+                1.6355493068695068,
+                1.6354897022247314,
+                1.6354626417160034
+              ],
+              "strandAlpha": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "visibleProbeMinCenterGaps": [
+                3.0524230003356934,
+                4.55729866027832,
+                6.350364685058594
+              ],
+              "visibleProbeMinWidths": [
+                1.6354626417160034,
+                1.564402461051941,
+                1.5359340906143188
+              ],
+              "visibleProbeMinAlpha": [
+                1.0,
+                0.845007061958313,
+                0.6900047063827515
+              ],
+              "end": {
+                "x": 15.918886184692383,
+                "y": -6.280567646026611,
+                "z": 0.0
+              },
+              "anchor": {
+                "x": 17.25,
+                "y": -0.8500000238418579,
+                "z": 0.0
+              },
+              "visibleStrands": 3,
+              "visible": true
+            }
+          },
+          {
+            "elapsed": 0.3199998736381531,
+            "bodySimulated": false,
+            "measurements": {
+              "savedArc": 5.660993576049805,
+              "drawnArc": 5.660994529724121,
+              "arcRatio": 1.0000001192092896,
+              "initialShapeError": 0.0,
+              "endpointDrop": 0.20438814163208008,
+              "endpointTravel": 0.8529569506645203,
+              "endpointAngle": 105.63397979736328,
+              "fixedEndError": 0.0,
+              "strandRootGap": 0.0,
+              "tipSeparationPixels": 18.47746467590332,
+              "minimumTipSeparationPixels": 8.254178047180176,
+              "maximumAlpha": 1.0,
+              "nearAlpha": 0.7352187037467957,
+              "middleAlpha": 1.0,
+              "farAlpha": 1.0,
+              "strandLengthPixels": [
+                36.755859375,
+                33.81761932373047,
+                34.094139099121094
+              ],
+              "strandWidthPixels": [
+                1.6355493068695068,
+                1.6354897022247314,
+                1.635545015335083
+              ],
+              "strandAlpha": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "visibleProbeMinCenterGaps": [
+                3.05253005027771,
+                4.557178497314453,
+                6.350423812866211
+              ],
+              "visibleProbeMinWidths": [
+                1.6354897022247314,
+                1.5644240379333496,
+                1.5360063314437866
+              ],
+              "visibleProbeMinAlpha": [
+                1.0,
+                0.845007061958313,
+                0.6900047063827515
+              ],
+              "end": {
+                "x": 15.98354434967041,
+                "y": -6.298040866851807,
+                "z": 0.0
+              },
+              "anchor": {
+                "x": 17.25,
+                "y": -0.8500000238418579,
+                "z": 0.0
+              },
+              "visibleStrands": 3,
+              "visible": true
+            }
+          },
+          {
+            "elapsed": 0.39999979734420776,
+            "bodySimulated": false,
+            "measurements": {
+              "savedArc": 5.660993576049805,
+              "drawnArc": 5.660995006561279,
+              "arcRatio": 1.000000238418579,
+              "initialShapeError": 0.0,
+              "endpointDrop": 0.20453119277954102,
+              "endpointTravel": 0.8533726930618286,
+              "endpointAngle": 105.63397979736328,
+              "fixedEndError": 0.0,
+              "strandRootGap": 0.0,
+              "tipSeparationPixels": 18.477527618408203,
+              "minimumTipSeparationPixels": 8.254183769226074,
+              "maximumAlpha": 1.0,
+              "nearAlpha": 0.654330849647522,
+              "middleAlpha": 0.9936156272888184,
+              "farAlpha": 1.0,
+              "strandLengthPixels": [
+                36.75591278076172,
+                33.81765365600586,
+                34.09412384033203
+              ],
+              "strandWidthPixels": [
+                1.6356011629104614,
+                1.6355504989624023,
+                1.635545015335083
+              ],
+              "strandAlpha": [
+                0.9720005393028259,
+                1.0,
+                1.0
+              ],
+              "visibleProbeMinCenterGaps": [
+                3.052476644515991,
+                4.557241439819336,
+                6.350423812866211
+              ],
+              "visibleProbeMinWidths": [
+                1.635545015335083,
+                1.5644240379333496,
+                1.5359947681427002
+              ],
+              "visibleProbeMinAlpha": [
+                0.9720005393028259,
+                0.8213473558425903,
+                0.6706849336624146
+              ],
+              "end": {
+                "x": 15.98393726348877,
+                "y": -6.298183917999268,
+                "z": 0.0
+              },
+              "anchor": {
+                "x": 17.25,
+                "y": -0.8500000238418579,
+                "z": 0.0
+              },
+              "visibleStrands": 3,
+              "visible": true
+            }
+          },
+          {
+            "elapsed": 0.47999972105026245,
+            "bodySimulated": false,
+            "measurements": {
+              "savedArc": 5.660993576049805,
+              "drawnArc": 5.660995006561279,
+              "arcRatio": 1.000000238418579,
+              "initialShapeError": 0.0,
+              "endpointDrop": 0.20453119277954102,
+              "endpointTravel": 0.8533726930618286,
+              "endpointAngle": 105.63397979736328,
+              "fixedEndError": 0.0,
+              "strandRootGap": 0.0,
+              "tipSeparationPixels": 18.477527618408203,
+              "minimumTipSeparationPixels": 8.254183769226074,
+              "maximumAlpha": 0.9149188995361328,
+              "nearAlpha": 0.24155841767787933,
+              "middleAlpha": 0.6134911775588989,
+              "farAlpha": 0.8632180094718933,
+              "strandLengthPixels": [
+                36.75591278076172,
+                33.81765365600586,
+                34.09412384033203
+              ],
+              "strandWidthPixels": [
+                1.6356011629104614,
+                1.6355504989624023,
+                1.635545015335083
+              ],
+              "strandAlpha": [
+                0.5000020265579224,
+                0.6480019688606262,
+                0.7840017080307007
+              ],
+              "visibleProbeMinCenterGaps": [
+                3.052476644515991,
+                4.557241439819336,
+                6.350423812866211
+              ],
+              "visibleProbeMinWidths": [
+                1.635545015335083,
+                1.5644240379333496,
+                1.5359947681427002
+              ],
+              "visibleProbeMinAlpha": [
+                0.5000020265579224,
+                0.422505259513855,
+                0.34500378370285034
+              ],
+              "end": {
+                "x": 15.98393726348877,
+                "y": -6.298183917999268,
+                "z": 0.0
+              },
+              "anchor": {
+                "x": 17.25,
+                "y": -0.8500000238418579,
+                "z": 0.0
+              },
+              "visibleStrands": 3,
+              "visible": true
+            }
+          },
+          {
+            "elapsed": 0.5599996447563171,
+            "bodySimulated": false,
+            "measurements": {
+              "savedArc": 5.660993576049805,
+              "drawnArc": 5.660995006561279,
+              "arcRatio": 1.000000238418579,
+              "initialShapeError": 0.0,
+              "endpointDrop": 0.20453119277954102,
+              "endpointTravel": 0.8533726930618286,
+              "endpointAngle": 105.63397979736328,
+              "fixedEndError": 0.0,
+              "strandRootGap": 0.0,
+              "tipSeparationPixels": 18.477527618408203,
+              "minimumTipSeparationPixels": 8.254183769226074,
+              "maximumAlpha": 0.3668327331542969,
+              "nearAlpha": 0.0,
+              "middleAlpha": 0.07911822199821472,
+              "farAlpha": 0.29987040162086487,
+              "strandLengthPixels": [
+                36.75591278076172,
+                33.81765365600586,
+                34.09412384033203
+              ],
+              "strandWidthPixels": [
+                1.6356011629104614,
+                1.6355504989624023,
+                1.635545015335083
+              ],
+              "strandAlpha": [
+                0.028000950813293457,
+                0.10400170087814331,
+                0.21600216627120972
+              ],
+              "visibleProbeMinCenterGaps": [
+                3.052476644515991,
+                4.557241439819336,
+                6.350423812866211
+              ],
+              "visibleProbeMinWidths": [
+                1.635545015335083,
+                1.5644240379333496,
+                1.5359947681427002
+              ],
+              "visibleProbeMinAlpha": [
+                0.028000950813293457,
+                0.02366100251674652,
+                0.019320787861943245
+              ],
+              "end": {
+                "x": 15.98393726348877,
+                "y": -6.298183917999268,
+                "z": 0.0
+              },
+              "anchor": {
+                "x": 17.25,
+                "y": -0.8500000238418579,
+                "z": 0.0
+              },
+              "visibleStrands": 2,
+              "visible": true
+            }
+          },
+          {
+            "elapsed": 0.6199995875358582,
+            "bodySimulated": false,
+            "measurements": {
+              "savedArc": 5.660993576049805,
+              "drawnArc": 5.660995006561279,
+              "arcRatio": 1.000000238418579,
+              "initialShapeError": 0.0,
+              "endpointDrop": 0.20453119277954102,
+              "endpointTravel": 0.8533726930618286,
+              "endpointAngle": 105.63397979736328,
+              "fixedEndError": 0.0,
+              "strandRootGap": 0.0,
+              "tipSeparationPixels": 18.477527618408203,
+              "minimumTipSeparationPixels": 8.254183769226074,
+              "maximumAlpha": 0.02940148115158081,
+              "nearAlpha": 0.0,
+              "middleAlpha": 0.0,
+              "farAlpha": 0.015563315711915493,
+              "strandLengthPixels": [
+                36.75591278076172,
+                33.81765365600586,
+                34.09412384033203
+              ],
+              "strandWidthPixels": [
+                1.6356011629104614,
+                1.6355504989624023,
+                1.635545015335083
+              ],
+              "strandAlpha": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "visibleProbeMinCenterGaps": [
+                3.052476644515991,
+                4.557241439819336,
+                6.350423812866211
+              ],
+              "visibleProbeMinWidths": [
+                1.635545015335083,
+                1.5644240379333496,
+                1.5359947681427002
+              ],
+              "visibleProbeMinAlpha": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "end": {
+                "x": 15.98393726348877,
+                "y": -6.298183917999268,
+                "z": 0.0
+              },
+              "anchor": {
+                "x": 17.25,
+                "y": -0.8500000238418579,
+                "z": 0.0
+              },
+              "visibleStrands": 0,
+              "visible": true
+            }
+          },
+          {
+            "elapsed": 0.6399995684623718,
+            "bodySimulated": false,
+            "measurements": {
+              "savedArc": 5.660993576049805,
+              "drawnArc": 5.660995006561279,
+              "arcRatio": 1.000000238418579,
+              "initialShapeError": 0.0,
+              "endpointDrop": 0.20453119277954102,
+              "endpointTravel": 0.8533726930618286,
+              "endpointAngle": 105.63397979736328,
+              "fixedEndError": 0.0,
+              "strandRootGap": 0.0,
+              "tipSeparationPixels": 18.477527618408203,
+              "minimumTipSeparationPixels": 8.254183769226074,
+              "maximumAlpha": 0.0,
+              "nearAlpha": 0.0,
+              "middleAlpha": 0.0,
+              "farAlpha": 0.0,
+              "strandLengthPixels": [
+                36.75591278076172,
+                33.81765365600586,
+                34.09412384033203
+              ],
+              "strandWidthPixels": [
+                1.6356011629104614,
+                1.6355504989624023,
+                1.635545015335083
+              ],
+              "strandAlpha": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "visibleProbeMinCenterGaps": [
+                3.052476644515991,
+                4.557241439819336,
+                6.350423812866211
+              ],
+              "visibleProbeMinWidths": [
+                1.635545015335083,
+                1.5644240379333496,
+                1.5359947681427002
+              ],
+              "visibleProbeMinAlpha": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "end": {
+                "x": 15.98393726348877,
+                "y": -6.298183917999268,
+                "z": 0.0
+              },
+              "anchor": {
+                "x": 17.25,
+                "y": -0.8500000238418579,
+                "z": 0.0
+              },
+              "visibleStrands": 0,
+              "visible": false
+            }
+          }
+        ]
+      }
+    },
+    "AfterL5": {
+      "errors": 0,
+      "development": false,
+      "attach": true,
+      "reached": true,
+      "route_cuts": 0,
+      "route_plays": 0,
+      "route_vfx": 0,
+      "old_fluff_max": 0,
+      "capture_failures": 0,
+      "audio_sha": "970d754ec4251d4ad2c4c57e22c97524db84ee63dcca50a1aefc4b1f4e2cde0e",
+      "gain": 0.41999998688697815,
+      "effects": 1.0,
+      "audio_render_failures": 0,
+      "cut_window_peak": 0.160003662109375,
+      "mix_clipped_samples": 0,
+      "negative": [],
+      "checks": [],
+      "cut_details": [],
+      "cut_to_cleanup_seconds": [],
+      "failure_local_seconds": null,
+      "route_final_remaining": 50.0,
+      "timeline_summary": {
+        "attachedFrames": 60,
+        "intersectionFrames": 0,
+        "minAttachedRopeBladeDistance": 2.502570390701294
+      }
+    },
+    "AfterL6": {
+      "errors": 0,
+      "development": false,
+      "attach": true,
+      "reached": true,
+      "route_cuts": 0,
+      "route_plays": 0,
+      "route_vfx": 0,
+      "old_fluff_max": 0,
+      "capture_failures": 0,
+      "audio_sha": "970d754ec4251d4ad2c4c57e22c97524db84ee63dcca50a1aefc4b1f4e2cde0e",
+      "gain": 0.41999998688697815,
+      "effects": 1.0,
+      "audio_render_failures": 0,
+      "cut_window_peak": 0.160003662109375,
+      "mix_clipped_samples": 0,
+      "negative": [],
+      "checks": [],
+      "cut_details": [],
+      "cut_to_cleanup_seconds": [],
+      "failure_local_seconds": null,
+      "route_final_remaining": 50.0,
+      "timeline_summary": {
+        "attachedFrames": 60,
+        "intersectionFrames": 0,
+        "minAttachedRopeBladeDistance": 1.5048669576644897
+      }
+    },
+    "BaselineL7": {
+      "errors": 0,
+      "development": false,
+      "attach": true,
+      "reached": false,
+      "route_cuts": 1,
+      "route_plays": 1,
+      "route_vfx": 1,
+      "old_fluff_max": 0,
+      "capture_failures": 0,
+      "audio_sha": "970d754ec4251d4ad2c4c57e22c97524db84ee63dcca50a1aefc4b1f4e2cde0e",
+      "gain": 0.41999998688697815,
+      "effects": 1.0,
+      "audio_render_failures": 0,
+      "cut_window_peak": 0.2403564453125,
+      "mix_clipped_samples": 0,
+      "negative": [],
+      "checks": [],
+      "cut_details": [
+        {
+          "frame": 104,
+          "pointCount": 14,
+          "pieces": 1,
+          "endFrays": 2,
+          "fibres": 4,
+          "time": 2.0799992084503174,
+          "fraction": 0.0,
+          "distanceFromContact": 1.3938233852386475,
+          "sourceWidth": 0.1599999964237213,
+          "elapsed": 0.6000000238418579,
+          "linePointError": 0.0,
+          "fixedTime": 2.0799992084503174,
+          "endTime": 2.6999990940093994,
+          "scissorsClosure": 0.017888512462377548,
+          "contact": {
+            "x": 15.007654190063477,
+            "y": -7.47961950302124,
+            "z": 0.0
+          },
+          "cut": {
+            "x": 15.155437469482422,
+            "y": -6.093652725219727,
+            "z": 0.0
+          },
+          "first": {
+            "x": 15.155437469482422,
+            "y": -6.093652725219727,
+            "z": 0.0
+          },
+          "last": {
+            "x": 17.25,
+            "y": -0.8500000238418579,
+            "z": 0.0
+          },
+          "mode": "nearest rope endpoint (no invented extension)",
+          "cleanup": "progressive unravel completed",
+          "attachedBefore": true,
+          "attachedAfter": false,
+          "replacedOldFluff": true,
+          "renderedRope": [
+            {
+              "x": 15.155437469482422,
+              "y": -6.093652725219727,
+              "z": 0.0
+            },
+            {
+              "x": 15.316557884216309,
+              "y": -5.821223258972168,
+              "z": 0.0
+            },
+            {
+              "x": 15.477678298950195,
+              "y": -5.52697229385376,
+              "z": 0.0
+            },
+            {
+              "x": 15.638797760009766,
+              "y": -5.21090030670166,
+              "z": 0.0
+            },
+            {
+              "x": 15.799918174743652,
+              "y": -4.873006343841553,
+              "z": 0.0
+            },
+            {
+              "x": 15.961038589477539,
+              "y": -4.513291358947754,
+              "z": 0.0
+            },
+            {
+              "x": 16.12215805053711,
+              "y": -4.1317548751831055,
+              "z": 0.0
+            },
+            {
+              "x": 16.283279418945312,
+              "y": -3.7283966541290283,
+              "z": 0.0
+            },
+            {
+              "x": 16.444398880004883,
+              "y": -3.3032174110412598,
+              "z": 0.0
+            },
+            {
+              "x": 16.605518341064453,
+              "y": -2.8562169075012207,
+              "z": 0.0
+            },
+            {
+              "x": 16.766639709472656,
+              "y": -2.387394666671753,
+              "z": 0.0
+            },
+            {
+              "x": 16.927759170532227,
+              "y": -1.8967511653900146,
+              "z": 0.0
+            },
+            {
+              "x": 17.08888053894043,
+              "y": -1.3842862844467163,
+              "z": 0.0
+            },
+            {
+              "x": 17.25,
+              "y": -0.8500000238418579,
+              "z": 0.0
+            }
+          ],
+          "bladeLeft": [
+            {
+              "x": 15.376155853271484,
+              "y": -8.278449058532715,
+              "z": 0.0
+            },
+            {
+              "x": 15.37476921081543,
+              "y": -8.280915260314941,
+              "z": 0.0
+            },
+            {
+              "x": 15.23012924194336,
+              "y": -8.468912124633789,
+              "z": 0.0
+            },
+            {
+              "x": 15.22681713104248,
+              "y": -8.471917152404785,
+              "z": 0.0
+            },
+            {
+              "x": 15.22435188293457,
+              "y": -8.470531463623047,
+              "z": 0.0
+            },
+            {
+              "x": 15.21487045288086,
+              "y": -8.444108963012695,
+              "z": 0.0
+            },
+            {
+              "x": 15.198915481567383,
+              "y": -8.394577026367188,
+              "z": 0.0
+            },
+            {
+              "x": 15.158443450927734,
+              "y": -8.250140190124512,
+              "z": 0.0
+            },
+            {
+              "x": 15.13824462890625,
+              "y": -8.170641899108887,
+              "z": 0.0
+            },
+            {
+              "x": 15.121283531188965,
+              "y": -8.10269832611084,
+              "z": 0.0
+            },
+            {
+              "x": 15.107561111450195,
+              "y": -8.046309471130371,
+              "z": 0.0
+            },
+            {
+              "x": 15.089287757873535,
+              "y": -7.96627140045166,
+              "z": 0.0
+            },
+            {
+              "x": 15.07425308227539,
+              "y": -7.8977885246276855,
+              "z": 0.0
+            },
+            {
+              "x": 15.067005157470703,
+              "y": -7.864509582519531,
+              "z": 0.0
+            },
+            {
+              "x": 15.049578666687012,
+              "y": -7.780080318450928,
+              "z": 0.0
+            },
+            {
+              "x": 15.039401054382324,
+              "y": -7.72892951965332,
+              "z": 0.0
+            },
+            {
+              "x": 15.024672508239746,
+              "y": -7.6541290283203125,
+              "z": 0.0
+            },
+            {
+              "x": 15.013721466064453,
+              "y": -7.592809677124023,
+              "z": 0.0
+            },
+            {
+              "x": 15.008399963378906,
+              "y": -7.558991432189941,
+              "z": 0.0
+            },
+            {
+              "x": 15.004157066345215,
+              "y": -7.529024600982666,
+              "z": 0.0
+            },
+            {
+              "x": 15.00230598449707,
+              "y": -7.5150041580200195,
+              "z": 0.0
+            },
+            {
+              "x": 15.000993728637695,
+              "y": -7.5029096603393555,
+              "z": 0.0
+            },
+            {
+              "x": 15.000761032104492,
+              "y": -7.494667053222656,
+              "z": 0.0
+            },
+            {
+              "x": 15.001607894897461,
+              "y": -7.490275859832764,
+              "z": 0.0
+            },
+            {
+              "x": 15.0029935836792,
+              "y": -7.487810134887695,
+              "z": 0.0
+            },
+            {
+              "x": 15.00492000579834,
+              "y": -7.487270355224609,
+              "z": 0.0
+            },
+            {
+              "x": 15.01231575012207,
+              "y": -7.491429328918457,
+              "z": 0.0
+            },
+            {
+              "x": 15.015321731567383,
+              "y": -7.494741439819336,
+              "z": 0.0
+            },
+            {
+              "x": 15.018865585327148,
+              "y": -7.499979019165039,
+              "z": 0.0
+            },
+            {
+              "x": 15.022950172424316,
+              "y": -7.507143020629883,
+              "z": 0.0
+            },
+            {
+              "x": 15.036282539367676,
+              "y": -7.532485485076904,
+              "z": 0.0
+            },
+            {
+              "x": 15.050153732299805,
+              "y": -7.559753894805908,
+              "z": 0.0
+            },
+            {
+              "x": 15.080056190490723,
+              "y": -7.621994495391846,
+              "z": 0.0
+            },
+            {
+              "x": 15.10071086883545,
+              "y": -7.666055679321289,
+              "z": 0.0
+            },
+            {
+              "x": 15.163752555847168,
+              "y": -7.802091598510742,
+              "z": 0.0
+            },
+            {
+              "x": 15.195813179016113,
+              "y": -7.872035026550293,
+              "z": 0.0
+            },
+            {
+              "x": 15.250685691833496,
+              "y": -7.993743419647217,
+              "z": 0.0
+            },
+            {
+              "x": 15.2843656539917,
+              "y": -8.069464683532715,
+              "z": 0.0
+            },
+            {
+              "x": 15.375616073608398,
+              "y": -8.27652359008789,
+              "z": 0.0
+            }
+          ],
+          "bladeRight": [
+            {
+              "x": 15.495450019836426,
+              "y": -8.4220609664917,
+              "z": 0.0
+            },
+            {
+              "x": 15.479499816894531,
+              "y": -8.471593856811523,
+              "z": 0.0
+            },
+            {
+              "x": 15.477034568786621,
+              "y": -8.472980499267578,
+              "z": 0.0
+            },
+            {
+              "x": 15.475109100341797,
+              "y": -8.472441673278809,
+              "z": 0.0
+            },
+            {
+              "x": 15.469023704528809,
+              "y": -8.464506149291992,
+              "z": 0.0
+            },
+            {
+              "x": 15.33483600616455,
+              "y": -8.283615112304688,
+              "z": 0.0
+            },
+            {
+              "x": 15.330677032470703,
+              "y": -8.276219367980957,
+              "z": 0.0
+            },
+            {
+              "x": 15.334991455078125,
+              "y": -8.260811805725098,
+              "z": 0.0
+            },
+            {
+              "x": 15.341232299804688,
+              "y": -8.245944023132324,
+              "z": 0.0
+            },
+            {
+              "x": 15.410730361938477,
+              "y": -8.086790084838867,
+              "z": 0.0
+            },
+            {
+              "x": 15.427834510803223,
+              "y": -8.047964096069336,
+              "z": 0.0
+            },
+            {
+              "x": 15.455802917480469,
+              "y": -7.985180377960205,
+              "z": 0.0
+            },
+            {
+              "x": 15.494634628295898,
+              "y": -7.898438930511475,
+              "z": 0.0
+            },
+            {
+              "x": 15.527226448059082,
+              "y": -7.826565265655518,
+              "z": 0.0
+            },
+            {
+              "x": 15.586167335510254,
+              "y": -7.697686195373535,
+              "z": 0.0
+            },
+            {
+              "x": 15.602193832397461,
+              "y": -7.662712097167969,
+              "z": 0.0
+            },
+            {
+              "x": 15.626925468444824,
+              "y": -7.611484050750732,
+              "z": 0.0
+            },
+            {
+              "x": 15.646495819091797,
+              "y": -7.571271896362305,
+              "z": 0.0
+            },
+            {
+              "x": 15.67068862915039,
+              "y": -7.521969795227051,
+              "z": 0.0
+            },
+            {
+              "x": 15.678854942321777,
+              "y": -7.507641315460205,
+              "z": 0.0
+            },
+            {
+              "x": 15.68948745727539,
+              "y": -7.491926193237305,
+              "z": 0.0
+            },
+            {
+              "x": 15.696883201599121,
+              "y": -7.487766742706299,
+              "z": 0.0
+            },
+            {
+              "x": 15.7001953125,
+              "y": -7.490771293640137,
+              "z": 0.0
+            },
+            {
+              "x": 15.701042175292969,
+              "y": -7.495162487030029,
+              "z": 0.0
+            },
+            {
+              "x": 15.700810432434082,
+              "y": -7.503405570983887,
+              "z": 0.0
+            },
+            {
+              "x": 15.69950008392334,
+              "y": -7.515500068664551,
+              "z": 0.0
+            },
+            {
+              "x": 15.694722175598145,
+              "y": -7.547393321990967,
+              "z": 0.0
+            },
+            {
+              "x": 15.689404487609863,
+              "y": -7.581212520599365,
+              "z": 0.0
+            },
+            {
+              "x": 15.68246841430664,
+              "y": -7.620809078216553,
+              "z": 0.0
+            },
+            {
+              "x": 15.669907569885254,
+              "y": -7.687907695770264,
+              "z": 0.0
+            },
+            {
+              "x": 15.6511812210083,
+              "y": -7.784433841705322,
+              "z": 0.0
+            },
+            {
+              "x": 15.63939094543457,
+              "y": -7.841363430023193,
+              "z": 0.0
+            },
+            {
+              "x": 15.625443458557129,
+              "y": -7.905996799468994,
+              "z": 0.0
+            },
+            {
+              "x": 15.587300300598145,
+              "y": -8.071855545043945,
+              "z": 0.0
+            },
+            {
+              "x": 15.565261840820312,
+              "y": -8.165376663208008,
+              "z": 0.0
+            },
+            {
+              "x": 15.546151161193848,
+              "y": -8.241025924682617,
+              "z": 0.0
+            }
+          ],
+          "playerMin": {
+            "x": 14.526189804077148,
+            "y": -7.562178134918213,
+            "z": 0.0
+          },
+          "playerMax": {
+            "x": 15.326189041137695,
+            "y": -6.362178325653076,
+            "z": 0.0
+          },
+          "currentHead": {
+            "x": 15.155437469482422,
+            "y": -6.093652725219727,
+            "z": 0.0
+          },
+          "playerPosition": {
+            "x": 14.926189422607422,
+            "y": -6.9621782302856445
+          },
+          "playerVelocity": {
+            "x": 2.2273855209350586,
+            "y": -11.758647918701172
+          },
+          "successSnips": 0,
+          "finishedFrame": 135,
+          "physicalFailureObserved": true,
+          "presentation": "3caca29 progressive trim baseline",
+          "configuredLifetime": 0.6000000238418579
+        }
+      ],
+      "cut_to_cleanup_seconds": [
+        0.619999885559082
+      ],
+      "failure_local_seconds": 1.2999999523162842,
+      "route_final_remaining": 50.0,
+      "timeline_summary": {
+        "attachedFrames": 28,
+        "intersectionFrames": 0,
+        "minAttachedRopeBladeDistance": 1.4018853902816772
+      }
+    },
+    "Muted": {
+      "errors": 0,
+      "development": false,
+      "attach": true,
+      "reached": false,
+      "route_cuts": 1,
+      "route_plays": 0,
+      "route_vfx": 1,
+      "old_fluff_max": 0,
+      "capture_failures": 0,
+      "audio_sha": "970d754ec4251d4ad2c4c57e22c97524db84ee63dcca50a1aefc4b1f4e2cde0e",
+      "gain": 0.41999998688697815,
+      "effects": 0.0,
+      "audio_render_failures": 0,
+      "cut_window_peak": 0.0,
+      "mix_clipped_samples": 0,
+      "negative": [],
+      "checks": [],
+      "cut_details": [
+        {
+          "frame": 104,
+          "pointCount": 14,
+          "pieces": 1,
+          "endFrays": 3,
+          "fibres": 2,
+          "time": 2.0799992084503174,
+          "fraction": 0.0,
+          "distanceFromContact": 1.3938233852386475,
+          "sourceWidth": 0.1599999964237213,
+          "elapsed": 0.6399999856948853,
+          "linePointError": 0.0,
+          "fixedTime": 2.0799992084503174,
+          "endTime": 2.7399990558624268,
+          "scissorsClosure": 0.017888512462377548,
+          "contact": {
+            "x": 15.007654190063477,
+            "y": -7.47961950302124,
+            "z": 0.0
+          },
+          "cut": {
+            "x": 15.155437469482422,
+            "y": -6.093652725219727,
+            "z": 0.0
+          },
+          "first": {
+            "x": 15.155437469482422,
+            "y": -6.093652725219727,
+            "z": 0.0
+          },
+          "last": {
+            "x": 17.25,
+            "y": -0.8500000238418579,
+            "z": 0.0
+          },
+          "mode": "nearest rope endpoint (no invented extension)",
+          "cleanup": "soft collapse and fray completed",
+          "attachedBefore": true,
+          "attachedAfter": false,
+          "replacedOldFluff": true,
+          "renderedRope": [
+            {
+              "x": 15.155437469482422,
+              "y": -6.093652725219727,
+              "z": 0.0
+            },
+            {
+              "x": 15.316557884216309,
+              "y": -5.821223258972168,
+              "z": 0.0
+            },
+            {
+              "x": 15.477678298950195,
+              "y": -5.52697229385376,
+              "z": 0.0
+            },
+            {
+              "x": 15.638797760009766,
+              "y": -5.21090030670166,
+              "z": 0.0
+            },
+            {
+              "x": 15.799918174743652,
+              "y": -4.873006343841553,
+              "z": 0.0
+            },
+            {
+              "x": 15.961038589477539,
+              "y": -4.513291358947754,
+              "z": 0.0
+            },
+            {
+              "x": 16.12215805053711,
+              "y": -4.1317548751831055,
+              "z": 0.0
+            },
+            {
+              "x": 16.283279418945312,
+              "y": -3.7283966541290283,
+              "z": 0.0
+            },
+            {
+              "x": 16.444398880004883,
+              "y": -3.3032174110412598,
+              "z": 0.0
+            },
+            {
+              "x": 16.605518341064453,
+              "y": -2.8562169075012207,
+              "z": 0.0
+            },
+            {
+              "x": 16.766639709472656,
+              "y": -2.387394666671753,
+              "z": 0.0
+            },
+            {
+              "x": 16.927759170532227,
+              "y": -1.8967511653900146,
+              "z": 0.0
+            },
+            {
+              "x": 17.08888053894043,
+              "y": -1.3842862844467163,
+              "z": 0.0
+            },
+            {
+              "x": 17.25,
+              "y": -0.8500000238418579,
+              "z": 0.0
+            }
+          ],
+          "bladeLeft": [
+            {
+              "x": 15.376155853271484,
+              "y": -8.278449058532715,
+              "z": 0.0
+            },
+            {
+              "x": 15.37476921081543,
+              "y": -8.280915260314941,
+              "z": 0.0
+            },
+            {
+              "x": 15.23012924194336,
+              "y": -8.468912124633789,
+              "z": 0.0
+            },
+            {
+              "x": 15.22681713104248,
+              "y": -8.471917152404785,
+              "z": 0.0
+            },
+            {
+              "x": 15.22435188293457,
+              "y": -8.470531463623047,
+              "z": 0.0
+            },
+            {
+              "x": 15.21487045288086,
+              "y": -8.444108963012695,
+              "z": 0.0
+            },
+            {
+              "x": 15.198915481567383,
+              "y": -8.394577026367188,
+              "z": 0.0
+            },
+            {
+              "x": 15.158443450927734,
+              "y": -8.250140190124512,
+              "z": 0.0
+            },
+            {
+              "x": 15.13824462890625,
+              "y": -8.170641899108887,
+              "z": 0.0
+            },
+            {
+              "x": 15.121283531188965,
+              "y": -8.10269832611084,
+              "z": 0.0
+            },
+            {
+              "x": 15.107561111450195,
+              "y": -8.046309471130371,
+              "z": 0.0
+            },
+            {
+              "x": 15.089287757873535,
+              "y": -7.96627140045166,
+              "z": 0.0
+            },
+            {
+              "x": 15.07425308227539,
+              "y": -7.8977885246276855,
+              "z": 0.0
+            },
+            {
+              "x": 15.067005157470703,
+              "y": -7.864509582519531,
+              "z": 0.0
+            },
+            {
+              "x": 15.049578666687012,
+              "y": -7.780080318450928,
+              "z": 0.0
+            },
+            {
+              "x": 15.039401054382324,
+              "y": -7.72892951965332,
+              "z": 0.0
+            },
+            {
+              "x": 15.024672508239746,
+              "y": -7.6541290283203125,
+              "z": 0.0
+            },
+            {
+              "x": 15.013721466064453,
+              "y": -7.592809677124023,
+              "z": 0.0
+            },
+            {
+              "x": 15.008399963378906,
+              "y": -7.558991432189941,
+              "z": 0.0
+            },
+            {
+              "x": 15.004157066345215,
+              "y": -7.529024600982666,
+              "z": 0.0
+            },
+            {
+              "x": 15.00230598449707,
+              "y": -7.5150041580200195,
+              "z": 0.0
+            },
+            {
+              "x": 15.000993728637695,
+              "y": -7.5029096603393555,
+              "z": 0.0
+            },
+            {
+              "x": 15.000761032104492,
+              "y": -7.494667053222656,
+              "z": 0.0
+            },
+            {
+              "x": 15.001607894897461,
+              "y": -7.490275859832764,
+              "z": 0.0
+            },
+            {
+              "x": 15.0029935836792,
+              "y": -7.487810134887695,
+              "z": 0.0
+            },
+            {
+              "x": 15.00492000579834,
+              "y": -7.487270355224609,
+              "z": 0.0
+            },
+            {
+              "x": 15.01231575012207,
+              "y": -7.491429328918457,
+              "z": 0.0
+            },
+            {
+              "x": 15.015321731567383,
+              "y": -7.494741439819336,
+              "z": 0.0
+            },
+            {
+              "x": 15.018865585327148,
+              "y": -7.499979019165039,
+              "z": 0.0
+            },
+            {
+              "x": 15.022950172424316,
+              "y": -7.507143020629883,
+              "z": 0.0
+            },
+            {
+              "x": 15.036282539367676,
+              "y": -7.532485485076904,
+              "z": 0.0
+            },
+            {
+              "x": 15.050153732299805,
+              "y": -7.559753894805908,
+              "z": 0.0
+            },
+            {
+              "x": 15.080056190490723,
+              "y": -7.621994495391846,
+              "z": 0.0
+            },
+            {
+              "x": 15.10071086883545,
+              "y": -7.666055679321289,
+              "z": 0.0
+            },
+            {
+              "x": 15.163752555847168,
+              "y": -7.802091598510742,
+              "z": 0.0
+            },
+            {
+              "x": 15.195813179016113,
+              "y": -7.872035026550293,
+              "z": 0.0
+            },
+            {
+              "x": 15.250685691833496,
+              "y": -7.993743419647217,
+              "z": 0.0
+            },
+            {
+              "x": 15.2843656539917,
+              "y": -8.069464683532715,
+              "z": 0.0
+            },
+            {
+              "x": 15.375616073608398,
+              "y": -8.27652359008789,
+              "z": 0.0
+            }
+          ],
+          "bladeRight": [
+            {
+              "x": 15.495450019836426,
+              "y": -8.4220609664917,
+              "z": 0.0
+            },
+            {
+              "x": 15.479499816894531,
+              "y": -8.471593856811523,
+              "z": 0.0
+            },
+            {
+              "x": 15.477034568786621,
+              "y": -8.472980499267578,
+              "z": 0.0
+            },
+            {
+              "x": 15.475109100341797,
+              "y": -8.472441673278809,
+              "z": 0.0
+            },
+            {
+              "x": 15.469023704528809,
+              "y": -8.464506149291992,
+              "z": 0.0
+            },
+            {
+              "x": 15.33483600616455,
+              "y": -8.283615112304688,
+              "z": 0.0
+            },
+            {
+              "x": 15.330677032470703,
+              "y": -8.276219367980957,
+              "z": 0.0
+            },
+            {
+              "x": 15.334991455078125,
+              "y": -8.260811805725098,
+              "z": 0.0
+            },
+            {
+              "x": 15.341232299804688,
+              "y": -8.245944023132324,
+              "z": 0.0
+            },
+            {
+              "x": 15.410730361938477,
+              "y": -8.086790084838867,
+              "z": 0.0
+            },
+            {
+              "x": 15.427834510803223,
+              "y": -8.047964096069336,
+              "z": 0.0
+            },
+            {
+              "x": 15.455802917480469,
+              "y": -7.985180377960205,
+              "z": 0.0
+            },
+            {
+              "x": 15.494634628295898,
+              "y": -7.898438930511475,
+              "z": 0.0
+            },
+            {
+              "x": 15.527226448059082,
+              "y": -7.826565265655518,
+              "z": 0.0
+            },
+            {
+              "x": 15.586167335510254,
+              "y": -7.697686195373535,
+              "z": 0.0
+            },
+            {
+              "x": 15.602193832397461,
+              "y": -7.662712097167969,
+              "z": 0.0
+            },
+            {
+              "x": 15.626925468444824,
+              "y": -7.611484050750732,
+              "z": 0.0
+            },
+            {
+              "x": 15.646495819091797,
+              "y": -7.571271896362305,
+              "z": 0.0
+            },
+            {
+              "x": 15.67068862915039,
+              "y": -7.521969795227051,
+              "z": 0.0
+            },
+            {
+              "x": 15.678854942321777,
+              "y": -7.507641315460205,
+              "z": 0.0
+            },
+            {
+              "x": 15.68948745727539,
+              "y": -7.491926193237305,
+              "z": 0.0
+            },
+            {
+              "x": 15.696883201599121,
+              "y": -7.487766742706299,
+              "z": 0.0
+            },
+            {
+              "x": 15.7001953125,
+              "y": -7.490771293640137,
+              "z": 0.0
+            },
+            {
+              "x": 15.701042175292969,
+              "y": -7.495162487030029,
+              "z": 0.0
+            },
+            {
+              "x": 15.700810432434082,
+              "y": -7.503405570983887,
+              "z": 0.0
+            },
+            {
+              "x": 15.69950008392334,
+              "y": -7.515500068664551,
+              "z": 0.0
+            },
+            {
+              "x": 15.694722175598145,
+              "y": -7.547393321990967,
+              "z": 0.0
+            },
+            {
+              "x": 15.689404487609863,
+              "y": -7.581212520599365,
+              "z": 0.0
+            },
+            {
+              "x": 15.68246841430664,
+              "y": -7.620809078216553,
+              "z": 0.0
+            },
+            {
+              "x": 15.669907569885254,
+              "y": -7.687907695770264,
+              "z": 0.0
+            },
+            {
+              "x": 15.6511812210083,
+              "y": -7.784433841705322,
+              "z": 0.0
+            },
+            {
+              "x": 15.63939094543457,
+              "y": -7.841363430023193,
+              "z": 0.0
+            },
+            {
+              "x": 15.625443458557129,
+              "y": -7.905996799468994,
+              "z": 0.0
+            },
+            {
+              "x": 15.587300300598145,
+              "y": -8.071855545043945,
+              "z": 0.0
+            },
+            {
+              "x": 15.565261840820312,
+              "y": -8.165376663208008,
+              "z": 0.0
+            },
+            {
+              "x": 15.546151161193848,
+              "y": -8.241025924682617,
+              "z": 0.0
+            }
+          ],
+          "playerMin": {
+            "x": 14.526189804077148,
+            "y": -7.562178134918213,
+            "z": 0.0
+          },
+          "playerMax": {
+            "x": 15.326189041137695,
+            "y": -6.362178325653076,
+            "z": 0.0
+          },
+          "currentHead": {
+            "x": 15.155437469482422,
+            "y": -6.093652725219727,
+            "z": 0.0
+          },
+          "playerPosition": {
+            "x": 14.926189422607422,
+            "y": -6.9621782302856445
+          },
+          "playerVelocity": {
+            "x": 2.2273855209350586,
+            "y": -11.758647918701172
+          },
+          "successSnips": 0,
+          "finishedFrame": 137,
+          "physicalFailureObserved": true,
+          "presentation": "soft free-end collapse, connected fibre separation, stationary regional fade",
+          "configuredLifetime": 0.6399999856948853
+        }
+      ],
+      "cut_to_cleanup_seconds": [
+        0.6599998474121094
+      ],
+      "failure_local_seconds": 1.2999999523162842,
+      "route_final_remaining": 50.0,
+      "timeline_summary": {
+        "attachedFrames": 28,
+        "intersectionFrames": 0,
+        "minAttachedRopeBladeDistance": 1.4018853902816772
+      },
+      "soft_summary": {
+        "note": "Renderer positions, width curves, gradient alpha and camera projection measured. Raw geometry arc includes transparent vertices; not visible length. Alpha>0.01 is a numeric visibility threshold, not Human perception. Zero-width tip separations are not used as visible gaps.",
+        "initial_error": 0.0,
+        "raw_arc_ratio_first32_min": 0.9921779036521912,
+        "raw_arc_ratio_first32_max": 1.0000003576278687,
+        "fixed_end_error_max": 0.0,
+        "strand_body_join_gap_max": 0.0,
+        "last_alpha_above_point01": 0.6199995875358582,
+        "first_all_alpha_zero": 0.6399995684623718,
+        "split_numeric_interval": [
+          0.19999994337558746,
+          0.47999972105026245
+        ],
+        "split_numeric_span": 0.279999777674675,
+        "samples": [
+          {
+            "elapsed": 0.0,
+            "bodySimulated": true,
+            "measurements": {
+              "savedArc": 5.660993576049805,
+              "drawnArc": 5.660994052886963,
+              "arcRatio": 1.0000001192092896,
+              "initialShapeError": 0.0,
+              "endpointDrop": 0.0,
+              "endpointTravel": 0.0,
+              "endpointAngle": 59.3991584777832,
+              "fixedEndError": 0.0,
+              "strandRootGap": 0.0,
+              "tipSeparationPixels": 7.758606433868408,
+              "minimumTipSeparationPixels": 3.620680332183838,
+              "maximumAlpha": 1.0,
+              "nearAlpha": 1.0,
+              "middleAlpha": 1.0,
+              "farAlpha": 1.0,
+              "strandLengthPixels": [
+                43.965206146240234,
+                39.82736587524414,
+                36.20646286010742
+              ],
+              "strandWidthPixels": [
+                2.0445351600646973,
+                2.044374465942383,
+                2.044442653656006
+              ],
+              "strandAlpha": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "visibleProbeMinCenterGaps": [
+                1.810311198234558,
+                2.26291823387146,
+                2.715332508087158
+              ],
+              "visibleProbeMinWidths": [
+                2.044374465942383,
+                1.9554592370986938,
+                1.9199063777923584
+              ],
+              "visibleProbeMinAlpha": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "end": {
+                "x": 15.155437469482422,
+                "y": -6.093652725219727,
+                "z": 0.0
+              },
+              "anchor": {
+                "x": 17.25,
+                "y": -0.8500000238418579,
+                "z": 0.0
+              },
+              "visibleStrands": 0,
+              "visible": true
+            }
+          },
+          {
+            "elapsed": 0.07999996840953827,
+            "bodySimulated": true,
+            "measurements": {
+              "savedArc": 5.660993576049805,
+              "drawnArc": 5.61671257019043,
+              "arcRatio": 0.9921779036521912,
+              "initialShapeError": 0.0,
+              "endpointDrop": -0.03328227996826172,
+              "endpointTravel": 0.04561273008584976,
+              "endpointAngle": 63.56378173828125,
+              "fixedEndError": 0.0,
+              "strandRootGap": 0.0,
+              "tipSeparationPixels": 6.596069812774658,
+              "minimumTipSeparationPixels": 3.125389575958252,
+              "maximumAlpha": 1.0,
+              "nearAlpha": 1.0,
+              "middleAlpha": 1.0,
+              "farAlpha": 1.0,
+              "strandLengthPixels": [
+                41.67476272583008,
+                38.203556060791016,
+                35.07793426513672
+              ],
+              "strandWidthPixels": [
+                2.0443413257598877,
+                2.0444860458374023,
+                2.04445743560791
+              ],
+              "strandAlpha": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "visibleProbeMinCenterGaps": [
+                1.79241943359375,
+                2.1764395236968994,
+                2.520803689956665
+              ],
+              "visibleProbeMinWidths": [
+                2.0443413257598877,
+                1.955525517463684,
+                1.9199702739715576
+              ],
+              "visibleProbeMinAlpha": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "end": {
+                "x": 15.186627388000488,
+                "y": -6.060370445251465,
+                "z": 0.0
+              },
+              "anchor": {
+                "x": 17.25,
+                "y": -0.8500000238418579,
+                "z": 0.0
+              },
+              "visibleStrands": 0,
+              "visible": true
+            }
+          },
+          {
+            "elapsed": 0.15999995172023773,
+            "bodySimulated": false,
+            "measurements": {
+              "savedArc": 5.660993576049805,
+              "drawnArc": 5.648098945617676,
+              "arcRatio": 0.9977222084999084,
+              "initialShapeError": 0.0,
+              "endpointDrop": 0.0995631217956543,
+              "endpointTravel": 0.37589871883392334,
+              "endpointAngle": 100.01048278808594,
+              "fixedEndError": 0.0,
+              "strandRootGap": 0.0,
+              "tipSeparationPixels": 8.86998176574707,
+              "minimumTipSeparationPixels": 3.7269716262817383,
+              "maximumAlpha": 1.0,
+              "nearAlpha": 0.9428073763847351,
+              "middleAlpha": 1.0,
+              "farAlpha": 1.0,
+              "strandLengthPixels": [
+                43.33465576171875,
+                39.57060241699219,
+                35.85940170288086
+              ],
+              "strandWidthPixels": [
+                2.0444421768188477,
+                2.04441237449646,
+                2.0444118976593018
+              ],
+              "strandAlpha": [
+                0.6700035929679871,
+                0.22576145827770233,
+                0.0
+              ],
+              "visibleProbeMinCenterGaps": [
+                1.925950527191162,
+                2.401468515396118,
+                2.86228609085083
+              ],
+              "visibleProbeMinWidths": [
+                2.0444118976593018,
+                1.9554916620254517,
+                1.9199507236480713
+              ],
+              "visibleProbeMinAlpha": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "end": {
+                "x": 15.517910957336426,
+                "y": -6.193215847015381,
+                "z": 0.0
+              },
+              "anchor": {
+                "x": 17.25,
+                "y": -0.8500000238418579,
+                "z": 0.0
+              },
+              "visibleStrands": 2,
+              "visible": true
+            }
+          },
+          {
+            "elapsed": 0.2399999350309372,
+            "bodySimulated": false,
+            "measurements": {
+              "savedArc": 5.660993576049805,
+              "drawnArc": 5.660994052886963,
+              "arcRatio": 1.0000001192092896,
+              "initialShapeError": 0.0,
+              "endpointDrop": 0.18691492080688477,
+              "endpointTravel": 0.7859969139099121,
+              "endpointAngle": 105.63397979736328,
+              "fixedEndError": 0.0,
+              "strandRootGap": 0.0,
+              "tipSeparationPixels": 22.052946090698242,
+              "minimumTipSeparationPixels": 9.323813438415527,
+              "maximumAlpha": 1.0,
+              "nearAlpha": 0.7352187037467957,
+              "middleAlpha": 1.0,
+              "farAlpha": 1.0,
+              "strandLengthPixels": [
+                45.94490432739258,
+                42.272064208984375,
+                41.779884338378906
+              ],
+              "strandWidthPixels": [
+                2.0443809032440186,
+                2.0444533824920654,
+                2.0444107055664062
+              ],
+              "strandAlpha": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "visibleProbeMinCenterGaps": [
+                3.8155343532562256,
+                5.696565628051758,
+                7.93792724609375
+              ],
+              "visibleProbeMinWidths": [
+                2.0443809032440186,
+                1.955504059791565,
+                1.9199331998825073
+              ],
+              "visibleProbeMinAlpha": [
+                1.0,
+                0.845007061958313,
+                0.6900047063827515
+              ],
+              "end": {
+                "x": 15.918886184692383,
+                "y": -6.280567646026611,
+                "z": 0.0
+              },
+              "anchor": {
+                "x": 17.25,
+                "y": -0.8500000238418579,
+                "z": 0.0
+              },
+              "visibleStrands": 3,
+              "visible": true
+            }
+          },
+          {
+            "elapsed": 0.3199998736381531,
+            "bodySimulated": false,
+            "measurements": {
+              "savedArc": 5.660993576049805,
+              "drawnArc": 5.660994529724121,
+              "arcRatio": 1.0000001192092896,
+              "initialShapeError": 0.0,
+              "endpointDrop": 0.20438814163208008,
+              "endpointTravel": 0.8529569506645203,
+              "endpointAngle": 105.63397979736328,
+              "fixedEndError": 0.0,
+              "strandRootGap": 0.0,
+              "tipSeparationPixels": 23.096923828125,
+              "minimumTipSeparationPixels": 10.31772518157959,
+              "maximumAlpha": 1.0,
+              "nearAlpha": 0.7352187037467957,
+              "middleAlpha": 1.0,
+              "farAlpha": 1.0,
+              "strandLengthPixels": [
+                45.94484329223633,
+                42.27202606201172,
+                42.617637634277344
+              ],
+              "strandWidthPixels": [
+                2.0445523262023926,
+                2.0443925857543945,
+                2.0444343090057373
+              ],
+              "strandAlpha": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "visibleProbeMinCenterGaps": [
+                3.8155877590179443,
+                5.696508884429932,
+                7.938108444213867
+              ],
+              "visibleProbeMinWidths": [
+                2.0443925857543945,
+                1.9554901123046875,
+                1.9199942350387573
+              ],
+              "visibleProbeMinAlpha": [
+                1.0,
+                0.845007061958313,
+                0.6900047063827515
+              ],
+              "end": {
+                "x": 15.98354434967041,
+                "y": -6.298040866851807,
+                "z": 0.0
+              },
+              "anchor": {
+                "x": 17.25,
+                "y": -0.8500000238418579,
+                "z": 0.0
+              },
+              "visibleStrands": 3,
+              "visible": true
+            }
+          },
+          {
+            "elapsed": 0.39999979734420776,
+            "bodySimulated": false,
+            "measurements": {
+              "savedArc": 5.660993576049805,
+              "drawnArc": 5.660995006561279,
+              "arcRatio": 1.000000238418579,
+              "initialShapeError": 0.0,
+              "endpointDrop": 0.20453119277954102,
+              "endpointTravel": 0.8533726930618286,
+              "endpointAngle": 105.63397979736328,
+              "fixedEndError": 0.0,
+              "strandRootGap": 0.0,
+              "tipSeparationPixels": 23.096923828125,
+              "minimumTipSeparationPixels": 10.317727088928223,
+              "maximumAlpha": 1.0,
+              "nearAlpha": 0.654330849647522,
+              "middleAlpha": 0.9936156272888184,
+              "farAlpha": 1.0,
+              "strandLengthPixels": [
+                45.94487380981445,
+                42.27206039428711,
+                42.61766052246094
+              ],
+              "strandWidthPixels": [
+                2.0444843769073486,
+                2.044452428817749,
+                2.0444343090057373
+              ],
+              "strandAlpha": [
+                0.9720005393028259,
+                1.0,
+                1.0
+              ],
+              "visibleProbeMinCenterGaps": [
+                3.815641403198242,
+                5.696508884429932,
+                7.938108444213867
+              ],
+              "visibleProbeMinWidths": [
+                2.0444343090057373,
+                1.9554946422576904,
+                1.9200074672698975
+              ],
+              "visibleProbeMinAlpha": [
+                0.9720005393028259,
+                0.8213473558425903,
+                0.6706849336624146
+              ],
+              "end": {
+                "x": 15.98393726348877,
+                "y": -6.298183917999268,
+                "z": 0.0
+              },
+              "anchor": {
+                "x": 17.25,
+                "y": -0.8500000238418579,
+                "z": 0.0
+              },
+              "visibleStrands": 3,
+              "visible": true
+            }
+          },
+          {
+            "elapsed": 0.47999972105026245,
+            "bodySimulated": false,
+            "measurements": {
+              "savedArc": 5.660993576049805,
+              "drawnArc": 5.660995006561279,
+              "arcRatio": 1.000000238418579,
+              "initialShapeError": 0.0,
+              "endpointDrop": 0.20453119277954102,
+              "endpointTravel": 0.8533726930618286,
+              "endpointAngle": 105.63397979736328,
+              "fixedEndError": 0.0,
+              "strandRootGap": 0.0,
+              "tipSeparationPixels": 23.096923828125,
+              "minimumTipSeparationPixels": 10.317727088928223,
+              "maximumAlpha": 0.9149188995361328,
+              "nearAlpha": 0.24155841767787933,
+              "middleAlpha": 0.6134911775588989,
+              "farAlpha": 0.8632180094718933,
+              "strandLengthPixels": [
+                45.94487380981445,
+                42.27206039428711,
+                42.61766052246094
+              ],
+              "strandWidthPixels": [
+                2.0444843769073486,
+                2.044452428817749,
+                2.0444343090057373
+              ],
+              "strandAlpha": [
+                0.5000020265579224,
+                0.6480019688606262,
+                0.7840017080307007
+              ],
+              "visibleProbeMinCenterGaps": [
+                3.815641403198242,
+                5.696508884429932,
+                7.938108444213867
+              ],
+              "visibleProbeMinWidths": [
+                2.0444343090057373,
+                1.9554946422576904,
+                1.9200074672698975
+              ],
+              "visibleProbeMinAlpha": [
+                0.5000020265579224,
+                0.422505259513855,
+                0.34500378370285034
+              ],
+              "end": {
+                "x": 15.98393726348877,
+                "y": -6.298183917999268,
+                "z": 0.0
+              },
+              "anchor": {
+                "x": 17.25,
+                "y": -0.8500000238418579,
+                "z": 0.0
+              },
+              "visibleStrands": 3,
+              "visible": true
+            }
+          },
+          {
+            "elapsed": 0.5599996447563171,
+            "bodySimulated": false,
+            "measurements": {
+              "savedArc": 5.660993576049805,
+              "drawnArc": 5.660995006561279,
+              "arcRatio": 1.000000238418579,
+              "initialShapeError": 0.0,
+              "endpointDrop": 0.20453119277954102,
+              "endpointTravel": 0.8533726930618286,
+              "endpointAngle": 105.63397979736328,
+              "fixedEndError": 0.0,
+              "strandRootGap": 0.0,
+              "tipSeparationPixels": 23.096923828125,
+              "minimumTipSeparationPixels": 10.317727088928223,
+              "maximumAlpha": 0.3668327331542969,
+              "nearAlpha": 0.0,
+              "middleAlpha": 0.07911822199821472,
+              "farAlpha": 0.29987040162086487,
+              "strandLengthPixels": [
+                45.94487380981445,
+                42.27206039428711,
+                42.61766052246094
+              ],
+              "strandWidthPixels": [
+                2.0444843769073486,
+                2.044452428817749,
+                2.0444343090057373
+              ],
+              "strandAlpha": [
+                0.028000950813293457,
+                0.10400170087814331,
+                0.21600216627120972
+              ],
+              "visibleProbeMinCenterGaps": [
+                3.815641403198242,
+                5.696508884429932,
+                7.938108444213867
+              ],
+              "visibleProbeMinWidths": [
+                2.0444343090057373,
+                1.9554946422576904,
+                1.9200074672698975
+              ],
+              "visibleProbeMinAlpha": [
+                0.028000950813293457,
+                0.02366100251674652,
+                0.019320787861943245
+              ],
+              "end": {
+                "x": 15.98393726348877,
+                "y": -6.298183917999268,
+                "z": 0.0
+              },
+              "anchor": {
+                "x": 17.25,
+                "y": -0.8500000238418579,
+                "z": 0.0
+              },
+              "visibleStrands": 2,
+              "visible": true
+            }
+          },
+          {
+            "elapsed": 0.6199995875358582,
+            "bodySimulated": false,
+            "measurements": {
+              "savedArc": 5.660993576049805,
+              "drawnArc": 5.660995006561279,
+              "arcRatio": 1.000000238418579,
+              "initialShapeError": 0.0,
+              "endpointDrop": 0.20453119277954102,
+              "endpointTravel": 0.8533726930618286,
+              "endpointAngle": 105.63397979736328,
+              "fixedEndError": 0.0,
+              "strandRootGap": 0.0,
+              "tipSeparationPixels": 23.096923828125,
+              "minimumTipSeparationPixels": 10.317727088928223,
+              "maximumAlpha": 0.02940148115158081,
+              "nearAlpha": 0.0,
+              "middleAlpha": 0.0,
+              "farAlpha": 0.015563315711915493,
+              "strandLengthPixels": [
+                45.94487380981445,
+                42.27206039428711,
+                42.61766052246094
+              ],
+              "strandWidthPixels": [
+                2.0444843769073486,
+                2.044452428817749,
+                2.0444343090057373
+              ],
+              "strandAlpha": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "visibleProbeMinCenterGaps": [
+                3.815641403198242,
+                5.696508884429932,
+                7.938108444213867
+              ],
+              "visibleProbeMinWidths": [
+                2.0444343090057373,
+                1.9554946422576904,
+                1.9200074672698975
+              ],
+              "visibleProbeMinAlpha": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "end": {
+                "x": 15.98393726348877,
+                "y": -6.298183917999268,
+                "z": 0.0
+              },
+              "anchor": {
+                "x": 17.25,
+                "y": -0.8500000238418579,
+                "z": 0.0
+              },
+              "visibleStrands": 0,
+              "visible": true
+            }
+          },
+          {
+            "elapsed": 0.6399995684623718,
+            "bodySimulated": false,
+            "measurements": {
+              "savedArc": 5.660993576049805,
+              "drawnArc": 5.660995006561279,
+              "arcRatio": 1.000000238418579,
+              "initialShapeError": 0.0,
+              "endpointDrop": 0.20453119277954102,
+              "endpointTravel": 0.8533726930618286,
+              "endpointAngle": 105.63397979736328,
+              "fixedEndError": 0.0,
+              "strandRootGap": 0.0,
+              "tipSeparationPixels": 23.096923828125,
+              "minimumTipSeparationPixels": 10.317727088928223,
+              "maximumAlpha": 0.0,
+              "nearAlpha": 0.0,
+              "middleAlpha": 0.0,
+              "farAlpha": 0.0,
+              "strandLengthPixels": [
+                45.94487380981445,
+                42.27206039428711,
+                42.61766052246094
+              ],
+              "strandWidthPixels": [
+                2.0444843769073486,
+                2.044452428817749,
+                2.0444343090057373
+              ],
+              "strandAlpha": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "visibleProbeMinCenterGaps": [
+                3.815641403198242,
+                5.696508884429932,
+                7.938108444213867
+              ],
+              "visibleProbeMinWidths": [
+                2.0444343090057373,
+                1.9554946422576904,
+                1.9200074672698975
+              ],
+              "visibleProbeMinAlpha": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "end": {
+                "x": 15.98393726348877,
+                "y": -6.298183917999268,
+                "z": 0.0
+              },
+              "anchor": {
+                "x": 17.25,
+                "y": -0.8500000238418579,
+                "z": 0.0
+              },
+              "visibleStrands": 0,
+              "visible": false
+            }
+          }
+        ]
+      }
+    }
+  },
+  "protected": {
+    "AudioReview.cs": {
+      "byte_equal": true,
+      "sha256": "170d7d39040005bf5021a8a33df5c18c70eca94f34bb05c1e41a2771646a3e34"
+    },
+    "CameraChecks.cs": {
+      "byte_equal": true,
+      "sha256": "e754eed440818423d5e95e41d149bb8b780613eed19be5faded173b67055a196"
+    },
+    "CraftScissorsMotion.cs": {
+      "byte_equal": true,
+      "sha256": "b2f8195bc7550903e37316e55761b20850555a09bbfb23d20ce1dd8d619df6a4"
+    },
+    "CutTimeline.cs": {
+      "byte_equal": true,
+      "sha256": "f79cc0c914d244b80efc50dccd73955aecf8548b7359908a9f857e969640df0f"
+    },
+    "HorizontalCameraFollow.cs": {
+      "byte_equal": true,
+      "sha256": "03105e317c866d33d5e50e746749f73bdcf11f195cfd6e15e84ec3aa0ffe396a"
+    },
+    "MainStageRespawnOnFall.cs": {
+      "byte_equal": true,
+      "sha256": "a34100524161f460dac5e08c2d3c83ae965854527da520e8570d0811111a1900"
+    },
+    "PreviousProgressiveUnravelDrawing.cs": {
+      "byte_equal": false,
+      "sha256": "3d8ccd1da983cfe4a76e855b36cdaa70b4d8e1cadfb08a9ee1c20a2e6a29602f"
+    },
+    "ProgressiveUnravelDrawing.cs": {
+      "byte_equal": false,
+      "sha256": "a1e14453eda666c80430aeaefc37c31d4f9acaff846da04a5c64c3cb4b9c7cbf"
+    },
+    "RopeSpikeHazard.cs": {
+      "byte_equal": true,
+      "sha256": "4d167f5dbcc691054a4f88e871a21aee54f4d2395865b4eb50747ce88d7e2ab9"
+    },
+    "RouteReview.cs": {
+      "byte_equal": true,
+      "sha256": "51777c1e714ac957c8094799bcd65a14d6f60f83e50543f00c514951419bb1e9"
+    },
+    "ScissorsCutAudio.cs": {
+      "byte_equal": true,
+      "sha256": "f7971de3ab5e1f5916e29f4d6ef36b9c39d02b8944ed1807b8df4597f1efdd6b"
+    },
+    "ScissorsCutVfx.cs": {
+      "byte_equal": false,
+      "sha256": "6298b23951131b28a10e86fe084b47caeca098d9aa18b51669f1f9cc0616259f"
+    },
+    "VfxReview.cs": {
+      "byte_equal": false,
+      "sha256": "542aacd9ea00e7ef8fc1817ceda2c38d691c83b5b937537183f963700fe0d347"
+    },
+    "HimoHitoWarmScissorsParts-v3.png": {
+      "byte_equal": true,
+      "sha256": "b5558bcd4b40b7762201184ec0324758803aaaede56cc3102dbd169670c57c1d"
+    },
+    "BladeGeometry.json": {
+      "byte_equal": true,
+      "sha256": "682dddeadf434346e6765160693ce983b143d50a2c89a24bc1310ec70825fd5f"
+    },
+    "C05RopeScissors_v4.wav": {
+      "byte_equal": true,
+      "sha256": "970d754ec4251d4ad2c4c57e22c97524db84ee63dcca50a1aefc4b1f4e2cde0e"
+    }
+  },
+  "comparison_algorithm_retained_except_class_name": true
+}

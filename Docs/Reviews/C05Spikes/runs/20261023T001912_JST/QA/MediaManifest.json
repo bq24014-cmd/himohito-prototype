@@ -1,0 +1,458 @@
+{
+  "baseline": "3caca29 / C05ProgressiveUnravelProof_20261022; 0.60-second progressive trim",
+  "candidate": "C05SoftUnravelProof_20261023; 0.64-second soft end collapse and connected fray",
+  "execution": "Existing actual Windows Unity Player captures; diagnostic/API input, not OS keys or Human play. This script does not run Unity or the Player.",
+  "clock": {
+    "video_fps": 25,
+    "reference_cut_frame": 29,
+    "reference_cut_video_seconds": 1.16,
+    "note": "Image timestamps below are encoded-video frame times, not newly measured simulation times. Runtime timings are in QA JSON."
+  },
+  "audio": "Recorded Player AudioRenderer final stereo mix, encoded to AAC; not dubbed, regenerated, or OS loopback. The approved source v4 WAV is unchanged. No gain, pitch, stretch, or replacement sound is applied here.",
+  "comparison": "0–6 seconds: baseline3caca; 6–12 seconds: soft candidate. Full-speed 25fps, identical gameplay resolution, full cut-to-disappearance interval, no slow motion or skipped frames. No labels are overlaid on video gameplay pixels.",
+  "images": "Full-frame stills are byte-for-byte JPEG copies at their original resolution. Cropped sheets and full-frame comparison sheets are JPEG-recompressed viewing previews. Labels are only in added outside margins; gameplay images are not painted or synthesized. Local original captures are retained.",
+  "inputs": {
+    "baseline/Publication/Video/After_1600x900_PlayerMix.mp4": {
+      "bytes": 844284,
+      "sha256": "05db256f13d9eeda89b611e95071944ee7a6e7aaec1e4856e8ad6dbcae1149f3"
+    },
+    "candidate/QA/After1600/PlayerMix.wav": {
+      "bytes": 1151020,
+      "sha256": "f027af24655a964e312ae8084d59ff63934e5aba33a964e0d90b95c57bd2f079"
+    },
+    "baseline/Publication/Video/After_1280x720_PlayerMix.mp4": {
+      "bytes": 647568,
+      "sha256": "8f746b98cee47f5c42e2d1cbafad874872393cd7649f67fd87b882889b009a42"
+    },
+    "candidate/QA/After720/PlayerMix.wav": {
+      "bytes": 1151020,
+      "sha256": "171ecd11b57f96b8fb56d8c7c419e0edf4ed2fc60eb2d506d85c65aa48743570"
+    }
+  },
+  "outputs": {
+    "Images/Before3caca_1600x900_00028_PreCut.jpg": {
+      "bytes": 221528,
+      "sha256": "35400b525594ffd1079dc82de27466ff9f30bfe7cd89a8d47ce9ab49a3a44f25"
+    },
+    "Images/Before3caca_1600x900_00029_Cut.jpg": {
+      "bytes": 222133,
+      "sha256": "294fa8b773494ea86e370f674f31e8c9abac016d42065e51c028a3e768c89fdb"
+    },
+    "Images/Before3caca_1600x900_00034_Slack.jpg": {
+      "bytes": 210575,
+      "sha256": "25306542475133d3dabe5386d77e1f3bbb555b126567b85c94d294d55a41e24d"
+    },
+    "Images/Before3caca_1600x900_00037_Split.jpg": {
+      "bytes": 209967,
+      "sha256": "a7c52c98f35c9f19a1f247403401b296244abb39e1f80149dd73b6a791a0fd5c"
+    },
+    "Images/Before3caca_1600x900_00042_Fade.jpg": {
+      "bytes": 209190,
+      "sha256": "fe195609f4f389badb68096b6b81b55359afe99f96d3656e2dab667ac7cb5cce"
+    },
+    "Images/Before3caca_1600x900_00046_Gone.jpg": {
+      "bytes": 208638,
+      "sha256": "0a695de6e8b978e1f31d3f32eb15141feb092f839eca47b3f23f07ecb494e00e"
+    },
+    "Images/AfterSoft_1600x900_00028_PreCut.jpg": {
+      "bytes": 221528,
+      "sha256": "35400b525594ffd1079dc82de27466ff9f30bfe7cd89a8d47ce9ab49a3a44f25"
+    },
+    "Images/AfterSoft_1600x900_00029_Cut.jpg": {
+      "bytes": 222094,
+      "sha256": "4873eee65c2e278800a095ace391366eb1c3c5eb6a8130ad39fe391e38900703"
+    },
+    "Images/AfterSoft_1600x900_00034_Slack.jpg": {
+      "bytes": 210583,
+      "sha256": "8a12793bfe731e5d10bf389eb956bac8e73afb706bd55ba13ba0e8621a85d7f4"
+    },
+    "Images/AfterSoft_1600x900_00037_Split.jpg": {
+      "bytes": 210511,
+      "sha256": "54958950dc2c379291ad3c416e96761f58234ba16eec02e2673a765538ae173c"
+    },
+    "Images/AfterSoft_1600x900_00042_Fade.jpg": {
+      "bytes": 209852,
+      "sha256": "483a4e9879f76c21d9d9a52024abee968f22a436616aa61a542990494208818e"
+    },
+    "Images/AfterSoft_1600x900_00046_Gone.jpg": {
+      "bytes": 208638,
+      "sha256": "0a695de6e8b978e1f31d3f32eb15141feb092f839eca47b3f23f07ecb494e00e"
+    },
+    "Video/After_1600x900_PlayerMix.mp4": {
+      "bytes": 845461,
+      "sha256": "6d5d8ecf36f7eda0c594d989aec3c5135372d45e6cd8e6f51acd160d1b00b903"
+    },
+    "Video/Before3cacaThenAfterSoft_1600x900_NormalSpeed.mp4": {
+      "bytes": 1531562,
+      "sha256": "88622b12e6cb51f87cf21c2d69ae3ae4b4ac92ee16d356e8a64f1a26200ca5ff"
+    },
+    "Images/SequenceSameScale_1600x900.jpg": {
+      "bytes": 416198,
+      "sha256": "71a58f794f7eb66b5b40c799ac07c4c83226b39698b6707dfe747dfc7ba6f599"
+    },
+    "Images/FullFrameComparison_1600x900_Split.jpg": {
+      "bytes": 465806,
+      "sha256": "b05398784de1b23202e1d7bfab3ccb618e822764750158ea74e013c1bbddebfd"
+    },
+    "Images/Before3caca_1280x720_00028_PreCut.jpg": {
+      "bytes": 158109,
+      "sha256": "90e25fcdaa54af52efc073c5b87a5034795e6f7fa220eb4ee0422e3abc7ed0e0"
+    },
+    "Images/Before3caca_1280x720_00029_Cut.jpg": {
+      "bytes": 158488,
+      "sha256": "cbd3a0f5f6d925cfc02a8331cd92e7f60cd272a0e92406b2f94b27eee4859ee9"
+    },
+    "Images/Before3caca_1280x720_00034_Slack.jpg": {
+      "bytes": 148523,
+      "sha256": "b2e96248a5c34b9760f0bab8f0648bb1eaef14e416fbacee01224de4fa607184"
+    },
+    "Images/Before3caca_1280x720_00037_Split.jpg": {
+      "bytes": 148022,
+      "sha256": "0df59724122d1d1b829d4bb960d7dee4aa59be015a9538d776941a3d5eaf04db"
+    },
+    "Images/Before3caca_1280x720_00042_Fade.jpg": {
+      "bytes": 147462,
+      "sha256": "a996fb51b12ada1d4cdcff539734492b99bd3766da4e98fdf2a72fc4d6d3cbe8"
+    },
+    "Images/Before3caca_1280x720_00046_Gone.jpg": {
+      "bytes": 147110,
+      "sha256": "ccda300b46993f5dc29b9782bb88d2c48c95502d0a383579f49873589bdf5a88"
+    },
+    "Images/AfterSoft_1280x720_00028_PreCut.jpg": {
+      "bytes": 158109,
+      "sha256": "90e25fcdaa54af52efc073c5b87a5034795e6f7fa220eb4ee0422e3abc7ed0e0"
+    },
+    "Images/AfterSoft_1280x720_00029_Cut.jpg": {
+      "bytes": 158487,
+      "sha256": "2433ea26dc17e041f857fd8e4018b017169ea65667c46b37c682ed767bf6c754"
+    },
+    "Images/AfterSoft_1280x720_00034_Slack.jpg": {
+      "bytes": 148553,
+      "sha256": "afb6a8f8b6cab6007b236b2671d61a9419e36492554aa46533abd8d0595aafc5"
+    },
+    "Images/AfterSoft_1280x720_00037_Split.jpg": {
+      "bytes": 148500,
+      "sha256": "4e3cce75c864eead588720726f9ea082a53d775cee00aabf59b04c19d35aa94f"
+    },
+    "Images/AfterSoft_1280x720_00042_Fade.jpg": {
+      "bytes": 147946,
+      "sha256": "262575b48fc2c8cb21bb42f1edabd5cdcd56f1baf978cf16200ac47f113e81de"
+    },
+    "Images/AfterSoft_1280x720_00046_Gone.jpg": {
+      "bytes": 147110,
+      "sha256": "ccda300b46993f5dc29b9782bb88d2c48c95502d0a383579f49873589bdf5a88"
+    },
+    "Video/After_1280x720_PlayerMix.mp4": {
+      "bytes": 647721,
+      "sha256": "5622f3a768fdd9949fce04f420c0af6da5d5381d135ea59e9cb46f2e0f233670"
+    },
+    "Video/Before3cacaThenAfterSoft_1280x720_NormalSpeed.mp4": {
+      "bytes": 1187034,
+      "sha256": "7f54c6bcad62d2de6ca5073c1d7d1a54f9a93147bc1150f4078717ebd42de983"
+    },
+    "Images/SequenceSameScale_1280x720.jpg": {
+      "bytes": 316308,
+      "sha256": "4e7df3ca5e275d480ecdd0423147fcbe93124893d01475623a899d3e3559ea1a"
+    },
+    "Images/FullFrameComparison_1280x720_Split.jpg": {
+      "bytes": 323158,
+      "sha256": "245276054a135adabb71f60572b1cd4171379d223ac1ccbc3656215d3f23cd74"
+    }
+  },
+  "frames": [
+    {
+      "file": "Images/Before3caca_1600x900_00028_PreCut.jpg",
+      "source": "Before3caca/QA/After1600/Frames/00028.jpg",
+      "frame_index": 28,
+      "video_seconds": 1.12,
+      "relative_to_reference_cut_seconds": -0.04,
+      "phase": "切断前",
+      "processing": "original full-frame JPEG copy; no recompression or resizing"
+    },
+    {
+      "file": "Images/Before3caca_1600x900_00029_Cut.jpg",
+      "source": "Before3caca/QA/After1600/Frames/00029.jpg",
+      "frame_index": 29,
+      "video_seconds": 1.16,
+      "relative_to_reference_cut_seconds": 0.0,
+      "phase": "切断開始",
+      "processing": "original full-frame JPEG copy; no recompression or resizing"
+    },
+    {
+      "file": "Images/Before3caca_1600x900_00034_Slack.jpg",
+      "source": "Before3caca/QA/After1600/Frames/00034.jpg",
+      "frame_index": 34,
+      "video_seconds": 1.36,
+      "relative_to_reference_cut_seconds": 0.2,
+      "phase": "端の緩み",
+      "processing": "original full-frame JPEG copy; no recompression or resizing"
+    },
+    {
+      "file": "Images/Before3caca_1600x900_00037_Split.jpg",
+      "source": "Before3caca/QA/After1600/Frames/00037.jpg",
+      "frame_index": 37,
+      "video_seconds": 1.48,
+      "relative_to_reference_cut_seconds": 0.32,
+      "phase": "繊維の分離",
+      "processing": "original full-frame JPEG copy; no recompression or resizing"
+    },
+    {
+      "file": "Images/Before3caca_1600x900_00042_Fade.jpg",
+      "source": "Before3caca/QA/After1600/Frames/00042.jpg",
+      "frame_index": 42,
+      "video_seconds": 1.68,
+      "relative_to_reference_cut_seconds": 0.52,
+      "phase": "フェード",
+      "processing": "original full-frame JPEG copy; no recompression or resizing"
+    },
+    {
+      "file": "Images/Before3caca_1600x900_00046_Gone.jpg",
+      "source": "Before3caca/QA/After1600/Frames/00046.jpg",
+      "frame_index": 46,
+      "video_seconds": 1.84,
+      "relative_to_reference_cut_seconds": 0.68,
+      "phase": "消去後",
+      "processing": "original full-frame JPEG copy; no recompression or resizing"
+    },
+    {
+      "file": "Images/AfterSoft_1600x900_00028_PreCut.jpg",
+      "source": "AfterSoft/QA/After1600/Frames/00028.jpg",
+      "frame_index": 28,
+      "video_seconds": 1.12,
+      "relative_to_reference_cut_seconds": -0.04,
+      "phase": "切断前",
+      "processing": "original full-frame JPEG copy; no recompression or resizing"
+    },
+    {
+      "file": "Images/AfterSoft_1600x900_00029_Cut.jpg",
+      "source": "AfterSoft/QA/After1600/Frames/00029.jpg",
+      "frame_index": 29,
+      "video_seconds": 1.16,
+      "relative_to_reference_cut_seconds": 0.0,
+      "phase": "切断開始",
+      "processing": "original full-frame JPEG copy; no recompression or resizing"
+    },
+    {
+      "file": "Images/AfterSoft_1600x900_00034_Slack.jpg",
+      "source": "AfterSoft/QA/After1600/Frames/00034.jpg",
+      "frame_index": 34,
+      "video_seconds": 1.36,
+      "relative_to_reference_cut_seconds": 0.2,
+      "phase": "端の緩み",
+      "processing": "original full-frame JPEG copy; no recompression or resizing"
+    },
+    {
+      "file": "Images/AfterSoft_1600x900_00037_Split.jpg",
+      "source": "AfterSoft/QA/After1600/Frames/00037.jpg",
+      "frame_index": 37,
+      "video_seconds": 1.48,
+      "relative_to_reference_cut_seconds": 0.32,
+      "phase": "繊維の分離",
+      "processing": "original full-frame JPEG copy; no recompression or resizing"
+    },
+    {
+      "file": "Images/AfterSoft_1600x900_00042_Fade.jpg",
+      "source": "AfterSoft/QA/After1600/Frames/00042.jpg",
+      "frame_index": 42,
+      "video_seconds": 1.68,
+      "relative_to_reference_cut_seconds": 0.52,
+      "phase": "フェード",
+      "processing": "original full-frame JPEG copy; no recompression or resizing"
+    },
+    {
+      "file": "Images/AfterSoft_1600x900_00046_Gone.jpg",
+      "source": "AfterSoft/QA/After1600/Frames/00046.jpg",
+      "frame_index": 46,
+      "video_seconds": 1.84,
+      "relative_to_reference_cut_seconds": 0.68,
+      "phase": "消去後",
+      "processing": "original full-frame JPEG copy; no recompression or resizing"
+    },
+    {
+      "file": "Images/Before3caca_1280x720_00028_PreCut.jpg",
+      "source": "Before3caca/QA/After720/Frames/00028.jpg",
+      "frame_index": 28,
+      "video_seconds": 1.12,
+      "relative_to_reference_cut_seconds": -0.04,
+      "phase": "切断前",
+      "processing": "original full-frame JPEG copy; no recompression or resizing"
+    },
+    {
+      "file": "Images/Before3caca_1280x720_00029_Cut.jpg",
+      "source": "Before3caca/QA/After720/Frames/00029.jpg",
+      "frame_index": 29,
+      "video_seconds": 1.16,
+      "relative_to_reference_cut_seconds": 0.0,
+      "phase": "切断開始",
+      "processing": "original full-frame JPEG copy; no recompression or resizing"
+    },
+    {
+      "file": "Images/Before3caca_1280x720_00034_Slack.jpg",
+      "source": "Before3caca/QA/After720/Frames/00034.jpg",
+      "frame_index": 34,
+      "video_seconds": 1.36,
+      "relative_to_reference_cut_seconds": 0.2,
+      "phase": "端の緩み",
+      "processing": "original full-frame JPEG copy; no recompression or resizing"
+    },
+    {
+      "file": "Images/Before3caca_1280x720_00037_Split.jpg",
+      "source": "Before3caca/QA/After720/Frames/00037.jpg",
+      "frame_index": 37,
+      "video_seconds": 1.48,
+      "relative_to_reference_cut_seconds": 0.32,
+      "phase": "繊維の分離",
+      "processing": "original full-frame JPEG copy; no recompression or resizing"
+    },
+    {
+      "file": "Images/Before3caca_1280x720_00042_Fade.jpg",
+      "source": "Before3caca/QA/After720/Frames/00042.jpg",
+      "frame_index": 42,
+      "video_seconds": 1.68,
+      "relative_to_reference_cut_seconds": 0.52,
+      "phase": "フェード",
+      "processing": "original full-frame JPEG copy; no recompression or resizing"
+    },
+    {
+      "file": "Images/Before3caca_1280x720_00046_Gone.jpg",
+      "source": "Before3caca/QA/After720/Frames/00046.jpg",
+      "frame_index": 46,
+      "video_seconds": 1.84,
+      "relative_to_reference_cut_seconds": 0.68,
+      "phase": "消去後",
+      "processing": "original full-frame JPEG copy; no recompression or resizing"
+    },
+    {
+      "file": "Images/AfterSoft_1280x720_00028_PreCut.jpg",
+      "source": "AfterSoft/QA/After720/Frames/00028.jpg",
+      "frame_index": 28,
+      "video_seconds": 1.12,
+      "relative_to_reference_cut_seconds": -0.04,
+      "phase": "切断前",
+      "processing": "original full-frame JPEG copy; no recompression or resizing"
+    },
+    {
+      "file": "Images/AfterSoft_1280x720_00029_Cut.jpg",
+      "source": "AfterSoft/QA/After720/Frames/00029.jpg",
+      "frame_index": 29,
+      "video_seconds": 1.16,
+      "relative_to_reference_cut_seconds": 0.0,
+      "phase": "切断開始",
+      "processing": "original full-frame JPEG copy; no recompression or resizing"
+    },
+    {
+      "file": "Images/AfterSoft_1280x720_00034_Slack.jpg",
+      "source": "AfterSoft/QA/After720/Frames/00034.jpg",
+      "frame_index": 34,
+      "video_seconds": 1.36,
+      "relative_to_reference_cut_seconds": 0.2,
+      "phase": "端の緩み",
+      "processing": "original full-frame JPEG copy; no recompression or resizing"
+    },
+    {
+      "file": "Images/AfterSoft_1280x720_00037_Split.jpg",
+      "source": "AfterSoft/QA/After720/Frames/00037.jpg",
+      "frame_index": 37,
+      "video_seconds": 1.48,
+      "relative_to_reference_cut_seconds": 0.32,
+      "phase": "繊維の分離",
+      "processing": "original full-frame JPEG copy; no recompression or resizing"
+    },
+    {
+      "file": "Images/AfterSoft_1280x720_00042_Fade.jpg",
+      "source": "AfterSoft/QA/After720/Frames/00042.jpg",
+      "frame_index": 42,
+      "video_seconds": 1.68,
+      "relative_to_reference_cut_seconds": 0.52,
+      "phase": "フェード",
+      "processing": "original full-frame JPEG copy; no recompression or resizing"
+    },
+    {
+      "file": "Images/AfterSoft_1280x720_00046_Gone.jpg",
+      "source": "AfterSoft/QA/After720/Frames/00046.jpg",
+      "frame_index": 46,
+      "video_seconds": 1.84,
+      "relative_to_reference_cut_seconds": 0.68,
+      "phase": "消去後",
+      "processing": "original full-frame JPEG copy; no recompression or resizing"
+    }
+  ],
+  "video_validation": {
+    "Video/After_1600x900_PlayerMix.mp4": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1600,
+          "height": 900,
+          "avg_frame_rate": "25/1"
+        },
+        {
+          "codec_type": "audio",
+          "avg_frame_rate": "0/0"
+        }
+      ],
+      "format": {
+        "duration": "6.000000"
+      }
+    },
+    "Video/Before3cacaThenAfterSoft_1600x900_NormalSpeed.mp4": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1600,
+          "height": 900,
+          "avg_frame_rate": "25/1"
+        },
+        {
+          "codec_type": "audio",
+          "avg_frame_rate": "0/0"
+        }
+      ],
+      "format": {
+        "duration": "12.000000"
+      }
+    },
+    "Video/After_1280x720_PlayerMix.mp4": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1280,
+          "height": 720,
+          "avg_frame_rate": "25/1"
+        },
+        {
+          "codec_type": "audio",
+          "avg_frame_rate": "0/0"
+        }
+      ],
+      "format": {
+        "duration": "6.000000"
+      }
+    },
+    "Video/Before3cacaThenAfterSoft_1280x720_NormalSpeed.mp4": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1280,
+          "height": 720,
+          "avg_frame_rate": "25/1"
+        },
+        {
+          "codec_type": "audio",
+          "avg_frame_rate": "0/0"
+        }
+      ],
+      "format": {
+        "duration": "12.000000"
+      }
+    }
+  }
+}

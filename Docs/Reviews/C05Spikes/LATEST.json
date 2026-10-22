@@ -1,24 +1,24 @@
 {
   "review_id": "C05Spikes",
-  "run_id": "20261022T233837_JST",
-  "updated_at": "2026-10-22T23:39:44.662233+09:00",
+  "run_id": "20261023T001912_JST",
+  "updated_at": "2026-10-23T00:24:22.1578796+09:00",
   "time_zone": "Asia/Tokyo",
-  "proof": "C05ProgressiveUnravelProof_20261022",
-  "revision": "progressive-unravel-r2",
+  "proof": "C05SoftUnravelProof_20261023",
+  "revision": "soft-unravel-r2",
   "production_head": "394b4a74e366678a9e0542d895b9a26f86993c19",
-  "status": "切り口から順にほつれる0.6秒候補完成。完成映像はHuman Review待ち／Production未統合",
+  "status": "端が垂れる・3繊維へ分かれる・薄れる隔離候補1案を共有。完成映像はHuman Review待ち",
   "production_integrated": false,
   "human_adoption": "本体・1.00倍下降0.95配置・S2画角・音v4・切り口からほつれる演出方針は承認済み。今回の完成映像の正式採用は未承認。",
   "branch": "codex/review-c05-spikes",
-  "report": "Docs/Reviews/C05Spikes/runs/20261022T233837_JST/Report.md",
-  "launch": "Docs/Reviews/C05Spikes/runs/20261022T233837_JST/Launch.md",
-  "images": "Docs/Reviews/C05Spikes/runs/20261022T233837_JST/Images",
-  "qa": "Docs/Reviews/C05Spikes/runs/20261022T233837_JST/QA",
-  "diff": "Docs/Reviews/C05Spikes/runs/20261022T233837_JST/Diff",
+  "report": "Docs/Reviews/C05Spikes/runs/20261023T001912_JST/Report.md",
+  "launch": "Docs/Reviews/C05Spikes/runs/20261023T001912_JST/Launch.md",
+  "images": "Docs/Reviews/C05Spikes/runs/20261023T001912_JST/Images",
+  "qa": "Docs/Reviews/C05Spikes/runs/20261023T001912_JST/QA",
+  "diff": "Docs/Reviews/C05Spikes/runs/20261023T001912_JST/Diff",
   "assets": "Docs/Reviews/C05Spikes/runs/20261022T114924_JST/Audio",
   "execution": "Existing Unity 6000.3.21f1 non-Development Player + isolated managed overlay + actual PCM16 v4 loading. Unity AudioRenderer final mix, not post-dub/OS loopback. Automated input/native APIs; NOT OS keys/Human/new Unity Build.",
-  "technical": "Compile / actual Player PASS. L5/6 reach; L7 cut1/audio1/VFX1. Matched300frame physics/resource/camera/closure deltas0. Natural failure copy cleanup at0.62s. Progressive near/middle/far disappearance0.24/0.38/0.52s. Pause/R/reattach/menu/reload API checks PASS. Mute0.",
-  "scope": "Front scissors only. Captured display-copy progressive unravel, slack and delayed fibres. Audio/cut condition/physics/material/camera unchanged.",
+  "technical": "Compile 0errors/4existing warnings; real non-Development Player + managed overlay, not new Unity Build. L5/6 reach, L7 cut1/audio1/VFX1. 300frame position/velocity/resource/camera deltas0. Native failure at +0.14s does not truncate; all alpha0 at +0.64s, cleanup+0.66s. Pause/R/reattach/menu/reload API checks PASS. Muted mix0. Manual launch/noauto verified; OS/Human unconfirmed.",
+  "scope": "Front scissors only. Preserve captured material path, deform unsupported end, 3 connected strands, overlapping local fades. Audio/cut/physics/material/camera unchanged.",
   "approved_body": {
     "commit": "5c64b9ef63d574a56ef4fbb0439ee7d364800dfa",
     "report": "Docs/Reviews/C05Spikes/runs/20261021T180204_JST/Report.md",
@@ -26,8 +26,14 @@
     "asset_sha256": "b5558bcd4b40b7762201184ec0324758803aaaede56cc3102dbd169670c57c1d",
     "scope": "body design and upright handles-down placement direction"
   },
-  "render_assembly_sha256": "fdfb2cec8ebff348d3c2d35f23bd6ff4abedd24731599be79bc660780a35a1ae",
+  "render_assembly_sha256": "27ef641f1648872da87d2d351531ddff57407c82c0dbb07074a6d59c29d1df71",
   "previous_candidates": [
+    {
+      "run_id": "20261022T233837_JST",
+      "commit": "3caca298cdeca8577a9afc2f6bd2c07021c38ee7",
+      "report": "Docs/Reviews/C05Spikes/runs/20261022T233837_JST/Report.md",
+      "status": "原本・動画・QA保持。太い糸を切り口から削るため巻き取りに見えるとHuman指摘。今回の比較基準。VFX正式採用なし。"
+    },
     {
       "run_id": "20261022T133717_JST",
       "commit": "1ccfbd06acacba2482b4d373139379b17fd5d70b",
@@ -115,24 +121,24 @@
     }
   ],
   "unconfirmed": [
-    "OS実キー・OS画面取得：今回未実施。前回のtimeout試行を反復せず",
-    "完成映像のHuman採用・操作感・聴感",
+    "OS実キー・OS画面取得：今回未実施。既存timeout反復なし",
+    "完成映像のHuman採用・操作感・実聴",
     "新規Unity Build / Editor Play",
-    "全接触角度と実交点2分割経路"
+    "全接触角度・実交点で2片になる経路"
   ],
   "holds": [
     "C11",
     "C18"
   ],
-  "video": "Docs/Reviews/C05Spikes/runs/20261022T233837_JST/Video",
-  "frames": "Docs/Reviews/C05Spikes/runs/20261022T233837_JST/Images",
+  "video": "Docs/Reviews/C05Spikes/runs/20261023T001912_JST/Video",
+  "frames": "Docs/Reviews/C05Spikes/runs/20261023T001912_JST/Images",
   "previous_static_report": "Docs/Reviews/C05Spikes/runs/20261021T203813_JST/Report.md",
   "audio": "Docs/Reviews/C05Spikes/runs/20261022T114924_JST/Audio/C05RopeScissors_v4.wav",
   "audio_asset_sha256": "970d754ec4251d4ad2c4c57e22c97524db84ee63dcca50a1aefc4b1f4e2cde0e",
   "known_limitations": [
-    "刃と表示ヒモ端の1.393823world差は未解決。実交点なしの頭側端1本だけを使用",
-    "720pの細い繊維は控えめ。毛糸のほどけより短縮に見える余地はHuman確認",
-    "音・物理切断・表示上の切断位置は移動していない"
+    "刃と表示ヒモ端の1.393823world差は未解決。自然接触で交点なし、保存された片側1本のみ使用",
+    "720pの細い先端は背景に溶けやすい。通常速度でのHuman可読性・採否は未確認",
+    "幾何長には透明な頂点を含む。幅0の末端間隔を可読性の実測根拠には使用しない"
   ],
-  "launchers": "Docs/Reviews/C05Spikes/runs/20261022T233837_JST/Launchers"
+  "launchers": "Docs/Reviews/C05Spikes/runs/20261023T001912_JST/Launchers"
 }
