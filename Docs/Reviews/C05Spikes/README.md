@@ -1,14 +1,18 @@
 # C05 危険物のデザインレビュー
 
-[最新状態](LATEST.json)／[ハサミ切断音の報告](runs/20261022T004810_JST/Report.md)／[手動起動](runs/20261022T004810_JST/Launch.md)
+[最新状態](LATEST.json)／[音v4＋切断VFXの報告](runs/20261022T114924_JST/Report.md)／[手動起動](runs/20261022T114924_JST/Launch.md)
 
-本体・1.00倍下降0.95の配置・第2区間の画角はHuman承認済みです。今回追加したのは、前側ハサミ1個で実際の切断が成立したときだけ鳴る0.22秒の音です。音は未承認、Production未統合です。
+本体・1.00倍下降0.95の配置・第2区間の画角・音v4はHuman承認済みです。今回の新しい対象は、切断直前の表示ヒモを使う短い戻り・ほつれです。前側ハサミ1個に限定し、VFXはHuman Review待ち、Production未統合です。
 
-[試聴用WAV](runs/20261022T004810_JST/Audio/HimoHitoScissorsSnip-v1.wav)／[実Player音声入り動画](runs/20261022T004810_JST/Video/After_PlayerMix.mp4)／[切断音なしの比較](runs/20261022T004810_JST/Video/Before_PlayerMix.mp4)
+[採用音v4 WAV](runs/20261022T114924_JST/Audio/C05RopeScissors_v4.wav)／[実Player音入り前後比較](runs/20261022T114924_JST/Video/Comparison_NormalSpeed.mp4)／[通常画角と拡大](runs/20261022T114924_JST/Images/ComparisonSheet.jpg)
 
-実切断1回→再生1回、非接触・E解除・開閉だけは0回、効果音ミュートは新音0回。音量50%の再生振幅比は約0.5です。300フレームの位置・速度・残量・Camera・ハサミ開閉は音追加前後で差0。自動入力／APIの記録であり、OS実キー・Humanの実聴評価ではありません。
+実切断1回→音1回・VFX1回、旧接触毛羽との重複なし。長さ5／6は通過、新音・VFX0回。長さ7は従来どおり接触。各300フレームの位置・速度・残量・Camera・ハサミ開閉は前後差0。ミュートはPlay0・切断窓PCM0・VFX1。自動入力／APIの記録であり、OS実キー・HumanのVFX採用評価ではありません。
+
+今回の経路はプレイヤーと刃の接触であり、ヒモ線と刃の交点はありません。ヒモを刃まで延ばさず最寄りの頭側端点でほつれを示します。刃とほつれの位置差、720pでの控えめな繊維はHuman Reviewで確認する制限です。
 
 ## 履歴
+
+- [旧音v1 c696ae3](runs/20261022T004810_JST/Report.md)：原本・動画・QAを保持。音は別途承認されたv4へ更新。旧報告の採否は当時の記録です。
 
 - [画角下降案 254d53f](runs/20261021T234155_JST/Report.md)：本体・配置・画角をHuman承認。今回の音追加の基準として保持。Production未統合。
 
@@ -28,6 +32,6 @@
 - [三角形素材調整案 80a004](runs/20261021T150807_JST/Report.md)：Human採用保留。
 
 
-実行は既存非Development Unity Player＋独立managed overlay＋承認PNG／新WAVの実読込。新規Unity Buildではありません。録音は実Player内部のAudioRenderer最終ミックスで、音の後付けやOSスピーカー録音ではありません。診断API・自動撮影とOS実キーを区別し、Human実聴と操作感は未確認です。
+実行は既存非Development Unity Player＋独立managed overlay＋承認PNG／音v4の実読込。新規Unity Buildではありません。録音は実Player内部のAudioRenderer最終ミックスで、音の後付けやOSスピーカー録音ではありません。診断API・自動撮影とOS実キーを区別し、今回のミックスのHuman実聴・VFX採否・操作感は未確認です。
 
-Production `394b4a74e366678a9e0542d895b9a26f86993c19`、既存差分・過去Proofを保持。レビュー資料だけをこのbranchに共有します。C11/C18はHOLD。今回の音候補はHuman Review待ちです。
+Production `394b4a74e366678a9e0542d895b9a26f86993c19`、既存差分・過去Proofを保持。レビュー資料だけをこのbranchに共有します。C11/C18はHOLD。今回の切断VFX候補はHuman Review待ちです。

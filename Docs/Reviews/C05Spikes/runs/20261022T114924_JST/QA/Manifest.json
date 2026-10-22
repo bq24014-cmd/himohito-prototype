@@ -1,0 +1,377 @@
+[
+  {
+    "path": "Launch.md",
+    "bytes": 1795,
+    "sha256": "88debbd2a4b5b0a789aac46580197ab34477a37c4aa2245e5aa0c818e87ff312"
+  },
+  {
+    "path": "Report.md",
+    "bytes": 9344,
+    "sha256": "140ea46760cf80f3a5aa10d9b81e446f7ddb2cc969409963f97b28314afc6643"
+  },
+  {
+    "path": "Audio/.gitattributes",
+    "bytes": 33,
+    "sha256": "5e6e5994dc88efd1511e5eb7ff2a66c9ba25d9a6dc22bb7f7e1f32b67a28abd0"
+  },
+  {
+    "path": "Audio/ADOPTION.json",
+    "bytes": 833,
+    "sha256": "fda1bd1790119c6d5292a47d646124f79ab46749e7addd549498ede4930b0df3"
+  },
+  {
+    "path": "Audio/C05RopeScissors_v4.wav",
+    "bytes": 22124,
+    "sha256": "970d754ec4251d4ad2c4c57e22c97524db84ee63dcca50a1aefc4b1f4e2cde0e"
+  },
+  {
+    "path": "Audio/C05RopeScissors_v4.wav.meta",
+    "bytes": 563,
+    "sha256": "6bea76be536df7e74226d3865d4f84e3eb807124d91f6759cff95a400f37923a"
+  },
+  {
+    "path": "Audio/generation.json",
+    "bytes": 1453,
+    "sha256": "dad5be69c90eb61378b3e52624ba3519dcd269b72de71daa7b12f20125fe2221"
+  },
+  {
+    "path": "Audio/synthesize_rope_snip.py",
+    "bytes": 6667,
+    "sha256": "367f0f25ff5617441f825890e5f1009fe19328ab26dd1cb18bd2025c777b4a2d"
+  },
+  {
+    "path": "Diff/AudioReview.cs.patch",
+    "bytes": 823,
+    "sha256": "f3a7b3821cd62988cb2349b883619840070cd2efa565c13392ae3a908a761374"
+  },
+  {
+    "path": "Diff/RopeSpikeHazard.cs.patch",
+    "bytes": 1116,
+    "sha256": "0b30476c60e536fcaa70aaebbb0d17488c4ee6594d966330dd23a77fd11aaf25"
+  },
+  {
+    "path": "Diff/RouteReview.cs.patch",
+    "bytes": 2596,
+    "sha256": "eef594f0e9bbb398f3c7fee198c4ca20e6a9d8bc364db5efe2845c64bf79a63f"
+  },
+  {
+    "path": "Diff/ScissorsCutAudio.cs.patch",
+    "bytes": 1587,
+    "sha256": "4a91e1dda20df28f5be10942a72969b11588387fe1f35800a8a1fa6d423d5a1c"
+  },
+  {
+    "path": "Diff/ScissorsCutVfx.cs.txt",
+    "bytes": 10904,
+    "sha256": "f5f038fc61e214bc30f5852f6000af515490b609713fd17ad6e903cd35e4e881"
+  },
+  {
+    "path": "Diff/VfxReview.cs.txt",
+    "bytes": 7089,
+    "sha256": "124233fa318b31f8f8719a1735404f7d8067e36b04ebd0f473ce5fef634a8b5a"
+  },
+  {
+    "path": "Images/After1600_1.12s.jpg",
+    "bytes": 221528,
+    "sha256": "35400b525594ffd1079dc82de27466ff9f30bfe7cd89a8d47ce9ab49a3a44f25"
+  },
+  {
+    "path": "Images/After1600_1.16s.jpg",
+    "bytes": 222153,
+    "sha256": "5095239a0ee19ba1f8cfe4d1500284759e0f94f9052bc6e1fe37f7ba94dfd53b"
+  },
+  {
+    "path": "Images/After1600_1.20s.jpg",
+    "bytes": 221870,
+    "sha256": "08e31dcf92e21b48510dac8251e64bef10e60fe15d2649d1200b115f36593ad7"
+  },
+  {
+    "path": "Images/After1600_1.24s.jpg",
+    "bytes": 221923,
+    "sha256": "7bd9fa5ff3509636426efdea0875884f8777b7111c3dd71d97dfee9e90d04115"
+  },
+  {
+    "path": "Images/After1600_1.28s.jpg",
+    "bytes": 221290,
+    "sha256": "dad56151d4d42924696c099a744bd378bad8df921da34848dd1bcacf46175eaa"
+  },
+  {
+    "path": "Images/After720_1.12s.jpg",
+    "bytes": 158109,
+    "sha256": "90e25fcdaa54af52efc073c5b87a5034795e6f7fa220eb4ee0422e3abc7ed0e0"
+  },
+  {
+    "path": "Images/After720_1.16s.jpg",
+    "bytes": 158496,
+    "sha256": "d55e1efe109528dd9e3e71aa60e7f4b3e57256e828a96fb92c74df071c70d912"
+  },
+  {
+    "path": "Images/After720_1.20s.jpg",
+    "bytes": 158697,
+    "sha256": "55bbde89742eaf2f50e96712201fcfadafe3014b4bf5ebeb287559431b831b6c"
+  },
+  {
+    "path": "Images/After720_1.24s.jpg",
+    "bytes": 158172,
+    "sha256": "1009504870bb0b4c0bc45ea9b7610385b752c66405a248097c1d9914b4a67f5e"
+  },
+  {
+    "path": "Images/After720_1.28s.jpg",
+    "bytes": 157994,
+    "sha256": "88058e012bbe744a2771963a44432a3f0c0b3ee11bbb1f8216f69610f887dc78"
+  },
+  {
+    "path": "Images/Before1600_1.12s.jpg",
+    "bytes": 221528,
+    "sha256": "35400b525594ffd1079dc82de27466ff9f30bfe7cd89a8d47ce9ab49a3a44f25"
+  },
+  {
+    "path": "Images/Before1600_1.16s.jpg",
+    "bytes": 220197,
+    "sha256": "c2e996945e6ac21023561ec9af34fcfa42bd2c445c7a23b66982fdb3e5708de0"
+  },
+  {
+    "path": "Images/Before1600_1.20s.jpg",
+    "bytes": 219830,
+    "sha256": "beb607a195f5b95032ddb9ddc04e2b390442f5aa2f635542e95296c2a2951bb2"
+  },
+  {
+    "path": "Images/Before1600_1.24s.jpg",
+    "bytes": 219882,
+    "sha256": "10f157080a2dcf6c436853b3554ca0ceda92f5d53cbcf422594827e6947fd55a"
+  },
+  {
+    "path": "Images/Before1600_1.28s.jpg",
+    "bytes": 219305,
+    "sha256": "f36c90567e80d9c598cb9f0676217248357feff7d941188c1e3b37389a93852c"
+  },
+  {
+    "path": "Images/ComparisonSheet.jpg",
+    "bytes": 251425,
+    "sha256": "abd23a40fba23a697fa8d2b884b3f81d692407d311af7c6a428e63a685b854ce"
+  },
+  {
+    "path": "Images/CutSequence.jpg",
+    "bytes": 133597,
+    "sha256": "60906ab9676d2cf068e74b02ac76c5721ba2c96e4c97dee2a388030429311986"
+  },
+  {
+    "path": "QA/After1600_AudioResult.json",
+    "bytes": 128828,
+    "sha256": "7a94419e46807ebc8e3e1aeee18c3b748f6bad002fcadad2dc8ee99cf48aab38"
+  },
+  {
+    "path": "QA/After1600_LogExcerpt.txt",
+    "bytes": 243,
+    "sha256": "8b5652c3e98a93124e91aed7e823d8cfad5fc42d1478970fd67576ef4bddbd8d"
+  },
+  {
+    "path": "QA/After1600_Result.json",
+    "bytes": 268698,
+    "sha256": "acf243a5941653cd1827e3a5b312bd8d470e049481cf01a89830d4a393d4caa3"
+  },
+  {
+    "path": "QA/After1600_VfxResult.json",
+    "bytes": 63063,
+    "sha256": "470ce40db2666cf08d350fa9dc2f7e391a767353be404b56749bb9d948fde7d7"
+  },
+  {
+    "path": "QA/After720_AudioResult.json",
+    "bytes": 129144,
+    "sha256": "57d48bff1e321c7073e548f65d8bf668a237d4e7c53e9b066a5c1674c94dda9f"
+  },
+  {
+    "path": "QA/After720_LogExcerpt.txt",
+    "bytes": 243,
+    "sha256": "8b5652c3e98a93124e91aed7e823d8cfad5fc42d1478970fd67576ef4bddbd8d"
+  },
+  {
+    "path": "QA/After720_Result.json",
+    "bytes": 268698,
+    "sha256": "28d028454bbc4535b57d1202853e93800b9c8c4dde4b7caa1b9f6e70786db6f2"
+  },
+  {
+    "path": "QA/After720_VfxResult.json",
+    "bytes": 64505,
+    "sha256": "26ed62e9dd0ab2b9a831b15b79536efe6f2f5eb1dc71a39457c1a9cd5c18a1d2"
+  },
+  {
+    "path": "QA/AfterL5_AudioResult.json",
+    "bytes": 127121,
+    "sha256": "f05e58c63dce98029896382176010a5b2e68e1b9e79bfefc99e7551167d3603e"
+  },
+  {
+    "path": "QA/AfterL5_LogExcerpt.txt",
+    "bytes": 242,
+    "sha256": "ad876b69ea702d654b9e2cbb3bba07cf3f2e157e67a2806b70a15a35a66c640c"
+  },
+  {
+    "path": "QA/AfterL5_Result.json",
+    "bytes": 270795,
+    "sha256": "3465f771a0f9c3b123717df27c14e1715c3ba9e9ce37e22977fb1c6632ec33f8"
+  },
+  {
+    "path": "QA/AfterL5_VfxResult.json",
+    "bytes": 56481,
+    "sha256": "e47445e1ff48a95fcab392148ed4b10bc967555b629f6f8c93b9abfcec35e9cb"
+  },
+  {
+    "path": "QA/AfterL6_AudioResult.json",
+    "bytes": 127121,
+    "sha256": "f05e58c63dce98029896382176010a5b2e68e1b9e79bfefc99e7551167d3603e"
+  },
+  {
+    "path": "QA/AfterL6_LogExcerpt.txt",
+    "bytes": 242,
+    "sha256": "d3b62f1f7961ecff7cbbd9940a8628be93e50b784e4ae5909e16620371614efe"
+  },
+  {
+    "path": "QA/AfterL6_Result.json",
+    "bytes": 270618,
+    "sha256": "dd3cd0257416c0230ae497eb58911743c1341a7b812782431338fb447c07078e"
+  },
+  {
+    "path": "QA/AfterL6_VfxResult.json",
+    "bytes": 56481,
+    "sha256": "e47445e1ff48a95fcab392148ed4b10bc967555b629f6f8c93b9abfcec35e9cb"
+  },
+  {
+    "path": "QA/Analysis.json",
+    "bytes": 17588,
+    "sha256": "358f706455f72946288242f8c06c8df764bd29b41e75d8721c95c2d8d1592dd9"
+  },
+  {
+    "path": "QA/Before1600_AudioResult.json",
+    "bytes": 127261,
+    "sha256": "b59e464319e3aeb1ad7f0d4d9caf3ac4a5e703713c6ebaa3bd8acc3a9f9aff7e"
+  },
+  {
+    "path": "QA/Before1600_LogExcerpt.txt",
+    "bytes": 243,
+    "sha256": "8b5652c3e98a93124e91aed7e823d8cfad5fc42d1478970fd67576ef4bddbd8d"
+  },
+  {
+    "path": "QA/Before1600_Result.json",
+    "bytes": 268698,
+    "sha256": "8ed652a36bf75ff9087f1d551a4114cc273f8883b7759769c09e5fdba6ac3906"
+  },
+  {
+    "path": "QA/Before1600_VfxResult.json",
+    "bytes": 56513,
+    "sha256": "93244e0a016e15d281bf325ef20be8be68e45398da95d1efda267b289723cc38"
+  },
+  {
+    "path": "QA/BeforeL5_AudioResult.json",
+    "bytes": 127121,
+    "sha256": "f05e58c63dce98029896382176010a5b2e68e1b9e79bfefc99e7551167d3603e"
+  },
+  {
+    "path": "QA/BeforeL5_LogExcerpt.txt",
+    "bytes": 242,
+    "sha256": "ad876b69ea702d654b9e2cbb3bba07cf3f2e157e67a2806b70a15a35a66c640c"
+  },
+  {
+    "path": "QA/BeforeL5_Result.json",
+    "bytes": 270795,
+    "sha256": "b6bb5e55f6587f275f896568c58fbfb7e258a13dd73b3b81d15b343ab77b6cd6"
+  },
+  {
+    "path": "QA/BeforeL5_VfxResult.json",
+    "bytes": 56481,
+    "sha256": "e47445e1ff48a95fcab392148ed4b10bc967555b629f6f8c93b9abfcec35e9cb"
+  },
+  {
+    "path": "QA/BeforeL6_AudioResult.json",
+    "bytes": 127121,
+    "sha256": "f05e58c63dce98029896382176010a5b2e68e1b9e79bfefc99e7551167d3603e"
+  },
+  {
+    "path": "QA/BeforeL6_LogExcerpt.txt",
+    "bytes": 242,
+    "sha256": "d3b62f1f7961ecff7cbbd9940a8628be93e50b784e4ae5909e16620371614efe"
+  },
+  {
+    "path": "QA/BeforeL6_Result.json",
+    "bytes": 270618,
+    "sha256": "1aad2d28ddd13144a15a66e3d87a6e744f9ea0fdb6e3ace9c1dbef13a72c87f2"
+  },
+  {
+    "path": "QA/BeforeL6_VfxResult.json",
+    "bytes": 56481,
+    "sha256": "e47445e1ff48a95fcab392148ed4b10bc967555b629f6f8c93b9abfcec35e9cb"
+  },
+  {
+    "path": "QA/Compile.txt",
+    "bytes": 802,
+    "sha256": "24f70d25ce80bcb0d210e200feb10a409756cdcd593c36570b5058f0c3ab60b1"
+  },
+  {
+    "path": "QA/ManualSmoke.json",
+    "bytes": 554,
+    "sha256": "3c056aeb1d494bab69b34713143686a75a2f9942502cb7bc9a9520be5f589bf9"
+  },
+  {
+    "path": "QA/Muted_AudioResult.json",
+    "bytes": 122444,
+    "sha256": "ab86e33f5d823f9f5f58f608c2e59f0fe69150d3e961829752249d3369c07ca5"
+  },
+  {
+    "path": "QA/Muted_LogExcerpt.txt",
+    "bytes": 243,
+    "sha256": "8b5652c3e98a93124e91aed7e823d8cfad5fc42d1478970fd67576ef4bddbd8d"
+  },
+  {
+    "path": "QA/Muted_Result.json",
+    "bytes": 268698,
+    "sha256": "51e54840e4b866cdc8556991b167239f68ea1391981a72b09a8470f1885b176f"
+  },
+  {
+    "path": "QA/Muted_VfxResult.json",
+    "bytes": 57809,
+    "sha256": "a60dc3e0f941697a6dc7fcfd77c65e31b06051d16af433e617c73a5d45686fed"
+  },
+  {
+    "path": "QA/ProtectionEnd.json",
+    "bytes": 555,
+    "sha256": "3fc3524625655967e11fe7254ac6c87a8096b7860df028a63b78471108d3afb6"
+  },
+  {
+    "path": "QA/SoloV4_AudioResult.json",
+    "bytes": 127248,
+    "sha256": "4beca0caae76b1a2307dfc9086a023805b0d631d013894682163aed8f8a8df20"
+  },
+  {
+    "path": "QA/SoloV4_LogExcerpt.txt",
+    "bytes": 243,
+    "sha256": "8b5652c3e98a93124e91aed7e823d8cfad5fc42d1478970fd67576ef4bddbd8d"
+  },
+  {
+    "path": "QA/SoloV4_Result.json",
+    "bytes": 268698,
+    "sha256": "f2b229fbeb6b70277d19c0fc54abe8fd9f5c41c541462c1727187aecc4704b7b"
+  },
+  {
+    "path": "QA/SoloV4_VfxResult.json",
+    "bytes": 57809,
+    "sha256": "a60dc3e0f941697a6dc7fcfd77c65e31b06051d16af433e617c73a5d45686fed"
+  },
+  {
+    "path": "Video/After1600_PlayerMix.mp4",
+    "bytes": 926265,
+    "sha256": "ef0f10e2b7cc2c83306ad9eeda64cd4256a2cfacc12eb0fe3831208f3ad170d6"
+  },
+  {
+    "path": "Video/After720_PlayerMix.mp4",
+    "bytes": 697577,
+    "sha256": "ee13405d361c2717d571b1c4efaed66cd9eb6d68aa82f3e3dd4c1610dd7da553"
+  },
+  {
+    "path": "Video/Before1600_PlayerMix.mp4",
+    "bytes": 922815,
+    "sha256": "3bcef71ea7573167a27aeb380cc04aabf851308e805e7259cbf152e94185112a"
+  },
+  {
+    "path": "Video/Comparison_NormalSpeed.mp4",
+    "bytes": 1679400,
+    "sha256": "7b5980c730f513726312743f5fd3977905c2a1ccec768ed3ea58f40cf55baee0"
+  }
+]

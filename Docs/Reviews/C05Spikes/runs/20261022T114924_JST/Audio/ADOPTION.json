@@ -1,0 +1,22 @@
+{
+  "date_jst": "2026-10-22",
+  "approved_audio": "C05RopeScissors_v4.wav",
+  "audio_sha256": "970d754ec4251d4ad2c4c57e22c97524db84ee63dcca50a1aefc4b1f4e2cde0e",
+  "user_approval": "これ採用しよう。あとはヒモが切れるときの演出も追加したい",
+  "audio_status": "Human-approved v4 audio asset; not yet installed in Unity by this session",
+  "cut_vfx_status": "Browser concept preview, not yet Human-approved or installed in Unity",
+  "code_reference_commit": "c696ae36fe5d075992166182b769ec3ee5984066",
+  "preview_checks": [
+    "Playback with approved v4",
+    "Rapid replay",
+    "Muted replay",
+    "No page errors",
+    "320px and 736px widths: no horizontal overflow"
+  ],
+  "not_performed": [
+    "Unity integration",
+    "Unity compilation",
+    "Player validation",
+    "GitHub commit or push"
+  ]
+}

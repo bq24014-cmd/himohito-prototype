@@ -1,0 +1,45 @@
+{
+  "file": "C05RopeScissors_v4.wav",
+  "config": {
+    "seed": 20261022041,
+    "duration": 0.23,
+    "closure_time": 0.039,
+    "friction_weight": 0.49,
+    "closing_weight": 1.08,
+    "handle_weight": 0.085,
+    "fibre_weight": 0.28,
+    "metal_weight": 0.27,
+    "felt_weight": 0.018,
+    "high_cutoff": 11100,
+    "sample_peak_dbfs": -6.0
+  },
+  "generation": "Procedural synthesis, not a recording.",
+  "audio_inputs": [],
+  "design_basis": "Observed approved artwork: stitched fabric, yarn, wooden toys, warm polymer-handled craft scissors.",
+  "revision_intent": "User requested a more distinct shaki: brighter, shorter blade scrape, sharper closing contact and a dry yarn break clustered at the same cut.",
+  "layers": [
+    "blade_friction",
+    "blade_closing",
+    "polymer_handle",
+    "short_blade_resonances",
+    "yarn_breakup",
+    "soft_tail"
+  ],
+  "format": {
+    "sample_rate": 48000,
+    "channels": 1,
+    "pcm_bits": 16,
+    "duration_seconds": 0.23
+  },
+  "sample_peak_dbfs": -6.000477743319013,
+  "true_peak_4x_dbtp": -5.5576409564248594,
+  "rms_dbfs": -26.848531301115962,
+  "energy_1_to_99_percent_seconds": [
+    0.00125,
+    0.04554166666666667
+  ],
+  "energy_above_8khz_percent": 11.904404950150758,
+  "clipped_samples": 0,
+  "sha256": "970d754ec4251d4ad2c4c57e22c97524db84ee63dcca50a1aefc4b1f4e2cde0e",
+  "review": "Numerical waveform checks only. No assistant listening, Human approval, or Unity integration claimed."
+}

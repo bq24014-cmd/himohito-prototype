@@ -1,0 +1,23 @@
+--- PreviousIsolated/ScissorsCutAudio.cs
++++ IsolatedV4Vfx/ScissorsCutAudio.cs
+@@ -26,9 +26,10 @@
+     {
+         if(name != CraftScissorsMotion.TargetName){enabled=false;return;}
+         hazard=GetComponent<RopeSpikeHazard>();
+-        byte[] bytes=File.ReadAllBytes(Path.Combine(Application.dataPath,"../ReviewAssets/HimoHitoScissorsSnip-v1.wav"));
++        byte[] bytes=File.ReadAllBytes(Path.Combine(Application.dataPath,"../ReviewAssets/C05RopeScissors_v4.wav"));
+         using(var sha=System.Security.Cryptography.SHA256.Create())
+             AssetSha256=BitConverter.ToString(sha.ComputeHash(bytes)).Replace("-","").ToLowerInvariant();
++        if(AssetSha256!="970d754ec4251d4ad2c4c57e22c97524db84ee63dcca50a1aefc4b1f4e2cde0e")throw new InvalidDataException("Approved v4 audio hash mismatch");
+         clip=ReadPcm16(bytes);
+         Source=gameObject.AddComponent<AudioSource>();
+         Source.clip=clip;Source.playOnAwake=false;Source.loop=false;
+@@ -67,7 +68,7 @@
+             }
+             if(format!=1||bits!=16||channels!=1||rate!=48000||pcm==null)throw new InvalidDataException("Expected mono PCM16 48kHz");
+             var samples=new float[pcm.Length/2];for(int i=0;i<samples.Length;i++)samples[i]=BitConverter.ToInt16(pcm,2*i)/32768f;
+-            var result=AudioClip.Create("HimoHito original craft-scissors snip v1",samples.Length,channels,rate,false);
++            var result=AudioClip.Create("C05 approved rope-scissors v4",samples.Length,channels,rate,false);
+             result.SetData(samples,0);return result;
+         }
+     }

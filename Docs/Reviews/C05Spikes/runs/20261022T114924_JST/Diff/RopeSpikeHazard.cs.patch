@@ -1,0 +1,19 @@
+--- PreviousIsolated/RopeSpikeHazard.cs
++++ IsolatedV4Vfx/RopeSpikeHazard.cs
+@@ -59,12 +59,15 @@
+                 }
+                 Rigidbody2D body = rope.GetComponent<Rigidbody2D>();
+                 Vector2 velocity = body != null ? body.linearVelocity : Vector2.zero;
++                var cutVfx = GetComponent<ScissorsCutVfx>();
++                bool replaceFluff = body != null && body.simulated && Time.timeScale > 0f &&
++                    cutVfx != null && cutVfx.CaptureBeforeCut(rope, detectionArea, point);
+                 // Preserve the existing detach/refund first. Presentation adds no force.
+                 rope.DetachAndRefund();
+                 if (body != null && body.simulated && Time.timeScale > 0f)
+                 {
+                     GetComponent<ToySpikeVisual>()?.PlayContact(point, velocity);
+-                    RopeLandingFluff.PlaySpikeContact(other, point, velocity);
++                    if (!replaceFluff) RopeLandingFluff.PlaySpikeContact(other, point, velocity);
+                     RopeCutSucceeded?.Invoke(rope);
+                 }
+             }

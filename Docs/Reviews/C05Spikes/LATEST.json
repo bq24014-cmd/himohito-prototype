@@ -1,24 +1,24 @@
 {
   "review_id": "C05Spikes",
-  "run_id": "20261022T004810_JST",
-  "updated_at": "2026-10-22T00:51:08.183028+09:00",
+  "run_id": "20261022T114924_JST",
+  "updated_at": "2026-10-22T11:55:39.182849+09:00",
   "time_zone": "Asia/Tokyo",
-  "proof": "C05ScissorsCutAudioProof_20261022",
-  "revision": "cut-audio-r1",
+  "proof": "C05CutVfxProof_20261022",
+  "revision": "audio-v4-cut-vfx-r3",
   "production_head": "394b4a74e366678a9e0542d895b9a26f86993c19",
-  "status": "切断音の隔離候補1案・Human実聴待ち。Technical checks PASS。Production未統合",
+  "status": "音v4正式採用済み。切断VFX隔離候補1案・Human Review待ち。Production未統合",
   "production_integrated": false,
-  "human_adoption": "本体・1.00倍下降0.95配置・S2画角をHuman承認。今回の音は未承認",
+  "human_adoption": "本体・1.00倍下降0.95配置・S2画角・音v4はHuman承認。切断VFXは未承認",
   "branch": "codex/review-c05-spikes",
-  "report": "Docs/Reviews/C05Spikes/runs/20261022T004810_JST/Report.md",
-  "launch": "Docs/Reviews/C05Spikes/runs/20261022T004810_JST/Launch.md",
-  "images": "Docs/Reviews/C05Spikes/runs/20261022T004810_JST/Images",
-  "qa": "Docs/Reviews/C05Spikes/runs/20261022T004810_JST/QA",
-  "diff": "Docs/Reviews/C05Spikes/runs/20261022T004810_JST/Diff",
-  "assets": "Docs/Reviews/C05Spikes/runs/20261022T004810_JST/Audio",
-  "execution": "Existing Unity 6000.3.21f1 non-Development Player + isolated managed overlay + PCM16 WAV loaded into AudioClip; actual Player AudioRenderer mixed capture; NOT OS keys/speaker loopback/new Unity Build",
-  "technical": "Native blade cut1 => new sound1; noncontact/E/idle/visual-only/detached0; Effects mute Play0 and cut-window PCM0; volume50% RMS ratio0.4999997; 300-frame physics/camera/scissors deltas0.",
-  "scope": "Only front scissors sound. Approved body, drop0.95, camera offset0.95, shape, blade collider, physical cut/refund unchanged. Prior proofs preserved.",
+  "report": "Docs/Reviews/C05Spikes/runs/20261022T114924_JST/Report.md",
+  "launch": "Docs/Reviews/C05Spikes/runs/20261022T114924_JST/Launch.md",
+  "images": "Docs/Reviews/C05Spikes/runs/20261022T114924_JST/Images",
+  "qa": "Docs/Reviews/C05Spikes/runs/20261022T114924_JST/QA",
+  "diff": "Docs/Reviews/C05Spikes/runs/20261022T114924_JST/Diff",
+  "assets": "Docs/Reviews/C05Spikes/runs/20261022T114924_JST/Audio",
+  "execution": "Existing Unity 6000.3.21f1 non-Development Player + isolated managed overlay + actual PCM16 v4 loading. Unity AudioRenderer final mix, not post-dub/OS loopback. Automated input/native APIs; NOT OS keys/Human/new Unity Build.",
+  "technical": "Compile/actual non-Development Player passed. L5/L6 pass, no new cue; L7 cut1/audio1/VFX1/old fluff0. Muted Play0/VFX1/cut-window PCM0. 300 frames each L5/L6/L7 physics/camera/resources/scissors deltas0. R/pause/reattach/failure/menu/scene checks passed using APIs.",
+  "scope": "Only front scissors sound v4 and cut-display copy/frays. Approved body, camera, shape, blade collider, cut/refund and physics unchanged. Prior proofs preserved.",
   "approved_body": {
     "commit": "5c64b9ef63d574a56ef4fbb0439ee7d364800dfa",
     "report": "Docs/Reviews/C05Spikes/runs/20261021T180204_JST/Report.md",
@@ -26,8 +26,17 @@
     "asset_sha256": "b5558bcd4b40b7762201184ec0324758803aaaede56cc3102dbd169670c57c1d",
     "scope": "body design and upright handles-down placement direction"
   },
-  "render_assembly_sha256": "7d15f950391d26045acf9530cb86fb9fce78c61847786900951b3febef4e82a9",
+  "render_assembly_sha256": "36552ec9121493cd19b167787959e8ab0860aff8b9e411ce337f09dd4300042d",
   "previous_candidates": [
+    {
+      "review_id": "C05Spikes",
+      "run_id": "20261022T004810_JST",
+      "proof": "C05ScissorsCutAudioProof_20261022",
+      "revision": "cut-audio-r1",
+      "report": "Docs/Reviews/C05Spikes/runs/20261022T004810_JST/Report.md",
+      "commit": "c696ae36fe5d075992166182b769ec3ee5984066",
+      "status": "旧音v1＋旧毛羽の原本を保持。音はHuman承認済みv4に更新。Production未統合"
+    },
     {
       "commit": "254d53fd7f258465637939693f9b63a40effca32",
       "report": "Docs/Reviews/C05Spikes/runs/20261021T234155_JST/Report.md",
@@ -94,19 +103,24 @@
     }
   ],
   "unconfirmed": [
-    "Human実聴・音色/音量/気持ちよさ",
-    "OS実キー・スピーカー/ヘッドフォンの実出音",
+    "VFXのHuman採用・楽しさ・実キー操作感",
+    "OSキー入力・スピーカー/ヘッドフォン出音・主観的ミックス",
     "新規Unity Build / Editor Play",
-    "全接触角度/音量の網羅",
-    "他のトゲへの展開は禁止。C11/C18はHOLD"
+    "実際のヒモと刃の交点による2分割経路（今回の接触は全て最寄り端点）",
+    "全接触角度の網羅。C11/C18 HOLD"
   ],
   "holds": [
     "C11",
     "C18"
   ],
-  "video": "Docs/Reviews/C05Spikes/runs/20261022T004810_JST/Video",
-  "frames": "Docs/Reviews/C05Spikes/runs/20261022T004810_JST/Images",
+  "video": "Docs/Reviews/C05Spikes/runs/20261022T114924_JST/Video",
+  "frames": "Docs/Reviews/C05Spikes/runs/20261022T114924_JST/Images",
   "previous_static_report": "Docs/Reviews/C05Spikes/runs/20261021T203813_JST/Report.md",
-  "audio": "Docs/Reviews/C05Spikes/runs/20261022T004810_JST/Audio/HimoHitoScissorsSnip-v1.wav",
-  "audio_asset_sha256": "19420a96fc903f9be4404f50e2e072bc9e103483f9b1f075b571439f7bf1f5a4"
+  "audio": "Docs/Reviews/C05Spikes/runs/20261022T114924_JST/Audio/C05RopeScissors_v4.wav",
+  "audio_asset_sha256": "970d754ec4251d4ad2c4c57e22c97524db84ee63dcca50a1aefc4b1f4e2cde0e",
+  "known_limitations": [
+    "自然L7接触点と表示ヒモ端は約1.394world離れる。仮のヒモ延長はしない",
+    "自然L7は落下失敗によりVFX経過0.12秒で消去。通常寿命0.27秒より早い",
+    "720pの毛羽は控えめ。採否はHuman Review待ち"
+  ]
 }

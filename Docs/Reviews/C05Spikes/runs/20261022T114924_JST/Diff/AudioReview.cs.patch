@@ -1,0 +1,18 @@
+--- PreviousIsolated/AudioReview.cs
++++ IsolatedV4Vfx/AudioReview.cs
+@@ -30,6 +30,7 @@
+ 
+     void SetupCutSound(GameObject target){
+         if(Arg("-soundBefore")!="1")cutAudio=target.AddComponent<ScissorsCutAudio>();
++        if(Arg("-vfxBefore")!="1")cutVfx=target.AddComponent<ScissorsCutVfx>();
+     }
+     void BeginAudio()
+     {
+@@ -64,6 +65,7 @@
+             cues=cutAudio?cutAudio.cues.Count:0,plays=cutAudio?cutAudio.playCount:0,snips=scissors?scissors.snips:0,
+             closure=scissors?scissors.closure:0,sourceVolume=cutAudio?cutAudio.Source.volume:0,
+             sourcePlaying=cutAudio&&cutAudio.Source.isPlaying,effects=HimoHitoAudioSettings.Effects,music=HimoHitoAudioSettings.Music,attached=rope.IsAttached,samples=count});
++        RecordVfx();
+     }
+     void EndAudio()
+     {

@@ -1,0 +1,21 @@
+--- PreviousIsolated/RouteReview.cs
++++ IsolatedV4Vfx/RouteReview.cs
+@@ -18,7 +18,8 @@
+     static object Get(object o,string n)=>o.GetType().GetField(n,H).GetValue(o);
+     static void Set(object o,string n,object v)=>o.GetType().GetField(n,H).SetValue(o,v);
+     static object Call(object o,string n)=>o.GetType().GetMethod(n,H|BindingFlags.Public).Invoke(o,null);
+-    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]static void Boot(){Application.runInBackground=true;HorizontalCameraFollow.ReviewSectionTwoLowering=Arg("-cameraBefore")!="1";if(QA){Time.captureFramerate=50;UnityEngine.Random.InitState(521);}SceneManager.sceneLoaded+=(s,m)=>{if(s.name!="MainStage"){SceneManager.LoadScene("MainStage");return;}new GameObject("C05 route fixture").AddComponent<GroundingReview>();};}
++    static bool suppressFixture;
++    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]static void Boot(){Application.runInBackground=true;HorizontalCameraFollow.ReviewSectionTwoLowering=Arg("-cameraBefore")!="1";if(QA){Time.captureFramerate=50;UnityEngine.Random.InitState(521);}SceneManager.sceneLoaded+=(s,m)=>{if(suppressFixture)return;if(s.name!="MainStage"){SceneManager.LoadScene("MainStage");return;}new GameObject("C05 route fixture").AddComponent<GroundingReview>();};}
+     [Serializable]public class Frame{public int tick;public float t,input,remaining,length,frontDistance,farDistance;public Vector2 position,velocity;public Vector3 camera;public bool grounded,attached,failure;public int snips;public float closure,handleGap;}
+     [Serializable]public class Event{public string kind,other;public int tick;public Vector2 position,velocity,normal,point;public bool attached;}
+     [Serializable]public class ColliderRecord{public string name,type;public Vector3 min,max,position,scale;public bool trigger;}
+@@ -59,6 +60,8 @@
+         active=false;recording=false;Set(mover,"moveInput",0f);result.finished=true;
+         EndAudio();
+         if(Arg("-negativeChecks")=="1"&&cutAudio)yield return NegativeAudioChecks();
++        if(Arg("-vfxChecks")=="1"&&cutVfx)yield return VfxChecks();
++        WriteVfx();
+         audioResult.finished=true;
+         File.WriteAllText(Path.Combine(output,"AudioResult.json"),JsonUtility.ToJson(audioResult,true));
+         File.WriteAllText(Path.Combine(output,"Result.json"),JsonUtility.ToJson(result,true));Debug.Log("C05_ROUTE_DONE "+variant+" L"+length+" attach="+result.attachSucceeded+" reached="+result.reachedBank+" errors="+result.errors);Application.Quit(result.errors>0?2:0);

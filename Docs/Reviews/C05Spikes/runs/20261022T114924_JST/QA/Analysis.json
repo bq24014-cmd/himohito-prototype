@@ -1,0 +1,597 @@
+{
+  "execution": "Automated input / native APIs in actual Windows Unity Player; not OS/Human. Existing non-Development Player + managed overlay, not new Unity Build.",
+  "comparisons": {
+    "L7_vfx_off_on": {
+      "frames": [
+        300,
+        300
+      ],
+      "max_deltas": {
+        "position": 0.0,
+        "velocity": 0.0,
+        "camera": 0.0,
+        "remaining": 0.0,
+        "length": 0.0,
+        "closure": 0.0,
+        "handleGap": 0.0
+      },
+      "state_mismatch_frames": [],
+      "pass_exact": true
+    },
+    "L5": {
+      "frames": [
+        300,
+        300
+      ],
+      "max_deltas": {
+        "position": 0.0,
+        "velocity": 0.0,
+        "camera": 0.0,
+        "remaining": 0.0,
+        "length": 0.0,
+        "closure": 0.0,
+        "handleGap": 0.0
+      },
+      "state_mismatch_frames": [],
+      "pass_exact": true
+    },
+    "L6": {
+      "frames": [
+        300,
+        300
+      ],
+      "max_deltas": {
+        "position": 0.0,
+        "velocity": 0.0,
+        "camera": 0.0,
+        "remaining": 0.0,
+        "length": 0.0,
+        "closure": 0.0,
+        "handleGap": 0.0
+      },
+      "state_mismatch_frames": [],
+      "pass_exact": true
+    },
+    "resolution_1600_720": {
+      "frames": [
+        300,
+        300
+      ],
+      "max_deltas": {
+        "position": 0.0,
+        "velocity": 0.0,
+        "camera": 0.0,
+        "remaining": 0.0,
+        "length": 0.0,
+        "closure": 0.0,
+        "handleGap": 0.0
+      },
+      "state_mismatch_frames": [],
+      "pass_exact": true
+    },
+    "previous_v1_vs_v4_vfx": {
+      "frames": [
+        300,
+        300
+      ],
+      "max_deltas": {
+        "position": 0.0,
+        "velocity": 0.0,
+        "camera": 0.0,
+        "remaining": 0.0,
+        "length": 0.0,
+        "closure": 0.0,
+        "handleGap": 0.0
+      },
+      "state_mismatch_frames": [],
+      "pass_exact": true
+    }
+  },
+  "cases": {
+    "After1600": {
+      "errors": 0,
+      "development": false,
+      "attach": true,
+      "reached": false,
+      "route_cuts": 1,
+      "route_plays": 1,
+      "route_vfx": 1,
+      "old_fluff_max": 0,
+      "capture_failures": 0,
+      "audio_sha": "970d754ec4251d4ad2c4c57e22c97524db84ee63dcca50a1aefc4b1f4e2cde0e",
+      "gain": 0.41999998688697815,
+      "effects": 1.0,
+      "audio_render_failures": 0,
+      "cut_window_peak": 0.270965576171875,
+      "mix_peak": 0.44091796875,
+      "mix_clipped_samples": 0,
+      "negative": [
+        {
+          "name": "idle/open-close only",
+          "cutsBefore": 1,
+          "cutsAfter": 1,
+          "playsBefore": 1,
+          "playsAfter": 1,
+          "pass": true
+        },
+        {
+          "name": "visual contact without rope cut",
+          "cutsBefore": 1,
+          "cutsAfter": 1,
+          "playsBefore": 1,
+          "playsAfter": 1,
+          "pass": true
+        },
+        {
+          "name": "detached blade overlap",
+          "cutsBefore": 1,
+          "cutsAfter": 1,
+          "playsBefore": 1,
+          "playsAfter": 1,
+          "pass": true
+        }
+      ],
+      "checks": [
+        {
+          "name": "Q/detached does not cue",
+          "detail": "Native TryBuild request; not successful bridge-generation test",
+          "pass": true
+        },
+        {
+          "name": "native cut after diagnostic blade overlap",
+          "detail": "No synthetic success notification; attached player overlaps existing live blade polygon",
+          "pass": true
+        },
+        {
+          "name": "native pause freezes VFX",
+          "detail": "StageOverlayControls pause API; eight rendered frames; not Esc key",
+          "pass": false
+        },
+        {
+          "name": "R removes cut copy",
+          "detail": "Native RestartFromCheckpoint API; copy cleanup only, not new R physics correction",
+          "pass": true
+        },
+        {
+          "name": "reattach live rope not erased",
+          "detail": "Second cut then diagnostic entrance placement + native grounded TryAttach",
+          "pass": true
+        },
+        {
+          "name": "manual-style E release does not cue",
+          "detail": "Native DetachAndRefund(playReleaseSound:true); API not OS E",
+          "pass": true
+        },
+        {
+          "name": "disabled/failure owner removes copy",
+          "detail": "Diagnostic body.simulated=false; natural failure also captured in L7 route",
+          "pass": true
+        },
+        {
+          "name": "no duplicate old contact fluff",
+          "detail": "New cut path replaces only the targeted SpikeContact emit; landing/jump particles unchanged",
+          "pass": true
+        }
+      ],
+      "cut_details": [
+        {
+          "frame": 104,
+          "pointCount": 14,
+          "pieces": 1,
+          "endFrays": 2,
+          "fibres": 4,
+          "time": 2.0799992084503174,
+          "fraction": 0.0,
+          "distanceFromContact": 1.3938233852386475,
+          "sourceWidth": 0.1599999964237213,
+          "elapsed": 0.119999960064888,
+          "linePointError": 0.0,
+          "contact": {
+            "x": 15.007654190063477,
+            "y": -7.47961950302124,
+            "z": 0.0
+          },
+          "cut": {
+            "x": 15.155437469482422,
+            "y": -6.093652725219727,
+            "z": 0.0
+          },
+          "first": {
+            "x": 15.155437469482422,
+            "y": -6.093652725219727,
+            "z": 0.0
+          },
+          "last": {
+            "x": 17.25,
+            "y": -0.8500000238418579,
+            "z": 0.0
+          },
+          "mode": "nearest rope endpoint (no invented extension)",
+          "cleanup": "failure / owner disabled",
+          "attachedBefore": true,
+          "attachedAfter": false,
+          "replacedOldFluff": true
+        }
+      ]
+    },
+    "After720": {
+      "errors": 0,
+      "development": false,
+      "attach": true,
+      "reached": false,
+      "route_cuts": 1,
+      "route_plays": 1,
+      "route_vfx": 1,
+      "old_fluff_max": 0,
+      "capture_failures": 0,
+      "audio_sha": "970d754ec4251d4ad2c4c57e22c97524db84ee63dcca50a1aefc4b1f4e2cde0e",
+      "gain": 0.41999998688697815,
+      "effects": 1.0,
+      "audio_render_failures": 0,
+      "cut_window_peak": 0.312255859375,
+      "mix_peak": 0.420440673828125,
+      "mix_clipped_samples": 0,
+      "negative": [
+        {
+          "name": "idle/open-close only",
+          "cutsBefore": 1,
+          "cutsAfter": 1,
+          "playsBefore": 1,
+          "playsAfter": 1,
+          "pass": true
+        },
+        {
+          "name": "visual contact without rope cut",
+          "cutsBefore": 1,
+          "cutsAfter": 1,
+          "playsBefore": 1,
+          "playsAfter": 1,
+          "pass": true
+        },
+        {
+          "name": "detached blade overlap",
+          "cutsBefore": 1,
+          "cutsAfter": 1,
+          "playsBefore": 1,
+          "playsAfter": 1,
+          "pass": true
+        }
+      ],
+      "checks": [
+        {
+          "name": "Q/detached does not cue",
+          "detail": "Native TryBuild request; not successful bridge-generation test",
+          "pass": true
+        },
+        {
+          "name": "native cut after diagnostic blade overlap",
+          "detail": "No synthetic success notification; attached player overlaps existing live blade polygon",
+          "pass": true
+        },
+        {
+          "name": "native pause freezes VFX",
+          "detail": "StageOverlayControls pause API; eight frames; timeScale=0 before=0 after=0",
+          "pass": true
+        },
+        {
+          "name": "R removes cut copy",
+          "detail": "Native RestartFromCheckpoint API; copy cleanup only, not new R physics correction",
+          "pass": true
+        },
+        {
+          "name": "reattach live rope not erased",
+          "detail": "Second cut then diagnostic entrance placement + native grounded TryAttach",
+          "pass": true
+        },
+        {
+          "name": "manual-style E release does not cue",
+          "detail": "Native DetachAndRefund(playReleaseSound:true); API not OS E",
+          "pass": true
+        },
+        {
+          "name": "disabled/failure owner removes copy",
+          "detail": "Diagnostic body.simulated=false; natural failure also captured in L7 route",
+          "pass": true
+        },
+        {
+          "name": "no duplicate old contact fluff",
+          "detail": "New cut path replaces only the targeted SpikeContact emit; landing/jump particles unchanged",
+          "pass": true
+        },
+        {
+          "name": "menu scene removes cut copy",
+          "detail": "Native ReturnToTitle API; active Scene=Tutorial",
+          "pass": true
+        },
+        {
+          "name": "Scene reload has no residual copy",
+          "detail": "Native Scene reload; no automatic route restart",
+          "pass": true
+        }
+      ],
+      "cut_details": [
+        {
+          "frame": 104,
+          "pointCount": 14,
+          "pieces": 1,
+          "endFrays": 2,
+          "fibres": 4,
+          "time": 2.0799992084503174,
+          "fraction": 0.0,
+          "distanceFromContact": 1.3938233852386475,
+          "sourceWidth": 0.1599999964237213,
+          "elapsed": 0.119999960064888,
+          "linePointError": 0.0,
+          "contact": {
+            "x": 15.007654190063477,
+            "y": -7.47961950302124,
+            "z": 0.0
+          },
+          "cut": {
+            "x": 15.155437469482422,
+            "y": -6.093652725219727,
+            "z": 0.0
+          },
+          "first": {
+            "x": 15.155437469482422,
+            "y": -6.093652725219727,
+            "z": 0.0
+          },
+          "last": {
+            "x": 17.25,
+            "y": -0.8500000238418579,
+            "z": 0.0
+          },
+          "mode": "nearest rope endpoint (no invented extension)",
+          "cleanup": "failure / owner disabled",
+          "attachedBefore": true,
+          "attachedAfter": false,
+          "replacedOldFluff": true
+        }
+      ]
+    },
+    "AfterL5": {
+      "errors": 0,
+      "development": false,
+      "attach": true,
+      "reached": true,
+      "route_cuts": 0,
+      "route_plays": 0,
+      "route_vfx": 0,
+      "old_fluff_max": 0,
+      "capture_failures": 0,
+      "audio_sha": "970d754ec4251d4ad2c4c57e22c97524db84ee63dcca50a1aefc4b1f4e2cde0e",
+      "gain": 0.41999998688697815,
+      "effects": 1.0,
+      "audio_render_failures": 0,
+      "cut_window_peak": 0.160003662109375,
+      "mix_peak": 0.41748046875,
+      "mix_clipped_samples": 0,
+      "negative": [],
+      "checks": [],
+      "cut_details": []
+    },
+    "AfterL6": {
+      "errors": 0,
+      "development": false,
+      "attach": true,
+      "reached": true,
+      "route_cuts": 0,
+      "route_plays": 0,
+      "route_vfx": 0,
+      "old_fluff_max": 0,
+      "capture_failures": 0,
+      "audio_sha": "970d754ec4251d4ad2c4c57e22c97524db84ee63dcca50a1aefc4b1f4e2cde0e",
+      "gain": 0.41999998688697815,
+      "effects": 1.0,
+      "audio_render_failures": 0,
+      "cut_window_peak": 0.160003662109375,
+      "mix_peak": 0.51849365234375,
+      "mix_clipped_samples": 0,
+      "negative": [],
+      "checks": [],
+      "cut_details": []
+    },
+    "Before1600": {
+      "errors": 0,
+      "development": false,
+      "attach": true,
+      "reached": false,
+      "route_cuts": 1,
+      "route_plays": 1,
+      "route_vfx": 0,
+      "old_fluff_max": 1,
+      "capture_failures": 0,
+      "audio_sha": "970d754ec4251d4ad2c4c57e22c97524db84ee63dcca50a1aefc4b1f4e2cde0e",
+      "gain": 0.41999998688697815,
+      "effects": 1.0,
+      "audio_render_failures": 0,
+      "cut_window_peak": 0.27069091796875,
+      "mix_peak": 0.348175048828125,
+      "mix_clipped_samples": 0,
+      "negative": [],
+      "checks": [],
+      "cut_details": []
+    },
+    "BeforeL5": {
+      "errors": 0,
+      "development": false,
+      "attach": true,
+      "reached": true,
+      "route_cuts": 0,
+      "route_plays": 0,
+      "route_vfx": 0,
+      "old_fluff_max": 0,
+      "capture_failures": 0,
+      "audio_sha": "970d754ec4251d4ad2c4c57e22c97524db84ee63dcca50a1aefc4b1f4e2cde0e",
+      "gain": 0.41999998688697815,
+      "effects": 1.0,
+      "audio_render_failures": 0,
+      "cut_window_peak": 0.160003662109375,
+      "mix_peak": 0.43377685546875,
+      "mix_clipped_samples": 0,
+      "negative": [],
+      "checks": [],
+      "cut_details": []
+    },
+    "BeforeL6": {
+      "errors": 0,
+      "development": false,
+      "attach": true,
+      "reached": true,
+      "route_cuts": 0,
+      "route_plays": 0,
+      "route_vfx": 0,
+      "old_fluff_max": 0,
+      "capture_failures": 0,
+      "audio_sha": "970d754ec4251d4ad2c4c57e22c97524db84ee63dcca50a1aefc4b1f4e2cde0e",
+      "gain": 0.41999998688697815,
+      "effects": 1.0,
+      "audio_render_failures": 0,
+      "cut_window_peak": 0.160003662109375,
+      "mix_peak": 0.394500732421875,
+      "mix_clipped_samples": 0,
+      "negative": [],
+      "checks": [],
+      "cut_details": []
+    },
+    "Muted": {
+      "errors": 0,
+      "development": false,
+      "attach": true,
+      "reached": false,
+      "route_cuts": 1,
+      "route_plays": 0,
+      "route_vfx": 1,
+      "old_fluff_max": 0,
+      "capture_failures": 0,
+      "audio_sha": "970d754ec4251d4ad2c4c57e22c97524db84ee63dcca50a1aefc4b1f4e2cde0e",
+      "gain": 0.41999998688697815,
+      "effects": 0.0,
+      "audio_render_failures": 0,
+      "cut_window_peak": 0.0,
+      "mix_peak": 0.043792724609375,
+      "mix_clipped_samples": 0,
+      "negative": [],
+      "checks": [],
+      "cut_details": [
+        {
+          "frame": 104,
+          "pointCount": 14,
+          "pieces": 1,
+          "endFrays": 2,
+          "fibres": 4,
+          "time": 2.0799992084503174,
+          "fraction": 0.0,
+          "distanceFromContact": 1.3938233852386475,
+          "sourceWidth": 0.1599999964237213,
+          "elapsed": 0.119999960064888,
+          "linePointError": 0.0,
+          "contact": {
+            "x": 15.007654190063477,
+            "y": -7.47961950302124,
+            "z": 0.0
+          },
+          "cut": {
+            "x": 15.155437469482422,
+            "y": -6.093652725219727,
+            "z": 0.0
+          },
+          "first": {
+            "x": 15.155437469482422,
+            "y": -6.093652725219727,
+            "z": 0.0
+          },
+          "last": {
+            "x": 17.25,
+            "y": -0.8500000238418579,
+            "z": 0.0
+          },
+          "mode": "nearest rope endpoint (no invented extension)",
+          "cleanup": "failure / owner disabled",
+          "attachedBefore": true,
+          "attachedAfter": false,
+          "replacedOldFluff": true
+        }
+      ]
+    },
+    "SoloV4": {
+      "errors": 0,
+      "development": false,
+      "attach": true,
+      "reached": false,
+      "route_cuts": 1,
+      "route_plays": 1,
+      "route_vfx": 1,
+      "old_fluff_max": 0,
+      "capture_failures": 0,
+      "audio_sha": "970d754ec4251d4ad2c4c57e22c97524db84ee63dcca50a1aefc4b1f4e2cde0e",
+      "gain": 0.41999998688697815,
+      "effects": 1.0,
+      "audio_render_failures": 0,
+      "cut_window_peak": 0.148834228515625,
+      "mix_peak": 0.148834228515625,
+      "mix_clipped_samples": 0,
+      "negative": [],
+      "checks": [],
+      "cut_details": [
+        {
+          "frame": 104,
+          "pointCount": 14,
+          "pieces": 1,
+          "endFrays": 2,
+          "fibres": 4,
+          "time": 2.0799992084503174,
+          "fraction": 0.0,
+          "distanceFromContact": 1.3938233852386475,
+          "sourceWidth": 0.1599999964237213,
+          "elapsed": 0.119999960064888,
+          "linePointError": 0.0,
+          "contact": {
+            "x": 15.007654190063477,
+            "y": -7.47961950302124,
+            "z": 0.0
+          },
+          "cut": {
+            "x": 15.155437469482422,
+            "y": -6.093652725219727,
+            "z": 0.0
+          },
+          "first": {
+            "x": 15.155437469482422,
+            "y": -6.093652725219727,
+            "z": 0.0
+          },
+          "last": {
+            "x": 17.25,
+            "y": -0.8500000238418579,
+            "z": 0.0
+          },
+          "mode": "nearest rope endpoint (no invented extension)",
+          "cleanup": "failure / owner disabled",
+          "attachedBefore": true,
+          "attachedAfter": false,
+          "replacedOldFluff": true
+        }
+      ]
+    }
+  },
+  "protected_source_hashes": {
+    "CraftScissorsMotion.cs": {
+      "sha256": "b2f8195bc7550903e37316e55761b20850555a09bbfb23d20ce1dd8d619df6a4",
+      "byte_equal": true
+    },
+    "HorizontalCameraFollow.cs": {
+      "sha256": "03105e317c866d33d5e50e746749f73bdcf11f195cfd6e15e84ec3aa0ffe396a",
+      "byte_equal": true
+    },
+    "HimoHitoWarmScissorsParts-v3.png": {
+      "sha256": "b5558bcd4b40b7762201184ec0324758803aaaede56cc3102dbd169670c57c1d",
+      "byte_equal": true
+    },
+    "BladeGeometry.json": {
+      "sha256": "682dddeadf434346e6765160693ce983b143d50a2c89a24bc1310ec70825fd5f",
+      "byte_equal": true
+    }
+  }
+}
