@@ -1,0 +1,131 @@
+using System;
+using System.Collections.Generic;
+using UnityEngine;
+
+// Isolated display only. Arc-length traversal of the actual saved rope; no physics or new cut side.
+public sealed class ProgressiveUnravelDrawing
+{
+    public const float Lifetime=.60f;
+    sealed class Piece
+    {
+        public Vector3[] path; public float[] distance; public float length,from,to;
+        public LineRenderer line; public LineRenderer[] tips=new LineRenderer[2],loose=new LineRenderer[4];
+    }
+    readonly RopeSnapshot saved;readonly Transform root;readonly List<Piece> pieces=new List<Piece>();
+    static readonly float[] Birth={.12f,.24f,.36f,.46f};
+    public float Progress {get;private set;} public float RetainedLength {get;private set;}
+    public float NearAlpha {get;private set;} public float MiddleAlpha {get;private set;} public float FarAlpha {get;private set;}
+    public float MaxSlack {get;private set;}public int VisibleFibres {get;private set;}
+    public Vector3 Front {get;private set;}public Vector3 FixedEnd {get;private set;}
+    public ProgressiveUnravelDrawing(RopeSnapshot snapshot,Transform parent)
+    {
+        saved=snapshot;root=parent;
+        var left=new List<Vector3>{saved.record.cut};
+        for(int i=saved.segment;i>=0;i--)if(Vector3.Distance(left[left.Count-1],saved.points[i])>.00001f)left.Add(saved.points[i]);
+        var right=new List<Vector3>{saved.record.cut};
+        for(int i=saved.segment+1;i<saved.points.Length;i++)if(Vector3.Distance(right[right.Count-1],saved.points[i])>.00001f)right.Add(saved.points[i]);
+        if(left.Count>1)Add(left.ToArray(),saved.record.fraction,0);
+        if(right.Count>1)Add(right.ToArray(),saved.record.fraction,1);
+        saved.record.pieces=pieces.Count;saved.record.endFrays=2*pieces.Count;saved.record.fibres=4*pieces.Count;
+    }
+    void Add(Vector3[] points,float from,float to)
+    {
+        var p=new Piece{path=points,distance=new float[points.Length],from=from,to=to};
+        for(int i=1;i<points.Length;i++)p.distance[i]=p.distance[i-1]+Vector3.Distance(points[i-1],points[i]);
+        p.length=p.distance[p.distance.Length-1];p.line=Make("saved rope progressively unravelling",1);
+        for(int i=0;i<2;i++)p.tips[i]=Make("delayed cut-end strand "+i,.24f);
+        for(int i=0;i<4;i++)p.loose[i]=Make("released short yarn fibre "+i,.21f);
+        pieces.Add(p);
+    }
+    LineRenderer Make(string name,float width)
+    {
+        var go=new GameObject(name);go.transform.SetParent(root,false);var l=go.AddComponent<LineRenderer>();
+        l.useWorldSpace=true;l.sharedMaterial=saved.material;l.alignment=saved.alignment;l.sortingLayerID=saved.layer;l.sortingOrder=saved.order+1;
+        l.textureMode=saved.textureMode;l.textureScale=saved.textureScale;l.numCapVertices=saved.caps;l.numCornerVertices=saved.corners;
+        l.widthMultiplier=saved.multiplier*width;l.widthCurve=AnimationCurve.Linear(0,saved.width.Evaluate(saved.record.fraction),1,saved.width.Evaluate(saved.record.fraction));return l;
+    }
+    static float Ease(float x)=>Mathf.SmoothStep(0,1,Mathf.Clamp01(x));
+    static float FrontAt(float time)=>Ease((time-.14f)/.46f);
+    static float RecoilAt(float time)=>.14f*Ease((time-.02f)/.10f);
+    Vector3 At(Piece p,float d,out Vector3 tangent)
+    {
+        d=Mathf.Clamp(d,0,p.length);int i=1;while(i<p.distance.Length-1&&p.distance[i]<d)i++;
+        tangent=(p.path[i]-p.path[i-1]).normalized;
+        return Vector3.Lerp(p.path[i-1],p.path[i],Mathf.InverseLerp(p.distance[i-1],p.distance[i],d));
+    }
+    Vector3 Bent(Piece p,float d,float time,out Vector3 tangent)
+    {
+        Vector3 at=At(p,d,out tangent);float u=d/p.length;
+        float slack=.22f*Ease(time/.16f)*(1-.45f*FrontAt(time))*Mathf.Sin(Mathf.PI*u);
+        Vector3 normal=new Vector3(-tangent.y,tangent.x,0);
+        float settle=.035f*Ease(time/.12f)*Mathf.Sin(Mathf.PI*Mathf.Clamp01(time/Lifetime))*Mathf.Sin(Mathf.PI*u);
+        return at+Vector3.down*slack+normal*settle+tangent*(RecoilAt(time)*Mathf.Clamp01(1-d/.7f));
+    }
+    float Opacity(Piece p,float d,float time)
+    {
+        float front=FrontAt(time)*p.length,remaining=p.length-front;
+        if(d<front||remaining<=.00001f)return 0;
+        float edge=Mathf.Lerp(1,Ease((d-front)/.24f),Ease((time-.14f)/.06f));
+        return edge*Mathf.Clamp01(remaining/.12f);
+    }
+    Color ColorAt(Piece p,float d)=>saved.color.Evaluate(Mathf.Lerp(p.from,p.to,d/p.length));
+    void FibreColor(LineRenderer l,Color c,float opacity)
+    {
+        l.startColor=new Color(c.r,c.g,c.b,c.a*opacity);l.endColor=new Color(c.r,c.g,c.b,0);
+    }
+    public void Draw(float time)
+    {
+        Progress=FrontAt(time);RetainedLength=0;MaxSlack=0;VisibleFibres=0;
+        foreach(var p in pieces)
+        {
+            float front=Progress*p.length,remaining=p.length-front;RetainedLength+=remaining;
+            p.line.enabled=remaining>.00001f;
+            int n=Mathf.Clamp(Mathf.CeilToInt(remaining/.10f)+1,2,128);
+            var distances=new List<float>();
+            for(int i=0;i<n;i++)distances.Add(Mathf.Lerp(front,p.length,i/(n-1f)));
+            // Retain the captured polyline's corners, rather than shortcutting them while resampling.
+            foreach(float d in p.distance)if(d>front+.00001f&&d<p.length-.00001f)distances.Add(d);
+            distances.Sort();p.line.positionCount=distances.Count;
+            for(int i=0;i<distances.Count;i++){
+                float d=distances[i];Vector3 tangent;
+                Vector3 v=Bent(p,d,time,out tangent);p.line.SetPosition(i,v);
+                Vector3 basePoint=At(p,d,out tangent);MaxSlack=Mathf.Max(MaxSlack,Mathf.Abs(v.y-basePoint.y));
+            }
+            // Only a short band at the travelling cut front thins/fades; the unvisited rope retains its colour.
+            float band=Mathf.Clamp(.24f/Mathf.Max(remaining,.0001f),.001f,.95f);
+            float[] keys={0,band*.25f,band*.6f,band,band+(1-band)*.25f,band+(1-band)*.5f,band+(1-band)*.75f,1};
+            var cols=new GradientColorKey[8];var alpha=new GradientAlphaKey[8];var width=new Keyframe[8];
+            for(int i=0;i<8;i++){
+                float d=Mathf.Lerp(front,p.length,keys[i]);Color c=ColorAt(p,d);float a=Opacity(p,d,time);
+                cols[i]=new GradientColorKey(c,keys[i]);alpha[i]=new GradientAlphaKey(c.a*a,keys[i]);
+                float taper=Mathf.Lerp(1,Mathf.Lerp(.18f,1,Ease((d-front)/.24f)),Ease((time-.14f)/.06f));
+                width[i]=new Keyframe(keys[i],saved.width.Evaluate(Mathf.Lerp(p.from,p.to,d/p.length))*taper);
+            }
+            var gradient=new Gradient();gradient.SetKeys(cols,alpha);p.line.colorGradient=gradient;p.line.widthCurve=new AnimationCurve(width);
+            Vector3 dir;Front=Bent(p,front,time,out dir);FixedEnd=p.line.GetPosition(p.line.positionCount-1);
+            NearAlpha=Opacity(p,.1f*p.length,time);MiddleAlpha=Opacity(p,.5f*p.length,time);FarAlpha=Opacity(p,.9f*p.length,time);
+            // Fine strands open after the main end has moved; both grow from that one observed cut front.
+            float tipAlpha=Ease((time-.06f)/.05f)*Mathf.Clamp01(remaining/.35f)*.85f;
+            Vector3 normal=new Vector3(-dir.y,dir.x,0);
+            for(int k=0;k<2;k++){
+                var l=p.tips[k];l.enabled=tipAlpha>.001f;if(l.enabled)VisibleFibres++;
+                l.positionCount=5;float sign=k==0?-1:1;
+                for(int i=0;i<5;i++){
+                    float s=i/4f;float open=Ease((time-.06f)/.12f);
+                    l.SetPosition(i,Front-dir*(s*(.08f+.04f*open))+normal*(sign*.055f*open*Mathf.Sin(s*Mathf.PI*.75f))+Vector3.down*(.025f*s*s));
+                }
+                FibreColor(l,ColorAt(p,front),tipAlpha);
+            }
+            // Four small released fibres are sampled from the saved shape as the front reaches them.
+            // Their initial points stay at their birth positions; they do not teleport along the rope.
+            for(int k=0;k<4;k++){
+                float age=time-Birth[k],life=.12f;var l=p.loose[k];l.enabled=age>0&&age<life;
+                if(l.enabled)VisibleFibres++;float t=Mathf.Clamp01(age/life),d=FrontAt(Birth[k])*p.length;
+                Vector3 tangent;Vector3 origin=Bent(p,d,Birth[k],out tangent);Vector3 side=new Vector3(-tangent.y,tangent.x,0)*(k%2==0?-1:1);
+                Vector3 drift=side*(.075f*t)+Vector3.down*(.07f*t*t);l.positionCount=3;
+                l.SetPosition(0,origin+drift);l.SetPosition(1,origin+drift-tangent*.045f+side*.025f);l.SetPosition(2,origin+drift-tangent*.085f+side*.04f);
+                FibreColor(l,ColorAt(p,d),Ease(t/.18f)*(1-Ease((t-.25f)/.75f))*.75f);
+            }
+        }
+    }
+}

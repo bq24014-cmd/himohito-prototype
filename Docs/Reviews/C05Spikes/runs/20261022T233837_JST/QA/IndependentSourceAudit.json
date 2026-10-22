@@ -1,0 +1,17 @@
+{
+  "method": "Read-only independent source and hash review; no Unity execution or edits",
+  "changed_sources": [
+    "ScissorsCutVfx.cs",
+    "ProgressiveUnravelDrawing.cs",
+    "VfxReview.cs"
+  ],
+  "confirmed": [
+    "Only display-copy calculation and diagnostic recording changed",
+    "Original captured breakpoints retained; moving edge has .06s onset ramp",
+    "v4 audio, scissors material/geometry, motion, Camera, hazard and isolated R source match1cc byte-for-byte",
+    "No physics/resource writes or randomness in new presentation code",
+    "One-piece natural endpoint path; no fabricated opposite end",
+    "Lifecycle cleanup remains separate from physical fall-stop"
+  ],
+  "limits": "Does not replace actual Player evidence or Human Visual evaluation"
+}

@@ -1,0 +1,21 @@
+{
+  "proof": "C05ProgressiveUnravelProof_20261022",
+  "baseline_review_commit": "1ccfbd06acacba2482b4d373139379b17fd5d70b",
+  "production_head": "394b4a74e366678a9e0542d895b9a26f86993c19",
+  "assembly_sha256": "fdfb2cec8ebff348d3c2d35f23bd6ff4abedd24731599be79bc660780a35a1ae",
+  "revision": "progressive-unravel-r2",
+  "configured_seconds": 0.6,
+  "observed_natural_cleanup_seconds": 0.62,
+  "new_unity_build": false,
+  "execution": "existing Unity6000.3.21f1 non-Development Windows Player + isolated managed overlay",
+  "manual": "native input / real time / no automatic driver,capture,exit",
+  "diagnostics": "common entrance fixture; A/D field input and native APIs. Supplementary placements labeled separately.",
+  "audio": "original approved v4 WAV unchanged; Player AudioRenderer final mix, not dubbed or OS loopback",
+  "os_input": "Unconfirmed; not attempted this revision",
+  "human_test": "Not performed this revision",
+  "production_integrated": false,
+  "holds": [
+    "C11",
+    "C18"
+  ]
+}

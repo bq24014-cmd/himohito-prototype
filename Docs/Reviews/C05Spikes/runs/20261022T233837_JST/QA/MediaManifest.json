@@ -1,0 +1,100 @@
+{
+  "method": "Actual Windows Unity Player captures. Normal-time game simulation50Hz, image25fps. Not OS control. No generated/repainted gameplay pixels. Crops/contact sheets/JPEG recompression are viewing previews; local originals retained.",
+  "audio": "Actual Player AudioRenderer final mix, 48k stereo; not dubbed and not OS loopback. Approved v4 input WAV unchanged.",
+  "comparison": "Each resolution: 0–6s baseline1cc, 6–12s candidate; each includes the full cut-to-end, no slow motion or skipped interval.",
+  "clock": "cut at video1.16s (candidate comparison7.16s); result start-relative1.18s includes first fixed-step .02s offset.",
+  "files": {
+    "Images/After_00028.jpg": {
+      "bytes": 221528,
+      "sha256": "35400b525594ffd1079dc82de27466ff9f30bfe7cd89a8d47ce9ab49a3a44f25"
+    },
+    "Images/After_00029.jpg": {
+      "bytes": 222133,
+      "sha256": "294fa8b773494ea86e370f674f31e8c9abac016d42065e51c028a3e768c89fdb"
+    },
+    "Images/After_00032.jpg": {
+      "bytes": 221158,
+      "sha256": "1ef8689e926a59d7e0abeb20b82295e42248d121fabd5aed72ca627c921b7066"
+    },
+    "Images/After_00035.jpg": {
+      "bytes": 210505,
+      "sha256": "cd23a433f93b9c2ae6102bde8eb3715738d87ccf089f8a28d30a20101fa226fd"
+    },
+    "Images/After_00038.jpg": {
+      "bytes": 209740,
+      "sha256": "97c8aed95e8f193300c86296f01ced7fab7c11535c01d7274d5d4b534fa53ef6"
+    },
+    "Images/After_00041.jpg": {
+      "bytes": 209282,
+      "sha256": "ae8d98dfdec243779d559312444505df7ce877571ec421e6d393788512fc0c0f"
+    },
+    "Images/After_00044.jpg": {
+      "bytes": 208746,
+      "sha256": "9310ea7791025edadf14b1d70283805ea266a10ccd4ce7ff79335edd8496d91d"
+    },
+    "Images/After_00045.jpg": {
+      "bytes": 208618,
+      "sha256": "a1e27adc27dd84a640cc7ac312f24025f6a9511b022fafcb4dca091dc1868f67"
+    },
+    "Images/Before1cc_00028.jpg": {
+      "bytes": 221528,
+      "sha256": "35400b525594ffd1079dc82de27466ff9f30bfe7cd89a8d47ce9ab49a3a44f25"
+    },
+    "Images/Before1cc_00029.jpg": {
+      "bytes": 222153,
+      "sha256": "5095239a0ee19ba1f8cfe4d1500284759e0f94f9052bc6e1fe37f7ba94dfd53b"
+    },
+    "Images/Before1cc_00032.jpg": {
+      "bytes": 221108,
+      "sha256": "465435f5ab8e5cc24d4fc685761e9268b503e87f5ce5dc27d0db811ce7d43efe"
+    },
+    "Images/Before1cc_00035.jpg": {
+      "bytes": 208903,
+      "sha256": "f4f74135178cfbc82fbeb9f2d47dcd18c891ba8fb557c1ffff62c4afaaa93b13"
+    },
+    "Images/Before1cc_00038.jpg": {
+      "bytes": 208745,
+      "sha256": "175985a81b729067c8ed8732859916353c949e42eec6ca5cf8f8ee3fc9492aed"
+    },
+    "Images/Before1cc_00041.jpg": {
+      "bytes": 208919,
+      "sha256": "c7cb310bd6b573fca1a9ba126c48491d78d0b0af5ff5c8b61a9ce08cd82e7999"
+    },
+    "Images/Before1cc_00044.jpg": {
+      "bytes": 208746,
+      "sha256": "9310ea7791025edadf14b1d70283805ea266a10ccd4ce7ff79335edd8496d91d"
+    },
+    "Images/Before1cc_00045.jpg": {
+      "bytes": 208618,
+      "sha256": "a1e27adc27dd84a640cc7ac312f24025f6a9511b022fafcb4dca091dc1868f67"
+    },
+    "Images/FullFrame_1280x720.jpg": {
+      "bytes": 343158,
+      "sha256": "0ff9f9b8e60a61ef4b2f6d820a6eae3d999cf21d135bfafb99b99ca4ccf04007"
+    },
+    "Images/FullFrame_1600x900.jpg": {
+      "bytes": 465114,
+      "sha256": "8c25433474db8fe643db9906307a6bcf82313038d06ec8428ecbcb23f62b26e1"
+    },
+    "Images/SequenceSameScale.jpg": {
+      "bytes": 508747,
+      "sha256": "8c450db0e3b2b614e9b5564ccc98dcfe30f5a4a29acbba6788d3a068bac51ea5"
+    },
+    "Video/After_1280x720_PlayerMix.mp4": {
+      "bytes": 647568,
+      "sha256": "8f746b98cee47f5c42e2d1cbafad874872393cd7649f67fd87b882889b009a42"
+    },
+    "Video/After_1600x900_PlayerMix.mp4": {
+      "bytes": 844284,
+      "sha256": "05db256f13d9eeda89b611e95071944ee7a6e7aaec1e4856e8ad6dbcae1149f3"
+    },
+    "Video/BeforeThenAfter_1280x720_NormalSpeed.mp4": {
+      "bytes": 1184331,
+      "sha256": "5ea33c330f655d15992b460cc0218d51853b55e416ddab60879af7573d549102"
+    },
+    "Video/BeforeThenAfter_1600x900_NormalSpeed.mp4": {
+      "bytes": 1531761,
+      "sha256": "bc87671a33d7bc7777c243d75cde25c40967cd2e9669ccea8959d3154955dd65"
+    }
+  }
+}

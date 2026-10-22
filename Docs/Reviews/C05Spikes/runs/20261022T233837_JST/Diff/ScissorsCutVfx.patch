@@ -1,0 +1,59 @@
+--- Previous1cc/ScissorsCutVfx.cs
++++ Isolated/ScissorsCutVfx.cs
+@@ -13,6 +13,7 @@
+         public bool attachedBefore, attachedAfter, replacedOldFluff;
+         public Vector3[] renderedRope, bladeLeft, bladeRight;public Vector3 playerMin,playerMax,currentHead;
+         public Vector2 playerPosition,playerVelocity;public int successSnips,finishedFrame;public bool physicalFailureObserved;
++        public string presentation;public float configuredLifetime;
+     }
+     public readonly List<CutRecord> records=new List<CutRecord>();
+     public int captureFailures; public CutRopeCopy Active {get;private set;}
+@@ -101,15 +102,30 @@
+     class Piece {public LineRenderer line;public Vector3[] rest;public Vector3 recoil;public float[] weight;public float from,to;}
+     class Fibre {public LineRenderer line;public Vector3 origin,axis,drift;public float life;public bool attachedEnd;}
+     RopeSnapshot saved; RopeController owner;Rigidbody2D body;Vector2 lastBody;int born;
+-    MainStageRespawnOnFall respawn;bool legacy;
++    MainStageRespawnOnFall respawn;bool legacy;ProgressiveUnravelDrawing progressive;
+     readonly List<Piece> pieces=new List<Piece>();readonly List<Fibre> fibres=new List<Fibre>();
+     public float Elapsed {get;private set;}public bool Finished {get;private set;}
+     public float CurrentAlpha {get;private set;}public float CurrentRecoil {get;private set;}
++    public float FrontProgress=>progressive!=null?progressive.Progress:0;
++    public float RetainedLength=>progressive!=null?progressive.RetainedLength:0;
++    public float NearAlpha=>progressive!=null?progressive.NearAlpha:CurrentAlpha;
++    public float MiddleAlpha=>progressive!=null?progressive.MiddleAlpha:CurrentAlpha;
++    public float FarAlpha=>progressive!=null?progressive.FarAlpha:CurrentAlpha;
++    public float MaxSlack=>progressive!=null?progressive.MaxSlack:0;
++    public int VisibleFibres=>progressive!=null?progressive.VisibleFibres:0;
++    public Vector3 CurrentFront=>progressive!=null?progressive.Front:Vector3.zero;
++    public Vector3 FixedEnd=>progressive!=null?progressive.FixedEnd:Vector3.zero;
+     public void Begin(RopeSnapshot snapshot,RopeController player)
+     {
+         saved=snapshot;owner=player;body=player.GetComponent<Rigidbody2D>();lastBody=body.position;born=Time.frameCount;
+         legacy=GroundingReview.Arg("-vfxLegacy")=="1";
+         respawn=player.GetComponent<MainStageRespawnOnFall>();if(respawn)respawn.PresentationRestartCompleted+=OnRestart;
++        if(!legacy&&GroundingReview.Arg("-vfxContinuity")!="1"){
++            progressive=new ProgressiveUnravelDrawing(saved,transform);
++            saved.record.presentation="cut-to-anchor progressive unravel, delayed fibres";saved.record.configuredLifetime=ProgressiveUnravelDrawing.Lifetime;
++            Draw();return;
++        }
++        saved.record.presentation="1ccfbd0 continuity baseline";saved.record.configuredLifetime=.27f;
+         var left=new List<Vector3>();for(int i=0;i<=saved.segment;i++)left.Add(saved.points[i]);
+         if(Vector3.Distance(left[left.Count-1],saved.record.cut)>.00001f)left.Add(saved.record.cut);
+         var right=new List<Vector3>{saved.record.cut};for(int i=saved.segment+1;i<saved.points.Length;i++)if(Vector3.Distance(right[right.Count-1],saved.points[i])>.00001f)right.Add(saved.points[i]);
+@@ -168,12 +184,14 @@
+         if(distance>Mathf.Max(2.5f,body.linearVelocity.magnitude*Time.deltaTime*3+.2f)){Finish("R / discontinuous relocation");return;}
+         lastBody=body.position;
+         if(Time.frameCount==born||Time.deltaTime<=0)return;
+-        Elapsed=Mathf.Min(.27f,Elapsed+Time.deltaTime);saved.record.elapsed=Elapsed;
+-        if(Elapsed>=.27f){Draw();Finish("fade completed");return;}
++        float life=progressive!=null?ProgressiveUnravelDrawing.Lifetime:.27f;
++        Elapsed=Mathf.Min(life,Elapsed+Time.deltaTime);saved.record.elapsed=Elapsed;
++        if(Elapsed>=life){Draw();Finish(progressive!=null?"progressive unravel completed":"fade completed");return;}
+         Draw();
+     }
+     void Draw()
+     {
++        if(progressive!=null){progressive.Draw(Elapsed);CurrentAlpha=progressive.FarAlpha;CurrentRecoil=.14f*Mathf.SmoothStep(0,1,(Elapsed-.02f)/.10f);return;}
+         // Native closing advances at the next fixed step. A short lead-in lets closure and recoil read together;
+         // it does not delay the physical cut, sound or create a fictional rope at the blade.
+         float recoil=.14f*Mathf.SmoothStep(0,1,(Elapsed-(legacy?0:.02f))/.10f);
