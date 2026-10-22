@@ -1,24 +1,24 @@
 {
   "review_id": "C05Spikes",
-  "run_id": "20261022T114924_JST",
-  "updated_at": "2026-10-22T11:55:39.182849+09:00",
+  "run_id": "20261022T133717_JST",
+  "updated_at": "2026-10-22T13:41:42.841762+09:00",
   "time_zone": "Asia/Tokyo",
-  "proof": "C05CutVfxProof_20261022",
-  "revision": "audio-v4-cut-vfx-r3",
+  "proof": "C05CutVfxContinuityProof_20261022",
+  "revision": "cut-vfx-continuity-r1",
   "production_head": "394b4a74e366678a9e0542d895b9a26f86993c19",
-  "status": "音v4正式採用済み。切断VFX隔離候補1案・Human Review待ち。Production未統合",
+  "status": "フェード途中消失を隔離修正。切断位置不一致は未解決。VFX Human Review待ち／Production未統合",
   "production_integrated": false,
-  "human_adoption": "本体・1.00倍下降0.95配置・S2画角・音v4はHuman承認。切断VFXは未承認",
+  "human_adoption": "本体・1.00倍下降0.95配置・S2画角・音v4はHuman承認。今回のVFX修正版は未承認。切断因果の品質HOLD",
   "branch": "codex/review-c05-spikes",
-  "report": "Docs/Reviews/C05Spikes/runs/20261022T114924_JST/Report.md",
-  "launch": "Docs/Reviews/C05Spikes/runs/20261022T114924_JST/Launch.md",
-  "images": "Docs/Reviews/C05Spikes/runs/20261022T114924_JST/Images",
-  "qa": "Docs/Reviews/C05Spikes/runs/20261022T114924_JST/QA",
-  "diff": "Docs/Reviews/C05Spikes/runs/20261022T114924_JST/Diff",
+  "report": "Docs/Reviews/C05Spikes/runs/20261022T133717_JST/Report.md",
+  "launch": "Docs/Reviews/C05Spikes/runs/20261022T133717_JST/Launch.md",
+  "images": "Docs/Reviews/C05Spikes/runs/20261022T133717_JST/Images",
+  "qa": "Docs/Reviews/C05Spikes/runs/20261022T133717_JST/QA",
+  "diff": "Docs/Reviews/C05Spikes/runs/20261022T133717_JST/Diff",
   "assets": "Docs/Reviews/C05Spikes/runs/20261022T114924_JST/Audio",
   "execution": "Existing Unity 6000.3.21f1 non-Development Player + isolated managed overlay + actual PCM16 v4 loading. Unity AudioRenderer final mix, not post-dub/OS loopback. Automated input/native APIs; NOT OS keys/Human/new Unity Build.",
-  "technical": "Compile/actual non-Development Player passed. L5/L6 pass, no new cue; L7 cut1/audio1/VFX1/old fluff0. Muted Play0/VFX1/cut-window PCM0. 300 frames each L5/L6/L7 physics/camera/resources/scissors deltas0. R/pause/reattach/failure/menu/scene checks passed using APIs.",
-  "scope": "Only front scissors sound v4 and cut-display copy/frays. Approved body, camera, shape, blade collider, cut/refund and physics unchanged. Prior proofs preserved.",
+  "technical": "Compile / actual non-Development Player PASS. L5/6 reach; L7 cut1/audio1/VFX1. 300-frame position/velocity/resource/camera/closure deltas0. Copy survives normal fall and fades at 0.28s actual. Native R event / pause / reattach / menu / reload checks via APIs. Muted Play0, cut-window PCM0.",
+  "scope": "Front scissors only; display-copy lifetime/recoil/fray, isolated post-R presentation notification. Cut condition/approved v4 asset/body/geometry/physics/camera unchanged.",
   "approved_body": {
     "commit": "5c64b9ef63d574a56ef4fbb0439ee7d364800dfa",
     "report": "Docs/Reviews/C05Spikes/runs/20261021T180204_JST/Report.md",
@@ -26,8 +26,14 @@
     "asset_sha256": "b5558bcd4b40b7762201184ec0324758803aaaede56cc3102dbd169670c57c1d",
     "scope": "body design and upright handles-down placement direction"
   },
-  "render_assembly_sha256": "36552ec9121493cd19b167787959e8ab0860aff8b9e411ce337f09dd4300042d",
+  "render_assembly_sha256": "2f83de2ed6a936f46b6df00305dca950e969c238a2c1b0292a10270a72344fc2",
   "previous_candidates": [
+    {
+      "run_id": "20261022T114924_JST",
+      "commit": "47f66ebdeba099c0c779d93220ae5eaa4612bf0d",
+      "report": "Docs/Reviews/C05Spikes/runs/20261022T114924_JST/Report.md",
+      "status": "原本保持。切断位置不一致・落下失敗時の早期消去を今回調査。VFX未採用。"
+    },
     {
       "review_id": "C05Spikes",
       "run_id": "20261022T004810_JST",
@@ -103,24 +109,25 @@
     }
   ],
   "unconfirmed": [
-    "VFXのHuman採用・楽しさ・実キー操作感",
-    "OSキー入力・スピーカー/ヘッドフォン出音・主観的ミックス",
+    "OSキー・OS画面取得：sky.list_appsが1回でタイムアウト、繰り返さず",
+    "Human VFX採否・手応え・聴感",
     "新規Unity Build / Editor Play",
-    "実際のヒモと刃の交点による2分割経路（今回の接触は全て最寄り端点）",
-    "全接触角度の網羅。C11/C18 HOLD"
+    "全接触角度と実交点2分割経路",
+    "切断条件変更後のL5/6/7軌道（今回は変更なし）"
   ],
   "holds": [
     "C11",
     "C18"
   ],
-  "video": "Docs/Reviews/C05Spikes/runs/20261022T114924_JST/Video",
-  "frames": "Docs/Reviews/C05Spikes/runs/20261022T114924_JST/Images",
+  "video": "Docs/Reviews/C05Spikes/runs/20261022T133717_JST/Video",
+  "frames": "Docs/Reviews/C05Spikes/runs/20261022T133717_JST/Images",
   "previous_static_report": "Docs/Reviews/C05Spikes/runs/20261021T203813_JST/Report.md",
   "audio": "Docs/Reviews/C05Spikes/runs/20261022T114924_JST/Audio/C05RopeScissors_v4.wav",
   "audio_asset_sha256": "970d754ec4251d4ad2c4c57e22c97524db84ee63dcca50a1aefc4b1f4e2cde0e",
   "known_limitations": [
-    "自然L7接触点と表示ヒモ端は約1.394world離れる。仮のヒモ延長はしない",
-    "自然L7は落下失敗によりVFX経過0.12秒で消去。通常寿命0.27秒より早い",
-    "720pの毛羽は控えめ。採否はHuman Review待ち"
-  ]
+    "刃と表示ヒモの実交点なし。接触点→頭側ヒモ端1.393823world。文字通り刃で切った位置は不一致のまま",
+    "Player接触の切断条件を実ヒモ交差へ変更すると、現在のL7切断時点は拒否される。未実装／将来軌道未確認",
+    "720pの毛羽は控えめ。Human採否は未確認"
+  ],
+  "launchers": "Docs/Reviews/C05Spikes/runs/20261022T133717_JST/Launchers"
 }

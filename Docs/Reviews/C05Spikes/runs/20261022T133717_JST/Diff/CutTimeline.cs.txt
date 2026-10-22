@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using UnityEngine;
+
+// Read-only rendered-frame geometry. No trigger/contact changes or synthetic cut events.
+public sealed partial class GroundingReview
+{
+    [Serializable]public class TimelineFrame {
+        public int tick,frame,cutEvents,soundPlays,snips;public float t,time,fixedTime,closure,ropeToBladeMinDistance;
+        public bool attached,playerBladeOverlap,ropeBladeIntersection,simulated,failure,copyVisible;
+        public float copyElapsed,copyAlpha;public Vector2 position,velocity,playerBladeContact;
+        public Vector3 head,playerMin,playerMax;public Vector3[] renderedRope,bladeLeft,bladeRight;
+    }
+    [Serializable]public class Timeline {public string method="End-of-frame actual rendered rope and blade polygons; native cut snapshot additionally saved before DetachAndRefund in VfxResult. No counterfactual gameplay simulated.";public int attachedFrames,intersectionFrames;public float minAttachedRopeBladeDistance=999;public List<TimelineFrame> frames=new List<TimelineFrame>();}
+    Timeline timeline=new Timeline();
+    void RecordTimeline()
+    {
+        var line=rope.GetComponent<LineRenderer>();Vector3[] points=null;
+        if(rope.IsAttached&&line.enabled){points=new Vector3[line.positionCount];line.GetPositions(points);if(!line.useWorldSpace)for(int i=0;i<points.Length;i++)points[i]=line.transform.TransformPoint(points[i]);}
+        var left=scissors.WorldBlade(0);var right=scissors.WorldBlade(1);
+        float distance=999;bool intersects=false;
+        if(points!=null){foreach(var blade in new[]{left,right})for(int i=0;i<points.Length-1;i++)for(int j=0;j<blade.Length;j++){
+            var a=(Vector2)points[i];var b=(Vector2)points[i+1];var c=(Vector2)blade[j];var d=(Vector2)blade[(j+1)%blade.Length];
+            if(Intersects(a,b,c,d)){intersects=true;distance=0;}else distance=Mathf.Min(distance,Mathf.Min(Mathf.Min(PointSegment(a,c,d),PointSegment(b,c,d)),Mathf.Min(PointSegment(c,a,b),PointSegment(d,a,b))));
+        }
+        timeline.attachedFrames++;if(intersects)timeline.intersectionFrames++;timeline.minAttachedRopeBladeDistance=Mathf.Min(timeline.minAttachedRopeBladeDistance,distance);}
+        var contact=Physics2D.Distance(front,pc);var fx=cutVfx?cutVfx.Active:null;
+        timeline.frames.Add(new TimelineFrame {tick=tick,frame=Time.frameCount,t=tick*.02f,time=Time.time,fixedTime=Time.fixedTime,
+            cutEvents=cutVfx?cutVfx.records.Count:0,soundPlays=cutAudio?cutAudio.playCount:0,snips=scissors.snips,closure=scissors.closure,
+            ropeToBladeMinDistance=distance,ropeBladeIntersection=intersects,attached=rope.IsAttached,playerBladeOverlap=contact.isOverlapped,playerBladeContact=contact.pointA,
+            simulated=body.simulated,failure=run.IsFailureVisible,position=body.position,velocity=body.linearVelocity,head=rope.GetComponent<HimoHito.RopeBodyVisual>().RopeOrigin,playerMin=pc.bounds.min,playerMax=pc.bounds.max,
+            renderedRope=tick>=45&&tick<=80?points:null,bladeLeft=tick>=45&&tick<=80?left:null,bladeRight=tick>=45&&tick<=80?right:null,
+            copyVisible=fx&&!fx.Finished,copyElapsed=fx?fx.Elapsed:0,copyAlpha=fx?fx.CurrentAlpha:0});
+    }
+    static float Cross2(Vector2 a,Vector2 b)=>a.x*b.y-a.y*b.x;
+    static bool Intersects(Vector2 a,Vector2 b,Vector2 c,Vector2 d){var r=b-a;var s=d-c;float den=Cross2(r,s);if(Mathf.Abs(den)<.000001f)return false;float t=Cross2(c-a,s)/den,u=Cross2(c-a,r)/den;return t>=0&&t<=1&&u>=0&&u<=1;}
+    static float PointSegment(Vector2 p,Vector2 a,Vector2 b){var d=b-a;return Vector2.Distance(p,a+d*(d.sqrMagnitude>0?Mathf.Clamp01(Vector2.Dot(p-a,d)/d.sqrMagnitude):0));}
+}

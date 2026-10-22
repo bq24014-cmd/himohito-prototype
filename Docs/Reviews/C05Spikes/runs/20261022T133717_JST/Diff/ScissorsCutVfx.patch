@@ -1,0 +1,102 @@
+--- Previous47f/ScissorsCutVfx.cs
++++ Isolated/ScissorsCutVfx.cs
+@@ -8,9 +8,11 @@
+ {
+     [Serializable] public class CutRecord {
+         public int frame, pointCount, pieces, endFrays, fibres=4;
+-        public float time, fraction, distanceFromContact, sourceWidth, elapsed, linePointError;
++        public float time, fraction, distanceFromContact, sourceWidth, elapsed, linePointError, fixedTime, endTime, scissorsClosure;
+         public Vector3 contact, cut, first, last; public string mode, cleanup;
+         public bool attachedBefore, attachedAfter, replacedOldFluff;
++        public Vector3[] renderedRope, bladeLeft, bladeRight;public Vector3 playerMin,playerMax,currentHead;
++        public Vector2 playerPosition,playerVelocity;public int successSnips,finishedFrame;public bool physicalFailureObserved;
+     }
+     public readonly List<CutRecord> records=new List<CutRecord>();
+     public int captureFailures; public CutRopeCopy Active {get;private set;}
+@@ -26,6 +28,11 @@
+         var line=rope.GetComponent<LineRenderer>();
+         if(!line||!line.enabled||line.positionCount<2||!line.sharedMaterial){captureFailures++;return false;}
+         pending=RopeSnapshot.Read(line,blade,contact);
++        var motion=GetComponent<CraftScissorsMotion>();var body=rope.GetComponent<Rigidbody2D>();var playerCollider=rope.GetComponent<Collider2D>();
++        pending.record.fixedTime=Time.fixedTime;pending.record.renderedRope=(Vector3[])pending.points.Clone();
++        pending.record.bladeLeft=motion.WorldBlade(0);pending.record.bladeRight=motion.WorldBlade(1);pending.record.scissorsClosure=motion.closure;
++        pending.record.playerMin=playerCollider.bounds.min;pending.record.playerMax=playerCollider.bounds.max;
++        pending.record.playerPosition=body.position;pending.record.playerVelocity=body.linearVelocity;pending.record.currentHead=rope.GetComponent<RopeBodyVisual>().RopeOrigin;
+         return true;
+     }
+     void OnSuccess(RopeController rope)
+@@ -34,6 +41,7 @@
+         if(Active)Active.Finish("new cut replaces old copy");
+         var record=pending.record;record.frame=Time.frameCount;record.time=Time.time;
+         record.attachedBefore=true;record.attachedAfter=rope.IsAttached;record.replacedOldFluff=true;
++        record.successSnips=GetComponent<CraftScissorsMotion>().snips;
+         records.Add(record);
+         Active=new GameObject("C05 cut rope display copy").AddComponent<CutRopeCopy>();
+         Active.Begin(pending,rope);pending=null;
+@@ -91,13 +99,17 @@
+ public sealed class CutRopeCopy : MonoBehaviour
+ {
+     class Piece {public LineRenderer line;public Vector3[] rest;public Vector3 recoil;public float[] weight;public float from,to;}
+-    class Fibre {public LineRenderer line;public Vector3 origin,axis,drift;public float life;}
++    class Fibre {public LineRenderer line;public Vector3 origin,axis,drift;public float life;public bool attachedEnd;}
+     RopeSnapshot saved; RopeController owner;Rigidbody2D body;Vector2 lastBody;int born;
++    MainStageRespawnOnFall respawn;bool legacy;
+     readonly List<Piece> pieces=new List<Piece>();readonly List<Fibre> fibres=new List<Fibre>();
+     public float Elapsed {get;private set;}public bool Finished {get;private set;}
++    public float CurrentAlpha {get;private set;}public float CurrentRecoil {get;private set;}
+     public void Begin(RopeSnapshot snapshot,RopeController player)
+     {
+         saved=snapshot;owner=player;body=player.GetComponent<Rigidbody2D>();lastBody=body.position;born=Time.frameCount;
++        legacy=GroundingReview.Arg("-vfxLegacy")=="1";
++        respawn=player.GetComponent<MainStageRespawnOnFall>();if(respawn)respawn.PresentationRestartCompleted+=OnRestart;
+         var left=new List<Vector3>();for(int i=0;i<=saved.segment;i++)left.Add(saved.points[i]);
+         if(Vector3.Distance(left[left.Count-1],saved.record.cut)>.00001f)left.Add(saved.record.cut);
+         var right=new List<Vector3>{saved.record.cut};for(int i=saved.segment+1;i<saved.points.Length;i++)if(Vector3.Distance(right[right.Count-1],saved.points[i])>.00001f)right.Add(saved.points[i]);
+@@ -140,27 +152,39 @@
+     void AddFibre(string name,Vector3 offset,Vector3 axis,Vector3 drift,float life)
+     {
+         var line=Make(name,saved.record.fraction,saved.record.fraction,.25f);line.positionCount=2;
+-        fibres.Add(new Fibre{line=line,origin=saved.record.cut+offset,axis=axis,drift=drift,life=life});
++        fibres.Add(new Fibre{line=line,origin=saved.record.cut+offset,axis=axis,drift=drift,life=life,attachedEnd=name=="end fray"});
+     }
+     void Update()
+     {
+         if(Finished||saved==null)return;
+-        if(!owner||!body||!body.simulated||!owner.enabled||!owner.gameObject.activeInHierarchy){Finish("failure / owner disabled");return;}
++        if(!owner||!body||!owner.gameObject.activeInHierarchy){Finish("owner removed");return;}
++        if(!body.simulated||!owner.enabled){
++            saved.record.physicalFailureObserved=true;
++            if(legacy){Finish("failure / owner disabled");return;}
++            // A normal fall failure disables the physical player, not this short world-space drawing.
++        }
+         if(owner.IsAttached){Finish("reattach; live rope untouched");return;}
+         float distance=Vector2.Distance(body.position,lastBody);
+         if(distance>Mathf.Max(2.5f,body.linearVelocity.magnitude*Time.deltaTime*3+.2f)){Finish("R / discontinuous relocation");return;}
+         lastBody=body.position;
+         if(Time.frameCount==born||Time.deltaTime<=0)return;
+-        Elapsed+=Time.deltaTime;saved.record.elapsed=Elapsed;
+-        if(Elapsed>=.27f){Finish("lifetime");return;}
++        Elapsed=Mathf.Min(.27f,Elapsed+Time.deltaTime);saved.record.elapsed=Elapsed;
++        if(Elapsed>=.27f){Draw();Finish("fade completed");return;}
+         Draw();
+     }
+     void Draw()
+     {
+-        float recoil=.14f*Mathf.SmoothStep(0,1,Elapsed/.10f),alpha=1-Mathf.Clamp01((Elapsed-.12f)/.15f);
++        // Native closing advances at the next fixed step. A short lead-in lets closure and recoil read together;
++        // it does not delay the physical cut, sound or create a fictional rope at the blade.
++        float recoil=.14f*Mathf.SmoothStep(0,1,(Elapsed-(legacy?0:.02f))/.10f);
++        float alpha=legacy?1-Mathf.Clamp01((Elapsed-.12f)/.15f):1-Mathf.SmoothStep(0,1,(Elapsed-.08f)/.19f);
++        CurrentAlpha=alpha;CurrentRecoil=recoil;
+         foreach(var p in pieces){for(int i=0;i<p.rest.Length;i++)p.line.SetPosition(i,p.rest[i]+p.recoil*(recoil*p.weight[i]));p.line.colorGradient=Colors(p.from,p.to,alpha);}
+-        foreach(var f in fibres){float t=Mathf.Clamp01(Elapsed/f.life);Vector3 o=f.origin+f.drift*Mathf.Sin(t*Mathf.PI*.5f);f.line.SetPosition(0,o);f.line.SetPosition(1,o+f.axis);f.line.colorGradient=Colors(saved.record.fraction,saved.record.fraction,1-t*t);}
++        foreach(var f in fibres){float t=Mathf.Clamp01(Elapsed/f.life);Vector3 offset=f.drift*Mathf.Sin(t*Mathf.PI*.5f);
++            if(!legacy&&f.attachedEnd)offset=f.drift.normalized*recoil;
++            Vector3 o=f.origin+offset;f.line.SetPosition(0,o);f.line.SetPosition(1,o+f.axis);f.line.colorGradient=Colors(saved.record.fraction,saved.record.fraction,(1-t*t)*(legacy?1:alpha));}
+     }
+-    public void Finish(string reason){if(Finished)return;Finished=true;if(saved!=null)saved.record.cleanup=reason;gameObject.SetActive(false);Destroy(gameObject);}
+-    void OnDestroy(){if(saved!=null){if(string.IsNullOrEmpty(saved.record.cleanup))saved.record.cleanup="scene unload";Destroy(saved.material);}}
++    void OnRestart()=>Finish("native R restart notification");
++    public void Finish(string reason){if(Finished)return;Finished=true;if(saved!=null){saved.record.cleanup=reason;saved.record.endTime=Time.time;saved.record.finishedFrame=Time.frameCount;}gameObject.SetActive(false);Destroy(gameObject);}
++    void OnDestroy(){if(respawn)respawn.PresentationRestartCompleted-=OnRestart;if(saved!=null){if(string.IsNullOrEmpty(saved.record.cleanup))saved.record.cleanup="scene unload";Destroy(saved.material);}}
+ }

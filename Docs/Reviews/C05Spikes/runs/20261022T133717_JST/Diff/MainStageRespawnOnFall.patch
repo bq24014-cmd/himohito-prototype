@@ -1,0 +1,19 @@
+--- Production/MainStageRespawnOnFall.cs
++++ Isolated/MainStageRespawnOnFall.cs
+@@ -47,6 +47,8 @@
+         public bool IsFallFailure { get; private set; }
+         public bool IsFailureVisible => IsRopeExhausted || IsFallFailure;
+         public bool IsFallUnravelling => FallUnravelVisual.IsPlayingFor(gameObject);
++        // Isolated presentation notification. No changes to checkpoint/physics/input rules.
++        public event System.Action PresentationRestartCompleted;
+ 
+         private void Awake()
+         {
+@@ -238,6 +240,7 @@
+             IsFallFailure = false;
+             Camera.main?.GetComponent<HorizontalCameraFollow>()?.ResetFraming();
+             RespawnWeaveVisual.Play(gameObject);
++            PresentationRestartCompleted?.Invoke();
+         }
+     }
+ }

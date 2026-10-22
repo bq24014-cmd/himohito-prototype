@@ -1,0 +1,31 @@
+Compile: success, 0 errors, four CS0649 warnings. Existing Unity assemblies / managed overlay; NOT new Unity Build.
+Assets\Scripts\PrototypeRunController.cs(37,39): warning CS0649: フィールド 'PrototypeRunController.startFromSectionFourForDevelopment' は割り当てられません。常に既定値 false を使用します
+Assets\Scripts\StageCatalog.cs(22,67): warning CS0649: フィールド 'StageCatalog.Data.stages' は割り当てられません。常に既定値 null を使用します
+<IsolatedProof>\Sources\MainStageRespawnOnFall.cs(23,22): warning CS0649: フィールド 'MainStageRespawnOnFall.startWithPartDPreview' は割り当てられません。常に既定値 false を使用します
+<IsolatedProof>\Sources\MainStageRespawnOnFall.cs(20,22): warning CS0649: フィールド 'MainStageRespawnOnFall.startNearGoalForEndingPreview' は割り当てられません。常に既定値 false を使用します
+
+After1600
+C05_MOTION_READY one Front only; original cut/refund; PNG=b5558bcd4b40b7762201184ec0324758803aaaede56cc3102dbd169670c57c1d
+C05_ROUTE_DONE Candidate L7 attach=True reached=False errors=0
+
+After720
+C05_MOTION_READY one Front only; original cut/refund; PNG=b5558bcd4b40b7762201184ec0324758803aaaede56cc3102dbd169670c57c1d
+C05_ROUTE_DONE Candidate L7 attach=True reached=False errors=0
+
+AfterL5
+C05_MOTION_READY one Front only; original cut/refund; PNG=b5558bcd4b40b7762201184ec0324758803aaaede56cc3102dbd169670c57c1d
+C05_ROUTE_DONE Candidate L5 attach=True reached=True errors=0
+
+AfterL6
+C05_MOTION_READY one Front only; original cut/refund; PNG=b5558bcd4b40b7762201184ec0324758803aaaede56cc3102dbd169670c57c1d
+C05_ROUTE_DONE Candidate L6 attach=True reached=True errors=0
+
+LegacyL7
+C05_MOTION_READY one Front only; original cut/refund; PNG=b5558bcd4b40b7762201184ec0324758803aaaede56cc3102dbd169670c57c1d
+C05_ROUTE_DONE Candidate L7 attach=True reached=False errors=0
+
+Muted
+C05_MOTION_READY one Front only; original cut/refund; PNG=b5558bcd4b40b7762201184ec0324758803aaaede56cc3102dbd169670c57c1d
+C05_ROUTE_DONE Candidate L7 attach=True reached=False errors=0
+C05_MANUAL_READY Candidate length=7 drop=0.95 scale=1 cameraLower=True. Native controls. No auto input/capture/exit.
+C05_MANUAL_READY Candidate length=7 drop=0.95 scale=1 cameraLower=True. Native controls. No auto input/capture/exit.

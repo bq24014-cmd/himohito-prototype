@@ -1,0 +1,85 @@
+{
+  "method": "Actual Unity Player screenshots, same camera; display-only crops/contact sheets/JPEG recompression, no generated or repainted gameplay pixels. Originals retained locally. AudioRenderer actual final mix at normal game time; 50Hz capture clock, images25fps; not OS loopback and not dubbed.",
+  "comparison_video": "0–6s frozen47f, 6–12s revised; no speed change.",
+  "video_time_cut": 1.16,
+  "clock_note": "Video frame0 is first recorded fixed-step end. AudioResult start-relative cut=1.18s; frame tick58/video=1.16s. Compare durations within the same clock.",
+  "old_video_sha256": "ef0f10e2b7cc2c83306ad9eeda64cd4256a2cfacc12eb0fe3831208f3ad170d6",
+  "files": {
+    "Images/After_00028.jpg": {
+      "bytes": 221528,
+      "sha256": "35400b525594ffd1079dc82de27466ff9f30bfe7cd89a8d47ce9ab49a3a44f25"
+    },
+    "Images/After_00029.jpg": {
+      "bytes": 222153,
+      "sha256": "5095239a0ee19ba1f8cfe4d1500284759e0f94f9052bc6e1fe37f7ba94dfd53b"
+    },
+    "Images/After_00031.jpg": {
+      "bytes": 221909,
+      "sha256": "95ee0fa60199fada85dcaf8106805b9e75491635f5f55f8f3432117ed9b328d9"
+    },
+    "Images/After_00033.jpg": {
+      "bytes": 210135,
+      "sha256": "8e177c46c2d4460ab2a5ffee182065d9860144685eceea8ef087295a0d3d3ee8"
+    },
+    "Images/After_00035.jpg": {
+      "bytes": 208903,
+      "sha256": "f4f74135178cfbc82fbeb9f2d47dcd18c891ba8fb557c1ffff62c4afaaa93b13"
+    },
+    "Images/After_00036.jpg": {
+      "bytes": 208627,
+      "sha256": "7e638ba99954ed4aa6840b9add607823ca34908cb4e6577e75d48207ed7bca18"
+    },
+    "Images/Before_00028.jpg": {
+      "bytes": 221528,
+      "sha256": "35400b525594ffd1079dc82de27466ff9f30bfe7cd89a8d47ce9ab49a3a44f25"
+    },
+    "Images/Before_00029.jpg": {
+      "bytes": 222153,
+      "sha256": "5095239a0ee19ba1f8cfe4d1500284759e0f94f9052bc6e1fe37f7ba94dfd53b"
+    },
+    "Images/Before_00031.jpg": {
+      "bytes": 221923,
+      "sha256": "7bd9fa5ff3509636426efdea0875884f8777b7111c3dd71d97dfee9e90d04115"
+    },
+    "Images/Before_00033.jpg": {
+      "bytes": 208757,
+      "sha256": "447f6d02d0e2554002ba69b78d8e70b979bf29f8173c759c5a03e83205df5a07"
+    },
+    "Images/Before_00035.jpg": {
+      "bytes": 208780,
+      "sha256": "d614be7fe3c08fd8bc3c0d788d275f4aa434ecea554592fe2b0a7f4b580a2d7c"
+    },
+    "Images/Before_00036.jpg": {
+      "bytes": 208648,
+      "sha256": "8a23fff32833ce813941484ae9b234ffd7d2c4de7440aeabb74d01e0d24ab17d"
+    },
+    "Images/FullFrame_After1600.jpg": {
+      "bytes": 463654,
+      "sha256": "4a80e33bca47645f885e81914c652e6bee90a814e17b4b7d716353b9e60f8bd9"
+    },
+    "Images/FullFrame_After720.jpg": {
+      "bytes": 341072,
+      "sha256": "cb0bfa3417f2949963734b0a2ac644e3cfd0f188d6ebc0a978d09721f44cd636"
+    },
+    "Images/SequenceSameScale.jpg": {
+      "bytes": 369905,
+      "sha256": "4cd6c3825e6830992072ddcf28632cc625fd6b3bdd9366a8b6c3ff9051e36619"
+    },
+    "Video/After1600_PlayerMix.mp4": {
+      "bytes": 843028,
+      "sha256": "07e2554870fffe9ffab1ec5da27f4b75610e9f6d9c8afea90017c4f026ec2d36"
+    },
+    "Video/After720_PlayerMix.mp4": {
+      "bytes": 644314,
+      "sha256": "d7009f2ea13d547444c4f00df6dbcee333ea3aea5b0ee9d6337ac5e2bd088c42"
+    },
+    "Video/Before47f_PlayerMix.mp4": {
+      "bytes": 926265,
+      "sha256": "ef0f10e2b7cc2c83306ad9eeda64cd4256a2cfacc12eb0fe3831208f3ad170d6"
+    },
+    "Video/BeforeThenAfter_NormalSpeed.mp4": {
+      "bytes": 1557207,
+      "sha256": "ef20b54c40f4e0ff43a0e1ad22ad275f84041e7c57ad3a01d5634783bee69a29"
+    }
+  }
+}

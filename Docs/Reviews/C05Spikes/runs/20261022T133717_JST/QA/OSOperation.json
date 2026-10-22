@@ -1,0 +1,8 @@
+{
+  "method": "computer-use skill initialized @oai/sky; sky.list_apps called once",
+  "result": "computer-use request timed out: list_apps",
+  "retries": 0,
+  "OS_screenshot": false,
+  "OS_keys": false,
+  "permission": "Human continuing permission retained; timeout is not a permission diagnosis"
+}

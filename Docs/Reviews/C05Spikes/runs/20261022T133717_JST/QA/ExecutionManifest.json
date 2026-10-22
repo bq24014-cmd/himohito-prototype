@@ -1,0 +1,17 @@
+{
+  "proof": "C05CutVfxContinuityProof_20261022",
+  "baseline_review_commit": "47f66ebdeba099c0c779d93220ae5eaa4612bf0d",
+  "production_head": "394b4a74e366678a9e0542d895b9a26f86993c19",
+  "assembly_sha256": "2f83de2ed6a936f46b6df00305dca950e969c238a2c1b0292a10270a72344fc2",
+  "new_unity_build": false,
+  "execution": "existing non-Development Unity 6000.3.21f1 Windows Player + independent managed overlay",
+  "manual": "native input / real-time / no automatic driver,capture,exit",
+  "diagnostics": "entrance fixture + fixed-step A/D field input + native E/R/menu APIs; supplemental diagnostic placements explicitly separate",
+  "audio": "approved original v4 WAV byte-identical; actual Player AudioRenderer final mix; not dubbed / not OS loopback",
+  "human_test": "not performed this run",
+  "production_integrated": false,
+  "holds": [
+    "C11",
+    "C18"
+  ]
+}
