@@ -1,0 +1,10 @@
+{
+  "errors": 0,
+  "existingWarnings": 4,
+  "r3": "3ec513452abf2cf07d78c6abcb593eee39b9de621c30e825224ea36ebc265ad8",
+  "r3_used_for": "natural routes, VFX-disabled / capture-failed, diagnostic time cases, lifecycle, mute, manual readiness",
+  "r4": "db29964b9994b1b116a68bd38802646f57d703343a17f505d522d91b1dfed916",
+  "r4_used_for": "same gameplay code; additional exact-frame screenshot capture only; 900p/720p",
+  "newUnityBuild": false,
+  "execution": "Existing non-Development Unity 6000.3.21f1 Player + isolated managed overlay"
+}

@@ -1,0 +1,65 @@
+--- baseline/MeshCases.cs
++++ candidate/MeshCases.cs
+@@ -0,0 +1,62 @@
++using System;
++using System.Collections;
++using System.Collections.Generic;
++using System.IO;
++using UnityEngine;
++using HimoHito;
++
++public sealed partial class GroundingReview
++{
++    [Serializable] public class MeshCase {
++        public string name,execution="Actual Player diagnostic LineRenderer geometry, NOT normal input route";
++        public bool startSeparated,endSeparated,contact,cut,bodyOverlap;public float timeFraction,beforeGap,afterGap,copyJump,copyCutTime,audioTime;
++        public int cuts,refunds,notifications,cues,vfx;public Vector3[] startMesh,endMesh,startPath,endPath,oldLeft,oldRight,newLeft,newRight;
++        public int[] triangles;public Vector3 contactPoint,copyStart,currentMaterial,contactMaterial;
++    }
++    IEnumerator MeshCases(){
++        var rows=new List<MeshCase>();
++        foreach(bool together in new[]{false,true}){
++            Call(run,"RestartFromCheckpoint");Place(entry);yield return new WaitForSeconds(.12f);Call(mover,"FixedUpdate");
++            bool attached=rope.TryAttach(hook);yield return new WaitForEndOfFrame();
++            var detector=front.GetComponent<RopeBladeContact>();detector.enabled=false;
++            var native=rope.GetComponent<LineRenderer>();var l=new GameObject("DIAGNOSTIC rendered mesh contact").AddComponent<LineRenderer>();
++            l.useWorldSpace=true;l.sharedMaterial=native.sharedMaterial;l.widthCurve=native.widthCurve;l.widthMultiplier=native.widthMultiplier;
++            l.numCapVertices=native.numCapVertices;l.numCornerVertices=native.numCornerVertices;l.alignment=native.alignment;l.positionCount=2;
++            l.sortingOrder=native.sortingOrder;l.colorGradient=native.colorGradient;
++            var left=scissors.WorldBlade(0);var right=scissors.WorldBlade(1);
++            float minX=float.PositiveInfinity,maxX=float.NegativeInfinity,minY=float.PositiveInfinity,maxY=float.NegativeInfinity;
++            foreach(var poly in new[]{left,right})foreach(var v in poly){minX=Mathf.Min(minX,v.x);maxX=Mathf.Max(maxX,v.x);minY=Mathf.Min(minY,v.y);maxY=Mathf.Max(maxY,v.y);}
++            float y=(minY+maxY)/2,x0=together?maxX+.4f:minX-.4f,x1=together?x0+2:maxX+.4f;
++            var a=new[]{new Vector3(x0,y-.35f,0),new Vector3(x0,y+.35f,0)};
++            var b=new[]{new Vector3(x1,y-.35f,0),new Vector3(x1,y+.35f,0)};
++            l.SetPositions(a);var av=RopeDrawMesh.Bake(l,Camera.main,out var indices);
++            l.SetPositions(b);var bv=RopeDrawMesh.Bake(l,Camera.main,out var otherIndices);
++            // Both blade and rope move. The second case has overlapping swept regions but fixed separation.
++            Vector3 shift=Vector3.right*(together?2:.05f);
++            var nl=(Vector3[])left.Clone();var nr=(Vector3[])right.Clone();for(int i=0;i<nl.Length;i++)nl[i]+=shift;for(int i=0;i<nr.Length;i++)nr[i]+=shift;
++            float before=RopeDrawMesh.Measure(av,indices,new[]{left,right}).distance,after=RopeDrawMesh.Measure(bv,indices,new[]{nl,nr}).distance;
++            bool contact=RopeDrawMesh.Sweep(av,bv,indices,new[]{left,right},new[]{nl,nr},out float t,out var h);
++            var row=new MeshCase{name=together?"different times, no contact":"between separated frames, contact",startSeparated=before>0,endSeparated=after>0,contact=contact,timeFraction=t,beforeGap=before,afterGap=after,
++                startMesh=av,endMesh=bv,startPath=a,endPath=b,oldLeft=left,oldRight=right,newLeft=nl,newRight=nr,triangles=indices,contactPoint=h.point,
++                bodyOverlap=Physics2D.Distance(scissors.blades,pc).isOverlapped};
++            if(contact&&attached){
++                var at=RopeDrawMesh.Blend(a,b,t);
++                var coordinate=RopeBladeContact.Closest(at,new[]{new[]{h.point,h.point}});
++                row.contactMaterial=Vector3.Lerp(at[coordinate.segment],at[coordinate.segment+1],coordinate.u);
++                row.currentMaterial=Vector3.Lerp(b[coordinate.segment],b[coordinate.segment+1],coordinate.u);
++                var impact=new RopeBladeContact.Impact{path=b,left=nl,right=nr,segment=coordinate.segment,u=coordinate.u,
++                    point=row.currentMaterial,meshContact=h.point,bladePoint=h.bladePoint,time=Time.time-Time.deltaTime*(1-t),frameTime=Time.time,geometry="DIAGNOSTIC two observed baked meshes; current material presentation",sweptOnly=true};
++                var hazard=front.GetComponent<RopeSpikeHazard>();int cuts=hazard.confirmedCuts,refunds=hazard.refundCalls,notifications=hazard.successNotifications,cues=cutAudio.cues.Count,vfx=cutVfx.records.Count;
++                row.cut=hazard.TryCutAtRopeContact(rope,impact,l);
++                row.cuts=hazard.confirmedCuts-cuts;row.refunds=hazard.refundCalls-refunds;row.notifications=hazard.successNotifications-notifications;row.cues=cutAudio.cues.Count-cues;row.vfx=cutVfx.records.Count-vfx;
++                row.audioTime=cutAudio.cues[cutAudio.cues.Count-1].time;row.copyCutTime=cutVfx.records[cutVfx.records.Count-1].contactTime;
++                var copy=cutVfx.Active;row.copyStart=copy.SoftMetrics.end;row.copyJump=Vector3.Distance(row.copyStart,row.currentMaterial);
++                // Every cut piece is born at the current material coordinate, not the historical crossing pose.
++            }
++            rows.Add(row);Destroy(l.gameObject);rope.DetachAndRefund();if(cutVfx.Active)cutVfx.Active.Finish("diagnostic case done");
++            detector.ResetHistory();detector.enabled=true;
++        }
++        File.WriteAllText(Path.Combine(output,"MeshCases.json"),JsonUtility.ToJson(new MeshCaseList{cases=rows},true));
++    }
++    [Serializable]public class MeshCaseList{public List<MeshCase> cases;}
++}

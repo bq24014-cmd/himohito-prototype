@@ -1,24 +1,24 @@
 {
   "review_id": "C05Spikes",
-  "run_id": "20261023T115000_JST",
-  "updated_at": "2026-10-23T11:55:07.689107+09:00",
+  "run_id": "20261023T132100_JST",
+  "updated_at": "2026-10-23T13:29:00.760901+09:00",
   "time_zone": "Asia/Tokyo",
-  "proof": "C05RopeBladeContactProof_20261023",
-  "revision": "contact-r4",
+  "proof": "C05FlatCapContactProof_20261023",
+  "revision": "flat-mesh-r4",
   "production_head": "394b4a74e366678a9e0542d895b9a26f86993c19",
-  "status": "実ヒモ接触・対象位置上げ0.50の隔離候補。Human Review待ち",
+  "status": "平らな実メッシュ接触／VFX非依存切断の隔離候補1案、Human Review待ち",
   "production_integrated": false,
-  "human_adoption": "本体・音v4・ほつれ方向承認を保持。新配置・実ヒモ接触候補の完成映像は未承認",
+  "human_adoption": "暖色本体・上向き・音v4・ほつれ方向を維持。下降0.42と今回の完成候補は未承認",
   "branch": "codex/review-c05-spikes",
-  "report": "Docs/Reviews/C05Spikes/runs/20261023T115000_JST/Report.md",
-  "launch": "Docs/Reviews/C05Spikes/runs/20261023T115000_JST/Launch.md",
-  "images": "Docs/Reviews/C05Spikes/runs/20261023T115000_JST/Images",
-  "qa": "Docs/Reviews/C05Spikes/runs/20261023T115000_JST/QA",
-  "diff": "Docs/Reviews/C05Spikes/runs/20261023T115000_JST/Diff",
+  "report": "Docs/Reviews/C05Spikes/runs/20261023T132100_JST/Report.md",
+  "launch": "Docs/Reviews/C05Spikes/runs/20261023T132100_JST/Launch.md",
+  "images": "Docs/Reviews/C05Spikes/runs/20261023T132100_JST/Images",
+  "qa": "Docs/Reviews/C05Spikes/runs/20261023T132100_JST/QA",
+  "diff": "Docs/Reviews/C05Spikes/runs/20261023T132100_JST/Diff",
   "assets": "Docs/Reviews/C05Spikes/runs/20261022T114924_JST/Audio",
   "execution": "Existing Unity 6000.3.21f1 non-Development Player + isolated managed overlay + actual PCM16 v4 loading. Unity AudioRenderer final mix, not post-dub/OS loopback. Automated input/native APIs; NOT OS keys/Human/new Unity Build.",
-  "technical": "Unity assembly Compile成功・実Player L5/6到達/全300frame位置速度残量Camera差0。L7は実ヒモ表面接触でcut/audio/VFX各1。API lifecycle10項目PASS。新規Unity Buildではない。",
-  "scope": "Main Section 2 Front Spike only; actual rendered rope versus moving blades; original body-cut entries disabled only for target",
+  "technical": "Compile成功。実Player: L5/6到達/300frame差0、L7実メッシュ接触cut/refund/audio/VFX各1。VFX無効/保存失敗でもcut/refund/audio各1、VFX0。実Player内診断sweep2ケース確認。復帰等API10件PASS。新規Buildなし。",
+  "scope": "Main Section 2 Front Spike only; baked actual LineRenderer triangle contact; cut/refund/audio independent of VFX capture",
   "approved_body": {
     "commit": "5c64b9ef63d574a56ef4fbb0439ee7d364800dfa",
     "report": "Docs/Reviews/C05Spikes/runs/20261021T180204_JST/Report.md",
@@ -26,8 +26,14 @@
     "asset_sha256": "b5558bcd4b40b7762201184ec0324758803aaaede56cc3102dbd169670c57c1d",
     "scope": "body design and upright handles-down placement direction"
   },
-  "render_assembly_sha256": "4d1c480b8aeedf29b4b5a282645709c4bd9fb30332b090e5d8debe3cf7bf1b81",
+  "render_assembly_sha256": "db29964b9994b1b116a68bd38802646f57d703343a17f505d522d91b1dfed916",
   "previous_candidates": [
+    {
+      "commit": "03e546d1689859eca493f7d24acf815e2c7e9725",
+      "report": "Docs/Reviews/C05Spikes/runs/20261023T115000_JST/Report.md",
+      "run_id": "20261023T115000_JST",
+      "status": "原本保持。端のカプセル判定が実メッシュより早く、VFX保存失敗で切断が止まる点を今回修正。未統合"
+    },
     {
       "commit": "4de821540fbd0c5074c2e6908fe4a2c2291edbbb",
       "run_id": "20261023T001912_JST",
@@ -127,25 +133,25 @@
     }
   ],
   "unconfirmed": [
-    "OS実キー/物理クリック/Human試遊・採用",
+    "OS実キー/物理クリック/Human試遊/Visual採否",
     "新規Unity Build/Editor Play",
-    "任意入力・高速/全開閉位相の網羅",
-    "実スピーカー試聴"
+    "任意速度・全入力・大回転の厳密連続解",
+    "実スピーカーでの聴感"
   ],
   "holds": [
     "C11",
     "C18"
   ],
-  "video": "Docs/Reviews/C05Spikes/runs/20261023T115000_JST/Video",
-  "frames": "Docs/Reviews/C05Spikes/runs/20261023T115000_JST/Images",
+  "video": "Docs/Reviews/C05Spikes/runs/20261023T132100_JST/Video",
+  "frames": "Docs/Reviews/C05Spikes/runs/20261023T132100_JST/Images",
   "previous_static_report": "Docs/Reviews/C05Spikes/runs/20261021T203813_JST/Report.md",
   "audio": "Docs/Reviews/C05Spikes/runs/20261022T114924_JST/Audio/C05RopeScissors_v4.wav",
   "audio_asset_sha256": "970d754ec4251d4ad2c4c57e22c97524db84ee63dcca50a1aefc4b1f4e2cde0e",
   "known_limitations": [
-    "自然経路は中心線交差でなく幅の接触。中心距離0.058084world、720p2.40px",
-    "高速なフレーム間のみの接触は実Player網羅未確認。線形補間CCDの仮定あり",
-    "頭と刃が重なる際の可読性と持ち手の配置の自然さはHuman未確認",
-    "ミュート録音の冒頭0.5秒未満に既存音残留。切断時PCM0・切断音再生0"
+    "高速診断: 接触推定時刻と実際の音/生成に15.34ms差。表示コピーは現在の材質位置から開始し、過去位置へ戻さない",
+    "自然接触: 実メッシュ重なり距離0。表面接触点とVFX中心は0.044875world差（同じヒモ断面内）",
+    "下降0.42の配置/完成映像はHuman未承認。任意速度・全位相の保証なし",
+    "録音冒頭0.5秒未満には従来音の切替残留。切断時ミュートPCM0"
   ],
-  "launchers": "Docs/Reviews/C05Spikes/runs/20261023T115000_JST/Launchers"
+  "launchers": "Docs/Reviews/C05Spikes/runs/20261023T132100_JST/Launchers"
 }

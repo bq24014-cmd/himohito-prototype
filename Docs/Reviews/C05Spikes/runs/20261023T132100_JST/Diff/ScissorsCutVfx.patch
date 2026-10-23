@@ -1,0 +1,18 @@
+--- baseline/ScissorsCutVfx.cs
++++ candidate/ScissorsCutVfx.cs
+@@ -23,6 +23,7 @@
+     void OnEnable(){if(hazard)hazard.RopeCutSucceeded+=OnSuccess;}
+     void OnDisable(){if(hazard)hazard.RopeCutSucceeded-=OnSuccess;Clear();}
+     void Clear(){if(pending!=null){Destroy(pending.material);pending=null;}if(Active)Active.Finish("source disabled / scene exit");}
++    public void DiscardPendingCapture(){if(pending!=null){if(pending.material)Destroy(pending.material);pending=null;}}
+     public bool CaptureBeforeCut(RopeController rope,Collider2D blade,Vector2 contact)
+     {
+         if(!enabled||!rope.IsAttached)return false;
+@@ -40,6 +41,7 @@
+     public bool CaptureConfirmed(RopeController rope,RopeBladeContact.Impact impact,LineRenderer line)
+     {
+         if(!enabled||!rope.IsAttached||!line||!line.sharedMaterial)return false;
++        if(GroundingReview.Arg("-forceCaptureFailure")=="1"){captureFailures++;return false;}
+         if(pending!=null)Destroy(pending.material);
+         pending=RopeSnapshot.Confirmed(line,impact);
+         var motion=GetComponent<CraftScissorsMotion>();var body=rope.GetComponent<Rigidbody2D>();var collider=rope.GetComponent<Collider2D>();

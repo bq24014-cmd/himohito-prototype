@@ -1,0 +1,20 @@
+--- baseline/RouteReview.cs
++++ candidate/RouteReview.cs
+@@ -55,10 +55,17 @@
+         BeginAudio();audioResult.startTime=Time.time;
+         for(int i=0;i<300;i++){
+             yield return new WaitForEndOfFrame();Record();CaptureAudio();
++            if(Arg("-capture")=="1"&&RopeBladeContact.Data!=null){
++                var data=RopeBladeContact.Data;bool near=false;
++                if(data.impacts.Count>0)near=Time.frameCount-data.impacts[0].frame<=3;
++                else if(data.samples.Count>0)near=data.samples[data.samples.Count-1].meshGap<.15f;
++                if(near){var exact=ScreenCapture.CaptureScreenshotAsTexture();var folder=Path.Combine(output,"Contact50");Directory.CreateDirectory(folder);File.WriteAllBytes(Path.Combine(folder,Time.frameCount.ToString("D5")+".jpg"),exact.EncodeToJPG(90));Destroy(exact);}
++            }
+             if(Arg("-capture")=="1"&&i%2==0)Capture(i/2);
+         }
+         active=false;recording=false;Set(mover,"moveInput",0f);result.finished=true;
+         EndMovie();EndAudio();
++        if(Arg("-meshCases")=="1")yield return MeshCases();
+         if(Arg("-negativeChecks")=="1"&&cutAudio)yield return NegativeAudioChecks();
+         if(Arg("-vfxChecks")=="1"&&cutVfx)yield return VfxChecks();
+         RopeBladeContact.Save(output);WriteVfx();

@@ -1,0 +1,10 @@
+--- baseline/AudioReview.cs
++++ candidate/AudioReview.cs
+@@ -32,6 +32,7 @@
+         if(Arg("-soundBefore")!="1")cutAudio=target.AddComponent<ScissorsCutAudio>();
+         if(Arg("-vfxBefore")!="1")cutVfx=target.AddComponent<ScissorsCutVfx>();
+         target.AddComponent<RopeBladeContact>();
++        if(Arg("-disableVfx")=="1"&&cutVfx)cutVfx.enabled=false;
+     }
+     void BeginAudio()
+     {

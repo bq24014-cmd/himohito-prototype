@@ -1,0 +1,22 @@
+[
+  {
+    "mode": "Candidate",
+    "nativeManualReady": true,
+    "readySeconds": 22.5286483,
+    "alive10SecondsAfterReady": true,
+    "closeMainWindow": true,
+    "osKeys": "Unconfirmed",
+    "QA": "Not enabled",
+    "clock": "real time, no captureFramerate"
+  },
+  {
+    "mode": "Comparison",
+    "nativeManualReady": true,
+    "readySeconds": 22.4313141,
+    "alive10SecondsAfterReady": true,
+    "closeMainWindow": true,
+    "osKeys": "Unconfirmed",
+    "QA": "Not enabled",
+    "clock": "real time, no captureFramerate"
+  }
+]

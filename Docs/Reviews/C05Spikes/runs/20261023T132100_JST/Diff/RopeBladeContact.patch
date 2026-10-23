@@ -1,0 +1,68 @@
+--- baseline/RopeBladeContact.cs
++++ candidate/RopeBladeContact.cs
+@@ -11,6 +11,9 @@
+     [Serializable] public class Sample {
+         public int frame,segment,blade,edge;public float time,fixedTime,distance,radius,u;public bool bodyOverlap,centerlineIntersection;
+         public Vector2 player,velocity;public Vector3 ropePoint,bladePoint;public Vector3[] path,left,right;
++        public Vector3[] mesh;public int[] triangles;public float meshGap;
++        public int caps,corners;public string alignment;public bool useWorldSpace;
++        public Matrix4x4 localToWorld,cameraView,cameraProjection;public Vector3 camera;
+     }
+     [Serializable] public class Evidence {
+         public string mode;public bool bodyCutDisabled;public List<Sample> samples=new List<Sample>();public List<Impact> impacts=new List<Impact>();
+@@ -20,6 +23,8 @@
+         public Vector3 point,bladePoint;public Vector3[] path,left,right;public bool sweptOnly,bodyOverlap,cutSucceeded;
+         public float beforeResource,afterResource,sourceSampleError,sourceSampleErrorPixels,centerlineBladeDistancePixels;
+         public string geometry;
++        public Vector3 meshContact;public float meshGap,meshGapPixels,presentationMaterialAdvance,presentationStartJump;public bool vfxCaptured;public string vfxStatus;
++        public Vector3[] contactPath,contactMesh;public int cuts,refunds,notifications;
+     }
+     public static Evidence Data;
+     RopeController rope;Rigidbody2D body;Collider2D pc;CraftScissorsMotion motion;Sample previous;
+@@ -37,26 +42,44 @@
+         var s=Closest(path,new[]{left,right});s.time=Time.time;s.fixedTime=Time.fixedTime;s.frame=Time.frameCount;s.player=body.position;s.velocity=body.linearVelocity;
+         s.radius=line.widthMultiplier*line.widthCurve.Evaluate((s.segment+s.u)/(path.Length-1f))*.5f;
+         s.bodyOverlap=Physics2D.Distance(motion.blades,pc).isOverlapped;s.path=path;s.left=left;s.right=right;
++        s.mesh=RopeDrawMesh.Bake(line,Camera.main,out s.triangles);
++        s.meshGap=RopeDrawMesh.Measure(s.mesh,s.triangles,new[]{left,right}).distance;
++        s.caps=line.numCapVertices;s.corners=line.numCornerVertices;s.alignment=line.alignment.ToString();s.useWorldSpace=line.useWorldSpace;
++        s.localToWorld=line.transform.localToWorldMatrix;s.camera=Camera.main.transform.position;s.cameraView=Camera.main.worldToCameraMatrix;s.cameraProjection=Camera.main.projectionMatrix;
+         if(GroundingReview.Arg("-routeQA")=="1")Data.samples.Add(s);
+         if(Data.mode=="cut"&&Data.bodyCutDisabled){
+             Sample hit=null;float fraction=1;bool sweptOnly=false;
+             // Prefer contact in this ACTUAL rendered frame; the swept fallback handles an entire crossing
+             // between frames. Both shapes are interpolated at one shared time, never timeless swept AABBs.
+-            if(s.distance<=s.radius)hit=s;
++            var mh=RopeDrawMesh.Measure(s.mesh,s.triangles,new[]{left,right});
++            if(s.meshGap<.000001f)hit=s;
+             else if(previous!=null&&previous.path.Length==path.Length&&Vector2.Distance(previous.player,s.player)<2f){
+-                hit=Sweep(previous,s,line,out fraction);sweptOnly=hit!=null;
++                if(RopeDrawMesh.Sweep(previous.mesh,s.mesh,s.triangles,new[]{previous.left,previous.right},new[]{s.left,s.right},out fraction,out mh)){
++                    hit=Closest(Blend(previous.path,path,fraction),new[]{Blend(previous.left,left,fraction),Blend(previous.right,right,fraction)});
++                    hit.path=Blend(previous.path,path,fraction);hit.left=Blend(previous.left,left,fraction);hit.right=Blend(previous.right,right,fraction);hit.time=Mathf.Lerp(previous.time,s.time,fraction);hit.radius=s.radius;sweptOnly=true;
++                }
+             }
+             if(hit!=null){
++                // The authoritative contact belongs to the mesh. Locate its material coordinate once here.
++                var at=Closest(hit.path,new[]{new[]{mh.point,mh.point}});hit.segment=at.segment;hit.u=at.u;
+                 var impact=new Impact{segment=hit.segment,u=hit.u,blade=hit.blade,edge=hit.edge,frame=Time.frameCount,
+                     point=Vector3.Lerp(hit.path[hit.segment],hit.path[hit.segment+1],hit.u),bladePoint=hit.bladePoint,path=hit.path,left=hit.left,right=hit.right,
+                     time=hit.time,frameTime=Time.time,sweepFraction=fraction,radius=hit.radius,centerlineBladeDistance=hit.distance,
+                     visualSurfaceGap=Mathf.Max(0,hit.distance-hit.radius),sweptOnly=sweptOnly,bodyOverlap=s.bodyOverlap,
+                     geometry=sweptOnly?"common-time interpolation of two observed rendered paths and both blade polygons":"actual current rendered LineRenderer and blade polygons"};
++                impact.meshContact=mh.point;impact.meshGap=mh.distance;impact.bladePoint=mh.bladePoint;impact.blade=mh.blade;
++                impact.contactPath=hit.path;impact.contactMesh=sweptOnly?RopeDrawMesh.Blend(previous.mesh,s.mesh,fraction):s.mesh;
++                if(Camera.main)impact.meshGapPixels=Vector2.Distance(Camera.main.WorldToScreenPoint(mh.point),Camera.main.WorldToScreenPoint(mh.bladePoint));
+                 var actual=Vector3.Lerp(path[hit.segment],path[hit.segment+1],hit.u);
+                 impact.sourceSampleError=Vector3.Distance(actual,impact.point);
++                // Cut is recorded at subframe time; drawing begins at NOW's same material coordinate.
++                // This avoids jumping the whole visible copy back to a historical pose.
++                impact.presentationMaterialAdvance=Vector3.Distance(actual,impact.point);
++                impact.path=path;impact.point=actual;impact.presentationStartJump=Vector3.Distance(actual,Vector3.Lerp(path[hit.segment],path[hit.segment+1],hit.u));
+                 var camera=Camera.main;if(camera){impact.sourceSampleErrorPixels=Vector2.Distance(camera.WorldToScreenPoint(actual),camera.WorldToScreenPoint(impact.point));impact.centerlineBladeDistancePixels=Vector2.Distance(camera.WorldToScreenPoint(impact.point),camera.WorldToScreenPoint(hit.bladePoint));}
+                 var resource=rope.GetComponent<RopeResource>();impact.beforeResource=resource.CurrentLength;
+                 impact.cutSucceeded=GetComponent<RopeSpikeHazard>().TryCutAtRopeContact(rope,impact,line);
++                var hazard=GetComponent<RopeSpikeHazard>();impact.cuts=hazard.confirmedCuts;impact.refunds=hazard.refundCalls;impact.notifications=hazard.successNotifications;
+                 impact.afterResource=resource.CurrentLength;Data.impacts.Add(impact);previous=null;return;
+             }
+         }

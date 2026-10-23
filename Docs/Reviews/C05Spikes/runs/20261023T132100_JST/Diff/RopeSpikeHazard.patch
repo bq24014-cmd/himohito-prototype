@@ -1,0 +1,32 @@
+--- baseline/RopeSpikeHazard.cs
++++ candidate/RopeSpikeHazard.cs
+@@ -12,6 +12,7 @@
+         private bool UsesRopeContact => name == CraftScissorsMotion.TargetName && GroundingReview.Arg("-bodyCutBaseline") != "1";
+         // Presentation notification only: no changes to contact, detach or refund.
+         public event System.Action<RopeController> RopeCutSucceeded;
++        [System.NonSerialized] public int confirmedCuts,refundCalls,successNotifications;
+ 
+         private void Awake()
+         {
+@@ -107,12 +108,18 @@
+             var body=rope.GetComponent<Rigidbody2D>();
+             if(!body||!body.simulated)return false;
+             var vfx=GetComponent<ScissorsCutVfx>();
+-            if(vfx==null||!vfx.CaptureConfirmed(rope,impact,line))return false;
++            impact.vfxStatus=vfx==null?"component missing":!vfx.enabled?"component disabled":"capture pending";
++            try {impact.vfxCaptured=vfx!=null&&vfx.enabled&&vfx.CaptureConfirmed(rope,impact,line);if(vfx&&vfx.enabled)impact.vfxStatus=impact.vfxCaptured?"captured":"capture failed";}
++            catch(System.Exception ex){impact.vfxCaptured=false;impact.vfxStatus="capture exception: "+ex.GetType().Name;}
++            if(!impact.vfxCaptured&&vfx)vfx.DiscardPendingCapture();
+             Vector2 velocity=body.linearVelocity;
+-            rope.DetachAndRefund();
++            confirmedCuts++;rope.DetachAndRefund();refundCalls++;
+             GetComponent<ToySpikeVisual>()?.PlayContact(impact.bladePoint,velocity);
+             // No legacy fluff here: the successful cut owns exactly one yarn-copy effect.
+-            RopeCutSucceeded?.Invoke(rope);
++            successNotifications++;
++            if(RopeCutSucceeded!=null)foreach(System.Action<RopeController> subscriber in RopeCutSucceeded.GetInvocationList()){
++                try{subscriber(rope);}catch(System.Exception ex){impact.vfxStatus+="; notification failure: "+ex.GetType().Name;}
++            }
+             return true;
+         }
+     }
