@@ -1,10 +1,10 @@
 {
   "review_id": "C05Spikes",
   "run_id": "20261023T132100_JST",
-  "updated_at": "2026-10-23T13:29:00.760901+09:00",
+  "updated_at": "2026-10-23T13:32:09.460471+09:00",
   "time_zone": "Asia/Tokyo",
   "proof": "C05FlatCapContactProof_20261023",
-  "revision": "flat-mesh-r4",
+  "revision": "flat-mesh-r5",
   "production_head": "394b4a74e366678a9e0542d895b9a26f86993c19",
   "status": "平らな実メッシュ接触／VFX非依存切断の隔離候補1案、Human Review待ち",
   "production_integrated": false,
@@ -26,7 +26,7 @@
     "asset_sha256": "b5558bcd4b40b7762201184ec0324758803aaaede56cc3102dbd169670c57c1d",
     "scope": "body design and upright handles-down placement direction"
   },
-  "render_assembly_sha256": "db29964b9994b1b116a68bd38802646f57d703343a17f505d522d91b1dfed916",
+  "render_assembly_sha256": "7e469815e6dea051ef561a5e23716e706a7a3bb1c4dd65b96d042ddb4ea729b1",
   "previous_candidates": [
     {
       "commit": "03e546d1689859eca493f7d24acf815e2c7e9725",

@@ -39,6 +39,9 @@ public sealed partial class GroundingReview
             var row=new MeshCase{name=together?"different times, no contact":"between separated frames, contact",startSeparated=before>0,endSeparated=after>0,contact=contact,timeFraction=t,beforeGap=before,afterGap=after,
                 startMesh=av,endMesh=bv,startPath=a,endPath=b,oldLeft=left,oldRight=right,newLeft=nl,newRight=nr,triangles=indices,contactPoint=h.point,
                 bodyOverlap=Physics2D.Distance(scissors.blades,pc).isOverlapped};
+            var observedHazard=front.GetComponent<RopeSpikeHazard>();
+            int observedCuts=observedHazard.confirmedCuts,observedRefunds=observedHazard.refundCalls,observedNotifications=observedHazard.successNotifications;
+            int observedCues=cutAudio.cues.Count,observedVfx=cutVfx.records.Count;
             if(contact&&attached){
                 var at=RopeDrawMesh.Blend(a,b,t);
                 var coordinate=RopeBladeContact.Closest(at,new[]{new[]{h.point,h.point}});
@@ -53,6 +56,9 @@ public sealed partial class GroundingReview
                 var copy=cutVfx.Active;row.copyStart=copy.SoftMetrics.end;row.copyJump=Vector3.Distance(row.copyStart,row.currentMaterial);
                 // Every cut piece is born at the current material coordinate, not the historical crossing pose.
             }
+            // Measure the negative case too; zero must be a difference of observed counters.
+            row.cuts=observedHazard.confirmedCuts-observedCuts;row.refunds=observedHazard.refundCalls-observedRefunds;
+            row.notifications=observedHazard.successNotifications-observedNotifications;row.cues=cutAudio.cues.Count-observedCues;row.vfx=cutVfx.records.Count-observedVfx;
             rows.Add(row);Destroy(l.gameObject);rope.DetachAndRefund();if(cutVfx.Active)cutVfx.Active.Finish("diagnostic case done");
             detector.ResetHistory();detector.enabled=true;
         }
