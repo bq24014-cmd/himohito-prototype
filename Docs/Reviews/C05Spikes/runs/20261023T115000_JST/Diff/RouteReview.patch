@@ -1,0 +1,48 @@
+--- baseline/RouteReview.cs
++++ candidate/RouteReview.cs
+@@ -34,7 +34,7 @@
+         int length=int.Parse(Arg("-length","6"));string variant=Arg("-variant","Candidate");
+         resource.RestoreCapacityAndCurrent(50,50);rope.RestoreSelectedRopeLength(length);Place(entry);run.TryReachSection(2,entry,50);Set(run,"checkpointPosition",entry);Call(run,"CaptureCheckpointState");
+         var target=GameObject.Find(CraftScissorsMotion.TargetName);
+-        float drop=variant=="Candidate"?(QA?float.Parse(Arg("-drop","0.95"),System.Globalization.CultureInfo.InvariantCulture):.95f):0;
++        float drop=variant=="Candidate"?float.Parse(Arg("-drop","0.95"),System.Globalization.CultureInfo.InvariantCulture):0;
+         if(variant!="Current"){CraftScissorsMotion.ReviewSupportY=CraftScissorsMotion.FloorY-drop;scissors=target.AddComponent<CraftScissorsMotion>();}
+         front=target.GetComponents<Collider2D>().First(c=>c.enabled);far=GameObject.Find("Main Section 2 Far Spike").GetComponent<Collider2D>();
+         if(scissors)SetupCutSound(target);
+@@ -58,10 +58,10 @@
+             if(Arg("-capture")=="1"&&i%2==0)Capture(i/2);
+         }
+         active=false;recording=false;Set(mover,"moveInput",0f);result.finished=true;
+-        EndAudio();
++        EndMovie();EndAudio();
+         if(Arg("-negativeChecks")=="1"&&cutAudio)yield return NegativeAudioChecks();
+         if(Arg("-vfxChecks")=="1"&&cutVfx)yield return VfxChecks();
+-        WriteVfx();
++        RopeBladeContact.Save(output);WriteVfx();
+         audioResult.finished=true;
+         File.WriteAllText(Path.Combine(output,"AudioResult.json"),JsonUtility.ToJson(audioResult,true));
+         File.WriteAllText(Path.Combine(output,"Result.json"),JsonUtility.ToJson(result,true));Debug.Log("C05_ROUTE_DONE "+variant+" L"+length+" attach="+result.attachSucceeded+" reached="+result.reachedBank+" errors="+result.errors);Application.Quit(result.errors>0?2:0);
+@@ -90,7 +90,22 @@
+     void Record(){result.frames.Add(new Frame{tick=tick,t=tick*Time.fixedDeltaTime,input=input,remaining=resource.CurrentLength,length=rope.SelectedRopeLength,position=body.position,velocity=body.linearVelocity,camera=Camera.main.transform.position,grounded=mover.IsGrounded,attached=rope.IsAttached,failure=run.IsFailureVisible,frontDistance=Physics2D.Distance(front,pc).distance,farDistance=Physics2D.Distance(far,pc).distance,snips=scissors?scissors.snips:0,closure=scissors?scissors.closure:0,handleGap=scissors?scissors.Record().handleGap:0});}
+     public void AddEvent(string kind,string other,Vector2 normal=default,Vector2 point=default){if(!recording)return;result.events.Add(new Event{kind=kind,other=other,tick=tick,position=body.position,velocity=body.linearVelocity,attached=rope.IsAttached,normal=normal,point=point});}
+     void Place(Vector2 p){rope.DetachAndRefund();body.position=p;body.transform.position=new Vector3(p.x,p.y,0);body.linearVelocity=Vector2.zero;body.angularVelocity=0;body.simulated=true;mover.enabled=true;rope.enabled=true;Set(mover,"previousPhysicsPosition",p);Set(mover,"hasPreviousPhysicsPosition",true);Set(mover,"hasPreviousVerticalSpeed",false);Physics2D.SyncTransforms();Camera.main.GetComponent<HorizontalCameraFollow>().ResetFraming();}
+-    void Capture(int i){var d=Path.Combine(output,"Frames");Directory.CreateDirectory(d);var im=ScreenCapture.CaptureScreenshotAsTexture();File.WriteAllBytes(Path.Combine(d,i.ToString("D5")+".jpg"),im.EncodeToJPG(86));Destroy(im);}
++    System.Diagnostics.Process movie;
++    void Capture(int i){
++        if(movie==null){
++            var exe=Arg("-ffmpeg");if(string.IsNullOrEmpty(exe))throw new InvalidOperationException("Explicit encoder path required for low-disk capture");
++            movie=new System.Diagnostics.Process{StartInfo=new System.Diagnostics.ProcessStartInfo(exe,
++                "-hide_banner -loglevel error -f image2pipe -vcodec mjpeg -framerate 25 -i pipe:0 -an -c:v libx264 -preset fast -crf 23 -pix_fmt yuv420p -movflags +faststart \""+Path.Combine(output,"VideoSilent.mp4")+"\""){
++                UseShellExecute=false,CreateNoWindow=true,RedirectStandardInput=true}};
++            movie.Start();
++        }
++        var im=ScreenCapture.CaptureScreenshotAsTexture();var bytes=im.EncodeToJPG(86);
++        movie.StandardInput.BaseStream.Write(bytes,0,bytes.Length);
++        // Keep selected actual frames only; do not retain a redundant full JPEG movie.
++        if(i==0||i==149||(i>=22&&i<=58&&i%2==0)){var d=Path.Combine(output,"Frames");Directory.CreateDirectory(d);File.WriteAllBytes(Path.Combine(d,i.ToString("D5")+".jpg"),bytes);}
++        Destroy(im);
++    }
++    void EndMovie(){if(movie==null)return;movie.StandardInput.Close();if(!movie.WaitForExit(15000)||movie.ExitCode!=0)throw new InvalidOperationException("Video encoder did not finish");movie.Dispose();movie=null;}
+     void Log(string t,string s,LogType kind){if(kind==LogType.Exception||kind==LogType.Error||kind==LogType.Assert){result.errors++;File.AppendAllText(Path.Combine(output,"Errors.txt"),t+"\n"+s+"\n");}}
+     void OnDestroy(){Application.logMessageReceived-=Log;}
+ }

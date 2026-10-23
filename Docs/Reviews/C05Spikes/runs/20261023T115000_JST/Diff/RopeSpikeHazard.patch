@@ -1,0 +1,48 @@
+--- baseline/RopeSpikeHazard.cs
++++ candidate/RopeSpikeHazard.cs
+@@ -9,6 +9,7 @@
+         private Collider2D detectionArea;
+         private RopeController playerRope;
+         private Collider2D playerCollider;
++        private bool UsesRopeContact => name == CraftScissorsMotion.TargetName && GroundingReview.Arg("-bodyCutBaseline") != "1";
+         // Presentation notification only: no changes to contact, detach or refund.
+         public event System.Action<RopeController> RopeCutSucceeded;
+ 
+@@ -19,6 +20,7 @@
+ 
+         private void FixedUpdate()
+         {
++            if (UsesRopeContact) return;
+             CacheReferences();
+             if (detectionArea == null ||
+                 !detectionArea.enabled ||
+@@ -43,6 +45,7 @@
+ 
+         private void Cut(Collider2D other)
+         {
++            if (UsesRopeContact) return;
+             RopeController rope = other.GetComponentInParent<RopeController>();
+             if (rope == null && other.attachedRigidbody != null)
+             {
+@@ -96,5 +99,21 @@
+                 playerCollider = playerRope.GetComponent<Collider2D>();
+             }
+         }
++
++        // Only the front scissors may use this authoritative rendered-rope contact path.
++        public bool TryCutAtRopeContact(RopeController rope,RopeBladeContact.Impact impact,LineRenderer line)
++        {
++            if(!UsesRopeContact||!rope||!rope.IsAttached||Time.timeScale<=0)return false;
++            var body=rope.GetComponent<Rigidbody2D>();
++            if(!body||!body.simulated)return false;
++            var vfx=GetComponent<ScissorsCutVfx>();
++            if(vfx==null||!vfx.CaptureConfirmed(rope,impact,line))return false;
++            Vector2 velocity=body.linearVelocity;
++            rope.DetachAndRefund();
++            GetComponent<ToySpikeVisual>()?.PlayContact(impact.bladePoint,velocity);
++            // No legacy fluff here: the successful cut owns exactly one yarn-copy effect.
++            RopeCutSucceeded?.Invoke(rope);
++            return true;
++        }
+     }
+ }

@@ -1,0 +1,40 @@
+--- baseline/VfxReview.cs
++++ candidate/VfxReview.cs
+@@ -18,6 +18,9 @@
+     void WriteVfx(){if(cutVfx){vfxResult.cuts=cutVfx.records;vfxResult.captureFailures=cutVfx.captureFailures;}if(vfxResult.cuts==null)vfxResult.cuts=new List<ScissorsCutVfx.CutRecord>();File.WriteAllText(Path.Combine(output,"VfxResult.json"),JsonUtility.ToJson(vfxResult,true));File.WriteAllText(Path.Combine(output,"Timeline.json"),JsonUtility.ToJson(timeline,true));}
+     IEnumerator VfxChecks()
+     {
++        // Supplemental fixtures below the normal fail plane must not open the failure overlay.
++        // This threshold is never changed in manual mode or the natural 5/6/7 route.
++        Call(run,"RestartFromCheckpoint");Set(run,"fallThreshold",-100f);
+         int noCut=cutVfx.records.Count;
+         // Q request while detached cannot be a scissors cut. Native public builder request via reflection.
+         Place(entry);yield return new WaitForSeconds(.1f);
+@@ -28,7 +31,7 @@
+         // Independent setup for lifecycle checks; not a claimed player route.
+         yield return PrepareDiagnosticCut(0);
+         bool alive=cutVfx.Active&&!cutVfx.Active.Finished;
+-        CheckResult("native cut after diagnostic blade overlap",alive,"No synthetic success notification; attached player overlaps existing live blade polygon");
++        CheckResult("native cut after diagnostic rope crossing",alive,"No synthetic success notification; actual rendered rope crosses live blade; body-only is not required");
+         if(alive){
+             var copy=cutVfx.Active;body.simulated=false;for(int i=0;i<12;i++)yield return new WaitForEndOfFrame();
+             float before=copy.Elapsed;string geometry=GeometrySignature(copy);float frontBefore=copy.FrontProgress;
+@@ -68,10 +71,13 @@
+         bool attached=rope.TryAttach(hook);yield return new WaitForEndOfFrame();
+         if(!attached){CheckResult("diagnostic attach "+side,false,"Native attach failed");yield break;}
+         yield return new WaitForSeconds(.24f);
+-        var points=scissors.WorldBlade(side%2);Vector2 centre=Vector2.zero;foreach(var p in points)centre+=(Vector2)p;centre/=points.Length;
+-        var hazard=front.GetComponent<RopeSpikeHazard>();hazard.enabled=false;
+-        body.position=centre;body.transform.position=new Vector3(centre.x,centre.y,0);body.linearVelocity=Vector2.zero;Set(mover,"previousPhysicsPosition",centre);Physics2D.SyncTransforms();
+-        // LateUpdate draws the real rope at the diagnostic position before next native physics contact.
+-        yield return new WaitForEndOfFrame();hazard.enabled=true;yield return new WaitForFixedUpdate();yield return new WaitForEndOfFrame();
++        var points=scissors.WorldBlade(0);Vector2 centre=Vector2.zero;foreach(var p in points)centre+=(Vector2)p;centre/=points.Length;
++        var detector=front.GetComponent<RopeBladeContact>();detector.ResetHistory();
++        // Diagnostic ONLY: allow one rendered frame below the normal fail plane to exercise an interior
++        // real-rope contact while the player's body is clear of the blades. Restore threshold immediately.
++        float oldFall=(float)Get(run,"fallThreshold");Set(run,"fallThreshold",-100f);
++        Vector2 fixture=centre+Vector2.down*2.4f;
++        body.position=fixture;body.transform.position=new Vector3(fixture.x,fixture.y,0);body.linearVelocity=Vector2.zero;Set(mover,"previousPhysicsPosition",fixture);Physics2D.SyncTransforms();
++        yield return new WaitForEndOfFrame();Set(run,"fallThreshold",oldFall);
+     }
+ }

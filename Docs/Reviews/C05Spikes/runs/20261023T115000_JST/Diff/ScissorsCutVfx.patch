@@ -1,0 +1,75 @@
+--- baseline/ScissorsCutVfx.cs
++++ candidate/ScissorsCutVfx.cs
+@@ -3,7 +3,7 @@
+ using UnityEngine;
+ using HimoHito;
+ 
+-// Isolated presentation only. The native hazard still cuts on PLAYER contact.
++// Isolated presentation; authoritative contact is supplied by the target rope/blade detector.
+ public sealed class ScissorsCutVfx : MonoBehaviour
+ {
+     [Serializable] public class CutRecord {
+@@ -14,6 +14,7 @@
+         public Vector3[] renderedRope, bladeLeft, bladeRight;public Vector3 playerMin,playerMax,currentHead;
+         public Vector2 playerPosition,playerVelocity;public int successSnips,finishedFrame;public bool physicalFailureObserved;
+         public string presentation;public float configuredLifetime;
++        public float contactTime,renderedCutStartError,renderedCutStartErrorPixels;public bool authoritativeContact;
+     }
+     public readonly List<CutRecord> records=new List<CutRecord>();
+     public int captureFailures; public CutRopeCopy Active {get;private set;}
+@@ -36,6 +37,18 @@
+         pending.record.playerPosition=body.position;pending.record.playerVelocity=body.linearVelocity;pending.record.currentHead=rope.GetComponent<RopeBodyVisual>().RopeOrigin;
+         return true;
+     }
++    public bool CaptureConfirmed(RopeController rope,RopeBladeContact.Impact impact,LineRenderer line)
++    {
++        if(!enabled||!rope.IsAttached||!line||!line.sharedMaterial)return false;
++        if(pending!=null)Destroy(pending.material);
++        pending=RopeSnapshot.Confirmed(line,impact);
++        var motion=GetComponent<CraftScissorsMotion>();var body=rope.GetComponent<Rigidbody2D>();var collider=rope.GetComponent<Collider2D>();
++        pending.record.fixedTime=Time.fixedTime;pending.record.renderedRope=(Vector3[])pending.points.Clone();
++        pending.record.bladeLeft=impact.left;pending.record.bladeRight=impact.right;pending.record.scissorsClosure=motion.closure;
++        pending.record.playerMin=collider.bounds.min;pending.record.playerMax=collider.bounds.max;
++        pending.record.playerPosition=body.position;pending.record.playerVelocity=body.linearVelocity;pending.record.currentHead=rope.GetComponent<RopeBodyVisual>().RopeOrigin;
++        return true;
++    }
+     void OnSuccess(RopeController rope)
+     {
+         if(pending==null)return;
+@@ -55,6 +68,18 @@
+     public Gradient color;public float multiplier;public Vector2 textureScale;public LineTextureMode textureMode;
+     public LineAlignment alignment;public int layer,order,caps,corners,segment;public float u;
+     public ScissorsCutVfx.CutRecord record;
++    public static RopeSnapshot Confirmed(LineRenderer line,RopeBladeContact.Impact impact)
++    {
++        var s=new RopeSnapshot{points=(Vector3[])impact.path.Clone(),material=new Material(line.sharedMaterial),
++            width=line.widthCurve,multiplier=line.widthMultiplier,color=line.colorGradient,textureScale=line.textureScale,
++            textureMode=line.textureMode,alignment=line.alignment,layer=line.sortingLayerID,order=line.sortingOrder,
++            caps=line.numCapVertices,corners=line.numCornerVertices,segment=impact.segment,u=impact.u};
++        float f=(s.segment+s.u)/(s.points.Length-1f);
++        s.record=new ScissorsCutVfx.CutRecord{pointCount=s.points.Length,contact=impact.bladePoint,cut=impact.point,
++            first=s.points[0],last=s.points[s.points.Length-1],fraction=f,sourceWidth=s.width.Evaluate(f)*s.multiplier,
++            distanceFromContact=impact.centerlineBladeDistance,mode=impact.geometry,contactTime=impact.time,authoritativeContact=true};
++        return s;
++    }
+     public static RopeSnapshot Read(LineRenderer line,Collider2D blade,Vector2 contact)
+     {
+         var s=new RopeSnapshot {points=new Vector3[line.positionCount],material=new Material(line.sharedMaterial),
+@@ -127,7 +152,7 @@
+                 saved.record.presentation="3caca29 progressive trim baseline";saved.record.configuredLifetime=PreviousProgressiveUnravelDrawing.Lifetime;
+                 Draw();return;
+             }
+-            progressive=new ProgressiveUnravelDrawing(saved,transform);
++            progressive=new ProgressiveUnravelDrawing(saved,transform,owner.GetComponent<RopeBodyVisual>());
+             saved.record.presentation="soft free-end collapse, connected fibre separation, stationary regional fade";saved.record.configuredLifetime=ProgressiveUnravelDrawing.Lifetime;
+             Draw();return;
+         }
+@@ -198,7 +223,7 @@
+     void Draw()
+     {
+         if(previousProgressive!=null){previousProgressive.Draw(Elapsed);CurrentAlpha=previousProgressive.FarAlpha;CurrentRecoil=.14f*Mathf.SmoothStep(0,1,(Elapsed-.02f)/.10f);return;}
+-        if(progressive!=null){progressive.Draw(Elapsed);CurrentAlpha=progressive.Actual.maximumAlpha;CurrentRecoil=.045f*Mathf.Sin(Mathf.PI*Mathf.Clamp01(Elapsed/.18f));if(Elapsed==0)saved.record.linePointError=progressive.Actual.initialShapeError;return;}
++        if(progressive!=null){progressive.Draw(Elapsed);CurrentAlpha=progressive.Actual.maximumAlpha;CurrentRecoil=.045f*Mathf.Sin(Mathf.PI*Mathf.Clamp01(Elapsed/.18f));if(Elapsed==0){saved.record.linePointError=progressive.Actual.initialShapeError;saved.record.renderedCutStartError=progressive.Actual.cutStartError;saved.record.renderedCutStartErrorPixels=progressive.Actual.cutStartErrorPixels;}return;}
+         // Native closing advances at the next fixed step. A short lead-in lets closure and recoil read together;
+         // it does not delay the physical cut, sound or create a fictional rope at the blade.
+         float recoil=.14f*Mathf.SmoothStep(0,1,(Elapsed-(legacy?0:.02f))/.10f);

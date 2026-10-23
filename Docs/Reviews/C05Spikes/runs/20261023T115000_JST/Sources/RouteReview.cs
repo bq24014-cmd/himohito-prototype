@@ -1,0 +1,117 @@
+using System;
+using System.IO;
+using System.Linq;
+using System.Reflection;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using HimoHito;
+
+// Host Player already registers GroundingReview.Boot. Manual mode has no input driver.
+[DefaultExecutionOrder(-30000)]
+public sealed partial class GroundingReview:MonoBehaviour
+{
+    const BindingFlags H=BindingFlags.Instance|BindingFlags.NonPublic;
+    public static string Arg(string k,string f=""){var a=Environment.GetCommandLineArgs();for(int i=0;i<a.Length-1;i++)if(a[i]==k)return a[i+1];return f;}
+    static bool QA=>Arg("-routeQA")=="1";
+    static object Get(object o,string n)=>o.GetType().GetField(n,H).GetValue(o);
+    static void Set(object o,string n,object v)=>o.GetType().GetField(n,H).SetValue(o,v);
+    static object Call(object o,string n)=>o.GetType().GetMethod(n,H|BindingFlags.Public).Invoke(o,null);
+    static bool suppressFixture;
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]static void Boot(){Application.runInBackground=true;HorizontalCameraFollow.ReviewSectionTwoLowering=Arg("-cameraBefore")!="1";if(QA){Time.captureFramerate=50;UnityEngine.Random.InitState(521);}SceneManager.sceneLoaded+=(s,m)=>{if(suppressFixture)return;if(s.name!="MainStage"){SceneManager.LoadScene("MainStage");return;}new GameObject("C05 route fixture").AddComponent<GroundingReview>();};}
+    [Serializable]public class Frame{public int tick;public float t,input,remaining,length,frontDistance,farDistance;public Vector2 position,velocity;public Vector3 camera;public bool grounded,attached,failure;public int snips;public float closure,handleGap;}
+    [Serializable]public class Event{public string kind,other;public int tick;public Vector2 position,velocity,normal,point;public bool attached;}
+    [Serializable]public class ColliderRecord{public string name,type;public Vector3 min,max,position,scale;public bool trigger;}
+    [Serializable]public class Result{public string execution="Diagnostic entrance initialization; fixed-step A/D field input, native TryAttach/DetachAndRefund APIs. Native physics throughout route. Not OS keys or Human play. Existing non-Development Player + managed overlay (not new Unity Build).",variant,unity,plan,phase;public float length,scale,drop,supportY,releaseSeconds,maxFloorError,maxHandleGap,maxColliderError,maxPivotError;public int attachTick,releaseTick,errors;public bool development,attachSucceeded,reachedBank,finished;public Vector2 initial,hook,playerSize;public List<Frame> frames=new List<Frame>();public List<Event> events=new List<Event>();public List<ColliderRecord> geometry=new List<ColliderRecord>();public CraftScissorsMotion.Pose initialScissors;}
+    PlayerMover mover;Rigidbody2D body;Collider2D pc,front,far;RopeController rope;RopeResource resource;MainStageRespawnOnFall run;CraftScissorsMotion scissors;
+    Result result;string output;int tick=-1;bool active,recording;float input;Vector2 entry=new Vector2(12.7f,-4.28f),hook=new Vector2(17.25f,-.85f);
+    IEnumerator Start()
+    {
+        yield return null;yield return null;yield return null;
+        mover=FindFirstObjectByType<PlayerMover>();body=mover.GetComponent<Rigidbody2D>();pc=body.GetComponent<Collider2D>();rope=body.GetComponent<RopeController>();resource=body.GetComponent<RopeResource>();run=FindFirstObjectByType<MainStageRespawnOnFall>();
+        var preview=FindFirstObjectByType<MainStagePreview>();if(preview&&MainStagePreview.IsActive)Call(preview,"RestoreState");
+        int length=int.Parse(Arg("-length","6"));string variant=Arg("-variant","Candidate");
+        resource.RestoreCapacityAndCurrent(50,50);rope.RestoreSelectedRopeLength(length);Place(entry);run.TryReachSection(2,entry,50);Set(run,"checkpointPosition",entry);Call(run,"CaptureCheckpointState");
+        var target=GameObject.Find(CraftScissorsMotion.TargetName);
+        float drop=variant=="Candidate"?float.Parse(Arg("-drop","0.95"),System.Globalization.CultureInfo.InvariantCulture):0;
+        if(variant!="Current"){CraftScissorsMotion.ReviewSupportY=CraftScissorsMotion.FloorY-drop;scissors=target.AddComponent<CraftScissorsMotion>();}
+        front=target.GetComponents<Collider2D>().First(c=>c.enabled);far=GameObject.Find("Main Section 2 Far Spike").GetComponent<Collider2D>();
+        if(scissors)SetupCutSound(target);
+        if(!QA){Debug.Log("C05_MANUAL_READY "+variant+" length="+length+" drop="+drop+" scale=1 cameraLower="+HorizontalCameraFollow.ReviewSectionTwoLowering+". Native controls. No auto input/capture/exit.");yield break;}
+        output=Arg("-output");Directory.CreateDirectory(output);Application.logMessageReceived+=Log;
+        result=new Result{variant=variant,scale=scissors?1:0,drop=drop,supportY=CraftScissorsMotion.FloorY-drop,phase=Arg("-phase","natural"),length=length,unity=Application.unityVersion,development=Debug.isDebugBuild,attachTick=int.Parse(Arg("-attachTick","30")),releaseTick=int.Parse(Arg("-releaseTick","90")),initial=entry,hook=hook,playerSize=pc.bounds.size};
+        result.releaseSeconds=result.releaseTick*Time.fixedDeltaTime;
+        result.plan=Arg("-plan","run");
+        if(scissors){for(int n=0;n<=100;n++){scissors.DiagnosticPose(n/100f);var q=scissors.Record();result.maxFloorError=Mathf.Max(result.maxFloorError,Mathf.Abs(Mathf.Min(q.leftSupport.y,q.rightSupport.y)-scissors.SupportY));result.maxHandleGap=Mathf.Max(result.maxHandleGap,q.handleGap);result.maxPivotError=Mathf.Max(result.maxPivotError,q.pivotDistance);for(int side=0;side<2;side++){var w=scissors.WorldBlade(side);var path=scissors.blades.GetPath(side);for(int i=0;i<w.Length;i++)result.maxColliderError=Mathf.Max(result.maxColliderError,Vector3.Distance(w[i],scissors.transform.TransformPoint(path[i])));}}scissors.DiagnosticRelease();scissors.Apply(0);}
+        foreach(var c in FindObjectsByType<Collider2D>(FindObjectsSortMode.None))if(c.bounds.max.x>10&&c.bounds.min.x<33&&c.bounds.min.y<2)result.geometry.Add(new ColliderRecord{name=c.name,type=c.GetType().Name,min=c.bounds.min,max=c.bounds.max,position=c.transform.position,scale=c.transform.lossyScale,trigger=c.isTrigger});
+        var probe=body.gameObject.AddComponent<RouteContactProbe>();probe.owner=this;
+        if(Arg("-cameraTransitions")=="1"){yield return CameraTransitions();yield break;}
+        yield return new WaitForSeconds(.8f);
+        // One diagnostic reset before the route; never move Root or overwrite velocity during passage.
+        Place(entry);if(scissors)scissors.DiagnosticRelease();yield return new WaitForEndOfFrame();
+        result.initial=body.position;if(scissors)result.initialScissors=scissors.Record();
+        active=true;recording=true;
+        BeginAudio();audioResult.startTime=Time.time;
+        for(int i=0;i<300;i++){
+            yield return new WaitForEndOfFrame();Record();CaptureAudio();
+            if(Arg("-capture")=="1"&&i%2==0)Capture(i/2);
+        }
+        active=false;recording=false;Set(mover,"moveInput",0f);result.finished=true;
+        EndMovie();EndAudio();
+        if(Arg("-negativeChecks")=="1"&&cutAudio)yield return NegativeAudioChecks();
+        if(Arg("-vfxChecks")=="1"&&cutVfx)yield return VfxChecks();
+        RopeBladeContact.Save(output);WriteVfx();
+        audioResult.finished=true;
+        File.WriteAllText(Path.Combine(output,"AudioResult.json"),JsonUtility.ToJson(audioResult,true));
+        File.WriteAllText(Path.Combine(output,"Result.json"),JsonUtility.ToJson(result,true));Debug.Log("C05_ROUTE_DONE "+variant+" L"+length+" attach="+result.attachSucceeded+" reached="+result.reachedBank+" errors="+result.errors);Application.Quit(result.errors>0?2:0);
+    }
+    void FixedUpdate()
+    {
+        if(transitionDriving&&mover){Set(mover,"moveInput",transitionInput);return;}
+        if(!active||!mover)return;tick++;
+        // Diagnostic pose sweep only. Native manual mode never enters this input driver.
+        if(scissors&&result.phase!="natural"){
+            float c=result.phase=="closed"?1:result.phase=="mid"?.5f:0;
+            if(result.phase=="cycle"){
+                float t=(tick-55)*Time.fixedDeltaTime;
+                c=t<0?0:t<.18f?Mathf.SmoothStep(0,1,t/.18f):t<.26f?1:t<.74f?1-Mathf.SmoothStep(0,1,(t-.26f)/.48f):0;
+            }
+            scissors.DiagnosticPose(c);
+        }
+        input=1;
+        if(result.plan=="stand"&&((tick>=11&&tick<30)||(tick>=36&&tick<60)))input=0;
+        if(body.position.x>=25.5f&&mover.IsGrounded){result.reachedBank=true;input=0;}
+        if(result.reachedBank)input=0;
+        Set(mover,"moveInput",input);
+        if(tick==result.attachTick){result.attachSucceeded=rope.TryAttach(hook);AddEvent("E_attach_"+result.attachSucceeded,"blue hook");}
+        if(tick==result.releaseTick){AddEvent("E_release_before","native DetachAndRefund");if(rope.IsAttached)rope.DetachAndRefund(playReleaseSound:true);}
+    }
+    void Record(){result.frames.Add(new Frame{tick=tick,t=tick*Time.fixedDeltaTime,input=input,remaining=resource.CurrentLength,length=rope.SelectedRopeLength,position=body.position,velocity=body.linearVelocity,camera=Camera.main.transform.position,grounded=mover.IsGrounded,attached=rope.IsAttached,failure=run.IsFailureVisible,frontDistance=Physics2D.Distance(front,pc).distance,farDistance=Physics2D.Distance(far,pc).distance,snips=scissors?scissors.snips:0,closure=scissors?scissors.closure:0,handleGap=scissors?scissors.Record().handleGap:0});}
+    public void AddEvent(string kind,string other,Vector2 normal=default,Vector2 point=default){if(!recording)return;result.events.Add(new Event{kind=kind,other=other,tick=tick,position=body.position,velocity=body.linearVelocity,attached=rope.IsAttached,normal=normal,point=point});}
+    void Place(Vector2 p){rope.DetachAndRefund();body.position=p;body.transform.position=new Vector3(p.x,p.y,0);body.linearVelocity=Vector2.zero;body.angularVelocity=0;body.simulated=true;mover.enabled=true;rope.enabled=true;Set(mover,"previousPhysicsPosition",p);Set(mover,"hasPreviousPhysicsPosition",true);Set(mover,"hasPreviousVerticalSpeed",false);Physics2D.SyncTransforms();Camera.main.GetComponent<HorizontalCameraFollow>().ResetFraming();}
+    System.Diagnostics.Process movie;
+    void Capture(int i){
+        if(movie==null){
+            var exe=Arg("-ffmpeg");if(string.IsNullOrEmpty(exe))throw new InvalidOperationException("Explicit encoder path required for low-disk capture");
+            movie=new System.Diagnostics.Process{StartInfo=new System.Diagnostics.ProcessStartInfo(exe,
+                "-hide_banner -loglevel error -f image2pipe -vcodec mjpeg -framerate 25 -i pipe:0 -an -c:v libx264 -preset fast -crf 23 -pix_fmt yuv420p -movflags +faststart \""+Path.Combine(output,"VideoSilent.mp4")+"\""){
+                UseShellExecute=false,CreateNoWindow=true,RedirectStandardInput=true}};
+            movie.Start();
+        }
+        var im=ScreenCapture.CaptureScreenshotAsTexture();var bytes=im.EncodeToJPG(86);
+        movie.StandardInput.BaseStream.Write(bytes,0,bytes.Length);
+        // Keep selected actual frames only; do not retain a redundant full JPEG movie.
+        if(i==0||i==149||(i>=22&&i<=58&&i%2==0)){var d=Path.Combine(output,"Frames");Directory.CreateDirectory(d);File.WriteAllBytes(Path.Combine(d,i.ToString("D5")+".jpg"),bytes);}
+        Destroy(im);
+    }
+    void EndMovie(){if(movie==null)return;movie.StandardInput.Close();if(!movie.WaitForExit(15000)||movie.ExitCode!=0)throw new InvalidOperationException("Video encoder did not finish");movie.Dispose();movie=null;}
+    void Log(string t,string s,LogType kind){if(kind==LogType.Exception||kind==LogType.Error||kind==LogType.Assert){result.errors++;File.AppendAllText(Path.Combine(output,"Errors.txt"),t+"\n"+s+"\n");}}
+    void OnDestroy(){Application.logMessageReceived-=Log;}
+}
+public sealed class RouteContactProbe:MonoBehaviour
+{
+    public GroundingReview owner;
+    void OnCollisionEnter2D(Collision2D c){var p=c.contactCount>0?c.GetContact(0):default;owner.AddEvent("collision",c.collider.name,p.normal,p.point);}
+    void OnTriggerEnter2D(Collider2D c){if(c.GetComponent<RopeSpikeHazard>())owner.AddEvent("hazard_enter",c.name);}
+}

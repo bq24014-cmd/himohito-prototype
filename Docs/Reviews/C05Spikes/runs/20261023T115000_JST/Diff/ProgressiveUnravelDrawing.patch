@@ -1,0 +1,51 @@
+--- baseline/ProgressiveUnravelDrawing.cs
++++ candidate/ProgressiveUnravelDrawing.cs
+@@ -13,13 +13,14 @@
+         public float[] strandLengthPixels=new float[3],strandWidthPixels=new float[3],strandAlpha=new float[3];
+         public float[] visibleProbeMinCenterGaps=new float[3],visibleProbeMinWidths=new float[3],visibleProbeMinAlpha=new float[3];
+         public Vector3 end,anchor;public int visibleStrands;public bool visible;
++        public float cutStartError,cutStartErrorPixels,bodyAnchorError,hookAnchorError;public int bodyPieces,hookPieces;
+     }
+     sealed class Piece {
+         public Vector3[] path;public float[] distance;public float length,from,to,fray;
+         public float[] samples;public Vector3[] posed;public LineRenderer line;
+         public LineRenderer[] strands=new LineRenderer[3],loose=new LineRenderer[2];
+     }
+-    readonly RopeSnapshot saved;readonly Transform root;readonly List<Piece> pieces=new List<Piece>();
++    readonly RopeSnapshot saved;readonly Transform root;readonly List<Piece> pieces=new List<Piece>();readonly HimoHito.RopeBodyVisual bodyVisual;readonly Vector3 initialHead;
+     static readonly float[] StrandStarts={.12f,.14f,.16f};
+     static readonly float[] StrandEnds={0,.08f,.15f};
+     static readonly float[] StrandSides={-.21f,.025f,.21f};
+@@ -30,9 +31,9 @@
+     public float MaxSlack=>Actual.endpointDrop;public int VisibleFibres=>Actual.visibleStrands;
+     public Vector3 Front=>Actual.end;public Vector3 FixedEnd=>Actual.anchor;
+ 
+-    public ProgressiveUnravelDrawing(RopeSnapshot snapshot,Transform parent)
+-    {
+-        saved=snapshot;root=parent;
++    public ProgressiveUnravelDrawing(RopeSnapshot snapshot,Transform parent,HimoHito.RopeBodyVisual body=null)
++    {
++        saved=snapshot;root=parent;bodyVisual=body;initialHead=body?body.RopeOrigin:Vector3.zero;
+         var left=new List<Vector3>{saved.record.cut};
+         for(int i=saved.segment;i>=0;i--)if(Vector3.Distance(left[left.Count-1],saved.points[i])>.00001f)left.Add(saved.points[i]);
+         var right=new List<Vector3>{saved.record.cut};
+@@ -71,6 +72,9 @@
+     void Pose(Piece p,float time)
+     {
+         int last=p.samples.Length-1;p.posed[last]=p.path[p.path.Length-1];
++        // The real body-side remnant follows its own endpoint; the hook-side remnant stays at the hook.
++        // A snapshot remains exact at time zero. This moves display vertices only.
++        if(saved.record.authoritativeContact&&p.to==0&&bodyVisual&&time>0)p.posed[last]+=(Vector3)bodyVisual.RopeOrigin-initialHead;
+         // Integrate from the fixed anchor, preserving each captured material segment's length.
+         // Loss of tension reaches the free end first, then its neighbourhood. This is not centre sag.
+         for(int i=last-1;i>=0;i--){
+@@ -168,6 +172,9 @@
+             m.endpointDrop=p.path[0].y-m.end.y;m.endpointTravel=Vector3.Distance(p.path[0],m.end);
+             var et=p.line.GetPosition(1)-m.end;m.endpointAngle=Mathf.Atan2(et.y,et.x)*Mathf.Rad2Deg;
+             m.fixedEndError=Vector3.Distance(m.anchor,p.path[p.path.Length-1]);
++            if(p.to==0){m.bodyPieces++;m.bodyAnchorError=Vector3.Distance(m.anchor,p.path[p.path.Length-1]+(saved.record.authoritativeContact&&bodyVisual&&time>0?(Vector3)bodyVisual.RopeOrigin-initialHead:Vector3.zero));}
++            else {m.hookPieces++;m.hookAnchorError=Vector3.Distance(m.anchor,p.path[p.path.Length-1]);}
++            if(time<=.000001f){m.cutStartError=Mathf.Max(m.cutStartError,Vector3.Distance(p.line.GetPosition(0),saved.record.cut));if(Camera.main)m.cutStartErrorPixels=Mathf.Max(m.cutStartErrorPixels,Vector2.Distance(Camera.main.WorldToScreenPoint(p.line.GetPosition(0)),Camera.main.WorldToScreenPoint(saved.record.cut)));}
+             if(time<=.000001f)foreach(float d in p.distance)m.initialShapeError=Mathf.Max(m.initialShapeError,Vector3.Distance(At(p,d),PosedAt(p,d)));
+             m.nearAlpha=p.line.colorGradient.Evaluate(.1f).a;m.middleAlpha=p.line.colorGradient.Evaluate(.5f).a;m.farAlpha=p.line.colorGradient.Evaluate(.9f).a;
+             foreach(var line in root.GetComponentsInChildren<LineRenderer>())if(line.enabled)foreach(var a in line.colorGradient.alphaKeys)m.maximumAlpha=Mathf.Max(m.maximumAlpha,a.alpha);

@@ -1,0 +1,83 @@
+using System;
+using System.IO;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using HimoHito;
+
+public sealed partial class GroundingReview
+{
+    [Serializable]public class VfxFrame{public int tick,effects,oldFluff,activeCopies,visibleFibres;public float elapsed,alpha,recoil,frontProgress,retainedLength,nearAlpha,middleAlpha,farAlpha,maxSlack;public Vector3 front,fixedEnd;public bool attached,bodySimulated;public ProgressiveUnravelDrawing.Metrics soft;}
+    [Serializable]public class Check{public string name,detail;public bool pass;}
+    [Serializable]public class VfxResult{public string execution="Actual Player, native cut events. Route is automated input/API, not OS/Human. Supplemental placements and reset/pause requests use diagnostic API.";public List<ScissorsCutVfx.CutRecord> cuts;public List<VfxFrame> frames=new List<VfxFrame>();public List<Check> checks=new List<Check>();public int captureFailures;}
+    ScissorsCutVfx cutVfx;VfxResult vfxResult=new VfxResult();
+    void RecordVfx(){var fx=cutVfx?cutVfx.Active:null;vfxResult.frames.Add(new VfxFrame{tick=tick,effects=cutVfx?cutVfx.records.Count:0,elapsed=fx?fx.Elapsed:0,alpha=fx?fx.CurrentAlpha:0,recoil=fx?fx.CurrentRecoil:0,frontProgress=fx?fx.FrontProgress:0,retainedLength=fx?fx.RetainedLength:0,nearAlpha=fx?fx.NearAlpha:0,middleAlpha=fx?fx.MiddleAlpha:0,farAlpha=fx?fx.FarAlpha:0,maxSlack=fx?fx.MaxSlack:0,visibleFibres=fx?fx.VisibleFibres:0,front=fx?fx.CurrentFront:Vector3.zero,fixedEnd=fx?fx.FixedEnd:Vector3.zero,activeCopies=FindObjectsByType<CutRopeCopy>(FindObjectsSortMode.None).Length,oldFluff=CountOldFluff(),attached=rope.IsAttached,bodySimulated=body.simulated,soft=fx?fx.SoftMetrics:null});RecordTimeline();}
+    string GeometrySignature(CutRopeCopy copy){var s=new System.Text.StringBuilder();foreach(var line in copy.GetComponentsInChildren<LineRenderer>()){s.Append(line.enabled);for(int i=0;i<line.positionCount;i++){var p=line.GetPosition(i);s.Append(p.x.ToString("R")).Append(p.y.ToString("R")).Append(p.z.ToString("R"));}foreach(var a in line.colorGradient.alphaKeys)s.Append(a.alpha.ToString("R"));foreach(var w in line.widthCurve.keys)s.Append(w.time.ToString("R")).Append(w.value.ToString("R"));}return s.ToString();}
+    int CountOldFluff(){int n=0;foreach(var p in FindObjectsByType<ParticleSystem>(FindObjectsSortMode.None))if(p.name=="Spike Contact Yarn Fibres")n++;return n;}
+    void CheckResult(string name,bool pass,string detail){vfxResult.checks.Add(new Check{name=name,pass=pass,detail=detail});}
+    void WriteVfx(){if(cutVfx){vfxResult.cuts=cutVfx.records;vfxResult.captureFailures=cutVfx.captureFailures;}if(vfxResult.cuts==null)vfxResult.cuts=new List<ScissorsCutVfx.CutRecord>();File.WriteAllText(Path.Combine(output,"VfxResult.json"),JsonUtility.ToJson(vfxResult,true));File.WriteAllText(Path.Combine(output,"Timeline.json"),JsonUtility.ToJson(timeline,true));}
+    IEnumerator VfxChecks()
+    {
+        // Supplemental fixtures below the normal fail plane must not open the failure overlay.
+        // This threshold is never changed in manual mode or the natural 5/6/7 route.
+        Call(run,"RestartFromCheckpoint");Set(run,"fallThreshold",-100f);
+        int noCut=cutVfx.records.Count;
+        // Q request while detached cannot be a scissors cut. Native public builder request via reflection.
+        Place(entry);yield return new WaitForSeconds(.1f);
+        var builder=body.GetComponent<RopePlatformBuilder>();
+        var method=typeof(RopePlatformBuilder).GetMethod("TryBuildCurrentPlatform",System.Reflection.BindingFlags.Instance|System.Reflection.BindingFlags.Public|System.Reflection.BindingFlags.NonPublic);
+        if(method!=null&&method.GetParameters().Length==0)method.Invoke(builder,null);
+        CheckResult("Q/detached does not cue",cutVfx.records.Count==noCut,method==null?"No zero-argument TryBuild found; Q API path not verified":"Native TryBuild request; not successful bridge-generation test");
+        // Independent setup for lifecycle checks; not a claimed player route.
+        yield return PrepareDiagnosticCut(0);
+        bool alive=cutVfx.Active&&!cutVfx.Active.Finished;
+        CheckResult("native cut after diagnostic rope crossing",alive,"No synthetic success notification; actual rendered rope crosses live blade; body-only is not required");
+        if(alive){
+            var copy=cutVfx.Active;body.simulated=false;for(int i=0;i<12;i++)yield return new WaitForEndOfFrame();
+            float before=copy.Elapsed;string geometry=GeometrySignature(copy);float frontBefore=copy.FrontProgress;
+            var overlay=FindFirstObjectByType<StageOverlayControls>();Set(overlay,"isPaused",true);Call(overlay,"ApplyPauseState");
+            for(int i=0;i<8;i++)yield return new WaitForEndOfFrame();
+            CheckResult("native pause freezes progressing rope and fibres",copy&&before>=.20f&&copy.Elapsed==before&&copy.FrontProgress==frontBefore&&GeometrySignature(copy)==geometry,"Diagnostic physical stop prevents a fall overlay during pause. StageOverlayControls pause API; eight frames; timeScale="+Time.timeScale+" before="+before+" after="+(copy?copy.Elapsed:-1));
+            Set(overlay,"isPaused",false);Call(overlay,"ApplyPauseState");
+            var oldCP=(Vector2)Get(run,"checkpointPosition");Set(run,"checkpointPosition",body.position);
+            Call(run,"RestartFromCheckpoint");bool immediate=!copy||copy.Finished;Set(run,"checkpointPosition",oldCP);
+            yield return null;yield return new WaitForEndOfFrame();
+            CheckResult("R removes cut copy immediately even without teleport",immediate,"Native RestartFromCheckpoint API with same-position diagnostic checkpoint; presentation-only notification");
+        }
+        yield return PrepareDiagnosticCut(1);
+        var previous=cutVfx.Active;var previousRecord=cutVfx.records[cutVfx.records.Count-1];bool wasVisible=previous&&!previous.Finished;
+        Place(entry);Call(mover,"FixedUpdate");bool attached=rope.TryAttach(hook);yield return new WaitForEndOfFrame();
+        CheckResult("reattach branch removes only old copy",wasVisible&&attached&&rope.IsAttached&&rope.GetComponent<LineRenderer>().enabled&&(!previous||previous.Finished)&&previousRecord.cleanup=="reattach; live rope untouched","Diagnostic entrance relocation + existing mover FixedUpdate for grounding + TryAttach in same frame; not a normal route. Actual cleanup="+previousRecord.cleanup);
+        int count=cutVfx.records.Count;rope.DetachAndRefund(playReleaseSound:true);yield return new WaitForEndOfFrame();
+        CheckResult("manual-style E release does not cue",cutVfx.records.Count==count,"Native DetachAndRefund(playReleaseSound:true); API not OS E");
+        yield return PrepareDiagnosticCut(2);
+        var dying=cutVfx.Active;body.simulated=false;rope.enabled=false;yield return null;yield return new WaitForEndOfFrame();
+        bool survived=dying&&!dying.Finished;
+        for(int i=0;i<38;i++)yield return new WaitForEndOfFrame();
+        CheckResult("physics disabled but visual finishes unravel",survived&&(!dying||dying.Finished),"Diagnostic physical stop >0.7s; native L7 fall failure separately recorded frame by frame");body.simulated=true;rope.enabled=true;
+        CheckResult("no duplicate old contact fluff",CountOldFluff()==0,"New cut path replaces only the targeted SpikeContact emit; landing/jump particles unchanged");
+        yield return PrepareDiagnosticCut(3);
+        var exiting=cutVfx.Active;vfxResult.cuts=cutVfx.records;vfxResult.captureFailures=cutVfx.captureFailures;
+        suppressFixture=true;DontDestroyOnLoad(gameObject);
+        var menu=FindFirstObjectByType<StageOverlayControls>();Set(menu,"isPaused",true);Set(menu,"confirmReturnToTitle",true);Call(menu,"ReturnToTitle");
+        yield return null;yield return null;yield return new WaitForEndOfFrame();
+        CheckResult("menu scene removes cut copy",(!exiting||exiting.Finished)&&FindObjectsByType<CutRopeCopy>(FindObjectsSortMode.None).Length==0,"Native ReturnToTitle API; active Scene="+UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
+        UnityEngine.SceneManagement.SceneManager.LoadScene("MainStage");yield return null;yield return null;
+        CheckResult("Scene reload has no residual copy",FindObjectsByType<CutRopeCopy>(FindObjectsSortMode.None).Length==0,"Native Scene reload; no automatic route restart");
+    }
+    IEnumerator PrepareDiagnosticCut(int side)
+    {
+        Call(run,"RestartFromCheckpoint");Place(entry);Set(mover,"moveInput",0f);yield return new WaitForSeconds(.12f);
+        bool attached=rope.TryAttach(hook);yield return new WaitForEndOfFrame();
+        if(!attached){CheckResult("diagnostic attach "+side,false,"Native attach failed");yield break;}
+        yield return new WaitForSeconds(.24f);
+        var points=scissors.WorldBlade(0);Vector2 centre=Vector2.zero;foreach(var p in points)centre+=(Vector2)p;centre/=points.Length;
+        var detector=front.GetComponent<RopeBladeContact>();detector.ResetHistory();
+        // Diagnostic ONLY: allow one rendered frame below the normal fail plane to exercise an interior
+        // real-rope contact while the player's body is clear of the blades. Restore threshold immediately.
+        float oldFall=(float)Get(run,"fallThreshold");Set(run,"fallThreshold",-100f);
+        Vector2 fixture=centre+Vector2.down*2.4f;
+        body.position=fixture;body.transform.position=new Vector3(fixture.x,fixture.y,0);body.linearVelocity=Vector2.zero;Set(mover,"previousPhysicsPosition",fixture);Physics2D.SyncTransforms();
+        yield return new WaitForEndOfFrame();Set(run,"fallThreshold",oldFall);
+    }
+}
